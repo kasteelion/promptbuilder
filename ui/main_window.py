@@ -5,7 +5,18 @@ from tkinter import ttk, messagebox
 from logic import DataLoader, PromptValidator, PromptRandomizer
 from core.builder import PromptBuilder
 from themes import ThemeManager
-from config import DEFAULT_THEME, DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE, PREVIEW_UPDATE_THROTTLE_MS
+from config import (
+    DEFAULT_THEME, 
+    DEFAULT_FONT_FAMILY, 
+    DEFAULT_FONT_SIZE, 
+    MIN_FONT_SIZE,
+    MAX_FONT_SIZE,
+    FONT_SIZE_BREAKPOINTS,
+    PREVIEW_UPDATE_THROTTLE_MS,
+    RESIZE_THROTTLE_MS,
+    RESIZE_SIGNIFICANT_CHANGE_PX,
+    MIN_PANE_WIDTH
+)
 from .characters_tab import CharactersTab
 from .scene_tab import SceneTab
 from .notes_tab import NotesTab
@@ -51,7 +62,9 @@ class PromptBuilderApp:
         
         # Throttling for resize events
         self._resize_after_id = None
-        self._resize_throttle_ms = 150
+        self._resize_throttle_ms = RESIZE_THROTTLE_MS
+        self._last_resize_width = 0
+        self._user_font_adjustment = 0  # User can adjust font size +/-
         
         # Build UI
         self._build_ui()
@@ -68,6 +81,28 @@ class PromptBuilderApp:
     
     def _build_ui(self):
         """Build the main UI layout."""
+        # Menu bar
+        menubar = tk.Menu(self.root)
+        self.root.config(menu=menubar)
+
+        # File menu
+        file_menu = tk.Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="File", menu=file_menu)
+        file_menu.add_command(label="Exit", command=self.root.quit)
+        
+        # View menu for font controls
+        view_menu = tk.Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="View", menu=view_menu)
+        view_menu.add_command(label="Increase Font Size", command=self._increase_font, accelerator="Ctrl++")
+        view_menu.add_command(label="Decrease Font Size", command=self._decrease_font, accelerator="Ctrl+-")
+        view_menu.add_command(label="Reset Font Size", command=self._reset_font, accelerator="Ctrl+0")
+        
+        # Bind keyboard shortcuts for font control
+        self.root.bind('<Control-plus>', lambda e: self._increase_font())
+        self.root.bind('<Control-equal>', lambda e: self._increase_font())  # + without shift
+        self.root.bind('<Control-minus>', lambda e: self._decrease_font())
+        self.root.bind('<Control-0>', lambda e: self._reset_font())
+        
         # Use PanedWindow directly in root to allow resizable left (notebook) and right (preview) panes
         # Drag the sash between them to resize
         paned = ttk.PanedWindow(self.root, orient="horizontal")
@@ -75,18 +110,20 @@ class PromptBuilderApp:
 
         # Left side: Notebook with tabs
         self.notebook = ttk.Notebook(paned, style="TNotebook")
-        paned.add(self.notebook, weight=0)
+        paned.add(self.notebook, weight=1)
 
         # Create tabs
         self.characters_tab = CharactersTab(
             self.notebook, 
             self.data_loader, 
-            self.schedule_preview_update
+            self.schedule_preview_update,
+            self.reload_data
         )
         self.scene_tab = SceneTab(
             self.notebook, 
             self.data_loader, 
-            self.schedule_preview_update
+            self.schedule_preview_update,
+            self.reload_data
         )
         self.notes_tab = NotesTab(
             self.notebook, 
@@ -104,7 +141,7 @@ class PromptBuilderApp:
 
         # Right side: Preview panel
         right_frame = ttk.Frame(paned, style="TFrame")
-        paned.add(right_frame, weight=1)
+        paned.add(right_frame, weight=2)
         
         self.preview_panel = PreviewPanel(
             right_frame, 
@@ -204,7 +241,25 @@ class PromptBuilderApp:
         """
         error = self._validate_prompt()
         if error:
-            return f"--- VALIDATION ERROR ---\n\n{error}"
+            # Friendly welcome message instead of harsh error
+            return """✨ Welcome to Prompt Builder! ✨
+
+To get started:
+1. Select a character from the dropdown below
+2. Click "+ Add to Group" to add them to your scene
+3. Choose their outfit and pose
+4. Add more characters if you'd like
+5. Optionally select a scene preset or write your own
+6. Watch your prompt appear here!
+
+Need help? 
+• Use "✨ Create New Character" to design your own character
+• Try the "🎲 Randomize" button for inspiration
+• Check the Edit Data tab to customize everything
+
+---
+
+Ready when you are! Add your first character to begin."""
         return self._generate_prompt()
     
     def reload_data(self):
@@ -245,6 +300,7 @@ class PromptBuilderApp:
         # Reload data in tabs
         self.characters_tab.load_data(self.characters, self.base_prompts, self.poses)
         self.scene_tab.load_data(self.scenes)
+        self.edit_tab._refresh_file_list()  # Refresh file list to show new character files
         
         self.schedule_preview_update()
         messagebox.showinfo("Success", "Data reloaded")
@@ -272,29 +328,83 @@ class PromptBuilderApp:
                                                  lambda: self._perform_resize(event))
 
     def _perform_resize(self, event):
-        """Handle window resize for dynamic font sizing.
+        """Handle window resize for dynamic font sizing with performance optimization.
         
         Args:
             event: Tkinter event
         """
-        w = self.root.winfo_width()
-        base_size = max(10, min(14, int(w / 70)))
-        font_family = DEFAULT_FONT_FAMILY
-        new_font = (font_family, base_size)
+        try:
+            w = self.root.winfo_width()
+            if w <= 1:  # Window not yet mapped
+                return
 
-        # List of all text widgets to apply the new font size
-        text_widgets = [
-            self.scene_tab.scene_text,
-            self.notes_tab.notes_text,
-            self.edit_tab.editor_text,
-            self.preview_panel.preview_text
-        ]
+            # Only update if width changed significantly
+            if abs(w - self._last_resize_width) < RESIZE_SIGNIFICANT_CHANGE_PX:
+                return
+            
+            self._last_resize_width = w
 
-        for widget in text_widgets:
-            widget.config(font=new_font)
+            # Calculate font size using breakpoints
+            base_size = self._calculate_font_size(w)
+            final_size = max(MIN_FONT_SIZE, min(MAX_FONT_SIZE, base_size + self._user_font_adjustment))
+            font_family = DEFAULT_FONT_FAMILY
+            new_font = (font_family, final_size)
 
-        # Special handling for preview panel tags
-        preview = self.preview_panel.preview_text
-        preview.tag_config("bold", font=(font_family, base_size, "bold"))
-        preview.tag_config("title", font=(font_family, base_size + 2, "bold"))
-        preview.tag_config("error", font=(font_family, base_size, "bold"))
+            # List of all text widgets to apply the new font size
+            text_widgets = [
+                self.scene_tab.scene_text,
+                self.notes_tab.notes_text,
+                self.edit_tab.editor_text,
+                self.preview_panel.preview_text
+            ]
+
+            for widget in text_widgets:
+                widget.config(font=new_font)
+
+            # Special handling for preview panel tags
+            preview = self.preview_panel.preview_text
+            preview.tag_config("bold", font=(font_family, final_size, "bold"))
+            preview.tag_config("title", font=(font_family, final_size + 2, "bold"))
+            preview.tag_config("error", font=(font_family, final_size, "bold"))
+        
+        except Exception:
+            pass  # Ignore errors during resize
+    
+    def _calculate_font_size(self, width):
+        """Calculate font size based on window width using breakpoints.
+        
+        Args:
+            width: Current window width in pixels
+            
+        Returns:
+            Calculated font size
+        """
+        # Find the appropriate breakpoint
+        for i, (breakpoint_width, font_size) in enumerate(FONT_SIZE_BREAKPOINTS):
+            if width < breakpoint_width:
+                if i == 0:
+                    return font_size
+                # Interpolate between breakpoints for smooth scaling
+                prev_width, prev_size = FONT_SIZE_BREAKPOINTS[i - 1]
+                ratio = (width - prev_width) / (breakpoint_width - prev_width)
+                return int(prev_size + ratio * (font_size - prev_size))
+        # If wider than all breakpoints, use the largest size
+        return FONT_SIZE_BREAKPOINTS[-1][1]
+    
+    def _increase_font(self):
+        """Increase font size by user preference."""
+        self._user_font_adjustment = min(4, self._user_font_adjustment + 1)
+        self._last_resize_width = 0  # Force update
+        self._perform_resize(None)
+    
+    def _decrease_font(self):
+        """Decrease font size by user preference."""
+        self._user_font_adjustment = max(-4, self._user_font_adjustment - 1)
+        self._last_resize_width = 0  # Force update
+        self._perform_resize(None)
+    
+    def _reset_font(self):
+        """Reset font size to automatic scaling."""
+        self._user_font_adjustment = 0
+        self._last_resize_width = 0  # Force update
+        self._perform_resize(None)

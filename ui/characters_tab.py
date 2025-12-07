@@ -3,22 +3,28 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from .widgets import FlowFrame
+from .character_creator import CharacterCreatorDialog
+from .base_style_creator import BaseStyleCreatorDialog
+from .outfit_creator import SharedOutfitCreatorDialog, CharacterOutfitCreatorDialog
+from .pose_creator import PoseCreatorDialog
 
 
 class CharactersTab:
     """Tab for managing characters, outfits, and poses."""
     
-    def __init__(self, parent, data_loader, on_change_callback):
+    def __init__(self, parent, data_loader, on_change_callback, reload_callback=None):
         """Initialize characters tab.
         
         Args:
             parent: Parent notebook widget
             data_loader: DataLoader instance
             on_change_callback: Function to call when data changes
+            reload_callback: Function to call to reload all data
         """
         self.parent = parent
         self.data_loader = data_loader
         self.on_change = on_change_callback
+        self.reload_data = reload_callback
         
         self.characters = {}
         self.base_prompts = {}
@@ -65,12 +71,15 @@ class CharactersTab:
         # Base prompt selector
         bp = ttk.LabelFrame(self.tab, text="📋 Base Prompt (Style)", style="TLabelframe")
         bp.grid(row=0, column=0, sticky="ew", padx=4, pady=4)
-        ttk.Label(bp, text="Choose a base art style", foreground="gray", font=("Consolas", 9)).pack(fill="x", padx=4, pady=(2, 0))
+        bp.columnconfigure(0, weight=1)
+        ttk.Label(bp, text="Choose a base art style", foreground="gray", font=("Consolas", 9)).grid(row=0, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 0))
         
         self.base_prompt_var = tk.StringVar()
         self.base_combo = ttk.Combobox(bp, state="readonly", textvariable=self.base_prompt_var)
-        self.base_combo.pack(fill="x", padx=4, pady=(0, 4))
+        self.base_combo.grid(row=1, column=0, sticky="ew", padx=(4, 2), pady=(0, 4))
         self.base_combo.bind("<<ComboboxSelected>>", lambda e: self.on_change())
+        
+        ttk.Button(bp, text="✨ Create Style", command=self._create_new_style).grid(row=1, column=1, sticky="ew", padx=(2, 4), pady=(0, 4))
 
         # Bulk outfit editor section
         bulk = ttk.LabelFrame(self.tab, text="⚡ Bulk Outfit Editor (Speed Tool)", style="TLabelframe")
@@ -81,30 +90,45 @@ class CharactersTab:
         ttk.Label(bulk, text="Shared Outfit:").grid(row=1, column=0, sticky="w", padx=(4, 2))
         self.bulk_outfit_var = tk.StringVar()
         self.bulk_outfit_combo = ttk.Combobox(bulk, textvariable=self.bulk_outfit_var, state="readonly")
-        self.bulk_outfit_combo.grid(row=0, column=1, sticky="ew", padx=2)
+        self.bulk_outfit_combo.grid(row=1, column=1, sticky="ew", padx=2)
         self.bulk_outfit_combo['values'] = []
         self.bulk_outfit_combo.bind("<Return>", lambda e: self._apply_bulk_outfit())
         
-        ttk.Label(bulk, text="Apply to:").grid(row=1, column=0, sticky="w", padx=(4, 2), pady=(4, 0))
+        ttk.Label(bulk, text="Apply to:").grid(row=2, column=0, sticky="w", padx=(4, 2), pady=(4, 0))
         self.bulk_chars_var = tk.StringVar()
         self.bulk_chars_combo = ttk.Combobox(bulk, textvariable=self.bulk_chars_var, state="readonly")
-        self.bulk_chars_combo.grid(row=1, column=1, sticky="ew", padx=2, pady=(4, 0))
+        self.bulk_chars_combo.grid(row=2, column=1, sticky="ew", padx=2, pady=(4, 0))
         self.bulk_chars_combo.bind("<Return>", lambda e: self._apply_bulk_outfit())
         
-        ttk.Button(bulk, text="Apply Outfit", 
-                  command=self._apply_bulk_outfit).grid(row=2, column=0, columnspan=2, 
-                                                         sticky="ew", padx=4, pady=4)
+        # Button row
+        btn_frame = ttk.Frame(bulk)
+        btn_frame.grid(row=3, column=0, columnspan=2, sticky="ew", padx=4, pady=4)
+        btn_frame.columnconfigure(0, weight=1)
+        btn_frame.columnconfigure(1, weight=1)
+        
+        ttk.Button(btn_frame, text="Apply Outfit", 
+                  command=self._apply_bulk_outfit).grid(row=0, column=0, sticky="ew", padx=(0, 2))
+        ttk.Button(btn_frame, text="✨ Create Shared Outfit", 
+                  command=self._create_shared_outfit).grid(row=0, column=1, sticky="ew", padx=(2, 0))
 
         # Add character section
         add = ttk.LabelFrame(self.tab, text="👥 Add Character", style="TLabelframe")
         add.grid(row=2, column=0, sticky="ew", padx=4, pady=4)
-        ttk.Label(add, text="Select a character and press Add or Enter", foreground="gray", font=("Consolas", 9)).pack(fill="x", padx=4, pady=(2, 4))
+        add.columnconfigure(0, weight=1)
+        ttk.Label(add, text="Select a character and press Add or Enter", foreground="gray", font=("Consolas", 9)).grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 4))
         
         self.char_var = tk.StringVar()
         self.char_combo = ttk.Combobox(add, state="readonly", textvariable=self.char_var)
-        self.char_combo.pack(fill="x", pady=(0, 4), padx=4)
+        self.char_combo.grid(row=1, column=0, columnspan=2, sticky="ew", pady=(0, 4), padx=4)
         self.char_combo.bind("<Return>", lambda e: self._add_character())
-        ttk.Button(add, text="+ Add to Group", command=self._add_character).pack(fill="x", padx=4, pady=(0, 4))
+        
+        button_frame = ttk.Frame(add)
+        button_frame.grid(row=2, column=0, columnspan=2, sticky="ew", padx=4, pady=(0, 4))
+        button_frame.columnconfigure(0, weight=1)
+        button_frame.columnconfigure(1, weight=1)
+        
+        ttk.Button(button_frame, text="+ Add to Prompt", command=self._add_character).grid(row=0, column=0, sticky="ew", padx=(0, 2))
+        ttk.Button(button_frame, text="✨ Create New Character", command=self._create_new_character).grid(row=0, column=1, sticky="ew", padx=(2, 0))
 
         # Selected characters scrollable area
         chars_frame = ttk.Frame(self.tab, style="TFrame")
@@ -228,6 +252,39 @@ class CharactersTab:
         # Auto-scroll to the newly added character
         self.chars_canvas.yview_moveto(1.0)
     
+    def _create_new_character(self):
+        """Open dialog to create a new character."""
+        # Get the root window to use as parent
+        root = self.tab.winfo_toplevel()
+        dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data)
+        result = dialog.show()
+        
+        # If character was created and reload callback exists, it will be called automatically
+    
+    def _create_new_style(self):
+        """Open dialog to create a new base art style."""
+        root = self.tab.winfo_toplevel()
+        dialog = BaseStyleCreatorDialog(root, self.data_loader, self.reload_data)
+        result = dialog.show()
+    
+    def _create_shared_outfit(self):
+        """Open dialog to create a new shared outfit."""
+        root = self.tab.winfo_toplevel()
+        dialog = SharedOutfitCreatorDialog(root, self.data_loader, self.reload_data)
+        result = dialog.show()
+    
+    def _create_character_outfit(self, character_name):
+        """Open dialog to create a new character-specific outfit."""
+        root = self.tab.winfo_toplevel()
+        dialog = CharacterOutfitCreatorDialog(root, self.data_loader, character_name, self.reload_data)
+        result = dialog.show()
+    
+    def _create_new_pose(self):
+        """Open dialog to create a new pose preset."""
+        root = self.tab.winfo_toplevel()
+        dialog = PoseCreatorDialog(root, self.data_loader, self.reload_data)
+        result = dialog.show()
+    
     def _remove_character(self, idx):
         """Remove character at index."""
         self.selected_characters.pop(idx)
@@ -315,25 +372,61 @@ class CharactersTab:
                                  padding=6, style="TLabelframe")
             frame.pack(fill="x", pady=(0, 8), padx=4)
             
-            # Outfit selector (clickable bubbles)
-            ttk.Label(frame, text="👕 Outfit:", font=("Consolas", 9, "bold")).pack(fill="x", pady=(0, 2))
-            outfits_frame = FlowFrame(frame, padding_x=6, padding_y=4)
-            outfits_frame.pack(fill="x", pady=(0, 6))
+            # Outfit selector - collapsible
+            outfit_header = ttk.Frame(frame)
+            outfit_header.pack(fill="x", pady=(0, 2))
+            
+            outfit_label = ttk.Label(outfit_header, text="👕 Outfit:", font=("Consolas", 9, "bold"))
+            outfit_label.pack(side="left")
+            
+            # Show current outfit
+            current_outfit = cd.get("outfit", "")
+            if current_outfit:
+                current_label = ttk.Label(outfit_header, text=f" {current_outfit}", font=("Consolas", 9), foreground="#0066cc")
+                current_label.pack(side="left")
+            
+            # Collapsible outfit frame
+            outfit_container = ttk.Frame(frame)
+            outfit_expanded = tk.BooleanVar(value=False)
+            
+            def make_toggle(container, expanded, parent_frame):
+                def toggle():
+                    if expanded.get():
+                        container.pack_forget()
+                        expanded.set(False)
+                    else:
+                        # Pack after the first child (outfit_header)
+                        container.pack(fill="x", pady=(0, 6))
+                        # Move to correct position
+                        container.pack_configure(after=parent_frame.winfo_children()[0])
+                        expanded.set(True)
+                return toggle
+            
+            toggle_func = make_toggle(outfit_container, outfit_expanded, frame)
+            toggle_btn = ttk.Button(outfit_header, text="▼", width=3, command=toggle_func)
+            toggle_btn.pack(side="right")
+            
+            # Outfit options inside collapsible frame
+            outfits_frame = FlowFrame(outfit_container, padding_x=6, padding_y=4)
+            outfits_frame.pack(fill="x", pady=(2, 2))
 
             outfit_keys = sorted(list(self.characters.get(cd["name"], {}).get("outfits", {}).keys()))
             for o in outfit_keys:
-                # Use accent button style for the selected outfit so it's visually distinct
-                btn_style = "Accent.TButton" if o == cd.get("outfit", "") else "TButton"
+                btn_style = "Accent.TButton" if o == current_outfit else "TButton"
                 outfits_frame.add_button(
                     text=o,
                     style=btn_style,
-                    command=(lambda idx=i, name=o: self._update_outfit(idx, name))
+                    command=(lambda idx=i, name=o, tog=toggle_func: (self._update_outfit(idx, name), tog()))
                 )
+            
+            # Outfit creator button
+            ttk.Button(outfit_container, text="✨ New Outfit for Character", 
+                      command=lambda name=cd["name"]: self._create_character_outfit(name)).pack(fill="x", pady=(2, 0))
             
             # Pose preset selector
             ttk.Label(frame, text="🎭 Pose (Optional):", font=("Consolas", 9, "bold")).pack(fill="x", pady=(6, 2))
             pose_row = ttk.Frame(frame)
-            pose_row.pack(fill="x", pady=(0, 0))
+            pose_row.pack(fill="x", pady=(0, 4))
             pose_row.columnconfigure(3, weight=1)
 
             ttk.Label(pose_row, text="Category:").grid(row=0, column=0, sticky="w", padx=(0, 4))
@@ -346,6 +439,9 @@ class CharactersTab:
             preset_var = tk.StringVar(value=cd.get("pose_preset", ""))
             preset_combo = ttk.Combobox(pose_row, textvariable=preset_var, state="readonly")
             preset_combo.grid(row=0, column=3, sticky="ew")
+            
+            # Add create pose button
+            ttk.Button(pose_row, text="✨", width=3, command=self._create_new_pose).grid(row=0, column=4, padx=(5, 0))
 
             # Initialize preset values
             current_cat = pcat_var.get()

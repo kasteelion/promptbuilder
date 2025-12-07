@@ -3,22 +3,25 @@
 import tkinter as tk
 from tkinter import ttk
 from .widgets import CollapsibleFrame
+from .scene_creator import SceneCreatorDialog
 
 
 class SceneTab:
     """Tab for managing scene descriptions and presets."""
     
-    def __init__(self, parent, data_loader, on_change_callback):
+    def __init__(self, parent, data_loader, on_change_callback, reload_callback=None):
         """Initialize scene tab.
         
         Args:
             parent: Parent notebook widget
             data_loader: DataLoader instance
             on_change_callback: Function to call when data changes
+            reload_callback: Function to call to reload all data
         """
         self.parent = parent
         self.data_loader = data_loader
         self.on_change = on_change_callback
+        self.reload_data = reload_callback
         
         self.scenes = {}
         
@@ -70,6 +73,9 @@ class SceneTab:
         self.scene_combo.grid(row=0, column=3, sticky="ew")
         self.scene_combo.bind("<<ComboboxSelected>>", lambda e: self._apply_preset())
         self.scene_combo.bind("<Return>", lambda e: self._apply_preset())
+        
+        # Add create scene button
+        ttk.Button(content, text="✨ Create Scene", command=self._create_new_scene).grid(row=1, column=0, columnspan=4, sticky="ew", pady=(5, 0))
 
         # Scene text area
         self.scene_text = tk.Text(self.tab, wrap="word")
@@ -104,6 +110,12 @@ class SceneTab:
         self._update_preset_combos()
         self.scene_text.delete("1.0", "end")
         self.on_change()
+    
+    def _create_new_scene(self):
+        """Open dialog to create a new scene."""
+        root = self.tab.winfo_toplevel()
+        dialog = SceneCreatorDialog(root, self.data_loader, self.reload_data)
+        result = dialog.show()
     
     def get_scene_text(self):
         """Get current scene text.

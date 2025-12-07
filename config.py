@@ -3,10 +3,29 @@
 # Font settings
 DEFAULT_FONT_FAMILY = "Consolas"
 DEFAULT_FONT_SIZE = 12
+MIN_FONT_SIZE = 9
+MAX_FONT_SIZE = 16
+
+# Font size breakpoints: (window_width, font_size)
+# These define how font size scales with window width
+FONT_SIZE_BREAKPOINTS = [
+    (600, 9),
+    (800, 10),
+    (1000, 11),
+    (1200, 12),
+    (1400, 13),
+    (1600, 14),
+    (1800, 15),
+    (2000, 16)
+]
 
 # UI settings
 PREVIEW_UPDATE_THROTTLE_MS = 200
+RESIZE_THROTTLE_MS = 150
+RESIZE_SIGNIFICANT_CHANGE_PX = 50  # Only update if width changes by this much
 DEFAULT_WINDOW_GEOMETRY = "1000x700"
+MIN_PANE_WIDTH = 250  # Minimum width for left panel
+DEFAULT_SASH_POSITION = 400  # Initial position of the divider
 
 # File paths
 # NOTE: Character files are loaded dynamically from the characters/ folder.

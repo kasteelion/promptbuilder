@@ -2,7 +2,7 @@
 
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
-from config import EDITABLE_FILES
+from config import MAIN_EDITABLE_FILES
 
 
 class EditTab:
@@ -24,7 +24,37 @@ class EditTab:
         parent.add(self.tab, text="Edit Data")
         
         self._build_ui()
+        self._refresh_file_list()
         self._load_markdown_for_editing()
+    
+    def _get_editable_files(self):
+        """Get current list of editable files including character files."""
+        files = list(MAIN_EDITABLE_FILES)
+        
+        # Check for character files in characters/ folder
+        char_dir = self.data_loader.base_dir / "characters"
+        if char_dir.exists() and char_dir.is_dir():
+            char_files = sorted([f.name for f in char_dir.glob("*.md")])
+            files.extend(char_files)
+        
+        # Check for legacy characters.md in root
+        root_char = self.data_loader.base_dir / "characters.md"
+        if root_char.exists() and "characters.md" not in files:
+            files.append("characters.md")
+        
+        return files
+    
+    def _refresh_file_list(self):
+        """Refresh the list of editable files in the dropdown."""
+        current_file = self.edit_file_var.get()
+        files = self._get_editable_files()
+        self.edit_file_combo['values'] = files
+        
+        # Restore selection if still valid, otherwise select first
+        if current_file in files:
+            self.edit_file_combo.set(current_file)
+        elif files:
+            self.edit_file_combo.current(0)
     
     def _build_ui(self):
         """Build the edit tab UI."""
@@ -46,9 +76,6 @@ class EditTab:
             textvariable=self.edit_file_var, 
             state="readonly"
         )
-        self.edit_file_combo['values'] = EDITABLE_FILES
-        if EDITABLE_FILES:
-            self.edit_file_combo.current(0)
         self.edit_file_combo.grid(row=0, column=1, sticky="ew")
         self.edit_file_combo.bind("<<ComboboxSelected>>", self._on_file_selected)
 
@@ -117,6 +144,7 @@ class EditTab:
         
         try:
             file_path.write_text(content, encoding="utf-8")
+            self._refresh_file_list()  # Refresh in case new files were created
             self.on_reload()
             messagebox.showinfo("Success", f"{filename} saved and data reloaded.")
         except Exception as e:
