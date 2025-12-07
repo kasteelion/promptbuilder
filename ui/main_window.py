@@ -2,7 +2,7 @@
 """Main application window."""
 
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, filedialog
 from logic import DataLoader, validate_prompt_config, PromptRandomizer
 from core.builder import PromptBuilder
 from themes import ThemeManager
@@ -17,11 +17,16 @@ from config import (
     RESIZE_THROTTLE_MS,
     RESIZE_SIGNIFICANT_CHANGE_PX,
     MIN_PANE_WIDTH,
-    THEMES
+    THEMES,
+    TOOLTIPS,
+    WELCOME_MESSAGE
 )
+from utils import UndoManager, PreferencesManager, PresetManager, create_tooltip
 from .characters_tab import CharactersTab
 from .edit_tab import EditTab
 from .preview_panel import PreviewPanel
+import sys
+import platform
 
 
 class PromptBuilderApp:
@@ -36,13 +41,18 @@ class PromptBuilderApp:
         self.root = root
         self.root.title("Prompt Builder — Group Picture Generator")
         
+        # Initialize managers
+        self.undo_manager = UndoManager()
+        self.prefs = PreferencesManager()
+        self.preset_manager = PresetManager()
+        
         # Initialize data
         self.data_loader = DataLoader()
         
         try:
             self.characters = self.data_loader.load_characters()
         except Exception as e:
-            messagebox.showerror("Error loading characters", str(e))
+            self._show_user_friendly_error("Error loading characters", str(e))
             self.root.destroy()
             return
         
@@ -63,7 +73,7 @@ class PromptBuilderApp:
         self._resize_after_id = None
         self._resize_throttle_ms = RESIZE_THROTTLE_MS
         self._last_resize_width = 0
-        self._user_font_adjustment = 0  # User can adjust font size +/-
+        self._user_font_adjustment = self.prefs.get("font_adjustment", 0)
         
         # Debounce tracking for text inputs
         self._scene_text_after_id = None
@@ -74,13 +84,38 @@ class PromptBuilderApp:
         
         # Set initial fonts and theme
         self._set_initial_fonts()
-        self._apply_theme(DEFAULT_THEME)
+        
+        # Auto-detect theme or use saved preference
+        theme_to_use = self.prefs.get("last_theme", DEFAULT_THEME)
+        if self.prefs.get("auto_theme", False):
+            theme_to_use = self._detect_os_theme()
+        self._apply_theme(theme_to_use)
+        
+        # Restore window geometry
+        saved_geometry = self.prefs.get("window_geometry")
+        if saved_geometry:
+            try:
+                self.root.geometry(saved_geometry)
+            except:
+                pass
+        
+        # Restore last base prompt
+        last_base_prompt = self.prefs.get("last_base_prompt")
+        if last_base_prompt and last_base_prompt in self.base_prompts:
+            self.characters_tab.set_base_prompt(last_base_prompt)
         
         # Initial preview update
         self.update_preview()
         
+        # Show welcome dialog for first-time users
+        if self.prefs.get("show_welcome", True):
+            self._show_welcome_dialog()
+        
         # Bind resize event
         self.root.bind("<Configure>", self._on_resize)
+        
+        # Save state on close
+        self.root.protocol("WM_DELETE_WINDOW", self._on_closing)
     
     def _build_ui(self):
         """Build the main UI layout."""
@@ -91,7 +126,23 @@ class PromptBuilderApp:
         # File menu
         file_menu = tk.Menu(menubar, tearoff=0)
         menubar.add_cascade(label="File", menu=file_menu)
-        file_menu.add_command(label="Exit", command=self.root.quit)
+        file_menu.add_command(label="Save Preset...", command=self._save_preset, accelerator="Ctrl+Shift+S")
+        file_menu.add_command(label="Load Preset...", command=self._load_preset, accelerator="Ctrl+Shift+O")
+        file_menu.add_separator()
+        file_menu.add_command(label="Export Configuration...", command=self._export_config)
+        file_menu.add_command(label="Import Configuration...", command=self._import_config)
+        file_menu.add_separator()
+        file_menu.add_command(label="Exit", command=self._on_closing)
+        
+        # Edit menu
+        edit_menu = tk.Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="Edit", menu=edit_menu)
+        edit_menu.add_command(label="Undo", command=self._undo, accelerator="Ctrl+Z")
+        edit_menu.add_command(label="Redo", command=self._redo, accelerator="Ctrl+Y")
+        edit_menu.add_separator()
+        edit_menu.add_command(label="Clear All Characters", command=self._clear_all_characters)
+        edit_menu.add_command(label="Reset All Outfits", command=self._reset_all_outfits)
+        edit_menu.add_command(label="Apply Same Pose to All", command=self._apply_same_pose_to_all)
         
         # View menu for font controls and theme
         view_menu = tk.Menu(menubar, tearoff=0)
@@ -117,7 +168,29 @@ class PromptBuilderApp:
                 command=lambda t=theme_name: self._change_theme(t)
             )
         
-        # Bind keyboard shortcuts for font control
+        # Auto theme checkbox
+        view_menu.add_separator()
+        self.auto_theme_var = tk.BooleanVar(value=self.prefs.get("auto_theme", False))
+        view_menu.add_checkbutton(label="Auto-detect OS Theme", variable=self.auto_theme_var, 
+                                  command=self._toggle_auto_theme)
+        
+        # Help menu
+        help_menu = tk.Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="Help", menu=help_menu)
+        help_menu.add_command(label="Show Welcome Screen", command=self._show_welcome_dialog)
+        help_menu.add_command(label="Keyboard Shortcuts", command=self._show_shortcuts_dialog)
+        help_menu.add_separator()
+        help_menu.add_command(label="About", command=self._show_about_dialog)
+        
+        # Bind keyboard shortcuts
+        self.root.bind('<Control-z>', lambda e: self._undo())
+        self.root.bind('<Control-Z>', lambda e: self._undo())
+        self.root.bind('<Control-y>', lambda e: self._redo())
+        self.root.bind('<Control-Y>', lambda e: self._redo())
+        self.root.bind('<Control-Shift-s>', lambda e: self._save_preset())
+        self.root.bind('<Control-Shift-S>', lambda e: self._save_preset())
+        self.root.bind('<Control-Shift-o>', lambda e: self._load_preset())
+        self.root.bind('<Control-Shift-O>', lambda e: self._load_preset())
         self.root.bind('<Control-plus>', lambda e: self._increase_font())
         self.root.bind('<Control-equal>', lambda e: self._increase_font())  # + without shift
         self.root.bind('<Control-minus>', lambda e: self._decrease_font())
@@ -141,7 +214,8 @@ class PromptBuilderApp:
             self.notebook, 
             self.data_loader, 
             self.schedule_preview_update,
-            self.reload_data
+            self.reload_data,
+            self._save_state_for_undo
         )
         self.edit_tab = EditTab(
             self.notebook, 
@@ -162,6 +236,7 @@ class PromptBuilderApp:
         scene_frame = ttk.LabelFrame(right_frame, text="🎬 Scene", style="TLabelframe")
         scene_frame.grid(row=0, column=0, sticky="ew", padx=4, pady=(4, 2))
         scene_frame.columnconfigure(1, weight=1)
+        create_tooltip(scene_frame, TOOLTIPS.get("scene", ""))
         
         # Scene presets row
         ttk.Label(scene_frame, text="Category:", font=("Consolas", 9)).grid(row=0, column=0, sticky="w", padx=(4, 2), pady=2)
@@ -180,6 +255,7 @@ class PromptBuilderApp:
         
         self.scene_text = tk.Text(scene_frame, wrap="word", height=2)
         self.scene_text.grid(row=1, column=0, columnspan=5, sticky="ew", padx=4, pady=(0, 4))
+        create_tooltip(self.scene_text, TOOLTIPS.get("scene", ""))
         # Debounce scene text changes
         self._scene_text_after_id = None
         def _on_scene_change(e):
@@ -192,9 +268,11 @@ class PromptBuilderApp:
         notes_frame = ttk.LabelFrame(right_frame, text="📝 Notes", style="TLabelframe")
         notes_frame.grid(row=1, column=0, sticky="ew", padx=4, pady=2)
         notes_frame.columnconfigure(0, weight=1)
+        create_tooltip(notes_frame, TOOLTIPS.get("notes", ""))
         
         self.notes_text = tk.Text(notes_frame, wrap="word", height=2)
         self.notes_text.pack(fill="x", padx=4, pady=4)
+        create_tooltip(self.notes_text, TOOLTIPS.get("notes", ""))
         # Debounce notes text changes
         self._notes_text_after_id = None
         def _on_notes_change(e):
@@ -359,15 +437,19 @@ class PromptBuilderApp:
     
     def reload_data(self):
         """Reload all data from markdown files."""
-        self._update_status("Reloading data...")
+        self._update_status("🔄 Reloading data...")
+        self.root.config(cursor="watch")
+        self.root.update()
+        
         try:
             new_characters = self.data_loader.load_characters()
             self.base_prompts = self.data_loader.load_base_prompts()
             self.scenes = self.data_loader.load_presets("scenes.md")
             self.poses = self.data_loader.load_presets("poses.md")
         except Exception as e:
-            messagebox.showerror("Reload Error", str(e))
-            self._update_status("Error loading data")
+            self.root.config(cursor="")
+            self._show_user_friendly_error("Reload Error", str(e))
+            self._update_status("❌ Error loading data")
             return
 
         # Update character selection validity
@@ -399,12 +481,16 @@ class PromptBuilderApp:
         self._update_scene_presets()  # Reload scene presets in UI
         self.edit_tab._refresh_file_list()  # Refresh file list to show new character files
         
+        self.root.config(cursor="")
         self.schedule_preview_update()
-        self._update_status("Data reloaded successfully")
-        messagebox.showinfo("Success", "Data reloaded")
+        self._update_status("✅ Data reloaded successfully")
+        messagebox.showinfo("Success", "Data reloaded successfully!")
 
     def randomize_all(self):
         """Generate a random prompt and update the UI."""
+        self._update_status("🎲 Randomizing...")
+        self._save_state_for_undo()
+        
         config = self.randomizer.randomize(
             num_characters=self.characters_tab.get_num_characters(),
             include_scene=True,
@@ -422,6 +508,7 @@ class PromptBuilderApp:
         self.notes_text.insert("1.0", config.get("notes", ""))
         
         self.schedule_preview_update()
+        self._update_status("✨ Randomized successfully")
     
     def _on_resize(self, event):
         """Throttle window resize events to prevent excessive updates."""
@@ -509,5 +596,436 @@ class PromptBuilderApp:
     def _reset_font(self):
         """Reset font size to automatic scaling."""
         self._user_font_adjustment = 0
+        self.prefs.set("font_adjustment", 0)
         self._last_resize_width = 0  # Force update
         self._perform_resize(None)
+    
+    def _on_closing(self):
+        """Handle window closing - save preferences."""
+        # Save window geometry
+        self.prefs.set("window_geometry", self.root.geometry())
+        
+        # Save current theme
+        self.prefs.set("last_theme", self.theme_var.get())
+        
+        # Save last base prompt
+        base_prompt = self.characters_tab.get_base_prompt_name()
+        if base_prompt:
+            self.prefs.set("last_base_prompt", base_prompt)
+        
+        # Save font adjustment
+        self.prefs.set("font_adjustment", self._user_font_adjustment)
+        
+        self.root.destroy()
+    
+    def _get_current_state(self):
+        """Get current application state for undo/redo.
+        
+        Returns:
+            Dictionary of current state
+        """
+        return {
+            "selected_characters": self.characters_tab.get_selected_characters(),
+            "base_prompt": self.characters_tab.get_base_prompt_name(),
+            "scene": self.scene_text.get("1.0", "end").strip(),
+            "notes": self.notes_text.get("1.0", "end").strip()
+        }
+    
+    def _restore_state(self, state):
+        """Restore application state from dictionary.
+        
+        Args:
+            state: State dictionary
+        """
+        if not state:
+            return
+        
+        # Restore characters
+        self.characters_tab.set_selected_characters(state.get("selected_characters", []))
+        
+        # Restore base prompt
+        base_prompt = state.get("base_prompt", "")
+        if base_prompt:
+            self.characters_tab.set_base_prompt(base_prompt)
+        
+        # Restore scene
+        self.scene_text.delete("1.0", "end")
+        self.scene_text.insert("1.0", state.get("scene", ""))
+        
+        # Restore notes
+        self.notes_text.delete("1.0", "end")
+        self.notes_text.insert("1.0", state.get("notes", ""))
+        
+        self.update_preview()
+    
+    def _save_state_for_undo(self):
+        """Save current state for undo."""
+        self.undo_manager.save_state(self._get_current_state())
+    
+    def _undo(self):
+        """Undo last action."""
+        if not self.undo_manager.can_undo():
+            self._update_status("Nothing to undo")
+            return
+        
+        state = self.undo_manager.undo()
+        if state:
+            self._restore_state(state)
+            self._update_status("Undo successful")
+    
+    def _redo(self):
+        """Redo last undone action."""
+        if not self.undo_manager.can_redo():
+            self._update_status("Nothing to redo")
+            return
+        
+        state = self.undo_manager.redo()
+        if state:
+            self._restore_state(state)
+            self._update_status("Redo successful")
+    
+    def _save_preset(self):
+        """Save current configuration as a preset."""
+        # Ask for preset name
+        from tkinter import simpledialog
+        name = simpledialog.askstring("Save Preset", "Enter preset name:")
+        if not name:
+            return
+        
+        config = self._get_current_state()
+        try:
+            filepath = self.preset_manager.save_preset(name, config)
+            self.prefs.add_recent("recent_presets", filepath.name)
+            messagebox.showinfo("Success", f"Preset '{name}' saved successfully!")
+            self._update_status(f"Preset '{name}' saved")
+        except Exception as e:
+            self._show_user_friendly_error("Error saving preset", str(e))
+    
+    def _load_preset(self):
+        """Load a preset configuration."""
+        presets = self.preset_manager.get_presets()
+        if not presets:
+            messagebox.showinfo("No Presets", "No saved presets found.")
+            return
+        
+        # Create preset selection dialog
+        dialog = tk.Toplevel(self.root)
+        dialog.title("Load Preset")
+        dialog.geometry("400x300")
+        dialog.transient(self.root)
+        dialog.grab_set()
+        
+        ttk.Label(dialog, text="Select a preset to load:", font=("Segoe UI", 10, "bold")).pack(pady=10, padx=10, anchor="w")
+        
+        # Listbox with presets
+        frame = ttk.Frame(dialog)
+        frame.pack(fill="both", expand=True, padx=10, pady=(0, 10))
+        
+        scrollbar = ttk.Scrollbar(frame)
+        scrollbar.pack(side="right", fill="y")
+        
+        listbox = tk.Listbox(frame, yscrollcommand=scrollbar.set)
+        listbox.pack(side="left", fill="both", expand=True)
+        scrollbar.config(command=listbox.yview)
+        
+        for filename, name, created in presets:
+            listbox.insert(tk.END, f"{name} ({created[:10]})")
+        
+        selected_preset = [None]
+        
+        def on_load():
+            selection = listbox.curselection()
+            if selection:
+                filename = presets[selection[0]][0]
+                selected_preset[0] = filename
+                dialog.destroy()
+        
+        def on_delete():
+            selection = listbox.curselection()
+            if selection:
+                filename = presets[selection[0]][0]
+                name = presets[selection[0]][1]
+                if messagebox.askyesno("Delete Preset", f"Delete preset '{name}'?"):
+                    if self.preset_manager.delete_preset(filename):
+                        listbox.delete(selection[0])
+                        presets.pop(selection[0])
+        
+        # Buttons
+        btn_frame = ttk.Frame(dialog)
+        btn_frame.pack(fill="x", padx=10, pady=(0, 10))
+        
+        ttk.Button(btn_frame, text="Load", command=on_load).pack(side="left", padx=2)
+        ttk.Button(btn_frame, text="Delete", command=on_delete).pack(side="left", padx=2)
+        ttk.Button(btn_frame, text="Cancel", command=dialog.destroy).pack(side="right", padx=2)
+        
+        listbox.bind("<Double-Button-1>", lambda e: on_load())
+        
+        dialog.wait_window()
+        
+        # Load selected preset
+        if selected_preset[0]:
+            config = self.preset_manager.load_preset(selected_preset[0])
+            if config:
+                self._save_state_for_undo()
+                self._restore_state(config)
+                self._update_status("Preset loaded successfully")
+            else:
+                self._show_user_friendly_error("Error", "Failed to load preset")
+    
+    def _export_config(self):
+        """Export current configuration to JSON file."""
+        filepath = filedialog.asksaveasfilename(
+            defaultextension=".json",
+            filetypes=[("JSON files", "*.json"), ("All files", "*.*")],
+            title="Export Configuration"
+        )
+        if not filepath:
+            return
+        
+        import json
+        config = self._get_current_state()
+        try:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(config, f, indent=2)
+            messagebox.showinfo("Success", "Configuration exported successfully!")
+        except Exception as e:
+            self._show_user_friendly_error("Export Error", str(e))
+    
+    def _import_config(self):
+        """Import configuration from JSON file."""
+        filepath = filedialog.askopenfilename(
+            filetypes=[("JSON files", "*.json"), ("All files", "*.*")],
+            title="Import Configuration"
+        )
+        if not filepath:
+            return
+        
+        import json
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                config = json.load(f)
+            self._save_state_for_undo()
+            self._restore_state(config)
+            messagebox.showinfo("Success", "Configuration imported successfully!")
+        except Exception as e:
+            self._show_user_friendly_error("Import Error", str(e))
+    
+    def _clear_all_characters(self):
+        """Clear all selected characters."""
+        if not self.characters_tab.get_selected_characters():
+            return
+        
+        if messagebox.askyesno("Clear All", "Remove all characters from the prompt?"):
+            self._save_state_for_undo()
+            self.characters_tab.set_selected_characters([])
+            self._update_status("All characters cleared")
+    
+    def _reset_all_outfits(self):
+        """Reset all characters to their base/first outfit."""
+        characters = self.characters_tab.get_selected_characters()
+        if not characters:
+            return
+        
+        if messagebox.askyesno("Reset Outfits", "Reset all characters to their default outfit?"):
+            self._save_state_for_undo()
+            for char in characters:
+                char_def = self.characters.get(char['name'], {})
+                outfits = char_def.get('outfits', {})
+                if 'Base' in outfits:
+                    char['outfit'] = 'Base'
+                elif outfits:
+                    char['outfit'] = sorted(list(outfits.keys()))[0]
+            self.characters_tab.set_selected_characters(characters)
+            self._update_status("All outfits reset to default")
+    
+    def _apply_same_pose_to_all(self):
+        """Apply same pose to all characters."""
+        characters = self.characters_tab.get_selected_characters()
+        if not characters:
+            return
+        
+        # Create dialog to select pose
+        dialog = tk.Toplevel(self.root)
+        dialog.title("Apply Pose to All")
+        dialog.geometry("400x200")
+        dialog.transient(self.root)
+        dialog.grab_set()
+        
+        ttk.Label(dialog, text="Select pose to apply to all characters:", font=("Segoe UI", 10, "bold")).pack(pady=10, padx=10)
+        
+        frame = ttk.Frame(dialog)
+        frame.pack(fill="both", expand=True, padx=10, pady=10)
+        
+        ttk.Label(frame, text="Category:").grid(row=0, column=0, sticky="w", pady=5)
+        cat_var = tk.StringVar()
+        cat_combo = ttk.Combobox(frame, textvariable=cat_var, state="readonly", width=20)
+        cat_combo['values'] = [""] + sorted(list(self.poses.keys()))
+        cat_combo.grid(row=0, column=1, sticky="ew", pady=5, padx=(5, 0))
+        
+        ttk.Label(frame, text="Preset:").grid(row=1, column=0, sticky="w", pady=5)
+        preset_var = tk.StringVar()
+        preset_combo = ttk.Combobox(frame, textvariable=preset_var, state="readonly", width=20)
+        preset_combo.grid(row=1, column=1, sticky="ew", pady=5, padx=(5, 0))
+        
+        def update_presets(e=None):
+            cat = cat_var.get()
+            if cat and cat in self.poses:
+                preset_combo['values'] = [""] + sorted(list(self.poses[cat].keys()))
+            else:
+                preset_combo['values'] = [""]
+            preset_var.set("")
+        
+        cat_combo.bind("<<ComboboxSelected>>", update_presets)
+        
+        frame.columnconfigure(1, weight=1)
+        
+        def apply_pose():
+            cat = cat_var.get()
+            preset = preset_var.get()
+            if cat or preset:
+                self._save_state_for_undo()
+                for char in characters:
+                    char['pose_category'] = cat
+                    char['pose_preset'] = preset
+                self.characters_tab.set_selected_characters(characters)
+                self._update_status(f"Applied pose to {len(characters)} character(s)")
+                dialog.destroy()
+        
+        btn_frame = ttk.Frame(dialog)
+        btn_frame.pack(fill="x", padx=10, pady=(0, 10))
+        ttk.Button(btn_frame, text="Apply", command=apply_pose).pack(side="left", padx=2)
+        ttk.Button(btn_frame, text="Cancel", command=dialog.destroy).pack(side="right", padx=2)
+        
+        dialog.wait_window()
+    
+    def _detect_os_theme(self):
+        """Detect OS theme preference.
+        
+        Returns:
+            Theme name based on OS settings
+        """
+        try:
+            if platform.system() == "Windows":
+                import winreg
+                try:
+                    registry = winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)
+                    key = winreg.OpenKey(registry, r"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
+                    value, _ = winreg.QueryValueEx(key, "AppsUseLightTheme")
+                    winreg.CloseKey(key)
+                    return "Light" if value == 1 else "Dark"
+                except:
+                    pass
+            elif platform.system() == "Darwin":  # macOS
+                import subprocess
+                result = subprocess.run(['defaults', 'read', '-g', 'AppleInterfaceStyle'], 
+                                      capture_output=True, text=True)
+                return "Light" if result.returncode != 0 else "Dark"
+        except:
+            pass
+        
+        return DEFAULT_THEME
+    
+    def _toggle_auto_theme(self):
+        """Toggle auto theme detection."""
+        auto = self.auto_theme_var.get()
+        self.prefs.set("auto_theme", auto)
+        if auto:
+            detected_theme = self._detect_os_theme()
+            self._change_theme(detected_theme)
+            self._update_status(f"Auto-detected theme: {detected_theme}")
+    
+    def _show_welcome_dialog(self):
+        """Show welcome dialog for first-time users."""
+        dialog = tk.Toplevel(self.root)
+        dialog.title("Welcome to Prompt Builder!")
+        dialog.geometry("600x500")
+        dialog.transient(self.root)
+        dialog.grab_set()
+        
+        # Welcome text
+        from tkinter import scrolledtext
+        text = scrolledtext.ScrolledText(dialog, wrap="word", font=("Segoe UI", 10))
+        text.pack(fill="both", expand=True, padx=10, pady=10)
+        text.insert("1.0", WELCOME_MESSAGE)
+        text.config(state="disabled")
+        
+        # Don't show again checkbox
+        show_again_var = tk.BooleanVar(value=False)
+        chk = ttk.Checkbutton(dialog, text="Don't show this again", variable=show_again_var)
+        chk.pack(pady=(0, 10))
+        
+        def on_close():
+            if show_again_var.get():
+                self.prefs.set("show_welcome", False)
+            dialog.destroy()
+        
+        ttk.Button(dialog, text="Get Started!", command=on_close).pack(pady=(0, 10))
+        
+        dialog.wait_window()
+    
+    def _show_shortcuts_dialog(self):
+        """Show keyboard shortcuts dialog."""
+        shortcuts = """
+Keyboard Shortcuts
+
+File Operations:
+  Ctrl+Shift+S    Save Preset
+  Ctrl+Shift+O    Load Preset
+
+Editing:
+  Ctrl+Z          Undo
+  Ctrl+Y          Redo
+
+View:
+  Ctrl++          Increase Font Size
+  Ctrl+-          Decrease Font Size
+  Ctrl+0          Reset Font Size
+  Alt+R           Randomize All
+
+Preview Panel:
+  Ctrl+C          Copy Prompt
+  Ctrl+S          Save Prompt to File
+
+Navigation:
+  Tab             Navigate between fields
+  Enter           Add character/Apply selection
+  Del             Remove selected character
+"""
+        messagebox.showinfo("Keyboard Shortcuts", shortcuts)
+    
+    def _show_about_dialog(self):
+        """Show about dialog."""
+        about_text = f"""Prompt Builder
+Version 2.0
+
+A desktop application for building complex AI image prompts.
+
+Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}
+Platform: {platform.system()} {platform.release()}
+
+© 2025 - Open Source
+"""
+        messagebox.showinfo("About Prompt Builder", about_text)
+    
+    def _show_user_friendly_error(self, title, error_msg):
+        """Show user-friendly error message.
+        
+        Args:
+            title: Error dialog title
+            error_msg: Error message
+        """
+        # Convert technical errors to user-friendly messages
+        friendly_msg = error_msg
+        
+        if "FileNotFoundError" in error_msg or "No such file" in error_msg:
+            friendly_msg = "File not found. Try clicking 'Reload Data' from the menu."
+        elif "PermissionError" in error_msg:
+            friendly_msg = "Permission denied. Check file permissions and try again."
+        elif "JSONDecodeError" in error_msg:
+            friendly_msg = "Invalid file format. The file may be corrupted."
+        elif "characters/" in error_msg:
+            friendly_msg = "Error loading character files. Check the characters folder."
+        
+        messagebox.showerror(title, friendly_msg)
+        self._update_status(f"Error: {title}")
+

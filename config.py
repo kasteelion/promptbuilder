@@ -133,3 +133,41 @@ THEMES = {
 }
 
 DEFAULT_THEME = "Dark"
+
+# Tooltip help text
+TOOLTIPS = {
+    "base_prompt": "The base art style that defines the overall look and technique of the image (e.g., 'Anime style', 'Photorealistic', etc.)",
+    "bulk_outfit": "Quickly apply the same outfit to multiple characters at once instead of changing them individually",
+    "character": "Add a character to your prompt. Each character can have different outfits and poses",
+    "scene": "Describe the environment, setting, location, lighting, and background details",
+    "notes": "Additional details, modifications, or special instructions for the AI",
+    "outfit": "Change what the character is wearing. Each character may have different outfit options",
+    "pose": "Select a preset pose or leave empty. Can be overridden by Custom Pose/Action below",
+    "action_note": "Describe specific actions, poses, or expressions for this character. Overrides pose preset",
+    "randomize": "Generate a random prompt with random characters, outfits, poses, scene, and notes",
+    "reload": "Reload all data from markdown files. Use this after editing character or preset files",
+    "copy": "Copy the entire prompt to clipboard for pasting into AI image generators",
+    "save": "Save the prompt to a text file",
+    "preview": "Live preview of your generated prompt. Updates automatically as you make changes"
+}
+
+# Welcome message for first-time users
+WELCOME_MESSAGE = """Welcome to Prompt Builder! 🎨
+
+Get started by:
+1. Select a Base Prompt (art style)
+2. Add Characters using the dropdown
+3. Customize their Outfits and Poses
+4. Add a Scene description
+5. Add any Notes for extra details
+
+Your prompt will appear here as you build it.
+
+💡 Tips:
+• Use Ctrl+Z/Y for undo/redo
+• Press Alt+R to randomize everything
+• Right-click characters for quick actions
+• Star ★ your favorite items for quick access
+
+Need help? Hover over any element for tooltips!
+"""

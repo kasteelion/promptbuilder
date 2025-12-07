@@ -43,11 +43,20 @@ class PreviewPanel:
         controls_frame = ttk.Frame(hdr, style="TFrame")
         controls_frame.grid(row=0, column=1, sticky="e", padx=(10, 0))
         
+        # Copy menu button
+        copy_menu_btn = ttk.Menubutton(controls_frame, text="Copy ▼")
+        copy_menu_btn.pack(side="left", padx=2)
+        
+        copy_menu = tk.Menu(copy_menu_btn, tearoff=0)
+        copy_menu_btn["menu"] = copy_menu
+        copy_menu.add_command(label="Copy Full Prompt (Ctrl+C)", command=self.copy_prompt)
+        copy_menu.add_separator()
+        copy_menu.add_command(label="Copy Characters Only", command=lambda: self._copy_section("characters"))
+        copy_menu.add_command(label="Copy Scene Only", command=lambda: self._copy_section("scene"))
+        copy_menu.add_command(label="Copy Notes Only", command=lambda: self._copy_section("notes"))
+        
         # Save button
         ttk.Button(controls_frame, text="Save (Ctrl+S)", command=self.save_prompt).pack(side="left", padx=2)
-        
-        # Copy button
-        ttk.Button(controls_frame, text="Copy (Ctrl+C)", command=self.copy_prompt).pack(side="left", padx=2)
         
         # Randomize button
         ttk.Button(controls_frame, text="Randomize", command=self.on_randomize).pack(side="left", padx=2)
@@ -111,7 +120,9 @@ class PreviewPanel:
         
         # Show welcome message if prompt is empty or just whitespace
         if not prompt or not prompt.strip():
-            self._show_welcome_message()
+            from config import WELCOME_MESSAGE
+            self.preview_text.insert("1.0", WELCOME_MESSAGE)
+            self.preview_text.tag_add("section_label", "1.0", "end")
             return
         
         if prompt.startswith("--- VALIDATION ERROR ---"):
@@ -283,6 +294,57 @@ class PreviewPanel:
         self.parent.clipboard_clear()
         self.parent.clipboard_append(prompt)
         messagebox.showinfo("Success", "Prompt copied to clipboard")
+    
+    def _copy_section(self, section_type):
+        """Copy specific section of prompt to clipboard.
+        
+        Args:
+            section_type: Type of section ('characters', 'scene', 'notes')
+        """
+        if not self.get_prompt_callback:
+            return
+        
+        prompt = self.get_prompt_callback()
+        lines = prompt.split('\n')
+        
+        section_text = ""
+        capture = False
+        
+        if section_type == "characters":
+            # Capture from first character to scene section
+            for line in lines:
+                if line.startswith("**CHARACTER") or line.startswith("**APPEARANCE"):
+                    capture = True
+                elif line.startswith("## Scene") or line.startswith("**SCENE"):
+                    break
+                if capture:
+                    section_text += line + "\n"
+        
+        elif section_type == "scene":
+            # Capture scene section
+            for line in lines:
+                if line.startswith("## Scene") or line.startswith("**SCENE"):
+                    capture = True
+                elif line.startswith("## Notes") or line.startswith("**NOTES") or line.startswith("---"):
+                    if capture:
+                        break
+                if capture:
+                    section_text += line + "\n"
+        
+        elif section_type == "notes":
+            # Capture notes section
+            for line in lines:
+                if line.startswith("## Notes") or line.startswith("**NOTES"):
+                    capture = True
+                if capture:
+                    section_text += line + "\n"
+        
+        if section_text.strip():
+            self.parent.clipboard_clear()
+            self.parent.clipboard_append(section_text.strip())
+            messagebox.showinfo("Success", f"{section_type.capitalize()} section copied to clipboard")
+        else:
+            messagebox.showinfo("Info", f"No {section_type} section found in prompt")
     
     def save_prompt(self):
         """Save current prompt to file."""

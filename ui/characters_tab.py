@@ -9,12 +9,14 @@ from .base_style_creator import BaseStyleCreatorDialog
 from .outfit_creator import SharedOutfitCreatorDialog, CharacterOutfitCreatorDialog
 from .pose_creator import PoseCreatorDialog
 from .scene_creator import SceneCreatorDialog
+from utils import create_tooltip
+from config import TOOLTIPS
 
 
 class CharactersTab:
     """Tab for managing characters, outfits, and poses."""
     
-    def __init__(self, parent, data_loader, on_change_callback, reload_callback=None):
+    def __init__(self, parent, data_loader, on_change_callback, reload_callback=None, undo_callback=None):
         """Initialize characters tab.
         
         Args:
@@ -22,11 +24,13 @@ class CharactersTab:
             data_loader: DataLoader instance
             on_change_callback: Function to call when data changes
             reload_callback: Function to call to reload all data
+            undo_callback: Function to call to save state for undo
         """
         self.parent = parent
         self.data_loader = data_loader
         self.on_change = on_change_callback
         self.reload_data = reload_callback
+        self.save_for_undo = undo_callback
         
         self.characters = {}
         self.base_prompts = {}
@@ -36,6 +40,9 @@ class CharactersTab:
         
         # Debounce tracking for action notes
         self._action_note_after_ids = {}
+        
+        # Drag and drop state
+        self._drag_data = {"index": None, "widget": None}
         
         self.tab = ttk.Frame(parent, style="TFrame")
         parent.add(self.tab, text="Prompt Builder")
@@ -81,20 +88,29 @@ class CharactersTab:
         bp = ttk.LabelFrame(self.tab, text="📋 Base Prompt (Style)", style="TLabelframe")
         bp.grid(row=0, column=0, sticky="ew", padx=4, pady=4)
         bp.columnconfigure(0, weight=1)
-        ttk.Label(bp, text="Choose a base art style", foreground="gray", font=("Consolas", 9)).grid(row=0, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 0))
+        help_label = ttk.Label(bp, text="Choose a base art style", foreground="gray", font=("Consolas", 9))
+        help_label.grid(row=0, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 0))
+        create_tooltip(help_label, TOOLTIPS.get("base_prompt", ""))
         
         self.base_prompt_var = tk.StringVar()
         self.base_combo = ttk.Combobox(bp, state="readonly", textvariable=self.base_prompt_var)
         self.base_combo.grid(row=1, column=0, sticky="ew", padx=(4, 2), pady=(0, 4))
         self.base_combo.bind("<<ComboboxSelected>>", lambda e: self.on_change())
+        create_tooltip(self.base_combo, TOOLTIPS.get("base_prompt", ""))
         
         ttk.Button(bp, text="✨ Create Style", command=self._create_new_style).grid(row=1, column=1, sticky="ew", padx=(2, 4), pady=(0, 4))
 
-        # Bulk outfit editor section
-        bulk = ttk.LabelFrame(self.tab, text="⚡ Bulk Outfit Editor (Speed Tool)", style="TLabelframe")
-        bulk.grid(row=1, column=0, sticky="ew", padx=4, pady=4)
+        # Bulk outfit editor section (Collapsible)
+        self.bulk_container = CollapsibleFrame(self.tab, text="⚡ Bulk Outfit Editor (Speed Tool)")
+        self.bulk_container.grid(row=1, column=0, sticky="ew", padx=4, pady=4)
+        # Start collapsed
+        self.bulk_container._toggle_cb()
+        
+        bulk = self.bulk_container.get_content_frame()
         bulk.columnconfigure(1, weight=1)
-        ttk.Label(bulk, text="Apply same outfit to multiple characters at once", foreground="gray", font=("Consolas", 9)).grid(row=0, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 4))
+        bulk_help = ttk.Label(bulk, text="Apply same outfit to multiple characters at once", foreground="gray", font=("Consolas", 9))
+        bulk_help.grid(row=0, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 4))
+        create_tooltip(bulk_help, TOOLTIPS.get("bulk_outfit", ""))
         
         ttk.Label(bulk, text="Shared Outfit:").grid(row=1, column=0, sticky="w", padx=(4, 2))
         self.bulk_outfit_var = tk.StringVar()
@@ -102,6 +118,7 @@ class CharactersTab:
         self.bulk_outfit_combo.grid(row=1, column=1, sticky="ew", padx=2)
         self.bulk_outfit_combo['values'] = []
         self.bulk_outfit_combo.bind("<Return>", lambda e: self._apply_bulk_outfit())
+        create_tooltip(self.bulk_outfit_combo, TOOLTIPS.get("bulk_outfit", ""))
         
         ttk.Label(bulk, text="Apply to:").grid(row=2, column=0, sticky="w", padx=(4, 2), pady=(4, 0))
         self.bulk_chars_var = tk.StringVar()
@@ -124,12 +141,15 @@ class CharactersTab:
         add = ttk.LabelFrame(self.tab, text="👥 Add Character", style="TLabelframe")
         add.grid(row=2, column=0, sticky="ew", padx=4, pady=4)
         add.columnconfigure(0, weight=1)
-        ttk.Label(add, text="Select a character and press Add or Enter", foreground="gray", font=("Consolas", 9)).grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 4))
+        char_help = ttk.Label(add, text="Select a character and press Add or Enter", foreground="gray", font=("Consolas", 9))
+        char_help.grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 4))
+        create_tooltip(char_help, TOOLTIPS.get("character", ""))
         
         self.char_var = tk.StringVar()
         self.char_combo = ttk.Combobox(add, state="readonly", textvariable=self.char_var)
         self.char_combo.grid(row=1, column=0, columnspan=2, sticky="ew", pady=(0, 4), padx=4)
         self.char_combo.bind("<Return>", lambda e: self._add_character())
+        create_tooltip(self.char_combo, TOOLTIPS.get("character", ""))
         
         button_frame = ttk.Frame(add)
         button_frame.grid(row=2, column=0, columnspan=2, sticky="ew", padx=4, pady=(0, 4))
@@ -237,8 +257,12 @@ class CharactersTab:
         if not name:
             return
         if any(c['name'] == name for c in self.selected_characters):
-            messagebox.showinfo("Info", f"{name} is already added")
+            messagebox.showinfo("Already Added", f"{name} is already in the prompt")
             return
+        
+        # Save state for undo
+        if self.save_for_undo:
+            self.save_for_undo()
         
         # Auto-assign first available outfit as default
         outfit = ""
@@ -296,6 +320,8 @@ class CharactersTab:
     
     def _remove_character(self, idx):
         """Remove character at index."""
+        if self.save_for_undo:
+            self.save_for_undo()
         self.selected_characters.pop(idx)
         self._refresh_list()
         self.on_change()
@@ -303,6 +329,8 @@ class CharactersTab:
     def _move_up(self, idx):
         """Move character up in list."""
         if idx > 0:
+            if self.save_for_undo:
+                self.save_for_undo()
             self.selected_characters[idx - 1], self.selected_characters[idx] = (
                 self.selected_characters[idx],
                 self.selected_characters[idx - 1],
@@ -313,6 +341,8 @@ class CharactersTab:
     def _move_down(self, idx):
         """Move character down in list."""
         if idx < len(self.selected_characters) - 1:
+            if self.save_for_undo:
+                self.save_for_undo()
             self.selected_characters[idx + 1], self.selected_characters[idx] = (
                 self.selected_characters[idx],
                 self.selected_characters[idx + 1],
@@ -393,6 +423,9 @@ class CharactersTab:
             frame = ttk.LabelFrame(self.chars_container, text=char_title, 
                                  padding=6, style="TLabelframe")
             frame.pack(fill="x", pady=(0, 8), padx=4)
+            
+            # Add context menu to frame
+            self._add_context_menu(frame, i)
             
             # Outfit selector - collapsible
             outfit_header = ttk.Frame(frame)
@@ -557,3 +590,73 @@ class CharactersTab:
             for widget in char_frame.winfo_children():
                 if isinstance(widget, tk.Text):
                     theme_manager.apply_text_widget_theme(widget, theme)
+    
+    def _add_context_menu(self, widget, char_index):
+        """Add context menu to character widget.
+        
+        Args:
+            widget: Widget to add menu to
+            char_index: Index of character
+        """
+        menu = tk.Menu(widget, tearoff=0)
+        
+        menu.add_command(label="Duplicate Character", 
+                        command=lambda: self._duplicate_character(char_index))
+        menu.add_separator()
+        
+        if char_index > 0:
+            menu.add_command(label="Move Up", 
+                            command=lambda: self._move_up(char_index))
+        if char_index < len(self.selected_characters) - 1:
+            menu.add_command(label="Move Down", 
+                            command=lambda: self._move_down(char_index))
+        
+        menu.add_separator()
+        menu.add_command(label="Copy Character Data", 
+                        command=lambda: self._copy_character_data(char_index))
+        menu.add_separator()
+        menu.add_command(label="Remove Character", 
+                        command=lambda: self._remove_character(char_index))
+        
+        def show_menu(event):
+            menu.post(event.x_root, event.y_root)
+        
+        widget.bind("<Button-3>", show_menu)  # Right-click
+    
+    def _duplicate_character(self, idx):
+        """Duplicate character at index.
+        
+        Args:
+            idx: Index of character to duplicate
+        """
+        if self.save_for_undo:
+            self.save_for_undo()
+        
+        char = self.selected_characters[idx].copy()
+        self.selected_characters.insert(idx + 1, char)
+        self._refresh_list()
+        self.on_change()
+    
+    def _copy_character_data(self, idx):
+        """Copy character data to clipboard.
+        
+        Args:
+            idx: Index of character
+        """
+        char = self.selected_characters[idx]
+        data = f"{char['name']}"
+        if char.get('outfit'):
+            data += f" - {char['outfit']}"
+        if char.get('pose_preset'):
+            data += f" - Pose: {char['pose_preset']}"
+        if char.get('action_note'):
+            data += f" - Action: {char['action_note']}"
+        
+        self.tab.clipboard_clear()
+        self.tab.clipboard_append(data)
+        
+        # Show brief feedback
+        root = self.tab.winfo_toplevel()
+        if hasattr(root, '_update_status'):
+            root._update_status("Character data copied to clipboard")
+

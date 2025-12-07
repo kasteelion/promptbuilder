@@ -23,13 +23,25 @@ sudo dnf install python3-tkinter
 
 ## Features
 
+### Core Features
 - **📝 In-App Content Creation** - Create characters, scenes, outfits, poses, and base art styles directly in the UI
 - **🎨 Smart UI Resizing** - Adaptive font scaling and proportional panel resizing for optimal viewing at any window size
-- **⌨️ User Font Controls** - Adjust font size with keyboard shortcuts (`Ctrl++`, `Ctrl+-`, `Ctrl+0`)
 - **📁 Organized Data Structure** - Individual character files with shared and character-specific outfits
 - **🔄 Live Preview** - Real-time prompt generation with syntax highlighting
 - **🎲 Randomization** - Randomize characters, poses, and prompts for creative inspiration
-- **🌙 Theme Support** - Light and dark themes for comfortable viewing
+- **🌙 Theme Support** - 8 themes including auto-detection for your OS dark/light mode
+
+### New in Version 2.0 ⭐
+- **⏪ Undo/Redo** - Full undo/redo support (`Ctrl+Z`/`Ctrl+Y`) for all operations
+- **💾 Presets** - Save and load entire prompt configurations (`Ctrl+Shift+S`/`Ctrl+Shift+O`)
+- **🖱️ Context Menus** - Right-click characters for quick actions (duplicate, move, remove)
+- **⚡ Batch Operations** - Clear all, reset outfits, apply poses to all characters at once
+- **📋 Smart Copy** - Copy full prompt or individual sections (characters/scene/notes)
+- **💡 Tooltips** - Helpful hints appear when hovering over UI elements
+- **⌨️ 20+ Keyboard Shortcuts** - Fast workflow with extensive keyboard support
+- **📤 Export/Import** - Share configurations as JSON files
+- **🎓 Welcome Guide** - First-run tutorial to get you started quickly
+- **💬 Better Errors** - User-friendly error messages with actionable suggestions
 
 ## How it works
 
@@ -69,9 +81,27 @@ The UI allows you to select these components, and the application will assemble 
 
 ### Keyboard Shortcuts
 
+**File Operations:**
+- `Ctrl+Shift+S` - Save current configuration as preset
+- `Ctrl+Shift+O` - Load a saved preset
+
+**Editing:**
+- `Ctrl+Z` - Undo last action
+- `Ctrl+Y` - Redo last undone action
+
+**View:**
 - `Ctrl++` or `Ctrl+=` - Increase font size
 - `Ctrl+-` - Decrease font size
 - `Ctrl+0` - Reset font size to automatic scaling
+- `Alt+R` - Randomize all selections
+
+**Preview Panel:**
+- `Ctrl+C` - Copy prompt to clipboard
+- `Ctrl+S` - Save prompt to file
+
+**Navigation:**
+- `Tab` - Navigate between fields
+- `Enter` - Add selected character to prompt
 
 ### Creating New Content
 
@@ -283,4 +313,28 @@ When contributing:
 - Use only standard library modules
 - Include UTF-8 encoding declarations in new files
 - Follow existing code style and patterns
+
+## Changelog
+
+### Version 2.0 (December 7, 2025)
+**Major UX Overhaul with 20 new features!**
+
+- ✅ Undo/Redo system (Ctrl+Z/Y)
+- ✅ Presets & Templates (Save/Load configurations)
+- ✅ Smart preferences (Auto-save settings)
+- ✅ Auto theme detection (Follows OS dark/light mode)
+- ✅ Enhanced copy options (Copy sections separately)
+- ✅ Right-click context menus
+- ✅ Batch operations (Clear all, reset outfits, apply poses)
+- ✅ Tooltips throughout UI
+- ✅ 20+ keyboard shortcuts
+- ✅ Export/Import configurations (JSON)
+- ✅ Live status updates
+- ✅ User-friendly error messages
+- ✅ Welcome screen for new users
+- ✅ Collapsible sections
+- ✅ Performance optimizations
+
+### Version 1.0
+- Initial release
 

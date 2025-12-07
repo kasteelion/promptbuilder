@@ -2,6 +2,7 @@
 
 import tkinter as tk
 from tkinter import ttk, messagebox
+from utils import get_template_names, get_template, get_template_description
 from pathlib import Path
 
 
@@ -39,6 +40,33 @@ class CharacterCreatorDialog:
         """Build the dialog UI."""
         main_frame = ttk.Frame(self.dialog, padding=10)
         main_frame.pack(fill="both", expand=True)
+        
+        # Template selection
+        template_frame = ttk.Frame(main_frame)
+        template_frame.pack(fill="x", pady=(0, 10))
+        
+        ttk.Label(template_frame, text="Template:", font=("Segoe UI", 10, "bold")).pack(side="left", padx=(0, 5))
+        
+        self.template_var = tk.StringVar(value="Blank")
+        template_combo = ttk.Combobox(
+            template_frame, 
+            textvariable=self.template_var,
+            values=get_template_names(),
+            state="readonly",
+            width=25,
+            font=("Segoe UI", 9)
+        )
+        template_combo.pack(side="left", padx=(0, 10))
+        template_combo.bind("<<ComboboxSelected>>", self._on_template_selected)
+        
+        # Template description label
+        self.template_desc_label = ttk.Label(
+            template_frame,
+            text=get_template_description("Blank"),
+            foreground="gray",
+            font=("Segoe UI", 8, "italic")
+        )
+        self.template_desc_label.pack(side="left")
         
         # Info/help section
         help_frame = ttk.Frame(main_frame, relief="groove", borderwidth=1)
@@ -167,6 +195,58 @@ class CharacterCreatorDialog:
         # Bind Enter key to create
         self.dialog.bind("<Return>", lambda e: self._create_character())
         self.dialog.bind("<Escape>", lambda e: self._cancel())
+    
+    def _on_template_selected(self, event=None):
+        """Handle template selection from dropdown."""
+        template_name = self.template_var.get()
+        template_data = get_template(template_name)
+        
+        if not template_data:
+            return
+        
+        # Update description label
+        self.template_desc_label.config(text=get_template_description(template_name))
+        
+        # Get template content
+        appearance = template_data.get("appearance", "")
+        outfit = template_data.get("outfit", "")
+        
+        # Clear existing content and placeholders
+        self.appearance_text.delete("1.0", "end")
+        self.outfit_text.delete("1.0", "end")
+        
+        # If blank template, restore placeholders
+        if template_name == "Blank":
+            appearance_placeholder = """Light/medium/dark skin tone with natural features and [hair description].
+- Young/mature [demographics], [age range]
+- [Eye color] eyes with [expression style]
+- [Body type] build with [posture description]
+- Makeup: [preference]
+- Fabrics: [preferences]
+- Accessories: [signature items]"""
+            self.appearance_text.insert("1.0", appearance_placeholder)
+            self.appearance_text.config(foreground="gray")
+            
+            outfit_placeholder = """- **Top:** [Description]
+- **Bottom:** [Description]
+- **Footwear:** [Description or "None specified"]
+- **Accessories:** [Description]
+- **Hair/Makeup:** [Description]"""
+            self.outfit_text.insert("1.0", outfit_placeholder)
+            self.outfit_text.config(foreground="gray")
+        else:
+            # Insert template content with normal text color
+            if appearance:
+                self.appearance_text.insert("1.0", appearance)
+                self.appearance_text.config(foreground="black")
+            
+            if outfit:
+                self.outfit_text.insert("1.0", outfit)
+                self.outfit_text.config(foreground="black")
+        
+        # Focus on name field so user can start typing character name
+        self.name_var.set("")
+        self.dialog.after(50, lambda: self.dialog.focus_set())
     
     def _cancel(self):
         """Cancel and close dialog."""
