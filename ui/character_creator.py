@@ -2,7 +2,7 @@
 
 import tkinter as tk
 from tkinter import ttk, messagebox
-from utils import get_template_names, get_template, get_template_description
+from utils import get_character_template_names, get_character_template, get_character_template_description
 from pathlib import Path
 
 
@@ -51,7 +51,7 @@ class CharacterCreatorDialog:
         template_combo = ttk.Combobox(
             template_frame, 
             textvariable=self.template_var,
-            values=get_template_names(),
+            values=get_character_template_names(),
             state="readonly",
             width=25,
             font=("Segoe UI", 9)
@@ -62,7 +62,7 @@ class CharacterCreatorDialog:
         # Template description label
         self.template_desc_label = ttk.Label(
             template_frame,
-            text=get_template_description("Blank"),
+            text=get_character_template_description("Blank"),
             foreground="gray",
             font=("Segoe UI", 8, "italic")
         )
@@ -199,13 +199,13 @@ class CharacterCreatorDialog:
     def _on_template_selected(self, event=None):
         """Handle template selection from dropdown."""
         template_name = self.template_var.get()
-        template_data = get_template(template_name)
+        template_data = get_character_template(template_name)
         
         if not template_data:
             return
         
         # Update description label
-        self.template_desc_label.config(text=get_template_description(template_name))
+        self.template_desc_label.config(text=get_character_template_description(template_name))
         
         # Get template content
         appearance = template_data.get("appearance", "")

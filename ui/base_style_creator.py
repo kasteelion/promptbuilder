@@ -2,6 +2,7 @@
 
 import tkinter as tk
 from tkinter import ttk, messagebox
+from utils import get_style_template_names, get_style_template, get_style_template_description
 
 
 class BaseStyleCreatorDialog:
@@ -38,6 +39,33 @@ class BaseStyleCreatorDialog:
         """Build the dialog UI."""
         main_frame = ttk.Frame(self.dialog, padding=10)
         main_frame.pack(fill="both", expand=True)
+        
+        # Template selection
+        template_frame = ttk.Frame(main_frame)
+        template_frame.pack(fill="x", pady=(0, 10))
+        
+        ttk.Label(template_frame, text="Template:", font=("Segoe UI", 10, "bold")).pack(side="left", padx=(0, 5))
+        
+        self.template_var = tk.StringVar(value="Blank")
+        template_combo = ttk.Combobox(
+            template_frame, 
+            textvariable=self.template_var,
+            values=get_style_template_names(),
+            state="readonly",
+            width=20,
+            font=("Segoe UI", 9)
+        )
+        template_combo.pack(side="left", padx=(0, 10))
+        template_combo.bind("<<ComboboxSelected>>", self._on_template_selected)
+        
+        # Template description label
+        self.template_desc_label = ttk.Label(
+            template_frame,
+            text=get_style_template_description("Blank"),
+            foreground="gray",
+            font=("Segoe UI", 8, "italic")
+        )
+        self.template_desc_label.pack(side="left")
         
         # Info/help section
         help_frame = ttk.Frame(main_frame, relief="groove", borderwidth=1)
@@ -154,8 +182,69 @@ Holographic displays, circuit patterns, rain-slicked atmosphere."""
         ttk.Button(button_frame, text="Cancel", command=self._cancel).pack(side="right", padx=(5, 0))
         ttk.Button(button_frame, text="Create Style", command=self._create_style).pack(side="right")
         
-        # Bind Escape key
+        # Bind Escape to cancel
         self.dialog.bind("<Escape>", lambda e: self._cancel())
+    
+    def _on_template_selected(self, event=None):
+        """Handle template selection from dropdown."""
+        template_name = self.template_var.get()
+        template_data = get_style_template(template_name)
+        
+        if not template_data:
+            return
+        
+        # Update description label
+        self.template_desc_label.config(text=get_style_template_description(template_name))
+        
+        # Get template content
+        content = template_data.get("content", "")
+        
+        # Clear existing content
+        self.description_text.delete("1.0", "end")
+        
+        # If blank template, restore placeholder
+        if template_name == "Blank":
+            placeholder = """Rendering
+[Describe the overall visual rendering style, lighting approach, effects, textures, and color treatment]
+
+Character Accuracy
+[Define how character features are rendered, expression style, and accuracy level]
+
+Body Types
+[Describe how body shapes and proportions are rendered in this style]
+
+Hair & Clothing
+Hair: [Hair rendering approach and typical styles]
+Clothing: [Fabric types, textures, and how clothing is rendered]
+
+Details
+[Additional visual elements, atmosphere, accessories approach, and environmental integration]
+
+---
+
+Example:
+Rendering
+High-contrast, dark rendering with strong neon lighting. Heavy volumetric fog effects. Chromatic aberration for retro-futuristic feel. High saturation in lights only.
+
+Character Accuracy
+Stylized features with sharp, angular aesthetic. Stoic expressions. Dynamic asymmetrical posture.
+
+Body Types
+Lean athletic builds. Hard-edged silhouettes with strong rim lighting.
+
+Hair & Clothing
+Hair: High-gloss, unnatural colors, wet-look finish
+Clothing: Techwear, synthetic fabrics, integrated LED components
+
+Details
+Holographic displays, circuit patterns, rain-slicked atmosphere."""
+            self.description_text.insert("1.0", placeholder)
+            self.description_text.config(foreground="gray")
+        else:
+            # Insert template content with normal text color
+            if content:
+                self.description_text.insert("1.0", content)
+                self.description_text.config(foreground="black")
     
     def _cancel(self):
         """Cancel and close dialog."""

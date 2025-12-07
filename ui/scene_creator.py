@@ -2,6 +2,7 @@
 
 import tkinter as tk
 from tkinter import ttk, messagebox
+from utils import get_scene_template_names, get_scene_template, get_scene_template_description
 
 
 class SceneCreatorDialog:
@@ -38,6 +39,33 @@ class SceneCreatorDialog:
         """Build the dialog UI."""
         main_frame = ttk.Frame(self.dialog, padding=10)
         main_frame.pack(fill="both", expand=True)
+        
+        # Template selection
+        template_frame = ttk.Frame(main_frame)
+        template_frame.pack(fill="x", pady=(0, 10))
+        
+        ttk.Label(template_frame, text="Template:", font=("Segoe UI", 10, "bold")).pack(side="left", padx=(0, 5))
+        
+        self.template_var = tk.StringVar(value="Blank")
+        template_combo = ttk.Combobox(
+            template_frame, 
+            textvariable=self.template_var,
+            values=get_scene_template_names(),
+            state="readonly",
+            width=20,
+            font=("Segoe UI", 9)
+        )
+        template_combo.pack(side="left", padx=(0, 10))
+        template_combo.bind("<<ComboboxSelected>>", self._on_template_selected)
+        
+        # Template description label
+        self.template_desc_label = ttk.Label(
+            template_frame,
+            text=get_scene_template_description("Blank"),
+            foreground="gray",
+            font=("Segoe UI", 8, "italic")
+        )
+        self.template_desc_label.pack(side="left")
         
         # Info/help section
         help_frame = ttk.Frame(main_frame, relief="groove", borderwidth=1)
@@ -137,6 +165,36 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
         
         # Bind Enter key to create
         self.dialog.bind("<Escape>", lambda e: self._cancel())
+    
+    def _on_template_selected(self, event=None):
+        """Handle template selection from dropdown."""
+        template_name = self.template_var.get()
+        template_data = get_scene_template(template_name)
+        
+        if not template_data:
+            return
+        
+        # Update description label
+        self.template_desc_label.config(text=get_scene_template_description(template_name))
+        
+        # Get template content
+        content = template_data.get("content", "")
+        
+        # Clear existing content
+        self.description_text.delete("1.0", "end")
+        
+        # If blank template, restore placeholder
+        if template_name == "Blank":
+            placeholder = """[Location] setting, [time of day] lighting, [atmosphere description], [key elements], [environmental details].
+
+Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter."""
+            self.description_text.insert("1.0", placeholder)
+            self.description_text.config(foreground="gray")
+        else:
+            # Insert template content with normal text color
+            if content:
+                self.description_text.insert("1.0", content)
+                self.description_text.config(foreground="black")
     
     def _load_categories(self):
         """Load existing scene categories from scenes.md."""

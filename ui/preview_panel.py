@@ -44,25 +44,25 @@ class PreviewPanel:
         controls_frame.grid(row=0, column=1, sticky="e", padx=(10, 0))
         
         # Copy menu button
-        copy_menu_btn = ttk.Menubutton(controls_frame, text="Copy ▼")
+        copy_menu_btn = ttk.Menubutton(controls_frame, text="Copy", style="TButton")
         copy_menu_btn.pack(side="left", padx=2)
         
         copy_menu = tk.Menu(copy_menu_btn, tearoff=0)
         copy_menu_btn["menu"] = copy_menu
-        copy_menu.add_command(label="Copy Full Prompt (Ctrl+C)", command=self.copy_prompt)
+        copy_menu.add_command(label="Full Prompt", command=self.copy_prompt, accelerator="Ctrl+C")
         copy_menu.add_separator()
-        copy_menu.add_command(label="Copy Characters Only", command=lambda: self._copy_section("characters"))
-        copy_menu.add_command(label="Copy Scene Only", command=lambda: self._copy_section("scene"))
-        copy_menu.add_command(label="Copy Notes Only", command=lambda: self._copy_section("notes"))
+        copy_menu.add_command(label="Characters Section", command=lambda: self._copy_section("characters"))
+        copy_menu.add_command(label="Scene Section", command=lambda: self._copy_section("scene"))
+        copy_menu.add_command(label="Notes Section", command=lambda: self._copy_section("notes"))
         
         # Save button
-        ttk.Button(controls_frame, text="Save (Ctrl+S)", command=self.save_prompt).pack(side="left", padx=2)
+        ttk.Button(controls_frame, text="Save", command=self.save_prompt).pack(side="left", padx=2)
         
         # Randomize button
-        ttk.Button(controls_frame, text="Randomize", command=self.on_randomize).pack(side="left", padx=2)
+        ttk.Button(controls_frame, text="🎲 Randomize", command=self.on_randomize).pack(side="left", padx=2)
         
         # Reload button
-        ttk.Button(controls_frame, text="Reload Data", command=self.on_reload).pack(side="left", padx=2)
+        ttk.Button(controls_frame, text="🔄 Reload", command=self.on_reload).pack(side="left", padx=2)
 
         # Preview text widget
         self.preview_text = scrolledtext.ScrolledText(self.parent, wrap="word")
