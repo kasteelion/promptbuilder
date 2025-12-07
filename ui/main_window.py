@@ -2,7 +2,8 @@
 
 import tkinter as tk
 from tkinter import ttk, messagebox
-from logic import DataLoader, PromptValidator, PromptGenerator, PromptRandomizer
+from logic import DataLoader, PromptValidator, PromptRandomizer
+from core.builder import PromptBuilder
 from themes import ThemeManager
 from config import DEFAULT_THEME, DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE, PREVIEW_UPDATE_THROTTLE_MS
 from .characters_tab import CharactersTab
@@ -184,15 +185,16 @@ class PromptBuilderApp:
         Returns:
             str: Generated prompt text
         """
-        generator = PromptGenerator(self.characters, self.base_prompts, self.poses)
+        builder = PromptBuilder(self.characters, self.base_prompts, self.poses)
         
-        return generator.generate(
-            self.characters_tab.get_selected_characters(),
-            self.characters_tab.get_base_prompt_name(),
-            self.scene_tab.get_scene_text(),
-            self.notes_tab.get_notes_text(),
-            outfit_mode=self.preview_panel.get_outfit_mode()
-        )
+        config = {
+            "selected_characters": self.characters_tab.get_selected_characters(),
+            "base_prompt": self.characters_tab.get_base_prompt_name(),
+            "scene": self.scene_tab.get_scene_text(),
+            "notes": self.notes_tab.get_notes_text()
+        }
+        
+        return builder.generate(config)
     
     def _generate_prompt_or_error(self):
         """Generate prompt or return validation error.
