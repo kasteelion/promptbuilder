@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Characters and poses tab UI."""
 
 import tkinter as tk
@@ -32,6 +33,9 @@ class CharactersTab:
         self.poses = {}
         self.scenes = {}
         self.selected_characters = []
+        
+        # Debounce tracking for action notes
+        self._action_note_after_ids = {}
         
         self.tab = ttk.Frame(parent, style="TFrame")
         parent.add(self.tab, text="Prompt Builder")
@@ -324,10 +328,23 @@ class CharactersTab:
         self.on_change()
     
     def _update_action_note(self, idx, text_widget):
-        """Update character action note."""
-        text = text_widget.get("1.0", "end").strip()
-        self.selected_characters[idx]["action_note"] = text
-        self.on_change()
+        """Update character action note with debouncing."""
+        # Cancel any pending update for this index
+        if idx in self._action_note_after_ids:
+            try:
+                self.tab.after_cancel(self._action_note_after_ids[idx])
+            except:
+                pass
+        
+        # Schedule new update after 300ms delay
+        def _do_update():
+            text = text_widget.get("1.0", "end").strip()
+            self.selected_characters[idx]["action_note"] = text
+            self.on_change()
+            if idx in self._action_note_after_ids:
+                del self._action_note_after_ids[idx]
+        
+        self._action_note_after_ids[idx] = self.tab.after(300, _do_update)
     
     def _update_pose_category(self, idx, category_var, preset_combo):
         """Update character pose category."""

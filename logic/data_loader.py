@@ -42,10 +42,15 @@ A simple and comfortable casual outfit.
         # Try loading from characters folder first
         if chars_dir.exists() and chars_dir.is_dir():
             for char_file in sorted(chars_dir.glob("*.md")):
-                text = char_file.read_text(encoding="utf-8")
-                # Parse single character file
-                file_chars = MarkdownParser.parse_characters(text)
-                chars.update(file_chars)
+                try:
+                    text = char_file.read_text(encoding="utf-8")
+                    # Parse single character file
+                    file_chars = MarkdownParser.parse_characters(text)
+                    if not file_chars:
+                        print(f"Warning: No characters found in {char_file.name}")
+                    chars.update(file_chars)
+                except Exception as e:
+                    print(f"Error loading {char_file.name}: {e}")
 
         # If no character files were found, attempt to create a sample character
         if not chars:
@@ -68,10 +73,14 @@ A simple and comfortable casual outfit.
 
                 # Read all character files from the characters folder (including the sample)
                 for char_file in sorted(chars_dir.glob("*.md")):
-                    text = char_file.read_text(encoding="utf-8")
-                    file_chars = MarkdownParser.parse_characters(text)
-                    chars.update(file_chars)
-            except Exception:
+                    try:
+                        text = char_file.read_text(encoding="utf-8")
+                        file_chars = MarkdownParser.parse_characters(text)
+                        chars.update(file_chars)
+                    except Exception as e:
+                        print(f"Error parsing {char_file.name}: {e}")
+            except Exception as e:
+                print(f"Error creating sample character: {e}")
                 # Fallback to legacy characters.md location for backwards compatibility
                 f = self.base_dir / "characters.md"
                 if not f.exists():

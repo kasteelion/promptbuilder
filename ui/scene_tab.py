@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Scene presets and description tab UI."""
 
 import tkinter as tk

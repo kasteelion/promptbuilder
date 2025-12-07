@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Main application window."""
 
 import tkinter as tk
@@ -65,6 +66,10 @@ class PromptBuilderApp:
         self._last_resize_width = 0
         self._user_font_adjustment = 0  # User can adjust font size +/-
         
+        # Debounce tracking for text inputs
+        self._scene_text_after_id = None
+        self._notes_text_after_id = None
+        
         # Build UI
         self._build_ui()
         
@@ -97,6 +102,10 @@ class PromptBuilderApp:
         view_menu.add_command(label="Reset Font Size", command=self._reset_font, accelerator="Ctrl+0")
         view_menu.add_separator()
         
+        # Add randomize to view menu
+        view_menu.add_command(label="Randomize All", command=self.randomize_all, accelerator="Alt+R")
+        view_menu.add_separator()
+        
         # Theme submenu
         self.theme_var = tk.StringVar(value=DEFAULT_THEME)
         theme_menu = tk.Menu(view_menu, tearoff=0)
@@ -114,6 +123,10 @@ class PromptBuilderApp:
         self.root.bind('<Control-equal>', lambda e: self._increase_font())  # + without shift
         self.root.bind('<Control-minus>', lambda e: self._decrease_font())
         self.root.bind('<Control-0>', lambda e: self._reset_font())
+        
+        # Bind Alt+R for randomize
+        self.root.bind('<Alt-r>', lambda e: self.randomize_all())
+        self.root.bind('<Alt-R>', lambda e: self.randomize_all())
         
         # Use PanedWindow directly in root to allow resizable left (notebook) and right (preview) panes
         # Drag the sash between them to resize
@@ -168,7 +181,13 @@ class PromptBuilderApp:
         
         self.scene_text = tk.Text(scene_frame, wrap="word", height=2)
         self.scene_text.grid(row=1, column=0, columnspan=5, sticky="ew", padx=4, pady=(0, 4))
-        self.scene_text.bind("<KeyRelease>", lambda e: self.schedule_preview_update())
+        # Debounce scene text changes
+        self._scene_text_after_id = None
+        def _on_scene_change(e):
+            if self._scene_text_after_id:
+                self.root.after_cancel(self._scene_text_after_id)
+            self._scene_text_after_id = self.root.after(300, self.schedule_preview_update)
+        self.scene_text.bind("<KeyRelease>", _on_scene_change)
         
         # Notes section (compact)
         notes_frame = ttk.LabelFrame(right_frame, text="📝 Notes", style="TLabelframe")
@@ -177,7 +196,13 @@ class PromptBuilderApp:
         
         self.notes_text = tk.Text(notes_frame, wrap="word", height=2)
         self.notes_text.pack(fill="x", padx=4, pady=4)
-        self.notes_text.bind("<KeyRelease>", lambda e: self.schedule_preview_update())
+        # Debounce notes text changes
+        self._notes_text_after_id = None
+        def _on_notes_change(e):
+            if self._notes_text_after_id:
+                self.root.after_cancel(self._notes_text_after_id)
+            self._notes_text_after_id = self.root.after(300, self.schedule_preview_update)
+        self.notes_text.bind("<KeyRelease>", _on_notes_change)
         
         # Preview panel container
         preview_container = ttk.Frame(right_frame, style="TFrame")
@@ -196,6 +221,11 @@ class PromptBuilderApp:
             self._validate_prompt,
             self.randomize_all
         )
+        
+        # Status bar at bottom of right panel
+        self.status_bar = ttk.Label(right_frame, text="Ready", relief="sunken", anchor="w", 
+                                    style="TLabel", font=("Consolas", 8))
+        self.status_bar.grid(row=3, column=0, sticky="ew", padx=0, pady=0)
         
         # Initialize scene presets
         self._update_scene_presets()
@@ -272,11 +302,23 @@ class PromptBuilderApp:
         if self._after_id:
             self.root.after_cancel(self._after_id)
         self._after_id = self.root.after(self._throttle_ms, self.update_preview)
+        self._update_status("Updating preview...")
     
     def update_preview(self):
         """Update the preview panel with current prompt."""
         prompt = self._generate_prompt_or_error()
         self.preview_panel.update_preview(prompt)
+        num_chars = len(self.characters_tab.get_selected_characters())
+        self._update_status(f"Ready • {num_chars} character(s) selected")
+    
+    def _update_status(self, message):
+        """Update status bar message.
+        
+        Args:
+            message: Status message to display
+        """
+        if hasattr(self, 'status_bar'):
+            self.status_bar.config(text=message)
     
     def _validate_prompt(self):
         """Validate current prompt data.
@@ -313,28 +355,26 @@ class PromptBuilderApp:
         error = self._validate_prompt()
         if error:
             # Friendly welcome message instead of harsh error
-            return """✨ Welcome to Prompt Builder! ✨
-
-To get started:
-1. Select a character from the dropdown below
-2. Click "+ Add to Group" to add them to your scene
-3. Choose their outfit and pose
-4. Add more characters if you'd like
-5. Optionally select a scene preset or write your own
-6. Watch your prompt appear here!
-
-Need help? 
-• Use "✨ Create New Character" to design your own character
-• Try the "🎲 Randomize" button for inspiration
-• Check the Edit Data tab to customize everything
-
----
-
-Ready when you are! Add your first character to begin."""
+            welcome = "*** Welcome to Prompt Builder! ***\\n\\n"
+            welcome += "To get started:\\n"
+            welcome += "1. Select a character from the dropdown below\\n"
+            welcome += '2. Click "+ Add to Group" to add them to your scene\\n'
+            welcome += "3. Choose their outfit and pose\\n"
+            welcome += "4. Add more characters if you'd like\\n"
+            welcome += "5. Optionally select a scene preset or write your own\\n"
+            welcome += "6. Watch your prompt appear here!\\n\\n"
+            welcome += "Need help?\\n"
+            welcome += '- Use "Create New Character" to design your own character\\n'
+            welcome += '- Try the "Randomize" button for inspiration\\n'
+            welcome += "- Check the Edit Data tab to customize everything\\n\\n"
+            welcome += "---\\n\\n"
+            welcome += "Ready when you are! Add your first character to begin."
+            return welcome
         return self._generate_prompt()
     
     def reload_data(self):
         """Reload all data from markdown files."""
+        self._update_status("Reloading data...")
         try:
             new_characters = self.data_loader.load_characters()
             self.base_prompts = self.data_loader.load_base_prompts()
@@ -342,6 +382,7 @@ Ready when you are! Add your first character to begin."""
             self.poses = self.data_loader.load_presets("poses.md")
         except Exception as e:
             messagebox.showerror("Reload Error", str(e))
+            self._update_status("Error loading data")
             return
 
         # Update character selection validity
@@ -370,10 +411,11 @@ Ready when you are! Add your first character to begin."""
 
         # Reload data in tabs
         self.characters_tab.load_data(self.characters, self.base_prompts, self.poses)
-        self.scene_tab.load_data(self.scenes)
+        self._update_scene_presets()  # Reload scene presets in UI
         self.edit_tab._refresh_file_list()  # Refresh file list to show new character files
         
         self.schedule_preview_update()
+        self._update_status("Data reloaded successfully")
         messagebox.showinfo("Success", "Data reloaded")
 
     def randomize_all(self):
@@ -386,8 +428,13 @@ Ready when you are! Add your first character to begin."""
         
         self.characters_tab.set_selected_characters(config["selected_characters"])
         self.characters_tab.set_base_prompt(config["base_prompt"])
-        self.scene_tab.set_scene_text(config["scene"])
-        self.notes_tab.set_notes_text(config["notes"])
+        
+        # Set scene and notes directly
+        self.scene_text.delete("1.0", "end")
+        self.scene_text.insert("1.0", config.get("scene", ""))
+        
+        self.notes_text.delete("1.0", "end")
+        self.notes_text.insert("1.0", config.get("notes", ""))
         
         self.schedule_preview_update()
     

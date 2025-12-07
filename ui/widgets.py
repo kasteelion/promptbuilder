@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Custom UI widgets for the application."""
 
 from tkinter import ttk
@@ -80,13 +81,24 @@ class FlowFrame(ttk.Frame):
         self._padx = padding_x
         self._pady = padding_y
         self._children = []
-        # Reflow on resize
+        self._reflow_after_id = None
+        self._last_width = 0
         # Reflow on resize
         self.bind("<Configure>", self._on_configure)
 
     def _on_configure(self, event):
-        # Delay actual reflow to let geometry settle
-        self.after_idle(self._reflow)
+        # Throttle reflows - only update if width changed significantly
+        if hasattr(event, 'width'):
+            if abs(event.width - self._last_width) < 10:  # Skip small changes
+                return
+            self._last_width = event.width
+        
+        # Cancel pending reflow
+        if self._reflow_after_id:
+            self.after_cancel(self._reflow_after_id)
+        
+        # Schedule new reflow with delay
+        self._reflow_after_id = self.after_idle(self._reflow)
 
     def _reflow(self):
         # Place children into grid cells, wrapping when necessary

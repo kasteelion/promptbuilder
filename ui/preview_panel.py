@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Preview panel for displaying generated prompts."""
 
 import re
@@ -57,6 +58,10 @@ class PreviewPanel:
         # Preview text widget
         self.preview_text = scrolledtext.ScrolledText(self.parent, wrap="word")
         self.preview_text.grid(row=1, column=0, sticky="nsew")
+        
+        # Bind Ctrl+C for copy and Ctrl+S for save
+        self.preview_text.bind('<Control-c>', lambda e: self.copy_prompt())
+        self.preview_text.bind('<Control-s>', lambda e: self.save_prompt())
         
         # Define tags with styling
         self.preview_text.tag_config("h1", font=("Consolas", 14, "bold"), foreground="#0078d4")
