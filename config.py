@@ -32,29 +32,6 @@ DEFAULT_SASH_POSITION = 400  # Initial position of the divider
 # These are the main data files that can be edited through the UI.
 MAIN_EDITABLE_FILES = ["base_prompts.md", "scenes.md", "poses.md", "outfits.md"]
 
-# For backwards compatibility, include characters.md if it exists
-def get_editable_files():
-    """Get list of editable files, including character files from characters/ folder if they exist."""
-    from pathlib import Path
-    import os
-    
-    files = list(MAIN_EDITABLE_FILES)
-    
-    # Check for character files in characters/ folder
-    char_dir = Path(__file__).parent / "characters"
-    if char_dir.exists() and char_dir.is_dir():
-        char_files = sorted([f.name for f in char_dir.glob("*.md")])
-        files.extend(char_files)
-    
-    # Check for legacy characters.md in root
-    root_char = Path(__file__).parent / "characters.md"
-    if root_char.exists() and "characters.md" not in files:
-        files.append("characters.md")
-    
-    return files
-
-EDITABLE_FILES = get_editable_files()
-
 # Theme definitions
 THEMES = {
     "Light": {

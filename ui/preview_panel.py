@@ -109,6 +109,11 @@ class PreviewPanel:
         """Parse and format the prompt with Markdown support."""
         self.preview_text.delete("1.0", "end")
         
+        # Show welcome message if prompt is empty or just whitespace
+        if not prompt or not prompt.strip():
+            self._show_welcome_message()
+            return
+        
         if prompt.startswith("--- VALIDATION ERROR ---"):
             self.preview_text.insert("1.0", prompt)
             self.preview_text.tag_add("error", "1.0", "end")
@@ -222,6 +227,47 @@ class PreviewPanel:
                     # No closing marker
                     self.preview_text.insert("end", "*")
                     pos = marker_pos + 1
+    
+    def _show_welcome_message(self):
+        """Display welcome message for new users when preview is empty."""
+        welcome_text = (
+            "* Welcome to Prompt Builder! *\n\n"
+            "To get started:\n"
+            "1. Select a character from the dropdown below\n"
+            "2. Click '+ Add to Group' to add them to your scene\n"
+            "3. Choose their outfit and pose\n"
+            "4. Add more characters if you'd like\n"
+            "5. Optionally select a scene preset or write your own\n"
+            "6. Watch your prompt appear here!\n\n"
+            "Need help?\n"
+            "- Use 'Create New Character' to design your own character\n"
+            "- Try the 'Randomize' button for inspiration\n"
+            "- Check the Edit Data tab to customize everything\n\n"
+            "---\n\n"
+            "Ready when you are! Add your first character to begin."
+        )
+        
+        self.preview_text.delete(1.0, "end")
+        
+        # Process the welcome text with markdown formatting
+        lines = welcome_text.split('\n')
+        for i, line in enumerate(lines):
+            if line.strip() == '---':
+                # Horizontal separator
+                self.preview_text.insert("end", "─" * 60 + "\n", "separator")
+            elif line.startswith('* ') and line.endswith(' *'):
+                # Title (centered style)
+                title = line[2:-2]
+                self.preview_text.insert("end", title + "\n", "h1")
+            elif line.strip().startswith(('-', '•')):
+                # Bullet list item
+                self.preview_text.insert("end", line + "\n", "list_item")
+            elif re.match(r'^\d+\.', line.strip()):
+                # Numbered list item
+                self.preview_text.insert("end", line + "\n", "list_item")
+            else:
+                # Regular text
+                self.preview_text.insert("end", line + "\n")
     
     def copy_prompt(self):
         """Copy current prompt to clipboard."""

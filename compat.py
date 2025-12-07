@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Python version compatibility utilities."""
 
 import sys
@@ -50,6 +49,63 @@ def check_tkinter_available() -> bool:
         return False
 
 
+def print_version_error():
+    """Print detailed error message for incompatible Python version."""
+    print("=" * 70)
+    print("ERROR: Python Version Too Old")
+    print("=" * 70)
+    print(f"Current version: Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}")
+    print("Required version: Python 3.8 or higher")
+    print()
+    print("This application requires Python 3.8+ for:")
+    print("  - Modern standard library features")
+    print("  - Better Unicode support")
+    print("  - Security fixes and performance improvements")
+    print()
+    print("Please upgrade your Python installation:")
+    print("  Windows: https://www.python.org/downloads/")
+    print("  macOS:   brew install python@3.12")
+    print("  Linux:   sudo apt-get install python3.12")
+    print("=" * 70)
+
+
+def print_tkinter_error():
+    """Print detailed error message for missing tkinter."""
+    print("=" * 70)
+    print("ERROR: tkinter Not Available")
+    print("=" * 70)
+    print("tkinter is required but not installed.")
+    print()
+    print("Installation instructions:")
+    print("  Ubuntu/Debian:  sudo apt-get install python3-tk")
+    print("  Fedora/RHEL:    sudo dnf install python3-tkinter")
+    print("  Arch Linux:     sudo pacman -S tk")
+    print("  macOS/Windows:  tkinter should be included with Python")
+    print()
+    print("If you installed Python from python.org, tkinter should be included.")
+    print("If using a system Python, you may need to install it separately.")
+    print("=" * 70)
+
+
+def check_requirements() -> bool:
+    """Check all requirements and return True if met, False otherwise.
+    
+    Prints helpful error messages if requirements are not met.
+    
+    Returns:
+        True if all requirements met, False otherwise
+    """
+    if not is_version_compatible():
+        print_version_error()
+        return False
+    
+    if not check_tkinter_available():
+        print_tkinter_error()
+        return False
+    
+    return True
+
+
 def get_compatibility_report() -> dict:
     """Generate a compatibility report.
     
@@ -98,5 +154,6 @@ def print_compatibility_report():
 
 
 if __name__ == "__main__":
+    print_compatibility_report()
     # Run compatibility check when executed directly
     print_compatibility_report()

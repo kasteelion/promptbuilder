@@ -1,20 +1,36 @@
-# Prompt Builder - Python Package Requirements
-# This application uses only Python standard library modules
-# No external dependencies required!
+# Prompt Builder - Requirements
+# Python version: >=3.8 (3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14 all supported)
 
-# Python version requirement
-# python_requires = ">=3.8"
+# === RUNTIME REQUIREMENTS ===
+# This application uses ONLY Python standard library modules.
+# No PyPI packages are required to run the application.
 
-# Optional: For development/testing
+# Required standard library modules (included with Python):
+# - tkinter (GUI framework)
+# - pathlib (file handling)
+# - re (regex parsing)
+# - typing (type hints)
+# - functools, sys, random, etc.
+
+# === PLATFORM-SPECIFIC NOTES ===
+# Windows/macOS: tkinter is included with Python
+# Linux: Install tkinter separately:
+#   Ubuntu/Debian: sudo apt-get install python3-tk
+#   Fedora/RHEL: sudo dnf install python3-tkinter
+#   Arch Linux: sudo pacman -S tk
+
+# === OPTIONAL DEVELOPMENT DEPENDENCIES ===
 # The following packages are NOT required to run the application
 # but can be useful for development:
 
-# pytest>=7.0.0          # For running tests (if you add them)
-# black>=22.0.0          # For code formatting
-# flake8>=4.0.0          # For linting
-# mypy>=0.950            # For type checking
+# pytest>=7.0.0          # Unit testing framework
+# black>=22.0.0          # Code formatting
+# flake8>=4.0.0          # Linting
+# mypy>=0.950            # Type checking
 
-# Note: This application intentionally uses only standard library
-# to maximize compatibility and minimize installation complexity.
-# tkinter is part of the standard library but may need separate
-# installation on some Linux distributions.
+# To install development dependencies:
+# pip install pytest black flake8 mypy
+
+# === VERIFICATION ===
+# Check your setup:
+# python main.py --check-compat

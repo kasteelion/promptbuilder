@@ -29,20 +29,7 @@ class EditTab:
     
     def _get_editable_files(self):
         """Get current list of editable files including character files."""
-        files = list(MAIN_EDITABLE_FILES)
-        
-        # Check for character files in characters/ folder
-        char_dir = self.data_loader.base_dir / "characters"
-        if char_dir.exists() and char_dir.is_dir():
-            char_files = sorted([f.name for f in char_dir.glob("*.md")])
-            files.extend(char_files)
-        
-        # Check for legacy characters.md in root
-        root_char = self.data_loader.base_dir / "characters.md"
-        if root_char.exists() and "characters.md" not in files:
-            files.append("characters.md")
-        
-        return files
+        return self.data_loader.get_editable_files()
     
     def _refresh_file_list(self):
         """Refresh the list of editable files in the dropdown."""

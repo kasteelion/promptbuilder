@@ -3,7 +3,7 @@
 
 import tkinter as tk
 from tkinter import ttk, messagebox
-from logic import DataLoader, PromptValidator, PromptRandomizer
+from logic import DataLoader, validate_prompt_config, PromptRandomizer
 from core.builder import PromptBuilder
 from themes import ThemeManager
 from config import (
@@ -38,7 +38,6 @@ class PromptBuilderApp:
         
         # Initialize data
         self.data_loader = DataLoader()
-        self.validator = PromptValidator()
         
         try:
             self.characters = self.data_loader.load_characters()
@@ -327,7 +326,7 @@ class PromptBuilderApp:
             str: Error message or None if valid
         """
         selected_chars = self.characters_tab.get_selected_characters()
-        return self.validator.validate(selected_chars)
+        return validate_prompt_config(selected_chars)
     
     def _generate_prompt(self):
         """Generate prompt from current data (assumes valid).
@@ -350,26 +349,12 @@ class PromptBuilderApp:
         """Generate prompt or return validation error.
         
         Returns:
-            str: Generated prompt or error message
+            str: Generated prompt or empty string if validation fails
         """
         error = self._validate_prompt()
         if error:
-            # Friendly welcome message instead of harsh error
-            welcome = "*** Welcome to Prompt Builder! ***\\n\\n"
-            welcome += "To get started:\\n"
-            welcome += "1. Select a character from the dropdown below\\n"
-            welcome += '2. Click "+ Add to Group" to add them to your scene\\n'
-            welcome += "3. Choose their outfit and pose\\n"
-            welcome += "4. Add more characters if you'd like\\n"
-            welcome += "5. Optionally select a scene preset or write your own\\n"
-            welcome += "6. Watch your prompt appear here!\\n\\n"
-            welcome += "Need help?\\n"
-            welcome += '- Use "Create New Character" to design your own character\\n'
-            welcome += '- Try the "Randomize" button for inspiration\\n'
-            welcome += "- Check the Edit Data tab to customize everything\\n\\n"
-            welcome += "---\\n\\n"
-            welcome += "Ready when you are! Add your first character to begin."
-            return welcome
+            # Return empty string - preview panel will show welcome message
+            return ""
         return self._generate_prompt()
     
     def reload_data(self):

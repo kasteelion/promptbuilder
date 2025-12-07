@@ -164,3 +164,26 @@ Soft semi-realistic illustration with clear, natural lighting. Fresh muted flora
         text = f.read_text(encoding="utf-8")
         parsed = MarkdownParser.parse_presets(text)
         return parsed if parsed else defaults_data.get(filename, {"Default": {}})
+    
+    def get_editable_files(self):
+        """Get list of editable files, including character files from characters/ folder if they exist.
+        
+        Returns:
+            list: List of editable filenames
+        """
+        from config import MAIN_EDITABLE_FILES
+        
+        files = list(MAIN_EDITABLE_FILES)
+        
+        # Check for character files in characters/ folder
+        char_dir = self.base_dir / "characters"
+        if char_dir.exists() and char_dir.is_dir():
+            char_files = sorted([f.name for f in char_dir.glob("*.md")])
+            files.extend(char_files)
+        
+        # Check for legacy characters.md in root
+        root_char = self.base_dir / "characters.md"
+        if root_char.exists() and "characters.md" not in files:
+            files.append("characters.md")
+        
+        return files

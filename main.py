@@ -6,42 +6,16 @@ import sys
 
 # Check Python version compatibility FIRST (before any other imports)
 if sys.version_info < (3, 8):
-    print("=" * 70)
-    print("ERROR: Python Version Too Old")
-    print("=" * 70)
-    print(f"Current version: Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}")
-    print("Required version: Python 3.8 or higher")
-    print()
-    print("This application requires Python 3.8+ for:")
-    print("  - Modern standard library features")
-    print("  - Better Unicode support")
-    print("  - Security fixes and performance improvements")
-    print()
-    print("Please upgrade your Python installation:")
-    print("  Windows: https://www.python.org/downloads/")
-    print("  macOS:   brew install python@3.12")
-    print("  Linux:   sudo apt-get install python3.12")
-    print("=" * 70)
+    from compat import print_version_error
+    print_version_error()
     sys.exit(1)
 
 # Check tkinter availability
 try:
     import tkinter as tk
 except ImportError:
-    print("=" * 70)
-    print("ERROR: tkinter Not Available")
-    print("=" * 70)
-    print("tkinter is required but not installed.")
-    print()
-    print("Installation instructions:")
-    print("  Ubuntu/Debian:  sudo apt-get install python3-tk")
-    print("  Fedora/RHEL:    sudo dnf install python3-tkinter")
-    print("  Arch Linux:     sudo pacman -S tk")
-    print("  macOS/Windows:  tkinter should be included with Python")
-    print()
-    print("If you installed Python from python.org, tkinter should be included.")
-    print("If using a system Python, you may need to install it separately.")
-    print("=" * 70)
+    from compat import print_tkinter_error
+    print_tkinter_error()
     sys.exit(1)
 
 # Import application modules
