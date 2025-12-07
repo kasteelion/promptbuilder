@@ -2,6 +2,25 @@
 
 A desktop application to help build complex and detailed prompts for AI image generation with an intuitive, resizable interface.
 
+## Requirements
+
+- **Python 3.8 or higher** (Tested on Python 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, and 3.14)
+- **tkinter** (Usually included with Python, but may need separate installation on some Linux distributions)
+
+### Installing tkinter (if needed)
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get install python3-tk
+```
+
+**Fedora/RHEL:**
+```bash
+sudo dnf install python3-tkinter
+```
+
+**macOS/Windows:** tkinter is included with standard Python installations
+
 ## Features
 
 - **📝 In-App Content Creation** - Create characters, scenes, outfits, poses, and base art styles directly in the UI
@@ -25,9 +44,20 @@ The UI allows you to select these components, and the application will assemble 
     python main.py
     ```
 
-2.  **Select Characters:** Choose from individual character files in the `characters/` folder. Click "**+ Add to Prompt**" to add them to your group.
+2.  **Check compatibility (optional):**
+    ```bash
+    python main.py --check-compat
+    ```
+    This will display your Python version and verify all requirements are met.
 
-3.  **Choose Outfits:** Select from shared outfits or character-specific variations. The outfit selector is collapsible for a cleaner interface.
+3.  **Check version (optional):**
+    ```bash
+    python main.py --version
+    ```
+
+4.  **Select Characters:** Choose from individual character files in the `characters/` folder. Click "**+ Add to Prompt**" to add them to your group.
+
+5.  **Choose Outfits:** Select from shared outfits or character-specific variations. The outfit selector is collapsible for a cleaner interface.
 
 4.  **Build a Scene:** Select different scene elements from `scenes.md`. You can also create new scenes directly in the UI.
 
@@ -175,3 +205,82 @@ promptbuilder/
     ├── outfit_creator.py     # Outfit creation dialogs
     └── pose_creator.py       # Pose creation dialog
 ```
+
+## Troubleshooting
+
+### "Python version too old" error
+
+**Problem:** You see an error about Python version being too old.
+
+**Solution:** Upgrade to Python 3.8 or higher:
+- Windows: Download from [python.org](https://www.python.org/downloads/)
+- macOS: `brew install python@3.12`
+- Linux: `sudo apt-get install python3.12` (or use your distro's package manager)
+
+### "tkinter not available" error
+
+**Problem:** Application won't start due to missing tkinter.
+
+**Solution:**
+```bash
+# Ubuntu/Debian
+sudo apt-get install python3-tk
+
+# Fedora/RHEL
+sudo dnf install python3-tkinter
+
+# Arch Linux
+sudo pacman -S tk
+```
+
+On Windows/macOS, tkinter should be included with Python. If it's missing, reinstall Python from python.org.
+
+### Character files not loading
+
+**Problem:** Characters aren't showing up in the dropdown.
+
+**Solution:**
+1. Check that `.md` files exist in the `characters/` folder
+2. Verify file format matches the expected structure (see README)
+3. Run `python main.py --check-compat` to verify setup
+4. Check console output for parsing errors
+
+### Performance issues (lag during typing)
+
+**Problem:** Application feels slow or laggy.
+
+**Solution:** This has been fixed in the latest version with debouncing. Make sure you're running the latest code. If issues persist:
+- Close other applications
+- Try a smaller window size
+- Check Python version (3.11+ recommended for best performance)
+
+### Unicode/emoji display issues
+
+**Problem:** Emoji characters don't display correctly.
+
+**Solution:** This is typically a font issue. The application uses emojis in buttons and labels:
+- Windows: Should work out of the box on Windows 10+
+- macOS: Should work out of the box
+- Linux: Install a font with emoji support (e.g., `fonts-noto-color-emoji`)
+
+For more detailed compatibility information, see [COMPATIBILITY.md](COMPATIBILITY.md).
+
+## Command-Line Options
+
+```bash
+python main.py              # Run normally
+python main.py --version    # Show version info
+python main.py --check-compat  # Check system compatibility
+python main.py --debug      # Run in debug mode (shows full error traces)
+```
+
+## Contributing
+
+Contributions are welcome! This project aims to maintain compatibility with Python 3.8+ and uses only standard library modules to minimize dependencies.
+
+When contributing:
+- Test on multiple Python versions if possible
+- Use only standard library modules
+- Include UTF-8 encoding declarations in new files
+- Follow existing code style and patterns
+

@@ -1,0 +1,20 @@
+# Prompt Builder - Python Package Requirements
+# This application uses only Python standard library modules
+# No external dependencies required!
+
+# Python version requirement
+# python_requires = ">=3.8"
+
+# Optional: For development/testing
+# The following packages are NOT required to run the application
+# but can be useful for development:
+
+# pytest>=7.0.0          # For running tests (if you add them)
+# black>=22.0.0          # For code formatting
+# flake8>=4.0.0          # For linting
+# mypy>=0.950            # For type checking
+
+# Note: This application intentionally uses only standard library
+# to maximize compatibility and minimize installation complexity.
+# tkinter is part of the standard library but may need separate
+# installation on some Linux distributions.
