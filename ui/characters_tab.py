@@ -2,11 +2,12 @@
 
 import tkinter as tk
 from tkinter import ttk, messagebox
-from .widgets import FlowFrame
+from .widgets import FlowFrame, CollapsibleFrame
 from .character_creator import CharacterCreatorDialog
 from .base_style_creator import BaseStyleCreatorDialog
 from .outfit_creator import SharedOutfitCreatorDialog, CharacterOutfitCreatorDialog
 from .pose_creator import PoseCreatorDialog
+from .scene_creator import SceneCreatorDialog
 
 
 class CharactersTab:
@@ -29,24 +30,28 @@ class CharactersTab:
         self.characters = {}
         self.base_prompts = {}
         self.poses = {}
+        self.scenes = {}
         self.selected_characters = []
         
         self.tab = ttk.Frame(parent, style="TFrame")
-        parent.add(self.tab, text="Characters/Poses")
+        parent.add(self.tab, text="Prompt Builder")
         
         self._build_ui()
     
-    def load_data(self, characters, base_prompts, poses):
+    def load_data(self, characters, base_prompts, poses, scenes=None):
         """Load character and prompt data.
         
         Args:
             characters: Character definitions dict
             base_prompts: Base prompts dict
             poses: Pose presets dict
+            scenes: Scene presets dict (optional, handled by main_window now)
         """
         self.characters = characters
         self.base_prompts = base_prompts
         self.poses = poses
+        if scenes:
+            self.scenes = scenes
         
         # Update UI
         self.base_combo['values'] = sorted(list(self.base_prompts.keys()))
@@ -66,7 +71,7 @@ class CharactersTab:
     def _build_ui(self):
         """Build the characters tab UI."""
         self.tab.columnconfigure(0, weight=1)
-        self.tab.rowconfigure(3, weight=1)
+        self.tab.rowconfigure(3, weight=1)  # Selected characters area expands
 
         # Base prompt selector
         bp = ttk.LabelFrame(self.tab, text="📋 Base Prompt (Style)", style="TLabelframe")

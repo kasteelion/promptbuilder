@@ -18,8 +18,6 @@ from config import (
     MIN_PANE_WIDTH
 )
 from .characters_tab import CharactersTab
-from .scene_tab import SceneTab
-from .notes_tab import NotesTab
 from .edit_tab import EditTab
 from .preview_panel import PreviewPanel
 
@@ -108,9 +106,9 @@ class PromptBuilderApp:
         paned = ttk.PanedWindow(self.root, orient="horizontal")
         paned.pack(fill="both", expand=True)
 
-        # Left side: Notebook with tabs
+        # Left side: Notebook with tabs (give it more weight for better visibility)
         self.notebook = ttk.Notebook(paned, style="TNotebook")
-        paned.add(self.notebook, weight=1)
+        paned.add(self.notebook, weight=3)
 
         # Create tabs
         self.characters_tab = CharactersTab(
@@ -119,16 +117,6 @@ class PromptBuilderApp:
             self.schedule_preview_update,
             self.reload_data
         )
-        self.scene_tab = SceneTab(
-            self.notebook, 
-            self.data_loader, 
-            self.schedule_preview_update,
-            self.reload_data
-        )
-        self.notes_tab = NotesTab(
-            self.notebook, 
-            self.schedule_preview_update
-        )
         self.edit_tab = EditTab(
             self.notebook, 
             self.data_loader, 
@@ -136,15 +124,53 @@ class PromptBuilderApp:
         )
 
         # Load data into tabs
-        self.characters_tab.load_data(self.characters, self.base_prompts, self.poses)
-        self.scene_tab.load_data(self.scenes)
+        self.characters_tab.load_data(self.characters, self.base_prompts, self.poses, self.scenes)
 
-        # Right side: Preview panel
+        # Right side: Preview panel (less weight so it takes less space)
         right_frame = ttk.Frame(paned, style="TFrame")
         paned.add(right_frame, weight=2)
+        right_frame.rowconfigure(2, weight=1)  # Preview gets all expanding space
+        right_frame.columnconfigure(0, weight=1)
+        
+        # Scene section (compact)
+        scene_frame = ttk.LabelFrame(right_frame, text="🎬 Scene", style="TLabelframe")
+        scene_frame.grid(row=0, column=0, sticky="ew", padx=4, pady=(4, 2))
+        scene_frame.columnconfigure(1, weight=1)
+        
+        # Scene presets row
+        ttk.Label(scene_frame, text="Category:", font=("Consolas", 9)).grid(row=0, column=0, sticky="w", padx=(4, 2), pady=2)
+        self.scene_category_var = tk.StringVar()
+        self.scene_cat_combo = ttk.Combobox(scene_frame, textvariable=self.scene_category_var, state="readonly", width=10)
+        self.scene_cat_combo.grid(row=0, column=1, sticky="w", padx=2, pady=2)
+        self.scene_cat_combo.bind("<<ComboboxSelected>>", lambda e: self._update_scene_presets())
+        
+        ttk.Label(scene_frame, text="Preset:", font=("Consolas", 9)).grid(row=0, column=2, sticky="w", padx=(8, 2), pady=2)
+        self.scene_preset_var = tk.StringVar()
+        self.scene_combo = ttk.Combobox(scene_frame, textvariable=self.scene_preset_var, state="readonly", width=15)
+        self.scene_combo.grid(row=0, column=3, sticky="ew", padx=2, pady=2)
+        self.scene_combo.bind("<<ComboboxSelected>>", lambda e: self._apply_scene_preset())
+        
+        ttk.Button(scene_frame, text="✨", width=3, command=self._create_new_scene).grid(row=0, column=4, padx=(4, 4), pady=2)
+        
+        self.scene_text = tk.Text(scene_frame, wrap="word", height=2)
+        self.scene_text.grid(row=1, column=0, columnspan=5, sticky="ew", padx=4, pady=(0, 4))
+        self.scene_text.bind("<KeyRelease>", lambda e: self.schedule_preview_update())
+        
+        # Notes section (compact)
+        notes_frame = ttk.LabelFrame(right_frame, text="📝 Notes", style="TLabelframe")
+        notes_frame.grid(row=1, column=0, sticky="ew", padx=4, pady=2)
+        notes_frame.columnconfigure(0, weight=1)
+        
+        self.notes_text = tk.Text(notes_frame, wrap="word", height=2)
+        self.notes_text.pack(fill="x", padx=4, pady=4)
+        self.notes_text.bind("<KeyRelease>", lambda e: self.schedule_preview_update())
+        
+        # Preview panel container
+        preview_container = ttk.Frame(right_frame, style="TFrame")
+        preview_container.grid(row=2, column=0, sticky="nsew", padx=0, pady=(2, 0))
         
         self.preview_panel = PreviewPanel(
-            right_frame, 
+            preview_container, 
             self.theme_manager,
             self.reload_data,
             self._on_theme_change,
@@ -157,12 +183,43 @@ class PromptBuilderApp:
             self._validate_prompt,
             self.randomize_all
         )
+        
+        # Initialize scene presets
+        self._update_scene_presets()
+    
+    def _update_scene_presets(self):
+        """Update scene preset combo based on selected category."""
+        cat = self.scene_category_var.get()
+        if cat and cat in self.scenes:
+            self.scene_combo["values"] = [""] + sorted(list(self.scenes[cat].keys()))
+        else:
+            self.scene_combo["values"] = [""]
+        self.scene_preset_var.set("")
+        
+        # Update category combo
+        self.scene_cat_combo["values"] = [""] + sorted(list(self.scenes.keys()))
+    
+    def _apply_scene_preset(self):
+        """Apply selected scene preset to text area."""
+        cat = self.scene_category_var.get()
+        name = self.scene_preset_var.get()
+        
+        if cat and name and cat in self.scenes and name in self.scenes[cat]:
+            self.scene_text.delete("1.0", "end")
+            self.scene_text.insert("1.0", self.scenes[cat][name])
+            self.schedule_preview_update()
+    
+    def _create_new_scene(self):
+        """Open dialog to create a new scene."""
+        from .scene_creator import SceneCreatorDialog
+        dialog = SceneCreatorDialog(self.root, self.data_loader, self.reload_data)
+        result = dialog.show()
     
     def _set_initial_fonts(self):
         """Set initial fonts on text widgets."""
         font = (DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE)
-        for widget in [self.scene_tab.scene_text, 
-                      self.notes_tab.notes_text, 
+        for widget in [self.scene_text, 
+                      self.notes_text, 
                       self.preview_panel.preview_text,
                       self.edit_tab.editor_text]:
             widget.config(padx=10, pady=10, font=font)
@@ -185,8 +242,8 @@ class PromptBuilderApp:
         
         # Apply to text widgets
         self.theme_manager.apply_preview_theme(self.preview_panel.preview_text, theme)
-        for widget in [self.scene_tab.scene_text, 
-                      self.notes_tab.notes_text, 
+        for widget in [self.scene_text, 
+                      self.notes_text, 
                       self.edit_tab.editor_text]:
             self.theme_manager.apply_text_widget_theme(widget, theme)
         
@@ -227,8 +284,8 @@ class PromptBuilderApp:
         config = {
             "selected_characters": self.characters_tab.get_selected_characters(),
             "base_prompt": self.characters_tab.get_base_prompt_name(),
-            "scene": self.scene_tab.get_scene_text(),
-            "notes": self.notes_tab.get_notes_text()
+            "scene": self.scene_text.get("1.0", "end").strip(),
+            "notes": self.notes_text.get("1.0", "end").strip()
         }
         
         return builder.generate(config)
@@ -352,8 +409,8 @@ Ready when you are! Add your first character to begin."""
 
             # List of all text widgets to apply the new font size
             text_widgets = [
-                self.scene_tab.scene_text,
-                self.notes_tab.notes_text,
+                self.scene_text,
+                self.notes_text,
                 self.edit_tab.editor_text,
                 self.preview_panel.preview_text
             ]
