@@ -3,6 +3,8 @@
 
 import json
 from pathlib import Path
+from config import MAX_RECENT_ITEMS
+from .logger import logger
 
 
 class PreferencesManager:
@@ -46,8 +48,11 @@ class PreferencesManager:
                 # Merge with defaults to handle new keys
                 default_prefs.update(loaded)
                 return default_prefs
+        except (json.JSONDecodeError, FileNotFoundError) as e:
+            logger.warning(f"Could not load preferences (using defaults): {e}")
+            return default_prefs
         except Exception as e:
-            print(f"Error loading preferences: {e}")
+            logger.error(f"Unexpected error loading preferences: {e}")
             return default_prefs
     
     def save_preferences(self):
@@ -55,8 +60,10 @@ class PreferencesManager:
         try:
             with open(self.prefs_file, 'w', encoding='utf-8') as f:
                 json.dump(self.prefs, f, indent=2)
+        except (PermissionError, OSError) as e:
+            logger.error(f"Error saving preferences: {e}")
         except Exception as e:
-            print(f"Error saving preferences: {e}")
+            logger.error(f"Unexpected error saving preferences: {e}")
     
     def get(self, key, default=None):
         """Get preference value.
@@ -80,14 +87,16 @@ class PreferencesManager:
         self.prefs[key] = value
         self.save_preferences()
     
-    def add_recent(self, list_key, item, max_items=10):
+    def add_recent(self, list_key, item, max_items=None):
         """Add item to recent list.
         
         Args:
             list_key: Key for the recent list
             item: Item to add
-            max_items: Maximum number of items to keep
+            max_items: Maximum number of items to keep (defaults to MAX_RECENT_ITEMS)
         """
+        if max_items is None:
+            max_items = MAX_RECENT_ITEMS
         recent = self.prefs.get(list_key, [])
         # Remove if already exists
         if item in recent:

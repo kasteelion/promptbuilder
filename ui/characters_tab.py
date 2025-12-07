@@ -10,7 +10,7 @@ from .outfit_creator import SharedOutfitCreatorDialog, CharacterOutfitCreatorDia
 from .pose_creator import PoseCreatorDialog
 from .scene_creator import SceneCreatorDialog
 from utils import create_tooltip
-from config import TOOLTIPS
+from config import TOOLTIPS, DEFAULT_TEXT_WIDGET_HEIGHT
 
 
 class CharactersTab:
@@ -517,7 +517,7 @@ class CharactersTab:
 
             # Action note text area
             ttk.Label(frame, text="💬 Custom Pose/Action (Optional - Overrides Preset):", font=("Consolas", 9, "bold")).pack(fill="x", pady=(6, 0))
-            action_text = tk.Text(frame, wrap="word", height=2)
+            action_text = tk.Text(frame, wrap="word", height=DEFAULT_TEXT_WIDGET_HEIGHT)
             action_text.insert("1.0", cd.get("action_note", ""))
             action_text.pack(fill="x", pady=(0, 6))
             action_text.config(padx=5, pady=5)

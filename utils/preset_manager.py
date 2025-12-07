@@ -4,6 +4,8 @@
 import json
 from pathlib import Path
 from datetime import datetime
+from .logger import logger
+from .validation import sanitize_filename, validate_file_path
 
 
 class PresetManager:
@@ -38,9 +40,8 @@ class PresetManager:
             "config": config
         }
         
-        # Sanitize filename
-        safe_name = "".join(c for c in name if c.isalnum() or c in (' ', '-', '_')).strip()
-        safe_name = safe_name.replace(' ', '_')
+        # Sanitize filename using validation utility
+        safe_name = sanitize_filename(name)
         filename = f"{safe_name}.json"
         filepath = self.presets_dir / filename
         
@@ -73,8 +74,11 @@ class PresetManager:
             with open(filepath, 'r', encoding='utf-8') as f:
                 preset_data = json.load(f)
                 return preset_data.get("config")
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            logger.error(f"Error loading preset '{filename}': {e}")
+            return None
         except Exception as e:
-            print(f"Error loading preset: {e}")
+            logger.error(f"Unexpected error loading preset '{filename}': {e}")
             return None
     
     def get_presets(self):
@@ -113,8 +117,11 @@ class PresetManager:
         try:
             filepath.unlink()
             return True
+        except (FileNotFoundError, PermissionError) as e:
+            logger.error(f"Error deleting preset '{filename}': {e}")
+            return False
         except Exception as e:
-            print(f"Error deleting preset: {e}")
+            logger.error(f"Unexpected error deleting preset '{filename}': {e}")
             return False
     
     def export_preset(self, filename, export_path):
@@ -132,8 +139,12 @@ class PresetManager:
             import shutil
             shutil.copy(filepath, export_path)
             return True
+        except (FileNotFoundError, PermissionError, OSError) as e:
+            logger.error(f"Error exporting preset '{filename}': {e}")
+            return False
         except Exception as e:
-            print(f"Error exporting preset: {e}")
+            logger.error(f"Unexpected error exporting preset '{filename}': {e}")
+            return False
             return False
     
     def import_preset(self, import_path):
@@ -147,18 +158,27 @@ class PresetManager:
         """
         try:
             import shutil
-            dest = self.presets_dir / Path(import_path).name
+            import_file = Path(import_path)
+            dest = self.presets_dir / import_file.name
             
-            # Handle duplicate names
-            if dest.exists():
-                stem = dest.stem
-                counter = 1
-                while dest.exists():
-                    dest = self.presets_dir / f"{stem}_{counter}.json"
-                    counter += 1
+            # Validate destination path is within presets directory
+            is_valid, error_msg = validate_file_path(dest, self.presets_dir)
+            if not is_valid:
+                logger.error(f"Invalid import destination: {error_msg}")
+                return None
+            
+            # Handle duplicate filenames
+            counter = 1
+            base_name = dest.stem
+            while dest.exists():
+                dest = self.presets_dir / f"{base_name}_{counter}.json"
+                counter += 1
             
             shutil.copy(import_path, dest)
             return dest.name
+        except (FileNotFoundError, PermissionError) as e:
+            logger.error(f"Error importing preset: {e}")
+            return None
         except Exception as e:
-            print(f"Error importing preset: {e}")
+            logger.error(f"Unexpected error importing preset: {e}")
             return None

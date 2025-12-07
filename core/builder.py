@@ -1,13 +1,31 @@
+from typing import Dict, List, Any
 from .renderers import OutfitRenderer, PoseRenderer, SceneRenderer, NotesRenderer, CharacterRenderer
 
 class PromptBuilder:
-    def __init__(self, characters, base_prompts, poses):
+    """Builds formatted prompts from character, scene, and style data."""
+    
+    def __init__(self, characters: Dict[str, Any], base_prompts: Dict[str, str], poses: Dict[str, Dict[str, str]]):
+        """Initialize the prompt builder.
+        
+        Args:
+            characters: Dictionary of character data
+            base_prompts: Dictionary of base art style prompts
+            poses: Dictionary of pose categories and presets
+        """
         self.characters = characters
         self.base_prompts = base_prompts
         self.poses = poses
 
-    def generate(self, config):
-        parts = []
+    def generate(self, config: Dict[str, Any]) -> str:
+        """Generate a formatted prompt from configuration.
+        
+        Args:
+            config: Configuration dictionary with selected characters, scene, notes, etc.
+            
+        Returns:
+            Formatted prompt string
+        """
+        parts: List[str] = []
 
         base = self.base_prompts.get(config.get("base_prompt"), "")
         if base:

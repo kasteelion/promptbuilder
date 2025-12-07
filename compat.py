@@ -154,6 +154,5 @@ def print_compatibility_report():
 
 
 if __name__ == "__main__":
-    print_compatibility_report()
     # Run compatibility check when executed directly
     print_compatibility_report()

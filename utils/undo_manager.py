@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
 """Undo/Redo manager for tracking state changes."""
 
+from config import MAX_UNDO_HISTORY
+
 
 class UndoManager:
     """Manages undo/redo stacks for application state."""
     
-    def __init__(self, max_history=50):
+    def __init__(self, max_history=None):
         """Initialize undo manager.
         
         Args:
-            max_history: Maximum number of states to keep in history
+            max_history: Maximum number of states to keep in history (defaults to MAX_UNDO_HISTORY)
         """
-        self.max_history = max_history
+        self.max_history = max_history if max_history is not None else MAX_UNDO_HISTORY
         self.undo_stack = []
         self.redo_stack = []
         self._current_state = None

@@ -5,6 +5,14 @@ from .undo_manager import UndoManager
 from .preferences import PreferencesManager
 from .tooltip import create_tooltip
 from .preset_manager import PresetManager
+from .logger import logger, setup_logger
+from .validation import (
+    validate_character_name,
+    validate_text_length,
+    sanitize_filename,
+    validate_file_path,
+    validate_preset_name
+)
 from .character_templates import (
     get_template_names as get_character_template_names,
     get_template as get_character_template,
@@ -31,6 +39,13 @@ __all__ = [
     'PreferencesManager', 
     'create_tooltip', 
     'PresetManager',
+    'logger',
+    'setup_logger',
+    'validate_character_name',
+    'validate_text_length',
+    'sanitize_filename',
+    'validate_file_path',
+    'validate_preset_name',
     # Character templates
     'get_character_template_names',
     'get_character_template',

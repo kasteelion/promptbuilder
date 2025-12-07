@@ -19,9 +19,12 @@ from config import (
     MIN_PANE_WIDTH,
     THEMES,
     TOOLTIPS,
-    WELCOME_MESSAGE
+    WELCOME_MESSAGE,
+    DEFAULT_TEXT_WIDGET_HEIGHT,
+    TOOLTIP_DELAY_MS,
+    MAX_UNDO_HISTORY
 )
-from utils import UndoManager, PreferencesManager, PresetManager, create_tooltip
+from utils import UndoManager, PreferencesManager, PresetManager, create_tooltip, logger
 from .characters_tab import CharactersTab
 from .edit_tab import EditTab
 from .preview_panel import PreviewPanel
@@ -42,7 +45,7 @@ class PromptBuilderApp:
         self.root.title("Prompt Builder — Group Picture Generator")
         
         # Initialize managers
-        self.undo_manager = UndoManager()
+        self.undo_manager = UndoManager(max_history=MAX_UNDO_HISTORY)
         self.prefs = PreferencesManager()
         self.preset_manager = PresetManager()
         
@@ -96,8 +99,9 @@ class PromptBuilderApp:
         if saved_geometry:
             try:
                 self.root.geometry(saved_geometry)
-            except:
-                pass
+            except (tk.TclError, ValueError) as e:
+                # Invalid geometry string, ignore and use defaults
+                logger.warning(f"Could not restore window geometry: {e}")
         
         # Restore last base prompt
         last_base_prompt = self.prefs.get("last_base_prompt")
@@ -253,7 +257,7 @@ class PromptBuilderApp:
         
         ttk.Button(scene_frame, text="✨", width=3, command=self._create_new_scene).grid(row=0, column=4, padx=(4, 4), pady=2)
         
-        self.scene_text = tk.Text(scene_frame, wrap="word", height=2)
+        self.scene_text = tk.Text(scene_frame, wrap="word", height=DEFAULT_TEXT_WIDGET_HEIGHT)
         self.scene_text.grid(row=1, column=0, columnspan=5, sticky="ew", padx=4, pady=(0, 4))
         create_tooltip(self.scene_text, TOOLTIPS.get("scene", ""))
         # Debounce scene text changes
@@ -270,7 +274,7 @@ class PromptBuilderApp:
         notes_frame.columnconfigure(0, weight=1)
         create_tooltip(notes_frame, TOOLTIPS.get("notes", ""))
         
-        self.notes_text = tk.Text(notes_frame, wrap="word", height=2)
+        self.notes_text = tk.Text(notes_frame, wrap="word", height=DEFAULT_TEXT_WIDGET_HEIGHT)
         self.notes_text.pack(fill="x", padx=4, pady=4)
         create_tooltip(self.notes_text, TOOLTIPS.get("notes", ""))
         # Debounce notes text changes

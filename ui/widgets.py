@@ -87,9 +87,10 @@ class FlowFrame(ttk.Frame):
         self.bind("<Configure>", self._on_configure)
 
     def _on_configure(self, event):
+        from config import FLOW_FRAME_MIN_WIDTH_THRESHOLD
         # Throttle reflows - only update if width changed significantly
         if hasattr(event, 'width'):
-            if abs(event.width - self._last_width) < 10:  # Skip small changes
+            if abs(event.width - self._last_width) < FLOW_FRAME_MIN_WIDTH_THRESHOLD:
                 return
             self._last_width = event.width
         
@@ -101,6 +102,7 @@ class FlowFrame(ttk.Frame):
         self._reflow_after_id = self.after_idle(self._reflow)
 
     def _reflow(self):
+        from config import FLOW_FRAME_REFLOW_DELAY_MS
         # Place children into grid cells, wrapping when necessary
         if not self._children:
             return
@@ -109,9 +111,14 @@ class FlowFrame(ttk.Frame):
         self.update_idletasks()
         avail_width = self.winfo_width()
         if avail_width <= 1:
-            # Not yet mapped; try again shortly
-            self.after(50, self._reflow)
+            # Not yet mapped; try again shortly (max 5 retries to prevent infinite loop)
+            if not hasattr(self, '_reflow_retry_count'):
+                self._reflow_retry_count = 0
+            if self._reflow_retry_count < 5:
+                self._reflow_retry_count += 1
+                self.after(FLOW_FRAME_REFLOW_DELAY_MS, self._reflow)
             return
+        self._reflow_retry_count = 0  # Reset counter on successful reflow
 
         x = 0
         row = 0
@@ -161,3 +168,9 @@ class FlowFrame(ttk.Frame):
         # Trigger reflow to wrap if needed
         self.after_idle(self._reflow)
         return btn
+
+    def clear(self):
+        """Clear all children and reset state."""
+        for child in self._children:
+            child.destroy()
+        self._children.clear()

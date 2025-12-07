@@ -171,3 +171,14 @@ Your prompt will appear here as you build it.
 
 Need help? Hover over any element for tooltips!
 """
+
+# UI Component Constants
+DEFAULT_TEXT_WIDGET_HEIGHT = 2  # Height for scene and notes text widgets
+TOOLTIP_DELAY_MS = 500  # Delay before showing tooltips
+MAX_UNDO_HISTORY = 50  # Maximum number of undo states to keep
+MAX_RECENT_ITEMS = 10  # Maximum recent items in preferences
+FLOW_FRAME_PADDING_X = 6  # Horizontal padding for FlowFrame
+FLOW_FRAME_PADDING_Y = 4  # Vertical padding for FlowFrame
+FLOW_FRAME_BUTTON_WIDTH = 20  # Default button width in FlowFrame
+FLOW_FRAME_MIN_WIDTH_THRESHOLD = 10  # Minimum width change to trigger reflow
+FLOW_FRAME_REFLOW_DELAY_MS = 50  # Delay before retrying reflow when window not mapped

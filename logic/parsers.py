@@ -93,9 +93,9 @@ class MarkdownParser:
             outfit_parts = re.split(r"^####\s+(.+)$", body, flags=re.MULTILINE)
             if len(outfit_parts) > 1:
                 # outfit_parts layout: [pre_text, outfit_name, outfit_body, outfit_name, outfit_body, ...]
-                for j in range(1, len(outfit_parts), 2):
-                    o_name = outfit_parts[j].strip()
-                    o_body = outfit_parts[j + 1] if j + 1 < len(outfit_parts) else ""
+                for outfit_idx in range(1, len(outfit_parts), 2):
+                    o_name = outfit_parts[outfit_idx].strip()
+                    o_body = outfit_parts[outfit_idx + 1] if outfit_idx + 1 < len(outfit_parts) else ""
 
                     # Parse key/value lines inside the outfit body (e.g. - **Top:** desc)
                     items = {}
@@ -103,10 +103,10 @@ class MarkdownParser:
                     # and allow multi-line values (continuation lines that do not
                     # start with a new list marker are appended to the current value).
                     lines = o_body.splitlines()
-                    i = 0
+                    line_idx = 0
                     item_found = False
-                    while i < len(lines):
-                        line = lines[i]
+                    while line_idx < len(lines):
+                        line = lines[line_idx]
                         # detect list marker and strip it
                         m_marker = re.match(r"^\s*[-*]\s+(.*)$", line)
                         if m_marker:
@@ -130,20 +130,20 @@ class MarkdownParser:
                                             val_start = after
                                 else:
                                     # malformed bold, fallback to split on first colon
-                                    parts = content.split(":", 1)
-                                    key = parts[0].strip()
-                                    val_start = parts[1].strip() if len(parts) > 1 else ""
+                                    key_val_parts = content.split(":", 1)
+                                    key = key_val_parts[0].strip()
+                                    val_start = key_val_parts[1].strip() if len(key_val_parts) > 1 else ""
                             else:
-                                parts = content.split(":", 1)
-                                key = parts[0].strip()
-                                val_start = parts[1].strip() if len(parts) > 1 else ""
+                                key_val_parts = content.split(":", 1)
+                                key = key_val_parts[0].strip()
+                                val_start = key_val_parts[1].strip() if len(key_val_parts) > 1 else ""
 
                             # start value lines
                             val_lines = [val_start.rstrip()] if val_start is not None else [""]
-                            j = i + 1
-                            while j < len(lines) and not re.match(r"^\s*[-*]\s+", lines[j]) and not re.match(r"^####\s+", lines[j]):
-                                val_lines.append(lines[j].rstrip())
-                                j += 1
+                            next_line_idx = line_idx + 1
+                            while next_line_idx < len(lines) and not re.match(r"^\s*[-*]\s+", lines[next_line_idx]) and not re.match(r"^####\s+", lines[next_line_idx]):
+                                val_lines.append(lines[next_line_idx].rstrip())
+                                next_line_idx += 1
                             val = "\n".join([l for l in val_lines if l is not None]).strip()
                             # clean key and value of stray bold markers or leading/trailing colons
                             if key:
@@ -153,10 +153,10 @@ class MarkdownParser:
                             if val.startswith("**"):
                                 val = val.lstrip("*").lstrip()
                             items[key] = val
-                            i = j
+                            line_idx = next_line_idx
                             continue
                         else:
-                            i += 1
+                            line_idx += 1
 
                     # If we found structured items, store them as a dict; otherwise store raw text
                     if item_found:
@@ -193,8 +193,11 @@ class MarkdownParser:
                         if bottom_val is None:
                             is_one_piece = True
                         else:
-                            bv = str(bottom_val).strip().lower()
-                            if bv == '' or bv.startswith('n/a') or bv.startswith('na') or bv.startswith('none') or 'one-piece' in bv or 'playsuit' in bv or 'teddy' in bv or 'dress' in bv:
+                            # Cache the normalized bottom value to avoid repeated operations
+                            bottom_val_normalized = str(bottom_val).strip().lower()
+                            if (bottom_val_normalized == '' or 
+                                bottom_val_normalized.startswith(('n/a', 'na', 'none')) or 
+                                any(keyword in bottom_val_normalized for keyword in ['one-piece', 'playsuit', 'teddy', 'dress'])):
                                 is_one_piece = True
 
                     if is_one_piece:
@@ -203,6 +206,10 @@ class MarkdownParser:
                             o_val['Bottom'] = None
                         else:
                             o_val[bottom_key] = None
+                            # Normalize to canonical 'Bottom' key if different
+                            if bottom_key != 'Bottom':
+                                o_val['Bottom'] = None
+                                del o_val[bottom_key]
                         o_val['one_piece'] = True
 
             characters[name] = {"appearance": appearance, "outfits": outfits}

@@ -2,22 +2,23 @@
 """Tooltip widget for providing help text on hover."""
 
 import tkinter as tk
+from config import TOOLTIP_DELAY_MS
 
 
 class ToolTip:
     """Create a tooltip for a given widget."""
     
-    def __init__(self, widget, text, delay=500):
+    def __init__(self, widget, text, delay=None):
         """Initialize tooltip.
         
         Args:
             widget: Widget to attach tooltip to
             text: Tooltip text
-            delay: Delay in ms before showing tooltip
+            delay: Delay in ms before showing tooltip (defaults to TOOLTIP_DELAY_MS)
         """
         self.widget = widget
         self.text = text
-        self.delay = delay
+        self.delay = delay if delay is not None else TOOLTIP_DELAY_MS
         self.tooltip_window = None
         self.id = None
         self.widget.bind("<Enter>", self.on_enter)
@@ -80,13 +81,13 @@ class ToolTip:
             self.tooltip_window = None
 
 
-def create_tooltip(widget, text, delay=500):
+def create_tooltip(widget, text, delay=None):
     """Create a tooltip for a widget.
     
     Args:
         widget: Widget to attach tooltip to
         text: Tooltip text
-        delay: Delay in ms before showing
+        delay: Delay in ms before showing (defaults to TOOLTIP_DELAY_MS)
         
     Returns:
         ToolTip instance
