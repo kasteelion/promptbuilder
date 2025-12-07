@@ -15,7 +15,8 @@ from config import (
     PREVIEW_UPDATE_THROTTLE_MS,
     RESIZE_THROTTLE_MS,
     RESIZE_SIGNIFICANT_CHANGE_PX,
-    MIN_PANE_WIDTH
+    MIN_PANE_WIDTH,
+    THEMES
 )
 from .characters_tab import CharactersTab
 from .edit_tab import EditTab
@@ -88,12 +89,25 @@ class PromptBuilderApp:
         menubar.add_cascade(label="File", menu=file_menu)
         file_menu.add_command(label="Exit", command=self.root.quit)
         
-        # View menu for font controls
+        # View menu for font controls and theme
         view_menu = tk.Menu(menubar, tearoff=0)
         menubar.add_cascade(label="View", menu=view_menu)
         view_menu.add_command(label="Increase Font Size", command=self._increase_font, accelerator="Ctrl++")
         view_menu.add_command(label="Decrease Font Size", command=self._decrease_font, accelerator="Ctrl+-")
         view_menu.add_command(label="Reset Font Size", command=self._reset_font, accelerator="Ctrl+0")
+        view_menu.add_separator()
+        
+        # Theme submenu
+        self.theme_var = tk.StringVar(value=DEFAULT_THEME)
+        theme_menu = tk.Menu(view_menu, tearoff=0)
+        view_menu.add_cascade(label="Theme", menu=theme_menu)
+        for theme_name in THEMES.keys():
+            theme_menu.add_radiobutton(
+                label=theme_name,
+                variable=self.theme_var,
+                value=theme_name,
+                command=lambda t=theme_name: self._change_theme(t)
+            )
         
         # Bind keyboard shortcuts for font control
         self.root.bind('<Control-plus>', lambda e: self._increase_font())
@@ -173,7 +187,6 @@ class PromptBuilderApp:
             preview_container, 
             self.theme_manager,
             self.reload_data,
-            self._on_theme_change,
             self.randomize_all
         )
         
@@ -224,12 +237,13 @@ class PromptBuilderApp:
                       self.edit_tab.editor_text]:
             widget.config(padx=10, pady=10, font=font)
     
-    def _on_theme_change(self, theme_name):
-        """Handle theme change event.
+    def _change_theme(self, theme_name):
+        """Handle theme change from menu.
         
         Args:
             theme_name: Name of new theme
         """
+        self.theme_var.set(theme_name)
         self._apply_theme(theme_name)
     
     def _apply_theme(self, theme_name):

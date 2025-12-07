@@ -58,7 +58,9 @@ class ThemeManager:
         fg = theme["fg"]
         text_bg = theme["text_bg"]
         accent = theme["accent"]
+        accent_hover = theme.get("accent_hover", accent)
         border = theme["border"]
+        selected_bg = theme.get("selected_bg", text_bg)
 
         # General Layout Elements
         self.style.configure("TFrame", background=bg)
@@ -68,46 +70,53 @@ class ThemeManager:
         # Custom widget styles
         self.style.configure("Collapsible.TFrame", background=bg)
         self.style.configure("Title.TLabel", font=(None, 14, "bold"), 
-                           background=bg, foreground=fg)
+                           background=bg, foreground=accent)
         
-        # Notebook tabs
-        self.style.configure("TNotebook", background=bg, bordercolor=border)
+        # Notebook tabs with better selection contrast
+        self.style.configure("TNotebook", background=bg, bordercolor=border, borderwidth=1)
         self.style.configure("TNotebook.Tab", background=bg, foreground=fg, 
-                           bordercolor=border)
+                           bordercolor=border, padding=[10, 2])
         self.style.map("TNotebook.Tab", 
-                      background=[("selected", text_bg), ("active", bg)],
-                      foreground=[("selected", fg), ("active", fg)])
+                      background=[("selected", selected_bg), ("active", text_bg)],
+                      foreground=[("selected", accent), ("active", fg)])
         
-        # Combobox/Entry
+        # Combobox/Entry with better contrast
         self.style.configure("TCombobox", fieldbackground=text_bg, 
                            foreground=fg, background=bg, 
-                           selectbackground=accent, selectforeground=fg)
+                           selectbackground=accent, selectforeground=text_bg,
+                           bordercolor=border, borderwidth=1)
         self.style.map("TCombobox", 
                       fieldbackground=[("readonly", text_bg)], 
                       selectbackground=[("readonly", text_bg)])
 
-        # Buttons
-        self.style.configure("TButton", background=border, 
-                           foreground=fg, bordercolor=border)
+        # Buttons with improved hover states
+        self.style.configure("TButton", background=text_bg, 
+                           foreground=fg, bordercolor=border, borderwidth=1,
+                           padding=[6, 3])
         self.style.map("TButton", 
-                      background=[("active", accent)], 
-                      foreground=[("active", fg)])
+                      background=[("active", accent), ("pressed", accent_hover)], 
+                      foreground=[("active", text_bg), ("pressed", text_bg)],
+                      bordercolor=[("active", accent), ("pressed", accent_hover)])
 
-        # Accent Button
+        # Accent Button for primary actions
         self.style.configure("Accent.TButton", background=accent, 
-                           foreground=text_bg, bordercolor=accent)
+                           foreground=text_bg, bordercolor=accent, borderwidth=1,
+                           padding=[6, 3])
         self.style.map("Accent.TButton", 
-                      background=[("active", fg)], 
-                      foreground=[("active", bg)])
+                      background=[("active", accent_hover), ("pressed", border)], 
+                      foreground=[("active", text_bg), ("pressed", fg)],
+                      bordercolor=[("active", accent_hover), ("pressed", border)])
                        
-        # Label Frames
+        # Label Frames with more visible borders
         self.style.configure("TLabelframe", background=bg, 
-                           foreground=fg, bordercolor=border)
-        self.style.configure("TLabelframe.Label", background=bg, foreground=fg)
+                           foreground=fg, bordercolor=border, borderwidth=2,
+                           relief="solid")
+        self.style.configure("TLabelframe.Label", background=bg, foreground=accent,
+                           font=(None, 9, "bold"))
 
-        # Scrollbar
-        self.style.configure("Vertical.TScrollbar", background=border, 
-                           troughcolor=bg)
+        # Scrollbar with better visibility
+        self.style.configure("Vertical.TScrollbar", background=text_bg, 
+                           troughcolor=bg, bordercolor=border, arrowcolor=fg)
     
     def apply_text_widget_theme(self, widget, theme):
         """Apply theme colors to a tk.Text widget.
@@ -172,4 +181,5 @@ class ThemeManager:
             canvas: tk.Canvas widget
             theme: Theme color dictionary
         """
-        canvas.config(bg=theme["bg"])
+        # Use text_bg for better contrast with content
+        canvas.config(bg=theme.get("text_bg", theme["bg"]))

@@ -58,34 +58,28 @@ EDITABLE_FILES = get_editable_files()
 # Theme definitions
 THEMES = {
     "Light": {
-        "bg": "#f5f5f5",
-        "fg": "#2c2c2c",
+        "bg": "#f0f0f0",
+        "fg": "#1a1a1a",
         "preview_bg": "#ffffff",
-        "preview_fg": "#1a1a1a",
+        "preview_fg": "#2c2c2c",
         "text_bg": "#ffffff",
         "text_fg": "#2c2c2c",
-        "accent": "#0078d4",
-        "border": "#d0d0d0"
+        "accent": "#0066cc",
+        "accent_hover": "#004c99",
+        "border": "#cccccc",
+        "selected_bg": "#e3f2fd"
     },
     "Dark": {
         "bg": "#1e1e1e",
-        "fg": "#e0e0e0",
+        "fg": "#d4d4d4",
         "preview_bg": "#252526",
-        "preview_fg": "#d4d4d4",
+        "preview_fg": "#e0e0e0",
         "text_bg": "#2d2d2d",
-        "text_fg": "#e0e0e0",
+        "text_fg": "#d4d4d4",
         "accent": "#0e639c",
-        "border": "#3c3c3c"
-    },
-    "Modern Dark": {
-        "bg": "#2c3e50",
-        "fg": "#ecf0f1",
-        "preview_bg": "#34495e",
-        "preview_fg": "#ecf0f1",
-        "text_bg": "#34495e",
-        "text_fg": "#ecf0f1",
-        "accent": "#3498db",
-        "border": "#2c3e50"
+        "accent_hover": "#1177bb",
+        "border": "#3c3c3c",
+        "selected_bg": "#2d3e50"
     },
     "Monokai": {
         "bg": "#272822",
@@ -95,17 +89,9 @@ THEMES = {
         "text_bg": "#3e3d32",
         "text_fg": "#f8f8f2",
         "accent": "#66d9ef",
-        "border": "#49483e"
-    },
-    "Solarized Dark": {
-        "bg": "#002b36",
-        "fg": "#839496",
-        "preview_bg": "#073642",
-        "preview_fg": "#93a1a1",
-        "text_bg": "#073642",
-        "text_fg": "#839496",
-        "accent": "#268bd2",
-        "border": "#586e75"
+        "accent_hover": "#89e4f7",
+        "border": "#49483e",
+        "selected_bg": "#49483e"
     },
     "Nord": {
         "bg": "#2e3440",
@@ -115,7 +101,9 @@ THEMES = {
         "text_bg": "#3b4252",
         "text_fg": "#d8dee9",
         "accent": "#88c0d0",
-        "border": "#4c566a"
+        "accent_hover": "#8fbcbb",
+        "border": "#4c566a",
+        "selected_bg": "#434c5e"
     },
     "Dracula": {
         "bg": "#282a36",
@@ -125,7 +113,45 @@ THEMES = {
         "text_bg": "#44475a",
         "text_fg": "#f8f8f2",
         "accent": "#bd93f9",
-        "border": "#6272a4"
+        "accent_hover": "#caa6fc",
+        "border": "#6272a4",
+        "selected_bg": "#44475a"
+    },
+    "Gruvbox Dark": {
+        "bg": "#282828",
+        "fg": "#ebdbb2",
+        "preview_bg": "#1d2021",
+        "preview_fg": "#ebdbb2",
+        "text_bg": "#3c3836",
+        "text_fg": "#ebdbb2",
+        "accent": "#83a598",
+        "accent_hover": "#a89984",
+        "border": "#504945",
+        "selected_bg": "#504945"
+    },
+    "One Dark": {
+        "bg": "#282c34",
+        "fg": "#abb2bf",
+        "preview_bg": "#21252b",
+        "preview_fg": "#abb2bf",
+        "text_bg": "#2c313a",
+        "text_fg": "#abb2bf",
+        "accent": "#61afef",
+        "accent_hover": "#84c0f4",
+        "border": "#3e4451",
+        "selected_bg": "#3e4451"
+    },
+    "Tokyo Night": {
+        "bg": "#1a1b26",
+        "fg": "#a9b1d6",
+        "preview_bg": "#16161e",
+        "preview_fg": "#c0caf5",
+        "text_bg": "#24283b",
+        "text_fg": "#a9b1d6",
+        "accent": "#7aa2f7",
+        "accent_hover": "#9db3f5",
+        "border": "#414868",
+        "selected_bg": "#292e42"
     }
 }
 

@@ -10,20 +10,18 @@ from config import THEMES
 class PreviewPanel:
     """Right-side panel showing formatted prompt preview."""
     
-    def __init__(self, parent, theme_manager, on_reload, on_theme_change, on_randomize):
+    def __init__(self, parent, theme_manager, on_reload, on_randomize):
         """Initialize preview panel.
         
         Args:
             parent: Parent widget
             theme_manager: ThemeManager instance
             on_reload: Callback for reload button
-            on_theme_change: Callback for theme change
             on_randomize: Callback for randomize button
         """
         self.parent = parent
         self.theme_manager = theme_manager
         self.on_reload = on_reload
-        self.on_theme_change = on_theme_change
         self.on_randomize = on_randomize
         
         self._build_ui()
@@ -55,26 +53,6 @@ class PreviewPanel:
         
         # Reload button
         ttk.Button(controls_frame, text="Reload Data", command=self.on_reload).pack(side="left", padx=2)
-        
-        # Display mode selector
-        ttk.Label(controls_frame, text="Display:").pack(side="left", padx=(8, 4))
-        self.outfit_mode_var = tk.StringVar(value="Detailed")
-        self.outfit_mode_combo = ttk.Combobox(controls_frame, textvariable=self.outfit_mode_var, state="readonly", width=10)
-        self.outfit_mode_combo["values"] = ["Detailed", "Compact"]
-        self.outfit_mode_combo.pack(side="left", padx=(0, 8))
-        
-        # Theme selector
-        ttk.Label(controls_frame, text="Theme:").pack(side="left", padx=(0, 4))
-        self.theme_var = tk.StringVar(value=self.theme_manager.current_theme or "Dark")
-        self.theme_combo = ttk.Combobox(
-            controls_frame, 
-            textvariable=self.theme_var, 
-            state="readonly", 
-            width=15
-        )
-        self.theme_combo["values"] = list(THEMES.keys())
-        self.theme_combo.pack(side="left", padx=0)
-        self.theme_combo.bind("<<ComboboxSelected>>", self._on_theme_selected)
 
         # Preview text widget
         self.preview_text = scrolledtext.ScrolledText(self.parent, wrap="word")
@@ -113,11 +91,6 @@ class PreviewPanel:
         self.get_prompt_callback = get_prompt
         self.validate_callback = validate
         self.randomize_callback = randomize
-
-    def get_outfit_mode(self):
-        """Return current outfit display mode value: 'detailed' or 'compact'"""
-        v = self.outfit_mode_var.get().lower()
-        return 'compact' if v.startswith('c') else 'detailed'
     
     def update_preview(self, prompt_text):
         """Update preview with formatted prompt text.
