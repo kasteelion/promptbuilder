@@ -205,6 +205,7 @@ The resizing system ensures optimal readability whether you're using the app on 
 promptbuilder/
 ├── main.py                 # Application entry point
 ├── config.py              # Configuration constants and theme definitions
+├── compat.py              # Python version compatibility utilities
 ├── base_prompts.md        # Base art style templates
 ├── outfits.md            # Shared outfit definitions
 ├── poses.md              # Pose presets
@@ -212,28 +213,37 @@ promptbuilder/
 ├── characters/           # Individual character files
 │   ├── character_name.md
 │   └── ...
+├── presets/              # Saved user presets
 ├── core/                 # Core prompt building logic
 │   ├── builder.py        # PromptBuilder class
-│   ├── models.py         # Data models
 │   └── renderers.py      # Prompt rendering
 ├── logic/                # Data loading and validation
-│   ├── data_loader.py
-│   ├── validator.py
-│   └── randomizer.py
+│   ├── data_loader.py    # Markdown file loading
+│   ├── parsers.py        # Markdown parsing utilities
+│   ├── validator.py      # Prompt validation
+│   └── randomizer.py     # Random prompt generation
 ├── themes/               # Theme management
 │   └── theme_manager.py
-└── ui/                   # User interface components
-    ├── main_window.py    # Main application window
-    ├── characters_tab.py # Character selection UI
-    ├── scene_tab.py      # Scene selection UI
-    ├── notes_tab.py      # Notes input UI
-    ├── edit_tab.py       # File editor UI
-    ├── preview_panel.py  # Prompt preview panel
-    ├── character_creator.py  # Character creation dialog
-    ├── scene_creator.py      # Scene creation dialog
-    ├── base_style_creator.py # Base style creation dialog
-    ├── outfit_creator.py     # Outfit creation dialogs
-    └── pose_creator.py       # Pose creation dialog
+├── ui/                   # User interface components
+│   ├── main_window.py    # Main application window
+│   ├── characters_tab.py # Character selection UI
+│   ├── edit_tab.py       # File editor UI
+│   ├── preview_panel.py  # Prompt preview panel
+│   ├── widgets.py        # Custom widgets (CollapsibleFrame, FlowFrame)
+│   ├── character_creator.py  # Character creation dialog
+│   ├── scene_creator.py      # Scene creation dialog
+│   ├── base_style_creator.py # Base style creation dialog
+│   ├── outfit_creator.py     # Outfit creation dialogs
+│   ├── pose_creator.py       # Pose creation dialog
+│   └── searchable_combobox.py # Enhanced combobox widget
+└── utils/                # Utility modules
+    ├── logger.py         # Centralized logging
+    ├── validation.py     # Input validation
+    ├── preferences.py    # User preferences persistence
+    ├── preset_manager.py # Preset save/load
+    ├── undo_manager.py   # Undo/redo functionality
+    ├── tooltip.py        # Tooltip widget
+    └── *_templates.py    # Creator dialog templates
 ```
 
 ## Troubleshooting
