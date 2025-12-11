@@ -373,7 +373,7 @@ When contributing:
 
 ## Changelog
 
-### Version 2.0 (December 2024)
+### Version 2.0 (December 2025)
 **Major UX Overhaul with 20+ new features!**
 
 - ✅ Undo/Redo system (Ctrl+Z/Y)
