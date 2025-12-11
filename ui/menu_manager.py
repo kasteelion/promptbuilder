@@ -1,0 +1,262 @@
+# -*- coding: utf-8 -*-
+"""Menu bar management for the application."""
+
+import tkinter as tk
+from tkinter import ttk
+from typing import Callable, Dict, Any
+from config import THEMES
+
+
+class MenuManager:
+    """Manages the application menu bar and all menu items.
+    
+    Separates menu creation and management from the main window,
+    making the code more maintainable and testable.
+    """
+    
+    def __init__(self, root: tk.Tk, callbacks: Dict[str, Callable]):
+        """Initialize menu manager.
+        
+        Args:
+            root: Tkinter root window
+            callbacks: Dictionary of callback functions for menu actions
+                Required keys:
+                - save_preset, load_preset
+                - export_config, import_config
+                - undo, redo
+                - clear_all_characters, reset_all_outfits, apply_same_pose_to_all
+                - toggle_character_gallery
+                - increase_font, decrease_font, reset_font
+                - randomize_all
+                - change_theme, toggle_auto_theme
+                - show_characters_summary, show_welcome, show_shortcuts, show_about
+                - on_closing
+        """
+        self.root = root
+        self.callbacks = callbacks
+        
+        # Variables that need to be accessible
+        self.theme_var = tk.StringVar(value=callbacks.get('initial_theme', 'Dark'))
+        self.auto_theme_var = tk.BooleanVar(value=callbacks.get('auto_theme_enabled', False))
+        self.gallery_visible_var = tk.BooleanVar(value=callbacks.get('gallery_visible', True))
+        
+        # Create menu bar
+        self.menubar = tk.Menu(root)
+        root.config(menu=self.menubar)
+        
+        # Build menus
+        self._build_file_menu()
+        self._build_edit_menu()
+        self._build_view_menu()
+        self._build_help_menu()
+    
+    def _build_file_menu(self):
+        """Build File menu."""
+        file_menu = tk.Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label="File", menu=file_menu)
+        
+        file_menu.add_command(
+            label="Save Preset...", 
+            command=self.callbacks['save_preset'],
+            accelerator="Ctrl+Shift+S"
+        )
+        file_menu.add_command(
+            label="Load Preset...", 
+            command=self.callbacks['load_preset'],
+            accelerator="Ctrl+Shift+O"
+        )
+        
+        file_menu.add_separator()
+        
+        file_menu.add_command(
+            label="Export Configuration...",
+            command=self.callbacks['export_config']
+        )
+        file_menu.add_command(
+            label="Import Configuration...",
+            command=self.callbacks['import_config']
+        )
+        
+        file_menu.add_separator()
+        
+        file_menu.add_command(
+            label="Exit",
+            command=self.callbacks['on_closing']
+        )
+    
+    def _build_edit_menu(self):
+        """Build Edit menu."""
+        edit_menu = tk.Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label="Edit", menu=edit_menu)
+        
+        edit_menu.add_command(
+            label="Undo",
+            command=self.callbacks['undo'],
+            accelerator="Ctrl+Z"
+        )
+        edit_menu.add_command(
+            label="Redo",
+            command=self.callbacks['redo'],
+            accelerator="Ctrl+Y"
+        )
+        
+        edit_menu.add_separator()
+        
+        edit_menu.add_command(
+            label="Clear All Characters",
+            command=self.callbacks['clear_all_characters']
+        )
+        edit_menu.add_command(
+            label="Reset All Outfits",
+            command=self.callbacks['reset_all_outfits']
+        )
+        edit_menu.add_command(
+            label="Apply Same Pose to All",
+            command=self.callbacks['apply_same_pose_to_all']
+        )
+    
+    def _build_view_menu(self):
+        """Build View menu with theme and display options."""
+        view_menu = tk.Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label="View", menu=view_menu)
+        
+        # Character Gallery toggle
+        view_menu.add_checkbutton(
+            label="Show Character Gallery",
+            variable=self.gallery_visible_var,
+            command=self.callbacks['toggle_character_gallery'],
+            accelerator="Ctrl+G"
+        )
+        view_menu.add_separator()
+        
+        # Font controls
+        view_menu.add_command(
+            label="Increase Font Size",
+            command=self.callbacks['increase_font'],
+            accelerator="Ctrl++"
+        )
+        view_menu.add_command(
+            label="Decrease Font Size",
+            command=self.callbacks['decrease_font'],
+            accelerator="Ctrl+-"
+        )
+        view_menu.add_command(
+            label="Reset Font Size",
+            command=self.callbacks['reset_font'],
+            accelerator="Ctrl+0"
+        )
+        
+        view_menu.add_separator()
+        
+        # Randomize
+        view_menu.add_command(
+            label="Randomize All",
+            command=self.callbacks['randomize_all'],
+            accelerator="Alt+R"
+        )
+        
+        view_menu.add_separator()
+        
+        # Theme submenu
+        self._build_theme_submenu(view_menu)
+        
+        # Auto theme detection
+        view_menu.add_separator()
+        view_menu.add_checkbutton(
+            label="Auto-detect OS Theme",
+            variable=self.auto_theme_var,
+            command=self.callbacks['toggle_auto_theme']
+        )
+    
+    def _build_theme_submenu(self, parent_menu):
+        """Build theme selection submenu.
+        
+        Args:
+            parent_menu: Parent menu to add theme submenu to
+        """
+        theme_menu = tk.Menu(parent_menu, tearoff=0)
+        parent_menu.add_cascade(label="Theme", menu=theme_menu)
+        
+        for theme_name in THEMES.keys():
+            theme_menu.add_radiobutton(
+                label=theme_name,
+                variable=self.theme_var,
+                value=theme_name,
+                command=lambda t=theme_name: self.callbacks['change_theme'](t)
+            )
+    
+    def _build_help_menu(self):
+        """Build Help menu."""
+        help_menu = tk.Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label="Help", menu=help_menu)
+        
+        help_menu.add_command(
+            label="Characters Summary",
+            command=self.callbacks['show_characters_summary']
+        )
+        
+        help_menu.add_separator()
+        
+        help_menu.add_command(
+            label="Show Welcome Screen",
+            command=self.callbacks['show_welcome']
+        )
+        help_menu.add_command(
+            label="Keyboard Shortcuts",
+            command=self.callbacks['show_shortcuts']
+        )
+        
+        help_menu.add_separator()
+        
+        help_menu.add_command(
+            label="About",
+            command=self.callbacks['show_about']
+        )
+    
+    def set_theme(self, theme_name: str):
+        """Set the current theme selection.
+        
+        Args:
+            theme_name: Name of theme to select
+        """
+        self.theme_var.set(theme_name)
+    
+    def get_theme(self) -> str:
+        """Get the current theme selection.
+        
+        Returns:
+            Current theme name
+        """
+        return self.theme_var.get()
+    
+    def set_auto_theme(self, enabled: bool):
+        """Set auto theme detection state.
+        
+        Args:
+            enabled: Whether auto theme detection is enabled
+        """
+        self.auto_theme_var.set(enabled)
+    
+    def get_auto_theme(self) -> bool:
+        """Get auto theme detection state.
+        
+        Returns:
+            True if auto theme detection is enabled
+        """
+        return self.auto_theme_var.get()
+    
+    def set_gallery_visible(self, visible: bool):
+        """Set gallery visibility state.
+        
+        Args:
+            visible: Whether gallery is visible
+        """
+        self.gallery_visible_var.set(visible)
+    
+    def get_gallery_visible(self) -> bool:
+        """Get gallery visibility state.
+        
+        Returns:
+            True if gallery is visible
+        """
+        return self.gallery_visible_var.get()

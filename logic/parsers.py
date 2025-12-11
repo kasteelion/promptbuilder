@@ -3,6 +3,19 @@
 import re
 
 
+# Pre-compile regex patterns for better performance
+_SECTION_RE = re.compile(r"^##\s+(.+)$", re.MULTILINE)
+_SUBSECTION_RE = re.compile(r"^###\s+(.+)$", re.MULTILINE)
+_OUTFIT_RE = re.compile(r"^####\s+(.+)$", re.MULTILINE)
+_PHOTO_RE = re.compile(r"\*\*Photo:\*\*\s*(.+?)(?:\n|$)", re.MULTILINE)
+_APPEARANCE_RE = re.compile(
+    r"\*\*Appearance:\*\*\s*(.+?)(?:\n\*\*Outfits:|\n\*\*|$)",
+    re.DOTALL
+)
+_LIST_ITEM_RE = re.compile(r"^\s*[-*]\s+(.*)$")
+_PRESET_ITEM_RE = re.compile(r"^-\s+\*\*([^:]+):\*\*\s*(.+)$")
+
+
 class MarkdownParser:
     """Parses markdown files for characters, base prompts, and presets."""
 
@@ -71,16 +84,18 @@ class MarkdownParser:
         - **Outfit Name:** description
         """
         characters = {}
-        parts = re.split(r"^###\s+(.+)$", content, flags=re.MULTILINE)
+        parts = _SUBSECTION_RE.split(content)
         for i in range(1, len(parts), 2):
             name = parts[i].strip()
             body = parts[i + 1] if i + 1 < len(parts) else ""
 
-            app_match = re.search(
-                r"\*\*Appearance:\*\*\s*(.+?)(?:\n\*\*Outfits:|\n\*\*|$)",
-                body,
-                flags=re.DOTALL,
-            )
+            # Extract photo path if present
+            photo = None
+            photo_match = _PHOTO_RE.search(body)
+            if photo_match:
+                photo = photo_match.group(1).strip()
+
+            app_match = _APPEARANCE_RE.search(body)
             appearance = app_match.group(1).strip() if app_match else ""
 
             outfits = {}
@@ -90,7 +105,7 @@ class MarkdownParser:
             # #### Base
             # - **Top:** ...
             # - **Bottom:** ...
-            outfit_parts = re.split(r"^####\s+(.+)$", body, flags=re.MULTILINE)
+            outfit_parts = _OUTFIT_RE.split(body)
             if len(outfit_parts) > 1:
                 # outfit_parts layout: [pre_text, outfit_name, outfit_body, outfit_name, outfit_body, ...]
                 for outfit_idx in range(1, len(outfit_parts), 2):
@@ -212,8 +227,38 @@ class MarkdownParser:
                                 del o_val[bottom_key]
                         o_val['one_piece'] = True
 
-            characters[name] = {"appearance": appearance, "outfits": outfits}
-        return characters
+            characters[name] = {
+                "appearance": appearance, 
+                "outfits": outfits,
+                "photo": photo
+            }
+        
+        # Validate parsed character structure
+        validated_chars = {}
+        for name, data in characters.items():
+            if not isinstance(data, dict):
+                # Import logger locally to avoid circular imports
+                from utils import logger
+                logger.warning(f"Invalid character data for {name}, skipping")
+                continue
+            
+            # Ensure required fields exist
+            if 'appearance' not in data:
+                from utils import logger
+                logger.warning(f"Character {name} missing appearance, adding empty")
+                data['appearance'] = ""
+            
+            if 'outfits' not in data or not isinstance(data['outfits'], dict):
+                from utils import logger
+                logger.warning(f"Character {name} has invalid outfits, adding empty dict")
+                data['outfits'] = {}
+            
+            if 'photo' not in data:
+                data['photo'] = None
+            
+            validated_chars[name] = data
+        
+        return validated_chars
 
     @staticmethod
     def parse_base_prompts(content: str):

@@ -3,7 +3,7 @@
 
 import json
 from pathlib import Path
-from config import MAX_RECENT_ITEMS
+from ui.constants import MAX_RECENT_ITEMS
 from .logger import logger
 
 

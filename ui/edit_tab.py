@@ -2,13 +2,14 @@
 
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
+from typing import Callable, List
 from config import MAIN_EDITABLE_FILES
 
 
 class EditTab:
     """Tab for editing markdown data files."""
     
-    def __init__(self, parent, data_loader, on_reload_callback):
+    def __init__(self, parent: ttk.Notebook, data_loader, on_reload_callback: Callable[[], None]):
         """Initialize edit tab.
         
         Args:
@@ -27,7 +28,7 @@ class EditTab:
         self._refresh_file_list()
         self._load_markdown_for_editing()
     
-    def _get_editable_files(self):
+    def _get_editable_files(self) -> List[str]:
         """Get current list of editable files including character files."""
         return self.data_loader.get_editable_files()
     
@@ -89,7 +90,7 @@ class EditTab:
             return
         
         # Check if it's a character file (from characters/ folder)
-        char_dir = self.data_loader.base_dir / "characters"
+        char_dir = self.data_loader._find_characters_dir()
         if char_dir.exists() and (char_dir / filename).exists():
             file_path = char_dir / filename
         else:
@@ -121,7 +122,7 @@ class EditTab:
             return
 
         # Check if it's a character file (from characters/ folder)
-        char_dir = self.data_loader.base_dir / "characters"
+        char_dir = self.data_loader._find_characters_dir()
         if char_dir.exists() and (char_dir / filename).exists():
             file_path = char_dir / filename
         else:
@@ -134,5 +135,23 @@ class EditTab:
             self._refresh_file_list()  # Refresh in case new files were created
             self.on_reload()
             messagebox.showinfo("Success", f"{filename} saved and data reloaded.")
+        except PermissionError:
+            messagebox.showerror(
+                "Permission Denied",
+                f"Cannot write to {filename}\n\n"
+                f"• File may be open in another program\n"
+                f"• Check folder permissions\n"
+                f"• Try running as administrator"
+            )
+        except OSError as e:
+            messagebox.showerror(
+                "File System Error",
+                f"Could not write to {filename}:\n{str(e)}"
+            )
         except Exception as e:
-            messagebox.showerror("Save Error", f"Could not write to {filename}:\n{str(e)}")
+            from utils import logger
+            logger.error(f"Unexpected error saving {filename}: {e}", exc_info=True)
+            messagebox.showerror(
+                "Save Error", 
+                f"Unexpected error ({type(e).__name__}):\n{str(e)}"
+            )

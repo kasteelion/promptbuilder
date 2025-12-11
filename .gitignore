@@ -19,3 +19,11 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+
+# User Data
+preferences.json
+*.log
+promptbuilder_debug.log
+presets/
+data/presets/
+

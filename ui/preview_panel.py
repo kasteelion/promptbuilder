@@ -4,6 +4,7 @@
 import re
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox, filedialog
+from typing import Callable, Optional
 from pathlib import Path
 from config import THEMES
 
@@ -11,7 +12,7 @@ from config import THEMES
 class PreviewPanel:
     """Right-side panel showing formatted prompt preview."""
     
-    def __init__(self, parent, theme_manager, on_reload, on_randomize):
+    def __init__(self, parent: ttk.Frame, theme_manager, on_reload: Callable[[], None], on_randomize: Callable[[], None]):
         """Initialize preview panel.
         
         Args:
@@ -27,7 +28,7 @@ class PreviewPanel:
         
         self._build_ui()
     
-    def _build_ui(self):
+    def _build_ui(self) -> None:
         """Build the preview panel UI."""
         self.parent.rowconfigure(1, weight=1)
         self.parent.columnconfigure(0, weight=1)

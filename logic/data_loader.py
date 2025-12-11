@@ -3,22 +3,79 @@
 import sys
 from pathlib import Path
 from .parsers import MarkdownParser
+from utils import logger
 
 
 class DataLoader:
     """Loads markdown files from the same directory as this script (or cwd)."""
 
     def __init__(self):
+        # Use Path(__file__).parent to get the script's directory
+        # This is more secure than using sys.argv[0] which can be manipulated
         try:
-            # Use Path(__file__).parent if run as a script
-            self.base_dir = Path(sys.argv[0]).resolve().parent
-        except Exception:
-            # Fallback for environments where __file__ is not defined
-            self.base_dir = Path.cwd()
+            import os
+            # Get the directory containing this module
+            module_dir = Path(__file__).parent
+            # Go up one level to get the project root
+            self.base_dir = module_dir.parent
+        except (NameError, AttributeError):
+            # Fallback for environments where __file__ is not defined (e.g., interactive shells)
+            import sys
+            try:
+                self.base_dir = Path(sys.argv[0]).resolve().parent
+            except (IndexError, AttributeError):
+                self.base_dir = Path.cwd()
+        
+        # Cache for parsed data
+        self._cache = {}
+        self._file_mtimes = {}
+    
+    def _find_data_file(self, filename):
+        """Find data file in new or old location.
+        
+        Checks data/ directory first (new structure), then root (old structure).
+        
+        Args:
+            filename: Name of file to find (e.g., 'outfits.md')
+            
+        Returns:
+            Path object or None if not found
+        """
+        # Try new location (data/filename)
+        new_location = self.base_dir / "data" / filename
+        if new_location.exists():
+            return new_location
+        
+        # Fall back to old location (root/filename)
+        old_location = self.base_dir / filename
+        if old_location.exists():
+            return old_location
+        
+        # Return new location as default for file creation
+        return new_location
+    
+    def _find_characters_dir(self):
+        """Find characters directory in new or old location.
+        
+        Returns:
+            Path to characters directory (new or old location)
+        """
+        # Try new location first
+        new_location = self.base_dir / "data" / "characters"
+        if new_location.exists():
+            return new_location
+        
+        # Fall back to old location
+        old_location = self.base_dir / "characters"
+        if old_location.exists():
+            return old_location
+        
+        # Return new location as default
+        return new_location
 
     def load_outfits(self):
         """Load and parse shared outfits from outfits.md file. Creates file if not found."""
-        f = self.base_dir / "outfits.md"
+        f = self._find_data_file("outfits.md")
         if not f.exists():
             default_content = """## Common Outfits
 ### Casual
@@ -36,8 +93,29 @@ A simple and comfortable casual outfit.
         
         Looks for individual character markdown files in the characters/ folder.
         Falls back to characters.md for backwards compatibility.
+        Uses caching to avoid re-parsing unchanged files.
         """
-        chars_dir = self.base_dir / "characters"
+        chars_dir = self._find_characters_dir()
+        
+        # Check if cache is valid
+        cache_key = 'characters'
+        if chars_dir.exists():
+            try:
+                char_files = list(chars_dir.glob("*.md"))
+                if char_files:
+                    current_mtime = max(f.stat().st_mtime for f in char_files)
+                    
+                    if (cache_key in self._cache and 
+                        self._file_mtimes.get(cache_key) == current_mtime):
+                        # Cache is valid, return cached data
+                        return self._cache[cache_key]
+                    
+                    # Update mtime
+                    self._file_mtimes[cache_key] = current_mtime
+            except (OSError, ValueError):
+                # If mtime check fails, continue with reload
+                pass
+        
         chars = {}
         # Try loading from characters folder first
         if chars_dir.exists() and chars_dir.is_dir():
@@ -47,10 +125,14 @@ A simple and comfortable casual outfit.
                     # Parse single character file
                     file_chars = MarkdownParser.parse_characters(text)
                     if not file_chars:
-                        print(f"Warning: No characters found in {char_file.name}")
+                        logger.warning(f"No characters found in {char_file.name}")
                     chars.update(file_chars)
+                except UnicodeDecodeError as e:
+                    logger.error(f"Encoding error in {char_file.name}: {e}")
+                except PermissionError as e:
+                    logger.error(f"Permission denied reading {char_file.name}: {e}")
                 except Exception as e:
-                    print(f"Error loading {char_file.name}: {e}")
+                    logger.error(f"Error loading {char_file.name}: {type(e).__name__} - {e}")
 
         # If no character files were found, attempt to create a sample character
         if not chars:
@@ -78,11 +160,11 @@ A simple and comfortable casual outfit.
                         file_chars = MarkdownParser.parse_characters(text)
                         chars.update(file_chars)
                     except Exception as e:
-                        print(f"Error parsing {char_file.name}: {e}")
+                        logger.error(f"Error parsing {char_file.name}: {e}")
             except Exception as e:
-                print(f"Error creating sample character: {e}")
+                logger.error(f"Error creating sample character: {e}")
                 # Fallback to legacy characters.md location for backwards compatibility
-                f = self.base_dir / "characters.md"
+                f = self._find_data_file("characters.md")
                 if not f.exists():
                     default_content = """### Sample Character
 **Appearance:** A sample character for you to get started.
@@ -105,11 +187,19 @@ A simple and comfortable casual outfit.
             )
             char_data["outfits"] = merged_outfits
         
+        # Cache the result
+        self._cache[cache_key] = chars
+        
         return chars
+
+    def clear_cache(self):
+        """Clear all cached data to force reload."""
+        self._cache.clear()
+        self._file_mtimes.clear()
 
     def load_base_prompts(self):
         """Load and parse base_prompts.md file. Creates file if not found."""
-        f = self.base_dir / "base_prompts.md"
+        f = self._find_data_file("base_prompts.md")
         default_prompt = {"Default": "Soft semi-realistic illustration with clear, natural lighting. Fresh muted florals, calm tonal balance."}
         
         if not f.exists():
@@ -126,7 +216,7 @@ Soft semi-realistic illustration with clear, natural lighting. Fresh muted flora
 
     def load_presets(self, filename: str):
         """Load and parse preset files (scenes.md, poses.md, etc.). Creates file if not found."""
-        f = self.base_dir / filename
+        f = self._find_data_file(filename)
         
         defaults_content = {
             "scenes.md": """## Default
@@ -176,7 +266,7 @@ Soft semi-realistic illustration with clear, natural lighting. Fresh muted flora
         files = list(MAIN_EDITABLE_FILES)
         
         # Check for character files in characters/ folder
-        char_dir = self.base_dir / "characters"
+        char_dir = self._find_characters_dir()
         if char_dir.exists() and char_dir.is_dir():
             char_files = sorted([f.name for f in char_dir.glob("*.md")])
             files.extend(char_files)

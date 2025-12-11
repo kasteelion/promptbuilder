@@ -4,6 +4,11 @@
 
 import sys
 
+# Initialize debug logging FIRST
+from debug_log import init_debug_log, log, close_debug_log
+init_debug_log()
+log("Starting Prompt Builder...")
+
 # Check Python version compatibility FIRST (before any other imports)
 if sys.version_info < (3, 8):
     from compat import print_version_error
@@ -20,7 +25,7 @@ except ImportError:
 
 # Import application modules
 from ui import PromptBuilderApp
-from config import DEFAULT_WINDOW_GEOMETRY
+from ui.constants import DEFAULT_WINDOW_GEOMETRY
 
 # Optional: Print version info for debugging
 if "--version" in sys.argv or "-v" in sys.argv:
@@ -42,17 +47,28 @@ if "--check-compat" in sys.argv:
 def main():
     """Main entry point for the application."""
     try:
+        log("Creating Tkinter root window...")
         root = tk.Tk()
         root.geometry(DEFAULT_WINDOW_GEOMETRY)
+        log("Creating PromptBuilderApp...")
         app = PromptBuilderApp(root)
-        
+        log("Entering mainloop...")
         root.mainloop()
+        log("Mainloop exited normally")
     except KeyboardInterrupt:
         # Graceful shutdown on Ctrl+C
+        log("Application closed by user (Ctrl+C)")
         print("\nApplication closed by user.")
+        close_debug_log()
         sys.exit(0)
     except Exception as e:
         # Catch any unexpected errors and provide helpful information
+        import traceback
+        log(f"FATAL ERROR: {type(e).__name__}: {str(e)}")
+        log("Full traceback:")
+        for line in traceback.format_exc().split('\n'):
+            log(line)
+        
         print("=" * 70)
         print("UNEXPECTED ERROR")
         print("=" * 70)
@@ -64,7 +80,10 @@ def main():
         print(f"  - Platform: {sys.platform}")
         print(f"  - Error type: {type(e).__name__}")
         print(f"  - Error message: {str(e)}")
+        print(f"  - Debug log saved to: promptbuilder_debug.log")
         print("=" * 70)
+        
+        close_debug_log()
         
         # Re-raise in debug mode
         if "--debug" in sys.argv:

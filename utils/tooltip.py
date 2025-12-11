@@ -2,7 +2,7 @@
 """Tooltip widget for providing help text on hover."""
 
 import tkinter as tk
-from config import TOOLTIP_DELAY_MS
+from ui.constants import TOOLTIP_DELAY_MS
 
 
 class ToolTip:

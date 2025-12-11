@@ -3,7 +3,9 @@
 import tkinter as tk
 import tkinter.font as tkfont
 from tkinter import ttk
-from config import THEMES, DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
+from config import THEMES
+from ui.constants import DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
+from utils import logger
 
 
 class ThemeManager:
@@ -26,8 +28,8 @@ class ThemeManager:
         # Set base theme
         try:
             self.style.theme_use("clam")
-        except:
-            pass
+        except tk.TclError as e:
+            logger.debug(f"Could not set clam theme: {e}")
     
     def apply_theme(self, theme_name):
         """Apply a theme to all ttk styles and return theme colors.
@@ -80,14 +82,16 @@ class ThemeManager:
                       background=[("selected", selected_bg), ("active", text_bg)],
                       foreground=[("selected", accent), ("active", fg)])
         
-        # Combobox/Entry with better contrast
+        # Combobox/Entry with better contrast and visibility
         self.style.configure("TCombobox", fieldbackground=text_bg, 
                            foreground=fg, background=bg, 
-                           selectbackground=accent, selectforeground=text_bg,
-                           bordercolor=border, borderwidth=1)
+                           selectbackground=accent, selectforeground=bg,
+                           bordercolor=border, borderwidth=1,
+                           arrowcolor=fg)
         self.style.map("TCombobox", 
-                      fieldbackground=[("readonly", text_bg)], 
-                      selectbackground=[("readonly", text_bg)])
+                      fieldbackground=[("readonly", text_bg), ("disabled", bg)],
+                      foreground=[("readonly", fg), ("disabled", border)],
+                      arrowcolor=[("disabled", border)])
 
         # Buttons with improved hover states
         self.style.configure("TButton", background=text_bg, 
@@ -130,7 +134,8 @@ class ThemeManager:
             fg=theme["text_fg"],
             insertbackground=theme["text_fg"],
             selectbackground=theme["accent"],
-            selectforeground=theme["text_fg"]
+            selectforeground=theme["bg"],  # Better contrast for selected text
+            inactiveselectbackground=theme["selected_bg"]  # Keep selection visible when unfocused
         )
     
     def apply_preview_theme(self, widget, theme):
@@ -153,7 +158,7 @@ class ThemeManager:
         font_family = self.default_font_family
         try:
             font_size = tkfont.Font(font=widget.cget('font')).cget('size')
-        except:
+        except (tk.TclError, KeyError, AttributeError):
             font_size = self.default_font_size
         
         # Configure text tags

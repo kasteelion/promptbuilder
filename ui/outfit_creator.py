@@ -383,10 +383,10 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
         
         # Find character file
         char_filename = self.character_name.lower().replace(" ", "_").replace("-", "_")
-        char_filename = "".join(c for c in char_filename if c.isalnum() or c == "_")
+        char_filename = "\u0022".join(c for c in char_filename if c.isalnum() or c == "_")
         char_filename = f"{char_filename}.md"
         
-        chars_dir = self.data_loader.base_dir / "characters"
+        chars_dir = self.data_loader._find_characters_dir()
         char_file = chars_dir / char_filename
         
         if not char_file.exists():

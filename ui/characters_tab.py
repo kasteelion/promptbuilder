@@ -3,14 +3,15 @@
 
 import tkinter as tk
 from tkinter import ttk, messagebox
-from .widgets import FlowFrame, CollapsibleFrame
+from .widgets import FlowFrame, CollapsibleFrame, ScrollableCanvas
 from .character_creator import CharacterCreatorDialog
 from .base_style_creator import BaseStyleCreatorDialog
 from .outfit_creator import SharedOutfitCreatorDialog, CharacterOutfitCreatorDialog
 from .pose_creator import PoseCreatorDialog
 from .scene_creator import SceneCreatorDialog
 from utils import create_tooltip
-from config import TOOLTIPS, DEFAULT_TEXT_WIDGET_HEIGHT
+from config import TOOLTIPS
+from .constants import DEFAULT_TEXT_WIDGET_HEIGHT
 
 
 class CharactersTab:
@@ -44,6 +45,9 @@ class CharactersTab:
         # Drag and drop state
         self._drag_data = {"index": None, "widget": None}
         
+        # Guard against recursive refresh
+        self._refreshing = False
+        
         self.tab = ttk.Frame(parent, style="TFrame")
         parent.add(self.tab, text="Prompt Builder")
         
@@ -64,10 +68,15 @@ class CharactersTab:
         if scenes:
             self.scenes = scenes
         
-        # Update UI
+        # Update UI - preserve current selections
+        current_base = self.base_combo.get()
         self.base_combo['values'] = sorted(list(self.base_prompts.keys()))
         if self.base_prompts:
-            self.base_combo.current(0)
+            # Try to restore previous selection, otherwise use first item
+            if current_base and current_base in self.base_prompts:
+                self.base_combo.set(current_base)
+            else:
+                self.base_combo.current(0)
         
         self.char_combo['values'] = sorted(list(self.characters.keys()))
         
@@ -145,69 +154,62 @@ class CharactersTab:
         char_help.grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 4))
         create_tooltip(char_help, TOOLTIPS.get("character", ""))
         
+        # Search field
+        search_frame = ttk.Frame(add)
+        search_frame.grid(row=1, column=0, columnspan=2, sticky="ew", padx=4, pady=(0, 2))
+        search_frame.columnconfigure(1, weight=1)
+        
+        ttk.Label(search_frame, text="🔍", font=("Segoe UI", 10)).grid(row=0, column=0, padx=(0, 2))
+        self.char_search_var = tk.StringVar()
+        self.char_search_entry = ttk.Entry(search_frame, textvariable=self.char_search_var)
+        self.char_search_entry.grid(row=0, column=1, sticky="ew")
+        self.char_search_var.trace('w', lambda *args: self._filter_characters())
+        create_tooltip(self.char_search_entry, "Type to filter characters")
+        
+        # Clear search button
+        ttk.Button(search_frame, text="✕", width=3, command=lambda: self.char_search_var.set("")).grid(row=0, column=2, padx=(2, 0))
+        
         self.char_var = tk.StringVar()
         self.char_combo = ttk.Combobox(add, state="readonly", textvariable=self.char_var)
-        self.char_combo.grid(row=1, column=0, columnspan=2, sticky="ew", pady=(0, 4), padx=4)
+        self.char_combo.grid(row=2, column=0, columnspan=2, sticky="ew", pady=(0, 4), padx=4)
         self.char_combo.bind("<Return>", lambda e: self._add_character())
+        self.char_combo.bind("<KP_Enter>", lambda e: self._add_character())  # Numpad Enter
         create_tooltip(self.char_combo, TOOLTIPS.get("character", ""))
         
         button_frame = ttk.Frame(add)
-        button_frame.grid(row=2, column=0, columnspan=2, sticky="ew", padx=4, pady=(0, 4))
+        button_frame.grid(row=3, column=0, columnspan=2, sticky="ew", padx=4, pady=(0, 4))
         button_frame.columnconfigure(0, weight=1)
         button_frame.columnconfigure(1, weight=1)
         
         ttk.Button(button_frame, text="+ Add to Prompt", command=self._add_character).grid(row=0, column=0, sticky="ew", padx=(0, 2))
         ttk.Button(button_frame, text="✨ Create New Character", command=self._create_new_character).grid(row=0, column=1, sticky="ew", padx=(2, 0))
 
-        # Selected characters scrollable area
-        chars_frame = ttk.Frame(self.tab, style="TFrame")
-        chars_frame.grid(row=3, column=0, sticky="nsew", padx=4, pady=4)
-        chars_frame.columnconfigure(0, weight=1)
-        chars_frame.rowconfigure(0, weight=1)
+        # Use ScrollableCanvas for selected characters
+        self.scrollable_canvas = ScrollableCanvas(self.tab)
+        self.scrollable_canvas.grid(row=3, column=0, sticky="nsew", padx=4, pady=4)
         
-        self.chars_canvas = tk.Canvas(chars_frame, highlightthickness=0)
-        vsb = ttk.Scrollbar(chars_frame, orient="vertical", 
-                          command=self.chars_canvas.yview, 
-                          style="Vertical.TScrollbar")
-        self.chars_container = ttk.Frame(self.chars_canvas, style="TFrame")
-        
-        self.chars_container.bind(
-            "<Configure>", 
-            lambda e: self.chars_canvas.configure(scrollregion=self.chars_canvas.bbox("all"))
-        )
-        # Create a window holding the container and keep its width in sync
-        # with the canvas so child frames (like the outfit FlowFrame) are
-        # constrained and will wrap correctly instead of being clipped.
-        self._chars_window = self.chars_canvas.create_window((0, 0), window=self.chars_container, anchor="nw")
-        # Ensure the canvas reports scrollregion when container changes
-        self.chars_canvas.configure(yscrollcommand=vsb.set)
-
-        # When the canvas is resized, set the inner window's width to match
-        # the canvas width so packed/fill='x' children expand to available space.
-        # Use after_idle to defer expensive layout updates and avoid lag during drag.
-        self._canvas_config_after_id = None
-        
-        def _on_canvas_config(e):
-            try:
-                if self._canvas_config_after_id:
-                    self.chars_canvas.after_cancel(self._canvas_config_after_id)
-                # Defer the config update to avoid blocking drag events
-                self._canvas_config_after_id = self.chars_canvas.after_idle(
-                    lambda: self.chars_canvas.itemconfig(self._chars_window, width=e.width)
-                )
-            except Exception:
-                pass
-
-        self.chars_canvas.bind('<Configure>', _on_canvas_config)
-        
-        self.chars_canvas.grid(row=0, column=0, sticky="nsew")
-        vsb.grid(row=0, column=1, sticky="ns")
-        
-        self.chars_canvas.bind_all("<MouseWheel>", self._on_mousewheel)
+        # Get container for characters
+        self.chars_container = self.scrollable_canvas.get_container()
+        # Keep reference to canvas for backward compatibility
+        self.chars_canvas = self.scrollable_canvas.canvas
     
-    def _on_mousewheel(self, event):
-        """Handle mousewheel scrolling."""
-        self.chars_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+    def _safe_update_canvas_width(self, width):
+        """Safely update canvas window width.
+        
+        Args:
+            width: New width value
+        """
+        try:
+            if self.chars_canvas.winfo_exists():
+                self.chars_canvas.itemconfig(self._chars_window, width=width)
+        except tk.TclError as e:
+            # Canvas destroyed - expected during cleanup
+            from utils import logger
+            logger.debug(f"Canvas update skipped: widget destroyed")
+        except AttributeError as e:
+            # Canvas attribute missing - shouldn't happen
+            from utils import logger
+            logger.warning(f"Canvas attribute error: {e}")
     
     def _apply_bulk_outfit(self):
         """Apply selected outfit to chosen character(s)."""
@@ -215,21 +217,35 @@ class CharactersTab:
         target = self.bulk_chars_var.get()
         
         if not outfit_name:
-            messagebox.showwarning("Error", "Please select an outfit")
+            messagebox.showwarning("Selection Required", "Please select an outfit to apply")
             return
         
         if not target:
-            messagebox.showwarning("Error", "Please select target character(s)")
+            messagebox.showwarning("Selection Required", "Please select which character(s) to apply the outfit to")
             return
+        
+        # Save state for undo
+        if self.save_for_undo:
+            self.save_for_undo()
         
         # Apply to single character
         if target in [c["name"] for c in self.selected_characters]:
             for char in self.selected_characters:
                 if char["name"] == target:
+                    # Validate character has this outfit
+                    char_def = self.characters.get(char["name"], {})
+                    if outfit_name not in char_def.get("outfits", {}):
+                        messagebox.showwarning("Outfit Not Available", 
+                                             f"{char['name']} doesn't have the '{outfit_name}' outfit")
+                        return
                     char["outfit"] = outfit_name
             self._refresh_list()
             self.on_change()
             self.bulk_outfit_var.set("")  # Clear for next use
+            # Show status feedback
+            root = self.tab.winfo_toplevel()
+            if hasattr(root, '_update_status'):
+                root._update_status(f"Applied '{outfit_name}' to {target}")
             return
         
         # Apply to all characters with this outfit available
@@ -250,6 +266,26 @@ class CharactersTab:
                 self.bulk_outfit_var.set("")  # Clear for next use
                 messagebox.showinfo("Success", f"Applied '{outfit_name}' to {count} character(s)")
             return
+    
+    def _filter_characters(self):
+        """Filter character dropdown based on search text."""
+        search = self.char_search_var.get().lower()
+        
+        # Get currently used characters
+        used = {c["name"] for c in self.selected_characters}
+        available = [k for k in self.characters.keys() if k not in used]
+        
+        if search:
+            # Filter by search term
+            filtered = [c for c in available if search in c.lower()]
+            self.char_combo['values'] = sorted(filtered)
+        else:
+            # Show all available
+            self.char_combo['values'] = sorted(available)
+        
+        # Clear selection if current selection not in filtered list
+        if self.char_var.get() not in self.char_combo['values']:
+            self.char_var.set("")
     
     def _add_character(self):
         """Add selected character to the list."""
@@ -320,11 +356,17 @@ class CharactersTab:
     
     def _remove_character(self, idx):
         """Remove character at index."""
+        # Add confirmation for destructive action
+        char_name = self.selected_characters[idx].get('name', 'this character')
+        if not messagebox.askyesno("Remove Character", 
+                                   f"Remove {char_name} from the prompt?",
+                                   icon='question'):
+            return
+        
         if self.save_for_undo:
             self.save_for_undo()
         self.selected_characters.pop(idx)
         self._refresh_list()
-        self.on_change()
     
     def _move_up(self, idx):
         """Move character up in list."""
@@ -336,7 +378,6 @@ class CharactersTab:
                 self.selected_characters[idx - 1],
             )
             self._refresh_list()
-            self.on_change()
     
     def _move_down(self, idx):
         """Move character down in list."""
@@ -348,25 +389,26 @@ class CharactersTab:
                 self.selected_characters[idx + 1],
             )
             self._refresh_list()
-            self.on_change()
     
     def _update_outfit(self, idx, outfit_name):
         """Update character outfit."""
         self.selected_characters[idx]["outfit"] = outfit_name
         # Refresh the list so outfit buttons update their visual state
         self._refresh_list()
-        self.on_change()
     
     def _update_action_note(self, idx, text_widget):
         """Update character action note with debouncing."""
+        from .constants import TEXT_UPDATE_DEBOUNCE_MS
+        
         # Cancel any pending update for this index
         if idx in self._action_note_after_ids:
             try:
                 self.tab.after_cancel(self._action_note_after_ids[idx])
-            except:
+            except (tk.TclError, ValueError):
+                # Widget destroyed or invalid ID
                 pass
         
-        # Schedule new update after 300ms delay
+        # Schedule new update after debounce delay
         def _do_update():
             text = text_widget.get("1.0", "end").strip()
             self.selected_characters[idx]["action_note"] = text
@@ -374,7 +416,7 @@ class CharactersTab:
             if idx in self._action_note_after_ids:
                 del self._action_note_after_ids[idx]
         
-        self._action_note_after_ids[idx] = self.tab.after(300, _do_update)
+        self._action_note_after_ids[idx] = self.tab.after(TEXT_UPDATE_DEBOUNCE_MS, _do_update)
     
     def _update_pose_category(self, idx, category_var, preset_combo):
         """Update character pose category."""
@@ -386,16 +428,23 @@ class CharactersTab:
             preset_combo["values"] = [""] + sorted(list(self.poses[cat].keys()))
         else:
             preset_combo["values"] = [""]
-        preset_combo.set("")
-        self.on_change()
+        preset_combo.set("") 
+        # Refresh the list to rebuild comboboxes with current values showing
+        self._refresh_list()
     
     def _update_pose_preset(self, idx, preset_name):
         """Update character pose preset."""
         self.selected_characters[idx]["pose_preset"] = preset_name
-        self.on_change()
+        # Refresh to show the selection
+        self._refresh_list()
     
     def _refresh_list(self):
         """Refresh the list of selected characters."""
+        if self._refreshing:
+            return
+        
+        self._refreshing = True
+        
         for w in self.chars_container.winfo_children():
             w.destroy()
 
@@ -414,8 +463,12 @@ class CharactersTab:
             empty_frame.pack(fill="both", expand=True, padx=4, pady=20)
             empty_label = ttk.Label(empty_frame, text="👈 Add characters to get started", foreground="gray", font=("Consolas", 11))
             empty_label.pack()
-            self.chars_container.update_idletasks()
-            self.chars_canvas.config(scrollregion=self.chars_canvas.bbox("all"))
+            # Manually update scroll region
+            try:
+                self.chars_canvas.config(scrollregion=self.chars_canvas.bbox("all"))
+            except Exception:
+                pass
+            self._refreshing = False
             return
 
         for i, cd in enumerate(self.selected_characters):
@@ -444,26 +497,26 @@ class CharactersTab:
             outfit_container = ttk.Frame(frame)
             outfit_expanded = tk.BooleanVar(value=False)
             
-            def make_toggle(container, expanded, parent_frame):
+            def make_toggle(container, expanded, parent_frame, header_widget):
                 def toggle():
                     if expanded.get():
                         container.pack_forget()
                         expanded.set(False)
                     else:
-                        # Pack after the first child (outfit_header)
-                        container.pack(fill="x", pady=(0, 6))
-                        # Move to correct position
-                        container.pack_configure(after=parent_frame.winfo_children()[0])
+                        # Pack after the header widget - fill both to allow vertical expansion
+                        container.pack(fill="both", expand=False, pady=(0, 6), after=header_widget)
                         expanded.set(True)
+                    # Update scroll region after toggle to account for height change
+                    self.tab.after(100, self.scrollable_canvas.update_scroll_region)
                 return toggle
             
-            toggle_func = make_toggle(outfit_container, outfit_expanded, frame)
+            toggle_func = make_toggle(outfit_container, outfit_expanded, frame, outfit_header)
             toggle_btn = ttk.Button(outfit_header, text="▼", width=3, command=toggle_func)
             toggle_btn.pack(side="right")
             
             # Outfit options inside collapsible frame
             outfits_frame = FlowFrame(outfit_container, padding_x=6, padding_y=4)
-            outfits_frame.pack(fill="x", pady=(2, 2))
+            outfits_frame.pack(fill="both", expand=True, pady=(2, 2))
 
             outfit_keys = sorted(list(self.characters.get(cd["name"], {}).get("outfits", {}).keys()))
             for o in outfit_keys:
@@ -486,13 +539,13 @@ class CharactersTab:
 
             ttk.Label(pose_row, text="Category:").grid(row=0, column=0, sticky="w", padx=(0, 4))
             pcat_var = tk.StringVar(value=cd.get("pose_category", ""))
-            pcat_combo = ttk.Combobox(pose_row, textvariable=pcat_var, state="readonly", width=10)
+            pcat_combo = ttk.Combobox(pose_row, textvariable=pcat_var, state="readonly", width=15)
             pcat_combo["values"] = [""] + sorted(list(self.poses.keys()))
             pcat_combo.grid(row=0, column=1, padx=(0, 10))
             
             ttk.Label(pose_row, text="Preset:").grid(row=0, column=2, sticky="w", padx=(0, 4))
             preset_var = tk.StringVar(value=cd.get("pose_preset", ""))
-            preset_combo = ttk.Combobox(pose_row, textvariable=preset_var, state="readonly")
+            preset_combo = ttk.Combobox(pose_row, textvariable=preset_var, state="readonly", width=20)
             preset_combo.grid(row=0, column=3, sticky="ew")
             
             # Add create pose button
@@ -517,7 +570,7 @@ class CharactersTab:
 
             # Action note text area
             ttk.Label(frame, text="💬 Custom Pose/Action (Optional - Overrides Preset):", font=("Consolas", 9, "bold")).pack(fill="x", pady=(6, 0))
-            action_text = tk.Text(frame, wrap="word", height=DEFAULT_TEXT_WIDGET_HEIGHT)
+            action_text = tk.Text(frame, wrap="word", height=5)
             action_text.insert("1.0", cd.get("action_note", ""))
             action_text.pack(fill="x", pady=(0, 6))
             action_text.config(padx=5, pady=5)
@@ -545,9 +598,13 @@ class CharactersTab:
             ttk.Button(btnrow, text="✕ Remove", 
                      command=lambda idx=i: self._remove_character(idx)).pack(side="right")
         
-        self.chars_container.update_idletasks()
-        self.chars_canvas.config(scrollregion=self.chars_canvas.bbox("all"))
-        self.on_change()
+        # Update scroll region and refresh mousewheel bindings
+        self.scrollable_canvas.refresh_mousewheel_bindings()
+        self.scrollable_canvas.update_scroll_region()
+        
+        # Defer on_change to avoid event queue overflow
+        self.tab.after(1, self.on_change)
+        self._refreshing = False
     
     def get_base_prompt_name(self):
         """Get selected base prompt name."""
@@ -632,7 +689,8 @@ class CharactersTab:
         if self.save_for_undo:
             self.save_for_undo()
         
-        char = self.selected_characters[idx].copy()
+        import copy
+        char = copy.deepcopy(self.selected_characters[idx])  # Use deep copy to avoid shared references
         self.selected_characters.insert(idx + 1, char)
         self._refresh_list()
         self.on_change()
@@ -659,4 +717,35 @@ class CharactersTab:
         root = self.tab.winfo_toplevel()
         if hasattr(root, '_update_status'):
             root._update_status("Character data copied to clipboard")
+    
+    def add_character_from_gallery(self, character_name):
+        """Add a character from the gallery to selected characters.
+        
+        Args:
+            character_name: Name of the character to add
+        """
+        if self.save_for_undo:
+            self.save_for_undo()
+        
+        # Auto-assign first available outfit as default
+        outfit = ""
+        char_def = self.characters.get(character_name, {})
+        outfits = char_def.get("outfits", {})
+        if "Base" in outfits:
+            outfit = "Base"
+        elif outfits:
+            outfit = sorted(list(outfits.keys()))[0]
+        
+        self.selected_characters.append({
+            'name': character_name,
+            'outfit': outfit,
+            'pose_category': '',
+            'pose_preset': '',
+            'action_note': ''
+        })
+        self._refresh_list()
+        # Auto-scroll to the newly added character
+        self.chars_canvas.yview_moveto(1.0)
+        self.on_change()
+
 

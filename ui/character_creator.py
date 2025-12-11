@@ -9,26 +9,35 @@ from pathlib import Path
 class CharacterCreatorDialog:
     """Dialog for creating new characters."""
     
-    def __init__(self, parent, data_loader, on_success_callback):
+    def __init__(self, parent, data_loader, on_success_callback, edit_character=None):
         """Initialize character creator dialog.
         
         Args:
             parent: Parent window
             data_loader: DataLoader instance
             on_success_callback: Function to call after successful creation
+            edit_character: Name of character to edit (None for new character)
         """
         self.data_loader = data_loader
         self.on_success = on_success_callback
         self.result = None
+        self.edit_character = edit_character
         
         # Create dialog window
         self.dialog = tk.Toplevel(parent)
-        self.dialog.title("Create New Character")
+        if edit_character:
+            self.dialog.title(f"Edit Character - {edit_character}")
+        else:
+            self.dialog.title("Create New Character")
         self.dialog.geometry("600x650")
         self.dialog.transient(parent)
         self.dialog.grab_set()
         
         self._build_ui()
+        
+        # Load existing character data if editing
+        if edit_character:
+            self._load_character_data(edit_character)
         
         # Center on parent
         self.dialog.update_idletasks()
@@ -106,9 +115,9 @@ class CharacterCreatorDialog:
         # Character name
         ttk.Label(main_frame, text="Character Name:", font=("Segoe UI", 10, "bold")).pack(anchor="w", pady=(0, 4))
         self.name_var = tk.StringVar()
-        name_entry = ttk.Entry(main_frame, textvariable=self.name_var, font=("Segoe UI", 10))
-        name_entry.pack(fill="x", pady=(0, 10))
-        name_entry.focus()
+        self.name_entry = ttk.Entry(main_frame, textvariable=self.name_var, font=("Segoe UI", 10))
+        self.name_entry.pack(fill="x", pady=(0, 10))
+        self.name_entry.focus()
         
         # Appearance
         ttk.Label(main_frame, text="Appearance:", font=("Segoe UI", 10, "bold")).pack(anchor="w", pady=(0, 4))
@@ -190,7 +199,8 @@ class CharacterCreatorDialog:
         button_frame.pack(fill="x", pady=(10, 0))
         
         ttk.Button(button_frame, text="Cancel", command=self._cancel).pack(side="right", padx=(5, 0))
-        ttk.Button(button_frame, text="Create Character", command=self._create_character).pack(side="right")
+        self.create_btn = ttk.Button(button_frame, text="Create Character", command=self._create_character)
+        self.create_btn.pack(side="right")
         
         # Bind Enter key to create
         self.dialog.bind("<Return>", lambda e: self._create_character())
@@ -253,10 +263,14 @@ class CharacterCreatorDialog:
         self.dialog.destroy()
     
     def _create_character(self):
-        """Validate and create the character file."""
+        """Validate and create/update the character file."""
         name = self.name_var.get().strip()
         appearance = self.appearance_text.get("1.0", "end").strip()
         outfit = self.outfit_text.get("1.0", "end").strip()
+        
+        # In edit mode, use the edit_character name
+        if self.edit_character:
+            name = self.edit_character
         
         # Check if appearance is still placeholder
         appearance_placeholder = """Light/medium/dark skin tone with natural features and [hair description].
@@ -278,22 +292,29 @@ class CharacterCreatorDialog:
             messagebox.showerror("Validation Error", "Please enter a character name.", parent=self.dialog)
             return
         
+        # Validate name for filesystem safety
+        from utils.validation import validate_character_name
+        is_valid, error_msg = validate_character_name(name)
+        if not is_valid:
+            messagebox.showerror("Invalid Character Name", error_msg, parent=self.dialog)
+            return
+        
         if not appearance or appearance == appearance_placeholder:
             messagebox.showerror("Validation Error", "Please enter an appearance description.", parent=self.dialog)
             return
         
-        # Create filename from character name (sanitize)
-        filename = name.lower().replace(" ", "_").replace("-", "_")
-        # Remove special characters
-        filename = "".join(c for c in filename if c.isalnum() or c == "_")
-        filename = f"{filename}.md"
+        # Create filename from character name (sanitize using validation utility)
+        from utils.validation import sanitize_filename
+        filename = sanitize_filename(name)
+        if not filename.endswith('.md'):
+            filename = f"{filename}.md"
         
-        # Check if file already exists
-        chars_dir = self.data_loader.base_dir / "characters"
+        # Check if file already exists (skip check in edit mode)
+        chars_dir = self.data_loader._find_characters_dir()
         chars_dir.mkdir(parents=True, exist_ok=True)
         file_path = chars_dir / filename
         
-        if file_path.exists():
+        if file_path.exists() and not self.edit_character:
             overwrite = messagebox.askyesno(
                 "File Exists", 
                 f"A character file '{filename}' already exists. Overwrite?",
@@ -319,11 +340,18 @@ class CharacterCreatorDialog:
         # Write file
         try:
             file_path.write_text(content, encoding="utf-8")
-            messagebox.showinfo(
-                "Success", 
-                f"Character '{name}' created successfully!\n\nFile: {filename}",
-                parent=self.dialog
-            )
+            if self.edit_character:
+                messagebox.showinfo(
+                    "Success", 
+                    f"Character '{name}' updated successfully!",
+                    parent=self.dialog
+                )
+            else:
+                messagebox.showinfo(
+                    "Success", 
+                    f"Character '{name}' created successfully!\n\nFile: {filename}",
+                    parent=self.dialog
+                )
             self.result = name
             self.dialog.destroy()
             if self.on_success:
@@ -331,9 +359,51 @@ class CharacterCreatorDialog:
         except Exception as e:
             messagebox.showerror(
                 "Error", 
-                f"Failed to create character file:\n{str(e)}",
+                f"Failed to save character file:\n{str(e)}",
                 parent=self.dialog
             )
+    
+    def _load_character_data(self, character_name):
+        """Load existing character data into the form.
+        
+        Args:
+            character_name: Name of character to load
+        """
+        try:
+            # Load all characters
+            characters = self.data_loader.load_characters()
+            char_data = characters.get(character_name)
+            
+            if not char_data:
+                messagebox.showwarning("Not Found", f"Character '{character_name}' not found.")
+                return
+            
+            # Populate form fields
+            self.name_entry.delete(0, tk.END)
+            self.name_entry.insert(0, character_name)
+            self.name_entry.config(state="readonly")  # Don't allow name changes when editing
+            
+            # Load appearance
+            appearance = char_data.get("appearance", "")
+            self.appearance_text.delete("1.0", tk.END)
+            self.appearance_text.insert("1.0", appearance)
+            
+            # Load base outfit if exists
+            outfits = char_data.get("outfits", {})
+            base_outfit = outfits.get("Base", {})
+            if isinstance(base_outfit, dict):
+                outfit_desc = base_outfit.get("description", "")
+            else:
+                outfit_desc = str(base_outfit)
+            
+            self.outfit_text.delete("1.0", tk.END)
+            self.outfit_text.insert("1.0", outfit_desc)
+            
+            # Update button text
+            self.create_btn.config(text="💾 Save Changes")
+            
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to load character:\n{str(e)}")
     
     def show(self):
         """Show dialog and wait for result."""

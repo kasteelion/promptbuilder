@@ -6,6 +6,7 @@ from .preferences import PreferencesManager
 from .tooltip import create_tooltip
 from .preset_manager import PresetManager
 from .logger import logger, setup_logger
+from .file_ops import atomic_write, safe_read, create_backup
 from .validation import (
     validate_character_name,
     validate_text_length,
@@ -41,6 +42,9 @@ __all__ = [
     'PresetManager',
     'logger',
     'setup_logger',
+    'atomic_write',
+    'safe_read',
+    'create_backup',
     'validate_character_name',
     'validate_text_length',
     'sanitize_filename',

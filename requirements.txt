@@ -28,6 +28,14 @@
 # flake8>=4.0.0          # Linting
 # mypy>=0.950            # Type checking
 
+# === OPTIONAL FEATURE DEPENDENCIES ===
+# These add extra features but are not required for basic operation:
+
+# Pillow>=9.0.0          # For visual character gallery with photos
+#                        # Install with: pip install Pillow
+#                        # Without this, character photos won't display
+#                        # but all other features work normally
+
 # To install development dependencies:
 # pip install pytest black flake8 mypy
 

@@ -1,7 +1,7 @@
 {
-  "window_geometry": "1000x700+156+156",
+  "window_geometry": "2560x1349+27+122",
   "last_theme": "Dark",
-  "last_base_prompt": "Default",
+  "last_base_prompt": "Photorealistic: \"High-Fidelity Candid\"",
   "font_adjustment": 0,
   "recent_characters": [],
   "favorite_characters": [],
@@ -9,5 +9,7 @@
   "recent_presets": [],
   "show_welcome": false,
   "sash_position": null,
-  "auto_theme": false
+  "auto_theme": false,
+  "ui_mode": "classic",
+  "window_state": "zoomed"
 }
