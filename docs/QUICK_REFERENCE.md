@@ -298,6 +298,18 @@ Outdated review documentation has been removed:
 - ❌ `IMPROVEMENTS_IMPLEMENTED.md`
 - ❌ `REVIEW_SUMMARY.md`
 - ❌ `CODEBASE_ANALYSIS.md`
+
+## Notifications
+
+- The application uses a toast-first approach for transient feedback.
+- Developers should use the centralized helper `utils.notification.notify(root, title, message, level='info', duration=3000)` to send notifications. This helper will attempt to show a toast, fall back to updating the main window status bar, and finally show a modal messagebox if needed.
+
+Example:
+
+```py
+from utils.notification import notify
+notify(root, "Saved", "File saved successfully", level='success')
+```
 - ❌ `UX_ENHANCEMENTS.md`
 
 ### Filename Sanitization

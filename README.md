@@ -294,6 +294,27 @@ The UI layer uses a **modular manager pattern** for improved maintainability:
 
 This architecture reduces the main window from 1210 to 851 lines (~30% reduction) while improving code organization and testability.
 
+## Notifications and Non-Blocking Feedback
+
+The app prefers non-blocking notifications to keep the UI fluid and prevent modal dialogs from interrupting small success messages.
+
+- Toasts: short, transient notifications shown by the `ToastManager` when available.
+- Status bar: used as a fallback for screen-reader compatibility and environments without toasts.
+- Modal dialogs: retained for critical errors and long-form content (about, shortcuts, welcome, etc.).
+
+Developer guide:
+
+- Use the centralized helper `utils.notification.notify` to send app notifications. It will try the toast manager, then the status bar, and finally fall back to a modal messagebox.
+
+Example:
+
+```py
+from utils.notification import notify
+notify(root, "Saved", "File saved successfully", level='success')
+```
+
+This centralization keeps notification behavior consistent and simplifies future changes to notification presentation.
+
 ## Troubleshooting
 
 ### "Python version too old" error
