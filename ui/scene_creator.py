@@ -1,8 +1,10 @@
 """Scene creator dialog UI."""
 
 import tkinter as tk
-from tkinter import ttk, messagebox
-from utils import get_scene_template_names, get_scene_template, get_scene_template_description
+from tkinter import messagebox, ttk
+
+from utils import (get_scene_template, get_scene_template_description,
+                   get_scene_template_names)
 
 
 class SceneCreatorDialog:
@@ -198,7 +200,7 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
     
     def _load_categories(self):
         """Load existing scene categories from scenes.md."""
-        scenes_file = self.data_loader.base_dir / "scenes.md"
+        scenes_file = self.data_loader._find_data_file("scenes.md")
         categories = []
         
         if scenes_file.exists():
@@ -207,8 +209,9 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
                 content = scenes_file.read_text(encoding="utf-8")
                 scenes_dict = MarkdownParser.parse_presets(content)
                 categories = sorted(list(scenes_dict.keys()))
-            except Exception:
-                pass
+            except Exception as e:
+                from utils import logger
+                logger.debug(f"Failed to load scene categories from {scenes_file}: {e}")
         
         # Add some default categories if none exist
         if not categories:
@@ -244,8 +247,8 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
             messagebox.showerror("Validation Error", "Please enter a scene description.", parent=self.dialog)
             return
         
-        # Read existing scenes.md
-        scenes_file = self.data_loader.base_dir / "scenes.md"
+        # Read existing scenes.md (use data/ if present)
+        scenes_file = self.data_loader._find_data_file("scenes.md")
         
         try:
             if scenes_file.exists():
@@ -284,11 +287,12 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
             # Write back to file
             scenes_file.write_text(content, encoding="utf-8")
             
-            messagebox.showinfo(
-                "Success", 
-                f"Scene '{name}' created in category '{category}'!",
-                parent=self.dialog
-            )
+            root = self.dialog.winfo_toplevel()
+            msg = f"Scene '{name}' created in category '{category}'!"
+            if hasattr(root, '_update_status'):
+                root._update_status(msg)
+            else:
+                messagebox.showinfo("Success", msg, parent=self.dialog)
             self.result = (category, name)
             self.dialog.destroy()
             if self.on_success:

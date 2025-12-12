@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 """Dialog management for the application."""
 
-import tkinter as tk
-from tkinter import ttk, messagebox, scrolledtext
-from typing import Optional, Callable
-import sys
 import platform
+import sys
+import tkinter as tk
+from tkinter import messagebox, scrolledtext, ttk
+from typing import Callable, Optional
+
 from config import WELCOME_MESSAGE
 
 
@@ -107,8 +108,25 @@ Platform: {platform.system()} {platform.release()}
         try:
             # Default to importing summary generator if no callback provided
             if callback is None:
-                from characters.summary import generate_summary
-                summary = generate_summary()
+                # Prefer the utils.character_summary helper (moved during refactor)
+                try:
+                    from utils.character_summary import generate_summary
+                    # Attempt to locate the characters directory under data/ first
+                    from pathlib import Path
+                    project_root = Path(__file__).resolve().parents[1]
+                    data_chars = project_root / 'data' / 'characters'
+                    legacy_chars = project_root / 'characters'
+                    if data_chars.exists():
+                        summary = generate_summary(data_chars)
+                    elif legacy_chars.exists():
+                        summary = generate_summary(legacy_chars)
+                    else:
+                        # Fallback to default behavior of generate_summary()
+                        summary = generate_summary()
+                except Exception:
+                    # Backwards-compatible fallback to old location if present
+                    from characters.summary import generate_summary
+                    summary = generate_summary()
             else:
                 summary = callback()
             
