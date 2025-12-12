@@ -1,32 +1,28 @@
 # -*- coding: utf-8 -*-
 """Main application window."""
 
+import platform
 import tkinter as tk
-from tkinter import ttk, messagebox, filedialog
-from typing import Dict, Any, Optional
-from logic import DataLoader, validate_prompt_config, PromptRandomizer
+from tkinter import messagebox, ttk
+from typing import Optional
+
+from config import DEFAULT_THEME, TOOLTIPS
 from core.builder import PromptBuilder
+from logic import DataLoader, PromptRandomizer, validate_prompt_config
 from themes import ThemeManager
-from config import DEFAULT_THEME, THEMES, TOOLTIPS
-from .constants import (
-    DEFAULT_FONT_FAMILY, 
-    DEFAULT_FONT_SIZE, 
-    PREVIEW_UPDATE_THROTTLE_MS,
-    MIN_PANE_WIDTH,
-    DEFAULT_TEXT_WIDGET_HEIGHT
-)
 from utils import PreferencesManager, create_tooltip, logger
 from utils.interaction_helpers import fill_template
-from .characters_tab import CharactersTab
-from .edit_tab import EditTab
-from .preview_panel import PreviewPanel
+
 from .character_card import CharacterGalleryPanel
-from .menu_manager import MenuManager
-from .font_manager import FontManager
-from .state_manager import StateManager
+from .characters_tab import CharactersTab
+from .constants import (DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE,
+                        PREVIEW_UPDATE_THROTTLE_MS)
 from .dialog_manager import DialogManager
-import sys
-import platform
+from .edit_tab import EditTab
+from .font_manager import FontManager
+from .menu_manager import MenuManager
+from .preview_panel import PreviewPanel
+from .state_manager import StateManager
 
 
 class PromptBuilderApp:
@@ -357,7 +353,9 @@ class PromptBuilderApp:
             preview_container, 
             self.theme_manager,
             self.reload_data,
-            self.randomize_all
+            self.randomize_all,
+            status_callback=self._update_status,
+            clear_callback=self._clear_interface
         )
         
         # Set preview callbacks
@@ -367,10 +365,10 @@ class PromptBuilderApp:
             self.randomize_all
         )
         
-        # Status bar at bottom of right panel
+        # Status bar at bottom of right panel (slightly larger for readability)
         self.status_bar = ttk.Label(right_frame, text="Ready", relief="sunken", anchor="w", 
-                                    style="TLabel", font=("Consolas", 8))
-        self.status_bar.grid(row=3, column=0, sticky="ew", padx=0, pady=0)
+                        style="TLabel", font=("Consolas", 10))
+        self.status_bar.grid(row=3, column=0, sticky="ew", padx=0, pady=(4,2))
         
         # Initialize scene presets
         self._update_scene_presets()
@@ -584,13 +582,13 @@ class PromptBuilderApp:
         """Open dialog to create a new interaction template."""
         from .interaction_creator import InteractionCreatorDialog
         dialog = InteractionCreatorDialog(self.root, self.data_loader, self._reload_interaction_templates)
-        result = dialog.show()
+        dialog.show()
     
     def _create_new_scene(self):
         """Open dialog to create a new scene."""
         from .scene_creator import SceneCreatorDialog
         dialog = SceneCreatorDialog(self.root, self.data_loader, self.reload_data)
-        result = dialog.show()
+        dialog.show()
     
     def _set_initial_fonts(self):
         """Set initial fonts on text widgets."""
@@ -893,7 +891,7 @@ class PromptBuilderApp:
         """Save current configuration as a preset."""
         success = self.state_manager.save_preset()
         if success:
-            self._update_status(f"Preset saved")
+            self._update_status("Preset saved")
     
     def _load_preset(self):
         """Load a preset configuration."""
@@ -1037,6 +1035,40 @@ class PromptBuilderApp:
             logger.debug(f"Failed to detect OS theme: {e}")
         
         return DEFAULT_THEME
+
+    def _clear_interface(self):
+        """Clear UI inputs: preview, notes, scene, and selected characters."""
+        try:
+            # Clear preview panel
+            if hasattr(self, 'preview_panel'):
+                try:
+                    self.preview_panel.clear_preview()
+                except Exception:
+                    pass
+
+            # Clear scene and notes text
+            if hasattr(self, 'scene_text'):
+                try:
+                    self.scene_text.delete('1.0', 'end')
+                except Exception:
+                    pass
+            if hasattr(self, 'notes_text'):
+                try:
+                    self.notes_text.delete('1.0', 'end')
+                except Exception:
+                    pass
+
+            # Clear selected characters
+            if hasattr(self, 'characters_tab'):
+                try:
+                    self.characters_tab.set_selected_characters([])
+                except Exception:
+                    pass
+
+            self._update_status('Interface cleared')
+        except Exception:
+            # Best-effort; if clearing fails, show status
+            self._update_status('Interface cleared')
     
     def _toggle_auto_theme(self):
         """Toggle auto theme detection."""

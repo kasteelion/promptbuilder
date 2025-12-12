@@ -3,16 +3,15 @@
 
 import re
 import tkinter as tk
-from tkinter import ttk, scrolledtext, messagebox, filedialog
-from typing import Callable, Optional
 from pathlib import Path
-from config import THEMES
+from tkinter import filedialog, messagebox, scrolledtext, ttk
+from typing import Callable, Optional
 
 
 class PreviewPanel:
     """Right-side panel showing formatted prompt preview."""
     
-    def __init__(self, parent: ttk.Frame, theme_manager, on_reload: Callable[[], None], on_randomize: Callable[[], None]):
+    def __init__(self, parent: ttk.Frame, theme_manager, on_reload: Callable[[], None], on_randomize: Callable[[], None], status_callback: Optional[Callable[[str], None]] = None, clear_callback: Optional[Callable[[], None]] = None):
         """Initialize preview panel.
         
         Args:
@@ -25,7 +24,9 @@ class PreviewPanel:
         self.theme_manager = theme_manager
         self.on_reload = on_reload
         self.on_randomize = on_randomize
-        
+        self.status_callback = status_callback
+        self.clear_callback = clear_callback
+
         self._build_ui()
     
     def _build_ui(self) -> None:
@@ -58,6 +59,9 @@ class PreviewPanel:
         
         # Save button
         ttk.Button(controls_frame, text="Save", command=self.save_prompt).pack(side="left", padx=2)
+
+        # Clear button (clears preview and calls optional clear callback in host)
+        ttk.Button(controls_frame, text="Clear", command=self._on_clear).pack(side="left", padx=2)
         
         # Randomize button
         ttk.Button(controls_frame, text="🎲 Randomize", command=self.on_randomize).pack(side="left", padx=2)
@@ -73,18 +77,7 @@ class PreviewPanel:
         self.preview_text.bind('<Control-c>', lambda e: self.copy_prompt())
         self.preview_text.bind('<Control-s>', lambda e: self.save_prompt())
         
-        # Define tags with styling
-        self.preview_text.tag_config("h1", font=("Consolas", 14, "bold"), foreground="#0078d4")
-        self.preview_text.tag_config("h2", font=("Consolas", 12, "bold"), foreground="#0078d4")
-        self.preview_text.tag_config("h3", font=("Consolas", 11, "bold"), foreground="#0078d4")
-        self.preview_text.tag_config("bold", font=("Consolas", 11, "bold"))
-        self.preview_text.tag_config("italic", font=("Consolas", 11, "italic"))
-        self.preview_text.tag_config("code", font=("Courier", 10), foreground="#d4d4d4", background="#1e1e1e")
-        self.preview_text.tag_config("separator", foreground="#666666")
-        self.preview_text.tag_config("list_item", foreground="#e0e0e0")
-        self.preview_text.tag_config("error", foreground="#f44747", font=("Consolas", 11, "bold"))
-        # Section labels (e.g. "Appearance:", "Outfits:") — font bold, color set by theme
-        self.preview_text.tag_config("section_label", font=("Consolas", 10, "bold"))
+        # Styling for tags is applied by ThemeManager via `apply_preview_theme`
         
         # Callback for getting current prompt
         self.get_prompt_callback = None
@@ -114,6 +107,28 @@ class PreviewPanel:
             prompt_text: Generated prompt string
         """
         self._format_markdown_preview(prompt_text)
+
+    def clear_preview(self):
+        """Clear the preview and show the welcome message."""
+        try:
+            self.preview_text.delete("1.0", "end")
+            self._show_welcome_message()
+        except Exception:
+            pass
+
+    def _on_clear(self):
+        """Handler for Clear button: clear preview and call host clear callback if provided."""
+        self.clear_preview()
+        if self.clear_callback:
+            try:
+                self.clear_callback()
+            except Exception:
+                # Don't raise - fallback to status update if available
+                if self.status_callback:
+                    try:
+                        self.status_callback("Interface cleared")
+                    except Exception:
+                        pass
     
     def _format_markdown_preview(self, prompt):
         """Parse and format the prompt with Markdown support."""
@@ -163,7 +178,6 @@ class PreviewPanel:
             
             # List items (- or *)
             if line.lstrip().startswith("- ") or line.lstrip().startswith("* "):
-                indent = len(line) - len(line.lstrip())
                 bullet = "• "
                 rest = line.lstrip()[2:]
                 self._insert_with_markdown(bullet + rest)
@@ -294,7 +308,15 @@ class PreviewPanel:
         prompt = self.get_prompt_callback()
         self.parent.clipboard_clear()
         self.parent.clipboard_append(prompt)
-        messagebox.showinfo("Success", "Prompt copied to clipboard")
+        # Prefer non-modal status update when available
+        if self.status_callback:
+            try:
+                self.status_callback("Prompt copied to clipboard")
+            except Exception:
+                # Fallback to modal if status callback fails
+                messagebox.showinfo("Success", "Prompt copied to clipboard")
+        else:
+            messagebox.showinfo("Success", "Prompt copied to clipboard")
     
     def _copy_section(self, section_type):
         """Copy specific section of prompt to clipboard.
@@ -343,7 +365,10 @@ class PreviewPanel:
         if section_text.strip():
             self.parent.clipboard_clear()
             self.parent.clipboard_append(section_text.strip())
-            messagebox.showinfo("Success", f"{section_type.capitalize()} section copied to clipboard")
+            if self.status_callback:
+                self.status_callback(f"{section_type.capitalize()} section copied to clipboard")
+            else:
+                messagebox.showinfo("Success", f"{section_type.capitalize()} section copied to clipboard")
         else:
             messagebox.showinfo("Info", f"No {section_type} section found in prompt")
     
@@ -365,6 +390,9 @@ class PreviewPanel:
         if filename:
             try:
                 Path(filename).write_text(prompt, encoding="utf-8")
-                messagebox.showinfo("Saved", f"Prompt saved to {filename}")
+                if self.status_callback:
+                    self.status_callback(f"Prompt saved to {filename}")
+                else:
+                    messagebox.showinfo("Saved", f"Prompt saved to {filename}")
             except Exception as e:
                 messagebox.showerror("Save Error", str(e))
