@@ -1,6 +1,9 @@
 # Visual UI Implementation Summary
 
-## What Was Built
+> DEPRECATED — The Visual Gallery UI was removed from the codebase on December 12, 2025.
+> This document is retained as an archived reference for historical context and design notes.
+
+## What Was Built (archived)
 
 I've implemented an **experimental Visual Character Gallery** feature that transforms your prompt builder into a more visual, photo-based interface.
 

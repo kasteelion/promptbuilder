@@ -10,6 +10,23 @@ This module provides specialized renderers for different prompt components:
 Each renderer follows a consistent interface with a static render() method.
 """
 
+import re
+
+
+def strip_html_comments(text: str) -> str:
+    """Remove HTML comment blocks from text.
+    
+    Args:
+        text: Input text potentially containing HTML comments
+    
+    Returns:
+        Text with all <!-- ... --> blocks removed
+    """
+    if not text:
+        return text
+    # Remove HTML comments (including multiline)
+    return re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL).strip()
+
 
 class OutfitRenderer:
     """Renders outfit data into formatted text.
@@ -157,8 +174,13 @@ class CharacterRenderer:
         """
         header = f"**CHARACTER {idx+1}: {character_name}**" if idx > 0 else f"**CHARACTER: {character_name}**"
         parts = [header]
+        
+        # Strip HTML comments from appearance text
         if appearance:
-            parts.append(f"**Appearance:**\n{appearance}")
+            clean_appearance = strip_html_comments(appearance)
+            if clean_appearance:
+                parts.append(f"**Appearance:**\n{clean_appearance}")
+        
         if outfit:
             parts.append(f"**Outfit:**\n{outfit}")
         if pose:

@@ -45,15 +45,16 @@ class SharedOutfitCreatorDialog:
         
         help_label = ttk.Label(
             help_frame, 
-            text="💡 Shared outfits can be used by all characters",
+            text="🌟 Shared outfits are available to ALL characters automatically!",
             font=("Segoe UI", 9, "bold"),
             foreground="#0066cc"
         )
         help_label.pack(anchor="w", padx=6, pady=4)
         
-        example_text = """Example outfit format:
+        example_text = """Categories are for organization only - all outfits here are shared.
+Example outfit format:
 • Main garments with fabric details
-• Accessories section
+• Accessories section  
 • Hair/Makeup notes
 • Use italics for *Accessories:* and *Hair/Makeup:* sections"""
         

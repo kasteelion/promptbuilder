@@ -1,8 +1,10 @@
-# Visual Character Gallery - Experimental Feature
+# Visual Character Gallery - (Deprecated / Archived)
 
-## Overview
+> DEPRECATED — The Visual Gallery UI was removed from the codebase on December 12, 2025. This guide is preserved as an archive of the experimental feature.
 
-The Visual Character Gallery is an experimental UI mode that provides a more visual, card-based approach to building prompts. Instead of dropdown lists, you see character cards with photos in a side panel.
+## Overview (archived)
+
+The Visual Character Gallery was an experimental UI mode that provided a visual, card-based approach to building prompts. Instead of dropdown lists, characters were displayed as photo-backed cards in a side panel.
 
 ## Features
 

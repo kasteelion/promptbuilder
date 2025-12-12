@@ -16,6 +16,7 @@ from .constants import (
     DEFAULT_TEXT_WIDGET_HEIGHT
 )
 from utils import PreferencesManager, create_tooltip, logger
+from utils.interaction_helpers import fill_template
 from .characters_tab import CharactersTab
 from .edit_tab import EditTab
 from .preview_panel import PreviewPanel
@@ -65,7 +66,14 @@ class PromptBuilderApp:
         self.base_prompts = self.data_loader.load_base_prompts()
         self.scenes = self.data_loader.load_presets("scenes.md")
         self.poses = self.data_loader.load_presets("poses.md")
-        self.randomizer = PromptRandomizer(self.characters, self.base_prompts, self.poses)
+        self.interactions = self.data_loader.load_interactions()
+        self.randomizer = PromptRandomizer(
+            self.characters, 
+            self.base_prompts, 
+            self.poses,
+            self.scenes,
+            self.interactions
+        )
         
         # Initialize theme manager
         self.style = ttk.Style()
@@ -265,14 +273,73 @@ class PromptBuilderApp:
         self.scene_text.bind("<KeyRelease>", _on_scene_change)
         
         # Notes section (expandable)
-        notes_frame = ttk.LabelFrame(right_frame, text="📝 Notes", style="TLabelframe")
+        notes_frame = ttk.LabelFrame(right_frame, text="📝 Notes & Interactions", style="TLabelframe")
         notes_frame.grid(row=1, column=0, sticky="nsew", padx=4, pady=2)
         notes_frame.columnconfigure(0, weight=1)
-        notes_frame.rowconfigure(0, weight=1)
+        notes_frame.rowconfigure(1, weight=1)
         create_tooltip(notes_frame, TOOLTIPS.get("notes", ""))
         
+        # Interaction template selector (with category grouping)
+        interaction_control = ttk.Frame(notes_frame, style="TFrame")
+        interaction_control.grid(row=0, column=0, sticky="ew", padx=4, pady=(4, 2))
+        interaction_control.columnconfigure(1, weight=1)
+        interaction_control.columnconfigure(3, weight=1)
+        
+        ttk.Label(interaction_control, text="Category:", style="TLabel").grid(
+            row=0, column=0, sticky="w", padx=(0, 4)
+        )
+        
+        self.interaction_category_var = tk.StringVar()
+        self.interaction_cat_combo = ttk.Combobox(
+            interaction_control,
+            textvariable=self.interaction_category_var,
+            state="readonly",
+            width=15
+        )
+        self.interaction_cat_combo.grid(row=0, column=1, sticky="w", padx=(0, 8))
+        self.interaction_cat_combo.bind("<<ComboboxSelected>>", lambda e: self._update_interaction_presets())
+        create_tooltip(self.interaction_cat_combo, "Choose interaction category")
+        
+        ttk.Label(interaction_control, text="Template:", style="TLabel").grid(
+            row=0, column=2, sticky="w", padx=(0, 4)
+        )
+        
+        self.interaction_var = tk.StringVar(value="Blank")
+        self.interaction_combo = ttk.Combobox(
+            interaction_control,
+            textvariable=self.interaction_var,
+            state="readonly"
+        )
+        self.interaction_combo.grid(row=0, column=3, sticky="ew")
+        create_tooltip(self.interaction_combo, "Choose a multi-character interaction template")
+        
+        insert_btn = ttk.Button(
+            interaction_control,
+            text="Insert",
+            command=self._insert_interaction_template
+        )
+        insert_btn.grid(row=0, column=4, padx=(4, 0))
+        create_tooltip(insert_btn, "Insert template with selected characters")
+        
+        refresh_btn = ttk.Button(
+            interaction_control,
+            text="🔄",
+            command=self._refresh_interaction_template,
+            width=3
+        )
+        refresh_btn.grid(row=0, column=5, padx=(4, 0))
+        create_tooltip(refresh_btn, "Re-fill template with current characters")
+        
+        create_btn = ttk.Button(
+            interaction_control,
+            text="+ Create",
+            command=self._create_new_interaction
+        )
+        create_btn.grid(row=0, column=6, padx=(4, 0))
+        create_tooltip(create_btn, "Create a new interaction template")
+        
         self.notes_text = tk.Text(notes_frame, wrap="word", height=4)
-        self.notes_text.pack(fill="both", expand=True, padx=4, pady=4)
+        self.notes_text.grid(row=1, column=0, sticky="nsew", padx=4, pady=(2, 4))
         create_tooltip(self.notes_text, TOOLTIPS.get("notes", ""))
         # Debounce notes text changes
         self._notes_text_after_id = None
@@ -325,6 +392,13 @@ class PromptBuilderApp:
             restore_state=self._restore_state,
             update_preview=self.schedule_preview_update
         )
+        
+        # Initialize interaction category combo
+        categories = list(self.interactions.keys())
+        self.interaction_cat_combo['values'] = categories
+        if categories:
+            self.interaction_category_var.set(categories[0])
+            self._update_interaction_presets()
     
     def _bind_keyboard_shortcuts(self):
         """Bind all keyboard shortcuts."""
@@ -371,6 +445,109 @@ class PromptBuilderApp:
         self.scene_combo.selection_clear()
         self.root.update_idletasks()
     
+    def _update_interaction_presets(self):
+        """Update interaction preset combo based on selected category."""
+        cat = self.interaction_category_var.get()
+        if cat and cat in self.interactions:
+            self.interaction_combo["values"] = [""] + sorted(list(self.interactions[cat].keys()))
+        else:
+            self.interaction_combo["values"] = [""]
+        self.interaction_var.set("")
+        
+        # Update category combo values
+        self.interaction_cat_combo["values"] = [""] + sorted(list(self.interactions.keys()))
+        
+        # Force both combos to refresh their display
+        self.interaction_cat_combo.selection_clear()
+        self.interaction_combo.selection_clear()
+        self.root.update_idletasks()
+    
+    def _insert_interaction_template(self):
+        """Insert interaction template with character placeholders filled."""
+        cat = self.interaction_category_var.get()
+        template_name = self.interaction_var.get()
+        
+        if not cat or not template_name:
+            return
+        
+        if cat not in self.interactions or template_name not in self.interactions[cat]:
+            return
+        
+        template_text = self.interactions[cat][template_name]
+        
+        if not template_text:
+            return
+        
+        # Get list of selected character names from characters tab
+        selected_chars = [char['name'] for char in self.characters_tab.selected_characters]
+        
+        if not selected_chars:
+            messagebox.showinfo(
+                "No Characters",
+                "Please add characters to your prompt first before using interaction templates.",
+                parent=self.root
+            )
+            return
+        
+        # Fill template with character names
+        filled_text = fill_template(template_text, selected_chars)
+        
+        # Insert at cursor position or append
+        try:
+            current_text = self.notes_text.get("1.0", "end-1c")
+            if current_text.strip():
+                # Add on new line if there's existing content
+                self.notes_text.insert("end", "\n" + filled_text)
+            else:
+                # Replace empty content
+                self.notes_text.delete("1.0", "end")
+                self.notes_text.insert("1.0", filled_text)
+            
+            self.schedule_preview_update()
+            self._update_status(f"Inserted: {template_name}")
+        except tk.TclError as e:
+            logger.error(f"Error inserting interaction template: {e}")
+    
+    def _refresh_interaction_template(self):
+        """Replace notes with re-filled interaction template using current characters."""
+        cat = self.interaction_category_var.get()
+        template_name = self.interaction_var.get()
+        
+        if not cat or not template_name:
+            return
+        
+        if cat not in self.interactions or template_name not in self.interactions[cat]:
+            return
+        
+        template_text = self.interactions[cat][template_name]
+        
+        if not template_text:
+            return
+        
+        # Get list of selected character names from characters tab
+        selected_chars = [char['name'] for char in self.characters_tab.selected_characters]
+        
+        if not selected_chars:
+            messagebox.showinfo(
+                "No Characters",
+                "Please add characters to your prompt first before using interaction templates.",
+                parent=self.root
+            )
+            return
+        
+        # Fill template with character names
+        filled_text = fill_template(template_text, selected_chars)
+        
+        # Replace notes content
+        try:
+            self.notes_text.delete("1.0", "end")
+            self.notes_text.insert("1.0", filled_text)
+            
+            self.schedule_preview_update()
+            self._update_status(f"Refreshed: {template_name}")
+        except tk.TclError as e:
+            logger.error(f"Error refreshing interaction template: {e}")
+    
     def _apply_scene_preset(self):
         """Apply selected scene preset to text area."""
         cat = self.scene_category_var.get()
@@ -380,6 +557,34 @@ class PromptBuilderApp:
             self.scene_text.delete("1.0", "end")
             self.scene_text.insert("1.0", self.scenes[cat][name])
             self.schedule_preview_update()
+    
+    def _reload_interaction_templates(self):
+        """Reload interaction templates from file."""
+        try:
+            # Reload interactions from markdown file
+            self.interactions = self.data_loader.load_interactions()
+            
+            # Update category combo
+            categories = list(self.interactions.keys())
+            self.interaction_cat_combo['values'] = categories
+            
+            # Keep current category if it exists, otherwise select first
+            current_cat = self.interaction_category_var.get()
+            if current_cat not in self.interactions and categories:
+                self.interaction_category_var.set(categories[0])
+            
+            # Update template dropdown based on category
+            self._update_interaction_presets()
+            
+            logger.info("Interaction templates reloaded successfully")
+        except Exception as e:
+            logger.error(f"Error reloading interaction templates: {e}")
+    
+    def _create_new_interaction(self):
+        """Open dialog to create a new interaction template."""
+        from .interaction_creator import InteractionCreatorDialog
+        dialog = InteractionCreatorDialog(self.root, self.data_loader, self._reload_interaction_templates)
+        result = dialog.show()
     
     def _create_new_scene(self):
         """Open dialog to create a new scene."""
@@ -509,6 +714,7 @@ class PromptBuilderApp:
             self.base_prompts = self.data_loader.load_base_prompts()
             self.scenes = self.data_loader.load_presets("scenes.md")
             self.poses = self.data_loader.load_presets("poses.md")
+            self._reload_interaction_templates()
         except Exception as e:
             self.root.config(cursor="")
             self.dialog_manager.show_error("Reload Error", str(e))
@@ -543,6 +749,10 @@ class PromptBuilderApp:
         self.characters_tab.load_data(self.characters, self.base_prompts, self.poses)
         self._update_scene_presets()  # Reload scene presets in UI
         self.edit_tab._refresh_file_list()  # Refresh file list to show new character files
+        
+        # Reload character gallery
+        if hasattr(self, 'character_gallery'):
+            self.character_gallery.load_characters(self.characters)
         
         self.root.config(cursor="")
         self.schedule_preview_update()

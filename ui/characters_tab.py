@@ -110,41 +110,57 @@ class CharactersTab:
         ttk.Button(bp, text="✨ Create Style", command=self._create_new_style).grid(row=1, column=1, sticky="ew", padx=(2, 4), pady=(0, 4))
 
         # Bulk outfit editor section (Collapsible)
-        self.bulk_container = CollapsibleFrame(self.tab, text="⚡ Bulk Outfit Editor (Speed Tool)")
+        self.bulk_container = CollapsibleFrame(self.tab, text="⚡ Bulk Outfit Editor")
         self.bulk_container.grid(row=1, column=0, sticky="ew", padx=4, pady=4)
         # Start collapsed
         self.bulk_container._toggle_cb()
         
         bulk = self.bulk_container.get_content_frame()
         bulk.columnconfigure(1, weight=1)
-        bulk_help = ttk.Label(bulk, text="Apply same outfit to multiple characters at once", foreground="gray", font=("Consolas", 9))
-        bulk_help.grid(row=0, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 4))
-        create_tooltip(bulk_help, TOOLTIPS.get("bulk_outfit", ""))
         
-        ttk.Label(bulk, text="Shared Outfit:").grid(row=1, column=0, sticky="w", padx=(4, 2))
+        # Info section
+        info_frame = ttk.Frame(bulk, relief="groove", borderwidth=1)
+        info_frame.grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 8))
+        info_frame.columnconfigure(0, weight=1)
+        
+        info_text = ttk.Label(info_frame, 
+            text="💡 Apply the same outfit to multiple characters at once",
+            foreground="#0066cc", font=("Consolas", 9, "bold"))
+        info_text.pack(anchor="w", padx=6, pady=2)
+        
+        help_text = ttk.Label(info_frame,
+            text="Select an outfit and click a button to apply it",
+            foreground="gray", font=("Consolas", 8))
+        help_text.pack(anchor="w", padx=6, pady=(0, 2))
+        
+        ttk.Label(bulk, text="Select Outfit:").grid(row=1, column=0, sticky="w", padx=(4, 2))
         self.bulk_outfit_var = tk.StringVar()
         self.bulk_outfit_combo = ttk.Combobox(bulk, textvariable=self.bulk_outfit_var, state="readonly")
         self.bulk_outfit_combo.grid(row=1, column=1, sticky="ew", padx=2)
         self.bulk_outfit_combo['values'] = []
+        self.bulk_outfit_combo.bind("<<ComboboxSelected>>", lambda e: self._update_bulk_preview())
         self.bulk_outfit_combo.bind("<Return>", lambda e: self._apply_bulk_outfit())
-        create_tooltip(self.bulk_outfit_combo, TOOLTIPS.get("bulk_outfit", ""))
+        create_tooltip(self.bulk_outfit_combo, "Choose an outfit to apply to selected characters")
         
-        ttk.Label(bulk, text="Apply to:").grid(row=2, column=0, sticky="w", padx=(4, 2), pady=(4, 0))
-        self.bulk_chars_var = tk.StringVar()
-        self.bulk_chars_combo = ttk.Combobox(bulk, textvariable=self.bulk_chars_var, state="readonly")
-        self.bulk_chars_combo.grid(row=2, column=1, sticky="ew", padx=2, pady=(4, 0))
-        self.bulk_chars_combo.bind("<Return>", lambda e: self._apply_bulk_outfit())
+        # Preview/status label
+        self.bulk_preview_var = tk.StringVar(value="")
+        self.bulk_preview_label = ttk.Label(bulk, textvariable=self.bulk_preview_var, 
+                                           foreground="gray", font=("Consolas", 8))
+        self.bulk_preview_label.grid(row=2, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 4))
         
         # Button row
         btn_frame = ttk.Frame(bulk)
         btn_frame.grid(row=3, column=0, columnspan=2, sticky="ew", padx=4, pady=4)
         btn_frame.columnconfigure(0, weight=1)
         btn_frame.columnconfigure(1, weight=1)
+        btn_frame.columnconfigure(2, weight=1)
         
-        ttk.Button(btn_frame, text="Apply Outfit", 
-                  command=self._apply_bulk_outfit).grid(row=0, column=0, sticky="ew", padx=(0, 2))
+        ttk.Button(btn_frame, text="✓ Apply to All", 
+                  command=self._apply_bulk_to_all).grid(row=0, column=0, sticky="ew", padx=(0, 2))
+        ttk.Button(btn_frame, text="✓ Apply to Selected", 
+                  command=self._apply_bulk_to_selected).grid(row=0, column=1, sticky="ew", padx=2)
         ttk.Button(btn_frame, text="✨ Create Shared Outfit", 
-                  command=self._create_shared_outfit).grid(row=0, column=1, sticky="ew", padx=(2, 0))
+                  command=self._create_shared_outfit).grid(row=0, column=2, sticky="ew", padx=(2, 0))
 
         # Add character section
         add = ttk.LabelFrame(self.tab, text="👥 Add Character", style="TLabelframe")
@@ -211,61 +227,143 @@ class CharactersTab:
             from utils import logger
             logger.warning(f"Canvas attribute error: {e}")
     
-    def _apply_bulk_outfit(self):
-        """Apply selected outfit to chosen character(s)."""
+    def _update_bulk_preview(self):
+        """Update preview text showing which characters will be affected."""
         outfit_name = self.bulk_outfit_var.get()
-        target = self.bulk_chars_var.get()
+        
+        if not outfit_name or not self.selected_characters:
+            self.bulk_preview_var.set("")
+            return
+        
+        # All selected characters have all outfits
+        count = len(self.selected_characters)
+        if count == 1:
+            self.bulk_preview_var.set(f"✓ Will update: {self.selected_characters[0]['name']}")
+        else:
+            self.bulk_preview_var.set(f"✓ Will update {count} characters")
+    
+    def _apply_bulk_to_all(self):
+        """Apply selected outfit to all selected characters."""
+        outfit_name = self.bulk_outfit_var.get()
         
         if not outfit_name:
             messagebox.showwarning("Selection Required", "Please select an outfit to apply")
             return
         
-        if not target:
-            messagebox.showwarning("Selection Required", "Please select which character(s) to apply the outfit to")
+        if not self.selected_characters:
+            messagebox.showwarning("No Characters", "No characters are currently selected")
             return
         
         # Save state for undo
         if self.save_for_undo:
             self.save_for_undo()
         
-        # Apply to single character
-        if target in [c["name"] for c in self.selected_characters]:
-            for char in self.selected_characters:
-                if char["name"] == target:
-                    # Validate character has this outfit
-                    char_def = self.characters.get(char["name"], {})
-                    if outfit_name not in char_def.get("outfits", {}):
-                        messagebox.showwarning("Outfit Not Available", 
-                                             f"{char['name']} doesn't have the '{outfit_name}' outfit")
-                        return
-                    char["outfit"] = outfit_name
-            self._refresh_list()
-            self.on_change()
-            self.bulk_outfit_var.set("")  # Clear for next use
-            # Show status feedback
-            root = self.tab.winfo_toplevel()
-            if hasattr(root, '_update_status'):
-                root._update_status(f"Applied '{outfit_name}' to {target}")
+        # Apply to all selected characters
+        count = len(self.selected_characters)
+        for char in self.selected_characters:
+            char["outfit"] = outfit_name
+        
+        self._refresh_list()
+        self.on_change()
+        self.bulk_outfit_var.set("")  # Clear for next use
+        
+        # Show status feedback
+        root = self.tab.winfo_toplevel()
+        if hasattr(root, '_update_status'):
+            root._update_status(f"Applied '{outfit_name}' to all {count} character(s)")
+    
+    def _apply_bulk_to_selected(self):
+        """Apply selected outfit to a specific selected character via dialog."""
+        outfit_name = self.bulk_outfit_var.get()
+        
+        if not outfit_name:
+            messagebox.showwarning("Selection Required", "Please select an outfit to apply")
             return
         
-        # Apply to all characters with this outfit available
-        if target == "All (with outfit)":
-            count = 0
-            for char in self.selected_characters:
-                char_def = self.characters.get(char["name"], {})
-                outfits = char_def.get("outfits", {})
-                if outfit_name in outfits:
-                    char["outfit"] = outfit_name
-                    count += 1
-            
-            if count == 0:
-                messagebox.showinfo("Info", f"No selected characters have the '{outfit_name}' outfit")
-            else:
-                self._refresh_list()
-                self.on_change()
-                self.bulk_outfit_var.set("")  # Clear for next use
-                messagebox.showinfo("Success", f"Applied '{outfit_name}' to {count} character(s)")
+        if not self.selected_characters:
+            messagebox.showwarning("No Characters", "No characters are currently selected")
             return
+        
+        # If only one character, apply directly
+        if len(self.selected_characters) == 1:
+            if self.save_for_undo:
+                self.save_for_undo()
+            
+            self.selected_characters[0]["outfit"] = outfit_name
+            self._refresh_list()
+            self.on_change()
+            self.bulk_outfit_var.set("")
+            
+            root = self.tab.winfo_toplevel()
+            if hasattr(root, '_update_status'):
+                root._update_status(f"Applied '{outfit_name}' to {self.selected_characters[0]['name']}")
+            return
+        
+        # Multiple characters - show selection dialog
+        from tkinter import simpledialog
+        
+        # Create a custom dialog for character selection
+        dialog = tk.Toplevel(self.tab)
+        dialog.title("Select Character")
+        dialog.transient(self.tab.winfo_toplevel())
+        dialog.grab_set()
+        
+        # Center the dialog
+        dialog.geometry("300x200")
+        
+        ttk.Label(dialog, text=f"Apply '{outfit_name}' to:", font=("Consolas", 10, "bold")).pack(pady=(10, 5))
+        
+        # Listbox with characters
+        listbox_frame = ttk.Frame(dialog)
+        listbox_frame.pack(fill="both", expand=True, padx=10, pady=5)
+        
+        scrollbar = ttk.Scrollbar(listbox_frame)
+        scrollbar.pack(side="right", fill="y")
+        
+        char_listbox = tk.Listbox(listbox_frame, yscrollcommand=scrollbar.set)
+        char_listbox.pack(side="left", fill="both", expand=True)
+        scrollbar.config(command=char_listbox.yview)
+        
+        for char in self.selected_characters:
+            char_listbox.insert(tk.END, char["name"])
+        
+        char_listbox.selection_set(0)  # Select first by default
+        
+        result = {"selected": None}
+        
+        def on_ok():
+            selection = char_listbox.curselection()
+            if selection:
+                result["selected"] = self.selected_characters[selection[0]]
+                dialog.destroy()
+        
+        def on_cancel():
+            dialog.destroy()
+        
+        # Buttons
+        btn_frame = ttk.Frame(dialog)
+        btn_frame.pack(pady=10)
+        ttk.Button(btn_frame, text="Apply", command=on_ok).pack(side="left", padx=5)
+        ttk.Button(btn_frame, text="Cancel", command=on_cancel).pack(side="left", padx=5)
+        
+        # Bind double-click
+        char_listbox.bind("<Double-Button-1>", lambda e: on_ok())
+        
+        dialog.wait_window()
+        
+        # Apply the outfit if a character was selected
+        if result["selected"]:
+            if self.save_for_undo:
+                self.save_for_undo()
+            
+            result["selected"]["outfit"] = outfit_name
+            self._refresh_list()
+            self.on_change()
+            self.bulk_outfit_var.set("")
+            
+            root = self.tab.winfo_toplevel()
+            if hasattr(root, '_update_status'):
+                root._update_status(f"Applied '{outfit_name}' to {result['selected']['name']}")
     
     def _filter_characters(self):
         """Filter character dropdown based on search text."""
@@ -452,10 +550,6 @@ class CharactersTab:
         used = {c["name"] for c in self.selected_characters}
         available = sorted([k for k in self.characters.keys() if k not in used])
         self.char_combo["values"] = available
-        
-        # Update bulk outfit target combo with selected characters + all option
-        char_names = [c["name"] for c in self.selected_characters]
-        self.bulk_chars_combo["values"] = ["All (with outfit)"] + char_names
         
         # Show empty state if no characters
         if not self.selected_characters:

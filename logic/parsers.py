@@ -282,16 +282,25 @@ class MarkdownParser:
     def merge_character_outfits(char_data: dict, shared_outfits: dict, character_name: str):
         """Merge shared outfits with character-specific outfits.
         
+        ALL outfits from outfits.md (all categories) are shared with every character.
         Character-specific outfits override shared outfits of the same name.
-        All shared common outfits are included unless overridden.
+        
+        Args:
+            char_data: Character data dictionary
+            shared_outfits: Shared outfits dictionary from outfits.md (organized by category)
+            character_name: Name of the character
+            
+        Returns:
+            Dictionary of merged outfits (outfit_name -> outfit_description)
         """
         merged_outfits = {}
         
-        # Add all common shared outfits first
-        if "Common" in shared_outfits:
-            merged_outfits.update(shared_outfits["Common"])
+        # Add ALL shared outfits from ALL categories in outfits.md
+        # This makes every outfit in outfits.md available to every character
+        for category, outfits in shared_outfits.items():
+            merged_outfits.update(outfits)
         
-        # Override with character's own outfit definitions (from characters.md)
+        # Character-specific outfits override shared ones with the same name
         merged_outfits.update(char_data.get("outfits", {}))
         
         return merged_outfits
@@ -322,3 +331,47 @@ class MarkdownParser:
                 presets.setdefault(current, {})[name] = desc
 
         return presets
+    
+    @staticmethod
+    def parse_interactions(content: str):
+        """Parse interaction templates from markdown content with categories.
+        
+        Expected format:
+        ## Category Name
+        - **Template Name:** template content with {char1}, {char2}, etc.
+        
+        Returns:
+            dict: Dictionary mapping categories to template dictionaries
+                  Example: {"Basic Interactions": {"Conversation": "...", ...}, ...}
+        """
+        interactions = {}
+        current = None
+        
+        for line in content.splitlines():
+            # Check for category header
+            cat = re.match(r"^##\s+(.+)$", line)
+            if cat:
+                current = cat.group(1).strip()
+                # Skip "Notes" section
+                if current.lower() == "notes":
+                    current = None
+                    continue
+                interactions.setdefault(current, {})
+                continue
+            
+            # Parse interaction items (only if we have a valid category)
+            if current:
+                item = re.match(r"^-\s+\*\*([^:]+):\*\*\s*(.*)$", line)
+                if item:
+                    name = item.group(1).strip()
+                    desc = item.group(2).strip()
+                    
+                    # Remove parenthetical descriptions like "(Start from scratch)"
+                    desc = re.sub(r"^\([^)]+\)\s*", "", desc)
+                    
+                    interactions[current][name] = desc
+        
+        # Remove any empty categories
+        interactions = {k: v for k, v in interactions.items() if v}
+        
+        return interactions

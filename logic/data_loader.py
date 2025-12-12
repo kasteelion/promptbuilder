@@ -255,6 +255,42 @@ Soft semi-realistic illustration with clear, natural lighting. Fresh muted flora
         parsed = MarkdownParser.parse_presets(text)
         return parsed if parsed else defaults_data.get(filename, {"Default": {}})
     
+    def load_interactions(self):
+        """Load and parse interactions.md file. Creates file if not found.
+        
+        Returns:
+            dict: Dictionary mapping categories to interaction dictionaries
+                  Example: {"Basic Interactions": {"Blank": "", "Conversation": "..."}, ...}
+        """
+        f = self._find_data_file("interactions.md")
+        
+        default_interactions = {
+            "Basic Interactions": {
+                "Blank": "",
+                "Conversation": "{char1} engaged in conversation with {char2}, both looking at each other with friendly expressions"
+            }
+        }
+        
+        if not f.exists():
+            default_content = """# Interaction Templates
+
+Multi-character interaction templates with placeholder support. Use {char1}, {char2}, {char3}, etc. for character placeholders.
+
+---
+
+## Basic Interactions
+
+- **Blank:** (Start from scratch)
+
+- **Conversation:** {char1} engaged in conversation with {char2}, both looking at each other with friendly expressions
+"""
+            f.write_text(default_content, encoding="utf-8")
+            return default_interactions
+        
+        text = f.read_text(encoding="utf-8")
+        interactions = MarkdownParser.parse_interactions(text)
+        return interactions if interactions else default_interactions
+    
     def get_editable_files(self):
         """Get list of editable files, including character files from characters/ folder if they exist.
         

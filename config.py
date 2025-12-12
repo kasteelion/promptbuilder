@@ -116,7 +116,7 @@ DEFAULT_THEME = "Dark"
 # Tooltip help text
 TOOLTIPS = {
     "base_prompt": "The base art style that defines the overall look and technique of the image (e.g., 'Anime style', 'Photorealistic', etc.)",
-    "bulk_outfit": "Quickly apply the same outfit to multiple characters at once instead of changing them individually",
+    "bulk_outfit": "Quickly apply the same outfit to multiple characters at once. All outfits from outfits.md are automatically shared with every character.",
     "character": "Add a character to your prompt. Each character can have different outfits and poses",
     "scene": "Describe the environment, setting, location, lighting, and background details",
     "notes": "Additional details, modifications, or special instructions for the AI",

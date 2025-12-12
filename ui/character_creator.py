@@ -89,14 +89,21 @@ class CharacterCreatorDialog:
         )
         help_label.pack(anchor="w", padx=6, pady=4)
         
-        example_text = """Example Appearance format:
-• Physical description (skin tone, features, hair)
-• Age and demographics
-• Eye color and expression style
-• Body type and posture
-• Makeup preferences
-• Fabric/style preferences
-• Signature accessories"""
+        example_text = """✓ CORE FEATURES (unchangeable - describe these):
+• Skin tone, undertone, finish (matte/dewy/natural)
+• Ethnicity, heritage, age range
+• Eye color and typical gaze quality
+• Body type, proportions, build
+• Hair color, texture, natural state (not specific styles)
+
+✓ STYLE NOTES (preferences that inform outfits - flexible):
+• Typical makeup approach when applicable
+• Fabric preferences for casual/signature looks
+• Jewelry preferences (metals, scale) when worn
+• General personality/expression tendencies
+
+✗ AVOID: Specific hairstyles, fixed accessories, pose descriptions,
+  outfit-specific makeup, or anything that limits scene adaptability"""
         
         example_widget = tk.Text(
             help_frame,
@@ -121,7 +128,7 @@ class CharacterCreatorDialog:
         
         # Appearance
         ttk.Label(main_frame, text="Appearance:", font=("Segoe UI", 10, "bold")).pack(anchor="w", pady=(0, 4))
-        ttk.Label(main_frame, text="Describe physical features, age, eyes, build, style", foreground="gray", font=("Segoe UI", 8)).pack(anchor="w")
+        ttk.Label(main_frame, text="Core features (skin, eyes, body, hair quality) + Style notes (preferences, not requirements)", foreground="gray", font=("Segoe UI", 8)).pack(anchor="w")
         
         appearance_frame = ttk.Frame(main_frame)
         appearance_frame.pack(fill="both", expand=True, pady=(0, 10))
@@ -131,13 +138,14 @@ class CharacterCreatorDialog:
         self.appearance_text.configure(yscrollcommand=appearance_scroll.set)
         
         # Add placeholder text
-        placeholder = """Light/medium/dark skin tone with natural features and [hair description].
-- Young/mature [demographics], [age range]
-- [Eye color] eyes with [expression style]
-- [Body type] build with [posture description]
-- Makeup: [preference]
-- Fabrics: [preferences]
-- Accessories: [signature items]"""
+        placeholder = """[Skin tone] skin with [undertone] and [finish - matte/dewy/natural glow]. [Hair color and texture] hair with natural [quality - e.g., wave, coil, straight].
+- [Ethnicity/heritage] [age descriptor], [age range]
+- [Eye color] eyes with [gaze quality - e.g., warm, focused, gentle]
+- [Body type] build: [proportions and notable features]
+- Neutral expression: [personality baseline]; signature [emotion] shows in [how it manifests]
+- Typical makeup approach: [style when applicable - e.g., minimal/warm/bold]
+- Style preferences: [fabrics, colors, jewelry metals] when choosing outfits
+- General vibe: [personality traits that inform styling]"""
         self.appearance_text.insert("1.0", placeholder)
         self.appearance_text.config(foreground="gray")
         

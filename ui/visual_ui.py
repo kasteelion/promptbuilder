@@ -1,75 +1,15 @@
-# -*- coding: utf-8 -*-
-"""Experimental UI with visual character gallery side panel."""
+# ui/visual_ui.py
+"""
+Deprecated: visual_ui
 
-import tkinter as tk
-from tkinter import ttk
-from .character_card import CharacterGalleryPanel
-from .preview_panel import PreviewPanel
-from .edit_tab import EditTab
-from logic import DataLoader, PromptRandomizer
-from core.builder import PromptBuilder
-from utils import create_tooltip, UndoManager, PreferencesManager, PresetManager
-from config import TOOLTIPS, DEFAULT_THEME
-from .constants import MAX_UNDO_STACK_SIZE, PREVIEW_UPDATE_THROTTLE_MS
-from themes import ThemeManager
+This module previously provided an experimental "Visual Gallery" UI mode.
+The implementation was removed from the active codebase on December 12, 2025.
 
+The file remains as an archival placeholder. Do not import or instantiate
+the VisualPromptBuilderUI class; it no longer exists in this runtime.
+"""
 
-class VisualPromptBuilderUI:
-    """Alternative UI layout with character gallery side panel (standalone version)."""
-    
-    def __init__(self, root):
-        """Initialize visual UI.
-        
-        Args:
-            root: Tkinter root window
-        """
-        self.root = root
-        self.root.title("Prompt Builder — Visual Gallery Mode")
-        
-        # Initialize managers (same as PromptBuilderApp)
-        self.undo_manager = UndoManager(max_history=MAX_UNDO_STACK_SIZE)
-        self.prefs = PreferencesManager()
-        self.preset_manager = PresetManager()
-        
-        # Initialize data
-        self.data_loader = DataLoader()
-        
-        try:
-            self.characters = self.data_loader.load_characters()
-        except Exception as e:
-            from tkinter import messagebox
-            messagebox.showerror("Error", f"Error loading characters: {str(e)}")
-            self.root.destroy()
-            return
-        
-        self.base_prompts = self.data_loader.load_base_prompts()
-        self.scenes = self.data_loader.load_presets("scenes.md")
-        self.poses = self.data_loader.load_presets("poses.md")
-        self.randomizer = PromptRandomizer(self.characters, self.base_prompts, self.poses)
-        
-        # Initialize theme manager
-        self.style = ttk.Style()
-        self.theme_manager = ThemeManager(self.root, self.style)
-        
-        # Throttling for preview updates
-        self._after_id = None
-        self._throttle_ms = PREVIEW_UPDATE_THROTTLE_MS
-        
-        # Selected characters list
-        self.selected_characters = []
-        
-        # Apply saved theme
-        last_theme = self.prefs.get("last_theme", DEFAULT_THEME)
-        self.theme_manager.apply_theme(last_theme)
-        
-        # Build UI
-        self._build_ui()
-        
-        # Setup menu
-        self._setup_menu()
-        
-        # Bind save event
-        self.root.protocol("WM_DELETE_WINDOW", self._on_closing)
+raise ImportError("ui.visual_ui has been removed: Visual Gallery mode is deprecated (see docs/VISUAL_UI_GUIDE.md)")
     
     def _build_ui(self):
         """Build the visual UI layout."""
@@ -131,13 +71,73 @@ class VisualPromptBuilderUI:
         self.scene_text.bind("<KeyRelease>", lambda e: self.schedule_preview_update())
         
         # Notes section
-        notes_frame = ttk.LabelFrame(settings_frame, text="📝 Notes", style="TLabelframe")
+        notes_frame = ttk.LabelFrame(settings_frame, text="📝 Notes & Interactions", style="TLabelframe")
         notes_frame.grid(row=2, column=0, sticky="nsew", padx=4, pady=4)
         notes_frame.columnconfigure(0, weight=1)
+        notes_frame.rowconfigure(1, weight=1)
         settings_frame.rowconfigure(2, weight=1)
         
+        # Interaction template selector (with category grouping)
+        interaction_control = ttk.Frame(notes_frame, style="TFrame")
+        interaction_control.grid(row=0, column=0, sticky="ew", padx=4, pady=(4, 2))
+        interaction_control.columnconfigure(1, weight=1)
+        interaction_control.columnconfigure(3, weight=1)
+        
+        ttk.Label(interaction_control, text="Category:", style="TLabel").grid(
+            row=0, column=0, sticky="w", padx=(0, 4)
+        )
+        
+        self.interaction_category_var = tk.StringVar()
+        self.interaction_cat_combo = ttk.Combobox(
+            interaction_control,
+            textvariable=self.interaction_category_var,
+            state="readonly",
+            width=15
+        )
+        self.interaction_cat_combo.grid(row=0, column=1, sticky="w", padx=(0, 8))
+        self.interaction_cat_combo.bind("<<ComboboxSelected>>", lambda e: self._update_interaction_presets())
+        create_tooltip(self.interaction_cat_combo, "Choose interaction category")
+        
+        ttk.Label(interaction_control, text="Template:", style="TLabel").grid(
+            row=0, column=2, sticky="w", padx=(0, 4)
+        )
+        
+        self.interaction_var = tk.StringVar(value="")
+        self.interaction_combo = ttk.Combobox(
+            interaction_control,
+            textvariable=self.interaction_var,
+            state="readonly"
+        )
+        self.interaction_combo.grid(row=0, column=3, sticky="ew")
+        create_tooltip(self.interaction_combo, "Choose a multi-character interaction template")
+        
+        insert_btn = ttk.Button(
+            interaction_control,
+            text="Insert",
+            command=self._insert_interaction_template
+        )
+        insert_btn.grid(row=0, column=4, padx=(4, 0))
+        create_tooltip(insert_btn, "Insert template with selected characters")
+        
+        refresh_btn = ttk.Button(
+            interaction_control,
+            text="🔄",
+            command=self._refresh_interaction_template,
+            width=3
+        )
+        refresh_btn.grid(row=0, column=5, padx=(4, 0))
+        create_tooltip(refresh_btn, "Re-fill template with current characters")
+        
+        create_btn = ttk.Button(
+            interaction_control,
+            text="+ Create",
+            command=self._create_new_interaction
+        )
+        create_btn.grid(row=0, column=6, padx=(4, 0))
+        create_tooltip(create_btn, "Create a new interaction template")
+        
         self.notes_text = tk.Text(notes_frame, wrap="word", height=4)
-        self.notes_text.pack(fill="both", expand=True, padx=4, pady=4)
+        self.notes_text.grid(row=1, column=0, sticky="nsew", padx=4, pady=(2, 4))
         self.notes_text.bind("<KeyRelease>", lambda e: self.schedule_preview_update())
         
         # Bottom section: Selected characters list
@@ -229,6 +229,136 @@ class VisualPromptBuilderUI:
                 display += f" - {char['outfit']}"
             self.selected_listbox.insert(tk.END, display)
     
+    def _update_interaction_presets(self):
+        """Update interaction template dropdown based on selected category."""
+        cat = self.interaction_category_var.get()
+        if cat and cat in self.interactions:
+            templates = list(self.interactions[cat].keys())
+            self.interaction_combo['values'] = templates
+            if templates:
+                self.interaction_var.set(templates[0])
+            else:
+                self.interaction_var.set("")
+        else:
+            self.interaction_combo['values'] = []
+            self.interaction_var.set("")
+    
+    def _insert_interaction_template(self):
+        """Insert interaction template with character placeholders filled."""
+        from tkinter import messagebox
+        from utils import logger
+        
+        cat = self.interaction_category_var.get()
+        template_name = self.interaction_var.get()
+        
+        if not cat or cat not in self.interactions:
+            return
+        if not template_name or template_name not in self.interactions[cat]:
+            return
+        
+        template_text = self.interactions[cat][template_name]
+        
+        if not template_text:
+            return
+        
+        # Get list of selected character names
+        selected_chars = [char['name'] for char in self.selected_characters]
+        
+        if not selected_chars:
+            messagebox.showinfo(
+                "No Characters",
+                "Please add characters to your prompt first before using interaction templates.",
+                parent=self.root
+            )
+            return
+        
+        # Fill template with character names
+        filled_text = fill_template(template_text, selected_chars)
+        
+        # Insert at cursor position or append
+        try:
+            current_text = self.notes_text.get("1.0", "end-1c")
+            if current_text.strip():
+                # Add on new line if there's existing content
+                self.notes_text.insert("end", "\n" + filled_text)
+            else:
+                # Replace empty content
+                self.notes_text.delete("1.0", "end")
+                self.notes_text.insert("1.0", filled_text)
+            
+            self.schedule_preview_update()
+        except tk.TclError as e:
+            logger.error(f"Error inserting interaction template: {e}")
+    
+    def _create_new_interaction(self):
+        """Open dialog to create a new interaction template."""
+        from .interaction_creator import InteractionCreatorDialog
+        dialog = InteractionCreatorDialog(self.root, self.data_loader, self._reload_interaction_templates)
+        result = dialog.show()
+    
+    def _refresh_interaction_template(self):
+        """Replace notes with re-filled interaction template using current characters."""
+        from utils import logger
+        
+        cat = self.interaction_category_var.get()
+        template_name = self.interaction_var.get()
+        
+        if not cat or cat not in self.interactions:
+            return
+        if not template_name or template_name not in self.interactions[cat]:
+            return
+        
+        template_text = self.interactions[cat][template_name]
+        
+        if not template_text:
+            return
+        
+        # Get list of selected character names
+        selected_chars = [char['name'] for char in self.selected_characters]
+        
+        if not selected_chars:
+            from tkinter import messagebox
+            messagebox.showinfo(
+                "No Characters",
+                "Please add characters to your prompt first before using interaction templates.",
+                parent=self.root
+            )
+            return
+        
+        # Fill template with character names
+        filled_text = fill_template(template_text, selected_chars)
+        
+        # Replace notes content
+        self.notes_text.delete("1.0", "end")
+        self.notes_text.insert("1.0", filled_text)
+        
+        self.schedule_preview_update()
+        logger.info(f"Refreshed interaction template: {template_name}")
+    
+    def _reload_interaction_templates(self):
+        """Reload interaction templates from file."""
+        try:
+            # Reload interactions from markdown file
+            self.interactions = self.data_loader.load_interactions()
+            
+            # Update category combo
+            categories = list(self.interactions.keys())
+            self.interaction_cat_combo['values'] = categories
+            
+            # Keep current category if it exists, otherwise select first
+            current_cat = self.interaction_category_var.get()
+            if current_cat not in self.interactions and categories:
+                self.interaction_category_var.set(categories[0])
+            
+            # Update template dropdown based on category
+            self._update_interaction_presets()
+            
+            from utils import logger
+            logger.info("Interaction templates reloaded successfully")
+        except Exception as e:
+            from utils import logger
+            logger.error(f"Error reloading interaction templates: {e}")
+    
     def _remove_selected(self):
         """Remove selected character from list."""
         selection = self.selected_listbox.curselection()
@@ -313,38 +443,30 @@ class VisualPromptBuilderUI:
         return len(self.selected_characters) > 0
     
     def randomize_all(self):
-        """Randomize all settings."""
-        # Randomize base prompt
-        if self.base_prompts:
-            import random
-            random_base = random.choice(list(self.base_prompts.keys()))
-            self.base_prompt_var.set(random_base)
+        """Randomize all settings using the randomizer."""
+        config = self.randomizer.randomize(
+            num_characters=None,  # Will randomize 2-3 characters
+            include_scene=True,
+            include_notes=True
+        )
         
-        # Randomize characters
-        if self.characters:
-            import random
-            num_chars = random.randint(1, min(4, len(self.characters)))
-            random_chars = random.sample(list(self.characters.keys()), num_chars)
-            
-            self.selected_characters.clear()
-            for char_name in random_chars:
-                char_def = self.characters.get(char_name, {})
-                outfits = char_def.get("outfits", {})
-                outfit = ""
-                if "Base" in outfits:
-                    outfit = "Base"
-                elif outfits:
-                    outfit = random.choice(list(outfits.keys()))
-                
-                self.selected_characters.append({
-                    'name': char_name,
-                    'outfit': outfit,
-                    'pose_category': '',
-                    'pose_preset': '',
-                    'action_note': ''
-                })
-            
-            self._update_selected_list()
+        # Apply base prompt
+        if config["base_prompt"]:
+            self.base_prompt_var.set(config["base_prompt"])
+        
+        # Apply selected characters
+        self.selected_characters = config["selected_characters"]
+        self._update_selected_list()
+        
+        # Apply scene
+        if config.get("scene"):
+            self.scene_text.delete("1.0", "end")
+            self.scene_text.insert("1.0", config["scene"])
+        
+        # Apply interaction/notes
+        if config.get("notes"):
+            self.notes_text.delete("1.0", "end")
+            self.notes_text.insert("1.0", config["notes"])
         
         self.schedule_preview_update()
     
@@ -355,7 +477,15 @@ class VisualPromptBuilderUI:
             self.base_prompts = self.data_loader.load_base_prompts()
             self.scenes = self.data_loader.load_presets("scenes.md")
             self.poses = self.data_loader.load_presets("poses.md")
-            self.randomizer = PromptRandomizer(self.characters, self.base_prompts, self.poses)
+            self.interactions = self.data_loader.load_interactions()
+            self.randomizer = PromptRandomizer(
+                self.characters, 
+                self.base_prompts, 
+                self.poses,
+                self.scenes,
+                self.interactions
+            )
+            self._reload_interaction_templates()
             
             # Reload gallery
             self.character_gallery.load_characters(self.characters)

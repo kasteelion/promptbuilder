@@ -5,21 +5,23 @@ This directory contains all documentation for Prompt Builder.
 ## Documentation Files
 
 ### User Documentation
-- **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - Quick reference guide for common tasks
-- **[VISUAL_UI_GUIDE.md](VISUAL_UI_GUIDE.md)** - Visual UI guide and screenshots
-- **[README.md](../README.md)** - Main project README (in root directory)
+- **[README.md](../README.md)** - Main project README with installation and usage guide
+- **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - Quick reference for keyboard shortcuts and features
+- **[INTERACTION_TEMPLATES.md](INTERACTION_TEMPLATES.md)** - Guide to using multi-character interaction templates
+  
+**Note:** The experimental Visual Gallery UI has been deprecated and removed from the codebase. Archived notes are available at `VISUAL_UI_GUIDE.md` and `VISUAL_UI_IMPLEMENTATION.md` if you need historical reference.
 
-### Developer Documentation
-- **[COMPATIBILITY.md](COMPATIBILITY.md)** - Python version compatibility information
-- **[RESTRUCTURING_PLAN.md](RESTRUCTURING_PLAN.md)** - File structure reorganization plan
-- **[VISUAL_UI_IMPLEMENTATION.md](VISUAL_UI_IMPLEMENTATION.md)** - UI implementation details
-- **[MODULARITY_REFACTORING.md](MODULARITY_REFACTORING.md)** - Code modularity improvements
+### Technical Documentation
+- **[COMPATIBILITY.md](COMPATIBILITY.md)** - Python version compatibility information (3.8+)
+- **[VISUAL_UI_IMPLEMENTATION.md](VISUAL_UI_IMPLEMENTATION.md)** - Technical details of the Visual Gallery implementation
 
 ## Getting Started
 
-1. For quick start, see [QUICK_REFERENCE.md](QUICK_REFERENCE.md)
-2. For visual guide, see [VISUAL_UI_GUIDE.md](VISUAL_UI_GUIDE.md)
-3. For full documentation, see [README.md](../README.md)
+1. **New users**: Start with the main [README.md](../README.md)
+2. **Quick reference**: See [QUICK_REFERENCE.md](QUICK_REFERENCE.md) for keyboard shortcuts and tips
+3. **Interaction templates**: Learn about the new multi-character interaction feature in [INTERACTION_TEMPLATES.md](INTERACTION_TEMPLATES.md)
+4. **Visual mode**: Learn about the experimental gallery UI in [VISUAL_UI_GUIDE.md](VISUAL_UI_GUIDE.md)
+5. **Compatibility**: Check [COMPATIBILITY.md](COMPATIBILITY.md) for Python version requirements
 
 ## Contributing
 

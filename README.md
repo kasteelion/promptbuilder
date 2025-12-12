@@ -2,33 +2,35 @@
 
 A desktop application to help build complex and detailed prompts for AI image generation with an intuitive, resizable interface.
 
-## Project Structure
+## Features
 
-```
-promptbuilder/
-├── data/               # Data files (characters, scenes, presets)
-│   ├── characters/    # Individual character definitions
-│   ├── base_prompts.md
-│   ├── characters.md
-│   ├── outfits.md
-│   ├── poses.md
-│   └── scenes.md
-├── docs/              # Documentation
-├── tests/             # Test files
-├── core/              # Core prompt building logic
-├── logic/             # Business logic (parsers, validators)
-├── themes/            # Theme management
-├── ui/                # User interface components
-├── utils/             # Utility modules
-├── main.py            # Application entry point
-└── pyproject.toml     # Project configuration
-```
+### Core Features
+- **📝 In-App Content Creation** - Create characters, scenes, outfits, poses, and base art styles directly in the UI
+- **🎨 Smart UI Resizing** - Adaptive font scaling and proportional panel resizing for optimal viewing at any window size
+- **📁 Organized Data Structure** - Individual character files with shared and character-specific outfits
+- **🔄 Live Preview** - Real-time prompt generation with syntax highlighting
+- **🎲 Randomization** - Randomize characters, poses, and prompts for creative inspiration
+- **🌙 Theme Support** - 8 themes including auto-detection for your OS dark/light mode
 
-See [docs/RESTRUCTURING_PLAN.md](docs/RESTRUCTURING_PLAN.md) for details on the file organization.
+### Advanced Features
+- **⏪ Undo/Redo** - Full undo/redo support (`Ctrl+Z`/`Ctrl+Y`) for all operations
+- **💾 Presets** - Save and load entire prompt configurations (`Ctrl+Shift+S`/`Ctrl+Shift+O`)
+- **🖱️ Context Menus** - Right-click characters for quick actions (duplicate, move, remove)
+- **⚡ Batch Operations** - Clear all, reset outfits, apply poses to all characters at once
+- **📋 Smart Copy** - Copy full prompt or individual sections (characters/scene/notes)
+- **💡 Tooltips** - Helpful hints appear when hovering over UI elements
+- **⌨️ 20+ Keyboard Shortcuts** - Fast workflow with extensive keyboard support
+- **📤 Export/Import** - Share configurations as JSON files
+- **🎓 Welcome Guide** - First-run tutorial to get you started quickly
+- **💬 Better Errors** - User-friendly error messages with actionable suggestions
+- **🎴 Visual Gallery** - Optional visual character browser with photo support (experimental)
+- **🔍 Character Search** - Quick filter to find characters in large collections
+- **🌊 Drag & Drop** - Reorder characters by dragging (in character list)
+- **🤝 Interaction Templates** - Pre-built multi-character interaction templates (NEW!)
 
 ## Requirements
 
-- **Python 3.8 or higher** (Tested on Python 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, and 3.14)
+- **Python 3.8 or higher** (Tested on Python 3.8 through 3.14)
 - **tkinter** (Usually included with Python, but may need separate installation on some Linux distributions)
 - **Zero external dependencies** - Uses only Python standard library
 
@@ -45,31 +47,6 @@ sudo dnf install python3-tkinter
 ```
 
 **macOS/Windows:** tkinter is included with standard Python installations
-
-## Features
-
-### Core Features
-- **📝 In-App Content Creation** - Create characters, scenes, outfits, poses, and base art styles directly in the UI
-- **🎨 Smart UI Resizing** - Adaptive font scaling and proportional panel resizing for optimal viewing at any window size
-- **📁 Organized Data Structure** - Individual character files with shared and character-specific outfits
-- **🔄 Live Preview** - Real-time prompt generation with syntax highlighting
-- **🎲 Randomization** - Randomize characters, poses, and prompts for creative inspiration
-- **🌙 Theme Support** - 8 themes including auto-detection for your OS dark/light mode
-
-### New in Version 2.0 ⭐
-- **⏪ Undo/Redo** - Full undo/redo support (`Ctrl+Z`/`Ctrl+Y`) for all operations
-- **💾 Presets** - Save and load entire prompt configurations (`Ctrl+Shift+S`/`Ctrl+Shift+O`)
-- **🖱️ Context Menus** - Right-click characters for quick actions (duplicate, move, remove)
-- **⚡ Batch Operations** - Clear all, reset outfits, apply poses to all characters at once
-- **📋 Smart Copy** - Copy full prompt or individual sections (characters/scene/notes)
-- **💡 Tooltips** - Helpful hints appear when hovering over UI elements
-- **⌨️ 20+ Keyboard Shortcuts** - Fast workflow with extensive keyboard support
-- **📤 Export/Import** - Share configurations as JSON files
-- **🎓 Welcome Guide** - First-run tutorial to get you started quickly
-- **💬 Better Errors** - User-friendly error messages with actionable suggestions
-- **🎴 Visual Gallery** - Optional visual character browser with photo support (experimental)
-- **🔍 Character Search** - Quick filter to find characters in large collections
-- **🌊 Drag & Drop** - Reorder characters by dragging (in character list)
 
 ## How it works
 
@@ -102,6 +79,28 @@ The UI allows you to select these components, and the application will assemble 
 4.  **Build a Scene:** Select different scene elements from `scenes.md`. You can also create new scenes directly in the UI.
 
 5.  **Choose a Pose:** Select a pose from `poses.md` or create custom poses.
+
+6.  **Add Notes & Interactions:** Include any additional details in the Notes section. Use the **Interaction Templates** dropdown to quickly insert pre-built multi-character interactions like "Conversation", "Dancing Together", "High Five", etc. The template will automatically fill in with your selected characters' names.
+
+7.  **Generate:** The preview panel automatically updates as you make selections, showing the final assembled prompt.
+
+### Using Interaction Templates
+
+The Notes section includes a powerful feature for creating multi-character interactions:
+
+1. **Add your characters** to the prompt (at least 2 characters recommended)
+2. **Select an interaction** from the dropdown (e.g., "Conversation", "Dancing Together", "Working Together")
+3. **Click "Insert"** - the template will be added with character names filled in automatically
+
+**Example:**
+- Characters selected: Alice, Bob, Carol
+- Template: "Group Discussion (3+)"
+- Result: "Alice, Bob, and Carol engaged in group discussion, all contributing to conversation"
+
+Available templates include:
+- **Two-character interactions:** Conversation, Dancing Together, High Five, Handshake, Working Together, and more
+- **Multi-character interactions:** Group Discussion, Circle Formation, Team Pose, Chain Reaction
+- **Create your own:** Click "+ Create" to make custom interaction templates
 
 6.  **Add Notes:** Include any additional details or modifications in the Notes tab.
 
@@ -142,6 +141,7 @@ Use the built-in creator dialogs to add new content:
 - **Characters Tab → Bulk Outfit Editor:** "Create Shared Outfit" - outfits available to all characters
 - **Characters Tab → Individual Character:** "Create Outfit" - character-specific outfit variations
 - **Scenes Tab:** "Create New Scene" button - add scenes organized by category
+- **Notes & Interactions:** "+ Create" button - create custom multi-character interaction templates
 
 All creator dialogs include copyable help text to assist with proper formatting.
 
@@ -270,7 +270,7 @@ promptbuilder/
 │   ├── outfit_creator.py     # Outfit creation dialogs
 │   ├── pose_creator.py       # Pose creation dialog
 │   ├── character_card.py     # Visual gallery character cards
-│   ├── visual_ui.py          # Visual gallery mode UI
+│   ├── (visual_ui removed)    # Visual gallery mode deprecated and removed
 │   └── searchable_combobox.py # Enhanced combobox widget
 └── utils/                # Utility modules
     ├── logger.py         # Centralized logging
@@ -397,639 +397,33 @@ When contributing:
 
 ---
 
-## Comprehensive Code Review & Analysis
+## Contributing
 
-### Overview
-This section documents a comprehensive review of the Prompt Builder codebase conducted in December 2025, analyzing code quality, architecture, security, and identifying areas for improvement.
+Contributions are welcome! This project follows standard Python best practices:
 
-### Code Quality Assessment
+- Python 3.8+ compatibility
+- Zero external dependencies for core functionality
+- Type hints where possible
+- Centralized logging using the `utils.logger` module
+- Modular architecture with specialized manager classes
 
-#### Strengths ✅
+See the documentation in the `docs/` directory for more technical details.
 
-1. **Modular Architecture**
-   - Clean separation of concerns (UI, logic, core, utils)
-   - Manager pattern reduces MainWindow from 1210 to 851 lines (30% reduction)
-   - 4 specialized managers: MenuManager, FontManager, StateManager, DialogManager
-   - Single Responsibility Principle followed throughout
+## Documentation
 
-2. **Comprehensive Type Hints**
-   - All manager classes fully typed with Python 3.8+ type hints
-   - Return types documented in docstrings
-   - Improves IDE support and catches type errors early
+- **[docs/QUICK_REFERENCE.md](docs/QUICK_REFERENCE.md)** - Keyboard shortcuts and quick tips
+- **[docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)** - Python version compatibility information
+ - **[docs/QUICK_REFERENCE.md](docs/QUICK_REFERENCE.md)** - Keyboard shortcuts and quick tips
+ - **[docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)** - Python version compatibility information
 
-3. **Robust Error Handling**
-   - Specific exception types (FileNotFoundError, PermissionError, tk.TclError, etc.)
-   - User-friendly error messages via DialogManager
-   - Graceful degradation with default values
-   - 10+ bare except blocks fixed during refactoring
+**Note:** The Visual Gallery UI has been deprecated and removed from the codebase. Archived notes are available at `docs/VISUAL_UI_GUIDE.md` and `docs/VISUAL_UI_IMPLEMENTATION.md`.
 
-4. **Security Measures**
-   - Path traversal prevention (`validate_file_path()`)
-   - Filename sanitization (`sanitize_filename()`)
-   - Input length validation
-   - No external network access
-   - No code execution (markdown is parsed, not executed)
+## License
 
-5. **Performance Optimizations**
-   - Throttled preview updates (150ms)
-   - Debounced text inputs (300ms)
-   - Font resize throttling (250ms)
-   - Widget reflow retry limits (5 max)
-   - Cached string operations in parsers
+This project is open source. Feel free to use, modify, and distribute as needed.
 
-6. **Centralized Logging**
-   - Consistent logger usage via `utils/logger.py`
-   - Debug file logging with rotation
-   - Console and file handlers
-   - Proper log levels (DEBUG, INFO, WARNING, ERROR)
+## Acknowledgments
 
-#### Areas Identified for Improvement
-
-1. **Remaining Print Statements** (Low Priority)
-   - Files affected: `logic/data_loader.py`, `logic/parsers.py`, `ui/character_card.py`
-   - Impact: Low - mostly informational output
-   - Recommendation: Replace with logger calls for consistency
-
-2. **Test Coverage** (Medium Priority)
-   - No automated test suite currently
-   - `test_features.py` provides basic verification
-   - Recommendation: Add pytest-based unit tests for critical components
-
-3. **Documentation** (Completed)
-   - ✅ README comprehensive and up-to-date
-   - ✅ QUICK_REFERENCE.md covers new patterns
-   - ✅ MODULARITY_REFACTORING.md documents architecture changes
-   - ✅ Inline code comments throughout
-
-### Security Review
-
-**Status: Secure** ✅
-
-- ✅ Path traversal prevention implemented
-- ✅ Filename sanitization in place
-- ✅ Input validation for all user inputs
-- ✅ No SQL injection risk (no database)
-- ✅ No remote code execution vectors
-- ✅ File operations restricted to project directory
-- ✅ No external dependencies (standard library only)
-
-### Performance Metrics
-
-| Metric | Value | Status |
-|--------|-------|--------|
-| Startup Time | < 1s | ✅ Excellent |
-| Preview Update Throttle | 150ms | ✅ Smooth |
-| Text Debounce | 300ms | ✅ No lag |
-| Resize Throttle | 250ms | ✅ Responsive |
-| Max Undo History | 50 states | ✅ Memory efficient |
-| Font Size Range | 9-16pt | ✅ Readable |
-| Widget Reflow Retries | 5 max | ✅ Prevents infinite loops |
-
-### Code Metrics
-
-**Before Refactoring:**
-- MainWindow: 1210 lines
-- Cyclomatic complexity: High
-- Exception handling: 30+ bare except blocks
-- Magic numbers: Scattered throughout
-- Logging: Mixed print/logger usage
-
-**After Refactoring:**
-- MainWindow: 851 lines (-30%)
-- Manager classes: 4 new modules (1069 lines organized)
-- Exception handling: Specific exception types
-- Magic numbers: Centralized in ui/constants.py
-- Logging: Consistent logger usage
-
-### Architecture Improvements Implemented
-
-1. **Manager Pattern**
-   - `MenuManager` (263 lines) - Menu bar and theme management
-   - `FontManager` (197 lines) - Adaptive font sizing
-   - `StateManager` (308 lines) - Undo/redo and presets
-   - `DialogManager` (242 lines) - Centralized dialogs
-
-2. **Constants Extraction**
-   - `ui/constants.py` (59 lines) - All UI-specific constants
-   - Prevents magic numbers in code
-   - Single source of truth for values
-
-3. **Code Quality**
-   - Type hints added to manager classes
-   - Specific exception handling throughout
-   - Consistent logging patterns
-   - User-friendly error messages
-
-### Recommendations for Future Development
-
-#### High Priority
-1. **Unit Testing**
-   - Add pytest for automated testing
-   - Focus on `logic/parsers.py` (320 lines of parsing logic)
-   - Test manager classes independently
-   - Target 80%+ code coverage
-
-2. **Logger Migration**
-   - Replace remaining print() statements
-   - Files: logic/data_loader.py, logic/parsers.py, ui/character_card.py
-   - Estimated effort: 1 hour
-
-#### Medium Priority
-3. **Integration Tests**
-   - Test UI component interactions
-   - Verify state management workflow
-   - Test preset save/load functionality
-
-4. **Type Hint Completion**
-   - Add type hints to remaining modules
-   - Focus on logic/parsers.py and ui/widgets.py
-   - Estimated effort: 2-3 hours
-
-5. **Documentation**
-   - Developer documentation for contributors
-   - Architecture decision records (ADRs)
-   - API documentation for managers
-
-#### Low Priority
-6. **Performance Profiling**
-   - Profile with large character sets (100+)
-   - Identify bottlenecks if any
-   - Optimize parsing if needed
-
-7. **CI/CD Pipeline**
-   - GitHub Actions for automated testing
-   - Linting with pylint/flake8
-   - Type checking with mypy
-
-8. **Code Coverage**
-   - Add coverage.py integration
-   - Generate coverage reports
-   - Identify untested code paths
-
-### Implementation: Logger Migration
-
-The following implementations replace print() statements with proper logging:
-
-#### logic/data_loader.py
-```python
-# Current (lines 120, 122):
-except Exception as e:
-    print(f"Error parsing {char_file.name}: {e}")
-    print(f"Error creating sample character: {e}")
-
-# Improved:
-except Exception as e:
-    logger.error(f"Error parsing {char_file.name}: {e}")
-    logger.error(f"Error creating sample character: {e}")
-```
-
-#### logic/parsers.py
-```python
-# Current (lines 240, 245, 249):
-print(f"Warning: Invalid character data for {name}, skipping")
-print(f"Warning: Character {name} missing appearance, adding empty")
-print(f"Warning: Character {name} has invalid outfits, adding empty dict")
-
-# Improved:
-logger.warning(f"Invalid character data for {name}, skipping")
-logger.warning(f"Character {name} missing appearance, adding empty")
-logger.warning(f"Character {name} has invalid outfits, adding empty dict")
-```
-
-#### ui/character_card.py
-```python
-# Current (lines 17-18):
-print("PIL/Pillow not available. Character photos will not be displayed.")
-print("Install with: pip install Pillow")
-
-# Improved:
-logger.info("PIL/Pillow not available. Character photos will not be displayed.")
-logger.info("Install Pillow for photo support: pip install Pillow")
-```
-
-### Implementation Status
-
-✅ **Completed:**
-- Modular architecture with manager pattern
-- Exception handling improvements
-- Constants extraction
-- Type hints for managers
-- Centralized logging system
-- Security measures (path validation, sanitization)
-- DialogManager for user-friendly errors
-- Performance optimizations (throttling, debouncing)
-
-🔄 **In Progress:**
-- None
-
-📋 **Recommended Next Steps:**
-1. Migrate remaining print() statements to logger (1 hour)
-2. Add pytest-based unit tests (8-12 hours)
-3. Complete type hints for all modules (2-3 hours)
-4. Set up CI/CD with GitHub Actions (2-4 hours)
-
-### Conclusion
-
-The Prompt Builder codebase demonstrates **excellent code quality** with a well-architected modular design, comprehensive error handling, and strong security practices. The recent refactoring reduced code complexity by 30% while improving maintainability and user experience.
-
-The application is **production-ready** with no critical issues identified. Recommended improvements are focused on testing infrastructure and documentation, which will further enhance long-term maintainability.
-
-**Overall Assessment: A+ (Excellent)**
-- Architecture: A+ (Modular, well-organized)
-- Code Quality: A (Clean, well-documented)
-- Security: A+ (No vulnerabilities)
-- Performance: A+ (Optimized, responsive)
-- Maintainability: A+ (Easy to extend)
-- User Experience: A+ (Polished, professional)
-
----
-
-## Detailed Code Review & Action Plan (December 2025)
-
-### Executive Summary
-
-**Project:** Standalone Python/Tkinter application with zero external PyPI dependencies  
-**Structure:** Well-organized modular architecture (logic/, core/, ui/, themes/, utils/)  
-**Quality:** Good practical structure with intentional documentation and debug scaffolding  
-**Focus:** Maintainability, robustness, and cross-platform compatibility
-
-### Critical Issues (Fixed Immediately) ✅
-
-#### 1. Bare `except:` Blocks
-**Status:** ✅ **FIXED**
-
-**Problem:** Found 4 bare `except:` blocks that hide important errors and can swallow `KeyboardInterrupt`, `SystemExit`, etc.
-
-**Files Fixed:**
-- `debug_log.py` (3 instances) - Now catches specific exceptions
-- `themes/theme_manager.py` (1 instance) - Now catches `tk.TclError`, `KeyError`, `AttributeError`
-
-**Before:**
-```python
-try:
-    _log_handle.flush()
-except:
-    pass
-```
-
-**After:**
-```python
-try:
-    _log_handle.flush()
-except (OSError, ValueError) as e:
-    print(f"Warning: Could not write to debug log: {e}")
-```
-
-#### 2. Platform-Specific Subprocess Call
-**Status:** ✅ **FIXED**
-
-**Problem:** macOS theme detection using `subprocess.run()` without timeout or proper error handling could block or crash on non-macOS systems.
-
-**Fix Applied:** Added 2-second timeout, explicit `check=False`, and proper exception handling for `FileNotFoundError` and `TimeoutExpired`.
-
-**Before:**
-```python
-result = subprocess.run(['defaults', 'read', '-g', 'AppleInterfaceStyle'], 
-                       capture_output=True, text=True)
-```
-
-**After:**
-```python
-try:
-    result = subprocess.run(
-        ['defaults', 'read', '-g', 'AppleInterfaceStyle'], 
-        capture_output=True, 
-        text=True, 
-        timeout=2.0,
-        check=False
-    )
-    return "Light" if result.returncode != 0 else "Dark"
-except (FileNotFoundError, subprocess.TimeoutExpired) as e:
-    logger.debug(f"macOS theme detection failed: {e}")
-```
-
-### Major Issues (Important, Prioritized)
-
-#### 3. Potential UI Thread Blocking
-**Status:** 📋 **PLANNED**
-
-**Problem:** Heavy I/O operations in `logic/data_loader.py` (reading/parsing multiple markdown files) can block the Tkinter main loop.
-
-**Impact:** UI freezes, poor user experience with large character sets
-
-**Recommended Fix:**
-```python
-from concurrent.futures import ThreadPoolExecutor
-import threading
-
-def load_characters_async(callback):
-    """Load characters in background thread."""
-    def worker():
-        chars = self.load_characters()
-        # Post result back to main thread safely
-        self.root.after(0, callback, chars)
-    
-    threading.Thread(target=worker, daemon=True).start()
-```
-
-**Effort:** 2-3 hours  
-**Priority:** High (UX improvement)
-
-#### 4. Debug Log File Lifecycle
-**Status:** ⚠️ **PARTIALLY ADDRESSED**
-
-**Current State:**
-- ✅ Now handles permission errors gracefully
-- ⚠️ Still writes to working directory
-- ⚠️ No protection against multiple instances
-
-**Recommended Improvement:**
-```python
-from pathlib import Path
-import platformdirs  # Or use Path.home() for stdlib-only
-
-# Use platform-appropriate app data directory
-if os.name == 'nt':  # Windows
-    log_dir = Path(os.getenv('APPDATA')) / 'PromptBuilder'
-elif sys.platform == 'darwin':  # macOS
-    log_dir = Path.home() / 'Library' / 'Logs' / 'PromptBuilder'
-else:  # Linux/Unix
-    log_dir = Path.home() / '.local' / 'share' / 'promptbuilder'
-
-log_dir.mkdir(parents=True, exist_ok=True)
-_log_file = log_dir / 'promptbuilder.log'
-```
-
-**Effort:** 1 hour  
-**Priority:** Medium
-
-#### 5. No Formal Tests or CI
-**Status:** 📋 **PLANNED**
-
-**Current State:** Only ad-hoc `test_features.py`, no pytest, no CI
-
-**Recommended Implementation:**
-
-**Phase 1: Basic Test Structure**
-```bash
-# Install dev dependencies
-pip install pytest pytest-cov
-
-# Create test structure
-tests/
-  ├── __init__.py
-  ├── test_data_loader.py
-  ├── test_parsers.py
-  ├── test_validation.py
-  └── fixtures/
-      ├── sample_character.md
-      └── sample_scene.md
-```
-
-**Phase 2: CI Setup (GitHub Actions)**
-```yaml
-# .github/workflows/test.yml
-name: Tests
-on: [push, pull_request]
-jobs:
-  test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: ['3.8', '3.11', '3.12']
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
-      - run: pip install pytest pytest-cov
-      - run: pytest --cov=. --cov-report=xml
-```
-
-**Effort:** 8-12 hours (tests) + 2-4 hours (CI)  
-**Priority:** High
-
-#### 6. Inconsistent Error Handling & Logging
-**Status:** ✅ **MOSTLY COMPLETE**, 📋 **REFINEMENT NEEDED**
-
-**Completed:**
-- ✅ Fixed bare except blocks
-- ✅ Migrated most print() to logger
-- ✅ Added specific exception types
-
-**Remaining Work:**
-- Establish logging policy document
-- Add logging levels guide
-- Ensure consistent error propagation
-
-**Effort:** 2 hours  
-**Priority:** Medium
-
-#### 7. Type Annotation Coverage
-**Status:** 🔄 **IN PROGRESS**
-
-**Current Coverage:**
-- ✅ Manager classes fully typed
-- ✅ Core builder module fully typed
-- ⚠️ logic/parsers.py partially typed
-- ⚠️ ui/widgets.py missing types
-
-**Recommended Next Steps:**
-```python
-# Add mypy to dev dependencies
-pip install mypy
-
-# Create mypy.ini
-[mypy]
-python_version = 3.8
-warn_return_any = True
-warn_unused_configs = True
-disallow_untyped_defs = True
-
-# Run type checking
-mypy logic/ core/ utils/
-```
-
-**Effort:** 2-3 hours  
-**Priority:** Medium
-
-#### 8. Preferences Stored in Repo Root
-**Status:** 📋 **PLANNED**
-
-**Problem:** `preferences.json` in working directory risks accidental commits and permission issues
-
-**Recommended Fix:**
-```python
-# utils/preferences.py
-from pathlib import Path
-import os
-
-def get_config_dir() -> Path:
-    """Get platform-appropriate config directory."""
-    if os.name == 'nt':
-        base = Path(os.getenv('APPDATA', Path.home()))
-    elif sys.platform == 'darwin':
-        base = Path.home() / 'Library' / 'Application Support'
-    else:
-        base = Path(os.getenv('XDG_CONFIG_HOME', Path.home() / '.config'))
-    
-    config_dir = base / 'PromptBuilder'
-    config_dir.mkdir(parents=True, exist_ok=True)
-    return config_dir
-
-# Use: preferences_file = get_config_dir() / 'preferences.json'
-```
-
-**Effort:** 1-2 hours  
-**Priority:** Medium
-
-### Minor Issues & Improvements
-
-#### 9. Enhanced Documentation
-**Status:** 📋 **PLANNED**
-
-**Recommendations:**
-- Add module-level docstrings where missing
-- Create `CONTRIBUTING.md` with developer guidelines
-- Add Architecture Decision Records (ADRs)
-
-**Effort:** 3-4 hours  
-**Priority:** Low
-
-#### 10. Code Style & Linting
-**Status:** 📋 **PLANNED**
-
-**Setup:**
-```bash
-pip install black ruff
-
-# pyproject.toml
-[tool.black]
-line-length = 100
-target-version = ['py38']
-
-[tool.ruff]
-line-length = 100
-select = ["E", "F", "W", "I"]
-```
-
-**Effort:** 1 hour setup + ongoing  
-**Priority:** Low
-
-#### 11. Packaging & Distribution
-**Status:** 📋 **PLANNED**
-
-**Create `pyproject.toml`:**
-```toml
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "prompt-builder"
-version = "2.0.0"
-description = "AI Image Prompt Builder"
-requires-python = ">=3.8"
-classifiers = [
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.12",
-]
-
-[project.scripts]
-prompt-builder = "main:main"
-```
-
-**Effort:** 2-3 hours  
-**Priority:** Low
-
-### Implementation Roadmap
-
-#### Sprint 1 (Week 1): Critical Fixes ✅
-- [x] Fix bare except blocks
-- [x] Add timeout to macOS subprocess
-- [x] Improve exception specificity
-- [x] Migrate print() to logger
-
-#### Sprint 2 (Week 2): Testing Infrastructure
-- [ ] Set up pytest structure
-- [ ] Write unit tests for parsers
-- [ ] Write unit tests for data loader
-- [ ] Write unit tests for validation
-- [ ] Target: 60% code coverage
-
-#### Sprint 3 (Week 3): CI/CD & Type Safety
-- [ ] Set up GitHub Actions
-- [ ] Add mypy type checking
-- [ ] Complete type hints
-- [ ] Add linting (ruff/black)
-
-#### Sprint 4 (Week 4): Platform Improvements
-- [ ] Move preferences to app data directory
-- [ ] Move debug logs to app data directory
-- [ ] Add async loading for heavy I/O
-- [ ] Test on all platforms
-
-#### Sprint 5 (Week 5): Polish & Documentation
-- [ ] Complete API documentation
-- [ ] Create CONTRIBUTING.md
-- [ ] Add packaging (pyproject.toml)
-- [ ] Create distribution guide
-
-### Tracking Metrics
-
-**Current Status:**
-- Code Quality: A
-- Test Coverage: 0% (no formal tests)
-- Type Coverage: ~40%
-- Platform Support: 3/3 (Windows, macOS, Linux)
-- External Dependencies: 0 (excellent!)
-
-**Target Status:**
-- Code Quality: A+
-- Test Coverage: 80%+
-- Type Coverage: 90%+
-- Platform Support: 3/3 (tested via CI)
-- External Dependencies: 0 (maintain)
-
-### Security Considerations
-
-**Current Security Posture:** ✅ **STRONG**
-
-- ✅ Path traversal prevention
-- ✅ Filename sanitization
-- ✅ Input validation
-- ✅ No SQL injection risk (no database)
-- ✅ No remote code execution
-- ✅ File operations restricted
-- ✅ No external dependencies
-
-**No critical security issues identified.**
-
-### Performance Notes
-
-**Current Performance:** ✅ **EXCELLENT**
-
-- Startup time: <1s
-- UI responsiveness: Excellent (with throttling)
-- Memory usage: Minimal
-- File I/O: Efficient (atomic operations)
-
-**Future Optimization:**
-- Consider background loading for 100+ character collections
-- Profile markdown parsing for very large files
-
-### Final Assessment
-
-**Production Readiness:** ✅ **READY**
-
-The application is production-ready with excellent code quality. All critical issues have been addressed. Recommended improvements focus on testing infrastructure, type safety, and platform-specific polish—all valuable but non-blocking for production use.
-
-**Recommended Focus:**
-1. ✅ **Done:** Fix critical error handling issues
-2. **Next:** Add automated testing (highest ROI)
-3. **Then:** Complete type hints and CI/CD
-4. **Finally:** Platform-specific polish and packaging
-
+Built with Python's tkinter library for maximum compatibility and zero dependencies.
 
 
