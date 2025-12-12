@@ -287,12 +287,10 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
             # Write back to file
             scenes_file.write_text(content, encoding="utf-8")
             
+            from utils.notification import notify
             root = self.dialog.winfo_toplevel()
             msg = f"Scene '{name}' created in category '{category}'!"
-            if hasattr(root, '_update_status'):
-                root._update_status(msg)
-            else:
-                messagebox.showinfo("Success", msg, parent=self.dialog)
+            notify(root, "Success", msg, level='success', duration=3000, parent=self.dialog)
             self.result = (category, name)
             self.dialog.destroy()
             if self.on_success:

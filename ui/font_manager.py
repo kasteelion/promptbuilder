@@ -2,17 +2,13 @@
 """Font size management and adaptive scaling."""
 
 import tkinter as tk
-from typing import List, Callable, Optional
-from .constants import (
-    DEFAULT_FONT_FAMILY,
-    DEFAULT_FONT_SIZE,
-    MIN_FONT_SIZE,
-    MAX_FONT_SIZE,
-    FONT_SIZE_BREAKPOINTS,
-    RESIZE_THROTTLE_MS,
-    RESIZE_SIGNIFICANT_CHANGE_PX
-)
+from typing import List, Optional
+
 from utils import logger
+
+from .constants import (DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE,
+                        FONT_SIZE_BREAKPOINTS, MAX_FONT_SIZE, MIN_FONT_SIZE,
+                        RESIZE_SIGNIFICANT_CHANGE_PX, RESIZE_THROTTLE_MS)
 
 
 class FontManager:
@@ -122,8 +118,6 @@ class FontManager:
     def _update_fonts(self):
         """Update all managed widgets with current font size."""
         self.current_font_size = self._calculate_font_size()
-        font = (self.font_family, self.current_font_size)
-        
         for widget in self.managed_widgets:
             self._apply_font_to_widget(widget)
     

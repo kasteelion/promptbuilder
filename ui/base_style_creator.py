@@ -1,8 +1,10 @@
 """Base style creator dialog UI."""
 
 import tkinter as tk
-from tkinter import ttk, messagebox
-from utils import get_style_template_names, get_style_template, get_style_template_description
+from tkinter import messagebox, ttk
+
+from utils import (get_style_template, get_style_template_description,
+                   get_style_template_names)
 
 
 class BaseStyleCreatorDialog:
@@ -281,11 +283,10 @@ Holographic displays, circuit patterns, rain-slicked atmosphere."""
             # Write back to file
             prompts_file.write_text(content, encoding="utf-8")
             
-            messagebox.showinfo(
-                "Success", 
-                f"Base style '{name}' created successfully!",
-                parent=self.dialog
-            )
+            root = self.dialog.winfo_toplevel()
+            msg = f"Base style '{name}' created successfully!"
+            from utils.notification import notify
+            notify(root, "Success", msg, level='success', duration=3000, parent=self.dialog)
             self.result = name
             self.dialog.destroy()
             if self.on_success:

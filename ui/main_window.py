@@ -484,11 +484,10 @@ class PromptBuilderApp:
         selected_chars = [char['name'] for char in self.characters_tab.selected_characters]
         
         if not selected_chars:
-            messagebox.showinfo(
-                "No Characters",
-                "Please add characters to your prompt first before using interaction templates.",
-                parent=self.root
-            )
+            from utils.notification import notify
+            root = self.root
+            msg = "Please add characters to your prompt first before using interaction templates."
+            notify(root, "No Characters", msg, level='info', duration=3000, parent=self.root)
             return
         
         # Fill template with character names
@@ -530,11 +529,10 @@ class PromptBuilderApp:
         selected_chars = [char['name'] for char in self.characters_tab.selected_characters]
         
         if not selected_chars:
-            messagebox.showinfo(
-                "No Characters",
-                "Please add characters to your prompt first before using interaction templates.",
-                parent=self.root
-            )
+            from utils.notification import notify
+            root = self.root
+            msg = "Please add characters to your prompt first before using interaction templates."
+            notify(root, "No Characters", msg, level='info', duration=3000, parent=self.root)
             return
         
         # Fill template with character names

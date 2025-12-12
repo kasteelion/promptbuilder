@@ -10,3 +10,9 @@ Quick scene descriptions for your prompts. Edit or add your own!
 - **Bank Background:** transparent blank background
 
 ---
+
+## Default
+
+- **White Background:** White transparent background
+
+---

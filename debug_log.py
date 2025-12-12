@@ -1,58 +1,85 @@
-"""Debug logging utility for crash diagnostics."""
-import os
-import sys
-from datetime import datetime
+"""Debug logging shim that delegates to the project's standardized logger.
 
-_log_file = "promptbuilder_debug.log"
-_log_handle = None
+This module preserves the simple `init_debug_log()`, `log()`, and
+`close_debug_log()` API used by the codebase but delegates to
+`utils.logger` so all output goes through the same logging configuration.
+"""
+import logging
+from pathlib import Path
+from typing import Optional
+
+try:
+    # Prefer the project's configured logger
+    from utils.logger import setup_logger
+    _logger = setup_logger(log_file="promptbuilder_debug.log", level=logging.DEBUG)
+except Exception:
+    # Fallback: basic logger to stdout
+    _logger = logging.getLogger("promptbuilder_debug_fallback")
+    if not _logger.handlers:
+        ch = logging.StreamHandler()
+        ch.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
+        _logger.addHandler(ch)
+    _logger.setLevel(logging.DEBUG)
+
+_file_handler: Optional[logging.Handler] = None
 
 def init_debug_log():
-    """Initialize debug logging. Deletes old log and creates new one."""
-    global _log_handle
-    
-    # Delete old log if exists
-    if os.path.exists(_log_file):
-        try:
-            os.remove(_log_file)
-        except (OSError, PermissionError) as e:
-            # Log deletion failure is non-critical; file will be overwritten
-            print(f"Warning: Could not delete old debug log: {e}")
-    
-    # Create new log
-    try:
-        _log_handle = open(_log_file, 'w', encoding='utf-8')
-        log(f"=== Debug Log Started: {datetime.now()} ===")
-        log(f"Python: {sys.version}")
-        log(f"Platform: {sys.platform}")
-        log("=" * 60)
-    except Exception as e:
-        print(f"Warning: Could not create debug log: {e}")
+    """Initialize debug logging (attach a file handler at DEBUG level).
 
-def log(message):
-    """Write a log message to the debug file and console."""
-    timestamp = datetime.now().strftime("%H:%M:%S.%f")[:-3]
-    log_line = f"[{timestamp}] {message}"
-    
-    # Write to console
-    print(log_line, flush=True)
-    
-    # Write to file
-    if _log_handle:
+    This will create/overwrite `promptbuilder_debug.log` in the current
+    working directory and ensure detailed debug messages are recorded.
+    """
+    global _file_handler
+    try:
+        log_path = Path("promptbuilder_debug.log")
+        # Remove existing file so we start fresh
         try:
-            _log_handle.write(log_line + "\n")
-            _log_handle.flush()
-        except (OSError, ValueError) as e:
-            # File handle may be closed or invalid; continue to console output
-            print(f"Warning: Could not write to debug log: {e}")
+            if log_path.exists():
+                log_path.unlink()
+        except Exception:
+            # Non-fatal; proceed to attach handler which will overwrite
+            pass
+
+        # Attach file handler if not already attached
+        if not _file_handler:
+            fh = logging.FileHandler(log_path, encoding="utf-8")
+            fh.setLevel(logging.DEBUG)
+            fh.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
+            _logger.addHandler(fh)
+            _file_handler = fh
+
+        _logger.debug("=== Debug Log Started ===")
+    except Exception as e:
+        # Last-resort fallback: write a simple warning to stderr
+        try:
+            print(f"Warning: Could not initialize debug log: {e}")
+        except Exception:
+            pass
+
+def log(message: str, level: int = logging.INFO):
+    """Log a message via the shared logger.
+
+    Args:
+        message: The message to log.
+        level: Logging level (defaults to INFO).
+    """
+    try:
+        _logger.log(level, message)
+    except Exception:
+        # Ignore logging failures
+        pass
 
 def close_debug_log():
-    """Close debug log file."""
-    global _log_handle
-    if _log_handle:
-        try:
-            log("=== Debug Log Ended ===")
-            _log_handle.close()
-        except (OSError, ValueError) as e:
-            # Log close failure is non-critical at shutdown
-            print(f"Warning: Could not close debug log cleanly: {e}")
-        _log_handle = None
+    """Close debug log file handler if attached."""
+    global _file_handler
+    try:
+        if _file_handler:
+            _logger.debug("=== Debug Log Ended ===")
+            _logger.removeHandler(_file_handler)
+            try:
+                _file_handler.close()
+            except Exception:
+                pass
+            _file_handler = None
+    except Exception:
+        pass

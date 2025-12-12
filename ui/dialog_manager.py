@@ -176,6 +176,29 @@ Platform: {platform.system()} {platform.release()}
             title: Dialog title
             message: Info message
         """
+        # Prefer transient, non-blocking notifications when available:
+        # 1) Toast manager on the root window
+        # 2) Main window status bar via `_update_status`
+        # 3) Fallback to modal messagebox
+        root = getattr(self, 'root', None)
+        try:
+            if root is not None and hasattr(root, 'toasts'):
+                try:
+                    # Use 'info' level for neutral messages
+                    root.toasts.notify(message, 'info', 3000)
+                    return
+                except Exception:
+                    pass
+            if root is not None and hasattr(root, '_update_status'):
+                try:
+                    root._update_status(message)
+                    return
+                except Exception:
+                    pass
+        except Exception:
+            # Defensive: if accessing root fails, fall through to modal
+            pass
+
         messagebox.showinfo(title, message)
     
     def show_warning(self, title: str, message: str) -> None:

@@ -6,7 +6,6 @@ This script extracts appearance information (excluding outfits) from character
 markdown files and prints a summary.
 """
 
-import os
 from pathlib import Path
 
 

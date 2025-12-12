@@ -384,7 +384,20 @@ class PreviewPanel:
             else:
                 messagebox.showinfo("Success", f"{section_type.capitalize()} section copied to clipboard")
         else:
-            messagebox.showinfo("Info", f"No {section_type} section found in prompt")
+            # Prefer toast -> status -> modal for missing section info
+            info_msg = f"No {section_type} section found in prompt"
+            if self.toast_callback:
+                try:
+                    self.toast_callback(info_msg, 'info', 3000)
+                except Exception:
+                    pass
+            elif self.status_callback:
+                try:
+                    self.status_callback(info_msg)
+                except Exception:
+                    messagebox.showinfo("Info", info_msg)
+            else:
+                messagebox.showinfo("Info", info_msg)
     
     def save_prompt(self):
         """Save current prompt to file."""

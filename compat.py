@@ -42,10 +42,13 @@ def check_tkinter_available() -> bool:
     Returns:
         True if tkinter can be imported, False otherwise
     """
+    # Use importlib to check for the presence of the tkinter module without
+    # importing it directly (avoids side-effects and linter warnings).
     try:
-        import tkinter
-        return True
-    except ImportError:
+        import importlib.util
+
+        return importlib.util.find_spec("tkinter") is not None
+    except Exception:
         return False
 
 

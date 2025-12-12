@@ -1,7 +1,7 @@
 """Outfit creator dialogs UI."""
 
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import messagebox, ttk
 
 
 class SharedOutfitCreatorDialog:
@@ -148,8 +148,9 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
                 for line in lines:
                     if line.strip().startswith("## "):
                         categories.append(line.strip()[3:])
-            except Exception:
-                pass
+            except Exception as e:
+                from utils import logger
+                logger.debug(f"Failed to load outfit categories from {outfits_file}: {e}")
         
         if not categories:
             categories = ["Common Outfits", "Formal", "Casual", "Athletic"]
@@ -211,11 +212,10 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
             
             outfits_file.write_text(content, encoding="utf-8")
             
-            messagebox.showinfo(
-                "Success", 
-                f"Shared outfit '{name}' created in category '{category}'!",
-                parent=self.dialog
-            )
+            from utils.notification import notify
+            root = self.dialog.winfo_toplevel()
+            msg = f"Shared outfit '{name}' created in category '{category}'!"
+            notify(root, "Success", msg, level='success', duration=3000, parent=self.dialog)
             self.result = name
             self.dialog.destroy()
             if self.on_success:
@@ -403,11 +403,10 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
             
             char_file.write_text(content, encoding="utf-8")
             
-            messagebox.showinfo(
-                "Success", 
-                f"Outfit '{name}' created for {self.character_name}!",
-                parent=self.dialog
-            )
+            from utils.notification import notify
+            root = self.dialog.winfo_toplevel()
+            msg = f"Outfit '{name}' created for {self.character_name}!"
+            notify(root, "Success", msg, level='success', duration=3000, parent=self.dialog)
             self.result = name
             self.dialog.destroy()
             if self.on_success:

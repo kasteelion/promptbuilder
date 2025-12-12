@@ -2,7 +2,7 @@
 
 import tkinter as tk
 import tkinter.font as tkfont
-from tkinter import ttk
+
 from config import THEMES
 from ui.constants import DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
 from utils import logger
@@ -178,6 +178,19 @@ class ThemeManager:
             font=(font_family, font_size, "bold"),
             foreground=theme.get("accent", theme.get("preview_fg", theme.get("fg")))
         )
+        # Additional tags for richer formatting
+        widget.tag_config("h1", font=(font_family, font_size + 3 if font_size > 0 else 16, "bold"),
+                          foreground=theme.get("accent", theme.get("preview_fg")))
+        widget.tag_config("h2", font=(font_family, font_size + 2 if font_size > 0 else 14, "bold"),
+                          foreground=theme.get("accent", theme.get("preview_fg")))
+        widget.tag_config("h3", font=(font_family, font_size + 1 if font_size > 0 else 12, "bold"),
+                          foreground=theme.get("accent", theme.get("preview_fg")))
+        widget.tag_config("italic", font=(font_family, font_size, "italic"),
+                          foreground=theme.get("preview_fg", theme.get("fg")))
+        widget.tag_config("code", font=("Courier", max(9, font_size - 1)),
+                          foreground=theme.get("code_fg", theme.get("preview_fg", theme.get("fg"))),
+                          background=theme.get("code_bg", theme.get("text_bg")))
+        widget.tag_config("list_item", foreground=theme.get("preview_fg", theme.get("fg")))
     
     def apply_canvas_theme(self, canvas, theme):
         """Apply theme background to a tk.Canvas widget.

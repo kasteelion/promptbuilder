@@ -1,8 +1,10 @@
 """Pose creator dialog UI."""
 
 import tkinter as tk
-from tkinter import ttk, messagebox
-from utils import get_pose_template_names, get_pose_template, get_pose_template_description
+from tkinter import messagebox, ttk
+
+from utils import (get_pose_template, get_pose_template_description,
+                   get_pose_template_names)
 
 
 class PoseCreatorDialog:
@@ -208,8 +210,9 @@ Example: Standing confidently with feet shoulder-width apart, arms crossed over 
                 content = poses_file.read_text(encoding="utf-8")
                 poses_dict = MarkdownParser.parse_presets(content)
                 categories = sorted(list(poses_dict.keys()))
-            except Exception:
-                pass
+            except Exception as e:
+                from utils import logger
+                logger.debug(f"Failed to load pose categories from {poses_file}: {e}")
         
         # Add some default categories if none exist
         if not categories:
@@ -280,11 +283,10 @@ Example: Standing confidently with feet shoulder-width apart, arms crossed over 
             # Write back to file
             poses_file.write_text(content, encoding="utf-8")
             
-            messagebox.showinfo(
-                "Success", 
-                f"Pose '{name}' created in category '{category}'!",
-                parent=self.dialog
-            )
+            from utils.notification import notify
+            root = self.dialog.winfo_toplevel()
+            msg = f"Pose '{name}' created in category '{category}'!"
+            notify(root, "Success", msg, level='success', duration=3000, parent=self.dialog)
             self.result = (category, name)
             self.dialog.destroy()
             if self.on_success:

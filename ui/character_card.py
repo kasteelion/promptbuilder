@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 """Visual character card widget with photo support."""
 
-import tkinter as tk
-from tkinter import ttk, filedialog, messagebox
-from pathlib import Path
 import shutil
-from .constants import CHARACTER_CARD_SIZE
+import tkinter as tk
+from pathlib import Path
+from tkinter import filedialog, messagebox, ttk
+
 from ui.widgets import ScrollableCanvas
 from utils import logger
+
+from .constants import CHARACTER_CARD_SIZE
 
 # Optional PIL import for image handling
 try:
@@ -148,6 +150,20 @@ class CharacterCard(ttk.Frame):
         """Handle photo canvas click - preview if photo exists, change if not."""
         photo_path = self.character_data.get("photo")
         if photo_path:
+            # If a photo path is present, check whether the file actually exists.
+            try:
+                chars_dir = self.data_loader._find_characters_dir()
+                photo_file = chars_dir / photo_path
+                if not photo_file.exists():
+                    # Photo metadata points to a missing file — prompt user to add one.
+                    if messagebox.askyesno("Photo Missing", "The referenced photo file is missing. Would you like to select a replacement file?"):
+                        self._change_photo()
+                    return
+            except Exception:
+                # If anything goes wrong resolving the path, fall back to change flow
+                self._change_photo()
+                return
+
             # Show preview
             self._preview_photo()
         else:
@@ -251,7 +267,7 @@ class CharacterCard(ttk.Frame):
         except ValueError:
             # Path is outside characters directory
             logger.warning(f"Photo path outside characters directory: {photo_path}")
-            raise ValueError(f"Photo path must be within characters directory")
+            raise ValueError("Photo path must be within characters directory")
     
     def _load_photo(self):
         """Load character photo if exists."""

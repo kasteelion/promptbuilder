@@ -1,9 +1,8 @@
 """Data loading utilities for markdown files."""
 
-import sys
 from pathlib import Path
+
 from .parsers import MarkdownParser
-from utils import logger
 
 
 class DataLoader:
@@ -13,7 +12,6 @@ class DataLoader:
         # Use Path(__file__).parent to get the script's directory
         # This is more secure than using sys.argv[0] which can be manipulated
         try:
-            import os
             # Get the directory containing this module
             module_dir = Path(__file__).parent
             # Go up one level to get the project root
@@ -112,9 +110,10 @@ A simple and comfortable casual outfit.
                     
                     # Update mtime
                     self._file_mtimes[cache_key] = current_mtime
-            except (OSError, ValueError):
-                # If mtime check fails, continue with reload
-                pass
+            except (OSError, ValueError) as e:
+                # If mtime check fails, continue with reload and log for diagnostics
+                from utils import logger
+                logger.debug(f"Failed to check character files mtimes: {e}")
         
         chars = {}
         # Try loading from characters folder first

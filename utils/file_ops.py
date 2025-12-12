@@ -1,8 +1,8 @@
 """File operation utilities with atomic writes and backups."""
 
-from pathlib import Path
 import shutil
 import tempfile
+from pathlib import Path
 from typing import Optional
 
 
@@ -59,8 +59,9 @@ def atomic_write(filepath: Path, content: str, encoding: str = 'utf-8', create_b
             try:
                 Path(temp_path).unlink(missing_ok=True)
             except (OSError, PermissionError):
-                # Could not delete temp file
-                pass
+                    # Could not delete temp file; log for diagnostics
+                    from utils import logger
+                    logger.debug(f"Could not delete temp file {temp_path}: {e}")
             raise e
             
     except Exception as e:

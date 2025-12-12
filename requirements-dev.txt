@@ -8,6 +8,7 @@ black>=23.0.0
 # Linting
 flake8>=6.0.0
 pylint>=3.0.0
+ruff>=0.14.9
 
 # Type checking
 mypy>=1.0.0
@@ -19,3 +20,6 @@ pytest-cov>=4.0.0
 # Documentation
 sphinx>=6.0.0
 sphinx-rtd-theme>=1.2.0
+
+# Formatting / import sorting
+isort>=5.12.0

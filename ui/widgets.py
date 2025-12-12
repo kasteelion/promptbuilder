@@ -71,8 +71,9 @@ class ScrollableCanvas(ttk.Frame):
             bbox = self.canvas.bbox("all")
             if bbox:
                 self.canvas.config(scrollregion=bbox)
-        except Exception:
-            pass
+        except Exception as e:
+            from utils import logger
+            logger.debug(f"Failed to update scroll region: {e}")
     
     def refresh_mousewheel_bindings(self):
         """Rebind mousewheel to all widgets (call after adding new content)."""
@@ -184,8 +185,9 @@ class FlowFrame(ttk.Frame):
                 self._reflow_after_id = self.after(50, self._reflow)
 
     def _reflow(self):
-        from .constants import FLOW_FRAME_REFLOW_DELAY_MS, WIDGET_REFLOW_RETRY_LIMIT
-        
+        from .constants import (FLOW_FRAME_REFLOW_DELAY_MS,
+                                WIDGET_REFLOW_RETRY_LIMIT)
+
         # Place children into grid cells, wrapping when necessary
         if not self._children:
             return
@@ -202,8 +204,8 @@ class FlowFrame(ttk.Frame):
             return
         self._reflow_retry_count = 0  # Reset counter on successful reflow
 
-        x = 0
         row = 0
+        col = 0
         col = 0
         max_cols = 3  # Limit to 3 columns for better readability
         

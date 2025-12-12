@@ -1,9 +1,11 @@
 """Character creator dialog UI."""
 
 import tkinter as tk
-from tkinter import ttk, messagebox
-from utils import get_character_template_names, get_character_template, get_character_template_description
-from pathlib import Path
+from tkinter import messagebox, ttk
+
+from utils import (get_character_template, get_character_template_description,
+                   get_character_template_names)
+from utils.notification import notify
 
 
 class CharacterCreatorDialog:
@@ -348,18 +350,10 @@ class CharacterCreatorDialog:
         # Write file
         try:
             file_path.write_text(content, encoding="utf-8")
-            if self.edit_character:
-                messagebox.showinfo(
-                    "Success", 
-                    f"Character '{name}' updated successfully!",
-                    parent=self.dialog
-                )
-            else:
-                messagebox.showinfo(
-                    "Success", 
-                    f"Character '{name}' created successfully!\n\nFile: {filename}",
-                    parent=self.dialog
-                )
+            root = self.dialog.winfo_toplevel()
+            msg = (f"Character '{name}' updated successfully!" if self.edit_character
+                   else f"Character '{name}' created successfully!\n\nFile: {filename}")
+            notify(root, "Success", msg, level='success', duration=3000, parent=self.dialog)
             self.result = name
             self.dialog.destroy()
             if self.on_success:

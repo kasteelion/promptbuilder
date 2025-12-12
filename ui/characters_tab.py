@@ -2,16 +2,17 @@
 """Characters and poses tab UI."""
 
 import tkinter as tk
-from tkinter import ttk, messagebox
-from .widgets import FlowFrame, CollapsibleFrame, ScrollableCanvas
-from .character_creator import CharacterCreatorDialog
-from .base_style_creator import BaseStyleCreatorDialog
-from .outfit_creator import SharedOutfitCreatorDialog, CharacterOutfitCreatorDialog
-from .pose_creator import PoseCreatorDialog
-from .scene_creator import SceneCreatorDialog
-from utils import create_tooltip
+from tkinter import messagebox, ttk
+
 from config import TOOLTIPS
-from .constants import DEFAULT_TEXT_WIDGET_HEIGHT
+from utils import create_tooltip
+
+from .base_style_creator import BaseStyleCreatorDialog
+from .character_creator import CharacterCreatorDialog
+from .outfit_creator import (CharacterOutfitCreatorDialog,
+                             SharedOutfitCreatorDialog)
+from .pose_creator import PoseCreatorDialog
+from .widgets import CollapsibleFrame, FlowFrame, ScrollableCanvas
 
 
 class CharactersTab:
@@ -218,10 +219,10 @@ class CharactersTab:
         try:
             if self.chars_canvas.winfo_exists():
                 self.chars_canvas.itemconfig(self._chars_window, width=width)
-        except tk.TclError as e:
+        except tk.TclError:
             # Canvas destroyed - expected during cleanup
             from utils import logger
-            logger.debug(f"Canvas update skipped: widget destroyed")
+            logger.debug("Canvas update skipped: widget destroyed")
         except AttributeError as e:
             # Canvas attribute missing - shouldn't happen
             from utils import logger
@@ -300,7 +301,6 @@ class CharactersTab:
             return
         
         # Multiple characters - show selection dialog
-        from tkinter import simpledialog
         
         # Create a custom dialog for character selection
         dialog = tk.Toplevel(self.tab)
@@ -391,7 +391,10 @@ class CharactersTab:
         if not name:
             return
         if any(c['name'] == name for c in self.selected_characters):
-            messagebox.showinfo("Already Added", f"{name} is already in the prompt")
+            from utils.notification import notify
+            root = self.tab.winfo_toplevel()
+            msg = f"{name} is already in the prompt"
+            notify(root, "Already Added", msg, level='info', duration=2500)
             return
         
         # Save state for undo
@@ -424,7 +427,7 @@ class CharactersTab:
         # Get the root window to use as parent
         root = self.tab.winfo_toplevel()
         dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data)
-        result = dialog.show()
+        dialog.show()
         
         # If character was created and reload callback exists, it will be called automatically
     
@@ -432,25 +435,25 @@ class CharactersTab:
         """Open dialog to create a new base art style."""
         root = self.tab.winfo_toplevel()
         dialog = BaseStyleCreatorDialog(root, self.data_loader, self.reload_data)
-        result = dialog.show()
+        dialog.show()
     
     def _create_shared_outfit(self):
         """Open dialog to create a new shared outfit."""
         root = self.tab.winfo_toplevel()
         dialog = SharedOutfitCreatorDialog(root, self.data_loader, self.reload_data)
-        result = dialog.show()
+        dialog.show()
     
     def _create_character_outfit(self, character_name):
         """Open dialog to create a new character-specific outfit."""
         root = self.tab.winfo_toplevel()
         dialog = CharacterOutfitCreatorDialog(root, self.data_loader, character_name, self.reload_data)
-        result = dialog.show()
+        dialog.show()
     
     def _create_new_pose(self):
         """Open dialog to create a new pose preset."""
         root = self.tab.winfo_toplevel()
         dialog = PoseCreatorDialog(root, self.data_loader, self.reload_data)
-        result = dialog.show()
+        dialog.show()
     
     def _remove_character(self, idx):
         """Remove character at index."""
@@ -497,14 +500,15 @@ class CharactersTab:
     def _update_action_note(self, idx, text_widget):
         """Update character action note with debouncing."""
         from .constants import TEXT_UPDATE_DEBOUNCE_MS
-        
+
         # Cancel any pending update for this index
         if idx in self._action_note_after_ids:
             try:
                 self.tab.after_cancel(self._action_note_after_ids[idx])
-            except (tk.TclError, ValueError):
-                # Widget destroyed or invalid ID
-                pass
+            except (tk.TclError, ValueError) as e:
+                # Widget destroyed or invalid ID; log for diagnostics
+                from utils import logger
+                logger.debug(f"Could not cancel scheduled action note update for idx {idx}: {e}")
         
         # Schedule new update after debounce delay
         def _do_update():
@@ -560,8 +564,9 @@ class CharactersTab:
             # Manually update scroll region
             try:
                 self.chars_canvas.config(scrollregion=self.chars_canvas.bbox("all"))
-            except Exception:
-                pass
+            except Exception as e:
+                from utils import logger
+                logger.debug(f"Failed to update chars canvas scrollregion: {e}")
             self._refreshing = False
             return
 

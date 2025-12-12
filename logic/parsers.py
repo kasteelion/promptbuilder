@@ -2,7 +2,6 @@
 
 import re
 
-
 # Pre-compile regex patterns for better performance
 _SECTION_RE = re.compile(r"^##\s+(.+)$", re.MULTILINE)
 _SUBSECTION_RE = re.compile(r"^###\s+(.+)$", re.MULTILINE)
@@ -159,7 +158,7 @@ class MarkdownParser:
                             while next_line_idx < len(lines) and not re.match(r"^\s*[-*]\s+", lines[next_line_idx]) and not re.match(r"^####\s+", lines[next_line_idx]):
                                 val_lines.append(lines[next_line_idx].rstrip())
                                 next_line_idx += 1
-                            val = "\n".join([l for l in val_lines if l is not None]).strip()
+                            val = "\n".join([entry for entry in val_lines if entry is not None]).strip()
                             # clean key and value of stray bold markers or leading/trailing colons
                             if key:
                                 key = key.strip()

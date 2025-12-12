@@ -70,7 +70,7 @@ class OutfitRenderer:
             present = [f"- {k}: {outfit[k]}" for k in keys if outfit.get(k)]
             extras = [f"- {k}: {v}" for k, v in outfit.items() if k not in keys]
             lines = present + extras
-            return "\n".join(lines) if mode == "detailed" else "; ".join([l.split(": ")[1] for l in lines])
+            return "\n".join(lines) if mode == "detailed" else "; ".join([entry.split(": ")[1] for entry in lines])
         return outfit
 
 

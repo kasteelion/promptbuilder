@@ -5,9 +5,10 @@
 import sys
 
 # Initialize debug logging FIRST
-from debug_log import init_debug_log, log, close_debug_log
+from debug_log import close_debug_log, init_debug_log, log
+
 init_debug_log()
-log("Starting Prompt Builder...")
+log("Starting Prompt Builder...", level=20)
 
 # Check Python version compatibility FIRST (before any other imports)
 if sys.version_info < (3, 8):
@@ -24,12 +25,12 @@ except ImportError:
     sys.exit(1)
 
 # Import application modules
-from ui import PromptBuilderApp
-from ui.constants import DEFAULT_WINDOW_GEOMETRY
+from ui import PromptBuilderApp  # noqa: E402
+from ui.constants import DEFAULT_WINDOW_GEOMETRY  # noqa: E402
 
 # Optional: Print version info for debugging
 if "--version" in sys.argv or "-v" in sys.argv:
-    print(f"Prompt Builder")
+    print("Prompt Builder")
     print(f"Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}")
     print(f"Platform: {sys.platform}")
     sys.exit(0)
@@ -51,44 +52,36 @@ def main():
         root = tk.Tk()
         root.geometry(DEFAULT_WINDOW_GEOMETRY)
         log("Creating PromptBuilderApp...")
-        app = PromptBuilderApp(root)
+        _app = PromptBuilderApp(root)
         log("Entering mainloop...")
         root.mainloop()
         log("Mainloop exited normally")
     except KeyboardInterrupt:
         # Graceful shutdown on Ctrl+C
         log("Application closed by user (Ctrl+C)")
-        print("\nApplication closed by user.")
+        # Keep console output minimal for CLI users
+        print("Application closed by user.")
         close_debug_log()
         sys.exit(0)
     except Exception as e:
         # Catch any unexpected errors and provide helpful information
         import traceback
+
+        # Log details to the debug log (file + console via debug_log)
         log(f"FATAL ERROR: {type(e).__name__}: {str(e)}")
         log("Full traceback:")
         for line in traceback.format_exc().split('\n'):
             log(line)
-        
-        print("=" * 70)
-        print("UNEXPECTED ERROR")
-        print("=" * 70)
-        print(f"An error occurred: {type(e).__name__}")
-        print(f"Message: {str(e)}")
-        print()
-        print("If this error persists, please report it with:")
-        print(f"  - Python version: {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}")
-        print(f"  - Platform: {sys.platform}")
-        print(f"  - Error type: {type(e).__name__}")
-        print(f"  - Error message: {str(e)}")
-        print(f"  - Debug log saved to: promptbuilder_debug.log")
-        print("=" * 70)
-        
+
+        # Give the user a concise message and point them to the debug log
+        print("An unexpected error occurred. See promptbuilder_debug.log for details.")
+
         close_debug_log()
-        
-        # Re-raise in debug mode
+
+        # Re-raise in debug mode for developers
         if "--debug" in sys.argv:
             raise
-        
+
         sys.exit(1)
 
 

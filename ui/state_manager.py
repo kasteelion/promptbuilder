@@ -2,10 +2,11 @@
 """State management for undo/redo and presets."""
 
 import tkinter as tk
-from tkinter import messagebox, filedialog
-from typing import Callable, Dict, Any, Optional
 from pathlib import Path
-from utils import UndoManager, PresetManager, logger
+from tkinter import filedialog, messagebox
+from typing import Any, Callable, Dict, Optional
+
+from utils import PresetManager, UndoManager, logger
 
 
 class StateManager:
@@ -67,7 +68,19 @@ class StateManager:
     def undo(self):
         """Undo last action."""
         if not self.undo_manager.can_undo():
-            messagebox.showinfo("Undo", "Nothing to undo")
+            # Prefer toast if available, then status bar, then modal
+            if hasattr(self.root, 'toasts'):
+                try:
+                    self.root.toasts.notify("Nothing to undo", 'info', 2000)
+                except Exception:
+                    messagebox.showinfo("Undo", "Nothing to undo")
+            elif hasattr(self.root, '_update_status'):
+                try:
+                    self.root._update_status("Nothing to undo")
+                except Exception:
+                    messagebox.showinfo("Undo", "Nothing to undo")
+            else:
+                messagebox.showinfo("Undo", "Nothing to undo")
             return
         
         try:
@@ -84,7 +97,19 @@ class StateManager:
     def redo(self):
         """Redo last undone action."""
         if not self.undo_manager.can_redo():
-            messagebox.showinfo("Redo", "Nothing to redo")
+            # Prefer toast if available, then status bar, then modal
+            if hasattr(self.root, 'toasts'):
+                try:
+                    self.root.toasts.notify("Nothing to redo", 'info', 2000)
+                except Exception:
+                    messagebox.showinfo("Redo", "Nothing to redo")
+            elif hasattr(self.root, '_update_status'):
+                try:
+                    self.root._update_status("Nothing to redo")
+                except Exception:
+                    messagebox.showinfo("Redo", "Nothing to redo")
+            else:
+                messagebox.showinfo("Redo", "Nothing to redo")
             return
         
         try:
@@ -126,7 +151,19 @@ class StateManager:
             preset_name = Path(filepath).stem
             self.prefs.add_recent("recent_presets", preset_name)
             
-            messagebox.showinfo("Success", f"Preset saved: {Path(filepath).name}")
+            # Prefer non-modal status update on the main window when available
+            if hasattr(self.root, 'toasts'):
+                try:
+                    self.root.toasts.notify(f"Preset saved: {Path(filepath).name}", 'success', 3000)
+                except Exception:
+                    pass
+            elif hasattr(self.root, '_update_status'):
+                try:
+                    self.root._update_status(f"Preset saved: {Path(filepath).name}")
+                except Exception:
+                    messagebox.showinfo("Success", f"Preset saved: {Path(filepath).name}")
+            else:
+                messagebox.showinfo("Success", f"Preset saved: {Path(filepath).name}")
             logger.info(f"Preset saved: {filepath}")
             return True
             
@@ -167,7 +204,18 @@ class StateManager:
             if self.update_preview_callback:
                 self.update_preview_callback()
             
-            messagebox.showinfo("Success", f"Preset loaded: {Path(filepath).name}")
+            if hasattr(self.root, 'toasts'):
+                try:
+                    self.root.toasts.notify(f"Preset loaded: {Path(filepath).name}", 'success', 3000)
+                except Exception:
+                    pass
+            elif hasattr(self.root, '_update_status'):
+                try:
+                    self.root._update_status(f"Preset loaded: {Path(filepath).name}")
+                except Exception:
+                    messagebox.showinfo("Success", f"Preset loaded: {Path(filepath).name}")
+            else:
+                messagebox.showinfo("Success", f"Preset loaded: {Path(filepath).name}")
             logger.info(f"Preset loaded: {filepath}")
             return True
             
@@ -237,8 +285,18 @@ class StateManager:
             state = self.get_state_callback()
             self.preset_manager.export_config(filepath, state)
             
-            messagebox.showinfo("Success", 
-                              f"Configuration exported: {Path(filepath).name}")
+            if hasattr(self.root, 'toasts'):
+                try:
+                    self.root.toasts.notify(f"Configuration exported: {Path(filepath).name}", 'success', 3000)
+                except Exception:
+                    pass
+            elif hasattr(self.root, '_update_status'):
+                try:
+                    self.root._update_status(f"Configuration exported: {Path(filepath).name}")
+                except Exception:
+                    messagebox.showinfo("Success", f"Configuration exported: {Path(filepath).name}")
+            else:
+                messagebox.showinfo("Success", f"Configuration exported: {Path(filepath).name}")
             logger.info(f"Configuration exported: {filepath}")
             return True
             
@@ -274,8 +332,18 @@ class StateManager:
             if self.update_preview_callback:
                 self.update_preview_callback()
             
-            messagebox.showinfo("Success", 
-                              f"Configuration imported: {Path(filepath).name}")
+            if hasattr(self.root, 'toasts'):
+                try:
+                    self.root.toasts.notify(f"Configuration imported: {Path(filepath).name}", 'success', 3000)
+                except Exception:
+                    pass
+            elif hasattr(self.root, '_update_status'):
+                try:
+                    self.root._update_status(f"Configuration imported: {Path(filepath).name}")
+                except Exception:
+                    messagebox.showinfo("Success", f"Configuration imported: {Path(filepath).name}")
+            else:
+                messagebox.showinfo("Success", f"Configuration imported: {Path(filepath).name}")
             logger.info(f"Configuration imported: {filepath}")
             return True
             

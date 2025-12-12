@@ -24,6 +24,7 @@ A desktop application to help build complex and detailed prompts for AI image ge
 - **🎓 Welcome Guide** - First-run tutorial to get you started quickly
 - **💬 Better Errors** - User-friendly error messages with actionable suggestions
 - **🎴 Visual Gallery** - Optional visual character browser with photo support (experimental)
+- **🎴 Visual Gallery** - Optional visual character browser with photo support (experimental). Note: this feature has been deprecated/removed from the runtime; see `docs/VISUAL_UI_GUIDE.md` for archived implementation and migration notes.
 - **🔍 Character Search** - Quick filter to find characters in large collections
 - **🌊 Drag & Drop** - Reorder characters by dragging (in character list)
 - **🤝 Interaction Templates** - Pre-built multi-character interaction templates (NEW!)
@@ -408,6 +409,27 @@ Contributions are welcome! This project follows standard Python best practices:
 - Modular architecture with specialized manager classes
 
 See the documentation in the `docs/` directory for more technical details.
+
+## Tests & CI
+
+- **Run tests locally:**
+
+```powershell
+# From project root (Windows PowerShell)
+C:/Users/parking/miniforge3/Scripts/conda.exe run -p C:\Users\parking\miniforge3 --no-capture-output python -m pytest -q
+```
+
+- **Run linters & formatters locally:**
+
+```powershell
+C:/Users/parking/miniforge3/Scripts/conda.exe run -p C:\Users\parking\miniforge3 --no-capture-output python -m isort .
+C:/Users/parking/miniforge3/Scripts/conda.exe run -p C:\Users\parking\miniforge3 --no-capture-output python -m black .
+C:/Users/parking/miniforge3/Scripts/conda.exe run -p C:\Users\parking\miniforge3 --no-capture-output python -m ruff check .
+```
+
+- **CI:** A GitHub Actions workflow is included at `.github/workflows/ci.yml` that runs formatting checks, linters, and `pytest` on pushes and pull requests to `master`.
+
+If you want me to also add a pre-commit configuration or extend the CI matrix, tell me which tools/versions you prefer and I will add them.
 
 ## Documentation
 

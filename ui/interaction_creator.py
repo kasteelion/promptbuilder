@@ -1,14 +1,13 @@
 """Interaction template creator dialog UI."""
 
 import tkinter as tk
-from tkinter import ttk, messagebox, scrolledtext
-from pathlib import Path
+from tkinter import messagebox, scrolledtext, ttk
+
 from utils import logger
+from utils.notification import notify
 from utils.interaction_template_helpers import (
-    get_interaction_template_names,
-    get_interaction_template,
-    get_interaction_template_description
-)
+    get_interaction_template, get_interaction_template_description,
+    get_interaction_template_names)
 
 
 class InteractionCreatorDialog:
@@ -245,12 +244,10 @@ The placeholders will be replaced with actual character names when inserted."""
             
             logger.info(f"Created new interaction template: {name}")
             
-            messagebox.showinfo(
-                "Success",
-                f"Interaction template '{name}' created successfully!\n\n"
-                "The template is now available in the dropdown.",
-                parent=self.dialog
-            )
+            root = self.dialog.winfo_toplevel()
+            msg = (f"Interaction template '{name}' created successfully!\n\n"
+                   "The template is now available in the dropdown.")
+            notify(root, "Success", msg, level='success', duration=3000, parent=self.dialog)
             
             self.result = {"name": name, "description": desc, "content": content}
             self.dialog.destroy()

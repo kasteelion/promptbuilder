@@ -2,8 +2,8 @@
 """Menu bar management for the application."""
 
 import tkinter as tk
-from tkinter import ttk
-from typing import Callable, Dict, Any
+from typing import Callable, Dict
+
 from config import THEMES
 
 

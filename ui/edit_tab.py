@@ -1,9 +1,8 @@
 """Markdown file editor tab UI."""
 
 import tkinter as tk
-from tkinter import ttk, scrolledtext, messagebox
+from tkinter import messagebox, scrolledtext, ttk
 from typing import Callable, List
-from config import MAIN_EDITABLE_FILES
 
 
 class EditTab:
@@ -134,7 +133,11 @@ class EditTab:
             file_path.write_text(content, encoding="utf-8")
             self._refresh_file_list()  # Refresh in case new files were created
             self.on_reload()
-            messagebox.showinfo("Success", f"{filename} saved and data reloaded.")
+            # Prefer transient notification (toast), then status bar, then modal
+            from utils.notification import notify
+            root = self.tab.winfo_toplevel()
+            msg = f"{filename} saved and data reloaded."
+            notify(root, "Success", msg, level='success', duration=3000)
         except PermissionError:
             messagebox.showerror(
                 "Permission Denied",
