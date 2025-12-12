@@ -74,6 +74,9 @@ class PromptBuilderApp:
         # Initialize theme manager
         self.style = ttk.Style()
         self.theme_manager = ThemeManager(self.root, self.style)
+        # Toast manager for transient notifications
+        from .toast import ToastManager
+        self.toasts = ToastManager(self.root, self.theme_manager)
         
         # Throttling for preview updates
         self._after_id: Optional[str] = None
@@ -355,7 +358,8 @@ class PromptBuilderApp:
             self.reload_data,
             self.randomize_all,
             status_callback=self._update_status,
-            clear_callback=self._clear_interface
+            clear_callback=self._clear_interface,
+            toast_callback=getattr(self, 'toasts').notify
         )
         
         # Set preview callbacks
@@ -634,6 +638,13 @@ class PromptBuilderApp:
         if hasattr(self, 'character_gallery'):
             self.character_gallery.theme_colors = theme
             self.character_gallery._refresh_display()
+
+        # Apply theme to toasts
+        if hasattr(self, 'toasts'):
+            try:
+                self.toasts.apply_theme(theme)
+            except Exception:
+                pass
     
     def schedule_preview_update(self):
         """Schedule a preview update with adaptive throttling."""

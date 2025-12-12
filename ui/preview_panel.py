@@ -11,7 +11,7 @@ from typing import Callable, Optional
 class PreviewPanel:
     """Right-side panel showing formatted prompt preview."""
     
-    def __init__(self, parent: ttk.Frame, theme_manager, on_reload: Callable[[], None], on_randomize: Callable[[], None], status_callback: Optional[Callable[[str], None]] = None, clear_callback: Optional[Callable[[], None]] = None):
+    def __init__(self, parent: ttk.Frame, theme_manager, on_reload: Callable[[], None], on_randomize: Callable[[], None], status_callback: Optional[Callable[[str], None]] = None, clear_callback: Optional[Callable[[], None]] = None, toast_callback: Optional[Callable[[str, str, int], None]] = None):
         """Initialize preview panel.
         
         Args:
@@ -26,6 +26,7 @@ class PreviewPanel:
         self.on_randomize = on_randomize
         self.status_callback = status_callback
         self.clear_callback = clear_callback
+        self.toast_callback = toast_callback
 
         self._build_ui()
     
@@ -308,13 +309,17 @@ class PreviewPanel:
         prompt = self.get_prompt_callback()
         self.parent.clipboard_clear()
         self.parent.clipboard_append(prompt)
-        # Prefer non-modal status update when available
-        if self.status_callback:
+        # Prefer toast (most visible), then status bar, then modal dialog
+        if self.toast_callback:
+            try:
+                self.toast_callback("Prompt copied to clipboard", 'success', 2500)
+            except Exception:
+                pass
+        elif self.status_callback:
             try:
                 self.status_callback("Prompt copied to clipboard")
             except Exception:
-                # Fallback to modal if status callback fails
-                messagebox.showinfo("Success", "Prompt copied to clipboard")
+                pass
         else:
             messagebox.showinfo("Success", "Prompt copied to clipboard")
     
@@ -365,8 +370,17 @@ class PreviewPanel:
         if section_text.strip():
             self.parent.clipboard_clear()
             self.parent.clipboard_append(section_text.strip())
-            if self.status_callback:
-                self.status_callback(f"{section_type.capitalize()} section copied to clipboard")
+            # Prefer toast, then status, then modal
+            if self.toast_callback:
+                try:
+                    self.toast_callback(f"{section_type.capitalize()} section copied to clipboard", 'success', 2500)
+                except Exception:
+                    pass
+            elif self.status_callback:
+                try:
+                    self.status_callback(f"{section_type.capitalize()} section copied to clipboard")
+                except Exception:
+                    pass
             else:
                 messagebox.showinfo("Success", f"{section_type.capitalize()} section copied to clipboard")
         else:
@@ -390,8 +404,18 @@ class PreviewPanel:
         if filename:
             try:
                 Path(filename).write_text(prompt, encoding="utf-8")
-                if self.status_callback:
-                    self.status_callback(f"Prompt saved to {filename}")
+                # Prefer toast, then status, then modal
+                if self.toast_callback:
+                    try:
+                        # Use info level so it's visible but not green
+                        self.toast_callback(f"Prompt saved to {filename}", 'info', 3000)
+                    except Exception:
+                        pass
+                elif self.status_callback:
+                    try:
+                        self.status_callback(f"Prompt saved to {filename}")
+                    except Exception:
+                        pass
                 else:
                     messagebox.showinfo("Saved", f"Prompt saved to {filename}")
             except Exception as e:
