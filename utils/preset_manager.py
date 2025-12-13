@@ -79,7 +79,7 @@ class PresetManager:
             logger.error(f"Error loading preset '{filename}': {e}")
             return None
         except Exception as e:
-            logger.error(f"Unexpected error loading preset '{filename}': {e}")
+            logger.exception(f"Unexpected error loading preset '{filename}'")
             return None
     
     def get_presets(self):
@@ -99,6 +99,10 @@ class PresetManager:
                         data.get("created", "Unknown")
                     ))
             except Exception:
+                from utils import logger
+                logger.exception('Auto-captured exception')
+                # Log at debug level with traceback to help diagnose corrupted files
+                logger.debug(f"Failed to read preset file: {filepath}", exc_info=True)
                 continue
         
         # Sort by created date (newest first)
@@ -122,7 +126,7 @@ class PresetManager:
             logger.error(f"Error deleting preset '{filename}': {e}")
             return False
         except Exception as e:
-            logger.error(f"Unexpected error deleting preset '{filename}': {e}")
+            logger.exception(f"Unexpected error deleting preset '{filename}'")
             return False
     
     def export_preset(self, filename, export_path):
@@ -144,8 +148,7 @@ class PresetManager:
             logger.error(f"Error exporting preset '{filename}': {e}")
             return False
         except Exception as e:
-            logger.error(f"Unexpected error exporting preset '{filename}': {e}")
-            return False
+            logger.exception(f"Unexpected error exporting preset '{filename}'")
             return False
     
     def import_preset(self, import_path):
@@ -181,5 +184,5 @@ class PresetManager:
             logger.error(f"Error importing preset: {e}")
             return None
         except Exception as e:
-            logger.error(f"Unexpected error importing preset: {e}")
+            logger.exception(f"Unexpected error importing preset")
             return None

@@ -296,6 +296,8 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
             if self.on_success:
                 self.on_success()
         except Exception as e:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             messagebox.showerror(
                 "Error", 
                 f"Failed to create scene:\n{str(e)}",

@@ -7,6 +7,7 @@ markdown files and prints a summary.
 """
 
 from pathlib import Path
+from .logger import logger
 
 
 def extract_appearance(file_path):
@@ -93,7 +94,7 @@ def generate_summary(characters_dir=None):
 def main():
     """Main entry point for the script."""
     summary = generate_summary()
-    print(summary)
+    logger.info(summary)
 
 
 if __name__ == '__main__':

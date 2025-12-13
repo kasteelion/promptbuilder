@@ -13,6 +13,8 @@ try:
     from utils.logger import setup_logger
     _logger = setup_logger(log_file="promptbuilder_debug.log", level=logging.DEBUG)
 except Exception:
+    from utils import logger
+    logger.exception('Auto-captured exception')
     # Fallback: basic logger to stdout
     _logger = logging.getLogger("promptbuilder_debug_fallback")
     if not _logger.handlers:
@@ -37,6 +39,8 @@ def init_debug_log():
             if log_path.exists():
                 log_path.unlink()
         except Exception:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             # Non-fatal; proceed to attach handler which will overwrite
             pass
 
@@ -50,10 +54,14 @@ def init_debug_log():
 
         _logger.debug("=== Debug Log Started ===")
     except Exception as e:
-        # Last-resort fallback: write a simple warning to stderr
+        from utils import logger
+        logger.exception('Auto-captured exception')
+        # Last-resort fallback: write a simple warning to the configured logger
         try:
-            print(f"Warning: Could not initialize debug log: {e}")
+            _logger.warning(f"Could not initialize debug log: {e}")
         except Exception:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             pass
 
 def log(message: str, level: int = logging.INFO):
@@ -66,6 +74,8 @@ def log(message: str, level: int = logging.INFO):
     try:
         _logger.log(level, message)
     except Exception:
+        from utils import logger
+        logger.exception('Auto-captured exception')
         # Ignore logging failures
         pass
 
@@ -79,7 +89,11 @@ def close_debug_log():
             try:
                 _file_handler.close()
             except Exception:
+                from utils import logger
+                logger.exception('Auto-captured exception')
                 pass
             _file_handler = None
     except Exception:
+        from utils import logger
+        logger.exception('Auto-captured exception')
         pass

@@ -7,6 +7,8 @@ from pathlib import Path
 from tkinter import filedialog, messagebox, scrolledtext, ttk
 from typing import Callable, Optional
 
+from utils import logger
+
 
 class PreviewPanel:
     """Right-side panel showing formatted prompt preview."""
@@ -115,7 +117,11 @@ class PreviewPanel:
             self.preview_text.delete("1.0", "end")
             self._show_welcome_message()
         except Exception:
-            pass
+            from utils import logger
+            logger.exception('Auto-captured exception')
+            # Non-fatal; log for diagnostics in case the widget is not mapped
+            from utils import logger
+            logger.debug("Failed to clear preview", exc_info=True)
 
     def _on_clear(self):
         """Handler for Clear button: clear preview and call host clear callback if provided."""
@@ -124,12 +130,17 @@ class PreviewPanel:
             try:
                 self.clear_callback()
             except Exception:
+                from utils import logger
+                logger.exception('Auto-captured exception')
                 # Don't raise - fallback to status update if available
+                from utils import logger
+                logger.debug("Clear callback raised an exception", exc_info=True)
                 if self.status_callback:
                     try:
                         self.status_callback("Interface cleared")
                     except Exception:
-                        pass
+                        from utils import logger
+                        logger.debug("Status callback failed", exc_info=True)
     
     def _format_markdown_preview(self, prompt):
         """Parse and format the prompt with Markdown support."""
@@ -314,12 +325,12 @@ class PreviewPanel:
             try:
                 self.toast_callback("Prompt copied to clipboard", 'success', 2500)
             except Exception:
-                pass
+                logger.exception("Toast callback failed while copying prompt")
         elif self.status_callback:
             try:
                 self.status_callback("Prompt copied to clipboard")
             except Exception:
-                pass
+                logger.exception("Status callback failed while copying prompt")
         else:
             messagebox.showinfo("Success", "Prompt copied to clipboard")
     
@@ -375,12 +386,12 @@ class PreviewPanel:
                 try:
                     self.toast_callback(f"{section_type.capitalize()} section copied to clipboard", 'success', 2500)
                 except Exception:
-                    pass
+                    logger.exception("Toast callback failed while copying section")
             elif self.status_callback:
                 try:
                     self.status_callback(f"{section_type.capitalize()} section copied to clipboard")
                 except Exception:
-                    pass
+                    logger.exception("Status callback failed while copying section")
             else:
                 messagebox.showinfo("Success", f"{section_type.capitalize()} section copied to clipboard")
         else:
@@ -390,11 +401,15 @@ class PreviewPanel:
                 try:
                     self.toast_callback(info_msg, 'info', 3000)
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     pass
             elif self.status_callback:
                 try:
                     self.status_callback(info_msg)
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     messagebox.showinfo("Info", info_msg)
             else:
                 messagebox.showinfo("Info", info_msg)
@@ -423,13 +438,15 @@ class PreviewPanel:
                         # Use info level so it's visible but not green
                         self.toast_callback(f"Prompt saved to {filename}", 'info', 3000)
                     except Exception:
-                        pass
+                        logger.exception("Toast callback failed while saving prompt")
                 elif self.status_callback:
                     try:
                         self.status_callback(f"Prompt saved to {filename}")
                     except Exception:
-                        pass
+                        logger.exception("Status callback failed while saving prompt")
                 else:
                     messagebox.showinfo("Saved", f"Prompt saved to {filename}")
-            except Exception as e:
-                messagebox.showerror("Save Error", str(e))
+            except Exception:
+                from utils import logger
+                logger.exception("Failed to save prompt to file")
+                messagebox.showerror("Save Error", "Could not save prompt; see log for details")

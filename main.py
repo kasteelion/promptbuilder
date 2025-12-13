@@ -64,6 +64,8 @@ def main():
         close_debug_log()
         sys.exit(0)
     except Exception as e:
+        from utils import logger
+        logger.exception('Auto-captured exception')
         # Catch any unexpected errors and provide helpful information
         import traceback
 

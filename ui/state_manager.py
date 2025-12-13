@@ -62,8 +62,8 @@ class StateManager:
             state = self.get_state_callback()
             self.undo_manager.save_state(state)
             logger.debug("State saved for undo")
-        except Exception as e:
-            logger.error(f"Error saving state for undo: {e}")
+        except Exception:
+            logger.exception("Error saving state for undo")
     
     def undo(self):
         """Undo last action."""
@@ -73,11 +73,15 @@ class StateManager:
                 try:
                     self.root.toasts.notify("Nothing to undo", 'info', 2000)
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     messagebox.showinfo("Undo", "Nothing to undo")
             elif hasattr(self.root, '_update_status'):
                 try:
                     self.root._update_status("Nothing to undo")
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     messagebox.showinfo("Undo", "Nothing to undo")
             else:
                 messagebox.showinfo("Undo", "Nothing to undo")
@@ -90,9 +94,9 @@ class StateManager:
                 if self.update_preview_callback:
                     self.update_preview_callback()
                 logger.info("Undo performed")
-        except Exception as e:
-            logger.error(f"Error during undo: {e}")
-            messagebox.showerror("Undo Error", f"Could not undo: {str(e)}")
+        except Exception:
+            logger.exception("Error during undo")
+            messagebox.showerror("Undo Error", "Could not undo; see log for details")
     
     def redo(self):
         """Redo last undone action."""
@@ -102,11 +106,15 @@ class StateManager:
                 try:
                     self.root.toasts.notify("Nothing to redo", 'info', 2000)
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     messagebox.showinfo("Redo", "Nothing to redo")
             elif hasattr(self.root, '_update_status'):
                 try:
                     self.root._update_status("Nothing to redo")
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     messagebox.showinfo("Redo", "Nothing to redo")
             else:
                 messagebox.showinfo("Redo", "Nothing to redo")
@@ -119,9 +127,9 @@ class StateManager:
                 if self.update_preview_callback:
                     self.update_preview_callback()
                 logger.info("Redo performed")
-        except Exception as e:
-            logger.error(f"Error during redo: {e}")
-            messagebox.showerror("Redo Error", f"Could not redo: {str(e)}")
+        except Exception:
+            logger.exception("Error during redo")
+            messagebox.showerror("Redo Error", "Could not redo; see log for details")
     
     def save_preset(self) -> bool:
         """Show dialog to save current state as a preset.
@@ -156,20 +164,24 @@ class StateManager:
                 try:
                     self.root.toasts.notify(f"Preset saved: {Path(filepath).name}", 'success', 3000)
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     pass
             elif hasattr(self.root, '_update_status'):
                 try:
                     self.root._update_status(f"Preset saved: {Path(filepath).name}")
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     messagebox.showinfo("Success", f"Preset saved: {Path(filepath).name}")
             else:
                 messagebox.showinfo("Success", f"Preset saved: {Path(filepath).name}")
             logger.info(f"Preset saved: {filepath}")
             return True
             
-        except Exception as e:
-            logger.error(f"Error saving preset: {e}")
-            messagebox.showerror("Save Error", f"Could not save preset: {str(e)}")
+        except Exception:
+            logger.exception("Error saving preset")
+            messagebox.showerror("Save Error", "Could not save preset; see log for details")
             return False
     
     def load_preset(self) -> bool:
@@ -208,20 +220,24 @@ class StateManager:
                 try:
                     self.root.toasts.notify(f"Preset loaded: {Path(filepath).name}", 'success', 3000)
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     pass
             elif hasattr(self.root, '_update_status'):
                 try:
                     self.root._update_status(f"Preset loaded: {Path(filepath).name}")
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     messagebox.showinfo("Success", f"Preset loaded: {Path(filepath).name}")
             else:
                 messagebox.showinfo("Success", f"Preset loaded: {Path(filepath).name}")
             logger.info(f"Preset loaded: {filepath}")
             return True
             
-        except Exception as e:
-            logger.error(f"Error loading preset: {e}")
-            messagebox.showerror("Load Error", f"Could not load preset: {str(e)}")
+        except Exception:
+            logger.exception("Error loading preset")
+            messagebox.showerror("Load Error", "Could not load preset; see log for details")
             return False
     
     def load_preset_by_name(self, preset_name: str) -> bool:
@@ -258,9 +274,9 @@ class StateManager:
             logger.info(f"Preset loaded: {preset_name}")
             return True
             
-        except Exception as e:
-            logger.error(f"Error loading preset {preset_name}: {e}")
-            messagebox.showerror("Load Error", f"Could not load preset: {str(e)}")
+        except Exception:
+            logger.exception(f"Error loading preset {preset_name}")
+            messagebox.showerror("Load Error", "Could not load preset; see log for details")
             return False
     
     def export_config(self) -> bool:
@@ -289,21 +305,24 @@ class StateManager:
                 try:
                     self.root.toasts.notify(f"Configuration exported: {Path(filepath).name}", 'success', 3000)
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     pass
             elif hasattr(self.root, '_update_status'):
                 try:
                     self.root._update_status(f"Configuration exported: {Path(filepath).name}")
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     messagebox.showinfo("Success", f"Configuration exported: {Path(filepath).name}")
             else:
                 messagebox.showinfo("Success", f"Configuration exported: {Path(filepath).name}")
             logger.info(f"Configuration exported: {filepath}")
             return True
             
-        except Exception as e:
-            logger.error(f"Error exporting configuration: {e}")
-            messagebox.showerror("Export Error", 
-                               f"Could not export configuration: {str(e)}")
+        except Exception:
+            logger.exception("Error exporting configuration")
+            messagebox.showerror("Export Error", "Could not export configuration; see log for details")
             return False
     
     def import_config(self) -> bool:
@@ -336,21 +355,24 @@ class StateManager:
                 try:
                     self.root.toasts.notify(f"Configuration imported: {Path(filepath).name}", 'success', 3000)
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     pass
             elif hasattr(self.root, '_update_status'):
                 try:
                     self.root._update_status(f"Configuration imported: {Path(filepath).name}")
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     messagebox.showinfo("Success", f"Configuration imported: {Path(filepath).name}")
             else:
                 messagebox.showinfo("Success", f"Configuration imported: {Path(filepath).name}")
             logger.info(f"Configuration imported: {filepath}")
             return True
             
-        except Exception as e:
-            logger.error(f"Error importing configuration: {e}")
-            messagebox.showerror("Import Error", 
-                               f"Could not import configuration: {str(e)}")
+        except Exception:
+            logger.exception("Error importing configuration")
+            messagebox.showerror("Import Error", "Could not import configuration; see log for details")
             return False
     
     def can_undo(self) -> bool:

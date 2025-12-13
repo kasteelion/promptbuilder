@@ -12,6 +12,7 @@ from logic import DataLoader, PromptRandomizer, validate_prompt_config
 from themes import ThemeManager
 from utils import PreferencesManager, create_tooltip, logger
 from utils.interaction_helpers import fill_template
+from .preview_worker import PreviewExecutor
 
 from .character_card import CharacterGalleryPanel
 from .characters_tab import CharactersTab
@@ -22,6 +23,10 @@ from .edit_tab import EditTab
 from .font_manager import FontManager
 from .menu_manager import MenuManager
 from .preview_panel import PreviewPanel
+from .preview_controller import PreviewController
+from .controllers.gallery import GalleryController
+from .controllers.menu_actions import MenuActions
+from .controllers.window_state import WindowStateController
 from .state_manager import StateManager
 
 
@@ -55,7 +60,9 @@ class PromptBuilderApp:
         try:
             self.characters = self.data_loader.load_characters()
         except Exception as e:
-            self.dialog_manager.show_error("Error loading characters", str(e))
+            logger.exception("Error loading characters")
+            # Show a concise message to the user and exit
+            self.dialog_manager.show_error("Error loading characters", "Failed to load character data; see log for details.")
             self.root.destroy()
             return
         
@@ -85,12 +92,21 @@ class PromptBuilderApp:
         # Debounce tracking for text inputs
         self._scene_text_after_id: Optional[str] = None
         self._notes_text_after_id: Optional[str] = None
+        # Preview controller (created after UI initialization)
+        self.preview_controller: Optional[PreviewController] = None
         
         # Build UI
         self._build_ui()
         
         # Initialize managers that depend on UI elements
         self._initialize_managers()
+
+        # Create preview controller after UI elements are ready
+        try:
+            # Will be re-assigned in _initialize_managers once preview_panel exists
+            self.preview_controller = None
+        except Exception:
+            logger.exception("Failed to initialize preview controller placeholder")
         
         # Bind keyboard shortcuts
         self._bind_keyboard_shortcuts()
@@ -104,17 +120,16 @@ class PromptBuilderApp:
             theme_to_use = self._detect_os_theme()
         self._apply_theme(theme_to_use)
         
-        # Restore window geometry and state BEFORE showing window
-        saved_geometry = self.prefs.get("window_geometry")
-        saved_state = self.prefs.get("window_state")
-        
-        if saved_geometry:
-            try:
-                self.root.geometry(saved_geometry)
-            except (tk.TclError, ValueError) as e:
-                # Invalid geometry string, ignore and use defaults
-                logger.warning(f"Could not restore window geometry: {e}")
-                saved_geometry = None  # Mark as invalid so we center instead
+        # Restore window geometry and state via WindowStateController
+        try:
+            self.window_state_controller = WindowStateController(self)
+            restored = self.window_state_controller.restore_geometry_and_state()
+            saved_geometry = None if not restored else self.prefs.get("window_geometry")
+            saved_state = self.prefs.get("window_state")
+        except Exception:
+            logger.exception("Failed to initialize WindowStateController")
+            saved_geometry = None
+            saved_state = None
         
         # Restore last base prompt
         last_base_prompt = self.prefs.get("last_base_prompt")
@@ -151,35 +166,37 @@ class PromptBuilderApp:
     def _build_ui(self):
         """Build the main UI layout."""
         # Create menu manager with callbacks
+        # Create menu manager with callbacks provided by MenuActions controller
+        self.menu_actions = MenuActions(self)
         menu_callbacks = {
-            'save_preset': self._save_preset,
-            'load_preset': self._load_preset,
-            'export_config': self._export_config,
-            'import_config': self._import_config,
-            'undo': self._undo,
-            'redo': self._redo,
-            'clear_all_characters': self._clear_all_characters,
-            'reset_all_outfits': self._reset_all_outfits,
-            'apply_same_pose_to_all': self._apply_same_pose_to_all,
-            'toggle_character_gallery': self._toggle_character_gallery,
-            'increase_font': self._increase_font,
-            'decrease_font': self._decrease_font,
-            'reset_font': self._reset_font,
-            'randomize_all': self.randomize_all,
-            'change_theme': self._change_theme,
-            'toggle_auto_theme': self._toggle_auto_theme,
-            'show_characters_summary': lambda: self.dialog_manager.show_characters_summary(),
-            'show_welcome': self.dialog_manager.show_welcome,
-            'show_shortcuts': self.dialog_manager.show_shortcuts,
-            'show_about': self.dialog_manager.show_about,
-            'on_closing': self._on_closing,
+            'save_preset': self.menu_actions.save_preset,
+            'load_preset': self.menu_actions.load_preset,
+            'export_config': self.menu_actions.export_config,
+            'import_config': self.menu_actions.import_config,
+            'undo': self.menu_actions.undo,
+            'redo': self.menu_actions.redo,
+            'clear_all_characters': self.menu_actions.clear_all_characters,
+            'reset_all_outfits': self.menu_actions.reset_all_outfits,
+            'apply_same_pose_to_all': self.menu_actions.apply_same_pose_to_all,
+            'toggle_character_gallery': self.menu_actions.toggle_character_gallery,
+            'increase_font': self.menu_actions.increase_font,
+            'decrease_font': self.menu_actions.decrease_font,
+            'reset_font': self.menu_actions.reset_font,
+            'randomize_all': self.menu_actions.randomize_all,
+            'change_theme': self.menu_actions.change_theme,
+            'toggle_auto_theme': self.menu_actions.toggle_auto_theme,
+            'show_characters_summary': self.menu_actions.show_characters_summary,
+            'show_welcome': self.menu_actions.show_welcome,
+            'show_shortcuts': self.menu_actions.show_shortcuts,
+            'show_about': self.menu_actions.show_about,
+            'on_closing': self.menu_actions.on_closing,
             'initial_theme': self.prefs.get("last_theme", DEFAULT_THEME),
             'auto_theme_enabled': self.prefs.get("auto_theme", False),
             'gallery_visible': self.prefs.get("gallery_visible", True)
         }
-        
+
         self.menu_manager = MenuManager(self.root, menu_callbacks)
-        
+
         # Bind keyboard shortcuts
         self._bind_keyboard_shortcuts()
         
@@ -401,6 +418,23 @@ class PromptBuilderApp:
         if categories:
             self.interaction_category_var.set(categories[0])
             self._update_interaction_presets()
+
+        # Create preview controller now that preview_panel and characters_tab exist
+        try:
+            self.preview_controller = PreviewController(
+                self.root,
+                self.preview_panel,
+                self._generate_prompt_or_error,
+                lambda: len(self.characters_tab.get_selected_characters()),
+                throttle_ms=self._throttle_ms
+            )
+        except Exception:
+            logger.exception("Failed to create PreviewController")
+        # Initialize gallery controller to encapsulate gallery behaviors
+        try:
+            self.gallery_controller = GalleryController(self)
+        except Exception:
+            logger.exception("Failed to create GalleryController")
     
     def _bind_keyboard_shortcuts(self):
         """Bind all keyboard shortcuts."""
@@ -507,7 +541,7 @@ class PromptBuilderApp:
             self.schedule_preview_update()
             self._update_status(f"Inserted: {template_name}")
         except tk.TclError as e:
-            logger.error(f"Error inserting interaction template: {e}")
+            logger.exception("Error inserting interaction template")
     
     def _refresh_interaction_template(self):
         """Replace notes with re-filled interaction template using current characters."""
@@ -546,7 +580,7 @@ class PromptBuilderApp:
             self.schedule_preview_update()
             self._update_status(f"Refreshed: {template_name}")
         except tk.TclError as e:
-            logger.error(f"Error refreshing interaction template: {e}")
+            logger.exception("Error refreshing interaction template")
     
     def _apply_scene_preset(self):
         """Apply selected scene preset to text area."""
@@ -577,8 +611,8 @@ class PromptBuilderApp:
             self._update_interaction_presets()
             
             logger.info("Interaction templates reloaded successfully")
-        except Exception as e:
-            logger.error(f"Error reloading interaction templates: {e}")
+        except Exception:
+            logger.exception("Error reloading interaction templates")
     
     def _create_new_interaction(self):
         """Open dialog to create a new interaction template."""
@@ -632,29 +666,46 @@ class PromptBuilderApp:
         # Apply to dynamic character action texts
         self.characters_tab.apply_theme_to_action_texts(self.theme_manager, theme)
         
-        # Apply to character gallery
-        if hasattr(self, 'character_gallery'):
-            self.character_gallery.theme_colors = theme
-            self.character_gallery._refresh_display()
+        # Apply to character gallery (use controller if available)
+        if hasattr(self, 'gallery_controller') and self.gallery_controller:
+            try:
+                self.gallery_controller.apply_theme(theme)
+            except Exception:
+                logger.exception("Failed to apply theme via GalleryController")
+        elif hasattr(self, 'character_gallery'):
+            try:
+                self.character_gallery.theme_colors = theme
+                self.character_gallery._refresh_display()
+            except Exception:
+                logger.exception("Failed to apply theme to character_gallery")
 
         # Apply theme to toasts
         if hasattr(self, 'toasts'):
             try:
                 self.toasts.apply_theme(theme)
             except Exception:
-                pass
+                from utils import logger as _logger
+                _logger.debug("Failed to apply theme to toasts", exc_info=True)
     
     def schedule_preview_update(self):
         """Schedule a preview update with adaptive throttling."""
-        if self._after_id:
-            self.root.after_cancel(self._after_id)
-        
         # Adaptive throttling - faster for simpler prompts
         num_chars = len(self.characters_tab.get_selected_characters())
         delay = 50 if num_chars <= 2 else self._throttle_ms
-        
-        self._after_id = self.root.after(delay, self.update_preview)
-        self._update_status("Updating preview...")
+
+        if self.preview_controller:
+            try:
+                self.preview_controller.schedule_update(delay)
+            except Exception:
+                logger.exception("Failed to schedule preview update via controller")
+        else:
+            # Fallback: do synchronous update after delay
+            try:
+                self.root.after(delay, lambda: self.update_preview())
+            except Exception:
+                logger.exception("Failed to schedule synchronous preview update")
+
+    # Preview submission is handled by PreviewController now.
     
     def update_preview(self):
         """Update the preview panel with current prompt."""
@@ -722,9 +773,10 @@ class PromptBuilderApp:
             self.scenes = self.data_loader.load_presets("scenes.md")
             self.poses = self.data_loader.load_presets("poses.md")
             self._reload_interaction_templates()
-        except Exception as e:
+        except Exception:
+            logger.exception("Error reloading data")
             self.root.config(cursor="")
-            self.dialog_manager.show_error("Reload Error", str(e))
+            self.dialog_manager.show_error("Reload Error", "Failed to reload data; see log for details")
             self._update_status("❌ Error loading data")
             return
 
@@ -758,8 +810,16 @@ class PromptBuilderApp:
         self.edit_tab._refresh_file_list()  # Refresh file list to show new character files
         
         # Reload character gallery
-        if hasattr(self, 'character_gallery'):
-            self.character_gallery.load_characters(self.characters)
+        if hasattr(self, 'gallery_controller') and self.gallery_controller:
+            try:
+                self.gallery_controller.load_characters(self.characters)
+            except Exception:
+                logger.exception("Failed to reload gallery via GalleryController")
+        elif hasattr(self, 'character_gallery'):
+            try:
+                self.character_gallery.load_characters(self.characters)
+            except Exception:
+                logger.exception("Failed to reload character_gallery")
         
         self.root.config(cursor="")
         self.schedule_preview_update()
@@ -834,6 +894,13 @@ class PromptBuilderApp:
         if base_prompt:
             self.prefs.set("last_base_prompt", base_prompt)
         
+        # Shutdown preview controller if present
+        try:
+            if self.preview_controller:
+                self.preview_controller.shutdown()
+        except Exception:
+            logger.exception("Error shutting down preview controller")
+
         self.root.destroy()
     
     def _get_current_state(self):
@@ -1053,29 +1120,35 @@ class PromptBuilderApp:
                 try:
                     self.preview_panel.clear_preview()
                 except Exception:
-                    pass
+                    from utils import logger as _logger
+                    _logger.debug("Could not delete temp file while replacing content", exc_info=True)
 
             # Clear scene and notes text
             if hasattr(self, 'scene_text'):
                 try:
                     self.scene_text.delete('1.0', 'end')
                 except Exception:
-                    pass
+                    from utils import logger as _logger
+                    _logger.debug("Failed to clear scene text widget", exc_info=True)
             if hasattr(self, 'notes_text'):
                 try:
                     self.notes_text.delete('1.0', 'end')
                 except Exception:
-                    pass
+                    from utils import logger as _logger
+                    _logger.debug("Failed to clear notes text widget", exc_info=True)
 
             # Clear selected characters
             if hasattr(self, 'characters_tab'):
                 try:
                     self.characters_tab.set_selected_characters([])
                 except Exception:
-                    pass
+                    from utils import logger as _logger
+                    _logger.debug("Failed to clear selected characters", exc_info=True)
 
             self._update_status('Interface cleared')
         except Exception:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             # Best-effort; if clearing fails, show status
             self._update_status('Interface cleared')
     
@@ -1095,22 +1168,29 @@ class PromptBuilderApp:
             self.menu_manager.set_gallery_visible(self.gallery_visible)
         self.prefs.set("gallery_visible", self.gallery_visible)
         
-        if self.gallery_visible:
-            # Show gallery - insert at position 0 (leftmost)
+        # Delegate gallery show/hide to controller when available
+        if hasattr(self, 'gallery_controller') and self.gallery_controller:
             try:
-                self.main_paned.insert(0, self.gallery_frame, weight=2)
-                # Reload characters in case they changed
-                self.character_gallery.load_characters(self.characters)
-            except tk.TclError:
-                # Already added
-                pass
+                self.gallery_controller.toggle_visibility(self.gallery_visible, self.characters if self.gallery_visible else None)
+            except Exception:
+                logger.exception("Failed to toggle gallery via GalleryController")
         else:
-            # Hide gallery
-            try:
-                self.main_paned.forget(self.gallery_frame)
-            except tk.TclError:
-                # Not in paned window
-                pass
+            if self.gallery_visible:
+                # Show gallery - insert at position 0 (leftmost)
+                try:
+                    self.main_paned.insert(0, self.gallery_frame, weight=2)
+                    # Reload characters in case they changed
+                    self.character_gallery.load_characters(self.characters)
+                except tk.TclError:
+                    # Already added
+                    pass
+            else:
+                # Hide gallery
+                try:
+                    self.main_paned.forget(self.gallery_frame)
+                except tk.TclError:
+                    # Not in paned window
+                    pass
     
     def _on_gallery_character_selected(self, character_name):
         """Handle character selection from gallery.

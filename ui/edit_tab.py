@@ -102,6 +102,8 @@ class EditTab:
                 content = file_path.read_text(encoding="utf-8")
                 self.editor_text.insert("1.0", content)
             except Exception as e:
+                from utils import logger
+                logger.exception('Auto-captured exception')
                 messagebox.showerror(
                     "File Read Error", 
                     f"Could not read {filename}:\n{str(e)}"

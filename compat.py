@@ -49,6 +49,8 @@ def check_tkinter_available() -> bool:
 
         return importlib.util.find_spec("tkinter") is not None
     except Exception:
+        from utils import logger
+        logger.exception('Auto-captured exception')
         return False
 
 

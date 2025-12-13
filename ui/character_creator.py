@@ -6,6 +6,7 @@ from tkinter import messagebox, ttk
 from utils import (get_character_template, get_character_template_description,
                    get_character_template_names)
 from utils.notification import notify
+from utils import logger
 
 
 class CharacterCreatorDialog:
@@ -358,10 +359,11 @@ class CharacterCreatorDialog:
             self.dialog.destroy()
             if self.on_success:
                 self.on_success()
-        except Exception as e:
+        except Exception:
+            logger.exception("Failed to save character file")
             messagebox.showerror(
-                "Error", 
-                f"Failed to save character file:\n{str(e)}",
+                "Error",
+                "Failed to save character file; see log for details.",
                 parent=self.dialog
             )
     
@@ -404,8 +406,9 @@ class CharacterCreatorDialog:
             # Update button text
             self.create_btn.config(text="💾 Save Changes")
             
-        except Exception as e:
-            messagebox.showerror("Error", f"Failed to load character:\n{str(e)}")
+        except Exception:
+            logger.exception("Failed to load character data")
+            messagebox.showerror("Error", "Failed to load character; see log for details.", parent=self.dialog)
     
     def show(self):
         """Show dialog and wait for result."""

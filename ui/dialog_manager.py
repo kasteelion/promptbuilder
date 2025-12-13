@@ -124,6 +124,8 @@ Platform: {platform.system()} {platform.release()}
                         # Fallback to default behavior of generate_summary()
                         summary = generate_summary()
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     # Backwards-compatible fallback to old location if present
                     from characters.summary import generate_summary
                     summary = generate_summary()
@@ -154,6 +156,8 @@ Platform: {platform.system()} {platform.release()}
             close_btn.pack(pady=(0, 10))
             
         except Exception as e:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             self.show_error("Error", f"Failed to generate character summary:\n{str(e)}")
     
     def show_error(self, title: str, error_msg: str, friendly: bool = True) -> None:
@@ -188,14 +192,20 @@ Platform: {platform.system()} {platform.release()}
                     root.toasts.notify(message, 'info', 3000)
                     return
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     pass
             if root is not None and hasattr(root, '_update_status'):
                 try:
                     root._update_status(message)
                     return
                 except Exception:
+                    from utils import logger
+                    logger.exception('Auto-captured exception')
                     pass
         except Exception:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             # Defensive: if accessing root fails, fall through to modal
             pass
 

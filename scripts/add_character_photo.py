@@ -40,6 +40,8 @@ def main():
         shutil.copy2(src, dest)
         print(f"Copied {src} -> {dest}")
     except Exception as e:
+        from utils import logger
+        logger.exception('Auto-captured exception')
         print(f"Failed to copy file: {e}")
         sys.exit(1)
 
