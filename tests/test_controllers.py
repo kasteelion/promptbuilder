@@ -1,4 +1,3 @@
-
 from ui.controllers.gallery import GalleryController
 from ui.controllers.menu_actions import MenuActions
 from ui.controllers.window_state import WindowStateController

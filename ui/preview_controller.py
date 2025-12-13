@@ -96,4 +96,3 @@ class PreviewController:
             self.executor.shutdown(wait=False)
         except Exception:
             logger.exception("Error shutting down preview executor")
-
