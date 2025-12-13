@@ -73,11 +73,16 @@ def test_imports():
     project_root = Path(__file__).resolve().parent.parent
     utils_dir = project_root / "utils"
     # Importing submodules directly can trigger package-level initializers
-    # (and circular imports). Instead, verify the expected module files
-    # exist — their behaviors are validated in the specific unit tests below.
-    assert (utils_dir / "undo_manager.py").exists()
-    assert (utils_dir / "preferences.py").exists()
-    assert (utils_dir / "preset_manager.py").exists()
+    # (and circular imports). Use the helper loader to verify the modules
+    # are importable from file without executing package-level side-effects.
+    mod_um = _load_module_from_path(utils_dir / "undo_manager.py", "utils.undo_manager")
+    assert hasattr(mod_um, "UndoManager")
+
+    mod_pref = _load_module_from_path(utils_dir / "preferences.py", "utils.preferences")
+    assert hasattr(mod_pref, "PreferencesManager")
+
+    mod_preset = _load_module_from_path(utils_dir / "preset_manager.py", "utils.preset_manager")
+    assert hasattr(mod_preset, "PresetManager")
 
 
 def test_undo_manager():
