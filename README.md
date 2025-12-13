@@ -4,401 +4,120 @@ A desktop application to help build complex and detailed prompts for AI image ge
 
 ## Features
 
-### Core Features
-- **📝 In-App Content Creation** - Create characters, scenes, outfits, poses, and base art styles directly in the UI
-- **🎨 Smart UI Resizing** - Adaptive font scaling and proportional panel resizing for optimal viewing at any window size
-- **📁 Organized Data Structure** - Individual character files with shared and character-specific outfits
-- **🔄 Live Preview** - Real-time prompt generation with syntax highlighting
-- **🎲 Randomization** - Randomize characters, poses, and prompts for creative inspiration
-- **🌙 Theme Support** - Multiple built-in themes and runtime-customizable themes (Theme Editor)
+# AI Image Prompt Builder
 
-### Advanced Features
-- **⏪ Undo/Redo** - Full undo/redo support (`Ctrl+Z`/`Ctrl+Y`) for all operations
-- **💾 Presets** - Save and load entire prompt configurations (`Ctrl+Shift+S`/`Ctrl+Shift+O`)
-- **🖱️ Context Menus** - Right-click characters for quick actions (duplicate, move, remove)
-- **⚡ Batch Operations** - Clear all, reset outfits, apply poses to all characters at once
-- **📋 Smart Copy** - Copy full prompt or individual sections (characters/scene/notes)
-- **💡 Tooltips** - Helpful hints appear when hovering over UI elements
-- **⌨️ 20+ Keyboard Shortcuts** - Fast workflow with extensive keyboard support
-- **📤 Export/Import** - Share configurations as JSON files
-- **🎓 Welcome Guide** - First-run tutorial to get you started quickly
-- **💬 Better Errors** - User-friendly error messages with actionable suggestions
-- **🎴 Visual Gallery (archived)** - An experimental visual character browser was previously included; it has been removed from runtime. See `docs/VISUAL_UI_GUIDE.md` for archived notes and migration guidance.
-- **🔍 Character Search** - Quick filter to find characters in large collections
-- **🌊 Drag & Drop** - Reorder characters by dragging (in character list)
-- **🤝 Interaction Templates** - Pre-built multi-character interaction templates (NEW!)
+A desktop application to help build complex and detailed prompts for AI image generation with an intuitive, resizable interface.
+
+**Quick status:** refactored startup into `cli.py` + `runner.py`, added theme-aware ttk label styles, and introduced a `DebugLog` context manager. Tests are available and the project uses only standard-library deps except optional Pillow for image previews.
+
+**Supported Python:** 3.8+
+
+---
+
+**Table of contents**
+- What it does
+- Requirements
+- Quick start
+- CLI options
+- Tests
+- Development & recent refactors
+- Theming notes
+- Data files & content format
+- Contributing
+
+---
+
+## What it does
+
+- Create characters, outfits, poses, and base art styles.
+- Assemble those pieces into AI image prompts in a preview panel.
+- Batch operations (apply outfit to many characters), randomization, and interaction templates.
+- Themeable UI using Tkinter/ttk styles.
 
 ## Requirements
 
-- **Python 3.8 or higher**
-- **tkinter** (Usually included with Python, but may need separate installation on some Linux distributions)
-- **Zero external dependencies** - Uses only Python standard library
+- Python 3.8 or newer (3.11+ recommended). The app was validated on local Python 3.14.
+- Tkinter (usually included with Python installs).
+- Optional: Pillow (`pip install Pillow`) to enable photo previews in the character gallery.
 
-### Installing tkinter (if needed)
+No other external packages are required for basic functionality.
 
-**Ubuntu/Debian:**
-```bash
-sudo apt-get install python3-tk
+## Quick start
+
+From the project root:
+
+```powershell
+# Run the app
+& C:/path/to/python.exe main.py
+
+# Run the test suite
+& C:/path/to/python.exe -m pytest -q
 ```
 
-**Fedora/RHEL:**
-```bash
-sudo dnf install python3-tkinter
+On Windows you can normally just run `python main.py` if `python` points to your Python installation.
+
+## CLI options
+
+- `--version` or `-v` : print version and exit.
+- `--check-compat` : perform a compatibility check (Python version, tkinter available).
+- `--debug` : run in debug mode (full tracebacks, extra logging).
+
+These are handled by `cli.py` and executed at runtime by `runner.py`.
+
+## Tests
+
+This project uses `pytest` for unit tests. Run all tests with:
+
+```powershell
+python -m pytest -q
 ```
 
-**macOS/Windows:** tkinter is included with standard Python installations
+A small test suite covering CLI parsing and other logic is included in `tests/`.
 
-## How it works
+## Development & recent refactors
 
-This application is a data-driven prompt-building tool. It uses a set of user-editable markdown files as a database for different prompt components like characters, outfits, scenes, and poses.
+Recent work improved startup modularity and themability:
 
-The UI allows you to select these components, and the application will assemble them into a final prompt string that you can use with your favorite AI image generator.
+- `cli.py` — centralizes command-line parsing (no import-time side effects).
+- `runner.py` — encapsulates application lifecycle (init, compatibility checks, debug logging, create root, run mainloop).
+- `debug_log.py` — added a `DebugLog` context manager to ensure logs are opened/closed cleanly.
+- `themes/theme_manager.py` — new ttk label styles added (`Bold.TLabel`, `Accent.TLabel`, `Muted.TLabel`, `Title.TLabel`) so labels respond to theme changes.
+- Many UI modules under `ui/` were updated to prefer ttk styles over hard-coded font/foreground values.
 
-## How to use
+These changes make the code easier to import in tests and easier to maintain.
 
-1.  **Run the application:**
-    ```bash
-    python main.py
-    ```
+## Theming notes
 
-2.  **Check compatibility (optional):**
-    ```bash
-    python main.py --check-compat
-    ```
-    This will display your Python version and verify all requirements are met.
+- Most labels now use ttk styles; theme colors are defined and applied in `themes/theme_manager.py`.
+- Classic `tk.Text` widgets still use direct configuration for placeholder/faint text; a follow-up helper can centralize placeholder color so it follows the theme.
+- If you add UI elements, prefer creating or reusing a ttk style instead of passing `foreground`/`font` inline.
 
-3.  **Check version (optional):**
-    ```bash
-    python main.py --version
-    ```
+## Data files & formats
 
-4.  **Select Characters:** Choose from individual character files in the `characters/` folder. Click "**+ Add to Prompt**" to add them to your group.
+- `characters/` — individual character markdown files. File names should be lowercase with underscores.
+- `base_prompts.md`, `poses.md`, `scenes.md`, `outfits.md` — structured markdown used as the "database" for prompt components.
 
-5.  **Choose Outfits:** Select from shared outfits or character-specific variations. The outfit selector is collapsible for a cleaner interface.
-
-4.  **Build a Scene:** Select different scene elements from `scenes.md`. You can also create new scenes directly in the UI.
-
-5.  **Choose a Pose:** Select a pose from `poses.md` or create custom poses.
-
-6.  **Add Notes & Interactions:** Include any additional details in the Notes section. Use the **Interaction Templates** dropdown to quickly insert pre-built multi-character interactions like "Conversation", "Dancing Together", "High Five", etc. The template will automatically fill in with your selected characters' names.
-
-7.  **Generate:** The preview panel automatically updates as you make selections, showing the final assembled prompt.
-
-### Using Interaction Templates
-
-The Notes section includes a powerful feature for creating multi-character interactions:
-
-1. **Add your characters** to the prompt (at least 2 characters recommended)
-2. **Select an interaction** from the dropdown (e.g., "Conversation", "Dancing Together", "Working Together")
-3. **Click "Insert"** - the template will be added with character names filled in automatically
-
-**Example:**
-- Characters selected: Alice, Bob, Carol
-- Template: "Group Discussion (3+)"
-- Result: "Alice, Bob, and Carol engaged in group discussion, all contributing to conversation"
-
-Available templates include:
-- **Two-character interactions:** Conversation, Dancing Together, High Five, Handshake, Working Together, and more
-- **Multi-character interactions:** Group Discussion, Circle Formation, Team Pose, Chain Reaction
-- **Create your own:** Click "+ Create" to make custom interaction templates
-
-See `docs/CHARACTER_FLEXIBILITY_GUIDE.md` for guidance on writing flexible character definitions, and `docs/INTERACTION_TEMPLATES.md` for more interaction template examples.
-
-6.  **Add Notes:** Include any additional details or modifications in the Notes tab.
-
-7.  **Generate:** The preview panel automatically updates as you make selections, showing the final assembled prompt.
-
-### Keyboard Shortcuts
-
-**File Operations:**
-- `Ctrl+Shift+S` - Save current configuration as preset
-- `Ctrl+Shift+O` - Load a saved preset
-
-**Editing:**
-- `Ctrl+Z` - Undo last action
-- `Ctrl+Y` - Redo last undone action
-
-**View:**
-- `Ctrl++` or `Ctrl+=` - Increase font size
-- `Ctrl+-` - Decrease font size
-- `Ctrl+0` - Reset font size to automatic scaling
-- `Ctrl+G` - Toggle character gallery
-- `Alt+R` - Randomize all selections
-
-**Preview Panel:**
-- `Ctrl+C` - Copy prompt to clipboard
-- `Ctrl+S` - Save prompt to file
-
-**Navigation:**
-- `Tab` - Navigate between fields
-- `Enter` - Add selected character to prompt
-
-### Creating New Content
-
-Use the built-in creator dialogs to add new content:
-
-- **Characters Tab:** "Create New Character" button - includes syntax suggestions based on existing characters
-- **Characters Tab:** "Create New Base Style" button - template with 5 standard sections
-- **Characters Tab:** "Create New Pose" button - add custom poses
-- **Characters Tab → Bulk Outfit Editor:** "Create Shared Outfit" - outfits available to all characters
-- **Characters Tab → Individual Character:** "Create Outfit" - character-specific outfit variations
-- **Scenes Tab:** "Create New Scene" button - add scenes organized by category
-- **Notes & Interactions:** "+ Create" button - create custom multi-character interaction templates
-
-All creator dialogs include copyable help text to assist with proper formatting.
-
-## Data Files
-
-The core of this application is the set of markdown files that it uses as a database. You can edit these files to add, remove, or modify the available options.
-
-### `base_prompts.md`
-
-This file contains base style prompts.
-
-**Format:**
-
-```markdown
-## Prompt Name
-Prompt content...
----
-```
-
-### Characters
-
-Character definitions are stored as individual markdown files in the `characters/` folder. Each character gets its own file for better organization and maintainability.
-
-**File naming:** Use lowercase with underscores (e.g., `mela_hart.md`, `nora_alvarez.md`)
-
-**Format:**
-
-```markdown
-### Character Name
-**Appearance:** description
-**Outfits:**
-
-#### Outfit Name
-- **Top:** ...
-- **Bottom:** ...
-- **Footwear:** ...
-- **Accessories:** ...
-- **Hair/Makeup:** ...
-```
-
-**Example structure:**
-- `characters/mela_hart.md` - Mela Hart's character definition
-- `characters/nora_alvarez.md` - Nora Alvarez's character definition
-- etc.
-
-### `outfits.md`
-
-This file contains shared outfit templates that can be used with any character.
-
-**Format:**
-
-```markdown
-## Common Outfits
-### Outfit Name
-Outfit description...
-
-## Character-Specific Variations
-### Character Name
-#### Outfit Name
-Outfit description...
-```
-
-**Note:** Character-specific outfits can also be defined within individual character files in the `characters/` folder.
-
-### `poses.md` & `scenes.md`
-
-These files contain presets for poses and scenes, organized by category.
-
-**Format:**
-
-```markdown
-## Category Name
-- **Item Name:** description
-```
-
-## UI Resizing & Display
-
-The application features an intelligent resizing system:
-
-- **Adaptive Font Scaling:** Font size automatically adjusts based on window width using smart breakpoints (9-16pt range)
-- **Proportional Panels:** Both the left (controls) and right (preview) panels resize proportionally for balanced viewing
-- **Performance Optimized:** Font updates only trigger on significant size changes (50px+) to prevent excessive reconfiguration
-- **User Control:** Override automatic scaling with manual font adjustments using keyboard shortcuts or the View menu
-
-The resizing system ensures optimal readability whether you're using the app on a small laptop screen or a large desktop monitor.
-
-## Project Structure
-
-```
-promptbuilder/
-├── main.py                 # Application entry point
-├── config.py              # Configuration constants and theme definitions
-├── compat.py              # Python version compatibility utilities
-├── base_prompts.md        # Base art style templates
-├── outfits.md            # Shared outfit definitions
-├── poses.md              # Pose presets
-├── scenes.md             # Scene presets
-├── characters/           # Individual character files
-│   ├── character_name.md
-│   └── ...
-├── presets/              # Saved user presets
-├── core/                 # Core prompt building logic
-│   ├── builder.py        # PromptBuilder class
-│   └── renderers.py      # Prompt rendering
-├── logic/                # Data loading and validation
-│   ├── data_loader.py    # Markdown file loading
-│   ├── parsers.py        # Markdown parsing utilities
-│   ├── validator.py      # Prompt validation
-│   └── randomizer.py     # Random prompt generation
-├── themes/               # Theme management
-│   └── theme_manager.py  # Theme switching and color schemes
-├── ui/                   # User interface components (modular architecture)
-│   ├── main_window.py    # Main application coordinator (851 lines)
-│   ├── menu_manager.py   # Menu bar creation and management
-│   ├── font_manager.py   # Adaptive font sizing and resize handling
-│   ├── state_manager.py  # Undo/redo and preset coordination
-│   ├── dialog_manager.py # Centralized dialog management
-│   ├── constants.py      # UI-specific constants (throttle delays, sizes)
-│   ├── characters_tab.py # Character selection UI
-│   ├── edit_tab.py       # File editor UI
-│   ├── preview_panel.py  # Prompt preview panel
-│   ├── widgets.py        # Custom widgets (CollapsibleFrame, FlowFrame)
-│   ├── character_creator.py  # Character creation dialog
-│   ├── scene_creator.py      # Scene creation dialog
-│   ├── base_style_creator.py # Base style creation dialog
-│   ├── outfit_creator.py     # Outfit creation dialogs
-│   ├── pose_creator.py       # Pose creation dialog
-│   ├── character_card.py     # Visual gallery character cards
-│   ├── (visual_ui removed)    # Visual gallery mode deprecated and removed
-│   └── searchable_combobox.py # Enhanced combobox widget
-└── utils/                # Utility modules
-    ├── logger.py         # Centralized logging
-    ├── validation.py     # Input validation
-    ├── preferences.py    # User preferences persistence
-    ├── preset_manager.py # Preset save/load
-    ├── undo_manager.py   # Undo/redo functionality
-    ├── tooltip.py        # Tooltip widget
-    └── *_templates.py    # Creator dialog templates
-```
-
-### Modular Architecture
-
-The UI layer uses a **modular manager pattern** for improved maintainability:
-
-- **MenuManager**: Handles all menu creation, theme switching, and menu state
-- **FontManager**: Manages adaptive font scaling based on window size with breakpoint interpolation
-- **StateManager**: Coordinates undo/redo operations and preset management
-- **DialogManager**: Centralizes all user dialogs (welcome, about, shortcuts, errors) with consistent styling
-
-This architecture reduces the main window from 1210 to 851 lines (~30% reduction) while improving code organization and testability.
-
-## Notifications and Non-Blocking Feedback
-
-The app prefers non-blocking notifications to keep the UI fluid and prevent modal dialogs from interrupting small success messages.
-
-- Toasts: short, transient notifications shown by the `ToastManager` when available.
-- Status bar: used as a fallback for screen-reader compatibility and environments without toasts.
-- Modal dialogs: retained for critical errors and long-form content (about, shortcuts, welcome, etc.).
-
-Developer guide:
-
-- Use the centralized helper `utils.notification.notify` to send app notifications. It will try the toast manager, then the status bar, and finally fall back to a modal messagebox.
-
-Example:
-
-```py
-from utils.notification import notify
-notify(root, "Saved", "File saved successfully", level='success')
-```
-
-This centralization keeps notification behavior consistent and simplifies future changes to notification presentation.
-
-## Troubleshooting
-
-### "Python version too old" error
-
-**Problem:** You see an error about Python version being too old.
-
-**Solution:** Upgrade to Python 3.8 or higher:
-- Windows: Download from [python.org](https://www.python.org/downloads/)
-- macOS: `brew install python@3.12`
-- Linux: `sudo apt-get install python3.12` (or use your distro's package manager)
-
-### "tkinter not available" error
-
-**Problem:** Application won't start due to missing tkinter.
-
-**Solution:**
-```bash
-# Ubuntu/Debian
-sudo apt-get install python3-tk
-
-# Fedora/RHEL
-sudo dnf install python3-tkinter
-
-# Arch Linux
-sudo pacman -S tk
-```
-
-On Windows/macOS, tkinter should be included with Python. If it's missing, reinstall Python from python.org.
-
-### Character files not loading
-
-**Problem:** Characters aren't showing up in the dropdown.
-
-**Solution:**
-1. Check that `.md` files exist in the `characters/` folder
-2. Verify file format matches the expected structure (see README)
-3. Run `python main.py --check-compat` to verify setup
-4. Check console output for parsing errors
-
-### Performance issues (lag during typing)
-
-**Problem:** Application feels slow or laggy.
-
-**Solution:** This has been fixed in the latest version with debouncing. Make sure you're running the latest code. If issues persist:
-- Close other applications
-- Try a smaller window size
-- Check Python version (3.11+ recommended for best performance)
-
-### Unicode/emoji display issues
-
-**Problem:** Emoji characters don't display correctly.
-
-**Solution:** This is typically a font issue. The application uses emojis in buttons and labels:
-- Windows: Should work out of the box on Windows 10+
-- macOS: Should work out of the box
-- Linux: Install a font with emoji support (e.g., `fonts-noto-color-emoji`)
-
-For more detailed compatibility information, see [COMPATIBILITY.md](COMPATIBILITY.md).
-
-## Command-Line Options
-
-```bash
-python main.py              # Run normally
-python main.py --version    # Show version info
-python main.py --check-compat  # Check system compatibility
-python main.py --debug      # Run in debug mode (shows full error traces)
-```
+Refer to the `docs/` directory for format examples and templates.
 
 ## Contributing
 
-Contributions are welcome! This project aims to maintain compatibility with Python 3.8+ and uses only standard library modules to minimize dependencies.
+- Keep changes compatible with Python 3.8+.
+- Prefer standard library modules. If you add a dependency, update `requirements.txt` and explain why it is necessary.
+- Avoid import-time side effects; use `Runner` or `if __name__ == '__main__'` to perform runtime initialization.
+- Follow existing style and test any UI code you modify. Run `python -m pytest -q` before opening PRs.
 
-When contributing:
-- Test on multiple Python versions if possible
-- Use only standard library modules
-- Include UTF-8 encoding declarations in new files
-- Follow existing code style and patterns
+If you want, open a PR for larger refactors and include screenshots of UI changes where relevant.
 
-## Changelog
+---
 
-### Version 2.0 (December 2025)
-**Major UX Overhaul with 20+ new features!**
+If you'd like I can also:
+- Add a short `CONTRIBUTING.md` template.
+- Add a small `dev.md` describing how to run and debug the GUI on Windows and common troubleshooting steps.
 
+
+***
+Updated: December 2025
+***
 - ✅ Undo/Redo system (Ctrl+Z/Y)
 - ✅ Presets & Templates (Save/Load configurations)
 - ✅ Smart preferences (Auto-save settings)
