@@ -136,10 +136,26 @@ Platform: {platform.system()} {platform.release()}
             else:
                 summary = callback()
 
-            # Create a dialog with scrollable text
+            # Create a dialog with options and scrollable text
             dialog = tk.Toplevel(self.root)
             dialog.title("Characters Summary")
             dialog.geometry("800x600")
+
+            # Top controls: checkbox to include base outfit and regenerate
+            ctrl_frame = ttk.Frame(dialog)
+            ctrl_frame.pack(fill="x", padx=10, pady=(10, 0))
+
+            include_base_var = tk.BooleanVar(value=False)
+            include_chk = ttk.Checkbutton(
+                ctrl_frame, text="Include Base Outfit", variable=include_base_var
+            )
+            include_chk.pack(side="left")
+
+            include_style_var = tk.BooleanVar(value=False)
+            style_chk = ttk.Checkbutton(
+                ctrl_frame, text="Show Style Notes (//)", variable=include_style_var
+            )
+            style_chk.pack(side="left", padx=(8, 0))
 
             # Add scrollbar and text widget
             frame = ttk.Frame(dialog)
@@ -154,8 +170,48 @@ Platform: {platform.system()} {platform.release()}
             text_widget.pack(side="left", fill="both", expand=True)
             scrollbar.config(command=text_widget.yview)
 
+            def regenerate_summary(*args):
+                try:
+                    # Recompute summary using the same discovery logic as above
+                    from pathlib import Path
+
+                    project_root = Path(__file__).resolve().parents[1]
+                    data_chars = project_root / "data" / "characters"
+                    legacy_chars = project_root / "characters"
+                    if data_chars.exists():
+                        new_summary = generate_summary(
+                            data_chars,
+                            include_base=include_base_var.get(),
+                            include_style=include_style_var.get(),
+                        )
+                    elif legacy_chars.exists():
+                        new_summary = generate_summary(
+                            legacy_chars,
+                            include_base=include_base_var.get(),
+                            include_style=include_style_var.get(),
+                        )
+                    else:
+                        new_summary = generate_summary(
+                            include_base=include_base_var.get(), include_style=include_style_var.get()
+                        )
+                except Exception:
+                    from utils import logger
+
+                    logger.exception("Auto-captured exception")
+                    new_summary = generate_summary(include_base=include_base_var.get())
+
+                text_widget.config(state="normal")
+                text_widget.delete("1.0", "end")
+                text_widget.insert("1.0", new_summary)
+                text_widget.config(state="disabled")
+
+            # Initial fill
             text_widget.insert("1.0", summary)
             text_widget.config(state="disabled")  # Make read-only
+
+            # Bind checkbox changes to regenerate
+            include_base_var.trace_add("write", regenerate_summary)
+            include_style_var.trace_add("write", regenerate_summary)
 
             # Add close button
             close_btn = ttk.Button(dialog, text="Close", command=dialog.destroy)

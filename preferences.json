@@ -1,7 +1,7 @@
 {
-  "window_geometry": "1768x901+-1235+53",
-  "last_theme": "Tokyo Night",
-  "last_base_prompt": "Anime Style: \"Dynamic Cel-Shaded\"",
+  "window_geometry": "2560x1349+-1342+80",
+  "last_theme": "Packers Dark",
+  "last_base_prompt": "Photorealistic: \"High-Fidelity Candid\"",
   "font_adjustment": 0,
   "recent_characters": [],
   "favorite_characters": [],
@@ -11,5 +11,7 @@
   "sash_position": null,
   "auto_theme": false,
   "ui_mode": "classic",
-  "window_state": "zoomed"
+  "window_state": "zoomed",
+  "gallery_visible": true,
+  "custom_themes": {}
 }

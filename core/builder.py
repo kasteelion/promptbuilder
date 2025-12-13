@@ -1,6 +1,7 @@
 from typing import Any, Dict, List
 
 from .renderers import CharacterRenderer, NotesRenderer, OutfitRenderer, PoseRenderer, SceneRenderer
+from utils.text_utils import normalize_blank_lines
 
 
 class PromptBuilder:
@@ -62,5 +63,5 @@ class PromptBuilder:
         notes = config.get("notes", "")
         if notes:
             parts.append(NotesRenderer.render(notes))
-
-        return "\n\n".join([p for p in parts if p]).strip()
+        out = "\n\n".join([p for p in parts if p])
+        return normalize_blank_lines(out)

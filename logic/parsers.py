@@ -24,50 +24,71 @@ class MarkdownParser:
         ### Outfit Name
         Outfit description...
         """
-        shared_outfits = {"Common": {}}
+        # Parse all sections (##) and their outfits (###). Return a dict
+        # mapping section_name -> {outfit_name: description, ...}
+        shared_outfits: dict = {}
 
         current_section = None
         current_outfit = None
-        current_desc = []
+        current_desc: list[str] = []
 
         for line in content.splitlines():
             # Detect section headers (##)
-            section_match = re.match(r"^##\s+(.+)$", line)
+            section_match = _SECTION_RE.match(line)
             if section_match:
                 # Save previous outfit if exists
-                if current_outfit and current_desc:
-                    if current_section == "Common Outfits":
-                        shared_outfits["Common"][current_outfit] = "\n".join(current_desc).strip()
+                if current_section is not None and current_outfit and current_desc:
+                    shared_outfits.setdefault(current_section, {})[current_outfit] = "\n".join(
+                        current_desc
+                    ).strip()
 
                 current_section = section_match.group(1).strip()
+                # Initialize section bucket
+                shared_outfits.setdefault(current_section, {})
                 current_outfit = None
                 current_desc = []
                 continue
 
-            # Detect outfit headers (###) in Common
-            outfit_match = re.match(r"^###\s+(.+)$", line)
-            if outfit_match and current_section == "Common Outfits":
+            # Detect outfit headers (###)
+            outfit_match = _SUBSECTION_RE.match(line)
+            if outfit_match and current_section is not None:
                 # Save previous outfit if exists
                 if current_outfit and current_desc:
-                    shared_outfits["Common"][current_outfit] = "\n".join(current_desc).strip()
+                    shared_outfits.setdefault(current_section, {})[current_outfit] = "\n".join(
+                        current_desc
+                    ).strip()
 
                 current_outfit = outfit_match.group(1).strip()
                 current_desc = []
                 continue
 
-            # Accumulate outfit description
+            # Accumulate outfit description lines if we are within an outfit
             if current_outfit is not None:
-                if line.strip():  # Skip empty lines at the start
+                # Skip leading empty lines, but preserve internal blank lines
+                if line.strip():
                     current_desc.append(line)
-                elif current_desc:  # Keep empty lines within description
+                elif current_desc:
                     current_desc.append(line)
 
         # Save last outfit if exists
-        if current_outfit and current_desc:
-            if current_section == "Common Outfits":
-                shared_outfits["Common"][current_outfit] = "\n".join(current_desc).strip()
+        if current_section is not None and current_outfit and current_desc:
+            shared_outfits.setdefault(current_section, {})[current_outfit] = "\n".join(
+                current_desc
+            ).strip()
 
-        return shared_outfits
+        # Normalize section names for backwards compatibility: map any
+        # section containing the word 'common' to the 'Common' key.
+        normalized: dict = {}
+        for sec_name, outfits in shared_outfits.items():
+            if "common" in sec_name.lower():
+                normalized.setdefault("Common", {}).update(outfits)
+            else:
+                normalized[sec_name] = outfits
+
+        # Ensure at least a 'Common' key exists for older callers/tests
+        normalized.setdefault("Common", {})
+
+        return normalized
 
     @staticmethod
     def parse_characters(content: str):
@@ -93,6 +114,14 @@ class MarkdownParser:
 
             app_match = _APPEARANCE_RE.search(body)
             appearance = app_match.group(1).strip() if app_match else ""
+
+            # Remove HTML comment blocks from appearance (legacy marker)
+            appearance = re.sub(r"(?s)<!--.*?-->", "", appearance).strip()
+
+            # Support '//' style notes: drop any lines starting with '//' (trim leading whitespace)
+            if appearance:
+                lines = [ln for ln in appearance.splitlines() if not re.match(r"^\s*//", ln)]
+                appearance = "\n".join(lines).strip()
 
             outfits = {}
 

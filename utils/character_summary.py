@@ -11,7 +11,7 @@ from pathlib import Path
 from .logger import logger
 
 
-def extract_appearance(file_path):
+def extract_appearance(file_path, include_base=False):
     """Extract appearance section from a character markdown file.
 
     Args:
@@ -39,19 +39,51 @@ def extract_appearance(file_path):
     outfits_start = content.find("**Outfits:**")
 
     if appearance_start == -1:
-        return character_name, "No appearance section found."
-
-    if outfits_start == -1:
-        # If no outfits section, take everything after appearance
-        appearance_text = content[appearance_start + len("**Appearance:**") :].strip()
+        appearance_text = "No appearance section found."
     else:
-        # Extract only the appearance section
-        appearance_text = content[appearance_start + len("**Appearance:**") : outfits_start].strip()
+        if outfits_start == -1:
+            # If no outfits section, take everything after appearance
+            appearance_text = content[appearance_start + len("**Appearance:**") :].strip()
+        else:
+            # Extract only the appearance section
+            appearance_text = content[appearance_start + len("**Appearance:**") : outfits_start].strip()
 
-    return character_name, appearance_text
+    # Capture style notes: HTML comment blocks and lines starting with '//' (preserve their content)
+    import re
+
+    style_notes_parts = []
+    # Find HTML comment blocks inside the appearance section
+    for m in re.finditer(r"(?s)<!--\s*(.*?)\s*-->", appearance_text):
+        inner = m.group(1).strip()
+        if inner:
+            style_notes_parts.append(inner)
+
+    # Find lines starting with // and capture their text (without the //)
+    for ln in appearance_text.splitlines():
+        sm = re.match(r"^\s*//\s?(.*)$", ln)
+        if sm:
+            style_notes_parts.append(sm.group(1).rstrip())
+
+    style_notes = "\n".join(style_notes_parts).strip() if style_notes_parts else None
+
+    # Remove HTML comment blocks (legacy) and lines starting with '//' used for style notes
+    appearance_text = re.sub(r"(?s)<!--.*?-->", "", appearance_text).strip()
+    if appearance_text:
+        appearance_lines = [ln for ln in appearance_text.splitlines() if not re.match(r"^\s*//", ln)]
+        appearance_text = "\n".join(appearance_lines).strip()
+
+    base_outfit = None
+    if include_base and outfits_start != -1:
+        # Try to capture the '#### Base' block under outfits
+        outfits_block = content[outfits_start:]
+        m = re.search(r"####\s+Base\s*(.*?)(?:\n####\s+|\Z)", outfits_block, re.DOTALL)
+        if m:
+            base_outfit = m.group(1).strip()
+
+    return character_name, appearance_text, base_outfit, style_notes
 
 
-def generate_summary(characters_dir=None):
+def generate_summary(characters_dir=None, include_base=False, include_style=False):
     """Generate a summary of all character appearances.
 
     Args:
@@ -74,17 +106,29 @@ def generate_summary(characters_dir=None):
     summary_parts = ["=" * 80, "CHARACTER APPEARANCES SUMMARY", "=" * 80, ""]
 
     for i, md_file in enumerate(md_files, 1):
-        name, appearance = extract_appearance(md_file)
+        name, appearance, base_outfit, style_notes = extract_appearance(
+            md_file, include_base=include_base
+        )
         summary_parts.append(f"[{i}] {name}")
         summary_parts.append("-" * 80)
         summary_parts.append(appearance)
+        if include_base and base_outfit:
+            summary_parts.append("")
+            summary_parts.append("Base Outfit:")
+            summary_parts.append(base_outfit)
+        if include_style and style_notes:
+            summary_parts.append("")
+            summary_parts.append("Style Notes:")
+            summary_parts.append(style_notes)
         summary_parts.append("")
 
     summary_parts.append("=" * 80)
     summary_parts.append(f"Total Characters: {len(md_files)}")
     summary_parts.append("=" * 80)
 
-    return "\n".join(summary_parts)
+    from .text_utils import normalize_blank_lines
+
+    return normalize_blank_lines("\n".join(summary_parts))
 
 
 def main():

@@ -6,6 +6,89 @@ import tkinter.font as tkfont
 from config import THEMES
 from ui.constants import DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
 from utils import logger
+import os
+
+
+def _parse_themes_md(path: str):
+    """Parse a simple themes.md file format.
+
+    Format: sections headed by '## Theme Name' followed by a ```yaml block
+    containing simple `key: value` lines. Returns dict[name] = {k: v}
+    """
+    themes = {}
+    if not os.path.exists(path):
+        return themes
+
+    with open(path, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    name = None
+    in_yaml = False
+    buf = []
+    for ln in lines:
+        s = ln.strip()
+        if s.startswith("## "):
+            # flush previous
+            if name and buf:
+                themes[name] = _parse_yaml_like(buf)
+            name = s[3:].strip()
+            buf = []
+            in_yaml = False
+            continue
+        if s.startswith("```"):
+            # toggle yaml block
+            if not in_yaml:
+                in_yaml = True
+                buf = []
+            else:
+                # close block
+                in_yaml = False
+                if name:
+                    themes[name] = _parse_yaml_like(buf)
+                buf = []
+            continue
+        if in_yaml:
+            buf.append(ln.rstrip("\n"))
+
+    # flush if file ended while in block
+    if name and buf:
+        themes[name] = _parse_yaml_like(buf)
+
+    return themes
+
+
+def _parse_yaml_like(lines):
+    d = {}
+    for ln in lines:
+        # simple key: value parsing
+        if not ln.strip() or ln.strip().startswith("#"):
+            continue
+        if ":" not in ln:
+            continue
+        k, v = ln.split(":", 1)
+        k = k.strip()
+        v = v.strip()
+        # strip quotes
+        if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
+            v = v[1:-1]
+        d[k] = v
+    return d
+
+
+def _write_themes_md(path: str, themes: dict):
+    lines = ["# Themes (auto-generated)\n", "# You can edit or add themes below. Each theme is a header and a YAML block.\n\n"]
+    for name in sorted(themes.keys()):
+        lines.append(f"## {name}\n")
+        lines.append("```yaml\n")
+        vals = themes[name]
+        for k, v in vals.items():
+            # ensure value is quoted to be safe
+            lines.append(f"{k}: \"{v}\"\n")
+        lines.append("```\n\n")
+
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        f.writelines(lines)
 
 
 class ThemeManager:
@@ -31,6 +114,18 @@ class ThemeManager:
         except tk.TclError as e:
             logger.debug(f"Could not set clam theme: {e}")
 
+        # Load additional themes from data/themes.md if present
+        try:
+            md_path = os.path.join(os.getcwd(), "data", "themes.md")
+            md_themes = _parse_themes_md(md_path)
+            # Merge: md themes override builtins
+            if md_themes:
+                merged = dict(self.themes)
+                merged.update(md_themes)
+                self.themes = merged
+        except Exception:
+            logger.debug("Failed to load themes from themes.md")
+
     def apply_theme(self, theme_name):
         """Apply a theme to all ttk styles and return theme colors.
 
@@ -53,6 +148,111 @@ class ThemeManager:
         self.root.config(bg=theme["bg"])
 
         return theme
+
+    def add_theme(self, name: str, theme_vals: dict):
+        """Add or update a theme at runtime.
+
+        Args:
+            name: Theme name
+            theme_vals: Dictionary of theme values (colors)
+        """
+        try:
+            self.themes[name] = theme_vals
+        except Exception:
+            logger.exception(f"Failed to add theme {name}")
+
+    def save_themes_md(self, path: str = None):
+        """Write non-default and overridden themes to `data/themes.md`.
+
+        The file will contain themes that are either new or differ from built-in defaults.
+        """
+        try:
+            if path is None:
+                path = os.path.join(os.getcwd(), "data", "themes.md")
+            # Only persist themes that are new or different from built-ins
+            built_in = THEMES
+            to_write = {}
+            for name, vals in self.themes.items():
+                if name not in built_in or built_in.get(name) != vals:
+                    to_write[name] = vals
+            _write_themes_md(path, to_write)
+        except Exception:
+            logger.exception("Failed to save themes to themes.md")
+
+    def migrate_from_prefs(self, prefs):
+        """Migrate `custom_themes` from PreferencesManager into data/themes.md.
+
+        This is intended as a one-time migration: after writing to themes.md,
+        the prefs key `custom_themes` will be cleared (set to empty dict) so
+        the migration won't re-run.
+        Returns True if migration performed, False otherwise.
+        """
+        try:
+            custom = prefs.get("custom_themes", {}) or {}
+            if not custom:
+                return False
+
+            # Read existing md themes and merge (md earlier than prefs)
+            md_path = os.path.join(os.getcwd(), "data", "themes.md")
+            md_themes = _parse_themes_md(md_path) or {}
+            merged = dict(md_themes)
+            # prefs should override md
+            merged.update(custom)
+
+            # Write merged themes back to md
+            _write_themes_md(md_path, merged)
+
+            # Clear prefs custom_themes to avoid re-migration
+            try:
+                prefs.set("custom_themes", {})
+            except Exception:
+                # Best-effort: if prefs.set fails, continue
+                logger.debug("Failed to clear custom_themes from prefs after migration")
+
+            # Update runtime themes map
+            self.themes = dict(THEMES)
+            self.themes.update(merged)
+
+            return True
+        except Exception:
+            logger.exception("Failed to migrate themes from prefs to themes.md")
+            return False
+
+    def reload_md_themes(self, path: str = None):
+        """Reload themes from `data/themes.md` and merge them into runtime themes.
+
+        This re-parses the markdown file and updates `self.themes` so callers
+        (e.g., a Reload action) can pick up manual edits to the file.
+        """
+        try:
+            if path is None:
+                path = os.path.join(os.getcwd(), "data", "themes.md")
+            md_themes = _parse_themes_md(path) or {}
+            # Merge: md themes override built-ins but preserve other runtime themes
+            merged = dict(THEMES)
+            merged.update(md_themes)
+            # Preserve any runtime-only themes
+            for k, v in list(self.themes.items()):
+                if k not in merged:
+                    merged[k] = v
+
+            self.themes = merged
+            return True
+        except Exception:
+            logger.exception("Failed to reload themes.md into ThemeManager")
+            return False
+
+    def remove_theme(self, name: str):
+        """Remove a theme if it exists.
+
+        Args:
+            name: Theme name
+        """
+        try:
+            if name in self.themes:
+                del self.themes[name]
+        except Exception:
+            logger.exception(f"Failed to remove theme {name}")
 
     def _update_ttk_styles(self, theme):
         """Update all ttk widget styles with theme colors."""

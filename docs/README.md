@@ -6,7 +6,6 @@ This directory contains all documentation for Prompt Builder.
 
 ### User Documentation
 - **[README.md](../README.md)** - Main project README with installation and usage guide
-- **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - Quick reference for keyboard shortcuts and features
 - **[INTERACTION_TEMPLATES.md](INTERACTION_TEMPLATES.md)** - Guide to using multi-character interaction templates
   
 **Note:** The experimental Visual Gallery UI has been deprecated and removed from the codebase. Archived notes are available at `VISUAL_UI_GUIDE.md` and `VISUAL_UI_IMPLEMENTATION.md` if you need historical reference.
@@ -18,7 +17,7 @@ This directory contains all documentation for Prompt Builder.
 ## Getting Started
 
 1. **New users**: Start with the main [README.md](../README.md)
-2. **Quick reference**: See [QUICK_REFERENCE.md](QUICK_REFERENCE.md) for keyboard shortcuts and tips
+2. **Quick reference**: Keyboard shortcuts and quick tips are available in the main [README.md](../README.md)
 3. **Interaction templates**: Learn about the new multi-character interaction feature in [INTERACTION_TEMPLATES.md](INTERACTION_TEMPLATES.md)
 4. **Visual mode**: Learn about the experimental gallery UI in [VISUAL_UI_GUIDE.md](VISUAL_UI_GUIDE.md)
 5. **Compatibility**: Check [COMPATIBILITY.md](COMPATIBILITY.md) for Python version requirements

@@ -2,6 +2,7 @@
 """Menu bar management for the application."""
 
 import tkinter as tk
+from tkinter import messagebox
 from typing import Callable, Dict
 
 from config import THEMES
@@ -154,16 +155,70 @@ class MenuManager:
         Args:
             parent_menu: Parent menu to add theme submenu to
         """
-        theme_menu = tk.Menu(parent_menu, tearoff=0)
-        parent_menu.add_cascade(label="Theme", menu=theme_menu)
+        self.theme_menu = tk.Menu(parent_menu, tearoff=0)
+        parent_menu.add_cascade(label="Theme", menu=self.theme_menu)
 
-        for theme_name in THEMES.keys():
-            theme_menu.add_radiobutton(
-                label=theme_name,
-                variable=self.theme_var,
-                value=theme_name,
-                command=lambda t=theme_name: self.callbacks["change_theme"](t),
-            )
+        # Populate menu entries
+        self._populate_theme_menu()
+
+    def _populate_theme_menu(self):
+        """(Re)build the theme submenu entries and icons."""
+        # Clear existing items if any
+        try:
+            self.theme_menu.delete(0, "end")
+        except Exception:
+            pass
+
+        # Use a supplier callback if provided so themes can be dynamic
+        supplier = self.callbacks.get("get_themes", lambda: THEMES)
+        themes = supplier() or THEMES
+
+        # Prepare small color swatch images for each theme (keep references to avoid GC)
+        self._theme_icons = {}
+        for theme_name, theme_vals in themes.items():
+            color = theme_vals.get("accent") or theme_vals.get("preview_fg") or "#888888"
+            try:
+                img = tk.PhotoImage(width=12, height=12)
+                img.put(color, to=(0, 0, 12, 12))
+            except Exception:
+                img = None
+            self._theme_icons[theme_name] = img
+
+        for theme_name in sorted(themes.keys()):
+            img = self._theme_icons.get(theme_name)
+            if img is not None:
+                self.theme_menu.add_radiobutton(
+                    label=theme_name,
+                    variable=self.theme_var,
+                    value=theme_name,
+                    image=img,
+                    compound="left",
+                    command=lambda t=theme_name: self.callbacks["change_theme"](t),
+                )
+            else:
+                self.theme_menu.add_radiobutton(
+                    label=theme_name,
+                    variable=self.theme_var,
+                    value=theme_name,
+                    command=lambda t=theme_name: self.callbacks["change_theme"](t),
+                )
+
+        # Editor entry
+        self.theme_menu.add_separator()
+        self.theme_menu.add_command(
+            label="Edit Themes...",
+            command=self.callbacks.get(
+                "open_theme_editor", lambda: messagebox.showinfo("Edit Themes", "No theme editor available")
+            ),
+        )
+
+    def refresh_theme_menu(self):
+        """Public method to refresh theme submenu after runtime changes."""
+        try:
+            self._populate_theme_menu()
+        except Exception:
+            # best effort
+            pass
 
     def _build_help_menu(self):
         """Build Help menu."""

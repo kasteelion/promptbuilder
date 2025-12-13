@@ -321,7 +321,19 @@ class PreviewPanel:
 
         error = self.validate_callback()
         if error:
-            messagebox.showwarning("Cannot Copy", error)
+            # Prefer toast -> status -> modal for validation warnings
+            if self.toast_callback:
+                try:
+                    self.toast_callback(error, "warning", 3500)
+                except Exception:
+                    logger.exception("Toast callback failed while copying prompt (warning)")
+            elif self.status_callback:
+                try:
+                    self.status_callback(error)
+                except Exception:
+                    logger.exception("Status callback failed while copying prompt (warning)")
+            else:
+                messagebox.showwarning("Cannot Copy", error)
             return
 
         prompt = self.get_prompt_callback()
@@ -454,7 +466,19 @@ class PreviewPanel:
 
         error = self.validate_callback()
         if error:
-            messagebox.showwarning("Cannot Save", error)
+            # Prefer toast -> status -> modal for validation warnings
+            if self.toast_callback:
+                try:
+                    self.toast_callback(error, "warning", 3500)
+                except Exception:
+                    logger.exception("Toast callback failed while saving prompt (warning)")
+            elif self.status_callback:
+                try:
+                    self.status_callback(error)
+                except Exception:
+                    logger.exception("Status callback failed while saving prompt (warning)")
+            else:
+                messagebox.showwarning("Cannot Save", error)
             return
 
         prompt = self.get_prompt_callback()

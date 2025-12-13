@@ -81,6 +81,13 @@ class PromptBuilderApp:
         from .toast import ToastManager
 
         self.toasts = ToastManager(self.root, self.theme_manager)
+        # Expose toast manager and status updater on the root so DialogManager
+        # and other helpers can prefer non-blocking notifications.
+        try:
+            self.root.toasts = self.toasts
+            self.root._update_status = self._update_status
+        except Exception:
+            logger.exception("Failed to attach toasts/status to root")
 
         # Throttling for preview updates
         self._after_id: Optional[str] = None
@@ -181,11 +188,13 @@ class PromptBuilderApp:
             "reset_font": self.menu_actions.reset_font,
             "randomize_all": self.menu_actions.randomize_all,
             "change_theme": self.menu_actions.change_theme,
+            "get_themes": lambda: self.theme_manager.themes,
             "toggle_auto_theme": self.menu_actions.toggle_auto_theme,
             "show_characters_summary": self.menu_actions.show_characters_summary,
             "show_welcome": self.menu_actions.show_welcome,
             "show_shortcuts": self.menu_actions.show_shortcuts,
             "show_about": self.menu_actions.show_about,
+            "open_theme_editor": self._open_theme_editor,
             "on_closing": self.menu_actions.on_closing,
             "initial_theme": self.prefs.get("last_theme", DEFAULT_THEME),
             "auto_theme_enabled": self.prefs.get("auto_theme", False),
@@ -467,16 +476,27 @@ class PromptBuilderApp:
             ("<Control-G>", lambda e: self._toggle_character_gallery()),
         ]
 
+        import inspect
+
         for key, handler in shortcuts:
-            # Wrap handlers that don't expect an event
-            if callable(handler) and handler.__name__ in [
-                "_increase_font",
-                "_decrease_font",
-                "_reset_font",
-            ]:
-                self.root.bind(key, lambda e, h=handler: h())
-            else:
-                self.root.bind(key, lambda e, h=handler: h())
+            # Determine whether handler expects an event parameter.
+            try:
+                sig = inspect.signature(handler)
+                # Count positional parameters (exclude VAR_POSITIONAL/VAR_KEYWORD)
+                pos_params = [
+                    p
+                    for p in sig.parameters.values()
+                    if p.kind in (p.POSITIONAL_ONLY, p.POSITIONAL_OR_KEYWORD)
+                ]
+                if len(pos_params) == 0:
+                    # Handler expects no args
+                    self.root.bind(key, lambda e, h=handler: h())
+                else:
+                    # Handler expects at least one arg (event)
+                    self.root.bind(key, lambda e, h=handler: h(e))
+            except (ValueError, TypeError):
+                # Fallback: call with event argument
+                self.root.bind(key, lambda e, h=handler: h(e))
 
     def _update_scene_presets(self):
         """Update scene preset combo based on selected category."""
@@ -646,6 +666,20 @@ class PromptBuilderApp:
         dialog = SceneCreatorDialog(self.root, self.data_loader, self.reload_data)
         dialog.show()
 
+    def _open_theme_editor(self):
+        """Open the Theme Editor dialog to create/edit custom themes."""
+        try:
+            from .theme_editor import ThemeEditorDialog
+
+            dlg = ThemeEditorDialog(
+                self.root, self.theme_manager, self.prefs, on_theme_change=self.menu_manager.refresh_theme_menu
+            )
+            dlg.show()
+        except Exception:
+            from utils import logger as _logger
+
+            _logger.exception("Failed to open Theme Editor")
+
     def _set_initial_fonts(self):
         """Set initial fonts on text widgets."""
         font = (DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE)
@@ -788,6 +822,22 @@ class PromptBuilderApp:
         self.root.config(cursor="watch")
         self.root.update()
 
+        # One-time migration: if user previously stored custom themes in preferences,
+        # migrate them into data/themes.md and clear the prefs key.
+        try:
+            migrated = False
+            if hasattr(self, "theme_manager") and self.theme_manager:
+                migrated = self.theme_manager.migrate_from_prefs(self.prefs)
+            if migrated:
+                # refresh menu to reflect migrated themes
+                try:
+                    if hasattr(self, "menu_manager") and self.menu_manager:
+                        self.menu_manager.refresh_theme_menu()
+                except Exception:
+                    logger.debug("Failed to refresh theme menu after migration")
+        except Exception:
+            logger.exception("Theme migration failed during reload")
+
         try:
             new_characters = self.data_loader.load_characters()
             self.base_prompts = self.data_loader.load_base_prompts()
@@ -831,6 +881,22 @@ class PromptBuilderApp:
         self.characters_tab.load_data(self.characters, self.base_prompts, self.poses)
         self._update_scene_presets()  # Reload scene presets in UI
         self.edit_tab._refresh_file_list()  # Refresh file list to show new character files
+
+        # Reload themes.md into ThemeManager so manual edits are picked up
+        try:
+            if hasattr(self, "theme_manager") and self.theme_manager:
+                self.theme_manager.reload_md_themes()
+                # re-apply currently selected theme (from prefs)
+                current = self.prefs.get("last_theme") or None
+                if current:
+                    try:
+                        self._apply_theme(current)
+                        if hasattr(self, "menu_manager") and self.menu_manager:
+                            self.menu_manager.refresh_theme_menu()
+                    except Exception:
+                        logger.debug("Failed to re-apply theme after reload")
+        except Exception:
+            logger.exception("Failed to reload themes during data reload")
 
         # Reload character gallery
         if hasattr(self, "gallery_controller") and self.gallery_controller:

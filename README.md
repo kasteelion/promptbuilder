@@ -10,7 +10,7 @@ A desktop application to help build complex and detailed prompts for AI image ge
 - **📁 Organized Data Structure** - Individual character files with shared and character-specific outfits
 - **🔄 Live Preview** - Real-time prompt generation with syntax highlighting
 - **🎲 Randomization** - Randomize characters, poses, and prompts for creative inspiration
-- **🌙 Theme Support** - 8 themes including auto-detection for your OS dark/light mode
+- **🌙 Theme Support** - Multiple built-in themes and runtime-customizable themes (Theme Editor)
 
 ### Advanced Features
 - **⏪ Undo/Redo** - Full undo/redo support (`Ctrl+Z`/`Ctrl+Y`) for all operations
@@ -23,15 +23,14 @@ A desktop application to help build complex and detailed prompts for AI image ge
 - **📤 Export/Import** - Share configurations as JSON files
 - **🎓 Welcome Guide** - First-run tutorial to get you started quickly
 - **💬 Better Errors** - User-friendly error messages with actionable suggestions
-- **🎴 Visual Gallery** - Optional visual character browser with photo support (experimental)
-- **🎴 Visual Gallery** - Optional visual character browser with photo support (experimental). Note: this feature has been deprecated/removed from the runtime; see `docs/VISUAL_UI_GUIDE.md` for archived implementation and migration notes.
+- **🎴 Visual Gallery (archived)** - An experimental visual character browser was previously included; it has been removed from runtime. See `docs/VISUAL_UI_GUIDE.md` for archived notes and migration guidance.
 - **🔍 Character Search** - Quick filter to find characters in large collections
 - **🌊 Drag & Drop** - Reorder characters by dragging (in character list)
 - **🤝 Interaction Templates** - Pre-built multi-character interaction templates (NEW!)
 
 ## Requirements
 
-- **Python 3.8 or higher** (Tested on Python 3.8 through 3.14)
+- **Python 3.8 or higher**
 - **tkinter** (Usually included with Python, but may need separate installation on some Linux distributions)
 - **Zero external dependencies** - Uses only Python standard library
 
@@ -102,6 +101,8 @@ Available templates include:
 - **Two-character interactions:** Conversation, Dancing Together, High Five, Handshake, Working Together, and more
 - **Multi-character interactions:** Group Discussion, Circle Formation, Team Pose, Chain Reaction
 - **Create your own:** Click "+ Create" to make custom interaction templates
+
+See `docs/CHARACTER_FLEXIBILITY_GUIDE.md` for guidance on writing flexible character definitions, and `docs/INTERACTION_TEMPLATES.md` for more interaction template examples.
 
 6.  **Add Notes:** Include any additional details or modifications in the Notes tab.
 

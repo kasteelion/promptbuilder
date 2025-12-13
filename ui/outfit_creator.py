@@ -157,7 +157,8 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
 
     def _load_categories(self):
         """Load existing outfit categories."""
-        outfits_file = self.data_loader.base_dir / "outfits.md"
+        # Use DataLoader helper to locate the outfits file (supports data/ folder)
+        outfits_file = self.data_loader._find_data_file("outfits.md")
         categories = []
 
         if outfits_file.exists():
@@ -205,7 +206,8 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
             )
             return
 
-        outfits_file = self.data_loader.base_dir / "outfits.md"
+        # Locate the outfits file via DataLoader so we respect data/ vs root locations
+        outfits_file = self.data_loader._find_data_file("outfits.md")
 
         try:
             if outfits_file.exists():
@@ -424,10 +426,11 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
             )
             return
 
-        # Find character file
-        char_filename = self.character_name.lower().replace(" ", "_").replace("-", "_")
-        char_filename = "\u0022".join(c for c in char_filename if c.isalnum() or c == "_")
-        char_filename = f"{char_filename}.md"
+        # Find character file (sanitize filename using shared utility)
+        from utils.validation import sanitize_filename
+
+        safe_name = sanitize_filename(self.character_name)
+        char_filename = f"{safe_name.lower()}.md"
 
         chars_dir = self.data_loader._find_characters_dir()
         char_file = chars_dir / char_filename

@@ -156,6 +156,14 @@ class CharactersTab:
         self.bulk_outfit_combo.bind("<Return>", lambda e: self._apply_bulk_outfit())
         create_tooltip(self.bulk_outfit_combo, "Choose an outfit to apply to selected characters")
 
+        # Lock checkbox: when checked, keep the selected outfit after applying
+        self.bulk_lock_var = tk.BooleanVar(value=False)
+        self.bulk_lock_chk = ttk.Checkbutton(
+            bulk, text="Lock", variable=self.bulk_lock_var, width=5
+        )
+        self.bulk_lock_chk.grid(row=1, column=2, sticky="w", padx=(6, 0))
+        create_tooltip(self.bulk_lock_chk, "Keep the selected outfit after applying")
+
         # Preview/status label
         self.bulk_preview_var = tk.StringVar(value="")
         self.bulk_preview_label = ttk.Label(
@@ -296,7 +304,9 @@ class CharactersTab:
 
         self._refresh_list()
         self.on_change()
-        self.bulk_outfit_var.set("")  # Clear for next use
+        # Clear selection only if not locked
+        if not getattr(self, "bulk_lock_var", None) or not self.bulk_lock_var.get():
+            self.bulk_outfit_var.set("")  # Clear for next use
 
         # Show status feedback
         root = self.tab.winfo_toplevel()
@@ -323,7 +333,8 @@ class CharactersTab:
             self.selected_characters[0]["outfit"] = outfit_name
             self._refresh_list()
             self.on_change()
-            self.bulk_outfit_var.set("")
+            if not getattr(self, "bulk_lock_var", None) or not self.bulk_lock_var.get():
+                self.bulk_outfit_var.set("")
 
             root = self.tab.winfo_toplevel()
             if hasattr(root, "_update_status"):
@@ -393,7 +404,8 @@ class CharactersTab:
             result["selected"]["outfit"] = outfit_name
             self._refresh_list()
             self.on_change()
-            self.bulk_outfit_var.set("")
+            if not getattr(self, "bulk_lock_var", None) or not self.bulk_lock_var.get():
+                self.bulk_outfit_var.set("")
 
             root = self.tab.winfo_toplevel()
             if hasattr(root, "_update_status"):
