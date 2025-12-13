@@ -3,7 +3,10 @@
 
 import tkinter as tk
 
-from ui.constants import TOOLTIP_DELAY_MS
+# Avoid importing `ui.constants` at module import time to prevent
+# circular imports during application startup. Resolve default
+# `TOOLTIP_DELAY_MS` lazily inside the ToolTip initializer if needed.
+_DEFAULT_TOOLTIP_DELAY_MS = 500
 
 
 class ToolTip:
@@ -19,7 +22,16 @@ class ToolTip:
         """
         self.widget = widget
         self.text = text
-        self.delay = delay if delay is not None else TOOLTIP_DELAY_MS
+        if delay is not None:
+            self.delay = delay
+        else:
+            try:
+                # Lazy import to avoid import cycles
+                from ui.constants import TOOLTIP_DELAY_MS as _td
+
+                self.delay = _td
+            except Exception:
+                self.delay = _DEFAULT_TOOLTIP_DELAY_MS
         self.tooltip_window = None
         self.id = None
         self.widget.bind("<Enter>", self.on_enter)

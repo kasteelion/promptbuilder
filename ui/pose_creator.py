@@ -292,6 +292,8 @@ Example: Standing confidently with feet shoulder-width apart, arms crossed over 
             if self.on_success:
                 self.on_success()
         except Exception as e:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             messagebox.showerror(
                 "Error", 
                 f"Failed to create pose:\n{str(e)}",

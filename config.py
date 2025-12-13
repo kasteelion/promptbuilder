@@ -113,6 +113,10 @@ THEMES = {
 
 DEFAULT_THEME = "Dark"
 
+# Preferences settings
+# Moved out of UI module so non-UI code can import this without importing tkinter
+MAX_RECENT_ITEMS = 10  # Maximum recent items stored in preferences
+
 # Tooltip help text
 TOOLTIPS = {
     "base_prompt": "The base art style that defines the overall look and technique of the image (e.g., 'Anime style', 'Photorealistic', etc.)",

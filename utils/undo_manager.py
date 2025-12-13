@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
-"""Undo/Redo manager for tracking state changes."""
+"""Undo/Redo manager for tracking state changes.
 
-from ui.constants import MAX_UNDO_STACK_SIZE
+This module avoids importing UI-specific constants at import time to
+prevent circular imports. If no `max_history` is provided, a sensible
+default is used.
+"""
 
 
 class UndoManager:
@@ -13,7 +16,9 @@ class UndoManager:
         Args:
             max_history: Maximum number of states to keep in history (defaults to MAX_UNDO_STACK_SIZE)
         """
-        self.max_history = max_history if max_history is not None else MAX_UNDO_STACK_SIZE
+        # Use provided max_history or a reasonable default to avoid importing
+        # UI constants at module import time (which can create circular deps).
+        self.max_history = max_history if max_history is not None else 50
         self.undo_stack = []
         self.redo_stack = []
         self._current_state = None

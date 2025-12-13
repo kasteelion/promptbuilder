@@ -292,6 +292,8 @@ Holographic displays, circuit patterns, rain-slicked atmosphere."""
             if self.on_success:
                 self.on_success()
         except Exception as e:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             messagebox.showerror(
                 "Error", 
                 f"Failed to create base style:\n{str(e)}",

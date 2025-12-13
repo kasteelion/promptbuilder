@@ -47,6 +47,8 @@ class ToastManager:
         try:
             win.attributes('-topmost', True)
         except Exception:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             pass
 
         # Frame and label
@@ -91,6 +93,8 @@ class ToastManager:
                 h = win.winfo_height() or 40
                 win.geometry(f"{w}x{h}+{x0-w}+{y0 - (i*(h + self.gap))}")
         except Exception:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             # Best-effort positioning; ignore if root not mapped
             pass
 
@@ -103,5 +107,7 @@ class ToastManager:
         try:
             win.destroy()
         except Exception:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             pass
         self._reposition()

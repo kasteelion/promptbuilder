@@ -31,14 +31,20 @@ def notify(root: Optional[tk.Misc], title: Optional[str], message: str, level: s
                 root.toasts.notify(message, level, duration)
                 return
             except Exception:
+                from utils import logger
+                logger.exception('Auto-captured exception')
                 pass
         if root is not None and hasattr(root, '_update_status'):
             try:
                 root._update_status(message)
                 return
             except Exception:
+                from utils import logger
+                logger.exception('Auto-captured exception')
                 pass
     except Exception:
+        from utils import logger
+        logger.exception('Auto-captured exception')
         # Defensive: if accessing root fails, fall through to modal
         pass
 

@@ -160,6 +160,8 @@ class CharacterCard(ttk.Frame):
                         self._change_photo()
                     return
             except Exception:
+                from utils import logger
+                logger.exception('Auto-captured exception')
                 # If anything goes wrong resolving the path, fall back to change flow
                 self._change_photo()
                 return
@@ -229,6 +231,8 @@ class CharacterCard(ttk.Frame):
             ttk.Button(btn_frame, text="Close", command=preview_window.destroy).pack(side="right", padx=5)
             
         except Exception as e:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             messagebox.showerror("Error", f"Failed to preview photo:\n{str(e)}")
     
     def _on_edit_clicked(self):
@@ -266,7 +270,7 @@ class CharacterCard(ttk.Frame):
             return full_path
         except ValueError:
             # Path is outside characters directory
-            logger.warning(f"Photo path outside characters directory: {photo_path}")
+            logger.exception(f"Photo path outside characters directory: {photo_path}")
             raise ValueError("Photo path must be within characters directory")
     
     def _load_photo(self):
@@ -283,10 +287,10 @@ class CharacterCard(ttk.Frame):
                 self._display_photo(photo_file)
         except ValueError as e:
             from utils import logger
-            logger.warning(f"Invalid photo path for {self.character_name}: {e}")
+            logger.warning(f"Invalid photo path for {self.character_name}: {e}", exc_info=True)
         except Exception as e:
             from utils import logger
-            logger.error(f"Error loading photo for {self.character_name}: {e}")
+            logger.exception(f"Error loading photo for {self.character_name}: {e}")
     
     def _display_photo(self, photo_path):
         """Display a photo in the canvas.
@@ -388,6 +392,8 @@ class CharacterCard(ttk.Frame):
                 self.on_photo_change(self.character_name, relative_path)
             
         except Exception as e:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             messagebox.showerror(
                 "Error",
                 f"Failed to set photo:\n{str(e)}"

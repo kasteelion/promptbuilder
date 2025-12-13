@@ -3,6 +3,7 @@
 from pathlib import Path
 
 from .parsers import MarkdownParser
+from utils import logger
 
 
 class DataLoader:

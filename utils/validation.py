@@ -3,10 +3,10 @@
 
 import re
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Tuple
 
 
-def validate_character_name(name: str) -> tuple[bool, Optional[str]]:
+def validate_character_name(name: str) -> Tuple[bool, Optional[str]]:
     """Validate a character name.
     
     Args:
@@ -28,7 +28,7 @@ def validate_character_name(name: str) -> tuple[bool, Optional[str]]:
     return True, None
 
 
-def validate_text_length(text: str, max_length: int = 10000, field_name: str = "Text") -> tuple[bool, Optional[str]]:
+def validate_text_length(text: str, max_length: int = 10000, field_name: str = "Text") -> Tuple[bool, Optional[str]]:
     """Validate text length.
     
     Args:
@@ -70,7 +70,7 @@ def sanitize_filename(filename: str) -> str:
     return safe_name
 
 
-def validate_file_path(filepath: Path, allowed_dir: Path) -> tuple[bool, Optional[str]]:
+def validate_file_path(filepath: Path, allowed_dir: Path) -> Tuple[bool, Optional[str]]:
     """Validate that a file path is within an allowed directory.
     
     Args:
@@ -91,10 +91,12 @@ def validate_file_path(filepath: Path, allowed_dir: Path) -> tuple[bool, Optiona
         
         return True, None
     except Exception as e:
+        from utils import logger
+        logger.exception('Auto-captured exception')
         return False, f"Invalid path: {e}"
 
 
-def validate_preset_name(name: str) -> tuple[bool, Optional[str]]:
+def validate_preset_name(name: str) -> Tuple[bool, Optional[str]]:
     """Validate a preset name.
     
     Args:

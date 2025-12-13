@@ -221,6 +221,8 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
             if self.on_success:
                 self.on_success()
         except Exception as e:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             messagebox.showerror("Error", f"Failed to create outfit:\n{str(e)}", parent=self.dialog)
     
     def show(self):
@@ -412,6 +414,8 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
             if self.on_success:
                 self.on_success()
         except Exception as e:
+            from utils import logger
+            logger.exception('Auto-captured exception')
             messagebox.showerror("Error", f"Failed to create outfit:\n{str(e)}", parent=self.dialog)
     
     def show(self):
