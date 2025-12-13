@@ -111,7 +111,7 @@ class CharacterCard(ttk.Frame):
         name_label = ttk.Label(
             self,
             text=self.character_name,
-            font=("Segoe UI", 9, "bold"),
+            style="Bold.TLabel",
             wraplength=110,
             justify="center",
         )
@@ -204,7 +204,7 @@ class CharacterCard(ttk.Frame):
             main_frame.pack(fill="both", expand=True)
 
             # Title
-            title = ttk.Label(main_frame, text=self.character_name, font=("Segoe UI", 14, "bold"))
+            title = ttk.Label(main_frame, text=self.character_name, style="Title.TLabel")
             title.pack(pady=(0, 10))
 
             if HAS_PIL:
@@ -490,7 +490,7 @@ class CharacterGalleryPanel(ttk.Frame):
         header = ttk.Frame(self, style="TFrame")
         header.pack(fill="x", padx=6, pady=(6, 2))
 
-        self.title_label = ttk.Label(header, text="👥 Characters", font=("Segoe UI", 11, "bold"))
+        self.title_label = ttk.Label(header, text="👥 Characters", style="Title.TLabel")
         self.title_label.pack(anchor="w")
 
         self.count_label = ttk.Label(

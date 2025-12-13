@@ -51,7 +51,7 @@ class InteractionCreatorDialog:
         template_frame = ttk.Frame(main_frame)
         template_frame.pack(fill="x", pady=(0, 10))
 
-        ttk.Label(template_frame, text="Template:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(template_frame, text="Template:", style="Bold.TLabel").pack(
             side="left", padx=(0, 5)
         )
 
@@ -71,8 +71,7 @@ class InteractionCreatorDialog:
         self.template_desc_label = ttk.Label(
             template_frame,
             text=get_interaction_template_description("Blank"),
-            foreground="gray",
-            font=("Segoe UI", 8, "italic"),
+            style="Muted.TLabel",
         )
         self.template_desc_label.pack(side="left")
 
@@ -83,8 +82,7 @@ class InteractionCreatorDialog:
         help_label = ttk.Label(
             help_frame,
             text="💡 Tip: Use {char1}, {char2}, {char3} as placeholders for character names",
-            font=("Segoe UI", 9, "bold"),
-            foreground="#0066cc",
+            style="Accent.TLabel",
         )
         help_label.pack(anchor="w", padx=6, pady=4)
 
@@ -103,8 +101,6 @@ The placeholders will be replaced with actual character names when inserted."""
         example_widget = tk.Text(
             help_frame,
             font=("Consolas", 8),
-            foreground="#555555",
-            background="#f0f0f0",
             height=8,
             wrap="word",
             relief="flat",
@@ -118,7 +114,7 @@ The placeholders will be replaced with actual character names when inserted."""
         name_frame = ttk.Frame(main_frame)
         name_frame.pack(fill="x", pady=(0, 10))
 
-        ttk.Label(name_frame, text="Template Name:", font=("Segoe UI", 9)).pack(
+        ttk.Label(name_frame, text="Template Name:", style="Bold.TLabel").pack(
             side="left", padx=(0, 5)
         )
 
@@ -129,7 +125,7 @@ The placeholders will be replaced with actual character names when inserted."""
         desc_frame = ttk.Frame(main_frame)
         desc_frame.pack(fill="x", pady=(0, 10))
 
-        ttk.Label(desc_frame, text="Description:", font=("Segoe UI", 9)).pack(
+        ttk.Label(desc_frame, text="Description:", style="Bold.TLabel").pack(
             side="left", padx=(0, 5)
         )
 
@@ -137,7 +133,7 @@ The placeholders will be replaced with actual character names when inserted."""
         self.desc_entry.pack(side="left", fill="x", expand=True)
 
         # Content editor
-        ttk.Label(main_frame, text="Template Content:", font=("Segoe UI", 9)).pack(
+        ttk.Label(main_frame, text="Template Content:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 5)
         )
 

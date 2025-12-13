@@ -2,84 +2,27 @@
 """Entry point for Prompt Builder application."""
 
 import sys
-import argparse
 
-# Initialize debug logging FIRST
 from debug_log import close_debug_log, init_debug_log, log
 
-init_debug_log()
-log("Starting Prompt Builder...", level=20)
+
+# Note: avoid import-time side effects. Initialize logging and parse CLI
+# inside `main()` so importing this module doesn't start the app.
+
+from cli import parse_cli  # local module for CLI parsing
 
 
-def parse_cli(argv=None):
-    """Parse command-line arguments and return namespace.
+def _check_python_compatibility() -> None:
+    """Exit if Python version is unsupported."""
+    if sys.version_info < (3, 8):
+        from compat import print_version_error
 
-    The parser intentionally keeps only the flags we previously supported so
-    behavior remains unchanged while making future extensions easier.
-    """
-    p = argparse.ArgumentParser(add_help=False)
-    p.add_argument("--check-compat", action="store_true", help=argparse.SUPPRESS)
-    p.add_argument("--version", "-v", action="store_true", help=argparse.SUPPRESS)
-    p.add_argument("--debug", action="store_true", help=argparse.SUPPRESS)
-    return p.parse_args(argv)
+        print_version_error()
+        sys.exit(1)
 
 
-# Check Python version compatibility FIRST (before any other imports)
-if sys.version_info < (3, 8):
-    from compat import print_version_error
-
-    print_version_error()
-    sys.exit(1)
 
 
-# Parse CLI early so flags behave exactly like before
-_cli_args = parse_cli(sys.argv[1:])
-
-if _cli_args.version:
-    print("Prompt Builder")
-    print(f"Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}")
-    print(f"Platform: {sys.platform}")
-    close_debug_log()
-    sys.exit(0)
-
-if _cli_args.check_compat:
-    try:
-        from compat import print_compatibility_report
-
-        print_compatibility_report()
-    except ImportError:
-        print("Compatibility module not found. Basic checks passed.")
-    close_debug_log()
-    sys.exit(0)
-
-
-# Check tkinter availability and import app modules only after compatibility checks
-try:
-    import tkinter as tk
-except ImportError:
-    from compat import print_tkinter_error
-
-    print_tkinter_error()
-    close_debug_log()
-    sys.exit(1)
-
-# Import application modules
-from ui import PromptBuilderApp  # noqa: E402
-from ui.constants import DEFAULT_WINDOW_GEOMETRY  # noqa: E402
-
-
-def create_root(geometry: str = DEFAULT_WINDOW_GEOMETRY):
-    """Create and configure the Tk root window.
-
-    Factored out so the creation is easier to test and reason about.
-    """
-    root = tk.Tk()
-    try:
-        root.geometry(geometry)
-    except Exception:
-        # Non-fatal: if geometry fails, continue with default
-        log("Warning: failed to apply DEFAULT_WINDOW_GEOMETRY", level=30)
-    return root
 
 
 def main(argv=None):
@@ -89,6 +32,59 @@ def main(argv=None):
     any exit path. The function accepts `argv` to make it easier to call from
     tests if needed.
     """
+    # Initialize runtime-only concerns (logging, CLI, compatibility)
+    init_debug_log()
+    log("Starting Prompt Builder...", level=20)
+
+    cli_args = parse_cli(argv or sys.argv[1:])
+
+    # Check Python compatibility before importing GUI-related modules
+    _check_python_compatibility()
+
+    if cli_args.version:
+        print("Prompt Builder")
+        print(f"Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}")
+        print(f"Platform: {sys.platform}")
+        close_debug_log()
+        return 0
+
+    if cli_args.check_compat:
+        try:
+            from compat import print_compatibility_report
+
+            print_compatibility_report()
+        except ImportError:
+            print("Compatibility module not found. Basic checks passed.")
+        close_debug_log()
+        return 0
+
+    # Now that checks are done, ensure tkinter is available and import app
+    try:
+        import tkinter as tk  # imported into local scope
+    except ImportError:
+        from compat import print_tkinter_error
+
+        print_tkinter_error()
+        close_debug_log()
+        return 1
+
+    # Import app modules now that tkinter is available
+    from ui import PromptBuilderApp  # noqa: E402
+    from ui.constants import DEFAULT_WINDOW_GEOMETRY  # noqa: E402
+
+    def create_root(geometry: str = DEFAULT_WINDOW_GEOMETRY):
+        """Create and configure the Tk root window.
+
+        Factored out so the creation is easier to test and reason about.
+        """
+        root = tk.Tk()
+        try:
+            root.geometry(geometry)
+        except Exception:
+            # Non-fatal: if geometry fails, continue with default
+            log("Warning: failed to apply DEFAULT_WINDOW_GEOMETRY", level=30)
+        return root
+
     try:
         log("Creating Tkinter root window...")
         root = create_root()
@@ -117,7 +113,7 @@ def main(argv=None):
         print("An unexpected error occurred. See promptbuilder_debug.log for details.")
 
         # Re-raise in debug mode for developers
-        if _cli_args.debug:
+        if 'cli_args' in locals() and cli_args.debug:
             raise
         return 1
     finally:
@@ -127,6 +123,18 @@ def main(argv=None):
         except Exception:
             # Best-effort cleanup; nothing else we can do safely here
             pass
+
+
+from runner import Runner
+
+
+def main(argv=None):
+    """Compatibility shim: use `Runner` to run the application.
+
+    Keeping a simple `main()` here preserves the original entrypoint
+    layout while delegating logic to `Runner` for modularity.
+    """
+    return Runner().run(argv)
 
 
 if __name__ == "__main__":

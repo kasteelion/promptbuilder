@@ -265,7 +265,7 @@ class PromptBuilderApp:
         create_tooltip(scene_frame, TOOLTIPS.get("scene", ""))
 
         # Scene presets row
-        ttk.Label(scene_frame, text="Category:", font=("Consolas", 9)).grid(
+        ttk.Label(scene_frame, text="Category:", style="TLabel").grid(
             row=0, column=0, sticky="w", padx=(4, 2), pady=2
         )
         self.scene_category_var = tk.StringVar()
@@ -275,7 +275,7 @@ class PromptBuilderApp:
         self.scene_cat_combo.grid(row=0, column=1, sticky="w", padx=2, pady=2)
         self.scene_cat_combo.bind("<<ComboboxSelected>>", lambda e: self._update_scene_presets())
 
-        ttk.Label(scene_frame, text="Preset:", font=("Consolas", 9)).grid(
+        ttk.Label(scene_frame, text="Preset:", style="TLabel").grid(
             row=0, column=2, sticky="w", padx=(8, 2), pady=2
         )
         self.scene_preset_var = tk.StringVar()
@@ -402,7 +402,6 @@ class PromptBuilderApp:
             relief="sunken",
             anchor="w",
             style="TLabel",
-            font=("Consolas", 10),
         )
         self.status_bar.grid(row=3, column=0, sticky="ew", padx=0, pady=(4, 2))
 

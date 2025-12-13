@@ -99,9 +99,7 @@ class CharactersTab:
         bp = ttk.LabelFrame(self.tab, text="📋 Base Prompt (Style)", style="TLabelframe")
         bp.grid(row=0, column=0, sticky="ew", padx=4, pady=4)
         bp.columnconfigure(0, weight=1)
-        help_label = ttk.Label(
-            bp, text="Choose a base art style", foreground="gray", font=("Consolas", 9)
-        )
+        help_label = ttk.Label(bp, text="Choose a base art style", style="Muted.TLabel")
         help_label.grid(row=0, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 0))
         create_tooltip(help_label, TOOLTIPS.get("base_prompt", ""))
 
@@ -132,16 +130,14 @@ class CharactersTab:
         info_text = ttk.Label(
             info_frame,
             text="💡 Apply the same outfit to multiple characters at once",
-            foreground="#0066cc",
-            font=("Consolas", 9, "bold"),
+            style="Accent.TLabel",
         )
         info_text.pack(anchor="w", padx=6, pady=2)
 
         help_text = ttk.Label(
             info_frame,
             text="Select an outfit and click a button to apply it",
-            foreground="gray",
-            font=("Consolas", 8),
+            style="Muted.TLabel",
         )
         help_text.pack(anchor="w", padx=6, pady=(0, 2))
 
@@ -167,7 +163,7 @@ class CharactersTab:
         # Preview/status label
         self.bulk_preview_var = tk.StringVar(value="")
         self.bulk_preview_label = ttk.Label(
-            bulk, textvariable=self.bulk_preview_var, foreground="gray", font=("Consolas", 8)
+            bulk, textvariable=self.bulk_preview_var, style="Muted.TLabel"
         )
         self.bulk_preview_label.grid(row=2, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 4))
 
@@ -193,10 +189,7 @@ class CharactersTab:
         add.grid(row=2, column=0, sticky="ew", padx=4, pady=4)
         add.columnconfigure(0, weight=1)
         char_help = ttk.Label(
-            add,
-            text="Select a character and press Add or Enter",
-            foreground="gray",
-            font=("Consolas", 9),
+            add, text="Select a character and press Add or Enter", style="Muted.TLabel"
         )
         char_help.grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 4))
         create_tooltip(char_help, TOOLTIPS.get("character", ""))
@@ -354,7 +347,7 @@ class CharactersTab:
         # Center the dialog
         dialog.geometry("300x200")
 
-        ttk.Label(dialog, text=f"Apply '{outfit_name}' to:", font=("Consolas", 10, "bold")).pack(
+        ttk.Label(dialog, text=f"Apply '{outfit_name}' to:", style="Bold.TLabel").pack(
             pady=(10, 5)
         )
 
@@ -642,7 +635,7 @@ class CharactersTab:
             outfit_header = ttk.Frame(frame)
             outfit_header.pack(fill="x", pady=(0, 2))
 
-            outfit_label = ttk.Label(outfit_header, text="👕 Outfit:", font=("Consolas", 9, "bold"))
+            outfit_label = ttk.Label(outfit_header, text="👕 Outfit:", style="Bold.TLabel")
             outfit_label.pack(side="left")
 
             # Show current outfit
@@ -651,8 +644,7 @@ class CharactersTab:
                 current_label = ttk.Label(
                     outfit_header,
                     text=f" {current_outfit}",
-                    font=("Consolas", 9),
-                    foreground="#0066cc",
+                    style="Accent.TLabel",
                 )
                 current_label.pack(side="left")
 

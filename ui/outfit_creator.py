@@ -46,8 +46,7 @@ class SharedOutfitCreatorDialog:
         help_label = ttk.Label(
             help_frame,
             text="🌟 Shared outfits are available to ALL characters automatically!",
-            font=("Segoe UI", 9, "bold"),
-            foreground="#0066cc",
+            style="Accent.TLabel",
         )
         help_label.pack(anchor="w", padx=6, pady=4)
 
@@ -61,8 +60,6 @@ Example outfit format:
         example_widget = tk.Text(
             help_frame,
             font=("Consolas", 8),
-            foreground="#555555",
-            background="#f0f0f0",
             height=4,
             wrap="word",
             relief="flat",
@@ -73,7 +70,7 @@ Example outfit format:
         example_widget.pack(anchor="w", padx=10, pady=(0, 4), fill="x")
 
         # Category
-        ttk.Label(main_frame, text="Category:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(main_frame, text="Category:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
         )
 
@@ -87,12 +84,12 @@ Example outfit format:
         self.category_combo.pack(side="left", fill="x", expand=True, padx=(0, 5))
         self._load_categories()
 
-        ttk.Label(cat_frame, text="(or type new)", foreground="gray", font=("Segoe UI", 8)).pack(
+        ttk.Label(cat_frame, text="(or type new)", style="Muted.TLabel").pack(
             side="left"
         )
 
         # Outfit name
-        ttk.Label(main_frame, text="Outfit Name:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(main_frame, text="Outfit Name:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
         )
         self.name_var = tk.StringVar()
@@ -101,14 +98,13 @@ Example outfit format:
         name_entry.focus()
 
         # Description
-        ttk.Label(main_frame, text="Outfit Description:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(main_frame, text="Outfit Description:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
         )
         ttk.Label(
             main_frame,
             text="Describe garments, accessories, and styling",
-            foreground="gray",
-            font=("Segoe UI", 8),
+            style="Muted.TLabel",
         ).pack(anchor="w")
 
         desc_frame = ttk.Frame(main_frame)

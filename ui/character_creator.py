@@ -60,7 +60,7 @@ class CharacterCreatorDialog:
         template_frame = ttk.Frame(main_frame)
         template_frame.pack(fill="x", pady=(0, 10))
 
-        ttk.Label(template_frame, text="Template:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(template_frame, text="Template:", style="Bold.TLabel").pack(
             side="left", padx=(0, 5)
         )
 
@@ -80,8 +80,7 @@ class CharacterCreatorDialog:
         self.template_desc_label = ttk.Label(
             template_frame,
             text=get_character_template_description("Blank"),
-            foreground="gray",
-            font=("Segoe UI", 8, "italic"),
+            style="Muted.TLabel",
         )
         self.template_desc_label.pack(side="left")
 
@@ -92,8 +91,7 @@ class CharacterCreatorDialog:
         help_label = ttk.Label(
             help_frame,
             text="💡 Tip: Follow the pattern of existing characters for consistency",
-            font=("Segoe UI", 9, "bold"),
-            foreground="#0066cc",
+            style="Accent.TLabel",
         )
         help_label.pack(anchor="w", padx=6, pady=4)
 
@@ -116,8 +114,6 @@ class CharacterCreatorDialog:
         example_widget = tk.Text(
             help_frame,
             font=("Consolas", 8),
-            foreground="#555555",
-            background="#f0f0f0",
             height=7,
             wrap="word",
             relief="flat",
@@ -128,7 +124,7 @@ class CharacterCreatorDialog:
         example_widget.pack(anchor="w", padx=10, pady=(0, 4), fill="x")
 
         # Character name
-        ttk.Label(main_frame, text="Character Name:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(main_frame, text="Character Name:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
         )
         self.name_var = tk.StringVar()
@@ -137,14 +133,13 @@ class CharacterCreatorDialog:
         self.name_entry.focus()
 
         # Appearance
-        ttk.Label(main_frame, text="Appearance:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(main_frame, text="Appearance:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
         )
         ttk.Label(
             main_frame,
             text="Core features (skin, eyes, body, hair quality) + Style notes (preferences, not requirements)",
-            foreground="gray",
-            font=("Segoe UI", 8),
+            style="Muted.TLabel",
         ).pack(anchor="w")
 
         appearance_frame = ttk.Frame(main_frame)
@@ -186,14 +181,13 @@ class CharacterCreatorDialog:
         appearance_scroll.pack(side="right", fill="y")
 
         # Default outfit
-        ttk.Label(main_frame, text="Default Outfit:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(main_frame, text="Default Outfit:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
         )
         ttk.Label(
             main_frame,
             text="Use sections: Top, Bottom, Footwear, Accessories, Hair/Makeup",
-            foreground="gray",
-            font=("Segoe UI", 8),
+            style="Muted.TLabel",
         ).pack(anchor="w")
 
         outfit_frame = ttk.Frame(main_frame)

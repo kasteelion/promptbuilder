@@ -350,6 +350,12 @@ class ThemeManager:
             "TLabelframe.Label", background=bg, foreground=accent, font=(None, 9, "bold")
         )
 
+        # Bold and Accent label styles for small inline headings and badges
+        self.style.configure("Bold.TLabel", font=(None, 9, "bold"), background=bg, foreground=fg)
+        self.style.configure("Accent.TLabel", font=(None, 9), background=bg, foreground=accent)
+        # Muted label for small helper text
+        self.style.configure("Muted.TLabel", font=(None, 8), background=bg, foreground=border)
+
         # Scrollbar with better visibility
         self.style.configure(
             "Vertical.TScrollbar",

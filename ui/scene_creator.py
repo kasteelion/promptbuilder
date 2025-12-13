@@ -45,7 +45,7 @@ class SceneCreatorDialog:
         template_frame = ttk.Frame(main_frame)
         template_frame.pack(fill="x", pady=(0, 10))
 
-        ttk.Label(template_frame, text="Template:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(template_frame, text="Template:", style="Bold.TLabel").pack(
             side="left", padx=(0, 5)
         )
 
@@ -65,8 +65,7 @@ class SceneCreatorDialog:
         self.template_desc_label = ttk.Label(
             template_frame,
             text=get_scene_template_description("Blank"),
-            foreground="gray",
-            font=("Segoe UI", 8, "italic"),
+            style="Muted.TLabel",
         )
         self.template_desc_label.pack(side="left")
 
@@ -77,8 +76,7 @@ class SceneCreatorDialog:
         help_label = ttk.Label(
             help_frame,
             text="💡 Tip: Include lighting, atmosphere, and key visual elements",
-            font=("Segoe UI", 9, "bold"),
-            foreground="#0066cc",
+            style="Accent.TLabel",
         )
         help_label.pack(anchor="w", padx=6, pady=4)
 
@@ -92,8 +90,6 @@ class SceneCreatorDialog:
         example_widget = tk.Text(
             help_frame,
             font=("Consolas", 8),
-            foreground="#555555",
-            background="#f0f0f0",
             height=5,
             wrap="word",
             relief="flat",
@@ -120,12 +116,12 @@ class SceneCreatorDialog:
         # Load existing categories
         self._load_categories()
 
-        ttk.Label(cat_frame, text="(or type new)", foreground="gray", font=("Segoe UI", 8)).pack(
+        ttk.Label(cat_frame, text="(or type new)", style="Muted.TLabel").pack(
             side="left"
         )
 
         # Scene name
-        ttk.Label(main_frame, text="Scene Name:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(main_frame, text="Scene Name:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
         )
         self.name_var = tk.StringVar()
@@ -133,14 +129,13 @@ class SceneCreatorDialog:
         name_entry.pack(fill="x", pady=(0, 10))
 
         # Description
-        ttk.Label(main_frame, text="Scene Description:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(main_frame, text="Scene Description:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
         )
         ttk.Label(
             main_frame,
             text="Describe the setting, lighting, and atmosphere",
-            foreground="gray",
-            font=("Segoe UI", 8),
+            style="Muted.TLabel",
         ).pack(anchor="w")
 
         desc_frame = ttk.Frame(main_frame)

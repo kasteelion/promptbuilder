@@ -72,6 +72,34 @@ def init_debug_log():
             pass
 
 
+class DebugLog:
+    """Context manager around debug log init/close.
+
+    Provides a safe `with DebugLog():` usage while preserving the
+    module-level `init_debug_log`/`close_debug_log` functions for
+    backwards compatibility.
+    """
+
+    def __enter__(self):
+        init_debug_log()
+        return _logger
+
+    def __exit__(self, exc_type, exc, tb):
+        try:
+            close_debug_log()
+        except Exception:
+            from utils import logger
+
+            logger.exception("Auto-captured exception")
+        # Do not suppress exceptions
+        return False
+
+
+def debug_log_context():
+    """Return a `DebugLog` instance for `with debug_log_context():` usage."""
+    return DebugLog()
+
+
 def log(message: str, level: int = logging.INFO):
     """Log a message via the shared logger.
 

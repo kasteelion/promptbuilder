@@ -45,7 +45,7 @@ class BaseStyleCreatorDialog:
         template_frame = ttk.Frame(main_frame)
         template_frame.pack(fill="x", pady=(0, 10))
 
-        ttk.Label(template_frame, text="Template:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(template_frame, text="Template:", style="Bold.TLabel").pack(
             side="left", padx=(0, 5)
         )
 
@@ -65,8 +65,7 @@ class BaseStyleCreatorDialog:
         self.template_desc_label = ttk.Label(
             template_frame,
             text=get_style_template_description("Blank"),
-            foreground="gray",
-            font=("Segoe UI", 8, "italic"),
+            style="Muted.TLabel",
         )
         self.template_desc_label.pack(side="left")
 
@@ -77,8 +76,7 @@ class BaseStyleCreatorDialog:
         help_label = ttk.Label(
             help_frame,
             text="💡 Tip: Base styles define rendering, character accuracy, body types, hair/clothing, and details",
-            font=("Segoe UI", 9, "bold"),
-            foreground="#0066cc",
+            style="Accent.TLabel",
         )
         help_label.pack(anchor="w", padx=6, pady=4)
 
@@ -92,8 +90,6 @@ class BaseStyleCreatorDialog:
         example_widget = tk.Text(
             help_frame,
             font=("Consolas", 8),
-            foreground="#555555",
-            background="#f0f0f0",
             height=5,
             wrap="word",
             relief="flat",
@@ -104,7 +100,7 @@ class BaseStyleCreatorDialog:
         example_widget.pack(anchor="w", padx=10, pady=(0, 4), fill="x")
 
         # Style name
-        ttk.Label(main_frame, text="Style Name:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(main_frame, text="Style Name:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
         )
         self.name_var = tk.StringVar()
@@ -113,14 +109,13 @@ class BaseStyleCreatorDialog:
         name_entry.focus()
 
         # Style description
-        ttk.Label(main_frame, text="Style Description:", font=("Segoe UI", 10, "bold")).pack(
+        ttk.Label(main_frame, text="Style Description:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
         )
         ttk.Label(
             main_frame,
             text="Define the visual characteristics across all sections",
-            foreground="gray",
-            font=("Segoe UI", 8),
+            style="Muted.TLabel",
         ).pack(anchor="w")
 
         desc_frame = ttk.Frame(main_frame)
