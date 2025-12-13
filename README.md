@@ -6,12 +6,11 @@ A desktop application to help build complex and detailed prompts for AI image ge
 
 # AI Image Prompt Builder
 
-A desktop application to help build complex and detailed prompts for AI image generation with an intuitive, resizable interface.
+A desktop application for composing complex prompts for AI image generation. It provides a graphical interface to create and combine characters, poses, outfits, and scene elements into shareable prompt text.
 
-**Quick status:** refactored startup into `cli.py` + `runner.py`, added theme-aware ttk label styles, and introduced a `DebugLog` context manager. Tests are available and the project uses only standard-library deps except optional Pillow for image previews.
+This repository focuses on a lightweight, dependency-free design (standard library only). Optional functionality (image previews) uses Pillow.
 
-**Supported Python:** 3.8+
-
+Supported Python: 3.8+
 ---
 
 **Table of contents**
@@ -44,80 +43,84 @@ No other external packages are required for basic functionality.
 
 ## Quick start
 
-From the project root:
+Clone the repository and run from the project root. Examples below are intentionally generic (no absolute, machine-specific paths).
+
+Run the application (example):
 
 ```powershell
-# Run the app
-& C:/path/to/python.exe main.py
-
-# Run the test suite
-& C:/path/to/python.exe -m pytest -q
+python main.py
 ```
 
-On Windows you can normally just run `python main.py` if `python` points to your Python installation.
-
-## CLI options
-
-- `--version` or `-v` : print version and exit.
-- `--check-compat` : perform a compatibility check (Python version, tkinter available).
-- `--debug` : run in debug mode (full tracebacks, extra logging).
-
-These are handled by `cli.py` and executed at runtime by `runner.py`.
-
-## Tests
-
-This project uses `pytest` for unit tests. Run all tests with:
+Run tests with `pytest`:
 
 ```powershell
 python -m pytest -q
 ```
 
-A small test suite covering CLI parsing and other logic is included in `tests/`.
+## CLI options
+
+- `--version` or `-v` : print version and exit
+- `--check-compat` : run a compatibility check (Python version, tkinter availability)
+- `--debug` : enable debug logging and full tracebacks
+
+CLI parsing is implemented in `cli.py` and executed by `runner.py` at runtime.
+
+## Tests
+
+The project uses `pytest`. Unit tests live under `tests/`.
+
+Run the suite:
+
+```bash
+python -m pytest -q
+```
+
+Add tests alongside new features where applicable.
 
 ## Development & recent refactors
 
-Recent work improved startup modularity and themability:
+Key architecture choices and recent improvements:
 
-- `cli.py` — centralizes command-line parsing (no import-time side effects).
-- `runner.py` — encapsulates application lifecycle (init, compatibility checks, debug logging, create root, run mainloop).
-- `debug_log.py` — added a `DebugLog` context manager to ensure logs are opened/closed cleanly.
-- `themes/theme_manager.py` — new ttk label styles added (`Bold.TLabel`, `Accent.TLabel`, `Muted.TLabel`, `Title.TLabel`) so labels respond to theme changes.
-- Many UI modules under `ui/` were updated to prefer ttk styles over hard-coded font/foreground values.
+- `cli.py` — centralized CLI parsing; minimizes import-time side-effects
+- `runner.py` — encapsulates startup lifecycle (compat checks, logging, app bootstrap)
+- `debug_log.py` — provides a context manager for deterministic log lifecycle
+- `themes/theme_manager.py` — defines ttk label styles (e.g. `Bold.TLabel`, `Accent.TLabel`, `Muted.TLabel`) to make UI elements theme-aware
 
-These changes make the code easier to import in tests and easier to maintain.
+Many UI modules were updated to prefer ttk styles instead of inline `foreground`/`font` arguments; this improves theming consistency and testability.
 
 ## Theming notes
 
-- Most labels now use ttk styles; theme colors are defined and applied in `themes/theme_manager.py`.
-- Classic `tk.Text` widgets still use direct configuration for placeholder/faint text; a follow-up helper can centralize placeholder color so it follows the theme.
-- If you add UI elements, prefer creating or reusing a ttk style instead of passing `foreground`/`font` inline.
+- Prefer ttk styles for label-like widgets; styles are declared and applied by the theme manager.
+- `tk.Text` widgets are not fully styleable via ttk; placeholder/faint text is still managed by direct configuration in a few places. Consider creating a small helper for placeholder behavior if you need full theme consistency.
+
+When adding UI widgets, favor creating or reusing styles instead of passing literal fonts/colours inline.
 
 ## Data files & formats
 
-- `characters/` — individual character markdown files. File names should be lowercase with underscores.
-- `base_prompts.md`, `poses.md`, `scenes.md`, `outfits.md` — structured markdown used as the "database" for prompt components.
+Content is stored as human-editable markdown files under the repository root:
 
-Refer to the `docs/` directory for format examples and templates.
+- `characters/` — one markdown file per character
+- `base_prompts.md`, `poses.md`, `scenes.md`, `outfits.md` — prompt component lists and presets
+
+See the `docs/` directory for format examples and editor templates.
+
 
 ## Contributing
 
-- Keep changes compatible with Python 3.8+.
-- Prefer standard library modules. If you add a dependency, update `requirements.txt` and explain why it is necessary.
-- Avoid import-time side effects; use `Runner` or `if __name__ == '__main__'` to perform runtime initialization.
-- Follow existing style and test any UI code you modify. Run `python -m pytest -q` before opening PRs.
+- Keep compatibility with Python 3.8+ unless there is a clear reason to bump the minimum supported version
+- Prefer standard-library packages; if adding a dependency, update `requirements.txt` and document the reason
+- Avoid import-time side effects. Use runtime entrypoints (`Runner` or `if __name__ == '__main__'`) for initialization logic
+- Add tests for new or changed behavior and run `pytest` before submitting a PR
 
-If you want, open a PR for larger refactors and include screenshots of UI changes where relevant.
+Please open PRs for larger refactors and include screenshots for UI changes where appropriate.
 
 ---
 
-If you'd like I can also:
-- Add a short `CONTRIBUTING.md` template.
-- Add a small `dev.md` describing how to run and debug the GUI on Windows and common troubleshooting steps.
+If you'd like, I can also add a `CONTRIBUTING.md` and a `docs/dev.md` with local development tips and common troubleshooting steps.
 
+---
 
-***
 Updated: December 2025
-***
 - ✅ Undo/Redo system (Ctrl+Z/Y)
 - ✅ Presets & Templates (Save/Load configurations)
 - ✅ Smart preferences (Auto-save settings)
