@@ -6,16 +6,21 @@ Usage:
 
 If `--dest` is omitted the script will ask for the target filename.
 """
-from pathlib import Path
-import shutil
 import argparse
+import shutil
 import sys
+from pathlib import Path
 
 
 def main():
     parser = argparse.ArgumentParser(description="Copy a character photo into data/characters")
     parser.add_argument("--source", "-s", required=True, help="Path to source image file")
-    parser.add_argument("--dest", "-d", default=None, help="Destination filename inside data/characters (e.g. roxanne_perez_photo.png)")
+    parser.add_argument(
+        "--dest",
+        "-d",
+        default=None,
+        help="Destination filename inside data/characters (e.g. roxanne_perez_photo.png)",
+    )
     args = parser.parse_args()
 
     repo_root = Path(__file__).resolve().parents[1]
@@ -41,7 +46,8 @@ def main():
         print(f"Copied {src} -> {dest}")
     except Exception as e:
         from utils import logger
-        logger.exception('Auto-captured exception')
+
+        logger.exception("Auto-captured exception")
         print(f"Failed to copy file: {e}")
         sys.exit(1)
 

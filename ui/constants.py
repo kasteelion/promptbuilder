@@ -16,7 +16,7 @@ FONT_SIZE_BREAKPOINTS = [
     (1400, 13),
     (1600, 14),
     (1800, 15),
-    (2000, 16)
+    (2000, 16),
 ]
 
 # Performance settings
@@ -66,7 +66,6 @@ FLOW_FRAME_MIN_WIDTH_THRESHOLD = 10  # Minimum width change to trigger reflow
 FLOW_FRAME_REFLOW_DELAY_MS = 50  # Delay before retrying reflow when window not mapped
 
 # Preferences settings
-from config import MAX_RECENT_ITEMS  # defined in project-wide config to avoid UI<->utils import cycles
 
 # Character photo thumbnail size
 CHARACTER_CARD_SIZE = 100  # Width and height of character photo thumbnail

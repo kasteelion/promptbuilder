@@ -23,7 +23,7 @@ THEMES = {
         "accent": "#0066cc",
         "accent_hover": "#004c99",
         "border": "#cccccc",
-        "selected_bg": "#e3f2fd"
+        "selected_bg": "#e3f2fd",
     },
     "Dark": {
         "bg": "#1e1e1e",
@@ -35,7 +35,7 @@ THEMES = {
         "accent": "#0e639c",
         "accent_hover": "#1177bb",
         "border": "#3c3c3c",
-        "selected_bg": "#2d3e50"
+        "selected_bg": "#2d3e50",
     },
     "Monokai": {
         "bg": "#272822",
@@ -47,7 +47,7 @@ THEMES = {
         "accent": "#66d9ef",
         "accent_hover": "#89e4f7",
         "border": "#49483e",
-        "selected_bg": "#49483e"
+        "selected_bg": "#49483e",
     },
     "Nord": {
         "bg": "#2e3440",
@@ -59,7 +59,7 @@ THEMES = {
         "accent": "#88c0d0",
         "accent_hover": "#8fbcbb",
         "border": "#4c566a",
-        "selected_bg": "#434c5e"
+        "selected_bg": "#434c5e",
     },
     "Dracula": {
         "bg": "#282a36",
@@ -71,7 +71,7 @@ THEMES = {
         "accent": "#bd93f9",
         "accent_hover": "#caa6fc",
         "border": "#6272a4",
-        "selected_bg": "#44475a"
+        "selected_bg": "#44475a",
     },
     "Gruvbox Dark": {
         "bg": "#282828",
@@ -83,7 +83,7 @@ THEMES = {
         "accent": "#83a598",
         "accent_hover": "#a89984",
         "border": "#504945",
-        "selected_bg": "#504945"
+        "selected_bg": "#504945",
     },
     "One Dark": {
         "bg": "#282c34",
@@ -95,7 +95,7 @@ THEMES = {
         "accent": "#61afef",
         "accent_hover": "#84c0f4",
         "border": "#3e4451",
-        "selected_bg": "#3e4451"
+        "selected_bg": "#3e4451",
     },
     "Tokyo Night": {
         "bg": "#1a1b26",
@@ -107,8 +107,8 @@ THEMES = {
         "accent": "#7aa2f7",
         "accent_hover": "#9db3f5",
         "border": "#414868",
-        "selected_bg": "#292e42"
-    }
+        "selected_bg": "#292e42",
+    },
 }
 
 DEFAULT_THEME = "Dark"
@@ -131,7 +131,7 @@ TOOLTIPS = {
     "reload": "Reload all data from markdown files. Use this after editing character or preset files",
     "copy": "Copy the entire prompt to clipboard for pasting into AI image generators",
     "save": "Save the prompt to a text file",
-    "preview": "Live preview of your generated prompt. Updates automatically as you make changes"
+    "preview": "Live preview of your generated prompt. Updates automatically as you make changes",
 }
 
 # Welcome message for first-time users

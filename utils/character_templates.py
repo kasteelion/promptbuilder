@@ -1,13 +1,7 @@
 """Character templates for quick character creation."""
 
-
 TEMPLATES = {
-    "Blank": {
-        "description": "Start from scratch",
-        "appearance": "",
-        "outfit": ""
-    },
-    
+    "Blank": {"description": "Start from scratch", "appearance": "", "outfit": ""},
     "Professional Woman": {
         "description": "Corporate professional woman",
         "appearance": """Light to medium skin tone with polished matte-soft finish. Highlight restricted to cheek arc only, avoiding T-zone shine. Shoulder-length hair styled in professional bob or sleek low ponytail with minimal flyaways.
@@ -47,9 +41,8 @@ TEMPLATES = {
 - **Bottom:** N/A
 - **Footwear:** Classic black heels
 - **Accessories:** Small structured clutch, statement earrings (single focal accent), delicate bracelet
-- **Hair/Makeup:** Polished updo or sleek waves; refined makeup with deeper lip color"""
+- **Hair/Makeup:** Polished updo or sleek waves; refined makeup with deeper lip color""",
     },
-    
     "Professional Man": {
         "description": "Corporate professional man",
         "appearance": """Medium skin tone with clean-cut features and matte finish. Short conservative hairstyle, neatly trimmed with minimal product.
@@ -89,9 +82,8 @@ TEMPLATES = {
 - **Bottom:** Matching suit trousers
 - **Footwear:** Polished black oxford shoes
 - **Accessories:** Silk pocket square, cufflinks, watch, leather belt
-- **Hair/Makeup:** Perfectly styled; clean-shaven or well-groomed beard"""
+- **Hair/Makeup:** Perfectly styled; clean-shaven or well-groomed beard""",
     },
-    
     "Student Woman": {
         "description": "Young, relaxed female student",
         "appearance": """Medium skin tone with youthful fresh features and natural dewy glow. Shoulder-length wavy hair with natural movement and casual styling.
@@ -138,9 +130,8 @@ TEMPLATES = {
 - **Bottom:** Comfortable jeans or athletic joggers
 - **Footwear:** Casual sneakers or boots
 - **Accessories:** Tote bag, iced coffee, sunglasses, small hoops
-- **Hair/Makeup:** Natural styling; fresh minimal makeup"""
+- **Hair/Makeup:** Natural styling; fresh minimal makeup""",
     },
-    
     "Student Man": {
         "description": "Young, relaxed male student",
         "appearance": """Medium skin tone with youthful features and natural matte finish. Casual short messy hair or medium-length skater cut with minimal product.
@@ -187,9 +178,8 @@ TEMPLATES = {
 - **Bottom:** Comfortable joggers or shorts
 - **Footwear:** Worn sneakers or slides
 - **Accessories:** Gym bag, water bottle, wireless earbuds, snapback
-- **Hair/Makeup:** Natural messy; unshaven"""
+- **Hair/Makeup:** Natural messy; unshaven""",
     },
-    
     "Athlete Woman": {
         "description": "Sporty, athletic woman",
         "appearance": """Sun-kissed medium skin tone with athletic features and natural healthy glow. Highlight limited to cheekbones only. Practical high ponytail or sporty braided style with controlled movement.
@@ -243,9 +233,8 @@ TEMPLATES = {
 - **Bottom:** Athletic shorts or competition leggings
 - **Footwear:** Sport-specific shoes
 - **Accessories:** Athletic tape, knee/ankle support, number bib, sports watch
-- **Hair/Makeup:** Slicked-back secure style; minimal waterproof makeup"""
+- **Hair/Makeup:** Slicked-back secure style; minimal waterproof makeup""",
     },
-    
     "Athlete Man": {
         "description": "Sporty, athletic man",
         "appearance": """Sun-kissed medium skin tone with strong athletic features and natural matte finish. Short practical crew cut or buzzed sides with minimal product.
@@ -299,9 +288,8 @@ TEMPLATES = {
 - **Bottom:** Competition shorts or pants
 - **Footwear:** Sport-specific shoes
 - **Accessories:** Athletic tape, number bib, sports watch, compression sleeves
-- **Hair/Makeup:** Fresh cut; game-ready"""
+- **Hair/Makeup:** Fresh cut; game-ready""",
     },
-    
     "Creative Artist Woman": {
         "description": "Artistic, expressive woman",
         "appearance": """Medium skin tone with distinctive expressive features and soft natural glow. Creatively styled long hair with color accents (purple, teal, or pink streaks) and natural movement.
@@ -355,9 +343,8 @@ TEMPLATES = {
 - **Bottom:** Patterned maxi skirt or palazzo pants
 - **Footwear:** Comfortable sandals or boots
 - **Accessories:** Handmade jewelry display, fabric bags, vintage sunglasses
-- **Hair/Makeup:** Half-up style with decorative clips; natural glowy makeup"""
+- **Hair/Makeup:** Half-up style with decorative clips; natural glowy makeup""",
     },
-    
     "Creative Artist Man": {
         "description": "Artistic, expressive man",
         "appearance": """Medium skin tone with distinctive expressive features and natural matte finish. Creatively styled medium messy hair or artistic undercut with natural movement.
@@ -411,9 +398,8 @@ TEMPLATES = {
 - **Bottom:** Wide-leg vintage pants or distressed jeans
 - **Footwear:** Unique vintage boots or platforms
 - **Accessories:** Handmade jewelry, canvas bags, sunglasses, pins
-- **Hair/Makeup:** Creative styled; artistic beard or clean"""
+- **Hair/Makeup:** Creative styled; artistic beard or clean""",
     },
-    
     "Elegant Woman": {
         "description": "Sophisticated formal woman",
         "appearance": """Light to medium skin tone with refined classic features and luminous matte finish. Highlight restricted to cheekbone arc for sophisticated radiance. Elegantly styled updo or sleek long hair with perfect controlled blowout.
@@ -467,9 +453,8 @@ TEMPLATES = {
 - **Bottom:** Floor-length or midi formal dress
 - **Footwear:** Elegant heeled sandals
 - **Accessories:** Opera gloves (optional), statement earrings, evening bag, silk scarf
-- **Hair/Makeup:** Classic updo; timeless elegant makeup"""
+- **Hair/Makeup:** Classic updo; timeless elegant makeup""",
     },
-    
     "Elegant Man": {
         "description": "Sophisticated formal man",
         "appearance": """Light to medium skin tone with refined distinguished features and matte finish. Perfectly groomed short hair styled with subtle product and controlled appearance.
@@ -523,9 +508,8 @@ TEMPLATES = {
 - **Bottom:** Formal trousers
 - **Footwear:** Polished dress shoes
 - **Accessories:** Luxury watch, cufflinks, silk scarf (optional), program
-- **Hair/Makeup:** Refined styled; impeccably groomed"""
+- **Hair/Makeup:** Refined styled; impeccably groomed""",
     },
-    
     "Outdoorsy Woman": {
         "description": "Outdoor adventurer woman",
         "appearance": """Sun-tanned medium skin tone with weather-worn natural features and healthy outdoor glow. Practical braided hair or tied-back ponytail with controlled secure styling.
@@ -579,9 +563,8 @@ TEMPLATES = {
 - **Bottom:** Technical trail running shorts
 - **Footwear:** Trail running shoes
 - **Accessories:** Hydration vest, GPS watch, sunglasses, hat
-- **Hair/Makeup:** High secure ponytail; sweat and sun protection"""
+- **Hair/Makeup:** High secure ponytail; sweat and sun protection""",
     },
-    
     "Outdoorsy Man": {
         "description": "Outdoor adventurer man",
         "appearance": """Sun-tanned medium to dark skin tone with weather-worn rugged features and natural matte finish. Practical short hair or longer tied-back style with minimal grooming.
@@ -635,9 +618,8 @@ TEMPLATES = {
 - **Bottom:** Durable work pants with knee pads
 - **Footwear:** Steel-toe work boots
 - **Accessories:** Tool belt, work gloves, water bottle, bandana
-- **Hair/Makeup:** Short practical; full beard or stubble"""
+- **Hair/Makeup:** Short practical; full beard or stubble""",
     },
-    
     "Tech Enthusiast Woman": {
         "description": "Modern tech-savvy woman",
         "appearance": """Light to medium skin tone with contemporary features and natural matte finish. Modern asymmetrical bob or sleek ponytail with clean styling.
@@ -691,9 +673,8 @@ TEMPLATES = {
 - **Bottom:** Comfortable joggers or leggings
 - **Footwear:** Slippers or cozy socks
 - **Accessories:** Laptop, desk setup, coffee mug, blue light glasses, phone
-- **Hair/Makeup:** Messy bun or natural; camera-ready minimal makeup"""
+- **Hair/Makeup:** Messy bun or natural; camera-ready minimal makeup""",
     },
-    
     "Tech Enthusiast Man": {
         "description": "Modern tech-savvy man",
         "appearance": """Light to medium skin tone with contemporary features and natural matte finish. Modern short sides fade or medium messy tech-bro cut with minimal product.
@@ -747,9 +728,8 @@ TEMPLATES = {
 - **Bottom:** Joggers or shorts
 - **Footwear:** Slippers or barefoot
 - **Accessories:** Laptop at desk, mechanical keyboard, coffee mug, phone, earbuds
-- **Hair/Makeup:** Natural unstyled; camera-off casual"""
+- **Hair/Makeup:** Natural unstyled; camera-off casual""",
     },
-    
     "Vintage Woman": {
         "description": "Retro-inspired woman",
         "appearance": """Fair to medium skin tone with classic timeless features and soft vintage glow. Period-appropriate hairstyle with victory rolls or classic waves with controlled elegant styling.
@@ -803,9 +783,8 @@ TEMPLATES = {
 - **Bottom:** Full skirt with crinoline
 - **Footwear:** Classic pumps
 - **Accessories:** Vintage hat with netting, gloves, pearl jewelry, structured handbag
-- **Hair/Makeup:** Elegant vintage waves; refined classic makeup"""
+- **Hair/Makeup:** Elegant vintage waves; refined classic makeup""",
     },
-    
     "Vintage Man": {
         "description": "Retro-inspired man",
         "appearance": """Fair to medium skin tone with classic distinguished features and natural matte finish. Period-appropriate slicked-back hair or classic side part with pomade styling.
@@ -859,9 +838,8 @@ TEMPLATES = {
 - **Bottom:** Tailored suit trousers
 - **Footwear:** Polished oxfords
 - **Accessories:** Fedora, pocket watch, vintage cufflinks, tie bar
-- **Hair/Makeup:** Perfectly slicked; well-groomed mustache"""
+- **Hair/Makeup:** Perfectly slicked; well-groomed mustache""",
     },
-    
     "Fantasy Woman": {
         "description": "Fantasy/fictional female character",
         "appearance": """Pale ethereal skin tone with otherworldly delicate features and mystical subtle shimmer. Long flowing hair in silver, platinum, or fantasy colors (lavender, ice blue) with magical natural movement.
@@ -915,9 +893,8 @@ TEMPLATES = {
 - **Bottom:** Comfortable enchanted pants
 - **Footwear:** Soft library slippers
 - **Accessories:** Multiple spell books, scrolls, quills, reading spectacles, amulets
-- **Hair/Makeup:** Messy bun with pencil; focused minimal"""
+- **Hair/Makeup:** Messy bun with pencil; focused minimal""",
     },
-    
     "Fantasy Man": {
         "description": "Fantasy/fictional male character",
         "appearance": """Pale or sun-bronzed skin tone with strong otherworldly features and natural mystical finish. Long warrior braids or shoulder-length flowing hair with controlled powerful movement.
@@ -971,9 +948,8 @@ TEMPLATES = {
 - **Bottom:** Flowing formal pants
 - **Footwear:** Delicate formal boots
 - **Accessories:** Ornate circlet, ceremonial sword, elven jewelry, formal cloak
-- **Hair/Makeup:** Elaborate braids; refined or clean"""
+- **Hair/Makeup:** Elaborate braids; refined or clean""",
     },
-    
     "Cozy Homebody Woman": {
         "description": "Comfortable, relaxed woman at home",
         "appearance": """Light to medium skin tone with soft comfortable features and natural fresh glow. Casual messy bun or loose natural waves with relaxed unstyled appearance.
@@ -1034,9 +1010,8 @@ TEMPLATES = {
 - **Bottom:** Comfortable joggers (camera-off) or presentable leggings
 - **Footwear:** Slippers or cozy socks
 - **Accessories:** Laptop, coffee mug, reading glasses, blanket on lap
-- **Hair/Makeup:** Messy bun; minimal Zoom-ready makeup optional"""
+- **Hair/Makeup:** Messy bun; minimal Zoom-ready makeup optional""",
     },
-    
     "Cozy Homebody Man": {
         "description": "Comfortable, relaxed man at home",
         "appearance": """Light to medium skin tone with relaxed comfortable features and natural matte finish. Casual unstyled short hair or medium messy bedhead with zero product.
@@ -1097,8 +1072,8 @@ TEMPLATES = {
 - **Bottom:** Sweatpants or comfortable shorts
 - **Footwear:** Slippers
 - **Accessories:** Laptop, coffee mug, phone, headphones
-- **Hair/Makeup:** Quickly combed or natural; Zoom-ready shave optional"""
-    }
+- **Hair/Makeup:** Quickly combed or natural; Zoom-ready shave optional""",
+    },
 }
 
 
@@ -1109,10 +1084,10 @@ def get_template_names():
 
 def get_template(name):
     """Get template data by name.
-    
+
     Args:
         name: Template name
-        
+
     Returns:
         Dict with 'appearance' and 'outfit' keys, or None if not found
     """
@@ -1121,10 +1096,10 @@ def get_template(name):
 
 def get_template_description(name):
     """Get template description.
-    
+
     Args:
         name: Template name
-        
+
     Returns:
         Description string or empty string if not found
     """

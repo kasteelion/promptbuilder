@@ -1,4 +1,5 @@
 import textwrap
+
 from logic.parsers import MarkdownParser
 
 

@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 """Entry point for Prompt Builder application."""
 
@@ -13,6 +12,7 @@ log("Starting Prompt Builder...", level=20)
 # Check Python version compatibility FIRST (before any other imports)
 if sys.version_info < (3, 8):
     from compat import print_version_error
+
     print_version_error()
     sys.exit(1)
 
@@ -21,6 +21,7 @@ try:
     import tkinter as tk
 except ImportError:
     from compat import print_tkinter_error
+
     print_tkinter_error()
     sys.exit(1)
 
@@ -39,6 +40,7 @@ if "--version" in sys.argv or "-v" in sys.argv:
 if "--check-compat" in sys.argv:
     try:
         from compat import print_compatibility_report
+
         print_compatibility_report()
     except ImportError:
         print("Compatibility module not found. Basic checks passed.")
@@ -65,14 +67,15 @@ def main():
         sys.exit(0)
     except Exception as e:
         from utils import logger
-        logger.exception('Auto-captured exception')
+
+        logger.exception("Auto-captured exception")
         # Catch any unexpected errors and provide helpful information
         import traceback
 
         # Log details to the debug log (file + console via debug_log)
         log(f"FATAL ERROR: {type(e).__name__}: {str(e)}")
         log("Full traceback:")
-        for line in traceback.format_exc().split('\n'):
+        for line in traceback.format_exc().split("\n"):
             log(line)
 
         # Give the user a concise message and point them to the debug log

@@ -1,15 +1,19 @@
 from typing import Any, Dict, List
 
-from .renderers import (CharacterRenderer, NotesRenderer, OutfitRenderer,
-                        PoseRenderer, SceneRenderer)
+from .renderers import CharacterRenderer, NotesRenderer, OutfitRenderer, PoseRenderer, SceneRenderer
 
 
 class PromptBuilder:
     """Builds formatted prompts from character, scene, and style data."""
-    
-    def __init__(self, characters: Dict[str, Any], base_prompts: Dict[str, str], poses: Dict[str, Dict[str, str]]):
+
+    def __init__(
+        self,
+        characters: Dict[str, Any],
+        base_prompts: Dict[str, str],
+        poses: Dict[str, Dict[str, str]],
+    ):
         """Initialize the prompt builder.
-        
+
         Args:
             characters: Dictionary of character data
             base_prompts: Dictionary of base art style prompts
@@ -21,10 +25,10 @@ class PromptBuilder:
 
     def generate(self, config: Dict[str, Any]) -> str:
         """Generate a formatted prompt from configuration.
-        
+
         Args:
             config: Configuration dictionary with selected characters, scene, notes, etc.
-            
+
         Returns:
             Formatted prompt string
         """
@@ -42,8 +46,18 @@ class PromptBuilder:
         for idx, char in enumerate(config.get("selected_characters", [])):
             data = self.characters.get(char["name"], {})
             outfit = data.get("outfits", {}).get(char.get("outfit", ""), "")
-            pose = char.get("action_note") or self.poses.get(char.get("pose_category"), {}).get(char.get("pose_preset"), "")
-            parts.append(CharacterRenderer.render(idx, char["name"], data.get("appearance", ""), OutfitRenderer.render(outfit), PoseRenderer.render(pose)))
+            pose = char.get("action_note") or self.poses.get(char.get("pose_category"), {}).get(
+                char.get("pose_preset"), ""
+            )
+            parts.append(
+                CharacterRenderer.render(
+                    idx,
+                    char["name"],
+                    data.get("appearance", ""),
+                    OutfitRenderer.render(outfit),
+                    PoseRenderer.render(pose),
+                )
+            )
 
         notes = config.get("notes", "")
         if notes:

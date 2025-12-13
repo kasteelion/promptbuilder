@@ -3,6 +3,7 @@
 This adapter keeps `main_window` smaller and makes menu-related logic
 easier to test and evolve.
 """
+
 from typing import Any
 
 
@@ -12,6 +13,7 @@ class MenuActions:
     Each method delegates to the corresponding `PromptBuilderApp` method
     to preserve existing behavior while keeping `main_window` focused on UI layout.
     """
+
     def __init__(self, app: Any):
         self.app = app
 
@@ -93,7 +95,7 @@ class MenuActions:
 
     def set_gallery_visible(self, visible: bool):
         try:
-            if hasattr(self.app, 'menu_manager'):
+            if hasattr(self.app, "menu_manager"):
                 self.app.menu_manager.set_gallery_visible(visible)
         except Exception:
             pass

@@ -9,7 +9,14 @@ from tkinter import messagebox
 from typing import Optional
 
 
-def notify(root: Optional[tk.Misc], title: Optional[str], message: str, level: str = 'info', duration: int = 3000, parent: Optional[tk.Misc] = None):
+def notify(
+    root: Optional[tk.Misc],
+    title: Optional[str],
+    message: str,
+    level: str = "info",
+    duration: int = 3000,
+    parent: Optional[tk.Misc] = None,
+):
     """Send a notification using preferred mechanism.
 
     Order:
@@ -26,32 +33,35 @@ def notify(root: Optional[tk.Misc], title: Optional[str], message: str, level: s
         parent: Parent for modal messagebox if desired.
     """
     try:
-        if root is not None and hasattr(root, 'toasts'):
+        if root is not None and hasattr(root, "toasts"):
             try:
                 root.toasts.notify(message, level, duration)
                 return
             except Exception:
                 from utils import logger
-                logger.exception('Auto-captured exception')
+
+                logger.exception("Auto-captured exception")
                 pass
-        if root is not None and hasattr(root, '_update_status'):
+        if root is not None and hasattr(root, "_update_status"):
             try:
                 root._update_status(message)
                 return
             except Exception:
                 from utils import logger
-                logger.exception('Auto-captured exception')
+
+                logger.exception("Auto-captured exception")
                 pass
     except Exception:
         from utils import logger
-        logger.exception('Auto-captured exception')
+
+        logger.exception("Auto-captured exception")
         # Defensive: if accessing root fails, fall through to modal
         pass
 
     # Fallback to modal depending on level
-    if level == 'error':
-        messagebox.showerror(title or 'Error', message, parent=parent)
-    elif level == 'warning':
-        messagebox.showwarning(title or 'Warning', message, parent=parent)
+    if level == "error":
+        messagebox.showerror(title or "Error", message, parent=parent)
+    elif level == "warning":
+        messagebox.showwarning(title or "Warning", message, parent=parent)
     else:
-        messagebox.showinfo(title or 'Info', message, parent=parent)
+        messagebox.showinfo(title or "Info", message, parent=parent)

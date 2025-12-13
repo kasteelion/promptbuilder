@@ -7,19 +7,21 @@ statements of the except block. It tries to preserve indentation.
 
 Run: python scripts/auto_inject_logger.py
 """
+
 import os
 import re
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-PY_EXT = '.py'
+PY_EXT = ".py"
 
-SKIP_DIRS = {'__pycache__', '.git', 'venv', 'env', '.venv'}
+SKIP_DIRS = {"__pycache__", ".git", "venv", "env", ".venv"}
 
-pattern = re.compile(r'^\s*except\s+Exception(?:\s+as\s+\w+)?\s*:\s*$')
+pattern = re.compile(r"^\s*except\s+Exception(?:\s+as\s+\w+)?\s*:\s*$")
+
 
 def process_file(path):
-    with open(path, 'r', encoding='utf-8') as f:
+    with open(path, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     changed = False
@@ -31,20 +33,19 @@ def process_file(path):
         out_lines.append(line)
         if pattern.match(line):
             # compute base indentation for the block
-            m = re.match(r'^(\s*)', line)
-            base_indent = m.group(1) if m else ''
-            block_indent = base_indent + ' ' * 4
+            m = re.match(r"^(\s*)", line)
+            base_indent = m.group(1) if m else ""
+            block_indent = base_indent + " " * 4
             # Peek ahead to find first non-blank/comment line in the block
             j = i + 1
             found_logger = False
-            end_of_block = False
             while j < L:
                 nl = lines[j]
                 # If indentation less-or-equal than base, block ended
                 if nl.strip() and not nl.startswith(block_indent):
                     # block ended without statements (e.g., next except or dedent)
                     break
-                if 'logger.' in nl or 'from utils import logger' in nl or 'import logger' in nl:
+                if "logger." in nl or "from utils import logger" in nl or "import logger" in nl:
                     found_logger = True
                     break
                 # If we encounter a "raise" or other statement, still inject
@@ -54,14 +55,14 @@ def process_file(path):
             if not found_logger:
                 # Insert logger import and exception call after the except line
                 insert_lines = []
-                insert_lines.append(block_indent + 'from utils import logger\n')
+                insert_lines.append(block_indent + "from utils import logger\n")
                 insert_lines.append(block_indent + "logger.exception('Auto-captured exception')\n")
                 out_lines.extend(insert_lines)
                 changed = True
         i += 1
 
     if changed:
-        with open(path, 'w', encoding='utf-8') as f:
+        with open(path, "w", encoding="utf-8") as f:
             f.writelines(out_lines)
     return changed
 
@@ -85,8 +86,9 @@ def walk_and_process(root):
                 print(f"Failed to process {path}: {e}")
     return changed_files
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     changed = walk_and_process(ROOT)
     print(f"Modified {len(changed)} files:")
     for p in changed:
-        print(' -', os.path.relpath(p, ROOT))
+        print(" -", os.path.relpath(p, ROOT))

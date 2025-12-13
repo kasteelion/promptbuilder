@@ -4,6 +4,7 @@ This module preserves the simple `init_debug_log()`, `log()`, and
 `close_debug_log()` API used by the codebase but delegates to
 `utils.logger` so all output goes through the same logging configuration.
 """
+
 import logging
 from pathlib import Path
 from typing import Optional
@@ -11,10 +12,12 @@ from typing import Optional
 try:
     # Prefer the project's configured logger
     from utils.logger import setup_logger
+
     _logger = setup_logger(log_file="promptbuilder_debug.log", level=logging.DEBUG)
 except Exception:
     from utils import logger
-    logger.exception('Auto-captured exception')
+
+    logger.exception("Auto-captured exception")
     # Fallback: basic logger to stdout
     _logger = logging.getLogger("promptbuilder_debug_fallback")
     if not _logger.handlers:
@@ -24,6 +27,7 @@ except Exception:
     _logger.setLevel(logging.DEBUG)
 
 _file_handler: Optional[logging.Handler] = None
+
 
 def init_debug_log():
     """Initialize debug logging (attach a file handler at DEBUG level).
@@ -40,7 +44,8 @@ def init_debug_log():
                 log_path.unlink()
         except Exception:
             from utils import logger
-            logger.exception('Auto-captured exception')
+
+            logger.exception("Auto-captured exception")
             # Non-fatal; proceed to attach handler which will overwrite
             pass
 
@@ -55,14 +60,17 @@ def init_debug_log():
         _logger.debug("=== Debug Log Started ===")
     except Exception as e:
         from utils import logger
-        logger.exception('Auto-captured exception')
+
+        logger.exception("Auto-captured exception")
         # Last-resort fallback: write a simple warning to the configured logger
         try:
             _logger.warning(f"Could not initialize debug log: {e}")
         except Exception:
             from utils import logger
-            logger.exception('Auto-captured exception')
+
+            logger.exception("Auto-captured exception")
             pass
+
 
 def log(message: str, level: int = logging.INFO):
     """Log a message via the shared logger.
@@ -75,9 +83,11 @@ def log(message: str, level: int = logging.INFO):
         _logger.log(level, message)
     except Exception:
         from utils import logger
-        logger.exception('Auto-captured exception')
+
+        logger.exception("Auto-captured exception")
         # Ignore logging failures
         pass
+
 
 def close_debug_log():
     """Close debug log file handler if attached."""
@@ -90,10 +100,12 @@ def close_debug_log():
                 _file_handler.close()
             except Exception:
                 from utils import logger
-                logger.exception('Auto-captured exception')
+
+                logger.exception("Auto-captured exception")
                 pass
             _file_handler = None
     except Exception:
         from utils import logger
-        logger.exception('Auto-captured exception')
+
+        logger.exception("Auto-captured exception")
         pass

@@ -1,4 +1,4 @@
-import builtins
+
 from ui.controllers.gallery import GalleryController
 from ui.controllers.menu_actions import MenuActions
 from ui.controllers.window_state import WindowStateController
@@ -55,20 +55,20 @@ def test_gallery_controller_behavior():
     app.prefs = PrefsMock()
     app.characters_tab = FakeCharsTab()
 
-    scheduled = {'ok': False}
+    scheduled = {"ok": False}
 
     def schedule():
-        scheduled['ok'] = True
+        scheduled["ok"] = True
 
     app.schedule_preview_update = schedule
 
     controller = GalleryController(app)
 
-    chars = {'Alice': {}}
+    chars = {"Alice": {}}
     controller.load_characters(chars)
     assert app.character_gallery.loaded is chars
 
-    controller.apply_theme({'bg': '#fff'})
+    controller.apply_theme({"bg": "#fff"})
     assert app.character_gallery.refreshed
 
     controller.toggle_visibility(True, chars)
@@ -77,9 +77,9 @@ def test_gallery_controller_behavior():
     controller.toggle_visibility(False)
     assert app.main_paned.removed
 
-    controller.on_character_selected('Bob')
-    assert app.characters_tab.added == 'Bob'
-    assert scheduled['ok'] is True
+    controller.on_character_selected("Bob")
+    assert app.characters_tab.added == "Bob"
+    assert scheduled["ok"] is True
 
 
 def test_menu_actions_delegation():
@@ -88,54 +88,54 @@ def test_menu_actions_delegation():
             self.called = []
 
         def _save_preset(self):
-            self.called.append('save')
+            self.called.append("save")
 
         def _load_preset(self):
-            self.called.append('load')
+            self.called.append("load")
 
         def _export_config(self):
-            self.called.append('export')
+            self.called.append("export")
 
         def _import_config(self):
-            self.called.append('import')
+            self.called.append("import")
 
         def _undo(self):
-            self.called.append('undo')
+            self.called.append("undo")
             return True
 
         def _redo(self):
-            self.called.append('redo')
+            self.called.append("redo")
             return True
 
         def _clear_all_characters(self):
-            self.called.append('clear')
+            self.called.append("clear")
 
         def _reset_all_outfits(self):
-            self.called.append('reset')
+            self.called.append("reset")
 
         def _apply_same_pose_to_all(self):
-            self.called.append('apply_pose')
+            self.called.append("apply_pose")
 
         def _increase_font(self):
-            self.called.append('inc')
+            self.called.append("inc")
 
         def _decrease_font(self):
-            self.called.append('dec')
+            self.called.append("dec")
 
         def _reset_font(self):
-            self.called.append('reset_font')
+            self.called.append("reset_font")
 
         def randomize_all(self):
-            self.called.append('randomize')
+            self.called.append("randomize")
 
         def _change_theme(self, t):
-            self.called.append(('theme', t))
+            self.called.append(("theme", t))
 
         def _toggle_auto_theme(self):
-            self.called.append('auto')
+            self.called.append("auto")
 
         def _on_closing(self):
-            self.called.append('closing')
+            self.called.append("closing")
 
     app = App()
     ma = MenuActions(app)
@@ -152,22 +152,22 @@ def test_menu_actions_delegation():
     ma.decrease_font()
     ma.reset_font()
     ma.randomize_all()
-    ma.change_theme('Dark')
+    ma.change_theme("Dark")
     ma.toggle_auto_theme()
     ma.on_closing()
 
-    assert 'save' in app.called and 'load' in app.called and ('theme', 'Dark') in app.called
+    assert "save" in app.called and "load" in app.called and ("theme", "Dark") in app.called
 
 
 def test_window_state_controller_restore_and_save():
     class FakeRoot:
         def __init__(self):
             self._geom = None
-            self._state = 'normal'
+            self._state = "normal"
 
         def geometry(self, g=None):
             if g is None:
-                return self._geom or '800x600+100+100'
+                return self._geom or "800x600+100+100"
             self._geom = g
 
         def state(self, s=None):
@@ -181,8 +181,8 @@ def test_window_state_controller_restore_and_save():
     app = App()
     app.root = FakeRoot()
     prefs = PrefsMock()
-    prefs.set('window_geometry', '1024x768+10+10')
-    prefs.set('window_state', 'zoomed')
+    prefs.set("window_geometry", "1024x768+10+10")
+    prefs.set("window_state", "zoomed")
     app.prefs = prefs
 
     wsc = WindowStateController(app)
@@ -190,8 +190,8 @@ def test_window_state_controller_restore_and_save():
     assert restored is True
 
     # test save
-    app.root.geometry('123x234+1+2')
-    app.root.state('normal')
+    app.root.geometry("123x234+1+2")
+    app.root.state("normal")
     wsc.save_geometry_and_state()
-    assert prefs.get('window_geometry') == '123x234+1+2'
-    assert prefs.get('window_state') == 'normal'
+    assert prefs.get("window_geometry") == "123x234+1+2"
+    assert prefs.get("window_state") == "normal"

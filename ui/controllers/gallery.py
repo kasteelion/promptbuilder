@@ -4,9 +4,9 @@ The controller holds references to the app's gallery widgets and exposes
 small adapter methods (load, apply_theme, toggle_visibility, on_character_selected)
 so `ui/main_window.py` can be simplified incrementally.
 """
-from typing import Optional
 
 import tkinter as tk
+from typing import Optional
 
 
 class GalleryController:
@@ -15,14 +15,15 @@ class GalleryController:
     This intentionally minimizes logic and keeps behavior identical while
     providing a single place to add gallery-related behaviors and tests.
     """
+
     def __init__(self, app):
         self.app = app
         # These are populated when UI is built
-        self.character_gallery = getattr(app, 'character_gallery', None)
-        self.gallery_frame = getattr(app, 'gallery_frame', None)
-        self.main_paned = getattr(app, 'main_paned', None)
-        self.prefs = getattr(app, 'prefs', None)
-        self.menu_manager = getattr(app, 'menu_manager', None)
+        self.character_gallery = getattr(app, "character_gallery", None)
+        self.gallery_frame = getattr(app, "gallery_frame", None)
+        self.main_paned = getattr(app, "main_paned", None)
+        self.prefs = getattr(app, "prefs", None)
+        self.menu_manager = getattr(app, "menu_manager", None)
 
         # If a gallery widget exists, ensure its callback points here
         if self.character_gallery is not None:
@@ -42,6 +43,7 @@ class GalleryController:
             # Defer to central logger on the app if available
             try:
                 from utils import logger
+
                 logger.exception("GalleryController: failed to load_characters")
             except Exception:
                 pass
@@ -53,11 +55,12 @@ class GalleryController:
         try:
             self.character_gallery.theme_colors = theme
             # Try to call the refresh helper if present
-            if hasattr(self.character_gallery, '_refresh_display'):
+            if hasattr(self.character_gallery, "_refresh_display"):
                 self.character_gallery._refresh_display()
         except Exception:
             try:
                 from utils import logger
+
                 logger.debug("GalleryController: failed to apply theme", exc_info=True)
             except Exception:
                 pass
@@ -87,6 +90,7 @@ class GalleryController:
         except Exception:
             try:
                 from utils import logger
+
                 logger.exception("GalleryController: toggle_visibility failed")
             except Exception:
                 pass
@@ -110,6 +114,7 @@ class GalleryController:
         except Exception:
             try:
                 from utils import logger
+
                 logger.exception("GalleryController: error handling character selection")
             except Exception:
                 pass

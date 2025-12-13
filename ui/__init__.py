@@ -8,10 +8,10 @@ from .state_manager import StateManager
 from .widgets import CollapsibleFrame
 
 __all__ = [
-    'PromptBuilderApp', 
-    'CollapsibleFrame',
-    'MenuManager',
-    'FontManager',
-    'StateManager',
-    'DialogManager'
+    "PromptBuilderApp",
+    "CollapsibleFrame",
+    "MenuManager",
+    "FontManager",
+    "StateManager",
+    "DialogManager",
 ]

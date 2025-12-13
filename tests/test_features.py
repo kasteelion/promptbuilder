@@ -5,7 +5,6 @@ via `pytest`. They use temporary directories to avoid mutating repository
 state.
 """
 
-import importlib
 from pathlib import Path
 
 

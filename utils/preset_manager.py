@@ -11,19 +11,19 @@ from .validation import sanitize_filename, validate_file_path
 
 class PresetManager:
     """Manages preset configurations for prompts."""
-    
+
     def __init__(self, presets_dir="presets"):
         """Initialize preset manager.
-        
+
         Args:
             presets_dir: Directory for storing presets
         """
         self.presets_dir = Path(presets_dir)
         self.presets_dir.mkdir(exist_ok=True)
-    
+
     def save_preset(self, name, config):
         """Save a preset configuration.
-        
+
         Args:
             name: Preset name
             config: Configuration dictionary containing:
@@ -31,90 +31,89 @@ class PresetManager:
                 - base_prompt: Base prompt name
                 - scene: Scene text
                 - notes: Notes text
-        
+
         Returns:
             Path to saved preset file
         """
-        preset_data = {
-            "name": name,
-            "created": datetime.now().isoformat(),
-            "config": config
-        }
-        
+        preset_data = {"name": name, "created": datetime.now().isoformat(), "config": config}
+
         # Sanitize filename using validation utility
         safe_name = sanitize_filename(name)
         filename = f"{safe_name}.json"
         filepath = self.presets_dir / filename
-        
+
         # Handle duplicate names
         counter = 1
         while filepath.exists():
             filename = f"{safe_name}_{counter}.json"
             filepath = self.presets_dir / filename
             counter += 1
-        
-        with open(filepath, 'w', encoding='utf-8') as f:
+
+        with open(filepath, "w", encoding="utf-8") as f:
             json.dump(preset_data, f, indent=2)
-        
+
         return filepath
-    
+
     def load_preset(self, filename):
         """Load a preset configuration.
-        
+
         Args:
             filename: Preset filename
-            
+
         Returns:
             Configuration dictionary or None if error
         """
         filepath = self.presets_dir / filename
         if not filepath.exists():
             return None
-        
+
         try:
-            with open(filepath, 'r', encoding='utf-8') as f:
+            with open(filepath, "r", encoding="utf-8") as f:
                 preset_data = json.load(f)
                 return preset_data.get("config")
         except (FileNotFoundError, json.JSONDecodeError) as e:
             logger.error(f"Error loading preset '{filename}': {e}")
             return None
-        except Exception as e:
+        except Exception:
             logger.exception(f"Unexpected error loading preset '{filename}'")
             return None
-    
+
     def get_presets(self):
         """Get list of available presets.
-        
+
         Returns:
             List of tuples (filename, name, created_date)
         """
         presets = []
         for filepath in self.presets_dir.glob("*.json"):
             try:
-                with open(filepath, 'r', encoding='utf-8') as f:
+                with open(filepath, "r", encoding="utf-8") as f:
                     data = json.load(f)
-                    presets.append((
-                        filepath.name,
-                        data.get("name", filepath.stem),
-                        data.get("created", "Unknown")
-                    ))
+                    presets.append(
+                        (
+                            filepath.name,
+                            data.get("name", filepath.stem),
+                            data.get("created", "Unknown"),
+                        )
+                    )
             except Exception:
                 from utils import logger
-                logger.exception('Auto-captured exception')
+
+                logger.exception("Auto-captured exception")
                 # Log at debug level with traceback to help diagnose corrupted files
                 logger.debug(f"Failed to read preset file: {filepath}", exc_info=True)
                 continue
-        
+
         # Sort by created date (newest first)
         presets.sort(key=lambda x: x[2], reverse=True)
         return presets
-    
+
     def delete_preset(self, filename):
         """Delete a preset.
-        
+
         Args:
             filename: Preset filename
-            
+
         Returns:
             True if deleted successfully
         """
@@ -125,64 +124,66 @@ class PresetManager:
         except (FileNotFoundError, PermissionError) as e:
             logger.error(f"Error deleting preset '{filename}': {e}")
             return False
-        except Exception as e:
+        except Exception:
             logger.exception(f"Unexpected error deleting preset '{filename}'")
             return False
-    
+
     def export_preset(self, filename, export_path):
         """Export preset to a different location.
-        
+
         Args:
             filename: Preset filename
             export_path: Path to export to
-            
+
         Returns:
             True if exported successfully
         """
         filepath = self.presets_dir / filename
         try:
             import shutil
+
             shutil.copy(filepath, export_path)
             return True
         except (FileNotFoundError, PermissionError, OSError) as e:
             logger.error(f"Error exporting preset '{filename}': {e}")
             return False
-        except Exception as e:
+        except Exception:
             logger.exception(f"Unexpected error exporting preset '{filename}'")
             return False
-    
+
     def import_preset(self, import_path):
         """Import preset from external file.
-        
+
         Args:
             import_path: Path to preset file
-            
+
         Returns:
             Imported preset filename or None
         """
         try:
             import shutil
+
             import_file = Path(import_path)
             dest = self.presets_dir / import_file.name
-            
+
             # Validate destination path is within presets directory
             is_valid, error_msg = validate_file_path(dest, self.presets_dir)
             if not is_valid:
                 logger.error(f"Invalid import destination: {error_msg}")
                 return None
-            
+
             # Handle duplicate filenames
             counter = 1
             base_name = dest.stem
             while dest.exists():
                 dest = self.presets_dir / f"{base_name}_{counter}.json"
                 counter += 1
-            
+
             shutil.copy(import_path, dest)
             return dest.name
         except (FileNotFoundError, PermissionError) as e:
             logger.error(f"Error importing preset: {e}")
             return None
-        except Exception as e:
-            logger.exception(f"Unexpected error importing preset")
+        except Exception:
+            logger.exception("Unexpected error importing preset")
             return None
