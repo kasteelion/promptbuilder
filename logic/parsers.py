@@ -8,6 +8,9 @@ _SUBSECTION_RE = re.compile(r"^###\s+(.+)$", re.MULTILINE)
 _OUTFIT_RE = re.compile(r"^####\s+(.+)$", re.MULTILINE)
 _PHOTO_RE = re.compile(r"\*\*Photo:\*\*\s*(.+?)(?:\n|$)", re.MULTILINE)
 _APPEARANCE_RE = re.compile(r"\*\*Appearance:\*\*\s*(.+?)(?:\n\*\*Outfits:|\n\*\*|$)", re.DOTALL)
+_GENDER_RE = re.compile(r"\*\*Gender:\*\*\s*([mfMF])\b")
+_SUMMARY_RE = re.compile(r"\*\*Summary:\*\*\s*(.+?)(?:\n\*\*|$)", re.DOTALL)
+_TAGS_RE = re.compile(r"\*\*Tags:\*\*\s*(.+?)(?:\n\*\*|$)", re.DOTALL)
 _LIST_ITEM_RE = re.compile(r"^\s*[-*]\s+(.*)$")
 _PRESET_ITEM_RE = re.compile(r"^-\s+\*\*([^:]+):\*\*\s*(.+)$")
 
@@ -114,6 +117,12 @@ class MarkdownParser:
 
             app_match = _APPEARANCE_RE.search(body)
             appearance = app_match.group(1).strip() if app_match else ""
+
+            # Extract optional summary if present
+            summary = None
+            summary_match = _SUMMARY_RE.search(body)
+            if summary_match:
+                summary = summary_match.group(1).strip()
 
             # Remove HTML comment blocks from appearance (legacy marker)
             appearance = re.sub(r"(?s)<!--.*?-->", "", appearance).strip()
@@ -222,6 +231,21 @@ class MarkdownParser:
                     o_desc = m.group(2).strip()
                     outfits[o_name] = o_desc
 
+            # Extract optional tags if present (comma-separated)
+            tags = []
+            tags_match = _TAGS_RE.search(body)
+            if tags_match:
+                raw = tags_match.group(1).strip()
+                tags = [t.strip() for t in re.split(r",|;", raw) if t.strip()]
+
+            # Detect gender tag (default to 'F' for backwards compatibility)
+            gender = "F"
+            gender_explicit = False
+            gender_match = _GENDER_RE.search(body)
+            if gender_match:
+                gender = gender_match.group(1).upper()
+                gender_explicit = True
+
             # Normalize outfits: detect one-piece entries and canonicalize Bottom
             for o_name, o_val in list(outfits.items()):
                 if isinstance(o_val, dict):
@@ -269,7 +293,15 @@ class MarkdownParser:
                                 del o_val[bottom_key]
                         o_val["one_piece"] = True
 
-            characters[name] = {"appearance": appearance, "outfits": outfits, "photo": photo}
+            characters[name] = {
+                "appearance": appearance,
+                "summary": summary,
+                "tags": tags,
+                "outfits": outfits,
+                "photo": photo,
+                "gender": gender,
+                "gender_explicit": gender_explicit,
+            }
 
         # Validate parsed character structure
         validated_chars = {}
@@ -336,10 +368,19 @@ class MarkdownParser:
         """
         merged_outfits = {}
 
-        # Add ALL shared outfits from ALL categories in outfits.md
-        # This makes every outfit in outfits.md available to every character
-        for category, outfits in shared_outfits.items():
-            merged_outfits.update(outfits)
+        # If shared_outfits is gendered (dict with 'F' and/or 'M'), pick the right one
+        # Otherwise, fall back to the legacy structure where shared_outfits is a single dict
+        gender = char_data.get("gender", "F") if isinstance(char_data, dict) else "F"
+
+        if isinstance(shared_outfits, dict) and any(k in shared_outfits for k in ("F", "M")):
+            selected = shared_outfits.get(gender, {})
+            # Add all categories from the selected gender file
+            for category, outfits in selected.items():
+                merged_outfits.update(outfits)
+        else:
+            # Legacy: shared_outfits is a single dict of categories
+            for category, outfits in shared_outfits.items():
+                merged_outfits.update(outfits)
 
         # Character-specific outfits override shared ones with the same name
         merged_outfits.update(char_data.get("outfits", {}))

@@ -84,6 +84,14 @@ Example outfit format:
         self.category_combo.pack(side="left", fill="x", expand=True, padx=(0, 5))
         self._load_categories()
 
+        # Target gender selector for shared outfit file
+        ttk.Label(cat_frame, text="Target:", style="Muted.TLabel").pack(side="left", padx=(6, 4))
+        self.target_var = tk.StringVar(value="Female")
+        self.target_combo = ttk.Combobox(
+            cat_frame, textvariable=self.target_var, values=["Female", "Male"], width=8
+        )
+        self.target_combo.pack(side="left")
+
         ttk.Label(cat_frame, text="(or type new)", style="Muted.TLabel").pack(
             side="left"
         )
@@ -153,21 +161,27 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
 
     def _load_categories(self):
         """Load existing outfit categories."""
-        # Use DataLoader helper to locate the outfits file (supports data/ folder)
-        outfits_file = self.data_loader._find_data_file("outfits.md")
+        # Read categories from both gendered outfit files (union)
         categories = []
+        try:
+            f_f = self.data_loader._find_data_file("outfits_f.md")
+            f_m = self.data_loader._find_data_file("outfits_m.md")
+            for outfits_file in (f_f, f_m):
+                if outfits_file.exists():
+                    try:
+                        content = outfits_file.read_text(encoding="utf-8")
+                        lines = content.split("\n")
+                        for line in lines:
+                            if line.strip().startswith("## "):
+                                cat = line.strip()[3:]
+                                if cat not in categories:
+                                    categories.append(cat)
+                    except Exception:
+                        from utils import logger
 
-        if outfits_file.exists():
-            try:
-                content = outfits_file.read_text(encoding="utf-8")
-                lines = content.split("\n")
-                for line in lines:
-                    if line.strip().startswith("## "):
-                        categories.append(line.strip()[3:])
-            except Exception as e:
-                from utils import logger
-
-                logger.debug(f"Failed to load outfit categories from {outfits_file}: {e}")
+                        logger.debug(f"Failed to load outfit categories from {outfits_file}")
+        except Exception:
+            categories = []
 
         if not categories:
             categories = ["Common Outfits", "Formal", "Casual", "Athletic"]
@@ -202,8 +216,12 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
             )
             return
 
-        # Locate the outfits file via DataLoader so we respect data/ vs root locations
-        outfits_file = self.data_loader._find_data_file("outfits.md")
+        # Determine target file based on selection
+        target = self.target_var.get().strip().lower()
+        if target.startswith("m"):
+            outfits_file = self.data_loader._find_data_file("outfits_m.md")
+        else:
+            outfits_file = self.data_loader._find_data_file("outfits_f.md")
 
         try:
             if outfits_file.exists():

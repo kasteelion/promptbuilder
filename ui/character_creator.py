@@ -2,6 +2,9 @@
 
 import tkinter as tk
 from tkinter import messagebox, ttk
+from ui.widgets import ScrollableCanvas
+import logic.parsers as parsers
+from logic.parsers import MarkdownParser
 
 from utils import (
     get_character_template,
@@ -53,8 +56,11 @@ class CharacterCreatorDialog:
 
     def _build_ui(self):
         """Build the dialog UI."""
-        main_frame = ttk.Frame(self.dialog, padding=10)
-        main_frame.pack(fill="both", expand=True)
+        # Use a scrollable canvas for main content so fields can scroll while
+        # the action buttons remain docked at the bottom.
+        scroll = ScrollableCanvas(self.dialog)
+        scroll.pack(fill="both", expand=True, padx=10, pady=(10, 0))
+        main_frame = scroll.get_container()
 
         # Template selection
         template_frame = ttk.Frame(main_frame)
@@ -131,6 +137,36 @@ class CharacterCreatorDialog:
         self.name_entry = ttk.Entry(main_frame, textvariable=self.name_var, font=("Segoe UI", 10))
         self.name_entry.pack(fill="x", pady=(0, 10))
         self.name_entry.focus()
+
+        # Gender selector
+        ttk.Label(main_frame, text="Gender:", style="Bold.TLabel").pack(
+            anchor="w", pady=(0, 4)
+        )
+        self.gender_var = tk.StringVar(value="F")
+        self.gender_combo = ttk.Combobox(
+            main_frame, textvariable=self.gender_var, values=["F", "M"], width=6, state="readonly"
+        )
+        self.gender_combo.pack(anchor="w", pady=(0, 10))
+
+        # Summary (short)
+        ttk.Label(main_frame, text="Summary (short):", style="Bold.TLabel").pack(
+            anchor="w", pady=(0, 4)
+        )
+        self.summary_var = tk.StringVar()
+        self.summary_entry = ttk.Entry(main_frame, textvariable=self.summary_var, font=("Segoe UI", 10))
+        self.summary_entry.pack(fill="x", pady=(0, 10))
+
+        # Tags (comma-separated)
+        ttk.Label(main_frame, text="Tags (comma-separated):", style="Bold.TLabel").pack(
+            anchor="w", pady=(0, 4)
+        )
+        self.tags_var = tk.StringVar()
+        self.tags_entry = ttk.Entry(main_frame, textvariable=self.tags_var, font=("Segoe UI", 10))
+        self.tags_entry.pack(fill="x", pady=(0, 10))
+        # Autocomplete popup for tags
+        self._tag_popup = None
+        self._available_tags = []
+        self._init_tag_autocomplete()
 
         # Appearance
         ttk.Label(main_frame, text="Appearance:", style="Bold.TLabel").pack(
@@ -222,21 +258,35 @@ class CharacterCreatorDialog:
         self.outfit_text.pack(side="left", fill="both", expand=True)
         outfit_scroll.pack(side="right", fill="y")
 
-        # Buttons
-        button_frame = ttk.Frame(main_frame)
-        button_frame.pack(fill="x", pady=(10, 0))
+        # Make dialog resizable and set a sensible minimum size so controls fit
+        try:
+            self.dialog.resizable(True, True)
+            self.dialog.minsize(520, 420)
+        except Exception:
+            pass
 
-        ttk.Button(button_frame, text="Cancel", command=self._cancel).pack(
+        # Docked bottom button bar so actions remain visible even when content scrolls
+        bottom_btn_frame = ttk.Frame(self.dialog)
+        bottom_btn_frame.pack(side="bottom", fill="x", padx=10, pady=10)
+
+        ttk.Button(bottom_btn_frame, text="Cancel", command=self._cancel).pack(
             side="right", padx=(5, 0)
         )
         self.create_btn = ttk.Button(
-            button_frame, text="Create Character", command=self._create_character
+            bottom_btn_frame, text="Create Character", command=self._create_character
         )
         self.create_btn.pack(side="right")
 
-        # Bind Enter key to create
+        # Bind Enter/Escape keys
         self.dialog.bind("<Return>", lambda e: self._create_character())
         self.dialog.bind("<Escape>", lambda e: self._cancel())
+
+        # Refresh scrollable canvas bindings/region now that content is added
+        try:
+            scroll.refresh_mousewheel_bindings()
+            scroll.update_scroll_region()
+        except Exception:
+            pass
 
     def _on_template_selected(self, event=None):
         """Handle template selection from dropdown."""
@@ -290,6 +340,137 @@ class CharacterCreatorDialog:
         self.name_var.set("")
         self.dialog.after(50, lambda: self.dialog.focus_set())
 
+    def _init_tag_autocomplete(self):
+        """Initialize tag autocomplete handlers and preload available tags."""
+        try:
+            # Use DataLoader to fetch known tags (may return only used tags)
+            self._available_tags = list(self.data_loader.load_tags() or [])
+        except Exception:
+            self._available_tags = []
+
+        # Bind events on the tags entry
+        self.tags_entry.bind("<KeyRelease>", self._on_tags_keyrelease)
+        self.tags_entry.bind("<Down>", self._focus_tag_list)
+        self.tags_entry.bind("<FocusOut>", lambda e: self.dialog.after(150, self._hide_tag_popup))
+
+    def _on_tags_keyrelease(self, event=None):
+        """Update suggestions when user types in tags entry."""
+        # Do not trigger on navigation keys
+        if event and event.keysym in ("Up", "Down", "Left", "Right", "Return", "Escape", "Tab"):
+            return
+
+        text = self.tags_var.get()
+        # Determine the token after the last comma
+        if "," in text:
+            parts = [p.strip() for p in text.split(",")]
+            current = parts[-1]
+            existing = set(p.lower() for p in parts[:-1] if p)
+        else:
+            current = text.strip()
+            existing = set()
+
+        if not current:
+            self._hide_tag_popup()
+            return
+
+        prefix = current.lower()
+        suggestions = [t for t in self._available_tags if t.lower().startswith(prefix) and t.lower() not in existing]
+        # If no suggestions, hide popup
+        if not suggestions:
+            self._hide_tag_popup()
+            return
+
+        # Limit suggestions
+        suggestions = suggestions[:8]
+        self._show_tag_popup(suggestions)
+
+    def _show_tag_popup(self, suggestions):
+        """Show or update the suggestion popup with given suggestions."""
+        try:
+            if self._tag_popup and self._tag_popup.winfo_exists():
+                listbox = self._tag_popup.listbox
+                listbox.delete(0, "end")
+            else:
+                self._tag_popup = tk.Toplevel(self.dialog)
+                self._tag_popup.wm_overrideredirect(True)
+                self._tag_popup.attributes("-topmost", True)
+                listbox = tk.Listbox(self._tag_popup, height=6)
+                listbox.pack(side="left", fill="both", expand=True)
+                listbox.bind("<Button-1>", self._on_tag_click)
+                listbox.bind("<Return>", self._on_tag_select)
+                listbox.bind("<Escape>", lambda e: self._hide_tag_popup())
+                listbox.bind("<Double-Button-1>", self._on_tag_select)
+                # store for later
+                self._tag_popup.listbox = listbox
+
+            # populate
+            lb = self._tag_popup.listbox
+            lb.delete(0, "end")
+            for s in suggestions:
+                lb.insert("end", s)
+
+            # position under the entry
+            x = self.tags_entry.winfo_rootx()
+            y = self.tags_entry.winfo_rooty() + self.tags_entry.winfo_height()
+            width = self.tags_entry.winfo_width()
+            # set geometry
+            self._tag_popup.geometry(f"{width}x{min(150, 24 * len(suggestions))}+{x}+{y}")
+            self._tag_popup.deiconify()
+        except Exception:
+            self._hide_tag_popup()
+
+    def _hide_tag_popup(self):
+        try:
+            if self._tag_popup and self._tag_popup.winfo_exists():
+                self._tag_popup.destroy()
+        except Exception:
+            pass
+        finally:
+            self._tag_popup = None
+
+    def _on_tag_click(self, event):
+        lb = event.widget
+        idx = lb.nearest(event.y)
+        if idx is not None:
+            self._apply_tag_from_list(lb.get(idx))
+
+    def _on_tag_select(self, event=None):
+        if not self._tag_popup or not self._tag_popup.winfo_exists():
+            return
+        lb = self._tag_popup.listbox
+        sel = lb.curselection()
+        if not sel:
+            return
+        value = lb.get(sel[0])
+        self._apply_tag_from_list(value)
+
+    def _focus_tag_list(self, event=None):
+        if self._tag_popup and self._tag_popup.winfo_exists():
+            try:
+                self._tag_popup.listbox.focus_set()
+                self._tag_popup.listbox.selection_set(0)
+            except Exception:
+                pass
+            return "break"
+
+    def _apply_tag_from_list(self, tag_value):
+        """Insert the selected tag into the tags entry, normalizing punctuation."""
+        text = self.tags_var.get()
+        if "," in text:
+            parts = [p.strip() for p in text.split(",")]
+            prefix_parts = parts[:-1]
+        else:
+            prefix_parts = []
+
+        # normalize tag (preserve suggested casing)
+        new_parts = prefix_parts + [tag_value]
+        new_text = ", ".join(new_parts)
+        # add a trailing comma+space so user can continue typing
+        new_text = new_text + ", "
+        self.tags_var.set(new_text)
+        self.tags_entry.icursor("end")
+        self._hide_tag_popup()
+
     def _cancel(self):
         """Cancel and close dialog."""
         self.dialog.destroy()
@@ -299,6 +480,9 @@ class CharacterCreatorDialog:
         name = self.name_var.get().strip()
         appearance = self.appearance_text.get("1.0", "end").strip()
         outfit = self.outfit_text.get("1.0", "end").strip()
+        summary = self.summary_var.get().strip()
+        tags_text = self.tags_var.get().strip()
+        tags_line = tags_text
 
         # In edit mode, use the edit_character name
         if self.edit_character:
@@ -347,6 +531,51 @@ class CharacterCreatorDialog:
         if not filename.endswith(".md"):
             filename = f"{filename}.md"
 
+        # Standardize photo filename to <sanitized_name>_photo.png (lowercase)
+        base_name = sanitize_filename(name).lower().replace(" ", "_")
+        photo_filename = f"{base_name}_photo.png"
+        photo_block = f"**Photo:** {photo_filename}\n"
+
+        # If editing an existing character, try to locate the original file
+        # so we overwrite it (preserve metadata like **Photo:**). This
+        # searches the characters directory for a file that parses to the
+        # same character name. If found, use that file path instead of the
+        # sanitized-name-derived path which can create duplicates.
+        existing_file_path = None
+        if self.edit_character:
+            try:
+                chars_dir = self.data_loader._find_characters_dir()
+                matches = []
+                for cf in sorted(chars_dir.glob("*.md")):
+                    try:
+                        txt = cf.read_text(encoding="utf-8")
+                        parsed = MarkdownParser.parse_characters(txt)
+                        if self.edit_character in parsed:
+                            matches.append((cf, txt))
+                    except Exception:
+                        continue
+
+                # Prefer a matching file that already contains a **Photo:** line
+                chosen = None
+                for cf, txt in matches:
+                    if parsers._PHOTO_RE.search(txt):
+                        chosen = cf
+                        break
+                if chosen is None and matches:
+                    chosen = matches[0][0]
+
+                existing_file_path = chosen
+            except Exception:
+                existing_file_path = None
+
+        if existing_file_path is not None:
+            file_path = existing_file_path
+        else:
+            # Default new file path under characters directory
+            chars_dir = self.data_loader._find_characters_dir()
+            chars_dir.mkdir(parents=True, exist_ok=True)
+            file_path = chars_dir / filename
+
         # Check if file already exists (skip check in edit mode)
         chars_dir = self.data_loader._find_characters_dir()
         chars_dir.mkdir(parents=True, exist_ok=True)
@@ -365,18 +594,111 @@ class CharacterCreatorDialog:
         # Use placeholder if outfit wasn't filled in
         outfit_content = outfit if outfit and outfit != outfit_placeholder else "A simple outfit."
 
+        # Insert gender tag for downstream parsing
+        gender_tag = self.gender_var.get().strip().upper() if self.gender_var.get() else "F"
+
+        # Include summary field if provided
+        summary_block = f"**Summary:** {summary}\n" if summary else ""
+        tags_block = f"**Tags:** {tags_line}\n" if tags_line else ""
         content = f"""### {name}
-**Appearance:**
-{appearance}
+    {summary_block}{tags_block}**Gender:** {gender_tag}
+    **Appearance:**
+    {appearance}
 
-**Outfits:**
+    **Outfits:**
 
-#### Base
-{outfit_content}
-"""
+    #### Base
+    {outfit_content}
+    """
 
         # Write file
         try:
+            # If file exists, create a backup first
+            if file_path.exists():
+                bak = file_path.with_suffix(file_path.suffix + ".bak")
+                if bak.exists():
+                    idx = 1
+                    while True:
+                        candidate = file_path.with_suffix(file_path.suffix + f".bak{idx}")
+                        if not candidate.exists():
+                            bak = candidate
+                            break
+                        idx += 1
+                import shutil
+
+                shutil.copy(file_path, bak)
+
+                # Preserve existing metadata lines (e.g., **Photo:** and other custom metadata)
+                try:
+                    existing = file_path.read_text(encoding="utf-8")
+                    lines = existing.splitlines()
+                    # find header line index (the character section)
+                    header_idx = None
+                    for i, ln in enumerate(lines):
+                        if ln.strip().startswith(f"### {name}"):
+                            header_idx = i
+                            break
+
+                    # find appearance section index (where metadata ends)
+                    appearance_idx = None
+                    for i in range(header_idx + 1 if header_idx is not None else 0, len(lines)):
+                        if lines[i].strip().lower().startswith("**appearance:"):
+                            appearance_idx = i
+                            break
+
+                    # Collect preserved metadata lines between header and appearance (excluding summary/tags/gender)
+                    preserved_meta = []
+                    if header_idx is not None:
+                        start = header_idx + 1
+                        end = appearance_idx if appearance_idx is not None else len(lines)
+                        for ln in lines[start:end]:
+                            s = ln.strip()
+                            # Skip existing summary/tags/gender lines (we'll write fresh ones)
+                            if not s:
+                                # preserve blank lines for readability
+                                preserved_meta.append(ln)
+                                continue
+                            low = s.lower()
+                            if low.startswith("**summary:") or low.startswith("**tags:") or low.startswith("**gender:"):
+                                continue
+                            # Skip existing photo lines; we'll write a standardized one
+                            if low.startswith("**photo:"):
+                                continue
+                            # Preserve any other metadata lines
+                            preserved_meta.append(ln)
+
+                    # Reconstruct the content: header + preserved metadata + new summary/tags/gender + rest (appearance/outfits)
+                    if header_idx is not None:
+                        before = "\n".join(lines[: header_idx + 1])
+                        meta_block = "\n".join(preserved_meta).rstrip()
+                        # Build new metadata block in a stable order: preserved meta (photo etc.), then summary/tags/gender
+                        new_meta_parts = []
+                        # Build new metadata block in a stable order: standardized photo, preserved meta, then summary/tags/gender
+                        # Photo comes first so it's easy to spot in files
+                        new_meta_parts.append(photo_block.strip())
+                        if meta_block:
+                            new_meta_parts.append(meta_block)
+                        if summary_block:
+                            new_meta_parts.append(summary_block.strip())
+                        if tags_block:
+                            new_meta_parts.append(tags_block.strip())
+                        # gender is always present
+                        new_meta_parts.append(f"**Gender:** {gender_tag}")
+                        new_meta = "\n".join(new_meta_parts)
+
+                        # Rest of file from appearance onwards (or from end if none)
+                        rest = ""
+                        if appearance_idx is not None:
+                            rest = "\n".join(lines[appearance_idx:])
+                        else:
+                            # If no appearance marker found, append the rest after header/meta
+                            rest = ""
+
+                        content = before + "\n" + new_meta + "\n\n" + rest
+                except Exception:
+                    # If preservation fails, continue with overwriting but we already made a backup
+                    pass
+
             file_path.write_text(content, encoding="utf-8")
             root = self.dialog.winfo_toplevel()
             msg = (
@@ -419,6 +741,27 @@ class CharacterCreatorDialog:
             appearance = char_data.get("appearance", "")
             self.appearance_text.delete("1.0", tk.END)
             self.appearance_text.insert("1.0", appearance)
+
+            # Load summary
+            summary = char_data.get("summary", "")
+            try:
+                self.summary_var.set(summary)
+            except Exception:
+                self.summary_var.set("")
+
+            # Load tags
+            tags = char_data.get("tags", [])
+            try:
+                self.tags_var.set(", ".join(tags) if isinstance(tags, (list, tuple)) else str(tags))
+            except Exception:
+                self.tags_var.set("")
+
+            # Load gender (default F)
+            gender = char_data.get("gender", "F")
+            try:
+                self.gender_var.set(gender.upper())
+            except Exception:
+                self.gender_var.set("F")
 
             # Load base outfit if exists
             outfits = char_data.get("outfits", {})

@@ -3,6 +3,7 @@
 
 import tkinter as tk
 from tkinter import messagebox, ttk
+from utils import logger
 
 from config import TOOLTIPS
 from utils import create_tooltip
@@ -86,6 +87,22 @@ class CharactersTab:
         all_outfits = set()
         for char_data in self.characters.values():
             all_outfits.update(char_data.get("outfits", {}).keys())
+        # Also include shared outfits from gendered shared outfit files
+        try:
+            shared = self.data_loader.load_outfits()
+            if isinstance(shared, dict):
+                # support gendered structure {'F': {...}, 'M': {...}}
+                for key in ("F", "M"):
+                    if key in shared and isinstance(shared[key], dict):
+                        for category, outfits in shared[key].items():
+                            all_outfits.update(outfits.keys())
+                # Fallback: if shared isn't gendered but is a dict of categories
+                if "F" not in shared and "M" not in shared:
+                    for category, outfits in shared.items():
+                        all_outfits.update(outfits.keys())
+        except Exception:
+            # If loading shared outfits fails, ignore and continue
+            pass
         self.bulk_outfit_combo["values"] = sorted(list(all_outfits))
 
         self._refresh_list()
@@ -286,6 +303,11 @@ class CharactersTab:
             messagebox.showwarning("No Characters", "No characters are currently selected")
             return
 
+        # Debug: log the bulk apply action
+        try:
+            logger.debug(f"Bulk apply to all: outfit='{outfit_name}', selected={ [c.get('name') for c in self.selected_characters] }")
+        except Exception:
+            pass
         # Save state for undo
         if self.save_for_undo:
             self.save_for_undo()
@@ -303,8 +325,15 @@ class CharactersTab:
 
         # Show status feedback
         root = self.tab.winfo_toplevel()
+        msg = f"Applied '{outfit_name}' to all {count} character(s)"
         if hasattr(root, "_update_status"):
-            root._update_status(f"Applied '{outfit_name}' to all {count} character(s)")
+            root._update_status(msg)
+        else:
+            try:
+                messagebox.showinfo("Applied Outfit", msg)
+            except Exception:
+                # best-effort: ignore UI failures
+                pass
 
     def _apply_bulk_to_selected(self):
         """Apply selected outfit to a specific selected character via dialog."""
@@ -317,6 +346,11 @@ class CharactersTab:
         if not self.selected_characters:
             messagebox.showwarning("No Characters", "No characters are currently selected")
             return
+
+        try:
+            logger.debug(f"Bulk apply to selected dialog: outfit='{outfit_name}', selected={ [c.get('name') for c in self.selected_characters] }")
+        except Exception:
+            pass
 
         # If only one character, apply directly
         if len(self.selected_characters) == 1:
@@ -401,8 +435,14 @@ class CharactersTab:
                 self.bulk_outfit_var.set("")
 
             root = self.tab.winfo_toplevel()
+            msg = f"Applied '{outfit_name}' to {result['selected']['name']}"
             if hasattr(root, "_update_status"):
-                root._update_status(f"Applied '{outfit_name}' to {result['selected']['name']}")
+                root._update_status(msg)
+            else:
+                try:
+                    messagebox.showinfo("Applied Outfit", msg)
+                except Exception:
+                    pass
 
     def _filter_characters(self):
         """Filter character dropdown based on search text."""
@@ -429,6 +469,95 @@ class CharactersTab:
         name = self.char_var.get()
         if not name:
             return
+        # If the parsed character data indicates gender wasn't explicit, or the raw
+        # character file lacks a Gender tag, prompt the user to add it.
+        try:
+            need_prompt = False
+
+            # Check parsed data first; if the parser reported no explicit gender,
+            # prompt immediately (don't rely on filename heuristics which can miss
+            # files with different naming).
+            char_def = self.characters.get(name, {})
+            if not char_def or not char_def.get("gender_explicit", False):
+                need_prompt = True
+
+            if need_prompt:
+                # Ask user for a quick inline gender choice (F/M) or open editor
+                choice = self._prompt_gender_choice(name)
+                if choice in ("F", "M"):
+                    # Try to write gender tag directly into the character file
+                    try:
+                        fp = self._find_character_file(name)
+                        if fp:
+                            import shutil
+
+                            bak = fp.with_suffix(fp.suffix + ".bak")
+                            if bak.exists():
+                                idx = 1
+                                while True:
+                                    candidate = fp.with_suffix(fp.suffix + f".bak{idx}")
+                                    if not candidate.exists():
+                                        bak = candidate
+                                        break
+                                    idx += 1
+                            shutil.copy(fp, bak)
+
+                            text = fp.read_text(encoding="utf-8")
+                            # Insert Gender tag after header or photo line
+                            lines = text.splitlines()
+                            insert_idx = None
+                            for i, line in enumerate(lines[:20]):
+                                if line.strip().lower().startswith("**photo:"):
+                                    insert_idx = i + 1
+                                    break
+                            if insert_idx is None:
+                                for i, line in enumerate(lines[:6]):
+                                    if line.strip().startswith("### "):
+                                        insert_idx = i + 1
+                                        break
+                            if insert_idx is None:
+                                insert_idx = 0
+
+                            new_lines = lines[:insert_idx] + ["", f"**Gender:** {choice}"] + lines[insert_idx:]
+                            fp.write_text("\n".join(new_lines), encoding="utf-8")
+                            # Reload characters and continue
+                            if self.reload_data:
+                                self.reload_data()
+                            self.characters = self.data_loader.load_characters()
+                        else:
+                            # No file found; open editor as fallback
+                            root = self.tab.winfo_toplevel()
+                            dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=name)
+                            dialog.show()
+                            if self.reload_data:
+                                self.reload_data()
+                            self.characters = self.data_loader.load_characters()
+                    except Exception:
+                        # If writing fails, open editor as fallback
+                        root = self.tab.winfo_toplevel()
+                        dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=name)
+                        dialog.show()
+                        if self.reload_data:
+                            self.reload_data()
+                        self.characters = self.data_loader.load_characters()
+
+                    # Abort if still missing
+                    if not self.characters.get(name, {}).get("gender_explicit", False):
+                        return
+                elif choice == "editor":
+                    root = self.tab.winfo_toplevel()
+                    dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=name)
+                    dialog.show()
+                    if self.reload_data:
+                        self.reload_data()
+                    self.characters = self.data_loader.load_characters()
+                    if not self.characters.get(name, {}).get("gender_explicit", False):
+                        return
+                else:
+                    return
+        except Exception:
+            # Non-fatal; continue with existing behavior
+            pass
         if any(c["name"] == name for c in self.selected_characters):
             from utils.notification import notify
 
@@ -785,6 +914,79 @@ class CharactersTab:
         self.tab.after(1, self.on_change)
         self._refreshing = False
 
+    def _find_character_file(self, character_name):
+        """Locate the markdown file for a character by scanning the characters dir.
+
+        Returns Path or None.
+        """
+        chars_dir = self.data_loader._find_characters_dir()
+        try:
+            for p in sorted(chars_dir.glob("*.md")):
+                try:
+                    text = p.read_text(encoding="utf-8")
+                except Exception:
+                    continue
+                # Look for header '### Name' within the first part of the file
+                lines = text.splitlines()
+                for ln in lines[:8]:
+                    if ln.strip().startswith("### ") and ln.strip()[4:].strip() == character_name:
+                        return p
+                # Fallback: substring search
+                if f"### {character_name}" in text:
+                    return p
+        except Exception:
+            return None
+        return None
+
+    def _prompt_gender_choice(self, character_name):
+        """Show a small modal dialog to pick gender quickly.
+
+        Returns 'F', 'M', 'editor' (open full editor), or None (cancel).
+        """
+        root = self.tab.winfo_toplevel()
+        dlg = tk.Toplevel(root)
+        dlg.transient(root)
+        dlg.grab_set()
+        dlg.title(f"Add Gender for {character_name}")
+        ttk.Label(dlg, text=f"Select gender for '{character_name}':").pack(padx=12, pady=(12, 6))
+
+        choice_var = tk.StringVar(value="F")
+        frame = ttk.Frame(dlg)
+        frame.pack(padx=12, pady=6)
+        ttk.Radiobutton(frame, text="Female (F)", variable=choice_var, value="F").pack(anchor="w")
+        ttk.Radiobutton(frame, text="Male (M)", variable=choice_var, value="M").pack(anchor="w")
+
+        btns = ttk.Frame(dlg)
+        btns.pack(padx=12, pady=(6, 12))
+
+        result = {"val": None}
+
+        def _ok():
+            result["val"] = choice_var.get()
+            dlg.destroy()
+
+        def _editor():
+            result["val"] = "editor"
+            dlg.destroy()
+
+        def _cancel():
+            result["val"] = None
+            dlg.destroy()
+
+        ttk.Button(btns, text="OK", command=_ok).pack(side="left", padx=(0, 6))
+        ttk.Button(btns, text="Open Editor", command=_editor).pack(side="left", padx=(0, 6))
+        ttk.Button(btns, text="Cancel", command=_cancel).pack(side="left")
+
+        # Center
+        dlg.update_idletasks()
+        x = root.winfo_x() + (root.winfo_width() // 2) - (dlg.winfo_width() // 2)
+        y = root.winfo_y() + (root.winfo_height() // 2) - (dlg.winfo_height() // 2)
+        dlg.geometry(f"+{x}+{y}")
+
+        dlg.wait_window()
+
+        return result["val"]
+
     def get_base_prompt_name(self):
         """Get selected base prompt name."""
         return self.base_prompt_var.get()
@@ -907,6 +1109,78 @@ class CharactersTab:
         Args:
             character_name: Name of the character to add
         """
+        # If the parsed character data indicates gender wasn't explicit, prompt
+        # the user before adding (same behavior as dropdown Add).
+        try:
+            char_def = self.characters.get(character_name, {})
+            if not char_def or not char_def.get("gender_explicit", False):
+                choice = self._prompt_gender_choice(character_name)
+                if choice in ("F", "M"):
+                    try:
+                        fp = self._find_character_file(character_name)
+                        if fp:
+                            import shutil
+
+                            bak = fp.with_suffix(fp.suffix + ".bak")
+                            if bak.exists():
+                                idx = 1
+                                while True:
+                                    candidate = fp.with_suffix(fp.suffix + f".bak{idx}")
+                                    if not candidate.exists():
+                                        bak = candidate
+                                        break
+                                    idx += 1
+                            shutil.copy(fp, bak)
+                            text = fp.read_text(encoding="utf-8")
+                            lines = text.splitlines()
+                            insert_idx = None
+                            for i, line in enumerate(lines[:20]):
+                                if line.strip().lower().startswith("**photo:"):
+                                    insert_idx = i + 1
+                                    break
+                            if insert_idx is None:
+                                for i, line in enumerate(lines[:6]):
+                                    if line.strip().startswith("### "):
+                                        insert_idx = i + 1
+                                        break
+                            if insert_idx is None:
+                                insert_idx = 0
+                            new_lines = lines[:insert_idx] + ["", f"**Gender:** {choice}"] + lines[insert_idx:]
+                            fp.write_text("\n".join(new_lines), encoding="utf-8")
+                            if self.reload_data:
+                                self.reload_data()
+                            self.characters = self.data_loader.load_characters()
+                        else:
+                            # fallback to open editor
+                            root = self.tab.winfo_toplevel()
+                            dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=character_name)
+                            dialog.show()
+                            if self.reload_data:
+                                self.reload_data()
+                            self.characters = self.data_loader.load_characters()
+                    except Exception:
+                        root = self.tab.winfo_toplevel()
+                        dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=character_name)
+                        dialog.show()
+                        if self.reload_data:
+                            self.reload_data()
+                        self.characters = self.data_loader.load_characters()
+                    if not self.characters.get(character_name, {}).get("gender_explicit", False):
+                        return
+                elif choice == "editor":
+                    root = self.tab.winfo_toplevel()
+                    dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=character_name)
+                    dialog.show()
+                    if self.reload_data:
+                        self.reload_data()
+                    self.characters = self.data_loader.load_characters()
+                    if not self.characters.get(character_name, {}).get("gender_explicit", False):
+                        return
+                else:
+                    return
+        except Exception:
+            pass
+
         if self.save_for_undo:
             self.save_for_undo()
 

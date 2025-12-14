@@ -355,6 +355,39 @@ class ThemeManager:
         self.style.configure("Accent.TLabel", font=(None, 9), background=bg, foreground=accent)
         # Muted label for small helper text
         self.style.configure("Muted.TLabel", font=(None, 8), background=bg, foreground=border)
+        # Tag-style label (chip-like) for small tag badges
+        # Use accent as background with high-contrast text (text_bg) where possible
+        tag_bg = theme.get("accent", accent)
+        tag_fg = theme.get("text_bg", bg)
+        self.style.configure(
+            "Tag.TLabel",
+            font=(None, 8),
+            background=tag_bg,
+            foreground=tag_fg,
+            padding=(4, 2),
+            borderwidth=0,
+        )
+
+        # Tag-style button for interactive chips (matches Tag.TLabel but button-specific)
+        try:
+            self.style.configure(
+                "Tag.TButton",
+                font=(None, 8),
+                background=tag_bg,
+                foreground=tag_fg,
+                padding=[6, 2],
+                bordercolor=border,
+                borderwidth=1,
+            )
+            self.style.map(
+                "Tag.TButton",
+                background=[("active", accent), ("pressed", accent_hover)],
+                foreground=[("active", text_bg), ("pressed", text_bg)],
+                bordercolor=[("active", accent), ("pressed", accent_hover)],
+            )
+        except Exception:
+            # Some ttk themes may not support advanced options; ignore failures
+            pass
 
         # Scrollbar with better visibility
         self.style.configure(

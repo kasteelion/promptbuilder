@@ -1,8 +1,16 @@
 # -*- coding: utf-8 -*-
-"""Custom UI widgets for the application."""
+"""Custom UI widgets for the application.
+
+Provides:
+- `ScrollableCanvas`: a frame containing a canvas + vertical scrollbar with an inner container.
+- `CollapsibleFrame`: a header + content frame that can be toggled.
+- `FlowFrame`: a placement-based flow/wrap container used for tag chips.
+"""
 
 import tkinter as tk
 from tkinter import ttk
+
+from utils import logger
 
 
 class ScrollableCanvas(ttk.Frame):
@@ -15,11 +23,6 @@ class ScrollableCanvas(ttk.Frame):
     """
 
     def __init__(self, parent, *args, **kwargs):
-        """Initialize scrollable canvas.
-
-        Args:
-            parent: Parent widget
-        """
         super().__init__(parent, *args, **kwargs)
 
         # Configure grid
@@ -36,6 +39,33 @@ class ScrollableCanvas(ttk.Frame):
         # Create canvas window and sync width
         self._window = self.canvas.create_window((0, 0), window=self.container, anchor="nw")
         self.canvas.configure(yscrollcommand=self.scrollbar.set)
+
+        # Debounce id for container configure events
+        self._container_configure_after_id = None
+
+        # When the inner container's size changes (due to FlowFrame reflow,
+        # image load, or dynamic content), we should recompute the scroll
+        # region. Use a short debounce to avoid thrashing during rapid
+        # layout changes.
+        def _on_container_configure(event):
+            try:
+                if self._container_configure_after_id:
+                    try:
+                        self.canvas.after_cancel(self._container_configure_after_id)
+                    except Exception:
+                        pass
+                # schedule update_scroll_region after a short delay
+                self._container_configure_after_id = self.canvas.after(60, self.update_scroll_region)
+            except Exception:
+                try:
+                    self.canvas.after_idle(self.update_scroll_region)
+                except Exception:
+                    pass
+
+        try:
+            self.container.bind("<Configure>", _on_container_configure)
+        except Exception:
+            pass
 
         # Bind canvas width to window width for proper wrapping
         def update_window_width(event):
@@ -54,38 +84,164 @@ class ScrollableCanvas(ttk.Frame):
         self._bind_mousewheel_recursive(self.container)
 
     def _on_mousewheel(self, event):
-        """Handle mousewheel scrolling."""
         self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
         return "break"
 
     def _bind_mousewheel_recursive(self, widget):
-        """Recursively bind mousewheel to widget and all its children."""
         widget.bind("<MouseWheel>", self._on_mousewheel)
         for child in widget.winfo_children():
             self._bind_mousewheel_recursive(child)
 
     def update_scroll_region(self):
-        """Update the canvas scroll region to fit all content."""
-        try:
-            self.canvas.update_idletasks()
-            bbox = self.canvas.bbox("all")
-            if bbox:
-                self.canvas.config(scrollregion=bbox)
-        except Exception as e:
-            from utils import logger
+        # Defer the actual bbox calculation until the event loop is idle so that
+        # geometry managers have a chance to settle. This avoids computing an
+        # incomplete bbox when widgets are still being laid out which can cause
+        # the scrollbar to not reach the bottom of the content.
+        def _apply_scrollregion():
+            try:
+                self.canvas.update_idletasks()
+                # Make the canvas window's height match the container's requested
+                # height so bbox('all') reflects the full content. This helps
+                # when children are positioned with place/grid and the window
+                # item hasn't picked up the final height yet.
+                try:
+                    req_h = int(self.container.winfo_reqheight() or 0)
+                    if req_h > 1:
+                        try:
+                            self.canvas.itemconfig(self._window, height=req_h)
+                        except Exception:
+                            pass
+                except Exception:
+                    pass
+                # Compute desired scrollregion from container/requested height
+                # and from measured child extents, since canvas.bbox('all') may
+                # only include the canvas window item and not reflect inner
+                # children's final placed extents.
+                try:
+                    # Container requested size is the best single source of truth
+                    cont_req_h = int(self.container.winfo_reqheight() or 0)
+                except Exception:
+                    cont_req_h = 0
 
-            logger.debug(f"Failed to update scroll region: {e}")
+                # Compute the max bottom among container children (y + height)
+                max_child_bottom = 0
+                try:
+                    for c in self.container.winfo_children():
+                        try:
+                            y = int(c.winfo_y())
+                            h = int(c.winfo_height())
+                            if y + h > max_child_bottom:
+                                max_child_bottom = y + h
+                        except Exception:
+                            continue
+                except Exception:
+                    max_child_bottom = 0
+
+                # Prefer the largest measurement we have
+                bottom_padding = 32
+                measured_bottom = max(cont_req_h, max_child_bottom)
+                try:
+                    canvas_h = int(self.canvas.winfo_height() or 0)
+                except Exception:
+                    canvas_h = 0
+
+                desired_bottom = max(measured_bottom + bottom_padding, canvas_h)
+
+                try:
+                    cont_req_w = int(self.container.winfo_reqwidth() or 0)
+                except Exception:
+                    cont_req_w = 0
+
+                # Set scrollregion explicitly using container extents so the
+                # scrollbar covers all inner widgets.
+                try:
+                    self.canvas.config(scrollregion=(0, 0, cont_req_w or 1, desired_bottom))
+                except Exception:
+                    try:
+                        # Fallback to using bbox if available
+                        bbox = self.canvas.bbox("all")
+                        if bbox:
+                            self.canvas.config(scrollregion=bbox)
+                    except Exception:
+                        pass
+            except Exception as e:
+                logger.debug(f"Failed to update scroll region: {e}")
+
+        try:
+            # Schedule after_idle to ensure all widgets report correct sizes first
+            self.canvas.after_idle(_apply_scrollregion)
+        except Exception:
+            # Best-effort immediate attempt if after_idle isn't available
+            try:
+                _apply_scrollregion()
+            except Exception:
+                pass
+
+        # Retry loop: attempt several times with increasing delays to handle
+        # widgets that perform layout asynchronously (FlowFrame reflows, image
+        # loading, etc.). This makes the scrollregion robust against late
+        # geometry changes.
+        max_retries = 5
+        delays = [60, 150, 300, 600, 1000]
+
+        def _retry_attempt(attempt=0):
+            try:
+                bbox = self.canvas.bbox("all")
+                if not bbox:
+                    # Nothing yet — schedule next attempt
+                    if attempt + 1 < max_retries:
+                        self.canvas.after(delays[min(attempt, len(delays) - 1)], lambda: _retry_attempt(attempt + 1))
+                    return
+
+                # Compute maximum bottom extent from children (in container coords)
+                max_child_h = 0
+                for c in self.container.winfo_children():
+                    try:
+                        y = int(c.winfo_y() + c.winfo_height())
+                        if y > max_child_h:
+                            max_child_h = y
+                    except Exception:
+                        continue
+
+                # If any child's bottom extends below bbox bottom, expand scrollregion
+                if max_child_h and bbox[3] < max_child_h:
+                    try:
+                        new_bottom = max_child_h + 32
+                        self.canvas.config(scrollregion=(bbox[0], bbox[1], bbox[2], new_bottom))
+                    except Exception:
+                        pass
+                else:
+                    # If bbox seems smaller than canvas height, ensure a small padding
+                    try:
+                        canvas_h = int(self.canvas.winfo_height() or 0)
+                        if bbox[3] < canvas_h:
+                            self.canvas.config(scrollregion=(bbox[0], bbox[1], bbox[2], max(bbox[3] + 24, canvas_h)))
+                    except Exception:
+                        pass
+
+                # If we're not yet satisfied and we have retries left, schedule another attempt
+                if attempt + 1 < max_retries:
+                    # If the bbox hasn't grown significantly, we can stop early
+                    next_delay = delays[min(attempt, len(delays) - 1)]
+                    self.canvas.after(next_delay, lambda: _retry_attempt(attempt + 1))
+            except Exception:
+                # Swallow exceptions in retry attempts to avoid noisy failures
+                if attempt + 1 < max_retries:
+                    try:
+                        self.canvas.after(delays[min(attempt, len(delays) - 1)], lambda: _retry_attempt(attempt + 1))
+                    except Exception:
+                        pass
+
+        try:
+            # Start retries
+            self.canvas.after(delays[0], lambda: _retry_attempt(0))
+        except Exception:
+            pass
 
     def refresh_mousewheel_bindings(self):
-        """Rebind mousewheel to all widgets (call after adding new content)."""
         self._bind_mousewheel_recursive(self.container)
 
     def get_container(self):
-        """Get the container frame for adding content.
-
-        Returns:
-            ttk.Frame: Container frame
-        """
         return self.container
 
 
@@ -93,12 +249,6 @@ class CollapsibleFrame(ttk.Frame):
     """A frame that can be collapsed/expanded with a toggle button."""
 
     def __init__(self, parent, text="", *args, **kwargs):
-        """Initialize collapsible frame.
-
-        Args:
-            parent: Parent widget
-            text: Header text for the frame
-        """
         super().__init__(parent, *args, **kwargs, style="Collapsible.TFrame")
         self.columnconfigure(0, weight=1)
 
@@ -120,7 +270,6 @@ class CollapsibleFrame(ttk.Frame):
         self._open = True
 
     def _toggle_cb(self):
-        """Toggle frame collapsed/expanded state."""
         self._open = not self._open
         if self._open:
             self._content.grid()
@@ -130,117 +279,145 @@ class CollapsibleFrame(ttk.Frame):
             self._toggle.config(text="▸ " + self._toggle.cget("text")[2:])
 
     def set_clear_command(self, cmd):
-        """Set the command for the clear button.
-
-        Args:
-            cmd: Callback function
-        """
         self._clear_btn.config(command=cmd)
 
     def get_content_frame(self):
-        """Get the content frame for adding widgets.
-
-        Returns:
-            ttk.Frame: Content frame
-        """
         return self._content
 
 
 class FlowFrame(ttk.Frame):
     """A simple flow/wrap frame that places children left-to-right and wraps naturally.
 
-    This implementation measures child widgets and places them into a
-    grid so they wrap to new lines when the available width is exceeded.
-    It automatically reflows on resize.
+    Uses placement-based layout to avoid flicker when reflowing.
     """
 
-    def __init__(self, parent, padding_x=6, padding_y=4, *args, **kwargs):
+    def __init__(self, parent, padding_x=6, padding_y=4, min_chip_width=64, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
         self._padx = padding_x
         self._pady = padding_y
         self._children = []
         self._reflow_after_id = None
+        self._pending_reflow = False
+        self._min_chip_width = min_chip_width
         self._last_width = 0
         self._reflow_retry_count = 0
-        self._max_retries = 10  # Prevent infinite recursion
         # Bind Configure to reflow when width changes
         self.bind("<Configure>", self._on_configure)
 
     def _on_configure(self, event):
-        """Handle width changes to trigger reflow."""
         if hasattr(event, "width") and event.width > 1:
-            # Only reflow if width actually changed significantly
             if abs(event.width - self._last_width) > 10:
                 self._last_width = event.width
-                # Cancel any pending reflow
                 if self._reflow_after_id:
-                    self.after_cancel(self._reflow_after_id)
-                # Schedule reflow
+                    try:
+                        self.after_cancel(self._reflow_after_id)
+                    except Exception:
+                        pass
+                logger.debug(f"FlowFrame._on_configure: width changed -> scheduling reflow (w={event.width})")
                 self._reflow_after_id = self.after(50, self._reflow)
 
     def _reflow(self):
         from .constants import FLOW_FRAME_REFLOW_DELAY_MS, WIDGET_REFLOW_RETRY_LIMIT
 
-        # Place children into grid cells, wrapping when necessary
+        try:
+            self.update_idletasks()
+        except Exception:
+            pass
+
         if not self._children:
             return
 
-        # Just use current width
         avail_width = self.winfo_width()
         if avail_width <= 1:
-            # Not yet mapped; try again shortly (max retries to prevent infinite loop)
+            try:
+                parent_w = getattr(self.master, 'winfo_width', lambda: 0)()
+                if parent_w and parent_w > 1:
+                    avail_width = parent_w - 8
+            except Exception:
+                parent_w = 0
+
+        if avail_width <= 1:
             if not hasattr(self, "_reflow_retry_count"):
                 self._reflow_retry_count = 0
             if self._reflow_retry_count < WIDGET_REFLOW_RETRY_LIMIT:
                 self._reflow_retry_count += 1
                 self.after(FLOW_FRAME_REFLOW_DELAY_MS, self._reflow)
             return
-        self._reflow_retry_count = 0  # Reset counter on successful reflow
 
-        row = 0
-        col = 0
-        col = 0
-        max_cols = 3  # Limit to 3 columns for better readability
+        self._reflow_retry_count = 0
+        logger.debug(f"FlowFrame._reflow(place): avail_width={avail_width} children={len(self._children)}")
+
+        x = self._padx
+        y = self._pady
+        line_height = 0
 
         for btn in self._children:
-            # Grid the button with better spacing
-            btn.grid_configure(row=row, column=col, padx=self._padx, pady=self._pady, sticky="ew")
+            try:
+                w_req = btn.winfo_reqwidth()
+                h_req = btn.winfo_reqheight()
+            except Exception:
+                w_req = 100
+                h_req = 24
 
-            col += 1
-            # Wrap to next row after max_cols
-            if col >= max_cols:
-                row += 1
-                col = 0
+            # enforce a minimum width for visual consistency
+            chip_w = max(w_req, self._min_chip_width)
+            total_w = chip_w + (2 * self._padx)
+            if x + total_w > avail_width and x > self._padx:
+                x = self._padx
+                y += line_height + self._pady
+                line_height = 0
 
-        # Configure column weights for uniform stretching
-        for c in range(max_cols):
-            self.columnconfigure(c, weight=1, uniform="outfit_col")
+            try:
+                btn.place(in_=self, x=x, y=y, width=chip_w, height=h_req)
+            except Exception:
+                try:
+                    btn.place(x=x, y=y)
+                except Exception:
+                    pass
 
-        # Configure row weights
-        for r in range(row + 1):
-            self.rowconfigure(r, weight=0)
+            x += total_w
+            if h_req > line_height:
+                line_height = h_req
+
+        try:
+            total_height = y + line_height + self._pady
+            self.config(height=total_height)
+        except Exception:
+            pass
 
     def add_button(self, text, style=None, command=None):
-        """Add a button to the flow frame.
-
-        Args:
-            text: Button label
-            style: ttk button style (e.g., 'Accent.TButton')
-            command: Button callback
-
-        Returns:
-            ttk.Button: The created button
-        """
         btn = ttk.Button(self, text=text, style=style or "TButton", command=command)
-        # Use grid placement managed by this frame's reflow logic
-        btn.grid(row=0, column=len(self._children), padx=self._padx, pady=self._pady, sticky="ew")
         self._children.append(btn)
-        # Trigger reflow to wrap if needed - use after() with delay to allow width to be set
-        self.after(10, self._reflow)
+        logger.debug(f"FlowFrame.add_button: added '{text}' children={len(self._children)}")
+        # Coalesce reflows so adding many buttons is fast
+        self._schedule_reflow()
         return btn
 
+    def _schedule_reflow(self, delay=16):
+        if self._pending_reflow:
+            return
+        self._pending_reflow = True
+
+        def _do_reflow():
+            try:
+                self._reflow()
+            finally:
+                self._pending_reflow = False
+
+        try:
+            self.after(delay, _do_reflow)
+        except Exception:
+            try:
+                self.after_idle(_do_reflow)
+            except Exception:
+                _do_reflow()
+
     def clear(self):
-        """Clear all children and reset state."""
-        for child in self._children:
-            child.destroy()
+        for child in list(self._children):
+            try:
+                child.place_forget()
+                child.destroy()
+            except Exception:
+                pass
         self._children.clear()
+

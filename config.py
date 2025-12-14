@@ -6,7 +6,7 @@ Note: UI-specific constants have been moved to ui/constants.py
 # File paths
 # NOTE: Character files are loaded dynamically from the characters/ folder.
 # These are the main data files that can be edited through the UI.
-MAIN_EDITABLE_FILES = ["base_prompts.md", "scenes.md", "poses.md", "outfits.md"]
+MAIN_EDITABLE_FILES = ["base_prompts.md", "scenes.md", "poses.md", "outfits_f.md", "outfits_m.md"]
 
 # Default theme
 DEFAULT_THEME = "Light"
@@ -192,7 +192,7 @@ MAX_RECENT_ITEMS = 10  # Maximum recent items stored in preferences
 # Tooltip help text
 TOOLTIPS = {
     "base_prompt": "The base art style that defines the overall look and technique of the image (e.g., 'Anime style', 'Photorealistic', etc.)",
-    "bulk_outfit": "Quickly apply the same outfit to multiple characters at once. All outfits from outfits.md are automatically shared with every character.",
+    "bulk_outfit": "Quickly apply the same outfit to multiple characters at once. Shared outfits are organized by gender in `outfits_f.md` and `outfits_m.md`.",
     "character": "Add a character to your prompt. Each character can have different outfits and poses",
     "scene": "Describe the environment, setting, location, lighting, and background details",
     "notes": "Additional details, modifications, or special instructions for the AI",

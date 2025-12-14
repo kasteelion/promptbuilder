@@ -157,6 +157,18 @@ Platform: {platform.system()} {platform.release()}
             )
             style_chk.pack(side="left", padx=(8, 0))
 
+            include_summary_var = tk.BooleanVar(value=False)
+            summary_chk = ttk.Checkbutton(
+                ctrl_frame, text="Include Summary (meta)", variable=include_summary_var
+            )
+            summary_chk.pack(side="left", padx=(8, 0))
+
+            include_tags_var = tk.BooleanVar(value=False)
+            tags_chk = ttk.Checkbutton(
+                ctrl_frame, text="Include Tags (meta)", variable=include_tags_var
+            )
+            tags_chk.pack(side="left", padx=(8, 0))
+
             # Add scrollbar and text widget
             frame = ttk.Frame(dialog)
             frame.pack(fill="both", expand=True, padx=10, pady=10)
@@ -183,16 +195,23 @@ Platform: {platform.system()} {platform.release()}
                             data_chars,
                             include_base=include_base_var.get(),
                             include_style=include_style_var.get(),
+                            include_summary=include_summary_var.get(),
+                            include_tags=include_tags_var.get(),
                         )
                     elif legacy_chars.exists():
                         new_summary = generate_summary(
                             legacy_chars,
                             include_base=include_base_var.get(),
                             include_style=include_style_var.get(),
+                            include_summary=include_summary_var.get(),
+                            include_tags=include_tags_var.get(),
                         )
                     else:
                         new_summary = generate_summary(
-                            include_base=include_base_var.get(), include_style=include_style_var.get()
+                            include_base=include_base_var.get(),
+                            include_style=include_style_var.get(),
+                            include_summary=include_summary_var.get(),
+                            include_tags=include_tags_var.get(),
                         )
                 except Exception:
                     from utils import logger
@@ -212,6 +231,8 @@ Platform: {platform.system()} {platform.release()}
             # Bind checkbox changes to regenerate
             include_base_var.trace_add("write", regenerate_summary)
             include_style_var.trace_add("write", regenerate_summary)
+            include_summary_var.trace_add("write", regenerate_summary)
+            include_tags_var.trace_add("write", regenerate_summary)
 
             # Add close button
             close_btn = ttk.Button(dialog, text="Close", command=dialog.destroy)

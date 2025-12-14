@@ -95,10 +95,27 @@ def extract_appearance(file_path, include_base=False):
         if m:
             base_outfit = m.group(1).strip()
 
-    return character_name, appearance_text, base_outfit, style_notes
+    # Extract explicit Summary and Tags metadata if present
+    import re as _re
+
+    summary_match = _re.search(r"\*\*Summary:\*\*\s*(.+)", content, _re.IGNORECASE)
+    summary_meta = summary_match.group(1).strip() if summary_match else None
+
+    tags_match = _re.search(r"\*\*Tags:\*\*\s*(.+)", content, _re.IGNORECASE)
+    tags_meta = []
+    if tags_match:
+        tags_meta = [t.strip() for t in tags_match.group(1).split(",") if t.strip()]
+
+    return character_name, appearance_text, base_outfit, style_notes, summary_meta, tags_meta
 
 
-def generate_summary(characters_dir=None, include_base=False, include_style=False):
+def generate_summary(
+    characters_dir=None,
+    include_base=False,
+    include_style=False,
+    include_summary=False,
+    include_tags=False,
+):
     """Generate a summary of all character appearances.
 
     Args:
@@ -121,11 +138,21 @@ def generate_summary(characters_dir=None, include_base=False, include_style=Fals
     summary_parts = ["=" * 80, "CHARACTER APPEARANCES SUMMARY", "=" * 80, ""]
 
     for i, md_file in enumerate(md_files, 1):
-        name, appearance, base_outfit, style_notes = extract_appearance(
-            md_file, include_base=include_base
-        )
+        (
+            name,
+            appearance,
+            base_outfit,
+            style_notes,
+            summary_meta,
+            tags_meta,
+        ) = extract_appearance(md_file, include_base=include_base)
         summary_parts.append(f"[{i}] {name}")
         summary_parts.append("-" * 80)
+        # If requested, prepend the explicit summary metadata before the appearance
+        if include_summary and summary_meta:
+            summary_parts.append(f"Summary: {summary_meta}")
+            summary_parts.append("")
+
         summary_parts.append(appearance)
         if include_base and base_outfit:
             summary_parts.append("")
@@ -135,6 +162,10 @@ def generate_summary(characters_dir=None, include_base=False, include_style=Fals
             summary_parts.append("")
             summary_parts.append("Style Notes:")
             summary_parts.append(style_notes)
+        if include_tags and tags_meta:
+            summary_parts.append("")
+            summary_parts.append("Tags:")
+            summary_parts.append(", ".join(tags_meta))
         summary_parts.append("")
 
     summary_parts.append("=" * 80)

@@ -73,19 +73,127 @@ class DataLoader:
         return new_location
 
     def load_outfits(self):
-        """Load and parse shared outfits from outfits.md file. Creates file if not found."""
-        f = self._find_data_file("outfits.md")
-        if not f.exists():
+        """Load and parse shared outfits from gendered outfit files.
+
+        Priority / behavior:
+        - If `outfits_f.md` or `outfits_m.md` exist in data/ they are parsed separately
+        - If neither exists but legacy `outfits.md` exists, it will be treated as female content
+        - If no file exists, a default `outfits_f.md` will be created with a sample entry
+
+        Returns a dict, either legacy structure (categories->outfits) or a gendered
+        structure: {"F": {...}, "M": {...}}
+        """
+        f_f = self._find_data_file("outfits_f.md")
+        f_m = self._find_data_file("outfits_m.md")
+
+        # If legacy file exists and gendered files do not, migrate legacy into outfits_f.md
+        legacy = self._find_data_file("outfits.md")
+        if not f_f.exists() and not f_m.exists() and legacy.exists():
+            try:
+                legacy_text = legacy.read_text(encoding="utf-8")
+                f_f.write_text(legacy_text, encoding="utf-8")
+            except Exception:
+                pass
+
+        # Ensure at least the female file exists with a basic sample
+        if not f_f.exists():
             default_content = """## Common Outfits
 ### Casual
 A simple and comfortable casual outfit.
 """
-            f.write_text(default_content, encoding="utf-8")
-            return {"Common": {"Casual": "A simple and comfortable casual outfit."}}
+            f_f.write_text(default_content, encoding="utf-8")
+
+        outfits_f_text = f_f.read_text(encoding="utf-8") if f_f.exists() else ""
+        outfits_m_text = f_m.read_text(encoding="utf-8") if f_m.exists() else ""
+
+        parsed_f = MarkdownParser.parse_shared_outfits(outfits_f_text) if outfits_f_text else {}
+        parsed_m = MarkdownParser.parse_shared_outfits(outfits_m_text) if outfits_m_text else {}
+
+        # If male file is empty, still return dict with both keys for consistency
+        return {"F": parsed_f or {}, "M": parsed_m or {}}
+
+    def load_tags(self):
+        """Load canonical tag list from `data/tags.md` (create defaults if missing).
+
+        Returns a list of tag strings.
+        """
+        f = self._find_data_file("tags.md")
+
+        default_tags = [
+            "athletic",
+            "edgy",
+            "formal",
+            "casual",
+            "bohemian",
+            "vintage",
+            "fantasy",
+            "soft",
+            "romantic",
+            "male",
+            "female",
+            "curvy",
+            "plus-size",
+        ]
+
+        # Prefer to compute the set of tags actually used by characters
+        try:
+            # If characters are cached, use them; otherwise attempt to load characters
+            chars = self._cache.get("characters")
+            if chars is None:
+                try:
+                    chars = self.load_characters()
+                except Exception:
+                    chars = None
+
+            if chars:
+                used = []
+                for _, data in chars.items():
+                    tlist = data.get("tags") or []
+                    if isinstance(tlist, str):
+                        tlist = [t.strip() for t in tlist.split(",") if t.strip()]
+                    for tt in tlist:
+                        if tt and tt not in used:
+                            used.append(tt)
+
+                # If we found any used tags, return them sorted (preserve insertion order for stability)
+                if used:
+                    return used
+        except Exception:
+            # If anything goes wrong computing used tags, fall back to reading tags.md
+            pass
+
+        # Fallback: read tags.md (create defaults if missing)
+        if not f.exists():
+            # create a simple tags.md listing
+            content = """# Tags
+
+Common tags used to categorize characters. One tag per line.
+
+"""
+            content += "\n".join(f"- {t}" for t in default_tags)
+            f.write_text(content, encoding="utf-8")
+            return default_tags
 
         text = f.read_text(encoding="utf-8")
-        outfits = MarkdownParser.parse_shared_outfits(text)
-        return outfits if outfits else {"Common": {}}
+        tags = []
+        for line in text.splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            if line.startswith("- "):
+                tags.append(line[2:].strip())
+            elif line.startswith("#"):
+                continue
+            else:
+                tags.append(line)
+
+        # normalize unique
+        seen = []
+        for t in tags:
+            tt = t.strip()
+            if tt and tt not in seen:
+                seen.append(tt)
+        return seen
 
     def load_characters(self):
         """Load and parse character files from characters/ folder, merging with shared outfits.
@@ -192,6 +300,18 @@ A simple and comfortable casual outfit.
             )
             char_data["outfits"] = merged_outfits
 
+        # Resolve photo filenames to actual files within characters directory.
+        # This makes the UI more robust: it will display only when an actual
+        # file exists and will prefer standardized photo filenames.
+        for char_name, char_data in list(chars.items()):
+            try:
+                resolved = self.resolve_photo_for_character(char_name, char_data.get("photo"))
+                # store resolved relative filename or None
+                char_data["photo"] = resolved
+            except Exception:
+                # If resolution fails, leave original value
+                pass
+
         # Cache the result
         self._cache[cache_key] = chars
 
@@ -201,6 +321,68 @@ A simple and comfortable casual outfit.
         """Clear all cached data to force reload."""
         self._cache.clear()
         self._file_mtimes.clear()
+
+    def resolve_photo_for_character(self, character_name: str, photo_field: str | None) -> str | None:
+        """Resolve a character's photo to a filename located in the characters directory.
+
+        Priority:
+        1. If `photo_field` is provided and the file exists under characters/, use it.
+        2. Try standardized name: `<sanitized_name>_photo.<ext>` (png/jpg/jpeg)
+        3. Try lowercase/underscore variants of the sanitized name.
+        4. If nothing found, return None.
+
+        Returns a filename relative to the characters directory, or None.
+        """
+        from pathlib import Path
+        from utils.validation import sanitize_filename
+
+        chars_dir = self._find_characters_dir()
+
+        # Helper to check candidate names
+        def check_candidate(name: str):
+            p = chars_dir / name
+            if p.exists():
+                return name
+            return None
+
+        # 1) explicit field if present
+        if photo_field:
+            try:
+                # If field is an absolute path, try to match by basename
+                cand = Path(photo_field)
+                if cand.is_absolute():
+                    # prefer file inside characters dir
+                    local = chars_dir / cand.name
+                    if local.exists():
+                        return cand.name
+                    # otherwise, do not return absolute paths (keep relative)
+                else:
+                    # relative to characters dir
+                    res = check_candidate(photo_field)
+                    if res:
+                        return res
+            except Exception:
+                pass
+
+        # 2) standardized sanitized name
+        base = sanitize_filename(character_name).lower().replace(" ", "_")
+        # Try common extensions
+        for ext in (".png", ".jpg", ".jpeg"):
+            cand = f"{base}_photo{ext}"
+            found = check_candidate(cand)
+            if found:
+                return found
+
+        # 3) try variants (strip diacritics not implemented here; try simple lowercase)
+        simple = "".join(c for c in character_name.lower() if c.isalnum() or c == "_").replace(" ", "_")
+        for ext in (".png", ".jpg", ".jpeg"):
+            cand = f"{simple}_photo{ext}"
+            found = check_candidate(cand)
+            if found:
+                return found
+
+        # 4) nothing found
+        return None
 
     def load_base_prompts(self):
         """Load and parse base_prompts.md file. Creates file if not found."""

@@ -42,12 +42,15 @@ def init_debug_log():
         try:
             if log_path.exists():
                 log_path.unlink()
-        except Exception:
-            from utils import logger
+        except Exception as _e:
+            # If another process holds the file, removing it may fail (common on Windows).
+            # This is non-fatal; avoid logging a full exception trace which can be noisy.
+            try:
+                from utils import logger
 
-            logger.exception("Auto-captured exception")
-            # Non-fatal; proceed to attach handler which will overwrite
-            pass
+                logger.debug(f"Could not remove existing debug log: {_e}")
+            except Exception:
+                pass
 
         # Attach file handler if not already attached
         if not _file_handler:

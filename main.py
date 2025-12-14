@@ -1,7 +1,29 @@
+"""Entrypoint shim for Prompt Builder.
+
+Delegates startup to the `Runner` class in `runner.py` so the
+application lifecycle is centralized and easier to test.
+"""
+
+import sys
+
+from runner import Runner
+
+
+def main(argv=None) -> int:
+    """Run the application via the Runner class.
+
+    Accepts an optional argv list for testing; returns an exit code.
+    """
+    return Runner().run(argv)
+
+
+if __name__ == "__main__":
+    sys.exit(main())
 # -*- coding: utf-8 -*-
 """Entry point for Prompt Builder application."""
 
 import sys
+import logging
 
 from debug_log import close_debug_log, init_debug_log, log
 
@@ -42,9 +64,9 @@ def main(argv=None):
     _check_python_compatibility()
 
     if cli_args.version:
-        print("Prompt Builder")
-        print(f"Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}")
-        print(f"Platform: {sys.platform}")
+        log("Prompt Builder", level=logging.INFO)
+        log(f"Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}", level=logging.INFO)
+        log(f"Platform: {sys.platform}", level=logging.INFO)
         close_debug_log()
         return 0
 
@@ -54,7 +76,7 @@ def main(argv=None):
 
             print_compatibility_report()
         except ImportError:
-            print("Compatibility module not found. Basic checks passed.")
+            log("Compatibility module not found. Basic checks passed.", level=logging.INFO)
         close_debug_log()
         return 0
 
@@ -96,7 +118,7 @@ def main(argv=None):
     except KeyboardInterrupt:
         # Graceful shutdown on Ctrl+C
         log("Application closed by user (Ctrl+C)")
-        print("Application closed by user.")
+        log("Application closed by user.", level=logging.INFO)
         return 0
     except Exception:
         from utils import logger
@@ -110,7 +132,7 @@ def main(argv=None):
         log(f"FATAL ERROR: {exc_text}")
 
         # Give the user a concise message and point them to the debug log
-        print("An unexpected error occurred. See promptbuilder_debug.log for details.")
+        log("An unexpected error occurred. See promptbuilder_debug.log for details.", level=logging.ERROR)
 
         # Re-raise in debug mode for developers
         if 'cli_args' in locals() and cli_args.debug:
