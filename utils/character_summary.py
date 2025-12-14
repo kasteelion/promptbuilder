@@ -66,6 +66,21 @@ def extract_appearance(file_path, include_base=False):
 
     style_notes = "\n".join(style_notes_parts).strip() if style_notes_parts else None
 
+    # Normalize style notes: remove duplicate heading lines like "Style notes" or
+    # "Style Notes:" that were included in the comment block so we don't print
+    # a redundant header when the caller adds a "Style Notes:" label.
+    if style_notes:
+        sn_lines = style_notes.splitlines()
+        if sn_lines:
+            first = sn_lines[0].strip()
+            import re as _re
+
+            if _re.match(r"(?i)^style\s*notes\b[:\-]?", first):
+                # drop the first line which is a heading
+                sn_lines = sn_lines[1:]
+        # Trim leading/trailing blank lines and rejoin
+        style_notes = "\n".join([ln.rstrip() for ln in sn_lines]).strip()
+
     # Remove HTML comment blocks (legacy) and lines starting with '//' used for style notes
     appearance_text = re.sub(r"(?s)<!--.*?-->", "", appearance_text).strip()
     if appearance_text:
