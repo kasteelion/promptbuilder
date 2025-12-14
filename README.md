@@ -88,6 +88,14 @@ Key architecture choices and recent improvements:
 
 Many UI modules were updated to prefer ttk styles instead of inline `foreground`/`font` arguments; this improves theming consistency and testability.
 
+**Developer Notes**
+
+- **Entrypoint:** Runtime startup is centralized in `runner.py`. Use `python main.py` (the `main.py` file is a small shim that delegates to `Runner`). This avoids import-time side-effects.
+- **Archived scripts:** Several legacy, one-off migration scripts were moved to `scripts/archived/` to keep the project root tidy. If you need an archived script, open it from that folder.
+- **Outfits files:** The project now uses gendered outfit files `outfits_f.md` and `outfits_m.md`. If you previously used a single `outfits.md`, see `docs/DEVELOPMENT.md` for migration notes.
+- **Logging:** Core logging is configured via `utils/logger.py`. Use `--debug` to enable verbose logging, or the `debug_log.py` utility for persistent debug logs.
+- **Running checks:** See `docs/DEVELOPMENT.md` for recommended linter, formatter, and import-time smoke-test commands (PowerShell examples included).
+
 ## Theming notes
 
 - Prefer ttk styles for label-like widgets; styles are declared and applied by the theme manager.
@@ -97,99 +105,115 @@ When adding UI widgets, favor creating or reusing styles instead of passing lite
 
 ## Data files & formats
 
-Content is stored as human-editable markdown files under the repository root:
+# AI Image Prompt Builder
 
-- `characters/` — one markdown file per character
-- `base_prompts.md`, `poses.md`, `scenes.md`, `outfits.md` — prompt component lists and presets
+A lightweight desktop application to compose detailed prompts for AI image generation. Use the GUI to build characters, poses, outfits and scene elements, then export the assembled prompt text for image-generation models.
 
-See the `docs/` directory for format examples and editor templates.
+Table of contents
+- What it is
+- Requirements
+- Quick start
+- Running the app (GUI & CLI)
+- Development (tests & linters)
+- Contributing
+- Documentation & changelog
 
+---
+
+## What it is
+
+- GUI-first tool to create modular prompt components (characters, poses, outfits, scenes) and combine them into exportable prompt strings.
+- Supports batch operations, randomization, and templates.
+- Themeable UI (Tkinter/ttk) with optional image previews via Pillow.
+
+## Requirements
+
+- Python 3.8 or newer (3.11+ recommended). The project has been validated locally on Python 3.14.
+- Tkinter (usually included with most Python distributions).
+- Optional: Pillow to enable photo previews in the character gallery (`pip install Pillow`).
+
+The core functionality avoids runtime external dependencies; add optional packages only if you need specific features.
+
+## Quick start
+
+Clone the repo and run from the project root.
+
+```powershell
+git clone https://github.com/kasteelion/promptbuilder.git
+cd promptbuilder
+python -m pip install -r requirements.txt  # optional, for development tools
+python main.py
+```
+
+The GUI will open; if you prefer the runner-based entrypoint you can use:
+
+```powershell
+python runner.py
+```
+
+## Running the app (GUI & CLI)
+
+- Start GUI: `python main.py` (recommended for most users)
+- CLI helpers are provided by `cli.py` and `runner.py`. Common options:
+	- `--version` / `-v`: print version and exit
+	- `--check-compat`: run compatibility checks (Python, tkinter)
+	- `--debug`: enable verbose logging and debug output
+
+Example (PowerShell):
+
+```powershell
+python main.py --debug
+```
+
+## Development (tests & linters)
+
+We use `pytest` for unit tests and standard formatters/linters in CI. Example commands (from project root):
+
+```powershell
+python -m pytest -q
+python -m isort .
+python -m black .
+python -m ruff check .
+```
+
+If you prefer a virtual environment, create one and activate it before running the commands above.
+
+### CI
+
+There is a GitHub Actions workflow at `.github/workflows/ci.yml` that runs formatting checks, linters and the test suite on pushes and pull requests.
 
 ## Contributing
 
-- Keep compatibility with Python 3.8+ unless there is a clear reason to bump the minimum supported version
-- Prefer standard-library packages; if adding a dependency, update `requirements.txt` and document the reason
-- Avoid import-time side effects. Use runtime entrypoints (`Runner` or `if __name__ == '__main__'`) for initialization logic
-- Add tests for new or changed behavior and run `pytest` before submitting a PR
+- Keep compatibility with Python 3.8+ unless there is a documented reason to bump the minimum version.
+- Prefer standard-library tools for core functionality; when adding a dependency, add it to `requirements.txt` and document the reason.
+- Avoid import-time side-effects; use `Runner`/`runner.py` or `if __name__ == '__main__'` for runtime initialization.
+- Add tests for any new or changed behavior and run `pytest` locally before submitting a PR.
 
-Please open PRs for larger refactors and include screenshots for UI changes where appropriate.
+If you want, I can add a `CONTRIBUTING.md` with local development tips, a recommended pre-commit configuration, and common troubleshooting steps.
 
----
+## Documentation & changelog
 
-If you'd like, I can also add a `CONTRIBUTING.md` and a `docs/dev.md` with local development tips and common troubleshooting steps.
+- User-facing guides and design notes live in the `docs/` directory (see `docs/QUICK_REFERENCE.md`, `docs/COMPATIBILITY.md`, `docs/README.md`).
+- Prompt components and content live under the repository root as plain markdown:
+	- `characters/` — character files
+	- `base_prompts.md`, `poses.md`, `scenes.md`, `outfits_f.md`, `outfits_m.md`
 
----
+Changelog (high-level updates):
 
-Updated: December 2025
-- ✅ Undo/Redo system (Ctrl+Z/Y)
-- ✅ Presets & Templates (Save/Load configurations)
-- ✅ Smart preferences (Auto-save settings)
-- ✅ Auto theme detection (Follows OS dark/light mode)
-- ✅ Enhanced copy options (Copy sections separately)
-- ✅ Right-click context menus
-- ✅ Batch operations (Clear all, reset outfits, apply poses)
-- ✅ Tooltips throughout UI
-- ✅ 20+ keyboard shortcuts
-- ✅ Export/Import configurations (JSON)
-- ✅ Live status updates
-- ✅ User-friendly error messages
-- ✅ Welcome screen for new users
-- ✅ Collapsible sections
-- ✅ Performance optimizations
-
-### Version 1.0
-- Initial release
+- Updated: December 2025 — UI improvements, undo/redo, presets, theme detection, improved copy/export options, batch operations, and performance work.
 
 ---
-
-## Contributing
-
-Contributions are welcome! This project follows standard Python best practices:
-
-- Python 3.8+ compatibility
-- Zero external dependencies for core functionality
-- Type hints where possible
-- Centralized logging using the `utils.logger` module
-- Modular architecture with specialized manager classes
-
-See the documentation in the `docs/` directory for more technical details.
-
-## Tests & CI
-
-- **Run tests locally:**
-
-```powershell
-# From project root (Windows PowerShell)
-C:/Users/parking/miniforge3/Scripts/conda.exe run -p C:\Users\parking\miniforge3 --no-capture-output python -m pytest -q
-```
-
-- **Run linters & formatters locally:**
-
-```powershell
-C:/Users/parking/miniforge3/Scripts/conda.exe run -p C:\Users\parking\miniforge3 --no-capture-output python -m isort .
-C:/Users/parking/miniforge3/Scripts/conda.exe run -p C:\Users\parking\miniforge3 --no-capture-output python -m black .
-C:/Users/parking/miniforge3/Scripts/conda.exe run -p C:\Users\parking\miniforge3 --no-capture-output python -m ruff check .
-```
-
-- **CI:** A GitHub Actions workflow is included at `.github/workflows/ci.yml` that runs formatting checks, linters, and `pytest` on pushes and pull requests to `master`.
-
-If you want me to also add a pre-commit configuration or extend the CI matrix, tell me which tools/versions you prefer and I will add them.
-
-## Documentation
-
-- **[docs/QUICK_REFERENCE.md](docs/QUICK_REFERENCE.md)** - Keyboard shortcuts and quick tips
-- **[docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)** - Python version compatibility information
- - **[docs/QUICK_REFERENCE.md](docs/QUICK_REFERENCE.md)** - Keyboard shortcuts and quick tips
- - **[docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)** - Python version compatibility information
-
-**Note:** The Visual Gallery UI has been deprecated and removed from the codebase. Archived notes are available at `docs/VISUAL_UI_GUIDE.md` and `docs/VISUAL_UI_IMPLEMENTATION.md`.
 
 ## License
 
-This project is open source. Feel free to use, modify, and distribute as needed.
+This project is open-source. Use, modify and redistribute as permitted by the project's license.
 
-## Acknowledgments
+---
 
-Built with Python's tkinter library for maximum compatibility and zero dependencies.
+If you'd like, I can:
+- Add a `CONTRIBUTING.md` and a short `docs/dev.md` with PowerShell development commands.
+- Add a small `README` badge section or a short GIF showing the main UI.
+
+Updated: December 2025
 
 
