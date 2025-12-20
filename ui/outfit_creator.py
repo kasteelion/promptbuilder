@@ -70,9 +70,7 @@ Example outfit format:
         example_widget.pack(anchor="w", padx=10, pady=(0, 4), fill="x")
 
         # Category
-        ttk.Label(main_frame, text="Category:", style="Bold.TLabel").pack(
-            anchor="w", pady=(0, 4)
-        )
+        ttk.Label(main_frame, text="Category:", style="Bold.TLabel").pack(anchor="w", pady=(0, 4))
 
         cat_frame = ttk.Frame(main_frame)
         cat_frame.pack(fill="x", pady=(0, 10))
@@ -92,9 +90,7 @@ Example outfit format:
         )
         self.target_combo.pack(side="left")
 
-        ttk.Label(cat_frame, text="(or type new)", style="Muted.TLabel").pack(
-            side="left"
-        )
+        ttk.Label(cat_frame, text="(or type new)", style="Muted.TLabel").pack(side="left")
 
         # Outfit name
         ttk.Label(main_frame, text="Outfit Name:", style="Bold.TLabel").pack(

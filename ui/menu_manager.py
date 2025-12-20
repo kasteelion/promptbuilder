@@ -208,7 +208,8 @@ class MenuManager:
         self.theme_menu.add_command(
             label="Edit Themes...",
             command=self.callbacks.get(
-                "open_theme_editor", lambda: messagebox.showinfo("Edit Themes", "No theme editor available")
+                "open_theme_editor",
+                lambda: messagebox.showinfo("Edit Themes", "No theme editor available"),
             ),
         )
 

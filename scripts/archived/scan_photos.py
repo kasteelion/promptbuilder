@@ -3,17 +3,19 @@
 Legacy script preserved for history. Not used by default.
 """
 
+
 def main():
     print("This script is archived and disabled.")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
 """Scan character markdown files for **Photo:** metadata and report missing files.
 
 Usage: python scripts/scan_photos.py
 """
-from pathlib import Path
 import sys
+from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import logic.parsers as parsers
@@ -49,7 +51,7 @@ def main() -> int:
         # Check existence of first photo reference
         ph = photos[0].strip()
         # Try relative to characters dir first
-        candidate = (chars_dir / ph)
+        candidate = chars_dir / ph
         exists = candidate.exists()
         if not exists:
             # Try resolving as absolute path
@@ -78,5 +80,5 @@ def main() -> int:
     return 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     raise SystemExit(main())

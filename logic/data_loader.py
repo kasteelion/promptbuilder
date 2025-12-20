@@ -322,7 +322,9 @@ Common tags used to categorize characters. One tag per line.
         self._cache.clear()
         self._file_mtimes.clear()
 
-    def resolve_photo_for_character(self, character_name: str, photo_field: str | None) -> str | None:
+    def resolve_photo_for_character(
+        self, character_name: str, photo_field: str | None
+    ) -> str | None:
         """Resolve a character's photo to a filename located in the characters directory.
 
         Priority:
@@ -334,6 +336,7 @@ Common tags used to categorize characters. One tag per line.
         Returns a filename relative to the characters directory, or None.
         """
         from pathlib import Path
+
         from utils.validation import sanitize_filename
 
         chars_dir = self._find_characters_dir()
@@ -374,7 +377,9 @@ Common tags used to categorize characters. One tag per line.
                 return found
 
         # 3) try variants (strip diacritics not implemented here; try simple lowercase)
-        simple = "".join(c for c in character_name.lower() if c.isalnum() or c == "_").replace(" ", "_")
+        simple = "".join(c for c in character_name.lower() if c.isalnum() or c == "_").replace(
+            " ", "_"
+        )
         for ext in (".png", ".jpg", ".jpeg"):
             cand = f"{simple}_photo{ext}"
             found = check_candidate(cand)

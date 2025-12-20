@@ -116,14 +116,10 @@ class PoseCreatorDialog:
         # Load existing categories
         self._load_categories()
 
-        ttk.Label(cat_frame, text="(or type new)", style="Muted.TLabel").pack(
-            side="left"
-        )
+        ttk.Label(cat_frame, text="(or type new)", style="Muted.TLabel").pack(side="left")
 
         # Pose name
-        ttk.Label(main_frame, text="Pose Name:", style="Bold.TLabel").pack(
-            anchor="w", pady=(0, 4)
-        )
+        ttk.Label(main_frame, text="Pose Name:", style="Bold.TLabel").pack(anchor="w", pady=(0, 4))
         self.name_var = tk.StringVar()
         name_entry = ttk.Entry(main_frame, textvariable=self.name_var, font=("Segoe UI", 10))
         name_entry.pack(fill="x", pady=(0, 10))

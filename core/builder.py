@@ -1,7 +1,8 @@
 from typing import Any, Dict, List
 
-from .renderers import CharacterRenderer, NotesRenderer, OutfitRenderer, PoseRenderer, SceneRenderer
 from utils.text_utils import normalize_blank_lines
+
+from .renderers import CharacterRenderer, NotesRenderer, OutfitRenderer, PoseRenderer, SceneRenderer
 
 
 class PromptBuilder:

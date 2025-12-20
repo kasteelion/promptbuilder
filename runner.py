@@ -3,14 +3,16 @@
 Provides a `Runner` class with a single `run()` method so the startup
 sequence is easy to test and reuse programmatically.
 """
+
 from __future__ import annotations
 
+import logging
 import sys
 import traceback
 from typing import Optional
 
-from debug_log import close_debug_log, init_debug_log, log
 from cli import parse_cli
+from debug_log import close_debug_log, init_debug_log, log
 
 
 class Runner:
@@ -47,11 +49,12 @@ class Runner:
         self._check_python_compatibility()
 
         if self.cli_args.version:
-            print("Prompt Builder")
-            print(
-                f"Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
+            log("Prompt Builder", level=logging.INFO)
+            log(
+                f"Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}",
+                level=logging.INFO,
             )
-            print(f"Platform: {sys.platform}")
+            log(f"Platform: {sys.platform}", level=logging.INFO)
             close_debug_log()
             return 0
 
@@ -61,7 +64,7 @@ class Runner:
 
                 print_compatibility_report()
             except ImportError:
-                print("Compatibility module not found. Basic checks passed.")
+                log("Compatibility module not found. Basic checks passed.", level=logging.INFO)
             close_debug_log()
             return 0
 
@@ -88,7 +91,7 @@ class Runner:
             log("Mainloop exited normally")
         except KeyboardInterrupt:
             log("Application closed by user (Ctrl+C)")
-            print("Application closed by user.")
+            log("Application closed by user.", level=logging.INFO)
             return 0
         except Exception:
             from utils import logger
@@ -96,7 +99,10 @@ class Runner:
             logger.exception("Auto-captured exception")
             exc_text = traceback.format_exc()
             log(f"FATAL ERROR: {exc_text}")
-            print("An unexpected error occurred. See promptbuilder_debug.log for details.")
+            log(
+                "An unexpected error occurred. See promptbuilder_debug.log for details.",
+                level=logging.ERROR,
+            )
             if self.cli_args and getattr(self.cli_args, "debug", False):
                 raise
             return 1

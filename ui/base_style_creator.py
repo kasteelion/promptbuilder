@@ -100,9 +100,7 @@ class BaseStyleCreatorDialog:
         example_widget.pack(anchor="w", padx=10, pady=(0, 4), fill="x")
 
         # Style name
-        ttk.Label(main_frame, text="Style Name:", style="Bold.TLabel").pack(
-            anchor="w", pady=(0, 4)
-        )
+        ttk.Label(main_frame, text="Style Name:", style="Bold.TLabel").pack(anchor="w", pady=(0, 4))
         self.name_var = tk.StringVar()
         name_entry = ttk.Entry(main_frame, textvariable=self.name_var, font=("Segoe UI", 10))
         name_entry.pack(fill="x", pady=(0, 10))

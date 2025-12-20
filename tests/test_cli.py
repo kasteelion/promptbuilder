@@ -1,5 +1,3 @@
-import sys
-
 from cli import parse_cli
 
 

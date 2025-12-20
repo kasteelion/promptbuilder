@@ -2,10 +2,10 @@
 
 import tkinter as tk
 from tkinter import messagebox, ttk
-from ui.widgets import ScrollableCanvas
+
 import logic.parsers as parsers
 from logic.parsers import MarkdownParser
-
+from ui.widgets import ScrollableCanvas
 from utils import (
     get_character_template,
     get_character_template_description,
@@ -139,9 +139,7 @@ class CharacterCreatorDialog:
         self.name_entry.focus()
 
         # Gender selector
-        ttk.Label(main_frame, text="Gender:", style="Bold.TLabel").pack(
-            anchor="w", pady=(0, 4)
-        )
+        ttk.Label(main_frame, text="Gender:", style="Bold.TLabel").pack(anchor="w", pady=(0, 4))
         self.gender_var = tk.StringVar(value="F")
         self.gender_combo = ttk.Combobox(
             main_frame, textvariable=self.gender_var, values=["F", "M"], width=6, state="readonly"
@@ -153,7 +151,9 @@ class CharacterCreatorDialog:
             anchor="w", pady=(0, 4)
         )
         self.summary_var = tk.StringVar()
-        self.summary_entry = ttk.Entry(main_frame, textvariable=self.summary_var, font=("Segoe UI", 10))
+        self.summary_entry = ttk.Entry(
+            main_frame, textvariable=self.summary_var, font=("Segoe UI", 10)
+        )
         self.summary_entry.pack(fill="x", pady=(0, 10))
 
         # Tags (comma-separated)
@@ -169,9 +169,7 @@ class CharacterCreatorDialog:
         self._init_tag_autocomplete()
 
         # Appearance
-        ttk.Label(main_frame, text="Appearance:", style="Bold.TLabel").pack(
-            anchor="w", pady=(0, 4)
-        )
+        ttk.Label(main_frame, text="Appearance:", style="Bold.TLabel").pack(anchor="w", pady=(0, 4))
         ttk.Label(
             main_frame,
             text="Core features (skin, eyes, body, hair quality) + Style notes (preferences, not requirements)",
@@ -215,6 +213,77 @@ class CharacterCreatorDialog:
 
         self.appearance_text.pack(side="left", fill="both", expand=True)
         appearance_scroll.pack(side="right", fill="y")
+
+        # Structured Identity Locks toggle and fields
+        self.use_identity_var = tk.BooleanVar(value=False)
+        identity_toggle = ttk.Checkbutton(
+            main_frame,
+            text="Use Identity Locks (structured)",
+            variable=self.use_identity_var,
+            command=self._toggle_identity_mode,
+        )
+        identity_toggle.pack(anchor="w", pady=(6, 4))
+
+        # Structured fields container (hidden by default)
+        self.structured_frame = ttk.Frame(main_frame)
+        # Four primary lines: Body, Face, Hair, Skin
+        row = ttk.Frame(self.structured_frame)
+        ttk.Label(row, text="Body:", width=10).pack(side="left")
+        self.body_var = tk.StringVar()
+        ttk.Entry(row, textvariable=self.body_var, width=60).pack(
+            side="left", fill="x", expand=True
+        )
+        row.pack(fill="x", pady=(2, 2))
+
+        row = ttk.Frame(self.structured_frame)
+        ttk.Label(row, text="Face:", width=10).pack(side="left")
+        self.face_var = tk.StringVar()
+        ttk.Entry(row, textvariable=self.face_var, width=60).pack(
+            side="left", fill="x", expand=True
+        )
+        row.pack(fill="x", pady=(2, 2))
+
+        row = ttk.Frame(self.structured_frame)
+        ttk.Label(row, text="Hair:", width=10).pack(side="left")
+        self.hair_var = tk.StringVar()
+        ttk.Entry(row, textvariable=self.hair_var, width=60).pack(
+            side="left", fill="x", expand=True
+        )
+        row.pack(fill="x", pady=(2, 2))
+
+        row = ttk.Frame(self.structured_frame)
+        ttk.Label(row, text="Skin:", width=10).pack(side="left")
+        self.skin_var = tk.StringVar()
+        ttk.Entry(row, textvariable=self.skin_var, width=60).pack(
+            side="left", fill="x", expand=True
+        )
+        row.pack(fill="x", pady=(2, 6))
+
+        # Age / Vibe / Bearing
+        row = ttk.Frame(self.structured_frame)
+        ttk.Label(row, text="Age Presentation:", width=14).pack(side="left")
+        self.age_var = tk.StringVar()
+        ttk.Entry(row, textvariable=self.age_var, width=48).pack(side="left", fill="x", expand=True)
+        row.pack(fill="x", pady=(2, 2))
+
+        row = ttk.Frame(self.structured_frame)
+        ttk.Label(row, text="Vibe / Energy:", width=14).pack(side="left")
+        self.vibe_var = tk.StringVar()
+        ttk.Entry(row, textvariable=self.vibe_var, width=48).pack(
+            side="left", fill="x", expand=True
+        )
+        row.pack(fill="x", pady=(2, 2))
+
+        row = ttk.Frame(self.structured_frame)
+        ttk.Label(row, text="Bearing:", width=14).pack(side="left")
+        self.bearing_var = tk.StringVar()
+        ttk.Entry(row, textvariable=self.bearing_var, width=48).pack(
+            side="left", fill="x", expand=True
+        )
+        row.pack(fill="x", pady=(2, 6))
+
+        # Initially hide structured_frame
+        self.structured_frame.pack_forget()
 
         # Default outfit
         ttk.Label(main_frame, text="Default Outfit:", style="Bold.TLabel").pack(
@@ -327,18 +396,70 @@ class CharacterCreatorDialog:
             self.outfit_text.insert("1.0", outfit_placeholder)
             self.outfit_text.config(foreground="gray")
         else:
-            # Insert template content with normal text color
-            if appearance:
-                self.appearance_text.insert("1.0", appearance)
-                self.appearance_text.config(foreground="black")
+            # If the template appearance matches the identity-locks structure,
+            # toggle into structured mode and populate fields; otherwise use freeform.
+            parsed = None
+            try:
+                parsed = MarkdownParser.parse_identity_locks(appearance)
+            except Exception:
+                parsed = None
 
-            if outfit:
-                self.outfit_text.insert("1.0", outfit)
-                self.outfit_text.config(foreground="black")
+            if parsed:
+                # populate structured fields and switch mode on
+                self.use_identity_var.set(True)
+                self._populate_structured_fields(parsed)
+                self._toggle_identity_mode()
+            else:
+                # Insert template content with normal text color
+                if appearance:
+                    self.appearance_text.insert("1.0", appearance)
+                    self.appearance_text.config(foreground="black")
+
+                if outfit:
+                    self.outfit_text.insert("1.0", outfit)
+                    self.outfit_text.config(foreground="black")
 
         # Focus on name field so user can start typing character name
         self.name_var.set("")
         self.dialog.after(50, lambda: self.dialog.focus_set())
+
+    def _populate_structured_fields(self, parsed: dict):
+        try:
+            self.body_var.set(parsed.get("Body", ""))
+            self.face_var.set(parsed.get("Face", ""))
+            self.hair_var.set(parsed.get("Hair", ""))
+            self.skin_var.set(parsed.get("Skin", ""))
+            self.age_var.set(parsed.get("Age Presentation", ""))
+            self.vibe_var.set(parsed.get("Vibe / Energy", ""))
+            self.bearing_var.set(parsed.get("Bearing", ""))
+        except Exception:
+            pass
+
+    def _gather_structured_fields(self) -> dict:
+        return {
+            "Body": self.body_var.get().strip(),
+            "Face": self.face_var.get().strip(),
+            "Hair": self.hair_var.get().strip(),
+            "Skin": self.skin_var.get().strip(),
+            "Age Presentation": self.age_var.get().strip(),
+            "Vibe / Energy": self.vibe_var.get().strip(),
+            "Bearing": self.bearing_var.get().strip(),
+        }
+
+    def _toggle_identity_mode(self):
+        """Show or hide structured identity-lock fields."""
+        use_struct = bool(self.use_identity_var.get())
+        try:
+            if use_struct:
+                # Hide freeform text and show structured entries
+                self.appearance_text.pack_forget()
+                self.structured_frame.pack(fill="x", pady=(0, 10))
+            else:
+                # Show freeform text and hide structured entries
+                self.structured_frame.pack_forget()
+                self.appearance_text.pack(side="left", fill="both", expand=True)
+        except Exception:
+            pass
 
     def _init_tag_autocomplete(self):
         """Initialize tag autocomplete handlers and preload available tags."""
@@ -374,7 +495,11 @@ class CharacterCreatorDialog:
             return
 
         prefix = current.lower()
-        suggestions = [t for t in self._available_tags if t.lower().startswith(prefix) and t.lower() not in existing]
+        suggestions = [
+            t
+            for t in self._available_tags
+            if t.lower().startswith(prefix) and t.lower() not in existing
+        ]
         # If no suggestions, hide popup
         if not suggestions:
             self._hide_tag_popup()
@@ -478,7 +603,15 @@ class CharacterCreatorDialog:
     def _create_character(self):
         """Validate and create/update the character file."""
         name = self.name_var.get().strip()
-        appearance = self.appearance_text.get("1.0", "end").strip()
+        # If structured identity-locks mode is active, build the appearance block
+        if getattr(self, "use_identity_var", None) and self.use_identity_var.get():
+            try:
+                structured = self._gather_structured_fields()
+                appearance = MarkdownParser.format_identity_locks(structured)
+            except Exception:
+                appearance = self.appearance_text.get("1.0", "end").strip()
+        else:
+            appearance = self.appearance_text.get("1.0", "end").strip()
         outfit = self.outfit_text.get("1.0", "end").strip()
         summary = self.summary_var.get().strip()
         tags_text = self.tags_var.get().strip()
@@ -659,7 +792,11 @@ class CharacterCreatorDialog:
                                 preserved_meta.append(ln)
                                 continue
                             low = s.lower()
-                            if low.startswith("**summary:") or low.startswith("**tags:") or low.startswith("**gender:"):
+                            if (
+                                low.startswith("**summary:")
+                                or low.startswith("**tags:")
+                                or low.startswith("**gender:")
+                            ):
                                 continue
                             # Skip existing photo lines; we'll write a standardized one
                             if low.startswith("**photo:"):
@@ -737,10 +874,25 @@ class CharacterCreatorDialog:
             self.name_entry.insert(0, character_name)
             self.name_entry.config(state="readonly")  # Don't allow name changes when editing
 
-            # Load appearance
+            # Load appearance. Prefer structured identity-locks if present.
             appearance = char_data.get("appearance", "")
+            parsed = None
+            try:
+                parsed = MarkdownParser.parse_identity_locks(appearance)
+            except Exception:
+                parsed = None
+
             self.appearance_text.delete("1.0", tk.END)
-            self.appearance_text.insert("1.0", appearance)
+            if parsed:
+                # populate structured fields and show structured UI
+                self._populate_structured_fields(parsed)
+                self.use_identity_var.set(True)
+                self._toggle_identity_mode()
+            else:
+                # freeform fallback
+                self.use_identity_var.set(False)
+                self._toggle_identity_mode()
+                self.appearance_text.insert("1.0", appearance)
 
             # Load summary
             summary = char_data.get("summary", "")

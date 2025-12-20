@@ -55,7 +55,9 @@ class ScrollableCanvas(ttk.Frame):
                     except Exception:
                         pass
                 # schedule update_scroll_region after a short delay
-                self._container_configure_after_id = self.canvas.after(60, self.update_scroll_region)
+                self._container_configure_after_id = self.canvas.after(
+                    60, self.update_scroll_region
+                )
             except Exception:
                 try:
                     self.canvas.after_idle(self.update_scroll_region)
@@ -190,7 +192,10 @@ class ScrollableCanvas(ttk.Frame):
                 if not bbox:
                     # Nothing yet — schedule next attempt
                     if attempt + 1 < max_retries:
-                        self.canvas.after(delays[min(attempt, len(delays) - 1)], lambda: _retry_attempt(attempt + 1))
+                        self.canvas.after(
+                            delays[min(attempt, len(delays) - 1)],
+                            lambda: _retry_attempt(attempt + 1),
+                        )
                     return
 
                 # Compute maximum bottom extent from children (in container coords)
@@ -215,7 +220,14 @@ class ScrollableCanvas(ttk.Frame):
                     try:
                         canvas_h = int(self.canvas.winfo_height() or 0)
                         if bbox[3] < canvas_h:
-                            self.canvas.config(scrollregion=(bbox[0], bbox[1], bbox[2], max(bbox[3] + 24, canvas_h)))
+                            self.canvas.config(
+                                scrollregion=(
+                                    bbox[0],
+                                    bbox[1],
+                                    bbox[2],
+                                    max(bbox[3] + 24, canvas_h),
+                                )
+                            )
                     except Exception:
                         pass
 
@@ -228,7 +240,10 @@ class ScrollableCanvas(ttk.Frame):
                 # Swallow exceptions in retry attempts to avoid noisy failures
                 if attempt + 1 < max_retries:
                     try:
-                        self.canvas.after(delays[min(attempt, len(delays) - 1)], lambda: _retry_attempt(attempt + 1))
+                        self.canvas.after(
+                            delays[min(attempt, len(delays) - 1)],
+                            lambda: _retry_attempt(attempt + 1),
+                        )
                     except Exception:
                         pass
 
@@ -313,7 +328,9 @@ class FlowFrame(ttk.Frame):
                         self.after_cancel(self._reflow_after_id)
                     except Exception:
                         pass
-                logger.debug(f"FlowFrame._on_configure: width changed -> scheduling reflow (w={event.width})")
+                logger.debug(
+                    f"FlowFrame._on_configure: width changed -> scheduling reflow (w={event.width})"
+                )
                 self._reflow_after_id = self.after(50, self._reflow)
 
     def _reflow(self):
@@ -330,7 +347,7 @@ class FlowFrame(ttk.Frame):
         avail_width = self.winfo_width()
         if avail_width <= 1:
             try:
-                parent_w = getattr(self.master, 'winfo_width', lambda: 0)()
+                parent_w = getattr(self.master, "winfo_width", lambda: 0)()
                 if parent_w and parent_w > 1:
                     avail_width = parent_w - 8
             except Exception:
@@ -345,7 +362,9 @@ class FlowFrame(ttk.Frame):
             return
 
         self._reflow_retry_count = 0
-        logger.debug(f"FlowFrame._reflow(place): avail_width={avail_width} children={len(self._children)}")
+        logger.debug(
+            f"FlowFrame._reflow(place): avail_width={avail_width} children={len(self._children)}"
+        )
 
         x = self._padx
         y = self._pady
@@ -420,4 +439,3 @@ class FlowFrame(ttk.Frame):
             except Exception:
                 pass
         self._children.clear()
-

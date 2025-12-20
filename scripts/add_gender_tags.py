@@ -4,6 +4,7 @@ Run this from the project root to update files under `data/characters/`.
 
 This script is non-destructive: it will create a `.bak` copy of any file it modifies.
 """
+
 from pathlib import Path
 
 CHAR_DIR = Path("data") / "characters"

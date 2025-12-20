@@ -1,4 +1,5 @@
 import os
+
 from themes.theme_manager import ThemeManager
 
 
@@ -68,11 +69,7 @@ def test_migrate_from_prefs_writes_md_and_clears(tmp_path, monkeypatch):
     old_cwd = os.getcwd()
     try:
         os.chdir(str(tmp_path))
-        prefs = PrefsMock({
-            "custom_themes": {
-                "FromPrefs": {"bg": "#010101", "fg": "#f1f1f1"}
-            }
-        })
+        prefs = PrefsMock({"custom_themes": {"FromPrefs": {"bg": "#010101", "fg": "#f1f1f1"}}})
 
         style = _FakeStyle()
         root = _FakeRoot()

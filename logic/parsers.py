@@ -13,6 +13,10 @@ _SUMMARY_RE = re.compile(r"\*\*Summary:\*\*\s*(.+?)(?:\n\*\*|$)", re.DOTALL)
 _TAGS_RE = re.compile(r"\*\*Tags:\*\*\s*(.+?)(?:\n\*\*|$)", re.DOTALL)
 _LIST_ITEM_RE = re.compile(r"^\s*[-*]\s+(.*)$")
 _PRESET_ITEM_RE = re.compile(r"^-\s+\*\*([^:]+):\*\*\s*(.+)$")
+_IDENTITY_LOCKS_HEADER_RE = re.compile(
+    r"^Appearance\s*\(Identity Locks\):\s*$", re.IGNORECASE | re.MULTILINE
+)
+_IDENTITY_LOCK_LINE_RE = re.compile(r"^\s*-\s*(Body|Face|Hair|Skin):\s*(.*)$", re.IGNORECASE)
 
 
 class MarkdownParser:
@@ -332,6 +336,90 @@ class MarkdownParser:
             validated_chars[name] = data
 
         return validated_chars
+
+    @staticmethod
+    def parse_identity_locks(appearance_text: str) -> dict | None:
+        """Attempt to parse an "Appearance (Identity Locks)" structured block.
+
+        Returns a dict with keys: 'Body', 'Face', 'Hair', 'Skin', 'Age Presentation',
+        'Vibe / Energy', 'Bearing' when detected. Returns None if the structure
+        is not present or cannot be reliably parsed.
+        """
+        if not appearance_text:
+            return None
+
+        # Look for a header line indicating the identity-locks structured format
+        if not _IDENTITY_LOCKS_HEADER_RE.search(appearance_text):
+            # Also accept a block that starts directly with the list lines
+            if not re.search(r"^\s*-\s*Body:\s*", appearance_text, re.MULTILINE | re.IGNORECASE):
+                return None
+
+        result = {
+            "Body": "",
+            "Face": "",
+            "Hair": "",
+            "Skin": "",
+            "Age Presentation": "",
+            "Vibe / Energy": "",
+            "Bearing": "",
+        }
+
+        # Parse line-by-line for leading '- Key: value' patterns
+        for ln in appearance_text.splitlines():
+            m = _IDENTITY_LOCK_LINE_RE.match(ln)
+            if m:
+                key = m.group(1).strip().title()
+                val = m.group(2).strip()
+                if key in result:
+                    result[key] = val
+
+        # Also capture single-line fields following the list (Age/Vibe/Bearing)
+        # e.g. 'Age Presentation: ...' or 'Vibe / Energy: ...'
+        for key in ("Age Presentation", "Vibe / Energy", "Bearing"):
+            pat = re.compile(rf"^{re.escape(key)}:\s*(.*)$", re.IGNORECASE | re.MULTILINE)
+            mm = pat.search(appearance_text)
+            if mm:
+                result[key] = mm.group(1).strip()
+
+        # If none of the main identity fields had content, return None
+        if not any(result[k] for k in ("Body", "Face", "Hair", "Skin")):
+            return None
+
+        return result
+
+    @staticmethod
+    def format_identity_locks(fields: dict) -> str:
+        """Format a dict of identity-locks into the exact block the framework expects.
+
+        Expected output:
+
+        Appearance (Identity Locks):
+
+        - Body: ...
+        - Face: ...
+        - Hair: ...
+        - Skin: ...
+
+        Age Presentation: ...
+        Vibe / Energy: ...
+        Bearing: ...
+        """
+
+        # Safe-get helper
+        def g(k):
+            v = fields.get(k, "")
+            return v.strip() if isinstance(v, str) else ""
+
+        parts = ["Appearance (Identity Locks):\n"]
+        parts.append(f"- Body: {g('Body')}\n")
+        parts.append(f"- Face: {g('Face')}\n")
+        parts.append(f"- Hair: {g('Hair')}\n")
+        parts.append(f"- Skin: {g('Skin')}\n\n")
+        parts.append(f"Age Presentation: {g('Age Presentation')}\n")
+        parts.append(f"Vibe / Energy: {g('Vibe / Energy')}\n")
+        parts.append(f"Bearing: {g('Bearing')}\n")
+
+        return "".join(parts).strip()
 
     @staticmethod
     def parse_base_prompts(content: str):

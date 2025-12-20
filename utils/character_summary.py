@@ -46,7 +46,9 @@ def extract_appearance(file_path, include_base=False):
             appearance_text = content[appearance_start + len("**Appearance:**") :].strip()
         else:
             # Extract only the appearance section
-            appearance_text = content[appearance_start + len("**Appearance:**") : outfits_start].strip()
+            appearance_text = content[
+                appearance_start + len("**Appearance:**") : outfits_start
+            ].strip()
 
     # Capture style notes: HTML comment blocks and lines starting with '//' (preserve their content)
     import re
@@ -84,7 +86,9 @@ def extract_appearance(file_path, include_base=False):
     # Remove HTML comment blocks (legacy) and lines starting with '//' used for style notes
     appearance_text = re.sub(r"(?s)<!--.*?-->", "", appearance_text).strip()
     if appearance_text:
-        appearance_lines = [ln for ln in appearance_text.splitlines() if not re.match(r"^\s*//", ln)]
+        appearance_lines = [
+            ln for ln in appearance_text.splitlines() if not re.match(r"^\s*//", ln)
+        ]
         appearance_text = "\n".join(appearance_lines).strip()
 
     base_outfit = None

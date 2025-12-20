@@ -3,20 +3,21 @@
 Legacy script preserved for history. Not used by default.
 """
 
+
 def main():
     print("This script is archived and disabled.")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
 """Scan character files and insert/replace `**Tags:**` using heuristics.
 
 Creates backups before modification.
 """
-import sys
 import pathlib
-from pathlib import Path
 import re
 import shutil
+import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from logic.data_loader import DataLoader
@@ -39,14 +40,25 @@ def main() -> int:
 
     # Heuristic mapping from appearance/summary keywords to tags
     heuristics = [
-        (re.compile(r"dance|gym|athletic|training|fit|workout|sports|soccer|basketball|mma|jiu jitsu", re.I), "athletic"),
+        (
+            re.compile(
+                r"dance|gym|athletic|training|fit|workout|sports|soccer|basketball|mma|jiu jitsu",
+                re.I,
+            ),
+            "athletic",
+        ),
         (re.compile(r"bohemian|cottage|maxi|floral|peasant|boho", re.I), "bohemian"),
         (re.compile(r"cosplay|anime|egirl|eboy|soft egirl|soft eboy|cosplay", re.I), "cosplay"),
         (re.compile(r"goth|gothic|punk|leather|edgy|alternative|dark academia", re.I), "edgy"),
         (re.compile(r"cocktail|formal|evening|gown|suit|tuxedo|elegant|bridal", re.I), "formal"),
         (re.compile(r"vintage|retro|pinup|1950s|dapper|greaser", re.I), "vintage"),
         (re.compile(r"fantasy|armor|warrior|medieval|myth|goddess|god|ren faire", re.I), "fantasy"),
-        (re.compile(r"casual|streetwear|hoodie|jeans|everyday|comfort|yoga|athleisure|street", re.I), "casual"),
+        (
+            re.compile(
+                r"casual|streetwear|hoodie|jeans|everyday|comfort|yoga|athleisure|street", re.I
+            ),
+            "casual",
+        ),
         (re.compile(r"soft|gentle|warm|natural|friendly|approach", re.I), "soft"),
         # 'soft' should be conservative: require an explicit soft cue and avoid conflicting edgy cues
         (re.compile(r"\b(soft|gentle|warm|natural|tender|delicate|subtle)\b", re.I), "soft"),
@@ -59,7 +71,10 @@ def main() -> int:
         (re.compile(r"glam|glossy|sequins|glamorous|dazzle", re.I), "glam"),
         (re.compile(r"androgynous|androgyny|gender[- ]?neutral", re.I), "androgynous"),
         (re.compile(r"nerd|geek|glasses|bookish|studious|academic", re.I), "nerdy"),
-        (re.compile(r"curvy|plus|plus-size|plus size|full[- ]?figured|curv|hourglass", re.I), "curvy"),
+        (
+            re.compile(r"curvy|plus|plus-size|plus size|full[- ]?figured|curv|hourglass", re.I),
+            "curvy",
+        ),
     ]
 
     updated = []

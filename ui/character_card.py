@@ -6,7 +6,7 @@ import tkinter as tk
 from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
-from ui.widgets import ScrollableCanvas, FlowFrame
+from ui.widgets import FlowFrame, ScrollableCanvas
 from utils import logger
 
 from .constants import CHARACTER_CARD_SIZE
@@ -146,7 +146,6 @@ class CharacterCard(ttk.Frame):
         if isinstance(tags, str):
             tags = [t.strip() for t in tags.split(",") if t.strip()]
 
-
         # If no tags, skip rendering tag flow
 
         if tags:
@@ -156,9 +155,13 @@ class CharacterCard(ttk.Frame):
             logger.debug(f"Building tags for {self.character_name}: {len(tags)} tags")
             for t in tags:
                 try:
-                    btn = tags_frame.add_button(text=t, style="Tag.TButton", command=(lambda v=t: self._handle_tag_click(v)))
+                    btn = tags_frame.add_button(
+                        text=t, style="Tag.TButton", command=(lambda v=t: self._handle_tag_click(v))
+                    )
                 except Exception:
-                    btn = tags_frame.add_button(text=t, command=(lambda v=t: self._handle_tag_click(v)))
+                    btn = tags_frame.add_button(
+                        text=t, command=(lambda v=t: self._handle_tag_click(v))
+                    )
                 try:
                     btn.configure(cursor="hand2")
                 except Exception:
@@ -452,7 +455,7 @@ class CharacterCard(ttk.Frame):
                 dest = chars_dir / f"{safe_name}_photo_{ts}{source.suffix}"
                 try:
                     shutil.copy2(source, dest)
-                except Exception as e:
+                except Exception:
                     from utils import logger
 
                     logger.exception("Auto-captured exception")
@@ -611,10 +614,14 @@ class CharacterGalleryPanel(ttk.Frame):
             tags = []
 
         tag_values = ["All"] + sorted(tags)
-        self.tag_combo = ttk.Combobox(tag_frame, textvariable=self.tag_var, state="readonly", values=tag_values)
+        self.tag_combo = ttk.Combobox(
+            tag_frame, textvariable=self.tag_var, state="readonly", values=tag_values
+        )
         self.tag_combo.pack(side="left", padx=(6, 0))
         # When a tag is picked from the combobox, add it to selected tags
-        self.tag_combo.bind("<<ComboboxSelected>>", lambda e: self._add_selected_tag(self.tag_var.get()))
+        self.tag_combo.bind(
+            "<<ComboboxSelected>>", lambda e: self._add_selected_tag(self.tag_var.get())
+        )
         # Small clear button to reset tag filter quickly
         try:
             clear_btn = ttk.Button(tag_frame, text="Clear", width=6, command=self._clear_tag_filter)
@@ -628,6 +635,7 @@ class CharacterGalleryPanel(ttk.Frame):
 
         # Forward mousewheel events from the selected-tags area to the scrollable canvas
         try:
+
             def _forward_wheel(e):
                 try:
                     self.scrollable_canvas.canvas.yview_scroll(int(-1 * (e.delta / 120)), "units")
@@ -637,7 +645,9 @@ class CharacterGalleryPanel(ttk.Frame):
 
             self.selected_tags_frame.bind("<MouseWheel>", _forward_wheel)
             # Also bind to any dynamically added children inside the flow frame
-            self.selected_tags_frame.bind("<Enter>", lambda e: self.selected_tags_frame.bind('<MouseWheel>', _forward_wheel))
+            self.selected_tags_frame.bind(
+                "<Enter>", lambda e: self.selected_tags_frame.bind("<MouseWheel>", _forward_wheel)
+            )
         except Exception:
             pass
 
@@ -696,7 +706,7 @@ class CharacterGalleryPanel(ttk.Frame):
         max_cols = 1  # 1 card per row for better visibility in narrow panel
         displayed_count = 0
 
-        selected_tag = (self.tag_var.get() or "All").strip()
+        _selected_tag = (self.tag_var.get() or "All").strip()
         for name, data in sorted(self.characters.items()):
             # Apply search filter
             if search_term and search_term not in name.lower():
@@ -783,8 +793,6 @@ class CharacterGalleryPanel(ttk.Frame):
 
             logger.exception("Failed to refresh mousewheel bindings or update scroll region")
 
-    
-
     def _on_tag_selected_from_card(self, tag_value: str):
         """Handle tag click from a card: set tag combobox and refresh display."""
         try:
@@ -820,12 +828,20 @@ class CharacterGalleryPanel(ttk.Frame):
             # Render selected tag as a chip-like button with a close action so FlowFrame can reflow
             try:
                 # Use the flow frame to create a button which will be managed by its reflow logic
-                btn = self.selected_tags_frame.add_button(text=f"{t} ✕", style="Accent.TButton", command=lambda v=t: self._remove_selected_tag(v))
+                btn = self.selected_tags_frame.add_button(
+                    text=f"{t} ✕",
+                    style="Accent.TButton",
+                    command=lambda v=t: self._remove_selected_tag(v),
+                )
             except Exception:
                 # Last-resort: create a standard button and append to _children for reflow
-                btn = ttk.Button(self.selected_tags_frame, text=f"{t} ✕", command=lambda v=t: self._remove_selected_tag(v))
-                btn.grid(row=0, column=len(getattr(self.selected_tags_frame, '_children', [])))
-                if not hasattr(self.selected_tags_frame, '_children'):
+                btn = ttk.Button(
+                    self.selected_tags_frame,
+                    text=f"{t} ✕",
+                    command=lambda v=t: self._remove_selected_tag(v),
+                )
+                btn.grid(row=0, column=len(getattr(self.selected_tags_frame, "_children", [])))
+                if not hasattr(self.selected_tags_frame, "_children"):
                     self.selected_tags_frame._children = []
                 self.selected_tags_frame._children.append(btn)
 

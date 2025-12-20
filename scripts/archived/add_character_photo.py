@@ -5,10 +5,12 @@ Legacy script preserved for history. Not used by default.
 
 from pathlib import Path
 
+
 def main():
     print("This script is archived and disabled.")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
 #!/usr/bin/env python3
 """Helper: copy an image into `data/characters` with the expected filename.
@@ -21,7 +23,6 @@ If `--dest` is omitted the script will ask for the target filename.
 import argparse
 import shutil
 import sys
-from pathlib import Path
 
 
 def main():

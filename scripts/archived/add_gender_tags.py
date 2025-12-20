@@ -3,10 +3,12 @@
 Legacy script preserved for history. Not used by default.
 """
 
+
 def main():
     print("This script is archived and disabled.")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
 """Utility to add a `**Gender:** F` tag to existing character markdown files if missing.
 

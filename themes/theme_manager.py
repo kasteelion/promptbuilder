@@ -1,12 +1,12 @@
 """Theme management for the application."""
 
+import os
 import tkinter as tk
 import tkinter.font as tkfont
 
 from config import THEMES
 from ui.constants import DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
 from utils import logger
-import os
 
 
 def _parse_themes_md(path: str):
@@ -76,14 +76,17 @@ def _parse_yaml_like(lines):
 
 
 def _write_themes_md(path: str, themes: dict):
-    lines = ["# Themes (auto-generated)\n", "# You can edit or add themes below. Each theme is a header and a YAML block.\n\n"]
+    lines = [
+        "# Themes (auto-generated)\n",
+        "# You can edit or add themes below. Each theme is a header and a YAML block.\n\n",
+    ]
     for name in sorted(themes.keys()):
         lines.append(f"## {name}\n")
         lines.append("```yaml\n")
         vals = themes[name]
         for k, v in vals.items():
             # ensure value is quoted to be safe
-            lines.append(f"{k}: \"{v}\"\n")
+            lines.append(f'{k}: "{v}"\n')
         lines.append("```\n\n")
 
     os.makedirs(os.path.dirname(path), exist_ok=True)

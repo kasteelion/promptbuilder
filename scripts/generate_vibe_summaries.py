@@ -3,11 +3,11 @@
 This replaces or inserts a `**Summary:**` line containing a brief trope/vibe.
 Backups are created before modification.
 """
-import sys
+
 import pathlib
-from pathlib import Path
 import re
 import shutil
+import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from logic.data_loader import DataLoader
@@ -29,16 +29,46 @@ def main() -> int:
 
     # Simple keyword->vibe mapping
     mapping = [
-        (re.compile(r"dance|ballet|hip hop|dancer|athletic|gym|training", re.I), "Athletic, energetic performer"),
-        (re.compile(r"bohemian|maxi|floral|cottage|peasant|boho", re.I), "Bohemian / soft cottagecore aesthetic"),
-        (re.compile(r"cosplay|anime|character|cosplay|egirl|eboy|soft egirl|soft eboy", re.I), "Playful, stylized/cosplay-inspired look"),
-        (re.compile(r"goth|dark|leather|alternative|punk|edgy", re.I), "Alternative / edgy aesthetic"),
-        (re.compile(r"formal|cocktail|evening|suit|tuxedo|elegant|bridal", re.I), "Elegant, formal evening-ready"),
-        (re.compile(r"professional|office|medical|scrub|work", re.I), "Clean, professional / work-ready"),
-        (re.compile(r"vintage|retro|pinup|1950s|dapper|dark academia", re.I), "Vintage / classic-inspired"),
-        (re.compile(r"fantasy|armor|warrior|medieval|myth|god|goddess|ren faire", re.I), "Fantasy / historical-inspired archetype"),
-        (re.compile(r"casual|streetwear|hoodie|jeans|everyday|comfort|yoga|athleisure", re.I), "Casual, modern streetwear vibe"),
-        (re.compile(r"soft|gentle|warm|natural|friendly|romantic", re.I), "Soft, approachable and warm"),
+        (
+            re.compile(r"dance|ballet|hip hop|dancer|athletic|gym|training", re.I),
+            "Athletic, energetic performer",
+        ),
+        (
+            re.compile(r"bohemian|maxi|floral|cottage|peasant|boho", re.I),
+            "Bohemian / soft cottagecore aesthetic",
+        ),
+        (
+            re.compile(r"cosplay|anime|character|cosplay|egirl|eboy|soft egirl|soft eboy", re.I),
+            "Playful, stylized/cosplay-inspired look",
+        ),
+        (
+            re.compile(r"goth|dark|leather|alternative|punk|edgy", re.I),
+            "Alternative / edgy aesthetic",
+        ),
+        (
+            re.compile(r"formal|cocktail|evening|suit|tuxedo|elegant|bridal", re.I),
+            "Elegant, formal evening-ready",
+        ),
+        (
+            re.compile(r"professional|office|medical|scrub|work", re.I),
+            "Clean, professional / work-ready",
+        ),
+        (
+            re.compile(r"vintage|retro|pinup|1950s|dapper|dark academia", re.I),
+            "Vintage / classic-inspired",
+        ),
+        (
+            re.compile(r"fantasy|armor|warrior|medieval|myth|god|goddess|ren faire", re.I),
+            "Fantasy / historical-inspired archetype",
+        ),
+        (
+            re.compile(r"casual|streetwear|hoodie|jeans|everyday|comfort|yoga|athleisure", re.I),
+            "Casual, modern streetwear vibe",
+        ),
+        (
+            re.compile(r"soft|gentle|warm|natural|friendly|romantic", re.I),
+            "Soft, approachable and warm",
+        ),
     ]
 
     updated = []
@@ -106,7 +136,9 @@ def main() -> int:
                     break
             if insert_idx is None:
                 insert_idx = 0
-            new_lines = lines[:insert_idx] + ["", f"**Summary:** {summary_line}"] + lines[insert_idx:]
+            new_lines = (
+                lines[:insert_idx] + ["", f"**Summary:** {summary_line}"] + lines[insert_idx:]
+            )
             new_text = "\n".join(new_lines)
 
         p.write_text(new_text, encoding="utf-8")

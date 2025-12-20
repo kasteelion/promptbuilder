@@ -3,6 +3,7 @@
 This module centralizes CLI parsing so `main.py` avoids import-time side
 effects and becomes easier to test and reuse.
 """
+
 from __future__ import annotations
 
 import argparse

@@ -671,7 +671,10 @@ class PromptBuilderApp:
             from .theme_editor import ThemeEditorDialog
 
             dlg = ThemeEditorDialog(
-                self.root, self.theme_manager, self.prefs, on_theme_change=self.menu_manager.refresh_theme_menu
+                self.root,
+                self.theme_manager,
+                self.prefs,
+                on_theme_change=self.menu_manager.refresh_theme_menu,
             )
             dlg.show()
         except Exception:

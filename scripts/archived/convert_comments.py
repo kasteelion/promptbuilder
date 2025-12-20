@@ -3,20 +3,23 @@
 Legacy script preserved for history. Not used by default.
 """
 
+
 def main():
     print("This script is archived and disabled.")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
 #!/usr/bin/env python3
 """Convert HTML comment blocks <!-- ... --> to // style note lines in character files.
 
 Backs up original files with a .bak extension.
 """
-from pathlib import Path
 import re
+from pathlib import Path
 
 CHAR_DIR = Path(__file__).resolve().parent.parent / "data" / "characters"
+
 
 def convert_block(content: str) -> (str, int):
     """Convert all HTML comment blocks in content to // lines.
@@ -67,5 +70,6 @@ def main():
             total += c
     print(f"Done. Total converted: {total}")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

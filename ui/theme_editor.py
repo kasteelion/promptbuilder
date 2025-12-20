@@ -2,11 +2,11 @@
 """Theme Editor dialog: create, edit, delete, and save custom themes."""
 
 import tkinter as tk
-from tkinter import ttk, messagebox, colorchooser
+from tkinter import colorchooser, messagebox, ttk
 from typing import Dict
 
-from utils import logger
 from config import DEFAULT_THEME
+from utils import logger
 
 
 class ThemeEditorDialog:
@@ -62,7 +62,9 @@ class ThemeEditorDialog:
         btns.pack(fill="x", pady=(6, 0))
         ttk.Button(btns, text="New", command=self._new_theme).pack(side="left", padx=(0, 4))
         ttk.Button(btns, text="Delete", command=self._delete_theme).pack(side="left")
-        ttk.Button(btns, text="Duplicate", command=self._duplicate_theme).pack(side="left", padx=(6, 0))
+        ttk.Button(btns, text="Duplicate", command=self._duplicate_theme).pack(
+            side="left", padx=(6, 0)
+        )
 
         # Right: editor fields
         right = ttk.Frame(main)

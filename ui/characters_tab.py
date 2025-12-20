@@ -3,10 +3,9 @@
 
 import tkinter as tk
 from tkinter import messagebox, ttk
-from utils import logger
 
 from config import TOOLTIPS
-from utils import create_tooltip
+from utils import create_tooltip, logger
 
 from .base_style_creator import BaseStyleCreatorDialog
 from .character_creator import CharacterCreatorDialog
@@ -305,7 +304,9 @@ class CharactersTab:
 
         # Debug: log the bulk apply action
         try:
-            logger.debug(f"Bulk apply to all: outfit='{outfit_name}', selected={ [c.get('name') for c in self.selected_characters] }")
+            logger.debug(
+                f"Bulk apply to all: outfit='{outfit_name}', selected={ [c.get('name') for c in self.selected_characters] }"
+            )
         except Exception:
             pass
         # Save state for undo
@@ -348,7 +349,9 @@ class CharactersTab:
             return
 
         try:
-            logger.debug(f"Bulk apply to selected dialog: outfit='{outfit_name}', selected={ [c.get('name') for c in self.selected_characters] }")
+            logger.debug(
+                f"Bulk apply to selected dialog: outfit='{outfit_name}', selected={ [c.get('name') for c in self.selected_characters] }"
+            )
         except Exception:
             pass
 
@@ -381,9 +384,7 @@ class CharactersTab:
         # Center the dialog
         dialog.geometry("300x200")
 
-        ttk.Label(dialog, text=f"Apply '{outfit_name}' to:", style="Bold.TLabel").pack(
-            pady=(10, 5)
-        )
+        ttk.Label(dialog, text=f"Apply '{outfit_name}' to:", style="Bold.TLabel").pack(pady=(10, 5))
 
         # Listbox with characters
         listbox_frame = ttk.Frame(dialog)
@@ -518,7 +519,11 @@ class CharactersTab:
                             if insert_idx is None:
                                 insert_idx = 0
 
-                            new_lines = lines[:insert_idx] + ["", f"**Gender:** {choice}"] + lines[insert_idx:]
+                            new_lines = (
+                                lines[:insert_idx]
+                                + ["", f"**Gender:** {choice}"]
+                                + lines[insert_idx:]
+                            )
                             fp.write_text("\n".join(new_lines), encoding="utf-8")
                             # Reload characters and continue
                             if self.reload_data:
@@ -527,7 +532,9 @@ class CharactersTab:
                         else:
                             # No file found; open editor as fallback
                             root = self.tab.winfo_toplevel()
-                            dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=name)
+                            dialog = CharacterCreatorDialog(
+                                root, self.data_loader, self.reload_data, edit_character=name
+                            )
                             dialog.show()
                             if self.reload_data:
                                 self.reload_data()
@@ -535,7 +542,9 @@ class CharactersTab:
                     except Exception:
                         # If writing fails, open editor as fallback
                         root = self.tab.winfo_toplevel()
-                        dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=name)
+                        dialog = CharacterCreatorDialog(
+                            root, self.data_loader, self.reload_data, edit_character=name
+                        )
                         dialog.show()
                         if self.reload_data:
                             self.reload_data()
@@ -546,7 +555,9 @@ class CharactersTab:
                         return
                 elif choice == "editor":
                     root = self.tab.winfo_toplevel()
-                    dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=name)
+                    dialog = CharacterCreatorDialog(
+                        root, self.data_loader, self.reload_data, edit_character=name
+                    )
                     dialog.show()
                     if self.reload_data:
                         self.reload_data()
@@ -1145,7 +1156,11 @@ class CharactersTab:
                                         break
                             if insert_idx is None:
                                 insert_idx = 0
-                            new_lines = lines[:insert_idx] + ["", f"**Gender:** {choice}"] + lines[insert_idx:]
+                            new_lines = (
+                                lines[:insert_idx]
+                                + ["", f"**Gender:** {choice}"]
+                                + lines[insert_idx:]
+                            )
                             fp.write_text("\n".join(new_lines), encoding="utf-8")
                             if self.reload_data:
                                 self.reload_data()
@@ -1153,14 +1168,21 @@ class CharactersTab:
                         else:
                             # fallback to open editor
                             root = self.tab.winfo_toplevel()
-                            dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=character_name)
+                            dialog = CharacterCreatorDialog(
+                                root,
+                                self.data_loader,
+                                self.reload_data,
+                                edit_character=character_name,
+                            )
                             dialog.show()
                             if self.reload_data:
                                 self.reload_data()
                             self.characters = self.data_loader.load_characters()
                     except Exception:
                         root = self.tab.winfo_toplevel()
-                        dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=character_name)
+                        dialog = CharacterCreatorDialog(
+                            root, self.data_loader, self.reload_data, edit_character=character_name
+                        )
                         dialog.show()
                         if self.reload_data:
                             self.reload_data()
@@ -1169,7 +1191,9 @@ class CharactersTab:
                         return
                 elif choice == "editor":
                     root = self.tab.winfo_toplevel()
-                    dialog = CharacterCreatorDialog(root, self.data_loader, self.reload_data, edit_character=character_name)
+                    dialog = CharacterCreatorDialog(
+                        root, self.data_loader, self.reload_data, edit_character=character_name
+                    )
                     dialog.show()
                     if self.reload_data:
                         self.reload_data()

@@ -26,6 +26,5 @@ preferences.json
 promptbuilder_debug.log
 presets/
 data/presets/
-# Local character/data files - keep private
-/data/
+
 

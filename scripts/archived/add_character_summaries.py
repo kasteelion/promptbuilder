@@ -3,20 +3,22 @@
 Legacy script preserved for history. Not used by default.
 """
 
+
 def main():
     print("This script is archived and disabled.")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
 """Add a `**Summary:**` field to character markdown files when missing.
 
 This script creates backups and inserts a Summary after the character header or photo line.
 """
-from pathlib import Path
+import pathlib
 import re
 import shutil
 import sys
-import pathlib
+
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from logic.data_loader import DataLoader
 
