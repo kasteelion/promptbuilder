@@ -21,6 +21,11 @@ except ImportError:
     logger.info("PIL/Pillow not available. Character photos will not be displayed.")
     logger.info("Install Pillow for photo support: pip install Pillow")
 
+import threading
+
+# Simple in-memory cache for resized/cropped PIL images keyed by (path, w, h)
+_IMAGE_CACHE: dict = {}
+
 
 class CharacterCard(ttk.Frame):
     """A visual card showing character with photo, name, and quick actions."""
@@ -337,25 +342,68 @@ class CharacterCard(ttk.Frame):
             raise ValueError("Photo path must be within characters directory")
 
     def _load_photo(self):
-        """Load character photo if exists."""
+        """Kick off async load of character photo if it exists.
+
+        Image decoding and resizing is done in a background thread; final
+        PhotoImage creation and canvas drawing happen on the main thread.
+        """
         photo_path = self.character_data.get("photo")
         if not photo_path:
             return
 
-        # Try to load the image
         try:
             photo_file = self._sanitize_photo_path(photo_path)
-
-            if photo_file.exists():
-                self._display_photo(photo_file)
         except ValueError as e:
-            from utils import logger
-
             logger.warning(f"Invalid photo path for {self.character_name}: {e}", exc_info=True)
-        except Exception as e:
-            from utils import logger
+            return
 
-            logger.exception(f"Error loading photo for {self.character_name}: {e}")
+        if not photo_file.exists():
+            return
+
+        # Determine target canvas size
+        try:
+            canvas_w = int(self.photo_canvas.cget("width"))
+            canvas_h = int(self.photo_canvas.cget("height"))
+        except Exception:
+            canvas_w = CHARACTER_CARD_SIZE
+            canvas_h = CHARACTER_CARD_SIZE
+
+        key = (str(photo_file.resolve()), canvas_w, canvas_h)
+        if key in _IMAGE_CACHE:
+            pil_img = _IMAGE_CACHE[key]
+            # Display immediately on main thread
+            self._display_photo_from_image(pil_img)
+            return
+
+        # Background loader
+        def _bg_load(path, w, h, widget_ref):
+            try:
+                img = Image.open(path).convert("RGBA")
+
+                # Cover-resize: scale to fill the canvas and crop center
+                scale = max(w / img.width, h / img.height)
+                new_size = (int(img.width * scale) + 2, int(img.height * scale) + 2)
+                img = img.resize(new_size, Image.Resampling.LANCZOS)
+
+                left = (img.width - w) // 2
+                top = (img.height - h) // 2
+                right = left + w
+                bottom = top + h
+                img = img.crop((left, top, right, bottom))
+
+                # Cache the processed PIL image
+                _IMAGE_CACHE[(str(path.resolve()), w, h)] = img
+
+                # Schedule UI update on main thread
+                try:
+                    widget_ref.after(0, lambda: widget_ref._display_photo_from_image(img))
+                except Exception:
+                    pass
+            except Exception:
+                logger.exception("Background image load failed")
+
+        t = threading.Thread(target=_bg_load, args=(photo_file, canvas_w, canvas_h, self), daemon=True)
+        t.start()
 
     def _display_photo(self, photo_path):
         """Display a photo in the canvas.
@@ -378,33 +426,15 @@ class CharacterCard(ttk.Frame):
             return
 
         try:
-            # Validate path is safe
-            safe_path = self._sanitize_photo_path(photo_path)
-            # Load image
-            img = Image.open(safe_path).convert("RGBA")
+            # If caller passed a PIL Image already, display directly
+            if hasattr(photo_path, "convert") and hasattr(photo_path, "size"):
+                self._display_photo_from_image(photo_path)
+                return
 
-            # Cover-resize: scale to fill the canvas and crop center
-            canvas_w = int(self.photo_canvas.cget("width"))
-            canvas_h = int(self.photo_canvas.cget("height"))
-
-            # Compute scale to cover
-            scale = max(canvas_w / img.width, canvas_h / img.height)
-            new_size = (int(img.width * scale) + 2, int(img.height * scale) + 2)
-            img = img.resize(new_size, Image.Resampling.LANCZOS)
-
-            # Crop center to canvas size
-            left = (img.width - canvas_w) // 2
-            top = (img.height - canvas_h) // 2
-            right = left + canvas_w
-            bottom = top + canvas_h
-            img = img.crop((left, top, right, bottom))
-
-            # Convert to PhotoImage
-            self.photo_image = ImageTk.PhotoImage(img)
-
-            # Clear canvas and draw at top-left to fill
-            self.photo_canvas.delete("all")
-            self.photo_canvas.create_image(0, 0, image=self.photo_image, anchor="nw")
+            # Otherwise sanitize and delegate to async loader (to avoid blocking UI)
+            photo_file = self._sanitize_photo_path(photo_path)
+            # Kick off async load (will use cache if available)
+            self._load_photo()
 
         except Exception as e:
             from utils import logger
@@ -421,6 +451,18 @@ class CharacterCard(ttk.Frame):
                 font=("Segoe UI", 8),
                 justify="center",
             )
+
+    def _display_photo_from_image(self, pil_img):
+        """Create a PhotoImage from a PIL Image and draw it on the canvas.
+
+        This must be called on the main/UI thread.
+        """
+        try:
+            self.photo_image = ImageTk.PhotoImage(pil_img)
+            self.photo_canvas.delete("all")
+            self.photo_canvas.create_image(0, 0, image=self.photo_image, anchor="nw")
+        except Exception:
+            logger.exception("Failed to create PhotoImage from PIL image")
 
     def _change_photo(self):
         """Open file dialog to change character photo."""
