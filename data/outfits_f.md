@@ -174,6 +174,9 @@ A **intimate apparel set** (bra and brief/boy short combination) in a flattering
 ### MMA - Competition
 Fitted **high-cut athletic briefs** in **{primary_color} with {secondary_color} accents**; **sports bra** in **{primary_color} with {secondary_color} accents**. *Accessories:* **MMA gloves** ({accent}, 4-6oz); **hand wraps**; **mouthguard**. *Hair/Makeup:* Hair secured tightly in braid or bun, no makeup.
 
+### Boxing - Competition
+Fitted **boxing shorts** in **{primary_color} with {secondary_color} waistband/accents** (satin or performance fabric, above knee); **sports bra or athletic tank** in **{primary_color} with {secondary_color} accents** (supportive, competition style); **boxing robe** (optional, matching colors, worn pre-fight); **boxing shoes** (high-top, {accent}). *Accessories:* **Boxing gloves** ({accent}, 8-12oz, competition style), hand wraps, mouthguard. *Hair/Makeup:* Hair in tight braid or bun, no makeup.
+
 ### Jiu Jitsu - Rash Guard
 Long-sleeve **compression rash guard** (moisture-wicking technical fabric with bold design); **spats or grappling shorts**. *Accessories:* None. *Hair/Makeup:* Hair secured tightly, no makeup.
 
@@ -183,6 +186,21 @@ White or blue **kimono-style gi jacket** (heavy cotton weave); matching **gi pan
 ---
 
 ## Team Sports
+### Baseball - Home
+**Baseball jersey** in **{primary_color} with {secondary_color} accents** (button-up, team logo and number); **white baseball pants** (belted, with {secondary_color} piping); **team cap** ({primary_color} with {secondary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair in ponytail or braid, minimal makeup.
+
+### Baseball - Away
+**Baseball jersey** in **{secondary_color} with {primary_color} accents** (button-up, team logo and number); **gray baseball pants** (belted, with {primary_color} piping); **team cap** ({secondary_color} with {primary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair in ponytail or braid, minimal makeup.
+
+### Softball - Home
+**Softball jersey** in **{primary_color} with {secondary_color} accents** (button-up or pullover, team logo and number); **white softball pants** (belted, with {secondary_color} piping); **team cap or visor** ({primary_color} with {secondary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair in ponytail or braid, minimal makeup.
+
+### Softball - Away
+**Softball jersey** in **{secondary_color} with {primary_color} accents** (button-up or pullover, team logo and number); **gray softball pants** (belted, with {primary_color} piping); **team cap or visor** ({secondary_color} with {primary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair in ponytail or braid, minimal makeup.
+
+
+### Esports Jersey
+**Pro-style V-neck jersey** featuring an **asymmetric diagonal design**; **white** torso base with contrasting **black** sleeves and side panels; a bold **{primary_color}** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** athletic joggers or leggings. *Accessories:* Gaming headset, wristbands. *Hair/Makeup:* Sleek styling, minimal modern makeup.
 
 ### Track and Field - Home
 Fitted **sleeveless crop top or racing bib** in **{primary_color} with {secondary_color} accents** (lightweight performance fabric); **high-cut athletic briefs** in **{primary_color} with {secondary_color} accents** (lightweight performance fabric); **track spikes or running shoes** ({accent}). *Accessories:* Race number bib, hair tie. *Hair/Makeup:* Minimal makeup, hair in ponytail or bun.
@@ -214,11 +232,12 @@ Fitted **sleeveless jersey** in **{secondary_color} with {primary_color} accents
 ### Tennis - Away
 **Performance tank top or short-sleeve shirt** in **{secondary_color} with {primary_color} accents** (moisture-wicking technical fabric); **athletic skirt with built-in shorts or tennis shorts** in **{secondary_color} with {primary_color} accents**; **tennis shoes** ({accent}, court-appropriate). *Accessories:* Visor or headband, wristbands, hair tie. *Hair/Makeup:* Hair in ponytail or braid, minimal waterproof makeup.
 
+
 ### Swimming - Home
-One-piece **competition swimsuit** in **{primary_color} with {secondary_color} accents** (high-performance technical fabric, full coverage with racerback design); **swim cap** in **{primary_color} with {secondary_color} logo**; **racing goggles**. *Accessories:* Team warm-up jacket and pants optional. *Hair/Makeup:* Hair secured in bun under cap, waterproof makeup optional.
+**Performance one-piece swimsuit** with a **solid black** central body panel for hydrodynamics; contoured side panels in **{primary_color}** framed by thin **white** piping; racerback strap design with open back. *Accessories:* **Black** swim cap with **{primary_color}** logo, mirrored racing goggles. *Hair/Makeup:* Wet skin texture, waterproof makeup.
 
 ### Swimming - Away
-One-piece **competition swimsuit** in **{secondary_color} with {primary_color} accents** (high-performance technical fabric, full coverage with racerback design); **swim cap** in **{secondary_color} with {primary_color} logo**; **racing goggles**. *Accessories:* Team warm-up jacket and pants optional. *Hair/Makeup:* Hair secured in bun under cap, waterproof makeup optional.
+**Performance one-piece swimsuit** with a **solid black** central body panel for hydrodynamics; contoured side panels in **{secondary_color}** framed by thin **white** piping; racerback strap design with open back. *Accessories:* **White** swim cap with **{secondary_color}** logo, mirrored racing goggles. *Hair/Makeup:* Wet skin texture, waterproof makeup.
 
 ### Beach Volleyball - Home
 **Athletic bikini top** in **{primary_color} with {secondary_color} accents** (performance fabric with secure fit); **short athletic bikini bottoms** in **{primary_color} with {secondary_color} accents** (performance fabric); **athletic sandals or barefoot**. *Accessories:* Sunglasses, visor or hat optional. *Hair/Makeup:* Waterproof sunscreen, minimal makeup, hair in ponytail or braid.
@@ -232,11 +251,12 @@ Fitted **sleeveless jersey** in **{primary_color} with {secondary_color} accents
 ### Volleyball - Away
 Fitted **sleeveless jersey** in **{secondary_color} with {primary_color} accents** (moisture-wicking performance fabric with team logo and number); **spandex shorts** in **{secondary_color} with {primary_color} accents** (spandex blend for movement); **knee pads**; **volleyball shoes** ({accent}, court-appropriate with ankle support). *Accessories:* Hair tie, sweatbands optional. *Hair/Makeup:* Hair in ponytail or braid, minimal makeup.
 
+
 ### Cheerleading - Home
-Fitted **sleeveless cheer top** in **{primary_color} with {secondary_color} accents** (performance fabric with team name/logo); **pleated cheer skirt** in **{primary_color} with {secondary_color} accents** (built-in shorts); **cheer shoes** ({accent} with team color accents). *Accessories:* Hair bow in team colors, pom-poms optional. *Hair/Makeup:* Hair in high ponytail with bow, natural makeup with team color accents.
+**High-neck performance crop top** featuring a **sheer black mesh yoke** and long sleeves; bodice in **{primary_color}** with a distinct **scalloped hemline**; entire top heavily encrusted with **crystal rhinestones** in a gradient scatter. **Fitted cheer skirt** in **{primary_color}** with matching **scalloped hem** and rhinestone trim. *Accessories:* **White** hair bow with crystal center, cheer shoes. *Hair/Makeup:* High pony with volume, performance makeup with rhinestone accents near eyes.
 
 ### Cheerleading - Away
-Fitted **sleeveless cheer top** in **{secondary_color} with {primary_color} accents** (performance fabric with team name/logo); **pleated cheer skirt** in **{secondary_color} with {primary_color} accents** (built-in shorts); **cheer shoes** ({accent}). *Accessories:* Hair bow in team colors, pom-poms optional. *Hair/Makeup:* Hair in high ponytail with bow, natural makeup with team color accents.
+**High-neck performance crop top** featuring a **sheer black mesh yoke** and long sleeves; bodice in **{secondary_color}** with a distinct **scalloped hemline**; entire top heavily encrusted with **crystal rhinestones** in a gradient scatter. **Fitted cheer skirt** in **{secondary_color}** with matching **scalloped hem** and rhinestone trim. *Accessories:* **Black** hair bow with crystal center, cheer shoes. *Hair/Makeup:* High pony with volume, performance makeup with rhinestone accents near eyes.
 
 ### Wrestling - Home
 Fitted **singlet** in **{primary_color} with {secondary_color} accents** (lycra/spandex performance fabric with team logo); **wrestling shoes** ({accent}, lightweight with ankle support). *Accessories:* Knee pads optional. *Hair/Makeup:* Hair tied back and messy.

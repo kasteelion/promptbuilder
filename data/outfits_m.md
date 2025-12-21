@@ -174,6 +174,9 @@ Simple **swim trunks or board shorts**. *Accessories:* None specified. *Hair/Mak
 ### MMA - Competition
 **MMA shorts** in **{primary_color} with {secondary_color} accents** (fitted athletic shorts with side slits, performance fabric). *Accessories:* **MMA gloves** ({accent}, 4-6oz); **hand wraps**; **mouthguard**. *Hair/Makeup:* Hair secured if longer, minimal grooming.
 
+### Boxing - Competition
+**Boxing trunks** in **{primary_color} with {secondary_color} waistband/accents** (satin or performance fabric, above knee); **boxing robe** (optional, matching colors, worn pre-fight); **boxing shoes** (high-top, {accent}). *Accessories:* **Boxing gloves** ({accent}, 8-12oz, competition style), hand wraps, mouthguard. *Hair/Makeup:* Hair short or secured, minimal grooming.
+
 ### Jiu Jitsu - Rash Guard
 Long-sleeve **compression rash guard** (moisture-wicking technical fabric with bold design); **spats or grappling shorts**. *Accessories:* None. *Hair/Makeup:* Hair secured if longer, minimal grooming.
 
@@ -186,6 +189,21 @@ White or blue **kimono-style gi jacket** (heavy cotton weave); matching **gi pan
 
 ### Track and Field - Home
 Fitted **sleeveless racing top or tank** in **{primary_color} with {secondary_color} accents** (lightweight performance fabric); **athletic shorts or briefs** in **{primary_color} with {secondary_color} accents** (lightweight performance fabric); **track spikes or running shoes**. *Accessories:* Race number bib. *Hair/Makeup:* Minimal grooming, hair short or secured.
+
+### Baseball - Home
+**Baseball jersey** in **{primary_color} with {secondary_color} accents** (button-up, team logo and number); **white baseball pants** (belted, with {secondary_color} piping); **team cap** ({primary_color} with {secondary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+
+### Baseball - Away
+**Baseball jersey** in **{secondary_color} with {primary_color} accents** (button-up, team logo and number); **gray baseball pants** (belted, with {primary_color} piping); **team cap** ({secondary_color} with {primary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+
+### Softball - Home
+**Softball jersey** in **{primary_color} with {secondary_color} accents** (button-up or pullover, team logo and number); **white softball pants** (belted, with {secondary_color} piping); **team cap or visor** ({primary_color} with {secondary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+
+### Softball - Away
+**Softball jersey** in **{secondary_color} with {primary_color} accents** (button-up or pullover, team logo and number); **gray softball pants** (belted, with {primary_color} piping); **team cap or visor** ({secondary_color} with {primary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+
+### Esports Jersey
+**Pro-style V-neck jersey** featuring an **asymmetric diagonal design**; **white** torso base with contrasting **black** sleeves and side panels; a bold **{primary_color}** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** tactical-style joggers. *Accessories:* Gaming headset, smart watch. *Hair/Makeup:* Clean modern styling.
 
 ### American Football - Home
 **Football jersey** in **{primary_color} with {secondary_color} accents** (mesh performance fabric with team number); **padded football pants** in **{secondary_color} with {primary_color} stripes** (knee-length); **football cleats**. *Accessories:* **Helmet** ({primary_color} with {secondary_color} face mask), **shoulder pads** (worn under jersey), mouthguard. *Hair/Makeup:* Minimal grooming.
