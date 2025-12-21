@@ -291,6 +291,7 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 
 - **Relay Race Handoff (4+):** {char1} passing the baton to {char2} in a track relay race, while {char3} starts to run in the next lane and {char4} watches from the side. High-stakes, coordinated motion.
 
+- **Volleyball Huddle (6):** {char1}, {char2}, {char3}, {char4}, {char5}, and {char6} standing in tight cluster viewed from behind on volleyball court. All facing inward with arms wrapped around each other's backs and waists, creating unified group embrace. Bodies close together, shoulders touching, forming intimate team circle. Heads leaning toward center, some tilted inward in concentration. Arms reach across to hold teammates, hands resting on backs and sides. Stance natural and grounded, weight distributed evenly. Court floor visible beneath—polished gym floor with court lines. Background shows gym setting with walls, bleachers, chairs courtside. View captures the back of the huddle, emphasizing team unity and interconnection. Energy focused and supportive, pre-game or timeout moment of solidarity and strategy.
 ---
 ## Dance & Performance:
 

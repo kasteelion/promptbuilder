@@ -536,20 +536,20 @@
  - **Makeup:** No makeup, hair tied back securely
 
 #### Bowling - Home
- - **Hijab:** Retro-styled hijab in {primary_color} with vintage wrap
- - **Top:** Long-sleeve modest bowling shirt in {primary_color} with {secondary_color} accents (button-up style with contrasting panels and embroidered name)
- - **Bottom:** High-waist straight-leg pants or midi skirt in {primary_color} with {secondary_color} accents
- - **Footwear:** Bowling shoes ({accent}, two-tone rental style or personal pair)
-- **Accessories:** Wrist support optional, team logo patch, simple gold earrings
-- **Makeup:** Casual styling
+ - **Hijab:** Sports hijab in {primary_color} (breathable, practical)
+ - **Top:** Fitted performance polo or athletic top in {primary_color} with {secondary_color} accents (moisture-wicking fabric with team logo, modest high neck)
+ - **Bottom:** Athletic midi skirt with built-in full-length leggings in {primary_color} with {secondary_color} accents
+ - **Footwear:** Bowling shoes ({accent})
+- **Accessories:** Wrist support optional, simple gold studs
+- **Makeup:** Minimal makeup, hair secured
 
 #### Bowling - Away
- - **Hijab:** Retro-styled hijab in {secondary_color} with vintage wrap
- - **Top:** Long-sleeve modest bowling shirt in {secondary_color} with {primary_color} accents (button-up style with contrasting panels and embroidered name)
- - **Bottom:** High-waist straight-leg pants or midi skirt in {secondary_color} with {primary_color} accents
- - **Footwear:** Bowling shoes ({accent}, two-tone rental style or personal pair)
- - **Accessories:** Wrist support optional, team logo patch, simple gold earrings
- - **Makeup:** Casual styling
+ - **Hijab:** Sports hijab in {secondary_color} (breathable, practical)
+ - **Top:** Fitted performance polo or athletic top in {secondary_color} with {primary_color} accents (moisture-wicking fabric with team logo, modest high neck)
+ - **Bottom:** Athletic midi skirt with built-in full-length leggings in {secondary_color} with {primary_color} accents
+ - **Footwear:** Bowling shoes ({accent})
+ - **Accessories:** Wrist support optional, simple gold studs
+ - **Makeup:** Minimal makeup, hair secured
 
 #### Film Noir - Lead
 - **Hijab:** Black silk hijab with dramatic elegant draping

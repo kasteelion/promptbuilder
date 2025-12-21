@@ -7,7 +7,7 @@
 **Appearance:**
 * **Body:** Flamboyant Natural frame; straight athletic flesh; compact balanced proportions with defined waist, toned limbs, and visible muscle definition; moderate vertical (5'5"-5'6"); athletic build with clean controlled lines, functional strength, and mixed-heritage features—Japanese bone structure with Puerto Rican curves, creating distinctive balanced aesthetics; athletic graceful presence.
 * **Face:** Balanced classical structure with mixed heritage features; oval face with subtle Japanese angularity softened by Puerto Rican warmth; firm clean planes; calm almond-shaped eyes that tilt slightly upward (Japanese influence) with warm expressive quality (Puerto Rican warmth), moderately spaced, dark brown; defined jawline; neutral expression shows calm composure with subtle knowing smile that brightens when engaged; beauty mark near left eye.
-* **Hair:** Type 1B-1C straight with slight natural wave at ends; medium-high density; long sleek cut with healthy satin sheen; commonly worn in sleek low ponytail with signature coral bandana tied as headband or around ponytail; occasionally in loose beachy waves when casual; dark brown to black with warm undertones that catch sun.
+* **Hair:** Type 1B-1C straight with slight natural wave at ends; medium-high density; long sleek cut with healthy satin sheen; dark brown to black with warm undertones that catch sun.
 * **Skin:** Warm golden-olive skin with bronzed finish and natural radiance.
 
 **Age Presentation:** mid-20s presentation; professional, composed, grounded.

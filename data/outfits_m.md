@@ -245,10 +245,10 @@ Fitted **singlet** in **{primary_color} with {secondary_color} accents** (lycra/
  Fitted **singlet** in **{secondary_color} with {primary_color} accents** (lycra/spandex performance fabric with team logo); **wrestling shoes** (lightweight with ankle support). *Accessories:* Knee pads optional. *Hair/Makeup:* Hair short or tied back and messy.
 
 ### Bowling - Home
-**Bowling shirt** in **{primary_color} with {secondary_color} accents** (short-sleeve button-up with contrasting panels and embroidered name); **straight-leg pants** in **{primary_color} with {secondary_color} accents**; **bowling shoes** (two-tone rental style or personal pair). *Accessories:* Wrist support optional, team logo patch. *Hair/Makeup:* Casual styling.
+Fitted **performance polo** in **{primary_color} with {secondary_color} accents** (moisture-wicking fabric with team logo and name on back); **performance pants** in **{primary_color} with {secondary_color} accents** (tailored fit); **bowling shoes** ({accent}). *Accessories:* Wrist support optional, team logo on collar. *Hair/Makeup:* Hair short or secured, neat grooming.
 
 ### Bowling - Away
- **Bowling shirt** in **{secondary_color} with {primary_color} accents** (short-sleeve button-up with contrasting panels and embroidered name); **straight-leg pants** in **{secondary_color} with {primary_color} accents**; **bowling shoes** (two-tone rental style or personal pair). *Accessories:* Wrist support optional, team logo patch. *Hair/Makeup:* Casual styling.
+Fitted **performance polo** in **{secondary_color} with {primary_color} accents** (moisture-wicking fabric with team logo and name on back); **performance pants** in **{secondary_color} with {primary_color} accents** (tailored fit); **bowling shoes** ({accent}). *Accessories:* Wrist support optional, team logo on collar. *Hair/Makeup:* Hair short or secured, neat grooming.
 
 ---
 
