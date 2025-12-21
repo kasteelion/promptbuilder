@@ -1,6 +1,6 @@
 {
-  "window_geometry": "1768x901+-1166+128",
-  "last_theme": "Packers Dark",
+  "window_geometry": "1768x901+-1101+177",
+  "last_theme": "Tokyo Night",
   "last_base_prompt": "Photorealistic: \"High-Fidelity Candid\"",
   "font_adjustment": 0,
   "recent_characters": [],
@@ -13,5 +13,6 @@
   "ui_mode": "classic",
   "window_state": "zoomed",
   "gallery_visible": true,
-  "custom_themes": {}
+  "custom_themes": {},
+  "last_color_scheme": "Default (No Scheme)"
 }

@@ -1,5 +1,6 @@
 from typing import Any, Dict, List
 
+from utils.color_scheme import parse_color_schemes, substitute_colors
 from utils.text_utils import normalize_blank_lines
 
 from .renderers import CharacterRenderer, NotesRenderer, OutfitRenderer, PoseRenderer, SceneRenderer
@@ -45,12 +46,21 @@ class PromptBuilder:
         if scene:
             parts.append(SceneRenderer.render(scene))
 
+        color_schemes = parse_color_schemes("data/color_schemes.md")
+
         for idx, char in enumerate(config.get("selected_characters", [])):
             data = self.characters.get(char["name"], {})
             outfit = data.get("outfits", {}).get(char.get("outfit", ""), "")
             pose = char.get("action_note") or self.poses.get(char.get("pose_category"), {}).get(
                 char.get("pose_preset"), ""
             )
+            scheme_name = char.get("color_scheme")
+            scheme = color_schemes.get(scheme_name, color_schemes.get("Default (No Scheme)", {}))
+            if isinstance(outfit, str):
+                outfit = substitute_colors(outfit, scheme)
+            elif isinstance(outfit, dict):
+                for k, v in outfit.items():
+                    outfit[k] = substitute_colors(v, scheme)
             parts.append(
                 CharacterRenderer.render(
                     idx,

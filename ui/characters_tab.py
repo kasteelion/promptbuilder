@@ -6,6 +6,8 @@ from tkinter import messagebox, ttk
 
 from config import TOOLTIPS
 from utils import create_tooltip, logger
+from utils.outfit_color_check import outfit_has_color_vars
+from utils.color_scheme import parse_color_schemes
 
 from .base_style_creator import BaseStyleCreatorDialog
 from .character_creator import CharacterCreatorDialog
@@ -761,6 +763,9 @@ class CharactersTab:
             self._refreshing = False
             return
 
+        # Load color schemes from file
+        color_schemes = parse_color_schemes("data/color_schemes.md")
+
         for i, cd in enumerate(self.selected_characters):
             char_title = f"#{i+1} — {cd['name']}"
             frame = ttk.LabelFrame(
@@ -780,6 +785,7 @@ class CharactersTab:
 
             # Show current outfit
             current_outfit = cd.get("outfit", "")
+            outfit_text = self.characters.get(cd["name"], {}).get("outfits", {}).get(current_outfit, "")
             if current_outfit:
                 current_label = ttk.Label(
                     outfit_header,
@@ -894,6 +900,19 @@ class CharactersTab:
             action_text.bind(
                 "<KeyRelease>", lambda e, idx=i, tw=action_text: self._update_action_note(idx, tw)
             )
+
+            # Insert color scheme selector if outfit uses color variables
+            # Insert after outfit selector
+            if outfit_has_color_vars(str(outfit_text)):
+                scheme_var = tk.StringVar(value=cd.get("color_scheme", ""))
+                scheme_names = list(color_schemes.keys())
+                ttk.Label(frame, text="Team Colors:").pack(anchor="w", padx=4)
+                scheme_combo = ttk.Combobox(frame, textvariable=scheme_var, state="readonly", values=scheme_names)
+                scheme_combo.pack(fill="x", padx=4, pady=(0, 6))
+                def on_scheme_selected(event, idx=i, var=scheme_var):
+                    self.selected_characters[idx]["color_scheme"] = var.get()
+                    self.on_change()
+                scheme_combo.bind("<<ComboboxSelected>>", on_scheme_selected)
 
             # Separator
             ttk.Separator(frame, orient="horizontal").pack(fill="x", pady=6)

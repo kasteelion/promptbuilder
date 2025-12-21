@@ -82,6 +82,10 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 - **Bowling Alley Lanes:** View down polished bowling lanes, pins at end, ball return, overhead scoring displays, recreational atmosphere.
 
+- **American Football Field:** Outdoor American football field, marked with yard lines, goalposts at each end, stadium lights or bright daylight.
+
+- **Beach Volleyball Court:** Sand volleyball court on a sunny beach, net in the center, ocean and sky in the background, relaxed but competitive atmosphere.
+
 ---
 
 ## Natural Environments
@@ -126,7 +130,7 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 - **Concert Stage:** Large concert stage, dramatic colored spotlights, smoke effects, microphone stand, energetic crowd visible.
 - 
-- **Concert Hall:** Grand concert hall interior inspired by Victorian Gothic architecture, tiered orchestra seating facing ornate stage, high vaulted ceiling with intricate decorative plasterwork, warm ambient lighting from chandeliers, rich red velvet seats, elaborate proscenium arch with gold detailing, excellent acoustics, formal classical music atmosphere.
+- **Concert Hall:** Grand concert hall interior inspired by Victorian Gothic architecture, tiered orchestra seating facing ornate stage, high vaulted ceiling with intricate decorative plasterwork, warm ambient lighting from chandeliers, rich red velvet seats, a elaborate proscenium arch with gold detailing, excellent acoustics, formal classical music atmosphere.
 
 - **Museum Hall:** High ceilings, large open space, displayed artifacts/art, clean bright lighting, polished floors, formal quiet atmosphere.
 
