@@ -614,7 +614,7 @@ class CharacterGalleryPanel(ttk.Frame):
 
         # Search box with placeholder effect
         search_frame = ttk.Frame(self, style="TFrame")
-        search_frame.pack(fill="x", padx=6, pady=(2, 6))
+        search_frame.pack(fill="x", padx=6, pady=(2, 4))
 
         self.search_var = tk.StringVar()
 
@@ -622,6 +622,22 @@ class CharacterGalleryPanel(ttk.Frame):
         search_entry.pack(fill="x", ipady=2)
         search_entry.insert(0, "Search...")
         search_entry.config(foreground="gray")
+        
+        # Sort and Filter row
+        sort_filter_frame = ttk.Frame(self, style="TFrame")
+        sort_filter_frame.pack(fill="x", padx=6, pady=(0, 6))
+        
+        ttk.Label(sort_filter_frame, text="Sort by:", style="Muted.TLabel").pack(side="left")
+        self.sort_var = tk.StringVar(value="Name")
+        sort_combo = ttk.Combobox(
+            sort_filter_frame, 
+            textvariable=self.sort_var, 
+            state="readonly", 
+            width=10,
+            values=["Name", "Modifier", "Recently Added"]
+        )
+        sort_combo.pack(side="left", padx=(4, 8))
+        sort_combo.bind("<<ComboboxSelected>>", lambda e: self._display_characters())
 
         # Clear placeholder on focus
         def on_focus_in(e):
@@ -742,28 +758,56 @@ class CharacterGalleryPanel(ttk.Frame):
         if search_term == "search...":
             search_term = ""
 
+        # Prepare character list for sorting
+        char_list = []
+        for name, data in self.characters.items():
+            # Apply search filter (Name, Summary, Appearance, Tags)
+            if search_term:
+                summary = (data.get("summary") or "").lower()
+                appearance = (data.get("appearance") or "").lower()
+                modifier = (data.get("modifier") or data.get("gender") or "").lower()
+                tags = " ".join(data.get("tags") or []).lower()
+                
+                matches = (
+                    search_term in name.lower() or
+                    search_term in summary or
+                    search_term in appearance or
+                    search_term in modifier or
+                    search_term in tags
+                )
+                if not matches:
+                    continue
+
+            # Apply tag filters (AND logic)
+            if self.selected_tags:
+                char_tags = data.get("tags") or []
+                if isinstance(char_tags, str):
+                    char_tags = [t.strip() for t in char_tags.split(",") if t.strip()]
+                missing = [t for t in self.selected_tags if t not in char_tags]
+                if missing:
+                    continue
+            
+            char_list.append((name, data))
+
+        # Apply sorting
+        sort_by = self.sort_var.get()
+        if sort_by == "Name":
+            char_list.sort(key=lambda x: x[0].lower())
+        elif sort_by == "Modifier":
+            # Sort by modifier (fallback to gender) then name
+            char_list.sort(key=lambda x: (x[1].get("modifier") or x[1].get("gender", "F"), x[0].lower()))
+        elif sort_by == "Recently Added":
+            # For now, we don't have true 'date added', so just reverse order
+            # which usually matches file discovery order if not sorted.
+            char_list.reverse()
+
         # Create cards
         row = 0
         col = 0
         max_cols = 1  # 1 card per row for better visibility in narrow panel
         displayed_count = 0
 
-        _selected_tag = (self.tag_var.get() or "All").strip()
-        for name, data in sorted(self.characters.items()):
-            # Apply search filter
-            if search_term and search_term not in name.lower():
-                continue
-
-            # Apply tag filters (support multiple selected tags; require AND)
-            if self.selected_tags:
-                char_tags = data.get("tags") or []
-                if isinstance(char_tags, str):
-                    char_tags = [t.strip() for t in char_tags.split(",") if t.strip()]
-                # If character doesn't have all selected tags, skip
-                missing = [t for t in self.selected_tags if t not in char_tags]
-                if missing:
-                    continue
-
+        for name, data in char_list:
             displayed_count += 1
 
             card = CharacterCard(

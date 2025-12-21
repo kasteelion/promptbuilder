@@ -5,6 +5,8 @@ from tkinter import messagebox, ttk
 
 from utils import get_pose_template, get_pose_template_description, get_pose_template_names
 
+from .searchable_combobox import SearchableCombobox
+
 
 class PoseCreatorDialog:
     """Dialog for creating new pose presets."""
@@ -108,8 +110,10 @@ class PoseCreatorDialog:
         cat_frame.pack(fill="x", pady=(0, 10))
 
         self.category_var = tk.StringVar()
-        self.category_combo = ttk.Combobox(
-            cat_frame, textvariable=self.category_var, font=("Segoe UI", 10)
+        self.category_combo = SearchableCombobox(
+            cat_frame, 
+            textvariable=self.category_var, 
+            placeholder="Search or type category..."
         )
         self.category_combo.pack(side="left", fill="x", expand=True, padx=(0, 5))
 
@@ -229,7 +233,7 @@ Example: Standing confidently with feet shoulder-width apart, arms crossed over 
         if not categories:
             categories = ["Standing", "Sitting", "Action", "Relaxed", "Dynamic"]
 
-        self.category_combo["values"] = categories
+        self.category_combo.set_values(categories)
 
     def _cancel(self):
         """Cancel and close dialog."""

@@ -73,44 +73,56 @@ class DataLoader:
         return new_location
 
     def load_outfits(self):
-        """Load and parse shared outfits from gendered outfit files.
+        """Load and parse shared outfits from all outfits_*.md files in data/.
 
         Priority / behavior:
-        - If `outfits_f.md` or `outfits_m.md` exist in data/ they are parsed separately
-        - If neither exists but legacy `outfits.md` exists, it will be treated as female content
-        - If no file exists, a default `outfits_f.md` will be created with a sample entry
+        - Scans for all files matching `data/outfits_*.md`.
+        - The suffix after the underscore (e.g. 'f' in outfits_f.md) becomes the key.
+        - Keys are converted to uppercase for consistency (e.g. 'F', 'M', 'H').
+        - If legacy `outfits.md` exists and no `outfits_f.md` exists, it migrates it.
 
-        Returns a dict, either legacy structure (categories->outfits) or a gendered
-        structure: {"F": {...}, "M": {...}}
+        Returns a dict: {"F": {...}, "M": {...}, "H": {...}, ...}
         """
-        f_f = self._find_data_file("outfits_f.md")
-        f_m = self._find_data_file("outfits_m.md")
+        data_dir = self.base_dir / "data"
+        if not data_dir.exists():
+            data_dir = self.base_dir
 
-        # If legacy file exists and gendered files do not, migrate legacy into outfits_f.md
+        # Migration logic for legacy outfits.md
         legacy = self._find_data_file("outfits.md")
-        if not f_f.exists() and not f_m.exists() and legacy.exists():
+        f_f = data_dir / "outfits_f.md"
+        if not f_f.exists() and legacy.exists():
             try:
                 legacy_text = legacy.read_text(encoding="utf-8")
                 f_f.write_text(legacy_text, encoding="utf-8")
             except Exception:
                 pass
 
-        # Ensure at least the female file exists with a basic sample
+        # Ensure at least a basic outfits_f.md exists
         if not f_f.exists():
             default_content = """## Common Outfits
 ### Casual
 A simple and comfortable casual outfit.
 """
-            f_f.write_text(default_content, encoding="utf-8")
+            try:
+                f_f.write_text(default_content, encoding="utf-8")
+            except Exception:
+                pass
 
-        outfits_f_text = f_f.read_text(encoding="utf-8") if f_f.exists() else ""
-        outfits_m_text = f_m.read_text(encoding="utf-8") if f_m.exists() else ""
+        parsed_outfits = {}
+        # Scan for all outfits_*.md files
+        for f in data_dir.glob("outfits_*.md"):
+            try:
+                # Extract suffix: outfits_suffix.md -> suffix
+                suffix = f.stem.split("_", 1)[1].upper()
+                text = f.read_text(encoding="utf-8")
+                parsed = MarkdownParser.parse_shared_outfits(text)
+                if parsed:
+                    parsed_outfits[suffix] = parsed
+            except Exception:
+                from utils import logger
+                logger.exception(f"Error loading outfit file: {f}")
 
-        parsed_f = MarkdownParser.parse_shared_outfits(outfits_f_text) if outfits_f_text else {}
-        parsed_m = MarkdownParser.parse_shared_outfits(outfits_m_text) if outfits_m_text else {}
-
-        # If male file is empty, still return dict with both keys for consistency
-        return {"F": parsed_f or {}, "M": parsed_m or {}}
+        return parsed_outfits
 
     def load_tags(self):
         """Load canonical tag list from `data/tags.md` (create defaults if missing).

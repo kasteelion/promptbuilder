@@ -26,7 +26,7 @@
 
 ---
 
-Base Outfit:
+#### Base
 - **Top:** Soft white eyelet lace peasant blouse with off-shoulder option and flutter sleeves
 - **Bottom:** High-waist light-wash denim shorts with frayed hem and subtle distressing
 - **Footwear:** Cognac brown leather gladiator sandals with braided straps

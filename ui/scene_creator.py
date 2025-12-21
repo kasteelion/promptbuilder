@@ -5,6 +5,8 @@ from tkinter import messagebox, ttk
 
 from utils import get_scene_template, get_scene_template_description, get_scene_template_names
 
+from .searchable_combobox import SearchableCombobox
+
 
 class SceneCreatorDialog:
     """Dialog for creating new scene presets."""
@@ -108,8 +110,10 @@ class SceneCreatorDialog:
         cat_frame.pack(fill="x", pady=(0, 10))
 
         self.category_var = tk.StringVar()
-        self.category_combo = ttk.Combobox(
-            cat_frame, textvariable=self.category_var, font=("Segoe UI", 10)
+        self.category_combo = SearchableCombobox(
+            cat_frame, 
+            textvariable=self.category_var, 
+            placeholder="Search or type category..."
         )
         self.category_combo.pack(side="left", fill="x", expand=True, padx=(0, 5))
 
@@ -226,17 +230,16 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
 
         # Add some default categories if none exist
         if not categories:
-            categories = [
-                "Indoor Settings",
-                "Outdoor Settings",
-                "Urban & Industrial",
-                "Fantasy",
-                "Other",
-            ]
-
-        self.category_combo["values"] = categories
-
-    def _cancel(self):
+                            categories = [
+                            "Indoor Settings",
+                            "Outdoor Settings",
+                            "Urban & Industrial",
+                            "Fantasy",
+                            "Other",
+                        ]
+            
+                    self.category_combo.set_values(categories)
+                def _cancel(self):
         """Cancel and close dialog."""
         self.dialog.destroy()
 

@@ -7,10 +7,11 @@ _SECTION_RE = re.compile(r"^##\s+(.+)$", re.MULTILINE)
 _SUBSECTION_RE = re.compile(r"^###\s+(.+)$", re.MULTILINE)
 _OUTFIT_RE = re.compile(r"^####\s+(.+)$", re.MULTILINE)
 _PHOTO_RE = re.compile(r"\*\*Photo:\*\*\s*(.+?)(?:\n|$)", re.MULTILINE)
-_APPEARANCE_RE = re.compile(r"\*\*Appearance:\*\*\s*(.+?)(?:\n\*\*Outfits:|\n\*\*|$)", re.DOTALL)
+_APPEARANCE_RE = re.compile(r"\*\*Appearance:\*\*\s*(.+?)(?:\n\s*\*\*Outfits:|\n\s*\*\*|$)", re.DOTALL)
 _GENDER_RE = re.compile(r"\*\*Gender:\*\*\s*([mfMF])\b")
-_SUMMARY_RE = re.compile(r"\*\*Summary:\*\*\s*(.+?)(?:\n\*\*|$)", re.DOTALL)
-_TAGS_RE = re.compile(r"\*\*Tags:\*\*\s*(.+?)(?:\n\*\*|$)", re.DOTALL)
+_MODIFIER_RE = re.compile(r"\*\*Modifier:\*\*\s*(.+?)(?:\n\s*\*\*|$)")
+_SUMMARY_RE = re.compile(r"\*\*Summary:\*\*\s*(.+?)(?:\n\s*\*\*|$)", re.DOTALL)
+_TAGS_RE = re.compile(r"\*\*Tags:\*\*\s*(.+?)(?:\n\s*\*\*|$)", re.DOTALL)
 _LIST_ITEM_RE = re.compile(r"^\s*[-*]\s+(.*)$")
 _PRESET_ITEM_RE = re.compile(r"^-\s+\*\*([^:]+):\*\*\s*(.+)$")
 _IDENTITY_LOCKS_HEADER_RE = re.compile(
@@ -250,6 +251,14 @@ class MarkdownParser:
                 gender = gender_match.group(1).upper()
                 gender_explicit = True
 
+            # Detect modifier tag (replaces/augments gender for outfit selection)
+            modifier = None
+            modifier_match = _MODIFIER_RE.search(body)
+            if modifier_match:
+                modifier = modifier_match.group(1).strip()
+                # If a modifier is present, we consider the gender/identity choice explicit
+                gender_explicit = True
+
             # Normalize outfits: detect one-piece entries and canonicalize Bottom
             for o_name, o_val in list(outfits.items()):
                 if isinstance(o_val, dict):
@@ -305,6 +314,7 @@ class MarkdownParser:
                 "photo": photo,
                 "gender": gender,
                 "gender_explicit": gender_explicit,
+                "modifier": modifier,
             }
 
         # Validate parsed character structure
@@ -443,12 +453,13 @@ class MarkdownParser:
     def merge_character_outfits(char_data: dict, shared_outfits: dict, character_name: str):
         """Merge shared outfits with character-specific outfits.
 
-        ALL outfits from outfits.md (all categories) are shared with every character.
-        Character-specific outfits override shared outfits of the same name.
+        ALL outfits from the relevant shared file (determined by modifier or gender)
+        are shared with every character. Character-specific outfits override
+        shared outfits of the same name.
 
         Args:
             char_data: Character data dictionary
-            shared_outfits: Shared outfits dictionary from outfits.md (organized by category)
+            shared_outfits: Shared outfits dictionary mapping keys (F, M, H, etc.) to categories
             character_name: Name of the character
 
         Returns:
@@ -456,19 +467,28 @@ class MarkdownParser:
         """
         merged_outfits = {}
 
-        # If shared_outfits is gendered (dict with 'F' and/or 'M'), pick the right one
-        # Otherwise, fall back to the legacy structure where shared_outfits is a single dict
-        gender = char_data.get("gender", "F") if isinstance(char_data, dict) else "F"
+        # Determine which shared outfit set to use.
+        # Priority: char_data['modifier'] > char_data['gender'] > 'F'
+        modifier = char_data.get("modifier")
+        if modifier:
+            key = modifier.upper()
+        else:
+            key = char_data.get("gender", "F").upper()
 
-        if isinstance(shared_outfits, dict) and any(k in shared_outfits for k in ("F", "M")):
-            selected = shared_outfits.get(gender, {})
-            # Add all categories from the selected gender file
+        if isinstance(shared_outfits, dict) and key in shared_outfits:
+            selected = shared_outfits.get(key, {})
+            # Add all categories from the selected shared file
             for category, outfits in selected.items():
                 merged_outfits.update(outfits)
-        else:
-            # Legacy: shared_outfits is a single dict of categories
+        elif isinstance(shared_outfits, dict) and not any(k in shared_outfits for k in ("F", "M")):
+            # Legacy/Fallback: shared_outfits is a single dict of categories
             for category, outfits in shared_outfits.items():
                 merged_outfits.update(outfits)
+        else:
+            # Fallback to 'F' if the requested key is missing but 'F' exists
+            if "F" in shared_outfits:
+                for category, outfits in shared_outfits.get("F", {}).items():
+                    merged_outfits.update(outfits)
 
         # Character-specific outfits override shared ones with the same name
         merged_outfits.update(char_data.get("outfits", {}))

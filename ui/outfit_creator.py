@@ -3,6 +3,8 @@
 import tkinter as tk
 from tkinter import messagebox, ttk
 
+from .searchable_combobox import SearchableCombobox
+
 
 class SharedOutfitCreatorDialog:
     """Dialog for creating new shared outfits."""
@@ -76,19 +78,34 @@ Example outfit format:
         cat_frame.pack(fill="x", pady=(0, 10))
 
         self.category_var = tk.StringVar()
-        self.category_combo = ttk.Combobox(
-            cat_frame, textvariable=self.category_var, font=("Segoe UI", 10)
+        self.category_combo = SearchableCombobox(
+            cat_frame, 
+            textvariable=self.category_var, 
+            placeholder="Search or type category..."
         )
         self.category_combo.pack(side="left", fill="x", expand=True, padx=(0, 5))
         self._load_categories()
 
-        # Target gender selector for shared outfit file
-        ttk.Label(cat_frame, text="Target:", style="Muted.TLabel").pack(side="left", padx=(6, 4))
-        self.target_var = tk.StringVar(value="Female")
-        self.target_combo = ttk.Combobox(
-            cat_frame, textvariable=self.target_var, values=["Female", "Male"], width=8
+        # Modifier selector for shared outfit file
+        ttk.Label(cat_frame, text="Modifier:", style="Muted.TLabel").pack(side="left", padx=(6, 4))
+        
+        # Scan for available modifiers
+        data_dir = self.data_loader.base_dir / "data"
+        modifiers = []
+        for f in data_dir.glob("outfits_*.md"):
+            suffix = f.stem.split("_", 1)[1].upper()
+            modifiers.append(suffix)
+        
+        if not modifiers:
+            modifiers = ["F", "M"]
+        else:
+            modifiers.sort()
+
+        self.modifier_var = tk.StringVar(value="F" if "F" in modifiers else modifiers[0])
+        self.modifier_combo = ttk.Combobox(
+            cat_frame, textvariable=self.modifier_var, values=modifiers, width=6, state="readonly"
         )
-        self.target_combo.pack(side="left")
+        self.modifier_combo.pack(side="left")
 
         ttk.Label(cat_frame, text="(or type new)", style="Muted.TLabel").pack(side="left")
 
@@ -156,33 +173,32 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
         self.dialog.bind("<Escape>", lambda e: self._cancel())
 
     def _load_categories(self):
-        """Load existing outfit categories."""
-        # Read categories from both gendered outfit files (union)
+        """Load existing outfit categories from all available outfit files."""
         categories = []
         try:
-            f_f = self.data_loader._find_data_file("outfits_f.md")
-            f_m = self.data_loader._find_data_file("outfits_m.md")
-            for outfits_file in (f_f, f_m):
-                if outfits_file.exists():
-                    try:
-                        content = outfits_file.read_text(encoding="utf-8")
-                        lines = content.split("\n")
-                        for line in lines:
-                            if line.strip().startswith("## "):
-                                cat = line.strip()[3:]
-                                if cat not in categories:
-                                    categories.append(cat)
-                    except Exception:
-                        from utils import logger
-
-                        logger.debug(f"Failed to load outfit categories from {outfits_file}")
+            data_dir = self.data_loader.base_dir / "data"
+            if not data_dir.exists():
+                data_dir = self.data_loader.base_dir
+                
+            for outfits_file in data_dir.glob("outfits_*.md"):
+                try:
+                    content = outfits_file.read_text(encoding="utf-8")
+                    lines = content.split("\n")
+                    for line in lines:
+                        if line.strip().startswith("## "):
+                            cat = line.strip()[3:]
+                            if cat not in categories:
+                                categories.append(cat)
+                except Exception:
+                    from utils import logger
+                    logger.debug(f"Failed to load outfit categories from {outfits_file}")
         except Exception:
             categories = []
 
         if not categories:
             categories = ["Common Outfits", "Formal", "Casual", "Athletic"]
 
-        self.category_combo["values"] = categories
+        self.category_combo.set_values(sorted(categories))
 
     def _cancel(self):
         """Cancel and close dialog."""
@@ -213,11 +229,10 @@ Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggin
             return
 
         # Determine target file based on selection
-        target = self.target_var.get().strip().lower()
-        if target.startswith("m"):
-            outfits_file = self.data_loader._find_data_file("outfits_m.md")
-        else:
-            outfits_file = self.data_loader._find_data_file("outfits_f.md")
+        mod = self.modifier_var.get().strip().lower()
+        outfits_file = self.data_loader.base_dir / "data" / f"outfits_{mod}.md"
+        if not outfits_file.parent.exists():
+            outfits_file = self.data_loader.base_dir / f"outfits_{mod}.md"
 
         try:
             if outfits_file.exists():

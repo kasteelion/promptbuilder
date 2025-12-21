@@ -1,204 +1,160 @@
 # Prompt Builder: Group Picture Generator & AI Prompt Authoring Tool
 
-Prompt Builder is a desktop application designed to streamline the creation and management of detailed prompts, characters, themes, and presets for AI image-generation workflows. It simplifies the process of building complex prompts, especially for scenarios involving multiple characters, specific scenes, interactions, and diverse stylistic elements.
+Prompt Builder is a powerful desktop application designed to streamline the creation and management of detailed prompts, characters, themes, and presets for AI image-generation workflows (like Stable Diffusion, Midjourney, etc.). It simplifies the process of building complex, multi-character prompts, ensuring consistency and creative flexibility.
 
-The application aims to be lightweight and self-contained, requiring no external dependencies for normal runtime operation. Developer tooling (linters, formatters, type checkers) is optional but provided to maintain codebase consistency.
+The application is built on a "data-first" philosophy, where all content is driven by human-readable Markdown files, allowing users to extend the system without touching any code.
 
-**Project status:** Beta
-
+**Project status:** Beta  
 **License:** MIT
+
+---
+
+## Core Philosophy
+
+*   **Data-Driven Design:** Everything from character appearances to UI themes is stored in Markdown or JSON. If you can edit text, you can customize this app.
+*   **Privacy & Local-First:** No cloud dependencies, no tracking, and no internet required for core functionality. Your data and prompts stay on your machine.
+*   **Consistency is Key:** Features like "Identity Locks" ensure that character descriptions remain stable even as you change their outfits or actions.
+*   **Extensible Logic:** The modular architecture allows for easy addition of new renderers, parsers, or UI components.
 
 ---
 
 ## Table of Contents
 
 - [Features](#features)
+- [Key Concepts](#key-concepts)
+- [Workflow Example](#workflow-example)
 - [Architecture Overview](#architecture-overview)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Running the Application](#running-the-application)
-  - [Command-line Usage](#command-line-usage)
 - [Data Structure and Customization](#data-structure-and-customization)
 - [Developer Setup](#developer-setup)
 - [Repository Layout](#repository-layout)
-- [Useful Scripts](#useful-scripts)
 - [Logging and Debugging](#logging-and-debugging)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [Contact](#contact)
 
 ---
 
 ## Features
 
-*   **Intuitive Tkinter GUI:** A user-friendly interface for building and managing prompts.
-*   **Character Management:** Easily select, configure outfits, poses, and details for multiple characters.
-*   **Scene and Interaction Definition:** Define custom scenes and multi-character interactions to enrich your prompts.
-*   **Real-time Prompt Preview:** Instantly see the generated prompt as you make selections and edits, with adaptive throttling for smooth performance.
-*   **Markdown-based Data Storage:** All configurable data (characters, outfits, scenes, poses, interactions, themes) is stored in human-readable Markdown files, making it easy to edit and extend.
-*   **Theming Support:** Customize the application's appearance with built-in themes or create your own.
-*   **Undo/Redo Functionality:** Safely experiment with prompt configurations.
-*   **Preset Saving/Loading:** Save and load entire prompt configurations as presets for quick reuse.
-*   **Random Prompt Generation:** Generate diverse and creative prompts with a single click.
-*   **Cross-platform Compatibility:** Built with Python and Tkinter, it runs on various operating systems.
-*   **Minimal Runtime Dependencies:** Designed for ease of use without complex setup.
+*   **Intuitive Tkinter GUI:** A professional, responsive interface with collapsible panels and resizable panes.
+*   **Character Management:** A gallery-style selection system for managing a vast library of characters.
+*   **Structured Outfits:** Support for complex outfit definitions (Top, Bottom, Footwear, Accessories) with automatic "one-piece" detection.
+*   **Interaction Templates:** A robust placeholder system (`{char1}`, `{char2}`) for defining how multiple characters interact in a scene.
+*   **Identity Locks:** A specialized format for character appearance that "locks" core traits (Body, Face, Hair, Skin) separately from temporary actions.
+*   **Real-time Prompt Preview:** Instant feedback as you build your prompt, with adaptive throttling to keep the UI snappy.
+*   **Advanced Theming:** A built-in theme editor to customize colors, fonts, and UI scaling.
+*   **Undo/Redo & Presets:** Full state management to save your work or experiment safely.
+*   **Randomization Engine:** Intelligent randomization that respects character counts and stylistic constraints.
+
+---
+
+## Key Concepts
+
+### Identity Locks
+To maintain character consistency across different generations, Prompt Builder supports "Identity Locks." In a character's Markdown file, you can define core physical traits that the generator will always include, ensuring the character looks the same whether they are at the beach or in a coffee shop.
+
+### Interaction Templates
+Building prompts for multiple people is hard. Interaction templates allow you to define patterns like:
+`{char1} is leaning against a wall while {char2} laughs at something on their phone.`
+The app automatically replaces these placeholders with your currently selected characters.
+
+### Adaptive Preview
+The preview panel doesn't just show text; it validates your configuration in real-time. If you have too many characters or missing data, the app provides helpful hints to fix your prompt.
+
+---
+
+## Workflow Example
+
+1.  **Select Characters:** Browse the gallery and add characters to your current session.
+2.  **Configure Details:** For each character, choose an outfit (from their personal list or shared global outfits) and a pose.
+3.  **Set the Scene:** Pick a scene preset (e.g., "Neon City") or write a custom environment description.
+4.  **Add Interactions:** Select an interaction template to define the relationship between the characters.
+5.  **Refine & Copy:** Watch the prompt build itself in the preview panel. Once satisfied, copy it to your image generator of choice.
+
+---
 
 ## Architecture Overview
 
-The Prompt Builder application follows a modular, layered architecture:
+The application follows a modular, layered architecture designed for maintainability:
 
-*   **Entrypoint (`main.py`)**: A minimal shim that delegates application startup to the `Runner`.
-*   **Application Lifecycle (`runner.py`)**: The `Runner` class manages the application's lifecycle, including CLI argument parsing, compatibility checks, debug logging, and launching the main Tkinter GUI. It also handles top-level error catching and graceful shutdowns.
-*   **User Interface (`ui/`)**: The core of the application's interaction. Built with Tkinter, it comprises:
-    *   **`PromptBuilderApp` (`ui/main_window.py`)**: The main application window, orchestrating all UI components.
-    *   **Tabs (`ui/characters_tab.py`, `ui/edit_tab.py`)**: For managing characters and potentially editing raw data files.
-    *   **Panels and Widgets**: Including `CharacterGalleryPanel`, `PreviewPanel`, and various input controls for scene, notes, and interactions.
-    *   **Managers/Controllers**: Dedicated classes (e.g., `MenuManager`, `FontManager`, `ThemeManager`, `StateManager`, `PreviewController`, `GalleryController`) encapsulate specific UI behaviors and state management.
-*   **Data Management (`logic/data_loader.py` & `data/`)**:
-    *   `DataLoader` is responsible for loading all application data from Markdown files located in the `data/` directory.
-    *   The `data/` directory contains definitions for `characters`, `base_prompts`, `poses`, `scenes`, `outfits` (female and male), `interactions`, and `themes`.
-*   **Prompt Generation Logic (`core/`, `logic/`)**:
-    *   **`PromptBuilder` (`core/builder.py`)**: The central engine for constructing the final prompt string based on the user's selections and inputs.
-    *   **`PromptRandomizer` (`logic/randomizer.py`)**: Generates random configurations for characters, poses, scenes, and interactions.
-    *   **`Validator` (`logic/validator.py`)**: Ensures that prompt configurations are valid.
-*   **Utilities (`utils/`)**: A collection of common helper modules for preferences, logging, notifications, file operations, undo/redo management, and more.
+*   **Lifecycle & Entry (`main.py`, `runner.py`)**: Manages startup, environment checks (Python version, Tkinter availability), and global error handling.
+*   **The UI Layer (`ui/`)**: A component-based GUI architecture.
+    *   **Main Window**: Orchestrates the interaction between the Gallery, Character Tabs, and Preview Panel.
+    *   **Controllers**: Decoupled logic for specific UI behaviors like Gallery management, Menu actions, and Window state.
+    *   **Theme Manager**: Handles dynamic UI updates and custom styling.
+*   **The Core Engine (`core/`)**:
+    *   **`PromptBuilder`**: The central logic that assembles the prompt. It uses specialized **Renderers** for Characters, Scenes, and Notes to ensure consistent formatting.
+*   **The Logic Layer (`logic/`)**:
+    *   **`DataLoader`**: A robust file system interface with caching and legacy support.
+    *   **`MarkdownParser`**: A regex-powered engine that transforms human-readable text into structured data objects.
+*   **Utilities (`utils/`)**: Shared services for Logging, Preferences, Undo/Redo, and File I/O.
 
-This structure ensures a clear separation of concerns, making the application maintainable, testable, and extensible.
+---
 
 ## Getting Started
 
 ### Prerequisites
 
-*   **Python 3.8 or newer**: Download from [python.org](https://www.python.org/downloads/).
-*   **Tkinter**: Your Python installation must include Tkinter. Most official Python distributions (e.g., from python.org) include it by default. If you encounter a `tkinter.TclError` or `ImportError`, you might need to install `tk` support via your system's package manager (e.g., `sudo apt-get install python3-tk` on Debian/Ubuntu, `brew install python-tk` on macOS for Homebrew Python).
+*   **Python 3.8+**: Ensure Python is installed.
+*   **Tkinter**: Usually bundled with Python. On Linux, you may need `sudo apt install python3-tk`.
 
 ### Running the Application
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-username/promptbuilder.git # Replace with actual repo URL
-    cd promptbuilder
-    ```
-2.  **Run the GUI:**
-    ```powershell
-    python main.py
-    ```
-    This will launch the main application window.
-
-### Command-line Usage
-
-The application supports a few command-line flags for non-GUI workflows or simple checks:
-
-*   `--version` / `-v`: Print application and Python version information, then exit.
-*   `--check-compat`: Run a basic compatibility report for your system.
-*   `--debug`: Enable debug-mode behavior, which causes exceptions to be re-raised in some code paths for easier debugging.
-
-**Examples:**
 ```powershell
-python main.py --version
-python main.py --check-compat
-python main.py --debug
+python main.py
 ```
+
+---
 
 ## Data Structure and Customization
 
-The core of Prompt Builder's flexibility comes from its Markdown-based data files, all located within the `data/` directory. You can easily modify or extend the application's content by editing these files:
+All data lives in the `data/` folder:
+*   `data/characters/`: Individual `.md` files for each character.
+*   `data/outfits_f.md` / `data/outfits_m.md`: Shared wardrobe items.
+*   `data/scenes.md`: Environment presets.
+*   `data/interactions.md`: Multi-character behavior templates.
 
-*   `data/characters/`: Contains individual Markdown files for each character, defining their properties, descriptions, and character-specific outfits.
-*   `data/base_prompts.md`: Defines base prompt templates that can be selected as a starting point.
-*   `data/poses.md`: Lists various poses with their descriptions.
-*   `data/scenes.md`: Contains scene categories and specific scene descriptions.
-*   `data/outfits_f.md`, `data/outfits_m.md`: Define shared outfits for female and male characters, respectively. These are automatically available to all characters.
-*   `data/interactions.md`: Stores templates for multi-character interactions.
-*   `data/color_schemes.md`, `data/tags.md`, `data/themes.md`: Used for UI theming and metadata management.
+Example Character File:
+```markdown
+### Maya
+**Appearance:** Athletic build, tan skin, long dark hair.
+**Outfits:**
+#### Base
+- **Top:** White tank top
+- **Bottom:** Blue jeans
+```
 
-By modifying these Markdown files, users can expand the application's content, add new characters, define new outfit styles, or create custom scenes and interactions without touching the Python code.
+---
 
 ## Developer Setup
 
-For developers interested in contributing or extending the application, follow these steps to set up your development environment:
+1.  **Install Dev Tools:** `pip install -r requirements-dev.txt`
+2.  **Run Tests:** `pytest`
+3.  **Lint & Format:** Use `ruff`, `black`, and `isort` to keep the codebase clean.
 
-1.  **Create a Virtual Environment (Recommended):**
-    ```powershell
-    python -m venv .venv
-    # On Windows:
-    .\.venv\Scripts\Activate.ps1
-    # On macOS/Linux:
-    source .venv/bin/activate
-    ```
-
-2.  **Install Development Dependencies:**
-    ```powersell
-    python -m pip install -r requirements-dev.txt
-    ```
-    This will install tools for testing, formatting, and linting.
-
-3.  **Run Tests:**
-    ```powershell
-    python -m pytest -q
-    ```
-
-4.  **Formatting and Linting (Recommended before committing):**
-    Ensure your code adheres to the project's style guidelines:
-    ```powershell
-    python -m black .
-    python -m isort .
-    python -m ruff check .
-    python -m flake8 .
-    python -m mypy .
-    ```
-
-*   **Notes:**
-    *   The `pyproject.toml` file contains configuration for `black` and `mypy`, and `ruff` exclusions for archived scripts.
-    *   Pre-commit hooks are not included by default; consider adding them (e.g., using `pre-commit` framework) to automate formatting and linting checks.
+---
 
 ## Repository Layout
 
-*   `main.py` — The minimal entrypoint shim, delegating to `Runner` in `runner.py`.
-*   `runner.py` — Manages the application lifecycle: CLI parsing, compatibility checks, debug logging, importing the GUI, and launching `root.mainloop()`.
-*   `core/` — Contains the core prompt-building engines and renderers.
-*   `logic/` — Houses utilities for data loading, parsing, randomization, and validation.
-*   `ui/` — All Tkinter UI code: windows, widgets, controllers, and panels.
-*   `utils/` — General utility modules: `file_ops.py`, `logger.py`, preferences manager, presets manager, etc.
-*   `data/` — The primary location for application data: characters, base prompts, scenes, outfits, interactions, and themes (all in Markdown format).
-*   `scripts/` — Convenience and maintenance scripts. `scripts/archived/` contains older helpers kept for reference.
-*   `tests/` — The `pytest` test suite for the application.
-*   `requirements-dev.txt` — Lists development-specific dependencies (linters, formatters, test tools).
-*   `pyproject.toml` — Contains project metadata and configuration for various development tools.
+*   `core/` — Prompt assembly and rendering.
+*   `logic/` — Data parsing and business logic.
+*   `ui/` — Tkinter components and controllers.
+*   `utils/` — Shared helpers (Logging, Prefs, Undo).
+*   `data/` — Markdown content files.
+*   `tests/` — Automated test suite.
 
-## Useful Scripts
-
-Several scripts in the `scripts/` directory assist with data management and maintenance:
-
-*   `scripts/generate_tags.py`: Scans `data/characters/*.md` files and heuristically inserts or updates the `**Tags:**` entry based on character appearance and summary.
-*   `scripts/generate_vibe_summaries.py`: A helper script to generate short vibe summaries for characters.
-*   `scripts/add_character_summaries.py`: Used to insert or adjust summary blocks within character Markdown files.
-
-**Caution:** Many scripts modify files and create `.bak` backups. Always review changes and test on a copy of your data if you are unsure.
+---
 
 ## Logging and Debugging
 
-Runtime debug logging is managed by `debug_log.py`, which delegates to `utils/logger.py`. A debug log file named `promptbuilder_debug.log` is created in the working directory when the app runs with debug logging initialized, providing detailed diagnostic messages.
+The app generates a `promptbuilder_debug.log` for troubleshooting. If the UI fails to load, check this file for a full stack trace.
 
-If the application encounters an unexpected error, consult `promptbuilder_debug.log` for the full traceback and relevant information.
-
-## Troubleshooting
-
-*   **Tkinter ImportError/TclError**: If the GUI fails to start due to `tkinter` not being found, ensure you have a Python distribution that includes `tkinter` (e.g., the official Python.org Windows installer), or install `tk` support via your system's package manager.
-*   **Script Errors/Unexpected File Modifications**: If a script produces errors or modifies files incorrectly, restore from the `.bak` files created alongside modified files or from your version control system.
-*   **Debugging Tests**: To get immediate failure traces for specific components, run `pytest` directly: `python -m pytest tests/test_parsers.py -q`.
+---
 
 ## Contributing
 
-Contributions are welcome! Please follow these general guidelines:
+Contributions are welcome! Please ensure you run the test suite and linters before submitting a PR.
 
-1.  **Fork the repository** and create a feature branch for your changes.
-2.  **Run tests and linters locally** to ensure your changes are consistent with the project's standards.
-3.  **Focus your changes** and include unit tests for any new behavior or bug fixes where applicable.
-4.  **Open a pull request** describing your changes and the rationale behind them.
-
-Consider integrating `pre-commit` hooks to automatically enforce `black`, `isort`, and `ruff` before committing.
+---
 
 ## Contact
 
-For assistance, please open an issue on the GitHub repository. Describe the problem, include steps to reproduce, and attach relevant log output from `promptbuilder_debug.log`.
+For assistance, please open an issue on the GitHub repository.

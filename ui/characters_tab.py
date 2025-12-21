@@ -13,6 +13,7 @@ from .base_style_creator import BaseStyleCreatorDialog
 from .character_creator import CharacterCreatorDialog
 from .outfit_creator import CharacterOutfitCreatorDialog, SharedOutfitCreatorDialog
 from .pose_creator import PoseCreatorDialog
+from .searchable_combobox import SearchableCombobox
 from .widgets import CollapsibleFrame, FlowFrame, ScrollableCanvas
 
 
@@ -74,15 +75,16 @@ class CharactersTab:
 
         # Update UI - preserve current selections
         current_base = self.base_combo.get()
-        self.base_combo["values"] = sorted(list(self.base_prompts.keys()))
+        base_keys = sorted(list(self.base_prompts.keys()))
+        self.base_combo.set_values(base_keys)
         if self.base_prompts:
             # Try to restore previous selection, otherwise use first item
             if current_base and current_base in self.base_prompts:
                 self.base_combo.set(current_base)
             else:
-                self.base_combo.current(0)
+                self.base_combo.set(base_keys[0])
 
-        self.char_combo["values"] = sorted(list(self.characters.keys()))
+        self.char_combo.set_values(sorted(list(self.characters.keys())))
 
         # Update bulk outfit combo with all available outfits across characters
         all_outfits = set()
@@ -104,7 +106,7 @@ class CharactersTab:
         except Exception:
             # If loading shared outfits fails, ignore and continue
             pass
-        self.bulk_outfit_combo["values"] = sorted(list(all_outfits))
+        self.bulk_outfit_combo.set_values(sorted(list(all_outfits)))
 
         self._refresh_list()
 
@@ -122,9 +124,14 @@ class CharactersTab:
         create_tooltip(help_label, TOOLTIPS.get("base_prompt", ""))
 
         self.base_prompt_var = tk.StringVar()
-        self.base_combo = ttk.Combobox(bp, state="readonly", textvariable=self.base_prompt_var)
+        self.base_combo = SearchableCombobox(
+            bp, 
+            values=sorted(list(self.base_prompts.keys())),
+            on_select=lambda val: self.on_change(),
+            placeholder="Search style...",
+            textvariable=self.base_prompt_var
+        )
         self.base_combo.grid(row=1, column=0, sticky="ew", padx=(4, 2), pady=(0, 4))
-        self.base_combo.bind("<<ComboboxSelected>>", lambda e: self.on_change())
         create_tooltip(self.base_combo, TOOLTIPS.get("base_prompt", ""))
 
         ttk.Button(bp, text="✨ Create Style", command=self._create_new_style).grid(
@@ -161,14 +168,14 @@ class CharactersTab:
 
         ttk.Label(bulk, text="Select Outfit:").grid(row=1, column=0, sticky="w", padx=(4, 2))
         self.bulk_outfit_var = tk.StringVar()
-        self.bulk_outfit_combo = ttk.Combobox(
-            bulk, textvariable=self.bulk_outfit_var, state="readonly"
+        self.bulk_outfit_combo = SearchableCombobox(
+            bulk,
+            values=[],
+            textvariable=self.bulk_outfit_var,
+            on_select=lambda val: self._update_bulk_preview(),
+            placeholder="Search outfit..."
         )
         self.bulk_outfit_combo.grid(row=1, column=1, sticky="ew", padx=2)
-        self.bulk_outfit_combo["values"] = []
-        self.bulk_outfit_combo.bind("<<ComboboxSelected>>", lambda e: self._update_bulk_preview())
-        self.bulk_outfit_combo.bind("<Return>", lambda e: self._apply_bulk_outfit())
-        create_tooltip(self.bulk_outfit_combo, "Choose an outfit to apply to selected characters")
 
         # Lock checkbox: when checked, keep the selected outfit after applying
         self.bulk_lock_var = tk.BooleanVar(value=False)
@@ -212,32 +219,19 @@ class CharactersTab:
         char_help.grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 4))
         create_tooltip(char_help, TOOLTIPS.get("character", ""))
 
-        # Search field
-        search_frame = ttk.Frame(add)
-        search_frame.grid(row=1, column=0, columnspan=2, sticky="ew", padx=4, pady=(0, 2))
-        search_frame.columnconfigure(1, weight=1)
-
-        ttk.Label(search_frame, text="🔍", font=("Segoe UI", 10)).grid(row=0, column=0, padx=(0, 2))
-        self.char_search_var = tk.StringVar()
-        self.char_search_entry = ttk.Entry(search_frame, textvariable=self.char_search_var)
-        self.char_search_entry.grid(row=0, column=1, sticky="ew")
-        self.char_search_var.trace("w", lambda *args: self._filter_characters())
-        create_tooltip(self.char_search_entry, "Type to filter characters")
-
-        # Clear search button
-        ttk.Button(
-            search_frame, text="✕", width=3, command=lambda: self.char_search_var.set("")
-        ).grid(row=0, column=2, padx=(2, 0))
-
         self.char_var = tk.StringVar()
-        self.char_combo = ttk.Combobox(add, state="readonly", textvariable=self.char_var)
-        self.char_combo.grid(row=2, column=0, columnspan=2, sticky="ew", pady=(0, 4), padx=4)
-        self.char_combo.bind("<Return>", lambda e: self._add_character())
-        self.char_combo.bind("<KP_Enter>", lambda e: self._add_character())  # Numpad Enter
+        self.char_combo = SearchableCombobox(
+            add,
+            values=sorted(list(self.characters.keys())),
+            on_select=lambda val: self._add_character(),
+            placeholder="Search character...",
+            textvariable=self.char_var
+        )
+        self.char_combo.grid(row=1, column=0, columnspan=2, sticky="ew", pady=(0, 4), padx=4)
         create_tooltip(self.char_combo, TOOLTIPS.get("character", ""))
 
         button_frame = ttk.Frame(add)
-        button_frame.grid(row=3, column=0, columnspan=2, sticky="ew", padx=4, pady=(0, 4))
+        button_frame.grid(row=2, column=0, columnspan=2, sticky="ew", padx=4, pady=(0, 4))
         button_frame.columnconfigure(0, weight=1)
         button_frame.columnconfigure(1, weight=1)
 
@@ -458,13 +452,13 @@ class CharactersTab:
         if search:
             # Filter by search term
             filtered = [c for c in available if search in c.lower()]
-            self.char_combo["values"] = sorted(filtered)
+            self.char_combo.set_values(sorted(filtered))
         else:
             # Show all available
-            self.char_combo["values"] = sorted(available)
+            self.char_combo.set_values(sorted(available))
 
         # Clear selection if current selection not in filtered list
-        if self.char_var.get() not in self.char_combo["values"]:
+        if self.char_var.get() not in self.char_combo.all_values:
             self.char_var.set("")
 
     def _add_character(self):
@@ -472,23 +466,21 @@ class CharactersTab:
         name = self.char_var.get()
         if not name:
             return
-        # If the parsed character data indicates gender wasn't explicit, or the raw
-        # character file lacks a Gender tag, prompt the user to add it.
+        # If the parsed character data indicates modifier wasn't explicit, or the raw
+        # character file lacks a Modifier/Gender tag, prompt the user to add it.
         try:
             need_prompt = False
 
-            # Check parsed data first; if the parser reported no explicit gender,
-            # prompt immediately (don't rely on filename heuristics which can miss
-            # files with different naming).
             char_def = self.characters.get(name, {})
-            if not char_def or not char_def.get("gender_explicit", False):
+            # If no modifier and no explicit gender, we need more info
+            if not char_def or (not char_def.get("modifier") and not char_def.get("gender_explicit")):
                 need_prompt = True
 
             if need_prompt:
-                # Ask user for a quick inline gender choice (F/M) or open editor
-                choice = self._prompt_gender_choice(name)
-                if choice in ("F", "M"):
-                    # Try to write gender tag directly into the character file
+                # Ask user for a quick inline modifier choice or open editor
+                choice = self._prompt_modifier_choice(name)
+                if choice and choice != "editor":
+                    # Try to write modifier tag directly into the character file
                     try:
                         fp = self._find_character_file(name)
                         if fp:
@@ -506,7 +498,7 @@ class CharactersTab:
                             shutil.copy(fp, bak)
 
                             text = fp.read_text(encoding="utf-8")
-                            # Insert Gender tag after header or photo line
+                            # Insert Modifier tag after header or photo line
                             lines = text.splitlines()
                             insert_idx = None
                             for i, line in enumerate(lines[:20]):
@@ -521,11 +513,23 @@ class CharactersTab:
                             if insert_idx is None:
                                 insert_idx = 0
 
-                            new_lines = (
-                                lines[:insert_idx]
-                                + ["", f"**Gender:** {choice}"]
-                                + lines[insert_idx:]
-                            )
+                            # Replace Gender with Modifier if it exists, otherwise insert Modifier
+                            new_lines = []
+                            replaced = False
+                            for line in lines:
+                                if line.strip().startswith("**Gender:**"):
+                                    new_lines.append(f"**Modifier:** {choice}")
+                                    replaced = True
+                                else:
+                                    new_lines.append(line)
+                            
+                            if not replaced:
+                                new_lines = (
+                                    lines[:insert_idx]
+                                    + ["", f"**Modifier:** {choice}"]
+                                    + lines[insert_idx:]
+                                )
+                                
                             fp.write_text("\n".join(new_lines), encoding="utf-8")
                             # Reload characters and continue
                             if self.reload_data:
@@ -553,7 +557,8 @@ class CharactersTab:
                         self.characters = self.data_loader.load_characters()
 
                     # Abort if still missing
-                    if not self.characters.get(name, {}).get("gender_explicit", False):
+                    char_def = self.characters.get(name, {})
+                    if not char_def.get("modifier") and not char_def.get("gender_explicit"):
                         return
                 elif choice == "editor":
                     root = self.tab.winfo_toplevel()
@@ -564,7 +569,8 @@ class CharactersTab:
                     if self.reload_data:
                         self.reload_data()
                     self.characters = self.data_loader.load_characters()
-                    if not self.characters.get(name, {}).get("gender_explicit", False):
+                    char_def = self.characters.get(name, {})
+                    if not char_def.get("modifier") and not char_def.get("gender_explicit"):
                         return
                 else:
                     return
@@ -714,9 +720,9 @@ class CharactersTab:
         self.selected_characters[idx]["pose_preset"] = ""
 
         if cat and cat in self.poses:
-            preset_combo["values"] = [""] + sorted(list(self.poses[cat].keys()))
+            preset_combo.set_values([""] + sorted(list(self.poses[cat].keys())))
         else:
-            preset_combo["values"] = [""]
+            preset_combo.set_values([""])
         preset_combo.set("")
         # Refresh the list to rebuild comboboxes with current values showing
         self._refresh_list()
@@ -740,7 +746,7 @@ class CharactersTab:
         # Update available characters
         used = {c["name"] for c in self.selected_characters}
         available = sorted([k for k in self.characters.keys() if k not in used])
-        self.char_combo["values"] = available
+        self.char_combo.set_values(available)
 
         # Show empty state if no characters
         if not self.selected_characters:
@@ -817,24 +823,41 @@ class CharactersTab:
             toggle_btn.pack(side="right")
 
             # Outfit options inside collapsible frame
-            outfits_frame = FlowFrame(outfit_container, padding_x=6, padding_y=4)
-            outfits_frame.pack(fill="both", expand=True, pady=(2, 2))
-
             outfit_keys = sorted(
                 list(self.characters.get(cd["name"], {}).get("outfits", {}).keys())
             )
-            for o in outfit_keys:
-                btn_style = "Accent.TButton" if o == current_outfit else "TButton"
-                outfits_frame.add_button(
-                    text=o,
-                    style=btn_style,
-                    command=(
-                        lambda idx=i, name=o, tog=toggle_func: (
-                            self._update_outfit(idx, name),
-                            tog(),
-                        )
+            
+            if len(outfit_keys) > 12:
+                # Use searchable combobox for many outfits
+                outfit_search_var = tk.StringVar(value=current_outfit)
+                outfit_combo = SearchableCombobox(
+                    outfit_container,
+                    values=outfit_keys,
+                    textvariable=outfit_search_var,
+                    on_select=lambda val, idx=i, tog=toggle_func: (
+                        self._update_outfit(idx, val),
+                        tog()
                     ),
+                    placeholder="Search outfit..."
                 )
+                outfit_combo.pack(fill="x", padx=4, pady=4)
+            else:
+                # Use buttons for fewer outfits
+                outfits_frame = FlowFrame(outfit_container, padding_x=6, padding_y=4)
+                outfits_frame.pack(fill="both", expand=True, pady=(2, 2))
+
+                for o in outfit_keys:
+                    btn_style = "Accent.TButton" if o == current_outfit else "TButton"
+                    outfits_frame.add_button(
+                        text=o,
+                        style=btn_style,
+                        command=(
+                            lambda idx=i, name=o, tog=toggle_func: (
+                                self._update_outfit(idx, name),
+                                tog(),
+                            )
+                        ),
+                    )
 
             # Outfit creator button
             ttk.Button(
@@ -853,38 +876,37 @@ class CharactersTab:
 
             ttk.Label(pose_row, text="Category:").grid(row=0, column=0, sticky="w", padx=(0, 4))
             pcat_var = tk.StringVar(value=cd.get("pose_category", ""))
-            pcat_combo = ttk.Combobox(pose_row, textvariable=pcat_var, state="readonly", width=15)
-            pcat_combo["values"] = [""] + sorted(list(self.poses.keys()))
+            
+            pcat_combo = SearchableCombobox(
+                pose_row,
+                values=[""] + sorted(list(self.poses.keys())),
+                textvariable=pcat_var,
+                on_select=lambda val, idx=i, var=pcat_var: self._update_pose_category(idx, var, preset_combo),
+                placeholder="Search category...",
+                width=15
+            )
             pcat_combo.grid(row=0, column=1, padx=(0, 10))
 
             ttk.Label(pose_row, text="Preset:").grid(row=0, column=2, sticky="w", padx=(0, 4))
             preset_var = tk.StringVar(value=cd.get("pose_preset", ""))
-            preset_combo = ttk.Combobox(
-                pose_row, textvariable=preset_var, state="readonly", width=20
+            
+            # Initial values for preset combo
+            current_cat = pcat_var.get()
+            preset_values = [""] + sorted(list(self.poses.get(current_cat, {}).keys())) if current_cat else [""]
+            
+            preset_combo = SearchableCombobox(
+                pose_row,
+                values=preset_values,
+                textvariable=preset_var,
+                on_select=lambda val, idx=i, var=preset_var: self._update_pose_preset(idx, var.get()),
+                placeholder="Search preset...",
+                width=20
             )
             preset_combo.grid(row=0, column=3, sticky="ew")
 
             # Add create pose button
             ttk.Button(pose_row, text="✨", width=3, command=self._create_new_pose).grid(
                 row=0, column=4, padx=(5, 0)
-            )
-
-            # Initialize preset values
-            current_cat = pcat_var.get()
-            if current_cat and current_cat in self.poses:
-                preset_combo["values"] = [""] + sorted(list(self.poses[current_cat].keys()))
-            else:
-                preset_combo["values"] = [""]
-
-            pcat_combo.bind(
-                "<<ComboboxSelected>>",
-                lambda e, idx=i, cat_var=pcat_var, p_combo=preset_combo: self._update_pose_category(
-                    idx, cat_var, p_combo
-                ),
-            )
-            preset_combo.bind(
-                "<<ComboboxSelected>>",
-                lambda e, idx=i, var=preset_var: self._update_pose_preset(idx, var.get()),
             )
 
             # Action note text area
@@ -968,26 +990,57 @@ class CharactersTab:
             return None
         return None
 
-    def _prompt_gender_choice(self, character_name):
-        """Show a small modal dialog to pick gender quickly.
+    def _prompt_modifier_choice(self, character_name):
+        """Show a modal dialog to pick an outfit modifier (e.g. F, M, H).
 
-        Returns 'F', 'M', 'editor' (open full editor), or None (cancel).
+        Returns the modifier string (e.g. 'F', 'M', 'H'), 'editor', or None.
         """
         root = self.tab.winfo_toplevel()
         dlg = tk.Toplevel(root)
         dlg.transient(root)
         dlg.grab_set()
-        dlg.title(f"Add Gender for {character_name}")
-        ttk.Label(dlg, text=f"Select gender for '{character_name}':").pack(padx=12, pady=(12, 6))
+        dlg.title(f"Add Modifier for {character_name}")
+        
+        ttk.Label(
+            dlg, 
+            text=f"Select an outfit modifier for '{character_name}':",
+            font=("Segoe UI", 9, "bold")
+        ).pack(padx=12, pady=(12, 6))
+        
+        ttk.Label(
+            dlg, 
+            text="This determines which shared outfit library (outfits_*.md) is used.",
+            style="Muted.TLabel",
+            wraplength=350
+        ).pack(padx=12, pady=(0, 10))
 
-        choice_var = tk.StringVar(value="F")
+        # Scan for available modifiers
+        data_dir = self.data_loader.base_dir / "data"
+        modifiers = []
+        for f in data_dir.glob("outfits_*.md"):
+            suffix = f.stem.split("_", 1)[1].upper()
+            modifiers.append(suffix)
+        
+        if not modifiers:
+            modifiers = ["F", "M"]
+        else:
+            modifiers.sort()
+
+        choice_var = tk.StringVar(value="F" if "F" in modifiers else modifiers[0])
+        
         frame = ttk.Frame(dlg)
-        frame.pack(padx=12, pady=6)
-        ttk.Radiobutton(frame, text="Female (F)", variable=choice_var, value="F").pack(anchor="w")
-        ttk.Radiobutton(frame, text="Male (M)", variable=choice_var, value="M").pack(anchor="w")
+        frame.pack(padx=12, pady=6, fill="x")
+        
+        for mod in modifiers:
+            label = mod
+            if mod == "F": label = "F (Female)"
+            elif mod == "M": label = "M (Male)"
+            elif mod == "H": label = "H (Hijabi)"
+            
+            ttk.Radiobutton(frame, text=label, variable=choice_var, value=mod).pack(anchor="w", pady=2)
 
         btns = ttk.Frame(dlg)
-        btns.pack(padx=12, pady=(6, 12))
+        btns.pack(padx=12, pady=(10, 12))
 
         result = {"val": None}
 
@@ -1040,7 +1093,7 @@ class CharactersTab:
         Args:
             prompt_name: The name of the prompt to select.
         """
-        if prompt_name in self.base_combo["values"]:
+        if prompt_name in self.base_combo.all_values:
             self.base_prompt_var.set(prompt_name)
 
     def get_num_characters(self):
@@ -1139,13 +1192,13 @@ class CharactersTab:
         Args:
             character_name: Name of the character to add
         """
-        # If the parsed character data indicates gender wasn't explicit, prompt
-        # the user before adding (same behavior as dropdown Add).
+        # If the parsed character data indicates modifier wasn't explicit, prompt
+        # the user before adding.
         try:
             char_def = self.characters.get(character_name, {})
-            if not char_def or not char_def.get("gender_explicit", False):
-                choice = self._prompt_gender_choice(character_name)
-                if choice in ("F", "M"):
+            if not char_def or (not char_def.get("modifier") and not char_def.get("gender_explicit")):
+                choice = self._prompt_modifier_choice(character_name)
+                if choice and choice != "editor":
                     try:
                         fp = self._find_character_file(character_name)
                         if fp:
@@ -1175,11 +1228,23 @@ class CharactersTab:
                                         break
                             if insert_idx is None:
                                 insert_idx = 0
-                            new_lines = (
-                                lines[:insert_idx]
-                                + ["", f"**Gender:** {choice}"]
-                                + lines[insert_idx:]
-                            )
+                            
+                            new_lines = []
+                            replaced = False
+                            for line in lines:
+                                if line.strip().startswith("**Gender:**"):
+                                    new_lines.append(f"**Modifier:** {choice}")
+                                    replaced = True
+                                else:
+                                    new_lines.append(line)
+                            
+                            if not replaced:
+                                new_lines = (
+                                    lines[:insert_idx]
+                                    + ["", f"**Modifier:** {choice}"]
+                                    + lines[insert_idx:]
+                                )
+                                
                             fp.write_text("\n".join(new_lines), encoding="utf-8")
                             if self.reload_data:
                                 self.reload_data()
@@ -1206,7 +1271,9 @@ class CharactersTab:
                         if self.reload_data:
                             self.reload_data()
                         self.characters = self.data_loader.load_characters()
-                    if not self.characters.get(character_name, {}).get("gender_explicit", False):
+                    
+                    char_def = self.characters.get(character_name, {})
+                    if not char_def.get("modifier") and not char_def.get("gender_explicit"):
                         return
                 elif choice == "editor":
                     root = self.tab.winfo_toplevel()
@@ -1217,7 +1284,8 @@ class CharactersTab:
                     if self.reload_data:
                         self.reload_data()
                     self.characters = self.data_loader.load_characters()
-                    if not self.characters.get(character_name, {}).get("gender_explicit", False):
+                    char_def = self.characters.get(character_name, {})
+                    if not char_def.get("modifier") and not char_def.get("gender_explicit"):
                         return
                 else:
                     return

@@ -25,6 +25,7 @@ from .font_manager import FontManager
 from .menu_manager import MenuManager
 from .preview_controller import PreviewController
 from .preview_panel import PreviewPanel
+from .searchable_combobox import SearchableCombobox
 from .state_manager import StateManager
 
 
@@ -269,21 +270,27 @@ class PromptBuilderApp:
             row=0, column=0, sticky="w", padx=(4, 2), pady=2
         )
         self.scene_category_var = tk.StringVar()
-        self.scene_cat_combo = ttk.Combobox(
-            scene_frame, textvariable=self.scene_category_var, state="readonly", width=10
+        self.scene_cat_combo = SearchableCombobox(
+            scene_frame, 
+            textvariable=self.scene_category_var,
+            on_select=lambda val: self._update_scene_presets(),
+            placeholder="Search category...",
+            width=12
         )
         self.scene_cat_combo.grid(row=0, column=1, sticky="w", padx=2, pady=2)
-        self.scene_cat_combo.bind("<<ComboboxSelected>>", lambda e: self._update_scene_presets())
 
         ttk.Label(scene_frame, text="Preset:", style="TLabel").grid(
             row=0, column=2, sticky="w", padx=(8, 2), pady=2
         )
         self.scene_preset_var = tk.StringVar()
-        self.scene_combo = ttk.Combobox(
-            scene_frame, textvariable=self.scene_preset_var, state="readonly", width=15
+        self.scene_combo = SearchableCombobox(
+            scene_frame, 
+            textvariable=self.scene_preset_var,
+            on_select=lambda val: self._apply_scene_preset(),
+            placeholder="Search preset...",
+            width=18
         )
         self.scene_combo.grid(row=0, column=3, sticky="ew", padx=2, pady=2)
-        self.scene_combo.bind("<<ComboboxSelected>>", lambda e: self._apply_scene_preset())
 
         ttk.Button(scene_frame, text="✨", width=3, command=self._create_new_scene).grid(
             row=0, column=4, padx=(4, 4), pady=2
@@ -322,16 +329,14 @@ class PromptBuilderApp:
         )
 
         self.interaction_category_var = tk.StringVar()
-        self.interaction_cat_combo = ttk.Combobox(
+        self.interaction_cat_combo = SearchableCombobox(
             interaction_control,
             textvariable=self.interaction_category_var,
-            state="readonly",
-            width=15,
+            on_select=lambda val: self._update_interaction_presets(),
+            placeholder="Search category...",
+            width=15
         )
         self.interaction_cat_combo.grid(row=0, column=1, sticky="w", padx=(0, 8))
-        self.interaction_cat_combo.bind(
-            "<<ComboboxSelected>>", lambda e: self._update_interaction_presets()
-        )
         create_tooltip(self.interaction_cat_combo, "Choose interaction category")
 
         ttk.Label(interaction_control, text="Template:", style="TLabel").grid(
@@ -339,8 +344,11 @@ class PromptBuilderApp:
         )
 
         self.interaction_var = tk.StringVar(value="Blank")
-        self.interaction_combo = ttk.Combobox(
-            interaction_control, textvariable=self.interaction_var, state="readonly"
+        self.interaction_combo = SearchableCombobox(
+            interaction_control, 
+            textvariable=self.interaction_var,
+            placeholder="Search template...",
+            width=25
         )
         self.interaction_combo.grid(row=0, column=3, sticky="ew")
         create_tooltip(self.interaction_combo, "Choose a multi-character interaction template")
@@ -432,7 +440,7 @@ class PromptBuilderApp:
 
         # Initialize interaction category combo
         categories = list(self.interactions.keys())
-        self.interaction_cat_combo["values"] = categories
+        self.interaction_cat_combo.set_values(categories)
         if categories:
             self.interaction_category_var.set(categories[0])
             self._update_interaction_presets()
@@ -501,34 +509,26 @@ class PromptBuilderApp:
         """Update scene preset combo based on selected category."""
         cat = self.scene_category_var.get()
         if cat and cat in self.scenes:
-            self.scene_combo["values"] = [""] + sorted(list(self.scenes[cat].keys()))
+            self.scene_combo.set_values([""] + sorted(list(self.scenes[cat].keys())))
         else:
-            self.scene_combo["values"] = [""]
+            self.scene_combo.set_values([""])
         self.scene_preset_var.set("")
 
         # Update category combo values
-        self.scene_cat_combo["values"] = [""] + sorted(list(self.scenes.keys()))
-
-        # Force both combos to refresh their display
-        self.scene_cat_combo.selection_clear()
-        self.scene_combo.selection_clear()
+        self.scene_cat_combo.set_values([""] + sorted(list(self.scenes.keys())))
         self.root.update_idletasks()
 
     def _update_interaction_presets(self):
         """Update interaction preset combo based on selected category."""
         cat = self.interaction_category_var.get()
         if cat and cat in self.interactions:
-            self.interaction_combo["values"] = [""] + sorted(list(self.interactions[cat].keys()))
+            self.interaction_combo.set_values([""] + sorted(list(self.interactions[cat].keys())))
         else:
-            self.interaction_combo["values"] = [""]
+            self.interaction_combo.set_values([""])
         self.interaction_var.set("")
 
         # Update category combo values
-        self.interaction_cat_combo["values"] = [""] + sorted(list(self.interactions.keys()))
-
-        # Force both combos to refresh their display
-        self.interaction_cat_combo.selection_clear()
-        self.interaction_combo.selection_clear()
+        self.interaction_cat_combo.set_values([""] + sorted(list(self.interactions.keys())))
         self.root.update_idletasks()
 
     def _insert_interaction_template(self):
@@ -635,7 +635,7 @@ class PromptBuilderApp:
 
             # Update category combo
             categories = list(self.interactions.keys())
-            self.interaction_cat_combo["values"] = categories
+            self.interaction_cat_combo.set_values(categories)
 
             # Keep current category if it exists, otherwise select first
             current_cat = self.interaction_category_var.get()
@@ -1128,28 +1128,36 @@ class PromptBuilderApp:
 
         ttk.Label(frame, text="Category:").grid(row=0, column=0, sticky="w", pady=5)
         cat_var = tk.StringVar()
-        cat_combo = ttk.Combobox(frame, textvariable=cat_var, state="readonly", width=20)
-        cat_combo["values"] = [""] + sorted(list(self.poses.keys()))
+        cat_combo = SearchableCombobox(
+            frame, 
+            values=[""] + sorted(list(self.poses.keys())),
+            textvariable=cat_var,
+            on_select=lambda val: update_presets(),
+            placeholder="Search category...",
+            width=20
+        )
         cat_combo.grid(row=0, column=1, sticky="ew", pady=5, padx=(5, 0))
 
         ttk.Label(frame, text="Preset:").grid(row=1, column=0, sticky="w", pady=5)
         preset_var = tk.StringVar()
-        preset_combo = ttk.Combobox(frame, textvariable=preset_var, state="readonly", width=20)
+        preset_combo = SearchableCombobox(
+            frame,
+            values=[""],
+            textvariable=preset_var,
+            on_select=lambda val: None,
+            placeholder="Search preset...",
+            width=20
+        )
         preset_combo.grid(row=1, column=1, sticky="ew", pady=5, padx=(5, 0))
 
-        def update_presets(e=None):
+        def update_presets():
             cat = cat_var.get()
             if cat and cat in self.poses:
-                preset_combo["values"] = [""] + sorted(list(self.poses[cat].keys()))
+                preset_combo.set_values([""] + sorted(list(self.poses[cat].keys())))
             else:
-                preset_combo["values"] = [""]
+                preset_combo.set_values([""])
             preset_var.set("")
-            # Force display refresh
-            cat_combo.selection_clear()
-            preset_combo.selection_clear()
             dialog.update_idletasks()
-
-        cat_combo.bind("<<ComboboxSelected>>", update_presets)
 
         frame.columnconfigure(1, weight=1)
 

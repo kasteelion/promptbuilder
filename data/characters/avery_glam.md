@@ -31,7 +31,7 @@
 
 ---
 
-Base Outfit:
+#### Base
 - **Top:** Black ribbed tank top with supportive, contoured bra underneath
 - **Bottom:** Studded boy-shorts and fishnet leggings worn underneath
 - **Footwear:** knee-high boots

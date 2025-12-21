@@ -138,13 +138,27 @@ class CharacterCreatorDialog:
         self.name_entry.pack(fill="x", pady=(0, 10))
         self.name_entry.focus()
 
-        # Gender selector
-        ttk.Label(main_frame, text="Gender:", style="Bold.TLabel").pack(anchor="w", pady=(0, 4))
-        self.gender_var = tk.StringVar(value="F")
-        self.gender_combo = ttk.Combobox(
-            main_frame, textvariable=self.gender_var, values=["F", "M"], width=6, state="readonly"
+        # Modifier selector (replaces Gender)
+        ttk.Label(main_frame, text="Outfit Modifier:", style="Bold.TLabel").pack(anchor="w", pady=(0, 4))
+        
+        # Scan for available modifiers
+        data_dir = self.data_loader.base_dir / "data"
+        modifiers = []
+        for f in data_dir.glob("outfits_*.md"):
+            suffix = f.stem.split("_", 1)[1].upper()
+            modifiers.append(suffix)
+        
+        if not modifiers:
+            modifiers = ["F", "M"]
+        else:
+            modifiers.sort()
+
+        self.modifier_var = tk.StringVar(value="F" if "F" in modifiers else modifiers[0])
+        self.modifier_combo = ttk.Combobox(
+            main_frame, textvariable=self.modifier_var, values=modifiers, width=6, state="readonly"
         )
-        self.gender_combo.pack(anchor="w", pady=(0, 10))
+        self.modifier_combo.pack(anchor="w", pady=(0, 10))
+        create_tooltip(self.modifier_combo, "Determines which shared outfit library (outfits_*.md) is used for this character.")
 
         # Summary (short)
         ttk.Label(main_frame, text="Summary (short):", style="Bold.TLabel").pack(
@@ -727,22 +741,17 @@ class CharacterCreatorDialog:
         # Use placeholder if outfit wasn't filled in
         outfit_content = outfit if outfit and outfit != outfit_placeholder else "A simple outfit."
 
-        # Insert gender tag for downstream parsing
-        gender_tag = self.gender_var.get().strip().upper() if self.gender_var.get() else "F"
+        # Insert modifier tag for downstream parsing
+        modifier_tag = self.modifier_var.get().strip().upper() if self.modifier_var.get() else "F"
 
         # Include summary field if provided
         summary_block = f"**Summary:** {summary}\n" if summary else ""
         tags_block = f"**Tags:** {tags_line}\n" if tags_line else ""
-        content = f"""### {name}
-    {summary_block}{tags_block}**Gender:** {gender_tag}
-    **Appearance:**
-    {appearance}
-
-    **Outfits:**
-
-    #### Base
-    {outfit_content}
-    """
+        
+        content = f"### {name}\n"
+        content += f"{summary_block}{tags_block}**Modifier:** {modifier_tag}\n"
+        content += f"**Appearance:**\n{appearance}\n\n"
+        content += f"**Outfits:**\n\n#### Base\n{outfit_content}\n"
 
         # Write file
         try:
@@ -796,6 +805,7 @@ class CharacterCreatorDialog:
                                 low.startswith("**summary:")
                                 or low.startswith("**tags:")
                                 or low.startswith("**gender:")
+                                or low.startswith("**modifier:")
                             ):
                                 continue
                             # Skip existing photo lines; we'll write a standardized one
@@ -804,14 +814,13 @@ class CharacterCreatorDialog:
                             # Preserve any other metadata lines
                             preserved_meta.append(ln)
 
-                    # Reconstruct the content: header + preserved metadata + new summary/tags/gender + rest (appearance/outfits)
+                    # Reconstruct the content: header + preserved metadata + new summary/tags/modifier + rest (appearance/outfits)
                     if header_idx is not None:
                         before = "\n".join(lines[: header_idx + 1])
                         meta_block = "\n".join(preserved_meta).rstrip()
-                        # Build new metadata block in a stable order: preserved meta (photo etc.), then summary/tags/gender
-                        new_meta_parts = []
-                        # Build new metadata block in a stable order: standardized photo, preserved meta, then summary/tags/gender
+                        # Build new metadata block in a stable order: standardized photo, preserved meta, then summary/tags/modifier
                         # Photo comes first so it's easy to spot in files
+                        new_meta_parts = []
                         new_meta_parts.append(photo_block.strip())
                         if meta_block:
                             new_meta_parts.append(meta_block)
@@ -819,8 +828,8 @@ class CharacterCreatorDialog:
                             new_meta_parts.append(summary_block.strip())
                         if tags_block:
                             new_meta_parts.append(tags_block.strip())
-                        # gender is always present
-                        new_meta_parts.append(f"**Gender:** {gender_tag}")
+                        # modifier is always present
+                        new_meta_parts.append(f"**Modifier:** {modifier_tag}")
                         new_meta = "\n".join(new_meta_parts)
 
                         # Rest of file from appearance onwards (or from end if none)
@@ -908,12 +917,12 @@ class CharacterCreatorDialog:
             except Exception:
                 self.tags_var.set("")
 
-            # Load gender (default F)
-            gender = char_data.get("gender", "F")
+            # Load modifier (fallback to gender, default F)
+            modifier = char_data.get("modifier") or char_data.get("gender", "F")
             try:
-                self.gender_var.set(gender.upper())
+                self.modifier_var.set(modifier.upper())
             except Exception:
-                self.gender_var.set("F")
+                self.modifier_var.set("F")
 
             # Load base outfit if exists
             outfits = char_data.get("outfits", {})
