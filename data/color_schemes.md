@@ -88,6 +88,129 @@
 - **accent:** #FFFFFF
 
 ## Wisconsin Badgers
+
 - **primary:** #C5050C
+
 - **secondary:** #FFFFFF
+
 - **accent:** #000000
+
+
+
+## Cyberpunk
+
+- **primary:** #FF00FF
+
+- **secondary:** #00FFFF
+
+- **accent:** #FFFF00
+
+
+
+## Pastel Dream
+
+- **primary:** #FFB7B2
+
+- **secondary:** #B2E2F2
+
+- **accent:** #FDFD96
+
+
+
+## Forest Ranger
+
+- **primary:** #2D5A27
+
+- **secondary:** #4B3621
+
+- **accent:** #D2B48C
+
+
+
+## Midnight Neon
+
+- **primary:** #000033
+
+- **secondary:** #33FF00
+
+- **accent:** #FF0055
+
+
+
+## LA Lakers
+
+- **primary:** #552583
+
+- **secondary:** #FDB927
+
+- **accent:** #FFFFFF
+
+
+
+## Boston Celtics
+
+- **primary:** #007A33
+
+- **secondary:** #BA9653
+
+- **accent:** #FFFFFF
+
+
+
+## SF 49ers
+
+
+
+- **primary:** #AA0000
+
+
+
+- **secondary:** #B3995D
+
+
+
+- **accent:** #FFFFFF
+
+
+
+
+
+
+
+## Ohio Northern
+
+
+
+- **primary:** #FF6600
+
+
+
+- **secondary:** #000000
+
+
+
+- **accent:** #FFFFFF
+
+
+
+
+
+
+
+## FC Cincinnati
+
+
+
+- **primary:** #FE5000
+
+
+
+- **secondary:** #263B94
+
+
+
+- **accent:** #FFFFFF
+
+
+
+

@@ -1,6 +1,6 @@
 {
-  "window_geometry": "2560x1349+420+268",
-  "last_theme": "Tokyo Night",
+  "window_geometry": "2560x1349+30+52",
+  "last_theme": "FC Cincinnati Dark",
   "last_base_prompt": "Photorealistic: \"High-Fidelity Candid\"",
   "font_adjustment": 0,
   "recent_characters": [],
@@ -14,5 +14,6 @@
   "window_state": "zoomed",
   "gallery_visible": true,
   "custom_themes": {},
-  "last_color_scheme": "Default (No Scheme)"
+  "last_color_scheme": "Default (No Scheme)",
+  "ui_scale": "Medium"
 }

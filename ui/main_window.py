@@ -27,6 +27,7 @@ from .preview_controller import PreviewController
 from .preview_panel import PreviewPanel
 from .searchable_combobox import SearchableCombobox
 from .state_manager import StateManager
+from .widgets import CollapsibleFrame, ScrollableCanvas
 
 
 class PromptBuilderApp:
@@ -71,6 +72,7 @@ class PromptBuilderApp:
         self.scenes = self.data_loader.load_presets("scenes.md")
         self.poses = self.data_loader.load_presets("poses.md")
         self.interactions = self.data_loader.load_interactions()
+        self.color_schemes = self.data_loader.load_color_schemes()
         self.randomizer = PromptRandomizer(
             self.characters, self.base_prompts, self.poses, self.scenes, self.interactions
         )
@@ -136,6 +138,10 @@ class PromptBuilderApp:
             saved_geometry = None
             saved_state = None
 
+        # Restore UI scale
+        saved_scale = self.prefs.get("ui_scale", "Medium")
+        self._change_ui_scale(saved_scale)
+
         # Restore last base prompt
         last_base_prompt = self.prefs.get("last_base_prompt")
         if last_base_prompt and last_base_prompt in self.base_prompts:
@@ -197,7 +203,9 @@ class PromptBuilderApp:
             "show_about": self.menu_actions.show_about,
             "open_theme_editor": self._open_theme_editor,
             "on_closing": self.menu_actions.on_closing,
+            "change_ui_scale": self._change_ui_scale,
             "initial_theme": self.prefs.get("last_theme", DEFAULT_THEME),
+            "initial_ui_scale": self.prefs.get("ui_scale", "Medium"),
             "auto_theme_enabled": self.prefs.get("auto_theme", False),
             "gallery_visible": self.prefs.get("gallery_visible", True),
         }
@@ -211,9 +219,19 @@ class PromptBuilderApp:
         main_container = ttk.Frame(self.root)
         main_container.pack(fill="both", expand=True)
 
+        # Status bar at bottom (pack first so it stays at bottom)
+        self.status_bar = ttk.Label(
+            main_container,
+            text="Ready",
+            relief="sunken",
+            anchor="w",
+            style="TLabel",
+        )
+        self.status_bar.pack(side="bottom", fill="x")
+
         # Create a paned window for gallery + main content
         self.main_paned = ttk.PanedWindow(main_container, orient="horizontal")
-        self.main_paned.pack(fill="both", expand=True)
+        self.main_paned.pack(side="top", fill="both", expand=True)
 
         # Left side: Character Gallery (collapsible, starts visible by default)
         self.gallery_frame = ttk.Frame(self.main_paned, style="TFrame", width=280)
@@ -252,26 +270,28 @@ class PromptBuilderApp:
         # Load data into tabs
         self.characters_tab.load_data(self.characters, self.base_prompts, self.poses, self.scenes)
 
-        # Right side: Preview panel
-        right_frame = ttk.Frame(paned, style="TFrame")
-        paned.add(right_frame, weight=4)
-        right_frame.rowconfigure(1, weight=1)  # Notes section gets expanding space
-        right_frame.rowconfigure(2, weight=3)  # Preview gets most expanding space
+        # Right side: Scrollable container for collapsible sections
+        self.right_scroll_container = ScrollableCanvas(paned)
+        paned.add(self.right_scroll_container, weight=4)
+        right_frame = self.right_scroll_container.get_container()
         right_frame.columnconfigure(0, weight=1)
 
         # Scene section (compact)
-        scene_frame = ttk.LabelFrame(right_frame, text="🎬 Scene", style="TLabelframe")
-        scene_frame.grid(row=0, column=0, sticky="ew", padx=4, pady=(4, 2))
-        scene_frame.columnconfigure(1, weight=1)
-        create_tooltip(scene_frame, TOOLTIPS.get("scene", ""))
+        self.scene_collapsible = CollapsibleFrame(right_frame, text="🎬 Scene", opened=True, show_clear=True)
+        self.scene_collapsible.grid(row=0, column=0, sticky="ew", padx=4, pady=(4, 2))
+        self.scene_collapsible.set_clear_command(lambda: (self.scene_text.delete("1.0", "end"), self.schedule_preview_update()))
+        
+        scene_content = self.scene_collapsible.get_content_frame()
+        scene_content.columnconfigure(1, weight=1)
+        create_tooltip(self.scene_collapsible, TOOLTIPS.get("scene", ""))
 
         # Scene presets row
-        ttk.Label(scene_frame, text="Category:", style="TLabel").grid(
+        ttk.Label(scene_content, text="Category:", style="TLabel").grid(
             row=0, column=0, sticky="w", padx=(4, 2), pady=2
         )
         self.scene_category_var = tk.StringVar()
         self.scene_cat_combo = SearchableCombobox(
-            scene_frame, 
+            scene_content, 
             textvariable=self.scene_category_var,
             on_select=lambda val: self._update_scene_presets(),
             placeholder="Search category...",
@@ -279,12 +299,12 @@ class PromptBuilderApp:
         )
         self.scene_cat_combo.grid(row=0, column=1, sticky="w", padx=2, pady=2)
 
-        ttk.Label(scene_frame, text="Preset:", style="TLabel").grid(
+        ttk.Label(scene_content, text="Preset:", style="TLabel").grid(
             row=0, column=2, sticky="w", padx=(8, 2), pady=2
         )
         self.scene_preset_var = tk.StringVar()
         self.scene_combo = SearchableCombobox(
-            scene_frame, 
+            scene_content, 
             textvariable=self.scene_preset_var,
             on_select=lambda val: self._apply_scene_preset(),
             placeholder="Search preset...",
@@ -292,13 +312,12 @@ class PromptBuilderApp:
         )
         self.scene_combo.grid(row=0, column=3, sticky="ew", padx=2, pady=2)
 
-        ttk.Button(scene_frame, text="✨", width=3, command=self._create_new_scene).grid(
+        ttk.Button(scene_content, text="✨", width=3, command=self._create_new_scene).grid(
             row=0, column=4, padx=(4, 4), pady=2
         )
 
-        self.scene_text = tk.Text(scene_frame, wrap="word", height=3)
+        self.scene_text = tk.Text(scene_content, wrap="word", height=3)
         self.scene_text.grid(row=1, column=0, columnspan=5, sticky="ew", padx=4, pady=(0, 4))
-        create_tooltip(self.scene_text, TOOLTIPS.get("scene", ""))
         # Debounce scene text changes
         self._scene_text_after_id = None
 
@@ -310,16 +329,16 @@ class PromptBuilderApp:
         self.scene_text.bind("<KeyRelease>", _on_scene_change)
 
         # Notes section (expandable)
-        notes_frame = ttk.LabelFrame(
-            right_frame, text="📝 Notes & Interactions", style="TLabelframe"
-        )
-        notes_frame.grid(row=1, column=0, sticky="nsew", padx=4, pady=2)
-        notes_frame.columnconfigure(0, weight=1)
-        notes_frame.rowconfigure(1, weight=1)
-        create_tooltip(notes_frame, TOOLTIPS.get("notes", ""))
+        self.notes_collapsible = CollapsibleFrame(right_frame, text="📝 Notes & Interactions", opened=True, show_clear=True)
+        self.notes_collapsible.grid(row=1, column=0, sticky="ew", padx=4, pady=2)
+        self.notes_collapsible.set_clear_command(lambda: (self.notes_text.delete("1.0", "end"), self.schedule_preview_update()))
+        
+        notes_content = self.notes_collapsible.get_content_frame()
+        notes_content.columnconfigure(0, weight=1)
+        create_tooltip(self.notes_collapsible, TOOLTIPS.get("notes", ""))
 
         # Interaction template selector (with category grouping)
-        interaction_control = ttk.Frame(notes_frame, style="TFrame")
+        interaction_control = ttk.Frame(notes_content, style="TFrame")
         interaction_control.grid(row=0, column=0, sticky="ew", padx=4, pady=(4, 2))
         interaction_control.columnconfigure(1, weight=1)
         interaction_control.columnconfigure(3, weight=1)
@@ -337,7 +356,6 @@ class PromptBuilderApp:
             width=15
         )
         self.interaction_cat_combo.grid(row=0, column=1, sticky="w", padx=(0, 8))
-        create_tooltip(self.interaction_cat_combo, "Choose interaction category")
 
         ttk.Label(interaction_control, text="Template:", style="TLabel").grid(
             row=0, column=2, sticky="w", padx=(0, 4)
@@ -351,29 +369,24 @@ class PromptBuilderApp:
             width=25
         )
         self.interaction_combo.grid(row=0, column=3, sticky="ew")
-        create_tooltip(self.interaction_combo, "Choose a multi-character interaction template")
 
         insert_btn = ttk.Button(
             interaction_control, text="Insert", command=self._insert_interaction_template
         )
         insert_btn.grid(row=0, column=4, padx=(4, 0))
-        create_tooltip(insert_btn, "Insert template with selected characters")
 
         refresh_btn = ttk.Button(
             interaction_control, text="🔄", command=self._refresh_interaction_template, width=3
         )
         refresh_btn.grid(row=0, column=5, padx=(4, 0))
-        create_tooltip(refresh_btn, "Re-fill template with current characters")
 
         create_btn = ttk.Button(
             interaction_control, text="+ Create", command=self._create_new_interaction
         )
         create_btn.grid(row=0, column=6, padx=(4, 0))
-        create_tooltip(create_btn, "Create a new interaction template")
 
-        self.notes_text = tk.Text(notes_frame, wrap="word", height=4)
+        self.notes_text = tk.Text(notes_content, wrap="word", height=4)
         self.notes_text.grid(row=1, column=0, sticky="nsew", padx=4, pady=(2, 4))
-        create_tooltip(self.notes_text, TOOLTIPS.get("notes", ""))
         # Debounce notes text changes
         self._notes_text_after_id = None
 
@@ -384,34 +397,39 @@ class PromptBuilderApp:
 
         self.notes_text.bind("<KeyRelease>", _on_notes_change)
 
+        # Summary section
+        self.summary_collapsible = CollapsibleFrame(right_frame, text="📋 Prompt Summary", opened=True)
+        self.summary_collapsible.grid(row=2, column=0, sticky="ew", padx=4, pady=2)
+        create_tooltip(self.summary_collapsible, "Condensed overview of characters and scene")
+        summary_content = self.summary_collapsible.get_content_frame()
+        summary_content.columnconfigure(0, weight=1)
+        
+        self.summary_text = tk.Text(summary_content, wrap="word", height=3, state="disabled")
+        self.summary_text.grid(row=0, column=0, sticky="ew", padx=4, pady=4)
+        create_tooltip(self.summary_text, "A condensed version of your prompt")
+
         # Preview panel container
-        preview_container = ttk.Frame(right_frame, style="TFrame")
-        preview_container.grid(row=2, column=0, sticky="nsew", padx=0, pady=(2, 0))
+        self.preview_collapsible = CollapsibleFrame(right_frame, text="🔍 Prompt Preview", opened=True)
+        self.preview_collapsible.grid(row=3, column=0, sticky="nsew", padx=4, pady=(2, 0))
+        create_tooltip(self.preview_collapsible, "The full generated prompt for copying")
+        preview_content = self.preview_collapsible.get_content_frame()
+        preview_header = self.preview_collapsible.get_header_frame()
 
         self.preview_panel = PreviewPanel(
-            preview_container,
+            preview_content,
             self.theme_manager,
             self.reload_data,
             self.randomize_all,
             status_callback=self._update_status,
             clear_callback=self._clear_interface,
             toast_callback=getattr(self, "toasts").notify,
+            header_parent=preview_header,
         )
 
         # Set preview callbacks
         self.preview_panel.set_callbacks(
             self._generate_prompt, self._validate_prompt, self.randomize_all
         )
-
-        # Status bar at bottom of right panel (slightly larger for readability)
-        self.status_bar = ttk.Label(
-            right_frame,
-            text="Ready",
-            relief="sunken",
-            anchor="w",
-            style="TLabel",
-        )
-        self.status_bar.grid(row=3, column=0, sticky="ew", padx=0, pady=(4, 2))
 
         # Initialize scene presets
         self._update_scene_presets()
@@ -425,6 +443,7 @@ class PromptBuilderApp:
         for widget in [
             self.scene_text,
             self.notes_text,
+            self.summary_text,
             self.preview_panel.preview_text,
             self.edit_tab.editor_text,
         ]:
@@ -688,6 +707,7 @@ class PromptBuilderApp:
         for widget in [
             self.scene_text,
             self.notes_text,
+            self.summary_text,
             self.preview_panel.preview_text,
             self.edit_tab.editor_text,
         ]:
@@ -703,6 +723,29 @@ class PromptBuilderApp:
             self.menu_manager.set_theme(theme_name)
         self._apply_theme(theme_name)
 
+    def _change_ui_scale(self, scale_name):
+        """Change the global UI scale.
+
+        Args:
+            scale_name: Name of scale ('Small', 'Medium', 'Large')
+        """
+        scales = {"Small": 0.8, "Medium": 1.0, "Large": 1.25, "Extra Large": 1.5}
+        factor = scales.get(scale_name, 1.0)
+        
+        self.theme_manager.scale_factor = factor
+        self.prefs.set("ui_scale", scale_name)
+        
+        if hasattr(self, "menu_manager"):
+            self.menu_manager.ui_scale_var.set(scale_name)
+        
+        # Apply theme again to update all styles with new scale
+        current_theme = self.theme_manager.current_theme or self.prefs.get("last_theme", DEFAULT_THEME)
+        self._apply_theme(current_theme)
+        
+        # Update fonts in text widgets
+        if hasattr(self, "font_manager"):
+            self.font_manager.update_font_size(int(DEFAULT_FONT_SIZE * factor))
+
     def _apply_theme(self, theme_name):
         """Apply theme to all UI elements.
 
@@ -713,11 +756,13 @@ class PromptBuilderApp:
 
         # Apply to text widgets
         self.theme_manager.apply_preview_theme(self.preview_panel.preview_text, theme)
-        for widget in [self.scene_text, self.notes_text, self.edit_tab.editor_text]:
+        for widget in [self.scene_text, self.notes_text, self.summary_text, self.edit_tab.editor_text]:
             self.theme_manager.apply_text_widget_theme(widget, theme)
 
         # Apply to canvas
         self.theme_manager.apply_canvas_theme(self.characters_tab.chars_canvas, theme)
+        if hasattr(self, "right_scroll_container"):
+            self.theme_manager.apply_canvas_theme(self.right_scroll_container.canvas, theme)
 
         # Apply to dynamic character action texts
         self.characters_tab.apply_theme_to_action_texts(self.theme_manager, theme)
@@ -768,8 +813,34 @@ class PromptBuilderApp:
         """Update the preview panel with current prompt."""
         prompt = self._generate_prompt_or_error()
         self.preview_panel.update_preview(prompt)
+        
+        # Update summary
+        summary = self._generate_summary()
+        self.summary_text.config(state="normal")
+        self.summary_text.delete("1.0", "end")
+        self.summary_text.insert("1.0", summary)
+        self.summary_text.config(state="disabled")
+        
         num_chars = len(self.characters_tab.get_selected_characters())
         self._update_status(f"Ready • {num_chars} character(s) selected")
+
+    def _generate_summary(self):
+        """Generate summary from current data.
+
+        Returns:
+            str: Summary text
+        """
+        builder = PromptBuilder(
+            self.characters, self.base_prompts, self.poses, self.color_schemes
+        )
+
+        config = {
+            "selected_characters": self.characters_tab.get_selected_characters(),
+            "scene": self.scene_text.get("1.0", "end").strip(),
+            "notes": self.notes_text.get("1.0", "end").strip(),
+        }
+
+        return builder.generate_summary(config)
 
     def _update_status(self, message):
         """Update status bar message.
@@ -795,7 +866,9 @@ class PromptBuilderApp:
         Returns:
             str: Generated prompt text
         """
-        builder = PromptBuilder(self.characters, self.base_prompts, self.poses)
+        builder = PromptBuilder(
+            self.characters, self.base_prompts, self.poses, self.color_schemes
+        )
 
         config = {
             "selected_characters": self.characters_tab.get_selected_characters(),
@@ -969,12 +1042,9 @@ class PromptBuilderApp:
 
     def _on_closing(self):
         """Handle window closing - save preferences."""
-        # Save window state (normal/zoomed/iconic)
-        window_state = self.root.state()
-        self.prefs.set("window_state", window_state)
-
-        # Save window geometry
-        self.prefs.set("window_geometry", self.root.geometry())
+        # Use WindowStateController to save geometry, state, and sash positions
+        if hasattr(self, "window_state_controller"):
+            self.window_state_controller.save_geometry_and_state()
 
         # Save current theme
         if hasattr(self, "menu_manager") and self.menu_manager:
@@ -1248,6 +1318,17 @@ class PromptBuilderApp:
                     from utils import logger as _logger
 
                     _logger.debug("Failed to clear notes text widget", exc_info=True)
+
+            # Clear summary text
+            if hasattr(self, "summary_text"):
+                try:
+                    self.summary_text.config(state="normal")
+                    self.summary_text.delete("1.0", "end")
+                    self.summary_text.config(state="disabled")
+                except Exception:
+                    from utils import logger as _logger
+
+                    _logger.debug("Failed to clear summary text widget", exc_info=True)
 
             # Clear selected characters
             if hasattr(self, "characters_tab"):

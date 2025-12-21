@@ -14,6 +14,7 @@ class PromptBuilder:
         characters: Dict[str, Any],
         base_prompts: Dict[str, str],
         poses: Dict[str, Dict[str, str]],
+        color_schemes: Dict[str, Dict[str, str]] = None,
     ):
         """Initialize the prompt builder.
 
@@ -21,10 +22,12 @@ class PromptBuilder:
             characters: Dictionary of character data
             base_prompts: Dictionary of base art style prompts
             poses: Dictionary of pose categories and presets
+            color_schemes: Dictionary of color schemes
         """
         self.characters = characters
         self.base_prompts = base_prompts
         self.poses = poses
+        self.color_schemes = color_schemes or {}
 
     def generate(self, config: Dict[str, Any]) -> str:
         """Generate a formatted prompt from configuration.
@@ -46,8 +49,6 @@ class PromptBuilder:
         if scene:
             parts.append(SceneRenderer.render(scene))
 
-        color_schemes = parse_color_schemes("data/color_schemes.md")
-
         for idx, char in enumerate(config.get("selected_characters", [])):
             data = self.characters.get(char["name"], {})
             outfit = data.get("outfits", {}).get(char.get("outfit", ""), "")
@@ -55,12 +56,17 @@ class PromptBuilder:
                 char.get("pose_preset"), ""
             )
             scheme_name = char.get("color_scheme")
-            scheme = color_schemes.get(scheme_name, color_schemes.get("Default (No Scheme)", {}))
+            scheme = self.color_schemes.get(
+                scheme_name, self.color_schemes.get("Default (No Scheme)", {})
+            )
             if isinstance(outfit, str):
                 outfit = substitute_colors(outfit, scheme)
             elif isinstance(outfit, dict):
+                # Work on a copy to avoid mutating the source data
+                outfit = outfit.copy()
                 for k, v in outfit.items():
-                    outfit[k] = substitute_colors(v, scheme)
+                    if isinstance(v, str):
+                        outfit[k] = substitute_colors(v, scheme)
             parts.append(
                 CharacterRenderer.render(
                     idx,
@@ -76,3 +82,43 @@ class PromptBuilder:
             parts.append(NotesRenderer.render(notes))
         out = "\n\n".join([p for p in parts if p])
         return normalize_blank_lines(out)
+
+    def generate_summary(self, config: Dict[str, Any]) -> str:
+        """Generate a condensed summary of the prompt.
+
+        Args:
+            config: Configuration dictionary.
+
+        Returns:
+            Condensed summary string.
+        """
+        summary_parts = []
+        
+        scene = config.get("scene", "").strip()
+        if scene:
+            # First line of scene or first 50 chars
+            short_scene = scene.split("\n")[0]
+            if len(short_scene) > 60:
+                short_scene = short_scene[:57] + "..."
+            summary_parts.append(f"🎬 {short_scene}")
+            
+        chars = config.get("selected_characters", [])
+        if chars:
+            char_summaries = []
+            for char in chars:
+                name = char["name"]
+                outfit = char.get("outfit", "Base")
+                pose = char.get("pose_preset") or "Default"
+                if char.get("action_note"):
+                    pose = "Custom"
+                char_summaries.append(f"{name} ({outfit}, {pose})")
+            summary_parts.append("👥 " + ", ".join(char_summaries))
+            
+        notes = config.get("notes", "").strip()
+        if notes:
+            short_notes = notes.split("\n")[0]
+            if len(short_notes) > 60:
+                short_notes = short_notes[:57] + "..."
+            summary_parts.append(f"📝 {short_notes}")
+            
+        return "\n".join(summary_parts) if summary_parts else "No characters or scene selected."

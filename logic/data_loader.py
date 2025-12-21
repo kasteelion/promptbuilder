@@ -519,3 +519,52 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
             files.append("characters.md")
 
         return files
+
+    def load_color_schemes(self):
+        """Load and parse color_schemes.md file. Creates file if not found.
+
+        Uses caching to avoid repeated parsing of the same file.
+        """
+        f = self._find_data_file("color_schemes.md")
+        cache_key = "color_schemes"
+
+        # Check if cache is valid
+        if f.exists():
+            try:
+                mtime = f.stat().st_mtime
+                if cache_key in self._cache and self._file_mtimes.get(cache_key) == mtime:
+                    return self._cache[cache_key]
+                self._file_mtimes[cache_key] = mtime
+            except OSError:
+                pass
+
+        default_schemes = {
+            "Default (No Scheme)": {
+                "primary_color": "white",
+                "secondary_color": "black",
+                "accent": "blue",
+            }
+        }
+
+        if not f.exists():
+            default_content = """## Default (No Scheme)
+- **primary:** white
+- **secondary:** black
+- **accent:** blue
+"""
+            try:
+                f.write_text(default_content, encoding="utf-8")
+            except Exception:
+                pass
+            return default_schemes
+
+        try:
+            text = f.read_text(encoding="utf-8")
+            schemes = MarkdownParser.parse_color_schemes(text)
+            result = schemes if schemes else default_schemes
+            self._cache[cache_key] = result
+            return result
+        except Exception:
+            from utils import logger
+            logger.exception("Error loading color schemes")
+            return default_schemes

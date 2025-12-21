@@ -40,40 +40,12 @@ class ScrollableCanvas(ttk.Frame):
         self._window = self.canvas.create_window((0, 0), window=self.container, anchor="nw")
         self.canvas.configure(yscrollcommand=self.scrollbar.set)
 
-        # Debounce id for container configure events
-        self._container_configure_after_id = None
-
-        # When the inner container's size changes (due to FlowFrame reflow,
-        # image load, or dynamic content), we should recompute the scroll
-        # region. Use a short debounce to avoid thrashing during rapid
-        # layout changes.
-        def _on_container_configure(event):
-            try:
-                if self._container_configure_after_id:
-                    try:
-                        self.canvas.after_cancel(self._container_configure_after_id)
-                    except Exception:
-                        pass
-                # schedule update_scroll_region after a short delay
-                self._container_configure_after_id = self.canvas.after(
-                    60, self.update_scroll_region
-                )
-            except Exception:
-                try:
-                    self.canvas.after_idle(self.update_scroll_region)
-                except Exception:
-                    pass
-
-        try:
-            self.container.bind("<Configure>", _on_container_configure)
-        except Exception:
-            pass
-
-        # Bind canvas width to window width for proper wrapping
+        # Bind canvas width to window width for proper wrapping and filling
         def update_window_width(event):
+            # Ensure the inner container fills the canvas width
             self.canvas.itemconfig(self._window, width=event.width)
             # Update scroll region when canvas resizes
-            self.canvas.after_idle(self.update_scroll_region)
+            self.update_scroll_region()
 
         self.canvas.bind("<Configure>", update_window_width)
 
@@ -86,7 +58,42 @@ class ScrollableCanvas(ttk.Frame):
         self._bind_mousewheel_recursive(self.container)
 
     def _on_mousewheel(self, event):
-        self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+        """Handle mousewheel scrolling with smooth pixel-based movement."""
+        # Calculate scroll amount
+        # On Windows, delta is typically 120 or -120 per notch
+        # We'll scroll by a fixed pixel amount for more consistent feel
+        scroll_pixels = 40  # pixels per notch
+        
+        direction = -1 if event.delta > 0 else 1
+        amount = direction * scroll_pixels
+        
+        # Get current scroll position and total height
+        try:
+            # yview returns (top, bottom) as fractions of total height
+            # we need to convert pixels to fraction
+            bbox = self.canvas.bbox("all")
+            if not bbox:
+                return "break"
+            
+            total_height = bbox[3] - bbox[1]
+            if total_height <= 0:
+                return "break"
+                
+            # Current top fraction
+            current_top = self.canvas.yview()[0]
+            
+            # New top fraction
+            new_top = current_top + (amount / total_height)
+            
+            # Clamp to [0, 1]
+            new_top = max(0, min(1, new_top))
+            
+            # Apply scroll
+            self.canvas.yview_moveto(new_top)
+        except Exception:
+            # Fallback to standard scroll if calculation fails
+            self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+            
         return "break"
 
     def _bind_mousewheel_recursive(self, widget):
@@ -263,38 +270,52 @@ class ScrollableCanvas(ttk.Frame):
 class CollapsibleFrame(ttk.Frame):
     """A frame that can be collapsed/expanded with a toggle button."""
 
-    def __init__(self, parent, text="", *args, **kwargs):
+    def __init__(self, parent, text="", opened=True, show_clear=False, *args, **kwargs):
         super().__init__(parent, *args, **kwargs, style="Collapsible.TFrame")
         self.columnconfigure(0, weight=1)
+        self._text = text
 
-        # Header frame with toggle button and clear button
+        # Header frame with toggle button and optional clear button
         self._header = ttk.Frame(self, style="Collapsible.TFrame")
         self._header.grid(row=0, column=0, sticky="ew")
 
-        self._toggle = ttk.Button(
-            self._header, text="▾ " + text, command=self._toggle_cb, style="Accent.TButton"
+        self._toggle_btn = ttk.Button(
+            self._header, 
+            text=("▾ " if opened else "▸ ") + text, 
+            command=self._toggle_cb, 
+            style="Accent.TButton"
         )
-        self._toggle.pack(side="left", anchor="w")
+        self._toggle_btn.pack(side="left", anchor="w")
 
-        self._clear_btn = ttk.Button(self._header, text="Clear", style="TButton")
-        self._clear_btn.pack(side="right")
+        self._clear_btn = None
+        if show_clear:
+            self._clear_btn = ttk.Button(self._header, text="Clear", style="TButton")
+            self._clear_btn.pack(side="right")
 
         # Content frame
         self._content = ttk.Frame(self, style="Collapsible.TFrame")
         self._content.grid(row=1, column=0, sticky="nsew")
-        self._open = True
+        
+        self._open = opened
+        if not self._open:
+            self._content.grid_remove()
 
     def _toggle_cb(self):
         self._open = not self._open
         if self._open:
             self._content.grid()
-            self._toggle.config(text="▾ " + self._toggle.cget("text")[2:])
+            self._toggle_btn.config(text="▾ " + self._text)
         else:
             self._content.grid_remove()
-            self._toggle.config(text="▸ " + self._toggle.cget("text")[2:])
+            self._toggle_btn.config(text="▸ " + self._text)
 
     def set_clear_command(self, cmd):
-        self._clear_btn.config(command=cmd)
+        if self._clear_btn:
+            self._clear_btn.config(command=cmd)
+
+    def get_header_frame(self):
+        """Return the header frame to allow adding custom widgets."""
+        return self._header
 
     def get_content_frame(self):
         return self._content

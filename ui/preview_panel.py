@@ -23,6 +23,7 @@ class PreviewPanel:
         status_callback: Optional[Callable[[str], None]] = None,
         clear_callback: Optional[Callable[[], None]] = None,
         toast_callback: Optional[Callable[[str, str, int], None]] = None,
+        header_parent: Optional[ttk.Frame] = None,
     ):
         """Initialize preview panel.
 
@@ -31,8 +32,10 @@ class PreviewPanel:
             theme_manager: ThemeManager instance
             on_reload: Callback for reload button
             on_randomize: Callback for randomize button
+            header_parent: Optional alternative parent for the header buttons
         """
         self.parent = parent
+        self.header_parent = header_parent or parent
         self.theme_manager = theme_manager
         self.on_reload = on_reload
         self.on_randomize = on_randomize
@@ -44,21 +47,34 @@ class PreviewPanel:
 
     def _build_ui(self) -> None:
         """Build the preview panel UI."""
-        self.parent.rowconfigure(1, weight=1)
-        self.parent.columnconfigure(0, weight=1)
+        if self.header_parent == self.parent:
+            self.parent.rowconfigure(1, weight=1)
+            self.parent.columnconfigure(0, weight=1)
+            header_row = 0
+        else:
+            self.parent.rowconfigure(0, weight=1)
+            self.parent.columnconfigure(0, weight=1)
+            header_row = 0
 
-        # Header with buttons - use grid to properly constrain right-side elements
-        hdr = ttk.Frame(self.parent, style="TFrame")
-        hdr.grid(row=0, column=0, sticky="ew", padx=6, pady=4)
-        hdr.columnconfigure(0, weight=1)  # Left title expands, right controls stay fixed
+        # Header with buttons
+        hdr = ttk.Frame(self.header_parent, style="TFrame")
+        if self.header_parent == self.parent:
+            hdr.grid(row=header_row, column=0, sticky="ew", padx=6, pady=4)
+        else:
+            # When in a separate header (like a CollapsibleFrame header), pack it
+            hdr.pack(side="right", padx=(10, 0), expand=True, fill="x")
+            
+        hdr.columnconfigure(0, weight=1)
 
-        ttk.Label(hdr, text="📄 Prompt Preview", style="Title.TLabel").grid(
-            row=0, column=0, sticky="w"
-        )
+        # Only show title if we're in the default parent
+        if self.header_parent == self.parent:
+            ttk.Label(hdr, text="📄 Prompt Preview", style="Title.TLabel").grid(
+                row=0, column=0, sticky="w"
+            )
 
-        # Right-side controls in a sub-frame so they don't wrap
+        # Right-side controls
         controls_frame = ttk.Frame(hdr, style="TFrame")
-        controls_frame.grid(row=0, column=1, sticky="e", padx=(10, 0))
+        controls_frame.grid(row=0, column=1, sticky="e")
 
         # Copy menu button
         copy_menu_btn = ttk.Menubutton(controls_frame, text="Copy", style="TButton")
@@ -91,7 +107,7 @@ class PreviewPanel:
         )
 
         # Preview text widget
-        self.preview_text = scrolledtext.ScrolledText(self.parent, wrap="word")
+        self.preview_text = tk.Text(self.parent, wrap="word")
         self.preview_text.grid(row=1, column=0, sticky="nsew")
 
         # Bind Ctrl+C for copy and Ctrl+S for save

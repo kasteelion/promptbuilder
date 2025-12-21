@@ -38,6 +38,7 @@ class MenuManager:
 
         # Variables that need to be accessible
         self.theme_var = tk.StringVar(value=callbacks.get("initial_theme", "Dark"))
+        self.ui_scale_var = tk.StringVar(value=callbacks.get("initial_ui_scale", "Medium"))
         self.auto_theme_var = tk.BooleanVar(value=callbacks.get("auto_theme_enabled", False))
         self.gallery_visible_var = tk.BooleanVar(value=callbacks.get("gallery_visible", True))
 
@@ -141,6 +142,9 @@ class MenuManager:
         # Theme submenu
         self._build_theme_submenu(view_menu)
 
+        # UI Scale submenu
+        self._build_ui_scale_submenu(view_menu)
+
         # Auto theme detection
         view_menu.add_separator()
         view_menu.add_checkbutton(
@@ -148,6 +152,24 @@ class MenuManager:
             variable=self.auto_theme_var,
             command=self.callbacks["toggle_auto_theme"],
         )
+
+    def _build_ui_scale_submenu(self, parent_menu):
+        """Build UI scaling submenu.
+
+        Args:
+            parent_menu: Parent menu to add scaling submenu to
+        """
+        scale_menu = tk.Menu(parent_menu, tearoff=0)
+        parent_menu.add_cascade(label="UI Scale", menu=scale_menu)
+
+        scales = ["Small", "Medium", "Large", "Extra Large"]
+        for scale in scales:
+            scale_menu.add_radiobutton(
+                label=scale,
+                variable=self.ui_scale_var,
+                value=scale,
+                command=lambda s=scale: self.callbacks["change_ui_scale"](s),
+            )
 
     def _build_theme_submenu(self, parent_menu):
         """Build theme selection submenu.

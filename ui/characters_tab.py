@@ -11,6 +11,7 @@ from utils.color_scheme import parse_color_schemes
 
 from .base_style_creator import BaseStyleCreatorDialog
 from .character_creator import CharacterCreatorDialog
+from .character_item import CharacterItem
 from .outfit_creator import CharacterOutfitCreatorDialog, SharedOutfitCreatorDialog
 from .pose_creator import PoseCreatorDialog
 from .searchable_combobox import SearchableCombobox
@@ -770,193 +771,127 @@ class CharactersTab:
             return
 
         # Load color schemes from file
-        color_schemes = parse_color_schemes("data/color_schemes.md")
+        color_schemes = self.data_loader.load_color_schemes()
+
+        # Define callbacks for CharacterItem
+        callbacks = {
+            "update_outfit": self._update_outfit,
+            "create_outfit": self._create_character_outfit,
+            "update_pose_preset": self._update_pose_preset,
+            "update_pose_category": self._update_pose_category,
+            "create_pose": self._create_new_pose,
+            "update_action_note": self._update_action_note,
+            "update_color_scheme": self._update_color_scheme,
+            "move_up": self._move_up,
+            "move_down": self._move_down,
+            "remove_character": self._remove_character,
+            "get_num_characters": lambda: len(self.selected_characters),
+            "update_scroll": self.scrollable_canvas.update_scroll_region
+        }
 
         for i, cd in enumerate(self.selected_characters):
-            char_title = f"#{i+1} — {cd['name']}"
-            frame = ttk.LabelFrame(
-                self.chars_container, text=char_title, padding=6, style="TLabelframe"
+            item = CharacterItem(
+                self.chars_container,
+                index=i,
+                char_data=cd,
+                all_characters=self.characters,
+                all_poses=self.poses,
+                color_schemes=color_schemes,
+                callbacks=callbacks
             )
-            frame.pack(fill="x", pady=(0, 8), padx=4)
+            item.pack(fill="x", pady=(0, 8), padx=4)
 
-            # Add context menu to frame
-            self._add_context_menu(frame, i)
+            # Bind drag and drop events to handle
+            if hasattr(item, "drag_handle"):
+                item.drag_handle.bind("<Button-1>", lambda e, i=i, w=item: self._on_drag_start(e, i, w))
+                item.drag_handle.bind("<B1-Motion>", self._on_drag_motion)
+                item.drag_handle.bind("<ButtonRelease-1>", self._on_drag_stop)
 
-            # Outfit selector - collapsible
-            outfit_header = ttk.Frame(frame)
-            outfit_header.pack(fill="x", pady=(0, 2))
+            # Add context menu to item
+            self._add_context_menu(item, i)
 
-            outfit_label = ttk.Label(outfit_header, text="👕 Outfit:", style="Bold.TLabel")
-            outfit_label.pack(side="left")
+        # Update scroll region and refresh mousewheel bindings
+        self.scrollable_canvas.refresh_mousewheel_bindings()
+        self.scrollable_canvas.update_scroll_region()
 
-            # Show current outfit
-            current_outfit = cd.get("outfit", "")
-            outfit_text = self.characters.get(cd["name"], {}).get("outfits", {}).get(current_outfit, "")
-            if current_outfit:
-                current_label = ttk.Label(
-                    outfit_header,
-                    text=f" {current_outfit}",
-                    style="Accent.TLabel",
-                )
-                current_label.pack(side="left")
+        # Defer on_change to avoid event queue overflow
+        self.tab.after(1, self.on_change)
+        self._refreshing = False
 
-            # Collapsible outfit frame
-            outfit_container = ttk.Frame(frame)
-            outfit_expanded = tk.BooleanVar(value=False)
+    def _update_color_scheme(self, index, scheme_name):
+        """Update color scheme for a character.
 
-            def make_toggle(container, expanded, parent_frame, header_widget):
-                def toggle():
-                    if expanded.get():
-                        container.pack_forget()
-                        expanded.set(False)
-                    else:
-                        # Pack after the header widget - fill both to allow vertical expansion
-                        container.pack(fill="both", expand=False, pady=(0, 6), after=header_widget)
-                        expanded.set(True)
-                    # Update scroll region after toggle to account for height change
-                    self.tab.after(100, self.scrollable_canvas.update_scroll_region)
+        Args:
+            index: Character index
+            scheme_name: Name of color scheme
+        """
+        if 0 <= index < len(self.selected_characters):
+            self.selected_characters[index]["color_scheme"] = scheme_name
+            self.on_change()
 
-                return toggle
+    def _on_drag_start(self, event, index, widget):
+        """Handle start of drag-and-drop reordering."""
+        self._drag_data["index"] = index
+        self._drag_data["widget"] = widget
+        # Change cursor to indicate dragging
+        self.parent.winfo_toplevel().config(cursor="fleur")
+        widget.configure(relief="groove")
 
-            toggle_func = make_toggle(outfit_container, outfit_expanded, frame, outfit_header)
-            toggle_btn = ttk.Button(outfit_header, text="▼", width=3, command=toggle_func)
-            toggle_btn.pack(side="right")
-
-            # Outfit options inside collapsible frame
-            outfit_keys = sorted(
-                list(self.characters.get(cd["name"], {}).get("outfits", {}).keys())
-            )
+    def _on_drag_motion(self, event):
+        """Handle mouse movement during drag."""
+        if self._drag_data["widget"] is None:
+            return
             
-            if len(outfit_keys) > 12:
-                # Use searchable combobox for many outfits
-                outfit_search_var = tk.StringVar(value=current_outfit)
-                outfit_combo = SearchableCombobox(
-                    outfit_container,
-                    values=outfit_keys,
-                    textvariable=outfit_search_var,
-                    on_select=lambda val, idx=i, tog=toggle_func: (
-                        self._update_outfit(idx, val),
-                        tog()
-                    ),
-                    placeholder="Search outfit..."
-                )
-                outfit_combo.pack(fill="x", padx=4, pady=4)
-            else:
-                # Use buttons for fewer outfits
-                outfits_frame = FlowFrame(outfit_container, padding_x=6, padding_y=4)
-                outfits_frame.pack(fill="both", expand=True, pady=(2, 2))
+        # Optional: Show visual indicator of drop target
+        pass
 
-                for o in outfit_keys:
-                    btn_style = "Accent.TButton" if o == current_outfit else "TButton"
-                    outfits_frame.add_button(
-                        text=o,
-                        style=btn_style,
-                        command=(
-                            lambda idx=i, name=o, tog=toggle_func: (
-                                self._update_outfit(idx, name),
-                                tog(),
-                            )
-                        ),
-                    )
+    def _on_drag_stop(self, event):
+        """Handle end of drag-and-drop reordering."""
+        if self._drag_data["index"] is None:
+            return
 
-            # Outfit creator button
-            ttk.Button(
-                outfit_container,
-                text="✨ New Outfit for Character",
-                command=lambda name=cd["name"]: self._create_character_outfit(name),
-            ).pack(fill="x", pady=(2, 0))
+        # Reset cursor
+        self.parent.winfo_toplevel().config(cursor="")
+        if self._drag_data["widget"]:
+            self._drag_data["widget"].configure(relief="solid")
 
-            # Pose preset selector
-            ttk.Label(frame, text="🎭 Pose (Optional):", font=("Consolas", 9, "bold")).pack(
-                fill="x", pady=(6, 2)
-            )
-            pose_row = ttk.Frame(frame)
-            pose_row.pack(fill="x", pady=(0, 4))
-            pose_row.columnconfigure(3, weight=1)
+        # Find drop index based on mouse Y position
+        # Get Y relative to container
+        canvas_y = self.chars_canvas.canvasy(event.y_root - self.chars_canvas.winfo_rooty())
+        drop_idx = self._find_drop_index(canvas_y)
 
-            ttk.Label(pose_row, text="Category:").grid(row=0, column=0, sticky="w", padx=(0, 4))
-            pcat_var = tk.StringVar(value=cd.get("pose_category", ""))
+        if drop_idx is not None and drop_idx != self._drag_data["index"]:
+            # Move item in list
+            item = self.selected_characters.pop(self._drag_data["index"])
             
-            pcat_combo = SearchableCombobox(
-                pose_row,
-                values=[""] + sorted(list(self.poses.keys())),
-                textvariable=pcat_var,
-                on_select=lambda val, idx=i, var=pcat_var: self._update_pose_category(idx, var, preset_combo),
-                placeholder="Search category...",
-                width=15
-            )
-            pcat_combo.grid(row=0, column=1, padx=(0, 10))
-
-            ttk.Label(pose_row, text="Preset:").grid(row=0, column=2, sticky="w", padx=(0, 4))
-            preset_var = tk.StringVar(value=cd.get("pose_preset", ""))
+            # Adjust drop_idx if it was after the original position
+            if drop_idx > self._drag_data["index"]:
+                drop_idx -= 1
+                
+            self.selected_characters.insert(drop_idx, item)
             
-            # Initial values for preset combo
-            current_cat = pcat_var.get()
-            preset_values = [""] + sorted(list(self.poses.get(current_cat, {}).keys())) if current_cat else [""]
+            # Save for undo and refresh
+            if self.save_for_undo:
+                self.save_for_undo()
+            self._refresh_list()
+            self.on_change()
+
+        # Clear drag data
+        self._drag_data = {"index": None, "widget": None}
+
+    def _find_drop_index(self, y):
+        """Find character index at given Y coordinate."""
+        for i, child in enumerate(self.chars_container.winfo_children()):
+            # Get widget position
+            wy = child.winfo_y()
+            wh = child.winfo_height()
             
-            preset_combo = SearchableCombobox(
-                pose_row,
-                values=preset_values,
-                textvariable=preset_var,
-                on_select=lambda val, idx=i, var=preset_var: self._update_pose_preset(idx, var.get()),
-                placeholder="Search preset...",
-                width=20
-            )
-            preset_combo.grid(row=0, column=3, sticky="ew")
-
-            # Add create pose button
-            ttk.Button(pose_row, text="✨", width=3, command=self._create_new_pose).grid(
-                row=0, column=4, padx=(5, 0)
-            )
-
-            # Action note text area
-            ttk.Label(
-                frame,
-                text="💬 Custom Pose/Action (Optional - Overrides Preset):",
-                font=("Consolas", 9, "bold"),
-            ).pack(fill="x", pady=(6, 0))
-            action_text = tk.Text(frame, wrap="word", height=5)
-            action_text.insert("1.0", cd.get("action_note", ""))
-            action_text.pack(fill="x", pady=(0, 6))
-            action_text.config(padx=5, pady=5)
-            action_text.bind(
-                "<KeyRelease>", lambda e, idx=i, tw=action_text: self._update_action_note(idx, tw)
-            )
-
-            # Insert color scheme selector if outfit uses color variables
-            # Insert after outfit selector
-            if outfit_has_color_vars(str(outfit_text)):
-                scheme_var = tk.StringVar(value=cd.get("color_scheme", ""))
-                scheme_names = list(color_schemes.keys())
-                ttk.Label(frame, text="Team Colors:").pack(anchor="w", padx=4)
-                scheme_combo = ttk.Combobox(frame, textvariable=scheme_var, state="readonly", values=scheme_names)
-                scheme_combo.pack(fill="x", padx=4, pady=(0, 6))
-                def on_scheme_selected(event, idx=i, var=scheme_var):
-                    self.selected_characters[idx]["color_scheme"] = var.get()
-                    self.on_change()
-                scheme_combo.bind("<<ComboboxSelected>>", on_scheme_selected)
-
-            # Separator
-            ttk.Separator(frame, orient="horizontal").pack(fill="x", pady=6)
-
-            # Button row
-            btnrow = ttk.Frame(frame, style="TFrame")
-            btnrow.pack(fill="x")
-
-            mv = ttk.Frame(btnrow, style="TFrame")
-            mv.pack(side="left", fill="x", expand=True)
-            if i > 0:
-                ttk.Button(
-                    mv, text="↑ Move Up", width=10, command=lambda idx=i: self._move_up(idx)
-                ).pack(side="left", padx=(0, 4))
-            if i < len(self.selected_characters) - 1:
-                ttk.Button(
-                    mv, text="↓ Move Down", width=10, command=lambda idx=i: self._move_down(idx)
-                ).pack(side="left")
-
-            ttk.Button(
-                btnrow, text="✕ Remove", command=lambda idx=i: self._remove_character(idx)
-            ).pack(side="right")
+            # If mouse is in upper half of widget, drop before it
+            if y < wy + (wh / 2):
+                return i
+        
+        # If below all items, drop at end
+        return len(self.selected_characters)
 
         # Update scroll region and refresh mousewheel bindings
         self.scrollable_canvas.refresh_mousewheel_bindings()

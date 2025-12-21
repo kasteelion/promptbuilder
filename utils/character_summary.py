@@ -110,7 +110,8 @@ def extract_appearance(file_path, include_base=False):
     if tags_match:
         tags_meta = [t.strip() for t in tags_match.group(1).split(",") if t.strip()]
 
-    return character_name, appearance_text, base_outfit, style_notes, summary_meta, tags_meta
+    # 4) nothing found
+    return character_name, appearance_text, base_outfit, style_notes, summary_meta, tags_meta, Path(file_path).name
 
 
 def generate_summary(
@@ -149,6 +150,7 @@ def generate_summary(
             style_notes,
             summary_meta,
             tags_meta,
+            filename,
         ) = extract_appearance(md_file, include_base=include_base)
         summary_parts.append(f"[{i}] {name}")
         summary_parts.append("-" * 80)
@@ -179,6 +181,42 @@ def generate_summary(
     from .text_utils import normalize_blank_lines
 
     return normalize_blank_lines("\n".join(summary_parts))
+
+
+def generate_character_data(characters_dir=None):
+    """Generate structured character data for the summary dialog.
+
+    Returns:
+        list: List of dicts containing character info
+    """
+    if characters_dir is None:
+        characters_dir = Path(__file__).parent
+    else:
+        characters_dir = Path(characters_dir)
+
+    md_files = sorted(characters_dir.glob("*.md"))
+    data = []
+
+    for md_file in md_files:
+        (
+            name,
+            appearance,
+            base_outfit,
+            style_notes,
+            summary_meta,
+            tags_meta,
+            filename,
+        ) = extract_appearance(md_file, include_base=True)
+        data.append({
+            "name": name,
+            "appearance": appearance,
+            "base_outfit": base_outfit,
+            "style_notes": style_notes,
+            "summary": summary_meta,
+            "tags": tags_meta,
+            "filename": filename
+        })
+    return data
 
 
 def main():

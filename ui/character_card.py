@@ -7,7 +7,7 @@ from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
 from ui.widgets import FlowFrame, ScrollableCanvas
-from utils import logger
+from utils import create_tooltip, logger
 
 from .constants import CHARACTER_CARD_SIZE
 
@@ -61,6 +61,9 @@ class CharacterCard(ttk.Frame):
         self.on_photo_change = on_photo_change
         self.on_tag_click = on_tag_click
         self.theme_colors = theme_colors or {}
+        
+        from utils import PreferencesManager
+        self.prefs = PreferencesManager()
 
         self.photo_image = None  # Keep reference to prevent GC
 
@@ -119,14 +122,28 @@ class CharacterCard(ttk.Frame):
         info_frame = ttk.Frame(container)
         info_frame.pack(side="left", fill="both", expand=True)
 
-        name_label = ttk.Label(
-            info_frame,
+        name_row = ttk.Frame(info_frame)
+        name_row.pack(fill="x", anchor="w")
+
+        self.name_label = ttk.Label(
+            name_row,
             text=self.character_name,
             style="Bold.TLabel",
-            wraplength=260,
+            wraplength=220,
             justify="left",
         )
-        name_label.pack(anchor="w")
+        self.name_label.pack(side="left", anchor="w")
+
+        self.fav_btn_var = tk.StringVar(value="☆")
+        self.fav_btn = ttk.Button(
+            name_row, 
+            textvariable=self.fav_btn_var, 
+            width=3, 
+            command=self._toggle_favorite,
+            style="TButton"
+        )
+        self.fav_btn.pack(side="right", padx=(4, 0))
+        self._update_fav_star()
 
         # Use explicit summary if present, otherwise fallback to appearance snippet
         summary = self.character_data.get("summary")
@@ -229,6 +246,30 @@ class CharacterCard(ttk.Frame):
             from utils import logger
 
             logger.exception("Error in tag click handler")
+
+    def _toggle_favorite(self):
+        """Toggle favorite status of this character."""
+        if self.prefs:
+            self.prefs.toggle_favorite("favorite_characters", self.character_name)
+            self._update_fav_star()
+            # If the parent has a _display_characters method, refresh it if favorites-only is on
+            try:
+                # CharacterCard -> cards_container -> ScrollableCanvas -> CharacterGalleryPanel
+                panel = self.master.master.master
+                if hasattr(panel, "fav_only_var") and panel.fav_only_var.get():
+                    panel._display_characters()
+            except Exception:
+                pass
+
+    def _update_fav_star(self):
+        """Update favorite star icon based on preference."""
+        if self.prefs:
+            is_fav = self.prefs.is_favorite("favorite_characters", self.character_name)
+            self.fav_btn_var.set("★" if is_fav else "☆")
+            if is_fav:
+                self.fav_btn.configure(style="Accent.TButton")
+            else:
+                self.fav_btn.configure(style="TButton")
 
     def _preview_photo(self):
         """Show full-size photo preview in a popup window."""
@@ -622,24 +663,41 @@ class CharacterGalleryPanel(ttk.Frame):
         search_entry.pack(fill="x", ipady=2)
         search_entry.insert(0, "Search...")
         search_entry.config(foreground="gray")
-        
+
+        # Clear search button
+        self.clear_search_btn = ttk.Button(
+            search_frame, text="✕", width=3, command=self._clear_search
+        )
+        self.clear_search_btn.pack(side="right", padx=(2, 0))
+
         # Sort and Filter row
         sort_filter_frame = ttk.Frame(self, style="TFrame")
         sort_filter_frame.pack(fill="x", padx=6, pady=(0, 6))
-        
-        ttk.Label(sort_filter_frame, text="Sort by:", style="Muted.TLabel").pack(side="left")
+
+        ttk.Label(sort_filter_frame, text="Sort:", style="Muted.TLabel").pack(side="left")
         self.sort_var = tk.StringVar(value="Name")
         sort_combo = ttk.Combobox(
-            sort_filter_frame, 
-            textvariable=self.sort_var, 
-            state="readonly", 
-            width=10,
-            values=["Name", "Modifier", "Recently Added"]
+            sort_filter_frame,
+            textvariable=self.sort_var,
+            state="readonly",
+            width=8,
+            values=["Name", "Modifier", "Recently Added"],
         )
         sort_combo.pack(side="left", padx=(4, 8))
         sort_combo.bind("<<ComboboxSelected>>", lambda e: self._display_characters())
 
-        # Clear placeholder on focus
+        self.fav_only_var = tk.BooleanVar(value=False)
+        self.fav_chk = ttk.Checkbutton(
+            sort_filter_frame,
+            text="⭐",
+            variable=self.fav_only_var,
+            command=self._display_characters,
+            style="TCheckbutton",
+        )
+        self.fav_chk.pack(side="left")
+        create_tooltip(self.fav_chk, "Show Favorites Only")
+
+        # Selected tags area (chips) shown under the search box
         def on_focus_in(e):
             if search_entry.get() == "Search...":
                 search_entry.delete(0, tk.END)
@@ -747,6 +805,11 @@ class CharacterGalleryPanel(ttk.Frame):
 
         self._display_characters()
 
+    def _clear_search(self):
+        """Clear search entry."""
+        self.search_var.set("")
+        self._display_characters()
+
     def _display_characters(self):
         """Display character cards."""
         # Clear existing cards
@@ -760,7 +823,19 @@ class CharacterGalleryPanel(ttk.Frame):
 
         # Prepare character list for sorting
         char_list = []
+        
+        # Get favorites list from preferences
+        from utils import PreferencesManager
+        prefs = PreferencesManager()
+        favs = prefs.get("favorite_characters", [])
+        fav_only = self.fav_only_var.get()
+
         for name, data in self.characters.items():
+            # Apply favorite filter
+            is_fav = name in favs
+            if fav_only and not is_fav:
+                continue
+
             # Apply search filter (Name, Summary, Appearance, Tags)
             if search_term:
                 summary = (data.get("summary") or "").lower()

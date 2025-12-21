@@ -110,6 +110,7 @@ class ThemeManager:
         self.themes = THEMES
         self.default_font_family = DEFAULT_FONT_FAMILY
         self.default_font_size = DEFAULT_FONT_SIZE
+        self.scale_factor = 1.0  # Default scale
 
         # Set base theme
         try:
@@ -266,22 +267,27 @@ class ThemeManager:
         accent_hover = theme.get("accent_hover", accent)
         border = theme["border"]
         selected_bg = theme.get("selected_bg", text_bg)
+        
+        # Scale fonts
+        def s(size):
+            return int(size * self.scale_factor)
 
         # General Layout Elements
         self.style.configure("TFrame", background=bg)
-        self.style.configure("TLabel", background=bg, foreground=fg)
-        self.style.configure("TCheckbutton", background=bg, foreground=fg)
+        self.style.configure("TLabel", background=bg, foreground=fg, font=(None, s(9)))
+        self.style.configure("TCheckbutton", background=bg, foreground=fg, font=(None, s(9)))
 
         # Custom widget styles
         self.style.configure("Collapsible.TFrame", background=bg)
         self.style.configure(
-            "Title.TLabel", font=(None, 14, "bold"), background=bg, foreground=accent
+            "Title.TLabel", font=(None, s(14), "bold"), background=bg, foreground=accent
         )
 
         # Notebook tabs with better selection contrast
         self.style.configure("TNotebook", background=bg, bordercolor=border, borderwidth=1)
         self.style.configure(
-            "TNotebook.Tab", background=bg, foreground=fg, bordercolor=border, padding=[10, 2]
+            "TNotebook.Tab", background=bg, foreground=fg, bordercolor=border, padding=[s(10), s(2)],
+            font=(None, s(9))
         )
         self.style.map(
             "TNotebook.Tab",
@@ -300,6 +306,7 @@ class ThemeManager:
             bordercolor=border,
             borderwidth=1,
             arrowcolor=fg,
+            font=(None, s(9))
         )
         self.style.map(
             "TCombobox",
@@ -315,7 +322,8 @@ class ThemeManager:
             foreground=fg,
             bordercolor=border,
             borderwidth=1,
-            padding=[6, 3],
+            padding=[s(6), s(3)],
+            font=(None, s(9))
         )
         self.style.map(
             "TButton",
@@ -331,7 +339,8 @@ class ThemeManager:
             foreground=text_bg,
             bordercolor=accent,
             borderwidth=1,
-            padding=[6, 3],
+            padding=[s(6), s(3)],
+            font=(None, s(9))
         )
         self.style.map(
             "Accent.TButton",
@@ -350,24 +359,23 @@ class ThemeManager:
             relief="solid",
         )
         self.style.configure(
-            "TLabelframe.Label", background=bg, foreground=accent, font=(None, 9, "bold")
+            "TLabelframe.Label", background=bg, foreground=accent, font=(None, s(9), "bold")
         )
 
         # Bold and Accent label styles for small inline headings and badges
-        self.style.configure("Bold.TLabel", font=(None, 9, "bold"), background=bg, foreground=fg)
-        self.style.configure("Accent.TLabel", font=(None, 9), background=bg, foreground=accent)
+        self.style.configure("Bold.TLabel", font=(None, s(9), "bold"), background=bg, foreground=fg)
+        self.style.configure("Accent.TLabel", font=(None, s(9)), background=bg, foreground=accent)
         # Muted label for small helper text
-        self.style.configure("Muted.TLabel", font=(None, 8), background=bg, foreground=border)
+        self.style.configure("Muted.TLabel", font=(None, s(8)), background=bg, foreground=border)
         # Tag-style label (chip-like) for small tag badges
-        # Use accent as background with high-contrast text (text_bg) where possible
         tag_bg = theme.get("accent", accent)
         tag_fg = theme.get("text_bg", bg)
         self.style.configure(
             "Tag.TLabel",
-            font=(None, 8),
+            font=(None, s(8)),
             background=tag_bg,
             foreground=tag_fg,
-            padding=(4, 2),
+            padding=(s(4), s(2)),
             borderwidth=0,
         )
 
@@ -375,10 +383,10 @@ class ThemeManager:
         try:
             self.style.configure(
                 "Tag.TButton",
-                font=(None, 8),
+                font=(None, s(8)),
                 background=tag_bg,
                 foreground=tag_fg,
-                padding=[6, 2],
+                padding=[s(6), s(2)],
                 bordercolor=border,
                 borderwidth=1,
             )
@@ -389,7 +397,6 @@ class ThemeManager:
                 bordercolor=[("active", accent), ("pressed", accent_hover)],
             )
         except Exception:
-            # Some ttk themes may not support advanced options; ignore failures
             pass
 
         # Scrollbar with better visibility
@@ -408,10 +415,12 @@ class ThemeManager:
             widget: tk.Text widget to style
             theme: Theme color dictionary
         """
+        text_bg = theme["text_bg"]
+        text_fg = theme["text_fg"]
         widget.config(
-            bg=theme["text_bg"],
-            fg=theme["text_fg"],
-            insertbackground=theme["text_fg"],
+            bg=text_bg,
+            fg=text_fg,
+            insertbackground=text_fg,
             selectbackground=theme["accent"],
             selectforeground=theme["bg"],  # Better contrast for selected text
             inactiveselectbackground=theme["selected_bg"],  # Keep selection visible when unfocused

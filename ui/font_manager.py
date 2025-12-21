@@ -95,6 +95,16 @@ class FontManager:
         self.prefs.set("font_adjustment", 0)
         logger.info("Font size reset to automatic")
 
+    def update_font_size(self, size: int):
+        """Manually update the base font size (used for UI scaling).
+
+        Args:
+            size: New base font size
+        """
+        self.base_font_size = size
+        self._update_fonts()
+        logger.info(f"Font size updated to {size}")
+
     def set_base_size_from_window_width(self, width: int):
         """Calculate base font size from window width using breakpoints.
 
