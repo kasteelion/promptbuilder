@@ -1,5 +1,5 @@
 {
-  "window_geometry": "2560x1349+30+52",
+  "window_geometry": "1536x869+30+52",
   "last_theme": "FC Cincinnati Dark",
   "last_base_prompt": "Photorealistic: \"High-Fidelity Candid\"",
   "font_adjustment": 0,
@@ -15,5 +15,9 @@
   "gallery_visible": true,
   "custom_themes": {},
   "last_color_scheme": "Default (No Scheme)",
-  "ui_scale": "Medium"
+  "ui_scale": "Medium",
+  "sash_positions": {
+    "main_sash": 399,
+    "content_sash": 632
+  }
 }

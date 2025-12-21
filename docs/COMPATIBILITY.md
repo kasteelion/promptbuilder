@@ -151,12 +151,11 @@ We aim to maintain compatibility with:
 - **Future releases** (tested with pre-release versions when available)
 - **Legacy support** for Python 3.8+ as long as feasible
 
-## Why No Type Hints Everywhere?
+## Type Hints
 
-While Python 3.8+ supports comprehensive type hints, we've kept them minimal to:
-1. Maintain readability for Python beginners
-2. Reduce visual complexity in UI code
-3. Avoid potential compatibility issues with future Python versions
-4. Keep the codebase accessible to contributors
+We use Python type hints across the codebase, particularly in manager classes and core logic, to:
+1. Improve IDE support and autocompletion.
+2. Enhance maintainability and code clarity.
+3. Facilitate static type checking.
 
-Type hints may be added in the future for better IDE support and type checking.
+Type hints are implemented in a way that remains compatible with Python 3.8+.

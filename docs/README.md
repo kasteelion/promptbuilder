@@ -1,31 +1,27 @@
 # Documentation Index
 
-This directory contains all documentation for Prompt Builder.
+Welcome to the Prompt Builder documentation. This index provides a roadmap to the available guides and technical references.
 
-## Documentation Files
+## User Guides
 
-### User Documentation
-- **[README.md](../README.md)** - Main project README with installation and usage guide
-- **[INTERACTION_TEMPLATES.md](INTERACTION_TEMPLATES.md)** - Guide to using multi-character interaction templates
-  
-**Note:** The experimental Visual Gallery UI has been deprecated and removed from the codebase. Archived notes are available at `VISUAL_UI_GUIDE.md` and `VISUAL_UI_IMPLEMENTATION.md` if you need historical reference.
+- **[Installation & Quick Start](../README.md)** - Getting the application up and running.
+- **[Interaction Templates](interaction-templates.md)** - How to use multi-character interaction placeholders.
+- **[Character Flexibility](character-flexibility.md)** - Guide to managing character identity and traits.
+- **[Compatibility Guide](compatibility.md)** - Detailed Python version and OS support information.
 
-### Technical Documentation
-- **[COMPATIBILITY.md](COMPATIBILITY.md)** - Python version compatibility information (3.8+)
-- **[VISUAL_UI_IMPLEMENTATION.md](VISUAL_UI_IMPLEMENTATION.md)** - Technical details of the Visual Gallery implementation
+## Developer Documentation
 
-## Getting Started
+- **[Development Guide](development.md)** - Setup, testing, and contribution workflow.
+- **[Architecture Overview](architecture.md)** - Understanding the modular design and core components.
+- **[API Reference](api.md)** - Internal technical documentation for developers.
+- **[Contributing](../CONTRIBUTING.md)** - Guidelines for reporting issues and submitting code.
 
-1. **New users**: Start with the main [README.md](../README.md)
-2. **Quick reference**: Keyboard shortcuts and quick tips are available in the main [README.md](../README.md)
-3. **Interaction templates**: Learn about the new multi-character interaction feature in [INTERACTION_TEMPLATES.md](INTERACTION_TEMPLATES.md)
-4. **Visual mode**: Learn about the experimental gallery UI in [VISUAL_UI_GUIDE.md](VISUAL_UI_GUIDE.md)
-5. **Compatibility**: Check [COMPATIBILITY.md](COMPATIBILITY.md) for Python version requirements
+## Legacy & Archives
 
-## Contributing
+- **[Visual Gallery Mode](legacy/VISUAL_UI_GUIDE.md)** - Deprecated experimental feature documentation.
+- **[Visual UI Implementation](legacy/VISUAL_UI_IMPLEMENTATION.md)** - Technical details of the removed visual mode.
+- **[Character Update Summary](legacy/CHARACTER_UPDATE_SUMMARY.md)** - Historical log of character data migrations.
 
-When adding new documentation:
-1. Place documentation files in this `docs/` directory
-2. Use descriptive filenames in UPPERCASE_WITH_UNDERSCORES.md format
-3. Update this index with a brief description
-4. Link to related documentation where appropriate
+---
+
+*Last updated: December 2025*

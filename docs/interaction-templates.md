@@ -234,7 +234,6 @@ A: Yes, currently you need to restart the application for new templates to appea
 Potential improvements being considered:
 - Visual template preview
 - Category grouping in dropdown
-- Custom template creator in UI
 - Template favorites/recent
 - Per-character role assignment (leader, follower, etc.)
 - Dynamic template suggestions based on character count

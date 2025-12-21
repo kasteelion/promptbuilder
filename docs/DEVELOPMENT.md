@@ -1,81 +1,77 @@
- # Development Guide
+# Development Guide
 
-Short, focused developer instructions for local checks, linting, import-time smoke tests, and common troubleshooting. Commands include Windows PowerShell examples.
+This guide provides instructions for developers looking to contribute to Prompt Builder or modify the codebase.
 
-## Install dev dependencies
+## Environment Setup
 
-The repository ships `requirements-dev.txt` for optional dev tools (formatters / linters).
-
-Run in PowerShell:
-
+1.  **Requirement**: Python 3.8+
+2.  **Recommended**: Create a virtual environment.
+3.  **Install Development Dependencies**:
+    ```powershell
     python -m pip install -r requirements-dev.txt
+    ```
 
-If you prefer specific tools only:
+## Code Quality Tools
 
-    python -m pip install ruff black isort pytest
+We use several tools to maintain code quality:
 
-## Run tests
+*   **pytest**: For running the test suite.
+*   **black**: For code formatting.
+*   **isort**: For sorting imports.
+*   **ruff**: For fast linting and code analysis.
 
-Run the test suite from the project root:
+### Running Quality Checks
 
-    # From project root
-    python -m pytest -q
+```powershell
+# Run all tests
+python -m pytest
 
-## Lint & format
+# Format code
+python -m black .
+python -m isort .
 
-Run import sort, format, and ruff checks (examples):
+# Run linter
+python -m ruff check .
+```
 
-    python -m isort .
-    python -m black .
-    python -m ruff check .
+## Testing Strategy
 
-Consider adding these to a pre-commit config or CI workflow.
+### Unit Tests
+Located in the `tests/` directory. We aim for high coverage of logic and parsers.
 
-## Import-time smoke tests (UI modules)
+### Import-Time Smoke Tests
+Since UI modules (Tkinter) are difficult to unit test, we use a smoke test to ensure all modules can at least be imported without errors.
 
-UI files (Tkinter, image preview code) are not fully exercised by unit tests. To run a reliable import-time smoke test, create a small script `tools/import_smoke.py` with the following content:
+```powershell
+# Run the smoke test
+python -m pytest tests/test_cli.py # (or specific smoke test script if available)
+```
 
-    import importlib, pkgutil, traceback
-    failed = []
-    for _, name, _ in pkgutil.iter_modules(['ui']):
-        mod = 'ui.' + name
-        try:
-            importlib.import_module(mod)
-        except Exception:
-            traceback.print_exc()
-            failed.append(mod)
-    print('Failed imports:', failed)
+## Architecture Principles
 
-Then run:
+*   **Modular Design**: Use the manager pattern for UI components (e.g., `MenuManager`, `ThemeManager`).
+*   **Data-Driven**: Logic should be separated from data. Data is stored in the `data/` folder as Markdown or JSON.
+*   **Fail Gracefully**: Use the `logger` for error reporting and provide user-friendly notifications via `utils.notification`.
+*   **Type Hinting**: Use Python type hints for better IDE support and maintainability.
 
-    python tools/import_smoke.py
+## Debugging
 
-If any `ui.*` module raises an exception on import, open the traceback and fix import-time side-effects (defer heavy initialization behind functions or the Runner entrypoint).
-
-## Debug logging
-
-To run the application with verbose debug logging:
-
+*   **Verbose Logging**: Run the app with the `--debug` flag to see more detailed output in `promptbuilder_debug.log`.
+    ```powershell
     python main.py --debug
+    ```
+*   **Debug Scripts**: Use `debug_log.py` for persistent logging during development.
 
-Use the `debug_log.py` helper to capture persistent logs to `promptbuilder_debug.log` (the helper is a thin wrapper around `utils.logger`).
+## Commit Checklist
 
-## Migration notes — outfits
-
-The project uses gendered outfit files: `outfits_f.md` and `outfits_m.md`. If you previously maintained a single `outfits.md`, split entries into the appropriate gendered file or keep shared items in both files. The `logic/data_loader.py` and `logic/parsers.py` will read the gendered files.
-
-## Commit checklist
-
-- Run unit tests: `python -m pytest -q`
-- Run `ruff` and `black` where applicable
-- Ensure no `print()` statements remain for user-facing messages (use `utils.logger`)
-- Avoid import-time side-effects in modules — prefer runtime initialization via `Runner` or guarded `if __name__ == '__main__'` blocks in scripts
-
-## Further improvements
-
-- Add a `pre-commit` configuration to run `isort`, `black`, and `ruff` on commit
-- Add a dedicated import-smoke test to `tests/` that imports all `ui.*` modules in CI
+Before submitting a pull request, ensure:
+1.  Tests pass: `pytest`
+2.  Code is formatted: `black .`
+3.  Imports are sorted: `isort .`
+4.  Linter passes: `ruff check .`
+5.  No `print()` statements remain (use `utils.logger`).
+6.  Documentation is updated.
 
 ---
 
-Last updated: December 2025
+*Last updated: December 2025*
