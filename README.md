@@ -1,262 +1,204 @@
-# Prompt Builder
+# Prompt Builder: Group Picture Generator & AI Prompt Authoring Tool
 
-Prompt Builder is a desktop application for authoring and managing prompts, characters, themes, and presets for AI image-generation workflows. It aims to be lightweight and self-contained at runtime (no external dependencies required for normal use). Developer tooling (linters, formatters, type checkers) is optional but provided to keep the codebase consistent.
+Prompt Builder is a desktop application designed to streamline the creation and management of detailed prompts, characters, themes, and presets for AI image-generation workflows. It simplifies the process of building complex prompts, especially for scenarios involving multiple characters, specific scenes, interactions, and diverse stylistic elements.
+
+The application aims to be lightweight and self-contained, requiring no external dependencies for normal runtime operation. Developer tooling (linters, formatters, type checkers) is optional but provided to maintain codebase consistency.
+
 **Project status:** Beta
 
 **License:** MIT
 
-**Table of contents**
+---
 
-- [Prompt Builder](#prompt-builder)
-  - [Quick Start (User)](#quick-start-user)
+## Table of Contents
+
+- [Features](#features)
+- [Architecture Overview](#architecture-overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Running the Application](#running-the-application)
   - [Command-line Usage](#command-line-usage)
-  - [Developer Setup](#developer-setup)
-  - [Development Workflow \& Tools](#development-workflow--tools)
-  - [Repository Layout](#repository-layout)
-  - [Character markdown format](#character-markdown-format)
-  - [Useful scripts](#useful-scripts)
-  - [Logging and debugging](#logging-and-debugging)
-  - [Troubleshooting](#troubleshooting)
-  - [Contributing](#contributing)
-  - [Commit history \& changelog](#commit-history--changelog)
-  - [Contact](#contact)
-- [Prompt Builder](#prompt-builder-1)
+- [Data Structure and Customization](#data-structure-and-customization)
+- [Developer Setup](#developer-setup)
+- [Repository Layout](#repository-layout)
+- [Useful Scripts](#useful-scripts)
+- [Logging and Debugging](#logging-and-debugging)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-## Quick Start (User)
+---
 
-Prerequisites: Python 3.10+ and a Python build that includes `tkinter`.
+## Features
 
-Run the GUI from the repository root:
+*   **Intuitive Tkinter GUI:** A user-friendly interface for building and managing prompts.
+*   **Character Management:** Easily select, configure outfits, poses, and details for multiple characters.
+*   **Scene and Interaction Definition:** Define custom scenes and multi-character interactions to enrich your prompts.
+*   **Real-time Prompt Preview:** Instantly see the generated prompt as you make selections and edits, with adaptive throttling for smooth performance.
+*   **Markdown-based Data Storage:** All configurable data (characters, outfits, scenes, poses, interactions, themes) is stored in human-readable Markdown files, making it easy to edit and extend.
+*   **Theming Support:** Customize the application's appearance with built-in themes or create your own.
+*   **Undo/Redo Functionality:** Safely experiment with prompt configurations.
+*   **Preset Saving/Loading:** Save and load entire prompt configurations as presets for quick reuse.
+*   **Random Prompt Generation:** Generate diverse and creative prompts with a single click.
+*   **Cross-platform Compatibility:** Built with Python and Tkinter, it runs on various operating systems.
+*   **Minimal Runtime Dependencies:** Designed for ease of use without complex setup.
 
-```powershell
-python main.py
-```
+## Architecture Overview
 
-The app launches a Tkinter window where you can browse and edit characters, presets, and themes. Character data is stored as Markdown files under `data/characters/`.
-## Command-line Usage
+The Prompt Builder application follows a modular, layered architecture:
 
-The app supports a few CLI flags for non-GUI workflows or simple checks:
+*   **Entrypoint (`main.py`)**: A minimal shim that delegates application startup to the `Runner`.
+*   **Application Lifecycle (`runner.py`)**: The `Runner` class manages the application's lifecycle, including CLI argument parsing, compatibility checks, debug logging, and launching the main Tkinter GUI. It also handles top-level error catching and graceful shutdowns.
+*   **User Interface (`ui/`)**: The core of the application's interaction. Built with Tkinter, it comprises:
+    *   **`PromptBuilderApp` (`ui/main_window.py`)**: The main application window, orchestrating all UI components.
+    *   **Tabs (`ui/characters_tab.py`, `ui/edit_tab.py`)**: For managing characters and potentially editing raw data files.
+    *   **Panels and Widgets**: Including `CharacterGalleryPanel`, `PreviewPanel`, and various input controls for scene, notes, and interactions.
+    *   **Managers/Controllers**: Dedicated classes (e.g., `MenuManager`, `FontManager`, `ThemeManager`, `StateManager`, `PreviewController`, `GalleryController`) encapsulate specific UI behaviors and state management.
+*   **Data Management (`logic/data_loader.py` & `data/`)**:
+    *   `DataLoader` is responsible for loading all application data from Markdown files located in the `data/` directory.
+    *   The `data/` directory contains definitions for `characters`, `base_prompts`, `poses`, `scenes`, `outfits` (female and male), `interactions`, and `themes`.
+*   **Prompt Generation Logic (`core/`, `logic/`)**:
+    *   **`PromptBuilder` (`core/builder.py`)**: The central engine for constructing the final prompt string based on the user's selections and inputs.
+    *   **`PromptRandomizer` (`logic/randomizer.py`)**: Generates random configurations for characters, poses, scenes, and interactions.
+    *   **`Validator` (`logic/validator.py`)**: Ensures that prompt configurations are valid.
+*   **Utilities (`utils/`)**: A collection of common helper modules for preferences, logging, notifications, file operations, undo/redo management, and more.
 
-- `--version` / `-v` — Print app & Python version then exit
-- `--check-compat` — Run a basic compatibility report
-- `--debug` — Enable debug-mode behavior (causes exceptions to be re-raised in some code paths)
+This structure ensures a clear separation of concerns, making the application maintainable, testable, and extensible.
 
-Examples:
+## Getting Started
 
+### Prerequisites
+
+*   **Python 3.8 or newer**: Download from [python.org](https://www.python.org/downloads/).
+*   **Tkinter**: Your Python installation must include Tkinter. Most official Python distributions (e.g., from python.org) include it by default. If you encounter a `tkinter.TclError` or `ImportError`, you might need to install `tk` support via your system's package manager (e.g., `sudo apt-get install python3-tk` on Debian/Ubuntu, `brew install python-tk` on macOS for Homebrew Python).
+
+### Running the Application
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/promptbuilder.git # Replace with actual repo URL
+    cd promptbuilder
+    ```
+2.  **Run the GUI:**
+    ```powershell
+    python main.py
+    ```
+    This will launch the main application window.
+
+### Command-line Usage
+
+The application supports a few command-line flags for non-GUI workflows or simple checks:
+
+*   `--version` / `-v`: Print application and Python version information, then exit.
+*   `--check-compat`: Run a basic compatibility report for your system.
+*   `--debug`: Enable debug-mode behavior, which causes exceptions to be re-raised in some code paths for easier debugging.
+
+**Examples:**
 ```powershell
 python main.py --version
 python main.py --check-compat
 python main.py --debug
 ```
 
-Some helper scripts in `scripts/` are standalone and can be run directly, for example:
+## Data Structure and Customization
 
-```powershell
-# Update tags heuristically for character markdown files
-python scripts/generate_tags.py
-```
+The core of Prompt Builder's flexibility comes from its Markdown-based data files, all located within the `data/` directory. You can easily modify or extend the application's content by editing these files:
 
-Note: many scripts modify files and create `.bak` backups — review and test them on a copy of your data if you are unsure.
+*   `data/characters/`: Contains individual Markdown files for each character, defining their properties, descriptions, and character-specific outfits.
+*   `data/base_prompts.md`: Defines base prompt templates that can be selected as a starting point.
+*   `data/poses.md`: Lists various poses with their descriptions.
+*   `data/scenes.md`: Contains scene categories and specific scene descriptions.
+*   `data/outfits_f.md`, `data/outfits_m.md`: Define shared outfits for female and male characters, respectively. These are automatically available to all characters.
+*   `data/interactions.md`: Stores templates for multi-character interactions.
+*   `data/color_schemes.md`, `data/tags.md`, `data/themes.md`: Used for UI theming and metadata management.
+
+By modifying these Markdown files, users can expand the application's content, add new characters, define new outfit styles, or create custom scenes and interactions without touching the Python code.
+
 ## Developer Setup
 
-Recommended: create a virtual environment and install dev tools (formatters, linters, test tools).
+For developers interested in contributing or extending the application, follow these steps to set up your development environment:
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements-dev.txt
-```
+1.  **Create a Virtual Environment (Recommended):**
+    ```powershell
+    python -m venv .venv
+    # On Windows:
+    .\.venv\Scripts\Activate.ps1
+    # On macOS/Linux:
+    source .venv/bin/activate
+    ```
 
-Run tests:
+2.  **Install Development Dependencies:**
+    ```powersell
+    python -m pip install -r requirements-dev.txt
+    ```
+    This will install tools for testing, formatting, and linting.
 
-```powershell
-python -m pytest -q
-```
+3.  **Run Tests:**
+    ```powershell
+    python -m pytest -q
+    ```
 
-Format and lint:
+4.  **Formatting and Linting (Recommended before committing):**
+    Ensure your code adheres to the project's style guidelines:
+    ```powershell
+    python -m black .
+    python -m isort .
+    python -m ruff check .
+    python -m flake8 .
+    python -m mypy .
+    ```
 
-```powershell
-python -m black .
-python -m isort .
-python -m ruff check .
-python -m flake8 .
-python -m mypy .
-```
-
-## Development Workflow & Tools
-
-- Formatting: `black` (configured via `pyproject.toml`).
-- Import sorting: `isort`.
-- Linting: `ruff` (fast), `flake8` (optional) and `pylint` available if you want stricter checks.
-- Type checking: `mypy` (configured in `pyproject.toml`).
-
-During the review I enabled `tool.ruff` exclusion for `scripts/archived/` to avoid lint noise from legacy helper scripts.
+*   **Notes:**
+    *   The `pyproject.toml` file contains configuration for `black` and `mypy`, and `ruff` exclusions for archived scripts.
+    *   Pre-commit hooks are not included by default; consider adding them (e.g., using `pre-commit` framework) to automate formatting and linting checks.
 
 ## Repository Layout
 
-- `main.py` — minimal entrypoint shim that delegates to `Runner` in `runner.py`.
-- `runner.py` — app lifecycle: CLI parsing, compatibility checks, debug logging, importing the GUI, and launching `root.mainloop()`.
-- `core/` — core prompt-building engines and renderers.
-- `logic/` — data loading, parsing, randomization, and validation utilities.
-- `ui/` — Tkinter UI: windows, widgets, controllers, panels.
-- `utils/` — utilities: `file_ops.py`, `logger.py`, preferences, presets manager, etc.
-- `data/` — application data (prompts, characters, scenes, outfits).
-- `scripts/` — convenience & maintenance scripts. `scripts/archived/` contains older helpers kept for reference.
-- `tests/` — pytest test suite.
-- `requirements-dev.txt` — development tooling.
-- `pyproject.toml` — project metadata and tooling configuration.
+*   `main.py` — The minimal entrypoint shim, delegating to `Runner` in `runner.py`.
+*   `runner.py` — Manages the application lifecycle: CLI parsing, compatibility checks, debug logging, importing the GUI, and launching `root.mainloop()`.
+*   `core/` — Contains the core prompt-building engines and renderers.
+*   `logic/` — Houses utilities for data loading, parsing, randomization, and validation.
+*   `ui/` — All Tkinter UI code: windows, widgets, controllers, and panels.
+*   `utils/` — General utility modules: `file_ops.py`, `logger.py`, preferences manager, presets manager, etc.
+*   `data/` — The primary location for application data: characters, base prompts, scenes, outfits, interactions, and themes (all in Markdown format).
+*   `scripts/` — Convenience and maintenance scripts. `scripts/archived/` contains older helpers kept for reference.
+*   `tests/` — The `pytest` test suite for the application.
+*   `requirements-dev.txt` — Lists development-specific dependencies (linters, formatters, test tools).
+*   `pyproject.toml` — Contains project metadata and configuration for various development tools.
 
-## Character markdown format
+## Useful Scripts
 
-Character data is stored under `data/characters/` as Markdown files. Files typically contain a header and metadata blocks such as `**Photo:**`, `**Summary:**`, and `**Tags:**` lines. Example snippet:
+Several scripts in the `scripts/` directory assist with data management and maintenance:
 
-```markdown
-### Noa Levi
+*   `scripts/generate_tags.py`: Scans `data/characters/*.md` files and heuristically inserts or updates the `**Tags:**` entry based on character appearance and summary.
+*   `scripts/generate_vibe_summaries.py`: A helper script to generate short vibe summaries for characters.
+*   `scripts/add_character_summaries.py`: Used to insert or adjust summary blocks within character Markdown files.
 
-**Photo:** noa_levi.jpg
+**Caution:** Many scripts modify files and create `.bak` backups. Always review changes and test on a copy of your data if you are unsure.
 
-**Summary:** An athletic dancer with a warm, friendly style.
+## Logging and Debugging
 
-**Tags:** athletic, soft
-```
+Runtime debug logging is managed by `debug_log.py`, which delegates to `utils/logger.py`. A debug log file named `promptbuilder_debug.log` is created in the working directory when the app runs with debug logging initialized, providing detailed diagnostic messages.
 
-Scripts such as `scripts/generate_tags.py` rely on heuristics and the parsed character fields to add or update the `**Tags:**` line.
-
-## Useful scripts
-
-- `scripts/generate_tags.py` — Add/update `**Tags:**` entries using heuristics based on `appearance`/`summary`.
-- `scripts/generate_vibe_summaries.py` — (helper) generate short vibe summaries for characters.
-- `scripts/add_character_summaries.py` — Insert or adjust summary blocks.
-
-Many scripts create `.bak` copies before modifying files. If you plan to run them on your dataset, ensure you have a backup or run against a copy.
-
-## Logging and debugging
-
-Runtime debug logging is managed by `debug_log.py`, which delegates to `utils/logger.py`. The debug log file is created at `promptbuilder_debug.log` in the working directory when the app runs with debug logging initialized.
-
-If the application fails unexpectedly, check `promptbuilder_debug.log` for the full traceback and diagnostic messages.
+If the application encounters an unexpected error, consult `promptbuilder_debug.log` for the full traceback and relevant information.
 
 ## Troubleshooting
 
-- If the GUI fails to start with an ImportError for `tkinter`, install a Python distribution that includes `tkinter` (e.g., the official Python.org Windows installer) or use your system package manager to add `tk` support.
-- If a script errors or modifies files unexpectedly, restore from the `.bak` files created next to modified files or from your version control.
-- Run tests to get immediate failure traces:
-
-```powershell
-python -m pytest tests/test_parsers.py -q
-```
+*   **Tkinter ImportError/TclError**: If the GUI fails to start due to `tkinter` not being found, ensure you have a Python distribution that includes `tkinter` (e.g., the official Python.org Windows installer), or install `tk` support via your system's package manager.
+*   **Script Errors/Unexpected File Modifications**: If a script produces errors or modifies files incorrectly, restore from the `.bak` files created alongside modified files or from your version control system.
+*   **Debugging Tests**: To get immediate failure traces for specific components, run `pytest` directly: `python -m pytest tests/test_parsers.py -q`.
 
 ## Contributing
 
-Contributions are welcome. Workflow suggestions:
+Contributions are welcome! Please follow these general guidelines:
 
-1. Fork the repo and create a feature branch.
-2. Run tests and linters locally.
-3. Keep changes focused and include tests for new behavior where applicable.
-4. Open a pull request describing the change and rationale.
+1.  **Fork the repository** and create a feature branch for your changes.
+2.  **Run tests and linters locally** to ensure your changes are consistent with the project's standards.
+3.  **Focus your changes** and include unit tests for any new behavior or bug fixes where applicable.
+4.  **Open a pull request** describing your changes and the rationale behind them.
 
-Consider adding `pre-commit` hooks to enforce `black`/`isort`/`ruff` automatically.
-
-## Commit history & changelog
-
-This repository does not include a formal CHANGELOG file by default. If you maintain releases, add a `CHANGELOG.md` and reference it from this README.
+Consider integrating `pre-commit` hooks to automatically enforce `black`, `isort`, and `ruff` before committing.
 
 ## Contact
 
-If you need help, open an issue describing the problem, include steps to reproduce and relevant log output from `promptbuilder_debug.log`.
-
----
-Generated and expanded README: added usage examples, developer workflow, script guidance, and troubleshooting notes.
-# Prompt Builder
-
-Prompt Builder is a desktop application for helping create and manage prompts and character data for AI image generation and related workflows. It's a lightweight, cross-platform Tkinter-based GUI with zero runtime external dependencies (dev tools are optional).
-
-**Project status:** Beta
-
-**License:** MIT
-
-**Key features**
-- Build, edit and preview character entries stored under `data/characters/`.
-- Manage presets, themes, and UI layout via a simple Tkinter GUI.
-- Several helper scripts in `scripts/` for batch operations (some archived helpers in `scripts/archived/`).
-- Safe file operations: atomic writes and backups for important data files.
-
-**Quick start (user)**
-- Install Python 3.10+.
-- Run the app from the repository root:
-
-```powershell
-python main.py
-```
-
-This launches the GUI (requires `tkinter` available in your Python build).
-
-**Command-line flags**
-- `--version` / `-v` : show program & Python version (non-GUI mode)
-- `--check-compat` : run simple compatibility checks
-- `--debug` : enable debug re-raise behavior in some code paths
-
-Example (show version):
-```powershell
-python main.py --version
-```
-
-**Developer / Contributing**
-The project aims to avoid runtime external packages. For development and formatting, a set of dev tools is provided.
-
-1. Create a virtual environment (recommended) and install dev dependencies:
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements-dev.txt
-```
-
-2. Run tests:
-```powershell
-python -m pytest
-```
-
-3. Formatting and linting (recommended before committing):
-```powershell
-python -m black .
-python -m isort .
-python -m ruff check .
-python -m flake8 .
-python -m mypy .
-```
-
-Notes:
-- The repo contains a `pyproject.toml` with `black` and `mypy` settings and a `tool.ruff` exclusion for archived scripts.
-- CI or pre-commit hooks are not included by default; consider adding `pre-commit` for enforcing formatting.
-
-**Repository layout (high level)**
-- `main.py` - small entrypoint shim that delegates to `Runner` (in `runner.py`).
-- `runner.py` - application startup lifecycle (compat checks, debug log, GUI import & mainloop).
-- `core/` - core prompt-building logic and renderer hooks.
-- `logic/` - data loaders, parsers, validators, randomizers.
-- `ui/` - Tkinter UI code (windows, panels, widgets, controllers).
-- `utils/` - helper utilities (file_ops, logging, presets, preferences, etc.).
-- `data/` - sample data and `data/characters/` (where character markdown files live).
-- `scripts/` - useful helper scripts for bulk operations and maintenance (some scripts are archived in `scripts/archived/`).
-- `tests/` - pytest test suite.
-- `requirements-dev.txt` - dev dependencies (linters, formatters, test tools).
-- `pyproject.toml` - project metadata and tooling configuration.
-
-**Notable implementation notes**
-- Logging: debug logging is routed through `debug_log.py` and uses the app logger configured in `utils/logger.py`.
-- Safe file writes: `utils/file_ops.py` provides `atomic_write`, `safe_read`, and backup creation.
-- The GUI requires `tkinter` to be available in the Python installation (most official distributions include it; some minimal builds do not).
-
-**Scripts of interest**
-- `scripts/generate_tags.py` - scans `data/characters/*.md` and inserts/updates a `**Tags:**` line using heuristics.
-- `scripts/generate_vibe_summaries.py`, `scripts/add_character_summaries.py`, etc. - other helpers for batch maintenance.
-
-**If something breaks**
-- Check `promptbuilder_debug.log` in the working directory for debug traces created by `debug_log.py`.
-- Run the test suite: `python -m pytest -q` to see failing tests and tracebacks.
-
-**Contact / Contributing**
-If you want to contribute, open an issue or a PR describing the change. The project follows a typical fork-and-PR workflow. Keep changes small and focused; run tests & linters before submitting.
-
---
-Generated README created by an automated code scan to summarize the repository and provide helpful developer instructions.
+For assistance, please open an issue on the GitHub repository. Describe the problem, include steps to reproduce, and attach relevant log output from `promptbuilder_debug.log`.

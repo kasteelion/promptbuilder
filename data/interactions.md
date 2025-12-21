@@ -278,6 +278,29 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 
 - **Pre-Game Ritual:** {char1} and {char2} performing pre-game handshake or ritual, focused synchronized movements, team bonding.
 
+## Sports & Athletic Activities - Bowling Section
+
+- **Bowling Celebration:** {char1} and {char2} celebrating after a strike or spare, high-fiving enthusiastically, both with excited expressions, standing near ball return area or in front of lane.
+
+- **Watching Teammate Bowl:** {char1} bowling (mid-release or follow-through), {char2} watching intently from seating area behind, leaning forward with supportive body language, hands clasped or resting on knees.
+
+- **Comparing Scores:** {char1} and {char2} standing together looking up at overhead scoring display, pointing at screen, discussing their scores with competitive or friendly expressions.
+
+- **Ball Selection Together:** {char1} and {char2} at ball return area, both examining bowling balls, helping each other choose the right weight, collaborative team moment.
+
+- **Pre-Roll Routine:** {char1} standing at approach preparing to bowl (holding ball at chest, focusing on pins), {char2} standing behind in ready position, both showing pre-shot concentration.
+
+- **Bowling Instruction:** {char1} demonstrating proper bowling form to {char2}, showing arm swing and release technique, {char2} watching attentively and mirroring the motion, coaching moment.
+
+- **Sitting Between Frames:** {char1} and {char2} sitting together in lane seating area, relaxed between turns, casual conversation, bowling shoes visible, team camaraderie.
+
+- **Team Huddle - Bowling:** {char1}, {char2}, and {char3} gathered in close huddle near their lane, discussing strategy or celebrating, arms around shoulders, unified team energy.
+
+- **Bowling High Five:** {char1} returning from successful bowl, {char2} standing to greet them with enthusiastic high five, both showing team spirit and celebration.
+
+- **Dual Lane Competition:** {char1} bowling on left lane mid-release, {char2} bowling on adjacent right lane also mid-release, side-by-side competitive energy, synchronized action.
+
+
 ---
 ## Sports - Team Interactions (3+)
 

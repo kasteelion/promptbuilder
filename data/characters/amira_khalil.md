@@ -538,7 +538,7 @@
 #### Bowling - Home
  - **Hijab:** Sports hijab in {primary_color} (breathable, practical)
  - **Top:** Fitted performance polo or athletic top in {primary_color} with {secondary_color} accents (moisture-wicking fabric with team logo, modest high neck)
- - **Bottom:** Athletic midi skirt with built-in full-length leggings in {primary_color} with {secondary_color} accents
+ - **Bottom:** **BLACK athletic midi skirt** with built-in full-length leggings
  - **Footwear:** Bowling shoes ({accent})
 - **Accessories:** Wrist support optional, simple gold studs
 - **Makeup:** Minimal makeup, hair secured
@@ -546,7 +546,7 @@
 #### Bowling - Away
  - **Hijab:** Sports hijab in {secondary_color} (breathable, practical)
  - **Top:** Fitted performance polo or athletic top in {secondary_color} with {primary_color} accents (moisture-wicking fabric with team logo, modest high neck)
- - **Bottom:** Athletic midi skirt with built-in full-length leggings in {secondary_color} with {primary_color} accents
+ - **Bottom:** **BLACK athletic midi skirt** with built-in full-length leggings
  - **Footwear:** Bowling shoes ({accent})
  - **Accessories:** Wrist support optional, simple gold studs
  - **Makeup:** Minimal makeup, hair secured

@@ -219,6 +219,36 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 
 - **Pointe Position:** Standing on pointe in ballet shoes, one leg extended, arms in graceful position, perfect balance.
 
+## Sports & Athletic Poses - Bowling Section
+
+- **Bowling Address Position:** Standing at foul line, bowling ball held at chest height with both hands, focused gaze down the lane at pins, knees slightly bent, ready stance before approach.
+
+- **Bowling Approach:** Mid-walk down approach (3-4 steps), ball swinging back behind body, opposite arm out for balance, focused on target, athletic momentum.
+
+- **Bowling Release:** - Low Angle: Dynamic athletic crouch at foul line, front knee deeply bent at 90 degrees supporting weight, back leg extended straight behind, right arm extended forward in powerful follow-through with fingers splayed upward reaching toward pins, left arm stretched out to side for balance, torso leaned forward showing athletic form, focused intense expression watching ball trajectory, black bowling ball visible on lane just released, captured from low ground-level perspective emphasizing power and athletic grace.
+
+- **Bowling Portrait with Ball:** Standing upright facing camera in relaxed confident pose, holding bowling ball cradled in both hands at waist/hip level against body, arms bent naturally, ball positioned in front showing logo/design, shoulders square to camera, weight evenly distributed or shifted slightly to one hip, warm genuine smile, direct eye contact with camera, professional portrait stance, studio or clean background setting, approachable friendly energy.
+
+- **Bowling Follow-Through:** Arm extended forward after release, hand in graceful follow-through position reaching toward pins, opposite arm out for balance, front knee bent, classic finish pose.
+
+- **Ball Return Wait:** Standing at ball return carousel, hand resting on return mechanism, watching for ball, casual ready stance, between-frames energy.
+
+- **Pin Watching:** Standing just past foul line, watching pins fall, arm still extended from release, hopeful or excited expression, anticipating the result.
+
+- **Victory Arms Up:** Both arms raised overhead in triumph after strike, wide smile, celebratory energy, standing near foul line or approach area.
+
+- **Sitting Lane Seat:** Sitting in molded plastic lane seating, relaxed posture, bowling shoes on, between frames, casual comfortable pose.
+
+- **Polishing Ball:** Standing at ball return area, towel in hand, carefully wiping/polishing bowling ball, focused preparation, pre-bowl ritual.
+
+- **Checking Score Monitor:** Looking up at overhead scoring display, hand shading eyes or pointing at screen, reading results, competitive focus.
+
+- **Disappointed Stance:** Standing at foul line after split or gutter ball, hands on hips or hand to forehead, disappointed but lighthearted expression, sports frustration.
+
+- **Lacing Bowling Shoes:** Sitting on bench, bent forward tying rental bowling shoes, casual pre-game preparation moment.
+
+- **Holding Multiple Balls:** Arms cradling 2-3 bowling balls at once, testing different weights, ball selection process, focused shopping expression.
+
 ## Cultural & Mythological Poses
 
 - **Goddess Pose:** Regal standing position, chin lifted, arms positioned with divine authority, ethereal commanding presence.

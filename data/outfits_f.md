@@ -245,10 +245,10 @@ Fitted **singlet** in **{primary_color} with {secondary_color} accents** (lycra/
 Fitted **singlet** in **{secondary_color} with {primary_color} accents** (lycra/spandex performance fabric with team logo); **wrestling shoes** ({accent}, lightweight with ankle support). *Accessories:* Knee pads optional. *Hair/Makeup:* Hair tied back and messy.
 
 ### Bowling - Home
-Fitted **performance polo** in **{primary_color} with {secondary_color} accents** (moisture-wicking fabric with team logo and name on back); **performance pants or athletic skirt** in **{primary_color} with {secondary_color} accents** (tailored fit); **bowling shoes** ({accent}). *Accessories:* Wrist support optional, team logo on collar. *Hair/Makeup:* Hair in ponytail or secured, neat makeup.
+Fitted **performance polo** in **{primary_color} with {secondary_color} accents** (moisture-wicking fabric with team logo and name on back); **BLACK athletic skirt** (tailored fit); **bowling shoes** ({accent}). *Accessories:* Wrist support optional, team logo on collar. *Hair/Makeup:* Hair in ponytail or secured, neat makeup.
 
 ### Bowling - Away
-Fitted **performance polo** in **{secondary_color} with {primary_color} accents** (moisture-wicking fabric with team logo and name on back); **performance pants or athletic skirt** in **{secondary_color} with {primary_color} accents** (tailored fit); **bowling shoes** ({accent}). *Accessories:* Wrist support optional, team logo on collar. *Hair/Makeup:* Hair in ponytail or secured, neat makeup.
+Fitted **performance polo** in **{secondary_color} with {primary_color} accents** (moisture-wicking fabric with team logo and name on back); **BLACK athletic skirt** (tailored fit); **bowling shoes** ({accent}). *Accessories:* Wrist support optional, team logo on collar. *Hair/Makeup:* Hair in ponytail or secured, neat makeup.
 ---
 
 ## Film Noir

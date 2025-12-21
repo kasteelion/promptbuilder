@@ -340,8 +340,6 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 - **Indian Palace Hall:** Ornate Mughal architecture, decorated arches, colorful tile work, luxurious royal setting.
 
----
-
 ### Festival & Outdoor Events
 
 - **Music Festival Main Stage:** Large outdoor festival stage, crowd in foreground, colorful lights, summer celebration atmosphere.
@@ -349,3 +347,20 @@ Quick scene descriptions for your prompts. Edit or add your own!
 - **Street Fair:** Outdoor fair with vendor booths, hanging decorations, crowds, festive community gathering energy.
 
 - **Carnival Midway:** Carnival games and rides, colorful lights, cotton candy stands, festive exciting atmosphere.
+
+### Bowling
+- **Bowling Alley Lanes:** View down polished bowling lanes, pins at end, ball return visible, overhead scoring displays, lane numbers, recreational atmosphere. *(Already exists - keep this)*
+
+- **Bowling Alley Seating Area:** Behind-the-lane perspective, molded plastic seats, ball return carousel in foreground, scoring monitor overhead, personal lane space, casual team area.
+
+- **Bowling Alley Approach:** Close view of hardwood approach area, foul line visible, polished lane extending into distance, arrows and dots on floor, player perspective from starting position.
+
+- **Bowling Ball Rack:** Wall of bowling balls organized by weight, colorful spheres in neat rows, house balls with finger holes visible, selection area with variety.
+
+- **Bowling Shoe Counter:** Rental counter with rows of red-and-tan or red-and-blue bowling shoes organized by size, casual retail transaction area, beginning-of-game atmosphere.
+
+- **Bowling Alley Lounge:** Casual lounge area with tables, arcade games visible in background, snack bar, social recreational atmosphere away from lanes.
+
+- **Cosmic Bowling:** Darkened bowling alley with black lights, neon lane bumpers glowing, colorful projected lights, music and party atmosphere, nighttime special event energy.
+
+- **Pro Shop Interior:** Bowling pro shop, custom balls on display, drilling equipment, bags and accessories, serious bowler specialty store atmosphere.
