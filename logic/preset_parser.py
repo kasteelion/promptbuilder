@@ -32,7 +32,13 @@ class PresetParser:
 
     @staticmethod
     def parse_interactions(content: str):
-        """Parse interaction templates from markdown content with categories."""
+        """Parse interaction templates from markdown content with categories.
+        
+        Extracts character count requirements from names like "Interaction (2+)".
+        
+        Returns:
+            dict: {category: {name: {'description': str, 'min_chars': int}}}
+        """
         interactions = {}
         current = None
 
@@ -51,8 +57,25 @@ class PresetParser:
                 if item:
                     name = item.group(1).strip()
                     desc = item.group(2).strip()
-                    desc = re.sub(r"^\([^)]+\)\s*", "", desc)
-                    interactions[current][name] = desc
+                    
+                    # Extract min characters from name if present (e.g., "(2+)" or "(3)")
+                    min_chars = 1
+                    char_match = re.search(r"\((\d+)\+?\)", name)
+                    if char_match:
+                        min_chars = int(char_match.group(1))
+                    
+                    # Also infer from placeholders in description (e.g. {char3} -> needs 3)
+                    # Find all {charN} patterns
+                    placeholders = re.findall(r"\{char(\d+)\}", desc)
+                    if placeholders:
+                        max_placeholder = max(int(p) for p in placeholders)
+                        min_chars = max(min_chars, max_placeholder)
+                    
+                    # Store as structured dict
+                    interactions[current][name] = {
+                        "description": re.sub(r"^\([^)]+\)\s*", "", desc),
+                        "min_chars": min_chars
+                    }
 
         interactions = {k: v for k, v in interactions.items() if v}
         return interactions

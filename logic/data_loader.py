@@ -300,7 +300,8 @@ Common tags used to categorize characters. One tag per line.
                 chars = MarkdownParser.parse_characters(text)
 
         if not chars:
-            raise ValueError(
+            from core.exceptions import DataLoadError
+            raise DataLoadError(
                 "No characters parsed from characters/ folder or characters.md. Please check the file format."
             )
 
@@ -472,8 +473,11 @@ Soft semi-realistic illustration with clear, natural lighting. Fresh muted flora
 
         default_interactions = {
             "Basic Interactions": {
-                "Blank": "",
-                "Conversation": "{char1} engaged in conversation with {char2}, both looking at each other with friendly expressions",
+                "Blank": {"description": "", "min_chars": 1},
+                "Conversation": {
+                    "description": "{char1} engaged in conversation with {char2}, both looking at each other with friendly expressions",
+                    "min_chars": 2
+                },
             }
         }
 
@@ -498,27 +502,45 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
         return interactions if interactions else default_interactions
 
     def get_editable_files(self):
-        """Get list of editable files, including character files from characters/ folder if they exist.
+        """Get list of editable files, dynamically scanning data directory.
 
         Returns:
             list: List of editable filenames
         """
-        from config import MAIN_EDITABLE_FILES
+        editable_files = set()
+        
+        # Priority list for ordering
+        priority_files = ["base_prompts.md", "scenes.md", "poses.md", "outfits_f.md", "outfits_m.md", "interactions.md", "color_schemes.md"]
+        
+        # Scan data directory
+        data_dir = self.base_dir / "data"
+        if data_dir.exists() and data_dir.is_dir():
+            for f in data_dir.glob("*.md"):
+                editable_files.add(f.name)
 
-        files = list(MAIN_EDITABLE_FILES)
+        # Also check root for legacy compatibility
+        for f in self.base_dir.glob("*.md"):
+             # Simple check to avoid README etc if we only want data files, 
+             # but keeping it simple to match previous behavior of "checking root"
+             if f.name in priority_files or f.name == "characters.md":
+                 editable_files.add(f.name)
+
+        # Sort: priority files first, then alphabetical
+        sorted_files = []
+        for f in priority_files:
+            if f in editable_files:
+                sorted_files.append(f)
+                editable_files.remove(f)
+        
+        sorted_files.extend(sorted(list(editable_files)))
 
         # Check for character files in characters/ folder
         char_dir = self._find_characters_dir()
         if char_dir.exists() and char_dir.is_dir():
             char_files = sorted([f.name for f in char_dir.glob("*.md")])
-            files.extend(char_files)
+            sorted_files.extend(char_files)
 
-        # Check for legacy characters.md in root
-        root_char = self.base_dir / "characters.md"
-        if root_char.exists() and "characters.md" not in files:
-            files.append("characters.md")
-
-        return files
+        return sorted_files
 
     def load_color_schemes(self):
         """Load and parse color_schemes.md file. Creates file if not found.

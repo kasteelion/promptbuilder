@@ -6,10 +6,15 @@ Note: UI-specific constants have been moved to ui/constants.py
 # File paths
 # NOTE: Character files are loaded dynamically from the characters/ folder.
 # These are the main data files that can be edited through the UI.
-MAIN_EDITABLE_FILES = ["base_prompts.md", "scenes.md", "poses.md", "outfits_f.md", "outfits_m.md"]
+# MAIN_EDITABLE_FILES has been deprecated in favor of dynamic discovery in DataLoader.
+
 
 # Default theme
-DEFAULT_THEME = "Light"
+DEFAULT_THEME = "Dark"
+
+# Font settings
+DEFAULT_FONT_FAMILY = "Consolas"
+DEFAULT_FONT_SIZE = 12
 
 # Theme definitions
 THEMES = {

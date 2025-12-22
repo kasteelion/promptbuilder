@@ -4,8 +4,7 @@ import os
 import tkinter as tk
 import tkinter.font as tkfont
 
-from config import THEMES
-from ui.constants import DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
+from config import THEMES, DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
 from utils import logger
 
 

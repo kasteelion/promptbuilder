@@ -1,8 +1,7 @@
 """UI-specific constants for the Prompt Builder application."""
 
 # Font settings
-DEFAULT_FONT_FAMILY = "Consolas"
-DEFAULT_FONT_SIZE = 12
+# DEFAULT_FONT_FAMILY and DEFAULT_FONT_SIZE are now in config.py
 MIN_FONT_SIZE = 9
 MAX_FONT_SIZE = 16
 

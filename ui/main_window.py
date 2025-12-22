@@ -6,8 +6,10 @@ import tkinter as tk
 from tkinter import ttk
 from typing import Optional
 
-from config import DEFAULT_THEME, TOOLTIPS
+from config import DEFAULT_THEME, TOOLTIPS, DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
+from core.app_context import AppContext
 from core.builder import PromptBuilder
+from core.exceptions import DataLoadError
 from logic import DataLoader, PromptRandomizer, validate_prompt_config
 from themes import ThemeManager
 from utils import PreferencesManager, create_tooltip, logger
@@ -15,7 +17,7 @@ from utils.interaction_helpers import fill_template
 
 from .character_card import CharacterGalleryPanel
 from .characters_tab import CharactersTab
-from .constants import DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE, PREVIEW_UPDATE_THROTTLE_MS
+from .constants import PREVIEW_UPDATE_THROTTLE_MS
 from .controllers.gallery import GalleryController
 from .controllers.menu_actions import MenuActions
 from .controllers.window_state import WindowStateController
@@ -45,8 +47,12 @@ class PromptBuilderApp:
         # Hide window during setup to prevent flickering/resizing
         self.root.withdraw()
 
-        # Initialize preferences first
-        self.prefs = PreferencesManager()
+        # Initialize Application Context
+        self.ctx = AppContext(self.root)
+        self.ctx.initialize_ui_services()
+
+        # Initialize preferences first (via context)
+        self.prefs = self.ctx.prefs
 
         # Initialize managers (font and state managers will be set up after UI)
         self.font_manager: Optional[FontManager] = None
@@ -54,43 +60,44 @@ class PromptBuilderApp:
         self.menu_manager: Optional[MenuManager] = None
         self.dialog_manager = DialogManager(self.root, self.prefs)
 
-        # Initialize data
-        self.data_loader = DataLoader()
+        # Initialize data via context
+        self.data_loader = self.ctx.data_loader
 
         try:
-            self.characters = self.data_loader.load_characters()
-        except Exception:
-            logger.exception("Error loading characters")
-            # Show a concise message to the user and exit
+            self.ctx.load_data()
+        except DataLoadError as e:
+            logger.exception("Error loading data")
             self.dialog_manager.show_error(
-                "Error loading characters", "Failed to load character data; see log for details."
+                "Error loading data", f"Failed to load application data: {e}\nSee log for details."
+            )
+            self.root.destroy()
+            return
+        except Exception as e:
+            logger.exception("Unexpected error loading data")
+            self.dialog_manager.show_error(
+                "Critical Error", f"An unexpected error occurred: {e}"
             )
             self.root.destroy()
             return
 
-        self.base_prompts = self.data_loader.load_base_prompts()
-        self.scenes = self.data_loader.load_presets("scenes.md")
-        self.poses = self.data_loader.load_presets("poses.md")
-        self.interactions = self.data_loader.load_interactions()
-        self.color_schemes = self.data_loader.load_color_schemes()
-        self.randomizer = PromptRandomizer(
-            self.characters, self.base_prompts, self.poses, self.scenes, self.interactions
-        )
+        # Aliases for compatibility
+        self.characters = self.ctx.characters
+        self.base_prompts = self.ctx.base_prompts
+        self.scenes = self.ctx.scenes
+        self.poses = self.ctx.poses
+        self.interactions = self.ctx.interactions
+        self.color_schemes = self.ctx.color_schemes
+        self.randomizer = self.ctx.randomizer
+        
+        self.theme_manager = self.ctx.theme_manager
+        self.toasts = self.ctx.toasts
 
-        # Initialize theme manager
-        self.style = ttk.Style()
-        self.theme_manager = ThemeManager(self.root, self.style)
-        # Toast manager for transient notifications
-        from .toast import ToastManager
-
-        self.toasts = ToastManager(self.root, self.theme_manager)
         # Expose toast manager and status updater on the root so DialogManager
         # and other helpers can prefer non-blocking notifications.
         try:
-            self.root.toasts = self.toasts
             self.root._update_status = self._update_status
         except Exception:
-            logger.exception("Failed to attach toasts/status to root")
+            logger.exception("Failed to attach status to root")
 
         # Throttling for preview updates
         self._after_id: Optional[str] = None

@@ -72,13 +72,20 @@ class PreviewPanel:
                 row=0, column=0, sticky="w"
             )
 
-        # Right-side controls
+        # Right-side controls - Use grid for better layout control
         controls_frame = ttk.Frame(hdr, style="TFrame")
-        controls_frame.grid(row=0, column=1, sticky="e")
+        controls_frame.grid(row=0, column=1, sticky="e", padx=(5, 0))
+        
+        # Configure button grid
+        controls_frame.columnconfigure(0, weight=0)
+        controls_frame.columnconfigure(1, weight=0)
+        controls_frame.columnconfigure(2, weight=0)
+        controls_frame.columnconfigure(3, weight=0)
+        controls_frame.columnconfigure(4, weight=0)
 
         # Copy menu button
         copy_menu_btn = ttk.Menubutton(controls_frame, text="Copy", style="TButton")
-        copy_menu_btn.pack(side="left", padx=2)
+        copy_menu_btn.grid(row=0, column=0, padx=2)
 
         copy_menu = tk.Menu(copy_menu_btn, tearoff=0)
         copy_menu_btn["menu"] = copy_menu
@@ -91,23 +98,19 @@ class PreviewPanel:
         copy_menu.add_command(label="Notes Section", command=lambda: self._copy_section("notes"))
 
         # Save button
-        ttk.Button(controls_frame, text="Save", command=self.save_prompt).pack(side="left", padx=2)
+        ttk.Button(controls_frame, text="Save", command=self.save_prompt).grid(row=0, column=1, padx=2)
 
-        # Clear button (clears preview and calls optional clear callback in host)
-        ttk.Button(controls_frame, text="Clear", command=self._on_clear).pack(side="left", padx=2)
+        # Clear button
+        ttk.Button(controls_frame, text="Clear", command=self._on_clear).grid(row=0, column=2, padx=2)
 
         # Randomize button
-        ttk.Button(controls_frame, text="🎲 Randomize", command=self.on_randomize).pack(
-            side="left", padx=2
-        )
+        ttk.Button(controls_frame, text="🎲 Rand", command=self.on_randomize).grid(row=0, column=3, padx=2)
 
         # Reload button
-        ttk.Button(controls_frame, text="🔄 Reload", command=self.on_reload).pack(
-            side="left", padx=2
-        )
+        ttk.Button(controls_frame, text="🔄 Reload", command=self.on_reload).grid(row=0, column=4, padx=2)
 
-        # Preview text widget
-        self.preview_text = tk.Text(self.parent, wrap="word")
+        # Preview text widget with scrollbar
+        self.preview_text = scrolledtext.ScrolledText(self.parent, wrap="word")
         self.preview_text.grid(row=1, column=0, sticky="nsew")
 
         # Bind Ctrl+C for copy and Ctrl+S for save
