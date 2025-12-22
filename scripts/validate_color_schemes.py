@@ -8,6 +8,7 @@ SCHEME_HEADER = re.compile(r"^## (.+)")
 PRIMARY = re.compile(r"^- \*\*primary:\*\* (.+)")
 SECONDARY = re.compile(r"^- \*\*secondary:\*\* (.+)")
 ACCENT = re.compile(r"^- \*\*accent:\*\* (.+)")
+TEAM = re.compile(r"^- \*\*team:\*\* (.+)")
 
 
 def validate_color_schemes(filepath):
@@ -19,7 +20,7 @@ def validate_color_schemes(filepath):
         line = lines[i]
         if SCHEME_HEADER.match(line):
             scheme = SCHEME_HEADER.match(line).group(1)
-            found = {"primary": False, "secondary": False, "accent": False}
+            found = {"primary": False, "secondary": False, "accent": False, "team": False}
             for j in range(1, 6):
                 if i + j >= len(lines):
                     break
@@ -30,6 +31,8 @@ def validate_color_schemes(filepath):
                     found["secondary"] = True
                 elif ACCENT.match(l2):
                     found["accent"] = True
+                elif TEAM.match(l2):
+                    found["team"] = True
                 elif SCHEME_HEADER.match(l2):
                     break
             for k, v in found.items():

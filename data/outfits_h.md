@@ -448,7 +448,7 @@
 
 ### American Football - Away
 - **Hijab:** Sports hijab in {secondary_color} (breathable technical fabric, secure tuck)
-- **Top:** football jersey in {secondary_color} with {primary_color} number (modest fit) worn over long-sleeve {accent} compression top
+- **Top:** football jersey for {team} in {secondary_color} with {primary_color} number (modest fit) worn over long-sleeve {accent} compression top
 - **Bottom:** padded football pants in {secondary_color} with {primary_color} accents (knee-length with secure fit); with full-length {accent} leggings underneath
 - **Footwear:** Football cleats ({accent})
 - **Accessories:** Mouthguard, wrist coach band, football helmet
@@ -456,7 +456,7 @@
 
 ### American Football - Home
 - **Hijab:** Sports hijab in {primary_color} (breathable technical fabric, secure tuck)
-- **Top:** football jersey in {primary_color} with {secondary_color} number (modest fit) worn over long-sleeve {accent} compression top
+- **Top:** football jersey for {team} in {primary_color} with {secondary_color} number (modest fit) worn over long-sleeve {accent} compression top
 - **Bottom:** padded football pants in {secondary_color} with {primary_color} accents (knee-length with secure fit); with full-length {accent} leggings underneath
 - **Footwear:** Football cleats ({accent})
 - **Accessories:** Mouthguard, wrist coach band, football helmet
@@ -464,7 +464,7 @@
 
 ### Baseball - Away
 - **Hijab:** Sports hijab in {secondary_color} (breathable, secure fit)
-- **Top:** Long-sleeve baseball jersey in {secondary_color} with {primary_color} accents (button-up, team logo and number, modest fit)
+- **Top:** Long-sleeve baseball jersey for {team} in {secondary_color} with {primary_color} accents (button-up, team logo and number, modest fit)
 - **Bottom:** Gray baseball pants (belted, with {primary_color} piping) worn over full-length {accent} leggings
 - **Footwear:** Cleats ({accent})
 - **Accessories:** Team cap (worn over hijab), batting gloves, wristbands optional, small gold studs
@@ -472,7 +472,7 @@
 
 ### Baseball - Home
 - **Hijab:** Sports hijab in {primary_color} (breathable, secure fit)
-- **Top:** Long-sleeve baseball jersey in {primary_color} with {secondary_color} accents (button-up, team logo and number, modest fit)
+- **Top:** Long-sleeve baseball jersey for {team} in {primary_color} with {secondary_color} accents (button-up, team logo and number, modest fit)
 - **Bottom:** White baseball pants (belted, with {secondary_color} piping) worn over full-length {accent} leggings
 - **Footwear:** Cleats ({accent})
 - **Accessories:** Team cap (worn over hijab), batting gloves, wristbands optional, small gold studs
@@ -480,7 +480,7 @@
 
 ### Basketball - Away
 - **Hijab:** Sports hijab in {secondary_color} (breathable, secure fit)
-- **Top:** Long-sleeve fitted athletic top in {secondary_color} with {primary_color} accents (moisture-wicking fabric with team name/logo and player number)
+- **Top:** Long-sleeve fitted athletic top for {team} in {secondary_color} with {primary_color} accents (moisture-wicking fabric with team name/logo and player number)
 - **Bottom:** Full-length athletic leggings in {secondary_color} with {primary_color} accents
 - **Footwear:** Basketball shoes ({accent}, high-tops or low-tops)
 - **Accessories:** Wristbands, hair secured
@@ -488,7 +488,7 @@
 
 ### Basketball - Home
 - **Hijab:** Sports hijab in {primary_color} (breathable, secure fit)
-- **Top:** Long-sleeve fitted athletic top in {primary_color} with {secondary_color} accents (moisture-wicking fabric with team name/logo and player number)
+- **Top:** Long-sleeve fitted athletic top for {team} in {primary_color} with {secondary_color} accents (moisture-wicking fabric with team name/logo and player number)
 - **Bottom:** Full-length athletic leggings in {primary_color} with {secondary_color} accents
 - **Footwear:** Basketball shoes ({accent}, high-tops or low-tops)
 - **Accessories:** Wristbands, hair secured
@@ -496,7 +496,7 @@
 
 ### Beach Volleyball - Away
 - **Hijab:** Sports swim hijab in {secondary_color} (quick-dry performance fabric)
-- **Top:** Long-sleeve athletic swim top in {secondary_color} with {primary_color} accents (performance fabric with secure fit, modest coverage)
+- **Top:** Long-sleeve athletic swim top for {team} in {secondary_color} with {primary_color} accents (performance fabric with secure fit, modest coverage)
 - **Bottom:** Athletic swim leggings in {secondary_color} with {primary_color} accents (performance fabric)
 - **Footwear:** Athletic sandals or barefoot
 - **Accessories:** Sunglasses, visor optional
@@ -504,7 +504,7 @@
 
 ### Beach Volleyball - Home
 - **Hijab:** Sports swim hijab in {primary_color} (quick-dry performance fabric)
-- **Top:** Long-sleeve athletic swim top in {primary_color} with {secondary_color} accents (performance fabric with secure fit, modest coverage)
+- **Top:** Long-sleeve athletic swim top for {team} in {primary_color} with {secondary_color} accents (performance fabric with secure fit, modest coverage)
 - **Bottom:** Athletic swim leggings in {primary_color} with {secondary_color} accents (performance fabric)
 - **Footwear:** Athletic sandals or barefoot
 - **Accessories:** Sunglasses, visor optional
@@ -512,7 +512,7 @@
 
 ### Bowling - Away
 - **Hijab:** Sports hijab in {secondary_color} (breathable, practical)
-- **Top:** Fitted performance polo or athletic top in {secondary_color} with {primary_color} accents (moisture-wicking fabric with team logo, modest high neck)
+- **Top:** Fitted performance polo or athletic top for {team} in {secondary_color} with {primary_color} accents (moisture-wicking fabric with team logo, modest high neck)
 - **Bottom:** **BLACK athletic midi skirt** with built-in full-length leggings
 - **Footwear:** Bowling shoes ({accent})
 - **Accessories:** Wrist support optional, simple gold studs
@@ -520,7 +520,7 @@
 
 ### Bowling - Home
 - **Hijab:** Sports hijab in {primary_color} (breathable, practical)
-- **Top:** Fitted performance polo or athletic top in {primary_color} with {secondary_color} accents (moisture-wicking fabric with team logo, modest high neck)
+- **Top:** Fitted performance polo or athletic top for {team} in {primary_color} with {secondary_color} accents (moisture-wicking fabric with team logo, modest high neck)
 - **Bottom:** **BLACK athletic midi skirt** with built-in full-length leggings
 - **Footwear:** Bowling shoes ({accent})
 - **Accessories:** Wrist support optional, simple gold studs
@@ -544,7 +544,7 @@
 
 ### Esports Jersey
 - **Hijab:** **Black** jersey hijab (sleek wrap)
-- **Top:** Long-sleeve **pro-style jersey** with modest loose fit; **white** torso base with **black** sleeves; bold **{primary_color}** sash stripe cutting diagonally across the chest
+- **Top:** Long-sleeve **pro-style jersey** for **{team}** with modest loose fit; **white** torso base with **black** sleeves; bold **{primary_color}** sash stripe cutting diagonally across the chest
 - **Bottom:** **Black** wide-leg track pants
 - **Footwear:** High-top sneakers
 - **Accessories:** Gaming headset (worn over hijab), wristbands
@@ -560,7 +560,7 @@
 
 ### Soccer - Away
 - **Hijab:** Sports hijab in {secondary_color} (breathable, secure fit)
-- **Top:** Long-sleeve fitted jersey in {secondary_color} with {primary_color} accents (moisture-wicking performance fabric with team logo and number)
+- **Top:** Long-sleeve fitted jersey for {team} in {secondary_color} with {primary_color} accents (moisture-wicking performance fabric with team logo and number)
 - **Bottom:** Full-length athletic leggings in {secondary_color} with {primary_color} accents
 - **Footwear:** Soccer cleats ({accent})
 - **Accessories:** Shin guards, hair secured, sweatbands optional
@@ -568,7 +568,7 @@
 
 ### Soccer - Home
 - **Hijab:** Sports hijab in {primary_color} (breathable, secure fit)
-- **Top:** Long-sleeve fitted jersey in {primary_color} with {secondary_color} accents (moisture-wicking performance fabric with team logo and number)
+- **Top:** Long-sleeve fitted jersey for {team} in {primary_color} with {secondary_color} accents (moisture-wicking performance fabric with team logo and number)
 - **Bottom:** Full-length athletic leggings in {primary_color} with {secondary_color} accents
 - **Footwear:** Soccer cleats ({accent})
 - **Accessories:** Shin guards, hair secured, sweatbands optional
@@ -576,7 +576,7 @@
 
 ### Softball - Away
 - **Hijab:** Sports hijab in {secondary_color} (breathable, secure fit)
-- **Top:** Long-sleeve softball jersey in {secondary_color} with {primary_color} accents (button-up or pullover, team logo and number, modest fit)
+- **Top:** Long-sleeve softball jersey for {team} in {secondary_color} with {primary_color} accents (button-up or pullover, team logo and number, modest fit)
 - **Bottom:** Gray softball pants (belted, with {primary_color} piping) worn over full-length {accent} leggings
 - **Footwear:** Cleats ({accent})
 - **Accessories:** Team cap or visor (worn over hijab), batting gloves, wristbands optional, small gold studs
@@ -584,7 +584,7 @@
 
 ### Softball - Home
 - **Hijab:** Sports hijab in {primary_color} (breathable, secure fit)
-- **Top:** Long-sleeve softball jersey in {primary_color} with {secondary_color} accents (button-up or pullover, team logo and number, modest fit)
+- **Top:** Long-sleeve softball jersey for {team} in {primary_color} with {secondary_color} accents (button-up or pullover, team logo and number, modest fit)
 - **Bottom:** White softball pants (belted, with {secondary_color} piping) worn over full-length {accent} leggings
 - **Footwear:** Cleats ({accent})
 - **Accessories:** Team cap or visor (worn over hijab), batting gloves, wristbands optional, small gold studs
@@ -624,7 +624,7 @@
 
 ### Track and Field - Away
 - **Hijab:** Sports hijab in {secondary_color} (breathable, secure fit)
-- **Top:** Long-sleeve fitted athletic top in {secondary_color} with {primary_color} accents (moisture-wicking, high neck)
+- **Top:** Long-sleeve fitted athletic top for {team} in {secondary_color} with {primary_color} accents (moisture-wicking, high neck)
 - **Bottom:** Full-length athletic leggings in {secondary_color} with {primary_color} accents (lightweight performance fabric)
 - **Footwear:** Track spikes or running shoes ({accent})
 - **Accessories:** Race number bib, hair secured
@@ -632,7 +632,7 @@
 
 ### Track and Field - Home
 - **Hijab:** Sports hijab in {primary_color} (breathable, secure fit)
-- **Top:** Long-sleeve fitted athletic top in {primary_color} with {secondary_color} accents (moisture-wicking, high neck)
+- **Top:** Long-sleeve fitted athletic top for {team} in {primary_color} with {secondary_color} accents (moisture-wicking, high neck)
 - **Bottom:** Full-length athletic leggings in {primary_color} with {secondary_color} accents (lightweight performance fabric)
 - **Footwear:** Track spikes or running shoes ({accent})
 - **Accessories:** Race number bib, hair secured
@@ -640,18 +640,18 @@
 
 ### Volleyball - Away
 - **Hijab:** Sports hijab in {secondary_color} (breathable, secure fit)
-- **Top:** Long-sleeve fitted athletic top in {secondary_color} with {primary_color} accents (moisture-wicking performance fabric with team logo and number)
-- **Bottom:** Full-length athletic leggings in {secondary_color} with {primary_color} accents (performance fabric for movement)
-- **Footwear:** Volleyball shoes ({accent}, court-appropriate with ankle support)
-- **Accessories:** Knee pads, hair secured, sweatbands optional
+- **Top:** Long-sleeve **pro-style jersey** for **{team}** in **{secondary_color}** featuring **{primary_color} angular side panels** and **white piping**; modest high neck; performance fabric with subtle **geometric texture**; large player number centered
+- **Bottom:** Full-length **athletic leggings** in **{secondary_color}** with **{primary_color} side stripes**
+- **Footwear:** **Volleyball shoes** ({accent} with gum soles)
+- **Accessories:** **Black** knee pads, athletic tape on fingers
 - **Makeup:** Minimal makeup
 
 ### Volleyball - Home
 - **Hijab:** Sports hijab in {primary_color} (breathable, secure fit)
-- **Top:** Long-sleeve fitted athletic top in {primary_color} with {secondary_color} accents (moisture-wicking performance fabric with team logo and number)
-- **Bottom:** Full-length athletic leggings in {primary_color} with {secondary_color} accents (performance fabric for movement)
-- **Footwear:** Volleyball shoes ({accent}, court-appropriate with ankle support)
-- **Accessories:** Knee pads, hair secured, sweatbands optional
+- **Top:** Long-sleeve **pro-style jersey** for **{team}** in **{primary_color}** featuring **{secondary_color} angular side panels** and **white piping**; modest high neck; performance fabric with subtle **geometric texture**; large player number centered
+- **Bottom:** Full-length **athletic leggings** in **{primary_color}** with **{secondary_color} side stripes**
+- **Footwear:** **Volleyball shoes** ({accent} with gum soles)
+- **Accessories:** **White** knee pads, athletic tape on fingers
 - **Makeup:** Minimal makeup
 
 ### Wrestling - Away

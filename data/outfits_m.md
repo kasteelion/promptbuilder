@@ -210,28 +210,28 @@ Simple **swim trunks or board shorts**. *Accessories:* None specified. *Hair/Mak
 ## Team Sports
 
 ### American Football - Away
-**Football jersey** in **{secondary_color} with {primary_color} accents** (mesh performance fabric with team number); **padded football pants** in **{secondary_color} with {primary_color} stripes** (knee-length); **football cleats**. *Accessories:* **Helmet** ({secondary_color} with {primary_color} face mask), **shoulder pads** (worn under jersey), mouthguard. *Hair/Makeup:* Minimal grooming.
+**Football jersey** for **{team}** in **{secondary_color} with {primary_color} accents** (mesh performance fabric with team number); **padded football pants** in **{secondary_color} with {primary_color} stripes** (knee-length); **football cleats**. *Accessories:* **Helmet** ({secondary_color} with {primary_color} face mask), **shoulder pads** (worn under jersey), mouthguard. *Hair/Makeup:* Minimal grooming.
 
 ### American Football - Home
-**Football jersey** in **{primary_color} with {secondary_color} accents** (mesh performance fabric with team number); **padded football pants** in **{secondary_color} with {primary_color} stripes** (knee-length); **football cleats**. *Accessories:* **Helmet** ({primary_color} with {secondary_color} face mask), **shoulder pads** (worn under jersey), mouthguard. *Hair/Makeup:* Minimal grooming.
+**Football jersey** for **{team}** in **{primary_color} with {secondary_color} accents** (mesh performance fabric with team number); **padded football pants** in **{secondary_color} with {primary_color} stripes** (knee-length); **football cleats**. *Accessories:* **Helmet** ({primary_color} with {secondary_color} face mask), **shoulder pads** (worn under jersey), mouthguard. *Hair/Makeup:* Minimal grooming.
 
 ### Baseball - Away
-**Baseball jersey** in **{secondary_color} with {primary_color} accents** (button-up, team logo and number); **gray baseball pants** (belted, with {primary_color} piping); **team cap** ({secondary_color} with {primary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+**Baseball jersey** for **{team}** in **{secondary_color} with {primary_color} accents** (button-up, team logo and number); **gray baseball pants** (belted, with {primary_color} piping); **team cap** ({secondary_color} with {primary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
 
 ### Baseball - Home
-**Baseball jersey** in **{primary_color} with {secondary_color} accents** (button-up, team logo and number); **white baseball pants** (belted, with {secondary_color} piping); **team cap** ({primary_color} with {secondary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+**Baseball jersey** for **{team}** in **{primary_color} with {secondary_color} accents** (button-up, team logo and number); **white baseball pants** (belted, with {secondary_color} piping); **team cap** ({primary_color} with {secondary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
 
 ### Basketball - Away
-Fitted **sleeveless jersey** in **{secondary_color} with {primary_color} accents** (moisture-wicking fabric with team name/logo and player number); **athletic shorts** in **{secondary_color} with {primary_color} accents** (loose fit for movement); **basketball shoes** (high-tops or low-tops). *Accessories:* Headband, wristbands. *Hair/Makeup:* Hair short or secured, minimal grooming.
+Fitted **sleeveless jersey** for **{team}** in **{secondary_color} with {primary_color} accents** (moisture-wicking fabric with team name/logo and player number); **athletic shorts** in **{secondary_color} with {primary_color} accents** (loose fit for movement); **basketball shoes** (high-tops or low-tops). *Accessories:* Headband, wristbands. *Hair/Makeup:* Hair short or secured, minimal grooming.
 
 ### Basketball - Home
-Fitted **sleeveless jersey** in **{primary_color} with {secondary_color} accents** (moisture-wicking fabric with team name/logo and player number); **athletic shorts** in **{primary_color} with {secondary_color} accents** (loose fit for movement); **basketball shoes** (high-tops or low-tops). *Accessories:* Headband, wristbands. *Hair/Makeup:* Hair short or secured, minimal grooming.
+Fitted **sleeveless jersey** for **{team}** in **{primary_color} with {secondary_color} accents** (moisture-wicking fabric with team name/logo and player number); **athletic shorts** in **{primary_color} with {secondary_color} accents** (loose fit for movement); **basketball shoes** (high-tops or low-tops). *Accessories:* Headband, wristbands. *Hair/Makeup:* Hair short or secured, minimal grooming.
 
 ### Beach Volleyball - Away
-**Athletic shorts or swim trunks** in **{secondary_color} with {primary_color} accents** (performance fabric). *Accessories:* Sunglasses, visor or hat optional. *Hair/Makeup:* Sunscreen, minimal grooming, hair short or secured.
+**Athletic shorts or swim trunks** for **{team}** in **{secondary_color} with {primary_color} accents** (performance fabric). *Accessories:* Sunglasses, visor or hat optional. *Hair/Makeup:* Sunscreen, minimal grooming, hair short or secured.
 
 ### Beach Volleyball - Home
-**Athletic shorts or swim trunks** in **{primary_color} with {secondary_color} accents** (performance fabric). *Accessories:* Sunglasses, visor or hat optional. *Hair/Makeup:* Sunscreen, minimal grooming, hair short or secured.
+**Athletic shorts or swim trunks** for **{team}** in **{primary_color} with {secondary_color} accents** (performance fabric). *Accessories:* Sunglasses, visor or hat optional. *Hair/Makeup:* Sunscreen, minimal grooming, hair short or secured.
 
 ### Bowling - Away
 Fitted **performance polo** in **{secondary_color} with {primary_color} accents** (moisture-wicking fabric with team logo and name on back); **BLACK performance pants** (tailored fit); **bowling shoes** ({accent}). *Accessories:* Wrist support optional, team logo on collar. *Hair/Makeup:* Hair short or secured, neat grooming.
@@ -240,25 +240,25 @@ Fitted **performance polo** in **{secondary_color} with {primary_color} accents*
 Fitted **performance polo** in **{primary_color} with {secondary_color} accents** (moisture-wicking fabric with team logo and name on back); **BLACK performance pants** (tailored fit); **bowling shoes** ({accent}). *Accessories:* Wrist support optional, team logo on collar. *Hair/Makeup:* Hair short or secured, neat grooming.
 
 ### Cheerleading - Away
-Fitted **sleeveless or short-sleeve athletic top** in **{secondary_color} with {primary_color} accents** (performance fabric with team name/logo); **athletic shorts** in **{secondary_color} with {primary_color} accents**; **cheer shoes** ({secondary_color} with team color accents). *Accessories:* Wristbands optional. *Hair/Makeup:* Hair styled or secured, minimal grooming.
+Fitted **sleeveless or short-sleeve athletic top** for **{team}** in **{secondary_color} with {primary_color} accents** (performance fabric with team name/logo); **athletic shorts** in **{secondary_color} with {primary_color} accents**; **cheer shoes** ({secondary_color} with team color accents). *Accessories:* Wristbands optional. *Hair/Makeup:* Hair styled or secured, minimal grooming.
 
 ### Cheerleading - Home
-Fitted **sleeveless or short-sleeve athletic top** in **{primary_color} with {secondary_color} accents** (performance fabric with team name/logo); **athletic shorts** in **{primary_color} with {secondary_color} accents**; **cheer shoes** ({primary_color} with team color accents). *Accessories:* Wristbands optional. *Hair/Makeup:* Hair styled or secured, minimal grooming.
+Fitted **sleeveless or short-sleeve athletic top** for **{team}** in **{primary_color} with {secondary_color} accents** (performance fabric with team name/logo); **athletic shorts** in **{primary_color} with {secondary_color} accents**; **cheer shoes** ({primary_color} with team color accents). *Accessories:* Wristbands optional. *Hair/Makeup:* Hair styled or secured, minimal grooming.
 
 ### Esports Jersey
-**Pro-style V-neck jersey** featuring an **asymmetric diagonal design**; **white** torso base with contrasting **black** sleeves and side panels; a bold **{primary_color}** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** tactical-style joggers. *Accessories:* Gaming headset, smart watch. *Hair/Makeup:* Clean modern styling.
+**Pro-style V-neck jersey** for **{team}** featuring an **asymmetric diagonal design**; **white** torso base with contrasting **black** sleeves and side panels; a bold **{primary_color}** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** tactical-style joggers. *Accessories:* Gaming headset, smart watch. *Hair/Makeup:* Clean modern styling.
 
 ### Soccer - Away
-Fitted **jersey** in **{secondary_color} with {primary_color} accents** (moisture-wicking performance fabric with team logo and number); **athletic shorts** in **{secondary_color} with {primary_color} accents**; **soccer socks** in **{secondary_color} with {primary_color} stripes**; **soccer cleats**. *Accessories:* Shin guards, sweatbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+Fitted **jersey** for **{team}** in **{secondary_color} with {primary_color} accents** (moisture-wicking performance fabric with team logo and number); **athletic shorts** in **{secondary_color} with {primary_color} accents**; **soccer socks** in **{secondary_color} with {primary_color} stripes**; **soccer cleats**. *Accessories:* Shin guards, sweatbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
 
 ### Soccer - Home
-Fitted **jersey** in **{primary_color} with {secondary_color} accents** (moisture-wicking performance fabric with team logo and number); **athletic shorts** in **{primary_color} with {secondary_color} accents**; **soccer socks** in **{primary_color} with {secondary_color} stripes**; **soccer cleats**. *Accessories:* Shin guards, sweatbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+Fitted **jersey** for **{team}** in **{primary_color} with {secondary_color} accents** (moisture-wicking performance fabric with team logo and number); **athletic shorts** in **{primary_color} with {secondary_color} accents**; **soccer socks** in **{primary_color} with {secondary_color} stripes**; **soccer cleats**. *Accessories:* Shin guards, sweatbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
 
 ### Softball - Away
-**Softball jersey** in **{secondary_color} with {primary_color} accents** (button-up or pullover, team logo and number); **gray softball pants** (belted, with {primary_color} piping); **team cap or visor** ({secondary_color} with {primary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+**Softball jersey** for **{team}** in **{secondary_color} with {primary_color} accents** (button-up or pullover, team logo and number); **gray softball pants** (belted, with {primary_color} piping); **team cap or visor** ({secondary_color} with {primary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
 
 ### Softball - Home
-**Softball jersey** in **{primary_color} with {secondary_color} accents** (button-up or pullover, team logo and number); **white softball pants** (belted, with {secondary_color} piping); **team cap or visor** ({primary_color} with {secondary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+**Softball jersey** for **{team}** in **{primary_color} with {secondary_color} accents** (button-up or pullover, team logo and number); **white softball pants** (belted, with {secondary_color} piping); **team cap or visor** ({primary_color} with {secondary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
 
 ### Swimming - Away
 **Competition swim brief or jammer** in **{secondary_color} with {primary_color} accents** (high-performance technical fabric); **swim cap** in **{secondary_color} with {primary_color} logo**; **racing goggles**. *Accessories:* Team warm-up jacket and pants optional. *Hair/Makeup:* Hair short or secured under cap, minimal grooming.
@@ -267,22 +267,22 @@ Fitted **jersey** in **{primary_color} with {secondary_color} accents** (moistur
 **Competition swim brief or jammer** in **{primary_color} with {secondary_color} accents** (high-performance technical fabric); **swim cap** in **{primary_color} with {secondary_color} logo**; **racing goggles**. *Accessories:* Team warm-up jacket and pants optional. *Hair/Makeup:* Hair short or secured under cap, minimal grooming.
 
 ### Tennis - Away
-**Performance polo or t-shirt** in **{secondary_color} with {primary_color} accents** (moisture-wicking technical fabric); **athletic shorts** in **{secondary_color} with {primary_color} accents**; **tennis shoes** (court-appropriate). *Accessories:* Headband or wristbands. *Hair/Makeup:* Hair short or secured, minimal grooming.
+**Performance polo or t-shirt** for **{team}** in **{secondary_color} with {primary_color} accents** (moisture-wicking technical fabric); **athletic shorts** in **{secondary_color} with {primary_color} accents**; **tennis shoes** (court-appropriate). *Accessories:* Headband or wristbands. *Hair/Makeup:* Hair short or secured, minimal grooming.
 
 ### Tennis - Home
-**Performance polo or t-shirt** in **{primary_color} with {secondary_color} accents** (moisture-wicking technical fabric); **athletic shorts** in **{primary_color} with {secondary_color} accents**; **tennis shoes** (court-appropriate). *Accessories:* Headband or wristbands. *Hair/Makeup:* Hair short or secured, minimal grooming.
+**Performance polo or t-shirt** for **{team}** in **{primary_color} with {secondary_color} accents** (moisture-wicking technical fabric); **athletic shorts** in **{primary_color} with {secondary_color} accents**; **tennis shoes** (court-appropriate). *Accessories:* Headband or wristbands. *Hair/Makeup:* Hair short or secured, minimal grooming.
 
 ### Track and Field - Away
-Fitted **sleeveless racing top or tank** in **{secondary_color} with {primary_color} accents** (lightweight performance fabric); **athletic shorts or briefs** in **{secondary_color} with {primary_color} accents** (lightweight performance fabric); **track spikes or running shoes**. *Accessories:* Race number bib. *Hair/Makeup:* Minimal grooming, hair short or secured.
+Fitted **sleeveless racing top or tank** for **{team}** in **{secondary_color} with {primary_color} accents** (lightweight performance fabric); **athletic shorts or briefs** in **{secondary_color} with {primary_color} accents** (lightweight performance fabric); **track spikes or running shoes**. *Accessories:* Race number bib. *Hair/Makeup:* Minimal grooming, hair short or secured.
 
 ### Track and Field - Home
-Fitted **sleeveless racing top or tank** in **{primary_color} with {secondary_color} accents** (lightweight performance fabric); **athletic shorts or briefs** in **{primary_color} with {secondary_color} accents** (lightweight performance fabric); **track spikes or running shoes**. *Accessories:* Race number bib. *Hair/Makeup:* Minimal grooming, hair short or secured.
+Fitted **sleeveless racing top or tank** for **{team}** in **{primary_color} with {secondary_color} accents** (lightweight performance fabric); **athletic shorts or briefs** in **{primary_color} with {secondary_color} accents** (lightweight performance fabric); **track spikes or running shoes**. *Accessories:* Race number bib. *Hair/Makeup:* Minimal grooming, hair short or secured.
 
 ### Volleyball - Away
-Fitted **sleeveless jersey or tank** in **{secondary_color} with {primary_color} accents** (moisture-wicking performance fabric with team logo and number); **athletic shorts** in **{secondary_color} with {primary_color} accents**; **knee pads**; **volleyball shoes** (court-appropriate with ankle support). *Accessories:* Sweatbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+**Pro-style sleeveless jersey** for **{team}** in **{secondary_color}** featuring **{primary_color} angular side panels** and **white piping**; performance fabric with subtle **geometric texture**; large player number centered. **Athletic volleyball shorts** in **{secondary_color}** (mid-thigh length) with **{primary_color} side stripes**. **Volleyball shoes** ({accent} with gum soles). *Accessories:* **Black** knee pads, compression sleeves optional. *Hair/Makeup:* Hair styled or secured, focused expression.
 
 ### Volleyball - Home
-Fitted **sleeveless jersey or tank** in **{primary_color} with {secondary_color} accents** (moisture-wicking performance fabric with team logo and number); **athletic shorts** in **{primary_color} with {secondary_color} accents**; **knee pads**; **volleyball shoes** (court-appropriate with ankle support). *Accessories:* Sweatbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
+**Pro-style sleeveless jersey** for **{team}** in **{primary_color}** featuring **{secondary_color} angular side panels** and **white piping**; performance fabric with subtle **geometric texture**; large player number centered. **Athletic volleyball shorts** in **{primary_color}** (mid-thigh length) with **{secondary_color} side stripes**. **Volleyball shoes** ({accent} with gum soles). *Accessories:* **White** knee pads, compression sleeves optional. *Hair/Makeup:* Hair styled or secured, focused expression.
 
 ### Wrestling - Away
 Fitted **singlet** in **{secondary_color} with {primary_color} accents** (lycra/spandex performance fabric with team logo); **wrestling shoes** (lightweight with ankle support). *Accessories:* Knee pads optional. *Hair/Makeup:* Hair short or tied back and messy.

@@ -111,7 +111,16 @@ class PromptBuilder:
                 pose = char.get("pose_preset") or "Default"
                 if char.get("action_note"):
                     pose = "Custom"
-                char_summaries.append(f"{name} ({outfit}, {pose})")
+                
+                parts = [outfit]
+                scheme_name = char.get("color_scheme")
+                if scheme_name:
+                    scheme = self.color_schemes.get(scheme_name, {})
+                    if "team" in scheme:
+                        parts.append(scheme["team"])
+                parts.append(pose)
+                
+                char_summaries.append(f"{name} ({', '.join(parts)})")
             summary_parts.append("👥 " + ", ".join(char_summaries))
             
         notes = config.get("notes", "").strip()

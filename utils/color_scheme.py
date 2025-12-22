@@ -21,6 +21,8 @@ def parse_color_schemes(filepath: str) -> Dict[str, Dict[str, str]]:
                 colors["secondary_color"] = line.split("**secondary:**", 1)[1].strip()
             elif line.startswith("- **accent:**"):
                 colors["accent"] = line.split("**accent:**", 1)[1].strip()
+            elif line.startswith("- **team:**"):
+                colors["team"] = line.split("**team:**", 1)[1].strip()
         if current:
             schemes[current] = colors
     return schemes

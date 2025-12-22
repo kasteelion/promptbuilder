@@ -68,7 +68,7 @@ class CharacterCard(ttk.Frame):
         self.photo_image = None  # Keep reference to prevent GC
 
         self._build_ui()
-        self._load_photo()
+        # self._load_photo()  # Deferred loading managed by parent
 
         # Add hover effect to card
         self.bind("<Enter>", self._on_enter)
@@ -636,6 +636,7 @@ class CharacterGalleryPanel(ttk.Frame):
         self.on_add_callback = on_add_callback
         self.theme_colors = theme_colors or {}
         self.characters = {}
+        self.load_queue = []  # Queue for lazy loading images
 
         self._build_ui()
 
@@ -816,6 +817,9 @@ class CharacterGalleryPanel(ttk.Frame):
         for widget in self.cards_container.winfo_children():
             widget.destroy()
 
+        # Reset load queue
+        self.load_queue = []
+
         # Get search filter (ignore placeholder text)
         search_term = self.search_var.get().lower()
         if search_term == "search...":
@@ -900,6 +904,9 @@ class CharacterGalleryPanel(ttk.Frame):
             except Exception:
                 pass
             card.grid(row=row, column=col, padx=4, pady=4, sticky="new")
+            
+            # Add to queue for lazy loading
+            self.load_queue.append(card)
 
             col += 1
             if col >= max_cols:
@@ -953,6 +960,35 @@ class CharacterGalleryPanel(ttk.Frame):
             from utils import logger
 
             logger.exception("Failed to refresh mousewheel bindings or update scroll region")
+
+        # Start processing the image load queue
+        self.after(100, self._process_load_queue)
+
+    def _process_load_queue(self):
+        """Process the image loading queue in batches."""
+        if not self.load_queue:
+            return
+
+        # Process a small batch to keep UI responsive
+        batch_size = 4
+        processed = 0
+        
+        while processed < batch_size and self.load_queue:
+            card = self.load_queue.pop(0)
+            
+            # Check if card still exists (widget might be destroyed if filter changed)
+            try:
+                if card.winfo_exists():
+                    # Trigger the threaded loader
+                    card._load_photo()
+                    processed += 1
+            except Exception:
+                # Widget likely destroyed
+                pass
+        
+        # Schedule next batch if items remain
+        if self.load_queue:
+            self.after(50, self._process_load_queue)
 
     def _on_tag_selected_from_card(self, tag_value: str):
         """Handle tag click from a card: set tag combobox and refresh display."""
