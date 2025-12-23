@@ -9,32 +9,24 @@
 
 **Appearance:**
 
-* **Body:** Natural frame; balanced athletic flesh with natural softness; moderate proportions with subtle shoulder definition, defined waist, and balanced hip line; moderate vertical (5'5"-5'6"); athletic build with powerful legs, core strength, functional upper body development, and grounded weight distribution from dance footwork; dignified powerful presence combining traditional athleticism with contemporary confidence.
+* **Body:** Natural frame; balanced athletic build with natural softness; moderate proportions; moderate vertical (5'5"-5'6"); powerful legs and core strength from dance; dignified powerful presence.
+* **Face:** Balanced-strong facial structure; oval-to-round face; pronounced cheekbones; medium almond-shaped dark eyes with proud gaze; defined epicanthic fold; neutral resting expression shows calm dignity with a slight knowing smile.
+* **Hair:** Type 1B-1C; very high density; very long hair to lower back; high-gloss sheen; pure black with blue-black sheen; versatile styling options including traditional braids and loose styles.
+* **Skin:** Medium tan with warm red-brown undertones and natural healthy finish.
 
-* **Face:** Balanced-strong facial structure; oval-to-round face shape with broad elegant planes; pronounced cheekbones positioned high with sculpted definition; medium almond-shaped eyes with moderate spacing, deep brown to black irises, defined epicanthic fold, direct proud gaze; broad nose bridge with rounded tip; strong jawline with gentle angles; neutral resting expression shows calm dignity with slight knowing smile and warm direct eye contact conveying cultural confidence; expressions shift between serene composure and joyful animation during dance.
+**Age Presentation:** mid-20s presentation; culturally grounded, athletically confident.
+**Vibe / Energy:** proud, powerful, graceful, culturally rooted.
+**Bearing:** grounded centered posture; powerful deliberate movement with rhythmic precision; dance-trained weight distribution.
 
-* **Hair:** Type 1B-1C; very high density; very long length to lower back; center part when loose; high-gloss sheen; commonly worn in two long braids with traditional wrapping and adornment, single braid down back, or loose and straight for ceremonial contexts; pure black with blue-black sheen.
+// Style Notes:
+// - Typical makeup: natural and subtle for daily wear; traditional face paint for powwow and ceremony
+// - Style preferences: contemporary Native style—denim, leather, turquoise, traditional patterns integrated with modern cuts
+// - Jewelry preference: silver and turquoise (primary), beadwork, bone, traditional Indigenous materials
+// - General vibe: contemporary Indigenous identity, cultural pride, athletic grace
+// - Lakota cultural markers: star quilt patterns, traditional beadwork, specific color symbolism
+// - Signature elements: turquoise jewelry, beaded accessories, braided hair with traditional wrapping
+// - Color palette: Turquoise (signature), earth tones (rust, sand, deep brown), denim blue, red (ceremonial significance)
 
-* **Skin:** Medium tan with warm red-brown undertones and natural healthy finish; bronze tone with subtle warmth; smooth even texture with outdoor resilience.
-
-**Age Presentation:** mid-20s presentation; culturally grounded, athletically confident, spiritually centered.
-
-**Vibe / Energy:** proud, powerful, graceful, culturally rooted, dignified strength.
-
-**Bearing:** grounded centered posture with strong vertical alignment; powerful deliberate movement with rhythmic precision; dance-trained weight distribution; relaxed shoulders with engaged core; movements carry ceremonial intention even in casual contexts; strong connection between earth and body.
-
-//Style Notes:
-//- Typical makeup: natural and subtle for daily wear; traditional face paint for powwow and ceremony (artist-designed, family-specific)
-//- Style preferences: contemporary Native style—denim, leather, turquoise, traditional patterns integrated with modern cuts
-//- Jewelry preference: silver and turquoise (primary), beadwork, bone, traditional Indigenous materials
-//- General vibe: contemporary Indigenous identity, cultural pride, athletic grace, traditional-modern fusion
-//- Lakota cultural markers: star quilt patterns in accessories, traditional beadwork designs, specific color symbolism in regalia
-//- Powwow dancer identity: competition-level athlete, cultural ambassador, family tradition carrier
-//- Signature elements: turquoise jewelry (heavy silver work), beaded accessories, braided hair with traditional wrapping
-//- Political/cultural pride: Indigenous rights advocacy, land acknowledgment awareness, cultural preservation active participation
-//- Traditional regalia: Jingle dress or fancy shawl dancer (specify based on her dance style), family-made components, inherited pieces alongside contemporary additions
-//- Color palette in daily wear: turquoise (signature), earth tones (rust, sand, deep brown), denim blue, black, white, red (ceremonial significance)
-//- Contemporary markers: blends traditional jewelry with modern streetwear, Indigenous designers preferred, cultural symbols worn with knowledge and permission
 
 ---
 

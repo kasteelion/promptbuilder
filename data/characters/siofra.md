@@ -8,7 +8,7 @@
 
 * **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
 * **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
-* **Hair:** Type 2A waves; high density; long cut; braided crown into high ponytail; controlled sheen; copper-red tones.
+* **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
 * **Skin:** Fair neutral skin with weathered undertone.
 
 **Age Presentation:** late 20s presentation; battle-ready, alert.
@@ -20,7 +20,7 @@
 // - Style preferences: streamlined and functional; soft technical knits, sleek leather, smooth silks in cool tones
 // - Jewelry preference: silver, minimal talismans or singular motifs (Celtic knots, small hammered pendants)
 // - General vibe: warrior-scholar blend, elegant yet practical
-// - Cultural/style markers: subtle Celtic knotwork accents in jewelry or embroidery, braided hairstyles inspired by traditional techniques, layered wool or tweed for texture and warmth
+// - Cultural/style markers: subtle Celtic knotwork accents in jewelry or embroidery; favors intricate crown braids or functional ponytails inspired by traditional techniques
 // - Outfit markers: fitted training layers, reinforced boots, practical belts and harnesses, lightweight cloaks or wraps for ceremonial/formal looks
 // - Combat-ready aesthetic even in casual wear: functional layers, secure hair, nothing that impedes movement
 // - Signature elements: leather bracers (even off-duty), practical boots, strategic pockets; callused fingertips from bowstring, excellent posture, economical movement patterns
@@ -36,7 +36,7 @@
 - **Bottom:** Dark olive cargo pants with reinforced knees and secure pockets
 - **Footwear:** Brown leather tactical boots with ankle support
 - **Accessories:** Leather forearm bracer (worn on dominant arm even casually), small field journal, leather belt with practical attachments, silver arrow pendant necklace
-- **Hair/Makeup:** Signature crown braid into high ponytail (keeps hair secure and controlled); minimal precise makeup
+- **Hair/Makeup:** Hair in signature crown braid into high ponytail (keeps hair secure and controlled); minimal precise makeup
 
 #### Ren Faire - Fantasy
 - **Top:** Ivory medieval-inspired linen blouse with laced bodice

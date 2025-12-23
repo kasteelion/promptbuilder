@@ -8,12 +8,12 @@
 
 * **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
 * **Face:** Angular compact structure; oval face; alert eyes; focused determined expression.
-* **Hair:** Type 2A waves; medium density; long cut; high ponytail when active; satin-matte finish.
+* **Hair:** Type 2A waves; medium density; long dark brown hair with natural wave and volume; typically worn in practical styles.
 * **Skin:** Warm medium-brown skin with golden undertones.
 
 **Age Presentation:** late 20s presentation; driven, capable.
 **Vibe / Energy:** focused, disciplined, intense.
-**Bearing:** efficient, athletic movement.
+**Bearing:** efficient, energetic, forward-moving bearing when active.
 
 // Style notes for outfit creation (not included in prompts):
 // - Typical makeup: minimal warm-toned approach when worn; bronze/nude tones preferred

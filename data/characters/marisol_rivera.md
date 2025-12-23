@@ -7,7 +7,7 @@
 **Appearance:**
 * **Body:** Flamboyant Natural frame; straight athletic flesh; compact balanced proportions with defined waist, toned limbs, and visible muscle definition; moderate vertical (5'5"-5'6"); athletic build with clean controlled lines, functional strength, and mixed-heritage features—Japanese bone structure with Puerto Rican curves, creating distinctive balanced aesthetics; athletic graceful presence.
 * **Face:** Balanced classical structure with mixed heritage features; oval face with subtle Japanese angularity softened by Puerto Rican warmth; firm clean planes; calm almond-shaped eyes that tilt slightly upward (Japanese influence) with warm expressive quality (Puerto Rican warmth), moderately spaced, dark brown; defined jawline; neutral expression shows calm composure with subtle knowing smile that brightens when engaged; beauty mark near left eye.
-* **Hair:** Type 1B-1C straight with slight natural wave at ends; medium-high density; long sleek cut with healthy satin sheen; dark brown to black with warm undertones that catch sun.
+* **Hair:** Type 1B-1C straight with slight natural wave; medium-high density; long sleek cut with healthy satin sheen; dark brown to black; versatile styling options including ponytails and braids.
 * **Skin:** Warm golden-olive skin with bronzed finish and natural radiance.
 
 **Age Presentation:** mid-20s presentation; professional, composed, grounded.
@@ -15,13 +15,13 @@
 **Bearing:** aligned and grounded bearing; upright posture; efficient movement.
 
 // Style notes for outfit creation (not included in prompts):
-// - Typical makeup: natural earth-toned when worn; bronze warmth, nude tones, restrained gold shimmer
+// - Typical makeup: natural earth-toned when worn; bronze warmth, nude tones, restrained gold shimmer; coral lip preferred
 // - Style preferences: structured pieces in warm sunset palette—coral, amber, gold; linen, satin, smooth clean drape
 // - Jewelry preference: gold, single focal accent when worn; family-inspired heirloom pieces welcome
 // - General vibe: composed, athletic-elegant, quietly confident
 // - SIGNATURE AESTHETIC: Coral Beach Fusion
 // - Signature color: Coral in all shades—from soft peachy coral to vibrant sunset coral to deep salmon
-// - Signature accessory: Bandana always present—worn as headband, around ponytail, tied on bag, or around wrist
+// - Signature accessory: Bandana often present—worn as headband, around ponytail, tied on bag, or around wrist
 // - Beach-athletic style: bandeau tops with high-waist sarongs, athletic crops with flowy cover-ups
 // - Mixed heritage styling: sleek Japanese minimalism meets Puerto Rican vibrant color and beach ease
 // - Typical outfit formula: Coral or neutral bandeau top + linen or rayon sarong + signature bandana + minimal gold jewelry
@@ -37,8 +37,8 @@
 
 **Outfits:**
 #### Base
-- **Top:** Coral bandeau top with subtle ruching (supportive athletic-style)
+- **Top:** Coral bandeau top with subtle x-back detail (supportive athletic-style)
 - **Bottom:** High-waist cream linen sarong with side tie and flowing drape to mid-calf
 - **Footwear:** Tan leather slide sandals with minimal sole
 - **Accessories:** Coral bandana tied as headband, small gold hoop earrings, delicate gold ankle bracelet, woven beach tote
-- **Hair/Makeup:** Sleek low ponytail with coral bandana; minimal natural makeup with warm bronze and coral-toned lip
+- **Hair/Makeup:** Sleek low ponytail secured with coral bandana; minimal natural makeup with warm bronze and coral-toned lip

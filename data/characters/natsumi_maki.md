@@ -17,11 +17,9 @@
 
 * **Skin:** Porcelain depth with cool-neutral undertones and soft matte-to-luminous finish; smooth, even texture with minimal visible pores; fair to very light complexion with subtle translucency; uniformly pale throughout face, neck, and body with slight natural warmth in cheeks when animated; delicate, refined quality that catches light softly.
 
-* **Age Presentation:** late teens to early twenties...
-
-* **Vibe / Energy:** bubbly, spirited, charismatic.
-
-* **Bearing:** expressive body language.
+**Age Presentation:** late teens to early twenties presentation; youthful, high-energy.
+**Vibe / Energy:** bubbly, spirited, charismatic, magnetic.
+**Bearing:** expressive body language; light and quick movement; animated gestures that project stage-presence.
 
 ---
 
@@ -32,3 +30,4 @@
 - **Bottom:** High-waist light-wash denim shorts or athletic joggers in soft gray
 - **Footwear:** White chunky sneakers or pastel platform trainers
 - **Accessories:** Small hoop earrings, delicate silver chain necklace
+- **Hair/Makeup:** Messy high bun with face-framing tendrils; bright kawaii makeup

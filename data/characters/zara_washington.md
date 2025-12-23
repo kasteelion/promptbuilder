@@ -11,15 +11,15 @@
 
 * **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
 * **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
-* **Hair:** Type 4B–4C coils; high density; rounded afro silhouette; optional side part; soft matte sheen.
+* **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
 * **Skin:** Deep rich brown skin with luminous depth.
 
 **Age Presentation:** mid-30s presentation; assured, radiant.
 **Vibe / Energy:** confident, warm, commanding.
-**Bearing:** grounded stance; fluid powerful movement.
+**Bearing:** confident bearing with natural ease and presence; grounded stance; fluid powerful movement.
 
 // Style notes for outfit creation (not included in prompts):
-// - Typical makeup: warm and bold when worn; drawn to burnt sienna, deep berry, warm bronze tones
+// - Typical makeup: warm and bold when worn; drawn to earth tones and rich berry shades (burnt sienna, deep berry, warm bronze)
 // - Style preferences: figure-celebrating fits in rich warm tones—burnt orange, deep purple, gold, olive green, rich brown, bold prints (African-inspired patterns, geometric, vibrant florals)
 // - Jewelry preference: gold, bold and meaningful when worn—statement pieces often with cultural significance
 // - General vibe: powerful, warm, grounded with natural magnetism
