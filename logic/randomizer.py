@@ -184,12 +184,13 @@ class PromptRandomizer:
             outfit_name = random.choice(list(outfits.keys())) if outfits else ""
 
         # Random outfit modifier if applicable
-        outfit_modifier = ""
+        outfit_traits = []
         outfit_desc = str(outfits.get(outfit_name, ""))
         if "{modifier}" in outfit_desc and self.modifiers:
-            # 50% chance to apply a modifier if the outfit supports it
-            if random.random() < 0.5:
-                outfit_modifier = random.choice(list(self.modifiers.keys()))
+            # 40% chance to apply a modifier if the outfit supports it
+            if random.random() < 0.4:
+                random_trait = random.choice(list(self.modifiers.keys()))
+                outfit_traits.append(random_trait)
 
         # Random pose (category + preset)
         pose_category = ""
@@ -204,7 +205,7 @@ class PromptRandomizer:
         return {
             "name": char_name,
             "outfit": outfit_name,
-            "outfit_modifier": outfit_modifier,
+            "outfit_traits": outfit_traits,
             "pose_category": pose_category,
             "pose_preset": pose_preset,
             "action_note": "",

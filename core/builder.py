@@ -60,9 +60,15 @@ class PromptBuilder:
                 char.get("pose_preset"), ""
             )
             
-            # Apply outfit modifier if selected
-            modifier_name = char.get("outfit_modifier")
-            modifier_text = self.modifiers.get(modifier_name, "")
+            # Apply outfit modifiers/traits if selected
+            # Support both single string (legacy) and list of traits
+            traits = char.get("outfit_traits", [])
+            if not traits and char.get("outfit_modifier"):
+                traits = [char.get("outfit_modifier")]
+            
+            modifier_parts = [self.modifiers.get(t, "") for t in traits if t in self.modifiers]
+            # Filter out empty strings and join with space (since text usually includes its own commas)
+            modifier_text = "".join(modifier_parts).strip()
             
             scheme_name = char.get("color_scheme")
             scheme = self.color_schemes.get(

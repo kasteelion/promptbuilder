@@ -88,6 +88,8 @@ class PromptBuilderApp:
         self.interactions = self.ctx.interactions
         self.color_schemes = self.ctx.color_schemes
         self.modifiers = self.ctx.modifiers
+        # Expose to root for easier access by components
+        self.root.modifiers = self.modifiers
         self.randomizer = self.ctx.randomizer
         
         self.theme_manager = self.ctx.theme_manager

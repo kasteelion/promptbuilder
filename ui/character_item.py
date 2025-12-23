@@ -206,19 +206,44 @@ class CharacterItem(ttk.LabelFrame):
 
         # Insert outfit modifier selector if outfit uses {modifier} variable
         if "{modifier}" in str(outfit_text):
-            mod_var = tk.StringVar(value=self.char_data.get("outfit_modifier", ""))
-            mod_names = [""] + list(self.modifiers.keys())
-            ttk.Label(self, text="Specialization / Position:").pack(anchor="w", padx=4)
-            mod_combo = ttk.Combobox(self, textvariable=mod_var, state="readonly", values=mod_names)
-            mod_combo.pack(fill="x", padx=4, pady=(0, 6))
-            def on_mod_selected(event):
-                self.char_data["outfit_modifier"] = mod_var.get()
-                self.callbacks.get("update_scroll", lambda: None)() # Refresh scroll
-                self.callbacks.get("on_change", lambda: None)()
-                # Force refresh if on_change doesn't do it
-                if hasattr(self.parent.winfo_toplevel(), "update_preview"):
-                    self.parent.winfo_toplevel().update_preview()
-            mod_combo.bind("<<ComboboxSelected>>", on_mod_selected)
+            current_traits = self.char_data.get("outfit_traits", [])
+            # Support legacy single-string modifier
+            if not current_traits and self.char_data.get("outfit_modifier"):
+                current_traits = [self.char_data.get("outfit_modifier")]
+                self.char_data["outfit_traits"] = current_traits
+            
+            ttk.Label(self, text="👕 Outfit Options / Traits:", font=("Segoe UI", 9, "bold")).pack(anchor="w", padx=4, pady=(4, 2))
+            
+            traits_frame = FlowFrame(self, padding_x=4, padding_y=2)
+            traits_frame.pack(fill="x", padx=4, pady=(0, 6))
+            
+            # Group traits by category (first word before hyphen)
+            sorted_modifier_keys = sorted(list(self.modifiers.keys()))
+            
+            for mod_name in sorted_modifier_keys:
+                # Use a closure to capture mod_name
+                def make_toggle(name=mod_name):
+                    def toggle():
+                        traits = self.char_data.get("outfit_traits", [])
+                        if name in traits:
+                            traits.remove(name)
+                        else:
+                            traits.append(name)
+                        self.char_data["outfit_traits"] = traits
+                        self.callbacks["on_change"]()
+                    return toggle
+
+                var = tk.BooleanVar(value=mod_name in current_traits)
+                chk = ttk.Checkbutton(
+                    traits_frame, 
+                    text=mod_name, 
+                    variable=var, 
+                    command=make_toggle(mod_name),
+                    style="Action.TCheckbutton"
+                )
+                traits_frame._children.append(chk)
+                # Position chk like a button in FlowFrame
+                traits_frame._schedule_reflow()
 
         # Separator
         ttk.Separator(self, orient="horizontal").pack(fill="x", pady=6)
