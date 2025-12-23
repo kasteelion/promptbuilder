@@ -2,9 +2,10 @@
 """Dialog management for the application."""
 
 import platform
+import sys
 import threading
 import tkinter as tk
-from tkinter import messagebox, ttk
+from tkinter import messagebox, ttk, scrolledtext
 
 from typing import Callable, Optional
 

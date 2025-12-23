@@ -219,6 +219,9 @@ class PromptBuilderApp:
 
         self.menu_manager = MenuManager(self.root, menu_callbacks)
 
+        # Build Toolbar
+        self._build_toolbar()
+
         # Bind keyboard shortcuts
         self._bind_keyboard_shortcuts()
 
@@ -319,9 +322,9 @@ class PromptBuilderApp:
         )
         self.scene_combo.grid(row=0, column=3, sticky="ew", padx=2, pady=2)
 
-        ttk.Button(scene_content, text="✨", width=3, command=self._create_new_scene).grid(
-            row=0, column=4, padx=(4, 4), pady=2
-        )
+        new_scene_btn = ttk.Button(scene_content, text="✨", width=3, command=self._create_new_scene)
+        new_scene_btn.grid(row=0, column=4, padx=(4, 4), pady=2)
+        create_tooltip(new_scene_btn, "Create a new scene preset")
 
         self.scene_text = tk.Text(scene_content, wrap="word", height=3)
         self.scene_text.grid(row=1, column=0, columnspan=5, sticky="ew", padx=4, pady=(0, 4))
@@ -440,6 +443,42 @@ class PromptBuilderApp:
 
         # Initialize scene presets
         self._update_scene_presets()
+
+    def _build_toolbar(self):
+        """Build the top toolbar with common actions."""
+        toolbar_frame = ttk.Frame(self.root, style="TFrame")
+        toolbar_frame.pack(side="top", fill="x", padx=4, pady=4)
+
+        # Helper to create styled toolbar buttons
+        def add_tool_btn(parent, text, command, tooltip=None, width=None):
+            btn = ttk.Button(parent, text=text, command=command)
+            if width:
+                btn.config(width=width)
+            btn.pack(side="left", padx=2)
+            if tooltip:
+                create_tooltip(btn, tooltip)
+            return btn
+
+        # File actions
+        add_tool_btn(toolbar_frame, "💾", self._save_preset, "Save Preset", width=3)
+        add_tool_btn(toolbar_frame, "📂", self._load_preset, "Load Preset", width=3)
+        
+        ttk.Separator(toolbar_frame, orient="vertical").pack(side="left", fill="y", padx=4, pady=2)
+
+        # Edit actions
+        add_tool_btn(toolbar_frame, "↩️", self._undo, "Undo (Ctrl+Z)", width=3)
+        add_tool_btn(toolbar_frame, "↪️", self._redo, "Redo (Ctrl+Y)", width=3)
+
+        ttk.Separator(toolbar_frame, orient="vertical").pack(side="left", fill="y", padx=4, pady=2)
+        
+        # Tools
+        add_tool_btn(toolbar_frame, "🎲 Randomize", self.randomize_all, "Randomize Everything (Alt+R)")
+        add_tool_btn(toolbar_frame, "👥 Gallery", self._toggle_character_gallery, "Toggle Character Gallery (Ctrl+G)")
+        
+        # Spacer
+        ttk.Frame(toolbar_frame).pack(side="left", fill="x", expand=True)
+
+        # Right side actions (Theme toggle could go here, but menu is fine)
 
     def _initialize_managers(self):
         """Initialize managers that depend on UI elements."""

@@ -49,7 +49,9 @@ class MenuManager:
         # Build menus
         self._build_file_menu()
         self._build_edit_menu()
+        self._build_characters_menu()
         self._build_view_menu()
+        self._build_tools_menu()
         self._build_help_menu()
 
     def _build_file_menu(self):
@@ -58,12 +60,12 @@ class MenuManager:
         self.menubar.add_cascade(label="File", menu=file_menu)
 
         file_menu.add_command(
-            label="Save Preset...",
+            label="💾 Save Preset...",
             command=self.callbacks["save_preset"],
             accelerator="Ctrl+Shift+S",
         )
         file_menu.add_command(
-            label="Load Preset...",
+            label="📂 Load Preset...",
             command=self.callbacks["load_preset"],
             accelerator="Ctrl+Shift+O",
         )
@@ -71,34 +73,46 @@ class MenuManager:
         file_menu.add_separator()
 
         file_menu.add_command(
-            label="Export Configuration...", command=self.callbacks["export_config"]
+            label="📤 Export Configuration...", command=self.callbacks["export_config"]
         )
         file_menu.add_command(
-            label="Import Configuration...", command=self.callbacks["import_config"]
+            label="📥 Import Configuration...", command=self.callbacks["import_config"]
         )
 
         file_menu.add_separator()
 
-        file_menu.add_command(label="Exit", command=self.callbacks["on_closing"])
+        file_menu.add_command(label="🚪 Exit", command=self.callbacks["on_closing"])
 
     def _build_edit_menu(self):
         """Build Edit menu."""
         edit_menu = tk.Menu(self.menubar, tearoff=0)
         self.menubar.add_cascade(label="Edit", menu=edit_menu)
 
-        edit_menu.add_command(label="Undo", command=self.callbacks["undo"], accelerator="Ctrl+Z")
-        edit_menu.add_command(label="Redo", command=self.callbacks["redo"], accelerator="Ctrl+Y")
+        edit_menu.add_command(label="↩️ Undo", command=self.callbacks["undo"], accelerator="Ctrl+Z")
+        edit_menu.add_command(label="↪️ Redo", command=self.callbacks["redo"], accelerator="Ctrl+Y")
 
-        edit_menu.add_separator()
+    def _build_characters_menu(self):
+        """Build Characters menu."""
+        char_menu = tk.Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label="Characters", menu=char_menu)
 
-        edit_menu.add_command(
-            label="Clear All Characters", command=self.callbacks["clear_all_characters"]
+        char_menu.add_command(
+            label="❌ Clear All Characters", command=self.callbacks["clear_all_characters"]
         )
-        edit_menu.add_command(
-            label="Reset All Outfits", command=self.callbacks["reset_all_outfits"]
+        char_menu.add_command(
+            label="👕 Reset All Outfits", command=self.callbacks["reset_all_outfits"]
         )
-        edit_menu.add_command(
-            label="Apply Same Pose to All", command=self.callbacks["apply_same_pose_to_all"]
+        char_menu.add_command(
+            label="🧘 Apply Same Pose to All", command=self.callbacks["apply_same_pose_to_all"]
+        )
+
+    def _build_tools_menu(self):
+        """Build Tools menu."""
+        tools_menu = tk.Menu(self.menubar, tearoff=0)
+        self.menubar.add_cascade(label="Tools", menu=tools_menu)
+
+        tools_menu.add_command(
+            label="🎲 Randomize All", command=self.callbacks["randomize_all"], accelerator="Alt+R"
         )
 
     def _build_view_menu(self):
@@ -108,7 +122,7 @@ class MenuManager:
 
         # Character Gallery toggle
         view_menu.add_checkbutton(
-            label="Show Character Gallery",
+            label="👥 Show Character Gallery",
             variable=self.gallery_visible_var,
             command=self.callbacks["toggle_character_gallery"],
             accelerator="Ctrl+G",
@@ -117,24 +131,17 @@ class MenuManager:
 
         # Font controls
         view_menu.add_command(
-            label="Increase Font Size",
+            label="🔍 Increase Font Size",
             command=self.callbacks["increase_font"],
             accelerator="Ctrl++",
         )
         view_menu.add_command(
-            label="Decrease Font Size",
+            label="🔍 Decrease Font Size",
             command=self.callbacks["decrease_font"],
             accelerator="Ctrl+-",
         )
         view_menu.add_command(
-            label="Reset Font Size", command=self.callbacks["reset_font"], accelerator="Ctrl+0"
-        )
-
-        view_menu.add_separator()
-
-        # Randomize
-        view_menu.add_command(
-            label="Randomize All", command=self.callbacks["randomize_all"], accelerator="Alt+R"
+            label="🔄 Reset Font Size", command=self.callbacks["reset_font"], accelerator="Ctrl+0"
         )
 
         view_menu.add_separator()
@@ -148,7 +155,7 @@ class MenuManager:
         # Auto theme detection
         view_menu.add_separator()
         view_menu.add_checkbutton(
-            label="Auto-detect OS Theme",
+            label="⚙️ Auto-detect OS Theme",
             variable=self.auto_theme_var,
             command=self.callbacks["toggle_auto_theme"],
         )
@@ -249,17 +256,17 @@ class MenuManager:
         self.menubar.add_cascade(label="Help", menu=help_menu)
 
         help_menu.add_command(
-            label="Characters Summary", command=self.callbacks["show_characters_summary"]
+            label="📊 Characters Summary", command=self.callbacks["show_characters_summary"]
         )
 
         help_menu.add_separator()
 
-        help_menu.add_command(label="Show Welcome Screen", command=self.callbacks["show_welcome"])
-        help_menu.add_command(label="Keyboard Shortcuts", command=self.callbacks["show_shortcuts"])
+        help_menu.add_command(label="👋 Show Welcome Screen", command=self.callbacks["show_welcome"])
+        help_menu.add_command(label="⌨️ Keyboard Shortcuts", command=self.callbacks["show_shortcuts"])
 
         help_menu.add_separator()
 
-        help_menu.add_command(label="About", command=self.callbacks["show_about"])
+        help_menu.add_command(label="ℹ️ About", command=self.callbacks["show_about"])
 
     def set_theme(self, theme_name: str):
         """Set the current theme selection.

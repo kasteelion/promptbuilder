@@ -161,3 +161,39 @@
 - **secondary:** #263B94
 - **accent:** #FFFFFF
 - **team:** The River City Lions
+
+## Synthwave 80s
+- **primary:** #FF00FF
+- **secondary:** #7000FF
+- **accent:** #00FFFF
+- **team:** The Retro Raiders
+
+## Deep Sea
+- **primary:** #001F3F
+- **secondary:** #0074D9
+- **accent:** #7FDBFF
+- **team:** The Abyss Explorers
+
+## Autumn Harvest
+- **primary:** #8B4513
+- **secondary:** #D2691E
+- **accent:** #FFD700
+- **team:** The Golden Reapers
+
+## Royal Elegance
+- **primary:** #4B0082
+- **secondary:** #D4AF37
+- **accent:** #F5F5DC
+- **team:** The Sovereign Guard
+
+## Space Galactic
+- **primary:** #0B0B3B
+- **secondary:** #6A0888
+- **accent:** #C0C0C0
+- **team:** The Star Voyagers
+
+## Desert Oasis
+- **primary:** #C2B280
+- **secondary:** #228B22
+- **accent:** #E2725B
+- **team:** The Sand Spirits

@@ -84,7 +84,7 @@ class PreviewPanel:
         controls_frame.columnconfigure(4, weight=0)
 
         # Copy menu button
-        copy_menu_btn = ttk.Menubutton(controls_frame, text="Copy", style="TButton")
+        copy_menu_btn = ttk.Menubutton(controls_frame, text="📋 Copy", style="TButton")
         copy_menu_btn.grid(row=0, column=0, padx=2)
 
         copy_menu = tk.Menu(copy_menu_btn, tearoff=0)
@@ -98,13 +98,13 @@ class PreviewPanel:
         copy_menu.add_command(label="Notes Section", command=lambda: self._copy_section("notes"))
 
         # Save button
-        ttk.Button(controls_frame, text="Save", command=self.save_prompt).grid(row=0, column=1, padx=2)
+        ttk.Button(controls_frame, text="💾 Save", command=self.save_prompt).grid(row=0, column=1, padx=2)
 
         # Clear button
-        ttk.Button(controls_frame, text="Clear", command=self._on_clear).grid(row=0, column=2, padx=2)
+        ttk.Button(controls_frame, text="🗑️ Clear", command=self._on_clear).grid(row=0, column=2, padx=2)
 
         # Randomize button
-        ttk.Button(controls_frame, text="🎲 Rand", command=self.on_randomize).grid(row=0, column=3, padx=2)
+        ttk.Button(controls_frame, text="🎲 Randomize", command=self.on_randomize).grid(row=0, column=3, padx=2)
 
         # Reload button
         ttk.Button(controls_frame, text="🔄 Reload", command=self.on_reload).grid(row=0, column=4, padx=2)
