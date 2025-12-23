@@ -1,7 +1,7 @@
 ### Freydis
 
 **Photo:** [freydis_photo.png]
-**Tags:** Nordic, nordic-inspired, rugged, strong, intense, athletic, warrior-spirit, female
+**Tags:** Nordic, Nordic-inspired, rugged, strong, intense, athletic, warrior-spirit, female
 **Summary:** Freydis carries the raw, untamed energy of the North into the modern world. Her presence is a strike of lightning—sharp, dangerous, and undeniably powerful. She moves with the purposeful weight of someone born to lead and survive, her rugged beauty enhanced by the scars of a life lived at the edge. Even in modern clothes, she looks as though she just stepped off a longship, radiating an ancient, unyielding confidence.
 **Gender:** F
 

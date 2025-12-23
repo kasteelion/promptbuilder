@@ -1,7 +1,7 @@
 ### Zara Washington
 **Photo:** zara_washington_photo.png
 
-**Tags:** bold, powerful, expressive, voluptuous, confident, warm, commanding, funky, Black, cultural, female
+**Tags:** bold, commanding, expressive, voluptuous, confident, warm, funky, Black, cultural, female
 
 **Summary:** Zara radiates unapologetic presence and embodied confidence. Her power is expressive and grounded, combining cultural pride, sensuality, and bold personal style.
 

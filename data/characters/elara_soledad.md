@@ -1,7 +1,7 @@
 ### Elara Soledad
 **Photo:** elara_soledad_photo.png
 
-**Tags:** Afro-Latina, warrior, athletic, protective, powerful, commanding, grounded, tall, strength-aesthetic, female
+**Tags:** afro-Latina, warrior, athletic, protective, commanding, grounded, tall, strength-aesthetic, female
 
 **Summary:** Elara commands space without effort—a woman built like a classical warrior with the presence to match. Her tall, sculpted frame and unwavering gaze speak to disciplined strength, while rare genuine smiles reveal the fierce protectiveness beneath her stoic exterior. She moves through the world like someone who has trained for battle but hopes for peace.
 

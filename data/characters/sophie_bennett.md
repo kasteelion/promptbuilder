@@ -1,7 +1,7 @@
 ### Sophie Bennett
 **Photo:** sophie_bennett_photo.png
 
-**Tags:** soft, gentle, nature-loving, athletic, casual, relaxed, approachable, accessible, active, outdoorsy, hiking, relatable, female
+**Tags:** soft, nature-loving, athletic, casual, relaxed, approachable, accessible, outdoorsy, hiking, relatable, female
 
 **Summary:** Sophie embodies accessible athleticism—the friend who invites you on a hike, not a marathon. Her soft rounded build carries natural strength without intimidation, creating the kind of presence that makes fitness feel approachable rather than exclusive. She's the bridge between "gym girl" and "regular girl," comfortable in athletic wear but never performatively so.
 

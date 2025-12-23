@@ -1,7 +1,7 @@
 ### Harald
 
 **Photo:** [harald_photo.png]
-**Tags:** Nordic, nordic-inspired, rugged, massive, leader, bearded, authoritative, male
+**Tags:** Nordic, Nordic-inspired, rugged, massive, leader, bearded, commanding, male
 **Summary:** Harald is a mountain of a man, embodying the sheer physical power and indomitable will of a Viking jarl. His presence is heavy and immovable, like a granite cliff facing the North Sea. He carries himself with the quiet, terrifying calm of a predator at rest, his deep-set eyes reflecting a life of combat and exploration. He is the modern echo of an ancient king—rugged, weathered, and undeniably dominant.
 **Gender:** M
 

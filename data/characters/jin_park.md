@@ -1,6 +1,6 @@
 ### Jin Park
 **Photo:** jin_park_photo.png
-**Tags:** minimalist, introspective, refined, K-fashion, gentle, quiet, reserved, contemporary, male
+**Tags:** minimalist, introspective, refined, K-fashion, soft, quiet, reserved, contemporary, male
 
 **Summary:** Jin’s presence is understated and thoughtful, defined by quiet confidence and emotional sensitivity. He feels observant rather than performative, with a modern elegance rooted in restraint.
 

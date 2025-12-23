@@ -1,7 +1,7 @@
 ### Rafael Santos
 **Photo:** rafael_santos_photo.png
 
-**Tags:** charismatic, artistic, expressive, warm, welcoming, spirited, Brazilian, creative, male
+**Tags:** charismatic, artistic, expressive, warm, energetic, Brazilian, creative, male
 
 **Summary:** Rafael carries creative energy that feels both grounded and effervescent. His presence blends artistic sensitivity with warm approachability, moving through space with the easy confidence of someone comfortable in their own skin. There's a theatrical quality to his gestures that never feels performative—just naturally expressive.
 

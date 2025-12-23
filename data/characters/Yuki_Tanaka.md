@@ -1,7 +1,7 @@
 ### Yuki Tanaka
 **Photo:** yuki_tanaka_photo.png
 **Summary:** Softly romantic yet self-assured, Yuki blends gentleness with quiet sensuality. Her warmth feels intimate and inviting, expressed through subtle movement and emotional openness.
-**Tags:** romantic, gentle, feminine, elegant, warm, shy, tender, soft, Japanese-American, female
+**Tags:** romantic, soft, feminine, elegant, warm, shy, Japanese-American, female
 **Gender:** F
 
 **Appearance:**

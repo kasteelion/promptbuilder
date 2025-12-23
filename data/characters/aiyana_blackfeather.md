@@ -1,7 +1,7 @@
 ### Aiyana Blackfeather
 **Photo:** aiyana_blackfeather_photo.png
 
-**Tags:** powwow-dancer, Indigenous, athletic, cultural-pride, traditional, graceful, powerful, contemporary-Native, regalia, Lakota, grounded, spiritual, female
+**Tags:** powwow-dancer, Indigenous, athletic, cultural-pride, traditional, graceful, commanding, contemporary-native, regalia, Lakota, grounded, spiritual, female
 
 **Summary:** Aiyana moves between worlds with the grace of someone deeply rooted in both. Her powwow dancing carries generations of tradition in every precise footfall, while her contemporary presence speaks to Indigenous identity that refuses to be confined to the past. She embodies cultural continuity—honoring ancestors while claiming space in the present with athletic power and unshakeable dignity.
 
