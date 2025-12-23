@@ -44,6 +44,7 @@ class CharacterItem(ttk.LabelFrame):
         self.char_def = all_characters.get(char_name, {})
         self.all_poses = all_poses
         self.color_schemes = color_schemes
+        self.modifiers = callbacks.get("get_modifiers", lambda: {})()
         self.callbacks = callbacks
 
         self._build_ui()
@@ -202,6 +203,22 @@ class CharacterItem(ttk.LabelFrame):
             def on_scheme_selected(event):
                 self.callbacks["update_color_scheme"](self.index, scheme_var.get())
             scheme_combo.bind("<<ComboboxSelected>>", on_scheme_selected)
+
+        # Insert outfit modifier selector if outfit uses {modifier} variable
+        if "{modifier}" in str(outfit_text):
+            mod_var = tk.StringVar(value=self.char_data.get("outfit_modifier", ""))
+            mod_names = [""] + list(self.modifiers.keys())
+            ttk.Label(self, text="Specialization / Position:").pack(anchor="w", padx=4)
+            mod_combo = ttk.Combobox(self, textvariable=mod_var, state="readonly", values=mod_names)
+            mod_combo.pack(fill="x", padx=4, pady=(0, 6))
+            def on_mod_selected(event):
+                self.char_data["outfit_modifier"] = mod_var.get()
+                self.callbacks.get("update_scroll", lambda: None)() # Refresh scroll
+                self.callbacks.get("on_change", lambda: None)()
+                # Force refresh if on_change doesn't do it
+                if hasattr(self.parent.winfo_toplevel(), "update_preview"):
+                    self.parent.winfo_toplevel().update_preview()
+            mod_combo.bind("<<ComboboxSelected>>", on_mod_selected)
 
         # Separator
         ttk.Separator(self, orient="horizontal").pack(fill="x", pady=6)

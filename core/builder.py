@@ -15,6 +15,7 @@ class PromptBuilder:
         base_prompts: Dict[str, str],
         poses: Dict[str, Dict[str, str]],
         color_schemes: Dict[str, Dict[str, str]] = None,
+        modifiers: Dict[str, str] = None,
     ):
         """Initialize the prompt builder.
 
@@ -23,11 +24,13 @@ class PromptBuilder:
             base_prompts: Dictionary of base art style prompts
             poses: Dictionary of pose categories and presets
             color_schemes: Dictionary of color schemes
+            modifiers: Dictionary of outfit modifiers
         """
         self.characters = characters
         self.base_prompts = base_prompts
         self.poses = poses
         self.color_schemes = color_schemes or {}
+        self.modifiers = modifiers or {}
 
     def generate(self, config: Dict[str, Any]) -> str:
         """Generate a formatted prompt from configuration.
@@ -55,17 +58,26 @@ class PromptBuilder:
             pose = char.get("action_note") or self.poses.get(char.get("pose_category"), {}).get(
                 char.get("pose_preset"), ""
             )
+            
+            # Apply outfit modifier if selected
+            modifier_name = char.get("outfit_modifier")
+            modifier_text = self.modifiers.get(modifier_name, "")
+            
             scheme_name = char.get("color_scheme")
             scheme = self.color_schemes.get(
                 scheme_name, self.color_schemes.get("Default (No Scheme)", {})
             )
+            
             if isinstance(outfit, str):
+                # Replace {modifier} placeholder before color substitution
+                outfit = re.sub(r"\{modifier\}", modifier_text, outfit)
                 outfit = substitute_colors(outfit, scheme)
             elif isinstance(outfit, dict):
                 # Work on a copy to avoid mutating the source data
                 outfit = outfit.copy()
                 for k, v in outfit.items():
                     if isinstance(v, str):
+                        v = re.sub(r"\{modifier\}", modifier_text, v)
                         outfit[k] = substitute_colors(v, scheme)
             parts.append(
                 CharacterRenderer.render(

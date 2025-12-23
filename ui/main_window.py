@@ -87,6 +87,7 @@ class PromptBuilderApp:
         self.poses = self.ctx.poses
         self.interactions = self.ctx.interactions
         self.color_schemes = self.ctx.color_schemes
+        self.modifiers = self.ctx.modifiers
         self.randomizer = self.ctx.randomizer
         
         self.theme_manager = self.ctx.theme_manager
@@ -906,7 +907,7 @@ class PromptBuilderApp:
             str: Summary text
         """
         builder = PromptBuilder(
-            self.characters, self.base_prompts, self.poses, self.color_schemes
+            self.characters, self.base_prompts, self.poses, self.color_schemes, self.modifiers
         )
 
         config = {
@@ -942,7 +943,7 @@ class PromptBuilderApp:
             str: Generated prompt text
         """
         builder = PromptBuilder(
-            self.characters, self.base_prompts, self.poses, self.color_schemes
+            self.characters, self.base_prompts, self.poses, self.color_schemes, self.modifiers
         )
 
         config = {

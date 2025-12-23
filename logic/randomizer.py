@@ -2,11 +2,13 @@
 
 import random
 
+from utils.interaction_helpers import fill_template
+
 
 class PromptRandomizer:
     """Generates random character, outfit, and pose combinations."""
 
-    def __init__(self, characters, base_prompts, poses, scenes=None, interactions=None, color_schemes=None):
+    def __init__(self, characters, base_prompts, poses, scenes=None, interactions=None, color_schemes=None, modifiers=None):
         """Initialize randomizer with data.
 
         Args:
@@ -16,6 +18,7 @@ class PromptRandomizer:
             scenes: Scene presets dict (category -> preset -> description)
             interactions: Interaction templates dict (category -> template -> description)
             color_schemes: Color schemes dict
+            modifiers: Outfit modifiers dict
         """
         self.characters = characters
         self.base_prompts = base_prompts
@@ -23,6 +26,7 @@ class PromptRandomizer:
         self.scenes = scenes or {}
         self.interactions = interactions or {}
         self.color_schemes = color_schemes or {}
+        self.modifiers = modifiers or {}
 
     def randomize(self, num_characters=None, include_scene=False, include_notes=False):
         """Generate random prompt configuration.
@@ -143,11 +147,8 @@ class PromptRandomizer:
         # Generate notes string from the pre-selected template
         notes_text = ""
         if selected_interaction_template:
-            filled = selected_interaction_template
             char_names = [char["name"] for char in selected_characters]
-            for i, name in enumerate(char_names, 1):
-                filled = filled.replace(f"{{char{i}}}", name)
-            notes_text = filled
+            notes_text = fill_template(selected_interaction_template, char_names)
         elif generate_interaction:
              # Fallback if no interactions loaded or something went wrong
             notes_text = self._generate_random_notes(selected_characters)
@@ -182,6 +183,14 @@ class PromptRandomizer:
         else:
             outfit_name = random.choice(list(outfits.keys())) if outfits else ""
 
+        # Random outfit modifier if applicable
+        outfit_modifier = ""
+        outfit_desc = str(outfits.get(outfit_name, ""))
+        if "{modifier}" in outfit_desc and self.modifiers:
+            # 50% chance to apply a modifier if the outfit supports it
+            if random.random() < 0.5:
+                outfit_modifier = random.choice(list(self.modifiers.keys()))
+
         # Random pose (category + preset)
         pose_category = ""
         pose_preset = ""
@@ -195,6 +204,7 @@ class PromptRandomizer:
         return {
             "name": char_name,
             "outfit": outfit_name,
+            "outfit_modifier": outfit_modifier,
             "pose_category": pose_category,
             "pose_preset": pose_preset,
             "action_note": "",
@@ -297,10 +307,6 @@ class PromptRandomizer:
 
             # Fill template with character names
             char_names = [char["name"] for char in selected_characters]
-            filled = template
-            for i, name in enumerate(char_names, 1):
-                filled = filled.replace(f"{{char{i}}}", name)
-
-            return filled
+            return fill_template(template, char_names)
             
         return ""

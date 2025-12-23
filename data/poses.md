@@ -126,6 +126,16 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Victory Arms Up:** Both arms raised overhead in triumph after strike, wide smile, celebratory energy, standing near foul line or approach area.
 - **Victory Pose:** Arms raised triumphantly overhead, confident smile, championship energy, standing tall.
 - **Volleyball Serve:** Jumping with arm extended overhead, ball contact moment, powerful athletic form, focused upward gaze.
+- **Volleyball Spike:** Mid-air jump, body arched, arm cocked back ready to strike the volleyball over the net, intense focused expression.
+- **Volleyball Dig:** Low athletic crouch, arms extended together in a platform, focused on the incoming ball, ready to pass.
+- **Volleyball Set:** Standing with hands raised above head, fingers spread, prepared to guide the ball upward, focused concentration.
+- **Soccer Dribbling:** Mid-stride with soccer ball at feet, focused gaze ahead, athletic movement, dynamic energy.
+- **Soccer Goalkeeper Save:** Diving sideways with arms extended, hands reaching for the ball, intense focus, athletic desperation.
+- **Basketball Dribbling:** Low athletic stance, one hand dribbling the ball, other arm out for protection, eyes on the court.
+- **Basketball Layup:** Jumping toward the hoop, one arm extended high with the ball, body in controlled motion.
+- **Softball/Baseball Batting Stance:** Standing at the plate, holding bat over shoulder, knees slightly bent, focused gaze on the pitcher.
+- **Softball/Baseball Pitching Windup:** Mid-motion pitching, leg lifted, arm cocked back, focused intensity.
+- **Softball/Baseball Catching:** Crouched with glove extended, ready to receive the ball, alert expression.
 
 ---
 

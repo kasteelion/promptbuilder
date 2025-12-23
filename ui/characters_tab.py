@@ -790,7 +790,9 @@ class CharactersTab:
             "move_down": self._move_down,
             "remove_character": self._remove_character,
             "get_num_characters": lambda: len(self.selected_characters),
-            "update_scroll": self.scrollable_canvas.update_scroll_region
+            "get_modifiers": lambda: getattr(self.parent.winfo_toplevel(), "modifiers", {}),
+            "update_scroll": self.scrollable_canvas.update_scroll_region,
+            "on_change": self.on_change
         }
 
         for i, cd in enumerate(self.selected_characters):

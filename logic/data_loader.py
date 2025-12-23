@@ -590,3 +590,36 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
             from utils import logger
             logger.exception("Error loading color schemes")
             return default_schemes
+
+    def load_modifiers(self):
+        """Load and parse modifiers.md file. Creates file if not found."""
+        f = self._find_data_file("modifiers.md")
+        cache_key = "modifiers"
+
+        # Check if cache is valid
+        if f.exists():
+            try:
+                mtime = f.stat().st_mtime
+                if cache_key in self._cache and self._file_mtimes.get(cache_key) == mtime:
+                    return self._cache[cache_key]
+                self._file_mtimes[cache_key] = mtime
+            except OSError:
+                pass
+
+        default_modifiers = {
+            "Volleyball - Libero": ", wearing a contrasting {secondary_color} jersey to denote libero position,"
+        }
+
+        if not f.exists():
+            return default_modifiers
+
+        try:
+            text = f.read_text(encoding="utf-8")
+            modifiers = MarkdownParser.parse_modifiers(text)
+            result = modifiers if modifiers else default_modifiers
+            self._cache[cache_key] = result
+            return result
+        except Exception:
+            from utils import logger
+            logger.exception("Error loading modifiers")
+            return default_modifiers

@@ -82,8 +82,14 @@ Quick scene descriptions for your prompts. Edit or add your own!
 - **Dance Studio:** Professional dance studio, barre along mirrored wall, polished hardwood floor, bright natural lighting, artistic atmosphere.
 - **Gymnastics Center:** Gymnastics training facility, foam pit, balance beams, uneven bars, spring floor, athletic training energy.
 - **Indoor Volleyball Court:** Gymnasium volleyball court, wooden floor, net at center, boundary lines, team sport setting.
+- **Volleyball Net Close-up:** Tight shot focused on the white volleyball net, players visible through the mesh, intense competition at the net.
+- **Soccer Goal View:** From behind the soccer net, looking out at the field, goalie in position, tension of an incoming attack.
+- **Soccer Sidelines:** View from the team bench, water bottles and equipment in foreground, green field and players in background.
+- **Basketball Hoop Perspective:** Looking up at the backboard and rim, indoor gymnasium lighting, crowded court suggested in background.
+- **Locker Room:** Professional sports locker room, benches, team jerseys hanging, pre-game focus or post-game celebration atmosphere.
 - **Martial Arts Dojo:** Traditional training hall, wooden floor, mirrors along wall, punching bags, Japanese calligraphy, disciplined atmosphere.
 - **MMA Gym:** Gritty training gym, octagon cage visible, heavy bags hanging, rubber mat flooring, intense training atmosphere.
+- **MMA Octagon:** Professional eight-sided competition cage, chain-link fence walls with black vinyl coating, thick padded corner posts in contrasting colors, heavy-duty battle-worn canvas floor with team or brand logos, dramatic high-contrast overhead lighting casting sharp shadows, intense championship fight atmosphere.
 - **Olympic Pool:** Indoor swimming facility, multiple lanes, starting blocks, clear blue water, competitive swimming atmosphere.
 - **Pro Shop Interior:** Bowling pro shop, custom balls on display, drilling equipment, bags and accessories, serious bowler specialty store atmosphere.
 - **Rock Climbing Gym:** Indoor climbing gym, tall textured walls with colorful holds, crash pads below, athletic challenge atmosphere.

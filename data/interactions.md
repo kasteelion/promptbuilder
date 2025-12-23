@@ -159,6 +159,10 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 - **Stretching Partner:** {char1} helping {char2} stretch, applying gentle pressure, athletic assistance, training partnership focus.
 - **Team Huddle - Bowling:** {char1}, {char2}, and {char3} gathered in close huddle near their lane, discussing strategy or celebrating, arms around shoulders, unified team energy.
 - **Victory Celebration:** {char1} and {char2} celebrating athletic victory, high energy, jumping or chest bumping, triumphant joy.
+- **Volleyball Block:** {char1} and {char2} jumping together at the net, arms extended high to block an incoming spike, coordinated team effort.
+- **Soccer Tackle:** {char1} sliding to tackle the ball away from {char2}, dynamic athletic movement, competitive intensity.
+- **Basketball Post-Up:** {char1} posting up against {char2} under the hoop, bodies pressed together in physical battle for position.
+- **Relay Baton Pass:** {char1} passing the baton to {char2} mid-sprint, perfectly timed athletic coordination.
 - **Volleyball Huddle (6):** {char1}, {char2}, {char3}, {char4}, {char5}, and {char6} standing in tight cluster viewed from behind on volleyball court. All facing inward with arms wrapped around each other's backs and waists, creating unified group embrace. Bodies close together, shoulders touching, forming intimate team circle. Heads leaning toward center, some tilted inward in concentration. Arms reach across to hold teammates, hands resting on backs and sides. Stance natural and grounded, weight distributed evenly. Court floor visible beneath—polished gym floor with court lines. Background shows gym setting with walls, bleachers, chairs courtside. View captures the back of the huddle, emphasizing team unity and interconnection. Energy focused and supportive, pre-game or timeout moment of solidarity and strategy.
 - **Watching Teammate Bowl:** {char1} bowling (mid-release or follow-through), {char2} watching intently from seating area behind, leaning forward with supportive body language, hands clasped or resting on knees.
 
