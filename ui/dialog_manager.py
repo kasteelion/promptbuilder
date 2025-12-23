@@ -387,7 +387,7 @@ Platform: {platform.system()} {platform.release()}
                 return
 
             dialog = tk.Toplevel(self.root)
-            dialog.title("Team Color Schemes Summary")
+            dialog.title("Team Colors Summary")
             dialog.geometry("800x600")
             dialog.minsize(600, 400)
             dialog.transient(self.root)
@@ -396,7 +396,7 @@ Platform: {platform.system()} {platform.release()}
             main_frame = ttk.Frame(dialog, padding=10)
             main_frame.pack(fill="both", expand=True)
 
-            ttk.Label(main_frame, text="Available Team Color Schemes", style="Title.TLabel").pack(pady=(0, 10))
+            ttk.Label(main_frame, text="Available Team Colors", style="Title.TLabel").pack(pady=(0, 10))
 
             # Scrollable area
             scroll_container = ScrollableCanvas(main_frame)

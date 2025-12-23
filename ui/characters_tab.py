@@ -220,22 +220,49 @@ class CharactersTab:
         self.bulk_lock_chk = ttk.Checkbutton(
             bulk, text="Lock", variable=self.bulk_lock_var, width=5
         )
-        self.bulk_lock_chk.grid(row=1, column=3, sticky="w", padx=(6, 0), pady=4) # Moved to separate column if possible, or pack in name_frame
         # Actually grid layout above used columnspan=3. Let's put lock check in the name frame or separate row?
         # Simpler: put lock check in name_frame
         self.bulk_lock_chk.pack(in_=name_frame, side="left", padx=(6, 0))
         create_tooltip(self.bulk_lock_chk, "Keep the selected outfit after applying")
+
+        # Bulk Team Colors
+        scheme_row = ttk.Frame(bulk)
+        scheme_row.grid(row=3, column=0, columnspan=3, sticky="ew", padx=4, pady=2)
+        
+        ttk.Label(scheme_row, text="Team Colors:", width=11).pack(side="left")
+        self.bulk_scheme_var = tk.StringVar()
+        
+        # Get color schemes
+        schemes = sorted(list(self.data_loader.load_color_schemes().keys()))
+        
+        self.bulk_scheme_combo = SearchableCombobox(
+            scheme_row,
+            values=schemes,
+            textvariable=self.bulk_scheme_var,
+            on_select=lambda val: self._update_bulk_preview(),
+            placeholder="Select team colors...",
+            width=25
+        )
+        self.bulk_scheme_combo.pack(side="left", fill="x", expand=True)
+
+        # Lock checkbox for schemes
+        self.bulk_scheme_lock_var = tk.BooleanVar(value=False)
+        self.bulk_scheme_lock_chk = ttk.Checkbutton(
+            bulk, text="Lock", variable=self.bulk_scheme_lock_var, width=5
+        )
+        self.bulk_scheme_lock_chk.pack(in_=scheme_row, side="left", padx=(6, 0))
+        create_tooltip(self.bulk_scheme_lock_chk, "Keep the selected colors after applying")
 
         # Preview/status label
         self.bulk_preview_var = tk.StringVar(value="")
         self.bulk_preview_label = ttk.Label(
             bulk, textvariable=self.bulk_preview_var, style="Muted.TLabel"
         )
-        self.bulk_preview_label.grid(row=3, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 6))
+        self.bulk_preview_label.grid(row=4, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 6))
 
         # Button row
         btn_frame = ttk.Frame(bulk)
-        btn_frame.grid(row=4, column=0, columnspan=2, sticky="ew", padx=4, pady=6)
+        btn_frame.grid(row=5, column=0, columnspan=2, sticky="ew", padx=4, pady=6)
         btn_frame.columnconfigure(0, weight=1)
         btn_frame.columnconfigure(1, weight=1)
         btn_frame.columnconfigure(2, weight=1)
@@ -316,37 +343,40 @@ class CharactersTab:
     def _update_bulk_preview(self):
         """Update preview text showing which characters will be affected."""
         outfit_name = self.bulk_outfit_var.get()
+        scheme_name = self.bulk_scheme_var.get()
 
-        if not outfit_name or not self.selected_characters:
+        if not outfit_name and not scheme_name:
             self.bulk_preview_var.set("")
             return
+            
+        changes = []
+        if outfit_name: changes.append("outfit")
+        if scheme_name: changes.append("colors")
+        change_text = " & ".join(changes)
 
-        # All selected characters have all outfits
+        if not self.selected_characters:
+            self.bulk_preview_var.set(f"Select characters to apply {change_text}")
+            return
+
         count = len(self.selected_characters)
         if count == 1:
-            self.bulk_preview_var.set(f"✓ Will update: {self.selected_characters[0]['name']}")
+            self.bulk_preview_var.set(f"✓ Apply {change_text} to: {self.selected_characters[0]['name']}")
         else:
-            self.bulk_preview_var.set(f"✓ Will update {count} characters")
+            self.bulk_preview_var.set(f"✓ Apply {change_text} to {count} characters")
 
     def _apply_bulk_to_all(self):
-        """Apply selected outfit to all selected characters."""
+        """Apply selected outfit and/or color scheme to all selected characters."""
         outfit_name = self.bulk_outfit_var.get()
+        scheme_name = self.bulk_scheme_var.get()
 
-        if not outfit_name:
-            messagebox.showwarning("Selection Required", "Please select an outfit to apply")
+        if not outfit_name and not scheme_name:
+            messagebox.showwarning("Selection Required", "Please select an outfit or color scheme to apply")
             return
 
         if not self.selected_characters:
             messagebox.showwarning("No Characters", "No characters are currently selected")
             return
 
-        # Debug: log the bulk apply action
-        try:
-            logger.debug(
-                f"Bulk apply to all: outfit='{outfit_name}', selected={ [c.get('name') for c in self.selected_characters] }"
-            )
-        except Exception:
-            pass
         # Save state for undo
         if self.save_for_undo:
             self.save_for_undo()
@@ -354,75 +384,83 @@ class CharactersTab:
         # Apply to all selected characters
         count = len(self.selected_characters)
         for char in self.selected_characters:
-            char["outfit"] = outfit_name
+            if outfit_name:
+                char["outfit"] = outfit_name
+            if scheme_name:
+                char["color_scheme"] = scheme_name
 
         self._refresh_list()
         self.on_change()
-        # Clear selection only if not locked
-        if not getattr(self, "bulk_lock_var", None) or not self.bulk_lock_var.get():
-            self.bulk_outfit_var.set("")  # Clear for next use
+        
+        # Clear selections only if not locked
+        if outfit_name and (not getattr(self, "bulk_lock_var", None) or not self.bulk_lock_var.get()):
+            self.bulk_outfit_var.set("")
+        if scheme_name and (not getattr(self, "bulk_scheme_lock_var", None) or not self.bulk_scheme_lock_var.get()):
+            self.bulk_scheme_var.set("")
 
         # Show status feedback
         root = self.tab.winfo_toplevel()
-        msg = f"Applied '{outfit_name}' to all {count} character(s)"
+        changes = []
+        if outfit_name: changes.append(f"outfit '{outfit_name}'")
+        if scheme_name: changes.append(f"colors '{scheme_name}'")
+        msg = f"Applied {', '.join(changes)} to all {count} character(s)"
+        
         if hasattr(root, "_update_status"):
             root._update_status(msg)
         else:
             try:
-                messagebox.showinfo("Applied Outfit", msg)
+                messagebox.showinfo("Applied Bulk Changes", msg)
             except Exception:
-                # best-effort: ignore UI failures
                 pass
 
     def _apply_bulk_to_selected(self):
-        """Apply selected outfit to a specific selected character via dialog."""
+        """Apply selected outfit/colors to a specific selected character via dialog."""
         outfit_name = self.bulk_outfit_var.get()
+        scheme_name = self.bulk_scheme_var.get()
 
-        if not outfit_name:
-            messagebox.showwarning("Selection Required", "Please select an outfit to apply")
+        if not outfit_name and not scheme_name:
+            messagebox.showwarning("Selection Required", "Please select an outfit or color scheme to apply")
             return
 
         if not self.selected_characters:
             messagebox.showwarning("No Characters", "No characters are currently selected")
             return
 
-        try:
-            logger.debug(
-                f"Bulk apply to selected dialog: outfit='{outfit_name}', selected={ [c.get('name') for c in self.selected_characters] }"
-            )
-        except Exception:
-            pass
-
         # If only one character, apply directly
         if len(self.selected_characters) == 1:
             if self.save_for_undo:
                 self.save_for_undo()
 
-            self.selected_characters[0]["outfit"] = outfit_name
+            char = self.selected_characters[0]
+            if outfit_name: char["outfit"] = outfit_name
+            if scheme_name: char["color_scheme"] = scheme_name
+            
             self._refresh_list()
             self.on_change()
-            if not getattr(self, "bulk_lock_var", None) or not self.bulk_lock_var.get():
+            
+            if outfit_name and (not getattr(self, "bulk_lock_var", None) or not self.bulk_lock_var.get()):
                 self.bulk_outfit_var.set("")
+            if scheme_name and (not getattr(self, "bulk_scheme_lock_var", None) or not self.bulk_scheme_lock_var.get()):
+                self.bulk_scheme_var.set("")
 
             root = self.tab.winfo_toplevel()
             if hasattr(root, "_update_status"):
-                root._update_status(
-                    f"Applied '{outfit_name}' to {self.selected_characters[0]['name']}"
-                )
+                root._update_status(f"Applied changes to {char['name']}")
             return
 
         # Multiple characters - show selection dialog
-
-        # Create a custom dialog for character selection
         dialog = tk.Toplevel(self.tab)
         dialog.title("Select Character")
         dialog.transient(self.tab.winfo_toplevel())
         dialog.grab_set()
+        dialog.geometry("300x250")
 
-        # Center the dialog
-        dialog.geometry("300x200")
-
-        ttk.Label(dialog, text=f"Apply '{outfit_name}' to:", style="Bold.TLabel").pack(pady=(10, 5))
+        msg = "Apply "
+        if outfit_name: msg += f"outfit '{outfit_name}' "
+        if scheme_name: msg += f"colors '{scheme_name}' "
+        msg += "to:"
+        
+        ttk.Label(dialog, text=msg, style="Bold.TLabel", wraplength=280).pack(pady=(10, 5))
 
         # Listbox with characters
         listbox_frame = ttk.Frame(dialog)
@@ -438,50 +476,35 @@ class CharactersTab:
         for char in self.selected_characters:
             char_listbox.insert(tk.END, char["name"])
 
-        char_listbox.selection_set(0)  # Select first by default
-
-        result = {"selected": None}
+        char_listbox.selection_set(0)
 
         def on_ok():
             selection = char_listbox.curselection()
             if selection:
-                result["selected"] = self.selected_characters[selection[0]]
+                char = self.selected_characters[selection[0]]
+                if self.save_for_undo:
+                    self.save_for_undo()
+                
+                if outfit_name: char["outfit"] = outfit_name
+                if scheme_name: char["color_scheme"] = scheme_name
+                
+                self._refresh_list()
+                self.on_change()
+                
+                if outfit_name and (not getattr(self, "bulk_lock_var", None) or not self.bulk_lock_var.get()):
+                    self.bulk_outfit_var.set("")
+                if scheme_name and (not getattr(self, "bulk_scheme_lock_var", None) or not self.bulk_scheme_lock_var.get()):
+                    self.bulk_scheme_var.set("")
+                    
                 dialog.destroy()
 
-        def on_cancel():
-            dialog.destroy()
-
-        # Buttons
         btn_frame = ttk.Frame(dialog)
         btn_frame.pack(pady=10)
         ttk.Button(btn_frame, text="Apply", command=on_ok).pack(side="left", padx=5)
-        ttk.Button(btn_frame, text="Cancel", command=on_cancel).pack(side="left", padx=5)
+        ttk.Button(btn_frame, text="Cancel", command=dialog.destroy).pack(side="left", padx=5)
 
-        # Bind double-click
         char_listbox.bind("<Double-Button-1>", lambda e: on_ok())
-
         dialog.wait_window()
-
-        # Apply the outfit if a character was selected
-        if result["selected"]:
-            if self.save_for_undo:
-                self.save_for_undo()
-
-            result["selected"]["outfit"] = outfit_name
-            self._refresh_list()
-            self.on_change()
-            if not getattr(self, "bulk_lock_var", None) or not self.bulk_lock_var.get():
-                self.bulk_outfit_var.set("")
-
-            root = self.tab.winfo_toplevel()
-            msg = f"Applied '{outfit_name}' to {result['selected']['name']}"
-            if hasattr(root, "_update_status"):
-                root._update_status(msg)
-            else:
-                try:
-                    messagebox.showinfo("Applied Outfit", msg)
-                except Exception:
-                    pass
 
     def _filter_characters(self):
         """Filter character dropdown based on search text."""
