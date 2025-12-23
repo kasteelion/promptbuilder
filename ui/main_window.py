@@ -360,7 +360,7 @@ class PromptBuilderApp:
 
         # Notes section (expandable)
         self.notes_collapsible = CollapsibleFrame(right_frame, text="📝 Notes & Interactions", opened=True, show_clear=True)
-        self.notes_collapsible.grid(row=1, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
+        self.notes_collapsible.grid(row=2, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
         self.notes_collapsible.set_clear_command(lambda: (self.notes_text.delete("1.0", "end"), self.schedule_preview_update()))
         
         notes_content = self.notes_collapsible.get_content_frame()
@@ -430,7 +430,7 @@ class PromptBuilderApp:
 
         # Summary section
         self.summary_collapsible = CollapsibleFrame(right_frame, text="📋 Prompt Summary", opened=True)
-        self.summary_collapsible.grid(row=2, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
+        self.summary_collapsible.grid(row=3, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
         create_tooltip(self.summary_collapsible, "Condensed overview of characters and scene")
         summary_content = self.summary_collapsible.get_content_frame()
         summary_content.columnconfigure(0, weight=1)
@@ -441,7 +441,7 @@ class PromptBuilderApp:
 
         # Preview panel container
         self.preview_collapsible = CollapsibleFrame(right_frame, text="🔍 Prompt Preview", opened=True)
-        self.preview_collapsible.grid(row=3, column=0, sticky="nsew", padx=INTERNAL_PAD_X, pady=(SECTION_PAD_Y[0], 20))
+        self.preview_collapsible.grid(row=4, column=0, sticky="nsew", padx=INTERNAL_PAD_X, pady=(SECTION_PAD_Y[0], 20))
         create_tooltip(self.preview_collapsible, "The full generated prompt for copying")
         preview_content = self.preview_collapsible.get_content_frame()
         preview_header = self.preview_collapsible.get_header_frame()
