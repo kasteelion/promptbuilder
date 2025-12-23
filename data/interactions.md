@@ -36,6 +36,7 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 - **Playing Catch:** {char1} and {char2} playing catch, one throwing while the other prepares to receive
 - **Playing Game:** {char1} and {char2} playing a game together, both focused and engaged in friendly competition
 - **Stretching Together:** {char1} and {char2} doing stretches together, both in exercise positions with focused attention
+- **Softball Diamond Showdown (3):** High-tension action scene on a softball diamond. In the background at the center of the frame, {char1} is mid-delivery in a powerful windmill pitch, her body coiled with athletic torque, right arm a blur at the bottom of the arc, right foot dragging a visible trench in the dirt of the mound. In the midground at home plate, {char2} is in a loaded batting stance, knees bent and quads tensed, hands gripping the bat high and ready to swing, eyes laser-focused on {char1}'s release point. Crouched directly behind the hitter, {char3} is in full catcher's gear, hunkered down in a low squat, large catcher's mitt held steady as a target, watching the play with intense focus through the bars of a hockey-style mask. The scene captures the split-second before the pitch reaches the plate, with fine dust suspended in the air and a gritty, high-stakes competitive atmosphere.
 
 ---
 

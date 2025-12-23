@@ -430,6 +430,13 @@ class CharacterCard(ttk.Frame):
         # Background loader
         def _bg_load(path, w, h, widget_ref):
             try:
+                # Check if widget still exists before starting heavy work
+                try:
+                    if not widget_ref.winfo_exists():
+                        return
+                except Exception:
+                    return
+
                 img = Image.open(path).convert("RGBA")
 
                 # Cover-resize: scale to fill the canvas and crop center
@@ -448,11 +455,13 @@ class CharacterCard(ttk.Frame):
 
                 # Schedule UI update on main thread
                 try:
-                    widget_ref.after(0, lambda: widget_ref._display_photo_from_image(img))
+                    if widget_ref.winfo_exists():
+                        widget_ref.after(0, lambda: widget_ref._display_photo_from_image(img))
                 except Exception:
                     pass
             except Exception:
-                logger.exception("Background image load failed")
+                # Silently fail background load if widget is gone or file is invalid
+                pass
 
         t = threading.Thread(target=_bg_load, args=(photo_file, canvas_w, canvas_h, self), daemon=True)
         t.start()
@@ -510,9 +519,17 @@ class CharacterCard(ttk.Frame):
         This must be called on the main/UI thread.
         """
         try:
+            if not self.winfo_exists():
+                return
+            if not hasattr(self, "photo_canvas") or not self.photo_canvas.winfo_exists():
+                return
+
             self.photo_image = ImageTk.PhotoImage(pil_img)
             self.photo_canvas.delete("all")
             self.photo_canvas.create_image(0, 0, image=self.photo_image, anchor="nw")
+        except tk.TclError:
+            # Widget likely destroyed
+            pass
         except Exception:
             logger.exception("Failed to create PhotoImage from PIL image")
 
@@ -966,6 +983,12 @@ class CharacterGalleryPanel(ttk.Frame):
 
     def _process_load_queue(self):
         """Process the image loading queue in batches."""
+        try:
+            if not self.winfo_exists():
+                return
+        except Exception:
+            return
+
         if not self.load_queue:
             return
 
@@ -988,7 +1011,10 @@ class CharacterGalleryPanel(ttk.Frame):
         
         # Schedule next batch if items remain
         if self.load_queue:
-            self.after(50, self._process_load_queue)
+            try:
+                self.after(50, self._process_load_queue)
+            except Exception:
+                pass
 
     def _on_tag_selected_from_card(self, tag_value: str):
         """Handle tag click from a card: set tag combobox and refresh display."""

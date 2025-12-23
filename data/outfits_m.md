@@ -210,10 +210,10 @@ Simple **swim trunks or board shorts**. *Accessories:* None specified. *Hair/Mak
 ## Team Sports
 
 ### American Football - Away
-**Football jersey** for **{team}** in **{secondary_color} with {primary_color} accents** (mesh performance fabric with team number); **padded football pants** in **{secondary_color} with {primary_color} stripes** (knee-length); **football cleats**. *Accessories:* **Helmet** ({secondary_color} with {primary_color} face mask), **shoulder pads** (worn under jersey), mouthguard. *Hair/Makeup:* Minimal grooming.
+**Football jersey** for **{team}** in **{secondary_color} with {primary_color} accents** (mesh performance fabric with team number){modifier}; **padded football pants** in **{secondary_color} with {primary_color} stripes** (knee-length); **football cleats**. *Accessories:* **Helmet** ({secondary_color} with {primary_color} face mask), **shoulder pads** (worn under jersey), mouthguard. *Hair/Makeup:* Minimal grooming.
 
 ### American Football - Home
-**Football jersey** for **{team}** in **{primary_color} with {secondary_color} accents** (mesh performance fabric with team number); **padded football pants** in **{secondary_color} with {primary_color} stripes** (knee-length); **football cleats**. *Accessories:* **Helmet** ({primary_color} with {secondary_color} face mask), **shoulder pads** (worn under jersey), mouthguard. *Hair/Makeup:* Minimal grooming.
+**Football jersey** for **{team}** in **{primary_color} with {secondary_color} accents** (mesh performance fabric with team number){modifier}; **padded football pants** in **{secondary_color} with {primary_color} stripes** (knee-length); **football cleats**. *Accessories:* **Helmet** ({primary_color} with {secondary_color} face mask), **shoulder pads** (worn under jersey), mouthguard. *Hair/Makeup:* Minimal grooming.
 
 ### Baseball - Away
 **Baseball jersey** for **{team}** in **{secondary_color} with {primary_color} accents** (button-up, team logo and number){modifier}; **gray baseball pants** (belted, with {primary_color} piping); **team cap** ({secondary_color} with {primary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.

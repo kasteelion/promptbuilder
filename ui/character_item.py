@@ -197,12 +197,54 @@ class CharacterItem(ttk.LabelFrame):
         if outfit_has_color_vars(str(outfit_text)):
             scheme_var = tk.StringVar(value=self.char_data.get("color_scheme", ""))
             scheme_names = list(self.color_schemes.keys())
-            ttk.Label(self, text="Team Colors:").pack(anchor="w", padx=4)
-            scheme_combo = ttk.Combobox(self, textvariable=scheme_var, state="readonly", values=scheme_names)
-            scheme_combo.pack(fill="x", padx=4, pady=(0, 6))
+            
+            color_row = ttk.Frame(self)
+            color_row.pack(fill="x", padx=4, pady=(0, 6))
+            
+            ttk.Label(color_row, text="Team Colors:").pack(side="left")
+            
+            scheme_combo = ttk.Combobox(color_row, textvariable=scheme_var, state="readonly", values=scheme_names, width=25)
+            scheme_combo.pack(side="left", padx=4)
+            
+            preview_frame = ttk.Frame(color_row)
+            preview_frame.pack(side="left", padx=4)
+            
+            def update_previews(name):
+                # Clear existing
+                for w in preview_frame.winfo_children():
+                    w.destroy()
+                
+                scheme = self.color_schemes.get(name)
+                if not scheme:
+                    return
+                
+                # Helper to check if a string is a hex color or named color
+                def is_valid_color(c):
+                    if not c or c.startswith("{"): return False
+                    return True
+
+                for label, key in [("P", "primary_color"), ("S", "secondary_color"), ("A", "accent")]:
+                    val = scheme.get(key)
+                    if is_valid_color(val):
+                        f = ttk.Frame(preview_frame)
+                        f.pack(side="left", padx=2)
+                        try:
+                            # Use a label with background for simple color box
+                            swatch = tk.Label(f, width=2, height=1, bg=val, relief="solid", borderwidth=1)
+                            swatch.pack(side="left")
+                            ttk.Label(f, text=label, font=("Segoe UI", 7)).pack(side="left", padx=1)
+                        except Exception:
+                            pass
+
             def on_scheme_selected(event):
-                self.callbacks["update_color_scheme"](self.index, scheme_var.get())
+                name = scheme_var.get()
+                self.callbacks["update_color_scheme"](self.index, name)
+                update_previews(name)
+            
             scheme_combo.bind("<<ComboboxSelected>>", on_scheme_selected)
+            # Initial preview
+            if scheme_var.get():
+                update_previews(scheme_var.get())
 
         # Insert outfit modifier selector if outfit uses {modifier} variable
         if "{modifier}" in str(outfit_text):

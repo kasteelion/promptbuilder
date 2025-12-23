@@ -1,78 +1,78 @@
 # Color Schemes
 
-## Default
+## The Standard
 - **primary:** #CCCCCC
 - **secondary:** #888888
 - **accent:** #222222
 - **team:** The Standard
 
-## UCLA
+## The Coastal Bears
 - **primary:** #2774AE
 - **secondary:** #FFD100
 - **accent:** #FFFFFF
 - **team:** The Coastal Bears
 
-## Stanford
+## The Crimson Trees
 - **primary:** #8C1515
 - **secondary:** #D2C295
 - **accent:** #FFFFFF
 - **team:** The Crimson Trees
 
-## Oregon
+## The Emerald Ducks
 - **primary:** #154733
 - **secondary:** #FEE123
 - **accent:** #FFFFFF
 - **team:** The Emerald Ducks
 
-## USC
+## The Golden Warriors
 - **primary:** #990000
 - **secondary:** #FFC72C
 - **accent:** #FFFFFF
 - **team:** The Golden Warriors
 
-## Arizona
+## The Desert Cats
 - **primary:** #CC0033
 - **secondary:** #003366
 - **accent:** #FFFFFF
 - **team:** The Desert Cats
 
-## Arizona State
+## The Sun Spirits
 - **primary:** #8C1D40
 - **secondary:** #FFC627
 - **accent:** #FFFFFF
 - **team:** The Sun Spirits
 
-## Washington
+## The Northern Wolves
 - **primary:** #4B2E83
 - **secondary:** #B7A57A
 - **accent:** #FFFFFF
 - **team:** The Northern Wolves
 
-## Washington State
+## The Mountain Cougars
 - **primary:** #981E32
 - **secondary:** #C4CED4
 - **accent:** #FFFFFF
 - **team:** The Mountain Cougars
 
-## Cal
+## The Bay Bears
 - **primary:** #003262
 - **secondary:** #FDB515
 - **accent:** #FFFFFF
 - **team:** The Bay Bears
 
-## Colorado
+## The Mountain Buffalo
 - **primary:** #000000
 - **secondary:** #CFB87C
 - **accent:** #FFFFFF
 - **team:** The Mountain Buffalo
 
-## Utah
+## The Red Hawks
 - **primary:** #CC0000
 - **secondary:** #FFFFFF
 - **accent:** #000000
 - **team:** The Red Hawks
 
-## Oregon State
+## The River Builders
 - **primary:** #DC4405
 - **secondary:** #000000
 - **accent:** #FFFFFF
@@ -84,115 +84,115 @@
 - **accent:** {accent}
 - **team:** {team}
 
-## White with Black
+## The Monochromes
 - **primary:** #FFFFFF
 - **secondary:** #000000
 - **accent:** #222222
 - **team:** The Monochromes
 
-## Black with White
+## The Shadows
 - **primary:** #000000
 - **secondary:** #FFFFFF
 - **accent:** #CCCCCC
 - **team:** The Shadows
 
-## Green Bay Packers
+## The Bay City Pack
 - **primary:** #203731
 - **secondary:** #FFB612
 - **accent:** #FFFFFF
 - **team:** The Bay City Pack
 
-## Wisconsin Badgers
+## The Red Badgers
 - **primary:** #C5050C
 - **secondary:** #FFFFFF
 - **accent:** #000000
 - **team:** The Red Badgers
 
-## Cyberpunk
+## The Neon City Hackers
 - **primary:** #FF00FF
 - **secondary:** #00FFFF
 - **accent:** #FFFF00
 - **team:** The Neon City Hackers
 
-## Pastel Dream
+## The Cotton Candies
 - **primary:** #FFB7B2
 - **secondary:** #B2E2F2
 - **accent:** #FDFD96
 - **team:** The Cotton Candies
 
-## Forest Ranger
+## The Forest Rangers
 - **primary:** #2D5A27
 - **secondary:** #4B3621
 - **accent:** #D2B48C
 - **team:** The Forest Rangers
 
-## Midnight Neon
+## The Night Riders
 - **primary:** #000033
 - **secondary:** #33FF00
 - **accent:** #FF0055
 - **team:** The Night Riders
 
-## LA Lakers
+## The Gold Coast Kings
 - **primary:** #552583
 - **secondary:** #FDB927
 - **accent:** #FFFFFF
 - **team:** The Gold Coast Kings
 
-## Boston Celtics
+## The Emerald Shamrocks
 - **primary:** #007A33
 - **secondary:** #BA9653
 - **accent:** #FFFFFF
 - **team:** The Emerald Shamrocks
 
-## SF 49ers
+## The Gold Rushers
 - **primary:** #AA0000
 - **secondary:** #B3995D
 - **accent:** #FFFFFF
 - **team:** The Gold Rushers
 
-## Ohio Northern
+## The Polar Bears
 - **primary:** #FF6600
 - **secondary:** #000000
 - **accent:** #FFFFFF
 - **team:** The Polar Bears
 
-## FC Cincinnati
+## The River City Lions
 - **primary:** #FE5000
 - **secondary:** #263B94
 - **accent:** #FFFFFF
 - **team:** The River City Lions
 
-## Synthwave 80s
+## The Retro Raiders
 - **primary:** #FF00FF
 - **secondary:** #7000FF
 - **accent:** #00FFFF
 - **team:** The Retro Raiders
 
-## Deep Sea
+## The Abyss Explorers
 - **primary:** #001F3F
 - **secondary:** #0074D9
 - **accent:** #7FDBFF
 - **team:** The Abyss Explorers
 
-## Autumn Harvest
+## The Golden Reapers
 - **primary:** #8B4513
 - **secondary:** #D2691E
 - **accent:** #FFD700
 - **team:** The Golden Reapers
 
-## Royal Elegance
+## The Sovereign Guard
 - **primary:** #4B0082
 - **secondary:** #D4AF37
 - **accent:** #F5F5DC
 - **team:** The Sovereign Guard
 
-## Space Galactic
+## The Star Voyagers
 - **primary:** #0B0B3B
 - **secondary:** #6A0888
 - **accent:** #C0C0C0
 - **team:** The Star Voyagers
 
-## Desert Oasis
+## The Sand Spirits
 - **primary:** #C2B280
 - **secondary:** #228B22
 - **accent:** #E2725B

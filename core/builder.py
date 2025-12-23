@@ -72,7 +72,7 @@ class PromptBuilder:
             
             scheme_name = char.get("color_scheme")
             scheme = self.color_schemes.get(
-                scheme_name, self.color_schemes.get("Default (No Scheme)", {})
+                scheme_name, self.color_schemes.get("The Standard", {})
             )
             
             if isinstance(outfit, str):

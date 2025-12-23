@@ -561,7 +561,7 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
                 pass
 
         default_schemes = {
-            "Default (No Scheme)": {
+            "The Standard": {
                 "primary_color": "white",
                 "secondary_color": "black",
                 "accent": "blue",
@@ -569,7 +569,7 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
         }
 
         if not f.exists():
-            default_content = """## Default (No Scheme)
+            default_content = """## The Standard
 - **primary:** white
 - **secondary:** black
 - **accent:** blue
