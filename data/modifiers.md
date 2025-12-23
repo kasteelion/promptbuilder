@@ -13,6 +13,9 @@ Modifiers are specialized variations that can be applied to outfits when they co
 ## Softball - Hitting
 - **text:** , wearing a batting helmet and batting gloves, holding a composite softball bat in a ready hitting stance,
 
+## Baseball - Hitting
+- **text:** , wearing a batting helmet and batting gloves, holding a wooden baseball bat in a focused hitting stance,
+
 ## Baseball - Catcher
 - **text:** , wearing full catcher's gear—including chest protector, leg guards, and catcher's mask, crouching behind home plate with a oversized catcher's mitt,
 
