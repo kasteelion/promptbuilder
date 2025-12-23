@@ -372,6 +372,92 @@ Platform: {platform.system()} {platform.release()}
             logger.exception("Error in characters summary explorer")
             self.show_error("Error", f"Failed to open character explorer: {e}")
 
+    def show_color_schemes_summary(self) -> None:
+        """Show a visual summary of all available team color schemes."""
+        try:
+            from ui.widgets import ScrollableCanvas
+            from logic.data_loader import DataLoader
+            
+            # Load schemes
+            loader = DataLoader()
+            schemes = loader.load_color_schemes()
+            
+            if not schemes:
+                self.show_error("Error", "No color schemes found.")
+                return
+
+            dialog = tk.Toplevel(self.root)
+            dialog.title("Team Color Schemes Summary")
+            dialog.geometry("800x600")
+            dialog.minsize(600, 400)
+            dialog.transient(self.root)
+
+            # Main container
+            main_frame = ttk.Frame(dialog, padding=10)
+            main_frame.pack(fill="both", expand=True)
+
+            ttk.Label(main_frame, text="Available Team Color Schemes", style="Title.TLabel").pack(pady=(0, 10))
+
+            # Scrollable area
+            scroll_container = ScrollableCanvas(main_frame)
+            scroll_container.pack(fill="both", expand=True)
+            
+            container = scroll_container.get_container()
+            container.columnconfigure(0, weight=1)
+
+            # Grid of schemes
+            # We'll use a grid with 2 columns if window is wide enough, but for simplicity 
+            # let's start with a list of wide rows.
+            
+            row = 0
+            for name in sorted(schemes.keys()):
+                scheme = schemes[name]
+                
+                # Each scheme gets a frame
+                item_frame = ttk.LabelFrame(container, text=name, padding=10)
+                item_frame.grid(row=row, column=0, sticky="ew", padx=5, pady=5)
+                item_frame.columnconfigure(1, weight=1)
+                
+                # Color swatches
+                swatch_frame = ttk.Frame(item_frame)
+                swatch_frame.grid(row=0, column=0, sticky="w")
+                
+                def is_valid_color(c):
+                    if not c or c.startswith("{"): return False
+                    return True
+
+                for label, key in [("Primary", "primary_color"), ("Secondary", "secondary_color"), ("Accent", "accent")]:
+                    val = scheme.get(key)
+                    if is_valid_color(val):
+                        f = ttk.Frame(swatch_frame)
+                        f.pack(side="left", padx=10)
+                        try:
+                            # Color box
+                            swatch = tk.Label(f, width=4, height=2, bg=val, relief="solid", borderwidth=1)
+                            swatch.pack()
+                            ttk.Label(f, text=label, font=("Segoe UI", 8)).pack()
+                            ttk.Label(f, text=val, font=("Consolas", 8), foreground="gray").pack()
+                        except Exception:
+                            pass
+                
+                # Team name
+                team_name = scheme.get("team", name)
+                team_label = ttk.Label(item_frame, text=f"Team Name: {team_name}", font=("Segoe UI", 10, "bold"))
+                team_label.grid(row=0, column=1, sticky="e", padx=10)
+                
+                row += 1
+
+            # Update scroll region
+            scroll_container.update_scroll_region()
+
+            # Close button at bottom
+            ttk.Button(main_frame, text="Close", command=dialog.destroy).pack(pady=10)
+
+        except Exception as e:
+            from utils import logger
+            logger.exception("Error in color schemes summary")
+            self.show_error("Error", f"Failed to open color schemes summary: {e}")
+
     def _copy_detail(self, text_widget):
         """Copy text from widget to clipboard."""
         try:

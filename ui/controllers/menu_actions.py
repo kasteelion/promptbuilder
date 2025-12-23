@@ -69,6 +69,9 @@ class MenuActions:
     def show_characters_summary(self):
         return self.app.dialog_manager.show_characters_summary()
 
+    def show_color_schemes_summary(self):
+        return self.app.dialog_manager.show_color_schemes_summary()
+
     def show_welcome(self):
         return self.app.dialog_manager.show_welcome()
 
