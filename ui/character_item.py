@@ -94,48 +94,72 @@ class CharacterItem(ttk.LabelFrame):
         toggle_btn = ttk.Button(outfit_header, text="▼", width=3, command=toggle_outfit)
         toggle_btn.pack(side="right")
 
-        # Outfit options inside collapsible frame
-        outfits_categorized = self.char_def.get("outfits_categorized")
-        if outfits_categorized:
-            outfit_keys = []
-            for category, outfits in outfits_categorized.items():
-                if not outfits: continue
-                outfit_keys.append(f"--- {category} ---")
-                outfit_keys.extend(sorted(list(outfits.keys())))
-        else:
-            outfit_keys = sorted(list(self.char_def.get("outfits", {}).keys()))
+        # Prepare data for two-step selection
+        outfits_categorized = self.char_def.get("outfits_categorized", {})
         
-        if len(outfit_keys) > 12:
-            # Use searchable combobox for many outfits
-            outfit_search_var = tk.StringVar(value=current_outfit)
-            outfit_combo = SearchableCombobox(
-                outfit_container,
-                values=outfit_keys,
-                textvariable=outfit_search_var,
-                on_select=lambda val: (
-                    self.callbacks["update_outfit"](self.index, val),
-                    toggle_outfit()
-                ),
-                placeholder="Search outfit..."
-            )
-            outfit_combo.pack(fill="x", padx=4, pady=4)
-        else:
-            # Use buttons for fewer outfits
-            outfits_frame = FlowFrame(outfit_container, padding_x=6, padding_y=4)
-            outfits_frame.pack(fill="both", expand=True, pady=(2, 2))
+        # Determine initial category
+        current_cat = ""
+        current_outfit = self.char_data.get("outfit", "")
+        
+        if outfits_categorized:
+            # 1. Try to find category containing current outfit
+            for cat, outfits in outfits_categorized.items():
+                if current_outfit in outfits:
+                    current_cat = cat
+                    break
+            # 2. If not found but we have categories, default to first (e.g. "Personal" or "Common")
+            if not current_cat:
+                # Prefer "Personal" or "Common" if available
+                if "Personal" in outfits_categorized:
+                    current_cat = "Personal"
+                elif "Common" in outfits_categorized:
+                    current_cat = "Common"
+                else:
+                    current_cat = sorted(list(outfits_categorized.keys()))[0]
 
-            for o in outfit_keys:
-                btn_style = "Accent.TButton" if o == current_outfit else "TButton"
-                outfits_frame.add_button(
-                    text=o,
-                    style=btn_style,
-                    command=(
-                        lambda name=o: (
-                            self.callbacks["update_outfit"](self.index, name),
-                            toggle_outfit(),
-                        )
-                    ),
-                )
+        # UI for Category
+        cat_frame = ttk.Frame(outfit_container)
+        cat_frame.pack(fill="x", padx=4, pady=2)
+        ttk.Label(cat_frame, text="Category:", width=8).pack(side="left")
+        
+        cat_var = tk.StringVar(value=current_cat)
+        
+        # UI for Outfit Name
+        name_frame = ttk.Frame(outfit_container)
+        name_frame.pack(fill="x", padx=4, pady=2)
+        ttk.Label(name_frame, text="Outfit:", width=8).pack(side="left")
+        
+        name_var = tk.StringVar(value=current_outfit)
+        
+        # Initialize name combo first so we can reference it
+        initial_outfits = sorted(list(outfits_categorized.get(current_cat, {}).keys())) if current_cat else []
+        
+        name_combo = SearchableCombobox(
+            name_frame,
+            values=initial_outfits,
+            textvariable=name_var,
+            on_select=lambda val: (
+                self.callbacks["update_outfit"](self.index, val),
+                toggle_outfit() # Close on selection
+            ),
+            placeholder="Select outfit..."
+        )
+        name_combo.pack(side="left", fill="x", expand=True)
+
+        # Define category select callback
+        def on_category_select(val):
+            new_outfits = sorted(list(outfits_categorized.get(val, {}).keys()))
+            name_combo.set_values(new_outfits)
+            name_combo.set("") # Clear selection so user forces a choice
+            
+        cat_combo = SearchableCombobox(
+            cat_frame,
+            values=sorted(list(outfits_categorized.keys())),
+            textvariable=cat_var,
+            on_select=on_category_select,
+            placeholder="Select category..."
+        )
+        cat_combo.pack(side="left", fill="x", expand=True)
 
         # Outfit creator button
         ttk.Button(

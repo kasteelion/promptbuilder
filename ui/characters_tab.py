@@ -44,6 +44,7 @@ class CharactersTab:
         self.poses = {}
         self.scenes = {}
         self.selected_characters = []
+        self.categorized_all = {}
 
         # Debounce tracking for action notes
         self._action_note_after_ids = {}
@@ -88,7 +89,7 @@ class CharactersTab:
         self.char_combo.set_values(sorted(list(self.characters.keys())))
 
         # Update bulk outfit combo with categorized lists
-        categorized_all = {}
+        self.categorized_all = {}
         
         # 1. From shared files (source of truth for categories)
         try:
@@ -98,9 +99,9 @@ class CharactersTab:
                 for gender_key, categories in shared.items():
                     if isinstance(categories, dict):
                         for cat, outfits in categories.items():
-                            if cat not in categorized_all:
-                                categorized_all[cat] = set()
-                            categorized_all[cat].update(outfits.keys())
+                            if cat not in self.categorized_all:
+                                self.categorized_all[cat] = set()
+                            self.categorized_all[cat].update(outfits.keys())
         except Exception:
             pass
 
@@ -108,21 +109,21 @@ class CharactersTab:
         for char_data in self.characters.values():
             char_cats = char_data.get("outfits_categorized", {})
             for cat, outfits in char_cats.items():
-                if cat not in categorized_all:
-                    categorized_all[cat] = set()
-                categorized_all[cat].update(outfits.keys())
+                if cat not in self.categorized_all:
+                    self.categorized_all[cat] = set()
+                self.categorized_all[cat].update(outfits.keys())
 
-        # 3. Flatten to list with headers
-        display_list = []
-        for cat in sorted(categorized_all.keys()):
-            outfits = sorted(list(categorized_all[cat]))
-            if outfits:
-                display_list.append(f"--- {cat} ---")
-                display_list.extend(outfits)
-        
-        self.bulk_outfit_combo.set_values(display_list)
+        # Set values for category combo
+        self.bulk_cat_combo.set_values(sorted(list(self.categorized_all.keys())))
+        self.bulk_outfit_combo.set_values([]) # Clear outfits until category selected
 
         self._refresh_list()
+
+    def _on_bulk_cat_select(self, val):
+        """Handle bulk category selection."""
+        outfits = sorted(list(self.categorized_all.get(val, set())))
+        self.bulk_outfit_combo.set_values(outfits)
+        self.bulk_outfit_combo.set("")
 
     def _build_ui(self):
         """Build the characters tab UI."""
@@ -183,23 +184,46 @@ class CharactersTab:
         )
         help_text.pack(anchor="w", padx=6, pady=(0, 4))
 
-        ttk.Label(bulk, text="Select Outfit:").grid(row=1, column=0, sticky="w", padx=(4, 4), pady=4)
+        # Bulk Category
+        cat_frame = ttk.Frame(bulk)
+        cat_frame.grid(row=1, column=0, columnspan=3, sticky="ew", padx=4, pady=2)
+        ttk.Label(cat_frame, text="Category:", width=9).pack(side="left")
+        
+        self.bulk_cat_var = tk.StringVar()
+        self.bulk_cat_combo = SearchableCombobox(
+            cat_frame,
+            textvariable=self.bulk_cat_var,
+            on_select=self._on_bulk_cat_select,
+            placeholder="Select category...",
+            width=25
+        )
+        self.bulk_cat_combo.pack(side="left", fill="x", expand=True)
+
+        # Bulk Outfit Name
+        name_frame = ttk.Frame(bulk)
+        name_frame.grid(row=2, column=0, columnspan=3, sticky="ew", padx=4, pady=2)
+        ttk.Label(name_frame, text="Outfit:", width=9).pack(side="left")
+
         self.bulk_outfit_var = tk.StringVar()
         self.bulk_outfit_combo = SearchableCombobox(
-            bulk,
+            name_frame,
             values=[],
             textvariable=self.bulk_outfit_var,
             on_select=lambda val: self._update_bulk_preview(),
-            placeholder="Search outfit..."
+            placeholder="Select outfit...",
+            width=25
         )
-        self.bulk_outfit_combo.grid(row=1, column=1, sticky="ew", padx=2, pady=4)
+        self.bulk_outfit_combo.pack(side="left", fill="x", expand=True)
 
         # Lock checkbox: when checked, keep the selected outfit after applying
         self.bulk_lock_var = tk.BooleanVar(value=False)
         self.bulk_lock_chk = ttk.Checkbutton(
             bulk, text="Lock", variable=self.bulk_lock_var, width=5
         )
-        self.bulk_lock_chk.grid(row=1, column=2, sticky="w", padx=(6, 0), pady=4)
+        self.bulk_lock_chk.grid(row=1, column=3, sticky="w", padx=(6, 0), pady=4) # Moved to separate column if possible, or pack in name_frame
+        # Actually grid layout above used columnspan=3. Let's put lock check in the name frame or separate row?
+        # Simpler: put lock check in name_frame
+        self.bulk_lock_chk.pack(in_=name_frame, side="left", padx=(6, 0))
         create_tooltip(self.bulk_lock_chk, "Keep the selected outfit after applying")
 
         # Preview/status label
@@ -207,11 +231,11 @@ class CharactersTab:
         self.bulk_preview_label = ttk.Label(
             bulk, textvariable=self.bulk_preview_var, style="Muted.TLabel"
         )
-        self.bulk_preview_label.grid(row=2, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 6))
+        self.bulk_preview_label.grid(row=3, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 6))
 
         # Button row
         btn_frame = ttk.Frame(bulk)
-        btn_frame.grid(row=3, column=0, columnspan=2, sticky="ew", padx=4, pady=6)
+        btn_frame.grid(row=4, column=0, columnspan=2, sticky="ew", padx=4, pady=6)
         btn_frame.columnconfigure(0, weight=1)
         btn_frame.columnconfigure(1, weight=1)
         btn_frame.columnconfigure(2, weight=1)
