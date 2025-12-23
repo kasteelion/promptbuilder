@@ -36,6 +36,7 @@ class CharacterCard(ttk.Frame):
         character_name,
         character_data,
         data_loader,
+        prefs,
         on_add_callback=None,
         on_photo_change=None,
         on_tag_click=None,
@@ -48,6 +49,7 @@ class CharacterCard(ttk.Frame):
             character_name: Name of the character
             character_data: Character data dict
             data_loader: DataLoader instance
+            prefs: PreferencesManager instance
             on_add_callback: Function to call when adding character
             on_photo_change: Function to call when photo is changed
             theme_colors: Theme color dict
@@ -57,18 +59,15 @@ class CharacterCard(ttk.Frame):
         self.character_name = character_name
         self.character_data = character_data
         self.data_loader = data_loader
+        self.prefs = prefs
         self.on_add_callback = on_add_callback
         self.on_photo_change = on_photo_change
         self.on_tag_click = on_tag_click
         self.theme_colors = theme_colors or {}
         
-        from utils import PreferencesManager
-        self.prefs = PreferencesManager()
-
         self.photo_image = None  # Keep reference to prevent GC
 
         self._build_ui()
-        # self._load_photo()  # Deferred loading managed by parent
 
         # Add hover effect to card
         self.bind("<Enter>", self._on_enter)
@@ -76,19 +75,31 @@ class CharacterCard(ttk.Frame):
 
     def _on_enter(self, event):
         """Handle mouse enter (hover)."""
-        # Keep borderwidth constant to prevent jitter, just change relief
-        self.configure(relief="solid")
+        # Modern hover effect: change background or border color
+        self.configure(relief="solid", borderwidth=1)
+        # If theme manager is available, we could change bg too
+        try:
+            self.name_label.config(foreground=self.theme_colors.get("accent", "#0078d7"))
+        except Exception:
+            pass
 
     def _on_leave(self, event):
         """Handle mouse leave."""
-        self.configure(relief="raised")
+        self.configure(relief="flat", borderwidth=1)
+        try:
+            self.name_label.config(foreground=self.theme_colors.get("fg", "black"))
+        except Exception:
+            pass
 
     def _build_ui(self):
         """Build the card UI."""
-        self.configure(relief="raised", borderwidth=1, padding=6)
+        # Use a flatter card style
+        self.configure(relief="flat", borderwidth=1, padding=8)
+        
         # Horizontal layout: photo on left, summary/info on right
         left_size = int(CHARACTER_CARD_SIZE * 1.4)
 
+        # Container with a clear border look
         container = ttk.Frame(self)
         container.pack(fill="both", expand=True)
 
@@ -621,18 +632,20 @@ class CharacterCard(ttk.Frame):
 class CharacterGalleryPanel(ttk.Frame):
     """Side panel showing character cards in a scrollable gallery."""
 
-    def __init__(self, parent, data_loader, on_add_callback, theme_colors=None):
+    def __init__(self, parent, data_loader, prefs, on_add_callback, theme_colors=None):
         """Initialize character gallery.
 
         Args:
             parent: Parent widget
             data_loader: DataLoader instance
+            prefs: PreferencesManager instance
             on_add_callback: Function to call when adding character
             theme_colors: Theme color dict
         """
         super().__init__(parent, style="TFrame")
 
         self.data_loader = data_loader
+        self.prefs = prefs
         self.on_add_callback = on_add_callback
         self.theme_colors = theme_colors or {}
         self.characters = {}
@@ -829,9 +842,7 @@ class CharacterGalleryPanel(ttk.Frame):
         char_list = []
         
         # Get favorites list from preferences
-        from utils import PreferencesManager
-        prefs = PreferencesManager()
-        favs = prefs.get("favorite_characters", [])
+        favs = self.prefs.get("favorite_characters", [])
         fav_only = self.fav_only_var.get()
 
         for name, data in self.characters.items():
@@ -894,6 +905,7 @@ class CharacterGalleryPanel(ttk.Frame):
                 name,
                 data,
                 self.data_loader,
+                self.prefs,
                 on_add_callback=self.on_add_callback,
                 on_tag_click=self._on_tag_selected_from_card,
                 theme_colors=self.theme_colors,
@@ -942,20 +954,8 @@ class CharacterGalleryPanel(ttk.Frame):
             except Exception:
                 pass
 
-            # Update scroll region to include new cards (and spacer). Also schedule
-            # a deferred update after idle to account for any late reflows.
-            try:
-                self.scrollable_canvas.update_scroll_region()
-            except Exception:
-                pass
-
-            try:
-                self.after_idle(self.scrollable_canvas.update_scroll_region)
-            except Exception:
-                try:
-                    self.after(60, self.scrollable_canvas.update_scroll_region)
-                except Exception:
-                    pass
+            # Update scroll region to include new cards (and spacer).
+            self.scrollable_canvas.update_scroll_region()
         except Exception:
             from utils import logger
 

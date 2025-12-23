@@ -61,8 +61,10 @@ class PreviewPanel:
         if self.header_parent == self.parent:
             hdr.grid(row=header_row, column=0, sticky="ew", padx=6, pady=4)
         else:
-            # When in a separate header (like a CollapsibleFrame header), pack it
-            hdr.pack(side="right", padx=(10, 0), expand=True, fill="x")
+            # When in a separate header (like a CollapsibleFrame header), use grid
+            # Position it in column 1 (after the toggle button)
+            hdr.grid(row=0, column=1, sticky="ew", padx=(10, 0))
+            self.header_parent.columnconfigure(1, weight=1)
             
         hdr.columnconfigure(0, weight=1)
 

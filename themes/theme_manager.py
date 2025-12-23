@@ -277,7 +277,9 @@ class ThemeManager:
         self.style.configure("TCheckbutton", background=bg, foreground=fg, font=(None, s(9)))
 
         # Custom widget styles
-        self.style.configure("Collapsible.TFrame", background=bg)
+        self.style.configure("Collapsible.TFrame", background=bg, bordercolor=border, relief="flat")
+        self.style.configure("Card.TFrame", background=bg, bordercolor=border, borderwidth=1, relief="flat")
+        
         self.style.configure(
             "Title.TLabel", font=(None, s(14), "bold"), background=bg, foreground=accent
         )

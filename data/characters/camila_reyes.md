@@ -9,14 +9,22 @@
 
 **Appearance:**
 
-* **Body:** Flamboyant Gamine; compact resilient flesh quality; petite but broad shoulders, long-torso-short-leg proportion; short (5'0"); tightly-wound sinewy muscle over sharp bone structure with defined calves and forearms; fiery dramatic presence.
-* **Face:** Angular slightly sharp structure; elongated diamond shape; prominent high arching brows and strong chin; large intensely focused round eyes, moderately spaced, dark hazel; defined narrow jawline; neutral resting expression is serious and contained; smile is sudden, wide, and mischievous, often accompanied by flash of eye contact.
-* **Hair:** Type 1B; medium density; very glossy dark; mid-back length; sleekly center-parted; high sheen; commonly pulled back into tight slicked-back bun or high ponytail; black.
-* **Skin:** Olive with cool undertones and soft matte finish; visible tension/clench in jawline when focused.
+* **Body:** Flamboyant Gamine frame; compact resilient flesh quality; petite but broad shoulders, long-torso-short-leg proportion; short (5'0"); tightly-wound sinewy muscle over sharp bone structure with defined calves and forearms; fiery and disciplined presence.
+* **Face:** Angular slightly sharp structure; elongated diamond shape; prominent high arching brows and strong chin; large intensely focused dark hazel eyes; defined narrow jawline; neutral resting expression is serious, contained, and observant.
+* **Hair:** Type 1B; medium density; mid-back length; pure black; very glossy with high sheen; takes precision styling well.
+* **Skin:** Olive with cool undertones and soft matte finish; smooth and disciplined surface.
 
 **Age Presentation:** late 30s presentation; experienced, vibrant, fiercely expressive.
-**Vibe / Energy:** passionate, disciplined, intense, fiery.
-**Bearing:** quick, sharp, and precise dancer's movements; stands with perfect slightly aggressive posture; frequent use of expressive hand and wrist articulation.
+**Vibe / Energy:** passionate, disciplined, intense, fiery, spirit of duende.
+**Bearing:** quick, sharp, and precise dancer's movements; stands with perfect slightly aggressive posture; frequent use of expressive hand and wrist articulation; smile is sudden and mischievous.
+
+// Style notes for outfit creation (not included in prompts):
+// - Typical makeup: minimal everyday with defined brows, light mascara
+// - Style preferences: sleek monochromatic looks, structured pieces in black and neutrals
+// - Jewelry preference: minimal, classic pieces
+// - General vibe: understated elegance with sharp tailored lines
+// - Signature Hair: favors sleek slicked-back buns or high ponytails that emphasize her sharp features and discipline
+// - Movement: moves with a precision that makes no distinction between life and art
 
 // Style notes for outfit creation (not included in prompts):
 // - Typical makeup: minimal everyday with defined brows, light mascara

@@ -8,21 +8,22 @@
 **Gender:** F
 
 **Appearance:**
-* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact athletic proportions; petite vertical.
-* **Face:** Angular compact structure; square-leaning oval face; sharp brows; intense eyes; focused expression.
-* **Hair:** Type 1 straight; medium density; asymmetrical undercut; choppy layers; heavy side sweep; matte texture.
-* **Skin:** Light neutral skin with matte clarity.
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact athletic proportions; petite vertical line; sharp and energized presence.
+* **Face:** Angular compact structure; square-leaning oval face; sharp brows; intensely focused dark eyes; neutral resting expression is focused and alert with an air of controlled defiance.
+* **Hair:** Type 1 straight; medium density; dark black with matte texture; choppy layers and versatile alternative styling options; drawn to sharp, edgy cuts.
+* **Skin:** Light neutral skin with matte clarity; smooth even finish.
 
 **Age Presentation:** late 20s presentation; sharp, energized.
-**Vibe / Energy:** alert, driven, competitive.
-**Bearing:** quick, precise movement.
+**Vibe / Energy:** alert, driven, competitive, rebellious, artistic.
+**Bearing:** quick, precise movement; direct eye contact; intentional and poised.
 
 // Style notes for outfit creation (not included in prompts):
 // - Typical makeup: bold and edgy when worn; black liner, dark lip, minimal color
 // - Style preferences: alternative streetwear meets traditional elements—leather, structured cotton, raw denim, technical fabrics in monochrome with pops of red—black, charcoal, white, deep red accents
 // - Jewelry preference: silver and blackened metal, bold statement pieces, multiple piercings
 // - General vibe: edgy, artistic, rebellious with intentional style
-// - Tattoos: visible ink on arms and one behind ear (traditional Japanese motifs mixed with modern designs)
+// - Tattoos: often features visible ink on arms and behind ear (traditional Japanese motifs mixed with modern designs)
+// - Signature Hair: favors asymmetrical undercut styles or choppy side-swept fringe in casual looks
 
 ---
 
