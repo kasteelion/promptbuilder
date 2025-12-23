@@ -116,12 +116,15 @@ class CharactersTab:
         self.tab.columnconfigure(0, weight=1)
         self.tab.rowconfigure(3, weight=1)  # Selected characters area expands
 
+        # Standard section padding
+        SECTION_PAD_Y = (4, 8)
+
         # Base prompt selector
         bp = ttk.LabelFrame(self.tab, text="📋 Base Prompt (Style)", style="TLabelframe")
-        bp.grid(row=0, column=0, sticky="ew", padx=4, pady=4)
+        bp.grid(row=0, column=0, sticky="ew", padx=6, pady=SECTION_PAD_Y)
         bp.columnconfigure(0, weight=1)
         help_label = ttk.Label(bp, text="Choose a base art style", style="Muted.TLabel")
-        help_label.grid(row=0, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 0))
+        help_label.grid(row=0, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 2))
         create_tooltip(help_label, TOOLTIPS.get("base_prompt", ""))
 
         self.base_prompt_var = tk.StringVar()
@@ -132,16 +135,16 @@ class CharactersTab:
             placeholder="Search style...",
             textvariable=self.base_prompt_var
         )
-        self.base_combo.grid(row=1, column=0, sticky="ew", padx=(4, 2), pady=(0, 4))
+        self.base_combo.grid(row=1, column=0, sticky="ew", padx=(4, 2), pady=(2, 6))
         create_tooltip(self.base_combo, TOOLTIPS.get("base_prompt", ""))
 
         ttk.Button(bp, text="✨ Create Style", command=self._create_new_style).grid(
-            row=1, column=1, sticky="ew", padx=(2, 4), pady=(0, 4)
+            row=1, column=1, sticky="ew", padx=(2, 4), pady=(2, 6)
         )
 
         # Bulk outfit editor section (Collapsible)
         self.bulk_container = CollapsibleFrame(self.tab, text="⚡ Bulk Outfit Editor")
-        self.bulk_container.grid(row=1, column=0, sticky="ew", padx=4, pady=4)
+        self.bulk_container.grid(row=1, column=0, sticky="ew", padx=6, pady=SECTION_PAD_Y)
         # Start collapsed
         self.bulk_container._toggle_cb()
 
@@ -150,7 +153,7 @@ class CharactersTab:
 
         # Info section
         info_frame = ttk.Frame(bulk, relief="groove", borderwidth=1)
-        info_frame.grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 8))
+        info_frame.grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 10))
         info_frame.columnconfigure(0, weight=1)
 
         info_text = ttk.Label(
@@ -158,16 +161,16 @@ class CharactersTab:
             text="💡 Apply the same outfit to multiple characters at once",
             style="Accent.TLabel",
         )
-        info_text.pack(anchor="w", padx=6, pady=2)
+        info_text.pack(anchor="w", padx=6, pady=4)
 
         help_text = ttk.Label(
             info_frame,
             text="Select an outfit and click a button to apply it",
             style="Muted.TLabel",
         )
-        help_text.pack(anchor="w", padx=6, pady=(0, 2))
+        help_text.pack(anchor="w", padx=6, pady=(0, 4))
 
-        ttk.Label(bulk, text="Select Outfit:").grid(row=1, column=0, sticky="w", padx=(4, 2))
+        ttk.Label(bulk, text="Select Outfit:").grid(row=1, column=0, sticky="w", padx=(4, 4), pady=4)
         self.bulk_outfit_var = tk.StringVar()
         self.bulk_outfit_combo = SearchableCombobox(
             bulk,
@@ -176,14 +179,14 @@ class CharactersTab:
             on_select=lambda val: self._update_bulk_preview(),
             placeholder="Search outfit..."
         )
-        self.bulk_outfit_combo.grid(row=1, column=1, sticky="ew", padx=2)
+        self.bulk_outfit_combo.grid(row=1, column=1, sticky="ew", padx=2, pady=4)
 
         # Lock checkbox: when checked, keep the selected outfit after applying
         self.bulk_lock_var = tk.BooleanVar(value=False)
         self.bulk_lock_chk = ttk.Checkbutton(
             bulk, text="Lock", variable=self.bulk_lock_var, width=5
         )
-        self.bulk_lock_chk.grid(row=1, column=2, sticky="w", padx=(6, 0))
+        self.bulk_lock_chk.grid(row=1, column=2, sticky="w", padx=(6, 0), pady=4)
         create_tooltip(self.bulk_lock_chk, "Keep the selected outfit after applying")
 
         # Preview/status label
@@ -191,61 +194,62 @@ class CharactersTab:
         self.bulk_preview_label = ttk.Label(
             bulk, textvariable=self.bulk_preview_var, style="Muted.TLabel"
         )
-        self.bulk_preview_label.grid(row=2, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 4))
+        self.bulk_preview_label.grid(row=2, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 6))
 
         # Button row
         btn_frame = ttk.Frame(bulk)
-        btn_frame.grid(row=3, column=0, columnspan=2, sticky="ew", padx=4, pady=4)
+        btn_frame.grid(row=3, column=0, columnspan=2, sticky="ew", padx=4, pady=6)
         btn_frame.columnconfigure(0, weight=1)
         btn_frame.columnconfigure(1, weight=1)
         btn_frame.columnconfigure(2, weight=1)
 
         ttk.Button(btn_frame, text="✓ Apply to All", command=self._apply_bulk_to_all).grid(
-            row=0, column=0, sticky="ew", padx=(0, 2)
+            row=0, column=0, sticky="ew", padx=(0, 4)
         )
         ttk.Button(
             btn_frame, text="✓ Apply to Selected", command=self._apply_bulk_to_selected
         ).grid(row=0, column=1, sticky="ew", padx=2)
         ttk.Button(
             btn_frame, text="✨ Create Shared Outfit", command=self._create_shared_outfit
-        ).grid(row=0, column=2, sticky="ew", padx=(2, 0))
+        ).grid(row=0, column=2, sticky="ew", padx=(4, 0))
 
         # Add character section
         add = ttk.LabelFrame(self.tab, text="👥 Add Character", style="TLabelframe")
-        add.grid(row=2, column=0, sticky="ew", padx=4, pady=4)
+        add.grid(row=2, column=0, sticky="ew", padx=6, pady=SECTION_PAD_Y)
         add.columnconfigure(0, weight=1)
         char_help = ttk.Label(
             add, text="Select a character and press Add or Enter", style="Muted.TLabel"
         )
-        char_help.grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 4))
+        char_help.grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(4, 4))
         create_tooltip(char_help, TOOLTIPS.get("character", ""))
 
         self.char_var = tk.StringVar()
         self.char_combo = SearchableCombobox(
             add,
             values=sorted(list(self.characters.keys())),
-            on_select=lambda val: self._add_character(),
+            on_select=lambda val: None, # Don't add on simple select
+            on_double_click=lambda val: self._add_character(),
             placeholder="Search character...",
             textvariable=self.char_var
         )
-        self.char_combo.grid(row=1, column=0, columnspan=2, sticky="ew", pady=(0, 4), padx=4)
+        self.char_combo.grid(row=1, column=0, columnspan=2, sticky="ew", pady=(2, 6), padx=4)
         create_tooltip(self.char_combo, TOOLTIPS.get("character", ""))
 
         button_frame = ttk.Frame(add)
-        button_frame.grid(row=2, column=0, columnspan=2, sticky="ew", padx=4, pady=(0, 4))
+        button_frame.grid(row=2, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 6))
         button_frame.columnconfigure(0, weight=1)
         button_frame.columnconfigure(1, weight=1)
 
         ttk.Button(button_frame, text="+ Add to Prompt", command=self._add_character).grid(
-            row=0, column=0, sticky="ew", padx=(0, 2)
+            row=0, column=0, sticky="ew", padx=(0, 4)
         )
         ttk.Button(
             button_frame, text="✨ Create New Character", command=self._create_new_character
-        ).grid(row=0, column=1, sticky="ew", padx=(2, 0))
+        ).grid(row=0, column=1, sticky="ew", padx=(4, 0))
 
         # Use ScrollableCanvas for selected characters
         self.scrollable_canvas = ScrollableCanvas(self.tab)
-        self.scrollable_canvas.grid(row=3, column=0, sticky="nsew", padx=4, pady=4)
+        self.scrollable_canvas.grid(row=3, column=0, sticky="nsew", padx=6, pady=SECTION_PAD_Y)
 
         # Get container for characters
         self.chars_container = self.scrollable_canvas.get_container()

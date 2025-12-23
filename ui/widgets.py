@@ -14,13 +14,7 @@ from utils import logger
 
 
 class ScrollableCanvas(ttk.Frame):
-    """A reusable scrollable canvas with mousewheel support and auto scroll region updates.
-
-    Handles common scrolling patterns:
-    - Mousewheel binding to canvas and all child widgets
-    - Automatic scroll region updates
-    - Canvas window width syncing for proper wrapping
-    """
+    """A reusable scrollable canvas with mousewheel support and auto scroll region updates."""
 
     def __init__(self, parent, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
@@ -30,7 +24,7 @@ class ScrollableCanvas(ttk.Frame):
         self.rowconfigure(0, weight=1)
 
         # Create canvas and scrollbar
-        self.canvas = tk.Canvas(self, highlightthickness=0)
+        self.canvas = tk.Canvas(self, highlightthickness=0, borderwidth=0)
         self.scrollbar = ttk.Scrollbar(
             self, orient="vertical", command=self.canvas.yview, style="Vertical.TScrollbar"
         )
@@ -45,7 +39,7 @@ class ScrollableCanvas(ttk.Frame):
             # Ensure the inner container fills the canvas width
             self.canvas.itemconfig(self._window, width=event.width)
             # Update scroll region when canvas resizes
-            self.update_scroll_region()
+            self.after_idle(self.update_scroll_region)
 
         self.canvas.bind("<Configure>", update_window_width)
 
@@ -59,18 +53,11 @@ class ScrollableCanvas(ttk.Frame):
 
     def _on_mousewheel(self, event):
         """Handle mousewheel scrolling with smooth pixel-based movement."""
-        # Calculate scroll amount
-        # On Windows, delta is typically 120 or -120 per notch
-        # We'll scroll by a fixed pixel amount for more consistent feel
         scroll_pixels = 40  # pixels per notch
-        
         direction = -1 if event.delta > 0 else 1
         amount = direction * scroll_pixels
         
-        # Get current scroll position and total height
         try:
-            # yview returns (top, bottom) as fractions of total height
-            # we need to convert pixels to fraction
             bbox = self.canvas.bbox("all")
             if not bbox:
                 return "break"
@@ -79,19 +66,11 @@ class ScrollableCanvas(ttk.Frame):
             if total_height <= 0:
                 return "break"
                 
-            # Current top fraction
             current_top = self.canvas.yview()[0]
-            
-            # New top fraction
             new_top = current_top + (amount / total_height)
-            
-            # Clamp to [0, 1]
             new_top = max(0, min(1, new_top))
-            
-            # Apply scroll
             self.canvas.yview_moveto(new_top)
         except Exception:
-            # Fallback to standard scroll if calculation fails
             self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
             
         return "break"
@@ -102,163 +81,40 @@ class ScrollableCanvas(ttk.Frame):
             self._bind_mousewheel_recursive(child)
 
     def update_scroll_region(self):
-        # Defer the actual bbox calculation until the event loop is idle so that
-        # geometry managers have a chance to settle. This avoids computing an
-        # incomplete bbox when widgets are still being laid out which can cause
-        # the scrollbar to not reach the bottom of the content.
-        def _apply_scrollregion():
+        """Update the scroll region with multiple retries to handle async layouts."""
+        def _apply():
             try:
                 self.canvas.update_idletasks()
-                # Make the canvas window's height match the container's requested
-                # height so bbox('all') reflects the full content. This helps
-                # when children are positioned with place/grid and the window
-                # item hasn't picked up the final height yet.
-                try:
-                    req_h = int(self.container.winfo_reqheight() or 0)
-                    if req_h > 1:
-                        try:
-                            self.canvas.itemconfig(self._window, height=req_h)
-                        except Exception:
-                            pass
-                except Exception:
-                    pass
-                # Compute desired scrollregion from container/requested height
-                # and from measured child extents, since canvas.bbox('all') may
-                # only include the canvas window item and not reflect inner
-                # children's final placed extents.
-                try:
-                    # Container requested size is the best single source of truth
-                    cont_req_h = int(self.container.winfo_reqheight() or 0)
-                except Exception:
-                    cont_req_h = 0
-
-                # Compute the max bottom among container children (y + height)
-                max_child_bottom = 0
-                try:
-                    for c in self.container.winfo_children():
-                        try:
-                            y = int(c.winfo_y())
-                            h = int(c.winfo_height())
-                            if y + h > max_child_bottom:
-                                max_child_bottom = y + h
-                        except Exception:
-                            continue
-                except Exception:
-                    max_child_bottom = 0
-
-                # Prefer the largest measurement we have
-                bottom_padding = 32
-                measured_bottom = max(cont_req_h, max_child_bottom)
-                try:
-                    canvas_h = int(self.canvas.winfo_height() or 0)
-                except Exception:
-                    canvas_h = 0
-
-                desired_bottom = max(measured_bottom + bottom_padding, canvas_h)
-
-                try:
-                    cont_req_w = int(self.container.winfo_reqwidth() or 0)
-                except Exception:
-                    cont_req_w = 0
-
-                # Set scrollregion explicitly using container extents so the
-                # scrollbar covers all inner widgets.
-                try:
-                    self.canvas.config(scrollregion=(0, 0, cont_req_w or 1, desired_bottom))
-                except Exception:
+                
+                # Method 1: Use bbox
+                bbox = self.canvas.bbox("all")
+                
+                # Method 2: Manually check children extents (often more reliable for grid/place)
+                max_y = 0
+                for child in self.container.winfo_children():
                     try:
-                        # Fallback to using bbox if available
-                        bbox = self.canvas.bbox("all")
-                        if bbox:
-                            self.canvas.config(scrollregion=bbox)
+                        if child.winfo_viewable():
+                            y = child.winfo_y() + child.winfo_height()
+                            if y > max_y:
+                                max_y = y
                     except Exception:
-                        pass
-            except Exception as e:
-                logger.debug(f"Failed to update scroll region: {e}")
-
-        try:
-            # Schedule after_idle to ensure all widgets report correct sizes first
-            self.canvas.after_idle(_apply_scrollregion)
-        except Exception:
-            # Best-effort immediate attempt if after_idle isn't available
-            try:
-                _apply_scrollregion()
+                        continue
+                
+                # Combine methods
+                width = bbox[2] if bbox else self.container.winfo_width()
+                height = max(max_y, bbox[3] if bbox else 0, self.container.winfo_reqheight())
+                
+                # Apply with padding
+                self.canvas.config(scrollregion=(0, 0, width, height + 64))
             except Exception:
                 pass
 
-        # Retry loop: attempt several times with increasing delays to handle
-        # widgets that perform layout asynchronously (FlowFrame reflows, image
-        # loading, etc.). This makes the scrollregion robust against late
-        # geometry changes.
-        max_retries = 5
-        delays = [60, 150, 300, 600, 1000]
-
-        def _retry_attempt(attempt=0):
-            try:
-                bbox = self.canvas.bbox("all")
-                if not bbox:
-                    # Nothing yet — schedule next attempt
-                    if attempt + 1 < max_retries:
-                        self.canvas.after(
-                            delays[min(attempt, len(delays) - 1)],
-                            lambda: _retry_attempt(attempt + 1),
-                        )
-                    return
-
-                # Compute maximum bottom extent from children (in container coords)
-                max_child_h = 0
-                for c in self.container.winfo_children():
-                    try:
-                        y = int(c.winfo_y() + c.winfo_height())
-                        if y > max_child_h:
-                            max_child_h = y
-                    except Exception:
-                        continue
-
-                # If any child's bottom extends below bbox bottom, expand scrollregion
-                if max_child_h and bbox[3] < max_child_h:
-                    try:
-                        new_bottom = max_child_h + 32
-                        self.canvas.config(scrollregion=(bbox[0], bbox[1], bbox[2], new_bottom))
-                    except Exception:
-                        pass
-                else:
-                    # If bbox seems smaller than canvas height, ensure a small padding
-                    try:
-                        canvas_h = int(self.canvas.winfo_height() or 0)
-                        if bbox[3] < canvas_h:
-                            self.canvas.config(
-                                scrollregion=(
-                                    bbox[0],
-                                    bbox[1],
-                                    bbox[2],
-                                    max(bbox[3] + 24, canvas_h),
-                                )
-                            )
-                    except Exception:
-                        pass
-
-                # If we're not yet satisfied and we have retries left, schedule another attempt
-                if attempt + 1 < max_retries:
-                    # If the bbox hasn't grown significantly, we can stop early
-                    next_delay = delays[min(attempt, len(delays) - 1)]
-                    self.canvas.after(next_delay, lambda: _retry_attempt(attempt + 1))
-            except Exception:
-                # Swallow exceptions in retry attempts to avoid noisy failures
-                if attempt + 1 < max_retries:
-                    try:
-                        self.canvas.after(
-                            delays[min(attempt, len(delays) - 1)],
-                            lambda: _retry_attempt(attempt + 1),
-                        )
-                    except Exception:
-                        pass
-
-        try:
-            # Start retries
-            self.canvas.after(delays[0], lambda: _retry_attempt(0))
-        except Exception:
-            pass
+        # Perform multiple updates with increasing delays to catch late-rendering items (like images or FlowFrame reflows)
+        self.after_idle(_apply)
+        self.after(100, _apply)
+        self.after(300, _apply)
+        self.after(600, _apply)
+        self.after(1200, _apply)
 
     def refresh_mousewheel_bindings(self):
         self._bind_mousewheel_recursive(self.container)
@@ -271,29 +127,31 @@ class CollapsibleFrame(ttk.Frame):
     """A frame that can be collapsed/expanded with a toggle button."""
 
     def __init__(self, parent, text="", opened=True, show_clear=False, *args, **kwargs):
-        super().__init__(parent, *args, **kwargs, style="Collapsible.TFrame")
+        super().__init__(parent, *args, **kwargs, style="Card.TFrame")
         self.columnconfigure(0, weight=1)
         self._text = text
 
-        # Header frame with toggle button and optional clear button
-        self._header = ttk.Frame(self, style="Collapsible.TFrame")
+        # Header frame with distinct styling
+        self._header = ttk.Frame(self, style="Collapsible.TFrame", padding=(4, 2))
         self._header.grid(row=0, column=0, sticky="ew")
+        self._header.columnconfigure(0, weight=1)
 
         self._toggle_btn = ttk.Button(
             self._header, 
             text=("▾ " if opened else "▸ ") + text, 
             command=self._toggle_cb, 
-            style="Accent.TButton"
+            style="Accent.TButton",
+            width=25
         )
-        self._toggle_btn.pack(side="left", anchor="w")
+        self._toggle_btn.grid(row=0, column=0, sticky="w")
 
         self._clear_btn = None
         if show_clear:
-            self._clear_btn = ttk.Button(self._header, text="Clear", style="TButton")
-            self._clear_btn.pack(side="right")
+            self._clear_btn = ttk.Button(self._header, text="✕ Clear", width=8, style="TButton")
+            self._clear_btn.grid(row=0, column=1, sticky="e", padx=(4, 0))
 
         # Content frame
-        self._content = ttk.Frame(self, style="Collapsible.TFrame")
+        self._content = ttk.Frame(self, style="TFrame", padding=(8, 4))
         self._content.grid(row=1, column=0, sticky="nsew")
         
         self._open = opened
@@ -302,12 +160,33 @@ class CollapsibleFrame(ttk.Frame):
 
     def _toggle_cb(self):
         self._open = not self._open
+        self._update_state()
+        
+    def _update_state(self):
         if self._open:
             self._content.grid()
             self._toggle_btn.config(text="▾ " + self._text)
         else:
             self._content.grid_remove()
             self._toggle_btn.config(text="▸ " + self._text)
+        
+        # Trigger parent scroll region update if applicable
+        try:
+            # Look for a ScrollableCanvas in parents
+            p = self.master
+            while p:
+                if isinstance(p, ScrollableCanvas):
+                    p.update_scroll_region()
+                    break
+                p = p.master
+        except Exception:
+            pass
+
+    def set_opened(self, opened):
+        """Programmatically set the opened/collapsed state."""
+        if self._open != opened:
+            self._open = opened
+            self._update_state()
 
     def set_clear_command(self, cmd):
         if self._clear_btn:

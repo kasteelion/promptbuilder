@@ -250,6 +250,7 @@ class PromptBuilderApp:
         self.character_gallery = CharacterGalleryPanel(
             self.gallery_frame,
             self.data_loader,
+            self.prefs,
             on_add_callback=self._on_gallery_character_selected,
             theme_colors=self.theme_manager.themes.get(DEFAULT_THEME, {}),
         )
@@ -286,9 +287,28 @@ class PromptBuilderApp:
         right_frame = self.right_scroll_container.get_container()
         right_frame.columnconfigure(0, weight=1)
 
+        # Standard spacing constants for consistent layout
+        SECTION_PAD_Y = (6, 10)
+        INTERNAL_PAD_X = 6
+
+        # Convenience controls row (Expand/Collapse All)
+        controls_frame = ttk.Frame(right_frame, style="TFrame")
+        controls_frame.grid(row=0, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=(4, 0))
+        
+        def _set_all_collapsible(state):
+            for section in [self.scene_collapsible, self.notes_collapsible, 
+                           self.summary_collapsible, self.preview_collapsible]:
+                section.set_opened(state)
+            self.right_scroll_container.update_scroll_region()
+
+        ttk.Button(controls_frame, text="Collapse All", width=12, 
+                   command=lambda: _set_all_collapsible(False)).pack(side="right", padx=2)
+        ttk.Button(controls_frame, text="Expand All", width=12, 
+                   command=lambda: _set_all_collapsible(True)).pack(side="right", padx=2)
+
         # Scene section (compact)
         self.scene_collapsible = CollapsibleFrame(right_frame, text="🎬 Scene", opened=True, show_clear=True)
-        self.scene_collapsible.grid(row=0, column=0, sticky="ew", padx=4, pady=(4, 2))
+        self.scene_collapsible.grid(row=1, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
         self.scene_collapsible.set_clear_command(lambda: (self.scene_text.delete("1.0", "end"), self.schedule_preview_update()))
         
         scene_content = self.scene_collapsible.get_content_frame()
@@ -297,7 +317,7 @@ class PromptBuilderApp:
 
         # Scene presets row
         ttk.Label(scene_content, text="Category:", style="TLabel").grid(
-            row=0, column=0, sticky="w", padx=(4, 2), pady=2
+            row=0, column=0, sticky="w", padx=(4, 4), pady=6
         )
         self.scene_category_var = tk.StringVar()
         self.scene_cat_combo = SearchableCombobox(
@@ -305,12 +325,12 @@ class PromptBuilderApp:
             textvariable=self.scene_category_var,
             on_select=lambda val: self._update_scene_presets(),
             placeholder="Search category...",
-            width=12
+            width=14
         )
-        self.scene_cat_combo.grid(row=0, column=1, sticky="w", padx=2, pady=2)
+        self.scene_cat_combo.grid(row=0, column=1, sticky="w", padx=2, pady=6)
 
         ttk.Label(scene_content, text="Preset:", style="TLabel").grid(
-            row=0, column=2, sticky="w", padx=(8, 2), pady=2
+            row=0, column=2, sticky="w", padx=(10, 4), pady=6
         )
         self.scene_preset_var = tk.StringVar()
         self.scene_combo = SearchableCombobox(
@@ -318,16 +338,16 @@ class PromptBuilderApp:
             textvariable=self.scene_preset_var,
             on_select=lambda val: self._apply_scene_preset(),
             placeholder="Search preset...",
-            width=18
+            width=20
         )
-        self.scene_combo.grid(row=0, column=3, sticky="ew", padx=2, pady=2)
+        self.scene_combo.grid(row=0, column=3, sticky="ew", padx=2, pady=6)
 
         new_scene_btn = ttk.Button(scene_content, text="✨", width=3, command=self._create_new_scene)
-        new_scene_btn.grid(row=0, column=4, padx=(4, 4), pady=2)
+        new_scene_btn.grid(row=0, column=4, padx=(6, 4), pady=6)
         create_tooltip(new_scene_btn, "Create a new scene preset")
 
         self.scene_text = tk.Text(scene_content, wrap="word", height=3)
-        self.scene_text.grid(row=1, column=0, columnspan=5, sticky="ew", padx=4, pady=(0, 4))
+        self.scene_text.grid(row=1, column=0, columnspan=5, sticky="ew", padx=4, pady=(2, 6))
         # Debounce scene text changes
         self._scene_text_after_id = None
 
@@ -340,7 +360,7 @@ class PromptBuilderApp:
 
         # Notes section (expandable)
         self.notes_collapsible = CollapsibleFrame(right_frame, text="📝 Notes & Interactions", opened=True, show_clear=True)
-        self.notes_collapsible.grid(row=1, column=0, sticky="ew", padx=4, pady=2)
+        self.notes_collapsible.grid(row=1, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
         self.notes_collapsible.set_clear_command(lambda: (self.notes_text.delete("1.0", "end"), self.schedule_preview_update()))
         
         notes_content = self.notes_collapsible.get_content_frame()
@@ -349,12 +369,12 @@ class PromptBuilderApp:
 
         # Interaction template selector (with category grouping)
         interaction_control = ttk.Frame(notes_content, style="TFrame")
-        interaction_control.grid(row=0, column=0, sticky="ew", padx=4, pady=(4, 2))
+        interaction_control.grid(row=0, column=0, sticky="ew", padx=4, pady=(6, 4))
         interaction_control.columnconfigure(1, weight=1)
         interaction_control.columnconfigure(3, weight=1)
 
         ttk.Label(interaction_control, text="Category:", style="TLabel").grid(
-            row=0, column=0, sticky="w", padx=(0, 4)
+            row=0, column=0, sticky="w", padx=(0, 6)
         )
 
         self.interaction_category_var = tk.StringVar()
@@ -365,16 +385,17 @@ class PromptBuilderApp:
             placeholder="Search category...",
             width=15
         )
-        self.interaction_cat_combo.grid(row=0, column=1, sticky="w", padx=(0, 8))
+        self.interaction_cat_combo.grid(row=0, column=1, sticky="w", padx=(0, 10))
 
         ttk.Label(interaction_control, text="Template:", style="TLabel").grid(
-            row=0, column=2, sticky="w", padx=(0, 4)
+            row=0, column=2, sticky="w", padx=(0, 6)
         )
 
         self.interaction_var = tk.StringVar(value="Blank")
         self.interaction_combo = SearchableCombobox(
             interaction_control, 
             textvariable=self.interaction_var,
+            on_double_click=lambda val: self._insert_interaction_template(),
             placeholder="Search template...",
             width=25
         )
@@ -383,7 +404,7 @@ class PromptBuilderApp:
         insert_btn = ttk.Button(
             interaction_control, text="Insert", command=self._insert_interaction_template
         )
-        insert_btn.grid(row=0, column=4, padx=(4, 0))
+        insert_btn.grid(row=0, column=4, padx=(6, 0))
 
         refresh_btn = ttk.Button(
             interaction_control, text="🔄", command=self._refresh_interaction_template, width=3
@@ -396,7 +417,7 @@ class PromptBuilderApp:
         create_btn.grid(row=0, column=6, padx=(4, 0))
 
         self.notes_text = tk.Text(notes_content, wrap="word", height=4)
-        self.notes_text.grid(row=1, column=0, sticky="nsew", padx=4, pady=(2, 4))
+        self.notes_text.grid(row=1, column=0, sticky="nsew", padx=4, pady=(4, 6))
         # Debounce notes text changes
         self._notes_text_after_id = None
 
@@ -409,18 +430,18 @@ class PromptBuilderApp:
 
         # Summary section
         self.summary_collapsible = CollapsibleFrame(right_frame, text="📋 Prompt Summary", opened=True)
-        self.summary_collapsible.grid(row=2, column=0, sticky="ew", padx=4, pady=2)
+        self.summary_collapsible.grid(row=2, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
         create_tooltip(self.summary_collapsible, "Condensed overview of characters and scene")
         summary_content = self.summary_collapsible.get_content_frame()
         summary_content.columnconfigure(0, weight=1)
         
         self.summary_text = tk.Text(summary_content, wrap="word", height=3, state="disabled")
-        self.summary_text.grid(row=0, column=0, sticky="ew", padx=4, pady=4)
+        self.summary_text.grid(row=0, column=0, sticky="ew", padx=4, pady=6)
         create_tooltip(self.summary_text, "A condensed version of your prompt")
 
         # Preview panel container
         self.preview_collapsible = CollapsibleFrame(right_frame, text="🔍 Prompt Preview", opened=True)
-        self.preview_collapsible.grid(row=3, column=0, sticky="nsew", padx=4, pady=(2, 0))
+        self.preview_collapsible.grid(row=3, column=0, sticky="nsew", padx=INTERNAL_PAD_X, pady=(SECTION_PAD_Y[0], 20))
         create_tooltip(self.preview_collapsible, "The full generated prompt for copying")
         preview_content = self.preview_collapsible.get_content_frame()
         preview_header = self.preview_collapsible.get_header_frame()
@@ -607,9 +628,9 @@ class PromptBuilderApp:
         if cat not in self.interactions or template_name not in self.interactions[cat]:
             return
 
-        template_text = self.interactions[cat][template_name]
+        template_data = self.interactions[cat][template_name]
 
-        if not template_text:
+        if not template_data:
             return
 
         # Get list of selected character names from characters tab
@@ -623,8 +644,16 @@ class PromptBuilderApp:
             notify(root, "No Characters", msg, level="info", duration=3000, parent=self.root)
             return
 
+        # Check character count if using new structured format
+        if isinstance(template_data, dict):
+            min_chars = template_data.get("min_chars", 1)
+            if len(selected_chars) < min_chars:
+                from utils.notification import notify
+                msg = f"This interaction typically requires {min_chars} characters (you have {len(selected_chars)}). Some placeholders may not be filled."
+                notify(self.root, "Character Count", msg, level="warning", duration=4000)
+
         # Fill template with character names
-        filled_text = fill_template(template_text, selected_chars)
+        filled_text = fill_template(template_data, selected_chars)
 
         # Insert at cursor position or append
         try:
@@ -653,9 +682,9 @@ class PromptBuilderApp:
         if cat not in self.interactions or template_name not in self.interactions[cat]:
             return
 
-        template_text = self.interactions[cat][template_name]
+        template_data = self.interactions[cat][template_name]
 
-        if not template_text:
+        if not template_data:
             return
 
         # Get list of selected character names from characters tab
@@ -670,7 +699,7 @@ class PromptBuilderApp:
             return
 
         # Fill template with character names
-        filled_text = fill_template(template_text, selected_chars)
+        filled_text = fill_template(template_data, selected_chars)
 
         # Replace notes content
         try:
