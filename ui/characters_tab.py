@@ -718,9 +718,9 @@ class CharactersTab:
 
         self._action_note_after_ids[idx] = self.tab.after(TEXT_UPDATE_DEBOUNCE_MS, _do_update)
 
-    def _update_pose_category(self, idx, category_var, preset_combo):
+    def _update_pose_category(self, idx, category_val, preset_combo):
         """Update character pose category."""
-        cat = category_var.get()
+        cat = category_val
         self.selected_characters[idx]["pose_category"] = cat
         self.selected_characters[idx]["pose_preset"] = ""
 

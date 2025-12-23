@@ -215,6 +215,18 @@ Soft **pajama set** (matching top and shorts/pants) or **nightgown**; **fuzzy sl
 ### American Football - Home
 **Football jersey** for **{team}** in **{primary_color} with {secondary_color} accents** (performance mesh with number){modifier}; **padded football pants** in **{secondary_color}** (knee-length with secure fit); **football cleats** ({accent}). *Accessories:* **Football Helmet** ({primary_color}), **shoulder pads** (under jersey), eye black. *Hair/Makeup:* Hair braided and secured, minimal makeup.
 
+### Flag Football - Away
+**Fitted performance jersey** for **{team}** in **{secondary_color}** with **{primary_color} numbers**; **high-waist athletic shorts** (pocketless) in **{secondary_color}**; **flag belt** in **{accent}** with three hanging flags; **cleats**. *Accessories:* Receiver gloves ({accent}), mouthguard, hair tie. *Hair/Makeup:* Sporty ponytail or braid, minimal makeup.
+
+### Flag Football - Home
+**Fitted performance jersey** for **{team}** in **{primary_color}** with **{secondary_color} numbers**; **high-waist athletic shorts** (pocketless) in **{primary_color}**; **flag belt** in **{accent}** with three hanging flags; **cleats**. *Accessories:* Receiver gloves ({accent}), mouthguard, hair tie. *Hair/Makeup:* Sporty ponytail or braid, minimal makeup.
+
+### Flag Football - Away
+**Fitted performance jersey** for **{team}** in **{secondary_color}** with **{primary_color} numbers**; **athletic shorts** (pocketless) in **{secondary_color}** or **compression leggings**; **flag belt** in **{accent}** with hanging flags; **cleats**. *Accessories:* Wristbands, mouthguard, receiver gloves. *Hair/Makeup:* Ponytail or braid, sporty look.
+
+### Flag Football - Home
+**Fitted performance jersey** for **{team}** in **{primary_color}** with **{secondary_color} numbers**; **athletic shorts** (pocketless) in **{primary_color}** or **compression leggings**; **flag belt** in **{accent}** with hanging flags; **cleats**. *Accessories:* Wristbands, mouthguard, receiver gloves. *Hair/Makeup:* Ponytail or braid, sporty look.
+
 ### Baseball - Away
 **Baseball jersey** for **{team}** in **{secondary_color} with {primary_color} accents** (button-up, team logo and number){modifier}; **gray baseball pants** (belted, with {primary_color} piping); **team cap** ({secondary_color} with {primary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair in ponytail or braid, minimal makeup.
 

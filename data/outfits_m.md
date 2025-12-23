@@ -215,6 +215,18 @@ Simple **swim trunks or board shorts**. *Accessories:* None specified. *Hair/Mak
 ### American Football - Home
 **Football jersey** for **{team}** in **{primary_color} with {secondary_color} accents** (mesh performance fabric with team number){modifier}; **padded football pants** in **{secondary_color} with {primary_color} stripes** (knee-length); **football cleats**. *Accessories:* **Helmet** ({primary_color} with {secondary_color} face mask), **shoulder pads** (worn under jersey), mouthguard. *Hair/Makeup:* Minimal grooming.
 
+### Flag Football - Away
+**Lightweight performance jersey** for **{team}** in **{secondary_color}** with **{primary_color} numbers**; **athletic shorts** (pocketless) in **{secondary_color}**; **flag belt** in **{accent}** with three hanging flags; **cleats**. *Accessories:* Receiver gloves ({accent}), mouthguard, sweatbands. *Hair/Makeup:* Minimal grooming.
+
+### Flag Football - Home
+**Lightweight performance jersey** for **{team}** in **{primary_color}** with **{secondary_color} numbers**; **athletic shorts** (pocketless) in **{primary_color}**; **flag belt** in **{accent}** with three hanging flags; **cleats**. *Accessories:* Receiver gloves ({accent}), mouthguard, sweatbands. *Hair/Makeup:* Minimal grooming.
+
+### Flag Football - Away
+**Athletic performance jersey** for **{team}** in **{secondary_color}** with **{primary_color} numbers**; **athletic shorts** (pocketless) in **{secondary_color}** with **{primary_color} side stripes**; **flag belt** in **{accent}** with hanging flags; **cleats**. *Accessories:* Wristbands, mouthguard, receiver gloves. *Hair/Makeup:* Athletic functional.
+
+### Flag Football - Home
+**Athletic performance jersey** for **{team}** in **{primary_color}** with **{secondary_color} numbers**; **athletic shorts** (pocketless) in **{primary_color}** with **{secondary_color} side stripes**; **flag belt** in **{accent}** with hanging flags; **cleats**. *Accessories:* Wristbands, mouthguard, receiver gloves. *Hair/Makeup:* Athletic functional.
+
 ### Baseball - Away
 **Baseball jersey** for **{team}** in **{secondary_color} with {primary_color} accents** (button-up, team logo and number){modifier}; **gray baseball pants** (belted, with {primary_color} piping); **team cap** ({secondary_color} with {primary_color} logo); **cleats** ({accent}). *Accessories:* Batting gloves, wristbands optional. *Hair/Makeup:* Hair short or secured, minimal grooming.
 

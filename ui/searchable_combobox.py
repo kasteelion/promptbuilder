@@ -94,6 +94,13 @@ class SearchableCombobox(ttk.Frame):
         # Set initial placeholder
         if not self._selected_value.get():
             self._set_placeholder_mode(True)
+            
+        # Bind global click to handle click-away closing
+        # We bind to the toplevel window to capture clicks anywhere in the app
+        try:
+            self.winfo_toplevel().bind("<Button-1>", self._check_click_outside, add="+")
+        except Exception:
+            pass
 
     def _on_entry_double_click(self, event):
         """Handle double click in entry."""
@@ -271,6 +278,33 @@ class SearchableCombobox(ttk.Frame):
         self.listbox.bind("<Motion>", self._on_listbox_motion)
 
         self.dropdown_visible = True
+        
+        self.dropdown.bind("<FocusOut>", self._on_dropdown_focus_out)
+
+    def _on_dropdown_focus_out(self, event):
+        """Handle dropdown losing focus."""
+        # Use a small delay to check if focus moved to entry or listbox child
+        self.after(100, self._check_hide_dropdown)
+
+    def _check_click_outside(self, event):
+        """Check if click was outside the combobox components."""
+        if not self.dropdown_visible:
+            return
+            
+        # Check if widget clicked is part of this combobox or its dropdown
+        widget = event.widget
+        try:
+            # Check if widget is the main frame or any of its children (entry, buttons, etc.)
+            if str(widget).startswith(str(self)):
+                return
+            # Check if widget is the dropdown window or any of its children (listbox, scrollbar)
+            if self.dropdown and str(widget).startswith(str(self.dropdown)):
+                return
+        except Exception:
+            pass
+            
+        # Click was outside, hide dropdown
+        self._hide_dropdown()
 
     def _get_accent_color(self):
         """Get accent color for selection."""

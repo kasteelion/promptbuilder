@@ -462,6 +462,22 @@
 - **Accessories:** Mouthguard, wrist coach band, football helmet
 - **Makeup:** Minimal waterproof makeup
 
+### Flag Football - Away
+- **Hijab:** Sports hijab in {secondary_color} (secure athletic wrap)
+- **Top:** Long-sleeve performance jersey for {team} in {secondary_color} with {primary_color} numbers (modest loose fit)
+- **Bottom:** Full-length athletic joggers in {secondary_color} (pocketless); **flag belt** in {accent} with three hanging flags worn over top
+- **Footwear:** Cleats ({accent})
+- **Accessories:** Receiver gloves, mouthguard
+- **Makeup:** Minimal, sweat-resistant
+
+### Flag Football - Home
+- **Hijab:** Sports hijab in {primary_color} (secure athletic wrap)
+- **Top:** Long-sleeve performance jersey for {team} in {primary_color} with {secondary_color} numbers (modest loose fit)
+- **Bottom:** Full-length athletic joggers in {primary_color} (pocketless); **flag belt** in {accent} with three hanging flags worn over top
+- **Footwear:** Cleats ({accent})
+- **Accessories:** Receiver gloves, mouthguard
+- **Makeup:** Minimal, sweat-resistant
+
 ### Baseball - Away
 - **Hijab:** Sports hijab in {secondary_color} (breathable, secure fit)
 - **Top:** Long-sleeve baseball jersey for {team} in {secondary_color} with {primary_color} accents (button-up, team logo and number, modest fit){modifier}
