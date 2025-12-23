@@ -1,3 +1,4 @@
+import re
 from typing import Any, Dict, List
 
 from utils.color_scheme import parse_color_schemes, substitute_colors
