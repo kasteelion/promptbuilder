@@ -95,7 +95,15 @@ class CharacterItem(ttk.LabelFrame):
         toggle_btn.pack(side="right")
 
         # Outfit options inside collapsible frame
-        outfit_keys = sorted(list(self.char_def.get("outfits", {}).keys()))
+        outfits_categorized = self.char_def.get("outfits_categorized")
+        if outfits_categorized:
+            outfit_keys = []
+            for category, outfits in outfits_categorized.items():
+                if not outfits: continue
+                outfit_keys.append(f"--- {category} ---")
+                outfit_keys.extend(sorted(list(outfits.keys())))
+        else:
+            outfit_keys = sorted(list(self.char_def.get("outfits", {}).keys()))
         
         if len(outfit_keys) > 12:
             # Use searchable combobox for many outfits

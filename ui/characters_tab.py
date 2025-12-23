@@ -87,27 +87,40 @@ class CharactersTab:
 
         self.char_combo.set_values(sorted(list(self.characters.keys())))
 
-        # Update bulk outfit combo with all available outfits across characters
-        all_outfits = set()
-        for char_data in self.characters.values():
-            all_outfits.update(char_data.get("outfits", {}).keys())
-        # Also include shared outfits from gendered shared outfit files
+        # Update bulk outfit combo with categorized lists
+        categorized_all = {}
+        
+        # 1. From shared files (source of truth for categories)
         try:
             shared = self.data_loader.load_outfits()
+            # Flatten F/M/H differentiation for the bulk list categories
             if isinstance(shared, dict):
-                # support gendered structure {'F': {...}, 'M': {...}}
-                for key in ("F", "M"):
-                    if key in shared and isinstance(shared[key], dict):
-                        for category, outfits in shared[key].items():
-                            all_outfits.update(outfits.keys())
-                # Fallback: if shared isn't gendered but is a dict of categories
-                if "F" not in shared and "M" not in shared:
-                    for category, outfits in shared.items():
-                        all_outfits.update(outfits.keys())
+                for gender_key, categories in shared.items():
+                    if isinstance(categories, dict):
+                        for cat, outfits in categories.items():
+                            if cat not in categorized_all:
+                                categorized_all[cat] = set()
+                            categorized_all[cat].update(outfits.keys())
         except Exception:
-            # If loading shared outfits fails, ignore and continue
             pass
-        self.bulk_outfit_combo.set_values(sorted(list(all_outfits)))
+
+        # 2. From individual characters (for Personal or unique ones)
+        for char_data in self.characters.values():
+            char_cats = char_data.get("outfits_categorized", {})
+            for cat, outfits in char_cats.items():
+                if cat not in categorized_all:
+                    categorized_all[cat] = set()
+                categorized_all[cat].update(outfits.keys())
+
+        # 3. Flatten to list with headers
+        display_list = []
+        for cat in sorted(categorized_all.keys()):
+            outfits = sorted(list(categorized_all[cat]))
+            if outfits:
+                display_list.append(f"--- {cat} ---")
+                display_list.extend(outfits)
+        
+        self.bulk_outfit_combo.set_values(display_list)
 
         self._refresh_list()
 

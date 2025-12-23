@@ -436,8 +436,8 @@ class SearchableCombobox(ttk.Frame):
         selection = self.listbox.curselection()
         if selection:
             value = self.listbox.get(selection[0])
-            # Skip separator
-            if value == "---":
+            # Skip separator or header
+            if value.startswith("---"):
                 return
                 
             # Remove favorite star if present

@@ -68,8 +68,13 @@ class OutfitParser:
 
     @staticmethod
     def merge_character_outfits(char_data: dict, shared_outfits: dict, character_name: str):
-        """Merge shared outfits with character-specific outfits."""
+        """Merge shared outfits with character-specific outfits.
+        
+        Returns:
+            tuple: (flat_outfits_dict, categorized_outfits_dict)
+        """
         merged_outfits = {}
+        categorized_outfits = {}
 
         modifier = char_data.get("modifier")
         if modifier:
@@ -77,18 +82,35 @@ class OutfitParser:
         else:
             key = char_data.get("gender", "F").upper()
 
+        selected_shared = {}
         if isinstance(shared_outfits, dict) and key in shared_outfits:
-            selected = shared_outfits.get(key, {})
-            for category, outfits in selected.items():
-                merged_outfits.update(outfits)
+            selected_shared = shared_outfits.get(key, {})
         elif isinstance(shared_outfits, dict) and not any(k in shared_outfits for k in ("F", "M")):
-            for category, outfits in shared_outfits.items():
-                merged_outfits.update(outfits)
+            selected_shared = shared_outfits
         else:
             if "F" in shared_outfits:
-                for category, outfits in shared_outfits.get("F", {}).items():
-                    merged_outfits.update(outfits)
+                selected_shared = shared_outfits.get("F", {})
 
-        merged_outfits.update(char_data.get("outfits", {}))
+        # Process shared outfits
+        for category, outfits in selected_shared.items():
+            merged_outfits.update(outfits)
+            categorized_outfits[category] = outfits
 
-        return merged_outfits
+        # Process personal outfits (treat as "Personal" category)
+        personal_outfits = char_data.get("outfits", {})
+        merged_outfits.update(personal_outfits)
+        
+        # If personal outfits exist, add/merge them into a "Personal" category
+        if personal_outfits:
+            if "Personal" not in categorized_outfits:
+                categorized_outfits["Personal"] = {}
+            categorized_outfits["Personal"].update(personal_outfits)
+
+        # Move "Personal" to the top of categorized dict for UI priority
+        # Python 3.7+ preserves insertion order, so we rebuild
+        final_categorized = {}
+        if "Personal" in categorized_outfits:
+            final_categorized["Personal"] = categorized_outfits.pop("Personal")
+        final_categorized.update(categorized_outfits)
+
+        return merged_outfits, final_categorized

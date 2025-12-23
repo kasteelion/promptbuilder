@@ -308,10 +308,11 @@ Common tags used to categorize characters. One tag per line.
         # Load shared outfits and merge with each character
         shared_outfits = self.load_outfits()
         for char_name, char_data in chars.items():
-            merged_outfits = MarkdownParser.merge_character_outfits(
+            merged_outfits, categorized_outfits = MarkdownParser.merge_character_outfits(
                 char_data, shared_outfits, char_name
             )
             char_data["outfits"] = merged_outfits
+            char_data["outfits_categorized"] = categorized_outfits
 
         # Resolve photo filenames to actual files within characters directory.
         # This makes the UI more robust: it will display only when an actual
