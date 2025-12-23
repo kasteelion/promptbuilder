@@ -12,10 +12,13 @@ Built with a "data-first" philosophy, the application uses human-readable Markdo
 
 *   **Intuitive GUI:** A professional, responsive Tkinter interface with collapsible panels and real-time feedback.
 *   **Character Management:** A gallery-based selection system for managing extensive character libraries.
+*   **Modular Character Design:** Refined "Ingredient-based" character descriptions for maximum flexibility across varied prompt contexts (e.g., Noir, Sports, Fantasy).
 *   **Identity Locks:** Maintain character consistency by "locking" core physical traits separately from outfits or actions.
-*   **Interaction Templates:** Use placeholders (e.g., `{char1}`, `{char2}`) to easily define complex multi-character scenes.
-*   **Structured Outfits:** Support for detailed outfit definitions with automatic "one-piece" detection.
-*   **Real-time Preview:** Instant prompt generation with adaptive validation and hints.
+*   **Outfit Traits & Specializations:** A dynamic multi-select checkbox system for specialized gear (e.g., *Softball Face Mask*, *Volleyball Libero*, *Baseball Catcher*).
+*   **Interaction Templates:** Use placeholders (e.g., `{char1}`, `{char2}`) to define complex multi-character scenes with cinematic framing.
+*   **Structured Outfits:** Support for detailed outfit definitions with automatic "one-piece" detection and team color substitution.
+*   **Optimized UX:** Advanced searchable comboboxes with keyboard navigation, auto-focus, and double-click shortcuts.
+*   **Real-time Preview:** Instant prompt generation with adaptive validation and condensed summary view.
 *   **Advanced Theming:** Built-in theme editor for customizing colors, fonts, and UI scaling.
 *   **Extensible Data:** Add characters, scenes, and interactions simply by editing Markdown files.
 *   **Privacy First:** Fully local execution with no cloud dependencies or tracking.
