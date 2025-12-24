@@ -1,8 +1,8 @@
-### Leonidas
+### Leonidas Stratos
 
 **Photo:** [leonidas_photo.png]
-**Tags:** Greek, Greek-inspired, elite-athlete, disciplined, intense, commanding, focused, male
-**Summary:** Leonidas is the embodiment of Spartan discipline and raw, kinetic power. His presence is sharp and focused, like a spear tip poised for impact. Every line of his body speaks of a life forged in the furnace of relentless training and unwavering resolve. He radiates a hard, uncompromising confidence—the kind that doesn't need to shout to be heard. He is a modern-day hoplite, an elite athlete with the spirit of an ancient king.
+**Tags:** Greek, elite-athlete, disciplined, intense, commanding, focused, male
+**Summary:** Leonidas Stratos is the embodiment of uncompromising discipline and raw, kinetic power. His presence is sharp and focused, like a spear tip poised for impact. Every line of his body speaks of a life forged in the furnace of relentless training. He radiates a hard, quiet confidence—the kind that doesn't need to shout to be heard.
 **Gender:** M
 
 **Appearance:**
@@ -27,8 +27,8 @@
 **Outfits:**
 
 #### Base
-- **Top:** Fitted crimson red high-performance compression t-shirt (emphasizes muscle definition)
-- **Bottom:** Tailored black tactical trousers with a clean, streamlined fit
-- **Footwear:** Modern black athletic cross-trainers with red accents
-- **Accessories:** High-end tactical smartwatch, simple bronze band on the left ring finger
-- **Hair/Makeup:** Disciplined short crop; sharp, groomed beard
+- **Top:** Fitted crimson red technical compression t-shirt
+- **Bottom:** Black woven athletic joggers with tapered fit
+- **Footwear:** Modern black performance cross-trainers
+- **Accessories:** Black smartwatch, simple gold band
+- **Hair/Makeup:** Short disciplined crop; neatly groomed beard

@@ -7,265 +7,338 @@ Different base style prompts for your character images. Select one from the drop
 ## Cyberpunk Neon
 
 Rendering
-High-contrast, dark rendering with a strong focus on neon lighting (rim light and accent colors). Heavy volumetric fog and rain effects for atmosphere. Chromatic aberration and scanline texture for a retro-futuristic digital feel. Synthwave aesthetic, high saturation in lights only.
+Ray-traced digital rendering with high-contrast chiaroscuro. Dominant cyan and magenta rim lighting against deep matte blacks. Heavy volumetric fog, bloom effects on light sources, and chromatic aberration at the edges. Wet-surface reflections and a distinct digital noise overlay.
 
 Character Accuracy
-Stylized features with a sharp, angular aesthetic. Stoic or determined expressions appropriate for a dystopian setting. Cybernetic enhancements or techwear detailing are integral to the look. Dynamic, asymmetrical posture.
+Sharp, angular facial geometry with high-contrast shading. Expressions are rendered with dramatic under-lighting or silhouette emphasis. Focus on hard-surface modeling for features, giving skin a synthetic or plasticky sheen.
 
 Body Types
-Lean, slightly stylized athletic builds. Emphasis on hard-edged silhouettes and defined musculature or mechanical parts. Body forms defined by strong rim lighting from neon sources.
+Anatomy defined by harsh lighting highlights rather than soft gradients. Musculature or body shape is accentuated by reflective contours. Silhouettes are cut sharp against the background with glowing edge detection.
 
 Hair & Clothing
-Hair: High-gloss, often unnatural colors (e.g., electric blue, pink, green), wet-look finish or braided/wired styles. Clothing: Techwear, synthetic fabrics, hardshell armor, and utility straps. Visible seams and integrated LED components.
+Hair: Rendered as synthetic fiber with high specularity (shine). Clothing: Materials appear as latex, matte carbon fiber, or translucent plastic. integrated light strips and glowing tech-wear accents are baked into the texture maps.
 
 Details
-Integrated holographic displays, circuit board patterns, and Japanese/Kanji lettering as background elements. Accessories are functional tech pieces (data jacks, comms). Gritty, rain-slicked atmosphere.
+Glitch art artifacts, holographic UI overlays in the foreground, and lens flare streaks. Backgrounds feature out-of-focus bokeh of city lights. The overall atmosphere is oppressive, high-tech, and gritty.
 
 ---
 
 ## Watercolor Impressionistic
 
 Rendering
-Soft, translucent rendering that simulates traditional watercolor painting. Visible paper texture and natural bleeding/diffusion of colors. Loose, feathered edges with minimal sharp line work (relying on color washes). Soft, diffused lighting (high-key look).
+Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines.
 
 Character Accuracy
-Features are suggested through light and color washes rather than precise lines. Gentle, serene expressions. Focus on the overall mood and color harmony rather than exact photographic likeness. Relaxed, natural posture.
+Facial features are suggested through shadow shapes and color temperature shifts rather than line art. Eyes and expressions are soft and diffused. Likeness is captured through "gestural" paint application rather than photographic precision.
 
 Body Types
-Soft, fluid rendering of forms. Body shapes are implied by washes and transitions of color; no hard outlines. Skin tones blend subtly with the background environment.
+Figures are grounded in gesture drawing techniques. Limbs and torso shapes are defined by broad washes of color. Edges of the body dissolve softly into the background, creating a dreamy, ethereal connection to the environment.
 
 Hair & Clothing
-Hair: Rendered as soft, flowing masses of color. Highlights are often achieved by leaving the "paper" white. Clothing: Natural, flowing fabrics (silk, cotton) with folds suggested by changes in color saturation and pooling of pigment.
+Hair: Rendered as loose, flowing pools of color with wet edges. Clothing: Fabrics are depicted through variegation in color saturation. Folds are soft gradients where paint creates "blooms." No sharp stitching or texture detailing.
 
 Details
-Minimal, subtle accessories. Color palette is soft, often muted pastels. Atmosphere feels dreamlike, hazy, or like a memory. Background elements are abstract or highly simplified washes of color.
+Splatter droplets, dry-brush scratch marks, and visible pencil under-drawing. The palette is harmonious and desaturated. Backgrounds are abstract washes suggesting environment without explicit detail.
 
 ---
 
 ## Low-Poly 3D
 
 Rendering
-Stylized Low-Poly 3D model aesthetic. Flat, matte coloring with minimal or no gradients. Hard-edged facet shading where polygons meet. Clean, cartoon-like lighting without realism (ambient occlusion). Minimal texture maps for a clean, blocky look.
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
 
 Character Accuracy
-Simplified, geometric features. Eyes are often simple colored shapes or dots. Expressions are clear and stylized (emoji-like). Focus on clean silhouette and recognizable shapes.
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
 
 Body Types
-Geometric, simplified body forms built from a small number of visible polygons. Proportions are chunky or cartoonishly stylized. No soft curves—all transitions are angular and sharp.
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
 
 Hair & Clothing
-Hair: Rendered as solid, angular blocks of color (like stylized helmets). Clothing: Simplified to their essential geometric forms. Folds and details are represented by sharp, angular cuts and color separation, not texture.
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
 
 Details
-Accessories are blocky and geometric. Minimal shadow or stylized cell-shading. Backgrounds are often simple flat colors or geometric landscapes.
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
 
 ---
 
 ## Soft Semi-Realistic: "Quiet Confidence"
 
 Rendering
-Soft semi-realistic digital painting with an anamorphic lens flare effect. Key lighting is natural, diffused, and slightly high-key. Color grading is fresh muted florals with a calm tonal balance (analogous color scheme). Finish is matte, with a soft tactile texture; no bloom, glow, or high polish (clear air). Clean tapered linework and gentle volumetric shading.
+Cinematic digital painting with an anamorphic lens simulation. Soft, diffused "Golden Hour" lighting. Subtle film grain and shallow depth of field. The rendering focuses on subsurface scattering (light passing through skin) for a warm, living glow.
 
 Character Accuracy
-Exact facial likeness and features from reference. Relaxed genuine posture. Warm, quietly confident, approachable expression (genuine smile/soft gaze). Never theatrical or overly stylized.
+Proportions are realistic but slightly idealized for aesthetic appeal. Facial features are rendered with soft edges, avoiding harsh lines. Expressions are subtle micro-expressions (a half-smile, a raised brow) rather than dramatic contortions.
 
 Body Types
-Render accurately and respectfully: soft-curvy, athletic build, natural curves, fuller hips and thighs, lived-in softness, and varied frames. No smoothing or idealizing; bodies are grounded and comfortable. True-to-life skin texture with subtle pores.
+Naturalistic anatomy with a focus on weight and gravity. Skin texture shows subtle imperfections (freckles, pores) without being gritty. The form is rounded and organic, emphasizing softness over muscle definition.
 
 Hair & Clothing
-Hair: natural weight, smooth strands, gentle S-curve movement, minimal, realistic shine. Clothing: realistic drape with tangible fabric properties (e.g., heavy knit, soft cotton, crisp linen, broken-in leather). Visible stitching and fine wrinkles.
+Hair: Soft, wispy strands with natural flyaways and backlighting. Clothing: Focus on tactile fabric textures (wool fuzz, linen weave). Draping follows physics accurately, bunching naturally at joints.
 
 Details
-Minimal, understated, correctly scaled jewelry. Light, natural-look makeup (e.g., "no-makeup makeup" look). Harmonious, slightly desaturated colors. Atmosphere is quiet, grounded, sincere (like fresh air).
+Dust motes floating in light shafts. Muted, analogous color palettes (earth tones, pastels). The background is usually a soft-focus environment that complements the subject's lighting.
 
 ---
 
 ## Photorealistic: "High-Fidelity Candid"
 
 Rendering
-Hyper-photorealistic rendering (8K resolution). Professional portrait photography quality. Natural daylight key lighting with accurate, deep shadow mapping. Shallow depth of field (bokeh), focus on the eyes. Natural color grading (no heavy filters). High-detail fidelity in all textures.
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
 
 Character Accuracy
-Exact photographic likeness with accurate human proportions. Realistic skin texture (visible pores, subtle imperfections, fine lines). Candid, fleeting expression (caught in a natural moment). Authentic body language and posture.
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
 
 Body Types
-True-to-life proportions with natural body diversity. Realistic, functional muscle definition or authentic body composition. Skin shows natural tonal variation, subtle details like freckles, moles, and subtle veins.
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
 
 Hair & Clothing
-Hair: Individual strand detail, realistic shine, authentic movement and weight based on style. Clothing: Accurate fabric physics—micro-wrinkles, stretch-marks, and proper weight-based draping. Visible weave (denim/knits) and grain (leather).
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
 
 Details
-Realistic jewelry with proper metallic sheen, reflections, and physical weight. Natural, high-definition makeup application (if present). Environmental lighting interacts naturally with subjects and materials (e.g., subsurface scattering).
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
 
 ---
 
 ## Anime Style: "Dynamic Cel-Shaded"
 
 Rendering
-Clean, high-quality Japanese anime illustration style. Hard-edged cel-shading with vibrant, high-saturation colors. Clear separation between base, shadow, and highlight tones. Smooth color gradients only for specific elements (e.g., eye iris). Sharp, energetic line work. Polished digital finish (no texture).
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
 
 Character Accuracy
-Large, expressive anime eyes (detailed catchlights and color gradients). Simplified but recognizable facial features in Manga/Anime convention. Stylized, non-photorealistic proportions. Dynamic
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
 
 Body Types
-Stylized anime proportions (e.g., slender frames, exaggerated muscle). Clear form definition achieved via bold line work and precise shadow placement.
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
 
 Hair & Clothing
-Hair: Distinctive anime styling—strong, angular shapes, dramatic, often layered highlights, high-volume/gravity-defying effects. Clothing: Exaggerated folds and motion lines (suggesting speed/wind). Bold, high-contrast color choices.
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
 
 Details
-Intense sparkling/light-bloom effects for eyes and accessories. Simplified graphic jewelry. Background elements: speed lines, tone effects (halftones), or dramatic atmospheric elements (e.g., smoke, stylized electric arcs).
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
 
 ---
 
 ## Digital Painting: "Expressive Impasto"
 
 Rendering
-Painterly digital illustration with visible impasto brush strokes and canvas texture. Rich, artistic color palette. Dramatic chiaroscuro lighting (strong contrast) with artistic interpretation of light sources. Blend of stylization and academic realism. Emphasis on mood and atmosphere.
+Thick, painterly application simulating oil or acrylics. Visible brush strokes with directional texture. Heavy use of "Chiaroscuro" (dramatic light and dark contrast). Edges range from sharp palette-knife cuts to soft blended strokes.
 
 Character Accuracy
-Recognizable features rendered with loose, expressive brushwork. Emotionally charged facial expressions that capture personality. Confident, loose technique that suggests detail rather than rendering it precisely.
+Likeness is captured through value planes rather than outlines. Features are constructed by blocks of color. Expressions are emotive and moody, emphasizing the "feeling" of the character over precise anatomy.
 
 Body Types
-Artistic rendering of natural body types using painterly technique. Forms are built using color, value, and confident strokes rather than precise outlines. Suggestion of anatomy through bold transitions and color shifts.
+Figures are sculpted with light and shadow. The solidity of the form is conveyed through the direction of the brushstrokes (e.g., strokes wrapping around the arm). Anatomy is artistic and interpretive.
 
 Hair & Clothing
-Hair: Rendered as flowing, defined shapes with complex color variation and painterly highlights. Clothing: Suggested through confident, sweeping brushwork showing major folds and textural implication (e.g., dry brush for wool).
+Hair: Painted as large masses and shapes, with loose strokes indicating strands. Clothing: Fabric texture is suggested by the roughness of the brushwork. Highlights on cloth are thick dabs of paint.
 
 Details
-Jewelry and accessories simplified but recognizable forms. Features enhanced through painterly color choices and stylized light reflections. Atmospheric effects (e.g., haze, volumetric light) to enhance mood.
+Canvas weave texture visible in the background. Color vibration (placing complementary colors next to each other). Atmospheric perspective is achieved through loose, hazy brushwork in the distance.
 
 ---
 
 ## Sketch Style: "Energetic Line Art"
 
 Rendering
-Loose, raw aesthetic with visible construction lines and artistic notation marks. Limited monochromatic palette (e.g., sepia, graphite, charcoal). Energetic, varied line weight that captures speed and force. Rough paper texture background.
+Monochromatic graphite or charcoal aesthetic. White or off-white paper background. Lines vary frantically in weight and opacity. Visible "construction lines" and erasure marks left in the final image to show the process.
 
 Character Accuracy
-Recognizable features captured through quick, gestural drawing. Focus on essence, motion, and character energy over photographic detail. Dynamic poses emphasizing movement and life.
+Focus on the "essence" of the face. Features may be loosely defined or merely suggested. Eyes are focal points with higher detail, while peripheral features fade into rough sketches.
 
 Body Types
-Natural proportions captured through quick, confident contours. Anatomy is suggested through gesture and form. Emphasis on the flow and rhythm of the figure.
+Gestural anatomy. The figure is defined by action lines and rhythm. Joints and muscles are marked with quick, scribbled notation. The body often fades into non-existence at the edges.
 
 Hair & Clothing
-Hair: Rendered as flowing, energetic masses of lines suggesting volume and direction. Clothing: Indicated by minimal, quick strokes showing major silhouette and primary folds. Line-based shading (e.g., cross-hatching, hatching).
+Hair: Rapid, sweeping strokes showing direction. Clothing: Outlines only, with cross-hatching used for shadow density. Folds are indicated by quick, zigzagging lines.
 
 Details
-Minimal, suggested accessories. Includes artist’s notation marks, quick perspective lines, and smudging effects.
+Smudge marks, graphite dust, and handwritten artistic notes. The lighting is purely suggested by the density of the hatch marks.
 
 ---
 
 ## Vintage Pin-Up: "Glamorous Airbrush"
 
 Rendering
-Classic Pin-Up illustration style (reminiscent of Elvgren/Vargas). Smooth, high-gloss airbrushed look with bold, clean vector-style outlines. Rich, high-saturation, retro color palette. Studio-style lighting to highlight figure contours.
+1950s commercial illustration style. Smooth, airbrushed gradients with soft vector-like outlines. High-key, flattering studio lighting. Colors are warm, vibrant, and nostalgic (technicolor simulation).
 
 Character Accuracy
-Idealized beauty standards of the 1940s-1950s while maintaining character recognition. Glamorous, heavily styled hair and makeup (period-appropriate). Confident, playful, flirty expressions and classic pin-up poses.
+Faces are idealized with "doll-like" perfection. Rosy cheeks, perfect symmetry, and sparkling eyes. Expressions are consistently inviting, playful, or confident.
 
 Body Types
-Classic hourglass pin-up proportions with emphasis on dramatic curves. Flawless, smooth, airbrushed skin with a polished, poreless finish. Poses specifically designed to emphasize the figure in a flattering, stylized way.
+Curvaceous, hourglass silhouettes. Skin is rendered as flawlessly smooth (porcelain finish) with a slight oily sheen to highlight curves. Poses are theatrical and designed to create pleasing S-curves.
 
 Hair & Clothing
-Period-appropriate high-drama hairstyles (Victory Rolls, Finger Waves, Pin Curls). Clothing: Stylized vintage fashion (e.g., Nautical theme, Gingham, High-Waisted Shorts, Wiggle Dresses). Bold, graphic patterns (polka dots, thick stripes).
+Hair: Perfectly coiffed, high-volume styles with soft, rolling waves. Clothing: Fits tightly to accentuate form. Fabric patterns are bold and graphic (polka dots, stripes). Cloth is rendered with smooth, plastic-like folds.
 
 Details
-Signature red lipstick and classic makeup looks (e.g., cat-eye liner). Period-accurate accessories (e.g., gloves, fedoras). Backgrounds may include simple gradient vignettes, vintage signage, or classic automotive elements.
-## sketch
+Vignette fading at the corners. A slight "bloom" effect on highlights. Props are rendered with high gloss. The overall finish feels like a vintage magazine cover or calendar art.
 
-**Rendering Quality:** Pencil sketch technique, visible pencil strokes, rough artistic lines, study quality
-**Character Accuracy:** Anatomical study proportions, gestural drawing
-**Body Types:** Natural figure drawing proportions
-**Hair & Clothing:** Sketched textures, loose fabric indication
-**Details:** Cross-hatching for shadows, sketch lines, paper texture visible, artistic spontaneity
+---
 
 ## Shonen Anime: "Battle-Ready Dynamic"
 
 Rendering
-High-energy shonen anime style with bold cel-shading and dramatic contrast. Vibrant, punchy colors with deep shadows. Strong directional lighting with intense highlights. Motion blur and speed lines for dynamic action feel. Sharp, confident line work with varied weight for impact. Polished digital finish with occasional halftone effects.
+Aggressive cel-shading with heavy black shadows. High contrast "Impact" lighting. Line art is thick, varied, and jagged. Color palette is intense, using primary colors and harsh lighting effects.
 
 Character Accuracy
-Fierce, determined expressions with intensity in the eyes. Strong eyebrows and defined facial structure. Medium-to-large expressive eyes with detailed pupils and dramatic catchlights. Powerful, action-ready poses with dynamic angles and foreshortening.
+Features are sharp and determined. Eyes are smaller and more angular than standard anime. Expressions focus on intensity: gritted teeth, shouting, or intense focus. Facial structure is blockier and more masculine/androgynous.
 
 Body Types
-Athletic, heroic builds with clear muscle definition. Proportions emphasize strength and agility—broad shoulders, defined core. Energy and power conveyed through stance and silhouette. Dynamic tension in the pose suggesting readiness for action.
+Hyper-athletic. Muscles are drawn with distinct, sharp lines. Posture is exaggerated for "action readiness" (foreshortening). Hands and feet are often drawn larger to emphasize power.
 
 Hair & Clothing
-Hair: Wild, gravity-defying spiky styles with sharp angular chunks. Dramatic movement showing wind or energy effects. Bold highlights and deep shadows. Clothing: Functional battle gear, school uniforms with attitude, or training outfits. Tattered edges, battle damage, flowing scarves or capes. Motion lines suggesting movement and power.
+Hair: Spiky, jagged, and wind-blown. Clothing: Tattered, moving violently with unseen energy. Accessories (belts, straps) are drawn floating to suggest power aura.
 
 Details
-Glowing energy effects, aura visualizations, impact frames. Dramatic background elements: speed lines, radial bursts, stylized explosions. Accessories like headbands, arm wraps, or battle scars. Intense atmospheric effects (dust clouds, energy crackling).
+"Kirby Dots" or energy crackles surrounding the figure. Impact lines. Debris floating in the air. The background is often a radial blur or abstract speed lines.
 
 ---
 
 ## Shojo Anime: "Romantic Sparkle"
 
 Rendering
-Soft, elegant shojo anime style with delicate cel-shading and gentle gradients. Pastel and romantic color palette with ethereal lighting. Soft, flowing line work with graceful curves. Dreamy, luminous finish with bokeh-like light effects.
+Soft, pastel-heavy cel-shading. Lines are thin, sepia or colored (not black), and delicate. Lighting is "overexposed" with soft gradients. Texture overlays of bubbles, flowers, or sparkles are common.
 
 Character Accuracy
-Large, expressive eyes with multiple layers of detail—complex iris patterns, multiple catchlights, emotional depth. Delicate facial features with soft expressions. Gentle, romantic, or emotionally vulnerable expressions. Graceful, elegant poses with flowing movement.
+Huge, shimmering eyes with distinct eyelashes and complex iris reflections. Noses and mouths are tiny or non-existent. Expressions are emotionally vulnerable, gentle, or joyful.
 
 Body Types
-Slender, graceful proportions with emphasis on elegance over power. Soft curves and feminine silhouettes. Poses emphasize beauty, emotion, and vulnerability. Flowing, dance-like body language.
+Slender, elongated proportions (clamped style). Shoulders are narrow; limbs are long and thin. Posture is elegant, turning inward, or floating.
 
 Hair & Clothing
-Hair: Long, flowing styles with incredible detail and movement. Soft, silky texture with gentle highlights and ribbon-like flow. Often adorned with flowers, ribbons, or decorative clips. Emphasis on beautiful draping and movement.
+Hair: Exceptionally detailed, flowing strands that take up much of the frame. Clothing: Frills, ribbons, and lace are rendered with high detail. Fabric floats weightlessly.
+
+Details
+Bokeh effects (light orbs). Floral framing. The atmosphere is dreamy and hazy. A "vignette" of white or pink often softens the edges of the image.
 
 ---
 
 ## Film Noir: "Shadows and Smoke"
 
 Rendering
-Classic 1940s film noir aesthetic with dramatic high-contrast lighting. Deep blacks and bright highlights creating chiaroscuro effect. Monochromatic or near-monochromatic palette (black, white, grays) with occasional muted color accents. Strong directional lighting casting dramatic shadows. Venetian blind patterns, cigarette smoke atmosphere, rain and wet surfaces for reflections. Grain texture overlay for vintage film quality.
+Black and white (or extremely desaturated sepia). High-contrast "Low Key" lighting. Deep, crushing blacks and stark white highlights. Film grain and scratch textures simulate aged celluloid.
 
 Character Accuracy
-Period-appropriate styling from 1940s-1950s era. Dramatic expressions—suspicious, seductive, world-weary, or determined. Strong facial shadows emphasizing mystery and drama. Poses suggesting tension, danger, or intrigue. Classic noir archetypes: femme fatale allure, hard-boiled detective grit, dame in distress vulnerability.
+Faces are partially obscured by shadow (half-lighting). Expressions are stoic, suspicious, or melancholy. Lighting is used to sculpt the face, often hiding the eyes or emphasizing the cheekbones.
 
 Body Types
-Classic Hollywood proportions of the golden age. Glamorous, idealized figures appropriate to 1940s beauty standards. Silhouettes emphasized by dramatic rim lighting and shadows. Strong posture conveying confidence or danger. Period-appropriate body language and gestures.
+Silhouettes are paramount—the figure is often defined by rim light against a dark background. Posture is rigid, leaning, or guarded.
 
 Hair & Clothing
-Hair: Victory rolls, finger waves, pin curls, sleek pompadours, or practical updos. High-gloss styling with dramatic highlights from key lighting. Clothing: Period-accurate 1940s fashion—trench coats, fedoras, pencil skirts, wide-shouldered suits, evening gowns with dramatic draping. Seamed stockings, oxford shoes, fedoras. Fabrics show realistic texture: gabardine, silk, wool.
+Hair: Sleek, controlled, and glossy (pomade/gel look). Clothing: Heavy fabrics (wool, trench coats) that absorb light. Sharp collars and brims cast distinct, hard shadows across the figure.
 
 Details
-Period jewelry: pearls, art deco brooches, simple gold pieces. Signature accessories: cigarette holders, revolvers in shoulder holsters, small clutch purses, fedora hats. Props: whiskey glasses, cigarettes with dramatic smoke, vintage telephones, manila folders. Makeup: deep red lipstick, defined eyebrows, beauty marks. Atmospheric elements: fog, smoke, rain streaks on windows, neon sign glow.
+Venetian blind shadow slats cast across the image. Volumetric cigarette smoke or fog. Rain streaks. The composition utilizes "Dutch Angles" (tilted camera) for tension.
 
 ---
 
 ## Classic Anime: "Clean Cel Animation"
 
 Rendering
-Traditional anime cel-shading with clean, consistent technique. Balanced color saturation—vibrant but not extreme. Clear three-tone shading (base, shadow, highlight) with minimal gradients. Smooth, even line work with consistent weight. Professional TV animation quality finish.
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
 
 Character Accuracy
-Proportional anime features following classic conventions. Expressive eyes sized appropriately for the style (not extreme). Clean, recognizable facial features with anime stylization. Natural, relatable expressions and poses. Balanced between stylization and relatability.
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
 
 Body Types
-Standard anime proportions—neither hyper-realistic nor extremely stylized. Natural variation in body types appropriate to character. Clear form definition through clean line work and precise shadow placement. Balanced anatomy that feels grounded yet stylized.
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
 
 Hair & Clothing
-Hair: Clean anime styling with logical volume and flow. Defined chunks and layers with natural-feeling movement. Realistic highlights based on light source. Clothing: Everyday wear—school uniforms, casual clothes, contemporary fashion. Accurate fabric behavior with clean fold rendering. Colors and patterns are bold but believable.
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
 
 Details
-Moderate sparkle effects for emphasis only (eyes, special moments). Simple, tasteful accessories. Clean background elements without excessive decoration. Balanced atmospheric effects—neither sparse nor overwhelming. Professional animation-ready quality.
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
 
 ---
 
 ## Artgerm Style: "Luminous Digital Fantasy"
 
 Rendering
-High-end digital illustration with signature soft airbrush blending and luminous quality. Semi-realistic anime-influenced aesthetic with painterly refinement. Dramatic rim lighting and multiple light sources creating ethereal glow effects. Rich color gradients with jewel-tone saturation. Smooth, polished finish with subtle texture overlays. Cinematic lighting with emphasis on face and hair highlights. Soft bloom and atmospheric haze for dreamy quality.
+Hyper-polished digital airbrushing. Skin is rendered to look like porcelain or high-quality silicone. Lighting is dramatic, usually featuring a strong cool rim light on one side and a warm key light on the other.
 
 Character Accuracy
-Idealized beauty with semi-realistic proportions blended with anime influences. Large, luminous eyes with intricate iris detail and multiple layered catchlights. Delicate facial features with perfect symmetry and flawless skin. Confident, alluring, or heroic expressions with emotional depth. Strong eye contact and engaging gaze. Faces are the focal pointâ€"rendered with maximum detail and refinement.
+The "Supermodel" face: perfect symmetry, small nose, full lips, large almond eyes. Makeup is always flawless and high-fashion. Expressions are confident, alluring, and piercing.
 
 Body Types
-Elegant, idealized proportions emphasizing graceful curves and heroic stature. Athletic-feminine or powerful-masculine builds with subtle definition. Forms rendered with soft gradients and smooth transitions. Emphasis on flowing silhouettes and dynamic posture. Figures convey strength, elegance, and fantasy appeal simultaneously.
+Idealized "Comic Book Hero" proportions. Athletic but curvy, with impossible grace. Muscles are defined but smooth. The figure always has a sense of "floating" or weightless elegance.
 
 Hair & Clothing
-Hair: Signature elaborate, flowing hair with incredible volume and movement. Individual strand detail with complex layering. Dramatic highlights creating luminous, almost glowing effects. Hair catches and reflects light beautifully with gradient color shifts. Often windswept or floating with fantasy physics. Clothing: Fantasy armor, elegant gowns, or contemporary fashion with fantastical elements. Intricate details like ornate patterns, metallic accents, and flowing fabric. Rich textures conveyed through careful rendering of materials (silk, leather, metal). Dynamic fabric flow suggesting motion and drama.
+Hair: The signature element—rendered as flowing liquid silk with incredible volume and distinct individual strands flowing in the wind. Clothing: Tight-fitting, glossy textures (latex, metal, silk).
 
 Details
-Elaborate fantasy accessoriesâ€"crowns, jewelry, magical artifacts rendered with metallic sheen and gem-like clarity. Particle effects: floating embers, magical sparkles, light motes, energy wisps. Atmospheric depth with bokeh effects and soft focus backgrounds. Signature color grading with emphasis on complementary color harmony. Complex background elements that support but don't compete with the character. Professional comic book cover or video game key art quality.
+Subtle particle effects (embers, petals). The background is usually a solid color gradient or a simple abstract halo to keep the focus entirely on the character's face and lighting.
+---
+
+## Cinematic 3D Animation
+
+Rendering
+Pre-rendered 3D animation aesthetic. Soft, global illumination with high-quality subsurface scattering. Vibrant, cinematic lighting with a focus on "appeal" and clarity. Smooth, clean surfaces with subtle tactile textures.
+
+Character Accuracy
+Stylized but highly expressive facial features. Large, "emotive" eyes with complex iris shaders. Proportions are designed for maximum personality and "readability" from a distance.
+
+Body Types
+Appealing, simplified anatomy with smooth transitions. Proportions are slightly exaggerated for character silhouettes. Weight and squash-and-stretch principles are implied in the posture.
+
+Hair & Clothing
+Hair: Rendered as soft, high-detail groom or stylized "sculpted" masses with individual strand visibility. Clothing: High-quality material shaders (velvet, silk, plastic) with clean, exaggerated folds.
+
+Details
+Soft bloom on highlights, subtle lens flare. Backgrounds are high-detail but designed to pop the character. The overall look is polished and "expensive."
+
+---
+
+## Western Comic Book
+
+Rendering
+High-contrast ink illustration. Bold, black "brush-work" for shadows and outlines. Flat or Ben-Day dot coloring (halftone). High-key lighting with dramatic, graphic shadow placement.
+
+Character Accuracy
+Anatomically heroic or exaggerated features. Strong, chiseled jawlines and intense gazes. Expressions are theatrical and iconic, captured in high-contrast ink.
+
+Body Types
+Heroic, hyper-defined musculature or exaggerated silhouettes. Postures are powerful "hero poses" with strong action lines and foreshortening.
+
+Hair & Clothing
+Hair: Rendered as solid black masses with high-contrast white highlights (ink style). Clothing: Spandex or heavy leather textures. Folds are represented by sharp, black "ink-creases."
+
+Details
+Action sound effects (suggested by composition), heavy border lines, and graphic grit. The palette is primary-heavy and bold.
+
+---
+
+## Classic Fantasy Oil
+
+Rendering
+Traditional oil on canvas. Warm, amber-toned glazes and visible, "lost-and-found" edges. High chiaroscuro contrast. Lighting feels like torchlight or magic-glow against dark, earthy backgrounds.
+
+Character Accuracy
+Features are rugged and lived-in. Expressions are epic, stoic, or battle-worn. Likeness is captured with a focus on the "legendary" status of the subject.
+
+Body Types
+Powerful, realistic anatomy with a focus on physical weight and presence. Skin is weathered and textured. Postures are majestic or grounded in struggle.
+
+Hair & Clothing
+Hair: Thick, textured brushstrokes showing volume and weight. Clothing: Heavy fabrics like fur, worn leather, and hammered metal. Materials look aged and battle-tested.
+
+Details
+Canvas texture, cracked paint artifacts, and atmospheric smoke/embers. The palette is dominated by ochre, deep reds, and metallic golds.
+
+---
+
+## Standard / Neutral
+
+Rendering
+Balanced digital photography. Neutral white-balance and natural lighting. Clean, high-resolution finish without specific filter bias. Sharp focus across the subject with natural depth-of-field.
+
+Character Accuracy
+Clear and accurate representation of the character's base traits. Neutral, versatile expressions. The focus is on a high-fidelity "default" look.
+
+Body Types
+Natural, unstylized anatomy. Accurate weight and proportion representation. Posture is relaxed and natural.
+
+Hair & Clothing
+Hair: Clean, realistic rendering with natural shine. Clothing: Basic material representation (cotton, denim, etc.) with standard physics and folding.
+
+Details
+Minimal visual effects. A clean, professional studio or natural background. This style acts as a high-quality foundation for any subject.

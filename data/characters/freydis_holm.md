@@ -1,8 +1,9 @@
-### Freydis
+### Freydis Holm
 
 **Photo:** [freydis_photo.png]
-**Tags:** Nordic, Nordic-inspired, rugged, strong, intense, athletic, warrior-spirit, female
-**Summary:** Freydis carries the raw, untamed energy of the North into the modern world. Her presence is a strike of lightning—sharp, dangerous, and undeniably powerful. She moves with the purposeful weight of someone born to lead and survive, her rugged beauty enhanced by the scars of a life lived at the edge. Even in modern clothes, she looks as though she just stepped off a longship, radiating an ancient, unyielding confidence.
+**Tags:** Nordic, rugged, strong, intense, athletic, resilient, commanding, female
+**Summary:** Freydis Holm carries a raw, untamed energy that feels elemental. Her presence is a strike of lightning—sharp, dangerous, and undeniably powerful. She moves with the purposeful weight of a natural survivor, her rugged beauty enhanced by the scars of a life lived at the edge. Whether she's navigating a city street or a mountain trail, she radiates an ancient, unyielding confidence that commands respect.
+**Tags:** Nordic, rugged, strong, intense, athletic, resilient, commanding, female
 **Gender:** F
 
 **Appearance:**
@@ -27,8 +28,8 @@
 **Outfits:**
 
 #### Base
-- **Top:** Heavy charcoal gray oversized wool sweater with a thick cable-knit texture
-- **Bottom:** Distressed black leather-look leggings with reinforced stitching
-- **Footwear:** Knee-high rugged black leather boots with heavy buckles and treaded soles
-- **Accessories:** Thick silver arm ring, leather wrap bracelet with a bronze hammer charm
-- **Hair/Makeup:** Intricate Nordic braids with loose strands framing the face; natural skin with a subtle smoky eye
+- **Top:** Oversized charcoal gray cable-knit wool sweater (off-shoulder or loose fit)
+- **Bottom:** Black coated-denim motto skinny jeans with knee detailing
+- **Footwear:** Black leather combat boots with silver hardware
+- **Accessories:** Silver arm cuff, layered leather bracelets
+- **Hair/Makeup:** Messy high braid with loose tendrils; natural skin

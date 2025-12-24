@@ -1,8 +1,8 @@
-### Harald
+### Harald Bjornson
 
 **Photo:** [harald_photo.png]
-**Tags:** Nordic, Nordic-inspired, rugged, massive, leader, bearded, commanding, male
-**Summary:** Harald is a mountain of a man, embodying the sheer physical power and indomitable will of a Viking jarl. His presence is heavy and immovable, like a granite cliff facing the North Sea. He carries himself with the quiet, terrifying calm of a predator at rest, his deep-set eyes reflecting a life of combat and exploration. He is the modern echo of an ancient king—rugged, weathered, and undeniably dominant.
+**Tags:** Nordic, rugged, massive, leader, bearded, commanding, male
+**Summary:** Harald Bjornson is a mountain of a man, embodying sheer physical power and indomitable will. His presence is heavy and immovable, like a granite cliff. He carries himself with the quiet, terrifying calm of a man who doesn't need to raise his voice to be heard. He is a modern echo of an ancient archetype—rugged, weathered, and undeniably dominant.
 **Gender:** M
 
 **Appearance:**
@@ -27,8 +27,8 @@
 **Outfits:**
 
 #### Base
-- **Top:** Thick dark forest green flannel shirt (worn unbuttoned over a fitted black henley)
-- **Bottom:** Rugged charcoal gray tactical cargo pants with multiple pockets
-- **Footwear:** Heavy black leather work boots with reinforced steel toes
-- **Accessories:** Leather cord necklace with a bronze hammer pendant, thick leather wrist cuff
-- **Hair/Makeup:** Swept-back hair with a single braid; full bearded look with bronze rings
+- **Top:** Thick dark forest green flannel shirt (sleeves rolled up)
+- **Bottom:** Dark charcoal gray utility pants
+- **Footwear:** Brown leather work boots with scuffs
+- **Accessories:** Leather cord necklace, simple leather wrist band
+- **Hair/Makeup:** Swept-back hair; full groomed beard

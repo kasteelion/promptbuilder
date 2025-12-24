@@ -1,8 +1,8 @@
-### Kassandra
+### Kassandra Lykaios
 
 **Photo:** [kassandra_photo.png]
-**Tags:** Greek, Greek-inspired, athlete, warrior, agile, strong, focused, independent, female
-**Summary:** Kassandra is a storm of agile strength and focused intensity. She possesses the lethal elegance of a well-balanced blade—capable of both immense power and delicate precision. Her presence is electric, charged with the energy of someone who is always prepared for the next challenge. She moves with an effortless, panther-like grace, her athletic frame a testament to a life of perpetual motion and iron discipline.
+**Tags:** Greek, athlete, dynamic, agile, strong, focused, independent, female
+**Summary:** Kassandra Lykaios is a storm of agile strength and focused intensity. She possesses the lethal elegance of a well-balanced blade—capable of both immense power and delicate precision. Her presence is electric, charged with the energy of someone who is always prepared for the next challenge. She moves with an effortless, panther-like grace, her athletic frame a testament to a life of perpetual motion.
 **Gender:** F
 
 **Appearance:**
@@ -27,8 +27,8 @@
 **Outfits:**
 
 #### Base
-- **Top:** Crimson red fitted racerback athletic tank top (shows off shoulder and back definition)
-- **Bottom:** High-waist black performance leggings with gold compression stitching
-- **Footwear:** Lightweight black and gold athletic training shoes
-- **Accessories:** Simple gold arm cuff on the upper right arm, small gold hoop earrings
-- **Hair/Makeup:** Complex athletic braid; natural sun-kissed skin with light bronze highlighter
+- **Top:** Crimson red fitted racerback tank top
+- **Bottom:** High-waist black compression leggings
+- **Footwear:** Black lightweight running shoes with gold accents
+- **Accessories:** Simple gold hoop earrings, gold hair cuff
+- **Hair/Makeup:** Intricate high braid; natural glowy skin
