@@ -19,7 +19,7 @@ Bearing: efficient, energetic, forward-moving bearing when active.
 // - General vibe: active, focused, approachable with natural athleticism
 
 ####Base
-Top: Deep emerald green halter top with criss-cross neckline, crossover front, large breast keyhole cutout, cleavage cutout, crop style showing midriff, sleeveless with bare shoulders, tight fitted silhouette
+  * Top: Deep emerald green halter top with criss-cross neckline, crossover front, large breast keyhole cutout, cleavage cutout, crop style showing midriff, sleeveless with bare shoulders, tight fitted silhouette
 	∙	Bottom: Warm bronze cotton-blend lehenga skirt with high front slit, matte finish with subtle texture, draped and pleated style, ankle-length with natural movement
 	∙	Footwear: Simple tan leather flat sandals or low wedge sandals
 	∙	Accessories: Small gold hoop earrings, single delicate gold chain with small Om pendant, 2-3 thin gold bangles on one wrist, small black bindi dot on forehead, fitness tracker on opposite wrist
