@@ -1,22 +1,25 @@
 # Color Schemes
 
-## The Standard
-- **primary:** #CCCCCC
-- **secondary:** #888888
-- **accent:** #222222
-- **team:** The Standard
-
-## Generic
-- **primary:** {primary_color}
-- **secondary:** {secondary_color}
-- **accent:** {accent}
-- **team:** {team}
-
 ## The Abyss Explorers
 - **primary:** #001F3F
 - **secondary:** #0074D9
 - **accent:** #7FDBFF
 - **team:** The Abyss Explorers
+
+## The Motor City Kings
+- **primary:** #0076B6
+
+- **secondary:** #000000
+
+- **accent:** #B0B7BC
+
+- **team:** The Motor City Kings
+
+## The Aero Aces
+- **primary:** #5BC2E7
+- **secondary:** #002244
+- **accent:** #FFFFFF
+- **team:** The Aero Aces
 
 ## The Bay Bears
 - **primary:** #003262
@@ -36,12 +39,6 @@
 - **accent:** #FFFFFF
 - **team:** The Coastal Bears
 
-## The Cotton Candies
-- **primary:** #FFB7B2
-- **secondary:** #B2E2F2
-- **accent:** #FDFD96
-- **team:** The Cotton Candies
-
 ## The Crimson Trees
 - **primary:** #8C1515
 - **secondary:** #D2C295
@@ -60,18 +57,6 @@
 - **accent:** #FFFFFF
 - **team:** The Emerald Ducks
 
-## The Emerald Shamrocks
-- **primary:** #007A33
-- **secondary:** #BA9653
-- **accent:** #FFFFFF
-- **team:** The Emerald Shamrocks
-
-## The Forest Rangers
-- **primary:** #2D5A27
-- **secondary:** #4B3621
-- **accent:** #D2B48C
-- **team:** The Forest Rangers
-
 ## The Gold Coast Kings
 - **primary:** #552583
 - **secondary:** #FDB927
@@ -84,17 +69,17 @@
 - **accent:** #FFFFFF
 - **team:** The Gold Rushers
 
-## The Golden Reapers
-- **primary:** #8B4513
-- **secondary:** #D2691E
-- **accent:** #FFD700
-- **team:** The Golden Reapers
-
-## The Golden Warriors
-- **primary:** #990000
-- **secondary:** #FFC72C
+## The Iron Vipers
+- **primary:** #1A1A1A
+- **secondary:** #E31837
 - **accent:** #FFFFFF
-- **team:** The Golden Warriors
+- **team:** The Iron Vipers
+
+## The Midnight Ravens
+- **primary:** #241773
+- **secondary:** #000000
+- **accent:** #9E7C0C
+- **team:** The Midnight Ravens
 
 ## The Monochromes
 - **primary:** #FFFFFF
@@ -120,12 +105,6 @@
 - **accent:** #FFFF00
 - **team:** The Neon City Hackers
 
-## The Night Riders
-- **primary:** #000033
-- **secondary:** #33FF00
-- **accent:** #FF0055
-- **team:** The Night Riders
-
 ## The Northern Wolves
 - **primary:** #4B2E83
 - **secondary:** #B7A57A
@@ -144,41 +123,11 @@
 - **accent:** #000000
 - **team:** The Red Badgers
 
-## The Red Hawks
-- **primary:** #CC0000
-- **secondary:** #FFFFFF
-- **accent:** #000000
-- **team:** The Red Hawks
-
-## The Retro Raiders
-- **primary:** #FF00FF
-- **secondary:** #7000FF
-- **accent:** #00FFFF
-- **team:** The Retro Raiders
-
-## The River Builders
-- **primary:** #DC4405
-- **secondary:** #000000
-- **accent:** #FFFFFF
-- **team:** The River Builders
-
 ## The River City Lions
 - **primary:** #FE5000
 - **secondary:** #263B94
 - **accent:** #FFFFFF
 - **team:** The River City Lions
-
-## The Sand Spirits
-- **primary:** #C2B280
-- **secondary:** #228B22
-- **accent:** #E2725B
-- **team:** The Sand Spirits
-
-## The Shadows
-- **primary:** #000000
-- **secondary:** #FFFFFF
-- **accent:** #CCCCCC
-- **team:** The Shadows
 
 ## The Sovereign Guard
 - **primary:** #4B0082
@@ -186,14 +135,14 @@
 - **accent:** #F5F5DC
 - **team:** The Sovereign Guard
 
-## The Star Voyagers
-- **primary:** #0B0B3B
-- **secondary:** #6A0888
-- **accent:** #C0C0C0
-- **team:** The Star Voyagers
+## The Storm Breakers
+- **primary:** #002244
+- **secondary:** #69BE28
+- **accent:** #A5ACAF
+- **team:** The Storm Breakers
 
-## The Sun Spirits
-- **primary:** #8C1D40
-- **secondary:** #FFC627
+## The Tidal Sharks
+- **primary:** #00758F
+- **secondary:** #000000
 - **accent:** #FFFFFF
-- **team:** The Sun Spirits
+- **team:** The Tidal Sharks

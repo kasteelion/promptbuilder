@@ -1,7 +1,7 @@
 ### Siofra Quinn
 **Photo:** siofra_photo.png
 **Summary:** Agile and sharp, Siofra Quinn carries the energy of a disciplined warrior-scholar. Built for speed and precision rather than brute force, she embodies the crossbow fighter's ethos: patient, focused, deadly accurate. Her confidence is tactical and controlled, blending intellectual strategy with combat-ready athleticism. She's the fighter who calculates trajectories and studies weaknesses before striking.
-**Tags:** athletic, warrior, focused, agile, intense, vigilant, tactical, disciplined, battle-ready, crossbow-fighter, warrior-scholar, strategic, Celtic-inspired, female
+**Tags:** female, athletic, tactical, agile, battle-ready, crossbow-fighter, disciplined, focused, intense, strategic, vigilant, warrior, warrior-scholar, celtic-inspired
 **Gender:** F
 
 **Appearance:**

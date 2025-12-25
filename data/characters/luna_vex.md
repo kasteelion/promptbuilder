@@ -1,7 +1,7 @@
 ### Luna Vex
 **Photo:** luna_vex_photo.png
 
-**Tags:** petite, hourglass, high-energy, alternative, female, vibrant alt-girl, playful
+**Tags:** female, curvy, petite, edgy, high-energy, playful
 
 **Summary:** She radiates a playful sense of mischief, her bold aesthetic serving as a backdrop to a deeply candid and joyful personality. Her presence is characterized by an infectious laugh and an undeniable magnetic energy that commands attention despite her petite stature.
 

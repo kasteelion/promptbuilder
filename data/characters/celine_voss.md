@@ -1,7 +1,7 @@
 ### Celine Voss
 **Photo:** celine_voss_photo.png
 **Summary:** Selene’s power lies in stillness. She commands space through restraint, geometry, and deliberate minimalism, projecting authority without excess.
-**Tags:** minimalist, architectural, reserved, commanding, controlled, cold, severe, formidable, elegant, female
+**Tags:** female, architectural, chic, minimalist, cold, commanding, controlled, severe, reserved
 **Gender:** F
 
 **Appearance:**

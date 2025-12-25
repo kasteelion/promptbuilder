@@ -353,31 +353,40 @@ class SearchableCombobox(ttk.Frame):
 
     def _update_dropdown_values(self):
         """Update dropdown with filtered values."""
-        if not self.dropdown or not self.listbox:
-            # If not visible, maybe show it if we have values
-            if self.entry.focus_get() == self.entry:
-                 self._show_dropdown()
-            return
+        try:
+            if not self.dropdown or not self.dropdown.winfo_exists():
+                # If not visible, maybe show it if we have values
+                if self.entry.winfo_exists() and self.entry.focus_get() == self.entry:
+                     self._show_dropdown()
+                return
 
-        filtered = self._get_filtered_values()
-        if not filtered:
-            self._hide_dropdown()
-            return
+            if not self.listbox or not self.listbox.winfo_exists():
+                return
 
-        self.listbox.delete(0, tk.END)
-        for item in filtered:
-            self.listbox.insert(tk.END, item)
-            
-        # Adjust height
-        h = max(40, min(300, (len(filtered) * 22) + 6))
-        self.dropdown.wm_geometry(f"{self.winfo_width()}x{h}")
+            filtered = self._get_filtered_values()
+            if not filtered:
+                self._hide_dropdown()
+                return
 
-        # Highlight first match if searching
-        if self.listbox.size() > 0 and self._selected_value.get():
-            self.listbox.selection_set(0)
+            self.listbox.delete(0, tk.END)
+            for item in filtered:
+                self.listbox.insert(tk.END, item)
+                
+            # Adjust height
+            h = max(40, min(300, (len(filtered) * 22) + 6))
+            self.dropdown.wm_geometry(f"{self.winfo_width()}x{h}")
+
+            # Highlight first match if searching
+            if self.listbox.size() > 0 and self._selected_value.get():
+                self.listbox.selection_set(0)
+        except tk.TclError:
+            # Widget likely destroyed during update
+            pass
 
     def _show_dropdown(self, event=None):
         """Show the dropdown."""
+        if not self.winfo_exists():
+            return
         if not self.dropdown_visible:
             self._build_dropdown()
         else:
@@ -385,13 +394,18 @@ class SearchableCombobox(ttk.Frame):
 
     def _hide_dropdown(self, event=None):
         """Hide the dropdown."""
-        if self.dropdown:
-            self.dropdown.destroy()
+        try:
+            if self.dropdown and self.dropdown.winfo_exists():
+                self.dropdown.destroy()
             self.dropdown = None
+        except tk.TclError:
+            pass
         self.dropdown_visible = False
 
     def _toggle_dropdown(self):
         """Toggle dropdown visibility."""
+        if not self.winfo_exists():
+            return
         if self.dropdown_visible:
             self._hide_dropdown()
         else:
@@ -400,6 +414,9 @@ class SearchableCombobox(ttk.Frame):
 
     def _on_key_release(self, event):
         """Handle key release in entry."""
+        if not self.winfo_exists():
+            return
+            
         val = self._selected_value.get()
         self._update_clear_btn_visibility()
         
@@ -407,6 +424,11 @@ class SearchableCombobox(ttk.Frame):
         # trigger on_select with empty value to ensure listeners know it's cleared.
         if not val and self.on_select:
              self.on_select("")
+             
+        # Check if we still exist after callback, as on_select might have 
+        # triggered a UI refresh that destroyed this widget.
+        if not self.winfo_exists():
+            return
         
         if event.keysym in ("Up", "Down", "Return", "Escape", "Tab"):
             return

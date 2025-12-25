@@ -2,7 +2,7 @@
 **Photo:** mei_chen_photo.png
 
 **Photo:** [mei_chen_photo.png]
-**Tags:** voluptuous, cute-provocative, confident, playful, sweet, feminine, Chinese-American, curvy, kawaii-sensual, short-stack, female
+**Tags:** chinese-american, female, curvy, plus-size, approachable, confident, playful, cute-provocative, feminine, kawaii-sensual
 **Summary:** Mei blends voluptuous curves with youthful sweetness in an unexpectedly magnetic combination. Her petite stature concentrates her curves into a compact, attention-commanding presence—soft and inviting yet undeniably provocative. She navigates femininity with playful confidence, mixing kawaii aesthetics with body-conscious choices that celebrate her figure. There's a knowing quality to her sweetness, a self-awareness that makes her charm feel deliberate rather than accidental.
 **Gender:** F
 

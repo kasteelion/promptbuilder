@@ -1,7 +1,7 @@
 ### Aaliyah Chen
 **Photo:** aaliyah_chen_photo_1765692796.png
 
-**Tags:** athletic, mixed-heritage, grounded, earthy, bohemian, warm, natural, approachable, female
+**Tags:** female, mixed-heritage, athletic, bohemian, natural, approachable, earthy, grounded, warm
 
 **Summary:** A grounded, vibrant performer whose energy feels rooted and alive. Aaliyah carries herself with relaxed athletic confidence, blending warmth, cultural depth, and effortless movement. Her presence feels sunlit and calm, with a quiet strength that reads as both capable and deeply human.
 

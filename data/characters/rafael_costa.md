@@ -1,7 +1,7 @@
 ### Rafael Costa
 **Photo:** rafael_costa_photo.png
 
-**Tags:** charismatic, artistic, expressive, warm, energetic, Brazilian, creative, male
+**Tags:** brazilian, male, creative, artistic, charismatic, energetic, expressive, warm
 
 **Summary:** Rafael carries creative energy that feels both grounded and effervescent. His presence blends artistic sensitivity with warm approachability, moving through space with the easy confidence of someone comfortable in their own skin. There's a theatrical quality to his gestures that never feels performative—just naturally expressive.
 

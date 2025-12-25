@@ -3,7 +3,7 @@
 
 **Summary:** Harper Mae embodies Southern warmth with an effortless, sun-kissed charm. Her presence feels like a front porch summer afternoon—sweet tea, genuine laughter, and the kind of hospitality that makes everyone feel like family. She radiates approachable beauty, where freckles and natural grace create a girl-next-door magnetism that's impossible to resist.
 
-**Tags:** Southern, freckled, warm, girl-next-door, approachable, sun-kissed, sweet, natural-beauty, female
+**Tags:** female, natural-beauty, southern, approachable, freckled, girl-next-door, sun-kissed, warm
 
 **Gender:** F
 

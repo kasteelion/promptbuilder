@@ -1,7 +1,7 @@
 ### Kendra Mitchell
 **Photo:** kendra_mitchell_photo.png
 
-**Tags:** athletic, commanding, bold, tall, confident, adventurous, magnetic, outdoorsy, natural, female
+**Tags:** female, athletic, tall, natural, outdoorsy, adventurous, commanding, confident, magnetic
 
 **Summary:** Kendra commands attention effortlessly—her tall, athletic frame and bold energy fill any room she enters. She moves with the confident swagger of someone who's always been comfortable taking up space, blending natural strength with magnetic charisma. Her presence is both grounding and electrifying, like a force of nature that refuses to be ignored.
 

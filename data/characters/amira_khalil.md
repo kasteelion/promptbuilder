@@ -2,7 +2,7 @@
 **Photo:** amira_khalil_photo.png
 
 **Summary:** Poised and thoughtful, Amira embodies elegance through restraint. Her movements are deliberate and graceful, her presence calm and assured. She radiates dignity and intelligence, balancing softness with a composed inner strength that commands respect without demanding attention.
-**Tags:** elegant, modest, refined, thoughtful, composed, dignified, Middle Eastern, hijabi, female
+**Tags:** female, middle eastern, chic, hijabi, modest, composed, dignified, refined, reserved
 **Modifier:** H
 
 **Appearance:**

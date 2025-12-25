@@ -1,7 +1,7 @@
 ### Jamal Rivers
 **Photo:** jamal_rivers_photo.png
 
-**Tags:** intellectual, composed, scholarly, refined, thoughtful, warm, contemporary, Black, male
+**Tags:** black, male, contemporary, scholarly, composed, intellectual, refined, warm, reserved
 
 **Summary:** Jamal embodies thoughtful masculinity—his confidence is intellectual rather than physical, expressed through careful speech and considered movement. He carries himself with professorial ease, blending contemporary style with classic refinement. His presence invites conversation and deep thought.
 

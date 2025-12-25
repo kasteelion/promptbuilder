@@ -1,7 +1,7 @@
 ### Mela Hart
 **Photo:** mela_hart_photo.png
 **Summary:** Bright and buoyant, Mela brings playful athleticism and youthful joy into every movement. Her presence feels lively and affectionate, grounded in warmth and expressive energy.
-**Tags:** playful, athletic, joyful, youthful, warm, energetic, approachable, Black, female
+**Tags:** black, female, athletic, approachable, energetic, playful, warm, youthful
 **Gender:** F
 
 **Appearance:**

@@ -1,7 +1,7 @@
 ### Theo Okonkwo
 **Photo:** theo_okonkwo_photo.png
 
-**Tags:** warm, creative, energetic, expressive, culturally-connected, rhythmic, afro-British, contemporary, male
+**Tags:** afro-british, male, contemporary, creative, culturally-connected, rhythmic, energetic, expressive, warm
 
 **Summary:** Theo radiates infectious creative energy and cultural confidence. His style blends British streetwear with African textile traditions, creating something entirely his own. He moves with easy rhythm, his warmth and humor making him a natural connector who brings people together effortlessly.
 

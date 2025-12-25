@@ -1,7 +1,7 @@
 ### Sina Tuilagi
 **Photo:** sina_tuilagi_photo.jpeg
 
-**Tags:** pacific-islander, Samoan, traditional-modern-fusion, tatau, cultural-pride, athletic, confident, island-heritage, contemporary, strong, proud, female
+**Tags:** female, pacific-islander, samoan, athletic, strong, contemporary, cultural-pride, tatau, traditional-modern-fusion, confident, island-heritage, proud
 
 **Gender:** F
 

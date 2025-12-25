@@ -1,7 +1,7 @@
 ### Maya Rose
 **Photo:** maya_rose_photo.png
 **Summary:** Maya radiates natural warmth and approachability—easy confidence, genuine joy, and emotional openness. Her charm lies in her relaxed authenticity and inviting presence, creating an immediate sense of comfort and ease.
-**Tags:** warm, approachable, natural, soft-glam, confident, relaxed, radiant, female
+**Tags:** female, natural, soft-glam, approachable, confident, radiant, relaxed, warm
 **Gender:** F
 
 **Appearance:**

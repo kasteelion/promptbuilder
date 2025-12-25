@@ -1,7 +1,7 @@
 ### Priya Sharma
 **Photo:** priya_sharma_photo.jpeg
 **Summary:** A vibrant fusion of focused athleticism and warm, approachable energy. Priya projects a kinetic confidence that is both disciplined and spirited. Her presence balances the intensity of a competitor with the genuine warmth of a friend, embodying a modern, culturally-rich vitality.
-**Tags:** athletic, driven, energetic, warm, vibrant, disciplined, modern, Indian-American, expressive, female
+**Tags:** female, indian, athletic, modern, disciplined, energetic, expressive, vibrant, warm, driven
 **Gender:** F
 
 **Appearance:**

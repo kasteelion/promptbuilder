@@ -124,32 +124,52 @@ A simple and comfortable casual outfit.
 
         return parsed_outfits
 
+    def load_categorized_tags(self):
+        """Load tags organized by category from `data/tags.md`.
+
+        Returns:
+            dict: { category_name: [tags] }
+        """
+        f = self._find_data_file("tags.md")
+        if not f.exists():
+            return {"Demographics": ["male", "female"], "Other": []}
+
+        text = f.read_text(encoding="utf-8")
+        categorized = {}
+        current_cat = "Other"
+        
+        for line in text.splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            if line.startswith("## "):
+                current_cat = line[3:].strip()
+                categorized[current_cat] = []
+            elif line.startswith("- "):
+                tag = line[2:].strip().lower()
+                if current_cat not in categorized:
+                    categorized[current_cat] = []
+                categorized[current_cat].append(tag)
+        
+        return categorized
+
     def load_tags(self):
-        """Load canonical tag list from `data/tags.md` (create defaults if missing).
+        """Load canonical tag list from `data/tags.md`, sorted by category priority.
 
         Returns a list of tag strings.
         """
-        f = self._find_data_file("tags.md")
-
-        default_tags = [
-            "athletic",
-            "edgy",
-            "formal",
-            "casual",
-            "bohemian",
-            "vintage",
-            "fantasy",
-            "soft",
-            "romantic",
-            "male",
-            "female",
-            "curvy",
-            "plus-size",
-        ]
-
-        # Prefer to compute the set of tags actually used by characters
+        categorized = self.load_categorized_tags()
+        
+        # Priority order for categories
+        priority = ["Demographics", "Body Type", "Style", "Vibe", "Other"]
+        
+        ordered_tags = []
+        for cat in priority:
+            if cat in categorized:
+                ordered_tags.extend(sorted(categorized[cat]))
+        
+        # Also include any tags actually used by characters that weren't in tags.md
         try:
-            # If characters are cached, use them; otherwise attempt to load characters
             chars = self._cache.get("characters")
             if chars is None:
                 try:
@@ -158,54 +178,22 @@ A simple and comfortable casual outfit.
                     chars = None
 
             if chars:
-                used = []
+                known_tags = set(ordered_tags)
+                extra_tags = set()
                 for _, data in chars.items():
                     tlist = data.get("tags") or []
                     if isinstance(tlist, str):
-                        tlist = [t.strip() for t in tlist.split(",") if t.strip()]
+                        tlist = [t.strip().lower() for t in tlist.split(",") if t.strip()]
                     for tt in tlist:
-                        if tt and tt not in used:
-                            used.append(tt)
-
-                # If we found any used tags, return them sorted (preserve insertion order for stability)
-                if used:
-                    return used
+                        if tt and tt not in known_tags:
+                            extra_tags.add(tt)
+                
+                if extra_tags:
+                    ordered_tags.extend(sorted(list(extra_tags)))
         except Exception:
-            # If anything goes wrong computing used tags, fall back to reading tags.md
             pass
 
-        # Fallback: read tags.md (create defaults if missing)
-        if not f.exists():
-            # create a simple tags.md listing
-            content = """# Tags
-
-Common tags used to categorize characters. One tag per line.
-
-"""
-            content += "\n".join(f"- {t}" for t in default_tags)
-            f.write_text(content, encoding="utf-8")
-            return default_tags
-
-        text = f.read_text(encoding="utf-8")
-        tags = []
-        for line in text.splitlines():
-            line = line.strip()
-            if not line:
-                continue
-            if line.startswith("- "):
-                tags.append(line[2:].strip())
-            elif line.startswith("#"):
-                continue
-            else:
-                tags.append(line)
-
-        # normalize unique
-        seen = []
-        for t in tags:
-            tt = t.strip()
-            if tt and tt not in seen:
-                seen.append(tt)
-        return seen
+        return ordered_tags
 
     def load_characters(self):
         """Load and parse character files from characters/ folder, merging with shared outfits.

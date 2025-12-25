@@ -2,6 +2,7 @@
 """Visual character card widget with photo support."""
 
 import shutil
+import random
 import tkinter as tk
 from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
@@ -10,6 +11,7 @@ from ui.widgets import FlowFrame, ScrollableCanvas
 from utils import create_tooltip, logger
 
 from .constants import CHARACTER_CARD_SIZE
+from .searchable_combobox import SearchableCombobox
 
 # Optional PIL import for image handling
 try:
@@ -41,6 +43,7 @@ class CharacterCard(ttk.Frame):
         on_photo_change=None,
         on_tag_click=None,
         theme_colors=None,
+        categorized_tags_map=None,
     ):
         """Initialize character card.
 
@@ -52,7 +55,9 @@ class CharacterCard(ttk.Frame):
             prefs: PreferencesManager instance
             on_add_callback: Function to call when adding character
             on_photo_change: Function to call when photo is changed
+            on_tag_click: Function to call when a tag is clicked
             theme_colors: Theme color dict
+            categorized_tags_map: Map of categories to tags for sorting
         """
         super().__init__(parent, style="Card.TFrame")
 
@@ -64,14 +69,11 @@ class CharacterCard(ttk.Frame):
         self.on_photo_change = on_photo_change
         self.on_tag_click = on_tag_click
         self.theme_colors = theme_colors or {}
+        self.categorized_tags_map = categorized_tags_map or {}
         
         self.photo_image = None  # Keep reference to prevent GC
 
         self._build_ui()
-
-        # Add hover effect to card
-        self.bind("<Enter>", self._on_enter)
-        self.bind("<Leave>", self._on_leave)
 
     def _on_enter(self, event):
         """Handle mouse enter (hover)."""
@@ -174,18 +176,17 @@ class CharacterCard(ttk.Frame):
         )
         desc_label.pack(anchor="w", pady=(4, 8))
 
-        # Tags display (small gray labels)
-        tags = self.character_data.get("tags") or []
-        if isinstance(tags, str):
-            tags = [t.strip() for t in tags.split(",") if t.strip()]
-
-        # If no tags, skip rendering tag flow
+        # Tags display (small gray labels) - SORTED BY CATEGORY
+        raw_tags = self.character_data.get("tags") or []
+        if isinstance(raw_tags, str):
+            raw_tags = [t.strip().lower() for t in raw_tags.split(",") if t.strip()]
+        
+        tags = self._sort_tags_by_category(raw_tags, self.categorized_tags_map)
 
         if tags:
             # Use FlowFrame so tags wrap naturally like outfits
             tags_frame = FlowFrame(info_frame, padding_x=4, padding_y=4)
             tags_frame.pack(anchor="w", pady=(0, 6), fill="x")
-            logger.debug(f"Building tags for {self.character_name}: {len(tags)} tags")
             for t in tags:
                 try:
                     btn = tags_frame.add_button(
@@ -214,6 +215,31 @@ class CharacterCard(ttk.Frame):
 
         add_btn = ttk.Button(btn_frame, text="➕ Add", command=self._on_add_clicked, width=10)
         add_btn.pack(side="left", padx=(0, 6))
+
+        edit_btn = ttk.Button(btn_frame, text="✏️ Edit", command=self._on_edit_clicked, width=10)
+        edit_btn.pack(side="left")
+
+    def _sort_tags_by_category(self, tags, categorized_map):
+        """Sort tags based on category priority."""
+        if not categorized_map:
+            return sorted(tags)
+            
+        priority = ["Demographics", "Body Type", "Style", "Vibe", "Other"]
+        
+        # Create a reverse map for lookup
+        tag_to_cat = {}
+        for cat, tag_list in categorized_map.items():
+            for t in tag_list:
+                tag_to_cat[t.lower()] = cat
+        
+        def sort_key(tag):
+            cat = tag_to_cat.get(tag.lower(), "Other")
+            try:
+                return (priority.index(cat), tag.lower())
+            except ValueError:
+                return (len(priority), tag.lower())
+                
+        return sorted(tags, key=sort_key)
 
         edit_btn = ttk.Button(btn_frame, text="✏️ Edit", command=self._on_edit_clicked, width=10)
         edit_btn.pack(side="left")
@@ -668,22 +694,40 @@ class CharacterGalleryPanel(ttk.Frame):
         self.characters = {}
         self.load_queue = []  # Queue for lazy loading images
         self._render_job_id = None # ID for cancelling pending render batches
+        self._current_filtered_chars = [] # List of currently filtered character names
+        
+        # Load categorized tags map for sorting logic
+        try:
+            self.categorized_tags_map = self.data_loader.load_categorized_tags()
+        except Exception:
+            self.categorized_tags_map = {}
 
         self._build_ui()
 
     def _build_ui(self):
         """Build the gallery UI."""
-        # Header with title and count
+        # Header with title, count, and random button
         header = ttk.Frame(self, style="TFrame")
         header.pack(fill="x", padx=6, pady=(6, 2))
 
-        self.title_label = ttk.Label(header, text="👥 Characters", style="Title.TLabel")
+        # Title and Count in a sub-frame
+        title_frame = ttk.Frame(header, style="TFrame")
+        title_frame.pack(side="left", fill="x", expand=True)
+
+        self.title_label = ttk.Label(title_frame, text="👥 Characters", style="Title.TLabel")
         self.title_label.pack(anchor="w")
 
         self.count_label = ttk.Label(
-            header, text="0 characters", font=("Segoe UI", 8), foreground="gray"
+            title_frame, text="0 characters", font=("Segoe UI", 8), foreground="gray"
         )
         self.count_label.pack(anchor="w")
+
+        # Random button on the right of header
+        self.random_btn = ttk.Button(
+            header, text="🎲", width=3, command=self._add_random_character
+        )
+        self.random_btn.pack(side="right", padx=(2, 0))
+        create_tooltip(self.random_btn, "Add a random character from the current list")
 
         # Search box with placeholder effect
         search_frame = ttk.Frame(self, style="TFrame")
@@ -750,32 +794,37 @@ class CharacterGalleryPanel(ttk.Frame):
         # initially empty
         self._render_selected_tags()
 
-        # Tag filter combobox (also usable to add tags)
+        # Tag filter section
         tag_frame = ttk.Frame(self, style="TFrame")
         tag_frame.pack(fill="x", padx=6, pady=(0, 6))
-        ttk.Label(tag_frame, text="Filter by tag:", style="Muted.TLabel").pack(side="left")
-        self.tag_var = tk.StringVar(value="All")
-        # Load tags via data_loader if available; fallback to empty list
-        try:
-            tags = self.data_loader.load_tags()
-        except Exception:
-            tags = []
+        tag_frame.columnconfigure(1, weight=1)
+        tag_frame.columnconfigure(3, weight=1)
 
-        tag_values = ["All"] + sorted(tags)
-        self.tag_combo = ttk.Combobox(
-            tag_frame, textvariable=self.tag_var, state="readonly", values=tag_values
+        ttk.Label(tag_frame, text="Cat:", style="Muted.TLabel").grid(row=0, column=0, sticky="w")
+        self.tag_category_var = tk.StringVar(value="All")
+        self.tag_cat_combo = SearchableCombobox(
+            tag_frame,
+            textvariable=self.tag_category_var,
+            on_select=lambda val: self._update_tag_list(),
+            placeholder="Category...",
+            width=10
         )
-        self.tag_combo.pack(side="left", padx=(6, 0))
-        # When a tag is picked from the combobox, add it to selected tags
-        self.tag_combo.bind(
-            "<<ComboboxSelected>>", lambda e: self._add_selected_tag(self.tag_var.get())
+        self.tag_cat_combo.grid(row=0, column=1, sticky="ew", padx=(2, 4))
+
+        ttk.Label(tag_frame, text="Tag:", style="Muted.TLabel").grid(row=0, column=2, sticky="w")
+        self.tag_var = tk.StringVar()
+        self.tag_combo = SearchableCombobox(
+            tag_frame,
+            textvariable=self.tag_var,
+            on_select=self._add_selected_tag,
+            placeholder="Search tag...",
+            width=12
         )
-        # Small clear button to reset tag filter quickly
-        try:
-            clear_btn = ttk.Button(tag_frame, text="Clear", width=6, command=self._clear_tag_filter)
-            clear_btn.pack(side="left", padx=(6, 0))
-        except Exception:
-            pass
+        self.tag_combo.grid(row=0, column=3, sticky="ew", padx=(2, 4))
+
+        self.clear_tags_btn = ttk.Button(tag_frame, text="✕", width=3, command=self._clear_tag_filter)
+        self.clear_tags_btn.grid(row=0, column=4)
+        create_tooltip(self.clear_tags_btn, "Clear tag filters")
 
         # Use ScrollableCanvas for cards
         self.scrollable_canvas = ScrollableCanvas(self)
@@ -812,30 +861,64 @@ class CharacterGalleryPanel(ttk.Frame):
             characters: Dict of character data
         """
         self.characters = characters
-        # Refresh tag combobox to only include tags actually used by these characters
+        
+        # Refresh categorized map
         try:
+            self.categorized_tags_map = self.data_loader.load_categorized_tags()
+        except Exception:
+            pass
+
+        # Populate category selector
+        categories = ["All"] + sorted(list(self.categorized_tags_map.keys()))
+        self.tag_cat_combo.set_values(categories)
+        
+        # Initialize tag list
+        self._update_tag_list()
+
+        self._display_characters()
+
+    def _update_tag_list(self):
+        """Update the tag selector based on selected category and character usage."""
+        try:
+            cat = self.tag_category_var.get()
+            
+            # Find all tags used by current character set
             used = set()
-            for _, data in (characters or {}).items():
+            for _, data in (self.characters or {}).items():
                 char_tags = data.get("tags") or []
                 if isinstance(char_tags, str):
-                    char_tags = [t.strip() for t in char_tags.split(",") if t.strip()]
+                    char_tags = [t.strip().lower() for t in char_tags.split(",") if t.strip()]
                 for t in char_tags:
                     if t:
                         used.add(t)
 
-            tag_values = ["All"] + sorted(used)
-            # Update combobox values while preserving selection if possible
-            current = self.tag_var.get() if hasattr(self, "tag_var") else "All"
-            self.tag_combo.config(values=tag_values)
-            if current in tag_values:
-                self.tag_var.set(current)
-            else:
-                self.tag_var.set("All")
-        except Exception:
-            # If anything fails, leave existing combobox values
-            pass
+            if cat == "All":
+                # Show all used tags, sorted by priority
+                priority = ["Demographics", "Body Type", "Style", "Vibe", "Other"]
+                tag_to_cat = {}
+                for c, tag_list in self.categorized_tags_map.items():
+                    for t in tag_list:
+                        tag_to_cat[t.lower()] = c
+                
+                def sort_key(tag):
+                    c = tag_to_cat.get(tag.lower(), "Other")
+                    try:
+                        return (priority.index(c), tag.lower())
+                    except ValueError:
+                        return (len(priority), tag.lower())
 
-        self._display_characters()
+                tag_values = sorted(list(used), key=sort_key)
+            else:
+                # Show only tags in selected category that are actually used
+                cat_tags = set([t.lower() for t in self.categorized_tags_map.get(cat, [])])
+                tag_values = sorted(list(used & cat_tags))
+
+            self.tag_combo.set_values(tag_values)
+            self.tag_var.set("") # Clear current selection in entry
+            
+        except Exception:
+            from utils import logger
+            logger.exception("Failed to update tag list")
 
     def _clear_search(self):
         """Clear search entry."""
@@ -905,6 +988,9 @@ class CharacterGalleryPanel(ttk.Frame):
             
             char_list.append((name, data))
 
+        # Store filtered names for random selection
+        self._current_filtered_chars = [c[0] for c in char_list]
+
         # Apply sorting
         sort_by = self.sort_var.get()
         if sort_by == "Name":
@@ -948,6 +1034,7 @@ class CharacterGalleryPanel(ttk.Frame):
                 on_add_callback=self.on_add_callback,
                 on_tag_click=self._on_tag_selected_from_card,
                 theme_colors=self.theme_colors,
+                categorized_tags_map=self.categorized_tags_map,
             )
             # wire tag click to set the gallery filter
             try:
@@ -1005,6 +1092,23 @@ class CharacterGalleryPanel(ttk.Frame):
         except Exception:
             from utils import logger
             logger.exception("Failed to finalize rendering")
+
+    def _add_random_character(self):
+        """Pick a random character from the current filtered list and add it."""
+        if not self._current_filtered_chars:
+            from utils.notification import notify
+            notify(self.winfo_toplevel(), "No Characters", "No characters available in the current list.", level="warning")
+            return
+
+        name = random.choice(self._current_filtered_chars)
+        
+        if self.on_add_callback:
+            self.on_add_callback(name)
+            
+            # Show status feedback
+            root = self.winfo_toplevel()
+            if hasattr(root, "_update_status"):
+                root._update_status(f"Added random character: {name}")
 
     def _process_load_queue(self):
         """Process the image loading queue in batches."""
@@ -1095,42 +1199,26 @@ class CharacterGalleryPanel(ttk.Frame):
 
     def _add_selected_tag(self, tag_value: str):
         """Add a tag to the selected tags list and refresh."""
-        if not tag_value or tag_value == "All":
+        if not tag_value:
             return
+            
         if tag_value not in self.selected_tags:
             self.selected_tags.append(tag_value)
             self._render_selected_tags()
             self._display_characters()
-
-    def _remove_selected_tag(self, tag_value: str):
-        """Remove a tag from the selected tags list and refresh."""
-        try:
-            if tag_value in self.selected_tags:
-                self.selected_tags.remove(tag_value)
-                self._render_selected_tags()
-                self._display_characters()
-        except Exception:
-            from utils import logger
-
-            logger.exception("Error removing selected tag")
-
-    def _refresh_display(self):
-        """Refresh the display (used when theme changes)."""
-        # Update canvas background
-        self.scrollable_canvas.canvas.configure(bg=self.theme_colors.get("bg", "#f0f0f0"))
-        # Redisplay all characters to update their theme colors
-        self._display_characters()
+            
+        # Reset tag selector for next addition
+        self.tag_var.set("")
 
     def _clear_tag_filter(self):
-        """Clear the tag filter and refresh display."""
+        """Clear all tag filters and refresh display."""
         try:
-            if hasattr(self, "tag_var"):
-                self.tag_var.set("All")
-            # clear selected chips as well
+            self.tag_category_var.set("All")
+            self.tag_var.set("")
             self.selected_tags = []
             self._render_selected_tags()
+            self._update_tag_list()
             self._display_characters()
         except Exception:
             from utils import logger
-
-            logger.exception("Error clearing tag filter")
+            logger.exception("Error clearing tag filters")

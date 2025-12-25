@@ -3,7 +3,7 @@
 
 **Gender:** M
 
-**Tags:** athletic, grounded, confident, calm, steady, modern, approachable, Black, male
+**Tags:** black, male, athletic, modern, approachable, calm, confident, grounded, steady
 
 **Summary:** Marcus balances strength with approachability, projecting calm confidence and grounded masculinity. His presence feels steady and reliable, marked by authenticity and emotional openness.
 

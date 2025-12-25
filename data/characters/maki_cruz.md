@@ -2,7 +2,7 @@
 **Photo:** maki_cruz_photo.png
 
 **Photo:** maki_cruz_photo.png
-**Tags:** skater, street-culture, technical, athletic, Filipino, baggy-aesthetic, laid-back, confident, tomboyish, female
+**Tags:** female, filipino, athletic, baggy-aesthetic, skater, street-culture, technical, confident, laid-back, tomboyish
 **Summary:** Maki embodies street skate culture with technical precision and effortless style. Her Filipino heritage shows in her grounded confidence and community-oriented approach to skating. She moves with the controlled looseness of someone who's bailed a thousand times and gotten back up—baggy clothes hiding elite-level board control and spatial awareness.
 **Gender:** F
 

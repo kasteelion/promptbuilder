@@ -1,7 +1,7 @@
 ### Marisol Rivera
 **Photo:** marisol_rivera_photo.png
 **Summary:** Marisol blends athletic precision with island warmth, embodying her Japanese-Puerto Rican heritage in every controlled movement. Her signature coral aesthetic and beach-inspired style reflect a life lived between Pacific discipline and Caribbean rhythm. She moves with the composed grace of Japanese martial arts tradition softened by Puerto Rican expressiveness, creating a unique fusion of cultures that's entirely her own.
-**Tags:** athletic, composed, elegant, controlled, professional, Japanese-Puerto Rican, mixed-heritage, Hafu, beach-aesthetic, coral-signature, bandana, chic, focused, fusion, island-meets-pacific, female
+**Tags:** female, mixed-heritage, athletic, beach-aesthetic, chic, fusion, professional, composed, controlled, coral-signature, focused, island-meets-pacific, bandana, japanese-puerto rican
 **Gender:** F
 
 **Appearance:**

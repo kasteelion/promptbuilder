@@ -1,7 +1,7 @@
 ### Valentina "Tina" Kovač
 **Photo:** valentina_tina_kovač_photo.png
 
-**Tags:** ectomorphic, Romani, street-artist, bohemian, angular, intense, restless, wild, grunge, nomadic, artistic, thin, Eastern-European, guerrilla-art, nocturnal, female
+**Tags:** eastern-european, female, romani, thin, bohemian, edgy, guerrilla-art, street-artist, artistic, intense, nocturnal, nomadic, restless, wild, angular
 
 **Summary:** Tina moves through the world like smoke—elusive, ethereal, impossible to pin down. Her Romani heritage shows in her restless energy and natural theatricality, while her ectomorphic build gives her an almost otherworldly quality. She's all angles and intensity, burning through life with creative fire that seems to consume her slight frame. Street art is her language, and the city is her canvas. There's a wildness to her that civilized spaces can't quite contain.
 

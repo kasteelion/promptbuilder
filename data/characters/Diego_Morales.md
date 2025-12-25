@@ -1,7 +1,7 @@
 ### Diego Morales
 **Photo:** diego_morales_photo.png
 **Summary:** Diego carries a relaxed charisma that feels both creative and inviting. His athleticism is softened by warmth and humor, giving him an approachable presence that naturally draws people in without effort.
-**Tags:** athletic, warm, creative, laid-back, casual, Californian, approachable, male
+**Tags:** male, athletic, californian, casual, creative, approachable, laid-back, warm
 **Gender:** M
 
 **Appearance:**

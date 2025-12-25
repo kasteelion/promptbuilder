@@ -5,7 +5,7 @@
 
 **Summary:** Isla embodies an effortless, metropolitan elegance with a warm, engaging spirit. She carries the poised confidence of a modern creative, blending sharp precision in her style with a radiant, approachable demeanor. Her presence is attentive and polished, yet she retains a natural, sun-kissed vitality that feels both grounded and sophisticated.
 
-**Tags:** filipina, elegant, radiant, poised, polished, metropolitan, creative, approachable, female
+**Tags:** female, filipino, chic, creative, metropolitan, approachable, poised, radiant
 
 **Gender:** F
 

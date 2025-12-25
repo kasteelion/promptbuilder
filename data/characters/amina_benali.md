@@ -1,7 +1,7 @@
 ### Amina Benali
 **Photo:** amina_benali_photo.png
 
-**Tags:** esports, streamer, content-creator, gaming, Moroccan-Canadian, North-African, girl-next-door, professional-casual, camera-ready, FPS-player, cozy-aesthetic, entrepreneurial, relatable, female
+**Tags:** female, north-african, content-creator, cozy-aesthetic, professional-casual, approachable, camera-ready, entrepreneurial, girl-next-door, gaming
 
 **Summary:** Amina commands her streaming space with the perfect balance of girl-next-door accessibility and polished content creator aesthetic. Her Moroccan-Canadian background shows in warm hospitality mixed with tech-savvy professionalism. She's built an empire on being relatable yet aspirational—the gaming girlfriend energy that translates to millions of followers. Behind the camera-ready smile lies sharp business instincts and competitive FPS skills that earn respect in male-dominated lobbies.
 

@@ -1,7 +1,7 @@
 ### Fiona O'Sullivan
 **Photo:** fiona_osullivan_photo.png
 **Summary:** Fiona radiates warmth and openness, grounding any space she enters with ease. Her confidence is rooted in authenticity rather than polish, making her feel deeply approachable and emotionally generous.
-**Tags:** warm, approachable, plus-size, confident, soft, generous, comforting, Irish, red-haired, freckled, Celtic, storyteller, female
+**Tags:** celtic, female, plus-size, approachable, comforting, confident, freckled, generous, red-haired, soft, storyteller, warm, irish
 **Gender:** F
 
 **Appearance:**
