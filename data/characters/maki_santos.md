@@ -1,4 +1,5 @@
 ### Maki Santos
+**Photo:** maki_santos_photo.png
 
 **Photo:** [maki_santos_photo.png]
 **Tags:** skater, street-culture, technical, athletic, Filipino, baggy-aesthetic, laid-back, confident, tomboyish, female

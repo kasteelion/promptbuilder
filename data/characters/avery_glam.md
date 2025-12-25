@@ -1,4 +1,5 @@
 ### Avery Blake
+**Photo:** avery_blake_photo.png
 
 **Tags:** edgy, rock-inspired, fierce, dramatic, athletic, rebellious, provocative, sultry, performance-driven, female
 

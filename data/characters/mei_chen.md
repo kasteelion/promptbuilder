@@ -1,4 +1,5 @@
 ### Mei Chen
+**Photo:** mei_chen_photo.png
 
 **Photo:** [mei_chen_photo.png]
 **Tags:** voluptuous, cute-provocative, confident, playful, sweet, feminine, Chinese-American, curvy, kawaii-sensual, short-stack, female

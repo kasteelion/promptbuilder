@@ -667,6 +667,7 @@ class CharacterGalleryPanel(ttk.Frame):
         self.theme_colors = theme_colors or {}
         self.characters = {}
         self.load_queue = []  # Queue for lazy loading images
+        self._render_job_id = None # ID for cancelling pending render batches
 
         self._build_ui()
 
@@ -842,7 +843,15 @@ class CharacterGalleryPanel(ttk.Frame):
         self._display_characters()
 
     def _display_characters(self):
-        """Display character cards."""
+        """Display character cards using incremental rendering."""
+        # Cancel any pending render job
+        if self._render_job_id:
+            try:
+                self.after_cancel(self._render_job_id)
+            except Exception:
+                pass
+            self._render_job_id = None
+
         # Clear existing cards
         for widget in self.cards_container.winfo_children():
             widget.destroy()
@@ -908,15 +917,28 @@ class CharacterGalleryPanel(ttk.Frame):
             # which usually matches file discovery order if not sorted.
             char_list.reverse()
 
-        # Create cards
-        row = 0
-        col = 0
-        max_cols = 1  # 1 card per row for better visibility in narrow panel
-        displayed_count = 0
+        # Update count label
+        total = len(self.characters)
+        if hasattr(self, "count_label"):
+            if search_term or fav_only or self.selected_tags:
+                self.count_label.config(text=f"{len(char_list)} of {total} characters")
+            else:
+                self.count_label.config(text=f"{total} character{'s' if total != 1 else ''}")
 
-        for name, data in char_list:
-            displayed_count += 1
+        # Start incremental rendering
+        # State: (row, col)
+        self._render_cards_batch(char_list, 0, 0, 0)
 
+    def _render_cards_batch(self, char_list, start_index, row, col):
+        """Render a batch of character cards."""
+        BATCH_SIZE = 8  # Number of cards to render per frame
+        max_cols = 1    # 1 card per row for better visibility in narrow panel
+        
+        end_index = min(start_index + BATCH_SIZE, len(char_list))
+        
+        for i in range(start_index, end_index):
+            name, data = char_list[i]
+            
             card = CharacterCard(
                 self.cards_container,
                 name,
@@ -932,6 +954,7 @@ class CharacterGalleryPanel(ttk.Frame):
                 card.on_tag_click = lambda v, panel=self: panel._on_tag_selected_from_card(v)
             except Exception:
                 pass
+            
             card.grid(row=row, column=col, padx=4, pady=4, sticky="new")
             
             # Add to queue for lazy loading
@@ -942,28 +965,34 @@ class CharacterGalleryPanel(ttk.Frame):
                 col = 0
                 row += 1
 
-        # Configure column weights
+        # Configure column weights (only need to do once really, but safe here)
         for c in range(max_cols):
             self.cards_container.columnconfigure(c, weight=1, uniform="card")
 
-        # Update count label
-        total = len(self.characters)
-        if hasattr(self, "count_label"):
-            if search_term:
-                self.count_label.config(text=f"{displayed_count} of {total} characters")
-            else:
-                self.count_label.config(text=f"{total} character{'s' if total != 1 else ''}")
-        # Ensure mousewheel bindings and scroll region are updated after creating cards
+        # If more items remain, schedule next batch
+        if end_index < len(char_list):
+            self._render_job_id = self.after(
+                10, 
+                lambda: self._render_cards_batch(char_list, end_index, row, col)
+            )
+        else:
+            # Done rendering
+            self._render_job_id = None
+            self._finalize_rendering(row, max_cols)
+
+        # Ensure load queue processing is running
+        self._process_load_queue()
+
+    def _finalize_rendering(self, final_row, max_cols):
+        """Finalize rendering: add spacer and update scroll region."""
         try:
-            # Rebind mousewheel events for newly-added widgets so scrolling works when pointer is over them
+            # Rebind mousewheel events
             self.scrollable_canvas.refresh_mousewheel_bindings()
 
-            # Add a small bottom spacer so the last card isn't flush against the bottom
-            # (prevents visual clipping on some platforms). Use grid placement to
-            # match the card layout and ensure the spacer doesn't shrink.
+            # Add spacer
             try:
                 spacer = ttk.Frame(self.cards_container, height=48)
-                spacer.grid(row=row, column=0, columnspan=max_cols, sticky="ew")
+                spacer.grid(row=final_row, column=0, columnspan=max_cols, sticky="ew")
                 try:
                     spacer.grid_propagate(False)
                 except Exception:
@@ -971,15 +1000,11 @@ class CharacterGalleryPanel(ttk.Frame):
             except Exception:
                 pass
 
-            # Update scroll region to include new cards (and spacer).
+            # Update scroll region
             self.scrollable_canvas.update_scroll_region()
         except Exception:
             from utils import logger
-
-            logger.exception("Failed to refresh mousewheel bindings or update scroll region")
-
-        # Start processing the image load queue
-        self.after(100, self._process_load_queue)
+            logger.exception("Failed to finalize rendering")
 
     def _process_load_queue(self):
         """Process the image loading queue in batches."""

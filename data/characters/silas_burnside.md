@@ -1,4 +1,5 @@
 ### Silas Burnside
+**Photo:** silas_burnside_photo.png
 
 **Photo:** silas_burnside_photo.png
 **Tags:** lumberjack, rugged, midwestern, strong, outdoorsy, hearty, reliable, male

@@ -73,3 +73,24 @@ class AppContext:
                 raise
             logger.exception("Data loading failed")
             raise DataLoadError(f"Failed to load application data: {e}") from e
+
+    def load_data_async(self, on_success, on_error):
+        """Load data in a background thread.
+
+        Args:
+            on_success: Callback to run on the main thread when loading succeeds.
+            on_error: Callback to run on the main thread when loading fails (receives exception).
+        """
+        import threading
+
+        def _load_worker():
+            try:
+                self.load_data()
+                # Schedule success callback on main thread
+                self.root.after(0, on_success)
+            except Exception as e:
+                # Schedule error callback on main thread
+                self.root.after(0, lambda: on_error(e))
+
+        thread = threading.Thread(target=_load_worker, daemon=True)
+        thread.start()

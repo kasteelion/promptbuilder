@@ -44,9 +44,6 @@ class PromptBuilderApp:
         self.root = root
         self.root.title("Prompt Builder — Group Picture Generator")
 
-        # Hide window during setup to prevent flickering/resizing
-        self.root.withdraw()
-
         # Initialize Application Context
         self.ctx = AppContext(self.root)
         self.ctx.initialize_ui_services()
@@ -62,25 +59,84 @@ class PromptBuilderApp:
 
         # Initialize data via context
         self.data_loader = self.ctx.data_loader
+        
+        # Throttling for preview updates
+        self._after_id: Optional[str] = None
+        self._throttle_ms = PREVIEW_UPDATE_THROTTLE_MS
+        
+        # Debounce tracking for text inputs
+        self._scene_text_after_id: Optional[str] = None
+        self._notes_text_after_id: Optional[str] = None
+        
+        # Initialize placeholder attributes
+        self.preview_controller: Optional[PreviewController] = None
 
-        try:
-            self.ctx.load_data()
-        except DataLoadError as e:
-            logger.exception("Error loading data")
-            self.dialog_manager.show_error(
-                "Error loading data", f"Failed to load application data: {e}\nSee log for details."
-            )
-            self.root.destroy()
-            return
-        except Exception as e:
-            logger.exception("Unexpected error loading data")
-            self.dialog_manager.show_error(
-                "Critical Error", f"An unexpected error occurred: {e}"
-            )
-            self.root.destroy()
-            return
+        # Build loading screen
+        self._build_loading_screen()
+        
+        # Center and show window
+        self._center_window()
+        self.root.deiconify()
 
-        # Aliases for compatibility
+        # Start async data load
+        self.ctx.load_data_async(self._on_init_success, self._on_init_error)
+
+    def _build_loading_screen(self):
+        """Build a simple loading screen."""
+        self.loading_frame = ttk.Frame(self.root)
+        self.loading_frame.place(relx=0, rely=0, relwidth=1, relheight=1)
+        
+        # Center container
+        container = ttk.Frame(self.loading_frame)
+        container.place(relx=0.5, rely=0.5, anchor="center")
+        
+        ttk.Label(
+            container, 
+            text="Prompt Builder", 
+            font=("Segoe UI", 24, "bold")
+        ).pack(pady=(0, 20))
+        
+        ttk.Label(
+            container, 
+            text="Loading assets...", 
+            font=("Segoe UI", 12)
+        ).pack(pady=(0, 10))
+        
+        self.loading_progress = ttk.Progressbar(
+            container, 
+            mode="indeterminate", 
+            length=300
+        )
+        self.loading_progress.pack(pady=10)
+        self.loading_progress.start(10)
+
+    def _on_init_success(self):
+        """Handle successful initial data load."""
+        # Stop progress bar
+        self.loading_progress.stop()
+        
+        # Initialize references
+        self._initialize_data_references()
+        
+        # Complete initialization
+        self._complete_initialization()
+        
+        # Remove loading screen with a fade out effect (simulated by just destroying for now)
+        self.loading_frame.destroy()
+        del self.loading_frame
+
+    def _on_init_error(self, error):
+        """Handle initial data load error."""
+        logger.exception("Error loading data", exc_info=error)
+        self.loading_progress.stop()
+        self.dialog_manager.show_error(
+            "Error loading data", 
+            f"Failed to load application data: {error}\nSee log for details."
+        )
+        self.root.destroy()
+
+    def _initialize_data_references(self):
+        """Initialize local references to context data."""
         self.characters = self.ctx.characters
         self.base_prompts = self.ctx.base_prompts
         self.scenes = self.ctx.scenes
@@ -95,23 +151,14 @@ class PromptBuilderApp:
         self.theme_manager = self.ctx.theme_manager
         self.toasts = self.ctx.toasts
 
-        # Expose toast manager and status updater on the root so DialogManager
-        # and other helpers can prefer non-blocking notifications.
+        # Expose toast manager and status updater on the root
         try:
             self.root._update_status = self._update_status
         except Exception:
             logger.exception("Failed to attach status to root")
 
-        # Throttling for preview updates
-        self._after_id: Optional[str] = None
-        self._throttle_ms = PREVIEW_UPDATE_THROTTLE_MS
-
-        # Debounce tracking for text inputs
-        self._scene_text_after_id: Optional[str] = None
-        self._notes_text_after_id: Optional[str] = None
-        # Preview controller (created after UI initialization)
-        self.preview_controller: Optional[PreviewController] = None
-
+    def _complete_initialization(self):
+        """Complete UI initialization after data is loaded."""
         # Build UI
         self._build_ui()
 
@@ -163,21 +210,18 @@ class PromptBuilderApp:
         # Initial preview update
         self.update_preview()
 
-        # Position window properly BEFORE showing (center if first run, else already set)
+        # Position window properly if not restored
         if not saved_geometry:
             self._center_window()
 
-        # Now show the window after everything is set up and positioned
-        self.root.deiconify()
-
-        # Restore window state AFTER deiconify (maximized/zoomed state)
+        # Restore window state (maximized/zoomed state)
         if saved_state and saved_state in ("zoomed", "normal", "iconic"):
             try:
                 self.root.state(saved_state)
             except tk.TclError as e:
                 logger.warning(f"Could not restore window state: {e}")
 
-        # Show welcome dialog for first-time users (after window is shown)
+        # Show welcome dialog for first-time users
         if self.prefs.get("show_welcome", True):
             self.root.after(100, self.dialog_manager.show_welcome)
 
@@ -971,19 +1015,86 @@ class PromptBuilderApp:
         return self._generate_prompt()
 
     def reload_data(self):
-        """Reload all data from markdown files."""
+        """Reload all data from markdown files asynchronously."""
         self._update_status("🔄 Reloading data...")
         self.root.config(cursor="watch")
-        self.root.update()
+        
+        # Show reloading overlay
+        self._show_reload_overlay()
 
-        # One-time migration: if user previously stored custom themes in preferences,
-        # migrate them into data/themes.md and clear the prefs key.
+        # Start async load
+        self.ctx.load_data_async(self._on_reload_success, self._on_reload_error)
+
+    def _show_reload_overlay(self):
+        """Show a modal overlay during reload."""
+        self.reload_overlay = ttk.Frame(self.root)
+        self.reload_overlay.place(relx=0, rely=0, relwidth=1, relheight=1)
+        
+        # Semi-transparent background effect (simulated with a label if needed, or just opaque)
+        # For simplicity, we use an opaque frame with a label
+        
+        container = ttk.Frame(self.reload_overlay)
+        container.place(relx=0.5, rely=0.5, anchor="center")
+        
+        ttk.Label(
+            container, text="Reloading...", font=("Segoe UI", 16, "bold")
+        ).pack(pady=10)
+        
+        self.reload_progress = ttk.Progressbar(container, mode="indeterminate", length=200)
+        self.reload_progress.pack(pady=10)
+        self.reload_progress.start(10)
+
+    def _hide_reload_overlay(self):
+        """Hide the reload overlay."""
+        if hasattr(self, "reload_overlay"):
+            self.reload_progress.stop()
+            self.reload_overlay.destroy()
+            del self.reload_overlay
+
+    def _on_reload_success(self):
+        """Handle successful data reload."""
+        try:
+            # Migration logic (preserved from original)
+            self._handle_theme_migration()
+            
+            # Update local references
+            self._initialize_data_references()
+            
+            # Reload themes (synchronous, but usually fast)
+            if hasattr(self, "theme_manager") and self.theme_manager:
+                self.theme_manager.reload_md_themes()
+
+            # Update UI
+            self._update_ui_after_reload()
+            
+            self._hide_reload_overlay()
+            self.root.config(cursor="")
+            self._update_status("✅ Data reloaded successfully")
+            self.dialog_manager.show_info("Success", "Data reloaded successfully!")
+            
+        except Exception:
+            logger.exception("Error during reload post-processing")
+            self._hide_reload_overlay()
+            self.root.config(cursor="")
+            self.dialog_manager.show_error("Reload Error", "Error updating UI after reload.")
+
+    def _on_reload_error(self, error):
+        """Handle data reload error."""
+        logger.exception("Error reloading data", exc_info=error)
+        self._hide_reload_overlay()
+        self.root.config(cursor="")
+        self.dialog_manager.show_error(
+            "Reload Error", f"Failed to reload data: {error}\nSee log for details."
+        )
+        self._update_status("❌ Error loading data")
+
+    def _handle_theme_migration(self):
+        """Handle one-time theme migration."""
         try:
             migrated = False
             if hasattr(self, "theme_manager") and self.theme_manager:
                 migrated = self.theme_manager.migrate_from_prefs(self.prefs)
             if migrated:
-                # refresh menu to reflect migrated themes
                 try:
                     if hasattr(self, "menu_manager") and self.menu_manager:
                         self.menu_manager.refresh_theme_menu()
@@ -992,23 +1103,10 @@ class PromptBuilderApp:
         except Exception:
             logger.exception("Theme migration failed during reload")
 
-        try:
-            new_characters = self.data_loader.load_characters()
-            self.base_prompts = self.data_loader.load_base_prompts()
-            self.scenes = self.data_loader.load_presets("scenes.md")
-            self.poses = self.data_loader.load_presets("poses.md")
-            self._reload_interaction_templates()
-        except Exception:
-            logger.exception("Error reloading data")
-            self.root.config(cursor="")
-            self.dialog_manager.show_error(
-                "Reload Error", "Failed to reload data; see log for details"
-            )
-            self._update_status("❌ Error loading data")
-            return
-
+    def _update_ui_after_reload(self):
+        """Update UI components with new data."""
         # Update character selection validity
-        new_chars_keys = set(new_characters.keys())
+        new_chars_keys = set(self.characters.keys())
         selected = self.characters_tab.get_selected_characters()
         updated_selected = []
         chars_removed = False
@@ -1022,7 +1120,6 @@ class PromptBuilderApp:
             else:
                 chars_removed = True
 
-        self.characters = new_characters
         self.characters_tab.selected_characters = updated_selected
 
         if chars_removed:
@@ -1032,25 +1129,20 @@ class PromptBuilderApp:
             )
 
         # Reload data in tabs
-        self.characters_tab.load_data(self.characters, self.base_prompts, self.poses)
-        self._update_scene_presets()  # Reload scene presets in UI
-        self.edit_tab._refresh_file_list()  # Refresh file list to show new character files
+        self.characters_tab.load_data(self.characters, self.base_prompts, self.poses, self.scenes)
+        self._update_scene_presets()
+        self._reload_interaction_templates()
+        self.edit_tab._refresh_file_list()
 
-        # Reload themes.md into ThemeManager so manual edits are picked up
-        try:
-            if hasattr(self, "theme_manager") and self.theme_manager:
-                self.theme_manager.reload_md_themes()
-                # re-apply currently selected theme (from prefs)
-                current = self.prefs.get("last_theme") or None
-                if current:
-                    try:
-                        self._apply_theme(current)
-                        if hasattr(self, "menu_manager") and self.menu_manager:
-                            self.menu_manager.refresh_theme_menu()
-                    except Exception:
-                        logger.debug("Failed to re-apply theme after reload")
-        except Exception:
-            logger.exception("Failed to reload themes during data reload")
+        # Re-apply theme
+        current = self.prefs.get("last_theme") or None
+        if current:
+            try:
+                self._apply_theme(current)
+                if hasattr(self, "menu_manager") and self.menu_manager:
+                    self.menu_manager.refresh_theme_menu()
+            except Exception:
+                logger.debug("Failed to re-apply theme after reload")
 
         # Reload character gallery
         if hasattr(self, "gallery_controller") and self.gallery_controller:
@@ -1064,10 +1156,7 @@ class PromptBuilderApp:
             except Exception:
                 logger.exception("Failed to reload character_gallery")
 
-        self.root.config(cursor="")
         self.schedule_preview_update()
-        self._update_status("✅ Data reloaded successfully")
-        self.dialog_manager.show_info("Success", "Data reloaded successfully!")
 
     def randomize_all(self):
         """Generate a random prompt and update the UI."""

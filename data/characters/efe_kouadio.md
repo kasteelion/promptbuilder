@@ -1,4 +1,5 @@
 ### Efe Kouadio
+**Photo:** efe_kouadio_photo.png
 
 **Photo:** efe_kouadio_photo.png
 

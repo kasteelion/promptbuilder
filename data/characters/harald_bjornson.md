@@ -1,4 +1,5 @@
 ### Harald Bjornson
+**Photo:** harald_bjornson_photo.png
 
 **Photo:** [harald_photo.png]
 **Tags:** Nordic, rugged, massive, leader, bearded, commanding, male

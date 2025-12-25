@@ -1,4 +1,5 @@
 ### Leonidas Stratos
+**Photo:** leonidas_stratos_photo.png
 
 **Photo:** [leonidas_photo.png]
 **Tags:** Greek, elite-athlete, disciplined, intense, commanding, focused, male

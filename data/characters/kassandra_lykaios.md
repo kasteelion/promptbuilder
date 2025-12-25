@@ -1,4 +1,5 @@
 ### Kassandra Lykaios
+**Photo:** kassandra_lykaios_photo.png
 
 **Photo:** [kassandra_photo.png]
 **Tags:** Greek, athlete, dynamic, agile, strong, focused, independent, female

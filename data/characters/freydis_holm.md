@@ -1,4 +1,5 @@
 ### Freydis Holm
+**Photo:** freydis_holm_photo.png
 
 **Photo:** [freydis_photo.png]
 **Tags:** Nordic, rugged, strong, intense, athletic, resilient, commanding, female
