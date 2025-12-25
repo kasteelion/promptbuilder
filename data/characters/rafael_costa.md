@@ -1,5 +1,5 @@
-### Rafael Santos
-**Photo:** rafael_santos_photo.png
+### Rafael Costa
+**Photo:** rafael_costa_photo.png
 
 **Tags:** charismatic, artistic, expressive, warm, energetic, Brazilian, creative, male
 

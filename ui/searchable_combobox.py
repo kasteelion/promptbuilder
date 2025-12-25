@@ -47,7 +47,7 @@ class SearchableCombobox(ttk.Frame):
         """Build the UI."""
         self.columnconfigure(0, weight=1)
 
-        # Entry container for the X button
+        # Entry container
         self.entry_container = ttk.Frame(self)
         self.entry_container.grid(row=0, column=0, sticky="ew")
         self.entry_container.columnconfigure(0, weight=1)
@@ -66,18 +66,14 @@ class SearchableCombobox(ttk.Frame):
         self.entry.bind("<Escape>", lambda e: self._hide_dropdown())
         self.entry.bind("<Double-Button-1>", self._on_entry_double_click)
         
-        # Small clear button inside entry (X)
-        self.clear_btn = tk.Label(
+        # Clear button next to entry (X)
+        self.clear_btn = ttk.Button(
             self.entry_container, 
             text="✕", 
-            font=("Arial", 7), 
-            fg="#999999", 
-            cursor="hand2",
-            bg="white"
+            width=2,
+            command=self._clear_text
         )
-        self.clear_btn.bind("<Enter>", lambda e: self.clear_btn.config(fg="#333333"))
-        self.clear_btn.bind("<Leave>", lambda e: self.clear_btn.config(fg="#999999"))
-        self.clear_btn.bind("<Button-1>", lambda e: self._clear_text())
+        # Configure style if needed, or rely on default
         
         # We'll place it dynamically in _on_key_release
         self._update_clear_btn_visibility()
@@ -96,7 +92,6 @@ class SearchableCombobox(ttk.Frame):
             self._set_placeholder_mode(True)
             
         # Bind global click to handle click-away closing
-        # We bind to the toplevel window to capture clicks anywhere in the app
         try:
             self.winfo_toplevel().bind("<Button-1>", self._check_click_outside, add="+")
         except Exception:
@@ -162,11 +157,9 @@ class SearchableCombobox(ttk.Frame):
         """Show/hide X button based on content."""
         val = self._selected_value.get()
         if val and val != self.placeholder:
-            # Shift it left a bit more to avoid overlapping the dropdown arrow too much
-            self.clear_btn.place(relx=1.0, rely=0.5, x=-5, anchor="e")
-            self.clear_btn.lift()
+            self.clear_btn.grid(row=0, column=1, sticky="w", padx=(2, 0))
         else:
-            self.clear_btn.place_forget()
+            self.clear_btn.grid_remove()
 
     def _on_focus_in(self, event):
         """Handle entry focus."""
@@ -407,7 +400,13 @@ class SearchableCombobox(ttk.Frame):
 
     def _on_key_release(self, event):
         """Handle key release in entry."""
+        val = self._selected_value.get()
         self._update_clear_btn_visibility()
+        
+        # If text is empty (and we just released a key, so user typed backspace/delete),
+        # trigger on_select with empty value to ensure listeners know it's cleared.
+        if not val and self.on_select:
+             self.on_select("")
         
         if event.keysym in ("Up", "Down", "Return", "Escape", "Tab"):
             return

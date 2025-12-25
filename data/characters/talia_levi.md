@@ -1,5 +1,5 @@
-### Noa Levi
-**Photo:** noa_levi_photo.png
+### Talia Levi
+**Photo:** talia_levi_photo.png
 
 **Tags:** alluring, sensual, confident, magnetic, sultry, Israeli, Mediterranean, provocative, feminine, female
 

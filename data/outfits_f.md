@@ -319,7 +319,7 @@ Fitted **singlet** in **{primary_color} with {secondary_color} accents** (lycra/
 ## Vintage & Retro
 
 ### Vintage - 1950s Server
-Pastel blue vintage **1950s waitress dress** (soft matte cotton-blend fabric, crisp white pointed collar and sleeve cuffs, knee-length A-line skirt). *Accessories:* None specified. *Hair/Makeup:* None specified.
+Pastel blue vintage **1950s waitress dress** (soft matte cotton-blend fabric, crisp white pointed collar and sleeve cuffs, knee-length A-line skirt). *Accessories:* None specified. *Hair/Makeup:* None specified. worn tightly to enhance underbust contour
 
 ### Vintage - Pinup
 High-waist **vintage-inspired dress or separates** (1940s-50s style); **heeled shoes**. *Accessories:* Vintage jewelry. *Hair/Makeup:* Vintage styling (victory rolls, pin curls, winged liner, bold lip).

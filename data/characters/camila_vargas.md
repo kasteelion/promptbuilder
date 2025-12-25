@@ -1,5 +1,5 @@
-### Camila Reyes
-**Photo:** camila_reyes_photo.png
+### Camila Vargas
+**Photo:** camila_vargas_photo.png
 
 **Tags:** lithe, Spanish, intense, dramatic, passionate, disciplined, dancer, petite, female
 

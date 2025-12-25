@@ -1,5 +1,5 @@
-### Sophie Bennett
-**Photo:** sophie_bennett_photo.png
+### Hallie Bennett
+**Photo:** hallie_bennett_photo.png
 
 **Tags:** soft, nature-loving, athletic, casual, relaxed, approachable, accessible, outdoorsy, hiking, relatable, female
 
