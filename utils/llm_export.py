@@ -10,29 +10,29 @@ def generate_llm_export_text(ctx: Any) -> str:
     lines = [
         "### SYSTEM INSTRUCTIONS for PromptBuilder ###",
         "You are a creative director. Use the provided catalog to generate prompt configurations.",
-        "Output MUST be in this specific format for the app to parse it:",
+        "Output MUST be in this specific format for the app to parse it.",
+        "IMPORTANT: Each field (Outfit, Pose, etc.) SHOULD be on its own new line for best results.",
         "",
         "### PROMPT CONFIG ###",
-        "Base: [Art Style Name]",
-        "Scene: [Descriptive environment paragraph]",
+        "Base: [Name of Art Style]",
+        "Scene: [Paragraph describing environment and lighting]",
         "---",
         "[1] [Character Name]",
         "Outfit: [Outfit Name]",
-        "Colors: [Optional Team Color Scheme]",
-        "Sig: [Yes/No - use character signature color]",
-        "Pose: [Pose Name or Custom description]",
-        "Note: [Specific action or facial expression detail]",
+        "Colors: [Color Scheme Name]",
+        "Sig: [Yes or No]",
+        "Pose: [Pose Name]",
+        "Note: [Specific character action detail]",
         "---",
         "Notes: [Interaction details between characters]",
         "",
         "RULES:",
-        "- Use [1], [2], [3] for multiple characters.",
-        "- Match character names and outfit names as closely as possible.",
-        "- If a pose isn't in the list, describe it in the 'Pose' field.",
+        "- Use [1], [2], [3] to start each character block.",
+        "- Character and Outfit names must match the catalog exactly.",
         "- 'Sig: Yes' applies the character's unique signature color to the outfit.",
+        "- If a pose is not in the presets, write a custom description in the 'Pose' field.",
         "- Outfits marked with (🎨) support 'Colors: [Scheme]'.",
         "- Outfits marked with (✨) support 'Sig: Yes'.",
-        "- MODIFIER NOTE: 'F' = Female, 'M' = Male, 'H' = Hijabi.",
         "",
         "--- CATALOG BEGINS ---",
         ""
@@ -46,13 +46,11 @@ def generate_llm_export_text(ctx: Any) -> str:
 
     # 3. Characters
     lines.append("## AVAILABLE CHARACTERS")
-    lines.append("Format: Name (Modifier) [Signature Color] [Tags]")
-    lines.append("Note: Modifier 'H' indicates the character is Hijabi.")
+    lines.append("Format: Name [Signature Color] [Tags]")
     for name, data in sorted(ctx.characters.items()):
-        mod = data.get("modifier") or data.get("gender", "F")
         sig = data.get("signature_color", "None")
         tags = ", ".join(data.get("tags", []))
-        lines.append(f"- {name} ({mod}) [{sig}] [{tags}]")
+        lines.append(f"- {name} [{sig}] [{tags}]")
     lines.append("")
 
     # 4. Outfits (Consolidated)
@@ -68,8 +66,6 @@ def generate_llm_export_text(ctx: Any) -> str:
             indicators = ""
             if data["has_color_scheme"]: indicators += " 🎨"
             if data["has_signature"]: indicators += " ✨"
-            
-            # Since outfits are synced across F/M/H, we just list the name and indicators
             lines.append(f"  * {out_name}{indicators}")
     lines.append("")
 
