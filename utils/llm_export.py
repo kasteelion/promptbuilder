@@ -1,6 +1,7 @@
-"""Utility for exporting application data in an LLM-friendly format."""
+﻿"""Utility for exporting application data in an LLM-friendly format."""
 
 from typing import Dict, Any, List
+from utils.outfit_summary import generate_consolidated_outfit_data
 
 def generate_llm_export_text(ctx: Any) -> str:
     """Generate a condensed text block for knowledge injection into an LLM."""
@@ -29,6 +30,8 @@ def generate_llm_export_text(ctx: Any) -> str:
         "- Match character names and outfit names as closely as possible.",
         "- If a pose isn't in the list, describe it in the 'Pose' field.",
         "- 'Sig: Yes' applies the character's unique signature color to the outfit.",
+        "- Outfits marked with (🎨) support 'Colors: [Scheme]'.",
+        "- Outfits marked with (✨) support 'Sig: Yes'.",
         "",
         "--- CATALOG BEGINS ---",
         ""
@@ -42,23 +45,31 @@ def generate_llm_export_text(ctx: Any) -> str:
 
     # 3. Characters
     lines.append("## AVAILABLE CHARACTERS")
-    lines.append("Format: Name (Modifier/Gender) [Tags]")
+    lines.append("Format: Name (Modifier/Gender) [Signature Color] [Tags]")
     for name, data in sorted(ctx.characters.items()):
         mod = data.get("modifier") or data.get("gender", "F")
+        sig = data.get("signature_color", "None")
         tags = ", ".join(data.get("tags", []))
-        lines.append(f"- {name} ({mod}) [{tags}]")
+        lines.append(f"- {name} ({mod}) [{sig}] [{tags}]")
     lines.append("")
 
-    # 4. Outfits
+    # 4. Outfits (Consolidated)
     lines.append("## OUTFIT LIBRARY")
-    # Using consolidated view would be better, but let's list by modifier
-    for mod in ["F", "M", "H"]:
-        mod_name = "Female" if mod == "F" else "Male" if mod == "M" else "Hijabi"
-        lines.append(f"### {mod_name} Outfits ({mod})")
-        outfits = ctx.data_loader.load_outfits().get(mod, {})
-        for cat, items in sorted(outfits.items()):
-            item_list = ", ".join(sorted(items.keys()))
-            lines.append(f"  * {cat}: {item_list}")
+    lines.append("Legend: 🎨 = Supports Team Colors, ✨ = Supports Signature Color")
+    
+    outfit_data = generate_consolidated_outfit_data()
+    for cat_name in sorted(outfit_data.keys()):
+        lines.append(f"### {cat_name}")
+        outfits = outfit_data[cat_name]
+        for out_name in sorted(outfits.keys()):
+            data = outfits[out_name]
+            indicators = ""
+            if data["has_color_scheme"]: indicators += " 🎨"
+            if data["has_signature"]: indicators += " ✨"
+            
+            # Show which gender/modifier versions exist
+            mods = ", ".join(sorted(data["variations"].keys()))
+            lines.append(f"  * {out_name}{indicators} ({mods})")
     lines.append("")
 
     # 5. Poses
@@ -69,7 +80,7 @@ def generate_llm_export_text(ctx: Any) -> str:
     lines.append("")
 
     # 6. Color Schemes
-    lines.append("## TEAM COLOR SCHEMES")
+    lines.append("## TEAM COLOR SCHEMES (Apply to 🎨 outfits)")
     lines.append(", ".join(sorted(ctx.color_schemes.keys())))
     
     lines.append("\n--- CATALOG ENDS ---")
