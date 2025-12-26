@@ -30,7 +30,11 @@ class MenuActions:
         return self.app._import_config()
 
     def import_from_text(self):
-        """Show text import dialog and apply results."""
+        """Show text import dialog or apply current summary box."""
+        # If user is currently editing the summary box, just apply it
+        if getattr(self.app, "_summary_modified", False):
+            return self.app._import_from_summary_box()
+            
         available_chars = list(self.app.characters.keys())
         
         def on_success(config):

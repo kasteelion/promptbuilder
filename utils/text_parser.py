@@ -1,4 +1,4 @@
-import re
+﻿import re
 from typing import Any, Dict, List, Optional
 
 class TextParser:
@@ -6,15 +6,7 @@ class TextParser:
 
     @staticmethod
     def parse_import_text(text: str, available_characters: List[str]) -> Dict[str, Any]:
-        """Parse a text block into a configuration dictionary.
-        
-        Args:
-            text: The text to parse
-            available_characters: List of valid character names for fuzzy matching
-            
-        Returns:
-            Dict: Config ready for state manager
-        """
+        """Parse a text block into a configuration dictionary."""
         config = {
             "selected_characters": [],
             "base_prompt": "Default",
@@ -22,12 +14,11 @@ class TextParser:
             "notes": ""
         }
 
-        lines = [line.strip() for line in text.splitlines() if line.strip()]
+        if not text.strip():
+            return config
         
-        # 1. Detect format type
-        is_structured = "### PROMPT CONFIG ###" in text or "---" in text
-        
-        if is_structured:
+        # Detect format type
+        if "### PROMPT CONFIG ###" in text or "---" in text:
             return TextParser._parse_structured(text, available_characters)
         else:
             return TextParser._parse_summary_style(text, available_characters)
@@ -42,7 +33,7 @@ class TextParser:
         }
         
         # Extract Scene
-        scene_match = re.search(r"Scene:\s*(.*?)(?:\n---\n|\n\[|$)", text, re.IGNORECASE | re.DOTALL)
+        scene_match = re.search(r"Scene:\s*(.*?)(?:\n---|\n\[|$)", text, re.IGNORECASE | re.DOTALL)
         if scene_match:
             config["scene"] = scene_match.group(1).strip()
             
@@ -52,15 +43,17 @@ class TextParser:
             config["base_prompt"] = base_match.group(1).strip()
 
         # Extract Notes
-        notes_match = re.search(r"Notes?:\s*(.*?)(?:\n---\n|\n\[|$)", text, re.IGNORECASE | re.DOTALL)
+        notes_match = re.search(r"\nNotes?:\s*(.*)$", text, re.IGNORECASE | re.DOTALL)
         if notes_match:
             config["notes"] = notes_match.group(1).strip()
 
-        # Extract Characters
-        # Pattern: [1] Name followed by fields until next [ or --- or end
-        char_blocks = re.findall(r"\\[\d+\\]\s*(.*?)(?:\n\\[|\n---\n|\nNotes:|$)", text, re.DOTALL | re.IGNORECASE)
-        
-        for block in char_blocks:
+        # Split by character blocks
+        char_parts = re.split(r"\[\d+\]", text)
+        for block in char_parts[1:]:
+            # Ignore the rest if we hit notes
+            if "Notes:" in block:
+                block = block.split("Notes:")[0]
+            
             lines = block.strip().splitlines()
             if not lines: continue
             
@@ -78,23 +71,24 @@ class TextParser:
                     "use_signature_color": False
                 }
                 
-                # Parse fields in block
                 block_text = "\n".join(lines[1:])
                 
-                outfit_match = re.search(r"Outfit:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
-                if outfit_match: char_entry["outfit"] = outfit_match.group(1).strip()
+                m = re.search(r"Outfit:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
+                if m: char_entry["outfit"] = m.group(1).strip()
                 
-                pose_match = re.search(r"Pose:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
-                if pose_match: char_entry["pose_preset"] = pose_match.group(1).strip()
+                m = re.search(r"Pose:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
+                if m: char_entry["pose_preset"] = m.group(1).strip()
                 
-                note_match = re.search(r"Note:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
-                if note_match: char_entry["action_note"] = note_match.group(1).strip()
+                m = re.search(r"Note:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
+                if m: char_entry["action_note"] = m.group(1).strip()
                 
-                color_match = re.search(r"Colors?:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
-                if color_match: char_entry["color_scheme"] = color_match.group(1).strip()
+                m = re.search(r"Colors?:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
+                if m: char_entry["color_scheme"] = m.group(1).strip()
                 
-                sig_match = re.search(r"Sig(nature)?:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
-                if sig_match: char_entry["use_signature_color"] = True
+                m = re.search(r"Sig(?:nature)?:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
+                if m: 
+                    sig_val = m.group(1).strip().lower()
+                    char_entry["use_signature_color"] = sig_val not in ("no", "false", "off")
 
                 config["selected_characters"].append(char_entry)
                 
@@ -102,7 +96,6 @@ class TextParser:
 
     @staticmethod
     def _parse_summary_style(text: str, available_characters: List[str]) -> Dict[str, Any]:
-        """Parses the shorthand format: [1] Name (Outfit, Pose)"""
         config = {
             "selected_characters": [],
             "base_prompt": "Default",
@@ -110,12 +103,10 @@ class TextParser:
             "notes": ""
         }
         
-        lines = text.splitlines()
-        for line in lines:
+        for line in text.splitlines():
             line = line.strip()
             if not line: continue
             
-            # Detect icons/prefixes
             if line.startswith("🎬"):
                 config["scene"] = line[1:].strip()
                 continue
@@ -129,9 +120,7 @@ class TextParser:
                 config["notes"] = line.split("Notes:", 1)[1].strip()
                 continue
                 
-            # Character pattern: [Index] Name (Outfit, Optional, Pose)
-            # Or just Name (Outfit, Pose)
-            char_match = re.search(r"(?:\\[\d+\\]\s*)?(.*?)\s*\((.*?)\)", line)
+            char_match = re.search(r"(?:\[\d+\]\s*)?([^(]+)\(([^)]+)\)", line)
             if char_match:
                 raw_name = char_match.group(1).strip()
                 name = TextParser._fuzzy_match(raw_name, available_characters)
@@ -144,42 +133,24 @@ class TextParser:
                         "pose_preset": params[-1] if len(params) > 1 else "",
                         "use_signature_color": any("Sig:" in p for p in params)
                     }
-                    # If 3 params, middle is likely color scheme
                     if len(params) == 3:
                         char_entry["color_scheme"] = params[1]
-                    
                     config["selected_characters"].append(char_entry)
             else:
-                # Try just a name on a line
                 name = TextParser._fuzzy_match(line, available_characters)
                 if name:
-                    config["selected_characters"].append({
-                        "name": name,
-                        "outfit": "Base",
-                        "pose_preset": ""
-                    })
+                    config["selected_characters"].append({"name": name, "outfit": "Base", "pose_preset": ""})
                     
         return config
 
     @staticmethod
     def _fuzzy_match(raw_name: str, available: List[str]) -> Optional[str]:
-        """Simple fuzzy match for character names."""
         raw_low = raw_name.lower().strip()
         if not raw_low: return None
-        
-        # 1. Exact match (case insensitive)
         for name in available:
-            if name.lower() == raw_low:
-                return name
-                
-        # 2. Starts with
+            if name.lower() == raw_low: return name
         for name in available:
-            if name.lower().startswith(raw_low):
-                return name
-                
-        # 3. Contains
+            if name.lower().startswith(raw_low): return name
         for name in available:
-            if raw_low in name.lower():
-                return name
-                
+            if raw_low in name.lower(): return name
         return None

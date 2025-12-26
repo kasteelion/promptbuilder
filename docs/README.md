@@ -5,6 +5,7 @@ Welcome to the Prompt Builder documentation. This index provides a roadmap to th
 ## User Guides
 
 - **[Installation & Quick Start](../README.md)** - Getting the application up and running.
+- **[Text Import & Console](text-import.md)** - Use natural language to load prompt configurations.
 - **[Interaction Templates](interaction-templates.md)** - How to use multi-character interaction placeholders.
 - **[Character Flexibility](character-flexibility.md)** - Guide to managing character identity and traits.
 - **[Compatibility Guide](compatibility.md)** - Detailed Python version and OS support information.

@@ -495,9 +495,28 @@ class PromptBuilderApp:
         summary_content = self.summary_collapsible.get_content_frame()
         summary_content.columnconfigure(0, weight=1)
         
-        self.summary_text = tk.Text(summary_content, wrap="word", height=3, state="disabled")
+        self.summary_text = tk.Text(summary_content, wrap="word", height=3)
         self.summary_text.grid(row=0, column=0, sticky="ew", padx=4, pady=6)
-        create_tooltip(self.summary_text, "A condensed version of your prompt")
+        create_tooltip(self.summary_text, "Condensed overview. You can edit this text and click 'Apply' to update the whole prompt.")
+        
+        # Track summary editing state
+        self._summary_modified = False
+        
+        def _on_summary_focus_in(e):
+            self._summary_modified = True
+            theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+            # Use text_bg or a fallback that isn't hardcoded white
+            bg = theme.get("text_bg", theme.get("bg", "#ffffff"))
+            fg = theme.get("text_fg", theme.get("fg", "#000000"))
+            self.summary_text.config(background=bg, foreground=fg)
+
+        def _on_summary_change(e):
+            self._summary_modified = True
+            # Change icon or text of the import button to show it's ready to apply? 
+            # For now, keeping it simple.
+
+        self.summary_text.bind("<FocusIn>", _on_summary_focus_in)
+        self.summary_text.bind("<KeyRelease>", _on_summary_change)
 
         # Preview panel container
         self.preview_collapsible = CollapsibleFrame(right_frame, text="🔍 Prompt Preview", opened=True)
@@ -893,6 +912,10 @@ class PromptBuilderApp:
         self.theme_manager.apply_preview_theme(self.preview_panel.preview_text, theme)
         for widget in [self.scene_text, self.notes_text, self.summary_text, self.edit_tab.editor_text]:
             self.theme_manager.apply_text_widget_theme(widget, theme)
+        
+        # Reset summary background if not modified
+        if not getattr(self, "_summary_modified", False):
+            self.theme_manager.apply_text_widget_theme(self.summary_text, theme)
 
         # Apply to canvas
         self.theme_manager.apply_canvas_theme(self.characters_tab.chars_canvas, theme)
@@ -949,12 +972,12 @@ class PromptBuilderApp:
         prompt = self._generate_prompt_or_error()
         self.preview_panel.update_preview(prompt)
         
-        # Update summary
-        summary = self._generate_summary()
-        self.summary_text.config(state="normal")
-        self.summary_text.delete("1.0", "end")
-        self.summary_text.insert("1.0", summary)
-        self.summary_text.config(state="disabled")
+        # Update summary only if not being manually edited
+        if not getattr(self, "_summary_modified", False):
+            summary = self._generate_summary()
+            self.summary_text.config(state="normal")
+            self.summary_text.delete("1.0", "end")
+            self.summary_text.insert("1.0", summary)
         
         num_chars = len(self.characters_tab.get_selected_characters())
         self._update_status(f"Ready • {num_chars} character(s) selected")
@@ -1177,6 +1200,27 @@ class PromptBuilderApp:
                 logger.exception("Failed to reload character_gallery")
 
         self.schedule_preview_update()
+
+    def _import_from_summary_box(self):
+        """Parse and apply the text currently in the summary box."""
+        raw_text = self.summary_text.get("1.0", "end-1c").strip()
+        if not raw_text:
+            return
+
+        available_chars = list(self.characters.keys())
+        from utils.text_parser import TextParser
+        
+        try:
+            config = TextParser.parse_import_text(raw_text, available_chars)
+            self._save_state_for_undo()
+            self._restore_state(config)
+            self._summary_modified = False
+            # Reset background
+            self._apply_theme(self.theme_manager.current_theme) 
+            self._update_status("Applied changes from summary console")
+        except Exception as e:
+            logger.error(f"Failed to parse summary box: {e}")
+            self._update_status("❌ Error parsing summary text")
 
     def randomize_all(self):
         """Generate a random prompt and update the UI."""
