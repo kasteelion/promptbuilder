@@ -18,7 +18,7 @@ class TextParser:
             return config
         
         # Detect format type
-        if "### PROMPT CONFIG ###" in text or "---" in text:
+        if "### PROMPT CONFIG ###" in text or "---" in text or "Base:" in text:
             return TextParser._parse_structured(text, available_characters)
         else:
             return TextParser._parse_summary_style(text, available_characters)
@@ -32,32 +32,44 @@ class TextParser:
             "notes": ""
         }
         
-        # Extract Scene
-        scene_match = re.search(r"Scene:\s*(.*?)(?:\n---|\n\[|$)", text, re.IGNORECASE | re.DOTALL)
-        if scene_match:
-            config["scene"] = scene_match.group(1).strip()
-            
-        # Extract Base Prompt
-        base_match = re.search(r"Base:\s*(.*?)(?:\n|$)", text, re.IGNORECASE)
-        if base_match:
-            config["base_prompt"] = base_match.group(1).strip()
+        # Comprehensive list of labels that mark the start of a new field
+        ALL_LABELS = [
+            "Base:", "Scene:", "Outfit:", "Colors?:", "Sig:", "Pose:", "Note:", 
+            "Notes?:", "---", r"\[\d+\]"
+        ]
 
-        # Extract Notes
-        notes_match = re.search(r"\nNotes?:\s*(.*)$", text, re.IGNORECASE | re.DOTALL)
-        if notes_match:
-            config["notes"] = notes_match.group(1).strip()
+        def get_field(label, source, markers=None):
+            if markers is None:
+                markers = ALL_LABELS
+            # Look for Label: (Capture) Stop before any other known Label or end of string
+            pattern = rf"{label}\s*(.*?)(?=\s*(?:{'|'.join(markers)})|$)"
+            m = re.search(pattern, source, re.IGNORECASE | re.DOTALL)
+            return m.group(1).strip().strip(":") if m else ""
 
-        # Split by character blocks
+        # 1. Extract Global Metadata
+        config["base_prompt"] = get_field("Base:", text)
+        config["scene"] = get_field("Scene:", text)
+        
+        # Extract global notes (usually at the end)
+        global_notes_match = re.search(r"(?:\n|^)Notes?:\s*(.*)$", text, re.IGNORECASE | re.DOTALL)
+        if global_notes_match:
+            config["notes"] = global_notes_match.group(1).strip()
+
+        # 2. Extract Characters
         char_parts = re.split(r"\[\d+\]", text)
         for block in char_parts[1:]:
-            # Ignore the rest if we hit notes
+            # Clean character block from global notes
             if "Notes:" in block:
                 block = block.split("Notes:")[0]
             
-            lines = block.strip().splitlines()
-            if not lines: continue
+            # Name is everything from start of block until first field label
+            name_markers = ["Outfit:", "Colors?:", "Sig:", "Pose:", "Note:"]
+            name_pattern = rf"^(.*?)(?=\s*(?:{'|'.join(name_markers)})|$)"
+            name_match = re.search(name_pattern, block.strip(), re.DOTALL | re.IGNORECASE)
+            raw_name = name_match.group(1).strip() if name_match else ""
             
-            raw_name = lines[0].strip()
+            # IMPROVED: Clean up modifiers like (F), (M), (H) case-insensitively
+            raw_name = re.sub(r"\s*\([FmMHh]\)\s*", "", raw_name)
             name = TextParser._fuzzy_match(raw_name, available_characters)
             
             if name:
@@ -71,23 +83,13 @@ class TextParser:
                     "use_signature_color": False
                 }
                 
-                block_text = "\n".join(lines[1:])
+                char_entry["outfit"] = get_field("Outfit:", block)
+                char_entry["pose_preset"] = get_field("Pose:", block)
+                char_entry["action_note"] = get_field("Note:", block)
+                char_entry["color_scheme"] = get_field("Colors?:", block)
                 
-                m = re.search(r"Outfit:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
-                if m: char_entry["outfit"] = m.group(1).strip()
-                
-                m = re.search(r"Pose:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
-                if m: char_entry["pose_preset"] = m.group(1).strip()
-                
-                m = re.search(r"Note:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
-                if m: char_entry["action_note"] = m.group(1).strip()
-                
-                m = re.search(r"Colors?:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
-                if m: char_entry["color_scheme"] = m.group(1).strip()
-                
-                m = re.search(r"Sig(?:nature)?:\s*(.*?)(?:\n|$)", block_text, re.IGNORECASE)
-                if m: 
-                    sig_val = m.group(1).strip().lower()
+                sig_val = get_field("Sig:", block).lower()
+                if sig_val:
                     char_entry["use_signature_color"] = sig_val not in ("no", "false", "off")
 
                 config["selected_characters"].append(char_entry)
@@ -113,6 +115,7 @@ class TextParser:
             if line.startswith("📝"):
                 config["notes"] = line[1:].strip()
                 continue
+            
             if "Scene:" in line:
                 config["scene"] = line.split("Scene:", 1)[1].strip()
                 continue
@@ -123,6 +126,8 @@ class TextParser:
             char_match = re.search(r"(?:\[\d+\]\s*)?([^(]+)\(([^)]+)\)", line)
             if char_match:
                 raw_name = char_match.group(1).strip()
+                # Clean up (F) etc
+                raw_name = re.sub(r"\s*\([FmMHh]\)\s*", "", raw_name)
                 name = TextParser._fuzzy_match(raw_name, available_characters)
                 
                 if name:
