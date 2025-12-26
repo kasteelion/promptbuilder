@@ -34,6 +34,8 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Drinking:** Holding cup or glass, bringing it toward mouth or just sipped, casual relaxed pose.
 - **Gaming Controller:** Holding game controller, focused on screen ahead, casual gaming posture, relaxed competitive energy.
 - **Headphone Vibe:** Adjusting over-ear headphones, eyes closed or looking away, lost in music, peaceful moment.
+- **Painter at Easel (Seated):** Sitting on a stool in front of a wooden easel, palette in one hand and brush in the other, focused intently on the canvas.
+- **Painter at Easel (Standing):** Standing before an easel, arm extended to make a brushstroke, stepping back slightly to judge the work, creative focus.
 - **Phone Check:** Looking down at phone screen, soft smile, casual modern moment, candid natural pose.
 - **Reading:** Holding book or phone, engaged in reading, relaxed seated or standing position.
 
@@ -48,6 +50,9 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Mirror Selfie:** Posing in front of mirror, phone held up, confident expression, outfit showcase.
 - **Over the Shoulder:** Looking back over shoulder, playful smile, hair cascading down, confident stance.
 - **VSCO Squat:** Crouching low fashion squat, arm resting on knee, camera-ready, trendy photo-ready pose.
+- **The Angel Wing Stance:** Standing with back arched, arms spread slightly away from the sides, head tilted with a glamorous "Victoria's Secret" smile.
+- **Runway Stride:** Mid-stride walking with one foot directly in front of the other, expression neutral and fierce, hair flowing with motion.
+- **Soft Lingerie Lean:** Leaning against a soft surface, one hand near the collarbone, eyes half-closed in a dreamy, high-fashion look.
 
 ---
 
@@ -139,6 +144,11 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Volleyball Serve:** Jumping with arm extended overhead, ball contact moment, powerful athletic form, focused upward gaze.
 - **Volleyball Set:** Standing with hands raised above head, fingers spread, prepared to guide the ball upward, focused concentration.
 - **Volleyball Spike:** Mid-air jump, body arched, arm cocked back ready to strike the volleyball over the net, intense focused expression.
+- **Three-Point Shot:** Mid-jump at the arc, body perfectly aligned, arm extended high with a flick of the wrist, eyes locked on the distant hoop.
+- **Professional Tennis Serve:** Body arched back in a deep "trophy position," racket head dropped behind the back, tossing hand high in the air, maximum kinetic tension.
+- **Cheerleading Liberty:** Standing on one locked leg, other leg bent with foot at the knee, arms in a high "V" position, bright energetic smile.
+- **High V Cheer:** Standing with legs apart, arms held high in a sharp V shape, fists tight, radiating spirited team energy.
+- **Pompom Shake:** Dynamic mid-motion pose, arms extended to the sides with pom-poms blurred in motion, joyful and high-energy.
 
 ---
 
@@ -181,3 +191,63 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Kimono Bow:** Traditional Japanese bow, upper body bent forward, hands positioned respectfully, formal posture.
 - **Royal Wave:** Hand raised in elegant royal wave gesture, graceful wrist movement, regal dignified posture.
 - **Sari Drape Adjust:** Gracefully adjusting sari fabric over shoulder, elegant traditional gesture, poised stance.
+
+---
+
+## Badass & Tactical
+
+- **Sword Point:** Pointing a sword or weapon directly at the camera with a cold, unwavering gaze, radiating lethal intent.
+- **Hero Landing:** Crouched on one knee, one hand on the ground, head lifting to reveal a fierce, determined expression.
+- **Weapon Maintenance:** Focused intently on cleaning or checking a weapon, sharp focus, dangerous calm, professional demeanor.
+- **Stoic Walk:** Walking calmly towards the camera with a neutral, unshakable expression while chaos is suggested in the background.
+- **Predatory Focus:** Leaning forward slightly in a low stance, eyes narrowed, radiating intense, calculated aggression.
+- **Cigar/Match Light:** Lighting a cigar or match with a steady hand, face partially shadowed, eyes focused on the flame with cool indifference.
+- **Coat Flip:** Mid-motion flipping a long coat or jacket onto shoulders, confident smirk, ready for action.
+
+---
+
+## Gym & Fitness Poses
+
+- **Barbell Rack Back View (Low Angle):** Standing at barbell rack facing away from camera, back arched, one leg extended straight back with foot on toes, other leg bent supporting weight, torso leaning forward toward bar, hands resting on barbell, low camera angle from behind emphasizing leg extension and back curve, dramatic athletic aesthetic.
+- **Cable Machine Mirror Selfie:** Standing at cable machine in side profile to mirror, one arm extended fully gripping cable handle at shoulder height, opposite hand holding phone up for selfie, body in athletic stance with slight lean, hip cocked, headphones on, mirror captures side view showing arm extension and engaged posture.
+- **Floor Kneeling Mirror Selfie (Front Angle):** Kneeling upright on gym floor facing mirror, sitting back slightly on heels, knees apart, torso upright, one hand holding phone up at face level for selfie, other arm relaxed at side, direct eye contact with camera through mirror, straight-on front angle capturing full upper body and kneeling position.
+- **Ground Sitting Lean Back:** Sitting on floor with legs extended to one side, leaning back on one arm for support, other hand holding phone for low-angle selfie, body angled toward camera, relaxed casual +pose, legs bent or crossed, camera positioned low capturing upward angle.
+- **Window Sill Seated Side Angle:** Sitting sideways on window ledge or sill, one leg bent with foot on sill, other leg dangling down, torso twisted toward camera, hand holding phone near face, natural window light from behind, side-to-three-quarter angle capturing silhouette and contemplative mood.
+- **Barbell Back Squat (Eye Level Front):** Deep squat position with loaded barbell resting on upper back/trapezius, hands gripping bar wider than shoulders, thighs parallel to ground or below parallel, chest up and out, back straight, knees tracking over toes, eyes focused straight ahead, camera at standing eye level capturing frontal view showing full squat depth and form, power rack visible in background.
+
+---
+
+## Aura & Power
+
+- **Energy Charging:** Hands held apart in front of the chest, fingers curved as if holding a sphere of light, face illuminated by a glow from between the palms.
+- **Floating Levitation:** Body suspended a few inches off the ground, toes pointed down, arms out to the sides, hair and clothing drifting upward as if in zero gravity.
+- **Dark Power Surge:** Standing with head bowed, one hand clutching the forehead, the other arm extended with claws out, a shadowy or smoky aura radiating from the body.
+- **Divine Ascension:** Looking up towards a beam of light from above, arms open wide, expression of pure serenity and overwhelming power.
+
+---
+
+## Fantasy & Combat Stances
+
+- **High Guard (Knight):** Holding a longsword with both hands above the head at a 45-degree angle, legs in a wide stable stance, ready to strike down.
+- **Draw-cut Stance (Samurai):** Crouched low, left hand on the scabbard at the hip, right hand gripping the hilt of the katana, eyes narrowed in lethal focus.
+- **Reverse Grip (Assassin):** Holding a dagger in a reverse grip (blade pointing down), body in a low prowl, shadowed face, radiating silent danger.
+- **Spellcast Ready (Mage):** One hand extended forward with palm open, the other hand tracing an arcane sigil in the air, glowing runes appearing around the wrist.
+
+---
+
+## Bodybuilding & Physique
+
+- **Front Double Bicep:** Standing with both arms raised and flexed at 90 degrees, fists curled inward, showing maximum arm and shoulder definition, vacuum-waist pose.
+- **Lat Spread:** Hands on the waist, elbows pushed forward to broaden the back, showcasing extreme V-taper and upper body width.
+- **Side Chest:** Standing in profile, one leg bent with calf flexed, torso twisted toward the camera, hands gripped together to pop the chest and bicep.
+- **Most Muscular (Crab):** Leaning forward with hands together in front of the waist, all muscles in the arms, chest, and shoulders tensed to the limit.
+
+---
+
+## Expressive Emotions
+
+- **Brave Stand:** Standing tall with chest out, chin lifted, and a look of unwavering determination, radiating courage.
+- **Recoil in Fear:** Cowering slightly with arms raised protectively, eyes wide and fearful, body tensed as if retreating from a threat.
+- **Blushing Embarrassment:** Head tilted down, one hand rubbing the back of the neck or covering the mouth, cheeks flushed, eyes looking away shyly.
+- **Lovelorn Gaze:** Looking at someone off-camera with soft, dreamy eyes, a gentle smile, and a relaxed, warm posture.
+- **Tearful Relief:** Eyes closed, head tilted back slightly, a faint smile breaking through a look of profound relief and exhaustion.

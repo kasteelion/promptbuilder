@@ -170,6 +170,14 @@
 - **Accessories:** Statement earrings, flower on hijab
 - **Makeup:** Bold red lip, passionate expression
 
+### Pro Wrestling
+- **Hijab:** **Sports hijab** (black with ((default:red) or (signature)) trim, secure fit for athletic movement)
+- **Top:** Long-sleeve athletic **bodysuit** (black base with bold ((default:red) or (signature)) geometric panels and accents down arms and sides)
+- **Bottom:** **Wrestling tights or leggings** (full-length, continuing the black and ((default:red) or (signature)) color scheme)
+- **Footwear:** **Wrestling boots** (standard lace-up style)
+- **Accessories:** Knee pads (under tights or over), elbow pads optional, wrestling gloves, wrist tape, personalized logo or text on gear
+- **Makeup:** Hijab fully secured for action, natural makeup with defined features visible, determined athletic expression, professional wrestling presence
+
 ---
 
 ## Casual Wear
@@ -249,6 +257,42 @@
 - **Footwear:** Strappy sandals or block heels
 - **Accessories:** Statement earrings, bangles, beaded necklace
 - **Makeup:** Bold makeup with warm tones, glowing skin
+
+---
+
+## Character & Costume
+
+### Bunny
+- **Hijab:** Black silk or satin hijab with secure wrap
+- **Top:** Long-sleeve black satin modest bodysuit (high neck, tailored fit)
+- **Bottom:** Black dress pants (slim fit)
+- **Footwear:** Black dress shoes or heels
+- **Accessories:** Tall black rabbit ears (worn over hijab), white bow tie, white wrist cuffs
+- **Makeup:** Soft elegant makeup, realistic anime shading
+
+### Superhero
+- **Hijab:** Sports hijab (((default:emerald green, royal blue, or deep purple) or (signature)) - breathable technical fabric, secured for action)
+- **Top:** Form-fitting athletic **bodysuit** (((default:emerald green, royal blue, or deep purple) or (signature)) with metallic accents and geometric patterns); **armored chest plate** or reinforced bodice
+- **Bottom:** Full-length matching athletic leggings or bodysuit bottom
+- **Footwear:** Armored **boots** (knee-high, tactical design)
+- **Accessories:** Utility belt (tactical with pouches), Cape (optional, attached at shoulders), protective gauntlets or arm guards, hero mask (optional, coordinating with hijab)
+- **Makeup:** strong defined brows visible, natural makeup with focus on eyes, determined heroic expression
+
+### Maid Outfit
+- **Hijab:** Black or white chiffon hijab with neat professional wrap
+- **Top:** Long-sleeve black modest dress with high white collar
+- **Bottom:** Matching full skirt (knee-length or longer) with white apron
+- **Footwear:** Black Mary Jane shoes
+- **Accessories:** White lace headpiece (on hijab), white wrist cuffs
+- **Makeup:** Neat, polished styling
+
+### Soft Aesthetic
+- **Hijab:** Pastel colored jersey hijab with soft draping
+- **Top:** Oversized pastel striped long-sleeve shirt or anime graphic tee (modest length)
+- **Bottom:** Pleated maxi skirt or wide-leg pastel pants
+- **Footwear:** Platform sneakers or Mary Janes
+- **Accessories:** Chain necklaces, colorful clips on hijab, small crossbody bag
+- **Makeup:** Blush on nose and cheeks, winged eyeliner, glossy lips
 
 ---
 

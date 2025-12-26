@@ -195,6 +195,76 @@ A simple and comfortable casual outfit.
 
         return ordered_tags
 
+    def sync_tags(self):
+        """Scan characters for tags not in tags.md and append them.
+        
+        Returns:
+            int: Number of new tags added
+        """
+        # 1. Load existing tags from file
+        tags_file = self._find_data_file("tags.md")
+        if not tags_file.exists():
+            return 0
+
+        known_tags = set()
+        try:
+            categorized = self.load_categorized_tags()
+            for cat_tags in categorized.values():
+                known_tags.update(cat_tags)
+        except Exception:
+            return 0
+
+        # 2. Scan characters
+        try:
+            chars = self.load_characters()
+        except Exception:
+            return 0
+
+        new_tags = set()
+        for char_data in chars.values():
+            tlist = char_data.get("tags") or []
+            if isinstance(tlist, str):
+                tlist = [t.strip().lower() for t in tlist.split(",") if t.strip()]
+            elif isinstance(tlist, (list, tuple)):
+                tlist = [str(t).strip().lower() for t in tlist if t]
+            
+            for t in tlist:
+                if t and t not in known_tags:
+                    new_tags.add(t)
+        
+        if not new_tags:
+            return 0
+
+        # 3. Append to file
+        try:
+            current_content = tags_file.read_text(encoding="utf-8")
+            
+            # Prepare append text
+            append_text = ""
+            
+            # If "## Other" doesn't exist, add it.
+            # We use a loose check; stricter parsing is complex for simple append.
+            if "## Other" not in current_content:
+                if not current_content.endswith("\n"):
+                    append_text += "\n"
+                append_text += "\n## Other"
+            
+            for t in sorted(list(new_tags)):
+                append_text += f"\n- {t}"
+            
+            # Append
+            with open(tags_file, "a", encoding="utf-8") as f:
+                f.write(append_text)
+            
+            from utils import logger
+            logger.info(f"Synced {len(new_tags)} new tags to tags.md")
+            
+            return len(new_tags)
+        except Exception as e:
+            from utils import logger
+            logger.error(f"Failed to sync tags: {e}")
+            return 0
+
     def load_characters(self):
         """Load and parse character files from characters/ folder, merging with shared outfits.
 

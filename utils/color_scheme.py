@@ -35,12 +35,14 @@ def substitute_colors(text: str, scheme: Dict[str, str]) -> str:
 
 
 def substitute_signature_color(text: str, signature_color: str, use_signature: bool) -> str:
-    """Substitute conditional signature color blocks.
+    """Substitute conditional signature color blocks and standalone tags.
     
-    Syntax: ((default:white) or (signature))
-    If use_signature is True and signature_color is provided, use signature_color.
-    Else, use the default value extracted from the string.
+    Syntax 1: ((default:white) or (signature)) 
+              Uses character sig color if active, else 'white'.
+    Syntax 2: {signature_color}
+              Uses character sig color if active, else 'vibrant color'.
     """
+    # 1. Handle conditional block syntax
     pattern = re.compile(r"\(\(default:(.*?)\)\s+or\s+\(signature\)\)", re.IGNORECASE)
     
     def replacer(match):
@@ -49,7 +51,14 @@ def substitute_signature_color(text: str, signature_color: str, use_signature: b
             return signature_color
         return default_val
         
-    return pattern.sub(replacer, text)
+    text = pattern.sub(replacer, text)
+
+    # 2. Handle standalone placeholder syntax
+    if "{signature_color}" in text:
+        replacement = signature_color if (use_signature and signature_color) else "vibrant color"
+        text = text.replace("{signature_color}", replacement)
+        
+    return text
 
 
 # Example usage:

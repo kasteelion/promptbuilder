@@ -5,7 +5,7 @@
 
 **Summary:** Samira radiates a polished, sophisticated warmth that reflects her Moroccan heritage and modern creative life. She moves with a gentle poise, blending traditional values with a high-fashion sensibility. Her presence is inviting and culturally rooted, defined by a sharp intellect and a penchant for intricate, colorful textiles.
 
-**Gender:** F
+**Modifier:** H
 **Signature Color:** #DAA520
 
 **Appearance:**

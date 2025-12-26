@@ -87,12 +87,17 @@ Outfits can adapt to specific color schemes defined in `data/color_schemes.md`.
 - `{modifier}`: A special slot for appending text from `data/modifiers.md`.
 
 #### 3. Signature Color Logic
-To support characters with defined `**Signature Color:**`, use the following syntax:
+To support characters with defined `**Signature Color:**`, you can use two different syntaxes:
 
+**A. Conditional Block (Recommended):**
 `((default:Color Name) or (signature))`
-
-*   **Logic:** If the character has a signature color and the "Use Signature Color" option is checked, the parser uses the Hex code. Otherwise, it defaults to "Color Name".
+*   **Logic:** If the character has a signature color and "Use Signature Color" is checked, uses the Hex code. Otherwise, defaults to "Color Name".
 *   **Example:** `A **((default:white) or (signature)) dress**`
+
+**B. Standalone Tag:**
+`{signature_color}`
+*   **Logic:** If the character has a signature color and "Use Signature Color" is checked, uses the Hex code. Otherwise, defaults to the generic term `"vibrant color"`.
+*   **Example:** `Energy glow in {signature_color}.`
 
 ---
 

@@ -48,6 +48,7 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 - **Helping Up:** {char1} extending hand to help {char2} stand up, showing support and assistance
 - **Hydration Break:** {char1} offering water bottle to {char2}, taking break together, athletic recovery moment
 - **Injury Check:** {char1} checking on {char2}'s injury, concerned expression, gentle examination, caring supportive gesture
+- **Tender Cheek Caress:** {char1} gently cupping {char2}'s cheek with one hand, thumb stroking the skin, both sharing an intimate, quiet look of affection.
 - **Photo Together:** {char1} and {char2} posing together for a photo, both looking at camera with cheerful expressions
 - **Sharing Food:** {char1} offering food to {char2}, sharing a meal or snack in friendly gesture
 - **Sharing Secret:** {char1} leaning close to {char2}, whispering a secret while {char2} listens intently with hand cupped to ear
@@ -192,6 +193,8 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 - **Sword Duel:** {char1} and {char2} locked in a dramatic sword duel, blades crossed, sparks flying. Both in dynamic lunging or parrying stances, with intense focus and athletic tension.
 - **Telekinesis Battle:** {char1} and {char2} engaged in a telekinetic battle. They are holding their ground, arms outstretched, with glowing energy connecting them. Debris floats in the air between them, held in place by their mental powers.
 - **Using Hologram Interface:** {char1} manipulating a floating holographic interface with their hands. {char2} is looking on, either observing the data or pointing to a specific element on the glowing screen.
+- **The Adventuring Party (4):** {char1} leading the way with a sword, {char2} and {char3} flanking with staves or bows, and {char4} in the back providing magical support, all moving through a dangerous environment.
+- **Magic Fusion:** {char1} and {char2} standing close together, hands joined, a massive vortex of combined magical energy swirling around them both.
 
 ---
 
@@ -221,3 +224,29 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 - **Line Formation (4+):** {char1}, {char2}, {char3}, and {char4} standing in a line side by side, all facing the same direction with coordinated poses
 - **Team Pose (4+):** {char1}, {char2}, {char3}, and {char4} in heroic team pose, standing together with confident expressions and coordinated stances
 - **Triangle Formation (3):** {char1}, {char2}, and {char3} positioned at three points of a triangle, creating geometric composition with balanced spacing
+
+---
+
+## Badass & High-Stakes
+
+- **Back-to-Back Combat:** {char1} and {char2} standing back-to-back in a defensive circle, weapons drawn, scanning for threats in opposite directions with tactical precision.
+- **The Duel Conclusion:** {char1} standing over {char2} with a weapon leveled at their throat, {char1} showing cold dominance while {char2} looks up with a mixture of defiance and respect.
+- **Interrogation:** {char1} leaning over a seated {char2}, one hand planted on the table or wall, demanding answers with an intimidating, overpowering presence.
+- **Silent Agreement:** {char1} and {char2} sharing a brief, knowing nod before simultaneously charging into action, perfectly synchronized.
+- **Saving the Day:** {char1} pulling {char2} out of danger or carrying them through a chaotic scene, {char1} moving with urgent purpose while {char2} grips them for safety.
+- **Tactical Breach:** {char1} and {char2} stacked at a doorway or corner, {char1} in a low crouch, {char2} standing behind, both poised to move with lethal coordination.
+- **Weapon Exchange:** {char1} tossing a weapon or tool to {char2} mid-action, both maintaining focus on their surroundings during the transition.
+
+---
+
+## Artistic Collaboration
+
+- **Modeling for Painter:** {char1} sitting perfectly still in a poised stance on a decorative chair, while {char2} stands at a wooden easel, brush in hand, glancing between {char1} and the canvas.
+- **Critiquing the Work:** {char1} and {char2} standing side-by-side in front of an easel, {char2} pointing at a detail on the canvas while {char1} listens with a thoughtful expression.
+
+---
+
+## Sentai & Team Heroics
+
+- **Sentai Team Pose (5):** {char1}, {char2}, {char3}, {char4}, and {char5} in a synchronized heroic formation, each striking a unique dynamic pose with hands held in stylized gestures, radiating "Power Rangers" energy.
+- **Back-to-Back Heroics:** {char1} and {char2} standing back-to-back, fists raised or weapons drawn, looking in opposite directions with fierce determination.

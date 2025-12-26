@@ -118,6 +118,14 @@ class PromptBuilderApp:
         # Initialize references
         self._initialize_data_references()
         
+        # Sync tags from characters (manual file additions)
+        try:
+            added = self.data_loader.sync_tags()
+            if added:
+                logger.info(f"Startup: Added {added} new tags from character files.")
+        except Exception:
+            logger.exception("Error syncing tags on startup")
+
         # Complete initialization
         self._complete_initialization()
         
@@ -1065,6 +1073,14 @@ class PromptBuilderApp:
             # Reload themes (synchronous, but usually fast)
             if hasattr(self, "theme_manager") and self.theme_manager:
                 self.theme_manager.reload_md_themes()
+
+            # Sync tags from characters
+            try:
+                added = self.data_loader.sync_tags()
+                if added:
+                    logger.info(f"Reload: Added {added} new tags from character files.")
+            except Exception:
+                logger.exception("Error syncing tags on reload")
 
             # Update UI
             self._update_ui_after_reload()

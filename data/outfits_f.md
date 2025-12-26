@@ -70,6 +70,9 @@ Nude colored bodysuit
 ### Salsa
 **Fitted dance dress** (knee-length or shorter with flared skirt, asymmetric hem, or high slit in red, black, or jewel tones with sequins or fringe); **dance bodysuit or fitted top** with **flowing skirt** alternative; **Latin dance heels** (2.5-3 inch, open-toe, T-strap in nude or metallic). *Accessories:* Statement earrings (chandelier or hoop style), hair flower or decorative comb. *Hair/Makeup:* Hair in sleek bun with side part, dramatic waves, or high ponytail; bold makeup with smoky eyes, false lashes, red or berry lip, bronzed contouring, passionate expression.
 
+### Pro Wrestling
+Athletic **sports bra or crop top** (((default:red) or (signature)) metallic spandex with black piping detail and center zipper accent); high-waisted **wrestling briefs** (matching ((default:red) or (signature)) with black trim); **fishnet tights** (black, full-length); elbow-length **arm sleeves** (((default:red) or (signature)) spandex, single arm or matching pair); knee-high **wrestling boots** (black leather with multiple buckle straps and platform sole). *Accessories:* ((default:red) or (signature)) knee pads (under fishnets), choker or collar (((default:red) or (signature)) to match outfit), wrist tape (black or ((default:red) or (signature))), hair ties matching gear colors. *Hair/Makeup:* dramatic smoky eye makeup with bold winged liner, contoured cheekbones, bold ((default:red) or (signature)) or dark lip.
+
 ---
 
 ## Casual Wear
@@ -111,6 +114,9 @@ Fitted **peplum top or off-shoulder blouse** (vibrant African print - Ankara, Ke
 
 ### Bunny
 Sleek **black satin bodysuit**; **sheer black tights**. *Accessories:* Tall black rabbit ears, white collar with bow tie, crisp white cuffs. *Hair/Makeup:* **Hair worn loose and flowing**; subtle soft makeup, calm confident expression, realistic anime shading, elegant not provocative.
+
+### Superhero
+((default:White) or (signature)) **bodysuit** (form-fitting spandex with high-cut legs); distinctive **circular cutout** at center chest; short ((default:white) or (signature)) **cape** (attached at shoulders); ((default:white) or (signature)) **gloves** (wrist-length); ((default:white) or (signature)) **boots** (knee-high with low heel). *Accessories:* Gold belt with circular buckle, optional gold accents on costume edges. *Hair/Makeup:* Strong heroic expression, hair styled for action.
 
 ### Maid Outfit
 Traditional **black dress with white apron** (knee-length); **white lace headpiece**; **black Mary Jane shoes**. *Accessories:* White collar, wrist cuffs. *Hair/Makeup:* Neat, polished styling.

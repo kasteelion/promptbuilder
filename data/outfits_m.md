@@ -70,6 +70,9 @@ Nude colored compression shirt and tights
 ### Salsa
 **Latin dance shirt** (black or deep jewel tone, deep V-neck or fitted button-down, often with sheer or satin details); **Latin dance trousers** (high-waisted, fitted through thigh, flared at hem); **Latin dance shoes** (Cuban heel). *Accessories:* Simple belt, minimal jewelry. *Hair/Makeup:* Slicked back hair, intense focused expression, bronzed skin.
 
+### Pro Wrestling
+Wrestling **trunks or long tights** (((default:red) or (signature)) with black side panels and metallic trim); **bare chest** or matching **wrestling vest**; high-top **wrestling boots** (black with ((default:red) or (signature)) laces); **knee pads** (((default:red) or (signature))). *Accessories:* Wrist tape (black or ((default:red) or (signature))), elbow pads, championship belt optional. *Hair/Makeup:* Intense focused expression, hair styled or slicked back for action.
+
 ---
 
 ## Casual Wear
@@ -111,6 +114,9 @@ Oversized **graphic hoodie or layered long-sleeve tees** (pastel or bold anime p
 
 ### Bunny
 Sleek **black satin vest** over bare chest; **black dress pants** (tailored fit); **sheer black socks**. *Accessories:* Tall black rabbit ears, white bow tie, white cuffs. *Hair/Makeup:* **Hair neatly styled**; clean-shaven or subtle grooming, calm confident expression, realistic anime shading, elegant not provocative.
+
+### Superhero
+Form-fitting ((default:two-tone geometric) or (signature)) **muscle-suit** (no logo); full-length **tights**; **tactical vest** or chest armor; knee-high **armored boots**. *Accessories:* Utility belt, protective gauntlets, optional cape. *Hair/Makeup:* Determined heroic expression, short neat or action-styled hair.
 
 ### Maid Outfit
 Traditional **black butler-style suit** (tailored jacket and trousers); **crisp white dress shirt**; **black bow tie**; **polished black dress shoes**. *Accessories:* White gloves, pocket square. *Hair/Makeup:* Neat, polished styling.
