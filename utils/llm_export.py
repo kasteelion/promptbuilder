@@ -32,6 +32,7 @@ def generate_llm_export_text(ctx: Any) -> str:
         "- 'Sig: Yes' applies the character's unique signature color to the outfit.",
         "- Outfits marked with (🎨) support 'Colors: [Scheme]'.",
         "- Outfits marked with (✨) support 'Sig: Yes'.",
+        "- MODIFIER NOTE: 'F' = Female, 'M' = Male, 'H' = Hijabi.",
         "",
         "--- CATALOG BEGINS ---",
         ""
@@ -45,7 +46,8 @@ def generate_llm_export_text(ctx: Any) -> str:
 
     # 3. Characters
     lines.append("## AVAILABLE CHARACTERS")
-    lines.append("Format: Name (Modifier/Gender) [Signature Color] [Tags]")
+    lines.append("Format: Name (Modifier) [Signature Color] [Tags]")
+    lines.append("Note: Modifier 'H' indicates the character is Hijabi.")
     for name, data in sorted(ctx.characters.items()):
         mod = data.get("modifier") or data.get("gender", "F")
         sig = data.get("signature_color", "None")
@@ -67,9 +69,8 @@ def generate_llm_export_text(ctx: Any) -> str:
             if data["has_color_scheme"]: indicators += " 🎨"
             if data["has_signature"]: indicators += " ✨"
             
-            # Show which gender/modifier versions exist
-            mods = ", ".join(sorted(data["variations"].keys()))
-            lines.append(f"  * {out_name}{indicators} ({mods})")
+            # Since outfits are synced across F/M/H, we just list the name and indicators
+            lines.append(f"  * {out_name}{indicators}")
     lines.append("")
 
     # 5. Poses
