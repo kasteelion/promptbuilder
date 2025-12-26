@@ -18,7 +18,9 @@
 ### Changed
 - **Character Data:** Updated all character profiles to include `**Signature Color:**` definitions and refined tag categorization.
 - **Outfit Data:** Updated existing outfits (Cyberpunk, Goth, etc.) to utilize the new Signature Color syntax.
-- **Documentation:** Added "Signature Colors" section to `docs/character-flexibility.md`.
+- **Documentation:**
+    - Added "Signature Colors" section to `docs/character-flexibility.md`.
+    - Created `docs/data-formats.md` detailing file syntax and conventions for characters, outfits, and global assets.
 - **Architecture:** Updated `docs/architecture.md` to include the new `OutfitSummary` component.
 
 ### Fixed
