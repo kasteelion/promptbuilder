@@ -79,6 +79,9 @@ class MenuManager:
             label="🤖 Export for LLM (Context Injection)...", command=self.callbacks["export_for_llm"]
         )
         file_menu.add_command(
+            label="🏗️ Export for LLM (Content Creation)...", command=self.callbacks["export_for_llm_creation"]
+        )
+        file_menu.add_command(
             label="📥 Import Configuration...", command=self.callbacks["import_config"]
         )
         file_menu.add_command(
@@ -125,6 +128,23 @@ class MenuManager:
 
         tools_menu.add_command(
             label="🎲 Randomize All", command=self.callbacks["randomize_all"], accelerator="Alt+R"
+        )
+
+        tools_menu.add_separator()
+
+        tools_menu.add_command(
+            label="📊 Characters Summary", command=self.callbacks["show_characters_summary"]
+        )
+        tools_menu.add_command(
+            label="👗 Outfits Summary", command=self.callbacks["show_outfits_summary"]
+        )
+        tools_menu.add_command(
+            label="🎨 Team Colors Summary",
+            command=self.callbacks["show_color_schemes_summary"]
+        )
+        tools_menu.add_command(
+            label="🏷️ Tag Distribution Summary",
+            command=self.callbacks["show_tag_summary"]
         )
 
     def _build_view_menu(self):
@@ -266,21 +286,6 @@ class MenuManager:
         """Build Help menu."""
         help_menu = tk.Menu(self.menubar, tearoff=0)
         self.menubar.add_cascade(label="Help", menu=help_menu)
-
-        help_menu.add_command(
-            label="📊 Characters Summary", command=self.callbacks["show_characters_summary"]
-        )
-        help_menu.add_command(
-            label="👗 Outfits Summary", command=self.callbacks["show_outfits_summary"]
-        )
-        help_menu.add_command(
-            label="🎨 Team Colors Summary", command=self.callbacks["show_color_schemes_summary"]
-        )
-        help_menu.add_command(
-            label="🏷️ Tag Distribution Summary", command=self.callbacks["show_tag_summary"]
-        )
-
-        help_menu.add_separator()
 
         help_menu.add_command(label="👋 Show Welcome Screen", command=self.callbacks["show_welcome"])
         help_menu.add_command(label="⌨️ Keyboard Shortcuts", command=self.callbacks["show_shortcuts"])

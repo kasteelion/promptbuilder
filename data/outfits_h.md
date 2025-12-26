@@ -222,6 +222,14 @@
 - **Accessories:** Yoga mat bag, water bottle, simple gold studs
 - **Makeup:** Fresh minimal makeup
 
+### Casual Robes
+- **Hijab:** Soft jersey hijab (((default:white) or (signature)) with relaxed draping)
+- **Top:** Long-sleeve flowing **modest robe** (((default:white) or (signature)) in soft cotton or linen, wrap-around style)
+- **Bottom:** Matching full-length trousers
+- **Footwear:** Barefoot or soft slippers
+- **Accessories:** Minimal jewelry
+- **Makeup:** Natural relaxed look
+
 ### Color Block Chic
 - **Hijab:** Rust orange or white cotton hijab with neat wrap
 - **Top:** Long-sleeve white tunic or top (classic cotton)
@@ -237,6 +245,14 @@
 - **Footwear:** White sneakers
 - **Accessories:** Small gold studs
 - **Makeup:** Natural minimal makeup
+
+### Casual - Country Pin-Up
+- **Hijab:** White cotton hijab tied with a red gingham ribbon or bow
+- **Top:** Long-sleeve red and white gingham button-down shirt (modest fit, tunic length)
+- **Bottom:** High-waist wide-leg denim jeans or denim maxi skirt
+- **Footwear:** Brown leather boots
+- **Accessories:** Woven belt, basket prop (optional)
+- **Makeup:** Fresh natural makeup, rosy cheeks
 
 ---
 
@@ -278,6 +294,38 @@
 - **Accessories:** Utility belt (tactical with pouches), Cape (optional, attached at shoulders), protective gauntlets or arm guards, hero mask (optional, coordinating with hijab)
 - **Makeup:** strong defined brows visible, natural makeup with focus on eyes, determined heroic expression
 
+### Catsuit
+- **Hijab:** Sleek high-shine jersey or leather-look hijab (secure, aerodynamic wrap)
+- **Top:** Long-sleeve **form-fitting modest bodysuit** (((default:black) or (signature)) with reinforced seams)
+- **Bottom:** Full-length matching high-shine leggings
+- **Footwear:** Knee-high combat or stiletto boots
+- **Accessories:** Stylized cat-ear headband (worn over hijab), utility belt, whip prop
+- **Makeup:** Intense eyes, bold dark lip
+
+### Barbershop Quartet
+- **Hijab:** Matching colored hijab (neat wrap) under boater hat
+- **Top:** Long-sleeve white button-up tunic under a **pinstriped vest**
+- **Bottom:** Matching **pinstriped trousers** (full length)
+- **Footwear:** Oxford shoes
+- **Accessories:** Bowtie (((default:red) or (signature))), boater hat with ribbon, arm garters
+- **Makeup:** Polished vintage-inspired makeup
+
+### Phantom of the Opera
+- **Hijab:** Soft white silk or lace-trimmed hijab (flowing romantic drape)
+- **Top:** Long-sleeve **white modest gown** (silk or satin with lace details, high neck)
+- **Bottom:** N/A (full-length gown)
+- **Footwear:** Delicate white slippers or pumps
+- **Accessories:** Candelabra prop, delicate jewelry
+- **Makeup:** Romantic natural makeup, look of wonder
+
+### Beauty and the Beast
+- **Hijab:** Blue cotton hijab with neat wrap and white ribbon accent
+- **Top:** Long-sleeve blue pinafore-style tunic over a **white modest peasant blouse** (high neck)
+- **Bottom:** Matching blue full-length skirt or trousers with **white apron**
+- **Footwear:** Flat leather shoes
+- **Accessories:** Blue hair ribbon (on hijab), basket with books
+- **Makeup:** Natural fresh-faced makeup
+
 ### Maid Outfit
 - **Hijab:** Black or white chiffon hijab with neat professional wrap
 - **Top:** Long-sleeve black modest dress with high white collar
@@ -294,9 +342,25 @@
 - **Accessories:** Chain necklaces, colorful clips on hijab, small crossbody bag
 - **Makeup:** Blush on nose and cheeks, winged eyeliner, glossy lips
 
+### Costume - Dark Pirate
+- **Hijab:** Black jersey hijab wrapped with a dark textured band or bandana style
+- **Top:** Long-sleeve billowy peasant blouse (black or cream, opaque) with leather corset-style vest
+- **Bottom:** Long layered skirt (black/dark grey) with tattered hem aesthetic or wide-leg trousers
+- **Footwear:** Knee-high boots
+- **Accessories:** Wide belt with large buckle, compass prop, layered necklaces
+- **Makeup:** Smoky eye, dark aesthetic, mysterious expression
+
+### Costume - Gypsy Fortune Teller Pirate
+- **Hijab:** Teal or jewel-tone hijab with coin trim or wrapped with a patterned scarf
+- **Top:** Long-sleeve white peasant tunic (modest fit, high neck) with embroidered vest
+- **Bottom:** Multi-layered maxi skirt with handkerchief hem (olive, burgundy, gold)
+- **Footwear:** Brown suede boots
+- **Accessories:** Coin belt, crystal ball prop, statement necklace, bangles
+- **Makeup:** Mystical eye makeup, warm tones
+
 ---
 
-## Fantasy & Historical
+## Historical
 
 ### Ren Faire
 - **Hijab:** Medieval-inspired flowing veil in cream (can be worn over or as part of fantasy costume)
@@ -305,14 +369,6 @@
 - **Footwear:** Leather boots
 - **Accessories:** Fantasy jewelry, decorative belt, small pouch
 - **Makeup:** Natural or fantasy-inspired makeup
-
-### Warrior
-- **Hijab:** Practical tactical hijab in dark color (charcoal or deep brown) with secure warrior-style wrap
-- **Top:** Long-sleeve fitted armor-inspired tunic (leather-look or structured fabric with protective details, high neck, falls to mid-thigh)
-- **Bottom:** High-waist tactical pants with utility details (dark colors, movement-friendly)
-- **Footwear:** Knee-high boots (sturdy with buckles)
-- **Accessories:** Arm bracers (worn over sleeves), utility belt with pouches, weapon prop (sword or bow)
-- **Makeup:** Natural makeup with defined features, warrior aesthetic
 
 ### Steampunk
 - **Hijab:** Victorian-inspired hijab in brown or burgundy with structured vintage wrap, small gear or brass ornaments
@@ -330,300 +386,184 @@
 - **Accessories:** Simple pendant necklace, period jewelry
 - **Makeup:** Natural elegant makeup, classic beauty aesthetic
 
----
-
 ### Knight
-
 - **Hijab:** Chainmail coif or armored hijab (silver or steel mesh) with secure undercap
-
 - **Top:** Polished plate armor bodice over long-sleeve gambeson or tunic
-
 - **Bottom:** Armored skirt (tassets) over full-length trousers or mail leggings
-
 - **Footwear:** Steel greaves and sabatons
-
 - **Accessories:** Longsword, shield, cape in ((default:house colors) or (signature))
-
 - **Makeup:** Determined expression, natural skin
 
-### Paladin
-
-- **Hijab:** ((default:White) or (signature)) silk or heavy cotton hijab with gold trim or circlet
-
-- **Top:** Silver or white plate armor bodice with flowing ((default:white) or (signature)) tabard over long sleeves
-
-- **Bottom:** Armored leg plates over white trousers
-
-- **Footwear:** Silver armored boots
-
-- **Accessories:** Holy sword, shield, prayer beads, white cape
-
-- **Makeup:** Radiant natural makeup, serene expression
-
 ### Barbarian
-
 - **Hijab:** Rugged wrap style (earth tones) with leather bands or bone accessories
-
 - **Top:** Leather tunic or vest with fur trim over long-sleeve base layer
-
 - **Bottom:** Leather trousers with fur leg wraps and loincloth overlay
-
 - **Footwear:** Fur-lined boots
-
 - **Accessories:** Battle axe, bone jewelry, war paint
-
 - **Makeup:** Fierce war paint, intense expression
 
 ### Samurai
-
 - **Hijab:** Secure wrap in black or red, worn under kabuto helmet or with headpiece
-
 - **Top:** Ornate dō (chest armor) over long-sleeve kimono-style top
-
 - **Bottom:** Hakama pants with armored thigh guards (haidate)
-
 - **Footwear:** Tabi boots or waraji with socks
-
 - **Accessories:** Katana, wakizashi, sash with family mon
-
 - **Makeup:** Honorable composed expression, natural features
 
+### Ninja
+- **Hijab:** Black tight wrap integrated with face mask (shinobi shozoku style)
+- **Top:** Fitted jacket over chest wraps/top
+- **Bottom:** Hakama-style pants or fitted trousers with leg wraps
+- **Footwear:** Tabi boots
+- **Accessories:** Katana, shuriken, smoke bombs
+- **Makeup:** Focused eyes, disciplined expression
+
+### Monk
+- **Hijab:** Secure sport-style hijab in earth tones
+- **Top:** Loose martial arts tunic (long sleeves)
+- **Bottom:** Loose pants with ankle ties
+- **Footwear:** Cloth shoes or barefoot
+- **Accessories:** Staff, prayer beads, sash
+- **Makeup:** Minimal, serene focused expression
+
+---
+
+## Fantasy
+
+### Warrior
+- **Hijab:** Practical tactical hijab in dark color (charcoal or deep brown) with secure warrior-style wrap
+- **Top:** Long-sleeve fitted armor-inspired tunic (leather-look or structured fabric with protective details, high neck, falls to mid-thigh)
+- **Bottom:** High-waist tactical pants with utility details (dark colors, movement-friendly)
+- **Footwear:** Knee-high boots (sturdy with buckles)
+- **Accessories:** Arm bracers (worn over sleeves), utility belt with pouches, weapon prop (sword or bow)
+- **Makeup:** Natural makeup with defined features, warrior aesthetic
+
+### Paladin
+- **Hijab:** ((default:White) or (signature)) silk or heavy cotton hijab with gold trim or circlet
+- **Top:** Silver or white plate armor bodice with flowing ((default:white) or (signature)) tabard over long sleeves
+- **Bottom:** Armored leg plates over white trousers
+- **Footwear:** Silver armored boots
+- **Accessories:** Holy sword, shield, prayer beads, white cape
+- **Makeup:** Radiant natural makeup, serene expression
+
 ### Wizard
-
 - **Hijab:** ((default:Deep blue or purple) or (signature)) hijab with star/moon embroidery, worn under pointed hat
-
 - **Top:** Long flowing robes (((default:coordinating with hijab) or (signature))) with arcane symbols, modest high neck
-
 - **Bottom:** Matching trousers under robes
-
 - **Footwear:** Soft leather boots
-
 - **Accessories:** Staff, spellbook, amulet, belt with pouches
-
 - **Makeup:** Wise expression, ethereal glow
 
 ### Sorceress
-
 - **Hijab:** Shimmering silk hijab in ((default:jewel tone - emerald, sapphire, ruby) or (signature)) with circlet
-
 - **Top:** Fitted bodice or corset over sheer long-sleeve overlay or matching top
-
 - **Bottom:** Flowing full skirt with modest layers
-
 - **Footwear:** Heeled boots
-
 - **Accessories:** Staff or wand, crystal jewelry, glowing amulet
-
 - **Makeup:** Dramatic shimmer makeup, mystical eyes
 
 ### Necromancer
-
 - **Hijab:** ((default:Black) or (signature)) hooded hijab with tattered edges or bone clasp
-
 - **Top:** Dark robes (((default:coordinating with hijab) or (signature))) with high collar and long sleeves
-
 - **Bottom:** Black trousers or long skirt
-
 - **Footwear:** Black leather boots
-
 - **Accessories:** Skull staff, bone jewelry, dark tome
-
 - **Makeup:** Pale complexion, dark dramatic eyes, haunting expression
 
 ### Druid
-
 - **Hijab:** ((default:Earth-toned - moss green, brown) or (signature)) hijab adorned with living vines or flowers
-
 - **Top:** Earth-toned tunic or robes (((default:coordinating with hijab) or (signature))) with leather vest overlay
-
 - **Bottom:** Flowing skirt or pants in natural fabrics
-
 - **Footwear:** Soft leather boots or sandals
-
 - **Accessories:** Wooden staff, herb pouches, animal companion
-
 - **Makeup:** Earthy tones, freckles, sun-kissed glow
 
 ### Thief
-
 - **Hijab:** Dark secure wrap (brown or black) for stealth, no loose ends
-
 - **Top:** Fitted leather vest over long-sleeve dark tunic
-
 - **Bottom:** Loose trousers allowing movement, tucked into boots
-
 - **Footwear:** Soft leather silent boots
-
 - **Accessories:** Lockpicks, coin purse, dagger, fingerless gloves
-
 - **Makeup:** Minimal, smudged kohl, cunning expression
 
 ### Assassin
-
 - **Hijab:** Black ninja-style wrap or tight hood covering neck and chest
-
 - **Top:** Form-fitting black modest bodysuit or tunic with armored bracers
-
 - **Bottom:** Tactical trousers or leggings with skirt overlay
-
 - **Footwear:** Silent boots
-
 - **Accessories:** Twin daggers, poison vials, mask (optional)
-
 - **Makeup:** Cold calculating expression, minimal makeup
 
-### Ninja
-
-- **Hijab:** Black tight wrap integrated with face mask (shinobi shozoku style)
-
-- **Top:** Fitted jacket over chest wraps/top
-
-- **Bottom:** Hakama-style pants or fitted trousers with leg wraps
-
-- **Footwear:** Tabi boots
-
-- **Accessories:** Katana, shuriken, smoke bombs
-
-- **Makeup:** Focused eyes, disciplined expression
-
 ### Priest
-
 - **Hijab:** White or cream modest hijab with gold embroidery
-
 - **Top:** Flowing robes with high neck and long sleeves
-
 - **Bottom:** Matching trousers or skirt
-
 - **Footwear:** Simple sandals or modest boots
-
 - **Accessories:** Holy symbol necklace, staff, prayer beads
-
 - **Makeup:** Soft natural makeup, compassionate expression
 
 ### Battle Priest
-
 - **Hijab:** Chainmail coif or white hijab securely wrapped
-
 - **Top:** Chainmail or scale armor over padded gambeson (long sleeves)
-
 - **Bottom:** Armored skirt or trousers
-
 - **Footwear:** Armored boots
-
 - **Accessories:** Mace or war hammer, shield, holy water
-
 - **Makeup:** Determined expression, natural makeup
 
 ### Hunter
-
 - **Hijab:** Green or brown camouflage hijab, secure for movement
-
 - **Top:** Leather armor vest over earth-toned long-sleeve tunic
-
 - **Bottom:** Fitted trousers suitable for running
-
 - **Footwear:** Sturdy calf-high boots
-
 - **Accessories:** Longbow, quiver, hooded cloak, leather gloves
-
 - **Makeup:** Natural sun-kissed makeup, focused expression
 
 ### Beastmaster
-
 - **Hijab:** Tribal-style wrap with feathers, beads, or bone accents
-
 - **Top:** Leather tunic with fur details (long sleeves)
-
 - **Bottom:** Durable trousers or skirt with leggings
-
 - **Footwear:** Leather boots with traction
-
 - **Accessories:** Spear or staff, animal companion, bone jewelry
-
 - **Makeup:** Tribal face paint, fierce expression
 
 ### Red Mage
-
 - **Hijab:** ((default:Red) or (signature)) hijab with white trim, worn under feathered cap
-
 - **Top:** ((default:Red) or (signature)) Renaissance-style jacket over white ruffled shirt
-
 - **Bottom:** Fitted white pants or split skirt
-
 - **Footwear:** Tall red or brown boots
-
 - **Accessories:** Rapier, wand, cape
-
 - **Makeup:** Confident with red accents, balanced expression
 
 ### Magic Knight
-
 - **Hijab:** Armored hijab or mystical fabric wrap (shimmering)
-
 - **Top:** Enchanted plate armor over modest layers
-
 - **Bottom:** Armored pants or battle skirt
-
 - **Footwear:** Mystical armored boots
-
 - **Accessories:** Enchanted sword, spellbook, glowing runes
-
 - **Makeup:** Powerful expression, hints of magical glow
 
-### Monk
-
-- **Hijab:** Secure sport-style hijab in earth tones
-
-- **Top:** Loose martial arts tunic (long sleeves)
-
-- **Bottom:** Loose pants with ankle ties
-
-- **Footwear:** Cloth shoes or barefoot
-
-- **Accessories:** Staff, prayer beads, sash
-
-- **Makeup:** Minimal, serene focused expression
-
 ### Bard
-
 - **Hijab:** Colorful patterned hijab or scarf with flair
-
 - **Top:** Colorful doublet or vest over billowy shirt
-
 - **Bottom:** Fitted pants or layered skirt
-
 - **Footwear:** Tall boots
-
 - **Accessories:** Lute or harp, feathered cap (optional), jewelry
-
 - **Makeup:** Theatrical makeup, expressive smile
 
 ### Alchemist
-
 - **Hijab:** Practical secure hijab (tucked in), protective material
-
 - **Top:** Leather apron or vest over long-sleeve shirt
-
 - **Bottom:** Fitted pants with many pockets
-
 - **Footwear:** Sturdy work boots
-
 - **Accessories:** Goggles, potions bandolier, gloves
-
 - **Makeup:** Curious expression, possibly smudge marks
 
 ### Engineer
-
 - **Hijab:** Practical cotton hijab, no loose ends
-
 - **Top:** Work vest with tool loops over fitted long-sleeve shirt
-
 - **Bottom:** Cargo pants with pockets
-
 - **Footwear:** Steel-toed boots
-
 - **Accessories:** Tool belt, goggles, gadgets, gloves
-
 - **Makeup:** Inventive expression, grease smudges## Film Noir
 
 ### Jazz Club Patron
@@ -686,6 +626,22 @@
 - **Accessories:** Statement earrings, delicate bracelet, clutch purse
 - **Makeup:** Sophisticated makeup with bold lip in complementary shade
 
+### Parisian High Fashion
+- **Hijab:** Black silk or chiffon hijab (sleek wrap) under a **black beret**
+- **Top:** Long-sleeve **white silk blouse** with pussy-bow collar under a structured **black blazer**
+- **Bottom:** Tailored wide-leg trousers or maxi skirt (black)
+- **Footwear:** Pointed-toe pumps or stilettos
+- **Accessories:** Designer sunglasses, quilted leather handbag, gold hoops
+- **Makeup:** Low low-maintenance chic, bold red lip
+
+### Fancy Robes
+- **Hijab:** White silk hijab with heavy **gold embroidery** (elegant formal drape)
+- **Top:** Long-sleeve luxurious **floor-length robes** (white silk or satin with gold brocade trim, high neck)
+- **Bottom:** N/A (full-length robes)
+- **Footwear:** Gold sandals or pumps
+- **Accessories:** Elaborate gold jewelry, circlet (worn over hijab)
+- **Makeup:** Elegant polished look
+
 ### Statement Accent
 - **Hijab:** White or black silk hijab with elegant drape
 - **Top:** Long-sleeve fitted evening gown (black bodycon silhouette) with integrated ((default:white) or (signature)) shoulder band detail adapted for modesty (white sash or bow detail at back)
@@ -745,6 +701,22 @@
 - **Footwear:** Ankle boots or Mary Janes
 - **Accessories:** Delicate necklace, flower pinned to hijab
 - **Makeup:** Natural rosy makeup, fresh-faced glow
+
+### Dance - Matador
+- **Hijab:** Black satin hijab with red rose accent (secure neat wrap)
+- **Top:** Long-sleeve black tunic with gold embroidery (simulating bolero jacket look, high neck)
+- **Bottom:** Full-length flowing red circle skirt or wide-leg black trousers with side embroidery
+- **Footwear:** Black character shoes or flats
+- **Accessories:** Wide black waistband, lace details on cuffs
+- **Makeup:** Bold red lip, dramatic winged eyeliner, passionate expression
+
+### Pop Star - Futuristic Glam
+- **Hijab:** Iridescent or metallic silver hijab (sleek aerodynamic wrap)
+- **Top:** Long-sleeve structural tunic (metallic blue/silver) with geometric shoulder details
+- **Bottom:** Matching metallic wide-leg pants or skirt
+- **Footwear:** Platform silver boots
+- **Accessories:** Geometric jewelry, microphone prop, LED accents
+- **Makeup:** Holographic highlighter, graphic liner, confident stage presence
 
 ---
 
@@ -849,6 +821,14 @@
 - **Footwear:** Comfortable sneakers or clogs (white or matching color)
 - **Accessories:** Stethoscope around neck, ID badge, watch, hair secured
 - **Makeup:** Natural minimal makeup
+
+### Military Uniform
+- **Hijab:** Practical cotton hijab (((default:olive drab, navy, or charcoal) or (signature)) with secure wrap) under a beret or garrison cap
+- **Top:** Tailored **military tunic/jacket** (((default:olive drab, navy, or charcoal) or (signature)) with brass buttons, high neck)
+- **Bottom:** Matching full-length trousers
+- **Footwear:** Polished combat boots
+- **Accessories:** Rank insignia, service medals
+- **Makeup:** Focused heroic expression
 
 ### Office
 - **Hijab:** Structured chiffon hijab in charcoal gray with neat professional wrap
@@ -1146,6 +1126,14 @@
 - **Accessories:** Small white apron with pocket detail, delicate gold studs
 - **Makeup:** Natural vintage-inspired makeup
 
+### 1900s Coastal New England
+- **Hijab:** White or cream linen hijab (soft romantic drape) under a **wide-brimmed straw hat**
+- **Top:** Long-sleeve **Edwardian-style blouse** (white linen with lace inserts and high collar)
+- **Bottom:** Matching full-length gathered skirt (cream linen)
+- **Footwear:** Lace-up vintage boots
+- **Accessories:** Parasol prop, delicate locket
+- **Makeup:** Romantic vintage look
+
 ### Pinup
 - **Hijab:** Vintage-inspired polka dot chiffon hijab in navy with white dots
 - **Top:** Long-sleeve modest dress with high neckline (1940s-50s inspired, fitted bodice)
@@ -1230,4 +1218,3 @@
 - **Accessories:** Pearl necklace, bridal bouquet of fresh flowers, delicate gold bracelet
 - **Makeup:** Soft romantic makeup with glowing skin and soft pink tones
 # Fantasy Class Outfits (Hijabi)
-

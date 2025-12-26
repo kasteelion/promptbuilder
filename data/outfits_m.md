@@ -92,11 +92,17 @@ Oversized **graphic hoodie or sweatshirt**; **cargo pants or joggers**; **chunky
 ### Yoga Athleisure
 **Athletic joggers or shorts** (stretchy technical fabric in solid color); **tank top or fitted t-shirt**; oversized **zip-up hoodie** (worn open); **slip-on sneakers**. *Accessories:* Yoga mat bag, water bottle, minimal jewelry. *Hair/Makeup:* Hair in natural style or pulled back, fresh minimal grooming.
 
+### Casual Robes
+Flowing **long-sleeve robe** (((default:white) or (signature)) in soft cotton or linen fabric, wrap-around style); **simple belt** at waist; **barefoot** or **soft slippers**. *Accessories:* Minimal jewelry. *Hair/Makeup:* Natural relaxed grooming.
+
 ### Color Block Chic
 Fitted **white v-neck tee** (classic cotton); **tailored chinos** (((default:rust orange, burnt orange, or terracotta) or (signature))). *Accessories:* Brown leather belt, simple watch, white sneakers or loafers. *Hair/Makeup:* Natural grooming, side-parted or neatly styled hair.
 
 ### Default Character
 tight white tank top, low rise distressed jean shorts
+
+### Casual - Country Pin-Up
+**Red and white gingham button-down shirt** (short sleeves or rolled up, tucked in); **fitted blue jeans** (dark wash, straight leg); **brown leather belt** with large western buckle; **leather work boots**. *Accessories:* Straw hat (optional), handkerchief in back pocket. *Hair/Makeup:* Natural hair, clean-shaven or light stubble, charming smile.
 
 ---
 
@@ -118,21 +124,36 @@ Sleek **black satin vest** over bare chest; **black dress pants** (tailored fit)
 ### Superhero
 Form-fitting ((default:two-tone geometric) or (signature)) **muscle-suit** (no logo); full-length **tights**; **tactical vest** or chest armor; knee-high **armored boots**. *Accessories:* Utility belt, protective gauntlets, optional cape. *Hair/Makeup:* Determined heroic expression, short neat or action-styled hair.
 
+### Catsuit
+Sleek **form-fitting bodysuit** (((default:black) or (signature)) matte or high-shine finish); **tactical cowl/mask**; **full-length sleeves**; **reinforced combat boots**. *Accessories:* Tactical belt, grappling hook prop. *Hair/Makeup:* Mask obscuring upper face, focused intense gaze.
+
+### Barbershop Quartet
+Classic **pinstriped vest** over **white button-up shirt**; **matching pinstriped trousers**; **bowtie** (((default:red) or (signature))); **boater hat** with matching ribbon. *Accessories:* Arm garters, cane prop. *Hair/Makeup:* Neat vintage grooming.
+
+### Phantom of the Opera
+Tailored **black suit** with **white dress shirt** and **black cravat**; flowing **black cape** with red silk lining; iconic **white half-mask** obscuring side of face. *Accessories:* Rose prop, signet ring. *Hair/Makeup:* Slicked back dark hair, intense shadowed eyes.
+
+### Beauty and the Beast
+Fitted **red vest** over a **yellow collared shirt** (sleeves rolled up to show biceps); **tight black trousers**; **tall brown leather boots**. *Accessories:* Wide leather belt with large buckle, hunting quiver optional. *Hair/Makeup:* Hair in a low ponytail, clean-shaven or stubble, arrogant smirk, hyper-masculine focus.
+
 ### Maid Outfit
 Traditional **black butler-style suit** (tailored jacket and trousers); **crisp white dress shirt**; **black bow tie**; **polished black dress shoes**. *Accessories:* White gloves, pocket square. *Hair/Makeup:* Neat, polished styling.
 
 ### Soft Aesthetic
 Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**; **relaxed fit chinos or cropped pants** (black or pastel); **crew socks**; **canvas sneakers or loafers**. *Accessories:* Chain necklaces, small crossbody bag or backpack. *Hair/Makeup:* Soft styled hair with face-framing pieces, minimal grooming.
 
+### Costume - Dark Pirate
+**Loose peasant shirt** (black or dark grey, unbuttoned at top, billowy sleeves); **weathered leather vest** or **long frock coat**; **dark breeches or trousers** tucked into boots; **tall leather boots**. *Accessories:* Tricorn hat, leather belt with large buckle, cutlass prop, eye patch (optional). *Hair/Makeup:* Long messy hair or bandana, rugged stubble or beard, guy-liner.
+
+### Costume - Gypsy Fortune Teller Pirate
+**Billowy white shirt** (sleeves rolled); **embroidered vest** or **leather jerkin**; **loose trousers** (striped or earth tone, ragged hem); **wide fabric sash** at waist; **brown leather boots**. *Accessories:* Headscarf or bandana, gold hoop earring, layered necklaces, coin belt. *Hair/Makeup:* Long hair or messy style, bronzed skin, mysterious expression.
+
 ---
 
-## Fantasy & Historical
+## Historical
 
 ### Ren Faire
 **Medieval-inspired tunic or shirt** with flowing fabrics; **vest or doublet**; **breeches or pants**; **boots**. *Accessories:* Fantasy jewelry, sword belt, decorative elements. *Hair/Makeup:* Natural or fantasy-inspired grooming, period hairstyle.
-
-### Warrior
-**Fitted armor-inspired vest or chest piece** (leather or faux-leather with metal accents); **tactical pants** (dark colors, movement-friendly); **knee-high boots** (sturdy with buckles). *Accessories:* Arm bracers, belt with pouches, weapon prop (sword or axe). *Hair/Makeup:* Hair in warrior style or short, natural grooming with defined features.
 
 ### Steampunk
 **Vest** (brown leather or brocade) over **white dress shirt** (with cravat or bow tie); **high-waist trousers** (brown, black, or striped); **lace-up boots**. *Accessories:* Goggles (on head or around neck), pocket watch with chain, gears and brass accessories, top hat or bowler. *Hair/Makeup:* Victorian-inspired styling, neat facial hair optional.
@@ -140,90 +161,74 @@ Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**; **relax
 ### Renaissance Noble
 **Doublet** (fitted jacket in velvet, brocade, or damask - ((default:jewel tones like burgundy, forest green, or navy) or (signature))); **shirt** (white linen with ruffled cuffs and collar visible); **breeches** (matching or contrasting fabric); **hose**; **tall leather boots**. *Accessories:* Leather belt with dagger (prop), flat cap or bonnet, heavy gold chain. *Hair/Makeup:* Shoulder-length hair or neat cut, well-groomed beard or mustache.
 
----
-
 ### Knight
-
 **Polished plate armor breastplate** (steel or silver with embossed details); **armored pauldrons and gauntlets**; **chainmail hauberk** underneath; **armored tassets**; **steel greaves and sabatons**; **sturdy leather boots**. *Accessories:* Longsword and shield (heraldic design), knight's helm with plume (carried or worn), cape in ((default:house colors) or (signature)). *Hair/Makeup:* Short groomed hair or practical warrior cut, clean-shaven or beard, determined expression.
 
-### Paladin
-
-**Silver or white plate armor breastplate** (ornate with holy symbols and gold trim); **flowing ((default:white) or (signature)) tabard** (emblazoned with holy symbol over armor); **armored leg plates** over **chainmail**; **white cape** with gold clasp; **silver boots** (heavy armor). *Accessories:* Holy sword (glowing or blessed), shield with divine insignia, prayer beads or holy symbol necklace. *Hair/Makeup:* Groomed hair (blonde or light brown), radiant natural appearance, serene expression.
-
 ### Barbarian
-
 **Bare chest** with **leather harness** (tribal design); **fur or leather loincloth** or **pants** with **leather straps**; **fur boots** (calf-high); **arm and leg wraps** (leather or fur). *Accessories:* Large battle axe or two-handed sword, bone jewelry, war paint on face and body, trophy necklace (teeth, claws). *Hair/Makeup:* Wild untamed hair (often with braids or dreadlocks), fierce war paint, tribal markings, intense warrior expression.
 
 ### Samurai
+**Ornate d (chest armor)** (lacquered plates in red, black, or gold with family crest); **kusazuri (armored skirt)** (overlapping plates); **sode (shoulder guards)**; **kote (armored sleeves)**; **hakama pants** underneath; **traditional tabi and waraji** or **armored boots**. *Accessories:* Katana and wakizashi (daisho pair), kabuto helmet with ornamental crest, silk sash with family mon. *Hair/Makeup:* Hair in traditional topknot (chonmage), clean-shaven or neat facial hair, honorable composed expression.
 
-**Ornate d�� (chest armor)** (lacquered plates in red, black, or gold with family crest); **kusazuri (armored skirt)** (overlapping plates); **sode (shoulder guards)**; **kote (armored sleeves)**; **hakama pants** underneath; **traditional tabi and waraji** or **armored boots**. *Accessories:* Katana and wakizashi (daisho pair), kabuto helmet with ornamental crest, silk sash with family mon. *Hair/Makeup:* Hair in traditional topknot (chonmage), clean-shaven or neat facial hair, honorable composed expression.
+### Ninja
+**Black or dark purple shinobi shozoku** (fitted jacket and pants); **chest wraps or fitted top** underneath; **tabi boots** (split-toe); **leg wraps and arm guards**; **face mask** (covering lower face). *Accessories:* Katana or ninjato on back, kunai and shuriken, smoke bombs, grappling hook, utility belt. *Hair/Makeup:* Hair in tight bun or short crop, focused eyes, disciplined expression.
+
+### Monk
+**Simple cloth wraps** (optional chest binding in earth tones); **loose martial arts pants** (with tied ankles); **cloth hand and foot wraps**; **martial arts belt** (colored by rank). *Accessories:* Staff or bo, prayer beads, meditation scrolls, minimal jewelry, headband. *Hair/Makeup:* Shaved head or short hair, serene focused expression, spiritual aura, visible discipline.
+
+---
+
+## Fantasy
+
+### Warrior
+**Fitted armor-inspired vest or chest piece** (leather or faux-leather with metal accents); **tactical pants** (dark colors, movement-friendly); **knee-high boots** (sturdy with buckles). *Accessories:* Arm bracers, belt with pouches, weapon prop (sword or axe). *Hair/Makeup:* Hair in warrior style or short, natural grooming with defined features.
+
+### Paladin
+**Silver or white plate armor breastplate** (ornate with holy symbols and gold trim); **flowing ((default:white) or (signature)) tabard** (emblazoned with holy symbol over armor); **armored leg plates** over **chainmail**; **white cape** with gold clasp; **silver boots** (heavy armor). *Accessories:* Holy sword (glowing or blessed), shield with divine insignia, prayer beads or holy symbol necklace. *Hair/Makeup:* Groomed hair (blonde or light brown), radiant natural appearance, serene expression.
 
 ### Wizard
-
 **Long flowing robes** (((default:deep blue, purple, or midnight black) or (signature)) with silver or gold arcane symbols and trim); **wide pointed hat** (matching robes with star or moon decorations); **leather belt** with pouches; **soft leather boots**. *Accessories:* Wooden staff with crystal or orb at top, spellbook, component pouches, mystical amulet. *Hair/Makeup:* Long hair and beard (often silver, white, or dark), wise expression, possible age marks, ethereal glow.
 
 ### Sorcerer
-
 **Fitted tunic or vest** (((default:rich jewel tones - emerald, sapphire, ruby) or (signature)) with magical shimmer); **fitted pants**; **flowing long coat or robe** (open front); **heeled boots**. *Accessories:* Ornate staff or wand, crystal jewelry (necklace, rings), magical tome or grimoire, glowing amulet. *Hair/Makeup:* Stylish hair (often with unnatural colors - silver, violet, crimson), sharp features, mystical eyes, confident powerful expression.
 
 ### Necromancer
-
 **Dark robes** (((default:black, deep purple, or charcoal) or (signature)) with tattered edges and bone decorations); **hooded cloak**; **skull motif accessories** (belt, shoulder pieces); **black leather boots** (knee-high). *Accessories:* Staff topped with skull or dark crystal, bone jewelry, spell tome bound in dark leather, vials of mysterious substances, death motifs throughout. *Hair/Makeup:* Pale complexion, dark hair (black or white) in sleek or messy style, dark dramatic eye circles, haunting expression.
 
 ### Druid
-
 **Earth-toned robes or tunic** (((default:forest green, brown, moss green) or (signature)) with leaf patterns); **leather vest** (with natural wood buttons); **loose pants** (natural fabrics); **barefoot** or **soft leather sandals**; **vine circlet**. *Accessories:* Wooden staff (gnarled with living vines or flowers), herb pouches, animal companion (owl, wolf, or deer), natural jewelry (wood, stone). *Hair/Makeup:* Natural messy hair (often with leaves or vines woven in), earthy tones, freckles, sun-kissed glow, peaceful expression.
 
 ### Thief
-
 **Fitted leather vest** (dark brown or black); **tight leather pants**; **hooded cloak** (dark color for stealth); **soft leather boots** (designed for silent movement). *Accessories:* Lockpick tools in belt, throwing daggers, coin purse, small satchel for loot, fingerless gloves. *Hair/Makeup:* Dark hair (short or tied back), subtle stubble, smudged kohl for night work, cunning expression.
 
 ### Assassin
-
 **Form-fitting black bodysuit or leather armor** (reinforced at vital areas); **armored bracers**; **tactical belt** with hidden weapon holsters; **silent boots** (soft-soled). *Accessories:* Twin daggers or short swords, hidden blade mechanisms, poison vials, mask or hood for identity concealment, smoke bombs. *Hair/Makeup:* Hair secured tightly or short, face paint or mask, cold calculating expression.
 
-### Ninja
-
-**Black or dark purple shinobi shozoku** (fitted jacket and pants); **chest wraps or fitted top** underneath; **tabi boots** (split-toe); **leg wraps and arm guards**; **face mask** (covering lower face). *Accessories:* Katana or ninjato on back, kunai and shuriken, smoke bombs, grappling hook, utility belt. *Hair/Makeup:* Hair in tight bun or short crop, focused eyes, disciplined expression.
-
 ### Priest
-
 **White or cream hooded robes** (flowing with gold trim and holy symbols); **ornate stole or sash** (embroidered with religious icons); **simple sandals** or **modest boots**. *Accessories:* Holy symbol necklace (prominently displayed), prayer beads, blessed staff or mace, healing herbs and bandages, sacred text. *Hair/Makeup:* Neat grooming, serene compassionate expression, gentle aura.
 
 ### Battle Priest
-
 **Blessed chainmail or scale armor** (silver or white with holy engravings); **white tabard** with holy symbol; **armored gauntlets and boots**; **flowing half-cape**. *Accessories:* Blessed mace or war hammer, shield with divine symbol, holy water vials, prayer beads worn as bracelet, healing kit. *Hair/Makeup:* Practical hair (short or tied back), determined expression, righteous aura.
 
 ### Hunter
-
 **Leather armor vest** (brown or forest green with fur trim); **fitted pants** (earth tones); **hooded cloak** (green or brown for camouflage); **sturdy leather boots** (calf-high). *Accessories:* Longbow and quiver of arrows (worn on back), hunting knife, animal companion (hawk, wolf, or hunting dog), rope and survival gear, leather gloves. *Hair/Makeup:* Practical hair (short or tied back), natural sun-kissed look, earth tone accents, alert focused expression.
 
 ### Beastmaster
-
 **Leather armor** (decorated with animal motifs - claws, teeth, fur accents); **tribal-inspired accessories**; **earth-toned pants**; **leather boots** with good traction. *Accessories:* Staff or spear, animal companion (large beast like bear, big cat, or wolf), bone jewelry, nature-themed decorations, beast-calling horn. *Hair/Makeup:* Wild natural hair with braids and animal-inspired decorations (feathers, beads), tribal face paint, fierce expression, connection with nature.
 
 ### Red Mage
-
 **Elegant jacket** (((default:red) or (signature)) with white trim, Renaissance-inspired with epaulettes); **white ruffled shirt** underneath; **fitted pants** (white or cream); **red cape** (knee-length); **tall leather boots** (((default:red or brown) or (signature)) with cuffs). *Accessories:* Rapier at hip, spell focus (wand or small orb), feathered cap, magical jewelry, component pouch. *Hair/Makeup:* Stylish hair (often with distinctive styling or color streak), confident expression showing both martial and magical prowess.
 
 ### Magic Knight
-
 **Enchanted armor** (lighter plate with magical runes glowing along edges); **armored pants**; **armored boots with mystical designs**; **enchanted cape** (color-changing or magical effects). *Accessories:* Enchanted sword (glowing blade with runes), magical focus (crystal or amulet), spellbook on belt, combination of armor and arcane jewelry. *Hair/Makeup:* Hair in warrior-mage style (practical but elegant), expression showing both warrior determination and mystical power.
 
-### Monk
-
-**Simple cloth wraps** (optional chest binding in earth tones); **loose martial arts pants** (with tied ankles); **cloth hand and foot wraps**; **martial arts belt** (colored by rank). *Accessories:* Staff or bo, prayer beads, meditation scrolls, minimal jewelry, headband. *Hair/Makeup:* Shaved head or short hair, serene focused expression, spiritual aura, visible discipline.
-
 ### Bard
-
 **Colorful doublet or vest** (jewel tones with decorative buttons and trim); **flowing shirt** (billowy sleeves); **fitted pants**; **tall boots with folded tops**; **feathered cap**. *Accessories:* Lute, harp, or other instrument, colorful scarves, jewelry (earring, rings), coin purse, performance props. *Hair/Makeup:* Styled hair (often with flair), expressive features, charismatic smile.
 
 ### Alchemist
-
 **Practical leather vest or apron** (with many pockets); **loose shirt** (with rolled sleeves); **fitted pants** tucked into boots; **sturdy work boots**; **protective goggles** (on head or around neck). *Accessories:* Bandolier of potion vials (multiple colors), mortar and pestle, ingredient pouches, bomb pouches, notebook for formulas, leather gloves. *Hair/Makeup:* Hair tied back for safety, possibly stained fingers from work, curious intelligent expression.
 
 ### Engineer
-
 **Practical work vest** (leather with tool loops); **fitted shirt** (with rolled sleeves); **pants with cargo pockets**; **sturdy boots** (steel-toed if available); **protective goggles**. *Accessories:* Tool belt (wrenches, hammers, screwdrivers), mechanical devices, gun or crossbow (modified), gadget pouches, blueprint tube, oil-stained gloves. *Hair/Makeup:* Practical short hair or secured style, possibly grease smudges, inventive expression.
 
 ## Film Noir
@@ -252,6 +257,12 @@ Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**; **relax
 
 ### Cocktail Party
 **Dress shirt** (crisp cotton) with **dress pants** (tailored fit in ((default:dark colors) or (signature))); **blazer or sport coat**; **leather dress shoes**. *Accessories:* Watch, simple cufflinks, leather belt. *Hair/Makeup:* Neat styled hair, well-groomed facial hair.
+
+### Parisian High Fashion
+Structured **black wool coat** or blazer; **white silk button-down shirt** (slightly unbuttoned); **black tailored trousers** (slim fit); **polished leather Chelsea boots**. *Accessories:* Black beret, designer sunglasses, leather briefcase, silk scarf. *Hair/Makeup:* Effortlessly tousled hair, neat stubble, sophisticated grooming.
+
+### Fancy Robes
+Luxurious **floor-length robes** (white silk or satin with heavy **gold embroidery** and brocade trim); **wide gold sash** at waist; **gold sandals**. *Accessories:* Elaborate gold jewelry, signet ring. *Hair/Makeup:* Neat polished grooming, dignified bearing.
 
 ### Statement Accent
 **Black tailored suit** (slim fit, modern cut); **white dress shirt** (crisp); **velvet bow tie or tie** (((default:black or deep jewel tone) or (signature))). *Accessories:* Pocket square (white or matching tie), polished dress shoes, cufflinks. *Hair/Makeup:* Polished grooming, slicked back or neatly styled hair.
@@ -315,12 +326,21 @@ Flowing **thobe or robe** (white or cream silk with gold embroidery); **sirwal p
 ### Oktoberfest
 **Checkered button-down shirt** (red, blue, or green gingham); **leather breeches (Lederhosen)** (knee-length or short, embroidered); **H-suspenders** with chest piece; **wool socks** (slouched or knee-high); **Haferl shoes** (traditional leather shoes). *Accessories:* Alpine hat (Tyrolean hat) with feather. *Hair/Makeup:* Natural grooming, healthy glow.
 
+### Dance - Matador
+**Embroidered matador jacket** (chaquetilla) in black with gold bullion detailing; **fitted high-waist trousers** (taleguilla) with matching side embroidery; **white dress shirt** with ruffled front; **red satin sash** (faja). *Accessories:* Black dress shoes or slippers, pink or white socks, traditional montera hat (optional). *Hair/Makeup:* Slicked back hair, stern passionate expression.
+
+### Pop Star - Futuristic Glam
+**Metallic silver or iridescent jacket** (structured shoulders, geometric lapels, worn open or closed); **mesh or tech-fabric shirt** underneath; **coated denim or metallic trousers** (black or silver, fitted); **futuristic high-top sneakers or boots**. *Accessories:* Visor or geometric sunglasses, LED accessories, microphone. *Hair/Makeup:* Spiked or slicked hair with color gel (blue/silver), metallic face paint or liner, confident stage presence.
+
 ---
 
 ## Professional & Office
 
 ### Medical Scrubs
 **Scrub top** (v-neck in ((default:solid color - navy, teal, or burgundy) or (signature))); **scrub pants** (drawstring waist, multiple pockets); **comfortable sneakers or clogs** (white or matching color). *Accessories:* Stethoscope around neck, ID badge, watch. *Hair/Makeup:* Natural minimal grooming, hair neat and short or secured.
+
+### Military Uniform
+Tailored **military tunic/jacket** (((default:olive drab, navy, or charcoal) or (signature)) with brass buttons and epaulettes); **matching trousers**; **polished combat boots**. *Accessories:* Beret or garrison cap, rank insignia, service medals. *Hair/Makeup:* Clean-cut hair, clean-shaven or neat facial hair, focused military bearing.
 
 ### Office
 Tailored **blazer** or **sport coat**; **dress shirt**; **dress pants** (pressed); **leather dress shoes**. *Accessories:* Watch, leather belt, minimal jewelry, professional bag. *Hair/Makeup:* Polished, professional styling.
@@ -449,6 +469,9 @@ Fitted **singlet** in **{primary_color} with {secondary_color} accents** (lycra/
 ### 1950s Server
 **White short-sleeve dress shirt** (crisp cotton, button-up); **black trousers** (tailored); **bow tie** (red or black); **white paper soda jerk hat** with colored trim. *Accessories:* Waist apron, order pad. *Hair/Makeup:* Clean-cut 50s grooming.
 
+### 1900s Coastal New England
+**Victorian-style striped shirt** with detached collar and suspenders; **matching trousers** (cuffed); **brown leather boots**. *Accessories:* Newsboy cap or flat cap, simple watch. *Hair/Makeup:* Neatly parted hair with pomade, vintage facial hair (mustache).
+
 ### Pinup
 **High-waist trousers** (1940s-50s style, cuffed); **fitted button-up shirt** or **tank undershirt**; **suspenders**; **dress shoes**. *Accessories:* Vintage watch, fedora optional. *Hair/Makeup:* Vintage styling (slicked back, side part, neat facial hair).
 
@@ -488,4 +511,3 @@ Traditional **formal kimono** (silk in deep colors like navy, forest green, or b
 ### Wedding
 **Classic black tuxedo** (wool-blend with satin lapels, tailored fit); **white wing-tip dress shirt**; **black silk bow tie**; **patent leather dress shoes**. *Accessories:* Silver cufflinks, white flower boutonniere, silk pocket square. *Hair/Makeup:* Impeccably styled hair, clean-shaven or perfectly groomed facial hair.
 # Fantasy Class Outfits (Male)
-

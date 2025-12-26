@@ -16,6 +16,7 @@
 - japanese
 - latina
 - male
+- british
 - mediterranean
 - mixed-heritage
 - north-african
@@ -50,6 +51,16 @@
 - outdoorsy
 - k-fashion
 - hijabi
+- alternative
+- corporate
+- goth
+- modern
+- street-style
+- techwear
+- high-femme
+- hipster
+- indie
+- craftsman
 
 ## Vibe
 - soft
@@ -62,6 +73,10 @@
 - intellectual
 - minimalist
 - cultural
+- energetic
+- luxury
+- romantic
+- confident
 
 ## Other
 - angular
@@ -86,11 +101,14 @@
 - freckled
 - funky
 - fusion
+- gay
 - generous
 - geometric
+- ginger
 - glasses
 - greek
 - lesbian
+- long-hair
 - middle eastern
 - midwestern
 - passionate
@@ -98,6 +116,7 @@
 - rhythmic
 - severe
 - sharp
+- silver-fox
 - soft dramatic
 - southern
 - sun-kissed

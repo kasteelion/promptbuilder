@@ -33,6 +33,10 @@ class MenuActions:
         """Export condensed app data for LLM knowledge injection."""
         return self.app.dialog_manager.show_llm_export(self.app.ctx)
 
+    def export_for_llm_creation(self):
+        """Show guide for LLM content creation."""
+        return self.app.dialog_manager.show_llm_content_creation(self.app.ctx)
+
     def import_from_text(self):
         """Show text import dialog or apply current summary box."""
         # If user is currently editing the summary box, just apply it

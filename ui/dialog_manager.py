@@ -140,6 +140,68 @@ Platform: {platform.system()} {platform.release()}
 
         dialog.wait_window()
 
+    def show_llm_content_creation(self, ctx: Any) -> None:
+        """Show dialog with instructions for LLMs to create new app content."""
+        from utils.llm_export import get_content_creation_prompts
+
+        dialog = tk.Toplevel(self.root)
+        dialog.title("LLM Content Creation Guide")
+        dialog.geometry("900x750")
+        dialog.transient(self.root)
+        dialog.grab_set()
+
+        # Generate prompts dictionary
+        prompts = get_content_creation_prompts(ctx)
+
+        # Header info
+        header_frame = ttk.Frame(dialog, padding=15)
+        header_frame.pack(fill="x")
+        
+        ttk.Label(header_frame, text="Copy a guide below to an LLM to generate compatible content:", style="Bold.TLabel").pack(anchor="w", pady=(0, 5))
+        ttk.Label(header_frame, text="Select the tab that matches the type of content you want to create.", style="Muted.TLabel").pack(anchor="w")
+
+        # Notebook for sections
+        notebook = ttk.Notebook(dialog)
+        notebook.pack(fill="both", expand=True, padx=10, pady=5)
+
+        def create_tab(name, content):
+            tab = ttk.Frame(notebook)
+            notebook.add(tab, text=name)
+            
+            # Content frame
+            content_frame = ttk.Frame(tab, padding=10)
+            content_frame.pack(fill="both", expand=True)
+            
+            text_area = scrolledtext.ScrolledText(content_frame, wrap="word", font=("Consolas", 9))
+            text_area.pack(fill="both", expand=True, pady=5)
+            text_area.insert("1.0", content)
+            text_area.config(state="disabled")
+            
+            btn_frame = ttk.Frame(content_frame)
+            btn_frame.pack(fill="x", pady=(5, 0))
+            
+            def copy_this():
+                self.root.clipboard_clear()
+                self.root.clipboard_append(content)
+                self.show_info("Copied", f"{name} Guide copied to clipboard!")
+                
+            ttk.Button(btn_frame, text=f"📋 Copy {name} Guide", command=copy_this).pack(side="right")
+
+        # Create tabs in specific order
+        if "Full Guide" in prompts:
+            create_tab("Full Guide", prompts["Full Guide"])
+            
+        for key in ["Characters", "Outfits", "Poses & Interactions", "Scenes", "Base Prompts"]:
+            if key in prompts:
+                create_tab(key, prompts[key])
+
+        # Bottom close button
+        bottom_frame = ttk.Frame(dialog, padding=10)
+        bottom_frame.pack(fill="x")
+        ttk.Button(bottom_frame, text="Close", command=dialog.destroy).pack(side="right")
+
+        dialog.wait_window()
+
     def show_text_import(self, available_characters: list, on_success: Callable[[dict], None]) -> None:
         """Show dialog to import prompt configuration from text."""
         from utils.text_parser import TextParser
@@ -563,23 +625,50 @@ Platform: {platform.system()} {platform.release()}
                     accent_color = self.root.theme_manager.themes.get(current, {}).get("accent", "blue")
 
                 for tag, count in cat_tag_counts:
-                    item_frame = ttk.Frame(cat_frame)
-                    item_frame.pack(fill="x", pady=2)
+                    # Container to hold the row and the expandable details
+                    container_frame = ttk.Frame(cat_frame)
+                    container_frame.pack(fill="x", pady=2)
+
+                    item_frame = ttk.Frame(container_frame)
+                    item_frame.pack(fill="x")
                     
                     percent = (count / total_chars) * 100
                     
                     # Tag name (Interactive)
                     tag_label = ttk.Label(
                         item_frame, 
-                        text=tag, 
+                        text=f"▶ {tag}", 
                         font=("Segoe UI", 10, "underline"),
                         foreground=accent_color,
                         cursor="hand2"
                     )
                     tag_label.pack(side="left")
                     
-                    # Bind character list popup
-                    tag_label.bind("<Button-1>", lambda e, t=tag, c=tag_to_chars.get(tag, []): self._show_tag_characters(t, c))
+                    # Details frame (hidden by default)
+                    details_frame = ttk.Frame(container_frame)
+                    char_list = tag_to_chars.get(tag, [])
+                    char_str = ", ".join(sorted(char_list))
+                    
+                    # Character list label
+                    det_lbl = ttk.Label(
+                        details_frame, 
+                        text=char_str, 
+                        wraplength=480, 
+                        foreground="gray", 
+                        font=("Segoe UI", 9)
+                    )
+                    det_lbl.pack(anchor="w", padx=(20, 10), pady=(2, 5))
+
+                    # Toggle function
+                    def toggle_details(event, f=details_frame, l=tag_label, t=tag):
+                        if f.winfo_ismapped():
+                            f.pack_forget()
+                            l.config(text=f"▶ {t}")
+                        else:
+                            f.pack(fill="x")
+                            l.config(text=f"▼ {t}")
+
+                    tag_label.bind("<Button-1>", toggle_details)
                     
                     # Count and bar
                     stats_label = ttk.Label(item_frame, text=f"{count} ({percent:.1f}%)", foreground="gray")

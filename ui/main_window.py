@@ -247,6 +247,7 @@ class PromptBuilderApp:
             "export_config": self.menu_actions.export_config,
             "import_config": self.menu_actions.import_config,
             "export_for_llm": self.menu_actions.export_for_llm,
+            "export_for_llm_creation": self.menu_actions.export_for_llm_creation,
             "import_from_text": self.menu_actions.import_from_text,
             "reload_data": self.reload_data,
             "undo": self.menu_actions.undo,
