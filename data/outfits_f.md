@@ -22,7 +22,7 @@ Cropped **tech-fabric jacket** with asymmetric cut; **high-waist tactical pants*
 Fitted **((default:bold colored) or (signature)) top**; **skinny jeans or leather pants** with distressing; **leather jacket**; **boots**. *Accessories:* Metal jewelry, belt. *Hair/Makeup:* Smoky or bold makeup.
 
 ### Edgy Chic
-Fitted **((default:red) or (signature)) turtleneck** (form-fitting knit); **black leather skirt** (mini or midi length); **((default:red) or (signature)) leggings** (opaque). *Accessories:* Black beret, fingerless black leather gloves, **black thigh-high leather boots** (high heeled). *Hair/Makeup:* ((default:Red) or (signature)) lipstick, black winged eyeliner, ((default:red) or (signature)) eye shadow, hair styled to complement beret (sleek or with face-framing pieces).
+Fitted **((default:red) or (signature)) turtleneck** (form-fitting knit); **black leather skirt** (mini or midi length); **((default:red) or (signature)) leggings** (opaque). *Accessories:* Black beret, fingerless black leather gloves, **black thigh-high leather boots** (high heeled). *Hair/Makeup:* lipstick, black winged eyeliner, ((default:red) or (signature)) eye shadow, hair styled to complement beret (sleek or with face-framing pieces).
 
 ### Studded Harness Style
 **Sleeveless halter bodysuit or crop top** (black with studded or riveted details); **strappy harness detailing** (black leather or faux-leather with geometric cutouts across chest and shoulders, secured with small studs or grommets); **pleated mini skirt** (black with subtle floral or cherry blossom print). *Accessories:* Black thigh-high stockings or socks, minimal jewelry. *Hair/Makeup:* Long flowing hair with soft waves and side-swept bangs, warm-toned natural makeup with coral or peachy lip, defined brows, subtle eyeshadow.
@@ -138,7 +138,7 @@ Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**; **pleat
 **Corset or fitted vest** (brown leather or brocade) over **white blouse** (with ruffles or high collar); **high-waist skirt or pants** (brown, black, or burgundy); **lace-up boots**. *Accessories:* Goggles (on head or around neck), pocket watch, gears and brass jewelry, mini top hat or fascinator. *Hair/Makeup:* Victorian-inspired updo, natural makeup with defined eyes.
 
 ### Renaissance Noble
-**Fitted bodice** (brocade, velvet, or damask fabric in ((default:deep jewel tones - burgundy, forest green, or navy) or (signature)) with subtle pattern or texture); **ruffle or lace trim collar** (v-neckline with decorative edging); **long fitted sleeves** with **ruffle cuffs**; **full floor-length skirt** (gathered and voluminous, matching bodice fabric). *Accessories:* Simple pendant necklace on black cord or ribbon, period-appropriate jewelry (minimal and understated). *Hair/Makeup:* Long flowing hair worn down with soft waves or partially pulled back, natural elegant makeup with pink or mauve eyeshadow, defined brows, rose or berry lip tone, classic beauty aesthetic.
+**Fitted bodice** (brocade, velvet, or damask fabric in ((default:burgundy) or (signature)) with subtle pattern or texture); **v-neckline** **long fitted sleeves** with **ruffle cuffs**; **full floor-length skirt** (gathered and voluminous, matching bodice fabric). *Accessories:* Simple pendant necklace on black cord or ribbon, period-appropriate jewelry (minimal and understated). *Hair/Makeup:* Long flowing hair worn down with soft waves or partially pulled back, natural elegant makeup with pink or mauve eyeshadow, defined brows, rose or berry lip tone, classic beauty aesthetic.
 
 ---
 

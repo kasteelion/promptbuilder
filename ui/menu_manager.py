@@ -84,6 +84,12 @@ class MenuManager:
 
         file_menu.add_separator()
 
+        file_menu.add_command(
+            label="🔄 Reload Data", command=self.callbacks["reload_data"]
+        )
+
+        file_menu.add_separator()
+
         file_menu.add_command(label="🚪 Exit", command=self.callbacks["on_closing"])
 
     def _build_edit_menu(self):

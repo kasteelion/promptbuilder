@@ -245,6 +245,7 @@ class PromptBuilderApp:
             "save_preset": self.menu_actions.save_preset,
             "load_preset": self.menu_actions.load_preset,
             "import_from_text": self.menu_actions.import_from_text,
+            "reload_data": self.reload_data,
             "export_config": self.menu_actions.export_config,
             "import_config": self.menu_actions.import_config,
             "undo": self.menu_actions.undo,
@@ -1054,6 +1055,12 @@ class PromptBuilderApp:
         self._update_status("🔄 Reloading data...")
         self.root.config(cursor="watch")
         
+        # Clear data loader cache to force fresh read from disk
+        try:
+            self.data_loader.clear_cache()
+        except Exception:
+            logger.debug("Failed to clear data_loader cache during reload")
+
         # Show reloading overlay
         self._show_reload_overlay()
 
