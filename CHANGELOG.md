@@ -3,6 +3,7 @@
 ## [Unreleased]
 
 ### Added
+- **Auto-Tag Sync:** The application now automatically scans character files on startup (and reload) and adds any new, unknown tags to `tags.md`. This supports the workflow of manually adding character files.
 - **Signature Colors:** Implemented a new system allowing characters to have a defined signature color (hex code). Outfits can now dynamically switch between a default color and the character's signature color using the `((default:Color) or (signature))` syntax.
 - **UI Explorers:** Added two new visual summary tools accessible via the Help menu:
     - **Tag Distribution Explorer:** Visualizes tag usage statistics across the character database.
@@ -16,7 +17,7 @@
     - **Period:** 1970s Disco.
 
 ### Changed
-- **Character Data:** Updated all character profiles to include `**Signature Color:**` definitions and refined tag categorization.
+- **Character Data:** Updated all character profiles to include `**Signature Color:**` definitions and refined tag categorization. Added new character: **Ayame Shiratori**.
 - **Outfit Data:** Updated existing outfits (Cyberpunk, Goth, etc.) to utilize the new Signature Color syntax.
 - **Documentation:**
     - Added "Signature Colors" section to `docs/character-flexibility.md`.
