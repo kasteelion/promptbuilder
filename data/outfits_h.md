@@ -323,8 +323,8 @@
 - **Makeup:** Victorian-inspired natural makeup with defined eyes
 
 ### Renaissance Noble
-- **Hijab:** Coordinated veil, wimple, or simple hijab in period-appropriate fabric (white, cream, or matching gown)
-- **Top:** Long-sleeve fitted bodice gown (brocade or velvet) with high neckline or chemise underneath
+- **Hijab:** Coordinated veil, wimple, or simple hijab in ((default:period-appropriate fabric - white, cream, or matching gown) or (signature))
+- **Top:** Long-sleeve fitted bodice gown (brocade or velvet in ((default:deep jewel tones) or (signature))) with high neckline or chemise underneath
 - **Bottom:** Full floor-length gathered skirt (matching bodice)
 - **Footwear:** Period-appropriate shoes
 - **Accessories:** Simple pendant necklace, period jewelry
@@ -342,15 +342,15 @@
 
 - **Footwear:** Steel greaves and sabatons
 
-- **Accessories:** Longsword, shield, cape in house colors
+- **Accessories:** Longsword, shield, cape in ((default:house colors) or (signature))
 
 - **Makeup:** Determined expression, natural skin
 
 ### Paladin
 
-- **Hijab:** White silk or heavy cotton hijab with gold trim or circlet
+- **Hijab:** ((default:White) or (signature)) silk or heavy cotton hijab with gold trim or circlet
 
-- **Top:** Silver or white plate armor bodice with flowing white tabard over long sleeves
+- **Top:** Silver or white plate armor bodice with flowing ((default:white) or (signature)) tabard over long sleeves
 
 - **Bottom:** Armored leg plates over white trousers
 
@@ -390,9 +390,9 @@
 
 ### Wizard
 
-- **Hijab:** Deep blue or purple hijab with star/moon embroidery, worn under pointed hat
+- **Hijab:** ((default:Deep blue or purple) or (signature)) hijab with star/moon embroidery, worn under pointed hat
 
-- **Top:** Long flowing robes with arcane symbols, modest high neck
+- **Top:** Long flowing robes (((default:coordinating with hijab) or (signature))) with arcane symbols, modest high neck
 
 - **Bottom:** Matching trousers under robes
 
@@ -404,7 +404,7 @@
 
 ### Sorceress
 
-- **Hijab:** Shimmering silk hijab in jewel tone (emerald, sapphire, ruby) with circlet
+- **Hijab:** Shimmering silk hijab in ((default:jewel tone - emerald, sapphire, ruby) or (signature)) with circlet
 
 - **Top:** Fitted bodice or corset over sheer long-sleeve overlay or matching top
 
@@ -418,9 +418,9 @@
 
 ### Necromancer
 
-- **Hijab:** Black hooded hijab with tattered edges or bone clasp
+- **Hijab:** ((default:Black) or (signature)) hooded hijab with tattered edges or bone clasp
 
-- **Top:** Dark robes with high collar and long sleeves
+- **Top:** Dark robes (((default:coordinating with hijab) or (signature))) with high collar and long sleeves
 
 - **Bottom:** Black trousers or long skirt
 
@@ -432,9 +432,9 @@
 
 ### Druid
 
-- **Hijab:** Earth-toned hijab (moss green, brown) adorned with living vines or flowers
+- **Hijab:** ((default:Earth-toned - moss green, brown) or (signature)) hijab adorned with living vines or flowers
 
-- **Top:** Earth-toned tunic or robes with leather vest overlay
+- **Top:** Earth-toned tunic or robes (((default:coordinating with hijab) or (signature))) with leather vest overlay
 
 - **Bottom:** Flowing skirt or pants in natural fabrics
 
@@ -544,9 +544,9 @@
 
 ### Red Mage
 
-- **Hijab:** Red hijab with white trim, worn under feathered cap
+- **Hijab:** ((default:Red) or (signature)) hijab with white trim, worn under feathered cap
 
-- **Top:** Red Renaissance-style jacket over white ruffled shirt
+- **Top:** ((default:Red) or (signature)) Renaissance-style jacket over white ruffled shirt
 
 - **Bottom:** Fitted white pants or split skirt
 

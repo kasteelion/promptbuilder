@@ -138,17 +138,17 @@ Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**; **pleat
 **Corset or fitted vest** (brown leather or brocade) over **white blouse** (with ruffles or high collar); **high-waist skirt or pants** (brown, black, or burgundy); **lace-up boots**. *Accessories:* Goggles (on head or around neck), pocket watch, gears and brass jewelry, mini top hat or fascinator. *Hair/Makeup:* Victorian-inspired updo, natural makeup with defined eyes.
 
 ### Renaissance Noble
-**Fitted bodice** (brocade, velvet, or damask fabric in deep jewel tones - burgundy, forest green, or navy with subtle pattern or texture); **ruffle or lace trim collar** (v-neckline with decorative edging); **long fitted sleeves** with **ruffle cuffs**; **full floor-length skirt** (gathered and voluminous, matching bodice fabric). *Accessories:* Simple pendant necklace on black cord or ribbon, period-appropriate jewelry (minimal and understated). *Hair/Makeup:* Long flowing hair worn down with soft waves or partially pulled back, natural elegant makeup with pink or mauve eyeshadow, defined brows, rose or berry lip tone, classic beauty aesthetic.
+**Fitted bodice** (brocade, velvet, or damask fabric in ((default:deep jewel tones - burgundy, forest green, or navy) or (signature)) with subtle pattern or texture); **ruffle or lace trim collar** (v-neckline with decorative edging); **long fitted sleeves** with **ruffle cuffs**; **full floor-length skirt** (gathered and voluminous, matching bodice fabric). *Accessories:* Simple pendant necklace on black cord or ribbon, period-appropriate jewelry (minimal and understated). *Hair/Makeup:* Long flowing hair worn down with soft waves or partially pulled back, natural elegant makeup with pink or mauve eyeshadow, defined brows, rose or berry lip tone, classic beauty aesthetic.
 
 ---
 
 ### Knight
 
-**Polished plate armor bodice** (steel or silver with embossed details); **armored pauldrons and gauntlets**; **chainmail skirt** or **armored tassets** (knee-length with leather underneath); **steel greaves and sabatons** (shin and foot protection); **sturdy leather boots**. *Accessories:* Longsword and shield (heraldic design), knight's helm with plume (carried or worn), cape in house colors. *Hair/Makeup:* Hair pulled back in practical bun or braid, minimal makeup, determined expression.
+**Polished plate armor bodice** (steel or silver with embossed details); **armored pauldrons and gauntlets**; **chainmail skirt** or **armored tassets** (knee-length with leather underneath); **steel greaves and sabatons** (shin and foot protection); **sturdy leather boots**. *Accessories:* Longsword and shield (heraldic design), knight's helm with plume (carried or worn), cape in ((default:house colors) or (signature)). *Hair/Makeup:* Hair pulled back in practical bun or braid, minimal makeup, determined expression.
 
 ### Paladin
 
-**Silver or white plate armor bodice** (ornate with holy symbols and gold trim); **flowing white tabard** (emblazoned with holy symbol over armor); **armored leg plates** over **white or silver pants**; **white cape** with gold clasp; **silver boots** (knee-high with armor plates). *Accessories:* Holy sword (glowing or blessed), shield with divine insignia, prayer beads or holy symbol necklace. *Hair/Makeup:* Long flowing hair (blonde or light brown) in loose waves or half-up style, radiant natural makeup with soft glow, serene expression.
+**Silver or white plate armor bodice** (ornate with holy symbols and gold trim); **flowing ((default:white) or (signature)) tabard** (emblazoned with holy symbol over armor); **armored leg plates** over **white or silver pants**; **white cape** with gold clasp; **silver boots** (knee-high with armor plates). *Accessories:* Holy sword (glowing or blessed), shield with divine insignia, prayer beads or holy symbol necklace. *Hair/Makeup:* Long flowing hair (blonde or light brown) in loose waves or half-up style, radiant natural makeup with soft glow, serene expression.
 
 ### Barbarian
 
@@ -160,19 +160,19 @@ Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**; **pleat
 
 ### Wizard
 
-**Long flowing robes** (deep blue, purple, or midnight black with silver or gold arcane symbols and trim); **wide pointed hat** (matching robes with star or moon decorations); **leather belt** with pouches; **soft leather boots**. *Accessories:* Wooden staff with crystal or orb at top, spellbook, component pouches, mystical amulet. *Hair/Makeup:* Long flowing hair (often silver, white, or dark) in loose waves or half-up with strands, wise expression, possible age marks or timeless beauty, ethereal glow.
+**Long flowing robes** (((default:deep blue, purple, or midnight black) or (signature)) with silver or gold arcane symbols and trim); **wide pointed hat** (matching robes with star or moon decorations); **leather belt** with pouches; **soft leather boots**. *Accessories:* Wooden staff with crystal or orb at top, spellbook, component pouches, mystical amulet. *Hair/Makeup:* Long flowing hair (often silver, white, or dark) in loose waves or half-up with strands, wise expression, possible age marks or timeless beauty, ethereal glow.
 
 ### Sorceress
 
-**Fitted bodice or corset** (rich jewel tones - emerald, sapphire, ruby with magical shimmer); **flowing skirt with high slits** (for mobility, layered with sheer overlay); **arm sleeves** (detached, sheer with arcane patterns); **heeled boots or strappy sandals**. *Accessories:* Ornate staff or wand, crystal jewelry (necklace, circlet, rings), magical tome or grimoire, glowing amulet. *Hair/Makeup:* Long dramatic hair (often with unnatural colors - silver, violet, crimson) in flowing curls, dramatic makeup with shimmer, mystical eyes, confident powerful expression.
+**Fitted bodice or corset** (((default:rich jewel tones - emerald, sapphire, ruby) or (signature)) with magical shimmer); **flowing skirt with high slits** (for mobility, layered with sheer overlay); **arm sleeves** (detached, sheer with arcane patterns); **heeled boots or strappy sandals**. *Accessories:* Ornate staff or wand, crystal jewelry (necklace, circlet, rings), magical tome or grimoire, glowing amulet. *Hair/Makeup:* Long dramatic hair (often with unnatural colors - silver, violet, crimson) in flowing curls, dramatic makeup with shimmer, mystical eyes, confident powerful expression.
 
 ### Necromancer
 
-**Dark robes** (black, deep purple, or charcoal with tattered edges and bone decorations); **hooded cloak**; **skull motif accessories** (belt, shoulder pieces); **black leather boots** (knee-high). *Accessories:* Staff topped with skull or dark crystal, bone jewelry, spell tome bound in dark leather, vials of mysterious substances, death motifs throughout. *Hair/Makeup:* Pale complexion, dark hair (black or white) in straight severe style, dark dramatic eye makeup with black or deep purple, black or dark lips, haunting expression.
+**Dark robes** (((default:black, deep purple, or charcoal) or (signature)) with tattered edges and bone decorations); **hooded cloak**; **skull motif accessories** (belt, shoulder pieces); **black leather boots** (knee-high). *Accessories:* Staff topped with skull or dark crystal, bone jewelry, spell tome bound in dark leather, vials of mysterious substances, death motifs throughout. *Hair/Makeup:* Pale complexion, dark hair (black or white) in straight severe style, dark dramatic eye makeup with black or deep purple, black or dark lips, haunting expression.
 
 ### Druid
 
-**Earth-toned robes or tunic** (forest green, brown, moss green with leaf patterns); **leather vest or bodice** (with natural wood buttons); **flowing skirt or pants** (layered natural fabrics); **barefoot** or **soft leather sandals**; **flower crown or vine circlet**. *Accessories:* Wooden staff (gnarled with living vines or flowers), herb pouches, animal companion (owl, wolf, or deer), natural jewelry (wood, stone, flowers). *Hair/Makeup:* Natural flowing hair (often with flowers, leaves, or vines woven in), earthy makeup tones, freckles, sun-kissed glow, peaceful expression.
+**Earth-toned robes or tunic** (((default:forest green, brown, moss green) or (signature)) with leaf patterns); **leather vest or bodice** (with natural wood buttons); **flowing skirt or pants** (layered natural fabrics); **barefoot** or **soft leather sandals**; **flower crown or vine circlet**. *Accessories:* Wooden staff (gnarled with living vines or flowers), herb pouches, animal companion (owl, wolf, or deer), natural jewelry (wood, stone, flowers). *Hair/Makeup:* Natural flowing hair (often with flowers, leaves, or vines woven in), earthy makeup tones, freckles, sun-kissed glow, peaceful expression.
 
 ### Thief
 
@@ -204,7 +204,7 @@ Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**; **pleat
 
 ### Red Mage
 
-**Elegant jacket** (red with white trim, Renaissance-inspired with epaulettes); **white ruffled shirt** underneath; **fitted pants or split skirt** (white or cream); **red cape** (knee-length); **tall leather boots** (red or brown with cuffs). *Accessories:* Rapier at hip, spell focus (wand or small orb), feathered cap, magical jewelry, component pouch. *Hair/Makeup:* Stylish hair (often with distinctive styling or color streak), confident makeup with red accents, balanced expression showing both martial and magical prowess.
+**Elegant jacket** (((default:red) or (signature)) with white trim, Renaissance-inspired with epaulettes); **white ruffled shirt** underneath; **fitted pants or split skirt** (white or cream); **red cape** (knee-length); **tall leather boots** (((default:red or brown) or (signature)) with cuffs). *Accessories:* Rapier at hip, spell focus (wand or small orb), feathered cap, magical jewelry, component pouch. *Hair/Makeup:* Stylish hair (often with distinctive styling or color streak), confident makeup with red accents, balanced expression showing both martial and magical prowess.
 
 ### Magic Knight
 
