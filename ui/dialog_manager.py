@@ -318,7 +318,16 @@ Platform: {platform.system()} {platform.release()}
                 
                 if char.get("tags"):
                     preview_text.insert("end", "TAGS:\n", "section_label")
-                    preview_text.insert("end", f"{', '.join(char['tags'])}\n")
+                    preview_text.insert("end", f"{', '.join(char['tags'])}\n\n")
+
+                if char.get("signature_color"):
+                    preview_text.insert("end", "SIGNATURE COLOR:\n", "section_label")
+                    sig_color = char['signature_color']
+                    preview_text.insert("end", f"{sig_color}  ", "normal")
+                    # Add a colored tag
+                    preview_text.tag_configure("sig_bg", background=sig_color, foreground="white" if not sig_color.upper().startswith("#F") and not sig_color.upper().startswith("#E") else "black", font=("Consolas", 10, "bold"))
+                    preview_text.insert("end", "   COLOR   ", "sig_bg")
+                    preview_text.insert("end", "\n")
 
                 preview_text.config(state="disabled")
                 
@@ -371,6 +380,303 @@ Platform: {platform.system()} {platform.release()}
             from utils import logger
             logger.exception("Error in characters summary explorer")
             self.show_error("Error", f"Failed to open character explorer: {e}")
+
+    def show_tag_summary(self) -> None:
+        """Show tag distribution summary across all characters."""
+        try:
+            from logic.data_loader import DataLoader
+            from ui.widgets import ScrollableCanvas
+            
+            loader = DataLoader()
+            chars = loader.load_characters()
+            categorized_map = loader.load_categorized_tags()
+            
+            if not chars:
+                self.show_error("Error", "No character data found.")
+                return
+
+            # Count tag frequencies and map characters
+            tag_counts = {}
+            tag_to_chars = {}
+            total_chars = len(chars)
+            
+            for name, data in chars.items():
+                char_tags = data.get("tags") or []
+                if isinstance(char_tags, str):
+                    char_tags = [t.strip().lower() for t in char_tags.split(",") if t.strip()]
+                else:
+                    char_tags = [str(t).strip().lower() for t in char_tags if t]
+                
+                for t in char_tags:
+                    tag_counts[t] = tag_counts.get(t, 0) + 1
+                    if t not in tag_to_chars:
+                        tag_to_chars[t] = []
+                    tag_to_chars[t].append(name)
+
+            dialog = tk.Toplevel(self.root)
+            dialog.title("Tag Distribution Summary")
+            dialog.geometry("600x700")
+            dialog.minsize(500, 500)
+            dialog.transient(self.root)
+
+            main_frame = ttk.Frame(dialog, padding=15)
+            main_frame.pack(fill="both", expand=True)
+
+            ttk.Label(main_frame, text="Tag Distribution", style="Title.TLabel").pack(pady=(0, 5))
+            ttk.Label(main_frame, text=f"Stats based on {total_chars} characters", font=(None, 9, "italic")).pack(pady=(0, 15))
+
+            # Scrollable area
+            scroll_container = ScrollableCanvas(main_frame)
+            scroll_container.pack(fill="both", expand=True)
+            
+            container = scroll_container.get_container()
+            container.columnconfigure(0, weight=1)
+
+            # Category priorities
+            priority = ["Demographics", "Body Type", "Style", "Vibe", "Other"]
+            
+            # Map used tags to categories
+            tag_to_cat = {}
+            for cat, tag_list in categorized_map.items():
+                for t in tag_list:
+                    tag_to_cat[t.lower()] = cat
+
+            row = 0
+            for cat in priority:
+                # Get tags for this category
+                cat_tag_counts = []
+                for tag, count in tag_counts.items():
+                    if tag_to_cat.get(tag, "Other") == cat:
+                        cat_tag_counts.append((tag, count))
+                
+                if not cat_tag_counts:
+                    continue
+                    
+                # Header for category
+                cat_frame = ttk.LabelFrame(container, text=f" {cat.upper()} ", padding=10)
+                cat_frame.grid(row=row, column=0, sticky="ew", padx=5, pady=8)
+                cat_frame.columnconfigure(0, weight=1)
+                
+                cat_tag_counts.sort(key=lambda x: x[1], reverse=True)
+                
+                # Get theme accent color safely
+                accent_color = "blue"
+                if hasattr(self.root, "theme_manager") and self.root.theme_manager:
+                    current = self.root.theme_manager.current_theme
+                    accent_color = self.root.theme_manager.themes.get(current, {}).get("accent", "blue")
+
+                for tag, count in cat_tag_counts:
+                    item_frame = ttk.Frame(cat_frame)
+                    item_frame.pack(fill="x", pady=2)
+                    
+                    percent = (count / total_chars) * 100
+                    
+                    # Tag name (Interactive)
+                    tag_label = ttk.Label(
+                        item_frame, 
+                        text=tag, 
+                        font=("Segoe UI", 10, "underline"),
+                        foreground=accent_color,
+                        cursor="hand2"
+                    )
+                    tag_label.pack(side="left")
+                    
+                    # Bind character list popup
+                    tag_label.bind("<Button-1>", lambda e, t=tag, c=tag_to_chars.get(tag, []): self._show_tag_characters(t, c))
+                    
+                    # Count and bar
+                    stats_label = ttk.Label(item_frame, text=f"{count} ({percent:.1f}%)", foreground="gray")
+                    stats_label.pack(side="right")
+                    
+                    # Visual bar
+                    bar_container = tk.Frame(item_frame, height=4, bg="#eeeeee")
+                    bar_container.pack(side="right", padx=10, fill="x", expand=True)
+                    
+                    colors = {
+                        "Demographics": "#4a90e2", "Body Type": "#50e3c2", "Style": "#f5a623", 
+                        "Vibe": "#bd10e0", "Other": "#9b9b9b"
+                    }
+                    bar_color = colors.get(cat, "#9b9b9b")
+                    
+                    canvas = tk.Canvas(bar_container, height=4, highlightthickness=0, bg="#eeeeee", width=150)
+                    canvas.pack(fill="both")
+                    canvas.create_rectangle(0, 0, int(150 * (count/total_chars)), 4, fill=bar_color, outline="")
+
+                row += 1
+
+            scroll_container.update_scroll_region()
+            ttk.Button(main_frame, text="Close", command=dialog.destroy).pack(pady=(15, 0))
+
+        except Exception as e:
+            from utils import logger
+            logger.exception("Error showing tag distribution")
+            self.show_error("Error", f"Failed to generate tag distribution: {e}")
+
+    def show_outfits_summary(self) -> None:
+        """Show outfit library summary with filtering."""
+        try:
+            from utils.outfit_summary import generate_consolidated_outfit_data
+            
+            # Load consolidated data
+            outfit_data = generate_consolidated_outfit_data()
+            
+            if not outfit_data:
+                self.show_error("Error", "No outfit data found.")
+                return
+
+            dialog = tk.Toplevel(self.root)
+            dialog.title("Outfit Library Explorer")
+            dialog.geometry("1000x700")
+            dialog.minsize(800, 500)
+            dialog.transient(self.root)
+
+            # --- Layout ---
+            # Top: Legend
+            top_frame = ttk.Frame(dialog, padding=10)
+            top_frame.pack(fill="x")
+            
+            ttk.Label(top_frame, text="Legend: ", font=("Segoe UI", 9, "bold")).pack(side="left")
+            ttk.Label(top_frame, text="🎨 = Color Scheme  ", foreground="blue").pack(side="left")
+            ttk.Label(top_frame, text="✨ = Signature Color", foreground="#d35400").pack(side="left")
+
+            # Main content: Paned window
+            paned = ttk.PanedWindow(dialog, orient="horizontal")
+            paned.pack(fill="both", expand=True, padx=10, pady=5)
+
+            # Left: Treeview
+            tree_frame = ttk.Frame(paned)
+            paned.add(tree_frame, weight=1)
+            
+            tree_scroll = ttk.Scrollbar(tree_frame)
+            tree_scroll.pack(side="right", fill="y")
+            
+            tree = ttk.Treeview(tree_frame, selectmode="browse", yscrollcommand=tree_scroll.set)
+            tree.pack(side="left", fill="both", expand=True)
+            tree_scroll.config(command=tree.yview)
+            
+            tree.heading("#0", text="Categories & Outfits", anchor="w")
+
+            # Right: Detail view
+            detail_frame = ttk.Frame(paned, padding=10)
+            paned.add(detail_frame, weight=2)
+            
+            detail_header = ttk.Label(detail_frame, text="Select an outfit", font=("Segoe UI", 12, "bold"), wraplength=400)
+            detail_header.pack(fill="x", pady=(0, 10))
+            
+            detail_text = tk.Text(detail_frame, wrap="word", font=("Segoe UI", 10), state="disabled", height=15)
+            detail_text.pack(fill="both", expand=True)
+
+            # Populate Tree
+            for cat_name in sorted(outfit_data.keys()):
+                cat_id = tree.insert("", "end", text=cat_name, open=True)
+                
+                outfits = outfit_data[cat_name]
+                for out_name in sorted(outfits.keys()):
+                    data = outfits[out_name]
+                    
+                    # Build label with indicators
+                    label = out_name
+                    if data["has_color_scheme"]:
+                        label += " 🎨"
+                    if data["has_signature"]:
+                        label += " ✨"
+                        
+                    outfit_id = tree.insert(cat_id, "end", text=label, values=("outfit", cat_name, out_name))
+                    
+                    # Add variations as children
+                    variations = data["variations"]
+                    for mod in ["F", "M", "H"]:
+                        if mod in variations:
+                            mod_label = "Female" if mod == "F" else "Male" if mod == "M" else "Hijabi"
+                            tree.insert(outfit_id, "end", text=f"({mod}) {mod_label}", values=("variation", cat_name, out_name, mod))
+
+            def on_tree_select(event):
+                sel = tree.selection()
+                if not sel: return
+                
+                item = tree.item(sel[0])
+                vals = item["values"]
+                
+                if not vals: return # Category folder
+                
+                type_ = vals[0]
+                
+                if type_ == "outfit":
+                    cat, name = vals[1], vals[2]
+                    data = outfit_data[cat][name]
+                    
+                    detail_header.config(text=name)
+                    
+                    # Show all variations in text
+                    detail_text.config(state="normal")
+                    detail_text.delete("1.0", "end")
+                    
+                    if data["has_color_scheme"]:
+                        detail_text.insert("end", "🎨 Supports Team Colors\n", "info")
+                    if data["has_signature"]:
+                        detail_text.insert("end", "✨ Supports Signature Color\n", "info")
+                    if data["has_color_scheme"] or data["has_signature"]:
+                        detail_text.insert("end", "\n")
+                        
+                    detail_text.tag_configure("info", foreground="gray", font=("Segoe UI", 9, "italic"))
+                    detail_text.tag_configure("header", font=("Segoe UI", 10, "bold"))
+
+                    for mod in ["F", "M", "H"]:
+                        if mod in data["variations"]:
+                            mod_label = "Female" if mod == "F" else "Male" if mod == "M" else "Hijabi"
+                            detail_text.insert("end", f"--- {mod_label} ({mod})---\n", "header")
+                            detail_text.insert("end", f"{data['variations'][mod]}\n\n")
+                            
+                    detail_text.config(state="disabled")
+                    
+                elif type_ == "variation":
+                    cat, name, mod = vals[1], vals[2], vals[3]
+                    desc = outfit_data[cat][name]["variations"][mod]
+                    mod_label = "Female" if mod == "F" else "Male" if mod == "M" else "Hijabi"
+                    
+                    detail_header.config(text=f"{name} - {mod_label}")
+                    detail_text.config(state="normal")
+                    detail_text.delete("1.0", "end")
+                    detail_text.insert("1.0", desc)
+                    detail_text.config(state="disabled")
+
+            tree.bind("<<TreeviewSelect>>", on_tree_select)
+            
+            # Close button
+            ttk.Button(dialog, text="Close", command=dialog.destroy).pack(pady=10)
+
+        except Exception as e:
+            from utils import logger
+            logger.exception("Error in outfit summary explorer")
+            self.show_error("Error", f"Failed to open outfit explorer: {e}")
+
+    def _show_tag_characters(self, tag: str, characters: list) -> None:
+        """Show a small popup listing characters with a specific tag."""
+        popup = tk.Toplevel(self.root)
+        popup.title(f"Characters with tag: {tag}")
+        popup.geometry("350x400")
+        popup.transient(self.root)
+        
+        main_frame = ttk.Frame(popup, padding=15)
+        main_frame.pack(fill="both", expand=True)
+        
+        ttk.Label(main_frame, text=f"Tag: {tag}", style="Bold.TLabel").pack(pady=(0, 10))
+        
+        # Scrollable list
+        list_frame = ttk.Frame(main_frame)
+        list_frame.pack(fill="both", expand=True)
+        
+        scrollbar = ttk.Scrollbar(list_frame)
+        scrollbar.pack(side="right", fill="y")
+        
+        lb = tk.Listbox(list_frame, yscrollcommand=scrollbar.set, font=("Segoe UI", 10))
+        lb.pack(side="left", fill="both", expand=True)
+        scrollbar.config(command=lb.yview)
+        
+        for char in sorted(characters):
+            lb.insert(tk.END, f"  {char}")
+            
+        ttk.Button(main_frame, text="Close", command=popup.destroy).pack(pady=(10, 0))
 
     def show_color_schemes_summary(self) -> None:
         """Show a visual summary of all available team color schemes."""

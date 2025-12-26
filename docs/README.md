@@ -24,4 +24,4 @@ Welcome to the Prompt Builder documentation. This index provides a roadmap to th
 
 ---
 
-*Last updated: December 2025*
+*Last updated: December 25, 2025*

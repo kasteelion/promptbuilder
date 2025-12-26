@@ -1,8 +1,9 @@
 ### Nora Alvarez
 **Photo:** nora_alvarez_photo.png
 **Summary:** Nora's strength is quiet and observant, amplified by her distinctive stature. Her short, curvy build creates an unexpected combination—intellectually sharp, physically grounded in a body that refuses to conform to athletic or willowy standards. She carries herself with the calm confidence of someone who's learned to take up space thoughtfully, projecting reliability and depth through simplicity and steady presence.
-**Tags:** female, latina, curvy, plus-size, practical, bookish, calm, deliberate, glasses, grounded, intellectual, reserved
+**Tags:** female, latina, curvy, plus-size, rugged, intellectual, minimalist, deliberate, glasses
 **Gender:** F
+**Signature Color:** #2E8B57
 
 **Appearance:**
 

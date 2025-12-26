@@ -1,7 +1,7 @@
 import re
 from typing import Any, Dict, List
 
-from utils.color_scheme import parse_color_schemes, substitute_colors
+from utils.color_scheme import parse_color_schemes, substitute_colors, substitute_signature_color
 from utils.text_utils import normalize_blank_lines
 
 from .renderers import CharacterRenderer, NotesRenderer, OutfitRenderer, PoseRenderer, SceneRenderer
@@ -75,9 +75,15 @@ class PromptBuilder:
                 scheme_name, self.color_schemes.get("The Standard", {})
             )
             
+            # Apply signature color substitution if applicable
+            sig_color = data.get("signature_color")
+            use_sig = char.get("use_signature_color", False)
+            
             if isinstance(outfit, str):
                 # Replace {modifier} placeholder before color substitution
                 outfit = re.sub(r"\{modifier\}", modifier_text, outfit)
+                # Apply signature color logic
+                outfit = substitute_signature_color(outfit, sig_color, use_sig)
                 outfit = substitute_colors(outfit, scheme)
             elif isinstance(outfit, dict):
                 # Work on a copy to avoid mutating the source data
@@ -85,6 +91,7 @@ class PromptBuilder:
                 for k, v in outfit.items():
                     if isinstance(v, str):
                         v = re.sub(r"\{modifier\}", modifier_text, v)
+                        v = substitute_signature_color(v, sig_color, use_sig)
                         outfit[k] = substitute_colors(v, scheme)
             parts.append(
                 CharacterRenderer.render(
@@ -137,6 +144,14 @@ class PromptBuilder:
                     scheme = self.color_schemes.get(scheme_name, {})
                     if "team" in scheme:
                         parts.append(scheme["team"])
+                
+                # Add signature color info if active
+                if char.get("use_signature_color"):
+                    char_def = self.characters.get(name, {})
+                    sig_color = char_def.get("signature_color")
+                    if sig_color:
+                        parts.append(f"Sig: {sig_color}")
+
                 parts.append(pose)
                 
                 char_summaries.append(f"{name} ({', '.join(parts)})")

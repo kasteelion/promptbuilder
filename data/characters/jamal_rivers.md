@@ -1,11 +1,12 @@
 ### Jamal Rivers
 **Photo:** jamal_rivers_photo.png
 
-**Tags:** black, male, contemporary, scholarly, composed, intellectual, refined, warm, reserved
+**Tags:** black, male, chic, approachable, intellectual, minimalist
 
 **Summary:** Jamal embodies thoughtful masculinity—his confidence is intellectual rather than physical, expressed through careful speech and considered movement. He carries himself with professorial ease, blending contemporary style with classic refinement. His presence invites conversation and deep thought.
 
 **Gender:** M
+**Signature Color:** #800020
 
 **Appearance:**
 

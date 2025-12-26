@@ -33,6 +33,25 @@ def substitute_colors(text: str, scheme: Dict[str, str]) -> str:
         text = re.sub(r"\{" + key + r"\}", value, text)
     return text
 
+
+def substitute_signature_color(text: str, signature_color: str, use_signature: bool) -> str:
+    """Substitute conditional signature color blocks.
+    
+    Syntax: ((default:white) or (signature))
+    If use_signature is True and signature_color is provided, use signature_color.
+    Else, use the default value extracted from the string.
+    """
+    pattern = re.compile(r"\(\(default:(.*?)\)\s+or\s+\(signature\)\)", re.IGNORECASE)
+    
+    def replacer(match):
+        default_val = match.group(1).strip()
+        if use_signature and signature_color:
+            return signature_color
+        return default_val
+        
+    return pattern.sub(replacer, text)
+
+
 # Example usage:
 if __name__ == "__main__":
     schemes = parse_color_schemes("data/color_schemes.md")

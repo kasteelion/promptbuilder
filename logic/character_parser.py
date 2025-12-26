@@ -11,6 +11,7 @@ _GENDER_RE = re.compile(r"\*\*Gender:\*\*\s*([mfMF])\b")
 _MODIFIER_RE = re.compile(r"\*\*Modifier:\*\*\s*(.+?)(?:\n\s*\*\*|$)")
 _SUMMARY_RE = re.compile(r"\*\*Summary:\*\*\s*(.+?)(?:\n\s*\*\*|$)", re.DOTALL)
 _TAGS_RE = re.compile(r"\*\*Tags:\*\*\s*(.+?)(?:\n\s*\*\*|$)", re.DOTALL)
+_SIGNATURE_COLOR_RE = re.compile(r"\*\*Signature Color:\*\*\s*(.+?)(?:\n\s*\*\*|$)")
 _IDENTITY_LOCKS_HEADER_RE = re.compile(
     r"^Appearance\s*\(Identity Locks\):\s*$", re.IGNORECASE | re.MULTILINE
 )
@@ -159,6 +160,11 @@ class CharacterParser:
                 modifier = modifier_match.group(1).strip()
                 gender_explicit = True
 
+            signature_color = None
+            sig_match = _SIGNATURE_COLOR_RE.search(body)
+            if sig_match:
+                signature_color = sig_match.group(1).strip()
+
             for o_name, o_val in list(outfits.items()):
                 if isinstance(o_val, dict):
                     bottom_key = None
@@ -208,6 +214,7 @@ class CharacterParser:
                 "gender": gender,
                 "gender_explicit": gender_explicit,
                 "modifier": modifier,
+                "signature_color": signature_color,
             }
 
         validated_chars = {}

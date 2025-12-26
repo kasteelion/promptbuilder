@@ -1,11 +1,12 @@
 ### Natsumi Maki
 **Photo:** natsumi_maki_photo.png
 
-**Tags:** female, japanese, athletic, petite, idol, performance, stage-performer, charismatic, energetic, playful, kawaii
+**Tags:** female, japanese, athletic, petite, chic, creative, playful
 
 **Summary:** Dynamic idol-wrestler with infectious enthusiasm and athletic grace. Natsumi radiates bubbly charisma and kawaii energy, blending fierce performance prowess with approachable sweetness. Her presence is magnetic—equal parts sparkle and strength.
 
 **Gender:** F
+**Signature Color:** #FF1493
 
 **Appearance:**
 
@@ -13,7 +14,7 @@
 
 * **Face:** Delicate angular structure with soft edges; heart-shaped, tapering to a gently pointed chin; midface slightly compressed with cheekbones positioned high and moderately prominent; large, round-almond shaped eyes with moderate-wide spacing, dark brown to nearly black irises, thick upper lash line with defined fold, significant lid exposure when open; straight, refined nose with softly defined bridge and rounded tip; smooth jawline tapering from cheekbones to chin; direct, engaging gaze with subtle intensity; naturally full lips with pronounced cupid's bow and plumper lower lip, often slightly parted; youthful softness
 
-* **Hair:** Type 2A; Medium density; Messy high bun with tendrils; Shoulder-length base; No part, pulled up; Matte sheen; Loosely twisted bun on crown, face-framing wisps. Platinum ash blonde
+* **Hair:** Type 2A; Medium density; **Signature Messy high bun with tendrils**; Shoulder-length base; No part, pulled up; Matte sheen; **Loosely twisted bun on crown with face-framing wisps**; Platinum ash blonde; this specific high-bun styling is her definitive silhouette.
 
 * **Skin:** Porcelain depth with cool-neutral undertones and soft matte-to-luminous finish; smooth, even texture with minimal visible pores; fair to very light complexion with subtle translucency; uniformly pale throughout face, neck, and body with slight natural warmth in cheeks when animated; delicate, refined quality that catches light softly.
 

@@ -2,9 +2,10 @@
 **Photo:** harald_bjornson_photo.png
 
 **Photo:** [harald_photo.png]
-**Tags:** male, nordic, massive, bearded, commanding, rugged
+**Tags:** male, nordic, massive, rugged, commanding, bearded
 **Summary:** Harald Bjornson is a mountain of a man, embodying sheer physical power and indomitable will. His presence is heavy and immovable, like a granite cliff. He carries himself with the quiet, terrifying calm of a man who doesn't need to raise his voice to be heard. He is a modern echo of an ancient archetype—rugged, weathered, and undeniably dominant.
 **Gender:** M
+**Signature Color:** #4A5D23
 
 **Appearance:**
 * **Body:** Flamboyant Natural; massive, heavily muscled frame with broad, powerful shoulders and a deep chest; long limbs with thick wrists and large, calloused hands; tall vertical (6'2"-6'4"); high muscle density with functional power visible in every movement; an imposing, statuesque presence.

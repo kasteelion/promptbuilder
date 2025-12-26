@@ -1,13 +1,14 @@
 ### Fiona O'Sullivan
 **Photo:** fiona_osullivan_photo.png
 **Summary:** Fiona radiates warmth and openness, grounding any space she enters with ease. Her confidence is rooted in authenticity rather than polish, making her feel deeply approachable and emotionally generous.
-**Tags:** celtic, female, plus-size, approachable, comforting, confident, freckled, generous, red-haired, soft, storyteller, warm, irish
+**Tags:** celtic, female, plus-size, creative, approachable, commanding, soft, freckled, generous, red-haired
 **Gender:** F
+**Signature Color:** #228B22
 
 **Appearance:**
 
 * **Body:** Soft Natural plus-size frame; wave-type plush softness; soft pear-hourglass proportions; moderate vertical.
-* **Face:** Rounded facial structure; heart-to-round face; full cheeks; bright wide-set eyes; warm open expression.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes; expressive hazel-green eyes **framed by practical but stylish tortoiseshell glasses**; warm engaging smile; soft jawline; radiant joyful expression that reflects her generous spirit.
 * **Hair:** Type 2B-2C waves; high density; long layered cut with natural body; side part; soft natural volume with gentle frizz; copper-red to auburn with natural variation.
 * **Skin:** Fair rosy-toned skin with soft glow; generous constellation of freckles across nose, cheeks, shoulders, and arms that intensify with sun exposure.
 

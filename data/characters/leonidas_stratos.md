@@ -2,9 +2,10 @@
 **Photo:** leonidas_stratos_photo.png
 
 **Photo:** [leonidas_photo.png]
-**Tags:** male, athletic, commanding, disciplined, focused, greek, intense
+**Tags:** male, athletic, commanding, intense, greek
 **Summary:** Leonidas Stratos is the embodiment of uncompromising discipline and raw, kinetic power. His presence is sharp and focused, like a spear tip poised for impact. Every line of his body speaks of a life forged in the furnace of relentless training. He radiates a hard, quiet confidence—the kind that doesn't need to shout to be heard.
 **Gender:** M
+**Signature Color:** #CD5C5C
 
 **Appearance:**
 * **Body:** Dramatic; elite athletic flesh; "Adonis belt" and deep core definition; broad square shoulders and a narrow, powerful waist; moderate-to-tall vertical (6'0"-6'2"); extremely high muscle density with sharp vascularity; movements are precise, economical, and explosive.

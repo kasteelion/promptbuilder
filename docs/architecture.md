@@ -33,6 +33,7 @@ Cross-cutting concerns and helper functions:
 *   **Preferences**: Manages user settings and persistence.
 *   **Undo/Redo**: Implements the command pattern for state management.
 *   **Notification**: Handles user feedback (toasts, status bar, dialogs).
+*   **OutfitSummary**: Generates structured summaries of the outfit library for the UI explorer.
 
 ## Key Design Patterns
 

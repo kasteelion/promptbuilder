@@ -1210,6 +1210,17 @@ class CharacterGalleryPanel(ttk.Frame):
         # Reset tag selector for next addition
         self.tag_var.set("")
 
+    def _remove_selected_tag(self, tag_value: str):
+        """Remove a tag from the selected tags list and refresh."""
+        try:
+            if tag_value in self.selected_tags:
+                self.selected_tags.remove(tag_value)
+                self._render_selected_tags()
+                self._display_characters()
+        except Exception:
+            from utils import logger
+            logger.exception("Error removing selected tag")
+
     def _clear_tag_filter(self):
         """Clear all tag filters and refresh display."""
         try:
@@ -1222,3 +1233,10 @@ class CharacterGalleryPanel(ttk.Frame):
         except Exception:
             from utils import logger
             logger.exception("Error clearing tag filters")
+
+    def _refresh_display(self):
+        """Refresh the display (used when theme changes)."""
+        # Update canvas background
+        self.scrollable_canvas.canvas.configure(bg=self.theme_colors.get("bg", "#f0f0f0"))
+        # Redisplay all characters to update their theme colors
+        self._display_characters()

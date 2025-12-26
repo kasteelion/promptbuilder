@@ -1,8 +1,9 @@
 ### Yuki Tanaka
 **Photo:** yuki_tanaka_photo.png
 **Summary:** Yuki carries the quiet poise of someone rooted in tradition but living fully in the present. Her confidence isn't loud; it's a soft, unshakable warmth that makes her presence feel like a sanctuary. She blends a gentle, romantic spirit with a modern self-assurance, moving with a delicate grace that reveals an intimate emotional openness.
-**Tags:** female, japanese, chic, romantic, soft, warm, feminine
+**Tags:** female, japanese, chic, approachable, soft
 **Gender:** F
+**Signature Color:** #FFC0CB
 
 **Appearance:**
 * **Body:** Romantic frame; wave plush softness; lush hourglass proportions; moderate vertical; soft and inviting presence.

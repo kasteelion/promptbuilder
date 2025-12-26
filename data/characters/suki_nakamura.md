@@ -1,11 +1,12 @@
 ### Suki Nakamura
 **Photo:** suki_nakamura_photo.png
 
-**Tags:** female, japanese, avant-garde, contemporary, minimalist, artistic, commanding, ethereal, geometric, graceful
+**Tags:** female, japanese, chic, creative, commanding, minimalist, ethereal, geometric
 
 **Summary:** Suki moves through space like a living art installation—deliberate, considered, and quietly captivating. Her minimalist aesthetic and controlled movement create an almost sculptural presence. She balances avant-garde fashion sensibility with approachable warmth, making the experimental feel accessible.
 
 **Gender:** F
+**Signature Color:** #C0C0C0
 
 **Appearance:**
 

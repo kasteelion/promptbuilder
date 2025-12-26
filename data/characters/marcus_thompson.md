@@ -2,8 +2,9 @@
 **Photo:** marcus_thompson_photo.png
 
 **Gender:** M
+**Signature Color:** #000080
 
-**Tags:** black, male, athletic, modern, approachable, calm, confident, grounded, steady
+**Tags:** black, male, athletic, chic, approachable, commanding, minimalist
 
 **Summary:** Marcus balances strength with approachability, projecting calm confidence and grounded masculinity. His presence feels steady and reliable, marked by authenticity and emotional openness.
 

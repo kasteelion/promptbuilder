@@ -2,9 +2,10 @@
 **Photo:** mei_chen_photo.png
 
 **Photo:** [mei_chen_photo.png]
-**Tags:** chinese-american, female, curvy, plus-size, approachable, confident, playful, cute-provocative, feminine, kawaii-sensual
+**Tags:** chinese-american, female, curvy, plus-size, edgy, approachable, commanding, playful
 **Summary:** Mei blends voluptuous curves with youthful sweetness in an unexpectedly magnetic combination. Her petite stature concentrates her curves into a compact, attention-commanding presence—soft and inviting yet undeniably provocative. She navigates femininity with playful confidence, mixing kawaii aesthetics with body-conscious choices that celebrate her figure. There's a knowing quality to her sweetness, a self-awareness that makes her charm feel deliberate rather than accidental.
 **Gender:** F
+**Signature Color:** #FF69B4
 
 **Appearance:**
 * **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large features—specifically an extremely full, heavy bust (F-G cup) that is her most prominent physical trait—balanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.

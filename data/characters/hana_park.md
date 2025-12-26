@@ -1,11 +1,12 @@
 ### Hana Park
 **Photo:** hana_park_photo.png
 
-**Tags:** female, petite, k-fashion, trendy, curious, cute, playful, youthful
+**Tags:** female, petite, chic, k-fashion, playful
 
 **Summary:** Youthful and charming, Hana blends sweetness with playful edge. Her presence feels light and expressive, full of curiosity and modern trend awareness, without losing sincerity.
 
 **Gender:** F
+**Signature Color:** #FFB7C5
 
 **Appearance:**
 

@@ -1,11 +1,12 @@
 ### Marley Thompson
 **Photo:** marley_thompson_photo.png
 
-**Tags:** female, jamaican, curvy, cultural-fusion, modest, traditional, conservative, controversial, maternal, nurturing, religious, warm, feminine
+**Tags:** female, jamaican, curvy, traditional, approachable, controversial, cultural-fusion
 
 **Summary:** Marley embodies a controversial blend: traditional homemaking values wrapped in Caribbean warmth and undeniable sensuality. She's chosen the "trad-wife" path intentionally, finding empowerment in domestic excellence and feminine presentation. Her Jamaican heritage infuses everything—the rhythm of her movement, the warmth of her hospitality, the pride in her cooking. She's feminine, soft, and unapologetically devoted to home and family, moving through domestic spaces with the confidence of someone who knows exactly what she wants and refuses to apologize for it.
 
 **Gender:** F
+**Signature Color:** #FFDAB9
 
 **Appearance:**
 * **Body:** Romantic frame; wave-lush flesh quality; voluptuous hourglass proportions with full bust (DD-E cup), dramatically defined waist, wide rounded hips, full thighs; moderate height (5'5"-5'6"); soft density with feminine curves throughout, rounded shoulders, shapely legs; magnetizing maternal presence.

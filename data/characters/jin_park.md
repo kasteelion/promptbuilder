@@ -1,15 +1,16 @@
 ### Jin Park
 **Photo:** jin_park_photo.png
-**Tags:** male, contemporary, k-fashion, minimalist, refined, soft, reserved
+**Tags:** male, chic, k-fashion, minimalist, soft
 
 **Summary:** Jin’s presence is understated and thoughtful, defined by quiet confidence and emotional sensitivity. He feels observant rather than performative, with a modern elegance rooted in restraint.
 
 **Gender:** M
+**Signature Color:** #A9A9A9
 
 **Appearance:**
 
 * **Body:** Dramatic male frame; straight lean flesh; narrow rectangle proportions; moderate-to-tall vertical; poised and understated presence with natural grace.
-* **Face:** Long delicate facial structure; oval face; soft jawline; gentle observant eyes; reserved thoughtful expression that suggests deep introspection.
+* **Face:** Long delicate facial structure; oval face; soft jawline; gentle observant eyes **framed by minimalist thin wire-frame glasses**; reserved thoughtful expression that suggests deep introspection.
 * **Hair:** Type 1 straight; medium density; dark brown to black with soft matte finish; naturally fine texture; versatile K-fashion styling options.
 * **Skin:** Light neutral skin with smooth even finish and soft clarity.
 

@@ -1,11 +1,12 @@
 ### Luna Vex
 **Photo:** luna_vex_photo.png
 
-**Tags:** female, curvy, petite, edgy, high-energy, playful
+**Tags:** female, curvy, petite, edgy, playful
 
 **Summary:** She radiates a playful sense of mischief, her bold aesthetic serving as a backdrop to a deeply candid and joyful personality. Her presence is characterized by an infectious laugh and an undeniable magnetic energy that commands attention despite her petite stature.
 
 **Gender:** F
+**Signature Color:** #FF00FF
 
 **Appearance:**
 * **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.

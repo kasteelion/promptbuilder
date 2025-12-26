@@ -1,11 +1,12 @@
 ### Hallie Bennett
 **Photo:** hallie_bennett_photo.png
 
-**Tags:** female, athletic, casual, outdoorsy, approachable, relaxed, soft
+**Tags:** female, athletic, casual, outdoorsy, approachable, minimalist, soft
 
 **Summary:** Sophie embodies accessible athleticism—the friend who invites you on a hike, not a marathon. Her soft rounded build carries natural strength without intimidation, creating the kind of presence that makes fitness feel approachable rather than exclusive. She's the bridge between "gym girl" and "regular girl," comfortable in athletic wear but never performatively so.
 
 **Gender:** F
+**Signature Color:** #87CEEB
 
 **Appearance:**
 

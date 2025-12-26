@@ -1,11 +1,12 @@
 ### Audrey Thorne
 **Photo:** audrey_thorne_photo.png
 
-**Tags:** caucasian, female, curvy, statuesque, casual-chic, modern, soft dramatic, vibrant, auburn hair
+**Tags:** caucasian, female, curvy, statuesque, chic, playful, auburn hair, casual-chic, soft dramatic
 
 **Summary:** Audrey radiates a grounded yet vibrant confidence, embodied by her bold choice of color and relaxed posture. Her presence is commanding without being aggressive, blending softness with structural strength in a way that feels both authentic and poised.
 
 **Gender:** F
+**Signature Color:** #DC143C
 
 **Appearance:**
 * **Body:** Heavy Curvy Hourglass / Spoon Shape; statuesque height at 5'7"; 43.5-37-48 proportions; thick, soft flesh quality; substantial bust carried high, transitioning into a defined but thick waist, which flares dramatically into wide, shelf-like hips and heavy thighs; bottom-heavy silhouette balanced by a full chest; voluptuous density with soft anatomical markers.

@@ -1,8 +1,9 @@
 ### Roxanna Perez
 **Photo:** roxanna_photo.png
 **Summary:** Roxanna Perez thrives on momentum and theatrical confidence. Her Puerto Rican heritage infuses her presence with vibrant energy and fierce pride. She moves with the compact power of someone who's trained their body into a weapon, blending athletic credibility with bold, spotlight-ready charisma.
-**Tags:** female, latina, puerto rican, athletic, edgy, performance-driven, theatrical, commanding, confident, dynamic, intense
+**Tags:** female, latina, puerto rican, athletic, creative, edgy, commanding, intense, playful
 **Gender:** F
+**Signature Color:** #800080
 
 **Appearance:**
 * **Body:** Theatrical Romantic frame (Kibbe); lush flesh; compact delicate bone structure; double-tapered proportions; short to moderately short vertical line; concentrated physical presence.

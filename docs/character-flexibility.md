@@ -260,3 +260,36 @@ If any combination feels forced or conflicting, the character description may st
 - The OUTFIT determines the final dish (cake vs cookies vs bread)
 
 Your character description should provide enough information to recognize the character in ANY context, without locking them into one specific look.
+
+---
+
+## Signature Colors
+
+To further distinguish characters while using shared outfits, you can assign a **Signature Color**. This allows a single outfit definition to automatically adapt its color palette to the specific character wearing it.
+
+### 1. Defining a Signature Color
+In your character markdown file, add the `**Signature Color:**` field (typically after Gender or Tags). Use a Hex code for precision.
+
+```markdown
+### Marisol Rivera
+**Tags:** female, athletic, ...
+**Gender:** F
+**Signature Color:** #FF7F50
+...
+```
+
+### 2. Using Signature Colors in Outfits
+In `outfits_*.md` files, use the following syntax to create a dynamic color slot:
+
+`((default:DEFAULT_COLOR) or (signature))`
+
+**Example:**
+```markdown
+### Casual - Color Block Chic
+Fitted **white v-neck tee**; high-waist **tailored pants** in ((default:rust orange) or (signature)).
+```
+
+- **If "Use Signature Color" is UNCHECKED:** The prompt will generate "rust orange".
+- **If "Use Signature Color" is CHECKED:** The prompt will generate "#FF7F50" (or whatever color is defined for that character).
+
+This system allows for highly reusable outfit templates that still feel personalized to each character.

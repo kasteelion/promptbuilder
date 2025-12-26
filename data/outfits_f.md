@@ -6,77 +6,111 @@
 
 ## Alternative & Edgy
 
-### Alternative - Cyberpunk
-Cropped **tech-fabric jacket** with asymmetric cut; **high-waist tactical pants** with straps; **platform boots**. *Accessories:* LED accents, tech goggles, geometric jewelry. *Hair/Makeup:* Bold graphic liner, vibrant hair color, futuristic styling.
+### Cyberpunk
+Cropped **tech-fabric jacket** with asymmetric cut; **high-waist tactical pants** with straps; **platform boots**. *Accessories:* LED accents, tech goggles, geometric jewelry. *Hair/Makeup:* Bold graphic liner, **hair in a futuristic style or with temporary color accents**, futuristic styling.
 
-### Alternative - Dark Academia
+### Dark Academia
 **Button-up shirt** (white or cream) under **wool sweater vest or cardigan** (brown, burgundy, or forest green); **pleated midi skirt or high-waist trousers** (dark plaid or solid); **oxford shoes or loafers**. *Accessories:* Vintage watch, small leather satchel, wire-frame glasses. *Hair/Makeup:* Natural makeup, hair in loose waves or neat bun.
 
-### Alternative - Goth
-**Black band tee or mesh top**; **distressed black jeans or skirt** with chains; **combat boots or platforms**. *Accessories:* Choker, silver rings, studded belt. *Hair/Makeup:* Dark lipstick, dramatic eye makeup, dark or colored hair.
+### Goth
+**Black band tee or mesh top**; **distressed black jeans or skirt** with chains; **combat boots or platforms**. *Accessories:* Choker, silver rings, studded belt. *Hair/Makeup:* Dark lipstick, dramatic eye makeup, **hair styled to match the dark aesthetic**.
 
-### Alternative - Preppy
+### Preppy
 **Cardigan or sweater vest** layered over **collared shirt**; **pleated skirt or chinos**; **loafers or oxfords**. *Accessories:* Watch, simple studs, crossbody bag. *Hair/Makeup:* Clean, polished styling.
 
-### Alternative - Rocker
-Fitted **bold colored top**; **skinny jeans or leather pants** with distressing; **leather jacket**; **boots**. *Accessories:* Metal jewelry, belt. *Hair/Makeup:* Smoky or bold makeup.
+### Rocker
+Fitted **((default:bold colored) or (signature)) top**; **skinny jeans or leather pants** with distressing; **leather jacket**; **boots**. *Accessories:* Metal jewelry, belt. *Hair/Makeup:* Smoky or bold makeup.
+
+### Edgy Chic
+Fitted **((default:red) or (signature)) turtleneck** (form-fitting knit); **black leather skirt** (mini or midi length); **((default:red) or (signature)) leggings** (opaque). *Accessories:* Black beret, fingerless black leather gloves, **black thigh-high leather boots** (high heeled). *Hair/Makeup:* ((default:Red) or (signature)) lipstick, black winged eyeliner, ((default:red) or (signature)) eye shadow, hair styled to complement beret (sleek or with face-framing pieces).
+
+### Studded Harness Style
+**Sleeveless halter bodysuit or crop top** (black with studded or riveted details); **strappy harness detailing** (black leather or faux-leather with geometric cutouts across chest and shoulders, secured with small studs or grommets); **pleated mini skirt** (black with subtle floral or cherry blossom print). *Accessories:* Black thigh-high stockings or socks, minimal jewelry. *Hair/Makeup:* Long flowing hair with soft waves and side-swept bangs, warm-toned natural makeup with coral or peachy lip, defined brows, subtle eyeshadow.
 
 ---
 
 ## Athletic & Sports
 
-### Athletic - Gym
-Fitted **athletic top** (technical knit); high-waist **athletic shorts or leggings** (technical fabric). *Accessories:* Fitness watch or tracker, hair in ponytail. *Hair/Makeup:* Minimal or no makeup.
+### Gym
+Fitted **((default:athletic top) or (signature) top)** (technical knit); high-waist **athletic shorts or leggings** (technical fabric). *Accessories:* Fitness watch or tracker, hair in ponytail. *Hair/Makeup:* Minimal or no makeup.
 
-### Athletic - Training
+### Training
 Fitted **sports bra** with minimal detailing; high-waist **athletic shorts**. *Accessories:* **Lightweight grappling gloves**; **ankle tape** for support. *Hair/Makeup:* Minimal makeup.
 
-### Dance - Arabian
+### Figure Skating
+**Lycra performance dress** ({primary_color} with {secondary_color} accents, featuring sheer mesh inserts and heavy {accent} crystal/sequin embellishments); **flesh-toned skating tights**; **silver figure skates**. *Accessories:* Crystal hair clips, delicate jewelry. *Hair/Makeup:* Sleek high bun or ponytail, dramatic performance makeup with glitter accents.
+
+### Gymnastics
+**High-neck leotard** (sleek performance lycra with bold geometric patterns in {primary_color} and {secondary_color}, featuring {accent} metallic foil accents); **barefoot or athletic toe-wraps**. *Accessories:* Chalk dust on hands, matching hair scrunchie. *Hair/Makeup:* Tight secure bun, focused athletic expression, minimal makeup.
+
+### Surfing
+**Long-sleeve neoprene wetsuit or rash guard** (fitted, featuring bold color-blocking in {primary_color} and {secondary_color}); **matching bikini bottoms or board shorts**; **barefoot** with sand-dusted skin. *Accessories:* Surfboard prop in **{accent}** (held under arm or standing nearby), waterproof fitness watch. *Hair/Makeup:* "Salt-water" textured hair, wet skin finish, minimal waterproof makeup.
+
+### Arabian
 **Fitted bra top or crop top** (jewel tone with beading or coins - burgundy, deep blue, or gold); **low-rise flowing pants or skirt** (sheer or chiffon with hip scarf, matching jewel tone); **hip scarf with coins**; **soft shoes or barefoot**. *Accessories:* Coin jewelry (necklace, arm bands, anklets), finger cymbals, decorative headpiece. *Hair/Makeup:* Dramatic kohl-lined eyes, hair in loose waves or braided with ornaments, jewel-toned makeup.
 
-### Dance - Ballet
+### Ballet
 **Leotard** (black, pink, or color-coordinated); **pink ballet tights**; **pink ballet slippers** (soft leather or satin). *Accessories:* Hair secured in classical bun, minimal jewelry. *Hair/Makeup:* Natural makeup, hair in neat bun with hairnet.
 
-### Dance - Flamenco
+### Flamenco
 **Fitted flamenco dress** (knee-length to floor-length with ruffled tiers in red, black, or polka dot); **off-shoulder or sweetheart neckline**; **flamenco shoes** (heeled with nails). *Accessories:* Large decorative comb or flower in hair, statement earrings, shawl optional. *Hair/Makeup:* Hair in dramatic updo or slicked bun with ornament, bold red lip, dramatic eyes, passionate expression.
 
-### Dance - Hip Hop
+### Hip Hop
 Oversized **graphic t-shirt or crop top**; **baggy cargo pants or joggers**; **high-top sneakers**. *Accessories:* Snapback cap worn backwards, chain necklace, sweatbands. *Hair/Makeup:* Hair in braids, ponytail, or loose, minimal makeup with bold lip.
 
-### Dance - Tango
+### Tango
 **Fitted tango dress** (knee-length to midi with high slit, elegant fabric in red, black, or jewel tone); **seamed stockings**; **tango heels** (strappy with ankle support). *Accessories:* Statement earrings, hair ornament optional. *Hair/Makeup:* Hair in sleek updo or dramatic waves, bold red lip, sultry eye makeup, intense expression.
 
 ### Dance Tights
 Nude colored bodysuit
 
+### Irish Step Dance
+**Traditional dress** (solid color - emerald green, royal blue, or black with Celtic embroidery and crystals); **fitted bodice** with high neck and long sleeves or cap sleeves; **full skirt** (above knee, pleated or A-line); **Irish dance hard shoes** (black leather with fiberglass heel and toe taps). *Accessories:* Celtic brooch or cape clasp, matching headband or tiara, competition number pinned to dress, white or tan poodle socks. *Hair/Makeup:* Tight ringlet curls (wig or styled), hair pulled back with decorative headband, natural stage makeup with defined eyes and pink lips.
+
+### Salsa
+**Fitted dance dress** (knee-length or shorter with flared skirt, asymmetric hem, or high slit in red, black, or jewel tones with sequins or fringe); **dance bodysuit or fitted top** with **flowing skirt** alternative; **Latin dance heels** (2.5-3 inch, open-toe, T-strap in nude or metallic). *Accessories:* Statement earrings (chandelier or hoop style), hair flower or decorative comb. *Hair/Makeup:* Hair in sleek bun with side part, dramatic waves, or high ponytail; bold makeup with smoky eyes, false lashes, red or berry lip, bronzed contouring, passionate expression.
+
 ---
 
 ## Casual Wear
 
-### Casual - Bohemian
+### Bohemian
 Flowing **maxi dress or skirt** with ethnic prints; loose **peasant blouse**; **strappy sandals**. *Accessories:* Layered necklaces, bangles, fringe bag, wide-brim hat. *Hair/Makeup:* Natural makeup, loose waves with braided accents.
 
-### Casual - Comfort
-Oversized **cozy top** (sweater or hoodie); comfortable **bottoms** (leggings or joggers); **soft footwear**. *Accessories:* Minimal jewelry. *Hair/Makeup:* Minimal makeup, relaxed hairstyle.
+### Comfort
+Oversized **((default:cozy top) or (signature) top)** (sweater or hoodie); comfortable **bottoms** (leggings or joggers); **soft footwear**. *Accessories:* Minimal jewelry. *Hair/Makeup:* Minimal makeup, relaxed hairstyle.
 
-### Casual - Cottagecore
+### Cottagecore
 Flowing **floral midi dress** or **linen blouse** with **high-waist skirt**; **flat leather sandals or boots**. *Accessories:* Woven basket, delicate gold jewelry, floral hair clip. *Hair/Makeup:* Soft natural makeup, loose waves or braids.
 
-### Casual - Streetwear
+### Streetwear
 Oversized **graphic hoodie or sweatshirt**; **cargo pants or joggers**; **chunky sneakers**. *Accessories:* Baseball cap or beanie, crossbody bag, chain necklace. *Hair/Makeup:* Natural or minimal makeup, casual hairstyle.
 
-### Casual - Yoga Athleisure
+### Yoga Athleisure
 High-waist **yoga leggings** (stretchy technical fabric in solid color or subtle pattern); cropped **athletic tank or sports bra**; oversized **zip-up hoodie or cardigan** (worn open); **slip-on sneakers**. *Accessories:* Yoga mat bag, water bottle, minimal jewelry. *Hair/Makeup:* Hair in messy bun or ponytail, fresh minimal makeup.
+
+### Color Block Chic
+Fitted **white v-neck tee** (short sleeves, classic cotton); high-waist **tailored pants** (((default:rust orange, burnt orange, or terracotta) or (signature)) in ankle length with front seam detail). *Accessories:* Delicate gold necklace, minimal jewelry. *Hair/Makeup:* Straight hair with center or side part, natural everyday makeup with groomed brows.
 
 ### Default Character
 tight white bandeau top, high leg low cut jean shorts
 
 ---
 
+## International
+
+### Japanese Harajuku Streetwear
+Oversized **graphic anime or kawaii print hoodie** or **layered long-sleeve tees** (pastel colors with bold prints); **pleated mini skirt** (plaid or solid in pink, lavender, or black) or **wide-leg cargo pants** (with chains and patches); **platform sneakers or chunky Mary Janes**. *Accessories:* Multiple hair clips (butterfly, star, or heart shapes), layered chain necklaces, mini backpack or crossbody bag with keychains, arm warmers or fingerless gloves, colorful leg warmers over socks. *Hair/Makeup:* Hair in twin tails, space buns, or half-up with colorful streaks (pink, blue, purple), doll-like makeup with aegyo-sal (under-eye brightening), gradient lips, circle lenses, blush on nose and cheeks, optional small stickers near eyes.
+
+### African Print Contemporary
+Fitted **peplum top or off-shoulder blouse** (vibrant African print - Ankara, Kente, or Dashiki patterns in bold colors like orange, teal, purple, gold); **pencil skirt or wide-leg pants** (matching or complementary print, high-waist); **strappy sandals or block heels**. *Accessories:* Statement earrings (large hoops or geometric designs), wrapped headscarf or headband in matching fabric, bangles, beaded necklace. *Hair/Makeup:* Natural hair in afro, braids, locs, or twisted updo; bold makeup with warm tones, defined brows, glowing skin with golden undertones.
+
+---
+
 ## Character & Costume
 
 ### Bunny
-Sleek **black satin bodysuit**; **sheer black tights**. *Accessories:* Tall black rabbit ears, white collar with bow tie, crisp white cuffs. *Hair/Makeup:* Long flowing dark hair; subtle soft makeup, calm confident expression, realistic anime shading, elegant not provocative.
+Sleek **black satin bodysuit**; **sheer black tights**. *Accessories:* Tall black rabbit ears, white collar with bow tie, crisp white cuffs. *Hair/Makeup:* **Hair worn loose and flowing**; subtle soft makeup, calm confident expression, realistic anime shading, elegant not provocative.
 
 ### Maid Outfit
 Traditional **black dress with white apron** (knee-length); **white lace headpiece**; **black Mary Jane shoes**. *Accessories:* White collar, wrist cuffs. *Hair/Makeup:* Neat, polished styling.
@@ -88,122 +122,234 @@ Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**; **pleat
 
 ## Fantasy & Historical
 
-### Fantasy - Ren Faire
+### Ren Faire
 **Medieval-inspired outfit** with flowing fabrics; **corset or bodice**; **skirt or breeches**; **boots**. *Accessories:* Fantasy jewelry, decorative elements. *Hair/Makeup:* Natural or fantasy-inspired makeup.
 
-### Fantasy - Warrior
+### Warrior
 **Fitted armor-inspired bodice** (leather or faux-leather with metal accents); **high-waist pants or skirt with side slits** (dark colors, movement-friendly); **knee-high boots** (sturdy with buckles). *Accessories:* Arm bracers, belt with pouches, weapon prop (sword or bow). *Hair/Makeup:* Hair in warrior braids or ponytail, natural makeup with defined features.
 
-### Costume - Steampunk
+### Steampunk
 **Corset or fitted vest** (brown leather or brocade) over **white blouse** (with ruffles or high collar); **high-waist skirt or pants** (brown, black, or burgundy); **lace-up boots**. *Accessories:* Goggles (on head or around neck), pocket watch, gears and brass jewelry, mini top hat or fascinator. *Hair/Makeup:* Victorian-inspired updo, natural makeup with defined eyes.
+
+### Renaissance Noble
+**Fitted bodice** (brocade, velvet, or damask fabric in deep jewel tones - burgundy, forest green, or navy with subtle pattern or texture); **ruffle or lace trim collar** (v-neckline with decorative edging); **long fitted sleeves** with **ruffle cuffs**; **full floor-length skirt** (gathered and voluminous, matching bodice fabric). *Accessories:* Simple pendant necklace on black cord or ribbon, period-appropriate jewelry (minimal and understated). *Hair/Makeup:* Long flowing hair worn down with soft waves or partially pulled back, natural elegant makeup with pink or mauve eyeshadow, defined brows, rose or berry lip tone, classic beauty aesthetic.
 
 ---
 
+### Knight
+
+**Polished plate armor bodice** (steel or silver with embossed details); **armored pauldrons and gauntlets**; **chainmail skirt** or **armored tassets** (knee-length with leather underneath); **steel greaves and sabatons** (shin and foot protection); **sturdy leather boots**. *Accessories:* Longsword and shield (heraldic design), knight's helm with plume (carried or worn), cape in house colors. *Hair/Makeup:* Hair pulled back in practical bun or braid, minimal makeup, determined expression.
+
+### Paladin
+
+**Silver or white plate armor bodice** (ornate with holy symbols and gold trim); **flowing white tabard** (emblazoned with holy symbol over armor); **armored leg plates** over **white or silver pants**; **white cape** with gold clasp; **silver boots** (knee-high with armor plates). *Accessories:* Holy sword (glowing or blessed), shield with divine insignia, prayer beads or holy symbol necklace. *Hair/Makeup:* Long flowing hair (blonde or light brown) in loose waves or half-up style, radiant natural makeup with soft glow, serene expression.
+
+### Barbarian
+
+**Leather or fur bikini top** (tribal design with bone or tooth decorations); **fur or leather loincloth** with **leather straps**; **fur boots** (calf-high); **arm and leg wraps** (leather or fur). *Accessories:* Large battle axe or two-handed sword, bone jewelry, war paint on face and body, trophy necklace (teeth, claws). *Hair/Makeup:* Wild untamed hair (often with braids or dreadlocks), fierce war paint, tribal markings, intense warrior expression.
+
+### Samurai
+
+**Ornate d�� (chest armor)** (lacquered plates in red, black, or gold with family crest); **kusazuri (armored skirt)** (overlapping plates); **sode (shoulder guards)**; **kote (armored sleeves)**; **hakama pants** underneath; **traditional tabi and waraji** or **armored boots**. *Accessories:* Katana and wakizashi (daisho pair), kabuto helmet with ornamental crest, silk sash with family mon. *Hair/Makeup:* Hair in traditional topknot or elegant updo with kanzashi, natural makeup with defined features, honorable composed expression.
+
+### Wizard
+
+**Long flowing robes** (deep blue, purple, or midnight black with silver or gold arcane symbols and trim); **wide pointed hat** (matching robes with star or moon decorations); **leather belt** with pouches; **soft leather boots**. *Accessories:* Wooden staff with crystal or orb at top, spellbook, component pouches, mystical amulet. *Hair/Makeup:* Long flowing hair (often silver, white, or dark) in loose waves or half-up with strands, wise expression, possible age marks or timeless beauty, ethereal glow.
+
+### Sorceress
+
+**Fitted bodice or corset** (rich jewel tones - emerald, sapphire, ruby with magical shimmer); **flowing skirt with high slits** (for mobility, layered with sheer overlay); **arm sleeves** (detached, sheer with arcane patterns); **heeled boots or strappy sandals**. *Accessories:* Ornate staff or wand, crystal jewelry (necklace, circlet, rings), magical tome or grimoire, glowing amulet. *Hair/Makeup:* Long dramatic hair (often with unnatural colors - silver, violet, crimson) in flowing curls, dramatic makeup with shimmer, mystical eyes, confident powerful expression.
+
+### Necromancer
+
+**Dark robes** (black, deep purple, or charcoal with tattered edges and bone decorations); **hooded cloak**; **skull motif accessories** (belt, shoulder pieces); **black leather boots** (knee-high). *Accessories:* Staff topped with skull or dark crystal, bone jewelry, spell tome bound in dark leather, vials of mysterious substances, death motifs throughout. *Hair/Makeup:* Pale complexion, dark hair (black or white) in straight severe style, dark dramatic eye makeup with black or deep purple, black or dark lips, haunting expression.
+
+### Druid
+
+**Earth-toned robes or tunic** (forest green, brown, moss green with leaf patterns); **leather vest or bodice** (with natural wood buttons); **flowing skirt or pants** (layered natural fabrics); **barefoot** or **soft leather sandals**; **flower crown or vine circlet**. *Accessories:* Wooden staff (gnarled with living vines or flowers), herb pouches, animal companion (owl, wolf, or deer), natural jewelry (wood, stone, flowers). *Hair/Makeup:* Natural flowing hair (often with flowers, leaves, or vines woven in), earthy makeup tones, freckles, sun-kissed glow, peaceful expression.
+
+### Thief
+
+**Fitted leather vest or corset** (dark brown or black); **tight leather pants**; **hooded cloak** (dark color for stealth); **soft leather boots** (designed for silent movement). *Accessories:* Lockpick tools in belt, throwing daggers, coin purse, small satchel for loot, fingerless gloves. *Hair/Makeup:* Dark hair pulled back in practical ponytail or braid, minimal makeup, smudged kohl for night work, cunning expression.
+
+### Assassin
+
+**Form-fitting black bodysuit or leather armor** (reinforced at vital areas); **armored bracers**; **tactical belt** with hidden weapon holsters; **silent boots** (soft-soled). *Accessories:* Twin daggers or short swords, hidden blade mechanisms, poison vials, mask or hood for identity concealment, smoke bombs. *Hair/Makeup:* Hair secured tightly (bun, braid, or short), face paint or mask, minimal makeup, cold calculating expression.
+
+### Ninja
+
+**Black or dark purple shinobi shozoku** (fitted jacket and pants); **chest wraps or fitted top** underneath; **tabi boots** (split-toe); **leg wraps and arm guards**; **face mask** (covering lower face). *Accessories:* Katana or ninjato on back, kunai and shuriken, smoke bombs, grappling hook, utility belt. *Hair/Makeup:* Hair in tight bun or ponytail, minimal makeup, focused eyes, disciplined expression.
+
+### Priest
+
+**White or cream hooded robes** (flowing with gold trim and holy symbols); **ornate stole or sash** (embroidered with religious icons); **simple sandals** or **modest boots**. *Accessories:* Holy symbol necklace (prominently displayed), prayer beads, blessed staff or mace, healing herbs and bandages, sacred text. *Hair/Makeup:* Hair in modest style (covered, braided, or in bun), soft natural makeup, serene compassionate expression, gentle aura.
+
+### Battle Priest
+
+**Blessed chainmail or scale armor** (silver or white with holy engravings); **white tabard** with holy symbol; **armored gauntlets and boots**; **flowing half-cape**. *Accessories:* Blessed mace or war hammer, shield with divine symbol, holy water vials, prayer beads worn as bracelet, healing kit. *Hair/Makeup:* Practical hair in braid or secured bun, determined expression, natural makeup, righteous aura.
+
+### Hunter
+
+**Leather armor vest** (brown or forest green with fur trim); **fitted pants** (earth tones); **hooded cloak** (green or brown for camouflage); **sturdy leather boots** (calf-high). *Accessories:* Longbow and quiver of arrows (worn on back), hunting knife, animal companion (hawk, wolf, or hunting dog), rope and survival gear, leather gloves. *Hair/Makeup:* Practical hair in braid or ponytail, natural sun-kissed makeup, earth tone accents, alert focused expression.
+
+### Beastmaster
+
+**Leather armor** (decorated with animal motifs - claws, teeth, fur accents); **tribal-inspired accessories**; **earth-toned pants or skirt**; **leather boots** with good traction. *Accessories:* Staff or spear, animal companion (large beast like bear, big cat, or wolf), bone jewelry, nature-themed decorations, beast-calling horn. *Hair/Makeup:* Wild natural hair with braids and animal-inspired decorations (feathers, beads), tribal face paint, fierce expression, connection with nature.
+
+### Red Mage
+
+**Elegant jacket** (red with white trim, Renaissance-inspired with epaulettes); **white ruffled shirt** underneath; **fitted pants or split skirt** (white or cream); **red cape** (knee-length); **tall leather boots** (red or brown with cuffs). *Accessories:* Rapier at hip, spell focus (wand or small orb), feathered cap, magical jewelry, component pouch. *Hair/Makeup:* Stylish hair (often with distinctive styling or color streak), confident makeup with red accents, balanced expression showing both martial and magical prowess.
+
+### Magic Knight
+
+**Enchanted armor** (lighter plate with magical runes glowing along edges); **flowing battle skirt** or **armored pants**; **armored boots with mystical designs**; **enchanted cape** (color-changing or magical effects). *Accessories:* Enchanted sword (glowing blade with runes), magical focus (crystal or amulet), spellbook on belt, combination of armor and arcane jewelry. *Hair/Makeup:* Hair in warrior-mage style (practical but elegant, possibly with magical color), makeup showing both warrior determination and mystical power, dual nature expression.
+
+### Monk
+
+**Simple cloth wraps** (chest binding in earth tones); **loose martial arts pants** (with tied ankles); **cloth hand and foot wraps**; **martial arts belt** (colored by rank). *Accessories:* Staff or bo, prayer beads, meditation scrolls, minimal jewelry, headband. *Hair/Makeup:* Hair in practical tight bun or shaved head, minimal or no makeup, serene focused expression, spiritual aura, visible discipline.
+
+### Bard
+
+**Colorful doublet or vest** (jewel tones with decorative buttons and trim); **flowing shirt** (billowy sleeves); **fitted pants or layered skirt**; **tall boots with folded tops**; **feathered cap or circlet**. *Accessories:* Lute, harp, or other instrument, colorful scarves, jewelry (earrings, rings), coin purse, performance props. *Hair/Makeup:* Styled hair (often with flair - curls, braids, or dramatic cut), theatrical makeup, expressive features, charismatic smile.
+
+### Alchemist
+
+**Practical leather vest or apron** (with many pockets); **loose shirt** (with rolled sleeves); **fitted pants** tucked into boots; **sturdy work boots**; **protective goggles** (on head or around neck). *Accessories:* Bandolier of potion vials (multiple colors), mortar and pestle, ingredient pouches, bomb pouches, notebook for formulas, leather gloves. *Hair/Makeup:* Hair tied back for safety (bun or ponytail), minimal makeup, possibly stained fingers from work, curious intelligent expression.
+
+### Engineer
+
+**Practical work vest** (leather with tool loops); **fitted shirt** (with rolled sleeves); **pants with cargo pockets**; **sturdy boots** (steel-toed if available); **protective goggles**. *Accessories:* Tool belt (wrenches, hammers, screwdrivers), mechanical devices, gun or crossbow (modified), gadget pouches, blueprint tube, oil-stained gloves. *Hair/Makeup:* Practical short hair or secured in functional style, minimal makeup, possibly grease smudges, inventive expression.
+
 ## Film Noir
 
-### Film Noir - Jazz Club Patron
+### Jazz Club Patron
 **Cocktail dress** (dark color with interesting neckline, tea-length); **seamed stockings**; **heeled pumps**. *Accessories:* Small clutch, cigarette case, martini glass, statement earrings. *Hair/Makeup:* Styled waves, red or plum lipstick, smoky eye makeup.
 
-### Film Noir - Lead
+### Lead
 Floor-length **evening gown** (black silk with dramatic slit); **long black gloves** (satin); **high heels** (strappy stilettos). *Accessories:* Pearl necklace, cigarette holder, small clutch purse. *Hair/Makeup:* Dramatic waves, deep red lipstick, sultry eye makeup, beauty mark optional.
 
-### Film Noir - Nightclub Singer
+### Nightclub Singer
 Fitted **sequined cocktail dress** (black or deep red, knee-length with sweetheart neckline); **seamed stockings**; **peep-toe heels**. *Accessories:* Long gloves, feather boa, vintage microphone. *Hair/Makeup:* Victory rolls or finger waves, dramatic winged eyeliner, dark red lips.
 
-### Film Noir - Police Matron
+### Police Matron
 **Dark blazer** (navy or charcoal, structured shoulders); **matching skirt** (below knee); **white blouse** (buttoned high); **oxford shoes or low heels**. *Accessories:* Badge pinned to lapel, simple watch, hair net. *Hair/Makeup:* Severe bun or tight waves, minimal makeup, stern expression.
 
-### Film Noir - Private Detective
+### Private Detective
 Fitted **white button-down shirt** (crisp cotton); **high-waist trousers** (dark gray or black wool); **trench coat** (beige or tan gabardine, belted); **oxford shoes or low heels**. *Accessories:* Fedora hat, shoulder holster visible under coat, notebook in pocket. *Hair/Makeup:* Hair in practical updo or waves, minimal makeup, serious expression.
 
-### Film Noir - Secretary
+### Secretary
 **Crisp white blouse** (peter pan collar or bow neck); **pencil skirt** (dark gray or navy, below knee); **cardigan or blazer**; **sensible heels**. *Accessories:* Cat-eye glasses, simple pearl earrings, leather satchel, hair in neat bun with pencil stuck through. *Hair/Makeup:* Professional updo, natural makeup, lipstick in rose or coral.
 
 ---
 
 ## Formal & Evening
 
-### Formal - Cocktail Party
+### Cocktail Party
 **Cocktail dress** (knee-length or midi, elegant fabric like satin or lace in jewel tones); **heeled pumps or strappy sandals**. *Accessories:* Statement earrings, clutch purse, delicate bracelet. *Hair/Makeup:* Elegant updo or styled waves, sophisticated makeup with bold lip.
 
-### Formal - Concert Black
+### Statement Accent
+**Off-shoulder mini dress** (black bodycon silhouette, structured fit); **integrated ((default:white) or (signature)) off-shoulder band** with **long fabric extensions that tie into an oversized bow at the back** (draped across shoulder blades with long trailing ends). *Accessories:* Delicate gold necklace, rings, strappy heels or ankle-strap sandals (white or nude). *Hair/Makeup:* Loose waves or beachy curls with natural volume, natural glam makeup with defined eyes and nude lip.
+
+### Black Tie Dinner
+**Floor-length evening gown** (silk, velvet, or chiffon in black or deep jewel tone); **fitted bodice** with elegant neckline; **full skirt**. *Accessories:* Fine jewelry (diamonds or pearls), evening clutch, heels. *Hair/Makeup:* Sophisticated updo or Hollywood waves; glamorous makeup.
+
+### Concert Black
 Elegant black dress with cap sleeves, sweetheart neckline, and wrap waist, ankle-length. Black heels and pearl jewelry.
 
-### Formal - Evening Out
+### Evening Out
 Fitted **top or dress** in an elegant fabric; **heeled footwear**. *Accessories:* Statement jewelry. *Hair/Makeup:* Refined makeup, elegant hairstyle.
 
-### Formal - Wedding
-A sophisticated **dress** (ankle-length or midi) in an elegant fabric. *Accessories:* Delicate jewelry. *Hair/Makeup:* Refined, elegant styling.
+### Wedding
+A sophisticated **((default:dress) or (signature) dress)** (ankle-length or midi) in an elegant fabric. *Accessories:* Delicate jewelry. *Hair/Makeup:* Refined, elegant styling.
 
 ---
 
 ## Mythological & Cultural
 
-### God/Goddess - Egyptian
+### Egyptian
 Fitted **white linen sheath dress** (floor-length with gold beaded collar); **ornate golden collar necklace** (usekh); **golden sandals**. *Accessories:* Golden arm cuffs and wrist bangles, elaborate headdress with cobra (uraeus), gold belt. *Hair/Makeup:* Straight black hair with blunt bangs or wig, dramatic winged eyeliner, defined brows, gold accents on skin.
 
-### God/Goddess - Greek
+### Greek
 Flowing **white chiton** (draped one-shoulder style, secured with golden brooches); **golden belt or cord** at waist; **leather sandals** with straps up the calf. *Accessories:* Golden laurel crown, armband and wrist cuffs, draped gold jewelry. *Hair/Makeup:* Flowing waves with braided crown details, natural glowing makeup with gold shimmer.
 
-### God/Goddess - Hindu
+### Hindu
 **Silk sari** (vibrant colors - red, gold, royal blue, or emerald with ornate gold embroidery and border); **fitted choli blouse**; **ornate sandals or barefoot**. *Accessories:* Elaborate gold jewelry set (necklace, earrings, bangles, anklets), bindi, nose ring, maang tikka (forehead jewelry), fresh flower garland. *Hair/Makeup:* Hair in elegant braid with flowers, dramatic eye makeup with kohl, natural lip.
 
-### God/Goddess - Japanese
+### Indian Formal
+**Saree** (5-9 yards of draped silk, chiffon, or georgette fabric in vibrant colors - red, royal blue, emerald, fuchsia, or gold with embroidered borders, sequins, or zari work); **fitted blouse (choli)** (short sleeves, sleeveless, or cap sleeves with matching or contrasting embellishments); **petticoat** (underskirt in matching color); **embellished sandals or heels**. *Accessories:* Gold jewelry set (necklace, earrings, bangles - multiple on each wrist, anklets optional), bindi (forehead decoration), maang tikka (center-part hair jewelry), clutch or small purse, draped pallu (end piece) over shoulder. *Hair/Makeup:* Hair in elegant bun with jasmine flowers or loose waves with side part, dramatic kohl-lined eyes, defined brows, natural or red lip, henna designs on hands optional.
+
+### Japanese
 Elegant **kimono** (silk in white, red, or gold with nature motifs - cherry blossoms, cranes); **obi** (wide decorative belt); **tabi socks** and **zori sandals**. *Accessories:* Ornate kanzashi (hair ornaments) with flowers or divine symbols, delicate fan. *Hair/Makeup:* Traditional updo with decorative pins, pale foundation, subtle red lip, defined eyes.
 
-### God/Goddess - Norse
+### Norse
 **Long layered dress** (base layer in cream, overdress in deep blue or forest green with embroidered trim); **fur-trimmed cloak**; **leather boots**. *Accessories:* Silver or bronze circlet, Thor's hammer pendant, arm rings, woven belt. *Hair/Makeup:* Long braided hair (single or multiple braids), natural makeup, warrior-goddess aesthetic.
 
-### Royalty - African Royalty
+### African Royalty
 **Colorful wrapper skirt** (traditional African print or kente cloth); **fitted top or bustier** (matching or complementary); **head wrap** (gele - elaborately tied). *Accessories:* Bold gold jewelry (chunky necklaces, bangles, earrings), beaded accessories. *Hair/Makeup:* Hair wrapped in gele or natural styles, bold makeup with rich colors, glowing skin.
 
-### Royalty - Arabian
+### Arabian
 Flowing **silk or chiffon pants** (harem style in jewel tones); **ornate beaded top or fitted vest** over **sheer long-sleeve blouse**; **pointed slippers**. *Accessories:* Jeweled headpiece with chains or coins, gold bangles and arm cuffs, ornate belt, sheer veil. *Hair/Makeup:* Long dark hair in loose waves or braided, dramatic eye makeup with kohl and jewel tones, henna designs on hands.
 
-### Royalty - Celtic
+### Celtic
 **Long flowing dress** (earthy tones - forest green, deep blue, cream with Celtic knotwork embroidery); **wool cloak** with brooch; **leather boots**. *Accessories:* Silver or bronze torc (neck ring), Celtic knotwork jewelry, flower crown or circlet. *Hair/Makeup:* Long loose waves or elaborate braids, natural makeup with earthy tones, freckles enhanced.
 
-### Royalty - Chinese
+### Chinese
 **Hanfu dress** (flowing robes in silk - red, gold, or pastel with embroidered details); **wide sleeves**; **trained embroidered slippers**. *Accessories:* Ornate hairpins and combs, jade jewelry, decorative fan, flowing ribbons in hair. *Hair/Makeup:* Elegant updo with decorative pins and ornaments, natural makeup with red lip, porcelain complexion.
 
-### Royalty - Medieval European
+### Medieval European
 **Fitted bodice** (velvet or brocade in rich colors - burgundy, royal blue, forest green) with **long flowing sleeves**; **full skirt** (multiple layers); **pointed shoes**. *Accessories:* Crown or circlet, jeweled necklace and rings, decorative belt. *Hair/Makeup:* Hair in elaborate braids or loose curls with jeweled nets, natural rosy makeup, fair complexion.
+
+---
+
+## Performance & Entertainment
+
+### Vintage Tap
+Fitted **Art Deco-style bodice** (pearl white or champagne satin with geometric beading, sequins, and crystal embellishments in symmetrical patterns); **high-cut performance briefs** (matching color with coordinated beadwork); **sheer nude stockings with back seam**; **T-strap heeled shoes** (silver or gold, 1930s style). *Accessories:* Towering white feathered headpiece (ostrich plumes arranged in tiered vertical display), long white opera gloves (satin), geometric Art Deco jewelry (crystal armband or statement necklace). *Hair/Makeup:* Finger waves or Marcel waves in platinum blonde, thin arched eyebrows, dark red cupid's bow lips, dramatic winged eyeliner, theatrical 1930s stage makeup with shimmer on cheeks and collarbones.
+
+### Oktoberfest
+**White peasant blouse** (puff sleeves, square or sweetheart neckline, cotton or linen); **fitted bodice/vest** (royal blue, burgundy, or traditional colors with lacing or buttons); **full gathered skirt** (knee-length with decorative trim or ribbon details, matching bodice); **apron** (white or complementary color tied at waist); **Mary Jane shoes or ankle boots**. *Accessories:* Delicate necklace (choker style), hair ribbon or flowers. *Hair/Makeup:* Hair in braids (single or double), natural rosy makeup, fresh-faced glow.
 
 ---
 
 ## Professional & Office
 
-### Professional - Medical Scrubs
-**Scrub top** (v-neck or round neck in solid color - navy, teal, or burgundy); **scrub pants** (drawstring waist, multiple pockets); **comfortable sneakers or clogs** (white or matching color). *Accessories:* Stethoscope around neck, ID badge, watch, hair secured away from face. *Hair/Makeup:* Natural minimal makeup, hair in ponytail or bun.
+### Medical Scrubs
+**Scrub top** (v-neck or round neck in ((default:solid color - navy, teal, or burgundy) or (signature))); **scrub pants** (drawstring waist, multiple pockets); **comfortable sneakers or clogs** (white or matching color). *Accessories:* Stethoscope around neck, ID badge, watch, hair secured away from face. *Hair/Makeup:* Natural minimal makeup, hair in ponytail or bun.
 
-### Professional - Office
+### Office
 Tailored **blazer** (structured fabric); **blouse or button-up shirt**; **dress pants or pencil skirt** (knee-length). *Accessories:* Simple watch, minimal jewelry, professional bag. *Hair/Makeup:* Polished, professional styling.
+
+### All Black
+**Black button-down shirt** (long or short sleeve, crisp); **black dress pants** (straight leg); **black waist apron** (optional). *Accessories:* Black non-slip shoes, black belt, order pad. *Hair/Makeup:* Neat ponytail or bun, minimal professional makeup.
+
+### Italian Restaurant
+**Crisp white button-down shirt** (rolled sleeves or fitted); **black fitted vest**; **black dress trousers**; **long white bistro apron** (tied at waist). *Accessories:* Black tie (optional), corkscrew/wine key, black non-slip shoes. *Hair/Makeup:* Polished, neat hair, classic makeup.
 
 ---
 
 ## Seasonal & Swimwear
 
-### Seasonal - Beach Summer
+### Beach Summer
 **Bikini or one-piece**; sheer **cover-up or linen shirt** worn open; **flat sandals**. *Accessories:* Sunhat, sunglasses optional. *Hair/Makeup:* Minimal waterproof makeup.
 
-### Seasonal - Cozy Autumn
+### Cozy Autumn
 Oversized **knit sweater** (chunky cable-knit); **high-waist jeans** or **corduroy pants**; **ankle boots**. *Accessories:* Knit scarf, simple jewelry. *Hair/Makeup:* Natural warm-toned makeup, relaxed hairstyle.
 
-### Seasonal - Winter Holiday
-**Velvet or satin dress** (knee-length or midi in deep jewel tones - emerald, burgundy, navy); **tights or stockings**; **heeled boots or pumps**. *Accessories:* Statement jewelry, clutch, elegant coat or shawl. *Hair/Makeup:* Festive styling with shimmer, bold lip in berry or red tones, hair in elegant curls or updo.
+### Winter Holiday
+**Velvet or satin dress** (knee-length or midi in ((default:deep jewel tones - emerald, burgundy, navy) or (signature))); **tights or stockings**; **heeled boots or pumps**. *Accessories:* Statement jewelry, clutch, elegant coat or shawl. *Hair/Makeup:* Festive styling with shimmer, bold lip in berry or red tones, hair in elegant curls or updo.
 
 ### Swimwear
-Simple **bikini**. *Accessories:* None specified. *Hair/Makeup:* Minimal waterproof makeup.
+Simple **((default:bikini) or (signature) bikini)**. *Accessories:* None specified. *Hair/Makeup:* Minimal waterproof makeup.
 
 ---
 
-## Sleepwear & Intimate
+## Sleepwear & Lounge
 
-### Lingerie - Intimate
-A **intimate apparel set** (bra and brief/boy short combination) in a flattering style. *Accessories:* Minimal jewelry. *Hair/Makeup:* Soft, intimate styling.
+### Intimate
+A **((default:intimate apparel set) or (signature) lingerie set)** (bra and brief/boy short combination) in a flattering style. *Accessories:* Minimal jewelry. *Hair/Makeup:* Soft, intimate styling.
 
-### Sleepwear - Comfortable
-Soft **pajama set** (matching top and shorts/pants) or **nightgown**; **fuzzy slippers or socks**. *Accessories:* None or minimal. *Hair/Makeup:* No makeup, hair down or in loose bun.
+### Comfortable
+Soft **((default:pajama set) or (signature) pajama set)** (matching top and shorts/pants) or **nightgown**; **fuzzy slippers or socks**. *Accessories:* None or minimal. *Hair/Makeup:* No makeup, hair down or in loose bun.
 
 ---
 
@@ -237,18 +383,12 @@ Soft **pajama set** (matching top and shorts/pants) or **nightgown**; **fuzzy sl
 **Sleeveless performance jersey** for **{team}** with **athletic mesh panels** on sides{modifier}; primary body in **{secondary_color}** with **contrasting {primary_color} shoulder stripes** and **double side piping**; **bold team number** on front and back in **{primary_color}** with **white outline**; **moisture-wicking athletic shorts** in **{secondary_color}** with **{primary_color} side stripe** and **contrast waistband**; **basketball shoes** ({accent}, high-tops or low-tops with ankle support). *Accessories:* Matching headband with team logo, compression arm sleeve optional, wristbands. *Hair/Makeup:* Hair secured in high ponytail with team-colored scrunchie, minimal makeup with defined brows.
 
 ### Basketball - Home
-**Sleeveless performance jersey** for **{team}** with **athletic mesh panels** on sides{modifier}; primary body in **{primary_color}** with **contrasting {secondary_color} shoulder stripes** and **double side piping**; **bold team number** on front and back in **{secondary_color}** with **white outline**; **moisture-wicking athletic shorts** in **{primary_color}** with **{secondary_color} side stripe** and **contrast waistband**; **basketball shoes** ({accent}, high-tops or low-tops with ankle support). *Accessories:* Matching headband with team logo, compression arm sleeve optional, wristbands. *Hair/Makeup:* Hair secured in high ponytail with team-colored scrunchie, minimal makeup with defined brows.
+**Sleeveless performance jersey** for **{team}** with **athletic mesh panels** on sides{modifier}; primary body in **{primary_color}** with **{secondary_color} shoulder stripes** and **double side piping**; **bold team number** on front and back in **{secondary_color}** with **white outline**; **moisture-wicking athletic shorts** in **{primary_color}** with **{secondary_color} side stripe** and **contrast waistband**; **basketball shoes** ({accent}, high-tops or low-tops with ankle support). *Accessories:* Matching headband with team logo, compression arm sleeve optional, wristbands. *Hair/Makeup:* Hair secured in high ponytail with team-colored scrunchie, minimal makeup with defined brows.
 
-### Beach Volleyball - Away
-**Professional athletic bikini set** for **{team}**{modifier}; **racerback top** featuring a **sculpted compression fit** and a **sheer mesh center-chest cutout**; bodice in **{secondary_color}** with **{primary_color} side-binding** and a **metallic foil team logo** on the left; fabric is a premium **honeycomb-textured matte lycra**; matching **high-cut athletic bottoms** with **asymmetric color-blocked panels** in **{primary_color}** and **thick double-needle flatlock stitching**; **barefoot** with a **thin layer of sand-dusted skin**. *Accessories:* **Mirrored polarized sports sunglasses** ({accent}) with a **secure neck strap**, **performance visor** in **{secondary_color}** featuring **rhinestone-encrusted team initials**, waterproof fitness watch. *Hair/Makeup:* **Sleek boxer braids** with flyaways secured, **athletic sun-kissed glow** with high-SPF tinted moisturizer, waterproof mascara, and a natural coral lip tint.
-
-### Beach Volleyball - Home
+### Beach Volleyball
 **Professional athletic bikini set** for **{team}**{modifier}; **racerback top** featuring a **sculpted compression fit** and a **sheer mesh center-chest cutout**; bodice in **{primary_color}** with **{secondary_color} side-binding** and a **metallic foil team logo** on the left; fabric is a premium **honeycomb-textured matte lycra**; matching **high-cut athletic bottoms** with **asymmetric color-blocked panels** in **{secondary_color}** and **thick double-needle flatlock stitching**; **barefoot** with a **thin layer of sand-dusted skin**. *Accessories:* **Mirrored polarized sports sunglasses** ({accent}) with a **secure neck strap**, **performance visor** in **{primary_color}** featuring **rhinestone-encrusted team initials**, waterproof fitness watch. *Hair/Makeup:* **Sleek boxer braids** with flyaways secured, **athletic sun-kissed glow** with high-SPF tinted moisturizer, waterproof mascara, and a natural coral lip tint.
 
-### Bowling - Away
-Fitted **performance polo** for **{team}** in **{secondary_color} with {primary_color} accents** (moisture-wicking fabric with team logo and name on back){modifier}; **BLACK athletic skirt** (tailored fit); **bowling shoes** ({accent}). *Accessories:* Wrist support optional, team logo on collar. *Hair/Makeup:* Hair in ponytail or secured, neat makeup.
-
-### Bowling - Home
+### Bowling
 Fitted **performance polo** for **{team}** in **{primary_color} with {secondary_color} accents** (moisture-wicking fabric with team logo and name on back){modifier}; **BLACK athletic skirt** (tailored fit); **bowling shoes** ({accent}). *Accessories:* Wrist support optional, team logo on collar. *Hair/Makeup:* Hair in ponytail or secured, neat makeup.
 
 ### Cheerleading - Away
@@ -260,17 +400,11 @@ Fitted **performance polo** for **{team}** in **{primary_color} with {secondary_
 ### Esports Jersey
 **Pro-style V-neck jersey** for **{team}** featuring an **asymmetric diagonal design**; **white** torso base with contrasting **black** sleeves and side panels; a bold **{primary_color}** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** athletic joggers or leggings. *Accessories:* Gaming headset, wristbands. *Hair/Makeup:* Sleek styling, minimal modern makeup.
 
-### Boxing - Away
-**Professional satin boxing set** for **{team}**{modifier}; fitted **athletic tank** in **{secondary_color}** with **{primary_color} mesh side panels**; high-waist **satin boxing shorts** in **{secondary_color}** featuring a **wide 4-inch {primary_color} elastic waistband** with the **{team}** name embroidered in **bold metallic script** across the center; deep **side-slits** for mobility; **matching {secondary_color} hand wraps** visible under **10oz pro-style boxing gloves** in **{accent}** with a **glossy finish**; **high-top boxing shoes** ({accent}) with thin soles and reinforced ankles. *Accessories:* **Clear mouthguard**, athletic tape on wrists. *Hair/Makeup:* **Tight Dutch braids** pinned close to the head, focused intensity, slight sheen of sweat, minimal waterproof makeup.
-
-### Boxing - Home
+### Boxing
 **Professional satin boxing set** for **{team}**{modifier}; fitted **athletic tank** in **{primary_color}** with **{secondary_color} mesh side panels**; high-waist **satin boxing shorts** in **{primary_color}** featuring a **wide 4-inch {secondary_color} elastic waistband** with the **{team}** name embroidered in **bold metallic script** across the center; deep **side-slits** for mobility; **matching {primary_color} hand wraps** visible under **10oz pro-style boxing gloves** in **{accent}** with a **glossy finish**; **high-top boxing shoes** ({accent}) with thin soles and reinforced ankles. *Accessories:* **Clear mouthguard**, athletic tape on wrists. *Hair/Makeup:* **Tight Dutch braids** pinned close to the head, focused intensity, slight sheen of sweat, minimal waterproof makeup.
 
-### MMA - Away
-**Elite mixed martial arts kit** for **{team}**; **high-impact athletic sports bra** in **{secondary_color}** with **{primary_color} contrast binding** and a **sublimated geometric pattern**; matching **short athletic-cut compression shorts** in **{secondary_color}** with a **silicone-grip waistband** and **scalloped side-slits**; fabric is a **heavy-duty matte lycra**; **4oz open-palm MMA gloves** in **{accent}** with **reinforced knuckle padding**; **matching {secondary_color} ankle sleeves**; **barefoot** with a **ready athletic stance**. *Accessories:* **Black mouthguard**, athletic tape on fingers. *Hair/Makeup:* **Cornrow braids** for maximum security, determined game-face, faint sheen of sweat on shoulders and forehead.
-
-### MMA - Home
-**Elite mixed martial arts kit** for **{team}**; **high-impact athletic sports bra** in **{primary_color}** with **{secondary_color} contrast binding** and a **sublimated geometric pattern**; matching **short athletic-cut compression shorts** in **{primary_color}** with a **silicone-grip waistband** and **scalloped side-slits**; fabric is a **heavy-duty matte lycra**; **4oz open-palm MMA gloves** in **{accent}** with **reinforced knuckle padding**; **matching {primary_color} ankle sleeves**; **barefoot** with a **ready athletic stance**. *Accessories:* **Black mouthguard**, athletic tape on fingers. *Hair/Makeup:* **Cornrow braids** for maximum security, determined game-face, faint sheen of sweat on shoulders and forehead.
+### MMA
+**Elite mixed martial arts kit** for **{team}**; **high-impact athletic sports bra** in **{primary_color}** with **{secondary_color} contrast binding** and a **sublimated geometric pattern**; matching **short athletic-cut compression shorts** in **{primary_color}** with a **silicone-grip waistband** and **scalloped side-slits**; fabric is a **heavy-duty matte lycra**; **4oz open-palm MMA gloves** in **{accent}** with **reinforced knuckle padding**; **matching {secondary_color} ankle sleeves**; **barefoot** with a **ready athletic stance**. *Accessories:* **Black mouthguard**, athletic tape on fingers. *Hair/Makeup:* **Cornrow braids** for maximum security, determined game-face, faint sheen of sweat on shoulders and forehead.
 
 ### Soccer - Away
 **Fitted performance jersey** for **{team}** with **raglan sleeves** and **ventilated mesh back panel**{modifier}; body in **{secondary_color}** with **{primary_color} chest stripe** and **shoulder accent blocks**; **team crest** on left chest, **player number** on back in **bold {primary_color}** with **white shadow**; **athletic shorts** in **{secondary_color}** with **{primary_color} side stripes** and **elastic contrast waistband**; **knee-high performance socks** in **{secondary_color}** with **{accent} horizontal stripes** at calf and ankle; **soccer cleats** ({accent} with studs). *Accessories:* Shin guards with compression sleeves, captain's armband optional, hair tie. *Hair/Makeup:* Hair in secure Dutch braid or low ponytail, minimal makeup, game-ready expression.
@@ -284,22 +418,13 @@ Fitted **performance polo** for **{team}** in **{primary_color} with {secondary_
 ### Softball - Home
 **Performance softball jersey** for **{team}** with **contrast raglan sleeves**{modifier}; body in **{primary_color}** with **{secondary_color} sleeve color blocks** and **double chest stripe**; **team name** arched across front, **player number** on back in **{secondary_color}** with **white outline**; **white belted softball pants** with **athletic taper** and **{secondary_color} double side piping**; **team visor** in **{primary_color}** with **{secondary_color} embroidered logo**; **molded cleats** ({accent}). *Accessories:* Batting gloves with team colors, wristbands, eyeblack stickers, hair tie. *Hair/Makeup:* Hair in practical ponytail pulled through visor or boxer braids, minimal makeup, competitive expression.
 
-### Swimming - Away
-**Performance one-piece swimsuit** with a **solid black** central body panel for hydrodynamics; contoured side panels in **{secondary_color}** framed by thin **white** piping; racerback strap design with open back. *Accessories:* **White** swim cap with **{secondary_color}** logo, mirrored racing goggles. *Hair/Makeup:* Wet skin texture, waterproof makeup.
+### Swimming
+**Performance one-piece swimsuit** with a **solid black** central body panel for hydrodynamics; contoured side panels in **{primary_color}** framed by thin **{secondary_color}** piping; racerback strap design with open back. *Accessories:* **White** swim cap with **{primary_color}** logo, mirrored racing goggles ({accent}). *Hair/Makeup:* Wet skin texture, waterproof makeup.
 
-### Swimming - Home
-**Performance one-piece swimsuit** with a **solid black** central body panel for hydrodynamics; contoured side panels in **{primary_color}** framed by thin **white** piping; racerback strap design with open back. *Accessories:* **Black** swim cap with **{primary_color}** logo, mirrored racing goggles. *Hair/Makeup:* Wet skin texture, waterproof makeup.
-
-### Tennis - Away
-**Performance tank top** for **{team}** with **racerback design** and **contrast binding**; body in **{secondary_color}** with **{primary_color} color-blocked side panels** and **subtle team logo** on chest; **athletic skirt with built-in compression shorts** in **{secondary_color}** featuring **{primary_color} pleated inserts** and **contrast waistband with hidden ball pockets**; **tennis shoes** ({accent}, court-appropriate with reinforced toe). *Accessories:* Visor in **{secondary_color}** with **{primary_color} logo**, matching wristbands, hair tie. *Hair/Makeup:* Hair in sporty ponytail or braid with flyaways secured, minimal waterproof makeup with tinted lip balm, athletic glow.
-
-### Tennis - Home
+### Tennis
 **Performance tank top** for **{team}** with **racerback design** and **contrast binding**; body in **{primary_color}** with **{secondary_color} color-blocked side panels** and **subtle team logo** on chest; **athletic skirt with built-in compression shorts** in **{primary_color}** featuring **{secondary_color} pleated inserts** and **contrast waistband with hidden ball pockets**; **tennis shoes** ({accent}, court-appropriate with reinforced toe). *Accessories:* Visor in **{primary_color}** with **{secondary_color} logo**, matching wristbands, hair tie. *Hair/Makeup:* Hair in sporty ponytail or braid with flyaways secured, minimal waterproof makeup with tinted lip balm, athletic glow.
 
-### Track and Field - Away
-**Fitted performance crop top** for **{team}** with **racerback straps** and **mesh ventilation panels**; body in **{secondary_color}** with **{primary_color} diagonal chest stripe** and **team logo**; **high-cut athletic briefs** in **{secondary_color}** with **{primary_color} side binding** and **streamlined hip cut for mobility**; **track spikes or racing flats** ({accent}, event-specific). *Accessories:* Race number bib pinned at hip, timing chip anklet, hair secured in aerodynamic style. *Hair/Makeup:* Hair in slicked-back ponytail or tight bun, minimal makeup, focused expression.
-
-### Track and Field - Home
+### Track and Field
 **Fitted performance crop top** for **{team}** with **racerback straps** and **mesh ventilation panels**; body in **{primary_color}** with **{secondary_color} diagonal chest stripe** and **team logo**; **high-cut athletic briefs** in **{primary_color}** with **{secondary_color} side binding** and **streamlined hip cut for mobility**; **track spikes or racing flats** ({accent}, event-specific). *Accessories:* Race number bib pinned at hip, timing chip anklet, hair secured in aerodynamic style. *Hair/Makeup:* Hair in slicked-back ponytail or tight bun, minimal makeup, focused expression.
 
 ### Volleyball - Away
@@ -308,18 +433,53 @@ Fitted **performance polo** for **{team}** in **{primary_color} with {secondary_
 ### Volleyball - Home
 **Fitted sleeveless performance jersey** for **{team}** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes** along the sides{modifier}; body in **{primary_color}** with **{secondary_color} wraparound piping** and a **sublimated geometric pattern**; fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** centered on the chest and back with a **glossy {secondary_color} finish**; **high-waist compression shorts** in **{primary_color}** with **wide {secondary_color} comfort waistband** and **reinforced flatlock seams**; **low-profile gel-cushioned knee pads** in **{primary_color}** with **breathable mesh backing**; **professional court shoes** ({accent}) featuring **gum rubber soles** and **translucent heel cushioning**. *Accessories:* **Primary-color sweatbands** with embroidered logo, athletic tape on fingers, matching hair ribbon. *Hair/Makeup:* **High tight ponytail** with extreme volume, sweat-resistant performance makeup including **subtle shimmer on cheekbones** and a natural pink lip balm.
 
-### Wrestling - Away
-Fitted **singlet** in **{secondary_color} with {primary_color} accents** (lycra/spandex performance fabric with team logo); **wrestling shoes** ({accent}, lightweight with ankle support). *Accessories:* Knee pads optional. *Hair/Makeup:* Hair tied back and messy.
-
-### Wrestling - Home
+### Wrestling
 Fitted **singlet** in **{primary_color} with {secondary_color} accents** (lycra/spandex performance fabric with team logo); **wrestling shoes** ({accent}, lightweight with ankle support). *Accessories:* Knee pads optional. *Hair/Makeup:* Hair tied back and messy.
 
 ---
 
-## Vintage & Retro
+## Vintage & Period
 
-### Vintage - 1950s Server
+### 1950s Server
 Pastel blue vintage **1950s waitress dress** (soft matte cotton-blend fabric, crisp white pointed collar and sleeve cuffs, knee-length A-line skirt). *Accessories:* None specified. *Hair/Makeup:* None specified. worn tightly to enhance underbust contour
 
-### Vintage - Pinup
+### Pinup
 High-waist **vintage-inspired dress or separates** (1940s-50s style); **heeled shoes**. *Accessories:* Vintage jewelry. *Hair/Makeup:* Vintage styling (victory rolls, pin curls, winged liner, bold lip).
+
+### 1970s Disco
+**Halter jumpsuit** or **wrap dress** (metallic fabric, sequins, or bold geometric prints in gold, silver, turquoise, or hot pink); **wide-leg pants** or **flared skirt**; **platform heels or boots** (chunky, metallic, or patent leather). *Accessories:* Large hoop earrings, layered gold chain necklaces, wide belt (metallic or embellished), headband or silk scarf in hair, oversized sunglasses. *Hair/Makeup:* Feathered layers with volume and wings, afro, or long flowing waves; shimmery eyeshadow (blue, purple, or gold), thick mascara, glossy lips, disco ball glow with highlighter on cheekbones.
+
+---
+
+## Western & Rugged
+
+### Lumberjack
+**Red and black buffalo plaid flannel shirt** (thick cotton, buttoned or worn open over a white tank); **distressed blue jeans** (straight leg, rugged denim); **brown leather work boots**. *Accessories:* Leather belt with large buckle, small axe prop (optional), wool beanie. *Hair/Makeup:* Loose natural waves or a messy bun, minimal "outdoorsy" makeup.
+
+### Cowboy
+**Western-style button-down shirt** (with yolk detailing and pearl snaps); **fitted blue jeans or leather chaps**; **pointed-toe cowboy boots** with decorative stitching. *Accessories:* Wide-brimmed felt cowboy hat, leather belt with ornate silver buckle, neck kerchief (red or blue). *Hair/Makeup:* Long loose hair or braids, sun-kissed makeup with light freckles.
+
+---
+
+## Cold Weather Variants
+
+### Cold Weather - Athletic
+**Sleek insulated thermal jacket** (moisture-wicking, technical fabric); **fleece-lined leggings** (black or charcoal); **waterproof hiking boots**. *Accessories:* Thermal gloves, headband ear-warmers, sports sunglasses. *Hair/Makeup:* Secure ponytail, fresh-faced "winter glow" makeup.
+
+### Cold Weather - Cozy
+**Oversized chunky-knit cable sweater** (cream, soft gray, or forest green); **thick wool-blend leggings or corduroy pants**; **fur-lined boots**. *Accessories:* Large infinity scarf, matching knit mittens and pom-pom beanie. *Hair/Makeup:* Soft loose waves, rosy cheeks and berry-tinted lip.
+
+### Cold Weather - Functional
+**Heavy-duty down parka** (thigh-length with faux-fur trimmed hood); **waterproof snow pants**; **rugged winter boots** with deep tread. *Accessories:* Heavy insulated gloves, wool scarf, thermal socks visible at top of boots. *Hair/Makeup:* Practical styling, minimal makeup, focused on warmth.
+
+---
+
+## Traditions & Ceremonies
+
+### Kimono
+Traditional **silk kimono** (vibrant color with intricate nature motifs like cranes or blossoms); **obi** (wide decorative sash knotted in a complex bow at the back); **tabi socks** and **zori sandals**. *Accessories:* Ornate kanzashi (hair ornaments), decorative fan. *Hair/Makeup:* Traditional updo, porcelain-finish foundation, classic red lip.
+
+### Wedding
+**Elegant floor-length wedding gown** (white or ivory lace and silk, sweetheart neckline, flowing silhouette); **sheer lace veil** (optional, pinned to hair); **satin heeled pumps**. *Accessories:* Pearl necklace and earrings, bridal bouquet of fresh flowers, delicate gold bracelet. *Hair/Makeup:* Soft romantic curls or elegant updo, glowing bridal makeup with soft pink tones.
+# Fantasy Class Outfits (Female)
+

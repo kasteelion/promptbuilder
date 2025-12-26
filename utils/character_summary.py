@@ -6,6 +6,7 @@ This script extracts appearance information (excluding outfits) from character
 markdown files and prints a summary.
 """
 
+import re
 from pathlib import Path
 
 from .logger import logger
@@ -110,8 +111,14 @@ def extract_appearance(file_path, include_base=False):
     if tags_match:
         tags_meta = [t.strip() for t in tags_match.group(1).split(",") if t.strip()]
 
+    # Extract signature color if present
+    signature_color = None
+    sig_match = re.search(r"\*\*Signature Color:\*\*\s*(.+?)(?:\n|$)", content)
+    if sig_match:
+        signature_color = sig_match.group(1).strip()
+
     # 4) nothing found
-    return character_name, appearance_text, base_outfit, style_notes, summary_meta, tags_meta, Path(file_path).name
+    return character_name, appearance_text, base_outfit, style_notes, summary_meta, tags_meta, Path(file_path).name, signature_color
 
 
 def generate_summary(
@@ -151,9 +158,15 @@ def generate_summary(
             summary_meta,
             tags_meta,
             filename,
+            signature_color,
         ) = extract_appearance(md_file, include_base=include_base)
         summary_parts.append(f"[{i}] {name}")
         summary_parts.append("-" * 80)
+        
+        if signature_color:
+            summary_parts.append(f"Signature Color: {signature_color}")
+            summary_parts.append("")
+
         # If requested, prepend the explicit summary metadata before the appearance
         if include_summary and summary_meta:
             summary_parts.append(f"Summary: {summary_meta}")
@@ -206,6 +219,7 @@ def generate_character_data(characters_dir=None):
             summary_meta,
             tags_meta,
             filename,
+            signature_color,
         ) = extract_appearance(md_file, include_base=True)
         data.append({
             "name": name,
@@ -214,7 +228,8 @@ def generate_character_data(characters_dir=None):
             "style_notes": style_notes,
             "summary": summary_meta,
             "tags": tags_meta,
-            "filename": filename
+            "filename": filename,
+            "signature_color": signature_color
         })
     return data
 

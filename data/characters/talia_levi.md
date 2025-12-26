@@ -1,11 +1,12 @@
 ### Talia Levi
 **Photo:** talia_levi_photo.png
 
-**Tags:** female, israeli, mediterranean, alluring, confident, magnetic, provocative, sensual, sultry, feminine
+**Tags:** female, israeli, mediterranean, edgy, commanding
 
 **Summary:** Noa commands attention through unapologetic sensuality and magnetic presence. Her confidence is body-forward and deliberate, moving through space with the kind of self-possession that makes people pause mid-conversation. There's nothing performative about her allure—it's simply who she is, worn as naturally as sun-warmed skin.
 
 **Gender:** F
+**Signature Color:** #B8860B
 
 **Appearance:**
 * **Body:** Soft Dramatic frame; wave-lush flesh quality; voluptuous hourglass proportions with pronounced bust (full D-DD), defined waist, and rounded hips; moderate-to-tall vertical (5'7"); soft density with feminine curves, visible décolletage, rounded shoulders, and shapely legs; magnetizing sensual presence.

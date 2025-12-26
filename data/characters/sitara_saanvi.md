@@ -1,11 +1,12 @@
 ### Sitara Saanvi
 **Photo:** sitara_saanvi_photo.png
 
-**Tags:** female, indian, curvy, chic, vintage-inspired, charming, playful, sensual, sultry
+**Tags:** female, indian, curvy, chic, edgy, playful, vintage-inspired
 
 **Summary:** Sitara radiates a captivating, effervescent joy, possessing the magnetic charm of classic cinema sirens. Her essence is a playful blend of tradition and high-wattage glamour, exuding a human quality of sweet, accessible stardom that draws all eyes.
 
 **Gender:** F
+**Signature Color:** #FFB6C1
 
 **Appearance:**
 

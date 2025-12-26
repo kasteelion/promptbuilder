@@ -1,11 +1,12 @@
 ### Zara Washington
 **Photo:** zara_washington_photo.png
 
-**Tags:** black, female, curvy, cultural, funky, commanding, confident, expressive, warm
+**Tags:** black, female, curvy, approachable, commanding, cultural, playful, funky
 
 **Summary:** Zara radiates unapologetic presence and embodied confidence. Her power is expressive and grounded, combining cultural pride, sensuality, and bold personal style.
 
 **Gender:** F
+**Signature Color:** #9932CC
 
 **Appearance:**
 

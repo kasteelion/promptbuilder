@@ -1,11 +1,12 @@
 ### Lucía Reyes
 **Photo:** lucía_reyes_photo.png
 
-**Tags:** female, latina, curvy, affectionate, confident, expressive, playful, radiant, warm
+**Tags:** female, latina, curvy, approachable, commanding, playful, soft
 
 **Summary:** Radiant and confident, Lucía carries joy as power. Her warmth is immediate and magnetic, paired with self-assured sensuality that feels celebratory rather than performative.
 
 **Gender:** F
+**Signature Color:** #FF4500
 
 **Appearance:**
 

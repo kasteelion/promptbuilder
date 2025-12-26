@@ -1,11 +1,12 @@
 ### Isla MacLeod
 **Photo:** isla_macleod_photo.png
 
-**Tags:** female, bohemian, creative, musician, photographer, artistic, dreamy, ethereal, soft, reserved
+**Tags:** female, bohemian, creative, minimalist, soft, ethereal
 
 **Summary:** Isla has a dreamy, otherworldly quality softened by genuine warmth. Her indie-folk aesthetic and artistic sensibility define her more than any regional identity—she's the girl with a vintage film camera and a Spotify playlist full of obscure folk artists. She moves with quiet intention, her creative nature expressed through thoughtful pauses and an observant gaze that takes everything in.
 
 **Gender:** F
+**Signature Color:** #66CDAA
 
 **Appearance:**
 

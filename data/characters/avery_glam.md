@@ -1,11 +1,12 @@
 ### Avery Blake
 **Photo:** avery_blake_photo.png
 
-**Tags:** female, athletic, dramatic, edgy, performance-driven, commanding, provocative, rebellious, sultry
+**Tags:** female, athletic, creative, edgy, commanding, dramatic
 
 **Summary:** Avery embodies dangerous glamour—a rock goddess who traded the stage for the ring without losing an ounce of attitude. Her presence is dark, dramatic, and unapologetically provocative: jet-black hair cascading like a curtain, smokey eyes that could stop traffic, and an edge sharp enough to draw blood. She moves with calculated sensuality and fierce confidence, equal parts seductress and warrior.
 
 **Gender:** F
+**Signature Color:** #800020
 
 **Appearance:**
 

@@ -259,7 +259,13 @@ class MenuManager:
             label="📊 Characters Summary", command=self.callbacks["show_characters_summary"]
         )
         help_menu.add_command(
+            label="👗 Outfits Summary", command=self.callbacks["show_outfits_summary"]
+        )
+        help_menu.add_command(
             label="🎨 Team Colors Summary", command=self.callbacks["show_color_schemes_summary"]
+        )
+        help_menu.add_command(
+            label="🏷️ Tag Distribution Summary", command=self.callbacks["show_tag_summary"]
         )
 
         help_menu.add_separator()

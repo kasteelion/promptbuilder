@@ -1,8 +1,9 @@
 ### Enzo Rossi
 **Photo:** enzo_rossi_photo.png
 **Summary:** Bold and magnetic, Enzo projects confidence through intensity and physical presence. His energy is commanding yet controlled, blending classic masculinity with a refined, intentional edge.
-**Tags:** italian, male, strong, charismatic, commanding, confident, intense
+**Tags:** italian, male, strong, commanding, intense, playful
 **Gender:** M
+**Signature Color:** #191970
 
 **Appearance:**
 

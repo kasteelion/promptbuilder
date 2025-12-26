@@ -2,10 +2,11 @@
 **Photo:** silas_burnside_photo.png
 
 **Photo:** silas_burnside_photo.png
-**Tags:** male, strong, lumberjack, midwestern, outdoorsy, hearty, reliable, rugged
+**Tags:** male, strong, outdoorsy, rugged, approachable, midwestern
 **Summary:** Silas is the quintessential midwestern woodsman—a giant of a man with a laugh that shakes the room and a heart as big as his frame. He carries the scent of pine sawdust and woodsmoke wherever he goes. His presence is warm but solid, grounded in decades of hard labor and simple living. He’s the guy who pulls your truck out of a snowbank in a blizzard and waves off any thanks.
 
 **Gender:** M
+**Signature Color:** #8B0000
 
 **Appearance:**
 * **Body:** Flamboyant Natural; bear-like frame; broad, heavy shoulders and a deep barrel chest; thick functional muscle covered by a healthy layer of "winter insulation"; tall vertical (6'3"-6'5"); massive, calloused hands; moves with a heavy, confident lumber.

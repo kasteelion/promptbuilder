@@ -1,11 +1,12 @@
 ### Diesel Murphy
 **Photo:** diesel_murphy_photo.png
 
-**Tags:** female, butch, grease-stained, masculine-presenting, mechanic, practical, vintage-cars, working-class, confident, lesbian, rugged, tomboyish
+**Tags:** female, rugged, commanding, lesbian
 
 **Summary:** Diesel lives with wrench in hand and grease under her nails. Her butch presentation is authentic feminine masculinity—she's unmistakably a woman who simply expresses herself through masculine aesthetics and body language. In male-dominated garage spaces, she commands respect through skill and quiet confidence rather than trying to be "one of the guys." Vintage cars are her language of love and precision, and she speaks it fluently with calloused hands and an encyclopedic knowledge of carburetors.
 
 **Gender:** F
+**Signature Color:** #556B2F
 
 **Appearance:**
 

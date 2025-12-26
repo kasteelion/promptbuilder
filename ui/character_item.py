@@ -5,6 +5,11 @@ import tkinter as tk
 from tkinter import ttk
 
 from utils.outfit_color_check import outfit_has_color_vars
+import re
+
+def outfit_has_signature_vars(text: str) -> bool:
+    return bool(re.search(r"\(\(default:.*?\)\s+or\s+\(signature\)\)", text, re.IGNORECASE))
+
 from .searchable_combobox import SearchableCombobox
 from .widgets import FlowFrame
 
@@ -167,6 +172,46 @@ class CharacterItem(ttk.LabelFrame):
             text="✨ New Outfit for Character",
             command=lambda: self.callbacks["create_outfit"](self.char_data["name"]),
         ).pack(fill="x", pady=(2, 0))
+
+        # Signature Color Checkbox
+        sig_color = self.char_def.get("signature_color")
+        if sig_color and outfit_has_signature_vars(str(outfit_text)):
+            sig_var = tk.BooleanVar(value=self.char_data.get("use_signature_color", False))
+            
+            def on_sig_toggle():
+                self.char_data["use_signature_color"] = sig_var.get()
+                self.callbacks["on_change"]()
+                
+            sig_frame = ttk.Frame(self)
+            sig_frame.pack(fill="x", padx=4, pady=(0, 6))
+            
+            chk = ttk.Checkbutton(
+                sig_frame, 
+                text="Use Signature Color", 
+                variable=sig_var, 
+                command=on_sig_toggle
+            )
+            chk.pack(side="left")
+            
+            # Color swatch
+            try:
+                # Validate hex if possible, though basic label usually handles it or ignores
+                swatch = tk.Label(
+                    sig_frame, 
+                    bg=sig_color, 
+                    width=2, 
+                    height=1, 
+                    relief="solid", 
+                    borderwidth=1
+                )
+                swatch.pack(side="left", padx=(5, 0))
+                
+                # Tooltip for specific hex
+                from utils.tooltip import create_tooltip
+                create_tooltip(swatch, f"Signature Color: {sig_color}")
+            except Exception:
+                # If color is invalid, just skip the swatch
+                pass
 
         # Pose preset selector
         ttk.Label(self, text="🎭 Pose (Optional):", font=("Consolas", 9, "bold")).pack(

@@ -2,6 +2,32 @@
 
 ## [Unreleased]
 
+### Added
+- **Signature Colors:** Implemented a new system allowing characters to have a defined signature color (hex code). Outfits can now dynamically switch between a default color and the character's signature color using the `((default:Color) or (signature))` syntax.
+- **UI Explorers:** Added two new visual summary tools accessible via the Help menu:
+    - **Tag Distribution Explorer:** Visualizes tag usage statistics across the character database.
+    - **Outfit Library Explorer:** Browse all available outfits, filter by category, and see which outfits support team colors or signature colors.
+- **Bulk Edit:** Added "Use Signature Color" checkbox to the Bulk Edit panel in the Characters tab.
+- **New Outfits:** Significantly expanded the outfit library with new categories:
+    - **International:** Japanese Harajuku, African Print Contemporary.
+    - **Fantasy Classes:** Knight, Paladin, Barbarian, Samurai, Wizard, Sorcerer, Necromancer, Druid, Thief, Assassin, Ninja, Priest, Hunter, Beastmaster, Red Mage, Monk, Bard, Alchemist, Engineer.
+    - **Performance:** Vintage Tap, Oktoberfest.
+    - **Historical:** Renaissance Noble.
+    - **Period:** 1970s Disco.
+
+### Changed
+- **Character Data:** Updated all character profiles to include `**Signature Color:**` definitions and refined tag categorization.
+- **Outfit Data:** Updated existing outfits (Cyberpunk, Goth, etc.) to utilize the new Signature Color syntax.
+- **Documentation:** Added "Signature Colors" section to `docs/character-flexibility.md`.
+- **Architecture:** Updated `docs/architecture.md` to include the new `OutfitSummary` component.
+
+### Fixed
+- **UI:** Improved `CharacterItem` to show a signature color swatch if applicable.
+
+### Internal
+- **Utils:** Added `utils/outfit_summary.py` for generating consolidated outfit data.
+- **Docs:** Updated `data/tags.md` with clearer categorization.
+
 - docs: comprehensive documentation overhaul to follow industry standards
 - docs: added MIT LICENSE and CONTRIBUTING.md guidelines
 - docs: reorganized docs/ directory with a central README index and legacy/ archive

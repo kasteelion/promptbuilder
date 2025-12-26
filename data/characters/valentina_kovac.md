@@ -1,11 +1,12 @@
 ### Valentina "Tina" Kovač
 **Photo:** valentina_tina_kovač_photo.png
 
-**Tags:** eastern-european, female, romani, thin, bohemian, edgy, guerrilla-art, street-artist, artistic, intense, nocturnal, nomadic, restless, wild, angular
+**Tags:** eastern-european, female, romani, thin, bohemian, creative, edgy, adventurous, intense, angular
 
 **Summary:** Tina moves through the world like smoke—elusive, ethereal, impossible to pin down. Her Romani heritage shows in her restless energy and natural theatricality, while her ectomorphic build gives her an almost otherworldly quality. She's all angles and intensity, burning through life with creative fire that seems to consume her slight frame. Street art is her language, and the city is her canvas. There's a wildness to her that civilized spaces can't quite contain.
 
 **Gender:** F
+**Signature Color:** #000000
 
 **Appearance:**
 * **Body:** Dramatic frame; straight thin flesh with minimal softness; narrow angular proportions with long limbs, prominent joints (elbows, wrists, knees), flat planes, minimal bust (A cup), straight hips, long fingers and toes; tall-moderate vertical (5'8"-5'9"); very low body density—visible bone structure, delicate appearance but wiry strength, lean muscle definition without bulk; bird-like presence that seems too delicate yet surprisingly resilient.

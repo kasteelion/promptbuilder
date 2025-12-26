@@ -253,16 +253,25 @@ class CharactersTab:
         self.bulk_scheme_lock_chk.pack(in_=scheme_row, side="left", padx=(6, 0))
         create_tooltip(self.bulk_scheme_lock_chk, "Keep the selected colors after applying")
 
+        # Signature Color Checkbox
+        self.bulk_sig_color_var = tk.BooleanVar(value=False)
+        sig_chk = ttk.Checkbutton(
+            bulk, text="Use Signature Colors", variable=self.bulk_sig_color_var,
+            command=lambda: self._update_bulk_preview()
+        )
+        sig_chk.grid(row=4, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 6))
+        create_tooltip(sig_chk, "Apply signature color to all (where supported by outfit)")
+
         # Preview/status label
         self.bulk_preview_var = tk.StringVar(value="")
         self.bulk_preview_label = ttk.Label(
             bulk, textvariable=self.bulk_preview_var, style="Muted.TLabel"
         )
-        self.bulk_preview_label.grid(row=4, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 6))
+        self.bulk_preview_label.grid(row=5, column=0, columnspan=2, sticky="w", padx=4, pady=(0, 6))
 
         # Button row
         btn_frame = ttk.Frame(bulk)
-        btn_frame.grid(row=5, column=0, columnspan=2, sticky="ew", padx=4, pady=6)
+        btn_frame.grid(row=6, column=0, columnspan=2, sticky="ew", padx=4, pady=6)
         btn_frame.columnconfigure(0, weight=1)
         btn_frame.columnconfigure(1, weight=1)
         btn_frame.columnconfigure(2, weight=1)
@@ -344,14 +353,16 @@ class CharactersTab:
         """Update preview text showing which characters will be affected."""
         outfit_name = self.bulk_outfit_var.get()
         scheme_name = self.bulk_scheme_var.get()
+        use_sig = self.bulk_sig_color_var.get()
 
-        if not outfit_name and not scheme_name:
+        if not outfit_name and not scheme_name and not use_sig:
             self.bulk_preview_var.set("")
             return
             
         changes = []
         if outfit_name: changes.append("outfit")
         if scheme_name: changes.append("colors")
+        if use_sig: changes.append("sig. color")
         change_text = " & ".join(changes)
 
         if not self.selected_characters:
@@ -368,9 +379,10 @@ class CharactersTab:
         """Apply selected outfit and/or color scheme to all selected characters."""
         outfit_name = self.bulk_outfit_var.get()
         scheme_name = self.bulk_scheme_var.get()
+        use_sig = self.bulk_sig_color_var.get()
 
-        if not outfit_name and not scheme_name:
-            messagebox.showwarning("Selection Required", "Please select an outfit or color scheme to apply")
+        if not outfit_name and not scheme_name and not use_sig:
+            messagebox.showwarning("Selection Required", "Please select an outfit, color scheme, or signature color to apply")
             return
 
         if not self.selected_characters:
@@ -388,6 +400,20 @@ class CharactersTab:
                 char["outfit"] = outfit_name
             if scheme_name:
                 char["color_scheme"] = scheme_name
+            if use_sig:
+                # Check if outfit supports signature color (optional, but good practice)
+                # But here we just set the flag, logic is in builder
+                char["use_signature_color"] = True
+            # If specifically unchecked (logic implies apply means 'set', 
+            # but usually bulk apply means 'set what is selected')
+            # If user wants to unset, we'd need a tristate or explicit 'unset' mode.
+            # For now, 'Apply' means enable. To disable, user handles individually or we need 'Clear' mode.
+            # Assuming checkbox state represents desired state for ALL:
+            # Actually, bulk apply usually means "apply positive change". 
+            # If checkbox is unchecked, it just means "don't change this setting".
+            # BUT if checkbox IS checked, we set it to True.
+            # To set to False, we'd need another mechanism.
+            # Let's stick to: Checked = Set True.
 
         self._refresh_list()
         self.on_change()
@@ -397,12 +423,18 @@ class CharactersTab:
             self.bulk_outfit_var.set("")
         if scheme_name and (not getattr(self, "bulk_scheme_lock_var", None) or not self.bulk_scheme_lock_var.get()):
             self.bulk_scheme_var.set("")
+        # Don't clear signature checkbox usually? Or clear it? 
+        # Typically simple inputs clear, but checkbox might stay? 
+        # Let's clear it to be consistent with "Apply" action.
+        if use_sig:
+            self.bulk_sig_color_var.set(False)
 
         # Show status feedback
         root = self.tab.winfo_toplevel()
         changes = []
         if outfit_name: changes.append(f"outfit '{outfit_name}'")
         if scheme_name: changes.append(f"colors '{scheme_name}'")
+        if use_sig: changes.append("signature color")
         msg = f"Applied {', '.join(changes)} to all {count} character(s)"
         
         if hasattr(root, "_update_status"):
@@ -417,9 +449,10 @@ class CharactersTab:
         """Apply selected outfit/colors to a specific selected character via dialog."""
         outfit_name = self.bulk_outfit_var.get()
         scheme_name = self.bulk_scheme_var.get()
+        use_sig = self.bulk_sig_color_var.get()
 
-        if not outfit_name and not scheme_name:
-            messagebox.showwarning("Selection Required", "Please select an outfit or color scheme to apply")
+        if not outfit_name and not scheme_name and not use_sig:
+            messagebox.showwarning("Selection Required", "Please select an outfit, color scheme, or signature color to apply")
             return
 
         if not self.selected_characters:
@@ -434,6 +467,7 @@ class CharactersTab:
             char = self.selected_characters[0]
             if outfit_name: char["outfit"] = outfit_name
             if scheme_name: char["color_scheme"] = scheme_name
+            if use_sig: char["use_signature_color"] = True
             
             self._refresh_list()
             self.on_change()
@@ -442,6 +476,8 @@ class CharactersTab:
                 self.bulk_outfit_var.set("")
             if scheme_name and (not getattr(self, "bulk_scheme_lock_var", None) or not self.bulk_scheme_lock_var.get()):
                 self.bulk_scheme_var.set("")
+            if use_sig:
+                self.bulk_sig_color_var.set(False)
 
             root = self.tab.winfo_toplevel()
             if hasattr(root, "_update_status"):
@@ -458,6 +494,7 @@ class CharactersTab:
         msg = "Apply "
         if outfit_name: msg += f"outfit '{outfit_name}' "
         if scheme_name: msg += f"colors '{scheme_name}' "
+        if use_sig: msg += "signature color "
         msg += "to:"
         
         ttk.Label(dialog, text=msg, style="Bold.TLabel", wraplength=280).pack(pady=(10, 5))
@@ -487,6 +524,7 @@ class CharactersTab:
                 
                 if outfit_name: char["outfit"] = outfit_name
                 if scheme_name: char["color_scheme"] = scheme_name
+                if use_sig: char["use_signature_color"] = True
                 
                 self._refresh_list()
                 self.on_change()
@@ -495,6 +533,8 @@ class CharactersTab:
                     self.bulk_outfit_var.set("")
                 if scheme_name and (not getattr(self, "bulk_scheme_lock_var", None) or not self.bulk_scheme_lock_var.get()):
                     self.bulk_scheme_var.set("")
+                if use_sig:
+                    self.bulk_sig_color_var.set(False)
                     
                 dialog.destroy()
 

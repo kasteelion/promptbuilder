@@ -1,11 +1,12 @@
 ### Rafael Costa
 **Photo:** rafael_costa_photo.png
 
-**Tags:** brazilian, male, creative, artistic, charismatic, energetic, expressive, warm
+**Tags:** latina, male, creative, approachable, playful
 
 **Summary:** Rafael carries creative energy that feels both grounded and effervescent. His presence blends artistic sensitivity with warm approachability, moving through space with the easy confidence of someone comfortable in their own skin. There's a theatrical quality to his gestures that never feels performative—just naturally expressive.
 
 **Gender:** M
+**Signature Color:** #A0522D
 
 **Appearance:**
 

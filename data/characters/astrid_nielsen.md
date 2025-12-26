@@ -1,9 +1,10 @@
 ### Astrid Nielsen
 **Photo:** astrid_nielsen_photo.png
-**Tags:** female, nordic, statuesque, chic, minimalist, cool-toned, poised, reserved
+**Tags:** female, nordic, statuesque, chic, minimalist, cool-toned
 
 **Summary:** Cool, serene, and impeccably controlled, Astrid feels like still water—quietly powerful beneath the surface. Her minimalist presence emphasizes clarity and balance, projecting confidence through simplicity and precision rather than overt expression.
 **Gender:** F
+**Signature Color:** #708090
 **Appearance:**
 
 * **Body:** Dramatic Classic frame; straight flesh; narrow balanced rectangle proportions; tall vertical line; refined posture with precise alignment; statuesque and poised.

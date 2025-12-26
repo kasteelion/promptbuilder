@@ -1,11 +1,12 @@
 ### Lila Reyes
 **Photo:** lila_reyes_photo.png
 
-**Tags:** female, filipino, athletic, petite, plus-size, strong, commanding, competition, determined, disciplined, intense, dark-asian
+**Tags:** female, filipino, athletic, petite, plus-size, strong, commanding, intense, dark-asian
 
 **Summary:** Lila is a study in concentrated strength—115 pounds of lean, athletic muscle packed onto a 5'1" frame. What she lacks in height, she compensates for in toned definition and functional power that reflects her deep dedication to training. Her dark Filipino features combined with a fit, strong physique create a striking aesthetic: a focused, determined face paired with a small but undeniably capable build. She embodies the phrase "small but mighty," moving through the world with the quiet confidence of a disciplined athlete.
 
 **Gender:** F
+**Signature Color:** #00CED1
 
 **Appearance:**
 * **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
