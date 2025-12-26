@@ -244,6 +244,7 @@ class PromptBuilderApp:
         menu_callbacks = {
             "save_preset": self.menu_actions.save_preset,
             "load_preset": self.menu_actions.load_preset,
+            "import_from_text": self.menu_actions.import_from_text,
             "export_config": self.menu_actions.export_config,
             "import_config": self.menu_actions.import_config,
             "undo": self.menu_actions.undo,
@@ -487,9 +488,10 @@ class PromptBuilderApp:
         self.notes_text.bind("<KeyRelease>", _on_notes_change)
 
         # Summary section
-        self.summary_collapsible = CollapsibleFrame(right_frame, text="📋 Prompt Summary", opened=True)
+        self.summary_collapsible = CollapsibleFrame(right_frame, text="📋 Prompt Summary", opened=True, show_import=True)
         self.summary_collapsible.grid(row=3, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
-        create_tooltip(self.summary_collapsible, "Condensed overview of characters and scene")
+        self.summary_collapsible.set_import_command(self.menu_actions.import_from_text)
+        create_tooltip(self.summary_collapsible, "Condensed overview of characters and scene. Click Import to load from text.")
         summary_content = self.summary_collapsible.get_content_frame()
         summary_content.columnconfigure(0, weight=1)
         

@@ -3,6 +3,8 @@
 ## [Unreleased]
 
 ### Added
+- **Natural Language Import:** New feature to import entire prompt configurations from raw text. Supports two formats: standard app summaries and a new structured LLM-friendly block format. Includes fuzzy character matching.
+- **Import Button:** Added a quick-access 📥 Import button to the Prompt Summary header.
 - **Auto-Tag Sync:** The application now automatically scans character files on startup (and reload) and adds any new, unknown tags to `tags.md`. This supports the workflow of manually adding character files.
 - **Signature Colors:** Implemented a new system allowing characters to have a defined signature color (hex code). Outfits can now dynamically switch between a default color and the character's signature color using the `((default:Color) or (signature))` syntax.
 - **UI Explorers:** Added two new visual summary tools accessible via the Help menu:

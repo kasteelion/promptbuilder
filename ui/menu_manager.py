@@ -78,6 +78,9 @@ class MenuManager:
         file_menu.add_command(
             label="📥 Import Configuration...", command=self.callbacks["import_config"]
         )
+        file_menu.add_command(
+            label="📝 Import from Text...", command=self.callbacks["import_from_text"]
+        )
 
         file_menu.add_separator()
 

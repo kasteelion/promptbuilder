@@ -126,7 +126,7 @@ class ScrollableCanvas(ttk.Frame):
 class CollapsibleFrame(ttk.Frame):
     """A frame that can be collapsed/expanded with a toggle button."""
 
-    def __init__(self, parent, text="", opened=True, show_clear=False, *args, **kwargs):
+    def __init__(self, parent, text="", opened=True, show_clear=False, show_import=False, *args, **kwargs):
         super().__init__(parent, *args, **kwargs, style="Card.TFrame")
         self.columnconfigure(0, weight=1)
         self._text = text
@@ -149,6 +149,13 @@ class CollapsibleFrame(ttk.Frame):
         if show_clear:
             self._clear_btn = ttk.Button(self._header, text="✕ Clear", width=8, style="TButton")
             self._clear_btn.grid(row=0, column=1, sticky="e", padx=(4, 0))
+
+        self._import_btn = None
+        if show_import:
+            self._import_btn = ttk.Button(self._header, text="📥 Import", width=8, style="TButton")
+            # If both clear and import exist, place them side by side
+            col = 2 if show_clear else 1
+            self._import_btn.grid(row=0, column=col, sticky="e", padx=(4, 0))
 
         # Content frame
         self._content = ttk.Frame(self, style="TFrame", padding=(8, 4))
@@ -191,6 +198,10 @@ class CollapsibleFrame(ttk.Frame):
     def set_clear_command(self, cmd):
         if self._clear_btn:
             self._clear_btn.config(command=cmd)
+
+    def set_import_command(self, cmd):
+        if self._import_btn:
+            self._import_btn.config(command=cmd)
 
     def get_header_frame(self):
         """Return the header frame to allow adding custom widgets."""

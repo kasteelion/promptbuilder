@@ -29,6 +29,17 @@ class MenuActions:
     def import_config(self):
         return self.app._import_config()
 
+    def import_from_text(self):
+        """Show text import dialog and apply results."""
+        available_chars = list(self.app.characters.keys())
+        
+        def on_success(config):
+            self.app._save_state_for_undo()
+            self.app._restore_state(config)
+            self.app._update_status("Imported configuration from text")
+            
+        return self.app.dialog_manager.show_text_import(available_chars, on_success)
+
     def undo(self):
         return self.app._undo()
 

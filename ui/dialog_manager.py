@@ -101,6 +101,64 @@ Platform: {platform.system()} {platform.release()}
 """
         messagebox.showinfo("About Prompt Builder", about_text)
 
+    def show_text_import(self, available_characters: list, on_success: Callable[[dict], None]) -> None:
+        """Show dialog to import prompt configuration from text."""
+        from utils.text_parser import TextParser
+
+        dialog = tk.Toplevel(self.root)
+        dialog.title("Import Prompt from Text")
+        dialog.geometry("600x500")
+        dialog.transient(self.root)
+        dialog.grab_set()
+
+        main_frame = ttk.Frame(dialog, padding=15)
+        main_frame.pack(fill="both", expand=True)
+
+        ttk.Label(main_frame, text="Paste your prompt configuration below:", style="Bold.TLabel").pack(anchor="w", pady=(0, 5))
+        
+        help_text = "Supported formats:\n• [1] Name (Outfit, Pose)\n• [1] Name\\nOutfit: Name\\nPose: Name\\n...\n• 🎬 Scene description\\n📝 Interaction notes"
+        ttk.Label(main_frame, text=help_text, style="Muted.TLabel", justify="left").pack(anchor="w", pady=(0, 10))
+
+        text_area = scrolledtext.ScrolledText(main_frame, wrap="word", font=("Consolas", 10))
+        text_area.pack(fill="both", expand=True, pady=5)
+        text_area.focus_set()
+
+        btn_frame = ttk.Frame(main_frame)
+        btn_frame.pack(fill="x", pady=(10, 0))
+
+        def do_import():
+            raw_text = text_area.get("1.0", "end-1c").strip()
+            if not raw_text:
+                messagebox.showwarning("Empty Input", "Please paste some text to import.")
+                return
+
+            try:
+                config = TextParser.parse_import_text(raw_text, available_characters)
+                
+                char_count = len(config.get("selected_characters", []))
+                if char_count == 0 and not config.get("scene") and not config.get("notes"):
+                    messagebox.showwarning("No Data Found", "Could not identify any characters, scenes, or notes in the text.")
+                    return
+
+                # Confirm with user
+                summary = f"Detected:\n• {char_count} character(s)"
+                if config.get("scene"): summary += "\n• Scene description"
+                if config.get("notes"): summary += "\n• Interaction notes"
+                summary += "\n\nApply this configuration? (This will overwrite current selection)"
+
+                if messagebox.askyesno("Import Confirmation", summary, parent=dialog):
+                    on_success(config)
+                    dialog.destroy()
+            except Exception as e:
+                from utils import logger
+                logger.exception("Error during text import")
+                messagebox.showerror("Import Error", f"Failed to parse text: {e}", parent=dialog)
+
+        ttk.Button(btn_frame, text="Cancel", command=dialog.destroy).pack(side="right", padx=(5, 0))
+        ttk.Button(btn_frame, text="Import Configuration", command=do_import).pack(side="right")
+
+        dialog.wait_window()
+
     def show_characters_summary(self, callback: Optional[Callable[[], str]] = None) -> None:
         """Show character appearances summary with an interactive explorer."""
         try:
