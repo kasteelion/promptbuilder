@@ -76,6 +76,9 @@ class MenuManager:
             label="📤 Export Configuration...", command=self.callbacks["export_config"]
         )
         file_menu.add_command(
+            label="🤖 Export for LLM (Context Injection)...", command=self.callbacks["export_for_llm"]
+        )
+        file_menu.add_command(
             label="📥 Import Configuration...", command=self.callbacks["import_config"]
         )
         file_menu.add_command(

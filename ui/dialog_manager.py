@@ -101,6 +101,45 @@ Platform: {platform.system()} {platform.release()}
 """
         messagebox.showinfo("About Prompt Builder", about_text)
 
+    def show_llm_export(self, ctx: Any) -> None:
+        """Show dialog with condensed app data for LLM context injection."""
+        from utils.llm_export import generate_llm_export_text
+
+        dialog = tk.Toplevel(self.root)
+        dialog.title("Export for LLM Context")
+        dialog.geometry("800x700")
+        dialog.transient(self.root)
+        dialog.grab_set()
+
+        main_frame = ttk.Frame(dialog, padding=15)
+        main_frame.pack(fill="both", expand=True)
+
+        ttk.Label(main_frame, text="Copy the context below and paste it into your LLM (Gemini, GPT, etc.):", style="Bold.TLabel").pack(anchor="w", pady=(0, 5))
+        
+        info_text = "This contains your character list, outfit names, poses, and parsing instructions."
+        ttk.Label(main_frame, text=info_text, style="Muted.TLabel").pack(anchor="w", pady=(0, 10))
+
+        text_area = scrolledtext.ScrolledText(main_frame, wrap="word", font=("Consolas", 9))
+        text_area.pack(fill="both", expand=True, pady=5)
+        
+        # Generate and insert text
+        export_text = generate_llm_export_text(ctx)
+        text_area.insert("1.0", export_text)
+        text_area.config(state="disabled")
+
+        btn_frame = ttk.Frame(main_frame)
+        btn_frame.pack(fill="x", pady=(10, 0))
+
+        def copy_to_clipboard():
+            self.root.clipboard_clear()
+            self.root.clipboard_append(export_text)
+            self.show_info("Copied", "Context copied to clipboard!")
+
+        ttk.Button(btn_frame, text="Close", command=dialog.destroy).pack(side="right", padx=(5, 0))
+        ttk.Button(btn_frame, text="📋 Copy Context", command=copy_to_clipboard).pack(side="right")
+
+        dialog.wait_window()
+
     def show_text_import(self, available_characters: list, on_success: Callable[[dict], None]) -> None:
         """Show dialog to import prompt configuration from text."""
         from utils.text_parser import TextParser

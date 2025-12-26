@@ -244,10 +244,9 @@ class PromptBuilderApp:
         menu_callbacks = {
             "save_preset": self.menu_actions.save_preset,
             "load_preset": self.menu_actions.load_preset,
-            "import_from_text": self.menu_actions.import_from_text,
-            "reload_data": self.reload_data,
-            "export_config": self.menu_actions.export_config,
             "import_config": self.menu_actions.import_config,
+            "export_for_llm": self.menu_actions.export_for_llm,
+            "import_from_text": self.menu_actions.import_from_text,
             "undo": self.menu_actions.undo,
             "redo": self.menu_actions.redo,
             "clear_all_characters": self.menu_actions.clear_all_characters,

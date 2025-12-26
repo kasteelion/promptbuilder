@@ -3,6 +3,7 @@
 ## [Unreleased]
 
 ### Added
+- **Export for LLM:** New utility to export a condensed catalog of characters, outfits, and poses along with system instructions. Designed for "knowledge injection" into LLMs to generate valid prompt configurations.
 - **Victoria's Secret Magazine Base Prompt:** Added a new "High-Fashion Glamour" art style designed for high-end fashion photography aesthetics.
 - **Natural Language Import:** New feature to import entire prompt configurations from raw text. Supports two formats: standard app summaries and a new structured LLM-friendly block format. Includes fuzzy character matching.
 - **Robust Data Reload:** Improved the data reload function to force-clear all internal caches. Added **🔄 Reload Data** to the **File** menu for better visibility.
