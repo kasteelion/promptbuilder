@@ -342,3 +342,22 @@ Hair: Clean, realistic rendering with natural shine. Clothing: Basic material re
 
 Details
 Minimal visual effects. A clean, professional studio or natural background. This style acts as a high-quality foundation for any subject.
+
+---
+
+## Victoria's Secret Magazine: "High-Fashion Glamour"
+
+Rendering
+Ultra-glamorous high-fashion photography style. High-key studio lighting with a mix of soft-boxes and dramatic ring lights. 8K resolution with a "glossy magazine" finish. Warm, sun-kissed color palette with subtle pink and gold undertones. Shallow depth of field with a soft, expensive-looking bokeh.
+
+Character Accuracy
+The "Supermodel" ideal: perfectly symmetrical facial features, high-fashion contouring, and shimmering eyeshadow. Eyes are vibrant and piercing with detailed corneal reflections. Expressions are confident, alluring, and effortlessly charismatic. Professional-grade makeup with glossy lips and perfectly groomed brows.
+
+Body Types
+Statuesque, toned, and exceptionally graceful proportions. Focus on long limbs and athletic-yet-feminine builds. Skin is rendered with a luminous "body oil" glow, highlighting muscle definition and soft curves. Poses are theatrical and dynamic, often utilizing "S-curve" geometry to maximize visual appeal.
+
+Hair & Clothing
+Hair: The iconic "Angels" blowout—massive volume, soft beachy waves, and incredible silk-like specularity. Every strand catches the light. Clothing: Luxury fabrics like delicate lace, shimmering satin, and liquid silk. Materials have high specularity and interact realistically with the body's curves.
+
+Details
+Soft bloom on highlights, subtle lens flare, and a faint shimmering particle effect (like glitter or gold dust) in the air. Backgrounds are high-end studio sets, tropical beaches, or opulent suites. The overall finish feels like a prestigious multi-page magazine spread.
