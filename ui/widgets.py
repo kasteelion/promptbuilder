@@ -274,7 +274,7 @@ class FlowFrame(ttk.Frame):
     Uses placement-based layout to avoid flicker when reflowing.
     """
 
-    def __init__(self, parent, padding_x=10, padding_y=8, min_chip_width=64, *args, **kwargs):
+    def __init__(self, parent, padding_x=10, padding_y=8, min_chip_width=0, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
         self._padx = padding_x
         self._pady = padding_y
