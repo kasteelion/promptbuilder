@@ -62,22 +62,30 @@ class WindowStateController:
         """Save positions of all paned window sashes."""
         try:
             positions = {}
+            # Helper to get sash position regardless of tk vs ttk
+            def get_sash_pos(widget):
+                if hasattr(widget, "sash_coord"): # tk.PanedWindow
+                    return widget.sash_coord(0)[0] # Horizontal x-coord
+                elif hasattr(widget, "sashpos"): # ttk.PanedWindow
+                    return widget.sashpos(0)
+                return None
+
             # Main paned (Gallery | Content)
             if hasattr(self.app, "main_paned"):
-                try:
-                    positions["main_sash"] = self.app.main_paned.sashpos(0)
-                except tk.TclError:
-                    pass
+                pos = get_sash_pos(self.app.main_paned)
+                if pos is not None:
+                    positions["main_sash"] = pos
             
             # Content paned (Notebook | Right Scroll)
-            # Find the paned window inside main_paned.panes()
             if hasattr(self.app, "main_paned"):
                 for pane in self.app.main_paned.panes():
                     try:
                         widget = self.root.nametowidget(pane)
-                        if isinstance(widget, tk.PanedWindow) or isinstance(widget, tk.ttk.PanedWindow):
-                            positions["content_sash"] = widget.sashpos(0)
-                            break
+                        if isinstance(widget, (tk.PanedWindow, tk.ttk.PanedWindow)):
+                            pos = get_sash_pos(widget)
+                            if pos is not None:
+                                positions["content_sash"] = pos
+                                break
                     except Exception:
                         continue
             
@@ -93,11 +101,17 @@ class WindowStateController:
             if not positions:
                 return
 
+            def set_sash_pos(widget, pos):
+                if hasattr(widget, "sash_place"): # tk.PanedWindow
+                    widget.sash_place(0, pos, 0)
+                elif hasattr(widget, "sashpos"): # ttk.PanedWindow
+                    widget.sashpos(0, pos)
+
             def _apply():
                 # Apply with a slight delay to ensure window is mapped
                 if "main_sash" in positions and hasattr(self.app, "main_paned"):
                     try:
-                        self.app.main_paned.sashpos(0, positions["main_sash"])
+                        set_sash_pos(self.app.main_paned, positions["main_sash"])
                     except tk.TclError:
                         pass
                 
@@ -105,8 +119,8 @@ class WindowStateController:
                     for pane in self.app.main_paned.panes():
                         try:
                             widget = self.root.nametowidget(pane)
-                            if isinstance(widget, tk.PanedWindow) or isinstance(widget, tk.ttk.PanedWindow):
-                                widget.sashpos(0, positions["content_sash"])
+                            if isinstance(widget, (tk.PanedWindow, tk.ttk.PanedWindow)):
+                                set_sash_pos(widget, positions["content_sash"])
                                 break
                         except Exception:
                             continue
