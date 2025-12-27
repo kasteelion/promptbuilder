@@ -295,3 +295,18 @@ class CharacterItem(ttk.Frame):
             self.config(style="Selected.Card.TFrame")
         else:
             self.config(style="Card.TFrame")
+
+    def _update_theme_overrides(self, theme):
+        """Update manual button overrides when theme changes. (Refactor 3)"""
+        accent_color = self.char_def.get("signature_color", theme.get("accent", "#0078d7"))
+        if not str(accent_color).startswith("#"): accent_color = theme.get("accent", "#0078d7")
+        panel_bg = theme.get("panel_bg", theme.get("bg", "#ffffff"))
+
+        # Update Ghost buttons
+        for btn in self.controls_frame.winfo_children():
+            if isinstance(btn, tk.Button):
+                if "↑" in btn.cget("text") or "↓" in btn.cget("text"):
+                    btn.config(bg=panel_bg, fg=accent_color, highlightbackground=accent_color)
+                elif "✕" in btn.cget("text"):
+                    btn.config(bg=panel_bg) # Link button stays muted gray/red
+

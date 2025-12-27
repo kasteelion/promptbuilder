@@ -85,6 +85,10 @@ class PreviewPanel:
         controls_frame.columnconfigure(3, weight=0)
         controls_frame.columnconfigure(4, weight=0)
 
+        # Get current theme for manual button overrides
+        theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+        self.ghost_buttons = [] # Track for theme updates
+
         # Helper for Ghost buttons in Phase 3
         def add_ghost_btn(parent, text, command, row, col):
             btn = tk.Button(
@@ -100,6 +104,7 @@ class PreviewPanel:
                 padx=10
             )
             btn.grid(row=row, column=col, padx=2)
+            self.ghost_buttons.append(btn)
             return btn
 
         # Copy menu button
@@ -152,6 +157,14 @@ class PreviewPanel:
         self.get_prompt_callback = get_prompt
         self.validate_callback = validate
         self.randomize_callback = randomize
+
+    def apply_theme(self, theme):
+        """Apply theme to custom widgets. (Refactor 3)"""
+        accent = theme.get("accent", "#0078d7")
+        panel_bg = theme.get("panel_bg", theme["bg"])
+        
+        for btn in self.ghost_buttons:
+            btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
 
     def update_preview(self, prompt_text):
         """Update preview with formatted prompt text.

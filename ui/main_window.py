@@ -557,6 +557,8 @@ class PromptBuilderApp:
         """Build the top toolbar with common actions."""
         toolbar_frame = ttk.Frame(self.root, style="TFrame")
         toolbar_frame.pack(side="top", fill="x", padx=4, pady=4)
+        
+        self.toolbar_buttons = [] # Track for theme updates
 
         # Helper to create styled toolbar buttons - Refactor 3
         def add_tool_btn(parent, text, command, tooltip=None, width=None):
@@ -576,6 +578,8 @@ class PromptBuilderApp:
             btn.pack(side="left", padx=2)
             if tooltip:
                 create_tooltip(btn, tooltip)
+            
+            self.toolbar_buttons.append(btn)
             return btn
 
         # File actions
@@ -931,6 +935,7 @@ class PromptBuilderApp:
 
         # Apply to text widgets - Refactor 2
         self.theme_manager.apply_preview_theme(self.preview_panel.preview_text, theme)
+        self.preview_panel.apply_theme(theme) # Refactor 3
         for widget in [self.scene_text, self.notes_text, self.summary_text, self.edit_tab.editor_text]:
             self.theme_manager.apply_text_widget_theme(widget, theme)
         
@@ -945,6 +950,15 @@ class PromptBuilderApp:
         if hasattr(self.characters_tab, "create_char_btn"):
             self.characters_tab.create_char_btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
 
+        # Force convenience controls (Collapse/Expand All)
+        for child in self.root.winfo_children():
+            # This is a bit broad, but safer to just update toolbar specifically
+            pass
+            
+        if hasattr(self, "toolbar_buttons"):
+            for btn in self.toolbar_buttons:
+                btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
+
         # Apply to search entries if they exist
         if hasattr(self, "character_gallery") and hasattr(self.character_gallery, "search_entry"):
              # CharacterGalleryPanel search entry
@@ -955,8 +969,12 @@ class PromptBuilderApp:
         if hasattr(self, "right_scroll_container"):
             self.theme_manager.apply_canvas_theme(self.right_scroll_container.canvas, theme)
 
-        # Apply to dynamic character action texts
+        # Apply to dynamic character action texts and custom buttons
         self.characters_tab.apply_theme_to_action_texts(self.theme_manager, theme)
+        # Refresh character items to pick up manual button overrides
+        for item in self.characters_tab.chars_container.winfo_children():
+            if hasattr(item, "_update_theme_overrides"):
+                item._update_theme_overrides(theme)
 
         # Apply to character gallery (use controller if available)
         if hasattr(self, "gallery_controller") and self.gallery_controller:
