@@ -302,7 +302,21 @@ class PromptBuilderApp:
         self.status_bar.pack(side="bottom", fill="x")
 
         # Create a paned window for gallery + main content
-        self.main_paned = ttk.PanedWindow(main_container, orient="horizontal")
+        # Refactor 1: Invisible Splitter styling
+        try:
+            panel_bg = ttk.Style().lookup("TFrame", "background")
+        except:
+            panel_bg = "#f0f0f0"
+
+        self.main_paned = tk.PanedWindow(
+            main_container, 
+            orient="horizontal",
+            bg=panel_bg,
+            bd=0,
+            sashwidth=6,
+            sashrelief="flat",
+            showhandle=False
+        )
         self.main_paned.pack(side="top", fill="both", expand=True)
 
         # Left side: Character Gallery (collapsible, starts visible by default)
@@ -319,16 +333,23 @@ class PromptBuilderApp:
         self.character_gallery.pack(fill="both", expand=True)
 
         if self.gallery_visible:
-            self.main_paned.add(self.gallery_frame, weight=2)
+            self.main_paned.add(self.gallery_frame, width=280) # Explicit width to respect preference
 
-        # Use PanedWindow directly for main content to allow resizable left (notebook) and right (preview) panes
-        # Drag the sash between them to resize
-        paned = ttk.PanedWindow(self.main_paned, orient="horizontal")
-        self.main_paned.add(paned, weight=15)
+        # Use PanedWindow directly for main content
+        paned = tk.PanedWindow(
+            self.main_paned, 
+            orient="horizontal",
+            bg=panel_bg,
+            bd=0,
+            sashwidth=6,
+            sashrelief="flat",
+            showhandle=False
+        )
+        self.main_paned.add(paned) # Let it take remaining space
 
         # Left side: Notebook with tabs (give it more weight for better visibility)
         self.notebook = ttk.Notebook(paned, style="TNotebook")
-        paned.add(self.notebook, weight=5)
+        paned.add(self.notebook, width=500) # Give reasonable default width
 
         # Create tabs
         self.characters_tab = CharactersTab(
@@ -345,7 +366,7 @@ class PromptBuilderApp:
 
         # Right side: Scrollable container for collapsible sections
         self.right_scroll_container = ScrollableCanvas(paned)
-        paned.add(self.right_scroll_container, weight=4)
+        paned.add(self.right_scroll_container) # Let it fill remaining
         right_frame = self.right_scroll_container.get_container()
         right_frame.columnconfigure(0, weight=1)
 
@@ -987,6 +1008,16 @@ class PromptBuilderApp:
         for item in self.characters_tab.chars_container.winfo_children():
             if hasattr(item, "_update_theme_overrides"):
                 item._update_theme_overrides(theme)
+
+        # Update PanedWindow backgrounds for invisible splitters - Refactor 1
+        if hasattr(self, "main_paned"):
+            try:
+                self.main_paned.config(bg=panel_bg)
+                # Find the inner paned window (it's a child of main_paned)
+                for child in self.main_paned.winfo_children():
+                    if isinstance(child, tk.PanedWindow):
+                        child.config(bg=panel_bg)
+            except: pass
 
         # Apply to character gallery (use controller if available)
         if hasattr(self, "gallery_controller") and self.gallery_controller:
