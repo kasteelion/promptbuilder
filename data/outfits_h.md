@@ -438,6 +438,14 @@
 - **Accessories:** Arm bracers (worn over sleeves), utility belt with pouches, weapon prop (sword or bow)
 - **Makeup:** Natural makeup with defined features, warrior aesthetic
 
+### Archer
+- **Hijab:** Practical tactical hijab in **((default:forest green) or (signature))** with secure aerodynamic wrap
+- **Top:** Long-sleeve fitted leather jerkin or tunic (high-neck modest cut, **((default:forest green or olive) or (signature))** with reinforced stitching) and **asymmetric chest guard**
+- **Bottom:** Full-length fitted trousers (earth tones or black, flexible fabric)
+- **Footwear:** Knee-high soft leather boots with flat soles
+- **Accessories:** Quiver with arrows, leather bracers, shooting glove, longbow or recurve bow, hooded cowl
+- **Makeup:** Sharp focused gaze, natural makeup or optional camouflage face paint
+
 ### Paladin
 - **Hijab:** ((default:White) or (signature)) silk or heavy cotton hijab with gold trim or circlet
 - **Top:** Silver or white plate armor bodice with flowing ((default:white) or (signature)) tabard over long sleeves

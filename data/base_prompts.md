@@ -361,3 +361,117 @@ Hair: Rendered with massive volume, soft waves, and high specularity to simulate
 
 Details
 Soft bloom on highlights, subtle lens flare, and a faint shimmering particle effect in the air. Backgrounds are rendered as high-end studio environments or sun-drenched luxury locations. The overall finish simulates a prestigious multi-page magazine spread with a clean, commercial aesthetic.
+
+---
+
+## Sports Action: "Frozen Velocity"
+
+Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+## Chibi Style: "Super Deformed"
+
+Rendering
+Soft-shaded vector illustration or vinyl toy aesthetic. Bright, pastel, or primary-heavy color palettes. Gradient shading is minimal and smooth, giving surfaces a matte plastic or "squishy" appearance. Thick, rounded line art (or lineless "sticker" style).
+
+Character Accuracy
+Extreme anatomical exaggeration (SD or Super Deformed). Heads are 1:1 or 1:2 ratio with the body. Eyes are massive, taking up 50% of the face, with simplified sparkles. Noses are absent or mere dots. Mouths are simple curves.
+
+Body Types
+"Bean" shaped torsos. Limbs are short, stubby cylinders with no muscle definition. Hands are simple spheres or "mitten" shapes; feet are rounded nubs. The silhouette is fundamentally cute and non-threatening.
+
+Hair & Clothing
+Hair: Simplified into large, chunky shapes with high volume and minimal strand detail. Clothing: Reduced to iconic elements—details like shoelaces or buttons are oversized and simplified for readability.
+
+Details
+Floating iconography (hearts, stars, sweat drops, anger veins) near the head. Backgrounds are simple patterns (polka dots, stripes) or solid soft colors. A thick white outline often surrounds the entire character like a die-cut sticker.
+
+---
+
+## Vintage Film: "Analog Nostalgia"
+
+Rendering
+Simulates 35mm film stock (Kodak Portra or Fujifilm styling) from the 1990s. Soft, slightly washed-out blacks and warm, yellow-green highlights. Visible film grain (ISO 400-800). Flash photography aesthetic: bright, direct light falloff leaving the background in darkness.
+
+Character Accuracy
+Candid, unposed, and raw. "Red-eye" effects or slight motion blur in the face. Skin texture is natural and unpolished, showing oil shine from the camera flash. Imperfect focus (soft focus) is common.
+
+Body Types
+Naturalistic and relaxed. Posture is casual, slouching, or mid-gesture. The camera angle often feels handheld and eye-level, lacking cinematic perfection.
+
+Hair & Clothing
+Hair: Natural friziness and flyaways are highlighted by the flash. Clothing: Textures look lived-in (flannel, denim, cotton). Colors are slightly desaturated or color-shifted by the film development process.
+
+Details
+Light leaks (orange/red burns) on the edges of the frame. A digital orange "Date Stamp" in the bottom corner. Vignetting. Dust and scratches on the "negative." The overall vibe is intimate and indie.
+
+---
+
+## American Romanticism: "The Sublime Landscape"
+
+Rendering
+19th-century oil painting style (Hudson River School). Luminism: focus on the effects of light on landscape and atmosphere. Soft, invisible brushstrokes creating a glowing, hazy atmosphere. Dramatic lighting contrasts between storm clouds and "God rays" of sunlight.
+
+Character Accuracy
+Figures are often smaller in the frame to emphasize the vastness of nature, or idealized and heroic. Faces are rendered with classical, academic precision but soft edges. Expressions are contemplative, gazing toward the horizon (Rückenfigur).
+
+Body Types
+Classical proportions based on Greco-Roman statues. Poses are dramatic, grounded, and emotionally resonant.
+
+Hair & Clothing
+Hair: Wind-blown and romanticized. Clothing: Period-appropriate (19th century) or timeless drapery. Fabrics are rendered with attention to how they catch the golden light—heavy wools, canvas, and linens.
+
+Details
+Dramatic environmental elements: jagged cliffs, mist-filled valleys, gnarled oak trees, and turbulent waterfalls. The palette is rich with earth tones, deep greens, and golden ambers.
+
+---
+
+## Stop-Motion Animation: "Handcrafted Clay"
+
+Rendering
+Simulates physical photography of miniature models (Laika or Aardman style). Shallow depth of field (macro photography aesthetic). Lighting is cinematic but interacts with physical textures like clay, silicone, or felt. No motion blur; movement is suggested by replacement animation.
+
+Character Accuracy
+Stylized and sculptural. Faces show visible "seams" or replacement lines where expressions change. Eyes are solid beads or glossy spheres. Skin has a matte, tactile finish (fingerprints visible in the clay).
+
+Body Types
+Top-heavy or stylized anatomy supported by internal armatures. Characters have a distinct "weight" and solidity. Clothing and hair add bulk to the silhouette.
+
+Hair & Clothing
+Hair: Sculpted clumps of clay or glued strands of physical fiber (yarn, crepe hair). Clothing: Real miniature fabrics (felt, knitted wool) that do not fold like full-sized cloth but stiffly bunch up.
+
+Details
+Visible texture of the materials (thumbprints, brush bristles). Dust motes in the air. The background looks like a built physical set made of cardboard, wood, and paint.
+
+---
+
+## Ligne Claire: "Clean Line Comic"
+
+Rendering
+"Clear Line" style (reminiscent of Hergé/Tintin or Moebius). Uniform, continuous black outlines of consistent width. No hatching or cross-hatching. Colors are flat, vivid, and unmodulated (no gradients).
+
+Character Accuracy
+Faces are highly simplified and iconic (dots for eyes), while the environment remains realistically proportioned. Expressions are readable and graphic.
+
+Body Types
+Realistic human proportions but rendered with flat graphic shapes. Posture is distinct and theatrical to ensure silhouette readability without shadow support.
+
+Hair & Clothing
+Hair: Defined by a single bounding outline and a flat color fill. Clothing: Realistic fashion rendered with minimal fold lines. Patterns (plaid, stripes) are drawn flat, ignoring the volume of the cloth.
+
+Details
+Backgrounds are hyper-detailed and architectural, contrasting with the simple characters. Everything is in sharp focus (deep depth of field). Shadows are cast as solid black shapes detached from the object.

@@ -183,6 +183,9 @@ Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**; **pleat
 ### Warrior
 **Fitted armor-inspired bodice** (leather or faux-leather with metal accents); **high-waist pants or skirt with side slits** (((default:dark colors) or (signature)), movement-friendly); **knee-high boots** (sturdy with buckles). *Accessories:* Arm bracers, belt with pouches, weapon prop (sword or bow). *Hair/Makeup:* Hair in warrior braids or ponytail, natural makeup with defined features.
 
+### Archer
+**Fitted leather jerkin or tunic** (((default:forest green or olive) or (signature)) with mobility slits and reinforced stitching); **asymmetric chest guard** (hardened leather, strapped over upper torso to protect from bowstring); **fitted trousers** (earth tones or black, flexible fabric tucked into boots); **knee-high boots** (soft leather with flat soles for silent movement). *Accessories:* Quiver with fletched arrows (slung across back or hip), leather bracers (forearm guards), shooting glove or finger tabs, longbow or recurve bow prop, hooded cowl. *Hair/Makeup:* Hair secured tightly in braid or ponytail away from face, sharp focused gaze ("eagle eye"), natural makeup or optional camouflage face paint.
+
 ### Paladin
 **Silver or white plate armor bodice** (ornate with holy symbols and gold trim); **flowing ((default:white) or (signature)) tabard** (emblazoned with holy symbol over armor); **armored leg plates** over **white or silver pants**; **white cape** with gold clasp; **silver boots** (knee-high with armor plates). *Accessories:* Holy sword (glowing or blessed), shield with divine insignia, prayer beads or holy symbol necklace. *Hair/Makeup:* Long flowing hair (blonde or light brown) in loose waves or half-up style, radiant natural makeup with soft glow, serene expression.
 

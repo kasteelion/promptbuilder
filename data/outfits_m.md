@@ -183,6 +183,9 @@ Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**; **relax
 ### Warrior
 **Fitted armor-inspired vest or chest piece** (leather or faux-leather with metal accents); **tactical pants** (dark colors, movement-friendly); **knee-high boots** (sturdy with buckles). *Accessories:* Arm bracers, belt with pouches, weapon prop (sword or axe). *Hair/Makeup:* Hair in warrior style or short, natural grooming with defined features.
 
+### Archer
+**Fitted leather jerkin or tunic** (((default:forest green or olive) or (signature)) with mobility slits and reinforced stitching); **asymmetric chest guard** (hardened leather, strapped over upper torso to protect from bowstring); **fitted trousers** (earth tones or black, flexible fabric tucked into boots); **knee-high boots** (soft leather with flat soles for silent movement). *Accessories:* Quiver with fletched arrows (slung across back or hip), leather bracers (forearm guards), shooting glove or finger tabs, longbow or recurve bow prop, hooded cowl. *Hair/Makeup:* Hair secured away from face, sharp focused gaze ("eagle eye"), natural grooming or optional camouflage face paint.
+
 ### Paladin
 **Silver or white plate armor breastplate** (ornate with holy symbols and gold trim); **flowing ((default:white) or (signature)) tabard** (emblazoned with holy symbol over armor); **armored leg plates** over **chainmail**; **white cape** with gold clasp; **silver boots** (heavy armor). *Accessories:* Holy sword (glowing or blessed), shield with divine insignia, prayer beads or holy symbol necklace. *Hair/Makeup:* Groomed hair (blonde or light brown), radiant natural appearance, serene expression.
 

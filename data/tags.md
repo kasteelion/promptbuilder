@@ -124,3 +124,5 @@
 - textured-hair
 - traditional-modern-fusion
 - vintage-inspired
+- glamorous
+- sophisticated
