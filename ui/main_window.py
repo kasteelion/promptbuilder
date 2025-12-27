@@ -571,8 +571,19 @@ class PromptBuilderApp:
             
             btn = tk.Button(
                 parent, text=text, command=command,
-                bg=bg, relief="flat", highlightthickness=1, padx=5
+                bg=bg, relief="flat", highlightthickness=2, padx=5
             )
+            
+            def on_btn_enter(e, b=btn): b.config(bg="#333333")
+            def on_btn_leave(e, b=btn):
+                # Attempt to get current background from parent or default
+                try: curr_bg = parent.cget("background")
+                except: curr_bg = "#ffffff"
+                b.config(bg=curr_bg)
+            
+            btn.bind("<Enter>", on_btn_enter)
+            btn.bind("<Leave>", on_btn_leave)
+            
             if width:
                 btn.config(width=width)
             btn.pack(side="left", padx=2)
@@ -945,6 +956,7 @@ class PromptBuilderApp:
             self.theme_manager.apply_text_widget_theme(self.summary_text, theme)
         
         # Force custom buttons in characters tab
+        self.characters_tab._last_pbg = panel_bg # Support Refactor 3 hover
         if hasattr(self.characters_tab, "create_shared_btn"):
             self.characters_tab.create_shared_btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
         if hasattr(self.characters_tab, "create_char_btn"):

@@ -75,8 +75,8 @@ class InteractionCreatorDialog:
         )
         self.template_desc_label.pack(side="left")
 
-        # Info/help section
-        help_frame = ttk.Frame(main_frame, relief="groove", borderwidth=1)
+        # Info/help section (Refactor 1: Spatial Layout)
+        help_frame = ttk.Frame(main_frame, style="TFrame", padding=(10, 5))
         help_frame.pack(fill="x", pady=(0, 10))
 
         help_label = ttk.Label(
@@ -98,6 +98,17 @@ Examples:
 
 The placeholders will be replaced with actual character names when inserted."""
 
+        # Refactor 2: Theme-aware Text Widget
+        try:
+            style = ttk.Style()
+            input_bg = style.lookup("TEntry", "fieldbackground")
+            input_fg = style.lookup("TEntry", "foreground")
+            if not input_bg: input_bg = "#2d2d2d"
+            if not input_fg: input_fg = "#ffffff"
+        except:
+            input_bg = "#2d2d2d"
+            input_fg = "#ffffff"
+
         example_widget = tk.Text(
             help_frame,
             font=("Consolas", 8),
@@ -105,6 +116,8 @@ The placeholders will be replaced with actual character names when inserted."""
             wrap="word",
             relief="flat",
             borderwidth=0,
+            bg=input_bg,
+            fg=input_fg
         )
         example_widget.insert("1.0", example_text)
         example_widget.config(state="disabled")
@@ -138,7 +151,16 @@ The placeholders will be replaced with actual character names when inserted."""
         )
 
         self.content_text = scrolledtext.ScrolledText(
-            main_frame, wrap="word", height=8, font=("Consolas", 10)
+            main_frame, 
+            wrap="word", 
+            height=8, 
+            font=("Consolas", 10),
+            bg=input_bg,
+            fg=input_fg,
+            insertbackground=input_fg,
+            relief="flat",
+            padx=10,
+            pady=10
         )
         self.content_text.pack(fill="both", expand=True, pady=(0, 10))
 
@@ -148,15 +170,28 @@ The placeholders will be replaced with actual character names when inserted."""
         )
         self.validation_label.pack(fill="x", pady=(0, 5))
 
-        # Buttons
+        # Buttons (Refactor 3: Component Hierarchy)
         button_frame = ttk.Frame(main_frame)
         button_frame.pack(fill="x")
 
+        # Cancel: Ghost Style (Secondary)
+        cancel_btn = tk.Button(
+            button_frame, 
+            text="Cancel", 
+            command=self._cancel,
+            bg=style.lookup("TFrame", "background"),
+            fg=style.lookup("TEntry", "foreground"),
+            highlightthickness=1,
+            highlightbackground="gray",
+            relief="flat",
+            padx=10
+        )
+        cancel_btn.pack(side="right")
+
+        # Create: Solid Accent (Primary)
         ttk.Button(button_frame, text="Create Template", command=self._create_template).pack(
             side="right", padx=(5, 0)
         )
-
-        ttk.Button(button_frame, text="Cancel", command=self._cancel).pack(side="right")
 
     def _on_template_selected(self, event):
         """Handle template selection change."""

@@ -228,24 +228,32 @@ class CharacterItem(ttk.Frame):
         except:
             panel_bg = "#ffffff"
 
+        self._last_pbg = panel_bg
+
         # Move Up/Down use Ghost style overrides
         move_frame = ttk.Frame(footer)
         move_frame.pack(side="left")
         
         if self.index > 0:
-            tk.Button(
+            up_btn = tk.Button(
                 move_frame, text="↑ Up", width=6, command=lambda: self.callbacks["move_up"](self.index),
-                bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=1,
+                bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=2,
                 relief="flat", font=("Segoe UI", 8)
-            ).pack(side="left", padx=2)
+            )
+            up_btn.pack(side="left", padx=2)
+            up_btn.bind("<Enter>", lambda e, b=up_btn: b.config(bg="#333333"))
+            up_btn.bind("<Leave>", lambda e, b=up_btn: b.config(bg=self._last_pbg))
         
         num_characters = self.callbacks.get("get_num_characters", lambda: 0)()
         if self.index < num_characters - 1:
-            tk.Button(
+            down_btn = tk.Button(
                 move_frame, text="↓ Down", width=6, command=lambda: self.callbacks["move_down"](self.index),
-                bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=1,
+                bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=2,
                 relief="flat", font=("Segoe UI", 8)
-            ).pack(side="left", padx=2)
+            )
+            down_btn.pack(side="left", padx=2)
+            down_btn.bind("<Enter>", lambda e, b=down_btn: b.config(bg="#333333"))
+            down_btn.bind("<Leave>", lambda e, b=down_btn: b.config(bg=self._last_pbg))
 
         # Remove uses Link style override
         tk.Button(
@@ -301,6 +309,7 @@ class CharacterItem(ttk.Frame):
         accent_color = self.char_def.get("signature_color", theme.get("accent", "#0078d7"))
         if not str(accent_color).startswith("#"): accent_color = theme.get("accent", "#0078d7")
         panel_bg = theme.get("panel_bg", theme.get("bg", "#ffffff"))
+        self._last_pbg = panel_bg
 
         # Update Ghost buttons
         for btn in self.controls_frame.winfo_children():

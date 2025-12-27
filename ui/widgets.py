@@ -45,20 +45,30 @@ class ScrollableCanvas(ttk.Frame):
 
         self.canvas.bind("<Configure>", update_window_width)
 
-        # Grid layout
+        # Grid layout - Refactor 3: Stop Layout Thrashing (Reserved Space)
         self.canvas.grid(row=0, column=0, sticky="nsew")
-        # Scrollbar is NOT gridded by default (Auto-hide logic) - Refactor 3
+        self.scrollbar.grid(row=0, column=1, sticky="ns")
         
-        # Auto-hide scrollbar logic
+        # Reserve fixed space for scrollbar so content doesn't jump
+        self.columnconfigure(1, minsize=16) 
+        
+        # Performance: Use 'state' to show/hide handle instead of grid_forget/pack_forget
         def show_scrollbar(event=None):
-            self.scrollbar.grid(row=0, column=1, sticky="ns")
+            # Only show if needed - Refactor 3 Fix
+            if self._is_scrolling_needed():
+                try: self.scrollbar.config(state="normal")
+                except: pass
             
         def hide_scrollbar(event=None):
-            self.scrollbar.grid_forget()
+            try: self.scrollbar.config(state="disabled")
+            except: pass
 
         self.canvas.bind("<Enter>", show_scrollbar)
         self.canvas.bind("<Leave>", hide_scrollbar)
         self.scrollbar.bind("<Enter>", show_scrollbar)
+        
+        # Initially disabled
+        hide_scrollbar()
 
         # Bind mousewheel
         self.canvas.bind("<MouseWheel>", self._on_mousewheel)
@@ -66,6 +76,10 @@ class ScrollableCanvas(ttk.Frame):
 
     def _on_mousewheel(self, event):
         """Handle mousewheel scrolling with smooth pixel-based movement."""
+        # Ensure scrollbar is enabled for scrolling - Refactor 3 Fix
+        if not self._is_scrolling_needed():
+            return "break"
+            
         scroll_pixels = 40  # pixels per notch
         direction = -1 if event.delta > 0 else 1
         amount = direction * scroll_pixels
@@ -117,13 +131,38 @@ class ScrollableCanvas(ttk.Frame):
                 bbox = self.canvas.bbox("all")
                 
                 width = bbox[2] if bbox else self.container.winfo_width()
-                height = max(max_y, bbox[3] if bbox else 0, self.container.winfo_reqheight())
+                # Use max of children extents or requested height
+                content_height = max(max_y, bbox[3] if bbox else 0, self.container.winfo_reqheight())
                 
                 # Apply with padding
-                self.canvas.config(scrollregion=(0, 0, width, height + 64))
+                self.canvas.config(scrollregion=(0, 0, width, content_height + 32))
+                
+                # Performance Fix: Check if scrollbar handle should be visible
+                if not self._is_scrolling_needed():
+                    self.scrollbar.config(state="disabled")
+                
                 self._scroll_after_id = None
             except Exception:
                 self._scroll_after_id = None
+
+        # Schedule update with a small delay to coalesce multiple calls
+        self._scroll_after_id = self.after(50, _apply)
+
+    def _is_scrolling_needed(self):
+        """Check if the content height exceeds the viewable height. (Refactor 3)"""
+        try:
+            self.canvas.update_idletasks()
+            view_height = self.canvas.winfo_height()
+            if view_height <= 1: # Not mapped yet
+                return False
+                
+            region = self.canvas.cget("scrollregion").split()
+            if region and len(region) >= 4:
+                content_height = float(region[3])
+                return content_height > view_height
+        except Exception: 
+            pass
+        return False
 
         # Schedule update with a small delay to coalesce multiple calls
         self._scroll_after_id = self.after(50, _apply)

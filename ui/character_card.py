@@ -157,7 +157,7 @@ class CharacterCard(ttk.Frame):
         fav_row.pack(fill="x")
 
         self.fav_btn_var = tk.StringVar(value="☆")
-        # Refactor 3: Ghost Favorite Button
+        # Refactor 3: Enhanced Ghost Favorite Button
         self.fav_btn = tk.Button(
             fav_row, 
             textvariable=self.fav_btn_var, 
@@ -166,11 +166,17 @@ class CharacterCard(ttk.Frame):
             bg=self.theme_colors.get("panel_bg", "#ffffff"),
             fg=self.theme_colors.get("accent", "#0078d7"),
             highlightbackground=self.theme_colors.get("accent", "#0078d7"),
-            highlightthickness=1,
+            highlightthickness=2, # Increased thickness
             relief="flat",
             font=("Segoe UI", 9)
         )
         self.fav_btn.pack(side="right")
+        
+        def on_fav_enter(e): self.fav_btn.config(bg="#333333")
+        def on_fav_leave(e): self.fav_btn.config(bg=self.theme_colors.get("panel_bg", "#ffffff"))
+        self.fav_btn.bind("<Enter>", on_fav_enter)
+        self.fav_btn.bind("<Leave>", on_fav_leave)
+        
         self._update_fav_star()
 
         # Use explicit summary if present
@@ -180,17 +186,19 @@ class CharacterCard(ttk.Frame):
             first_line = appearance.split("\n")[0] if appearance else ""
             summary = (first_line[:180] + "...") if len(first_line) > 180 else first_line
 
+        # Refactor 2: Fix Text Wrapping
         desc_label = ttk.Label(
             info_frame,
             text=summary,
             font=("Segoe UI", 9),
             foreground="gray",
-            wraplength=260,
+            wraplength=260, # Forced wrapping
             justify="left",
+            anchor="w"
         )
         desc_label.pack(anchor="w", pady=(0, 8))
 
-        # Tags display (Refactor 2: Outlined Pill)
+        # Tags display (Refactor 1: Masking Technique for Tags)
         raw_tags = self.character_data.get("tags") or []
         if isinstance(raw_tags, str):
             raw_tags = [t.strip().lower() for t in raw_tags.split(",") if t.strip()]
@@ -202,19 +210,21 @@ class CharacterCard(ttk.Frame):
             tags_frame.pack(anchor="w", pady=(0, 6), fill="x")
             
             accent_color = self.theme_colors.get("accent", "#0078d7")
-            panel_bg = self.theme_colors.get("panel_bg", "#ffffff")
+            # CRITICAL: Use opaque hex for panel background to mask correctly
+            panel_bg = self.theme_colors.get("panel_bg", "#1E1E1E") 
 
             for t in tags:
-                # Create a pill-shaped container (the border) - Refactor 2
+                # Outer Frame (The Border)
                 pill = tk.Frame(tags_frame, bg=accent_color, padx=1, pady=1)
                 
+                # Inner Label (The hollow center with padding)
                 lbl = tk.Label(
                     pill, 
                     text=t, 
                     bg=panel_bg, 
                     fg=accent_color,
                     font=("Segoe UI", 8, "bold"),
-                    padx=8,
+                    padx=6,
                     pady=2,
                     cursor="hand2"
                 )
@@ -233,7 +243,7 @@ class CharacterCard(ttk.Frame):
         add_btn = ttk.Button(btn_frame, text="➕ Add", command=self._on_add_clicked, width=10, style="TButton")
         add_btn.pack(side="left", padx=(0, 6))
 
-        # Refactor 3: Ghost Edit Button (Using tk.Button for direct styling control)
+        # Refactor 3: Enhanced Ghost Edit Button
         edit_btn = tk.Button(
             btn_frame, 
             text="✏️ Edit", 
@@ -242,11 +252,16 @@ class CharacterCard(ttk.Frame):
             bg=panel_bg,
             fg=accent_color,
             highlightbackground=accent_color,
-            highlightthickness=1,
+            highlightthickness=2, # Increased thickness
             relief="flat",
             font=("Segoe UI", 9)
         )
         edit_btn.pack(side="left")
+        
+        def on_edit_enter(e): edit_btn.config(bg="#333333")
+        def on_edit_leave(e): edit_btn.config(bg=panel_bg)
+        edit_btn.bind("<Enter>", on_edit_enter)
+        edit_btn.bind("<Leave>", on_edit_leave)
 
     def toggle_visibility(self, event=None):
         """Toggle the visibility of the card contents. (Refactor 3)"""

@@ -91,19 +91,28 @@ class PreviewPanel:
 
         # Helper for Ghost buttons in Phase 3
         def add_ghost_btn(parent, text, command, row, col):
+            pbg = theme.get("panel_bg", "#ffffff")
+            accent = theme.get("accent", "#0078d7")
+            
             btn = tk.Button(
                 parent, 
                 text=text, 
                 command=command,
-                bg=theme.get("panel_bg", "#ffffff"),
-                fg=theme.get("accent", "#0078d7"),
-                highlightbackground=theme.get("accent", "#0078d7"),
-                highlightthickness=1,
+                bg=pbg,
+                fg=accent,
+                highlightbackground=accent,
+                highlightthickness=2, # Increased thickness
                 relief="flat",
                 font=("Segoe UI", 9),
                 padx=10
             )
             btn.grid(row=row, column=col, padx=2)
+            
+            def on_enter(e, b=btn): b.config(bg="#333333")
+            def on_leave(e, b=btn, bg=pbg): b.config(bg=bg)
+            btn.bind("<Enter>", on_enter)
+            btn.bind("<Leave>", on_leave)
+            
             self.ghost_buttons.append(btn)
             return btn
 

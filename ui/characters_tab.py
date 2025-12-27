@@ -283,17 +283,23 @@ class CharactersTab:
             btn_frame, text="✓ Apply to Selected", command=self._apply_bulk_to_selected
         ).grid(row=0, column=1, sticky="ew", padx=2)
         # Refactor 3: Ghost style for Create Shared Outfit
+        pbg = self.theme_colors.get("panel_bg", "#ffffff") if hasattr(self, "theme_colors") else "#ffffff"
         self.create_shared_btn = tk.Button(
             btn_frame, 
             text="✨ Create Shared Outfit", 
             command=self._create_shared_outfit,
-            bg=self.theme_colors.get("panel_bg", "#ffffff") if hasattr(self, "theme_colors") else "#ffffff",
+            bg=pbg,
             fg="#0078d7", # Fallback, will be updated by apply_theme
-            highlightthickness=1,
+            highlightthickness=2, # Increased thickness
             relief="flat",
             font=("Segoe UI", 9)
         )
         self.create_shared_btn.grid(row=0, column=2, sticky="ew", padx=(4, 0))
+        
+        def on_shared_enter(e): self.create_shared_btn.config(bg="#333333")
+        def on_shared_leave(e): self.create_shared_btn.config(bg=getattr(self, "_last_pbg", "#ffffff"))
+        self.create_shared_btn.bind("<Enter>", on_shared_enter)
+        self.create_shared_btn.bind("<Leave>", on_shared_leave)
 
         # Add character section
         add = ttk.LabelFrame(self.tab, text="👥 Add Character", style="TLabelframe", padding=12)
@@ -331,13 +337,18 @@ class CharactersTab:
             button_frame, 
             text="✨ Create New Character", 
             command=self._create_new_character,
-            bg="#ffffff", # Fallback
+            bg=pbg,
             fg="#0078d7", # Fallback
-            highlightthickness=1,
+            highlightthickness=2, # Increased thickness
             relief="flat",
             font=("Segoe UI", 9)
         )
         self.create_char_btn.grid(row=0, column=1, sticky="ew", padx=(4, 0))
+        
+        def on_char_enter(e): self.create_char_btn.config(bg="#333333")
+        def on_char_leave(e): self.create_char_btn.config(bg=getattr(self, "_last_pbg", "#ffffff"))
+        self.create_char_btn.bind("<Enter>", on_char_enter)
+        self.create_char_btn.bind("<Leave>", on_char_leave)
 
         # Use ScrollableCanvas for selected characters
         self.scrollable_canvas = ScrollableCanvas(self.tab)

@@ -71,8 +71,8 @@ class SceneCreatorDialog:
         )
         self.template_desc_label.pack(side="left")
 
-        # Info/help section
-        help_frame = ttk.Frame(main_frame, relief="groove", borderwidth=1)
+        # Info/help section (Refactor 1: Spatial Layout)
+        help_frame = ttk.Frame(main_frame, style="TFrame", padding=(10, 5))
         help_frame.pack(fill="x", pady=(0, 10))
 
         help_label = ttk.Label(
@@ -89,6 +89,19 @@ class SceneCreatorDialog:
 • Key background elements
 • Environmental details"""
 
+        # Refactor 2: Theme-aware Text Widget
+        # Try to get theme colors
+        try:
+            style = ttk.Style()
+            input_bg = style.lookup("TEntry", "fieldbackground")
+            input_fg = style.lookup("TEntry", "foreground")
+            # Fallback if lookup fails
+            if not input_bg: input_bg = "#2d2d2d"
+            if not input_fg: input_fg = "#ffffff"
+        except:
+            input_bg = "#2d2d2d"
+            input_fg = "#ffffff"
+
         example_widget = tk.Text(
             help_frame,
             font=("Consolas", 8),
@@ -96,6 +109,8 @@ class SceneCreatorDialog:
             wrap="word",
             relief="flat",
             borderwidth=0,
+            bg=input_bg,
+            fg=input_fg
         )
         example_widget.insert("1.0", example_text)
         example_widget.config(state="disabled")
@@ -141,7 +156,18 @@ class SceneCreatorDialog:
         desc_frame = ttk.Frame(main_frame)
         desc_frame.pack(fill="both", expand=True, pady=(0, 10))
 
-        self.description_text = tk.Text(desc_frame, height=10, wrap="word", font=("Consolas", 9))
+        self.description_text = tk.Text(
+            desc_frame, 
+            height=10, 
+            wrap="word", 
+            font=("Consolas", 9),
+            bg=input_bg,
+            fg=input_fg,
+            insertbackground=input_fg, # Cursor color
+            relief="flat",
+            padx=10,
+            pady=10
+        )
         desc_scroll = ttk.Scrollbar(desc_frame, command=self.description_text.yview)
         self.description_text.configure(yscrollcommand=desc_scroll.set)
 
@@ -152,11 +178,11 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
         self.description_text.insert("1.0", placeholder)
         self.description_text.config(foreground="gray")
 
-        # Bind events to clear placeholder
+        # Bind events to clear placeholder - Refactor 3
         def on_focus_in(event):
             if self.description_text.get("1.0", "end").strip() == placeholder.strip():
                 self.description_text.delete("1.0", "end")
-                self.description_text.config(foreground="black")
+                self.description_text.config(foreground=input_fg)
 
         def on_focus_out(event):
             if not self.description_text.get("1.0", "end").strip():
@@ -169,13 +195,26 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
         self.description_text.pack(side="left", fill="both", expand=True)
         desc_scroll.pack(side="right", fill="y")
 
-        # Buttons
+        # Buttons - Refactor 4: Component Hierarchy
         button_frame = ttk.Frame(main_frame)
         button_frame.pack(fill="x", pady=(10, 0))
 
-        ttk.Button(button_frame, text="Cancel", command=self._cancel).pack(
-            side="right", padx=(5, 0)
+        # Cancel: Ghost Style (Secondary)
+        cancel_btn = tk.Button(
+            button_frame, 
+            text="Cancel", 
+            command=self._cancel,
+            bg=style.lookup("TFrame", "background"),
+            fg=style.lookup("TEntry", "foreground"), # Use text color for secondary
+            highlightthickness=1,
+            highlightbackground="gray",
+            relief="flat",
+            padx=10
         )
+        cancel_btn.pack(side="right", padx=(5, 0))
+
+        # Create: Solid Accent (Primary) -> Use TButton default or explicit Accent.TButton if available
+        # Note: Since this is a modal, standard TButton usually implies primary.
         ttk.Button(button_frame, text="Create Scene", command=self._create_scene).pack(side="right")
 
         # Bind Enter key to create
