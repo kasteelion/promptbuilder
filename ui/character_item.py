@@ -14,8 +14,8 @@ from .searchable_combobox import SearchableCombobox
 from .widgets import FlowFrame
 
 
-class CharacterItem(ttk.LabelFrame):
-    """A widget representing a single character in the prompt list."""
+class CharacterItem(ttk.Frame):
+    """A widget representing a single character in the prompt list with accordion behavior."""
 
     def __init__(
         self,
@@ -37,141 +37,99 @@ class CharacterItem(ttk.LabelFrame):
             all_characters: Full character definitions dict
             all_poses: Pose presets dict
             color_schemes: Color schemes dict
-            callbacks: Dict of callback functions (update_outfit, update_pose, etc.)
-            **kwargs: Additional args for LabelFrame
+            callbacks: Dict of callback functions
         """
-        char_name = char_data["name"]
-        char_title = f"#{index + 1} — {char_name}"
-        super().__init__(parent, text=char_title, padding=12, style="TLabelframe", **kwargs)
+        super().__init__(parent, style="Card.TFrame", padding=2)
 
         self.index = index
         self.char_data = char_data
-        self.char_def = all_characters.get(char_name, {})
+        self.char_name = char_data["name"]
+        self.char_def = all_characters.get(self.char_name, {})
         self.all_poses = all_poses
         self.color_schemes = color_schemes
         self.modifiers = callbacks.get("get_modifiers", lambda: {})()
         self.callbacks = callbacks
+        
+        # Use existing expanded state or default to True for new items
+        self._expanded = char_data.get("_expanded", True)
 
         self._build_ui()
 
     def _build_ui(self):
         """Build the character item UI components."""
-        # Main header frame for title and drag handle
-        header_row = ttk.Frame(self)
-        header_row.pack(fill="x", pady=(0, 4))
+        # Header Row (Refactor 1: Accordion)
+        self.header = ttk.Frame(self, style="TFrame", cursor="hand2")
+        self.header.pack(fill="x", padx=10, pady=8)
         
-        # Drag handle (visual indicator)
-        self.drag_handle = ttk.Label(header_row, text="⠿", cursor="fleur", font=(None, 12))
-        self.drag_handle.pack(side="left", padx=(0, 5))
+        # Drag handle
+        self.drag_handle = ttk.Label(self.header, text="⠿", cursor="fleur", font=(None, 12))
+        self.drag_handle.pack(side="left", padx=(0, 10))
         
-        # Re-parent the outfit header content
-        outfit_header = ttk.Frame(self)
-        outfit_header.pack(fill="x", pady=(0, 2))
+        # Title
+        title_text = f"#{self.index + 1} — {self.char_name}"
+        self.title_label = ttk.Label(self.header, text=title_text, style="Bold.TLabel")
+        self.title_label.pack(side="left")
+        
+        # Indicator
+        self.toggle_indicator = ttk.Label(self.header, text="▾" if self._expanded else "▸", style="Muted.TLabel")
+        self.toggle_indicator.pack(side="right", padx=5)
 
-        outfit_label = ttk.Label(outfit_header, text="👕 Outfit:", style="Bold.TLabel")
-        outfit_label.pack(side="left")
+        # Controls container (The part that collapses)
+        self.controls_frame = ttk.Frame(self, style="TFrame", padding=(15, 5, 15, 15))
+        if self._expanded:
+            self.controls_frame.pack(fill="x")
+            
+        # Bind toggle to header and label
+        self.header.bind("<Button-1>", lambda e: self.toggle_collapse())
+        self.title_label.bind("<Button-1>", lambda e: self.toggle_collapse())
 
-        # Show current outfit
+        # --- Content inside controls_frame ---
+        
+        # Outfit Section
+        outfit_row = ttk.Frame(self.controls_frame)
+        outfit_row.pack(fill="x", pady=(0, 10))
+
+        ttk.Label(outfit_row, text="👕 Outfit:", style="Bold.TLabel").pack(side="left")
+        
         current_outfit = self.char_data.get("outfit", "")
         outfit_text = self.char_def.get("outfits", {}).get(current_outfit, "")
-        if current_outfit:
-            current_label = ttk.Label(
-                outfit_header,
-                text=f" {current_outfit}",
-                style="Accent.TLabel",
-            )
-            current_label.pack(side="left")
-
-        # Collapsible outfit frame
-        outfit_container = ttk.Frame(self)
-        outfit_expanded = tk.BooleanVar(value=False)
-
-        def toggle_outfit():
-            if outfit_expanded.get():
-                outfit_container.pack_forget()
-                outfit_expanded.set(False)
-            else:
-                outfit_container.pack(fill="both", expand=False, pady=(0, 6), after=outfit_header)
-                outfit_expanded.set(True)
-            if "update_scroll" in self.callbacks:
-                self.callbacks["update_scroll"]()
-
-        toggle_btn = ttk.Button(outfit_header, text="▼", width=3, command=toggle_outfit)
-        toggle_btn.pack(side="right")
-
+        
+        self.outfit_var = tk.StringVar(value=current_outfit)
+        
         # Prepare data for two-step selection
         outfits_categorized = self.char_def.get("outfits_categorized", {})
         
         # Determine initial category
         current_cat = ""
-        current_outfit = self.char_data.get("outfit", "")
-        
         if outfits_categorized:
-            # 1. Try to find category containing current outfit
             for cat, outfits in outfits_categorized.items():
                 if current_outfit in outfits:
                     current_cat = cat
                     break
-            # 2. If not found but we have categories, default to first (e.g. "Personal" or "Common")
             if not current_cat:
-                # Prefer "Personal" or "Common" if available
-                if "Personal" in outfits_categorized:
-                    current_cat = "Personal"
-                elif "Common" in outfits_categorized:
-                    current_cat = "Common"
-                else:
-                    current_cat = sorted(list(outfits_categorized.keys()))[0]
+                current_cat = "Personal" if "Personal" in outfits_categorized else sorted(list(outfits_categorized.keys()))[0]
 
-        # UI for Category
-        cat_frame = ttk.Frame(outfit_container)
-        cat_frame.pack(fill="x", padx=4, pady=2)
-        ttk.Label(cat_frame, text="Category:", width=8).pack(side="left")
-        
-        cat_var = tk.StringVar(value=current_cat)
-        
-        # UI for Outfit Name
-        name_frame = ttk.Frame(outfit_container)
-        name_frame.pack(fill="x", padx=4, pady=2)
-        ttk.Label(name_frame, text="Outfit:", width=8).pack(side="left")
-        
-        name_var = tk.StringVar(value=current_outfit)
-        
-        # Initialize name combo first so we can reference it
-        initial_outfits = sorted(list(outfits_categorized.get(current_cat, {}).keys())) if current_cat else []
-        
-        name_combo = SearchableCombobox(
-            name_frame,
-            values=initial_outfits,
-            textvariable=name_var,
-            on_select=lambda val: (
-                self.callbacks["update_outfit"](self.index, val),
-                toggle_outfit() # Close on selection
-            ),
-            placeholder="Select outfit..."
-        )
-        name_combo.pack(side="left", fill="x", expand=True)
-
-        # Define category select callback
-        def on_category_select(val):
-            new_outfits = sorted(list(outfits_categorized.get(val, {}).keys()))
-            name_combo.set_values(new_outfits)
-            name_combo.set("") # Clear selection so user forces a choice
-            
-        cat_combo = SearchableCombobox(
-            cat_frame,
+        # Compact outfit selectors
+        self.outfit_cat_combo = SearchableCombobox(
+            outfit_row,
             values=sorted(list(outfits_categorized.keys())),
-            textvariable=cat_var,
-            on_select=on_category_select,
-            placeholder="Select category..."
+            on_select=self._on_outfit_cat_select,
+            placeholder="Category...",
+            width=12
         )
-        cat_combo.pack(side="left", fill="x", expand=True)
+        self.outfit_cat_combo.pack(side="left", padx=10)
+        self.outfit_cat_combo.set(current_cat)
 
-        # Outfit creator button
-        ttk.Button(
-            outfit_container,
-            text="✨ New Outfit for Character",
-            command=lambda: self.callbacks["create_outfit"](self.char_data["name"]),
-        ).pack(fill="x", pady=(2, 0))
+        initial_outfits = sorted(list(outfits_categorized.get(current_cat, {}).keys())) if current_cat else []
+        self.outfit_combo = SearchableCombobox(
+            outfit_row,
+            values=initial_outfits,
+            textvariable=self.outfit_var,
+            on_select=lambda val: self.callbacks["update_outfit"](self.index, val),
+            placeholder="Select outfit...",
+            width=25
+        )
+        self.outfit_combo.pack(side="left", fill="x", expand=True)
 
         # Signature Color Checkbox
         sig_color = self.char_def.get("signature_color")
@@ -182,209 +140,144 @@ class CharacterItem(ttk.LabelFrame):
                 self.char_data["use_signature_color"] = sig_var.get()
                 self.callbacks["on_change"]()
                 
-            sig_frame = ttk.Frame(self)
-            sig_frame.pack(fill="x", padx=4, pady=(0, 6))
+            sig_frame = ttk.Frame(self.controls_frame)
+            sig_frame.pack(fill="x", pady=(0, 10))
             
-            chk = ttk.Checkbutton(
+            ttk.Checkbutton(
                 sig_frame, 
                 text="Use Signature Color", 
                 variable=sig_var, 
                 command=on_sig_toggle
-            )
-            chk.pack(side="left")
+            ).pack(side="left")
             
             # Color swatch
             try:
-                # Validate hex if possible, though basic label usually handles it or ignores
-                swatch = tk.Label(
-                    sig_frame, 
-                    bg=sig_color, 
-                    width=2, 
-                    height=1, 
-                    relief="solid", 
-                    borderwidth=1
-                )
-                swatch.pack(side="left", padx=(5, 0))
-                
-                # Tooltip for specific hex
-                from utils.tooltip import create_tooltip
-                create_tooltip(swatch, f"Signature Color: {sig_color}")
-            except Exception:
-                # If color is invalid, just skip the swatch
-                pass
+                swatch = tk.Label(sig_frame, bg=sig_color, width=2, height=1, relief="solid", borderwidth=1)
+                swatch.pack(side="left", padx=10)
+            except Exception: pass
 
-        # Pose preset selector
-        ttk.Label(self, text="🎭 Pose (Optional):", font=("Consolas", 9, "bold")).pack(
-            fill="x", pady=(6, 2)
-        )
-        pose_row = ttk.Frame(self)
-        pose_row.pack(fill="x", pady=(0, 4))
-        pose_row.columnconfigure(3, weight=1)
-
-        ttk.Label(pose_row, text="Category:").grid(row=0, column=0, sticky="w", padx=(0, 4))
+        # Pose Section
+        pose_section = ttk.Frame(self.controls_frame)
+        pose_section.pack(fill="x", pady=(0, 10))
+        
+        ttk.Label(pose_section, text="🎭 Pose:", style="Bold.TLabel").pack(side="left")
+        
         pcat_var = tk.StringVar(value=self.char_data.get("pose_category", ""))
-        
-        # We'll need a reference to preset_combo to update it
         preset_var = tk.StringVar(value=self.char_data.get("pose_preset", ""))
-        current_cat = pcat_var.get()
-        preset_values = [""] + sorted(list(self.all_poses.get(current_cat, {}).keys())) if current_cat else [""]
+        current_pcat = pcat_var.get()
+        preset_values = [""] + sorted(list(self.all_poses.get(current_pcat, {}).keys())) if current_pcat else [""]
         
-        preset_combo = SearchableCombobox(
-            pose_row,
+        self.pcat_combo = SearchableCombobox(
+            pose_section,
+            values=[""] + sorted(list(self.all_poses.keys())),
+            textvariable=pcat_var,
+            on_select=self._on_pose_cat_select,
+            placeholder="Category...",
+            width=15
+        )
+        self.pcat_combo.pack(side="left", padx=10)
+
+        self.preset_combo = SearchableCombobox(
+            pose_section,
             values=preset_values,
             textvariable=preset_var,
             on_select=lambda val: self.callbacks["update_pose_preset"](self.index, val),
             placeholder="Search preset...",
             width=20
         )
-        preset_combo.grid(row=0, column=3, sticky="ew")
-
-        pcat_combo = SearchableCombobox(
-            pose_row,
-            values=[""] + sorted(list(self.all_poses.keys())),
-            textvariable=pcat_var,
-            on_select=lambda val: self.callbacks["update_pose_category"](self.index, val, preset_combo),
-            placeholder="Search category...",
-            width=15
-        )
-        pcat_combo.grid(row=0, column=1, padx=(0, 10))
-
-        ttk.Label(pose_row, text="Preset:").grid(row=0, column=2, sticky="w", padx=(0, 4))
-
-        # Add create pose button
-        ttk.Button(pose_row, text="✨", width=3, command=self.callbacks["create_pose"]).grid(
-            row=0, column=4, padx=(5, 0)
-        )
+        self.preset_combo.pack(side="left", fill="x", expand=True)
 
         # Action note text area
         ttk.Label(
-            self,
+            self.controls_frame,
             text="💬 Custom Pose/Action (Optional - Overrides Preset):",
-            font=("Consolas", 9, "bold"),
-        ).pack(fill="x", pady=(6, 0))
-        action_text = tk.Text(self, wrap="word", height=5)
-        action_text.insert("1.0", self.char_data.get("action_note", ""))
-        action_text.pack(fill="x", pady=(0, 6))
-        action_text.config(padx=5, pady=5)
-        action_text.bind(
-            "<KeyRelease>", lambda e: self.callbacks["update_action_note"](self.index, action_text)
+            style="Muted.TLabel",
+        ).pack(fill="x", pady=(5, 2))
+        
+        self.action_text = tk.Text(self.controls_frame, wrap="word", height=3)
+        self.action_text.insert("1.0", self.char_data.get("action_note", ""))
+        self.action_text.pack(fill="x", pady=(0, 15))
+        self.action_text.bind(
+            "<KeyRelease>", lambda e: self.callbacks["update_action_note"](self.index, self.action_text)
         )
 
-        # Insert color scheme selector if outfit uses color variables
+        # Color scheme selector if needed
         if outfit_has_color_vars(str(outfit_text)):
             scheme_var = tk.StringVar(value=self.char_data.get("color_scheme", ""))
-            scheme_names = list(self.color_schemes.keys())
             
-            color_row = ttk.Frame(self)
-            color_row.pack(fill="x", padx=4, pady=(0, 6))
+            color_row = ttk.Frame(self.controls_frame)
+            color_row.pack(fill="x", pady=(0, 15))
+            ttk.Label(color_row, text="🎨 Team Colors:").pack(side="left", padx=(0, 5))
             
-            ttk.Label(color_row, text="Team Colors:").pack(side="left")
-            
-            scheme_combo = ttk.Combobox(color_row, textvariable=scheme_var, state="readonly", values=scheme_names, width=25)
-            scheme_combo.pack(side="left", padx=4)
-            
-            preview_frame = ttk.Frame(color_row)
-            preview_frame.pack(side="left", padx=4)
-            
-            def update_previews(name):
-                # Clear existing
-                for w in preview_frame.winfo_children():
-                    w.destroy()
-                
-                scheme = self.color_schemes.get(name)
-                if not scheme:
-                    return
-                
-                # Helper to check if a string is a hex color or named color
-                def is_valid_color(c):
-                    if not c or c.startswith("{"): return False
-                    return True
+            scheme_combo = ttk.Combobox(color_row, textvariable=scheme_var, state="readonly", values=list(self.color_schemes.keys()), width=25)
+            scheme_combo.pack(side="left")
+            scheme_combo.bind("<<ComboboxSelected>>", lambda e: self.callbacks["update_color_scheme"](self.index, scheme_var.get()))
 
-                for label, key in [("P", "primary_color"), ("S", "secondary_color"), ("A", "accent")]:
-                    val = scheme.get(key)
-                    if is_valid_color(val):
-                        f = ttk.Frame(preview_frame)
-                        f.pack(side="left", padx=2)
-                        try:
-                            # Use a label with background for simple color box
-                            swatch = tk.Label(f, width=2, height=1, bg=val, relief="solid", borderwidth=1)
-                            swatch.pack(side="left")
-                            ttk.Label(f, text=label, font=("Segoe UI", 7)).pack(side="left", padx=1)
-                        except Exception:
-                            pass
+        # Footer Actions (Refactor 2: Secondary Actions)
+        footer = ttk.Frame(self.controls_frame)
+        footer.pack(fill="x")
 
-            def on_scheme_selected(event):
-                name = scheme_var.get()
-                self.callbacks["update_color_scheme"](self.index, name)
-                update_previews(name)
-            
-            scheme_combo.bind("<<ComboboxSelected>>", on_scheme_selected)
-            # Initial preview
-            if scheme_var.get():
-                update_previews(scheme_var.get())
-
-        # Insert outfit modifier selector if outfit uses {modifier} variable
-        if "{modifier}" in str(outfit_text):
-            current_traits = self.char_data.get("outfit_traits", [])
-            # Support legacy single-string modifier
-            if not current_traits and self.char_data.get("outfit_modifier"):
-                current_traits = [self.char_data.get("outfit_modifier")]
-                self.char_data["outfit_traits"] = current_traits
-            
-            ttk.Label(self, text="👕 Outfit Options / Traits:", font=("Segoe UI", 9, "bold")).pack(anchor="w", padx=4, pady=(4, 2))
-            
-            traits_frame = FlowFrame(self, padding_x=4, padding_y=2)
-            traits_frame.pack(fill="x", padx=4, pady=(0, 6))
-            
-            # Group traits by category (first word before hyphen)
-            sorted_modifier_keys = sorted(list(self.modifiers.keys()))
-            
-            for mod_name in sorted_modifier_keys:
-                # Use a closure to capture mod_name
-                def make_toggle(name=mod_name):
-                    def toggle():
-                        traits = self.char_data.get("outfit_traits", [])
-                        if name in traits:
-                            traits.remove(name)
-                        else:
-                            traits.append(name)
-                        self.char_data["outfit_traits"] = traits
-                        self.callbacks["on_change"]()
-                    return toggle
-
-                var = tk.BooleanVar(value=mod_name in current_traits)
-                chk = ttk.Checkbutton(
-                    traits_frame, 
-                    text=mod_name, 
-                    variable=var, 
-                    command=make_toggle(mod_name),
-                    style="Action.TCheckbutton"
-                )
-                traits_frame._children.append(chk)
-                # Position chk like a button in FlowFrame
-                traits_frame._schedule_reflow()
-
-        # Separator
-        ttk.Separator(self, orient="horizontal").pack(fill="x", pady=6)
-
-        # Button row
-        btnrow = ttk.Frame(self, style="TFrame")
-        btnrow.pack(fill="x")
-
-        mv = ttk.Frame(btnrow, style="TFrame")
-        mv.pack(side="left", fill="x", expand=True)
-        
-        num_characters = self.callbacks.get("get_num_characters", lambda: 0)()
+        # Move Up/Down use Ghost style
+        move_frame = ttk.Frame(footer)
+        move_frame.pack(side="left")
         
         if self.index > 0:
             ttk.Button(
-                mv, text="↑ Move Up", width=10, command=lambda: self.callbacks["move_up"](self.index)
-            ).pack(side="left", padx=(0, 4))
+                move_frame, text="↑ Up", style="Ghost.TButton", width=6, 
+                command=lambda: self.callbacks["move_up"](self.index)
+            ).pack(side="left", padx=2)
+        
+        num_characters = self.callbacks.get("get_num_characters", lambda: 0)()
         if self.index < num_characters - 1:
             ttk.Button(
-                mv, text="↓ Move Down", width=10, command=lambda: self.callbacks["move_down"](self.index)
-            ).pack(side="left")
+                move_frame, text="↓ Down", style="Ghost.TButton", width=6, 
+                command=lambda: self.callbacks["move_down"](self.index)
+            ).pack(side="left", padx=2)
 
+        # Remove uses Link style
         ttk.Button(
-            btnrow, text="✕ Remove", command=lambda: self.callbacks["remove_character"](self.index)
+            footer, text="✕ Remove Character", style="Link.TButton", 
+            command=lambda: self.callbacks["remove_character"](self.index)
         ).pack(side="right")
+
+    def _on_outfit_cat_select(self, val):
+        outfits = sorted(list(self.char_def.get("outfits_categorized", {}).get(val, {}).keys()))
+        self.outfit_combo.set_values(outfits)
+        self.outfit_combo.set("")
+
+    def _on_pose_cat_select(self, val):
+        presets = [""] + sorted(list(self.all_poses.get(val, {}).keys()))
+        self.preset_combo.set_values(presets)
+        self.preset_combo.set("")
+        self.callbacks["update_pose_category"](self.index, val, self.preset_combo)
+
+    def toggle_collapse(self):
+        """Toggle the visibility of controls."""
+        if self._expanded:
+            self.controls_frame.pack_forget()
+            self.toggle_indicator.config(text="▸")
+            self._expanded = False
+        else:
+            # Auto-collapse others if requested by parent/tab
+            if self.callbacks.get("auto_collapse"):
+                self.callbacks["auto_collapse"](self.index)
+            
+            self.controls_frame.pack(fill="x")
+            self.toggle_indicator.config(text="▾")
+            self._expanded = True
+            
+        self.char_data["_expanded"] = self._expanded
+        if "update_scroll" in self.callbacks:
+            self.callbacks["update_scroll"]()
+
+    def set_expanded(self, expanded):
+        """Programmatically set expanded state."""
+        if self._expanded != expanded:
+            self.toggle_collapse()
+
+    def set_selected(self, selected):
+        """Update visual state to show selection."""
+        if selected:
+            self.config(style="Selected.Card.TFrame")
+        else:
+            self.config(style="Card.TFrame")

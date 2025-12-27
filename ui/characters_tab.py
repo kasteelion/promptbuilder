@@ -283,7 +283,7 @@ class CharactersTab:
             btn_frame, text="✓ Apply to Selected", command=self._apply_bulk_to_selected
         ).grid(row=0, column=1, sticky="ew", padx=2)
         ttk.Button(
-            btn_frame, text="✨ Create Shared Outfit", command=self._create_shared_outfit
+            btn_frame, text="✨ Create Shared Outfit", command=self._create_shared_outfit, style="Ghost.TButton"
         ).grid(row=0, column=2, sticky="ew", padx=(4, 0))
 
         # Add character section
@@ -317,7 +317,7 @@ class CharactersTab:
             row=0, column=0, sticky="ew", padx=(0, 4)
         )
         ttk.Button(
-            button_frame, text="✨ Create New Character", command=self._create_new_character
+            button_frame, text="✨ Create New Character", command=self._create_new_character, style="Ghost.TButton"
         ).grid(row=0, column=1, sticky="ew", padx=(4, 0))
 
         # Use ScrollableCanvas for selected characters
@@ -889,6 +889,7 @@ class CharactersTab:
             "move_up": self._move_up,
             "move_down": self._move_down,
             "remove_character": self._remove_character,
+            "auto_collapse": self._auto_collapse_others, # Added Refactor 1
             "get_num_characters": lambda: len(self.selected_characters),
             "get_modifiers": lambda: getattr(self.parent.winfo_toplevel(), "modifiers", {}),
             "update_scroll": self.scrollable_canvas.update_scroll_region,
@@ -923,6 +924,16 @@ class CharactersTab:
         # Defer on_change to avoid event queue overflow
         self.tab.after(1, self.on_change)
         self._refreshing = False
+
+    def _auto_collapse_others(self, active_index):
+        """Collapse all character items except the active one. (Refactor 1)"""
+        for child in self.chars_container.winfo_children():
+            if isinstance(child, CharacterItem):
+                if child.index != active_index:
+                    child.set_expanded(False)
+                    child.set_selected(False)
+                else:
+                    child.set_selected(True)
 
     def _update_color_scheme(self, index, scheme_name):
         """Update color scheme for a character.

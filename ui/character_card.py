@@ -213,10 +213,10 @@ class CharacterCard(ttk.Frame):
         btn_frame = ttk.Frame(info_frame)
         btn_frame.pack(fill="x", pady=(4, 0))
 
-        add_btn = ttk.Button(btn_frame, text="➕ Add", command=self._on_add_clicked, width=10)
+        add_btn = ttk.Button(btn_frame, text="➕ Add", command=self._on_add_clicked, width=10, style="TButton")
         add_btn.pack(side="left", padx=(0, 6))
 
-        edit_btn = ttk.Button(btn_frame, text="✏️ Edit", command=self._on_edit_clicked, width=10)
+        edit_btn = ttk.Button(btn_frame, text="✏️ Edit", command=self._on_edit_clicked, width=10, style="Ghost.TButton")
         edit_btn.pack(side="left")
 
     def _sort_tags_by_category(self, tags, categorized_map):
@@ -726,7 +726,7 @@ class CharacterGalleryPanel(ttk.Frame):
 
         # Random button on the right of header
         self.random_btn = ttk.Button(
-            header, text="🎲", width=3, command=self._add_random_character
+            header, text="🎲", width=3, command=self._add_random_character, style="Ghost.TButton"
         )
         self.random_btn.pack(side="right", padx=(2, 0))
         create_tooltip(self.random_btn, "Add a random character from the current list")

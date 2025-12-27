@@ -291,18 +291,6 @@ class ThemeManager:
             padding=(0, s(5))
         )
 
-        # Notebook tabs with better selection contrast
-        self.style.configure("TNotebook", background=bg, bordercolor=border, borderwidth=0)
-        self.style.configure(
-            "TNotebook.Tab", background=bg, foreground=fg, bordercolor=border, padding=[s(10), s(4)],
-            font=(None, s(9))
-        )
-        self.style.map(
-            "TNotebook.Tab",
-            background=[("selected", selected_bg), ("active", text_bg)],
-            foreground=[("selected", accent), ("active", fg)],
-        )
-
         # Combobox/Entry with better contrast and visibility
         self.style.configure(
             "TCombobox",
@@ -311,8 +299,8 @@ class ThemeManager:
             background=bg,
             selectbackground=accent,
             selectforeground=bg,
-            bordercolor=accent,
-            borderwidth=0,
+            bordercolor=border,
+            borderwidth=1,
             arrowcolor=fg,
             font=(None, s(9))
         )
@@ -320,6 +308,7 @@ class ThemeManager:
             "TCombobox",
             fieldbackground=[("readonly", text_bg), ("disabled", bg)],
             foreground=[("readonly", fg), ("disabled", border)],
+            bordercolor=[("active", accent), ("focus", accent)],
             arrowcolor=[("disabled", border)],
         )
 
@@ -330,48 +319,76 @@ class ThemeManager:
             background=bg,
             selectbackground=accent,
             selectforeground=bg,
-            bordercolor=accent,
-            borderwidth=0,
+            bordercolor=border,
+            borderwidth=1,
             font=(None, s(9))
         )
         self.style.map(
             "TEntry",
             fieldbackground=[("disabled", bg)],
             foreground=[("disabled", border)],
+            bordercolor=[("active", accent), ("focus", accent)],
         )
 
-        # Buttons with improved hover states
+        # Primary Button (Refactor 2: High Importance)
         self.style.configure(
             "TButton",
-            background=text_bg,
-            foreground=fg,
-            bordercolor=border,
+            background=accent,
+            foreground=text_bg,
+            bordercolor=accent,
             borderwidth=1,
-            padding=[s(6), s(3)],
-            font=(None, s(9))
+            padding=[s(12), s(5)],
+            font=(None, s(9), "bold")
         )
         self.style.map(
             "TButton",
-            background=[("active", accent), ("pressed", accent_hover)],
+            background=[("active", accent_hover), ("pressed", border)],
             foreground=[("active", text_bg), ("pressed", text_bg)],
-            bordercolor=[("active", accent), ("pressed", accent_hover)],
+            bordercolor=[("active", accent_hover), ("pressed", border)],
         )
 
-        # Accent Button for primary actions
+        # Ghost Button (Refactor 2: Medium Importance)
+        self.style.configure(
+            "Ghost.TButton",
+            background=bg,
+            foreground=accent,
+            bordercolor=accent,
+            borderwidth=1,
+            padding=[s(10), s(4)],
+            font=(None, s(9))
+        )
+        self.style.map(
+            "Ghost.TButton",
+            background=[("active", selected_bg)],
+            foreground=[("active", accent_hover)],
+            bordercolor=[("active", accent_hover)],
+        )
+
+        # Link Button (Refactor 2: Low Importance)
+        self.style.configure(
+            "Link.TButton",
+            background=bg,
+            foreground=fg,
+            bordercolor=bg,
+            borderwidth=0,
+            padding=[s(5), s(2)],
+            font=(None, s(9))
+        )
+        self.style.map(
+            "Link.TButton",
+            foreground=[("active", accent)],
+            background=[("active", bg)],
+        )
+
+        # Accent Button (deprecated in favor of TButton primary, but keeping for compat)
         self.style.configure(
             "Accent.TButton",
             background=accent,
             foreground=text_bg,
             bordercolor=accent,
             borderwidth=1,
-            padding=[s(6), s(3)],
-            font=(None, s(9))
-        )
-        self.style.map(
-            "Accent.TButton",
-            background=[("active", accent_hover), ("pressed", border)],
-            foreground=[("active", text_bg), ("pressed", fg)],
-            bordercolor=[("active", accent_hover), ("pressed", border)],
+            padding=[s(12), s(5)],
+            font=(None, s(9), "bold")
         )
 
         # Label Frames (Refactor 1: The Flattening)
@@ -441,6 +458,12 @@ class ThemeManager:
             borderwidth=0,
             arrowcolor=fg,
         )
+
+        # Custom widget styles
+        self.style.configure("Collapsible.TFrame", background=panel_bg, borderwidth=0, relief="flat")
+        self.style.configure("Card.TFrame", background=panel_bg, borderwidth=1, bordercolor=border, relief="solid")
+        self.style.configure("Selected.Card.TFrame", background=panel_bg, borderwidth=2, bordercolor=accent, relief="solid")
+
 
     def apply_text_widget_theme(self, widget, theme):
         """Apply theme colors to a tk.Text widget. (Refactor 2)"""

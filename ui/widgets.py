@@ -47,7 +47,18 @@ class ScrollableCanvas(ttk.Frame):
 
         # Grid layout
         self.canvas.grid(row=0, column=0, sticky="nsew")
-        self.scrollbar.grid(row=0, column=1, sticky="ns")
+        # Scrollbar is NOT gridded by default (Auto-hide logic) - Refactor 3
+        
+        # Auto-hide scrollbar logic
+        def show_scrollbar(event=None):
+            self.scrollbar.grid(row=0, column=1, sticky="ns")
+            
+        def hide_scrollbar(event=None):
+            self.scrollbar.grid_forget()
+
+        self.canvas.bind("<Enter>", show_scrollbar)
+        self.canvas.bind("<Leave>", hide_scrollbar)
+        self.scrollbar.bind("<Enter>", show_scrollbar)
 
         # Bind mousewheel
         self.canvas.bind("<MouseWheel>", self._on_mousewheel)
@@ -148,12 +159,12 @@ class CollapsibleFrame(ttk.Frame):
 
         self._clear_btn = None
         if show_clear:
-            self._clear_btn = ttk.Button(self._header, text="✕ Clear", width=8, style="TButton")
+            self._clear_btn = ttk.Button(self._header, text="✕ Clear", width=8, style="Ghost.TButton")
             self._clear_btn.grid(row=0, column=1, sticky="e", padx=(4, 0))
 
         self._import_btn = None
         if show_import:
-            self._import_btn = ttk.Button(self._header, text="📥 Import", width=8, style="TButton")
+            self._import_btn = ttk.Button(self._header, text="📥 Import", width=8, style="Link.TButton")
             # If both clear and import exist, place them side by side
             col = 2 if show_clear else 1
             self._import_btn.grid(row=0, column=col, sticky="e", padx=(4, 0))

@@ -363,10 +363,10 @@ class PromptBuilderApp:
                 section.set_opened(state)
             self.right_scroll_container.update_scroll_region()
 
-        ttk.Button(controls_frame, text="Collapse All", width=12, 
-                   command=lambda: _set_all_collapsible(False)).pack(side="right", padx=2)
-        ttk.Button(controls_frame, text="Expand All", width=12, 
-                   command=lambda: _set_all_collapsible(True)).pack(side="right", padx=2)
+        ttk.Button(controls_frame, text="Collapse All", 
+                   command=lambda: _set_all_collapsible(False), style="Link.TButton").pack(side="right", padx=2)
+        ttk.Button(controls_frame, text="Expand All", 
+                   command=lambda: _set_all_collapsible(True), style="Link.TButton").pack(side="right", padx=2)
 
         # Scene section (compact)
         self.scene_collapsible = CollapsibleFrame(right_frame, text="🎬 Scene", opened=True, show_clear=True)
@@ -554,7 +554,7 @@ class PromptBuilderApp:
 
         # Helper to create styled toolbar buttons
         def add_tool_btn(parent, text, command, tooltip=None, width=None):
-            btn = ttk.Button(parent, text=text, command=command)
+            btn = ttk.Button(parent, text=text, command=command, style="Ghost.TButton")
             if width:
                 btn.config(width=width)
             btn.pack(side="left", padx=2)
