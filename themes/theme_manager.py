@@ -261,6 +261,7 @@ class ThemeManager:
         """Update all ttk widget styles with theme colors."""
         bg = theme["bg"]
         fg = theme["fg"]
+        panel_bg = theme.get("panel_bg", bg)
         text_bg = theme["text_bg"]
         accent = theme["accent"]
         accent_hover = theme.get("accent_hover", accent)
@@ -271,23 +272,28 @@ class ThemeManager:
         def s(size):
             return int(size * self.scale_factor)
 
-        # General Layout Elements
-        self.style.configure("TFrame", background=bg)
-        self.style.configure("TLabel", background=bg, foreground=fg, font=(None, s(9)))
-        self.style.configure("TCheckbutton", background=bg, foreground=fg, font=(None, s(9)))
+        # General Layout Elements - Refactor 1
+        self.style.configure("TFrame", background=panel_bg, borderwidth=0, highlightthickness=0)
+        self.style.configure("TLabel", background=panel_bg, foreground=fg, font=(None, s(9)))
+        self.style.configure("TCheckbutton", background=panel_bg, foreground=fg, font=(None, s(9)))
 
         # Custom widget styles
-        self.style.configure("Collapsible.TFrame", background=bg, bordercolor=border, relief="flat")
-        self.style.configure("Card.TFrame", background=bg, bordercolor=border, borderwidth=1, relief="flat")
+        self.style.configure("Collapsible.TFrame", background=panel_bg, borderwidth=0, relief="flat")
+        self.style.configure("Card.TFrame", background=panel_bg, borderwidth=0, relief="flat")
         
+        # Typography-based Headers (Refactor 3)
         self.style.configure(
-            "Title.TLabel", font=(None, s(14), "bold"), background=bg, foreground=accent
+            "Title.TLabel", 
+            font=(None, s(16), "bold"), 
+            background=panel_bg, 
+            foreground=accent,
+            padding=(0, s(5))
         )
 
         # Notebook tabs with better selection contrast
-        self.style.configure("TNotebook", background=bg, bordercolor=border, borderwidth=1)
+        self.style.configure("TNotebook", background=bg, bordercolor=border, borderwidth=0)
         self.style.configure(
-            "TNotebook.Tab", background=bg, foreground=fg, bordercolor=border, padding=[s(10), s(2)],
+            "TNotebook.Tab", background=bg, foreground=fg, bordercolor=border, padding=[s(10), s(4)],
             font=(None, s(9))
         )
         self.style.map(
@@ -304,8 +310,8 @@ class ThemeManager:
             background=bg,
             selectbackground=accent,
             selectforeground=bg,
-            bordercolor=border,
-            borderwidth=1,
+            bordercolor=accent,
+            borderwidth=0,
             arrowcolor=fg,
             font=(None, s(9))
         )
@@ -314,6 +320,23 @@ class ThemeManager:
             fieldbackground=[("readonly", text_bg), ("disabled", bg)],
             foreground=[("readonly", fg), ("disabled", border)],
             arrowcolor=[("disabled", border)],
+        )
+
+        self.style.configure(
+            "TEntry",
+            fieldbackground=text_bg,
+            foreground=fg,
+            background=bg,
+            selectbackground=accent,
+            selectforeground=bg,
+            bordercolor=accent,
+            borderwidth=0,
+            font=(None, s(9))
+        )
+        self.style.map(
+            "TEntry",
+            fieldbackground=[("disabled", bg)],
+            foreground=[("disabled", border)],
         )
 
         # Buttons with improved hover states
@@ -350,51 +373,59 @@ class ThemeManager:
             bordercolor=[("active", accent_hover), ("pressed", border)],
         )
 
-        # Label Frames with more visible borders
+        # Label Frames (Refactor 1: The Flattening)
         self.style.configure(
             "TLabelframe",
-            background=bg,
-            foreground=fg,
+            background=panel_bg,
+            foreground=accent,
             bordercolor=border,
-            borderwidth=2,
-            relief="solid",
+            borderwidth=0,
+            relief="flat",
         )
         self.style.configure(
-            "TLabelframe.Label", background=bg, foreground=accent, font=(None, s(9), "bold")
+            "TLabelframe.Label", 
+            background=panel_bg, 
+            foreground=accent, 
+            font=(None, s(11), "bold"),
+            padding=(s(5), 0)
         )
 
         # Bold and Accent label styles for small inline headings and badges
-        self.style.configure("Bold.TLabel", font=(None, s(9), "bold"), background=bg, foreground=fg)
-        self.style.configure("Accent.TLabel", font=(None, s(9)), background=bg, foreground=accent)
+        self.style.configure("Bold.TLabel", font=(None, s(9), "bold"), background=panel_bg, foreground=fg)
+        self.style.configure("Accent.TLabel", font=(None, s(9)), background=panel_bg, foreground=accent)
         # Muted label for small helper text
-        self.style.configure("Muted.TLabel", font=(None, s(8)), background=bg, foreground=border)
-        # Tag-style label (chip-like) for small tag badges
-        tag_bg = theme.get("accent", accent)
-        tag_fg = theme.get("text_bg", bg)
+        self.style.configure("Muted.TLabel", font=(None, s(8)), background=panel_bg, foreground=border)
+        
+        # Tag-style (Refactor 4: Outlined)
+        tag_fg = accent
+        tag_bg = text_bg
         self.style.configure(
             "Tag.TLabel",
-            font=(None, s(8)),
+            font=(None, s(8), "bold"),
             background=tag_bg,
             foreground=tag_fg,
-            padding=(s(4), s(2)),
-            borderwidth=0,
+            padding=(s(6), s(2)),
+            borderwidth=1,
+            relief="solid",
+            bordercolor=accent
         )
 
-        # Tag-style button for interactive chips (matches Tag.TLabel but button-specific)
+        # Tag-style button for interactive chips (Refactor 4: Outlined)
         try:
             self.style.configure(
                 "Tag.TButton",
-                font=(None, s(8)),
+                font=(None, s(8), "bold"),
                 background=tag_bg,
                 foreground=tag_fg,
                 padding=[s(6), s(2)],
-                bordercolor=border,
+                bordercolor=accent,
                 borderwidth=1,
+                relief="solid"
             )
             self.style.map(
                 "Tag.TButton",
                 background=[("active", accent), ("pressed", accent_hover)],
-                foreground=[("active", text_bg), ("pressed", text_bg)],
+                foreground=[("active", bg), ("pressed", bg)],
                 bordercolor=[("active", accent), ("pressed", accent_hover)],
             )
         except Exception:
@@ -406,34 +437,58 @@ class ThemeManager:
             background=text_bg,
             troughcolor=bg,
             bordercolor=border,
+            borderwidth=0,
             arrowcolor=fg,
         )
 
     def apply_text_widget_theme(self, widget, theme):
-        """Apply theme colors to a tk.Text widget.
-
-        Args:
-            widget: tk.Text widget to style
-            theme: Theme color dictionary
-        """
+        """Apply theme colors to a tk.Text widget. (Refactor 2)"""
         text_bg = theme["text_bg"]
         text_fg = theme["text_fg"]
+        accent = theme["accent"]
+        
+        # Dynamic caret color
+        caret_color = text_fg
+        
         widget.config(
             bg=text_bg,
             fg=text_fg,
-            insertbackground=text_fg,
-            selectbackground=theme["accent"],
-            selectforeground=theme["bg"],  # Better contrast for selected text
-            inactiveselectbackground=theme["selected_bg"],  # Keep selection visible when unfocused
+            insertbackground=caret_color,
+            selectbackground=accent,
+            selectforeground=theme["bg"],
+            relief="flat",
+            highlightthickness=1,
+            highlightbackground=theme["border"],
+            highlightcolor=accent,
+            padx=10,
+            pady=10
         )
 
-    def apply_preview_theme(self, widget, theme):
-        """Apply theme colors to preview widget with formatted tags.
+    def apply_entry_theme(self, widget, theme):
+        """Apply theme colors to a ttk.Entry or tk.Entry widget. (Refactor 2)"""
+        text_bg = theme["text_bg"]
+        text_fg = theme["text_fg"]
+        accent = theme["accent"]
+        
+        if isinstance(widget, ttk.Entry):
+            # ttk widgets are mostly styled via style.configure
+            pass
+        else:
+            # tk.Entry
+            widget.config(
+                bg=text_bg,
+                fg=text_fg,
+                insertbackground=text_fg,
+                selectbackground=accent,
+                selectforeground=theme["bg"],
+                relief="flat",
+                highlightthickness=1,
+                highlightbackground=theme["border"],
+                highlightcolor=accent
+            )
 
-        Args:
-            widget: scrolledtext.ScrolledText widget
-            theme: Theme color dictionary
-        """
+    def apply_preview_theme(self, widget, theme):
+        """Apply theme colors to preview widget with formatted tags. (Refactor 2)"""
         # Base widget colors
         widget.config(
             bg=theme["preview_bg"],
@@ -441,6 +496,12 @@ class ThemeManager:
             insertbackground=theme["preview_fg"],
             selectbackground=theme["accent"],
             selectforeground=theme["preview_fg"],
+            relief="flat",
+            highlightthickness=1,
+            highlightbackground=theme["border"],
+            highlightcolor=theme["accent"],
+            padx=15,
+            pady=15
         )
 
         # Get current font size safely
@@ -508,3 +569,24 @@ class ThemeManager:
         """
         # Use text_bg for better contrast with content
         canvas.config(bg=theme.get("text_bg", theme["bg"]))
+
+    def apply_container_theme(self, widget, theme):
+        """Apply theme background to a container (tk.Frame)."""
+        panel_bg = theme.get("panel_bg", theme["bg"])
+        widget.config(bg=panel_bg)
+
+    def apply_listbox_theme(self, widget, theme):
+        """Apply theme colors to a tk.Listbox widget."""
+        text_bg = theme["text_bg"]
+        text_fg = theme["text_fg"]
+        accent = theme["accent"]
+        
+        widget.config(
+            bg=text_bg,
+            fg=text_fg,
+            selectbackground=accent,
+            selectforeground=theme["bg"],
+            borderwidth=0,
+            highlightthickness=0,
+            activestyle="none"
+        )

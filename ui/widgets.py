@@ -29,6 +29,8 @@ class ScrollableCanvas(ttk.Frame):
             self, orient="vertical", command=self.canvas.yview, style="Vertical.TScrollbar"
         )
         self.container = ttk.Frame(self.canvas, style="TFrame")
+        
+        self._scroll_after_id = None # Debounce tracking for scroll region updates
 
         # Create canvas window and sync width
         self._window = self.canvas.create_window((0, 0), window=self.container, anchor="nw")
@@ -81,15 +83,15 @@ class ScrollableCanvas(ttk.Frame):
             self._bind_mousewheel_recursive(child)
 
     def update_scroll_region(self):
-        """Update the scroll region with multiple retries to handle async layouts."""
+        """Update the scroll region with debouncing to handle async layouts efficiently."""
+        if self._scroll_after_id:
+            self.after_cancel(self._scroll_after_id)
+            
         def _apply():
             try:
                 self.canvas.update_idletasks()
                 
-                # Method 1: Use bbox
-                bbox = self.canvas.bbox("all")
-                
-                # Method 2: Manually check children extents (often more reliable for grid/place)
+                # Manual calculation of height based on children extents
                 max_y = 0
                 for child in self.container.winfo_children():
                     try:
@@ -100,21 +102,20 @@ class ScrollableCanvas(ttk.Frame):
                     except Exception:
                         continue
                 
-                # Combine methods
+                # Get bbox as fallback/complement
+                bbox = self.canvas.bbox("all")
+                
                 width = bbox[2] if bbox else self.container.winfo_width()
                 height = max(max_y, bbox[3] if bbox else 0, self.container.winfo_reqheight())
                 
                 # Apply with padding
                 self.canvas.config(scrollregion=(0, 0, width, height + 64))
+                self._scroll_after_id = None
             except Exception:
-                pass
+                self._scroll_after_id = None
 
-        # Perform multiple updates with increasing delays to catch late-rendering items (like images or FlowFrame reflows)
-        self.after_idle(_apply)
-        self.after(100, _apply)
-        self.after(300, _apply)
-        self.after(600, _apply)
-        self.after(1200, _apply)
+        # Schedule update with a small delay to coalesce multiple calls
+        self._scroll_after_id = self.after(50, _apply)
 
     def refresh_mousewheel_bindings(self):
         self._bind_mousewheel_recursive(self.container)
@@ -131,8 +132,8 @@ class CollapsibleFrame(ttk.Frame):
         self.columnconfigure(0, weight=1)
         self._text = text
 
-        # Header frame with distinct styling
-        self._header = ttk.Frame(self, style="Collapsible.TFrame", padding=(4, 2))
+        # Header frame with distinct styling - Refactor 1 & 3
+        self._header = ttk.Frame(self, style="TFrame", padding=(10, 5))
         self._header.grid(row=0, column=0, sticky="ew")
         self._header.columnconfigure(0, weight=1)
 
@@ -140,7 +141,7 @@ class CollapsibleFrame(ttk.Frame):
             self._header, 
             text=("▾ " if opened else "▸ ") + text, 
             command=self._toggle_cb, 
-            style="Accent.TButton",
+            style="Title.TLabel", # Use typography header style
             width=25
         )
         self._toggle_btn.grid(row=0, column=0, sticky="w")
@@ -157,8 +158,8 @@ class CollapsibleFrame(ttk.Frame):
             col = 2 if show_clear else 1
             self._import_btn.grid(row=0, column=col, sticky="e", padx=(4, 0))
 
-        # Content frame
-        self._content = ttk.Frame(self, style="TFrame", padding=(8, 4))
+        # Content frame - Refactor 1
+        self._content = ttk.Frame(self, style="TFrame", padding=(15, 10))
         self._content.grid(row=1, column=0, sticky="nsew")
         
         self._open = opened
@@ -217,7 +218,7 @@ class FlowFrame(ttk.Frame):
     Uses placement-based layout to avoid flicker when reflowing.
     """
 
-    def __init__(self, parent, padding_x=6, padding_y=4, min_chip_width=64, *args, **kwargs):
+    def __init__(self, parent, padding_x=10, padding_y=8, min_chip_width=64, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
         self._padx = padding_x
         self._pady = padding_y

@@ -56,10 +56,10 @@ class PreviewPanel:
             self.parent.columnconfigure(0, weight=1)
             header_row = 0
 
-        # Header with buttons
+        # Header with buttons - Refactor 1
         hdr = ttk.Frame(self.header_parent, style="TFrame")
         if self.header_parent == self.parent:
-            hdr.grid(row=header_row, column=0, sticky="ew", padx=6, pady=4)
+            hdr.grid(row=header_row, column=0, sticky="ew", padx=12, pady=(15, 10))
         else:
             # When in a separate header (like a CollapsibleFrame header), use grid
             # Position it in column 1 (after the toggle button)
@@ -111,9 +111,9 @@ class PreviewPanel:
         # Reload button
         ttk.Button(controls_frame, text="🔄 Reload", command=self.on_reload).grid(row=0, column=4, padx=2)
 
-        # Preview text widget with scrollbar
+        # Preview text widget with scrollbar - Refactor 1
         self.preview_text = scrolledtext.ScrolledText(self.parent, wrap="word")
-        self.preview_text.grid(row=1, column=0, sticky="nsew")
+        self.preview_text.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0, 15))
 
         # Bind Ctrl+C for copy and Ctrl+S for save
         self.preview_text.bind("<Control-c>", lambda e: self.copy_prompt())

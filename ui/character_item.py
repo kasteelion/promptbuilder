@@ -42,7 +42,7 @@ class CharacterItem(ttk.LabelFrame):
         """
         char_name = char_data["name"]
         char_title = f"#{index + 1} — {char_name}"
-        super().__init__(parent, text=char_title, padding=6, style="TLabelframe", **kwargs)
+        super().__init__(parent, text=char_title, padding=12, style="TLabelframe", **kwargs)
 
         self.index = index
         self.char_data = char_data

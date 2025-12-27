@@ -269,58 +269,59 @@ A simple and comfortable casual outfit.
         """Load and parse character files from characters/ folder, merging with shared outfits.
 
         Looks for individual character markdown files in the characters/ folder.
-        Falls back to characters.md for backwards compatibility.
-        Uses caching to avoid re-parsing unchanged files.
+        Uses granular per-file caching to only re-parse changed files.
         """
         chars_dir = self._find_characters_dir()
+        
+        # Initialize caches if not present
+        if "characters_map" not in self._cache:
+            self._cache["characters_map"] = {}
+        if "file_mtimes_map" not in self._cache:
+            self._cache["file_mtimes_map"] = {}
 
-        # Check if cache is valid
-        cache_key = "characters"
-        if chars_dir.exists():
-            try:
-                char_files = list(chars_dir.glob("*.md"))
-                if char_files:
-                    current_mtime = max(f.stat().st_mtime for f in char_files)
+        cached_chars = self._cache["characters_map"]
+        mtimes_map = self._cache["file_mtimes_map"]
 
-                    if (
-                        cache_key in self._cache
-                        and self._file_mtimes.get(cache_key) == current_mtime
-                    ):
-                        # Cache is valid, return cached data
-                        return self._cache[cache_key]
-
-                    # Update mtime
-                    self._file_mtimes[cache_key] = current_mtime
-            except (OSError, ValueError) as e:
-                # If mtime check fails, continue with reload and log for diagnostics
-                from utils import logger
-
-                logger.debug(f"Failed to check character files mtimes: {e}")
-
-        chars = {}
-        # Try loading from characters folder first
         if chars_dir.exists() and chars_dir.is_dir():
-            for char_file in sorted(chars_dir.glob("*.md")):
+            all_files = list(chars_dir.glob("*.md"))
+            found_any = False
+            
+            # Identify which files need parsing
+            for char_file in all_files:
+                found_any = True
                 try:
-                    text = char_file.read_text(encoding="utf-8")
-                    # Parse single character file
-                    file_chars = MarkdownParser.parse_characters(text)
-                    if not file_chars:
-                        logger.warning(f"No characters found in {char_file.name}")
-                    chars.update(file_chars)
-                except UnicodeDecodeError as e:
-                    logger.error(f"Encoding error in {char_file.name}: {e}")
-                except PermissionError as e:
-                    logger.error(f"Permission denied reading {char_file.name}: {e}")
+                    mtime = char_file.stat().st_mtime
+                    # If not in cache or mtime changed, parse it
+                    if char_file.name not in cached_chars or mtimes_map.get(char_file.name) != mtime:
+                        text = char_file.read_text(encoding="utf-8")
+                        file_chars = MarkdownParser.parse_characters(text)
+                        if file_chars:
+                            # We expect one character per file usually, but parse_characters returns a dict
+                            # We'll associate these characters with this file for cache invalidation
+                            cached_chars[char_file.name] = file_chars
+                            mtimes_map[char_file.name] = mtime
                 except Exception as e:
-                    logger.error(f"Error loading {char_file.name}: {type(e).__name__} - {e}")
+                    from utils import logger
+                    logger.error(f"Error loading {char_file.name}: {e}")
+
+            # Remove characters from cache if their file is gone
+            current_filenames = {f.name for f in all_files}
+            for cached_filename in list(cached_chars.keys()):
+                if cached_filename not in current_filenames:
+                    del cached_chars[cached_filename]
+                    if cached_filename in mtimes_map:
+                        del mtimes_map[cached_filename]
+
+        # Flatten the per-file character dicts into one master dict
+        chars = {}
+        for file_dict in cached_chars.values():
+            chars.update(file_dict)
 
         # If no character files were found, attempt to create a sample character
         if not chars:
             try:
-                # Ensure characters directory exists
+                # ... (rest of fallback logic remains similar but uses chars_dir)
                 chars_dir.mkdir(parents=True, exist_ok=True)
-
                 sample_file = chars_dir / "sample_character.md"
                 if not sample_file.exists():
                     default_content = """### Sample Character
@@ -333,34 +334,18 @@ A simple and comfortable casual outfit.
 - **Bottom:** Basic jeans
 """
                     sample_file.write_text(default_content, encoding="utf-8")
-
-                # Read all character files from the characters folder (including the sample)
-                for char_file in sorted(chars_dir.glob("*.md")):
-                    try:
-                        text = char_file.read_text(encoding="utf-8")
-                        file_chars = MarkdownParser.parse_characters(text)
-                        chars.update(file_chars)
-                    except Exception as e:
-                        logger.error(f"Error parsing {char_file.name}: {e}")
-            except Exception as e:
-                logger.error(f"Error creating sample character: {e}")
-                # Fallback to legacy characters.md location for backwards compatibility
-                f = self._find_data_file("characters.md")
-                if not f.exists():
-                    default_content = """### Sample Character
-**Appearance:** A sample character for you to get started.
-**Outfits:**
-- **Base:** A default outfit.
-"""
-                    f.write_text(default_content, encoding="utf-8")
-
-                text = f.read_text(encoding="utf-8")
+                
+                # Re-run logic for the newly created sample
+                text = sample_file.read_text(encoding="utf-8")
                 chars = MarkdownParser.parse_characters(text)
+            except Exception as e:
+                from utils import logger
+                logger.error(f"Error creating sample character: {e}")
 
         if not chars:
             from core.exceptions import DataLoadError
             raise DataLoadError(
-                "No characters parsed from characters/ folder or characters.md. Please check the file format."
+                "No characters parsed from characters/ folder. Please check the file format."
             )
 
         # Load shared outfits and merge with each character
@@ -372,20 +357,13 @@ A simple and comfortable casual outfit.
             char_data["outfits"] = merged_outfits
             char_data["outfits_categorized"] = categorized_outfits
 
-        # Resolve photo filenames to actual files within characters directory.
-        # This makes the UI more robust: it will display only when an actual
-        # file exists and will prefer standardized photo filenames.
-        for char_name, char_data in list(chars.items()):
+        # Resolve photo filenames
+        for char_name, char_data in chars.items():
             try:
                 resolved = self.resolve_photo_for_character(char_name, char_data.get("photo"))
-                # store resolved relative filename or None
                 char_data["photo"] = resolved
             except Exception:
-                # If resolution fails, leave original value
                 pass
-
-        # Cache the result
-        self._cache[cache_key] = chars
 
         return chars
 

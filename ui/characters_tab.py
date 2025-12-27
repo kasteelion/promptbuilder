@@ -130,12 +130,12 @@ class CharactersTab:
         self.tab.columnconfigure(0, weight=1)
         self.tab.rowconfigure(3, weight=1)  # Selected characters area expands
 
-        # Standard section padding
-        SECTION_PAD_Y = (4, 8)
+        # Standard section padding - Refactor 1
+        SECTION_PAD_Y = (10, 15)
 
         # Base prompt selector
-        bp = ttk.LabelFrame(self.tab, text="📋 Base Prompt (Style)", style="TLabelframe")
-        bp.grid(row=0, column=0, sticky="ew", padx=6, pady=SECTION_PAD_Y)
+        bp = ttk.LabelFrame(self.tab, text="📋 Base Prompt (Style)", style="TLabelframe", padding=12)
+        bp.grid(row=0, column=0, sticky="ew", padx=10, pady=SECTION_PAD_Y)
         bp.columnconfigure(0, weight=1)
         help_label = ttk.Label(bp, text="Choose a base art style", style="Muted.TLabel")
         help_label.grid(row=0, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 2))
@@ -158,15 +158,15 @@ class CharactersTab:
 
         # Bulk outfit editor section (Collapsible)
         self.bulk_container = CollapsibleFrame(self.tab, text="⚡ Bulk Outfit Editor")
-        self.bulk_container.grid(row=1, column=0, sticky="ew", padx=6, pady=SECTION_PAD_Y)
+        self.bulk_container.grid(row=1, column=0, sticky="ew", padx=10, pady=SECTION_PAD_Y)
         # Start collapsed
-        self.bulk_container._toggle_cb()
+        self.bulk_container.set_opened(False)
 
         bulk = self.bulk_container.get_content_frame()
         bulk.columnconfigure(1, weight=1)
 
         # Info section
-        info_frame = ttk.Frame(bulk, relief="groove", borderwidth=1)
+        info_frame = ttk.Frame(bulk)
         info_frame.grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 10))
         info_frame.columnconfigure(0, weight=1)
 
@@ -186,8 +186,8 @@ class CharactersTab:
 
         # Bulk Category
         cat_frame = ttk.Frame(bulk)
-        cat_frame.grid(row=1, column=0, columnspan=3, sticky="ew", padx=4, pady=2)
-        ttk.Label(cat_frame, text="Category:", width=9).pack(side="left")
+        cat_frame.grid(row=1, column=0, columnspan=3, sticky="ew", padx=4, pady=4)
+        ttk.Label(cat_frame, text="Category:", width=10).pack(side="left")
         
         self.bulk_cat_var = tk.StringVar()
         self.bulk_cat_combo = SearchableCombobox(
@@ -201,8 +201,8 @@ class CharactersTab:
 
         # Bulk Outfit Name
         name_frame = ttk.Frame(bulk)
-        name_frame.grid(row=2, column=0, columnspan=3, sticky="ew", padx=4, pady=2)
-        ttk.Label(name_frame, text="Outfit:", width=9).pack(side="left")
+        name_frame.grid(row=2, column=0, columnspan=3, sticky="ew", padx=4, pady=4)
+        ttk.Label(name_frame, text="Outfit:", width=10).pack(side="left")
 
         self.bulk_outfit_var = tk.StringVar()
         self.bulk_outfit_combo = SearchableCombobox(
@@ -227,9 +227,9 @@ class CharactersTab:
 
         # Bulk Team Colors
         scheme_row = ttk.Frame(bulk)
-        scheme_row.grid(row=3, column=0, columnspan=3, sticky="ew", padx=4, pady=2)
+        scheme_row.grid(row=3, column=0, columnspan=3, sticky="ew", padx=4, pady=4)
         
-        ttk.Label(scheme_row, text="Team Colors:", width=11).pack(side="left")
+        ttk.Label(scheme_row, text="Team Colors:", width=12).pack(side="left")
         self.bulk_scheme_var = tk.StringVar()
         
         # Get color schemes
@@ -259,7 +259,7 @@ class CharactersTab:
             bulk, text="Use Signature Colors", variable=self.bulk_sig_color_var,
             command=lambda: self._update_bulk_preview()
         )
-        sig_chk.grid(row=4, column=0, columnspan=2, sticky="w", padx=4, pady=(2, 6))
+        sig_chk.grid(row=4, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 8))
         create_tooltip(sig_chk, "Apply signature color to all (where supported by outfit)")
 
         # Preview/status label
@@ -267,11 +267,11 @@ class CharactersTab:
         self.bulk_preview_label = ttk.Label(
             bulk, textvariable=self.bulk_preview_var, style="Muted.TLabel"
         )
-        self.bulk_preview_label.grid(row=5, column=0, columnspan=2, sticky="w", padx=4, pady=(0, 6))
+        self.bulk_preview_label.grid(row=5, column=0, columnspan=2, sticky="w", padx=4, pady=(0, 10))
 
         # Button row
         btn_frame = ttk.Frame(bulk)
-        btn_frame.grid(row=6, column=0, columnspan=2, sticky="ew", padx=4, pady=6)
+        btn_frame.grid(row=6, column=0, columnspan=2, sticky="ew", padx=4, pady=10)
         btn_frame.columnconfigure(0, weight=1)
         btn_frame.columnconfigure(1, weight=1)
         btn_frame.columnconfigure(2, weight=1)
@@ -287,8 +287,8 @@ class CharactersTab:
         ).grid(row=0, column=2, sticky="ew", padx=(4, 0))
 
         # Add character section
-        add = ttk.LabelFrame(self.tab, text="👥 Add Character", style="TLabelframe")
-        add.grid(row=2, column=0, sticky="ew", padx=6, pady=SECTION_PAD_Y)
+        add = ttk.LabelFrame(self.tab, text="👥 Add Character", style="TLabelframe", padding=12)
+        add.grid(row=2, column=0, sticky="ew", padx=10, pady=SECTION_PAD_Y)
         add.columnconfigure(0, weight=1)
         char_help = ttk.Label(
             add, text="Select a character and press Add or Enter", style="Muted.TLabel"
@@ -305,11 +305,11 @@ class CharactersTab:
             placeholder="Search character...",
             textvariable=self.char_var
         )
-        self.char_combo.grid(row=1, column=0, columnspan=2, sticky="ew", pady=(2, 6), padx=4)
+        self.char_combo.grid(row=1, column=0, columnspan=2, sticky="ew", pady=(4, 8), padx=4)
         create_tooltip(self.char_combo, TOOLTIPS.get("character", ""))
 
         button_frame = ttk.Frame(add)
-        button_frame.grid(row=2, column=0, columnspan=2, sticky="ew", padx=4, pady=(2, 6))
+        button_frame.grid(row=2, column=0, columnspan=2, sticky="ew", padx=4, pady=(4, 8))
         button_frame.columnconfigure(0, weight=1)
         button_frame.columnconfigure(1, weight=1)
 
@@ -322,7 +322,7 @@ class CharactersTab:
 
         # Use ScrollableCanvas for selected characters
         self.scrollable_canvas = ScrollableCanvas(self.tab)
-        self.scrollable_canvas.grid(row=3, column=0, sticky="nsew", padx=6, pady=SECTION_PAD_Y)
+        self.scrollable_canvas.grid(row=3, column=0, sticky="nsew", padx=10, pady=SECTION_PAD_Y)
 
         # Get container for characters
         self.chars_container = self.scrollable_canvas.get_container()

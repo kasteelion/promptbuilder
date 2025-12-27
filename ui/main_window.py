@@ -349,13 +349,13 @@ class PromptBuilderApp:
         right_frame = self.right_scroll_container.get_container()
         right_frame.columnconfigure(0, weight=1)
 
-        # Standard spacing constants for consistent layout
-        SECTION_PAD_Y = (6, 10)
-        INTERNAL_PAD_X = 6
+        # Standard spacing constants for consistent layout - Refactor 1
+        SECTION_PAD_Y = (10, 15)
+        INTERNAL_PAD_X = 12
 
         # Convenience controls row (Expand/Collapse All)
         controls_frame = ttk.Frame(right_frame, style="TFrame")
-        controls_frame.grid(row=0, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=(4, 0))
+        controls_frame.grid(row=0, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=(10, 0))
         
         def _set_all_collapsible(state):
             for section in [self.scene_collapsible, self.notes_collapsible, 
@@ -911,11 +911,16 @@ class PromptBuilderApp:
         """
         theme = self.theme_manager.apply_theme(theme_name)
 
-        # Apply to text widgets
+        # Apply to text widgets - Refactor 2
         self.theme_manager.apply_preview_theme(self.preview_panel.preview_text, theme)
         for widget in [self.scene_text, self.notes_text, self.summary_text, self.edit_tab.editor_text]:
             self.theme_manager.apply_text_widget_theme(widget, theme)
         
+        # Apply to search entries if they exist
+        if hasattr(self, "character_gallery") and hasattr(self.character_gallery, "search_entry"):
+             # CharacterGalleryPanel search entry
+             self.theme_manager.apply_entry_theme(self.character_gallery.search_entry, theme)
+
         # Reset summary background if not modified
         if not getattr(self, "_summary_modified", False):
             self.theme_manager.apply_text_widget_theme(self.summary_text, theme)

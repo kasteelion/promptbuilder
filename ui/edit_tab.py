@@ -48,9 +48,9 @@ class EditTab:
         self.tab.columnconfigure(0, weight=1)
         self.tab.rowconfigure(1, weight=1)
 
-        # Control frame
+        # Control frame - Refactor 1
         control_frame = ttk.Frame(self.tab, style="TFrame")
-        control_frame.grid(row=0, column=0, sticky="ew", padx=4, pady=4)
+        control_frame.grid(row=0, column=0, sticky="ew", padx=12, pady=(15, 10))
         control_frame.columnconfigure(1, weight=1)
 
         # File selector
@@ -70,9 +70,9 @@ class EditTab:
         )
         self.save_data_btn.grid(row=0, column=2, padx=(10, 0))
 
-        # Editor text widget
+        # Editor text widget - Refactor 1
         self.editor_text = scrolledtext.ScrolledText(self.tab, wrap="word")
-        self.editor_text.grid(row=1, column=0, sticky="nsew", padx=4, pady=4)
+        self.editor_text.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0, 15))
 
     def _on_file_selected(self, event):
         """Handle file selection change."""

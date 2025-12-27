@@ -95,8 +95,8 @@ class CharacterCard(ttk.Frame):
 
     def _build_ui(self):
         """Build the card UI."""
-        # Use a flatter card style
-        self.configure(relief="flat", borderwidth=1, padding=8)
+        # Use a flatter card style - Refactor 1
+        self.configure(relief="flat", borderwidth=0, padding=12)
         
         # Horizontal layout: photo on left, summary/info on right
         left_size = int(CHARACTER_CARD_SIZE * 1.4)
@@ -106,14 +106,14 @@ class CharacterCard(ttk.Frame):
         container.pack(fill="both", expand=True)
 
         # Photo frame on the left
-        photo_frame = ttk.Frame(container, style="Card.TFrame")
-        photo_frame.pack(side="left", padx=(0, 8))
+        photo_frame = ttk.Frame(container, style="TFrame")
+        photo_frame.pack(side="left", padx=(0, 10))
 
         self.photo_canvas = tk.Canvas(
             photo_frame,
             width=left_size,
             height=left_size,
-            bg=self.theme_colors.get("text_bg", "#ffffff"),
+            bg=self.theme_colors.get("panel_bg", self.theme_colors.get("text_bg", "#ffffff")),
             highlightthickness=1,
             highlightbackground=self.theme_colors.get("border", "#cccccc"),
             cursor="hand2",
@@ -468,7 +468,8 @@ class CharacterCard(ttk.Frame):
                 # Cover-resize: scale to fill the canvas and crop center
                 scale = max(w / img.width, h / img.height)
                 new_size = (int(img.width * scale) + 2, int(img.height * scale) + 2)
-                img = img.resize(new_size, Image.Resampling.LANCZOS)
+                # Performance: Use BILINEAR for thumbnails instead of LANCZOS (much faster)
+                img = img.resize(new_size, Image.Resampling.BILINEAR)
 
                 left = (img.width - w) // 2
                 top = (img.height - h) // 2
@@ -694,6 +695,7 @@ class CharacterGalleryPanel(ttk.Frame):
         self.characters = {}
         self.load_queue = []  # Queue for lazy loading images
         self._render_job_id = None # ID for cancelling pending render batches
+        self._search_after_id = None # ID for debouncing search
         self._current_filtered_chars = [] # List of currently filtered character names
         
         # Load categorized tags map for sorting logic
@@ -706,9 +708,9 @@ class CharacterGalleryPanel(ttk.Frame):
 
     def _build_ui(self):
         """Build the gallery UI."""
-        # Header with title, count, and random button
+        # Header with title, count, and random button - Refactor 1
         header = ttk.Frame(self, style="TFrame")
-        header.pack(fill="x", padx=6, pady=(6, 2))
+        header.pack(fill="x", padx=12, pady=(15, 5))
 
         # Title and Count in a sub-frame
         title_frame = ttk.Frame(header, style="TFrame")
@@ -731,14 +733,14 @@ class CharacterGalleryPanel(ttk.Frame):
 
         # Search box with placeholder effect
         search_frame = ttk.Frame(self, style="TFrame")
-        search_frame.pack(fill="x", padx=6, pady=(2, 4))
+        search_frame.pack(fill="x", padx=12, pady=(5, 10))
 
         self.search_var = tk.StringVar()
 
-        search_entry = ttk.Entry(search_frame, textvariable=self.search_var)
-        search_entry.pack(fill="x", ipady=2)
-        search_entry.insert(0, "Search...")
-        search_entry.config(foreground="gray")
+        self.search_entry = ttk.Entry(search_frame, textvariable=self.search_var)
+        self.search_entry.pack(fill="x", ipady=2)
+        self.search_entry.insert(0, "Search...")
+        self.search_entry.config(foreground="gray")
 
         # Clear search button
         self.clear_search_btn = ttk.Button(
@@ -748,7 +750,7 @@ class CharacterGalleryPanel(ttk.Frame):
 
         # Sort and Filter row
         sort_filter_frame = ttk.Frame(self, style="TFrame")
-        sort_filter_frame.pack(fill="x", padx=6, pady=(0, 6))
+        sort_filter_frame.pack(fill="x", padx=12, pady=(0, 10))
 
         ttk.Label(sort_filter_frame, text="Sort:", style="Muted.TLabel").pack(side="left")
         self.sort_var = tk.StringVar(value="Name")
@@ -775,28 +777,29 @@ class CharacterGalleryPanel(ttk.Frame):
 
         # Selected tags area (chips) shown under the search box
         def on_focus_in(e):
-            if search_entry.get() == "Search...":
-                search_entry.delete(0, tk.END)
-                search_entry.config(foreground="black")
+            if self.search_entry.get() == "Search...":
+                self.search_entry.delete(0, tk.END)
+                # Let theme engine handle color or set to theme fg
+                # self.search_entry.config(foreground="black")
 
         def on_focus_out(e):
-            if not search_entry.get():
-                search_entry.insert(0, "Search...")
-                search_entry.config(foreground="gray")
+            if not self.search_entry.get():
+                self.search_entry.insert(0, "Search...")
+                self.search_entry.config(foreground="gray")
 
-        search_entry.bind("<FocusIn>", on_focus_in)
-        search_entry.bind("<FocusOut>", on_focus_out)
+        self.search_entry.bind("<FocusIn>", on_focus_in)
+        self.search_entry.bind("<FocusOut>", on_focus_out)
 
         # Selected tags area (chips) shown under the search box
         self.selected_tags = []
-        self.selected_tags_frame = FlowFrame(self, padding_x=4, padding_y=4)
-        self.selected_tags_frame.pack(fill="x", padx=6, pady=(0, 6))
+        self.selected_tags_frame = FlowFrame(self, padding_x=8, padding_y=6)
+        self.selected_tags_frame.pack(fill="x", padx=12, pady=(0, 10))
         # initially empty
         self._render_selected_tags()
 
         # Tag filter section
         tag_frame = ttk.Frame(self, style="TFrame")
-        tag_frame.pack(fill="x", padx=6, pady=(0, 6))
+        tag_frame.pack(fill="x", padx=12, pady=(0, 10))
         tag_frame.columnconfigure(1, weight=1)
         tag_frame.columnconfigure(3, weight=1)
 
@@ -828,7 +831,7 @@ class CharacterGalleryPanel(ttk.Frame):
 
         # Use ScrollableCanvas for cards
         self.scrollable_canvas = ScrollableCanvas(self)
-        self.scrollable_canvas.pack(fill="both", expand=True, padx=4, pady=4)
+        self.scrollable_canvas.pack(fill="both", expand=True, padx=8, pady=8)
 
         # Forward mousewheel events from the selected-tags area to the scrollable canvas
         try:
@@ -1160,8 +1163,12 @@ class CharacterGalleryPanel(ttk.Frame):
         self.after_idle(self.scrollable_canvas.update_scroll_region)
 
     def _filter_characters(self):
-        """Filter characters based on search."""
-        self._display_characters()
+        """Filter characters based on search with debouncing."""
+        if self._search_after_id:
+            self.after_cancel(self._search_after_id)
+        
+        # Debounce for 250ms to avoid re-rendering gallery while typing
+        self._search_after_id = self.after(250, self._display_characters)
 
     def _render_selected_tags(self):
         """Render the selected tag chips in the selected_tags_frame."""

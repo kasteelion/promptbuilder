@@ -21,6 +21,7 @@ THEMES = {
     "Light": {
         "bg": "#f0f0f0",
         "fg": "#1a1a1a",
+        "panel_bg": "#f8f8f8",
         "preview_bg": "#ffffff",
         "preview_fg": "#2c2c2c",
         "text_bg": "#ffffff",
@@ -33,6 +34,7 @@ THEMES = {
     "Dark": {
         "bg": "#1e1e1e",
         "fg": "#d4d4d4",
+        "panel_bg": "#252526",
         "preview_bg": "#252526",
         "preview_fg": "#e0e0e0",
         "text_bg": "#2d2d2d",
@@ -45,6 +47,7 @@ THEMES = {
     "Monokai": {
         "bg": "#272822",
         "fg": "#f8f8f2",
+        "panel_bg": "#1e1f1c",
         "preview_bg": "#1e1f1c",
         "preview_fg": "#f8f8f2",
         "text_bg": "#3e3d32",
@@ -57,6 +60,7 @@ THEMES = {
     "Nord": {
         "bg": "#2e3440",
         "fg": "#d8dee9",
+        "panel_bg": "#3b4252",
         "preview_bg": "#3b4252",
         "preview_fg": "#eceff4",
         "text_bg": "#3b4252",
@@ -69,6 +73,7 @@ THEMES = {
     "Dracula": {
         "bg": "#282a36",
         "fg": "#f8f8f2",
+        "panel_bg": "#21222c",
         "preview_bg": "#21222c",
         "preview_fg": "#f8f8f2",
         "text_bg": "#44475a",
@@ -81,6 +86,7 @@ THEMES = {
     "Gruvbox Dark": {
         "bg": "#282828",
         "fg": "#ebdbb2",
+        "panel_bg": "#1d2021",
         "preview_bg": "#1d2021",
         "preview_fg": "#ebdbb2",
         "text_bg": "#3c3836",
@@ -93,6 +99,7 @@ THEMES = {
     "One Dark": {
         "bg": "#282c34",
         "fg": "#abb2bf",
+        "panel_bg": "#21252b",
         "preview_bg": "#21252b",
         "preview_fg": "#abb2bf",
         "text_bg": "#2c313a",
@@ -105,6 +112,7 @@ THEMES = {
     "Tokyo Night": {
         "bg": "#1a1b26",
         "fg": "#a9b1d6",
+        "panel_bg": "#16161e",
         "preview_bg": "#16161e",
         "preview_fg": "#c0caf5",
         "text_bg": "#24283b",
@@ -117,6 +125,7 @@ THEMES = {
     "Solarized Light": {
         "bg": "#fdf6e3",
         "fg": "#657b83",
+        "panel_bg": "#eee8d5",
         "preview_bg": "#eee8d5",
         "preview_fg": "#586e75",
         "text_bg": "#ffffff",
@@ -129,6 +138,7 @@ THEMES = {
     "Solarized Dark": {
         "bg": "#002b36",
         "fg": "#839496",
+        "panel_bg": "#073642",
         "preview_bg": "#073642",
         "preview_fg": "#93a1a1",
         "text_bg": "#002b36",
@@ -141,6 +151,7 @@ THEMES = {
     "Sepia": {
         "bg": "#f4ecd8",
         "fg": "#5b4636",
+        "panel_bg": "#f6eee1",
         "preview_bg": "#f6eee1",
         "preview_fg": "#5b4636",
         "text_bg": "#fbf6ee",
@@ -153,6 +164,7 @@ THEMES = {
     "High Contrast": {
         "bg": "#000000",
         "fg": "#ffffff",
+        "panel_bg": "#111111",
         "preview_bg": "#000000",
         "preview_fg": "#ffffff",
         "text_bg": "#000000",
@@ -165,6 +177,7 @@ THEMES = {
     "Pastel": {
         "bg": "#fffaf0",
         "fg": "#3b3a3a",
+        "panel_bg": "#fff8f2",
         "preview_bg": "#fff8f2",
         "preview_fg": "#3b3a3a",
         "text_bg": "#fffaf0",
@@ -177,6 +190,7 @@ THEMES = {
     "Midnight Blue": {
         "bg": "#0b1b2b",
         "fg": "#cfe8ff",
+        "panel_bg": "#071426",
         "preview_bg": "#071426",
         "preview_fg": "#bcdff6",
         "text_bg": "#0f2a44",
@@ -189,6 +203,7 @@ THEMES = {
     "Packers Dark": {
         "bg": "#203731",
         "fg": "#FFFFFF",
+        "panel_bg": "#1a2b26",
         "preview_bg": "#1a2b26",
         "preview_fg": "#f0f0f0",
         "text_bg": "#2d4d45",
@@ -201,6 +216,7 @@ THEMES = {
     "Packers Light": {
         "bg": "#f5f5f5",
         "fg": "#203731",
+        "panel_bg": "#FFFFFF",
         "preview_bg": "#FFFFFF",
         "preview_fg": "#203731",
         "text_bg": "#FFFFFF",
@@ -213,6 +229,7 @@ THEMES = {
     "FC Cincinnati Dark": {
         "bg": "#1a1a1a",
         "fg": "#FFFFFF",
+        "panel_bg": "#263B94",
         "preview_bg": "#263B94",
         "preview_fg": "#FFFFFF",
         "text_bg": "#2d2d2d",
@@ -225,6 +242,7 @@ THEMES = {
     "FC Cincinnati Light": {
         "bg": "#f0f4f8",
         "fg": "#263B94",
+        "panel_bg": "#FFFFFF",
         "preview_bg": "#FFFFFF",
         "preview_fg": "#263B94",
         "text_bg": "#FFFFFF",
@@ -237,6 +255,7 @@ THEMES = {
     "ONU Dark": {
         "bg": "#000000",
         "fg": "#FFFFFF",
+        "panel_bg": "#1a1a1a",
         "preview_bg": "#1a1a1a",
         "preview_fg": "#FFFFFF",
         "text_bg": "#222222",
@@ -249,6 +268,7 @@ THEMES = {
     "ONU Light": {
         "bg": "#FFFFFF",
         "fg": "#000000",
+        "panel_bg": "#f5f5f5",
         "preview_bg": "#f5f5f5",
         "preview_fg": "#000000",
         "text_bg": "#FFFFFF",

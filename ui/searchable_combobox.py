@@ -53,7 +53,7 @@ class SearchableCombobox(ttk.Frame):
         self.entry_container.columnconfigure(0, weight=1)
 
         # Entry for search/display
-        self.entry = ttk.Entry(self.entry_container, textvariable=self._selected_value)
+        self.entry = ttk.Entry(self.entry_container, textvariable=self._selected_value, style="TEntry")
         self.entry.grid(row=0, column=0, sticky="ew")
         
         # Bindings for the entry
@@ -237,7 +237,27 @@ class SearchableCombobox(ttk.Frame):
         self.dropdown.wm_geometry(f"{w}x{h}+{x}+{y}")
 
         # Listbox with scrollbar
-        frame = tk.Frame(self.dropdown, borderwidth=1, relief="solid", bg="#cccccc")
+        # Attempt to get theme colors
+        theme = None
+        accent_color = "#0078d7"
+        bg_color = "white"
+        fg_color = "black"
+        border_color = "#cccccc"
+        
+        try:
+            root = self.winfo_toplevel()
+            if hasattr(root, "theme_manager"):
+                tm = root.theme_manager
+                theme = tm.themes.get(tm.current_theme)
+                if theme:
+                    accent_color = theme["accent"]
+                    bg_color = theme["text_bg"]
+                    fg_color = theme["text_fg"]
+                    border_color = theme["border"]
+        except Exception:
+            pass
+
+        frame = tk.Frame(self.dropdown, borderwidth=1, relief="solid", bg=border_color)
         frame.pack(fill="both", expand=True)
 
         self.listbox = tk.Listbox(
@@ -247,9 +267,10 @@ class SearchableCombobox(ttk.Frame):
             highlightthickness=0,
             font=("Segoe UI", 9),
             activestyle="none",
-            selectbackground=self._get_accent_color(),
-            selectforeground="white",
-            background="white"
+            selectbackground=accent_color,
+            selectforeground=theme["bg"] if theme else "white",
+            background=bg_color,
+            foreground=fg_color
         )
         self.listbox.pack(side="left", fill="both", expand=True)
 
