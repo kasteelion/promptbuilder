@@ -29,13 +29,20 @@ def test_gallery_controller_behavior():
     class FakeMainPaned:
         def __init__(self):
             self.inserted = False
-            self.removed = False
-
-        def insert(self, idx, frame, weight=0):
+            self.children = []
+        def panes(self):
+            return self.children
+        def add(self, child, before=None, width=None):
             self.inserted = True
-
-        def forget(self, frame):
-            self.removed = True
+            if before in self.children:
+                idx = self.children.index(before)
+                self.children.insert(idx, child)
+            else:
+                self.children.append(child)
+        def forget(self, child):
+            self.inserted = False
+            if child in self.children:
+                self.children.remove(child)
 
     class FakeCharsTab:
         def __init__(self):
@@ -74,7 +81,7 @@ def test_gallery_controller_behavior():
     assert app.main_paned.inserted
 
     controller.toggle_visibility(False)
-    assert app.main_paned.removed
+    assert not app.main_paned.inserted
 
     controller.on_character_selected("Bob")
     assert app.characters_tab.added == "Bob"

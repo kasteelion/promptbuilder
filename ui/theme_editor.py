@@ -35,8 +35,8 @@ class ThemeEditorDialog:
         self.on_theme_change = on_theme_change
 
         self.dialog = tk.Toplevel(parent)
-        self.dialog.title("Theme Editor")
-        self.dialog.geometry("700x420")
+        self.dialog.title("THEME EDITOR")
+        self.dialog.geometry("750x550")
         self.dialog.transient(parent)
         self.dialog.grab_set()
 
@@ -45,59 +45,93 @@ class ThemeEditorDialog:
         # Load existing themes (including custom from prefs)
         self._load_themes()
 
+        # Register for theme updates
+        if hasattr(parent, "dialog_manager"):
+            parent.dialog_manager._register_dialog(self.dialog, self.apply_theme)
+        
+        # Initial theme application
+        try:
+            current_theme = theme_manager.themes.get(theme_manager.current_theme, {})
+            self.apply_theme(current_theme)
+        except: pass
+
+    def apply_theme(self, theme):
+        """Apply theme to all dialog widgets. (Refactor 3)"""
+        tm = self.theme_manager
+        tm.apply_listbox_theme(self.listbox, theme)
+        
+        pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+        accent = theme.get("accent", "#0078d7")
+        
+        # Update swatch background for empty entries
+        for k in self.KEYS:
+            val = self.entries[k].get()
+            if not val:
+                try: self.swatches[k].config(bg=pbg)
+                except: pass
+
     def _build_ui(self):
-        main = ttk.Frame(self.dialog)
-        main.pack(fill="both", expand=True, padx=8, pady=8)
+        main = ttk.Frame(self.dialog, style="TFrame", padding=15)
+        main.pack(fill="both", expand=True)
         main.columnconfigure(1, weight=1)
 
         # Left: list of themes
-        left = ttk.Frame(main)
-        left.grid(row=0, column=0, sticky="nsw", padx=(0, 8), pady=4)
-        ttk.Label(left, text="Themes:").pack(anchor="w")
-        self.listbox = tk.Listbox(left, height=18)
-        self.listbox.pack(fill="y", expand=True)
+        left = ttk.Frame(main, style="TFrame")
+        left.grid(row=0, column=0, sticky="nsw", padx=(0, 15), pady=4)
+        ttk.Label(left, text="THEMES:", style="Bold.TLabel").pack(anchor="w", pady=(0, 5))
+        
+        list_frame = ttk.Frame(left, style="TFrame")
+        list_frame.pack(fill="both", expand=True)
+        
+        self.listbox = tk.Listbox(list_frame, height=18, font=("Lexend", 10), borderwidth=0, highlightthickness=0)
+        self.listbox.pack(side="left", fill="both", expand=True)
+        
+        list_scroll = ttk.Scrollbar(list_frame, orient="vertical", command=self.listbox.yview, style="Themed.Vertical.TScrollbar")
+        list_scroll.pack(side="right", fill="y")
+        self.listbox.config(yscrollcommand=list_scroll.set)
+        
         self.listbox.bind("<<ListboxSelect>>", lambda e: self._on_theme_select())
 
-        btns = ttk.Frame(left)
-        btns.pack(fill="x", pady=(6, 0))
-        ttk.Button(btns, text="New", command=self._new_theme).pack(side="left", padx=(0, 4))
-        ttk.Button(btns, text="Delete", command=self._delete_theme).pack(side="left")
-        ttk.Button(btns, text="Duplicate", command=self._duplicate_theme).pack(
+        btns = ttk.Frame(left, style="TFrame")
+        btns.pack(fill="x", pady=(10, 0))
+        ttk.Button(btns, text="NEW", command=self._new_theme, style="TButton").pack(side="left", padx=(0, 4))
+        ttk.Button(btns, text="DELETE", command=self._delete_theme, style="Ghost.TButton").pack(side="left")
+        ttk.Button(btns, text="DUPLICATE", command=self._duplicate_theme, style="Ghost.TButton").pack(
             side="left", padx=(6, 0)
         )
 
         # Right: editor fields
-        right = ttk.Frame(main)
+        right = ttk.Frame(main, style="TFrame")
         right.grid(row=0, column=1, sticky="nsew")
         right.columnconfigure(1, weight=1)
 
-        ttk.Label(right, text="Theme Name:").grid(row=0, column=0, sticky="w")
+        ttk.Label(right, text="THEME NAME:", style="Bold.TLabel").grid(row=0, column=0, sticky="w", pady=(0, 10))
         self.name_var = tk.StringVar()
-        ttk.Entry(right, textvariable=self.name_var).grid(row=0, column=1, sticky="ew")
+        ttk.Entry(right, textvariable=self.name_var, style="TEntry").grid(row=0, column=1, sticky="ew", pady=(0, 10))
 
         self.entries: Dict[str, tk.StringVar] = {}
         self.swatches: Dict[str, tk.Label] = {}
         for i, key in enumerate(self.KEYS, start=1):
-            ttk.Label(right, text=f"{key}:").grid(row=i, column=0, sticky="w", pady=2)
+            ttk.Label(right, text=f"{key.upper()}:", style="Muted.TLabel").grid(row=i, column=0, sticky="w", pady=2)
             sv = tk.StringVar()
             self.entries[key] = sv
-            entry = ttk.Entry(right, textvariable=sv)
+            entry = ttk.Entry(right, textvariable=sv, style="TEntry")
             entry.grid(row=i, column=1, sticky="ew", pady=2)
 
             # Color picker button and swatch
-            btn = ttk.Button(right, text="◉", width=3, command=lambda k=key: self._choose_color(k))
-            btn.grid(row=i, column=2, sticky="w", padx=(6, 0))
+            btn = ttk.Button(right, text="◉", width=3, command=lambda k=key: self._choose_color(k), style="Ghost.TButton")
+            btn.grid(row=i, column=2, sticky="w", padx=(10, 0))
 
-            sw = tk.Label(right, width=2, relief="sunken")
-            sw.grid(row=i, column=3, sticky="w", padx=(6, 0))
+            sw = tk.Label(right, width=2, relief="solid", borderwidth=1)
+            sw.grid(row=i, column=3, sticky="w", padx=(10, 0))
             self.swatches[key] = sw
 
         # Save/Apply/Close buttons
-        action_row = ttk.Frame(self.dialog)
-        action_row.pack(fill="x", padx=8, pady=(6, 8))
-        ttk.Button(action_row, text="Apply", command=self._apply_theme).pack(side="left")
-        ttk.Button(action_row, text="Save", command=self._save_all).pack(side="left", padx=(6, 0))
-        ttk.Button(action_row, text="Close", command=self._close).pack(side="right")
+        action_row = ttk.Frame(self.dialog, style="TFrame", padding=15)
+        action_row.pack(fill="x")
+        ttk.Button(action_row, text="APPLY", command=self._apply_theme, style="TButton").pack(side="left")
+        ttk.Button(action_row, text="SAVE", command=self._save_all, style="TButton").pack(side="left", padx=(10, 0))
+        ttk.Button(action_row, text="CLOSE", command=self._close, style="TButton").pack(side="right")
 
     def _load_themes(self):
         # Start with current ThemeManager themes

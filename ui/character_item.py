@@ -26,6 +26,7 @@ class CharacterItem(ttk.Frame):
         all_poses,
         color_schemes,
         callbacks,
+        theme_manager=None,
         **kwargs
     ):
         """Initialize character item.
@@ -38,6 +39,7 @@ class CharacterItem(ttk.Frame):
             all_poses: Pose presets dict
             color_schemes: Color schemes dict
             callbacks: Dict of callback functions
+            theme_manager: Optional ThemeManager instance
         """
         super().__init__(parent, style="Card.TFrame", padding=2)
 
@@ -47,6 +49,7 @@ class CharacterItem(ttk.Frame):
         self.char_def = all_characters.get(self.char_name, {})
         self.all_poses = all_poses
         self.color_schemes = color_schemes
+        self.theme_manager = theme_manager
         self.modifiers = callbacks.get("get_modifiers", lambda: {})()
         self.callbacks = callbacks
         
@@ -54,6 +57,9 @@ class CharacterItem(ttk.Frame):
         self._expanded = char_data.get("_expanded", True)
 
         self._build_ui()
+        
+        if self.theme_manager:
+            self.theme_manager.register(self, self._update_theme_overrides)
 
     def _build_ui(self):
         """Build the character item UI components."""
@@ -65,8 +71,8 @@ class CharacterItem(ttk.Frame):
         self.drag_handle = ttk.Label(self.header, text="⠿", cursor="fleur", font=(None, 12))
         self.drag_handle.pack(side="left", padx=(0, 10))
         
-        # Title
-        title_text = f"#{self.index + 1} — {self.char_name}"
+        # Title - Refactor 5: Semantic Typography
+        title_text = f"#{self.index + 1} — {self.char_name.upper()}"
         self.title_label = ttk.Label(self.header, text=title_text, style="Bold.TLabel")
         self.title_label.pack(side="left")
         
@@ -86,12 +92,22 @@ class CharacterItem(ttk.Frame):
             widget.bind("<Enter>", self._on_header_hover)
             widget.bind("<Leave>", self._on_header_leave)
 
-        # Get theme colors safely for hover logic
-        try:
-            style = ttk.Style()
-            self._last_pbg = style.lookup("TFrame", "background")
-        except:
-            self._last_pbg = "#ffffff"
+        # Get initial colors from theme if available
+        panel_bg = "#1e1e1e"
+        muted_fg = "gray"
+        theme = {}
+        
+        if self.theme_manager and self.theme_manager.current_theme in self.theme_manager.themes:
+            theme = self.theme_manager.themes[self.theme_manager.current_theme]
+            panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            muted_fg = theme.get("border", "gray")
+        else:
+            try:
+                style = ttk.Style()
+                panel_bg = style.lookup("TFrame", "background")
+            except: pass
+            
+        self._last_pbg = panel_bg
 
         # --- Content inside controls_frame ---
         
@@ -122,6 +138,7 @@ class CharacterItem(ttk.Frame):
         # Compact outfit selectors
         self.outfit_cat_combo = SearchableCombobox(
             outfit_row,
+            theme_manager=self.theme_manager,
             values=sorted(list(outfits_categorized.keys())),
             on_select=self._on_outfit_cat_select,
             placeholder="Category...",
@@ -133,6 +150,7 @@ class CharacterItem(ttk.Frame):
         initial_outfits = sorted(list(outfits_categorized.get(current_cat, {}).keys())) if current_cat else []
         self.outfit_combo = SearchableCombobox(
             outfit_row,
+            theme_manager=self.theme_manager,
             values=initial_outfits,
             textvariable=self.outfit_var,
             on_select=lambda val: self.callbacks["update_outfit"](self.index, val),
@@ -141,24 +159,53 @@ class CharacterItem(ttk.Frame):
         )
         self.outfit_combo.pack(side="left", fill="x", expand=True)
 
-        # Signature Color Checkbox
+        # Signature Color Checkbox - Refactor 6: Pill Strategy
         sig_color = self.char_def.get("signature_color")
         if sig_color and outfit_has_signature_vars(str(outfit_text)):
-            sig_var = tk.BooleanVar(value=self.char_data.get("use_signature_color", False))
+            self.sig_var = tk.BooleanVar(value=self.char_data.get("use_signature_color", False))
             
-            def on_sig_toggle():
-                self.char_data["use_signature_color"] = sig_var.get()
+            def toggle_sig(e):
+                new_val = not self.sig_var.get()
+                self.sig_var.set(new_val)
+                self.char_data["use_signature_color"] = new_val
+                self.sig_pill_lbl.config(text=f"✓ USE SIGNATURE COLOR" if new_val else "USE SIGNATURE COLOR")
                 self.callbacks["on_change"]()
                 
             sig_frame = ttk.Frame(self.controls_frame)
             sig_frame.pack(fill="x", pady=(0, 10))
             
-            ttk.Checkbutton(
-                sig_frame, 
-                text="Use Signature Color", 
-                variable=sig_var, 
-                command=on_sig_toggle
-            ).pack(side="left")
+            # Use theme accent/panel colors
+            accent = theme.get("accent", "#0078d7")
+
+            self.sig_pill_frame = tk.Frame(sig_frame, bg=accent, padx=1, pady=1)
+            self.sig_pill_frame.pack(side="left")
+            
+            initial_text = "✓ USE SIGNATURE COLOR" if self.sig_var.get() else "USE SIGNATURE COLOR"
+            self.sig_pill_lbl = tk.Label(
+                self.sig_pill_frame, 
+                text=initial_text, 
+                bg=panel_bg, 
+                fg=accent,
+                font=("Lexend", 8, "bold"),
+                padx=8,
+                pady=2,
+                cursor="hand2"
+            )
+            self.sig_pill_lbl.pack()
+            self.sig_pill_lbl._base_bg = panel_bg
+            
+            def on_s_enter(e):
+                try:
+                    theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                    hbg = theme.get("hover_bg", "#333333")
+                except: hbg = "#333333"
+                self.sig_pill_lbl.config(bg=hbg)
+            def on_s_leave(e):
+                self.sig_pill_lbl.config(bg=getattr(self.sig_pill_lbl, "_base_bg", "#1e1e1e"))
+                
+            self.sig_pill_lbl.bind("<Button-1>", toggle_sig)
+            self.sig_pill_lbl.bind("<Enter>", on_s_enter)
+            self.sig_pill_lbl.bind("<Leave>", on_s_leave)
             
             # Color swatch
             try:
@@ -179,6 +226,7 @@ class CharacterItem(ttk.Frame):
         
         self.pcat_combo = SearchableCombobox(
             pose_section,
+            theme_manager=self.theme_manager,
             values=[""] + sorted(list(self.all_poses.keys())),
             textvariable=pcat_var,
             on_select=self._on_pose_cat_select,
@@ -189,6 +237,7 @@ class CharacterItem(ttk.Frame):
 
         self.preset_combo = SearchableCombobox(
             pose_section,
+            theme_manager=self.theme_manager,
             values=preset_values,
             textvariable=preset_var,
             on_select=lambda val: self.callbacks["update_pose_preset"](self.index, val),
@@ -200,16 +249,28 @@ class CharacterItem(ttk.Frame):
         # Action note text area
         ttk.Label(
             self.controls_frame,
-            text="💬 Custom Pose/Action (Optional - Overrides Preset):",
+            text="💬 CUSTOM POSE/ACTION (OVERRIDES PRESET):",
             style="Muted.TLabel",
         ).pack(fill="x", pady=(5, 2))
         
-        self.action_text = tk.Text(self.controls_frame, wrap="word", height=3)
+        # Refactor 3: Visual Comfort - Blending Inputs
+        self.action_text = tk.Text(
+            self.controls_frame, 
+            wrap="word", 
+            height=3,
+            relief="flat",
+            padx=10,
+            pady=10,
+            font=("Lexend", 9)
+        )
         self.action_text.insert("1.0", self.char_data.get("action_note", ""))
         self.action_text.pack(fill="x", pady=(0, 15))
         self.action_text.bind(
             "<KeyRelease>", lambda e: self.callbacks["update_action_note"](self.index, self.action_text)
         )
+        
+        if self.theme_manager:
+            self.theme_manager.register_text_widget(self.action_text)
 
         # Color scheme selector if needed
         if outfit_has_color_vars(str(outfit_text)):
@@ -227,49 +288,41 @@ class CharacterItem(ttk.Frame):
         footer = ttk.Frame(self.controls_frame)
         footer.pack(fill="x")
 
-        accent_color = self.char_def.get("signature_color", "#0078d7")
-        if not accent_color.startswith("#"): accent_color = "#0078d7"
+        accent_color = self.char_def.get("signature_color", theme.get("accent", "#0078d7"))
+        if not str(accent_color).startswith("#"): accent_color = theme.get("accent", "#0078d7")
         
-        # Get theme colors safely
-        try:
-            style = ttk.Style()
-            panel_bg = style.lookup("TFrame", "background")
-        except:
-            panel_bg = "#ffffff"
-
-        self._last_pbg = panel_bg
-
         # Move Up/Down use Ghost style overrides
-        move_frame = ttk.Frame(footer)
+        move_frame = ttk.Frame(self.controls_frame)
         move_frame.pack(side="left")
         
         if self.index > 0:
             up_btn = tk.Button(
-                move_frame, text="↑ Up", width=6, command=lambda: self.callbacks["move_up"](self.index),
+                move_frame, text="↑ UP", width=6, command=lambda: self.callbacks["move_up"](self.index),
                 bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=2,
-                relief="flat", font=("Segoe UI", 8)
+                relief="flat", font=("Lexend", 8, "bold")
             )
             up_btn.pack(side="left", padx=2)
-            up_btn.bind("<Enter>", lambda e, b=up_btn: b.config(bg="#333333"))
+            up_btn.bind("<Enter>", lambda e, b=up_btn: b.config(bg=self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")))
             up_btn.bind("<Leave>", lambda e, b=up_btn: b.config(bg=self._last_pbg))
         
         num_characters = self.callbacks.get("get_num_characters", lambda: 0)()
         if self.index < num_characters - 1:
             down_btn = tk.Button(
-                move_frame, text="↓ Down", width=6, command=lambda: self.callbacks["move_down"](self.index),
+                move_frame, text="↓ DOWN", width=6, command=lambda: self.callbacks["move_down"](self.index),
                 bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=2,
-                relief="flat", font=("Segoe UI", 8)
+                relief="flat", font=("Lexend", 8, "bold")
             )
             down_btn.pack(side="left", padx=2)
-            down_btn.bind("<Enter>", lambda e, b=down_btn: b.config(bg="#333333"))
+            down_btn.bind("<Enter>", lambda e, b=down_btn: b.config(bg=self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")))
             down_btn.bind("<Leave>", lambda e, b=down_btn: b.config(bg=self._last_pbg))
 
-        # Remove uses Link style override
-        tk.Button(
-            footer, text="✕ Remove Character", command=lambda: self.callbacks["remove_character"](self.index),
-            bg=panel_bg, fg="gray", borderwidth=0, relief="flat", font=("Segoe UI", 8),
+        # Remove uses Link style override - Refactor 5: Lexend
+        self.remove_btn = tk.Button(
+            footer, text="✕ REMOVE CHARACTER", command=lambda: self.callbacks["remove_character"](self.index),
+            bg=panel_bg, fg=muted_fg, borderwidth=0, relief="flat", font=("Lexend", 8, "bold"),
             activeforeground="red"
-        ).pack(side="right")
+        )
+        self.remove_btn.pack(side="right")
 
     def _on_header_hover(self, event):
         """Highlight header on hover."""
@@ -329,8 +382,21 @@ class CharacterItem(ttk.Frame):
         """Update manual button overrides when theme changes. (Refactor 3)"""
         accent_color = self.char_def.get("signature_color", theme.get("accent", "#0078d7"))
         if not str(accent_color).startswith("#"): accent_color = theme.get("accent", "#0078d7")
-        panel_bg = theme.get("panel_bg", theme.get("bg", "#ffffff"))
+        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
         self._last_pbg = panel_bg # Store for hover restoration
+
+        # Update sig pill - Refactor 6
+        if hasattr(self, "sig_pill_frame"):
+            accent = theme.get("accent", "#0078d7")
+            self.sig_pill_frame.config(bg=accent)
+            self.sig_pill_lbl.config(bg=panel_bg, fg=accent)
+            self.sig_pill_lbl._base_bg = panel_bg
+            self.sig_pill_lbl.config(text=f"✓ USE SIGNATURE COLOR" if self.sig_var.get() else "USE SIGNATURE COLOR")
+
+        # Update nested comboboxes - Refactor 3
+        for cb in ["outfit_cat_combo", "outfit_combo", "pcat_combo", "preset_combo"]:
+            if hasattr(self, cb):
+                getattr(self, cb).apply_theme(theme)
 
         # Update Ghost buttons
         for btn in self.controls_frame.winfo_children():
@@ -339,4 +405,3 @@ class CharacterItem(ttk.Frame):
                     btn.config(bg=panel_bg, fg=accent_color, highlightbackground=accent_color)
                 elif "✕" in btn.cget("text"):
                     btn.config(bg=panel_bg) # Link button stays muted gray/red
-

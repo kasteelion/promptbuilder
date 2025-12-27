@@ -15,6 +15,10 @@
     - **Outfit Library Explorer:** Browse all available outfits, filter by category, and see which outfits support team colors or signature colors.
 - **Bulk Edit:** Added "Use Signature Color" checkbox to the Bulk Edit panel in the Characters tab.
 - **New Outfits:** Significantly expanded the outfit library with new categories:
+    - **Athletic:** LFL Performance Uniform, Tech-Athletic Compression, Street-Dance Set.
+    - **Alternative:** High-Gloss Tech-Suit, Tactical Scout.
+    - **Professional:** Modern Power Suit.
+    - **Formal:** Sculpted Bandage Set.
     - **International:** Japanese Harajuku, African Print Contemporary.
     - **Fantasy Classes:** Knight, Paladin, Barbarian, Samurai, Wizard, Sorcerer, Necromancer, Druid, Thief, Assassin, Ninja, Priest, Hunter, Beastmaster, Red Mage, Monk, Bard, Alchemist, Engineer.
     - **Performance:** Vintage Tap, Oktoberfest.
@@ -22,6 +26,10 @@
     - **Period:** 1970s Disco.
 
 ### Changed
+- **Performance Optimizations:**
+    - **Lazy Loading:** UI tabs (like Edit Data) are now initialized on-demand to reduce initial startup time.
+    - **Async Image Engine:** Character gallery now uses a shared `ThreadPoolExecutor` for background image loading, preventing UI lag and reducing system resource usage.
+    - **Optimized Rendering:** Improved scroll region updates and batched rendering for smoother gallery navigation.
 - **Character Data:** Updated all character profiles to include `**Signature Color:**` definitions and refined tag categorization. Added new character: **Ayame Shiratori**.
 - **Outfit Data:** Updated existing outfits (Cyberpunk, Goth, etc.) to utilize the new Signature Color syntax.
 - **Documentation:**
@@ -30,7 +38,22 @@
 - **Architecture:** Updated `docs/architecture.md` to include the new `OutfitSummary` component.
 
 ### Fixed
+- **UI:** Resolved persistent hover highlighting issues on pill buttons and chips.
+- **Theme Compliance:** Fixed hardcoded colors (#333333, #666666) across all UI components.
+- **Typography:** Unified application font to "Lexend" (replacing Segoe UI/Consolas).
+- **Dialogs:** Ensured consistent theming for all modal dialogs via `ThemeManager`.
+- **SearchableCombobox:** Added full theme support including hover states and placeholders.
+- **Theme Contrast:** Improved accessibility for Nord, Monokai, and One Dark themes by adjusting border and text background contrast while maintaining palette authenticity.
 - **UI:** Improved `CharacterItem` to show a signature color swatch if applicable.
+
+### Refactored
+- **MainWindow Decomposition:** Broken down the monolithic `MainWindow` into reusable functional components: `ScenePanel`, `NotesPanel`, and `SummaryPanel`.
+- **Declarative Theming:** Implemented a central Theme Registry in `ThemeManager`. Widgets now subscribe to theme updates, eliminating manual update loops and improving responsiveness to theme changes.
+- **Logic Extraction (Controllers):** Extracted business logic from UI classes into dedicated controllers:
+    - `PromptController`: Handles prompt generation, summary assembly, and validation.
+    - `CharacterController`: Manages character lifecycle operations (add, duplicate, remove) and file updates.
+    - `DataController`: Orchestrates data loading, syncing, and lifecycle management.
+- **Dependency Injection:** Improved modularity by passing managers and controllers explicitly via constructors, reducing tight coupling to the root window.
 
 ### Internal
 - **Utils:** Added `utils/outfit_summary.py` for generating consolidated outfit data.

@@ -39,8 +39,20 @@ Small, focused functions for formatting specific parts of the prompt.
 ## UI Layer (`ui/`)
 
 ### `ThemeManager` (`themes/theme_manager.py`)
-Manages application styling.
+Manages application styling and dynamic theming.
 - **Responsibility**: Handles theme loading, switching, and color palette management.
+- **Key Features**:
+    - Derives `hover_bg` and `placeholder_fg` automatically if not provided by the theme.
+    - `theme_toplevel(window)`: Applies theme background and attaches the manager to Toplevel dialogs.
+    - `apply_theme(theme_name)`: Updates all standard `ttk` styles and triggers manual updates for custom widgets.
+
+### `SearchableCombobox` (`ui/searchable_combobox.py`)
+A custom themed combobox with filtering and favorites.
+- **Responsibility**: Provides a better user experience for long lists (characters, outfits).
+- **Key Features**:
+    - Real-time filtering with smart prioritization (Starts With > Contains).
+    - Favorites system with visual indicators.
+    - Fully themed dropdown and entry components.
 
 ### `StateManager`
 Orchestrates application state and undo/redo.

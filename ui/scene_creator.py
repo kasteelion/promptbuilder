@@ -22,33 +22,74 @@ class SceneCreatorDialog:
         self.data_loader = data_loader
         self.on_success = on_success_callback
         self.result = None
+        self.parent = parent
 
         # Create dialog window
         self.dialog = tk.Toplevel(parent)
-        self.dialog.title("Create New Scene")
-        self.dialog.geometry("550x500")
+        self.dialog.title("CREATE NEW SCENE PRESET")
+        self.dialog.geometry("650x700")
         self.dialog.transient(parent)
         self.dialog.grab_set()
 
+        # Apply basic top-level theme
+        if hasattr(parent, "theme_manager"):
+            parent.theme_manager.theme_toplevel(self.dialog)
+
         self._build_ui()
+
+        # Register for theme updates
+        if hasattr(parent, "dialog_manager"):
+            parent.dialog_manager._register_dialog(self.dialog, self.apply_theme)
+        
+        # Initial theme application
+        try:
+            current_theme = parent.theme_manager.themes.get(parent.theme_manager.current_theme, {})
+            self.apply_theme(current_theme)
+        except: pass
 
         # Center on parent
         self.dialog.update_idletasks()
         x = parent.winfo_x() + (parent.winfo_width() // 2) - (self.dialog.winfo_width() // 2)
         y = parent.winfo_y() + (parent.winfo_height() // 2) - (self.dialog.winfo_height() // 2)
-        self.dialog.geometry(f"+{x}+{y}")
+        self.dialog.geometry(f"{x}+{y}")
+
+    def apply_theme(self, theme):
+        """Apply theme to all dialog widgets. (Refactor 3)"""
+        tm = self.parent.theme_manager
+        tm.apply_text_widget_theme(self.example_widget, theme)
+        tm.apply_text_widget_theme(self.description_text, theme)
+        
+        pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+        
+        # Update cancel btn manual overrides
+        if hasattr(self, "cancel_btn"):
+            self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground="gray")
+            self.cancel_btn._base_bg = pbg
+
+        if hasattr(self, "category_combo"): self.category_combo.apply_theme(theme)
+
+        # Handle placeholders
+        if self.description_text.get("1.0", "2.0").lower().startswith("[describe"):
+            try:
+                tm = self.parent.theme_manager
+                theme = tm.themes.get(tm.current_theme, {})
+                pfg = theme.get("placeholder_fg", "#666666")
+            except: pfg = "#666666"
+            self.description_text.config(foreground=pfg)
+        else:
+            self.description_text.config(foreground=theme.get("text_fg", "white"))
 
     def _build_ui(self):
-        """Build the dialog UI."""
-        main_frame = ttk.Frame(self.dialog, padding=10)
+        """Build the scene creator UI."""
+        main_frame = ttk.Frame(self.dialog, padding=15, style="TFrame")
         main_frame.pack(fill="both", expand=True)
 
         # Template selection
-        template_frame = ttk.Frame(main_frame)
-        template_frame.pack(fill="x", pady=(0, 10))
+        template_frame = ttk.Frame(main_frame, style="TFrame")
+        template_frame.pack(fill="x", pady=(0, 15))
 
-        ttk.Label(template_frame, text="Template:", style="Bold.TLabel").pack(
-            side="left", padx=(0, 5)
+        ttk.Label(template_frame, text="TEMPLATE:", style="Bold.TLabel").pack(
+            side="left", padx=(0, 10)
         )
 
         self.template_var = tk.StringVar(value="Blank")
@@ -58,115 +99,85 @@ class SceneCreatorDialog:
             values=get_scene_template_names(),
             state="readonly",
             width=20,
-            font=("Segoe UI", 9),
+            font=("Lexend", 9),
         )
-        template_combo.pack(side="left", padx=(0, 10))
+        template_combo.pack(side="left", padx=(0, 15))
         template_combo.bind("<<ComboboxSelected>>", self._on_template_selected)
 
         # Template description label
         self.template_desc_label = ttk.Label(
             template_frame,
-            text=get_scene_template_description("Blank"),
+            text=get_scene_template_description("Blank").upper(),
             style="Muted.TLabel",
         )
         self.template_desc_label.pack(side="left")
 
         # Info/help section (Refactor 1: Spatial Layout)
-        help_frame = ttk.Frame(main_frame, style="TFrame", padding=(10, 5))
-        help_frame.pack(fill="x", pady=(0, 10))
+        help_frame = ttk.Frame(main_frame, style="TFrame", padding=(15, 10))
+        help_frame.pack(fill="x", pady=(0, 15))
 
-        help_label = ttk.Label(
+        ttk.Label(
             help_frame,
-            text="💡 Tip: Include lighting, atmosphere, and key visual elements",
+            text="💡 TIP: SCENES SHOULD DESCRIBE THE ENVIRONMENT, LIGHTING, ATMOSPHERE, AND BACKGROUND ELEMENTS",
             style="Accent.TLabel",
-        )
-        help_label.pack(anchor="w", padx=6, pady=4)
+        ).pack(anchor="w", padx=6, pady=4)
 
-        example_text = """Example scene format:
-• Setting location and time of day
-• Lighting conditions (natural/artificial)
-• Atmosphere and mood
-• Key background elements
-• Environmental details"""
+        example_text = """Example scene components:
+• Location and setting (e.g., 'urban rooftop', 'lush forest')
+• Lighting conditions (e.g., 'golden hour', 'dim neon glow')
+• Atmospheric effects (e.g., 'light mist', 'swirling dust')
+• Background details (e.g., 'blurred city lights', 'towering pines')
+• Overall color palette and mood"""
 
-        # Refactor 2: Theme-aware Text Widget
-        # Try to get theme colors
-        try:
-            style = ttk.Style()
-            input_bg = style.lookup("TEntry", "fieldbackground")
-            input_fg = style.lookup("TEntry", "foreground")
-            # Fallback if lookup fails
-            if not input_bg: input_bg = "#2d2d2d"
-            if not input_fg: input_fg = "#ffffff"
-        except:
-            input_bg = "#2d2d2d"
-            input_fg = "#ffffff"
-
-        example_widget = tk.Text(
+        self.example_widget = tk.Text(
             help_frame,
-            font=("Consolas", 8),
-            height=5,
+            font=("Lexend", 8),
+            height=6,
             wrap="word",
             relief="flat",
-            borderwidth=0,
-            bg=input_bg,
-            fg=input_fg
+            borderwidth=0
         )
-        example_widget.insert("1.0", example_text)
-        example_widget.config(state="disabled")
-        example_widget.pack(anchor="w", padx=10, pady=(0, 4), fill="x")
+        self.example_widget.insert("1.0", example_text)
+        self.example_widget.config(state="disabled")
+        self.example_widget.pack(anchor="w", padx=10, pady=(0, 4), fill="x")
 
-        # Category selection
-        ttk.Label(main_frame, text="Category:", font=("Segoe UI", 10, "bold")).pack(
-            anchor="w", pady=(0, 4)
-        )
+        # Scene category and name
+        row1 = ttk.Frame(main_frame, style="TFrame")
+        row1.pack(fill="x", pady=(0, 15))
 
-        cat_frame = ttk.Frame(main_frame)
-        cat_frame.pack(fill="x", pady=(0, 10))
+        ttk.Label(row1, text="CATEGORY:", style="Bold.TLabel").pack(side="left")
+        self.category_var = tk.StringVar(value="Indoor")
+        categories = ["Urban", "Nature", "Indoor", "Sci-Fi", "Fantasy", "Abstract", "Other"]
+        cat_combo = ttk.Combobox(row1, textvariable=self.category_var, values=categories, width=12, font=("Lexend", 9))
+        cat_combo.pack(side="left", padx=10)
 
-        self.category_var = tk.StringVar()
-        self.category_combo = SearchableCombobox(
-            cat_frame, 
-            textvariable=self.category_var, 
-            placeholder="Search or type category..."
-        )
-        self.category_combo.pack(side="left", fill="x", expand=True, padx=(0, 5))
-
-        # Load existing categories
-        self._load_categories()
-
-        ttk.Label(cat_frame, text="(or type new)", style="Muted.TLabel").pack(side="left")
-
-        # Scene name
-        ttk.Label(main_frame, text="Scene Name:", style="Bold.TLabel").pack(anchor="w", pady=(0, 4))
+        ttk.Label(row1, text="SCENE NAME:", style="Bold.TLabel").pack(side="left", padx=(10, 0))
         self.name_var = tk.StringVar()
-        name_entry = ttk.Entry(main_frame, textvariable=self.name_var, font=("Segoe UI", 10))
-        name_entry.pack(fill="x", pady=(0, 10))
+        name_entry = ttk.Entry(row1, textvariable=self.name_var, style="TEntry")
+        name_entry.pack(side="left", fill="x", expand=True, padx=(10, 0))
+        name_entry.focus()
 
-        # Description
-        ttk.Label(main_frame, text="Scene Description:", style="Bold.TLabel").pack(
+        # Scene description
+        ttk.Label(main_frame, text="SCENE DESCRIPTION:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
         )
         ttk.Label(
             main_frame,
-            text="Describe the setting, lighting, and atmosphere",
+            text="Describe the setting, lighting, and environmental details",
             style="Muted.TLabel",
         ).pack(anchor="w")
 
-        desc_frame = ttk.Frame(main_frame)
-        desc_frame.pack(fill="both", expand=True, pady=(0, 10))
+        desc_frame = ttk.Frame(main_frame, style="TFrame")
+        desc_frame.pack(fill="both", expand=True, pady=(0, 15))
 
         self.description_text = tk.Text(
             desc_frame, 
-            height=10, 
+            height=15, 
             wrap="word", 
-            font=("Consolas", 9),
-            bg=input_bg,
-            fg=input_fg,
-            insertbackground=input_fg, # Cursor color
+            font=("Lexend", 9),
             relief="flat",
-            padx=10,
-            pady=10,
+            padx=15,
+            pady=15,
             highlightthickness=0,
             borderwidth=0
         )
@@ -174,22 +185,24 @@ class SceneCreatorDialog:
         self.description_text.configure(yscrollcommand=desc_scroll.set)
 
         # Add placeholder text
-        placeholder = """[Location] setting, [time of day] lighting, [atmosphere description], [key elements], [environmental details].
-
-Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter."""
+        placeholder = "[Describe the environmental setting, background details, lighting conditions, and atmosphere.]"
         self.description_text.insert("1.0", placeholder)
-        self.description_text.config(foreground="gray")
 
-        # Bind events to clear placeholder - Refactor 3
+        # Bind events to clear placeholder
         def on_focus_in(event):
-            if self.description_text.get("1.0", "end").strip() == placeholder.strip():
+            if self.description_text.get("1.0", "end").strip() == placeholder:
                 self.description_text.delete("1.0", "end")
-                self.description_text.config(foreground=input_fg)
+                self.description_text.config(foreground="")
 
         def on_focus_out(event):
             if not self.description_text.get("1.0", "end").strip():
                 self.description_text.insert("1.0", placeholder)
-                self.description_text.config(foreground="gray")
+                try:
+            tm = self.winfo_toplevel().theme_manager
+            theme = tm.themes.get(tm.current_theme, {})
+            pfg = theme.get("placeholder_fg", "#666666")
+        except: pfg = "#666666"
+        self.description_text.config(foreground=pfg)
 
         self.description_text.bind("<FocusIn>", on_focus_in)
         self.description_text.bind("<FocusOut>", on_focus_out)
@@ -197,29 +210,37 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
         self.description_text.pack(side="left", fill="both", expand=True)
         desc_scroll.pack(side="right", fill="y")
 
-        # Buttons - Refactor 4: Component Hierarchy
-        button_frame = ttk.Frame(main_frame)
-        button_frame.pack(fill="x", pady=(10, 0))
+        # Buttons (Refactor 3: Hierarchy)
+        button_frame = ttk.Frame(self.dialog, padding=15, style="TFrame")
+        button_frame.pack(side="bottom", fill="x")
 
         # Cancel: Ghost Style (Secondary)
-        cancel_btn = tk.Button(
+        self.cancel_btn = tk.Button(
             button_frame, 
-            text="Cancel", 
+            text="CANCEL", 
             command=self._cancel,
-            bg=style.lookup("TFrame", "background"),
-            fg=style.lookup("TEntry", "foreground"), # Use text color for secondary
-            highlightthickness=1,
-            highlightbackground="gray",
             relief="flat",
-            padx=10
+            highlightthickness=2,
+            padx=20,
+            font=("Lexend", 9, "bold"),
+            cursor="hand2"
         )
-        cancel_btn.pack(side="right", padx=(5, 0))
+        self.cancel_btn.pack(side="right", padx=(15, 0))
+        
+        def on_c_enter(e):
+            try:
+                tm = self.winfo_toplevel().theme_manager
+                theme = tm.themes.get(tm.current_theme, {})
+                hbg = theme.get("hover_bg", "#333333")
+            except: hbg = "#333333"
+            self.cancel_btn.config(bg=hbg)
+        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", "#1e1e1e"))
+        self.cancel_btn.bind("<Enter>", on_c_enter)
+        self.cancel_btn.bind("<Leave>", on_c_leave)
 
-        # Create: Solid Accent (Primary) -> Use TButton default or explicit Accent.TButton if available
-        # Note: Since this is a modal, standard TButton usually implies primary.
-        ttk.Button(button_frame, text="Create Scene", command=self._create_scene).pack(side="right")
+        ttk.Button(button_frame, text="CREATE SCENE", command=self._create_scene, style="TButton").pack(side="right")
 
-        # Bind Enter key to create
+        # Bind Escape to cancel
         self.dialog.bind("<Escape>", lambda e: self._cancel())
 
     def _on_template_selected(self, event=None):
@@ -231,7 +252,7 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
             return
 
         # Update description label
-        self.template_desc_label.config(text=get_scene_template_description(template_name))
+        self.template_desc_label.config(text=get_scene_template_description(template_name).upper())
 
         # Get template content
         content = template_data.get("content", "")
@@ -241,16 +262,19 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
 
         # If blank template, restore placeholder
         if template_name == "Blank":
-            placeholder = """[Location] setting, [time of day] lighting, [atmosphere description], [key elements], [environmental details].
-
-Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter."""
+            placeholder = "[Describe the environmental setting, background details, lighting conditions, and atmosphere.]"
             self.description_text.insert("1.0", placeholder)
-            self.description_text.config(foreground="gray")
+            try:
+            tm = self.winfo_toplevel().theme_manager
+            theme = tm.themes.get(tm.current_theme, {})
+            pfg = theme.get("placeholder_fg", "#666666")
+        except: pfg = "#666666"
+        self.description_text.config(foreground=pfg)
         else:
             # Insert template content with normal text color
             if content:
                 self.description_text.insert("1.0", content)
-                self.description_text.config(foreground="black")
+                self.description_text.config(foreground="")
 
     def _load_categories(self):
         """Load existing scene categories from scenes.md."""
@@ -271,16 +295,17 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
 
         # Add some default categories if none exist
         if not categories:
-                            categories = [
-                            "Indoor Settings",
-                            "Outdoor Settings",
-                            "Urban & Industrial",
-                            "Fantasy",
-                            "Other",
-                        ]
-            
-                    self.category_combo.set_values(categories)
-                def _cancel(self):
+            categories = [
+                "Indoor Settings",
+                "Outdoor Settings",
+                "Urban & Industrial",
+                "Fantasy",
+                "Other",
+            ]
+
+        self.category_combo.set_values(categories)
+
+    def _cancel(self):
         """Cancel and close dialog."""
         self.dialog.destroy()
 
@@ -291,9 +316,7 @@ Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfor
         description = self.description_text.get("1.0", "end").strip()
 
         # Check placeholder
-        placeholder = """[Location] setting, [time of day] lighting, [atmosphere description], [key elements], [environmental details].
-
-Example: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter."""
+        placeholder = "[Describe the environmental setting, background details, lighting conditions, and atmosphere.]"
 
         # Validate
         if not category:

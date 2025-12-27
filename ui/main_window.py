@@ -20,6 +20,9 @@ from .characters_tab import CharactersTab
 from .constants import PREVIEW_UPDATE_THROTTLE_MS
 from .controllers.gallery import GalleryController
 from .controllers.menu_actions import MenuActions
+from .controllers.prompt_controller import PromptController
+from .controllers.character_controller import CharacterController
+from .controllers.data_controller import DataController
 from .controllers.window_state import WindowStateController
 from .dialog_manager import DialogManager
 from .edit_tab import EditTab
@@ -27,6 +30,9 @@ from .font_manager import FontManager
 from .menu_manager import MenuManager
 from .preview_controller import PreviewController
 from .preview_panel import PreviewPanel
+from .scene_panel import ScenePanel
+from .notes_panel import NotesPanel
+from .summary_panel import SummaryPanel
 from .searchable_combobox import SearchableCombobox
 from .state_manager import StateManager
 from .widgets import CollapsibleFrame, ScrollableCanvas
@@ -57,19 +63,13 @@ class PromptBuilderApp:
         self.menu_manager: Optional[MenuManager] = None
         self.dialog_manager = DialogManager(self.root, self.prefs)
 
-        # Initialize data via context
-        self.data_loader = self.ctx.data_loader
+        # Initialize Controllers
+        self.prompt_controller = PromptController(self.ctx)
+        self.character_controller = CharacterController(self)
+        self.data_controller = DataController(self.ctx)
         
         # Throttling for preview updates
-        self._after_id: Optional[str] = None
         self._throttle_ms = PREVIEW_UPDATE_THROTTLE_MS
-        
-        # Debounce tracking for text inputs
-        self._scene_text_after_id: Optional[str] = None
-        self._notes_text_after_id: Optional[str] = None
-        
-        # Initialize placeholder attributes
-        self.preview_controller: Optional[PreviewController] = None
 
         # Build loading screen
         self._build_loading_screen()
@@ -79,7 +79,7 @@ class PromptBuilderApp:
         self.root.deiconify()
 
         # Start async data load
-        self.ctx.load_data_async(self._on_init_success, self._on_init_error)
+        self.data_controller.load_initial_data(self._on_init_success, self._on_init_error)
 
     def _build_loading_screen(self):
         """Build a simple loading screen."""
@@ -93,13 +93,13 @@ class PromptBuilderApp:
         ttk.Label(
             container, 
             text="Prompt Builder", 
-            font=("Segoe UI", 24, "bold")
+            font=("Lexend", 24, "bold")
         ).pack(pady=(0, 20))
         
         ttk.Label(
             container, 
             text="Loading assets...", 
-            font=("Segoe UI", 12)
+            font=("Lexend", 12)
         ).pack(pady=(0, 10))
         
         self.loading_progress = ttk.Progressbar(
@@ -119,12 +119,7 @@ class PromptBuilderApp:
         self._initialize_data_references()
         
         # Sync tags from characters (manual file additions)
-        try:
-            added = self.data_loader.sync_tags()
-            if added:
-                logger.info(f"Startup: Added {added} new tags from character files.")
-        except Exception:
-            logger.exception("Error syncing tags on startup")
+        self.data_controller.sync_character_tags()
 
         # Complete initialization
         self._complete_initialization()
@@ -145,6 +140,7 @@ class PromptBuilderApp:
 
     def _initialize_data_references(self):
         """Initialize local references to context data."""
+        self.data_loader = self.ctx.data_loader
         self.characters = self.ctx.characters
         self.base_prompts = self.ctx.base_prompts
         self.scenes = self.ctx.scenes
@@ -157,6 +153,7 @@ class PromptBuilderApp:
         self.randomizer = self.ctx.randomizer
         
         self.theme_manager = self.ctx.theme_manager
+        self.root.theme_manager = self.theme_manager
         self.toasts = self.ctx.toasts
 
         # Expose toast manager and status updater on the root
@@ -182,9 +179,6 @@ class PromptBuilderApp:
 
         # Bind keyboard shortcuts
         self._bind_keyboard_shortcuts()
-
-        # Set initial fonts and theme
-        self._set_initial_fonts()
 
         # Auto-detect theme or use saved preference
         theme_to_use = self.prefs.get("last_theme", DEFAULT_THEME)
@@ -291,22 +285,35 @@ class PromptBuilderApp:
         main_container = ttk.Frame(self.root)
         main_container.pack(fill="both", expand=True)
 
-        # Status bar at bottom (pack first so it stays at bottom)
-        self.status_bar = ttk.Label(
+        # Status bar at bottom (Refactor 1: Spatial Layout - No Borders)
+        # Attempt to get bg color safely
+        try:
+            tm = self.theme_manager
+            theme = tm.themes.get(tm.current_theme, {})
+            main_bg = theme.get("bg", "#121212")
+            muted_fg = theme.get("border", "gray")
+        except:
+            main_bg = "#121212"
+            muted_fg = "gray"
+
+        self.status_bar = tk.Label(
             main_container,
-            text="Ready",
-            relief="sunken",
+            text="READY",
             anchor="w",
-            style="TLabel",
+            bg=main_bg,
+            fg=muted_fg,
+            font=("Lexend", 8, "bold"),
+            padx=15,
+            pady=5
         )
         self.status_bar.pack(side="bottom", fill="x")
 
         # Create a paned window for gallery + main content
         # Refactor 1: Invisible Splitter styling
         try:
-            panel_bg = ttk.Style().lookup("TFrame", "background")
+            panel_bg = style.lookup("TFrame", "background")
         except:
-            panel_bg = "#f0f0f0"
+            panel_bg = "#1e1e1e"
 
         self.main_paned = tk.PanedWindow(
             main_container, 
@@ -320,7 +327,7 @@ class PromptBuilderApp:
         self.main_paned.pack(side="top", fill="both", expand=True)
 
         # Left side: Character Gallery (collapsible, starts visible by default)
-        self.gallery_frame = ttk.Frame(self.main_paned, style="TFrame", width=280)
+        self.gallery_frame = ttk.Frame(self.main_paned, style="TFrame", width=300) # Slightly wider
         self.gallery_visible = self.prefs.get("gallery_visible", True)
 
         self.character_gallery = CharacterGalleryPanel(
@@ -328,12 +335,13 @@ class PromptBuilderApp:
             self.data_loader,
             self.prefs,
             on_add_callback=self._on_gallery_character_selected,
+            theme_manager=self.theme_manager,
             theme_colors=self.theme_manager.themes.get(DEFAULT_THEME, {}),
         )
         self.character_gallery.pack(fill="both", expand=True)
 
         if self.gallery_visible:
-            self.main_paned.add(self.gallery_frame, width=280) # Explicit width to respect preference
+            self.main_paned.add(self.gallery_frame, width=300) 
 
         # Use PanedWindow directly for main content
         paned = tk.PanedWindow(
@@ -345,38 +353,63 @@ class PromptBuilderApp:
             sashrelief="flat",
             showhandle=False
         )
-        self.main_paned.add(paned) # Let it take remaining space
+        self.main_paned.add(paned) 
 
-        # Left side: Notebook with tabs (give it more weight for better visibility)
+        # Left side: Notebook with tabs
         self.notebook = ttk.Notebook(paned, style="TNotebook")
-        paned.add(self.notebook, width=500) # Give reasonable default width
+        paned.add(self.notebook, width=550) 
 
         # Create tabs
         self.characters_tab = CharactersTab(
             self.notebook,
             self.data_loader,
+            self.theme_manager,
+            self.character_controller,
             self.schedule_preview_update,
             self.reload_data,
             self._save_state_for_undo,
         )
-        self.edit_tab = EditTab(self.notebook, self.data_loader, self.reload_data)
+        
+        # Lazy load EditTab to improve startup performance
+        self.edit_tab = None
+        self.notebook.add(ttk.Frame(self.notebook, style="TFrame"), text="Edit Data")
+        
+        def _on_tab_changed(event):
+            selected_tab = self.notebook.select()
+            tab_text = self.notebook.tab(selected_tab, "text")
+            if tab_text == "Edit Data" and self.edit_tab is None:
+                # Build EditTab on demand
+                # First, find the empty frame we added
+                tab_frame = self.notebook.nametowidget(selected_tab)
+                self.edit_tab = EditTab(
+                    self.notebook, 
+                    self.data_loader, 
+                    self.theme_manager,
+                    self.reload_data, 
+                    existing_frame=tab_frame
+                )
+                # Re-apply theme to ensure it matches
+                current_theme = self.theme_manager.current_theme or self.prefs.get("last_theme", DEFAULT_THEME)
+                self._apply_theme(current_theme)
+
+        self.notebook.bind("<<NotebookTabChanged>>", _on_tab_changed)
 
         # Load data into tabs
         self.characters_tab.load_data(self.characters, self.base_prompts, self.poses, self.scenes)
 
         # Right side: Scrollable container for collapsible sections
         self.right_scroll_container = ScrollableCanvas(paned)
-        paned.add(self.right_scroll_container) # Let it fill remaining
+        paned.add(self.right_scroll_container) 
         right_frame = self.right_scroll_container.get_container()
         right_frame.columnconfigure(0, weight=1)
 
-        # Standard spacing constants for consistent layout - Refactor 1
-        SECTION_PAD_Y = (10, 15)
-        INTERNAL_PAD_X = 12
+        # Standard spacing constants for consistent layout - Refactor 1: Generous Padding
+        SECTION_PAD_Y = (15, 20)
+        INTERNAL_PAD_X = 15
 
         # Convenience controls row (Expand/Collapse All) - Refactor 3
         controls_frame = ttk.Frame(right_frame, style="TFrame")
-        controls_frame.grid(row=0, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=(10, 0))
+        controls_frame.grid(row=0, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=(15, 0))
         
         def _set_all_collapsible(state):
             for section in [self.scene_collapsible, self.notes_collapsible, 
@@ -386,196 +419,60 @@ class PromptBuilderApp:
 
         # Get panel background safely for manual button overrides
         try:
-            panel_bg = ttk.Style().lookup("TFrame", "background")
+            tm = self.theme_manager
+            theme = tm.themes.get(tm.current_theme, {})
+            panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            muted_fg = theme.get("border", "gray")
         except:
-            panel_bg = "#ffffff"
+            panel_bg = "#1e1e1e"
+            muted_fg = "gray"
 
-        tk.Button(controls_frame, text="Collapse All", 
+        self.collapse_all_btn = tk.Button(controls_frame, text="COLLAPSE ALL", 
                    command=lambda: _set_all_collapsible(False), 
-                   bg=panel_bg, fg="gray", borderwidth=0, relief="flat", font=("Segoe UI", 8)).pack(side="right", padx=2)
-        tk.Button(controls_frame, text="Expand All", 
+                   bg=panel_bg, fg=muted_fg, borderwidth=0, relief="flat", font=("Lexend", 8, "bold"))
+        self.collapse_all_btn.pack(side="right", padx=2)
+        
+        self.expand_all_btn = tk.Button(controls_frame, text="EXPAND ALL", 
                    command=lambda: _set_all_collapsible(True), 
-                   bg=panel_bg, fg="gray", borderwidth=0, relief="flat", font=("Segoe UI", 8)).pack(side="right", padx=2)
+                   bg=panel_bg, fg=muted_fg, borderwidth=0, relief="flat", font=("Lexend", 8, "bold"))
+        self.expand_all_btn.pack(side="right", padx=2)
 
-        # Scene section (compact)
-        self.scene_collapsible = CollapsibleFrame(right_frame, text="🎬 Scene", opened=True, show_clear=True)
-        self.scene_collapsible.grid(row=1, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
-        self.scene_collapsible.set_clear_command(lambda: (self.scene_text.delete("1.0", "end"), self.schedule_preview_update()))
-        
-        scene_content = self.scene_collapsible.get_content_frame()
-        scene_content.columnconfigure(1, weight=1)
-        create_tooltip(self.scene_collapsible, TOOLTIPS.get("scene", ""))
 
-        # Scene presets row
-        ttk.Label(scene_content, text="Category:", style="TLabel").grid(
-            row=0, column=0, sticky="w", padx=(4, 4), pady=6
+
+        # Scene section (compact) - Refactor 5: Semantic Typography
+        self.scene_panel = ScenePanel(
+            right_frame, 
+            self.data_loader, 
+            self.theme_manager, 
+            self.scenes,
+            on_change_callback=self.schedule_preview_update,
+            create_scene_callback=self._create_new_scene
         )
-        self.scene_category_var = tk.StringVar()
-        self.scene_cat_combo = SearchableCombobox(
-            scene_content, 
-            textvariable=self.scene_category_var,
-            on_select=lambda val: self._update_scene_presets(),
-            placeholder="Search category...",
-            width=14
+        self.scene_panel.grid(row=1, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
+
+        # Notes section (expandable) - Refactor 5
+        self.notes_panel = NotesPanel(
+            right_frame,
+            self.data_loader,
+            self.theme_manager,
+            self.interactions,
+            on_change_callback=self.schedule_preview_update,
+            create_interaction_callback=self._create_new_interaction,
+            get_selected_char_names=lambda: [c["name"] for c in self.characters_tab.get_selected_characters()]
         )
-        self.scene_cat_combo.grid(row=0, column=1, sticky="w", padx=2, pady=6)
+        self.notes_panel.grid(row=2, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
 
-        ttk.Label(scene_content, text="Preset:", style="TLabel").grid(
-            row=0, column=2, sticky="w", padx=(10, 4), pady=6
+        # Summary section - Refactor 5
+        self.summary_panel = SummaryPanel(
+            right_frame,
+            self.theme_manager,
+            on_apply_callback=self._import_from_summary_box,
+            on_import_callback=self.menu_actions.import_from_text
         )
-        self.scene_preset_var = tk.StringVar()
-        self.scene_combo = SearchableCombobox(
-            scene_content, 
-            textvariable=self.scene_preset_var,
-            on_select=lambda val: self._apply_scene_preset(),
-            placeholder="Search preset...",
-            width=20
-        )
-        self.scene_combo.grid(row=0, column=3, sticky="ew", padx=2, pady=6)
+        self.summary_panel.grid(row=3, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
 
-        new_scene_btn = ttk.Button(scene_content, text="✨", width=3, command=self._create_new_scene)
-        new_scene_btn.grid(row=0, column=4, padx=(6, 4), pady=6)
-        create_tooltip(new_scene_btn, "Create a new scene preset")
-
-        self.scene_text = tk.Text(scene_content, wrap="word", height=3)
-        self.scene_text.grid(row=1, column=0, columnspan=5, sticky="ew", padx=4, pady=(2, 6))
-        # Debounce scene text changes
-        self._scene_text_after_id = None
-
-        def _on_scene_change(e):
-            if self._scene_text_after_id:
-                self.root.after_cancel(self._scene_text_after_id)
-            self._scene_text_after_id = self.root.after(300, self.schedule_preview_update)
-
-        self.scene_text.bind("<KeyRelease>", _on_scene_change)
-
-        # Notes section (expandable)
-        self.notes_collapsible = CollapsibleFrame(right_frame, text="📝 Notes & Interactions", opened=True, show_clear=True)
-        self.notes_collapsible.grid(row=2, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
-        self.notes_collapsible.set_clear_command(lambda: (self.notes_text.delete("1.0", "end"), self.schedule_preview_update()))
-        
-        notes_content = self.notes_collapsible.get_content_frame()
-        notes_content.columnconfigure(0, weight=1)
-        create_tooltip(self.notes_collapsible, TOOLTIPS.get("notes", ""))
-
-        # Interaction template selector (Refactor 3: Spacing & Pill Buttons)
-        interaction_control = ttk.Frame(notes_content, style="TFrame")
-        interaction_control.grid(row=0, column=0, sticky="ew", padx=4, pady=(6, 10))
-        interaction_control.columnconfigure(1, weight=1)
-        interaction_control.columnconfigure(3, weight=1)
-
-        # Row 0: Selectors
-        ttk.Label(interaction_control, text="Category:", style="TLabel").grid(
-            row=0, column=0, sticky="w", padx=(0, 6)
-        )
-
-        self.interaction_category_var = tk.StringVar()
-        self.interaction_cat_combo = SearchableCombobox(
-            interaction_control,
-            textvariable=self.interaction_category_var,
-            on_select=lambda val: self._update_interaction_presets(),
-            placeholder="Search category...",
-            width=15
-        )
-        self.interaction_cat_combo.grid(row=0, column=1, sticky="ew", padx=(0, 10))
-
-        ttk.Label(interaction_control, text="Template:", style="TLabel").grid(
-            row=0, column=2, sticky="w", padx=(0, 6)
-        )
-
-        self.interaction_var = tk.StringVar(value="Blank")
-        self.interaction_combo = SearchableCombobox(
-            interaction_control, 
-            textvariable=self.interaction_var,
-            on_double_click=lambda val: self._insert_interaction_template(),
-            placeholder="Search template...",
-            width=25
-        )
-        self.interaction_combo.grid(row=0, column=3, sticky="ew")
-
-        # Row 1: Action Buttons (Pill Style)
-        action_btn_frame = ttk.Frame(interaction_control, style="TFrame")
-        action_btn_frame.grid(row=1, column=0, columnspan=4, sticky="ew", pady=(10, 0))
-        
-        self.notes_pill_buttons = [] # Track for theme updates
-        
-        def add_notes_pill(text, command):
-            try:
-                style = ttk.Style()
-                pbg = style.lookup("TFrame", "background")
-                accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
-            except:
-                pbg = "#ffffff"
-                accent = "#0078d7"
-                
-            pill = tk.Frame(action_btn_frame, bg=accent, padx=1, pady=1)
-            pill.pack(side="left", padx=(0, 6))
-            
-            lbl = tk.Label(
-                pill, text=text, bg=pbg, fg=accent,
-                font=("Segoe UI", 8, "bold"), padx=10, pady=2, cursor="hand2"
-            )
-            lbl.pack()
-            lbl._base_bg = pbg
-            
-            def on_e(e, l=lbl): l.config(bg="#333333")
-            def on_l(e, l=lbl):
-                try: l.config(bg=ttk.Style().lookup("TFrame", "background"))
-                except: l.config(bg=l._base_bg)
-                
-            lbl.bind("<Enter>", on_e)
-            lbl.bind("<Leave>", on_l)
-            lbl.bind("<Button-1>", lambda e: command())
-            self.notes_pill_buttons.append((pill, lbl))
-            return pill
-
-        add_notes_pill("📥 Insert Template", self._insert_interaction_template)
-        add_notes_pill("🔄 Refresh", self._refresh_interaction_template)
-        add_notes_pill("✨ Create New", self._create_new_interaction)
-
-        self.notes_text = tk.Text(notes_content, wrap="word", height=4)
-        self.notes_text.grid(row=1, column=0, sticky="nsew", padx=4, pady=(4, 6))
-        # Debounce notes text changes
-        self._notes_text_after_id = None
-
-        def _on_notes_change(e):
-            if self._notes_text_after_id:
-                self.root.after_cancel(self._notes_text_after_id)
-            self._notes_text_after_id = self.root.after(300, self.schedule_preview_update)
-
-        self.notes_text.bind("<KeyRelease>", _on_notes_change)
-
-        # Summary section - Refactor 1
-        self.summary_collapsible = CollapsibleFrame(right_frame, text="📋 Prompt Summary", opened=True, show_import=True)
-        self.summary_collapsible.grid(row=3, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
-        self.summary_collapsible.set_import_command(self.menu_actions.import_from_text)
-        create_tooltip(self.summary_collapsible, "Condensed overview of characters and scene. Click Import to load from text.")
-        summary_content = self.summary_collapsible.get_content_frame()
-        summary_content.columnconfigure(0, weight=1)
-        
-        self.summary_text = tk.Text(summary_content, wrap="word", height=3)
-        self.summary_text.grid(row=0, column=0, sticky="ew", padx=4, pady=6)
-        create_tooltip(self.summary_text, "Condensed overview. You can edit this text and click 'Apply' to update the whole prompt.")
-        
-        # Track summary editing state
-        self._summary_modified = False
-        
-        def _on_summary_focus_in(e):
-            self._summary_modified = True
-            theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-            # Fix Refactor 1: Global Input Styling
-            bg = theme.get("text_bg", theme.get("bg", "#ffffff"))
-            fg = theme.get("text_fg", theme.get("fg", "#000000"))
-            self.summary_text.config(background=bg, foreground=fg, insertbackground=fg)
-
-        def _on_summary_change(e):
-            self._summary_modified = True
-
-        self.summary_text.bind("<FocusIn>", _on_summary_focus_in)
-        self.summary_text.bind("<KeyRelease>", _on_summary_change)
-
-        # Preview panel container
-        self.preview_collapsible = CollapsibleFrame(right_frame, text="🔍 Prompt Preview", opened=True)
+        # Preview panel container - Refactor 5
+        self.preview_collapsible = CollapsibleFrame(right_frame, text="🔍 PROMPT PREVIEW", opened=True)
         self.preview_collapsible.grid(row=4, column=0, sticky="nsew", padx=INTERNAL_PAD_X, pady=(SECTION_PAD_Y[0], 20))
         create_tooltip(self.preview_collapsible, "The full generated prompt for copying")
         preview_content = self.preview_collapsible.get_content_frame()
@@ -598,7 +495,7 @@ class PromptBuilderApp:
         )
 
         # Initialize scene presets
-        self._update_scene_presets()
+        # (Handled internally by ScenePanel now)
 
     def _build_toolbar(self):
         """Build the top toolbar with common actions."""
@@ -607,25 +504,30 @@ class PromptBuilderApp:
         
         self.toolbar_buttons = [] # Track for theme updates
 
-        # Helper to create styled toolbar buttons - Refactor 3
+        # Helper to create styled toolbar buttons - Refactor 5: Lexend
         def add_tool_btn(parent, text, command, tooltip=None, width=None):
             # Try to get background safely
             try: 
                 bg = parent.cget("background")
             except: 
                 try: bg = ttk.Style().lookup("TFrame", "background")
-                except: bg = "#ffffff"
+                except: bg = "#121212"
             
             btn = tk.Button(
                 parent, text=text, command=command,
-                bg=bg, relief="flat", highlightthickness=2, padx=5
+                bg=bg, relief="flat", highlightthickness=2, padx=10,
+                font=("Lexend", 9)
             )
             
-            def on_btn_enter(e, b=btn): b.config(bg="#333333")
+            def on_btn_enter(e, b=btn):
+                try:
+                    theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                    hbg = theme.get("hover_bg", "#333333")
+                except: hbg = "#333333"
+                b.config(bg=hbg)
             def on_btn_leave(e, b=btn):
-                # Attempt to get current background from parent or default
                 try: curr_bg = parent.cget("background")
-                except: curr_bg = "#ffffff"
+                except: curr_bg = bg
                 b.config(bg=curr_bg)
             
             btn.bind("<Enter>", on_btn_enter)
@@ -668,11 +570,10 @@ class PromptBuilderApp:
 
         # Register text widgets for font management
         for widget in [
-            self.scene_text,
-            self.notes_text,
-            self.summary_text,
+            self.scene_panel.text,
+            self.notes_panel.text,
+            self.summary_panel.text,
             self.preview_panel.preview_text,
-            self.edit_tab.editor_text,
         ]:
             self.font_manager.register_widget(widget)
 
@@ -683,13 +584,6 @@ class PromptBuilderApp:
             restore_state=self._restore_state,
             update_preview=self.schedule_preview_update,
         )
-
-        # Initialize interaction category combo
-        categories = list(self.interactions.keys())
-        self.interaction_cat_combo.set_values(categories)
-        if categories:
-            self.interaction_category_var.set(categories[0])
-            self._update_interaction_presets()
 
         # Create preview controller now that preview_panel and characters_tab exist
         try:
@@ -751,204 +645,54 @@ class PromptBuilderApp:
                 # Fallback: call with event argument
                 self.root.bind(key, lambda e, h=handler: h(e))
 
-    def _update_scene_presets(self):
-        """Update scene preset combo based on selected category."""
-        cat = self.scene_category_var.get()
-        if cat and cat in self.scenes:
-            self.scene_combo.set_values([""] + sorted(list(self.scenes[cat].keys())))
-        else:
-            self.scene_combo.set_values([""])
-        self.scene_preset_var.set("")
+    def randomize_all(self):
+        """Generate a random prompt and update the UI."""
+        self._update_status("🎲 Randomizing...")
+        self._save_state_for_undo()
 
-        # Update category combo values
-        self.scene_cat_combo.set_values([""] + sorted(list(self.scenes.keys())))
-        self.root.update_idletasks()
-
-    def _update_interaction_presets(self):
-        """Update interaction preset combo based on selected category."""
-        cat = self.interaction_category_var.get()
-        if cat and cat in self.interactions:
-            self.interaction_combo.set_values([""] + sorted(list(self.interactions[cat].keys())))
-        else:
-            self.interaction_combo.set_values([""])
-        self.interaction_var.set("")
-
-        # Update category combo values
-        self.interaction_cat_combo.set_values([""] + sorted(list(self.interactions.keys())))
-        self.root.update_idletasks()
-
-    def _insert_interaction_template(self):
-        """Insert interaction template with character placeholders filled."""
-        cat = self.interaction_category_var.get()
-        template_name = self.interaction_var.get()
-
-        if not cat or not template_name:
-            return
-
-        if cat not in self.interactions or template_name not in self.interactions[cat]:
-            return
-
-        template_data = self.interactions[cat][template_name]
-
-        if not template_data:
-            return
-
-        # Get list of selected character names from characters tab
-        selected_chars = [char["name"] for char in self.characters_tab.selected_characters]
-
-        if not selected_chars:
-            from utils.notification import notify
-
-            root = self.root
-            msg = "Please add characters to your prompt first before using interaction templates."
-            notify(root, "No Characters", msg, level="info", duration=3000, parent=self.root)
-            return
-
-        # Check character count if using new structured format
-        if isinstance(template_data, dict):
-            min_chars = template_data.get("min_chars", 1)
-            if len(selected_chars) < min_chars:
-                from utils.notification import notify
-                msg = f"This interaction typically requires {min_chars} characters (you have {len(selected_chars)}). Some placeholders may not be filled."
-                notify(self.root, "Character Count", msg, level="warning", duration=4000)
-
-        # Fill template with character names
-        filled_text = fill_template(template_data, selected_chars)
-
-        # Insert at cursor position or append
-        try:
-            current_text = self.notes_text.get("1.0", "end-1c")
-            if current_text.strip():
-                # Add on new line if there's existing content
-                self.notes_text.insert("end", "\n" + filled_text)
-            else:
-                # Replace empty content
-                self.notes_text.delete("1.0", "end")
-                self.notes_text.insert("1.0", filled_text)
-
-            self.schedule_preview_update()
-            self._update_status(f"Inserted: {template_name}")
-        except tk.TclError:
-            logger.exception("Error inserting interaction template")
-
-    def _refresh_interaction_template(self):
-        """Replace notes with re-filled interaction template using current characters."""
-        cat = self.interaction_category_var.get()
-        template_name = self.interaction_var.get()
-
-        if not cat or not template_name:
-            return
-
-        if cat not in self.interactions or template_name not in self.interactions[cat]:
-            return
-
-        template_data = self.interactions[cat][template_name]
-
-        if not template_data:
-            return
-
-        # Get list of selected character names from characters tab
-        selected_chars = [char["name"] for char in self.characters_tab.selected_characters]
-
-        if not selected_chars:
-            from utils.notification import notify
-
-            root = self.root
-            msg = "Please add characters to your prompt first before using interaction templates."
-            notify(root, "No Characters", msg, level="info", duration=3000, parent=self.root)
-            return
-
-        # Fill template with character names
-        filled_text = fill_template(template_data, selected_chars)
-
-        # Replace notes content
-        try:
-            self.notes_text.delete("1.0", "end")
-            self.notes_text.insert("1.0", filled_text)
-
-            self.schedule_preview_update()
-            self._update_status(f"Refreshed: {template_name}")
-        except tk.TclError:
-            logger.exception("Error refreshing interaction template")
-
-    def _apply_scene_preset(self):
-        """Apply selected scene preset to text area."""
-        cat = self.scene_category_var.get()
-        name = self.scene_preset_var.get()
-
-        if cat and name and cat in self.scenes and name in self.scenes[cat]:
-            self.scene_text.delete("1.0", "end")
-            self.scene_text.insert("1.0", self.scenes[cat][name])
-            self.schedule_preview_update()
-
-    def _reload_interaction_templates(self):
-        """Reload interaction templates from file."""
-        try:
-            # Reload interactions from markdown file
-            self.interactions = self.data_loader.load_interactions()
-
-            # Update category combo
-            categories = list(self.interactions.keys())
-            self.interaction_cat_combo.set_values(categories)
-
-            # Keep current category if it exists, otherwise select first
-            current_cat = self.interaction_category_var.get()
-            if current_cat not in self.interactions and categories:
-                self.interaction_category_var.set(categories[0])
-
-            # Update template dropdown based on category
-            self._update_interaction_presets()
-
-            logger.info("Interaction templates reloaded successfully")
-        except Exception:
-            logger.exception("Error reloading interaction templates")
-
-    def _create_new_interaction(self):
-        """Open dialog to create a new interaction template."""
-        from .interaction_creator import InteractionCreatorDialog
-
-        dialog = InteractionCreatorDialog(
-            self.root, self.data_loader, self._reload_interaction_templates
+        config = self.randomizer.randomize(
+            num_characters=self.characters_tab.get_num_characters(),
+            include_scene=True,
+            include_notes=True,
         )
-        dialog.show()
 
-    def _create_new_scene(self):
-        """Open dialog to create a new scene."""
-        from .scene_creator import SceneCreatorDialog
+        self.characters_tab.set_selected_characters(config["selected_characters"])
+        self.characters_tab.set_base_prompt(config["base_prompt"])
 
-        dialog = SceneCreatorDialog(self.root, self.data_loader, self.reload_data)
-        dialog.show()
+        # Set scene and notes directly
+        self.scene_panel.set_text(config.get("scene", ""))
+        self.notes_panel.set_text(config.get("notes", ""))
 
-    def _open_theme_editor(self):
-        """Open the Theme Editor dialog to create/edit custom themes."""
-        try:
-            from .theme_editor import ThemeEditorDialog
+        self.schedule_preview_update()
+        self._update_status("✨ Randomized successfully")
 
-            dlg = ThemeEditorDialog(
-                self.root,
-                self.theme_manager,
-                self.prefs,
-                on_theme_change=self.menu_manager.refresh_theme_menu,
-            )
-            dlg.show()
-        except Exception:
-            from utils import logger as _logger
+    def _center_window(self):
+        """Center the window on the screen using current geometry."""
+        # Get current geometry string (e.g., "1000x700")
+        geom = self.root.geometry()
+        # Parse width and height
+        if "x" in geom:
+            dims = geom.split("+")[0]  # Get "1000x700" part
+            width, height = map(int, dims.split("x"))
+            screen_width = self.root.winfo_screenwidth()
+            screen_height = self.root.winfo_screenheight()
+            x = (screen_width - width) // 2
+            y = (screen_height - height) // 2
+            self.root.geometry(f"{width}x{height}+{x}+{y}")
 
-            _logger.exception("Failed to open Theme Editor")
+    def _increase_font(self):
+        """Increase font size by user preference."""
+        self.font_manager.increase_font_size()
 
-    def _set_initial_fonts(self):
-        """Set initial fonts on text widgets."""
-        font = (DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE)
-        for widget in [
-            self.scene_text,
-            self.notes_text,
-            self.summary_text,
-            self.preview_panel.preview_text,
-            self.edit_tab.editor_text,
-        ]:
-            widget.config(padx=10, pady=10, font=font)
+    def _decrease_font(self):
+        """Decrease font size by user preference."""
+        self.font_manager.decrease_font_size()
 
-    def _change_theme(self, theme_name):
+    def _reset_font(self):
+        """Reset font size to automatic scaling."""
+        self.font_manager.reset_font_size()
+
+    def _on_closing(self):
         """Handle theme change from menu.
 
         Args:
@@ -988,70 +732,43 @@ class PromptBuilderApp:
             theme_name: Name of theme to apply
         """
         theme = self.theme_manager.apply_theme(theme_name)
-        accent = theme.get("accent", "#0078d7")
         panel_bg = theme.get("panel_bg", theme["bg"])
 
-        # Apply to text widgets - Refactor 2
-        self.theme_manager.apply_preview_theme(self.preview_panel.preview_text, theme)
-        self.preview_panel.apply_theme(theme) # Refactor 3
-        for widget in [self.scene_text, self.notes_text, self.summary_text, self.edit_tab.editor_text]:
-            self.theme_manager.apply_text_widget_theme(widget, theme)
-        
-        # Apply manual Phase 3 fixes
-        # Update Notes & Interactions pill buttons
-        if hasattr(self, "notes_pill_buttons"):
-            for frame, lbl in self.notes_pill_buttons:
-                frame.config(bg=accent)
-                lbl._base_bg = panel_bg
-                lbl.config(bg=panel_bg, fg=accent)
-
-        # Force summary box background
-        if not getattr(self, "_summary_modified", False):
-            self.theme_manager.apply_text_widget_theme(self.summary_text, theme)
-        
-        # Force custom buttons in characters tab
-        self.characters_tab._last_pbg = panel_bg # Support Refactor 3 hover
-        if hasattr(self.characters_tab, "create_shared_btn"):
-            self.characters_tab.create_shared_btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
-        if hasattr(self.characters_tab, "create_char_btn"):
-            self.characters_tab.create_char_btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
-
-        # Force convenience controls (Collapse/Expand All)
-        for child in self.root.winfo_children():
-            # This is a bit broad, but safer to just update toolbar specifically
-            pass
+        # Manual updates for remaining non-modular components
+        if hasattr(self, "collapse_all_btn"):
+            self.collapse_all_btn.config(bg=panel_bg, fg=theme.get("border", "gray"))
+        if hasattr(self, "expand_all_btn"):
+            self.expand_all_btn.config(bg=panel_bg, fg=theme.get("border", "gray"))
             
         if hasattr(self, "toolbar_buttons"):
+            accent = theme.get("accent", "#0078d7")
             for btn in self.toolbar_buttons:
                 btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
 
-        # Apply to search entries if they exist
-        if hasattr(self, "character_gallery") and hasattr(self.character_gallery, "search_entry"):
-             # CharacterGalleryPanel search entry
-             self.theme_manager.apply_entry_theme(self.character_gallery.search_entry, theme)
-
-        # Apply to canvas
-        self.theme_manager.apply_canvas_theme(self.characters_tab.chars_canvas, theme)
-        if hasattr(self, "right_scroll_container"):
-            self.theme_manager.apply_canvas_theme(self.right_scroll_container.canvas, theme)
-
-        # Apply to dynamic character action texts and custom buttons
-        self.characters_tab.apply_theme_to_action_texts(self.theme_manager, theme)
+        # Refactor 5: Update status bar
+        if hasattr(self, "status_bar"):
+            self.status_bar.config(bg=theme["bg"], fg=theme.get("border", "gray"))
         
-        # Refactor 3: Update custom CollapsibleFrames
-        for cf in [self.scene_collapsible, self.notes_collapsible, 
-                   self.summary_collapsible, self.preview_collapsible]:
-            if hasattr(cf, "apply_theme"):
-                cf.apply_theme(theme)
-        
-        # Also in characters_tab bulk editor
-        if hasattr(self.characters_tab, "bulk_container"):
-            self.characters_tab.bulk_container.apply_theme(theme)
+        # Update PanedWindow backgrounds for invisible splitters - Refactor 1
+        if hasattr(self, "main_paned"):
+            try:
+                self.main_paned.config(bg=panel_bg)
+                for child in self.main_paned.winfo_children():
+                    if isinstance(child, tk.PanedWindow):
+                        child.config(bg=panel_bg)
+            except Exception: pass
 
-        # Refresh character items to pick up manual button overrides
-        for item in self.characters_tab.chars_container.winfo_children():
-            if hasattr(item, "_update_theme_overrides"):
-                item._update_theme_overrides(theme)
+        # Update specialized controllers/services
+        if hasattr(self, "gallery_controller") and self.gallery_controller:
+            self.gallery_controller.apply_theme(theme)
+
+        if hasattr(self, "toasts"):
+            try:
+                self.toasts.apply_theme(theme)
+            except Exception: pass
+
+        if hasattr(self, "dialog_manager"):
+            self.dialog_manager.apply_theme(theme)
 
         # Update PanedWindow backgrounds for invisible splitters - Refactor 1
         if hasattr(self, "main_paned"):
@@ -1085,6 +802,10 @@ class PromptBuilderApp:
 
                 _logger.debug("Failed to apply theme to toasts", exc_info=True)
 
+        # Refactor 3: Propagate theme to open dialogs
+        if hasattr(self, "dialog_manager"):
+            self.dialog_manager.apply_theme(theme)
+
     def schedule_preview_update(self):
         """Schedule a preview update with adaptive throttling."""
         # Adaptive throttling - faster for simpler prompts
@@ -1107,41 +828,22 @@ class PromptBuilderApp:
 
     def update_preview(self):
         """Update the preview panel with current prompt."""
-        prompt = self._generate_prompt_or_error()
+        config = self._get_current_state()
+        prompt = self.prompt_controller.generate_or_error(config)
         self.preview_panel.update_preview(prompt)
         
         # Update summary only if not being manually edited
-        if not getattr(self, "_summary_modified", False):
-            summary = self._generate_summary()
-            self.summary_text.config(state="normal")
-            self.summary_text.delete("1.0", "end")
-            self.summary_text.insert("1.0", summary)
+        if not self.summary_panel.is_modified:
+            summary = self.prompt_controller.generate_summary(config)
+            self.summary_panel.set_text(summary)
         
-        num_chars = len(self.characters_tab.get_selected_characters())
+        num_chars = len(config["selected_characters"])
         self._update_status(f"Ready • {num_chars} character(s) selected")
 
         # Update gallery highlights
         if hasattr(self, "character_gallery") and hasattr(self.character_gallery, "update_used_status"):
-            selected_names = [c["name"] for c in self.characters_tab.get_selected_characters()]
+            selected_names = [c["name"] for c in config["selected_characters"]]
             self.character_gallery.update_used_status(selected_names)
-
-    def _generate_summary(self):
-        """Generate summary from current data.
-
-        Returns:
-            str: Summary text
-        """
-        builder = PromptBuilder(
-            self.characters, self.base_prompts, self.poses, self.color_schemes, self.modifiers
-        )
-
-        config = {
-            "selected_characters": self.characters_tab.get_selected_characters(),
-            "scene": self.scene_text.get("1.0", "end").strip(),
-            "notes": self.notes_text.get("1.0", "end").strip(),
-        }
-
-        return builder.generate_summary(config)
 
     def _update_status(self, message):
         """Update status bar message.
@@ -1152,77 +854,98 @@ class PromptBuilderApp:
         if hasattr(self, "status_bar"):
             self.status_bar.config(text=message)
 
-    def _validate_prompt(self):
-        """Validate current prompt data.
+    def _generate_prompt_or_error(self):
+        """Bridge for PreviewController/Panel."""
+        return self.prompt_controller.generate_or_error(self._get_current_state())
 
-        Returns:
-            str: Error message or None if valid
-        """
-        selected_chars = self.characters_tab.get_selected_characters()
-        return validate_prompt_config(selected_chars)
+    def _validate_prompt(self):
+        """Bridge for PreviewController/Panel."""
+        return self.prompt_controller.validate(self.characters_tab.get_selected_characters())
 
     def _generate_prompt(self):
-        """Generate prompt from current data (assumes valid).
+        """Bridge for PreviewController/Panel."""
+        return self.prompt_controller.generate_full_prompt(self._get_current_state())
 
-        Returns:
-            str: Generated prompt text
-        """
-        builder = PromptBuilder(
-            self.characters, self.base_prompts, self.poses, self.color_schemes, self.modifiers
+    def _reload_interaction_templates(self):
+        """Reload interaction templates from file."""
+        try:
+            # Reload interactions from markdown file
+            self.interactions = self.data_loader.load_interactions()
+            
+            # Notify notes panel
+            self.notes_panel.update_presets(self.interactions)
+
+            logger.info("Interaction templates reloaded successfully")
+        except Exception:
+            logger.exception("Error reloading interaction templates")
+
+    def _create_new_interaction(self):
+        """Open dialog to create a new interaction template."""
+        from .interaction_creator import InteractionCreatorDialog
+
+        dialog = InteractionCreatorDialog(
+            self.root, self.data_loader, self._reload_interaction_templates
         )
+        dialog.show()
 
-        config = {
-            "selected_characters": self.characters_tab.get_selected_characters(),
-            "base_prompt": self.characters_tab.get_base_prompt_name(),
-            "scene": self.scene_text.get("1.0", "end").strip(),
-            "notes": self.notes_text.get("1.0", "end").strip(),
-        }
+    def _create_new_scene(self):
+        """Open dialog to create a new scene."""
+        from .scene_creator import SceneCreatorDialog
 
-        return builder.generate(config)
+        dialog = SceneCreatorDialog(self.root, self.data_loader, self.reload_data)
+        dialog.show()
 
-    def _generate_prompt_or_error(self):
-        """Generate prompt or return validation error.
+    def _open_theme_editor(self):
+        """Open the Theme Editor dialog to create/edit custom themes."""
+        try:
+            from .theme_editor import ThemeEditorDialog
 
-        Returns:
-            str: Generated prompt or empty string if validation fails
-        """
-        error = self._validate_prompt()
-        if error:
-            # Return empty string - preview panel will show welcome message
-            return ""
-        return self._generate_prompt()
+            dlg = ThemeEditorDialog(
+                self.root,
+                self.theme_manager,
+                self.prefs,
+                on_theme_change=self.menu_manager.refresh_theme_menu,
+            )
+            dlg.show()
+        except Exception:
+            logger.exception("Failed to open Theme Editor")
 
     def reload_data(self):
         """Reload all data from markdown files asynchronously."""
         self._update_status("🔄 Reloading data...")
         self.root.config(cursor="watch")
         
-        # Clear data loader cache to force fresh read from disk
-        try:
-            self.data_loader.clear_cache()
-        except Exception:
-            logger.debug("Failed to clear data_loader cache during reload")
-
         # Show reloading overlay
         self._show_reload_overlay()
 
-        # Start async load
-        self.ctx.load_data_async(self._on_reload_success, self._on_reload_error)
+        # Start async load via controller
+        self.data_controller.reload_all_data(self._on_reload_success, self._on_reload_error)
 
     def _show_reload_overlay(self):
         """Show a modal overlay during reload."""
         self.reload_overlay = ttk.Frame(self.root)
         self.reload_overlay.place(relx=0, rely=0, relwidth=1, relheight=1)
         
+        # Get theme colors safely
+        try:
+            theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+            panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            accent = theme.get("accent", "#0078d7")
+        except:
+            panel_bg = "#1e1e1e"
+            accent = "#0078d7"
+
         # Semi-transparent background effect (simulated with a label if needed, or just opaque)
         # For simplicity, we use an opaque frame with a label
         
         container = ttk.Frame(self.reload_overlay)
         container.place(relx=0.5, rely=0.5, anchor="center")
         
-        ttk.Label(
-            container, text="Reloading...", font=("Segoe UI", 16, "bold")
-        ).pack(pady=10)
+        loading_label = tk.Label(
+            container, text="RELOADING...", font=("Lexend", 16, "bold"),
+            bg=panel_bg, fg=accent
+        )
+        loading_label.pack()
         
         self.reload_progress = ttk.Progressbar(container, mode="indeterminate", length=200)
         self.reload_progress.pack(pady=10)
@@ -1320,11 +1043,62 @@ class PromptBuilderApp:
                 "Some previously selected characters were removed as they no longer exist in the updated data.",
             )
 
-        # Reload data in tabs
+    def _update_ui_after_reload(self):
+        """Update UI components with new data."""
+        # Update character selection validity
+        new_chars_keys = set(self.characters.keys())
+        selected = self.characters_tab.get_selected_characters()
+        updated_selected = []
+        chars_removed = False
+
+        for c in selected:
+            if c["name"] in new_chars_keys:
+                c.setdefault("pose_category", "")
+                c.setdefault("pose_preset", "")
+                c.setdefault("action_note", "")
+                updated_selected.append(c)
+            else:
+                chars_removed = True
+
+        self.characters_tab.selected_characters = updated_selected
+
+        if chars_removed:
+            self.dialog_manager.show_info(
+                "Reload Info",
+                "Some previously selected characters were removed as they no longer exist in the updated data.",
+            )
+
+        # Reload data in tabs/panels
         self.characters_tab.load_data(self.characters, self.base_prompts, self.poses, self.scenes)
-        self._update_scene_presets()
-        self._reload_interaction_templates()
-        self.edit_tab._refresh_file_list()
+        self.scene_panel.update_presets(self.scenes)
+        self.notes_panel.update_presets(self.interactions)
+        
+        if self.edit_tab:
+            self.edit_tab._refresh_file_list()
+
+        # Re-apply theme
+        current = self.prefs.get("last_theme") or None
+        if current:
+            try:
+                self._apply_theme(current)
+                if hasattr(self, "menu_manager") and self.menu_manager:
+                    self.menu_manager.refresh_theme_menu()
+            except Exception:
+                logger.debug("Failed to re-apply theme after reload")
+
+        # Reload character gallery
+        if hasattr(self, "gallery_controller") and self.gallery_controller:
+            try:
+                self.gallery_controller.load_characters(self.characters)
+            except Exception:
+                logger.exception("Failed to reload gallery via GalleryController")
+        elif hasattr(self, "character_gallery"):
+            try:
+                self.character_gallery.load_characters(self.characters)
+            except Exception:
+                logger.exception("Failed to reload character_gallery")
+
+        self.schedule_preview_update()
 
         # Re-apply theme
         current = self.prefs.get("last_theme") or None
@@ -1352,7 +1126,7 @@ class PromptBuilderApp:
 
     def _import_from_summary_box(self):
         """Parse and apply the text currently in the summary box."""
-        raw_text = self.summary_text.get("1.0", "end-1c").strip()
+        raw_text = self.summary_panel.get_text()
         if not raw_text:
             return
 
@@ -1363,7 +1137,7 @@ class PromptBuilderApp:
             config = TextParser.parse_import_text(raw_text, available_chars)
             self._save_state_for_undo()
             self._restore_state(config)
-            self._summary_modified = False
+            self.summary_panel.is_modified = False
             # Reset background
             self._apply_theme(self.theme_manager.current_theme) 
             self._update_status("Applied changes from summary console")
@@ -1385,12 +1159,9 @@ class PromptBuilderApp:
         self.characters_tab.set_selected_characters(config["selected_characters"])
         self.characters_tab.set_base_prompt(config["base_prompt"])
 
-        # Set scene and notes directly
-        self.scene_text.delete("1.0", "end")
-        self.scene_text.insert("1.0", config.get("scene", ""))
-
-        self.notes_text.delete("1.0", "end")
-        self.notes_text.insert("1.0", config.get("notes", ""))
+        # Set scene and notes directly via panels
+        self.scene_panel.set_text(config.get("scene", ""))
+        self.notes_panel.set_text(config.get("notes", ""))
 
         self.schedule_preview_update()
         self._update_status("✨ Randomized successfully")
@@ -1454,8 +1225,8 @@ class PromptBuilderApp:
         return {
             "selected_characters": self.characters_tab.get_selected_characters(),
             "base_prompt": self.characters_tab.get_base_prompt_name(),
-            "scene": self.scene_text.get("1.0", "end").strip(),
-            "notes": self.notes_text.get("1.0", "end").strip(),
+            "scene": self.scene_panel.get_text(),
+            "notes": self.notes_panel.get_text(),
         }
 
     def _restore_state(self, state):
@@ -1476,12 +1247,10 @@ class PromptBuilderApp:
             self.characters_tab.set_base_prompt(base_prompt)
 
         # Restore scene
-        self.scene_text.delete("1.0", "end")
-        self.scene_text.insert("1.0", state.get("scene", ""))
+        self.scene_panel.set_text(state.get("scene", ""))
 
         # Restore notes
-        self.notes_text.delete("1.0", "end")
-        self.notes_text.insert("1.0", state.get("notes", ""))
+        self.notes_panel.set_text(state.get("notes", ""))
 
         self.update_preview()
 
@@ -1571,7 +1340,7 @@ class PromptBuilderApp:
         dialog.grab_set()
 
         ttk.Label(
-            dialog, text="Select pose to apply to all characters:", font=("Segoe UI", 10, "bold")
+            dialog, text="Select pose to apply to all characters:", font=("Lexend", 10, "bold")
         ).pack(pady=10, padx=10)
 
         frame = ttk.Frame(dialog)
@@ -1684,32 +1453,24 @@ class PromptBuilderApp:
                         "Could not delete temp file while replacing content", exc_info=True
                     )
 
-            # Clear scene and notes text
-            if hasattr(self, "scene_text"):
-                try:
-                    self.scene_text.delete("1.0", "end")
-                except Exception:
-                    from utils import logger as _logger
+            # Clear panels via their internal methods
+            try:
+                self.scene_panel.set_text("")
+            except Exception:
+                from utils import logger as _logger
+                _logger.debug("Failed to clear scene panel", exc_info=True)
 
-                    _logger.debug("Failed to clear scene text widget", exc_info=True)
-            if hasattr(self, "notes_text"):
-                try:
-                    self.notes_text.delete("1.0", "end")
-                except Exception:
-                    from utils import logger as _logger
+            try:
+                self.notes_panel.set_text("")
+            except Exception:
+                from utils import logger as _logger
+                _logger.debug("Failed to clear notes panel", exc_info=True)
 
-                    _logger.debug("Failed to clear notes text widget", exc_info=True)
-
-            # Clear summary text
-            if hasattr(self, "summary_text"):
-                try:
-                    self.summary_text.config(state="normal")
-                    self.summary_text.delete("1.0", "end")
-                    self.summary_text.config(state="disabled")
-                except Exception:
-                    from utils import logger as _logger
-
-                    _logger.debug("Failed to clear summary text widget", exc_info=True)
+            try:
+                self.summary_panel.set_text("")
+            except Exception:
+                from utils import logger as _logger
+                _logger.debug("Failed to clear summary panel", exc_info=True)
 
             # Clear selected characters
             if hasattr(self, "characters_tab"):
@@ -1756,7 +1517,11 @@ class PromptBuilderApp:
             if self.gallery_visible:
                 # Show gallery - insert at position 0 (leftmost)
                 try:
-                    self.main_paned.insert(0, self.gallery_frame, weight=2)
+                    panes = self.main_paned.panes()
+                    if panes:
+                        self.main_paned.add(self.gallery_frame, before=panes[0], width=300)
+                    else:
+                        self.main_paned.add(self.gallery_frame, width=300)
                     # Reload characters in case they changed
                     self.character_gallery.load_characters(self.characters)
                 except tk.TclError:

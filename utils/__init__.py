@@ -6,6 +6,9 @@ from .character_templates import get_template_description as get_character_templ
 from .character_templates import get_template_names as get_character_template_names
 from .file_ops import atomic_write, create_backup, safe_read
 from .logger import logger, setup_logger
+from .outfit_templates import get_template as get_outfit_template
+from .outfit_templates import get_template_description as get_outfit_template_description
+from .outfit_templates import get_template_names as get_outfit_template_names
 from .pose_templates import get_template as get_pose_template
 from .pose_templates import get_template_description as get_pose_template_description
 from .pose_templates import get_template_names as get_pose_template_names
@@ -46,6 +49,10 @@ __all__ = [
     "get_character_template_names",
     "get_character_template",
     "get_character_template_description",
+    # Outfit templates
+    "get_outfit_template_names",
+    "get_outfit_template",
+    "get_outfit_template_description",
     # Scene templates
     "get_scene_template_names",
     "get_scene_template",

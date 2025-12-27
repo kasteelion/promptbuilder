@@ -27,100 +27,514 @@ class DialogManager:
         """
         self.root = root
         self.prefs = preferences_manager
+        self.active_dialogs = [] # Track open dialogs for theme updates
+
+    def _register_dialog(self, dialog, apply_theme_fn=None):
+        """Helper to track open dialogs."""
+        self.active_dialogs.append({"window": dialog, "apply_theme": apply_theme_fn})
+        dialog.bind("<Destroy>", lambda e: self._unregister_dialog(dialog))
+
+    def _unregister_dialog(self, dialog):
+        self.active_dialogs = [d for d in self.active_dialogs if d["window"] != dialog]
+
+    def apply_theme(self, theme):
+        """Propagate theme changes to all open dialogs. (Refactor 3)"""
+        for d in self.active_dialogs:
+            if d["apply_theme"]:
+                try:
+                    d["apply_theme"](theme)
+                except Exception:
+                    pass
+
+    def show_info(self, title: str, message: str) -> None:
+        """Show an information dialog."""
+        messagebox.showinfo(title, message, parent=self.root)
+
+    def show_error(self, title: str, message: str) -> None:
+        """Show an error dialog."""
+        messagebox.showerror(title, message, parent=self.root)
+
+    def ask_yes_no(self, title: str, message: str) -> bool:
+        """Show a yes/no confirmation dialog."""
+        return messagebox.askyesno(title, message, parent=self.root)
+
+    def show_shortcuts(self) -> None:
+        """Show keyboard shortcuts dialog."""
+        dialog = tk.Toplevel(self.root)
+        dialog.title("KEYBOARD SHORTCUTS")
+        dialog.geometry("500x600")
+        dialog.transient(self.root)
+        
+        if hasattr(self.root, "theme_manager"):
+            self.root.theme_manager.theme_toplevel(dialog)
+
+        main_frame = ttk.Frame(dialog, padding=20)
+        main_frame.pack(fill="both", expand=True)
+
+        ttk.Label(main_frame, text="APPLICATION SHORTCUTS", style="Title.TLabel").pack(pady=(0, 15))
+
+        shortcuts = [
+            ("FILE", [
+                ("Ctrl + S", "Save Preset"),
+                ("Ctrl + O", "Load Preset"),
+                ("Ctrl + Shift + S", "Export Config"),
+                ("Ctrl + Shift + O", "Import Config"),
+            ]),
+            ("EDIT", [
+                ("Ctrl + Z", "Undo"),
+                ("Ctrl + Y", "Redo"),
+                ("Ctrl + G", "Toggle Gallery"),
+                ("Alt + R", "Randomize All"),
+            ]),
+            ("VIEW", [
+                ("Ctrl + Plus / =", "Increase Font Size"),
+                ("Ctrl + Minus", "Decrease Font Size"),
+                ("Ctrl + 0", "Reset Font Size"),
+            ])
+        ]
+
+        for category, items in shortcuts:
+            ttk.Label(main_frame, text=category, style="Bold.TLabel").pack(anchor="w", pady=(10, 5))
+            for key, desc in items:
+                row = ttk.Frame(main_frame)
+                row.pack(fill="x", pady=2)
+                ttk.Label(row, text=key, width=15).pack(side="left")
+                ttk.Label(row, text=desc, style="Muted.TLabel").pack(side="left")
+
+        ttk.Button(main_frame, text="CLOSE", command=dialog.destroy).pack(side="bottom", pady=10)
+
+    def show_about(self) -> None:
+        """Show about dialog."""
+        dialog = tk.Toplevel(self.root)
+        dialog.title("ABOUT PROMPT BUILDER")
+        dialog.geometry("450x400")
+        dialog.transient(self.root)
+        
+        if hasattr(self.root, "theme_manager"):
+            self.root.theme_manager.theme_toplevel(dialog)
+
+        main_frame = ttk.Frame(dialog, padding=30)
+        main_frame.pack(fill="both", expand=True)
+
+        ttk.Label(main_frame, text="PROMPT BUILDER", font=("Lexend", 18, "bold")).pack(pady=(0, 5))
+        ttk.Label(main_frame, text="v2.5.0", style="Muted.TLabel").pack(pady=(0, 20))
+
+        about_text = (
+            "A professional tool for creating complex, multi-character prompts "
+            "with consistent identity and outfit management.\n\n"
+            "Built with Python and Tkinter."
+        )
+        
+        lbl = ttk.Label(main_frame, text=about_text, wraplength=350, justify="center")
+        lbl.pack(pady=10)
+
+        ttk.Label(main_frame, text="© 2025 PromptBuilder Team", style="Muted.TLabel").pack(pady=(20, 0))
+        
+        ttk.Button(main_frame, text="CLOSE", command=dialog.destroy).pack(side="bottom", pady=10)
+
+    def show_text_import(self, available_chars: list, on_success: callable) -> None:
+        """Show natural language text import dialog."""
+        dialog = tk.Toplevel(self.root)
+        dialog.title("IMPORT FROM TEXT")
+        dialog.geometry("700x600")
+        dialog.transient(self.root)
+        dialog.grab_set()
+
+        if hasattr(self.root, "theme_manager"):
+            self.root.theme_manager.theme_toplevel(dialog)
+
+        main_frame = ttk.Frame(dialog, padding=20)
+        main_frame.pack(fill="both", expand=True)
+
+        ttk.Label(main_frame, text="PASTE PROMPT SUMMARY OR LLM BLOCK:", style="Title.TLabel").pack(anchor="w", pady=(0, 10))
+        
+        # Text Area
+        text_frame = ttk.Frame(main_frame, style="TFrame")
+        text_frame.pack(fill="both", expand=True, pady=5)
+        text_frame.columnconfigure(0, weight=1)
+        text_frame.rowconfigure(0, weight=1)
+
+        import_text = tk.Text(text_frame, wrap="word", font=("Lexend", 10), highlightthickness=0, borderwidth=0)
+        import_text.grid(row=0, column=0, sticky="nsew")
+        
+        scroll = ttk.Scrollbar(text_frame, orient="vertical", command=import_text.yview, style="Themed.Vertical.TScrollbar")
+        scroll.grid(row=0, column=1, sticky="ns")
+        import_text.configure(yscrollcommand=scroll.set)
+
+        help_text = "Supported: App summaries, interaction templates, and structured LLM config blocks."
+        ttk.Label(main_frame, text=help_text, style="Muted.TLabel").pack(anchor="w", pady=(10, 0))
+
+        btn_frame = ttk.Frame(main_frame)
+        btn_frame.pack(fill="x", pady=(15, 0))
+
+        def do_import():
+            raw_text = import_text.get("1.0", "end-1c").strip()
+            if not raw_text:
+                return
+            
+            from utils.text_parser import TextParser
+            try:
+                config = TextParser.parse_import_text(raw_text, available_chars)
+                if config["selected_characters"]:
+                    on_success(config)
+                    dialog.destroy()
+                else:
+                    self.show_error("Import Error", "No valid characters found in the provided text.")
+            except Exception as e:
+                self.show_error("Import Error", f"Failed to parse text: {str(e)}")
+
+        ttk.Button(btn_frame, text="IMPORT", command=do_import, style="TButton").pack(side="right")
+        ttk.Button(btn_frame, text="CANCEL", command=dialog.destroy).pack(side="right", padx=10)
+
+        def _apply(t):
+            self.root.theme_manager.apply_text_widget_theme(import_text, t)
+            
+        self._register_dialog(dialog, _apply)
+        _apply(self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}))
+
+    def show_llm_content_creation(self, ctx) -> None:
+        """Show segmented LLM prompts for creating new application content."""
+        from utils.llm_export import get_content_creation_prompts
+
+        dialog = tk.Toplevel(self.root)
+        dialog.title("LLM CONTENT CREATION GUIDE")
+        dialog.geometry("900x750")
+        dialog.transient(self.root)
+        dialog.grab_set()
+
+        if hasattr(self.root, "theme_manager"):
+            self.root.theme_manager.theme_toplevel(dialog)
+
+        main_frame = ttk.Frame(dialog, padding=20)
+        main_frame.pack(fill="both", expand=True)
+
+        ttk.Label(main_frame, text="SELECT A CONTENT CATEGORY TO GENERATE PROMPTS:", style="Title.TLabel").pack(anchor="w", pady=(0, 15))
+
+        prompts = get_content_creation_prompts(ctx)
+        
+        # Notebook for categories
+        nb = ttk.Notebook(main_frame, style="TNotebook")
+        nb.pack(fill="both", expand=True)
+
+        text_widgets = {}
+
+        for category, text in prompts.items():
+            tab = ttk.Frame(nb, style="TFrame")
+            nb.add(tab, text=category.upper())
+            
+            t_frame = ttk.Frame(tab, style="TFrame", padding=10)
+            t_frame.pack(fill="both", expand=True)
+            t_frame.columnconfigure(0, weight=1)
+            t_frame.rowconfigure(0, weight=1)
+
+            txt = tk.Text(t_frame, wrap="word", font=("Lexend", 9), highlightthickness=0, borderwidth=0)
+            txt.grid(row=0, column=0, sticky="nsew")
+            
+            sc = ttk.Scrollbar(t_frame, orient="vertical", command=txt.yview, style="Themed.Vertical.TScrollbar")
+            sc.grid(row=0, column=1, sticky="ns")
+            txt.configure(yscrollcommand=sc.set)
+            
+            txt.insert("1.0", text)
+            txt.config(state="disabled")
+            text_widgets[category] = txt
+
+        btn_frame = ttk.Frame(main_frame)
+        btn_frame.pack(fill="x", pady=(15, 0))
+
+        def copy_current():
+            current_tab = nb.tab(nb.select(), "text").title()
+            # Handle the title casing difference
+            for cat, text in prompts.items():
+                if cat.upper() == current_tab.upper():
+                    self.root.clipboard_clear()
+                    self.root.clipboard_append(text)
+                    self.show_info("Copied", f"{cat} prompt copied to clipboard!")
+                    break
+
+        ttk.Button(btn_frame, text="📋 COPY CURRENT TAB", command=copy_current).pack(side="right")
+        ttk.Button(btn_frame, text="CLOSE", command=dialog.destroy).pack(side="right", padx=10)
+
+        def _apply(t):
+            for tw in text_widgets.values():
+                self.root.theme_manager.apply_text_widget_theme(tw, t)
+            
+        self._register_dialog(dialog, _apply)
+        _apply(self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}))
+
+    def show_outfits_summary(self) -> None:
+        """Show the interactive outfit library explorer."""
+        try:
+            from utils.outfit_summary import generate_consolidated_outfit_data
+            
+            data = generate_consolidated_outfit_data()
+            
+            dialog = tk.Toplevel(self.root)
+            dialog.title("OUTFIT LIBRARY EXPLORER")
+            dialog.geometry("1000x700")
+            dialog.transient(self.root)
+            
+            if hasattr(self.root, "theme_manager"):
+                self.root.theme_manager.theme_toplevel(dialog)
+
+            main_frame = ttk.Frame(dialog, padding=20)
+            main_frame.pack(fill="both", expand=True)
+
+            # Left side: Category/Outfit List
+            # Right side: Details
+            paned = tk.PanedWindow(main_frame, orient="horizontal", bd=0, sashwidth=6, sashrelief="flat")
+            paned.pack(fill="both", expand=True)
+
+            list_frame = ttk.Frame(paned, style="TFrame")
+            paned.add(list_frame, width=350)
+
+            detail_frame = ttk.Frame(paned, style="TFrame")
+            paned.add(detail_frame)
+
+            # Search
+            search_var = tk.StringVar()
+            ttk.Entry(list_frame, textvariable=search_var, style="TEntry").pack(fill="x", pady=(0, 10))
+
+            tree = ttk.Treeview(list_frame, columns=("Indicators"), show="tree", selectmode="browse")
+            tree.pack(side="left", fill="both", expand=True)
+            
+            vsb = ttk.Scrollbar(list_frame, orient="vertical", command=tree.yview)
+            vsb.pack(side="right", fill="y")
+            tree.configure(yscrollcommand=vsb.set)
+
+            # Detail area
+            detail_text = tk.Text(detail_frame, wrap="word", font=("Lexend", 10), padx=20, pady=20, borderwidth=0)
+            detail_text.pack(fill="both", expand=True)
+            
+            def populate_tree():
+                tree.delete(*tree.get_children())
+                search = search_var.get().lower()
+                
+                for cat in sorted(data.keys()):
+                    cat_id = tree.insert("", "end", text=cat.upper(), open=True)
+                    for out_name in sorted(data[cat].keys()):
+                        if search and search not in out_name.lower() and search not in cat.lower():
+                            continue
+                        
+                        out_data = data[cat][out_name]
+                        indicators = []
+                        if out_data["has_color_scheme"]: indicators.append("🎨")
+                        if out_data["has_signature"]: indicators.append("✨")
+                        
+                        tree.insert(cat_id, "end", text=out_name, values=(" ".join(indicators),), tags=(out_name, cat))
+
+            def on_select(event):
+                selection = tree.selection()
+                if not selection: return
+                
+                item = tree.item(selection[0])
+                name = item["text"]
+                # Skip category headers
+                if not item["tags"]: return
+                
+                cat = item["tags"][1]
+                out_data = data[cat][name]
+                
+                detail_text.config(state="normal")
+                detail_text.delete("1.0", "end")
+                
+                detail_text.insert("end", f"{name.upper()}\n", "title")
+                detail_text.insert("end", f"Category: {cat}\n\n", "muted")
+                
+                for mod, desc in out_data["variations"].items():
+                    mod_name = {"F": "Female", "M": "Male", "H": "Hijabi"}.get(mod, mod)
+                    detail_text.insert("end", f"--- {mod_name} Variation ---\n", "bold")
+                    detail_text.insert("end", f"{desc}\n\n")
+                
+                detail_text.config(state="disabled")
+
+            tree.bind("<<TreeviewSelect>>", on_select)
+            search_var.trace_add("write", lambda *args: populate_tree())
+
+            # Formatting tags
+            detail_text.tag_configure("title", font=("Lexend", 14, "bold"), foreground=self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}).get("accent", "#0078d7"))
+            detail_text.tag_configure("bold", font=("Lexend", 10, "bold"))
+            detail_text.tag_configure("muted", foreground="gray")
+
+            populate_tree()
+            
+            def _apply(t):
+                self.root.theme_manager.apply_text_widget_theme(detail_text, t)
+                paned.config(bg=t.get("border", "#333333"))
+            
+            self._register_dialog(dialog, _apply)
+            _apply(self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}))
+
+        except Exception as e:
+            self.show_error("Explorer Error", f"Failed to load outfit data: {str(e)}")
+
+    def show_color_schemes_summary(self) -> None:
+        """Show color schemes summary dialog."""
+        dialog = tk.Toplevel(self.root)
+        dialog.title("COLOR SCHEMES CATALOG")
+        dialog.geometry("600x700")
+        dialog.transient(self.root)
+        
+        if hasattr(self.root, "theme_manager"):
+            self.root.theme_manager.theme_toplevel(dialog)
+
+        main_frame = ttk.Frame(dialog, padding=20)
+        main_frame.pack(fill="both", expand=True)
+
+        ttk.Label(main_frame, text="AVAILABLE TEAM COLOR SCHEMES", style="Title.TLabel").pack(pady=(0, 15))
+
+        # Use canvas for scrollable list of schemes
+        canvas = tk.Canvas(main_frame, highlightthickness=0)
+        scrollbar = ttk.Scrollbar(main_frame, orient="vertical", command=canvas.yview)
+        scrollable_frame = ttk.Frame(canvas)
+
+        scrollable_frame.bind(
+            "<Configure>",
+            lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+        )
+
+        canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+        canvas.configure(yscrollcommand=scrollbar.set)
+
+        canvas.pack(side="left", fill="both", expand=True)
+        scrollbar.pack(side="right", fill="y")
+
+        # Load schemes
+        from logic.data_loader import DataLoader
+        loader = DataLoader()
+        schemes = loader.load_color_schemes()
+
+        for name, colors in sorted(schemes.items()):
+            scheme_frame = ttk.LabelFrame(scrollable_frame, text=f" {name.upper()} ", padding=10)
+            scheme_frame.pack(fill="x", padx=10, pady=10)
+            
+            for key, val in colors.items():
+                row = ttk.Frame(scheme_frame)
+                row.pack(fill="x", pady=2)
+                ttk.Label(row, text=f"{key.capitalize()}:", width=15).pack(side="left")
+                
+                # Color Swatch
+                try:
+                    swatch = tk.Frame(row, width=20, height=20, bg=val, highlightthickness=1, highlightbackground="gray")
+                    swatch.pack(side="left", padx=5)
+                except: pass
+                
+                ttk.Label(row, text=val, style="Muted.TLabel").pack(side="left")
+
+        ttk.Button(main_frame, text="CLOSE", command=dialog.destroy).pack(side="bottom", pady=10)
+
+    def _copy_detail(self, text_widget):
+        """Helper to copy text from a widget."""
+        content = text_widget.get("1.0", "end-1c")
+        if content:
+            self.root.clipboard_clear()
+            self.root.clipboard_append(content)
+            self.show_info("Copied", "Content copied to clipboard!")
+
 
     def show_welcome(self) -> None:
         """Show welcome dialog for first-time users."""
         dialog = tk.Toplevel(self.root)
-        dialog.title("Welcome to Prompt Builder!")
-        dialog.geometry("600x500")
+        dialog.title("WELCOME TO PROMPT BUILDER!") # Refactor 5: UPPERCASE
+        dialog.geometry("600x550")
         dialog.transient(self.root)
         dialog.grab_set()
 
+        # Theme colors
+        try:
+            tm = self.root.theme_manager
+            theme = tm.themes.get(tm.current_theme, {})
+        except: theme = {}
+
+        # Apply basic top-level theme
+        if hasattr(self.root, "theme_manager"):
+            self.root.theme_manager.theme_toplevel(dialog, theme)
+
         # Welcome text
-        text = scrolledtext.ScrolledText(dialog, wrap="word", font=("Segoe UI", 10))
-        text.pack(fill="both", expand=True, padx=10, pady=10)
+        text_frame = ttk.Frame(dialog, style="TFrame")
+        text_frame.pack(fill="both", expand=True, padx=15, pady=15)
+        text_frame.columnconfigure(0, weight=1)
+        text_frame.rowconfigure(0, weight=1)
+
+        text = tk.Text(text_frame, wrap="word", font=("Lexend", 10), highlightthickness=0, borderwidth=0)
+        text.grid(row=0, column=0, sticky="nsew")
+        
+        scroll = ttk.Scrollbar(text_frame, orient="vertical", command=text.yview, style="Themed.Vertical.TScrollbar")
+        scroll.grid(row=0, column=1, sticky="ns")
+        text.configure(yscrollcommand=scroll.set)
+        
         text.insert("1.0", WELCOME_MESSAGE)
         text.config(state="disabled")
 
         # Don't show again checkbox
         show_again_var = tk.BooleanVar(value=False)
-        chk = ttk.Checkbutton(dialog, text="Don't show this again", variable=show_again_var)
-        chk.pack(pady=(0, 10))
+        pill_frame = tk.Frame(dialog, bg=theme.get("accent", "#0078d7"), padx=1, pady=1)
+        pill_frame.pack(pady=(0, 15))
+        
+        chk_lbl = tk.Label(
+            pill_frame, text="DON'T SHOW THIS AGAIN", bg=theme.get("panel_bg", "#1e1e1e"),
+            fg=theme.get("accent", "#0078d7"), font=("Lexend", 8, "bold"), padx=10, pady=2, cursor="hand2"
+        )
+        chk_lbl.pack()
+        
+        def toggle_again(e):
+            new_val = not show_again_var.get()
+            show_again_var.set(new_val)
+            chk_lbl.config(text="✓ DON'T SHOW THIS AGAIN" if new_val else "DON'T SHOW THIS AGAIN")
+
+        chk_lbl.bind("<Button-1>", toggle_again)
 
         def on_close():
             if show_again_var.get():
                 self.prefs.set("show_welcome", False)
             dialog.destroy()
 
-        ttk.Button(dialog, text="Get Started!", command=on_close).pack(pady=(0, 10))
+        # Get started button (Primary)
+        btn = ttk.Button(dialog, text="GET STARTED!", command=on_close, style="TButton")
+        btn.pack(pady=(0, 20))
 
+        def _apply(t):
+            self.root.theme_manager.apply_text_widget_theme(text, t)
+            pill_frame.config(bg=t.get("accent", "#0078d7"))
+            chk_lbl.config(bg=t.get("panel_bg", "#1e1e1e"), fg=t.get("accent", "#0078d7"))
+            
+        self._register_dialog(dialog, _apply)
+        _apply(theme)
         dialog.wait_window()
 
-    def show_shortcuts(self) -> None:
-        """Show keyboard shortcuts dialog."""
-        shortcuts = """
-Keyboard Shortcuts
-
-File Operations:
-  Ctrl+Shift+S    Save Preset
-  Ctrl+Shift+O    Load Preset
-
-Editing:
-  Ctrl+Z          Undo
-  Ctrl+Y          Redo
-
-View:
-  Ctrl+G          Toggle Character Gallery
-  Ctrl++          Increase Font Size
-  Ctrl+-          Decrease Font Size
-  Ctrl+0          Reset Font Size
-  Alt+R           Randomize All
-
-Preview Panel:
-  Ctrl+C          Copy Prompt
-  Ctrl+S          Save Prompt to File
-
-Navigation:
-  Tab             Navigate between fields
-  Enter           Add character/Apply selection
-  Del             Remove selected character
-"""
-        messagebox.showinfo("Keyboard Shortcuts", shortcuts)
-
-    def show_about(self) -> None:
-        """Show about dialog."""
-        about_text = f"""Prompt Builder
-Version 2.0
-
-A desktop application for building complex AI image prompts.
-
-Python {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}
-Platform: {platform.system()} {platform.release()}
-
-© 2025 - Open Source
-"""
-        messagebox.showinfo("About Prompt Builder", about_text)
-
-    def show_llm_export(self, ctx: Any) -> None:
+    def show_llm_export(self, ctx) -> None:
         """Show dialog with condensed app data for LLM context injection."""
         from utils.llm_export import generate_llm_export_text
 
         dialog = tk.Toplevel(self.root)
-        dialog.title("Export for LLM Context")
+        dialog.title("EXPORT FOR LLM CONTEXT")
         dialog.geometry("800x700")
         dialog.transient(self.root)
         dialog.grab_set()
 
+        # Apply basic top-level theme
+        if hasattr(self.root, "theme_manager"):
+            self.root.theme_manager.theme_toplevel(dialog)
+
         main_frame = ttk.Frame(dialog, padding=15)
         main_frame.pack(fill="both", expand=True)
 
-        ttk.Label(main_frame, text="Copy the context below and paste it into your LLM (Gemini, GPT, etc.):", style="Bold.TLabel").pack(anchor="w", pady=(0, 5))
+        ttk.Label(main_frame, text="COPY THE CONTEXT BELOW AND PASTE IT INTO YOUR LLM:", style="Title.TLabel").pack(anchor="w", pady=(0, 5))
         
         info_text = "This contains your character list, outfit names, poses, and parsing instructions."
         ttk.Label(main_frame, text=info_text, style="Muted.TLabel").pack(anchor="w", pady=(0, 10))
 
-        text_area = scrolledtext.ScrolledText(main_frame, wrap="word", font=("Consolas", 9))
-        text_area.pack(fill="both", expand=True, pady=5)
+        # Refactor 3: Themed Text + Scrollbar
+        text_frame = ttk.Frame(main_frame, style="TFrame")
+        text_frame.pack(fill="both", expand=True, pady=5)
+        text_frame.columnconfigure(0, weight=1)
+        text_frame.rowconfigure(0, weight=1)
+
+        text_area = tk.Text(text_frame, wrap="word", font=("Lexend", 9), highlightthickness=0, borderwidth=0)
+        text_area.grid(row=0, column=0, sticky="nsew")
+        
+        scroll = ttk.Scrollbar(text_frame, orient="vertical", command=text_area.yview, style="Themed.Vertical.TScrollbar")
+        scroll.grid(row=0, column=1, sticky="ns")
+        text_area.configure(yscrollcommand=scroll.set)
         
         # Generate and insert text
         export_text = generate_llm_export_text(ctx)
@@ -135,129 +549,40 @@ Platform: {platform.system()} {platform.release()}
             self.root.clipboard_append(export_text)
             self.show_info("Copied", "Context copied to clipboard!")
 
-        ttk.Button(btn_frame, text="Close", command=dialog.destroy).pack(side="right", padx=(5, 0))
-        ttk.Button(btn_frame, text="📋 Copy Context", command=copy_to_clipboard).pack(side="right")
-
-        dialog.wait_window()
-
-    def show_llm_content_creation(self, ctx: Any) -> None:
-        """Show dialog with instructions for LLMs to create new app content."""
-        from utils.llm_export import get_content_creation_prompts
-
-        dialog = tk.Toplevel(self.root)
-        dialog.title("LLM Content Creation Guide")
-        dialog.geometry("900x750")
-        dialog.transient(self.root)
-        dialog.grab_set()
-
-        # Generate prompts dictionary
-        prompts = get_content_creation_prompts(ctx)
-
-        # Header info
-        header_frame = ttk.Frame(dialog, padding=15)
-        header_frame.pack(fill="x")
-        
-        ttk.Label(header_frame, text="Copy a guide below to an LLM to generate compatible content:", style="Bold.TLabel").pack(anchor="w", pady=(0, 5))
-        ttk.Label(header_frame, text="Select the tab that matches the type of content you want to create.", style="Muted.TLabel").pack(anchor="w")
-
-        # Notebook for sections
-        notebook = ttk.Notebook(dialog)
-        notebook.pack(fill="both", expand=True, padx=10, pady=5)
-
-        def create_tab(name, content):
-            tab = ttk.Frame(notebook)
-            notebook.add(tab, text=name)
-            
-            # Content frame
-            content_frame = ttk.Frame(tab, padding=10)
-            content_frame.pack(fill="both", expand=True)
-            
-            text_area = scrolledtext.ScrolledText(content_frame, wrap="word", font=("Consolas", 9))
-            text_area.pack(fill="both", expand=True, pady=5)
-            text_area.insert("1.0", content)
-            text_area.config(state="disabled")
-            
-            btn_frame = ttk.Frame(content_frame)
-            btn_frame.pack(fill="x", pady=(5, 0))
-            
-            def copy_this():
-                self.root.clipboard_clear()
-                self.root.clipboard_append(content)
-                self.show_info("Copied", f"{name} Guide copied to clipboard!")
-                
-            ttk.Button(btn_frame, text=f"📋 Copy {name} Guide", command=copy_this).pack(side="right")
-
-        # Create tabs in specific order
-        if "Full Guide" in prompts:
-            create_tab("Full Guide", prompts["Full Guide"])
-            
-        for key in ["Characters", "Outfits", "Poses & Interactions", "Scenes", "Base Prompts"]:
-            if key in prompts:
-                create_tab(key, prompts[key])
-
-        # Bottom close button
-        bottom_frame = ttk.Frame(dialog, padding=10)
-        bottom_frame.pack(fill="x")
-        ttk.Button(bottom_frame, text="Close", command=dialog.destroy).pack(side="right")
-
-        dialog.wait_window()
-
-    def show_text_import(self, available_characters: list, on_success: Callable[[dict], None]) -> None:
-        """Show dialog to import prompt configuration from text."""
-        from utils.text_parser import TextParser
-
-        dialog = tk.Toplevel(self.root)
-        dialog.title("Import Prompt from Text")
-        dialog.geometry("600x500")
-        dialog.transient(self.root)
-        dialog.grab_set()
-
-        main_frame = ttk.Frame(dialog, padding=15)
-        main_frame.pack(fill="both", expand=True)
-
-        ttk.Label(main_frame, text="Paste your prompt configuration below:", style="Bold.TLabel").pack(anchor="w", pady=(0, 5))
-        
-        help_text = "Supported formats:\n• [1] Name (Outfit, Pose)\n• [1] Name\\nOutfit: Name\\nPose: Name\\n...\n• 🎬 Scene description\\n📝 Interaction notes"
-        ttk.Label(main_frame, text=help_text, style="Muted.TLabel", justify="left").pack(anchor="w", pady=(0, 10))
-
-        text_area = scrolledtext.ScrolledText(main_frame, wrap="word", font=("Consolas", 10))
-        text_area.pack(fill="both", expand=True, pady=5)
-        text_area.focus_set()
-
-        btn_frame = ttk.Frame(main_frame)
-        btn_frame.pack(fill="x", pady=(10, 0))
-
-        def do_import():
-            raw_text = text_area.get("1.0", "end-1c").strip()
-            if not raw_text:
-                messagebox.showwarning("Empty Input", "Please paste some text to import.")
-                return
-
+        # Helper for Pill buttons in dialogs
+        def add_dialog_pill(parent, text, command):
             try:
-                config = TextParser.parse_import_text(raw_text, available_characters)
+                tm = self.root.theme_manager
+                theme = tm.themes.get(tm.current_theme, {})
+                accent = theme.get("accent", "#0078d7")
+                pbg = theme.get("panel_bg", "#1e1e1e")
+            except:
+                accent = "#0078d7"
+                pbg = "#1e1e1e"
                 
-                char_count = len(config.get("selected_characters", []))
-                if char_count == 0 and not config.get("scene") and not config.get("notes"):
-                    messagebox.showwarning("No Data Found", "Could not identify any characters, scenes, or notes in the text.")
-                    return
+            frame = tk.Frame(parent, bg=accent, padx=1, pady=1)
+            lbl = tk.Label(
+                frame, text=text, bg=pbg, fg=accent,
+                font=("Lexend", 8, "bold"), padx=12, pady=3, cursor="hand2"
+            )
+            lbl.pack()
+            lbl.bind("<Button-1>", lambda e: command())
+            lbl.bind("<Enter>", lambda e: lbl.config(bg=self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}).get("hover_bg", "#333333")))
+            lbl.bind("<Leave>", lambda e: lbl.config(bg=getattr(lbl, "_base_bg", "#1e1e1e")))
+            return frame, lbl
 
-                # Confirm with user
-                summary = f"Detected:\n• {char_count} character(s)"
-                if config.get("scene"): summary += "\n• Scene description"
-                if config.get("notes"): summary += "\n• Interaction notes"
-                summary += "\n\nApply this configuration? (This will overwrite current selection)"
+        close_pill, _ = add_dialog_pill(btn_frame, "CLOSE", dialog.destroy)
+        close_pill.pack(side="right", padx=(10, 0))
+        
+        copy_pill, _ = add_dialog_pill(btn_frame, "📋 COPY CONTEXT", copy_to_clipboard)
+        copy_pill.pack(side="right")
 
-                if messagebox.askyesno("Import Confirmation", summary, parent=dialog):
-                    on_success(config)
-                    dialog.destroy()
-            except Exception as e:
-                from utils import logger
-                logger.exception("Error during text import")
-                messagebox.showerror("Import Error", f"Failed to parse text: {e}", parent=dialog)
-
-        ttk.Button(btn_frame, text="Cancel", command=dialog.destroy).pack(side="right", padx=(5, 0))
-        ttk.Button(btn_frame, text="Import Configuration", command=do_import).pack(side="right")
-
+        def _apply(t):
+            self.root.theme_manager.apply_text_widget_theme(text_area, t)
+            # Add logic here if we tracked the pills
+            
+        self._register_dialog(dialog, _apply)
+        _apply(self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}))
         dialog.wait_window()
 
     def show_characters_summary(self, callback: Optional[Callable[[], str]] = None) -> None:
@@ -280,122 +605,155 @@ Platform: {platform.system()} {platform.release()}
             
             # Create a dialog
             dialog = tk.Toplevel(self.root)
-            dialog.title("Character Explorer & Summary")
+            dialog.title("CHARACTER EXPLORER & SUMMARY")
             dialog.geometry("1100x750")
             dialog.minsize(900, 600)
 
+            # Apply basic top-level theme
+            if hasattr(self.root, "theme_manager"):
+                self.root.theme_manager.theme_toplevel(dialog)
+
             # --- Layout ---
             # Top: Search and Stats
-            top_frame = ttk.Frame(dialog, padding=(10, 10, 10, 0))
+            top_frame = ttk.Frame(dialog, padding=(15, 15, 15, 0))
             top_frame.pack(fill="x")
 
             # Middle: Paned window for list and detail
-            paned = ttk.PanedWindow(dialog, orient="horizontal")
-            paned.pack(fill="both", expand=True, padx=10, pady=10)
+            # Refactor 1: Invisible Splitter
+            try:
+                tm = self.root.theme_manager
+                theme = tm.themes.get(tm.current_theme, {})
+                pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            except: pbg = "#1e1e1e"
+
+            paned = tk.PanedWindow(dialog, orient="horizontal", bg=pbg, bd=0, sashwidth=6, sashrelief="flat")
+            paned.pack(fill="both", expand=True, padx=15, pady=15)
 
             # Left: Character list
-            list_side = ttk.Frame(paned)
-            paned.add(list_side, weight=1)
+            list_side = ttk.Frame(paned, style="TFrame")
+            paned.add(list_side, width=300)
 
             # Right: Detail view
-            detail_side = ttk.Frame(paned)
-            paned.add(detail_side, weight=2)
+            detail_side = ttk.Frame(paned, style="TFrame")
+            paned.add(detail_side)
 
             # --- Search & Filters ---
             search_frame = ttk.Frame(top_frame)
             search_frame.pack(side="left", fill="x", expand=True)
 
-            ttk.Label(search_frame, text="🔍 Search:").pack(side="left")
+            ttk.Label(search_frame, text="🔍 SEARCH:", style="Bold.TLabel").pack(side="left")
             search_var = tk.StringVar()
-            search_entry = ttk.Entry(search_frame, textvariable=search_var)
-            search_entry.pack(side="left", fill="x", expand=True, padx=5)
+            search_entry = ttk.Entry(search_frame, textvariable=search_var, style="TEntry")
+            search_entry.pack(side="left", fill="x", expand=True, padx=10)
 
-            ttk.Label(search_frame, text="🏷️ Tag:").pack(side="left", padx=(10, 0))
+            ttk.Label(search_frame, text="🏷️ TAG:", style="Bold.TLabel").pack(side="left", padx=(10, 0))
             tag_var = tk.StringVar(value="All")
             # Get all unique tags
             all_tags = set()
             for c in all_chars:
                 for t in c.get("tags", []):
                     all_tags.add(t)
-            tag_combo = ttk.Combobox(search_frame, textvariable=tag_var, values=["All"] + sorted(list(all_tags)), state="readonly", width=15)
-            tag_combo.pack(side="left", padx=5)
+            tag_combo = ttk.Combobox(search_frame, textvariable=tag_var, values=["All"] + sorted(list(all_tags)), state="readonly", width=15, font=("Lexend", 9))
+            tag_combo.pack(side="left", padx=10)
 
             fav_only_var = tk.BooleanVar(value=False)
-            fav_chk = ttk.Checkbutton(search_frame, text="⭐ Favorites Only", variable=fav_only_var)
+            fav_chk = ttk.Checkbutton(search_frame, text="⭐ FAVORITES ONLY", variable=fav_only_var, style="TCheckbutton")
             fav_chk.pack(side="left", padx=10)
 
             # --- Stats ---
             stats_frame = ttk.Frame(top_frame)
             stats_frame.pack(side="right")
-            stats_label = ttk.Label(stats_frame, text=f"Total: {len(all_chars)}", font=(None, 9, "bold"))
+            stats_label = ttk.Label(stats_frame, text=f"TOTAL: {len(all_chars)}", style="Title.TLabel")
             stats_label.pack(side="right")
 
             # --- List Side ---
             list_header = ttk.Frame(list_side)
-            list_header.pack(fill="x", pady=(0, 5))
-            ttk.Label(list_header, text="Characters", font=(None, 10, "bold")).pack(side="left")
+            list_header.pack(fill="x", pady=(0, 10))
+            ttk.Label(list_header, text="CHARACTERS", style="Title.TLabel").pack(side="left")
 
-            char_listbox = tk.Listbox(list_side, font=("Segoe UI", 10), selectmode="single", exportselection=False)
+            char_listbox = tk.Listbox(list_side, font=("Lexend", 10), selectmode="single", exportselection=False, borderwidth=0, highlightthickness=0)
             char_listbox.pack(side="left", fill="both", expand=True)
             
-            list_scroll = ttk.Scrollbar(list_side, orient="vertical", command=char_listbox.yview)
+            list_scroll = ttk.Scrollbar(list_side, orient="vertical", command=char_listbox.yview, style="Themed.Vertical.TScrollbar")
             list_scroll.pack(side="right", fill="y")
             char_listbox.config(yscrollcommand=list_scroll.set)
 
             # --- Detail Side ---
-            detail_notebook = ttk.Notebook(detail_side)
+            detail_notebook = ttk.Notebook(detail_side, style="TNotebook")
             detail_notebook.pack(fill="both", expand=True)
 
             # Tab 1: Formatted Preview
-            preview_tab = ttk.Frame(detail_notebook)
-            detail_notebook.add(preview_tab, text="📄 Details")
+            preview_tab = ttk.Frame(detail_notebook, style="TFrame")
+            detail_notebook.add(preview_tab, text="📄 DETAILS")
 
-            # Tab 2: Full Text Summary (the original feature)
-            full_text_tab = ttk.Frame(detail_notebook)
-            detail_notebook.add(full_text_tab, text="📝 Full Summary")
+            # Tab 2: Full Text Summary
+            full_text_tab = ttk.Frame(detail_notebook, style="TFrame")
+            detail_notebook.add(full_text_tab, text="📝 FULL SUMMARY")
 
             # --- Preview Tab Content ---
-            preview_scroll_frame = ttk.Frame(preview_tab)
+            preview_scroll_frame = ttk.Frame(preview_tab, style="TFrame")
             preview_scroll_frame.pack(fill="both", expand=True)
 
-            preview_scroll = ttk.Scrollbar(preview_scroll_frame)
+            preview_scroll = ttk.Scrollbar(preview_scroll_frame, orient="vertical", style="Themed.Vertical.TScrollbar")
             preview_scroll.pack(side="right", fill="y")
 
-            preview_text = tk.Text(preview_scroll_frame, wrap="word", yscrollcommand=preview_scroll.set, font=("Segoe UI", 10), state="disabled", padx=15, pady=15)
+            preview_text = tk.Text(preview_scroll_frame, wrap="word", font=("Lexend", 10), highlightthickness=0, borderwidth=0, padx=20, pady=20)
             preview_text.pack(side="left", fill="both", expand=True)
             preview_scroll.config(command=preview_text.yview)
+            preview_text.configure(yscrollcommand=preview_scroll.set)
 
             # Control buttons for preview
-            preview_btns = ttk.Frame(preview_tab)
-            preview_btns.pack(fill="x", pady=5)
+            preview_btns = ttk.Frame(preview_tab, style="TFrame")
+            preview_btns.pack(fill="x", pady=15)
             
-            fav_btn_var = tk.StringVar(value="☆ Favorite")
-            fav_btn = ttk.Button(preview_btns, textvariable=fav_btn_var)
-            fav_btn.pack(side="left", padx=10)
+            # Helper for dialog pills
+            def add_pill(parent, text, command):
+                try:
+                    style = ttk.Style()
+                    accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
+                    bg = style.lookup("TFrame", "background")
+                except: accent = "#0078d7"; bg = "#1e1e1e"
+                
+                f = tk.Frame(parent, bg=accent, padx=1, pady=1)
+                l = tk.Label(f, text=text, bg=bg, fg=accent, font=("Lexend", 8, "bold"), padx=12, pady=3, cursor="hand2")
+                l.pack()
+                l.bind("<Button-1>", lambda e: command())
+                l.bind("<Enter>", lambda e: l.config(bg=self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}).get("hover_bg", "#333333")))
+                l.bind("<Leave>", lambda e: l.config(bg=getattr(l, "_base_bg", "#1e1e1e")))
+                return f, l
 
-            copy_btn = ttk.Button(preview_btns, text="📋 Copy Details", command=lambda: self._copy_detail(preview_text))
-            copy_btn.pack(side="left")
+            fav_btn_var = tk.StringVar(value="☆ FAVORITE")
+            def _fav_toggle():
+                toggle_fav()
+                
+            fav_pill_frame, fav_pill_lbl = add_pill(preview_btns, "☆ FAVORITE", _fav_toggle)
+            fav_pill_frame.pack(side="left", padx=(15, 10))
+
+            def _copy(): self._copy_detail(preview_text)
+            copy_pill_frame, _ = add_pill(preview_btns, "📋 COPY DETAILS", _copy)
+            copy_pill_frame.pack(side="left")
 
             # --- Full Text Tab Content ---
-            full_text_frame = ttk.Frame(full_text_tab)
+            full_text_frame = ttk.Frame(full_text_tab, style="TFrame")
             full_text_frame.pack(fill="both", expand=True, padx=5, pady=5)
             
-            full_text_scroll = ttk.Scrollbar(full_text_frame)
+            full_text_scroll = ttk.Scrollbar(full_text_frame, orient="vertical", style="Themed.Vertical.TScrollbar")
             full_text_scroll.pack(side="right", fill="y")
             
-            full_text_widget = tk.Text(full_text_frame, wrap="word", yscrollcommand=full_text_scroll.set, font=("Consolas", 10), state="disabled")
+            full_text_widget = tk.Text(full_text_frame, wrap="word", font=("Lexend", 10), highlightthickness=0, borderwidth=0, padx=15, pady=15)
             full_text_widget.pack(side="left", fill="both", expand=True)
             full_text_scroll.config(command=full_text_widget.yview)
+            full_text_widget.configure(yscrollcommand=full_text_scroll.set)
 
             # Filter options for full summary
-            full_filter_frame = ttk.Frame(full_text_tab)
-            full_filter_frame.pack(fill="x", pady=5)
+            full_filter_frame = ttk.Frame(full_text_tab, style="TFrame")
+            full_filter_frame.pack(fill="x", pady=15)
             
             full_include_base = tk.BooleanVar(value=True)
-            ttk.Checkbutton(full_filter_frame, text="Base Outfit", variable=full_include_base).pack(side="left", padx=5)
+            ttk.Checkbutton(full_filter_frame, text="BASE OUTFIT", variable=full_include_base, style="TCheckbutton").pack(side="left", padx=15)
             
             full_include_style = tk.BooleanVar(value=True)
-            ttk.Checkbutton(full_filter_frame, text="Style Notes", variable=full_include_style).pack(side="left", padx=5)
+            ttk.Checkbutton(full_filter_frame, text="STYLE NOTES", variable=full_include_style, style="TCheckbutton").pack(side="left", padx=15)
 
             def refresh_full_summary(*args):
                 new_sum = generate_summary(
@@ -439,7 +797,7 @@ Platform: {platform.system()} {platform.release()}
                     prefix = "★ " if is_fav else "  "
                     char_listbox.insert(tk.END, f"{prefix}{c['name']}")
                 
-                stats_label.config(text=f"Showing: {len(filtered_chars)} / {len(all_chars)}")
+                stats_label.config(text=f"SHOWING: {len(filtered_chars)} / {len(all_chars)}")
                 if filtered_chars:
                     char_listbox.selection_set(0)
                     on_select()
@@ -457,7 +815,7 @@ Platform: {platform.system()} {platform.release()}
                 preview_text.delete("1.0", "end")
                 
                 # Use tags for formatting
-                preview_text.insert("end", f"{char['name']}\n", "title")
+                preview_text.insert("end", f"{char['name'].upper()}\n", "title")
                 preview_text.insert("end", "=" * 40 + "\n\n", "separator")
                 
                 if char.get("summary"):
@@ -484,7 +842,7 @@ Platform: {platform.system()} {platform.release()}
                     sig_color = char['signature_color']
                     preview_text.insert("end", f"{sig_color}  ", "normal")
                     # Add a colored tag
-                    preview_text.tag_configure("sig_bg", background=sig_color, foreground="white" if not sig_color.upper().startswith("#F") and not sig_color.upper().startswith("#E") else "black", font=("Consolas", 10, "bold"))
+                    preview_text.tag_configure("sig_bg", background=sig_color, foreground="white" if not sig_color.upper().startswith("#F") and not sig_color.upper().startswith("#E") else "black", font=("Lexend", 10, "bold"))
                     preview_text.insert("end", "   COLOR   ", "sig_bg")
                     preview_text.insert("end", "\n")
 
@@ -493,9 +851,9 @@ Platform: {platform.system()} {platform.release()}
                 # Update Favorite Button
                 favs = self.prefs.get("favorite_characters", []) if self.prefs else []
                 if char["name"] in favs:
-                    fav_btn_var.set("★ Unfavorite")
+                    fav_pill_lbl.config(text="★ UNFAVORITE")
                 else:
-                    fav_btn_var.set("☆ Favorite")
+                    fav_pill_lbl.config(text="☆ FAVORITE")
 
             def toggle_fav():
                 selection = char_listbox.curselection()
@@ -516,24 +874,29 @@ Platform: {platform.system()} {platform.release()}
             tag_var.trace_add("write", update_list)
             fav_only_var.trace_add("write", update_list)
             char_listbox.bind("<<ListboxSelect>>", on_select)
-            fav_btn.config(command=toggle_fav)
             
             full_include_base.trace_add("write", refresh_full_summary)
             full_include_style.trace_add("write", refresh_full_summary)
 
-            # --- Apply Theme ---
-            if hasattr(self.root, "theme_manager"):
-                theme = self.root.theme_manager.themes.get(self.root.theme_manager.current_theme)
-                if theme:
-                    self.root.theme_manager.apply_preview_theme(preview_text, theme)
-                    self.root.theme_manager.apply_preview_theme(full_text_widget, theme)
+            def _apply(t):
+                self.root.theme_manager.apply_preview_theme(preview_text, t)
+                self.root.theme_manager.apply_preview_theme(full_text_widget, t)
+                self.root.theme_manager.apply_listbox_theme(char_listbox, t)
+                paned.config(bg=t.get("panel_bg", t["bg"]))
+                fav_pill_frame.config(bg=t["accent"])
+                fav_pill_lbl.config(bg=t["panel_bg"], fg=t["accent"])
+                copy_pill_frame.config(bg=t["accent"])
+                copy_pill_frame.winfo_children()[0].config(bg=t["panel_bg"], fg=t["accent"])
+
+            self._register_dialog(dialog, _apply)
+            _apply(self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}))
 
             # Initialize
             update_list()
             refresh_full_summary()
 
             # Close button
-            ttk.Button(dialog, text="Close", command=dialog.destroy).pack(pady=10)
+            ttk.Button(dialog, text="CLOSE", command=dialog.destroy).pack(pady=15)
 
         except Exception as e:
             from utils import logger
@@ -573,16 +936,20 @@ Platform: {platform.system()} {platform.release()}
                     tag_to_chars[t].append(name)
 
             dialog = tk.Toplevel(self.root)
-            dialog.title("Tag Distribution Summary")
-            dialog.geometry("600x700")
+            dialog.title("TAG DISTRIBUTION SUMMARY")
+            dialog.geometry("600x750")
             dialog.minsize(500, 500)
             dialog.transient(self.root)
+
+            # Apply basic top-level theme
+            if hasattr(self.root, "theme_manager"):
+                self.root.theme_manager.theme_toplevel(dialog)
 
             main_frame = ttk.Frame(dialog, padding=15)
             main_frame.pack(fill="both", expand=True)
 
-            ttk.Label(main_frame, text="Tag Distribution", style="Title.TLabel").pack(pady=(0, 5))
-            ttk.Label(main_frame, text=f"Stats based on {total_chars} characters", font=(None, 9, "italic")).pack(pady=(0, 15))
+            ttk.Label(main_frame, text="TAG DISTRIBUTION", style="Title.TLabel").pack(pady=(0, 5))
+            ttk.Label(main_frame, text=f"Stats based on {total_chars} characters", style="Muted.TLabel").pack(pady=(0, 15))
 
             # Scrollable area
             scroll_container = ScrollableCanvas(main_frame)
@@ -600,6 +967,8 @@ Platform: {platform.system()} {platform.release()}
                 for t in tag_list:
                     tag_to_cat[t.lower()] = cat
 
+            self.tag_summary_pills = [] # Track for updates
+
             row = 0
             for cat in priority:
                 # Get tags for this category
@@ -612,40 +981,47 @@ Platform: {platform.system()} {platform.release()}
                     continue
                     
                 # Header for category
-                cat_frame = ttk.LabelFrame(container, text=f" {cat.upper()} ", padding=10)
-                cat_frame.grid(row=row, column=0, sticky="ew", padx=5, pady=8)
+                cat_frame = ttk.LabelFrame(container, text=f" {cat.upper()} ", padding=15, style="TLabelframe")
+                cat_frame.grid(row=row, column=0, sticky="ew", padx=5, pady=10)
                 cat_frame.columnconfigure(0, weight=1)
                 
                 cat_tag_counts.sort(key=lambda x: x[1], reverse=True)
                 
-                # Get theme accent color safely
-                accent_color = "blue"
-                if hasattr(self.root, "theme_manager") and self.root.theme_manager:
-                    current = self.root.theme_manager.current_theme
-                    accent_color = self.root.theme_manager.themes.get(current, {}).get("accent", "blue")
-
                 for tag, count in cat_tag_counts:
                     # Container to hold the row and the expandable details
-                    container_frame = ttk.Frame(cat_frame)
-                    container_frame.pack(fill="x", pady=2)
+                    container_frame = ttk.Frame(cat_frame, style="TFrame")
+                    container_frame.pack(fill="x", pady=4)
 
-                    item_frame = ttk.Frame(container_frame)
+                    item_frame = ttk.Frame(container_frame, style="TFrame")
                     item_frame.pack(fill="x")
                     
                     percent = (count / total_chars) * 100
                     
-                    # Tag name (Interactive)
-                    tag_label = ttk.Label(
-                        item_frame, 
-                        text=f"▶ {tag}", 
-                        font=("Segoe UI", 10, "underline"),
-                        foreground=accent_color,
+                    # Refactor 6: Tag name as Pill
+                    try:
+                        style = ttk.Style()
+                        accent_color = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
+                        pbg = style.lookup("TFrame", "background")
+                    except: accent_color = "#0078d7"; pbg = "#1e1e1e"
+
+                    pill_frame = tk.Frame(item_frame, bg=accent_color, padx=1, pady=1)
+                    pill_frame.pack(side="left")
+                    
+                    tag_label = tk.Label(
+                        pill_frame, 
+                        text=f"▶ {tag.upper()}", 
+                        font=("Lexend", 8, "bold"),
+                        bg=pbg,
+                        fg=accent_color,
+                        padx=10,
+                        pady=2,
                         cursor="hand2"
                     )
-                    tag_label.pack(side="left")
+                    tag_label.pack()
+                    tag_label._base_bg = pbg
                     
                     # Details frame (hidden by default)
-                    details_frame = ttk.Frame(container_frame)
+                    details_frame = ttk.Frame(container_frame, style="TFrame")
                     char_list = tag_to_chars.get(tag, [])
                     char_str = ", ".join(sorted(char_list))
                     
@@ -654,421 +1030,56 @@ Platform: {platform.system()} {platform.release()}
                         details_frame, 
                         text=char_str, 
                         wraplength=480, 
-                        foreground="gray", 
-                        font=("Segoe UI", 9)
+                        style="Muted.TLabel"
                     )
-                    det_lbl.pack(anchor="w", padx=(20, 10), pady=(2, 5))
+                    det_lbl.pack(anchor="w", padx=(25, 10), pady=(5, 10))
 
                     # Toggle function
                     def toggle_details(event, f=details_frame, l=tag_label, t=tag):
                         if f.winfo_ismapped():
                             f.pack_forget()
-                            l.config(text=f"▶ {t}")
+                            l.config(text=f"▶ {t.upper()}")
                         else:
                             f.pack(fill="x")
-                            l.config(text=f"▼ {t}")
+                            l.config(text=f"▼ {t.upper()}")
 
                     tag_label.bind("<Button-1>", toggle_details)
+                    tag_label.bind("<Enter>", lambda e, l=tag_label: l.config(bg=self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}).get("hover_bg", "#333333")))
+                    tag_label.bind("<Leave>", lambda e, l=tag_label: l.config(bg=getattr(l, "_base_bg", "#1e1e1e")))
                     
-                    # Count and bar
-                    stats_label = ttk.Label(item_frame, text=f"{count} ({percent:.1f}%)", foreground="gray")
+                    self.tag_summary_pills.append((pill_frame, tag_label))
+
+                    # Count
+                    stats_label = ttk.Label(item_frame, text=f"{count} ({percent:.1f}%)", style="Muted.TLabel")
                     stats_label.pack(side="right")
                     
                     # Visual bar
-                    bar_container = tk.Frame(item_frame, height=4, bg="#eeeeee")
-                    bar_container.pack(side="right", padx=10, fill="x", expand=True)
+                    bar_container = tk.Frame(item_frame, height=4, bg=accent_color)
+                    bar_container.pack(side="right", padx=15, fill="x", expand=True)
                     
-                    colors = {
-                        "Demographics": "#4a90e2", "Body Type": "#50e3c2", "Style": "#f5a623", 
-                        "Vibe": "#bd10e0", "Other": "#9b9b9b"
-                    }
-                    bar_color = colors.get(cat, "#9b9b9b")
+                    # Hollow bar: label inside frame
+                    bar_fill = tk.Frame(bar_container, bg=pbg, height=2)
+                    bar_fill.pack(fill="both", expand=True, padx=1, pady=1)
                     
-                    canvas = tk.Canvas(bar_container, height=4, highlightthickness=0, bg="#eeeeee", width=150)
-                    canvas.pack(fill="both")
-                    canvas.create_rectangle(0, 0, int(150 * (count/total_chars)), 4, fill=bar_color, outline="")
+                    # Progress segment
+                    canvas = tk.Canvas(bar_fill, height=2, highlightthickness=0, bg=pbg, width=150)
+                    canvas.pack(fill="both", side="left")
+                    canvas.create_rectangle(0, 0, int(150 * (count/total_chars)), 2, fill=accent_color, outline="")
 
                 row += 1
 
+            def _apply(t):
+                scroll_container.canvas.config(bg=t["bg"])
+                for f, l in self.tag_summary_pills:
+                    f.config(bg=t["accent"])
+                    l.config(bg=t["panel_bg"], fg=t["accent"])
+                    l._base_bg = t["panel_bg"]
+
+            self._register_dialog(dialog, _apply)
             scroll_container.update_scroll_region()
-            ttk.Button(main_frame, text="Close", command=dialog.destroy).pack(pady=(15, 0))
+            ttk.Button(main_frame, text="CLOSE", command=dialog.destroy).pack(pady=(20, 0))
 
         except Exception as e:
             from utils import logger
             logger.exception("Error showing tag distribution")
             self.show_error("Error", f"Failed to generate tag distribution: {e}")
-
-    def show_outfits_summary(self) -> None:
-        """Show outfit library summary with filtering."""
-        try:
-            from utils.outfit_summary import generate_consolidated_outfit_data
-            
-            # Load consolidated data
-            outfit_data = generate_consolidated_outfit_data()
-            
-            if not outfit_data:
-                self.show_error("Error", "No outfit data found.")
-                return
-
-            dialog = tk.Toplevel(self.root)
-            dialog.title("Outfit Library Explorer")
-            dialog.geometry("1000x700")
-            dialog.minsize(800, 500)
-            dialog.transient(self.root)
-
-            # --- Layout ---
-            # Top: Legend
-            top_frame = ttk.Frame(dialog, padding=10)
-            top_frame.pack(fill="x")
-            
-            ttk.Label(top_frame, text="Legend: ", font=("Segoe UI", 9, "bold")).pack(side="left")
-            ttk.Label(top_frame, text="🎨 = Color Scheme  ", foreground="blue").pack(side="left")
-            ttk.Label(top_frame, text="✨ = Signature Color", foreground="#d35400").pack(side="left")
-
-            # Main content: Paned window
-            paned = ttk.PanedWindow(dialog, orient="horizontal")
-            paned.pack(fill="both", expand=True, padx=10, pady=5)
-
-            # Left: Treeview
-            tree_frame = ttk.Frame(paned)
-            paned.add(tree_frame, weight=1)
-            
-            tree_scroll = ttk.Scrollbar(tree_frame)
-            tree_scroll.pack(side="right", fill="y")
-            
-            tree = ttk.Treeview(tree_frame, selectmode="browse", yscrollcommand=tree_scroll.set)
-            tree.pack(side="left", fill="both", expand=True)
-            tree_scroll.config(command=tree.yview)
-            
-            tree.heading("#0", text="Categories & Outfits", anchor="w")
-
-            # Right: Detail view
-            detail_frame = ttk.Frame(paned, padding=10)
-            paned.add(detail_frame, weight=2)
-            
-            detail_header = ttk.Label(detail_frame, text="Select an outfit", font=("Segoe UI", 12, "bold"), wraplength=400)
-            detail_header.pack(fill="x", pady=(0, 10))
-            
-            detail_text = tk.Text(detail_frame, wrap="word", font=("Segoe UI", 10), state="disabled", height=15)
-            detail_text.pack(fill="both", expand=True)
-
-            # Populate Tree
-            for cat_name in sorted(outfit_data.keys()):
-                cat_id = tree.insert("", "end", text=cat_name, open=True)
-                
-                outfits = outfit_data[cat_name]
-                for out_name in sorted(outfits.keys()):
-                    data = outfits[out_name]
-                    
-                    # Build label with indicators
-                    label = out_name
-                    if data["has_color_scheme"]:
-                        label += " 🎨"
-                    if data["has_signature"]:
-                        label += " ✨"
-                        
-                    outfit_id = tree.insert(cat_id, "end", text=label, values=("outfit", cat_name, out_name))
-                    
-                    # Add variations as children
-                    variations = data["variations"]
-                    for mod in ["F", "M", "H"]:
-                        if mod in variations:
-                            mod_label = "Female" if mod == "F" else "Male" if mod == "M" else "Hijabi"
-                            tree.insert(outfit_id, "end", text=f"({mod}) {mod_label}", values=("variation", cat_name, out_name, mod))
-
-            def on_tree_select(event):
-                sel = tree.selection()
-                if not sel: return
-                
-                item = tree.item(sel[0])
-                vals = item["values"]
-                
-                if not vals: return # Category folder
-                
-                type_ = vals[0]
-                
-                if type_ == "outfit":
-                    cat, name = vals[1], vals[2]
-                    data = outfit_data[cat][name]
-                    
-                    detail_header.config(text=name)
-                    
-                    # Show all variations in text
-                    detail_text.config(state="normal")
-                    detail_text.delete("1.0", "end")
-                    
-                    if data["has_color_scheme"]:
-                        detail_text.insert("end", "🎨 Supports Team Colors\n", "info")
-                    if data["has_signature"]:
-                        detail_text.insert("end", "✨ Supports Signature Color\n", "info")
-                    if data["has_color_scheme"] or data["has_signature"]:
-                        detail_text.insert("end", "\n")
-                        
-                    detail_text.tag_configure("info", foreground="gray", font=("Segoe UI", 9, "italic"))
-                    detail_text.tag_configure("header", font=("Segoe UI", 10, "bold"))
-
-                    for mod in ["F", "M", "H"]:
-                        if mod in data["variations"]:
-                            mod_label = "Female" if mod == "F" else "Male" if mod == "M" else "Hijabi"
-                            detail_text.insert("end", f"--- {mod_label} ({mod})---\n", "header")
-                            detail_text.insert("end", f"{data['variations'][mod]}\n\n")
-                            
-                    detail_text.config(state="disabled")
-                    
-                elif type_ == "variation":
-                    cat, name, mod = vals[1], vals[2], vals[3]
-                    desc = outfit_data[cat][name]["variations"][mod]
-                    mod_label = "Female" if mod == "F" else "Male" if mod == "M" else "Hijabi"
-                    
-                    detail_header.config(text=f"{name} - {mod_label}")
-                    detail_text.config(state="normal")
-                    detail_text.delete("1.0", "end")
-                    detail_text.insert("1.0", desc)
-                    detail_text.config(state="disabled")
-
-            tree.bind("<<TreeviewSelect>>", on_tree_select)
-            
-            # Close button
-            ttk.Button(dialog, text="Close", command=dialog.destroy).pack(pady=10)
-
-        except Exception as e:
-            from utils import logger
-            logger.exception("Error in outfit summary explorer")
-            self.show_error("Error", f"Failed to open outfit explorer: {e}")
-
-    def _show_tag_characters(self, tag: str, characters: list) -> None:
-        """Show a small popup listing characters with a specific tag."""
-        popup = tk.Toplevel(self.root)
-        popup.title(f"Characters with tag: {tag}")
-        popup.geometry("350x400")
-        popup.transient(self.root)
-        
-        main_frame = ttk.Frame(popup, padding=15)
-        main_frame.pack(fill="both", expand=True)
-        
-        ttk.Label(main_frame, text=f"Tag: {tag}", style="Bold.TLabel").pack(pady=(0, 10))
-        
-        # Scrollable list
-        list_frame = ttk.Frame(main_frame)
-        list_frame.pack(fill="both", expand=True)
-        
-        scrollbar = ttk.Scrollbar(list_frame)
-        scrollbar.pack(side="right", fill="y")
-        
-        lb = tk.Listbox(list_frame, yscrollcommand=scrollbar.set, font=("Segoe UI", 10))
-        lb.pack(side="left", fill="both", expand=True)
-        scrollbar.config(command=lb.yview)
-        
-        for char in sorted(characters):
-            lb.insert(tk.END, f"  {char}")
-            
-        ttk.Button(main_frame, text="Close", command=popup.destroy).pack(pady=(10, 0))
-
-    def show_color_schemes_summary(self) -> None:
-        """Show a visual summary of all available team color schemes."""
-        try:
-            from ui.widgets import ScrollableCanvas
-            from logic.data_loader import DataLoader
-            
-            # Load schemes
-            loader = DataLoader()
-            schemes = loader.load_color_schemes()
-            
-            if not schemes:
-                self.show_error("Error", "No color schemes found.")
-                return
-
-            dialog = tk.Toplevel(self.root)
-            dialog.title("Team Colors Summary")
-            dialog.geometry("800x600")
-            dialog.minsize(600, 400)
-            dialog.transient(self.root)
-
-            # Main container
-            main_frame = ttk.Frame(dialog, padding=10)
-            main_frame.pack(fill="both", expand=True)
-
-            ttk.Label(main_frame, text="Available Team Colors", style="Title.TLabel").pack(pady=(0, 10))
-
-            # Scrollable area
-            scroll_container = ScrollableCanvas(main_frame)
-            scroll_container.pack(fill="both", expand=True)
-            
-            container = scroll_container.get_container()
-            container.columnconfigure(0, weight=1)
-
-            # Grid of schemes
-            # We'll use a grid with 2 columns if window is wide enough, but for simplicity 
-            # let's start with a list of wide rows.
-            
-            row = 0
-            for name in sorted(schemes.keys()):
-                scheme = schemes[name]
-                
-                # Each scheme gets a frame
-                item_frame = ttk.LabelFrame(container, text=name, padding=10)
-                item_frame.grid(row=row, column=0, sticky="ew", padx=5, pady=5)
-                item_frame.columnconfigure(1, weight=1)
-                
-                # Color swatches
-                swatch_frame = ttk.Frame(item_frame)
-                swatch_frame.grid(row=0, column=0, sticky="w")
-                
-                def is_valid_color(c):
-                    if not c or c.startswith("{"): return False
-                    return True
-
-                for label, key in [("Primary", "primary_color"), ("Secondary", "secondary_color"), ("Accent", "accent")]:
-                    val = scheme.get(key)
-                    if is_valid_color(val):
-                        f = ttk.Frame(swatch_frame)
-                        f.pack(side="left", padx=10)
-                        try:
-                            # Color box
-                            swatch = tk.Label(f, width=4, height=2, bg=val, relief="solid", borderwidth=1)
-                            swatch.pack()
-                            ttk.Label(f, text=label, font=("Segoe UI", 8)).pack()
-                            ttk.Label(f, text=val, font=("Consolas", 8), foreground="gray").pack()
-                        except Exception:
-                            pass
-                
-                # Team name
-                team_name = scheme.get("team", name)
-                team_label = ttk.Label(item_frame, text=f"Team Name: {team_name}", font=("Segoe UI", 10, "bold"))
-                team_label.grid(row=0, column=1, sticky="e", padx=10)
-                
-                row += 1
-
-            # Update scroll region
-            scroll_container.update_scroll_region()
-
-            # Close button at bottom
-            ttk.Button(main_frame, text="Close", command=dialog.destroy).pack(pady=10)
-
-        except Exception as e:
-            from utils import logger
-            logger.exception("Error in color schemes summary")
-            self.show_error("Error", f"Failed to open color schemes summary: {e}")
-
-    def _copy_detail(self, text_widget):
-        """Copy text from widget to clipboard."""
-        try:
-            content = text_widget.get("1.0", "end-1c")
-            self.root.clipboard_clear()
-            self.root.clipboard_append(content)
-            self.show_info("Copied", "Character details copied to clipboard.")
-        except Exception:
-            pass
-
-        except Exception as e:
-            from utils import logger
-
-            logger.exception("Auto-captured exception")
-            self.show_error("Error", f"Failed to generate character summary:\n{str(e)}")
-
-    def show_error(self, title: str, error_msg: str, friendly: bool = True) -> None:
-        """Show error dialog with optional user-friendly message conversion.
-
-        Args:
-            title: Error dialog title
-            error_msg: Error message
-            friendly: Whether to convert technical errors to user-friendly messages
-        """
-        if friendly:
-            error_msg = self._make_user_friendly(error_msg)
-
-        messagebox.showerror(title, error_msg)
-
-    def show_info(self, title: str, message: str) -> None:
-        """Show info dialog.
-
-        Args:
-            title: Dialog title
-            message: Info message
-        """
-        # Prefer transient, non-blocking notifications when available:
-        # 1) Toast manager on the root window
-        # 2) Main window status bar via `_update_status`
-        # 3) Fallback to modal messagebox
-        root = getattr(self, "root", None)
-        try:
-            if root is not None and hasattr(root, "toasts"):
-                try:
-                    # Use 'info' level for neutral messages
-                    root.toasts.notify(message, "info", 3000)
-                    return
-                except Exception:
-                    from utils import logger
-
-                    logger.exception("Auto-captured exception")
-                    pass
-            if root is not None and hasattr(root, "_update_status"):
-                try:
-                    root._update_status(message)
-                    return
-                except Exception:
-                    from utils import logger
-
-                    logger.exception("Auto-captured exception")
-                    pass
-        except Exception:
-            from utils import logger
-
-            logger.exception("Auto-captured exception")
-            # Defensive: if accessing root fails, fall through to modal
-            pass
-
-        messagebox.showinfo(title, message)
-
-    def show_warning(self, title: str, message: str) -> None:
-        """Show warning dialog.
-
-        Args:
-            title: Dialog title
-            message: Warning message
-        """
-        messagebox.showwarning(title, message)
-
-    def ask_yes_no(self, title: str, message: str) -> bool:
-        """Show yes/no confirmation dialog.
-
-        Args:
-            title: Dialog title
-            message: Question message
-
-        Returns:
-            True if user clicked Yes, False otherwise
-        """
-        return messagebox.askyesno(title, message)
-
-    def ask_ok_cancel(self, title: str, message: str) -> bool:
-        """Show OK/Cancel confirmation dialog.
-
-        Args:
-            title: Dialog title
-            message: Question message
-
-        Returns:
-            True if user clicked OK, False otherwise
-        """
-        return messagebox.askokcancel(title, message)
-
-    def _make_user_friendly(self, error_msg: str) -> str:
-        """Convert technical error messages to user-friendly text.
-
-        Args:
-            error_msg: Technical error message
-
-        Returns:
-            User-friendly error message
-        """
-        if "FileNotFoundError" in error_msg or "No such file" in error_msg:
-            return "File not found. Try clicking 'Reload Data' from the menu."
-        elif "PermissionError" in error_msg:
-            return "Permission denied. Check file permissions and try again."
-        elif "JSONDecodeError" in error_msg:
-            return "Invalid file format. The file may be corrupted."
-        elif "characters/" in error_msg:
-            return "Error loading character files. Check the characters folder."
-
-        return error_msg

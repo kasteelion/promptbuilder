@@ -45,6 +45,10 @@ class PreviewPanel:
         self.pill_buttons = [] # Track for theme updates
 
         self._build_ui()
+        
+        if self.theme_manager:
+            self.theme_manager.register(self.parent, self.apply_theme)
+            self.theme_manager.register_preview(self.preview_text)
 
     def _build_ui(self) -> None:
         """Build the preview panel UI."""
@@ -83,20 +87,18 @@ class PreviewPanel:
         controls_frame.columnconfigure(0, weight=0)
         controls_frame.columnconfigure(1, weight=0)
         controls_frame.columnconfigure(2, weight=0)
-        controls_frame.columnconfigure(3, weight=0)
-        controls_frame.columnconfigure(4, weight=0)
 
         # Get current theme for manual button overrides
         theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
 
         # Helper for Pill buttons in Phase 3
         def add_pill_btn(parent, text, command, row, col):
-            pbg = theme.get("panel_bg", "#ffffff")
+            pbg = theme.get("panel_bg", theme.get("text_bg", "#1e1e1e"))
             accent = theme.get("accent", "#0078d7")
             
             # Outer Frame (The Border)
             pill = tk.Frame(parent, bg=accent, padx=1, pady=1)
-            pill.grid(row=row, column=col, padx=2)
+            pill.grid(row=row, column=col, padx=2, pady=2)
             
             # Inner Label (The hollow center)
             lbl = tk.Label(
@@ -104,7 +106,7 @@ class PreviewPanel:
                 text=text, 
                 bg=pbg, 
                 fg=accent,
-                font=("Segoe UI", 9, "bold"),
+                font=("Lexend", 9, "bold"), # Refactor 5
                 padx=12,
                 pady=3,
                 cursor="hand2"
@@ -114,14 +116,14 @@ class PreviewPanel:
             # Hover restoration storage
             lbl._base_bg = pbg
             
-            def on_enter(e, l=lbl): l.config(bg="#333333")
-            def on_leave(e, l=lbl):
+            def on_enter(e, l=lbl):
                 try:
-                    current_theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-                    base = current_theme.get("panel_bg", "#ffffff")
-                except:
-                    base = l._base_bg
-                l.config(bg=base)
+                    theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                    hbg = theme.get("hover_bg", "#333333")
+                except: hbg = "#333333"
+                l.config(bg=hbg)
+            def on_leave(e, l=lbl):
+                l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
                 
             lbl.bind("<Enter>", on_enter)
             lbl.bind("<Leave>", on_leave)
@@ -131,14 +133,17 @@ class PreviewPanel:
             return pill
 
         # Refactor 3: Pill style for Copy, Save, Clear, Randomize, Reload
-        add_pill_btn(controls_frame, "📋 Copy", self._show_copy_menu_pill, 0, 0)
+        # Row 0: Generation/Data Actions
+        add_pill_btn(controls_frame, "🎲 Randomize", self.on_randomize, 0, 1)
+        add_pill_btn(controls_frame, "🔄 Reload", self.on_reload, 0, 2)
+
+        # Row 1: File/Clipboard Actions
+        add_pill_btn(controls_frame, "📋 Copy", self._show_copy_menu_pill, 1, 0)
         # Store for menu access
         self.copy_btn_frame, self.copy_btn_lbl = self.pill_buttons[-1]
 
-        add_pill_btn(controls_frame, "💾 Save", self.save_prompt, 0, 1)
-        add_pill_btn(controls_frame, "🗑️ Clear", self._on_clear, 0, 2)
-        add_pill_btn(controls_frame, "🎲 Randomize", self.on_randomize, 0, 3)
-        add_pill_btn(controls_frame, "🔄 Reload", self.on_reload, 0, 4)
+        add_pill_btn(controls_frame, "💾 Save", self.save_prompt, 1, 1)
+        add_pill_btn(controls_frame, "🗑️ Clear", self._on_clear, 1, 2)
 
         # Preview text widget with scrollbar - Refactor 1
         # Refactor 3: Switch to custom dark scrollbar
@@ -198,7 +203,7 @@ class PreviewPanel:
     def apply_theme(self, theme):
         """Apply theme to custom widgets. (Refactor 3)"""
         accent = theme.get("accent", "#0078d7")
-        panel_bg = theme.get("panel_bg", theme["bg"])
+        panel_bg = theme.get("panel_bg", theme.get("text_bg", "#1e1e1e"))
         
         if hasattr(self, "pill_buttons"):
             for frame, lbl in self.pill_buttons:

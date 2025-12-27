@@ -1,7 +1,7 @@
 """Interaction template creator dialog UI."""
 
 import tkinter as tk
-from tkinter import messagebox, scrolledtext, ttk
+from tkinter import messagebox, ttk
 
 from utils import logger
 from utils.interaction_template_helpers import (
@@ -26,33 +26,61 @@ class InteractionCreatorDialog:
         self.data_loader = data_loader
         self.on_success = on_success_callback
         self.result = None
+        self.parent = parent
 
         # Create dialog window
         self.dialog = tk.Toplevel(parent)
-        self.dialog.title("Create New Interaction Template")
-        self.dialog.geometry("600x550")
+        self.dialog.title("CREATE INTERACTION TEMPLATE")
+        self.dialog.geometry("700x750")
         self.dialog.transient(parent)
         self.dialog.grab_set()
 
+        # Apply basic top-level theme
+        if hasattr(parent, "theme_manager"):
+            parent.theme_manager.theme_toplevel(self.dialog)
+
         self._build_ui()
+
+        # Register for theme updates
+        if hasattr(parent, "dialog_manager"):
+            parent.dialog_manager._register_dialog(self.dialog, self.apply_theme)
+        
+        # Initial theme application
+        try:
+            current_theme = parent.theme_manager.themes.get(parent.theme_manager.current_theme, {})
+            self.apply_theme(current_theme)
+        except: pass
 
         # Center on parent
         self.dialog.update_idletasks()
         x = parent.winfo_x() + (parent.winfo_width() // 2) - (self.dialog.winfo_width() // 2)
         y = parent.winfo_y() + (parent.winfo_height() // 2) - (self.dialog.winfo_height() // 2)
-        self.dialog.geometry(f"+{x}+{y}")
+        self.dialog.geometry(f"{x}+{y}")
+
+    def apply_theme(self, theme):
+        """Apply theme to all dialog widgets. (Refactor 3)"""
+        tm = self.parent.theme_manager
+        tm.apply_text_widget_theme(self.example_widget, theme)
+        tm.apply_text_widget_theme(self.content_text, theme)
+        
+        pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+        
+        # Update cancel btn manual overrides
+        if hasattr(self, "cancel_btn"):
+            self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground="gray")
+            self.cancel_btn._base_bg = pbg
 
     def _build_ui(self):
         """Build the dialog UI."""
-        main_frame = ttk.Frame(self.dialog, padding=10)
+        main_frame = ttk.Frame(self.dialog, padding=15, style="TFrame")
         main_frame.pack(fill="both", expand=True)
 
         # Template selection
-        template_frame = ttk.Frame(main_frame)
-        template_frame.pack(fill="x", pady=(0, 10))
+        template_frame = ttk.Frame(main_frame, style="TFrame")
+        template_frame.pack(fill="x", pady=(0, 15))
 
-        ttk.Label(template_frame, text="Template:", style="Bold.TLabel").pack(
-            side="left", padx=(0, 5)
+        ttk.Label(template_frame, text="TEMPLATE:", style="Bold.TLabel").pack(
+            side="left", padx=(0, 10)
         )
 
         self.template_var = tk.StringVar(value="Blank")
@@ -62,29 +90,28 @@ class InteractionCreatorDialog:
             values=get_interaction_template_names(),
             state="readonly",
             width=28,
-            font=("Segoe UI", 9),
+            font=("Lexend", 9),
         )
-        template_combo.pack(side="left", padx=(0, 10))
+        template_combo.pack(side="left", padx=(0, 15))
         template_combo.bind("<<ComboboxSelected>>", self._on_template_selected)
 
         # Template description label
         self.template_desc_label = ttk.Label(
             template_frame,
-            text=get_interaction_template_description("Blank"),
+            text=get_interaction_template_description("Blank").upper(),
             style="Muted.TLabel",
         )
         self.template_desc_label.pack(side="left")
 
         # Info/help section (Refactor 1: Spatial Layout)
-        help_frame = ttk.Frame(main_frame, style="TFrame", padding=(10, 5))
-        help_frame.pack(fill="x", pady=(0, 10))
+        help_frame = ttk.Frame(main_frame, style="TFrame", padding=(15, 10))
+        help_frame.pack(fill="x", pady=(0, 15))
 
-        help_label = ttk.Label(
+        ttk.Label(
             help_frame,
-            text="💡 Tip: Use {char1}, {char2}, {char3} as placeholders for character names",
+            text="💡 TIP: USE {char1}, {char2}, {char3} AS PLACEHOLDERS FOR CHARACTER NAMES",
             style="Accent.TLabel",
-        )
-        help_label.pack(anchor="w", padx=6, pady=4)
+        ).pack(anchor="w", padx=6, pady=4)
 
         example_text = """Placeholder Guide:
 • {char1} - First selected character
@@ -92,67 +119,55 @@ class InteractionCreatorDialog:
 • {char3} - Third selected character, etc.
 
 Examples:
-• "{char1} hugging {char2} warmly"
-• "{char1}, {char2}, and {char3} celebrating together"
-• "{char1} teaching {char2} while {char3} observes"
+• \"{char1} hugging {char2} warmly\" 
+• \"{char1}, {char2}, and {char3} celebrating together\"
+• \"{char1} teaching {char2} while {char3} observes\"
 
-The placeholders will be replaced with actual character names when inserted."""
+The placeholders will be replaced with actual character names when inserted.
+"""
 
-        # Refactor 2: Theme-aware Text Widget
-        try:
-            style = ttk.Style()
-            input_bg = style.lookup("TEntry", "fieldbackground")
-            input_fg = style.lookup("TEntry", "foreground")
-            if not input_bg: input_bg = "#2d2d2d"
-            if not input_fg: input_fg = "#ffffff"
-        except:
-            input_bg = "#2d2d2d"
-            input_fg = "#ffffff"
-
-        example_widget = tk.Text(
+        self.example_widget = tk.Text(
             help_frame,
-            font=("Consolas", 8),
+            font=("Lexend", 8),
             height=8,
             wrap="word",
             relief="flat",
             borderwidth=0,
-            bg=input_bg,
-            fg=input_fg
         )
-        example_widget.insert("1.0", example_text)
-        example_widget.config(state="disabled")
-        example_widget.pack(fill="x", padx=6, pady=(0, 4))
+        self.example_widget.insert("1.0", example_text)
+        self.example_widget.config(state="disabled")
+        self.example_widget.pack(fill="x", padx=6, pady=(0, 4))
 
         # Template name input
-        name_frame = ttk.Frame(main_frame)
-        name_frame.pack(fill="x", pady=(0, 10))
+        name_frame = ttk.Frame(main_frame, style="TFrame")
+        name_frame.pack(fill="x", pady=(0, 15))
 
-        ttk.Label(name_frame, text="Template Name:", style="Bold.TLabel").pack(
-            side="left", padx=(0, 5)
+        ttk.Label(name_frame, text="TEMPLATE NAME:", style="Bold.TLabel").pack(
+            side="left", padx=(0, 10)
         )
 
-        self.name_entry = ttk.Entry(name_frame, font=("Segoe UI", 9))
+        self.name_entry = ttk.Entry(name_frame, style="TEntry")
         self.name_entry.pack(side="left", fill="x", expand=True)
 
         # Description input
-        desc_frame = ttk.Frame(main_frame)
-        desc_frame.pack(fill="x", pady=(0, 10))
+        desc_frame = ttk.Frame(main_frame, style="TFrame")
+        desc_frame.pack(fill="x", pady=(0, 15))
 
-        ttk.Label(desc_frame, text="Description:", style="Bold.TLabel").pack(
-            side="left", padx=(0, 5)
+        ttk.Label(desc_frame, text="DESCRIPTION:", style="Bold.TLabel").pack(
+            side="left", padx=(0, 10)
         )
 
-        self.desc_entry = ttk.Entry(desc_frame, font=("Segoe UI", 9))
+        self.desc_entry = ttk.Entry(desc_frame, style="TEntry")
         self.desc_entry.pack(side="left", fill="x", expand=True)
 
         # Content editor
-        ttk.Label(main_frame, text="Template Content:", style="Bold.TLabel").pack(
+        ttk.Label(main_frame, text="TEMPLATE CONTENT:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 5)
         )
 
         # Refactor 3: custom dark scrollbar
         content_frame = ttk.Frame(main_frame, style="TFrame")
-        content_frame.pack(fill="both", expand=True, pady=(0, 10))
+        content_frame.pack(fill="both", expand=True, pady=(0, 15))
         content_frame.columnconfigure(0, weight=1)
         content_frame.rowconfigure(0, weight=1)
 
@@ -160,13 +175,10 @@ The placeholders will be replaced with actual character names when inserted."""
             content_frame, 
             wrap="word", 
             height=8, 
-            font=("Consolas", 10),
-            bg=input_bg,
-            fg=input_fg,
-            insertbackground=input_fg,
+            font=("Lexend", 10),
             relief="flat",
-            padx=10,
-            pady=10,
+            padx=15,
+            pady=15,
             highlightthickness=0,
             borderwidth=0
         )
@@ -180,32 +192,41 @@ The placeholders will be replaced with actual character names when inserted."""
 
         # Validation message
         self.validation_label = ttk.Label(
-            main_frame, text="", foreground="red", font=("Segoe UI", 8)
+            main_frame, text="", foreground="red", style="Muted.TLabel"
         )
         self.validation_label.pack(fill="x", pady=(0, 5))
 
-        # Buttons (Refactor 3: Component Hierarchy)
-        button_frame = ttk.Frame(main_frame)
-        button_frame.pack(fill="x")
+        # Buttons (Refactor 3: Hierarchy)
+        button_frame = ttk.Frame(self.dialog, padding=15, style="TFrame")
+        button_frame.pack(side="bottom", fill="x")
 
         # Cancel: Ghost Style (Secondary)
-        cancel_btn = tk.Button(
+        self.cancel_btn = tk.Button(
             button_frame, 
-            text="Cancel", 
+            text="CANCEL", 
             command=self._cancel,
-            bg=style.lookup("TFrame", "background"),
-            fg=style.lookup("TEntry", "foreground"),
-            highlightthickness=1,
-            highlightbackground="gray",
             relief="flat",
-            padx=10
+            highlightthickness=2,
+            padx=20,
+            font=("Lexend", 9, "bold"),
+            cursor="hand2"
         )
-        cancel_btn.pack(side="right")
+        self.cancel_btn.pack(side="right", padx=(15, 0))
+        
+        def on_c_enter(e):
+            try:
+                tm = self.winfo_toplevel().theme_manager
+                theme = tm.themes.get(tm.current_theme, {})
+                hbg = theme.get("hover_bg", "#333333")
+            except: hbg = "#333333"
+            self.cancel_btn.config(bg=hbg)
+        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", "#1e1e1e"))
+        self.cancel_btn.bind("<Enter>", on_c_enter)
+        self.cancel_btn.bind("<Leave>", on_c_leave)
 
-        # Create: Solid Accent (Primary)
-        ttk.Button(button_frame, text="Create Template", command=self._create_template).pack(
-            side="right", padx=(5, 0)
-        )
+        ttk.Button(button_frame, text="CREATE TEMPLATE", command=self._create_template, style="TButton").pack(side="right")
+
+        self.dialog.bind("<Escape>", lambda e: self._cancel())
 
     def _on_template_selected(self, event):
         """Handle template selection change."""
@@ -214,7 +235,7 @@ The placeholders will be replaced with actual character names when inserted."""
         desc = get_interaction_template_description(template_name)
 
         # Update description label
-        self.template_desc_label.config(text=desc)
+        self.template_desc_label.config(text=desc.upper())
 
         # Update content if not blank
         if content:
@@ -222,100 +243,60 @@ The placeholders will be replaced with actual character names when inserted."""
             self.content_text.insert("1.0", content)
 
     def _validate_inputs(self):
-        """Validate user inputs.
-
-        Returns:
-            Tuple of (is_valid, error_message)
-        """
+        """Validate user inputs."""
         name = self.name_entry.get().strip()
         desc = self.desc_entry.get().strip()
         content = self.content_text.get("1.0", "end-1c").strip()
 
         if not name:
-            return False, "⚠️ Template name is required"
-
+            return False, "⚠️ TEMPLATE NAME IS REQUIRED"
         if not desc:
-            return False, "⚠️ Description is required"
-
+            return False, "⚠️ DESCRIPTION IS REQUIRED"
         if not content:
-            return False, "⚠️ Template content is required"
-
-        # Check for valid placeholder syntax
-        if "{char" in content:
-            # Basic validation that placeholders are properly formatted
-            import re
-
-            placeholders = re.findall(r"\{char\d+\}", content)
-            if not placeholders:
-                return False, "⚠️ Placeholders should be in format: {char1}, {char2}, etc."
+            return False, "⚠️ TEMPLATE CONTENT IS REQUIRED"
 
         return True, ""
 
     def _create_template(self):
         """Create the new interaction template."""
-        # Validate inputs
         is_valid, error_msg = self._validate_inputs()
-
         if not is_valid:
             self.validation_label.config(text=error_msg)
             return
 
         self.validation_label.config(text="")
-
         name = self.name_entry.get().strip()
         desc = self.desc_entry.get().strip()
         content = self.content_text.get("1.0", "end-1c").strip()
 
-        # Get the interactions.md file path
         interactions_file = self.data_loader.base_dir / "data" / "interactions.md"
 
         try:
-            # Read current file
             with open(interactions_file, "r", encoding="utf-8") as f:
                 file_content = f.read()
 
-            # Create the new template entry in markdown format
-            # Find the last category section or create one
             new_entry = f"\n- **{name}:** {content}\n"
-
-            # If there's a description, add it as a comment (optional)
-            # For now, we'll just append to the end of the file before any trailing whitespace
             file_content = file_content.rstrip() + new_entry
 
-            # Write back to file
             with open(interactions_file, "w", encoding="utf-8") as f:
                 f.write(file_content)
 
-            logger.info(f"Created new interaction template: {name}")
-
             root = self.dialog.winfo_toplevel()
-            msg = (
-                f"Interaction template '{name}' created successfully!\n\n"
-                "The template is now available in the dropdown."
-            )
+            msg = f"Interaction template '{name}' created successfully!"
             notify(root, "Success", msg, level="success", duration=3000, parent=self.dialog)
-
             self.result = {"name": name, "description": desc, "content": content}
             self.dialog.destroy()
-
             if self.on_success:
                 self.on_success()
-
         except Exception as e:
             logger.error(f"Error creating interaction template: {e}")
-            messagebox.showerror(
-                "Error", f"Failed to create interaction template:\n{str(e)}", parent=self.dialog
-            )
+            messagebox.showerror("Error", f"Failed to create interaction template:\n{str(e)}", parent=self.dialog)
 
     def _cancel(self):
         """Cancel and close the dialog."""
         self.dialog.destroy()
 
     def show(self):
-        """Show the dialog and wait for it to close.
-
-        Returns:
-            Result dict or None if cancelled
-        """
+        """Show the dialog and wait for it to close."""
         self.dialog.wait_window()
         return self.result

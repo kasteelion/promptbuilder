@@ -80,7 +80,7 @@ class ToolTip:
             foreground="#000000",
             relief="solid",
             borderwidth=1,
-            font=("Segoe UI", 9),
+            font=("Lexend", 9),
             justify="left",
             padx=5,
             pady=3,

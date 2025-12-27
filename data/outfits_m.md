@@ -24,6 +24,18 @@ Fitted **graphic tee or tank**; **skinny jeans or leather pants** with distressi
 ### Edgy Chic
 Fitted **((default:red) or (signature)) turtleneck** (fine knit); **black leather pants** (slim fit); **black boots** (Chelsea or combat style). *Accessories:* Black beanie (optional), black leather gloves, silver chain necklace. *Hair/Makeup:* Clean styled hair, defined features.
 
+### Cyber-Tactical Combat
+**Mock-neck Compression Suit** (a form-fitting, full-length base layer made of high-sheen {primary_color} technical spandex and reinforced nylon panels); **Reinforced Tactical Harness** (an integrated {secondary_color} chest and midsection harness with metallic buckle details and industrial webbing); **Asymmetrical Tech-Overlay** (laser-cut {accent} leather geometric patterns stitched across the chest and down the outer thighs for a futuristic, armored silhouette). *Accessories:* Matching {primary_color} fingerless tactical gloves with metallic plating; heavy-duty lace-up combat boots with reinforced shinguards; a detachable high-collared entrance coat with structural shoulders. *Hair/Makeup:* Sharp slicked-back hair with a high-shine finish; bold high-contrast architectural eye paint with {accent} metallic accents; clean-shaven or sharp stubble with high-definition contouring.
+
+### Tech-Athletic Compression
+Long-sleeve compression shirt (high-neck technical nylon-spandex blend in ((default:charcoal) or (signature)), ultra-fitted to highlight muscle definition in the chest, shoulders, and arms); Matching compression leggings (thick elasticated waistband, moisture-wicking matte finish). *Accessories:* Black fitness tracker; wireless earbuds. *Hair/Makeup:* Short neat hairstyle; natural clean skin; well-groomed.
+
+### Ribbed Bodysuit
+Sleeveless scoop-neck ribbed tank (high-density ribbed knit in ((default:cream) or (signature)), form-fitting construction that emphasizes chest and abdominal definition); Worn tucked into low-waist distressed denim shorts. *Accessories:* Simple gold chain necklace; small silver watch. *Hair/Makeup:* Tousled natural hair; clean-shaven or neat stubble; fresh-faced look.
+
+### Tactical Scout
+Ribbed moisture-wicking henley (fitted tightly in ((default:olive green) or (signature)), featuring a three-button neckline and reinforced elbow patches); Tactical compression pants (technical {secondary_color} fabric with integrated side pockets and mesh ventilation). *Accessories:* Heavy-duty utility belt with {accent} hardware; rugged combat boots; black digital fitness watch. *Hair/Makeup:* Short practical hair or man-bun; rugged "outdoorsy" appearance; minimal grooming.
+
 ### Studded Harness Style
 **Mesh tank top or sleeveless tee** (black); **leather body harness** (strappy geometric details across chest); **black cargo pants or utility kilt** (heavy hardware, buckles). *Accessories:* Combat boots, leather wrist cuffs, silver rings. *Hair/Makeup:* Messy texture or undercut, guyliner or dark eye makeup optional.
 
@@ -69,6 +81,9 @@ Nude colored compression shirt and tights
 
 ### Salsa
 **Latin dance shirt** (black or deep jewel tone, deep V-neck or fitted button-down, often with sheer or satin details); **Latin dance trousers** (high-waisted, fitted through thigh, flared at hem); **Latin dance shoes** (Cuban heel). *Accessories:* Simple belt, minimal jewelry. *Hair/Makeup:* Slicked back hair, intense focused expression, bronzed skin.
+
+### Street-Dance Set
+Technical fleece hoodie (cropped to the waist in ((default:vibrant orange) or (signature)), featuring an oversized hood and raw-edge hem); Technical athletic shorts (black spandex with {secondary_color} side-stripes worn over matching compression leggings). *Accessories:* Chunky {accent} sneakers; layered silver chain necklaces; oversized silver watch. *Hair/Makeup:* Messy textured hair or dreadlocks; urban "street style" appearance; minimal grooming.
 
 ### Pro Wrestling
 Wrestling **trunks or long tights** (((default:red) or (signature)) with black side panels and metallic trim); **bare chest** or matching **wrestling vest**; high-top **wrestling boots** (black with ((default:red) or (signature)) laces); **knee pads** (((default:red) or (signature))). *Accessories:* Wrist tape (black or ((default:red) or (signature))), elbow pads, championship belt optional. *Hair/Makeup:* Intense focused expression, hair styled or slicked back for action.
@@ -267,6 +282,9 @@ Structured **black wool coat** or blazer; **white silk button-down shirt** (slig
 ### Fancy Robes
 Luxurious **floor-length robes** (white silk or satin with heavy **gold embroidery** and brocade trim); **wide gold sash** at waist; **gold sandals**. *Accessories:* Elaborate gold jewelry, signet ring. *Hair/Makeup:* Neat polished grooming, dignified bearing.
 
+### Sculpted Bandage Set
+Sculpted compression suit (constructed from heavy, elasticated ((default:black) or (signature)) ribbing designed to define the athletic silhouette); Cross-over chest harness (((default:charcoal) or (signature)) accent straps that create a structural "X" shape across the torso). *Accessories:* Polished **((default:silver) or (signature))** dress shoes; metallic wrist cuff; statement ring. *Hair/Makeup:* Neatly styled hair with high volume; sharp features; intense focused expression.
+
 ### Statement Accent
 **Black tailored suit** (slim fit, modern cut); **white dress shirt** (crisp); **velvet bow tie or tie** (((default:black or deep jewel tone) or (signature))). *Accessories:* Pocket square (white or matching tie), polished dress shoes, cufflinks. *Hair/Makeup:* Polished grooming, slicked back or neatly styled hair.
 
@@ -344,6 +362,9 @@ Flowing **thobe or robe** (white or cream silk with gold embroidery); **sirwal p
 
 ### Military Uniform
 Tailored **military tunic/jacket** (((default:olive drab, navy, or charcoal) or (signature)) with brass buttons and epaulettes); **matching trousers**; **polished combat boots**. *Accessories:* Beret or garrison cap, rank insignia, service medals. *Hair/Makeup:* Clean-cut hair, clean-shaven or neat facial hair, focused military bearing.
+
+### Modern Power Suit
+Compression-fit tailored blazer (structured {primary_color} wool-blend, slim-cut and worn over a bare chest or minimalist tank to emphasize the chest and torso silhouette); Tailored trousers (matching {primary_color} fabric, slim-fit with a sharp front crease). *Accessories:* Slim {secondary_color} leather belt; minimalist {accent} watch; polished leather loafers. *Hair/Makeup:* Sleek neatly styled hair with a precise part; clean-shaven or well-groomed stubble; neutral polished appearance.
 
 ### Office
 Tailored **blazer** or **sport coat**; **dress shirt**; **dress pants** (pressed); **leather dress shoes**. *Accessories:* Watch, leather belt, minimal jewelry, professional bag. *Hair/Makeup:* Polished, professional styling.

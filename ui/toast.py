@@ -21,7 +21,11 @@ class ToastManager:
         self.max_visible = max_visible
         self.active: List[tk.Toplevel] = []
         # Theme colors (fallbacks)
-        self.bg = "#333333"
+        theme = {}
+        if self.theme_manager:
+             theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+        
+        self.bg = theme.get("panel_bg", "#333333")
         self.fg = "#ffffff"
         self.accent = "#2ea44f"
 

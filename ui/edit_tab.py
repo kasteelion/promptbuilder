@@ -8,22 +8,32 @@ from typing import Callable, List
 class EditTab:
     """Tab for editing markdown data files."""
 
-    def __init__(self, parent: ttk.Notebook, data_loader, on_reload_callback: Callable[[], None]):
+    def __init__(self, parent: ttk.Notebook, data_loader, theme_manager, on_reload_callback: Callable[[], None], existing_frame=None):
         """Initialize edit tab.
 
         Args:
             parent: Parent notebook widget
             data_loader: DataLoader instance
+            theme_manager: ThemeManager instance
             on_reload_callback: Function to call after saving
+            existing_frame: Optional frame to use instead of creating a new one
         """
         self.parent = parent
         self.data_loader = data_loader
+        self.theme_manager = theme_manager
         self.on_reload = on_reload_callback
 
-        self.tab = ttk.Frame(parent, style="TFrame")
-        parent.add(self.tab, text="Edit Data")
+        if existing_frame:
+            self.tab = existing_frame
+        else:
+            self.tab = ttk.Frame(parent, style="TFrame")
+            parent.add(self.tab, text="Edit Data")
 
         self._build_ui()
+        
+        if self.theme_manager:
+            self.theme_manager.register_text_widget(self.editor_text)
+            
         self._refresh_file_list()
         self._load_markdown_for_editing()
 

@@ -31,16 +31,18 @@ class CharacterCreatorDialog:
         self.on_success = on_success_callback
         self.result = None
         self.edit_character = edit_character
+        self.parent = parent # Store for theme manager access
 
         # Create dialog window
         self.dialog = tk.Toplevel(parent)
-        if edit_character:
-            self.dialog.title(f"Edit Character - {edit_character}")
-        else:
-            self.dialog.title("Create New Character")
-        self.dialog.geometry("600x650")
+        self.dialog.title("CREATE NEW CHARACTER")
+        self.dialog.geometry("800x850")
         self.dialog.transient(parent)
         self.dialog.grab_set()
+
+        # Apply basic top-level theme
+        if hasattr(parent, "theme_manager"):
+            parent.theme_manager.theme_toplevel(self.dialog)
 
         self._build_ui()
 
@@ -48,58 +50,66 @@ class CharacterCreatorDialog:
         if edit_character:
             self._load_character_data(edit_character)
 
+        # Register for theme updates
+        if hasattr(parent, "dialog_manager"):
+            parent.dialog_manager._register_dialog(self.dialog, self.apply_theme)
+        
+        # Initial theme application
+        try:
+            current_theme = parent.theme_manager.themes.get(parent.theme_manager.current_theme, {})
+            self.apply_theme(current_theme)
+        except: pass
+
         # Center on parent
         self.dialog.update_idletasks()
         x = parent.winfo_x() + (parent.winfo_width() // 2) - (self.dialog.winfo_width() // 2)
         y = parent.winfo_y() + (parent.winfo_height() // 2) - (self.dialog.winfo_height() // 2)
         self.dialog.geometry(f"+{x}+{y}")
 
+    def apply_theme(self, theme):
+        """Apply theme to all dialog widgets. (Refactor 3)"""
+        tm = self.parent.theme_manager
+        tm.apply_text_widget_theme(self.example_widget, theme)
+        tm.apply_text_widget_theme(self.appearance_text, theme)
+        tm.apply_text_widget_theme(self.outfit_text, theme)
+        
+        accent = theme.get("accent", "#0078d7")
+        pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+        
+        # Update cancel btn manual overrides
+        if hasattr(self, "cancel_btn"):
+            self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground="gray")
+            self.cancel_btn._base_bg = pbg
+
+        # Handle placeholders
+        for text_widget in [self.appearance_text, self.outfit_text]:
+            if "skin tone" in text_widget.get("1.0", "2.0").lower() or "- **top:**" in text_widget.get("1.0", "2.0").lower():
+                try:
+                    tm = self.parent.theme_manager
+                    theme = tm.themes.get(tm.current_theme, {})
+                    pfg = theme.get("placeholder_fg", "#666666")
+                except: pfg = "#666666"
+                text_widget.config(foreground=pfg)
+            else:
+                text_widget.config(foreground=theme.get("text_fg", "white"))
+
     def _build_ui(self):
-        """Build the dialog UI."""
-        # Use a scrollable canvas for main content so fields can scroll while
-        # the action buttons remain docked at the bottom.
-        scroll = ScrollableCanvas(self.dialog)
-        scroll.pack(fill="both", expand=True, padx=10, pady=(10, 0))
-        main_frame = scroll.get_container()
+        """Build the character creator UI."""
+        # Use a scrollable canvas for the main content to handle many fields
+        scroll_container = ScrollableCanvas(self.dialog)
+        scroll_container.pack(fill="both", expand=True)
+        main_frame = scroll_container.get_container()
+        main_frame.columnconfigure(0, weight=1)
 
-        # Template selection
-        template_frame = ttk.Frame(main_frame)
-        template_frame.pack(fill="x", pady=(0, 10))
+        # Info section (Refactor 1: Spatial Layout)
+        help_frame = ttk.Frame(main_frame, style="TFrame", padding=(15, 5))
+        help_frame.pack(fill="x", padx=10, pady=(0, 15))
 
-        ttk.Label(template_frame, text="Template:", style="Bold.TLabel").pack(
-            side="left", padx=(0, 5)
-        )
-
-        self.template_var = tk.StringVar(value="Blank")
-        template_combo = ttk.Combobox(
-            template_frame,
-            textvariable=self.template_var,
-            values=get_character_template_names(),
-            state="readonly",
-            width=25,
-            font=("Segoe UI", 9),
-        )
-        template_combo.pack(side="left", padx=(0, 10))
-        template_combo.bind("<<ComboboxSelected>>", self._on_template_selected)
-
-        # Template description label
-        self.template_desc_label = ttk.Label(
-            template_frame,
-            text=get_character_template_description("Blank"),
-            style="Muted.TLabel",
-        )
-        self.template_desc_label.pack(side="left")
-
-        # Info/help section
-        help_frame = ttk.Frame(main_frame, relief="groove", borderwidth=1)
-        help_frame.pack(fill="x", pady=(0, 10))
-
-        help_label = ttk.Label(
+        ttk.Label(
             help_frame,
-            text="💡 Tip: Follow the pattern of existing characters for consistency",
+            text="💡 TIP: CHARACTERS ARE SAVED AS INDIVIDUAL MARKDOWN FILES",
             style="Accent.TLabel",
-        )
-        help_label.pack(anchor="w", padx=6, pady=4)
+        ).pack(anchor="w", padx=6, pady=4)
 
         example_text = """✓ CORE FEATURES (unchangeable - describe these):
 • Skin tone, undertone, finish (matte/dewy/natural)
@@ -117,29 +127,29 @@ class CharacterCreatorDialog:
 ✗ AVOID: Specific hairstyles, fixed accessories, pose descriptions,
   outfit-specific makeup, or anything that limits scene adaptability"""
 
-        example_widget = tk.Text(
+        self.example_widget = tk.Text(
             help_frame,
-            font=("Consolas", 8),
-            height=7,
+            font=("Lexend", 8),
+            height=12,
             wrap="word",
             relief="flat",
             borderwidth=0,
         )
-        example_widget.insert("1.0", example_text)
-        example_widget.config(state="disabled")  # Make read-only but still copyable
-        example_widget.pack(anchor="w", padx=10, pady=(0, 4), fill="x")
+        self.example_widget.insert("1.0", example_text)
+        self.example_widget.config(state="disabled")
+        self.example_widget.pack(anchor="w", padx=10, pady=(0, 4), fill="x")
 
         # Character name
-        ttk.Label(main_frame, text="Character Name:", style="Bold.TLabel").pack(
-            anchor="w", pady=(0, 4)
+        ttk.Label(main_frame, text="CHARACTER NAME:", style="Bold.TLabel").pack(
+            anchor="w", padx=15, pady=(0, 4)
         )
         self.name_var = tk.StringVar()
-        self.name_entry = ttk.Entry(main_frame, textvariable=self.name_var, font=("Segoe UI", 10))
-        self.name_entry.pack(fill="x", pady=(0, 10))
+        self.name_entry = ttk.Entry(main_frame, textvariable=self.name_var, style="TEntry")
+        self.name_entry.pack(fill="x", padx=15, pady=(0, 15))
         self.name_entry.focus()
 
         # Modifier selector (replaces Gender)
-        ttk.Label(main_frame, text="Outfit Modifier:", style="Bold.TLabel").pack(anchor="w", pady=(0, 4))
+        ttk.Label(main_frame, text="OUTFIT MODIFIER:", style="Bold.TLabel").pack(anchor="w", padx=15, pady=(0, 4))
         
         # Scan for available modifiers
         data_dir = self.data_loader.base_dir / "data"
@@ -155,48 +165,54 @@ class CharacterCreatorDialog:
 
         self.modifier_var = tk.StringVar(value="F" if "F" in modifiers else modifiers[0])
         self.modifier_combo = ttk.Combobox(
-            main_frame, textvariable=self.modifier_var, values=modifiers, width=6, state="readonly"
+            main_frame, textvariable=self.modifier_var, values=modifiers, width=6, state="readonly", font=("Lexend", 9)
         )
-        self.modifier_combo.pack(anchor="w", pady=(0, 10))
+        self.modifier_combo.pack(anchor="w", padx=15, pady=(0, 15))
         create_tooltip(self.modifier_combo, "Determines which shared outfit library (outfits_*.md) is used for this character.")
 
         # Summary (short)
-        ttk.Label(main_frame, text="Summary (short):", style="Bold.TLabel").pack(
-            anchor="w", pady=(0, 4)
+        ttk.Label(main_frame, text="SUMMARY (SHORT):", style="Bold.TLabel").pack(
+            anchor="w", padx=15, pady=(0, 4)
         )
         self.summary_var = tk.StringVar()
         self.summary_entry = ttk.Entry(
-            main_frame, textvariable=self.summary_var, font=("Segoe UI", 10)
+            main_frame, textvariable=self.summary_var, style="TEntry"
         )
-        self.summary_entry.pack(fill="x", pady=(0, 10))
+        self.summary_entry.pack(fill="x", padx=15, pady=(0, 15))
 
         # Tags (comma-separated)
-        ttk.Label(main_frame, text="Tags (comma-separated):", style="Bold.TLabel").pack(
-            anchor="w", pady=(0, 4)
+        ttk.Label(main_frame, text="TAGS (COMMA-SEPARATED):", style="Bold.TLabel").pack(
+            anchor="w", padx=15, pady=(0, 4)
         )
         self.tags_var = tk.StringVar()
-        self.tags_entry = ttk.Entry(main_frame, textvariable=self.tags_var, font=("Segoe UI", 10))
-        self.tags_entry.pack(fill="x", pady=(0, 10))
+        self.tags_entry = ttk.Entry(main_frame, textvariable=self.tags_var, style="TEntry")
+        self.tags_entry.pack(fill="x", padx=15, pady=(0, 15))
         # Autocomplete popup for tags
         self._tag_popup = None
         self._available_tags = []
         self._init_tag_autocomplete()
 
         # Appearance
-        ttk.Label(main_frame, text="Appearance:", style="Bold.TLabel").pack(anchor="w", pady=(0, 4))
+        ttk.Label(main_frame, text="APPEARANCE:", style="Bold.TLabel").pack(anchor="w", padx=15, pady=(0, 4))
         ttk.Label(
             main_frame,
             text="Core features (skin, eyes, body, hair quality) + Style notes (preferences, not requirements)",
             style="Muted.TLabel",
-        ).pack(anchor="w")
+        ).pack(anchor="w", padx=15)
 
-        appearance_frame = ttk.Frame(main_frame)
-        appearance_frame.pack(fill="both", expand=True, pady=(0, 10))
+        appearance_frame = ttk.Frame(main_frame, style="TFrame")
+        appearance_frame.pack(fill="both", expand=True, padx=15, pady=(0, 15))
 
         self.appearance_text = tk.Text(
-            appearance_frame, height=8, wrap="word", font=("Consolas", 9)
+            appearance_frame, 
+            height=8, 
+            wrap="word", 
+            font=("Lexend", 9),
+            relief="flat",
+            padx=15,
+            pady=15
         )
-        appearance_scroll = ttk.Scrollbar(appearance_frame, command=self.appearance_text.yview)
+        appearance_scroll = ttk.Scrollbar(appearance_frame, orient="vertical", command=self.appearance_text.yview, style="Themed.Vertical.TScrollbar")
         self.appearance_text.configure(yscrollcommand=appearance_scroll.set)
 
         # Add placeholder text
@@ -209,18 +225,22 @@ class CharacterCreatorDialog:
 - Style preferences: [fabrics, colors, jewelry metals] when choosing outfits
 - General vibe: [personality traits that inform styling]"""
         self.appearance_text.insert("1.0", placeholder)
-        self.appearance_text.config(foreground="gray")
 
         # Bind events to clear placeholder
         def on_focus_in(event):
             if self.appearance_text.get("1.0", "end").strip() == placeholder.strip():
                 self.appearance_text.delete("1.0", "end")
-                self.appearance_text.config(foreground="black")
+                self.appearance_text.config(foreground="") # Reset to theme color
 
         def on_focus_out(event):
             if not self.appearance_text.get("1.0", "end").strip():
                 self.appearance_text.insert("1.0", placeholder)
-                self.appearance_text.config(foreground="gray")
+                try:
+                    tm = self.winfo_toplevel().theme_manager
+                    theme = tm.themes.get(tm.current_theme, {})
+                    pfg = theme.get("placeholder_fg", "#666666")
+                except: pfg = "#666666"
+                self.appearance_text.config(foreground=pfg)
 
         self.appearance_text.bind("<FocusIn>", on_focus_in)
         self.appearance_text.bind("<FocusOut>", on_focus_out)
@@ -232,144 +252,105 @@ class CharacterCreatorDialog:
         self.use_identity_var = tk.BooleanVar(value=False)
         identity_toggle = ttk.Checkbutton(
             main_frame,
-            text="Use Identity Locks (structured)",
+            text="USE IDENTITY LOCKS (STRUCTURED)",
             variable=self.use_identity_var,
             command=self._toggle_identity_mode,
+            style="TCheckbutton"
         )
-        identity_toggle.pack(anchor="w", pady=(6, 4))
+        identity_toggle.pack(anchor="w", padx=15, pady=(6, 10))
 
         # Structured fields container (hidden by default)
-        self.structured_frame = ttk.Frame(main_frame)
+        self.structured_frame = ttk.Frame(main_frame, style="TFrame")
         # Four primary lines: Body, Face, Hair, Skin
-        row = ttk.Frame(self.structured_frame)
-        ttk.Label(row, text="Body:", width=10).pack(side="left")
+        def add_struct_row(label, var):
+            row = ttk.Frame(self.structured_frame, style="TFrame")
+            ttk.Label(row, text=label.upper(), width=12, style="Muted.TLabel").pack(side="left")
+            ttk.Entry(row, textvariable=var, style="TEntry").pack(
+                side="left", fill="x", expand=True
+            )
+            row.pack(fill="x", padx=15, pady=(2, 6))
+
         self.body_var = tk.StringVar()
-        ttk.Entry(row, textvariable=self.body_var, width=60).pack(
-            side="left", fill="x", expand=True
-        )
-        row.pack(fill="x", pady=(2, 2))
-
-        row = ttk.Frame(self.structured_frame)
-        ttk.Label(row, text="Face:", width=10).pack(side="left")
         self.face_var = tk.StringVar()
-        ttk.Entry(row, textvariable=self.face_var, width=60).pack(
-            side="left", fill="x", expand=True
-        )
-        row.pack(fill="x", pady=(2, 2))
-
-        row = ttk.Frame(self.structured_frame)
-        ttk.Label(row, text="Hair:", width=10).pack(side="left")
         self.hair_var = tk.StringVar()
-        ttk.Entry(row, textvariable=self.hair_var, width=60).pack(
-            side="left", fill="x", expand=True
-        )
-        row.pack(fill="x", pady=(2, 2))
-
-        row = ttk.Frame(self.structured_frame)
-        ttk.Label(row, text="Skin:", width=10).pack(side="left")
         self.skin_var = tk.StringVar()
-        ttk.Entry(row, textvariable=self.skin_var, width=60).pack(
-            side="left", fill="x", expand=True
-        )
-        row.pack(fill="x", pady=(2, 6))
+        
+        add_struct_row("Body:", self.body_var)
+        add_struct_row("Face:", self.face_var)
+        add_struct_row("Hair:", self.hair_var)
+        add_struct_row("Skin:", self.skin_var)
 
-        # Age / Vibe / Bearing
-        row = ttk.Frame(self.structured_frame)
-        ttk.Label(row, text="Age Presentation:", width=14).pack(side="left")
+        # Three secondary lines: Age, Vibe, Bearing
+        secondary = ttk.Frame(self.structured_frame, style="TFrame")
+        secondary.pack(fill="x", padx=15, pady=(2, 6))
+        
+        ttk.Label(secondary, text="AGE:", width=12, style="Muted.TLabel").pack(side="left")
         self.age_var = tk.StringVar()
-        ttk.Entry(row, textvariable=self.age_var, width=48).pack(side="left", fill="x", expand=True)
-        row.pack(fill="x", pady=(2, 2))
-
-        row = ttk.Frame(self.structured_frame)
-        ttk.Label(row, text="Vibe / Energy:", width=14).pack(side="left")
+        ttk.Entry(secondary, textvariable=self.age_var, style="TEntry", width=40).pack(side="left", fill="x", expand=True)
+        
+        ttk.Label(secondary, text="VIBE:", width=10, style="Muted.TLabel").pack(side="left", padx=(15, 0))
         self.vibe_var = tk.StringVar()
-        ttk.Entry(row, textvariable=self.vibe_var, width=48).pack(
-            side="left", fill="x", expand=True
-        )
-        row.pack(fill="x", pady=(2, 2))
-
-        row = ttk.Frame(self.structured_frame)
-        ttk.Label(row, text="Bearing:", width=14).pack(side="left")
+        ttk.Entry(secondary, textvariable=self.vibe_var, style="TEntry", width=40).pack(side="left", fill="x", expand=True)
+        
+        ttk.Label(secondary, text="BEARING:", width=12, style="Muted.TLabel").pack(side="left", padx=(15, 0))
         self.bearing_var = tk.StringVar()
-        ttk.Entry(row, textvariable=self.bearing_var, width=48).pack(
-            side="left", fill="x", expand=True
+        ttk.Entry(secondary, textvariable=self.bearing_var, style="TEntry", width=40).pack(side="left", fill="x", expand=True)
+
+        # Default Outfit
+        ttk.Label(main_frame, text="DEFAULT OUTFIT TEMPLATE", style="Title.TLabel").pack(
+            anchor="w", padx=15, pady=(15, 5)
         )
-        row.pack(fill="x", pady=(2, 6))
-
-        # Initially hide structured_frame
-        self.structured_frame.pack_forget()
-
-        # Default outfit
-        ttk.Label(main_frame, text="Default Outfit:", style="Bold.TLabel").pack(
-            anchor="w", pady=(0, 4)
+        
+        outfit_frame = ttk.Frame(main_frame, style="TFrame")
+        outfit_frame.pack(fill="x", padx=15, pady=(0, 15))
+        
+        self.outfit_text = tk.Text(
+            outfit_frame, 
+            height=6, 
+            wrap="word", 
+            font=("Lexend", 9),
+            relief="flat",
+            padx=15,
+            pady=15
         )
-        ttk.Label(
-            main_frame,
-            text="Use sections: Top, Bottom, Footwear, Accessories, Hair/Makeup",
-            style="Muted.TLabel",
-        ).pack(anchor="w")
+        self.outfit_text.pack(fill="x")
+        self.outfit_text.insert("1.0", "- **Top:** [Description]\n- **Bottom:** [Description]\n- **Footwear:** [Description]\n- **Accessories:** [Description]\n- **Hair/Makeup:** [Description]")
 
-        outfit_frame = ttk.Frame(main_frame)
-        outfit_frame.pack(fill="both", expand=True, pady=(0, 10))
+        # Buttons (Refactor 3: Hierarchy)
+        button_frame = ttk.Frame(self.dialog, padding=15, style="TFrame")
+        button_frame.pack(side="bottom", fill="x")
 
-        self.outfit_text = tk.Text(outfit_frame, height=6, wrap="word", font=("Consolas", 9))
-        outfit_scroll = ttk.Scrollbar(outfit_frame, command=self.outfit_text.yview)
-        self.outfit_text.configure(yscrollcommand=outfit_scroll.set)
-
-        # Add outfit placeholder
-        outfit_placeholder = """- **Top:** [Description]
-- **Bottom:** [Description]
-- **Footwear:** [Description or "None specified"]
-- **Accessories:** [Description]
-- **Hair/Makeup:** [Description]"""
-        self.outfit_text.insert("1.0", outfit_placeholder)
-        self.outfit_text.config(foreground="gray")
-
-        def on_outfit_focus_in(event):
-            if self.outfit_text.get("1.0", "end").strip() == outfit_placeholder.strip():
-                self.outfit_text.delete("1.0", "end")
-                self.outfit_text.config(foreground="black")
-
-        def on_outfit_focus_out(event):
-            if not self.outfit_text.get("1.0", "end").strip():
-                self.outfit_text.insert("1.0", outfit_placeholder)
-                self.outfit_text.config(foreground="gray")
-
-        self.outfit_text.bind("<FocusIn>", on_outfit_focus_in)
-        self.outfit_text.bind("<FocusOut>", on_outfit_focus_out)
-
-        self.outfit_text.pack(side="left", fill="both", expand=True)
-        outfit_scroll.pack(side="right", fill="y")
-
-        # Make dialog resizable and set a sensible minimum size so controls fit
-        try:
-            self.dialog.resizable(True, True)
-            self.dialog.minsize(520, 420)
-        except Exception:
-            pass
-
-        # Docked bottom button bar so actions remain visible even when content scrolls
-        bottom_btn_frame = ttk.Frame(self.dialog)
-        bottom_btn_frame.pack(side="bottom", fill="x", padx=10, pady=10)
-
-        ttk.Button(bottom_btn_frame, text="Cancel", command=self._cancel).pack(
-            side="right", padx=(5, 0)
+        # Cancel: Ghost Style (Secondary)
+        self.cancel_btn = tk.Button(
+            button_frame, 
+            text="CANCEL", 
+            command=self._cancel,
+            relief="flat",
+            highlightthickness=2,
+            padx=20,
+            font=("Lexend", 9, "bold"),
+            cursor="hand2"
         )
-        self.create_btn = ttk.Button(
-            bottom_btn_frame, text="Create Character", command=self._create_character
-        )
-        self.create_btn.pack(side="right")
+        self.cancel_btn.pack(side="right", padx=(15, 0))
+        
+        def on_c_enter(e):
+            try:
+                tm = self.winfo_toplevel().theme_manager
+                theme = tm.themes.get(tm.current_theme, {})
+                hbg = theme.get("hover_bg", "#333333")
+            except: hbg = "#333333"
+            self.cancel_btn.config(bg=hbg)
+        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", "#1e1e1e"))
+        self.cancel_btn.bind("<Enter>", on_c_enter)
+        self.cancel_btn.bind("<Leave>", on_c_leave)
 
-        # Bind Enter/Escape keys
-        self.dialog.bind("<Return>", lambda e: self._create_character())
-        self.dialog.bind("<Escape>", lambda e: self._cancel())
+        self.save_btn = ttk.Button(button_frame, text="SAVE CHARACTER", command=self._save_character, style="TButton")
+        self.save_btn.pack(side="right")
 
-        # Refresh scrollable canvas bindings/region now that content is added
-        try:
-            scroll.refresh_mousewheel_bindings()
-            scroll.update_scroll_region()
-        except Exception:
-            pass
+        # Initialize scroll region
+        self.dialog.update_idletasks()
+        scroll_container.update_scroll_region()
+
 
     def _on_template_selected(self, event=None):
         """Handle template selection from dropdown."""

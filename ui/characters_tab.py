@@ -22,19 +22,30 @@ class CharactersTab:
     """Tab for managing characters, outfits, and poses."""
 
     def __init__(
-        self, parent, data_loader, on_change_callback, reload_callback=None, undo_callback=None
+        self, 
+        parent, 
+        data_loader, 
+        theme_manager,
+        character_controller,
+        on_change_callback, 
+        reload_callback=None, 
+        undo_callback=None
     ):
         """Initialize characters tab.
 
         Args:
             parent: Parent notebook widget
             data_loader: DataLoader instance
+            theme_manager: ThemeManager instance
+            character_controller: CharacterController instance
             on_change_callback: Function to call when data changes
             reload_callback: Function to call to reload all data
             undo_callback: Function to call to save state for undo
         """
         self.parent = parent
         self.data_loader = data_loader
+        self.theme_manager = theme_manager
+        self.character_controller = character_controller
         self.on_change = on_change_callback
         self.reload_data = reload_callback
         self.save_for_undo = undo_callback
@@ -59,6 +70,47 @@ class CharactersTab:
         parent.add(self.tab, text="Prompt Builder")
 
         self._build_ui()
+        
+        if self.theme_manager:
+            self.theme_manager.register(self.tab, self.apply_theme)
+
+    def apply_theme(self, theme):
+        """Update character tab widgets with theme colors. (Refactor 3)"""
+        accent = theme.get("accent", "#0078d7")
+        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+        self._last_pbg = panel_bg
+        
+        # Update custom buttons
+        if hasattr(self, "create_shared_btn"):
+            self.create_shared_btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
+        if hasattr(self, "create_char_btn"):
+            self.create_char_btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
+
+        # Update pill toggles
+        if hasattr(self, "pill_buttons_info"):
+            for frame, lbl, text, var in self.pill_buttons_info:
+                frame.config(bg=accent)
+                lbl.config(bg=panel_bg, fg=accent)
+                lbl._base_bg = panel_bg
+                lbl.config(text=f"✓ {text}" if var.get() else text)
+
+        # Update searchable comboboxes
+        for widget in [self.base_combo, self.bulk_cat_combo, self.bulk_outfit_combo, 
+                       self.bulk_scheme_combo, self.char_combo]:
+            widget.apply_theme(theme)
+
+        # Update canvas
+        if hasattr(self, "chars_canvas"):
+            self.theme_manager.apply_canvas_theme(self.chars_canvas, theme)
+
+        # Refresh character items
+        for child in self.chars_container.winfo_children():
+            if hasattr(child, "_update_theme_overrides"):
+                child._update_theme_overrides(theme)
+            
+            for widget in child.winfo_children():
+                if isinstance(widget, tk.Text):
+                    self.theme_manager.apply_text_widget_theme(widget, theme)
 
     def load_data(self, characters, base_prompts, poses, scenes=None):
         """Load character and prompt data.
@@ -133,8 +185,8 @@ class CharactersTab:
         # Standard section padding - Refactor 1
         SECTION_PAD_Y = (10, 15)
 
-        # Base prompt selector
-        bp = ttk.LabelFrame(self.tab, text="📋 Base Prompt (Style)", style="TLabelframe", padding=12)
+        # Base prompt selector - Refactor 5: Semantic Typography
+        bp = ttk.LabelFrame(self.tab, text="📋 BASE PROMPT (STYLE)", style="TLabelframe", padding=12)
         bp.grid(row=0, column=0, sticky="ew", padx=10, pady=SECTION_PAD_Y)
         bp.columnconfigure(0, weight=1)
         help_label = ttk.Label(bp, text="Choose a base art style", style="Muted.TLabel")
@@ -156,8 +208,8 @@ class CharactersTab:
             row=1, column=1, sticky="ew", padx=(2, 4), pady=(2, 6)
         )
 
-        # Bulk outfit editor section (Collapsible)
-        self.bulk_container = CollapsibleFrame(self.tab, text="⚡ Bulk Outfit Editor")
+        # Bulk outfit editor section (Collapsible) - Refactor 5
+        self.bulk_container = CollapsibleFrame(self.tab, text="⚡ BULK OUTFIT EDITOR")
         self.bulk_container.grid(row=1, column=0, sticky="ew", padx=10, pady=SECTION_PAD_Y)
         # Start collapsed
         self.bulk_container.set_opened(False)
@@ -215,15 +267,65 @@ class CharactersTab:
         )
         self.bulk_outfit_combo.pack(side="left", fill="x", expand=True)
 
-        # Lock checkbox: when checked, keep the selected outfit after applying
+        # Helper for Pill Toggle buttons in CharactersTab
+        def add_pill_toggle(parent, text, variable, command=None, tooltip=None):
+            try:
+                style = ttk.Style()
+                pbg = style.lookup("TFrame", "background")
+                accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
+            except:
+                pbg = "#1e1e1e"
+                accent = "#0078d7"
+                
+            frame = tk.Frame(parent, bg=accent, padx=1, pady=1)
+            
+            # Initial text based on variable
+            initial_text = f"✓ {text}" if variable.get() else text
+            
+            lbl = tk.Label(
+                frame, text=initial_text, bg=pbg, fg=accent,
+                font=("Lexend", 8, "bold"), padx=8, pady=2, cursor="hand2"
+            )
+            lbl.pack()
+            lbl._base_bg = pbg
+            
+            def toggle(e):
+                new_val = not variable.get()
+                variable.set(new_val)
+                lbl.config(text=f"✓ {text}" if new_val else text)
+                if command: command()
+                
+            def on_e(e, l=lbl):
+                try:
+                    tm = self.tab.winfo_toplevel().theme_manager
+                    theme = tm.themes.get(tm.current_theme, {})
+                    hbg = theme.get("hover_bg", "#333333")
+                except: hbg = "#333333"
+                l.config(bg=hbg)
+            def on_l(e, l=lbl):
+                try: l.config(bg=ttk.Style().lookup("TFrame", "background"))
+                except: l.config(bg=l._base_bg)
+                
+            lbl.bind("<Button-1>", toggle)
+            lbl.bind("<Enter>", on_e)
+            lbl.bind("<Leave>", on_l)
+            
+            if tooltip:
+                create_tooltip(lbl, tooltip)
+                
+            # Track for theme updates
+            if not hasattr(self, "pill_toggles"): self.pill_buttons_info = [] # Reuse or new?
+            if not hasattr(self, "pill_buttons_info"): self.pill_buttons_info = []
+            self.pill_buttons_info.append((frame, lbl, text, variable))
+            return frame
+
+        # Lock checkbox: Refactor 6 (Pill Strategy)
         self.bulk_lock_var = tk.BooleanVar(value=False)
-        self.bulk_lock_chk = ttk.Checkbutton(
-            bulk, text="Lock", variable=self.bulk_lock_var, width=5
+        self.bulk_lock_pill = add_pill_toggle(
+            name_frame, "LOCK", self.bulk_lock_var, 
+            tooltip="Keep the selected outfit after applying"
         )
-        # Actually grid layout above used columnspan=3. Let's put lock check in the name frame or separate row?
-        # Simpler: put lock check in name_frame
-        self.bulk_lock_chk.pack(in_=name_frame, side="left", padx=(6, 0))
-        create_tooltip(self.bulk_lock_chk, "Keep the selected outfit after applying")
+        self.bulk_lock_pill.pack(side="left", padx=(6, 0))
 
         # Bulk Team Colors
         scheme_row = ttk.Frame(bulk)
@@ -245,22 +347,22 @@ class CharactersTab:
         )
         self.bulk_scheme_combo.pack(side="left", fill="x", expand=True)
 
-        # Lock checkbox for schemes
+        # Lock checkbox for schemes: Refactor 6 (Pill Strategy)
         self.bulk_scheme_lock_var = tk.BooleanVar(value=False)
-        self.bulk_scheme_lock_chk = ttk.Checkbutton(
-            bulk, text="Lock", variable=self.bulk_scheme_lock_var, width=5
+        self.bulk_scheme_lock_pill = add_pill_toggle(
+            scheme_row, "LOCK", self.bulk_scheme_lock_var,
+            tooltip="Keep the selected colors after applying"
         )
-        self.bulk_scheme_lock_chk.pack(in_=scheme_row, side="left", padx=(6, 0))
-        create_tooltip(self.bulk_scheme_lock_chk, "Keep the selected colors after applying")
+        self.bulk_scheme_lock_pill.pack(side="left", padx=(6, 0))
 
-        # Signature Color Checkbox
+        # Signature Color Checkbox: Refactor 6 (Pill Strategy)
         self.bulk_sig_color_var = tk.BooleanVar(value=False)
-        sig_chk = ttk.Checkbutton(
-            bulk, text="Use Signature Colors", variable=self.bulk_sig_color_var,
-            command=lambda: self._update_bulk_preview()
+        self.bulk_sig_pill = add_pill_toggle(
+            bulk, "USE SIGNATURE COLORS", self.bulk_sig_color_var,
+            command=lambda: self._update_bulk_preview(),
+            tooltip="Apply signature color to all (where supported by outfit)"
         )
-        sig_chk.grid(row=4, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 8))
-        create_tooltip(sig_chk, "Apply signature color to all (where supported by outfit)")
+        self.bulk_sig_pill.grid(row=4, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 8))
 
         # Preview/status label
         self.bulk_preview_var = tk.StringVar(value="")
@@ -292,19 +394,25 @@ class CharactersTab:
             fg="#0078d7", # Fallback, will be updated by apply_theme
             highlightthickness=2, # Increased thickness
             relief="flat",
-            font=("Segoe UI", 9)
+            font=("Lexend", 9) # Refactor 5
         )
         self.create_shared_btn.grid(row=0, column=2, sticky="ew", padx=(4, 0))
         
-        def on_shared_enter(e): self.create_shared_btn.config(bg="#333333")
+        def on_shared_enter(e):
+            try:
+                tm = self.tab.winfo_toplevel().theme_manager
+                theme = tm.themes.get(tm.current_theme, {})
+                hbg = theme.get("hover_bg", "#333333")
+            except: hbg = "#333333"
+            self.create_shared_btn.config(bg=hbg)
         def on_shared_leave(e): 
             bg = getattr(self, "_last_pbg", "#ffffff")
             self.create_shared_btn.config(bg=bg)
         self.create_shared_btn.bind("<Enter>", on_shared_enter)
         self.create_shared_btn.bind("<Leave>", on_shared_leave)
 
-        # Add character section
-        add = ttk.LabelFrame(self.tab, text="👥 Add Character", style="TLabelframe", padding=12)
+        # Add character section - Refactor 5
+        add = ttk.LabelFrame(self.tab, text="👥 ADD CHARACTER", style="TLabelframe", padding=12)
         add.grid(row=2, column=0, sticky="ew", padx=10, pady=SECTION_PAD_Y)
         add.columnconfigure(0, weight=1)
         char_help = ttk.Label(
@@ -343,11 +451,17 @@ class CharactersTab:
             fg="#0078d7", # Fallback
             highlightthickness=2, # Increased thickness
             relief="flat",
-            font=("Segoe UI", 9)
+            font=("Lexend", 9)
         )
         self.create_char_btn.grid(row=0, column=1, sticky="ew", padx=(4, 0))
         
-        def on_char_enter(e): self.create_char_btn.config(bg="#333333")
+        def on_char_enter(e):
+            try:
+                tm = self.tab.winfo_toplevel().theme_manager
+                theme = tm.themes.get(tm.current_theme, {})
+                hbg = theme.get("hover_bg", "#333333")
+            except: hbg = "#333333"
+            self.create_char_btn.config(bg=hbg)
         def on_char_leave(e): 
             bg = getattr(self, "_last_pbg", "#ffffff")
             self.create_char_btn.config(bg=bg)
@@ -605,151 +719,13 @@ class CharactersTab:
         name = self.char_var.get()
         if not name:
             return
-        # If the parsed character data indicates modifier wasn't explicit, or the raw
-        # character file lacks a Modifier/Gender tag, prompt the user to add it.
-        try:
-            need_prompt = False
-
-            char_def = self.characters.get(name, {})
-            # If no modifier and no explicit gender, we need more info
-            if not char_def or (not char_def.get("modifier") and not char_def.get("gender_explicit")):
-                need_prompt = True
-
-            if need_prompt:
-                # Ask user for a quick inline modifier choice or open editor
-                choice = self._prompt_modifier_choice(name)
-                if choice and choice != "editor":
-                    # Try to write modifier tag directly into the character file
-                    try:
-                        fp = self._find_character_file(name)
-                        if fp:
-                            import shutil
-
-                            bak = fp.with_suffix(fp.suffix + ".bak")
-                            if bak.exists():
-                                idx = 1
-                                while True:
-                                    candidate = fp.with_suffix(fp.suffix + f".bak{idx}")
-                                    if not candidate.exists():
-                                        bak = candidate
-                                        break
-                                    idx += 1
-                            shutil.copy(fp, bak)
-
-                            text = fp.read_text(encoding="utf-8")
-                            # Insert Modifier tag after header or photo line
-                            lines = text.splitlines()
-                            insert_idx = None
-                            for i, line in enumerate(lines[:20]):
-                                if line.strip().lower().startswith("**photo:"):
-                                    insert_idx = i + 1
-                                    break
-                            if insert_idx is None:
-                                for i, line in enumerate(lines[:6]):
-                                    if line.strip().startswith("### "):
-                                        insert_idx = i + 1
-                                        break
-                            if insert_idx is None:
-                                insert_idx = 0
-
-                            # Replace Gender with Modifier if it exists, otherwise insert Modifier
-                            new_lines = []
-                            replaced = False
-                            for line in lines:
-                                if line.strip().startswith("**Gender:**"):
-                                    new_lines.append(f"**Modifier:** {choice}")
-                                    replaced = True
-                                else:
-                                    new_lines.append(line)
-                            
-                            if not replaced:
-                                new_lines = (
-                                    lines[:insert_idx]
-                                    + ["", f"**Modifier:** {choice}"]
-                                    + lines[insert_idx:]
-                                )
-                                
-                            fp.write_text("\n".join(new_lines), encoding="utf-8")
-                            # Reload characters and continue
-                            if self.reload_data:
-                                self.reload_data()
-                            self.characters = self.data_loader.load_characters()
-                        else:
-                            # No file found; open editor as fallback
-                            root = self.tab.winfo_toplevel()
-                            dialog = CharacterCreatorDialog(
-                                root, self.data_loader, self.reload_data, edit_character=name
-                            )
-                            dialog.show()
-                            if self.reload_data:
-                                self.reload_data()
-                            self.characters = self.data_loader.load_characters()
-                    except Exception:
-                        # If writing fails, open editor as fallback
-                        root = self.tab.winfo_toplevel()
-                        dialog = CharacterCreatorDialog(
-                            root, self.data_loader, self.reload_data, edit_character=name
-                        )
-                        dialog.show()
-                        if self.reload_data:
-                            self.reload_data()
-                        self.characters = self.data_loader.load_characters()
-
-                    # Abort if still missing
-                    char_def = self.characters.get(name, {})
-                    if not char_def.get("modifier") and not char_def.get("gender_explicit"):
-                        return
-                elif choice == "editor":
-                    root = self.tab.winfo_toplevel()
-                    dialog = CharacterCreatorDialog(
-                        root, self.data_loader, self.reload_data, edit_character=name
-                    )
-                    dialog.show()
-                    if self.reload_data:
-                        self.reload_data()
-                    self.characters = self.data_loader.load_characters()
-                    char_def = self.characters.get(name, {})
-                    if not char_def.get("modifier") and not char_def.get("gender_explicit"):
-                        return
-                else:
-                    return
-        except Exception:
-            # Non-fatal; continue with existing behavior
-            pass
-        if any(c["name"] == name for c in self.selected_characters):
-            from utils.notification import notify
-
-            root = self.tab.winfo_toplevel()
-            msg = f"{name} is already in the prompt"
-            notify(root, "Already Added", msg, level="info", duration=2500)
-            return
-
-        # Save state for undo
-        if self.save_for_undo:
-            self.save_for_undo()
-
-        # Auto-assign first available outfit as default
-        outfit = ""
-        char_def = self.characters.get(name, {})
-        outfits = char_def.get("outfits", {})
-        if "Base" in outfits:
-            outfit = "Base"
-        elif outfits:
-            outfit = sorted(list(outfits.keys()))[0]
-
-        self.selected_characters.append(
-            {
-                "name": name,
-                "outfit": outfit,
-                "pose_category": "",
-                "pose_preset": "",
-                "action_note": "",
-            }
-        )
-        self.char_var.set("")
-        self._refresh_list()
-        # Auto-scroll to the newly added character
-        self.chars_canvas.yview_moveto(1.0)
+            
+        if self.character_controller.add_character(name, self.selected_characters):
+            self.char_var.set("")
+            self._refresh_list()
+            # Auto-scroll to the newly added character
+            self.chars_canvas.yview_moveto(1.0)
+            self.on_change()
 
     def _create_new_character(self):
         """Open dialog to create a new character."""
@@ -788,17 +764,11 @@ class CharactersTab:
 
     def _remove_character(self, idx):
         """Remove character at index."""
-        # Add confirmation for destructive action
-        char_name = self.selected_characters[idx].get("name", "this character")
-        if not messagebox.askyesno(
-            "Remove Character", f"Remove {char_name} from the prompt?", icon="question"
-        ):
-            return
-
-        if self.save_for_undo:
-            self.save_for_undo()
-        self.selected_characters.pop(idx)
-        self._refresh_list()
+        if self.character_controller.remove_character(idx, self.selected_characters):
+            if self.save_for_undo:
+                self.save_for_undo()
+            self._refresh_list()
+            self.on_change()
 
     def _move_up(self, idx):
         """Move character up in list."""
@@ -810,6 +780,7 @@ class CharactersTab:
                 self.selected_characters[idx - 1],
             )
             self._refresh_list()
+            self.on_change()
 
     def _move_down(self, idx):
         """Move character down in list."""
@@ -821,12 +792,14 @@ class CharactersTab:
                 self.selected_characters[idx + 1],
             )
             self._refresh_list()
+            self.on_change()
 
     def _update_outfit(self, idx, outfit_name):
         """Update character outfit."""
         self.selected_characters[idx]["outfit"] = outfit_name
         # Refresh the list so outfit buttons update their visual state
         self._refresh_list()
+        self.on_change()
 
     def _update_action_note(self, idx, text_widget):
         """Update character action note with debouncing."""
@@ -865,12 +838,14 @@ class CharactersTab:
         preset_combo.set("")
         # Refresh the list to rebuild comboboxes with current values showing
         self._refresh_list()
+        self.on_change()
 
     def _update_pose_preset(self, idx, preset_name):
         """Update character pose preset."""
         self.selected_characters[idx]["pose_preset"] = preset_name
         # Refresh to show the selection
         self._refresh_list()
+        self.on_change()
 
     def _refresh_list(self):
         """Refresh the list of selected characters."""
@@ -895,7 +870,7 @@ class CharactersTab:
                 empty_frame,
                 text="👈 Add characters to get started",
                 foreground="gray",
-                font=("Consolas", 11),
+                font=("Lexend", 11),
             )
             empty_label.pack()
             # Manually update scroll region
@@ -1050,6 +1025,7 @@ class CharactersTab:
 
         # Defer on_change to avoid event queue overflow
         self.tab.after(1, self.on_change)
+        self._refresh_list() # Potential infinite recursion? Fixed by _refreshing guard.
         self._refreshing = False
 
     def _find_character_file(self, character_name):
@@ -1090,7 +1066,7 @@ class CharactersTab:
         ttk.Label(
             dlg, 
             text=f"Select an outfit modifier for '{character_name}':",
-            font=("Segoe UI", 9, "bold")
+            font=("Lexend", 9, "bold")
         ).pack(padx=12, pady=(12, 6))
         
         ttk.Label(
@@ -1193,8 +1169,28 @@ class CharactersTab:
             theme_manager: ThemeManager instance
             theme: Theme color dict
         """
-        for char_frame in self.chars_container.winfo_children():
-            for widget in char_frame.winfo_children():
+        # Update pill toggles - Refactor 6
+        if hasattr(self, "pill_buttons_info"):
+            accent = theme.get("accent", "#0078d7")
+            panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            for frame, lbl, text, var in self.pill_buttons_info:
+                frame.config(bg=accent)
+                lbl.config(bg=panel_bg, fg=accent)
+                lbl._base_bg = panel_bg
+                # Also ensure text is correct for current state
+                lbl.config(text=f"✓ {text}" if var.get() else text)
+
+        # Update searchable comboboxes - Refactor 3
+        for widget in [self.base_combo, self.bulk_cat_combo, self.bulk_outfit_combo, 
+                       self.bulk_scheme_combo, self.char_combo]:
+            if hasattr(widget, "apply_theme"):
+                widget.apply_theme(theme)
+
+        for child in self.chars_container.winfo_children():
+            if hasattr(child, "_update_theme_overrides"):
+                child._update_theme_overrides(theme)
+            
+            for widget in child.winfo_children():
                 if isinstance(widget, tk.Text):
                     theme_manager.apply_text_widget_theme(widget, theme)
 
@@ -1237,15 +1233,9 @@ class CharactersTab:
         Args:
             idx: Index of character to duplicate
         """
+        self.character_controller.duplicate_character(idx, self.selected_characters)
         if self.save_for_undo:
             self.save_for_undo()
-
-        import copy
-
-        char = copy.deepcopy(
-            self.selected_characters[idx]
-        )  # Use deep copy to avoid shared references
-        self.selected_characters.insert(idx + 1, char)
         self._refresh_list()
         self.on_change()
 
@@ -1278,128 +1268,11 @@ class CharactersTab:
         Args:
             character_name: Name of the character to add
         """
-        # If the parsed character data indicates modifier wasn't explicit, prompt
-        # the user before adding.
-        try:
-            char_def = self.characters.get(character_name, {})
-            if not char_def or (not char_def.get("modifier") and not char_def.get("gender_explicit")):
-                choice = self._prompt_modifier_choice(character_name)
-                if choice and choice != "editor":
-                    try:
-                        fp = self._find_character_file(character_name)
-                        if fp:
-                            import shutil
+        if self.character_controller.add_character(character_name, self.selected_characters):
+            if self.save_for_undo:
+                self.save_for_undo()
+            self._refresh_list()
+            # Auto-scroll to the newly added character
+            self.chars_canvas.yview_moveto(1.0)
+            self.on_change()
 
-                            bak = fp.with_suffix(fp.suffix + ".bak")
-                            if bak.exists():
-                                idx = 1
-                                while True:
-                                    candidate = fp.with_suffix(fp.suffix + f".bak{idx}")
-                                    if not candidate.exists():
-                                        bak = candidate
-                                        break
-                                    idx += 1
-                            shutil.copy(fp, bak)
-                            text = fp.read_text(encoding="utf-8")
-                            lines = text.splitlines()
-                            insert_idx = None
-                            for i, line in enumerate(lines[:20]):
-                                if line.strip().lower().startswith("**photo:"):
-                                    insert_idx = i + 1
-                                    break
-                            if insert_idx is None:
-                                for i, line in enumerate(lines[:6]):
-                                    if line.strip().startswith("### "):
-                                        insert_idx = i + 1
-                                        break
-                            if insert_idx is None:
-                                insert_idx = 0
-                            
-                            new_lines = []
-                            replaced = False
-                            for line in lines:
-                                if line.strip().startswith("**Gender:**"):
-                                    new_lines.append(f"**Modifier:** {choice}")
-                                    replaced = True
-                                else:
-                                    new_lines.append(line)
-                            
-                            if not replaced:
-                                new_lines = (
-                                    lines[:insert_idx]
-                                    + ["", f"**Modifier:** {choice}"]
-                                    + lines[insert_idx:]
-                                )
-                                
-                            fp.write_text("\n".join(new_lines), encoding="utf-8")
-                            if self.reload_data:
-                                self.reload_data()
-                            self.characters = self.data_loader.load_characters()
-                        else:
-                            # fallback to open editor
-                            root = self.tab.winfo_toplevel()
-                            dialog = CharacterCreatorDialog(
-                                root,
-                                self.data_loader,
-                                self.reload_data,
-                                edit_character=character_name,
-                            )
-                            dialog.show()
-                            if self.reload_data:
-                                self.reload_data()
-                            self.characters = self.data_loader.load_characters()
-                    except Exception:
-                        root = self.tab.winfo_toplevel()
-                        dialog = CharacterCreatorDialog(
-                            root, self.data_loader, self.reload_data, edit_character=character_name
-                        )
-                        dialog.show()
-                        if self.reload_data:
-                            self.reload_data()
-                        self.characters = self.data_loader.load_characters()
-                    
-                    char_def = self.characters.get(character_name, {})
-                    if not char_def.get("modifier") and not char_def.get("gender_explicit"):
-                        return
-                elif choice == "editor":
-                    root = self.tab.winfo_toplevel()
-                    dialog = CharacterCreatorDialog(
-                        root, self.data_loader, self.reload_data, edit_character=character_name
-                    )
-                    dialog.show()
-                    if self.reload_data:
-                        self.reload_data()
-                    self.characters = self.data_loader.load_characters()
-                    char_def = self.characters.get(character_name, {})
-                    if not char_def.get("modifier") and not char_def.get("gender_explicit"):
-                        return
-                else:
-                    return
-        except Exception:
-            pass
-
-        if self.save_for_undo:
-            self.save_for_undo()
-
-        # Auto-assign first available outfit as default
-        outfit = ""
-        char_def = self.characters.get(character_name, {})
-        outfits = char_def.get("outfits", {})
-        if "Base" in outfits:
-            outfit = "Base"
-        elif outfits:
-            outfit = sorted(list(outfits.keys()))[0]
-
-        self.selected_characters.append(
-            {
-                "name": character_name,
-                "outfit": outfit,
-                "pose_category": "",
-                "pose_preset": "",
-                "action_note": "",
-            }
-        )
-        self._refresh_list()
-        # Auto-scroll to the newly added character
-        self.chars_canvas.yview_moveto(1.0)
-        self.on_change()

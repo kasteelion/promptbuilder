@@ -39,7 +39,7 @@ def test_parse_shared_outfits_and_merge():
 
     # merge with character outfits overriding common
     char_data = {"outfits": {"Casual": "Character-specific casual"}}
-    merged = MarkdownParser.merge_character_outfits(char_data, shared, "Alice")
+    merged, categorized = MarkdownParser.merge_character_outfits(char_data, shared, "Alice")
     assert merged["Casual"] == "Character-specific casual"
     assert "Formal" in merged
 

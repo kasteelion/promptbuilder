@@ -8,11 +8,12 @@ from tkinter import ttk
 class SearchableCombobox(ttk.Frame):
     """Combobox with search/filter functionality and better UX for large lists."""
 
-    def __init__(self, parent, values=None, on_select=None, on_favorite_toggle=None, on_double_click=None, show_favorites=False, placeholder="Search...", textvariable=None, **kwargs):
+    def __init__(self, parent, theme_manager=None, values=None, on_select=None, on_favorite_toggle=None, on_double_click=None, show_favorites=False, placeholder="Search...", textvariable=None, **kwargs):
         """Initialize searchable combobox.
 
         Args:
             parent: Parent widget
+            theme_manager: Optional ThemeManager instance
             values: List of values
             on_select: Callback when item selected (passes value)
             on_favorite_toggle: Callback when favorite toggled (passes value, is_fav)
@@ -24,6 +25,7 @@ class SearchableCombobox(ttk.Frame):
         """
         super().__init__(parent, **kwargs)
 
+        self.theme_manager = theme_manager
         self.all_values = values or []
         self.on_select = on_select
         self.on_favorite_toggle = on_favorite_toggle
@@ -42,6 +44,9 @@ class SearchableCombobox(ttk.Frame):
         self._filter_cache = {}
 
         self._build_ui()
+        
+        if self.theme_manager:
+            self.theme_manager.register(self, self.apply_theme)
 
     def _build_ui(self):
         """Build the UI."""
@@ -66,26 +71,75 @@ class SearchableCombobox(ttk.Frame):
         self.entry.bind("<Escape>", lambda e: self._hide_dropdown())
         self.entry.bind("<Double-Button-1>", self._on_entry_double_click)
         
-        # Clear button next to entry (X)
+        # Clear button next to entry (X) - Refactor 5: Lexend/Link
         self.clear_btn = ttk.Button(
             self.entry_container, 
             text="✕", 
             width=2,
-            command=self._clear_text
+            command=self._clear_text,
+            style="Link.TButton"
         )
         # Configure style if needed, or rely on default
         
         # We'll place it dynamically in _on_key_release
         self._update_clear_btn_visibility()
 
-        # Dropdown button
-        self.dropdown_btn = ttk.Button(self, text="▾", width=3, command=self._toggle_dropdown)
-        self.dropdown_btn.grid(row=0, column=1)
+        # Get initial colors from theme if available
+        panel_bg = "#1e1e1e"
+        accent = "#0078d7"
+        border = "#333333"
+        sel_bg = "#333333"
+        
+        if self.theme_manager and self.theme_manager.current_theme in self.theme_manager.themes:
+            theme = self.theme_manager.themes[self.theme_manager.current_theme]
+            panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            accent = theme.get("accent", "#0078d7")
+            border = theme.get("border", panel_bg)
+            sel_bg = theme.get("hover_bg", theme.get("selected_bg", "#333333"))
+        else:
+            try:
+                style = ttk.Style()
+                panel_bg = style.lookup("TFrame", "background")
+                accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
+                border = style.lookup("Card.TFrame", "bordercolor") or accent
+            except: pass
+
+        # Dropdown button - Refactor 3: Ghost style
+        self.dropdown_btn = tk.Button(
+            self, 
+            text="▾", 
+            width=3, 
+            command=self._toggle_dropdown,
+            bg=panel_bg,
+            fg=accent,
+            relief="flat",
+            highlightthickness=1,
+            highlightbackground=border,
+            cursor="hand2"
+        )
+        self.dropdown_btn.grid(row=0, column=1, padx=(2, 0))
+        self.dropdown_btn._base_bg = panel_bg
+        
+        self.dropdown_btn.bind("<Enter>", lambda e: self.dropdown_btn.config(bg=sel_bg))
+        self.dropdown_btn.bind("<Leave>", lambda e: self.dropdown_btn.config(bg=getattr(self.dropdown_btn, "_base_bg", panel_bg)))
 
         # Favorite button (optional)
         if self.show_favorites:
-            self.fav_btn = ttk.Button(self, text="☆", width=3, command=self._toggle_favorite)
-            self.fav_btn.grid(row=0, column=2)
+            self.fav_btn = tk.Button(
+                self, 
+                text="☆", 
+                width=3, 
+                command=self._toggle_favorite,
+                bg=panel_bg,
+                fg=accent,
+                relief="flat",
+                highlightthickness=1,
+                highlightbackground=border
+            )
+            self.fav_btn.grid(row=0, column=2, padx=(2, 0))
+            self.fav_btn._base_bg = panel_bg
+            self.fav_btn.bind("<Enter>", lambda e: self.fav_btn.config(bg=sel_bg))
+            self.fav_btn.bind("<Leave>", lambda e: self.fav_btn.config(bg=getattr(self.fav_btn, "_base_bg", panel_bg)))
             
         # Set initial placeholder
         if not self._selected_value.get():
@@ -136,11 +190,15 @@ class SearchableCombobox(ttk.Frame):
         """Set entry placeholder mode (gray text)."""
         if active:
             self._selected_value.set(self.placeholder)
-            self.entry.config(foreground="gray")
+            pfg = "#666666"
+            if self.theme_manager and self.theme_manager.current_theme in self.theme_manager.themes:
+                theme = self.theme_manager.themes[self.theme_manager.current_theme]
+                pfg = theme.get("placeholder_fg", "#666666")
+            self.entry.config(foreground=pfg) # Refactor 3: Dark friendly gray
         else:
             if self._selected_value.get() == self.placeholder:
                 self._selected_value.set("")
-            self.entry.config(foreground="") # Reset to default (black)
+            self.entry.config(foreground="") # Reset to default (black/white from theme)
 
     def _clear_text(self):
         """Clear entry text."""
@@ -182,7 +240,13 @@ class SearchableCombobox(ttk.Frame):
 
     def _check_hide_dropdown(self):
         """Check if we should hide dropdown after focus loss."""
-        focus = self.focus_get()
+        try:
+            focus = self.focus_get()
+        except Exception:
+            # focus_get() can raise KeyError if focus is on an internal widget like 'popdown'
+            self._hide_dropdown()
+            return
+
         if self.dropdown and self.dropdown.winfo_exists():
             # Check if focus is in dropdown or its children
             try:
@@ -204,6 +268,10 @@ class SearchableCombobox(ttk.Frame):
         self.dropdown = tk.Toplevel(self)
         self.dropdown.wm_overrideredirect(True)
         self.dropdown.attributes("-topmost", True)
+        
+        # Ensure children can find the manager
+        if self.theme_manager:
+            self.theme_manager.theme_toplevel(self.dropdown)
 
         # Position below entry
         self.update_idletasks()
@@ -225,7 +293,7 @@ class SearchableCombobox(ttk.Frame):
 
         # Measure font height for accurate row height
         from tkinter import font as tkfont
-        f = tkfont.Font(font=("Segoe UI", 9))
+        f = tkfont.Font(font=("Lexend", 9))
         line_h = f.metrics("linespace") + 4
         
         h = max(30, min(300, (num_items * line_h) + 6))
@@ -238,24 +306,18 @@ class SearchableCombobox(ttk.Frame):
 
         # Listbox with scrollbar
         # Attempt to get theme colors
-        theme = None
+        theme = {}
         accent_color = "#0078d7"
-        bg_color = "white"
-        fg_color = "black"
-        border_color = "#cccccc"
+        bg_color = "#1e1e1e" # Darker default
+        fg_color = "#eeeeee" # Lighter default
+        border_color = "#333333" # Muted default
         
-        try:
-            root = self.winfo_toplevel()
-            if hasattr(root, "theme_manager"):
-                tm = root.theme_manager
-                theme = tm.themes.get(tm.current_theme)
-                if theme:
-                    accent_color = theme["accent"]
-                    bg_color = theme["text_bg"]
-                    fg_color = theme["text_fg"]
-                    border_color = theme["border"]
-        except Exception:
-            pass
+        if self.theme_manager and self.theme_manager.current_theme in self.theme_manager.themes:
+            theme = self.theme_manager.themes[self.theme_manager.current_theme]
+            accent_color = theme["accent"]
+            bg_color = theme["text_bg"]
+            fg_color = theme["text_fg"]
+            border_color = theme["border"]
 
         frame = tk.Frame(self.dropdown, borderwidth=1, relief="solid", bg=border_color)
         frame.pack(fill="both", expand=True)
@@ -265,16 +327,16 @@ class SearchableCombobox(ttk.Frame):
             height=10, 
             borderwidth=0, 
             highlightthickness=0,
-            font=("Segoe UI", 9),
+            font=("Lexend", 9), # Refactor 5: Lexend
             activestyle="none",
             selectbackground=accent_color,
-            selectforeground=theme["bg"] if theme else "white",
+            selectforeground=theme.get("bg", "white"),
             background=bg_color,
             foreground=fg_color
         )
         self.listbox.pack(side="left", fill="both", expand=True)
 
-        scrollbar = ttk.Scrollbar(frame, command=self.listbox.yview)
+        scrollbar = ttk.Scrollbar(frame, orient="vertical", command=self.listbox.yview, style="Themed.Vertical.TScrollbar")
         scrollbar.pack(side="right", fill="y")
         self.listbox.config(yscrollcommand=scrollbar.set)
 
@@ -544,3 +606,41 @@ class SearchableCombobox(ttk.Frame):
         """Set favorites list."""
         self.favorites = set(favorites) if favorites else set()
         self._filter_cache.clear()
+
+    def apply_theme(self, theme):
+        """Apply theme to custom widgets. (Refactor 3)"""
+        accent = theme.get("accent", "#0078d7")
+        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+        border = theme.get("border", panel_bg)
+        sel_bg = theme.get("hover_bg", theme.get("selected_bg", "#333333"))
+        
+        # Update custom buttons
+        if hasattr(self, "dropdown_btn"):
+            self.dropdown_btn.config(bg=panel_bg, fg=accent, highlightbackground=border)
+            self.dropdown_btn._base_bg = panel_bg
+            
+        if hasattr(self, "fav_btn"):
+            self.fav_btn.config(bg=panel_bg, fg=accent, highlightbackground=border)
+            self.fav_btn._base_bg = panel_bg
+            
+        # Update placeholder color if currently active
+        if self._selected_value.get() == self.placeholder:
+             pfg = theme.get("placeholder_fg", "#666666")
+             self.entry.config(foreground=pfg)
+            
+        # If dropdown is open, we need to update the listbox too
+        if self.dropdown and self.dropdown.winfo_exists():
+            try:
+                # Find the frame and listbox
+                for child in self.dropdown.winfo_children():
+                    if isinstance(child, tk.Frame):
+                        child.config(bg=border)
+                        for inner in child.winfo_children():
+                            if isinstance(inner, tk.Listbox):
+                                inner.config(
+                                    bg=theme.get("text_bg", panel_bg),
+                                    fg=theme.get("text_fg", theme.get("fg", "white")),
+                                    selectbackground=accent,
+                                    selectforeground=theme.get("bg", "black")
+                                )
+            except: pass

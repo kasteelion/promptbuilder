@@ -16,7 +16,7 @@ Character files are Markdown documents that define the visual identity, metadata
 **Photo:** filename.png
 **Summary:** A brief narrative description of the character's vibe and personality.
 **Tags:** comma, separated, tags, for, filtering
-**Gender:** F (or M)
+**Modifier:** F (or M, or H)
 **Signature Color:** #HEXCODE (Optional)
 
 **Appearance:**
@@ -44,7 +44,7 @@ Character files are Markdown documents that define the visual identity, metadata
 ### Key Fields
 - **Header (`### Name`):** Must match the character's display name.
 - **Photo:** The filename of the corresponding image in `data/characters/`.
-- **Gender:** Critical for mapping to the correct outfit library (`outfits_f.md` vs `outfits_m.md`).
+- **Modifier:** Replaces the legacy **Gender** field. Critical for mapping to the correct outfit library (`outfits_f.md`, `outfits_m.md`, or `outfits_h.md`).
 - **Signature Color:** A Hex code (e.g., `#FF7F50`) used to personalize generic outfits.
 - **Appearance:** Bullet points are parsed to build the core visual prompt.
 - **Base Outfit:** Defines the "Default" look if no specific outfit is selected in the UI.
@@ -78,26 +78,18 @@ Description text goes here. Bold **key items** to ensure they are emphasized in 
 #### 1. Bold Emphasis
 Enclosing text in double asterisks (e.g., `**red leather jacket**`) is a convention to signal key visual elements.
 
-#### 2. Dynamic Placeholders
+#### 2. Library Indicators
+When using the Outfit Library Explorer, you may see these symbols:
+- `(🎨)`: Supports Team Color Scheme placeholders.
+- `(✨)`: Supports the character's Signature Color.
+
+#### 3. Dynamic Placeholders
 Outfits can adapt to specific color schemes defined in `data/color_schemes.md`.
 - `{primary_color}`: The team/scheme's main color.
 - `{secondary_color}`: The supporting color.
 - `{accent}`: A highlight color.
 - `{team}`: The text name of the team/organization.
 - `{modifier}`: A special slot for appending text from `data/modifiers.md`.
-
-#### 3. Signature Color Logic
-To support characters with defined `**Signature Color:**`, you can use two different syntaxes:
-
-**A. Conditional Block (Recommended):**
-`((default:Color Name) or (signature))`
-*   **Logic:** If the character has a signature color and "Use Signature Color" is checked, uses the Hex code. Otherwise, defaults to "Color Name".
-*   **Example:** `A **((default:white) or (signature)) dress**`
-
-**B. Standalone Tag:**
-`{signature_color}`
-*   **Logic:** If the character has a signature color and "Use Signature Color" is checked, uses the Hex code. Otherwise, defaults to the generic term `"vibrant color"`.
-*   **Example:** `Energy glow in {signature_color}.`
 
 ---
 
@@ -135,9 +127,9 @@ All three files follow a simple list format grouped by headers.
 
 ### Interaction Placeholders (`interactions.md`)
 Interactions often involve multiple subjects. Use specific placeholders to map characters:
-- `{char1}`: The primary character.
-- `{char2}`: The secondary character.
-- `{char3+}`: Additional characters.
+- `{char1}`: The first selected character.
+- `{char2}`: The second selected character.
+- `{char3}`, `{char4}`, etc.: Additional characters.
 
 ---
 

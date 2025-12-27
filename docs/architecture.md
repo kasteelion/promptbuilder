@@ -8,9 +8,17 @@ Prompt Builder is designed with a modular, layered architecture to ensure mainta
 The GUI is built using Python's standard `tkinter` library. It follows a component-based approach:
 
 *   **MainWindow**: The central coordinator that integrates various panels and managers.
-*   **Managers**: Specialized classes that handle specific UI concerns (Menu, Theme, Font, State, Dialog).
-*   **Controllers**: Decoupled logic for specific UI behaviors, such as gallery management and menu actions.
-*   **Widgets**: Custom, reusable UI components like `CollapsibleFrame` and `SearchableCombobox`.
+*   **Managers**: Specialized classes that handle specific UI concerns:
+    *   `ThemeManager`: Handles dynamic styling, color derivation (`hover_bg`, `placeholder_fg`), and cross-component theme propagation.
+    *   `MenuManager`: Manages application menus and shortcuts.
+    *   `FontManager`: Handles responsive typography.
+    *   `DialogManager`: Centralizes creation of themed `Toplevel` dialogs.
+*   **Controllers**: Decoupled logic for specific UI behaviors, such as gallery management (`GalleryController`) and menu actions.
+*   **Widgets**: Custom, reusable UI components like `CollapsibleFrame`, `SearchableCombobox`, and `ScrollableCanvas`.
+*   **Performance Optimizations**:
+    *   **Lazy Loading**: Expensive UI components (like the `EditTab`) are initialized only when first accessed.
+    *   **Async Image Loading**: A shared `ThreadPoolExecutor` manages character photo decoding and resizing to prevent UI freezes and excessive thread creation.
+    *   **Throttled Rendering**: Character gallery rendering is batched and throttled to maintain responsiveness during large catalog loads.
 
 ### 2. The Logic Layer (`logic/`)
 This layer handles data processing and business rules, independent of the UI:

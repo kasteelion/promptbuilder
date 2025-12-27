@@ -9,12 +9,27 @@ from tkinter import ttk
 
 from logic.data_loader import DataLoader
 from ui.characters_tab import CharactersTab
+from themes.theme_manager import ThemeManager
+from ui.controllers.character_controller import CharacterController
 
 root = tk.Tk()
 root.withdraw()
 notebook = ttk.Notebook(root)
+style = ttk.Style(root)
+tm = ThemeManager(root, style)
+
+class MockApp:
+    def __init__(self, root, dl, ct_tab=None):
+        self.root = root
+        self.ctx = type('obj', (object,), {'characters': {}, 'base_prompts': {}, 'poses': {}, 'color_schemes': {}, 'modifiers': {}, 'data_loader': dl})
+        self.data_loader = dl
+        self.characters_tab = ct_tab
+    def reload_data(self): print("Mock reload")
 
 dl = DataLoader()
+app = MockApp(root, dl)
+cc = CharacterController(app)
+
 chars = dl.load_characters()
 base = dl.load_base_prompts()
 poses = dl.load_presets("poses.md")
@@ -22,10 +37,13 @@ poses = dl.load_presets("poses.md")
 ct = CharactersTab(
     notebook,
     dl,
+    tm,
+    cc,
     lambda: print("on_change called"),
     lambda: print("reload called"),
     lambda: print("save undo"),
 )
+app.characters_tab = ct
 ct.load_data(chars, base, poses)
 
 # Choose two characters from loaded chars

@@ -76,7 +76,13 @@ class GalleryController:
             if visible:
                 # Show gallery - insert at position 0 (leftmost)
                 try:
-                    self.main_paned.insert(0, self.gallery_frame, weight=2)
+                    panes = self.main_paned.panes()
+                    if panes:
+                        # Use 'before' to ensure it's the first pane
+                        self.main_paned.add(self.gallery_frame, before=panes[0], width=300)
+                    else:
+                        self.main_paned.add(self.gallery_frame, width=300)
+                        
                     if characters is not None:
                         self.load_characters(characters)
                 except tk.TclError:

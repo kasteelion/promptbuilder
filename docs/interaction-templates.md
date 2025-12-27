@@ -176,20 +176,16 @@ Content: {char1} demonstrating technique to {char2} and {char3}, who watch atten
 
 ### Editing Existing Templates (Advanced)
 
-Developers can directly edit `utils/interaction_templates.py`:
+Developers or advanced users can directly edit the Markdown file at `data/interactions.md`.
 
-```python
-TEMPLATES = {
-    # ... existing templates ...
-    
-    "Your Template Name": {
-        "description": "Brief description",
-        "content": "{char1} doing something with {char2}, descriptive details"
-    },
-}
+Format:
+```markdown
+## Category Name
+
+- **Template Name:** Template content with {char1}, {char2} placeholders
 ```
 
-**Important:** After editing the file manually, restart the application to reload templates.
+**Important:** After editing the file manually, restart the application or use "File > Reload Data" to reload templates.
 
 ## Technical Details
 
@@ -201,11 +197,11 @@ TEMPLATES = {
 5. Result is inserted into notes text field
 
 ### File Location
-- Template definitions: `utils/interaction_templates.py`
-- Integration: `ui/main_window.py` (the experimental `ui/visual_ui.py` was deprecated and removed)
+- Template definitions: `data/interactions.md`
+- Integration: `ui/main_window.py`
 
 ### Compatibility
-- Works in the Classic UI (the Visual Gallery mode has been deprecated and removed)
+- Works in the Classic UI
 - Templates are applied at insertion time (editing characters later won't update)
 - Can be saved with presets for reusable prompt configurations
 

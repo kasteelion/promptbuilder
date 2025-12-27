@@ -54,6 +54,36 @@
 - **Accessories:** Black beret (worn over hijab), fingerless black leather gloves
 - **Makeup:** ((default:Red) or (signature)) lipstick, black winged eyeliner, ((default:red) or (signature)) eye shadow
 
+### Cyber-Tactical Combat
+- **Hijab:** High-sheen technical jersey hijab in **{primary_color}** with a secure aerodynamic wrap and metallic **{accent}** trim
+- **Top:** **Mock-neck Compression Tunic** (a form-fitting, full-length modest base layer made of high-sheen **{primary_color}** technical fabric and reinforced nylon panels); **Reinforced Tactical Harness** (an integrated **{secondary_color}** midsection and torso harness with metallic buckle details and structured webbing)
+- **Bottom:** **Full-length Compression Leggings** with integrated **Asymmetrical Tech-Overlay** (laser-cut **{accent}** leather geometric patterns stitched down the outer thighs for a futuristic, armored silhouette)
+- **Footwear:** Heavy-duty lace-up wrestling boots with reinforced shinguards
+- **Accessories:** Matching **{primary_color}** fingerless tactical gloves with metallic plating; a detachable high-collared entrance capelet (full coverage)
+- **Makeup:** Sleek hijab wrap secured for action; bold high-contrast smoky eye with **{accent}** metallic liner; matte nude lip and sharp, athletic contouring
+
+### Tech-Athletic Compression
+- **Hijab:** Technical jersey sports hijab in ((default:charcoal) or (signature)) with a secure aerodynamic wrap
+- **Top:** Long-sleeve compression tunic (high-neck technical nylon-spandex blend in ((default:charcoal) or (signature)), modest length, ultra-fitted to highlight athletic silhouette)
+- **Bottom:** Matching compression leggings (thick elasticated waistband, moisture-wicking matte finish)
+- **Accessories:** Black fitness tracker; wireless earbuds
+- **Makeup:** Natural dewy skin; minimal makeup
+
+### Ribbed Bodysuit
+- **Hijab:** Soft ribbed knit hijab in ((default:cream) or (signature)) with a relaxed wrap
+- **Top:** Long-sleeve ribbed modest tunic (high-density ribbed knit in ((default:cream) or (signature)), form-fitting construction, high neck)
+- **Bottom:** Matching ribbed leggings or worn with modest denim midi-skirt
+- **Accessories:** Simple gold chain necklace; small gold studs
+- **Makeup:** Peachy lip gloss; fresh-faced glow
+
+### Tactical Scout
+- **Hijab:** Practical tactical hijab in **((default:olive green) or (signature))** with a secure aerodynamic wrap.
+- **Top:** **Ribbed moisture-wicking tunic** (long-sleeve, modest fit in **((default:olive green) or (signature))**, featuring reinforced elbow patches).
+- **Bottom:** **Tactical leggings** (technical **{secondary_color}** compression fabric with integrated side pockets and mesh ventilation).
+- **Footwear:** Rugged mid-calf leather boots.
+- **Accessories:** Heavy-duty utility belt with **{accent}** hardware; black digital fitness watch.
+- **Makeup:** Secure hijab wrap; fresh-faced "outdoorsy" glow; tinted lip balm.
+
 ### Studded Harness Style
 - **Hijab:** Black jersey hijab with silver stud accents
 - **Top:** Long-sleeve black bodysuit with strappy harness details worn over it (geometric cutouts simulated with fabric overlays or harness worn over tunic)
@@ -169,6 +199,14 @@
 - **Footwear:** Latin dance heels
 - **Accessories:** Statement earrings, flower on hijab
 - **Makeup:** Bold red lip, passionate expression
+
+### Street-Dance Set
+- **Hijab:** Jersey hijab in **((default:vibrant orange) or (signature))** with an urban wrap style.
+- **Top:** **Technical fleece hoodie** (long-sleeve, modest length in **((default:vibrant orange) or (signature))**, featuring an oversized hood) worn over a long-sleeve black base layer.
+- **Bottom:** **Full-length black athletic leggings** with **{secondary_color}** side-stripes and a high-compression waistband.
+- **Footwear:** Chunky **{accent}** platform sneakers.
+- **Accessories:** Layered silver chain necklaces; oversized hoop earrings.
+- **Makeup:** Graphic winged eyeliner; glossy nude lip.
 
 ### Pro Wrestling
 - **Hijab:** **Sports hijab** (black with ((default:red) or (signature)) trim, secure fit for athletic movement)
@@ -650,6 +688,14 @@
 - **Accessories:** Elaborate gold jewelry, circlet (worn over hijab)
 - **Makeup:** Elegant polished look
 
+### Sculpted Bandage Set
+- **Hijab:** Heavy silk hijab in **((default:black) or (signature))** with an elegant formal wrap.
+- **Top:** **Sculpted bandage gown** (long-sleeve, modest high-neck design, constructed from heavy **((default:black) or (signature))** elasticated ribbing); Cross-over strap detailing (**((default:charcoal) or (signature))** accent straps creating a structural "X" shape across the chest).
+- **Bottom:** **Matching sculpted maxi skirt** (floor-length, form-fitting).
+- **Footwear:** Strappy **((default:silver) or (signature))** high heels or elegant flats.
+- **Accessories:** Vintage-inspired gold clutch; statement cocktail ring.
+- **Makeup:** Sultry smoky eye in charcoal and **((default:black) or (signature))**; deep plum or crimson lipstick.
+
 ### Statement Accent
 - **Hijab:** White or black silk hijab with elegant drape
 - **Top:** Long-sleeve fitted evening gown (black bodycon silhouette) with integrated ((default:white) or (signature)) shoulder band detail adapted for modesty (white sash or bow detail at back)
@@ -837,6 +883,14 @@
 - **Footwear:** Polished combat boots
 - **Accessories:** Rank insignia, service medals
 - **Makeup:** Focused heroic expression
+
+### Modern Power Suit
+- **Hijab:** Structured silk hijab in **{primary_color}** with a sharp professional wrap.
+- **Top:** **Modern tailored blazer** (long-sleeve, structured **{primary_color}** wool-blend, modest length falling to mid-thigh) worn over a matching high-neck **{primary_color}** modest tunic.
+- **Bottom:** **Tailored trousers** (matching **{primary_color}** fabric, high-waisted with a sharp front crease).
+- **Footwear:** Pointed-toe low-heeled pumps or loafers.
+- **Accessories:** Slim **{secondary_color}** leather belt; minimalist **{accent}** watch.
+- **Makeup:** Professional natural makeup; bold matte lipstick in **((default:deep red) or (signature))**.
 
 ### Office
 - **Hijab:** Structured chiffon hijab in charcoal gray with neat professional wrap

@@ -74,6 +74,11 @@ class ScrollableCanvas(ttk.Frame):
         self.canvas.bind("<MouseWheel>", self._on_mousewheel)
         self._bind_mousewheel_recursive(self.container)
 
+    def apply_theme(self, theme):
+        """Update canvas background with theme colors. (Refactor 3)"""
+        bg = theme.get("bg", "#121212")
+        self.canvas.config(bg=bg)
+
     def _on_mousewheel(self, event):
         """Handle mousewheel scrolling with smooth pixel-based movement."""
         # Ensure scrollbar is enabled for scrolling - Refactor 3 Fix
@@ -114,39 +119,38 @@ class ScrollableCanvas(ttk.Frame):
             
         def _apply():
             try:
-                self.canvas.update_idletasks()
+                if not self.winfo_exists():
+                    return
+                    
+                # Use requested height as primary source (much faster than winfo_y() loops)
+                req_h = self.container.winfo_reqheight()
+                req_w = self.container.winfo_reqwidth()
                 
-                # Manual calculation of height based on children extents
-                max_y = 0
-                for child in self.container.winfo_children():
-                    try:
-                        if child.winfo_viewable():
-                            y = child.winfo_y() + child.winfo_height()
-                            if y > max_y:
-                                max_y = y
-                    except Exception:
-                        continue
+                # Performance Optimization: 
+                # If req_h is very small but we have children, we might need a manual check.
+                # Otherwise, winfo_reqheight is usually accurate for pack/grid containers.
+                content_height = req_h
                 
-                # Get bbox as fallback/complement
-                bbox = self.canvas.bbox("all")
+                if content_height < 100: # Heuristic: if suspiciously small, verify with bbox
+                    bbox = self.canvas.bbox("all")
+                    if bbox:
+                        content_height = max(content_height, bbox[3])
                 
-                width = bbox[2] if bbox else self.container.winfo_width()
-                # Use max of children extents or requested height
-                content_height = max(max_y, bbox[3] if bbox else 0, self.container.winfo_reqheight())
-                
-                # Apply with padding
-                self.canvas.config(scrollregion=(0, 0, width, content_height + 32))
+                # Apply with padding for a clean look at the bottom
+                self.canvas.config(scrollregion=(0, 0, req_w, content_height + 32))
                 
                 # Performance Fix: Check if scrollbar handle should be visible
                 if not self._is_scrolling_needed():
                     self.scrollbar.config(state="disabled")
+                else:
+                    self.scrollbar.config(state="normal")
                 
                 self._scroll_after_id = None
             except Exception:
                 self._scroll_after_id = None
 
-        # Schedule update with a small delay to coalesce multiple calls
-        self._scroll_after_id = self.after(50, _apply)
+        # Coalesce multiple layout calls into one update
+        self._scroll_after_id = self.after(30, _apply)
 
     def _is_scrolling_needed(self):
         """Check if the content height exceeds the viewable height. (Refactor 3)"""
@@ -180,11 +184,11 @@ class CollapsibleFrame(ttk.Frame):
     def __init__(self, parent, text="", opened=True, show_clear=False, show_import=False, *args, **kwargs):
         super().__init__(parent, *args, **kwargs, style="Card.TFrame")
         self.columnconfigure(0, weight=1)
-        self._text = text
+        self._text = text.upper() # Refactor 5: UPPERCASE
         self.pill_buttons = [] # Track for theme updates
 
         # Header frame with distinct styling - Refactor 1 & 3
-        self._header = ttk.Frame(self, style="TFrame", padding=(10, 5))
+        self._header = ttk.Frame(self, style="TFrame", padding=(15, 5))
         self._header.grid(row=0, column=0, sticky="ew")
         
         # Explicitly set background for the header frame if needed - Refactor 3
@@ -193,18 +197,18 @@ class CollapsibleFrame(ttk.Frame):
             panel_bg = style.lookup("TFrame", "background")
             accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
         except:
-            panel_bg = "#f0f0f0"
+            panel_bg = "#1e1e1e"
             accent = "#0078d7"
 
         self._header.columnconfigure(0, weight=1)
 
         self._toggle_btn = tk.Button(
             self._header, 
-            text=("▾ " if opened else "▸ ") + text, 
+            text=("▼ " if opened else "▶ ") + self._text, 
             command=self._toggle_cb, 
             bg=panel_bg,
             fg=accent,
-            font=("Segoe UI", 11, "bold"),
+            font=("Lexend", 10, "bold"),
             relief="flat",
             anchor="w",
             padx=5,
@@ -225,24 +229,26 @@ class CollapsibleFrame(ttk.Frame):
             # Inner Label (The hollow center)
             lbl = tk.Label(
                 pill, 
-                text=text, 
+                text=text.upper(), 
                 bg=panel_bg, 
                 fg=accent,
-                font=("Segoe UI", 8, "bold"),
-                padx=8,
+                font=("Lexend", 8, "bold"),
+                padx=10,
                 pady=2,
                 cursor="hand2"
             )
             lbl.pack()
             lbl._base_bg = panel_bg
             
-            def on_enter(e, l=lbl): l.config(bg="#333333")
-            def on_leave(e, l=lbl):
+            def on_enter(e, l=lbl):
                 try:
-                    s = ttk.Style()
-                    base = s.lookup("TFrame", "background")
-                except: base = l._base_bg
-                l.config(bg=base)
+                    tm = self.master.winfo_toplevel().theme_manager
+                    theme = tm.themes.get(tm.current_theme, {})
+                    hbg = theme.get("hover_bg", "#333333")
+                except: hbg = "#333333"
+                l.config(bg=hbg)
+            def on_leave(e, l=lbl):
+                l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
                 
             lbl.bind("<Enter>", on_enter)
             lbl.bind("<Leave>", on_leave)
@@ -253,12 +259,12 @@ class CollapsibleFrame(ttk.Frame):
 
         self._clear_btn_parts = None
         if show_clear:
-            self._clear_btn_parts = add_pill("✕ Clear", None, 0)
+            self._clear_btn_parts = add_pill("✕ CLEAR", None, 0)
 
         self._import_btn_parts = None
         if show_import:
             col = 1 if show_clear else 0
-            self._import_btn_parts = add_pill("📥 Import", None, col)
+            self._import_btn_parts = add_pill("📥 IMPORT", None, col)
 
         # Content frame - Refactor 1
         self._content = ttk.Frame(self, style="TFrame", padding=(15, 10))
@@ -275,10 +281,10 @@ class CollapsibleFrame(ttk.Frame):
     def _update_state(self):
         if self._open:
             self._content.grid()
-            self._toggle_btn.config(text="▾ " + self._text)
+            self._toggle_btn.config(text="▼ " + self._text)
         else:
             self._content.grid_remove()
-            self._toggle_btn.config(text="▸ " + self._text)
+            self._toggle_btn.config(text="▶ " + self._text)
         
         # Trigger parent scroll region update if applicable
         try:
@@ -294,8 +300,8 @@ class CollapsibleFrame(ttk.Frame):
 
     def apply_theme(self, theme):
         """Update custom widgets with theme colors. (Refactor 3)"""
-        accent = theme.get("accent", "#0078d7")
-        panel_bg = theme.get("panel_bg", theme["bg"])
+        accent = theme.get("accent", theme.get("fg", "#0078d7"))
+        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
         
         self._toggle_btn.config(bg=panel_bg, fg=accent)
         
@@ -365,6 +371,12 @@ class FlowFrame(ttk.Frame):
         from .constants import FLOW_FRAME_REFLOW_DELAY_MS, WIDGET_REFLOW_RETRY_LIMIT
 
         try:
+            # PERFORMANCE: Skip reflow if not visible or mapped
+            if not self.winfo_exists() or not self.winfo_viewable():
+                # If not viewable, we might want to schedule one for when it becomes visible
+                # But for now, just skip to save CPU
+                return
+                
             self.update_idletasks()
         except Exception:
             pass

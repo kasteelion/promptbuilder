@@ -27,6 +27,8 @@ import threading
 
 # Simple in-memory cache for resized/cropped PIL images keyed by (path, w, h)
 _IMAGE_CACHE: dict = {}
+# Shared executor for image loading to avoid thread explosion
+_IMAGE_EXECUTOR = None
 
 
 class CharacterCard(ttk.Frame):
@@ -39,6 +41,7 @@ class CharacterCard(ttk.Frame):
         character_data,
         data_loader,
         prefs,
+        theme_manager=None,
         on_add_callback=None,
         on_photo_change=None,
         on_tag_click=None,
@@ -53,6 +56,7 @@ class CharacterCard(ttk.Frame):
             character_data: Character data dict
             data_loader: DataLoader instance
             prefs: PreferencesManager instance
+            theme_manager: Optional ThemeManager instance
             on_add_callback: Function to call when adding character
             on_photo_change: Function to call when photo is changed
             on_tag_click: Function to call when a tag is clicked
@@ -65,6 +69,7 @@ class CharacterCard(ttk.Frame):
         self.character_data = character_data
         self.data_loader = data_loader
         self.prefs = prefs
+        self.theme_manager = theme_manager
         self.on_add_callback = on_add_callback
         self.on_photo_change = on_photo_change
         self.on_tag_click = on_tag_click
@@ -76,6 +81,20 @@ class CharacterCard(ttk.Frame):
         self.is_used = False # State for "Added" indicator
 
         self._build_ui()
+        
+        if self.theme_manager:
+            self.theme_manager.register(self, self._update_theme_overrides)
+
+    @classmethod
+    def _get_executor(cls):
+        global _IMAGE_EXECUTOR
+        if _IMAGE_EXECUTOR is None:
+            from concurrent.futures import ThreadPoolExecutor
+            import os
+            # Use number of cores or at least 4
+            workers = min(32, (os.cpu_count() or 4) + 1)
+            _IMAGE_EXECUTOR = ThreadPoolExecutor(max_workers=workers)
+        return _IMAGE_EXECUTOR
 
     def set_used_state(self, is_used):
         """Update visual state to show if character is already in prompt."""
@@ -86,12 +105,13 @@ class CharacterCard(ttk.Frame):
         if is_used:
             # Show "Added" indicator
             if not hasattr(self, "used_label"):
+                accent = self.theme_colors.get("accent", "#0078d7")
                 self.used_label = tk.Label(
                     self.photo_canvas, 
                     text="✓", 
-                    bg="#4caf50", 
+                    bg="#4caf50", # Keep green for success/added
                     fg="white", 
-                    font=("Segoe UI", 10, "bold")
+                    font=("Lexend", 10, "bold")
                 )
                 # Place in top-right corner of photo
                 self.photo_canvas.create_window(
@@ -103,7 +123,6 @@ class CharacterCard(ttk.Frame):
                 )
             
             # Apply subtle highlight to card - Refactor 3
-            accent = self.theme_colors.get("accent", "#0078d7")
             self.configure(style="Selected.Card.TFrame")
         else:
             # Remove indicator
@@ -127,7 +146,7 @@ class CharacterCard(ttk.Frame):
         """Handle mouse leave."""
         self.configure(style="Card.TFrame")
         try:
-            self.name_label.config(foreground=self.theme_colors.get("fg", "black"))
+            self.name_label.config(foreground=self.theme_colors.get("fg", "white"))
         except Exception:
             pass
 
@@ -135,6 +154,13 @@ class CharacterCard(ttk.Frame):
         """Build the card UI with a vertical stacked layout. (Refactor 3)"""
         self.configure(relief="flat", borderwidth=0, padding=10)
         
+        # Theme colors
+        pbg = self.theme_colors.get("panel_bg", self.theme_colors.get("text_bg", "#1e1e1e"))
+        fg = self.theme_colors.get("fg", "white")
+        accent = self.theme_colors.get("accent", "#0078d7")
+        border = self.theme_colors.get("border", self.theme_colors.get("bg", "#333333"))
+        muted = "gray" # Default fallback for muted text
+
         # Main container (Vertical stack)
         container = ttk.Frame(self, style="TFrame")
         container.pack(fill="both", expand=True)
@@ -145,9 +171,9 @@ class CharacterCard(ttk.Frame):
             container,
             width=photo_size,
             height=photo_size,
-            bg=self.theme_colors.get("panel_bg", self.theme_colors.get("text_bg", "#ffffff")),
+            bg=pbg,
             highlightthickness=1,
-            highlightbackground=self.theme_colors.get("border", "#cccccc"),
+            highlightbackground=border,
             cursor="hand2",
         )
         self.photo_canvas.pack(pady=(0, 10))
@@ -158,8 +184,8 @@ class CharacterCard(ttk.Frame):
             center,
             center,
             text="📷",
-            fill=self.theme_colors.get("fg", "#666666"),
-            font=("Segoe UI", 14), # Slightly larger icon
+            fill=fg,
+            font=("Lexend", 14), 
             justify="center",
         )
 
@@ -188,8 +214,7 @@ class CharacterCard(ttk.Frame):
         self.desc_label = ttk.Label(
             container,
             text=summary,
-            font=("Segoe UI", 8),
-            foreground="gray",
+            style="Muted.TLabel", # Use themed muted style
             wraplength=240,
             justify="center",
             anchor="center"
@@ -208,19 +233,16 @@ class CharacterCard(ttk.Frame):
             tags_frame = FlowFrame(container, padding_x=2, padding_y=2)
             tags_frame.pack(pady=(0, 10), fill="x")
             
-            accent_color = self.theme_colors.get("accent", "#0078d7")
-            panel_bg = self.theme_colors.get("panel_bg", "#1E1E1E") 
-
             for t in tags:
-                pill = tk.Frame(tags_frame, bg=accent_color, padx=1, pady=1)
+                pill = tk.Frame(tags_frame, bg=accent, padx=1, pady=1)
                 lbl = tk.Label(
                     pill, 
                     text=t, 
-                    bg=panel_bg, 
-                    fg=accent_color,
-                    font=("Segoe UI", 8, "bold"), # Increased font size
+                    bg=pbg, 
+                    fg=accent,
+                    font=("Lexend", 8, "bold"),
                     padx=10,
-                    pady=4, # Increased vertical padding
+                    pady=4,
                     cursor="hand2"
                 )
                 lbl.pack()
@@ -236,7 +258,7 @@ class CharacterCard(ttk.Frame):
         # Add button: Primary
         self.add_btn = ttk.Button(
             btn_frame, 
-            text="➕ Add", 
+            text="➕ ADD", 
             command=self._on_add_clicked, 
             width=8,
             style="TButton"
@@ -249,37 +271,40 @@ class CharacterCard(ttk.Frame):
             text="✏️", 
             command=self._on_edit_clicked, 
             width=3,
-            bg=self.theme_colors.get("panel_bg", "#ffffff"),
-            fg=self.theme_colors.get("accent", "#0078d7"),
-            highlightbackground=self.theme_colors.get("accent", "#0078d7"),
+            bg=pbg,
+            fg=accent,
+            highlightbackground=accent,
             highlightthickness=2,
             relief="flat"
         )
         self.edit_btn.pack(side="left", padx=2)
         
         # Hover for edit
-        self.edit_btn.bind("<Enter>", lambda e: self.edit_btn.config(bg="#333333"))
-        self.edit_btn.bind("<Leave>", lambda e: self.edit_btn.config(bg=self.theme_colors.get("panel_bg", "#ffffff")))
-
-        # Favorite button
-        self.fav_btn_var = tk.StringVar(value="☆")
+        def on_edit_enter(e): self.edit_btn.config(bg=self.theme_colors.get("hover_bg", self.theme_colors.get("selected_bg", "#333333")))
+        def on_edit_leave(e): self.edit_btn.config(bg=self.theme_colors.get("panel_bg", self.theme_colors.get("bg", "#1e1e1e")))
+        
+        self.edit_btn.bind("<Enter>", on_edit_enter)
+        self.edit_btn.bind("<Leave>", on_edit_leave)
+        
+        self.fav_btn_var = tk.StringVar()
         self.fav_btn = tk.Button(
             btn_frame, 
-            textvariable=self.fav_btn_var, 
-            width=3, 
+            textvariable=self.fav_btn_var,
             command=self._toggle_favorite,
-            bg=self.theme_colors.get("panel_bg", "#ffffff"),
+            bg=self.theme_colors.get("panel_bg", self.theme_colors.get("bg", "#1e1e1e")),
             fg=self.theme_colors.get("accent", "#0078d7"),
-            highlightbackground=self.theme_colors.get("accent", "#0078d7"),
-            highlightthickness=2,
-            relief="flat"
+            relief="flat",
+            font=("Lexend", 11)
         )
-        self.fav_btn.pack(side="left", padx=2)
+        self.fav_btn.pack(side="right")
         
-        self.fav_btn.bind("<Enter>", lambda e: self.fav_btn.config(bg="#333333"))
-        self.fav_btn.bind("<Leave>", lambda e: self.fav_btn.config(bg=self.theme_colors.get("panel_bg", "#ffffff")))
+        def on_fav_enter(e): self.fav_btn.config(bg=self.theme_colors.get("hover_bg", self.theme_colors.get("selected_bg", "#333333")))
+        def on_fav_leave(e): self.fav_btn.config(bg=self.theme_colors.get("panel_bg", pbg))
+        self.fav_btn.bind("<Enter>", on_fav_enter)
+        self.fav_btn.bind("<Leave>", on_fav_leave)
         
         self._update_fav_star()
+
 
     def toggle_visibility(self, event=None):
         """Toggle the visibility of the card contents. (Refactor 3)"""
@@ -383,7 +408,7 @@ class CharacterCard(ttk.Frame):
             self.fav_btn_var.set("★" if is_fav else "☆")
             
             accent = self.theme_colors.get("accent", "#0078d7")
-            panel_bg = self.theme_colors.get("panel_bg", "#ffffff")
+            panel_bg = self.theme_colors.get("panel_bg", self.theme_colors.get("bg", "#1e1e1e"))
             
             if is_fav:
                 # Primary style for favorite
@@ -414,6 +439,10 @@ class CharacterCard(ttk.Frame):
             preview_window.title(f"{self.character_name} - Photo")
             preview_window.geometry("600x700")
             preview_window.transient(self.winfo_toplevel())
+
+            # Apply basic top-level theme
+            if self.theme_manager:
+                self.theme_manager.theme_toplevel(preview_window)
 
             # Main frame
             main_frame = ttk.Frame(preview_window, padding=10)
@@ -540,7 +569,7 @@ class CharacterCard(ttk.Frame):
         # Background loader
         def _bg_load(path, w, h, widget_ref):
             try:
-                # Check if widget still exists before starting heavy work
+                # Early check: if widget is gone, don't bother
                 try:
                     if not widget_ref.winfo_exists():
                         return
@@ -552,6 +581,7 @@ class CharacterCard(ttk.Frame):
                 # Cover-resize: scale to fill the canvas and crop center
                 scale = max(w / img.width, h / img.height)
                 new_size = (int(img.width * scale) + 2, int(img.height * scale) + 2)
+                
                 # Performance: Use BILINEAR for thumbnails instead of LANCZOS (much faster)
                 img = img.resize(new_size, Image.Resampling.BILINEAR)
 
@@ -574,8 +604,8 @@ class CharacterCard(ttk.Frame):
                 # Silently fail background load if widget is gone or file is invalid
                 pass
 
-        t = threading.Thread(target=_bg_load, args=(photo_file, canvas_w, canvas_h, self), daemon=True)
-        t.start()
+        # Submit to shared thread pool
+        self._get_executor().submit(_bg_load, photo_file, canvas_w, canvas_h, self)
 
     def _display_photo(self, photo_path):
         """Display a photo in the canvas.
@@ -592,7 +622,7 @@ class CharacterCard(ttk.Frame):
                 center,
                 text="📷\nPIL not\ninstalled",
                 fill=self.theme_colors.get("fg", "#666666"),
-                font=("Segoe UI", 8),
+                font=("Lexend", 8),
                 justify="center",
             )
             return
@@ -620,7 +650,7 @@ class CharacterCard(ttk.Frame):
                 center,
                 text="❌\nInvalid\nimage",
                 fill="red",
-                font=("Segoe UI", 8),
+                font=("Lexend", 8),
                 justify="center",
             )
 
@@ -760,7 +790,7 @@ class CharacterCard(ttk.Frame):
 class CharacterGalleryPanel(ttk.Frame):
     """Side panel showing character cards in a scrollable gallery."""
 
-    def __init__(self, parent, data_loader, prefs, on_add_callback, theme_colors=None):
+    def __init__(self, parent, data_loader, prefs, on_add_callback, theme_manager=None, theme_colors=None):
         """Initialize character gallery.
 
         Args:
@@ -768,6 +798,7 @@ class CharacterGalleryPanel(ttk.Frame):
             data_loader: DataLoader instance
             prefs: PreferencesManager instance
             on_add_callback: Function to call when adding character
+            theme_manager: Optional ThemeManager instance
             theme_colors: Theme color dict
         """
         super().__init__(parent, style="TFrame")
@@ -775,6 +806,7 @@ class CharacterGalleryPanel(ttk.Frame):
         self.data_loader = data_loader
         self.prefs = prefs
         self.on_add_callback = on_add_callback
+        self.theme_manager = theme_manager
         self.theme_colors = theme_colors or {}
         self.characters = {}
         self.load_queue = []  # Queue for lazy loading images
@@ -789,6 +821,9 @@ class CharacterGalleryPanel(ttk.Frame):
             self.categorized_tags_map = {}
 
         self._build_ui()
+        
+        if self.theme_manager:
+            self.theme_manager.register(self, self._refresh_display)
 
     def _build_ui(self):
         """Build the gallery UI."""
@@ -800,11 +835,12 @@ class CharacterGalleryPanel(ttk.Frame):
         title_frame = ttk.Frame(header, style="TFrame")
         title_frame.pack(side="left", fill="x", expand=True)
 
-        self.title_label = ttk.Label(title_frame, text="👥 Characters", style="Title.TLabel")
+        # Refactor 5: Semantic Typography (UPPERCASE)
+        self.title_label = ttk.Label(title_frame, text="👥 CHARACTERS", style="Title.TLabel")
         self.title_label.pack(anchor="w")
 
         self.count_label = ttk.Label(
-            title_frame, text="0 characters", font=("Segoe UI", 8), foreground="gray"
+            title_frame, text="0 characters", style="Muted.TLabel"
         )
         self.count_label.pack(anchor="w")
 
@@ -817,26 +853,31 @@ class CharacterGalleryPanel(ttk.Frame):
 
         # Search box with placeholder effect
         search_frame = ttk.Frame(self, style="TFrame")
-        search_frame.pack(fill="x", padx=12, pady=(5, 10))
+        search_frame.pack(fill="x", padx=15, pady=(5, 15))
 
         self.search_var = tk.StringVar()
 
-        self.search_entry = ttk.Entry(search_frame, textvariable=self.search_var)
+        self.search_entry = ttk.Entry(search_frame, textvariable=self.search_var, style="TEntry")
         self.search_entry.pack(fill="x", ipady=2)
-        self.search_entry.insert(0, "Search...")
-        self.search_entry.config(foreground="gray")
+        self.search_entry.insert(0, "SEARCH...")
+        
+        # Selected tags area (chips) shown under the search box
+        def on_focus_in(e):
+            if self.search_entry.get() == "SEARCH...":
+                self.search_entry.delete(0, tk.END)
 
-        # Clear search button
-        self.clear_search_btn = ttk.Button(
-            search_frame, text="✕", width=3, command=self._clear_search
-        )
-        self.clear_search_btn.pack(side="right", padx=(2, 0))
+        def on_focus_out(e):
+            if not self.search_entry.get():
+                self.search_entry.insert(0, "SEARCH...")
 
-        # Sort and Filter row
+        self.search_entry.bind("<FocusIn>", on_focus_in)
+        self.search_entry.bind("<FocusOut>", on_focus_out)
+
+        # Sort and Filter row - Refactor 5 (Initialized early to avoid AttributeError)
         sort_filter_frame = ttk.Frame(self, style="TFrame")
-        sort_filter_frame.pack(fill="x", padx=12, pady=(0, 10))
+        sort_filter_frame.pack(fill="x", padx=15, pady=(0, 15))
 
-        ttk.Label(sort_filter_frame, text="Sort:", style="Muted.TLabel").pack(side="left")
+        ttk.Label(sort_filter_frame, text="SORT:", style="Muted.TLabel").pack(side="left")
         self.sort_var = tk.StringVar(value="Name")
         sort_combo = ttk.Combobox(
             sort_filter_frame,
@@ -844,35 +885,55 @@ class CharacterGalleryPanel(ttk.Frame):
             state="readonly",
             width=8,
             values=["Name", "Modifier", "Recently Added"],
+            font=("Lexend", 8)
         )
-        sort_combo.pack(side="left", padx=(4, 8))
+        sort_combo.pack(side="left", padx=(6, 10))
         sort_combo.bind("<<ComboboxSelected>>", lambda e: self._display_characters())
 
+        # Refactor 6: Component Semantics (Pill Strategy for Filter)
         self.fav_only_var = tk.BooleanVar(value=False)
-        self.fav_chk = ttk.Checkbutton(
-            sort_filter_frame,
-            text="⭐",
-            variable=self.fav_only_var,
-            command=self._display_characters,
-            style="TCheckbutton",
+        
+        try:
+            style = ttk.Style()
+            pbg = style.lookup("TFrame", "background")
+            accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
+        except:
+            pbg = "#1e1e1e"
+            accent = "#0078d7"
+
+        self.fav_pill_frame = tk.Frame(sort_filter_frame, bg=accent, padx=1, pady=1)
+        self.fav_pill_frame.pack(side="left")
+        
+        self.fav_pill_lbl = tk.Label(
+            self.fav_pill_frame, 
+            text="☆", 
+            bg=pbg, 
+            fg=accent,
+            font=("Lexend", 10, "bold"),
+            padx=8,
+            pady=1,
+            cursor="hand2"
         )
-        self.fav_chk.pack(side="left")
-        create_tooltip(self.fav_chk, "Show Favorites Only")
+        self.fav_pill_lbl.pack()
+        self.fav_pill_lbl._base_bg = pbg
 
-        # Selected tags area (chips) shown under the search box
-        def on_focus_in(e):
-            if self.search_entry.get() == "Search...":
-                self.search_entry.delete(0, tk.END)
-                # Let theme engine handle color or set to theme fg
-                # self.search_entry.config(foreground="black")
+        def toggle_fav_filter(e=None):
+            new_state = not self.fav_only_var.get()
+            self.fav_only_var.set(new_state)
+            self.fav_pill_lbl.config(text="★" if new_state else "☆")
+            self._display_characters()
 
-        def on_focus_out(e):
-            if not self.search_entry.get():
-                self.search_entry.insert(0, "Search...")
-                self.search_entry.config(foreground="gray")
+        def on_f_enter(e):
+            hbg = self.theme_colors.get("hover_bg", "#333333")
+            self.fav_pill_lbl.config(bg=hbg)
+        def on_f_leave(e):
+            self.fav_pill_lbl.config(bg=getattr(self.fav_pill_lbl, "_base_bg", "#1e1e1e"))
 
-        self.search_entry.bind("<FocusIn>", on_focus_in)
-        self.search_entry.bind("<FocusOut>", on_focus_out)
+        self.fav_pill_lbl.bind("<Button-1>", toggle_fav_filter)
+        self.fav_pill_lbl.bind("<Enter>", on_f_enter)
+        self.fav_pill_lbl.bind("<Leave>", on_f_leave)
+        
+        create_tooltip(self.fav_pill_lbl, "Show Favorites Only")
 
         # Selected tags area (chips) shown under the search box
         self.selected_tags = []
@@ -1112,7 +1173,7 @@ class CharacterGalleryPanel(ttk.Frame):
 
     def _render_cards_batch(self, char_list, start_index, row, col):
         """Render a batch of character cards."""
-        BATCH_SIZE = 8  # Number of cards to render per frame
+        BATCH_SIZE = 12 # Slightly larger batch for modern CPUs
         max_cols = 1    # Reverted to 1 column
         
         end_index = min(start_index + BATCH_SIZE, len(char_list))
@@ -1154,7 +1215,7 @@ class CharacterGalleryPanel(ttk.Frame):
         # If more items remain, schedule next batch
         if end_index < len(char_list):
             self._render_job_id = self.after(
-                10, 
+                5, # Smaller delay for faster perceived speed
                 lambda: self._render_cards_batch(char_list, end_index, row, col)
             )
         else:
@@ -1162,7 +1223,7 @@ class CharacterGalleryPanel(ttk.Frame):
             self._render_job_id = None
             self._finalize_rendering(row, max_cols)
 
-        # Ensure load queue processing is running
+        # Process load queue more aggressively during initial render
         self._process_load_queue()
 
     def _finalize_rendering(self, final_row, max_cols):
@@ -1236,7 +1297,7 @@ class CharacterGalleryPanel(ttk.Frame):
         # Schedule next batch if items remain
         if self.load_queue:
             try:
-                self.after(50, self._process_load_queue)
+                self.after(20, self._process_load_queue)
             except Exception:
                 pass
 
@@ -1333,10 +1394,23 @@ class CharacterGalleryPanel(ttk.Frame):
             from utils import logger
             logger.exception("Error clearing tag filters")
 
-    def _refresh_display(self):
+    def _refresh_display(self, theme=None):
         """Refresh the display (used when theme changes)."""
+        if theme:
+            self.theme_colors = theme
+            
         # Update canvas background
-        self.scrollable_canvas.canvas.configure(bg=self.theme_colors.get("bg", "#f0f0f0"))
+        bg = self.theme_colors.get("bg", "#121212")
+        self.scrollable_canvas.canvas.configure(bg=bg)
+        
+        # Update fav pill
+        if hasattr(self, "fav_pill_frame"):
+            accent = self.theme_colors.get("accent", "#0078d7")
+            pbg = self.theme_colors.get("panel_bg", self.theme_colors.get("text_bg", "#1e1e1e"))
+            self.fav_pill_frame.config(bg=accent)
+            self.fav_pill_lbl.config(bg=pbg, fg=accent)
+            self.fav_pill_lbl._base_bg = pbg
+
         # Redisplay all characters to update their theme colors
         self._display_characters()
         
