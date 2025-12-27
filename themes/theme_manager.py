@@ -2,6 +2,7 @@
 
 import os
 import tkinter as tk
+from tkinter import ttk
 import tkinter.font as tkfont
 
 from config import THEMES, DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
