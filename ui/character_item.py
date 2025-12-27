@@ -80,9 +80,18 @@ class CharacterItem(ttk.Frame):
             self.controls_frame.pack(fill="x")
             
         # Bind toggle to header, title and handle - Refactor 3
-        self.header.bind("<Button-1>", lambda e: self.toggle_collapse())
-        self.title_label.bind("<Button-1>", lambda e: self.toggle_collapse())
-        self.drag_handle.bind("<Button-1>", lambda e: self.toggle_collapse())
+        for widget in [self.header, self.title_label, self.drag_handle, self.toggle_indicator]:
+            widget.bind("<Button-1>", lambda e: self.toggle_collapse())
+            # Hover effect for clearer affordance
+            widget.bind("<Enter>", self._on_header_hover)
+            widget.bind("<Leave>", self._on_header_leave)
+
+        # Get theme colors safely for hover logic
+        try:
+            style = ttk.Style()
+            self._last_pbg = style.lookup("TFrame", "background")
+        except:
+            self._last_pbg = "#ffffff"
 
         # --- Content inside controls_frame ---
         
@@ -261,6 +270,18 @@ class CharacterItem(ttk.Frame):
             bg=panel_bg, fg="gray", borderwidth=0, relief="flat", font=("Segoe UI", 8),
             activeforeground="red"
         ).pack(side="right")
+
+    def _on_header_hover(self, event):
+        """Highlight header on hover."""
+        try:
+            self.title_label.configure(style="Accent.TLabel")
+        except: pass
+
+    def _on_header_leave(self, event):
+        """Restore header on leave."""
+        try:
+            self.title_label.configure(style="Bold.TLabel")
+        except: pass
 
     def _on_outfit_cat_select(self, val):
         outfits = sorted(list(self.char_def.get("outfits_categorized", {}).get(val, {}).keys()))

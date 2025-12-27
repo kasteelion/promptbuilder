@@ -1045,6 +1045,11 @@ class PromptBuilderApp:
         num_chars = len(self.characters_tab.get_selected_characters())
         self._update_status(f"Ready • {num_chars} character(s) selected")
 
+        # Update gallery highlights
+        if hasattr(self, "character_gallery") and hasattr(self.character_gallery, "update_used_status"):
+            selected_names = [c["name"] for c in self.characters_tab.get_selected_characters()]
+            self.character_gallery.update_used_status(selected_names)
+
     def _generate_summary(self):
         """Generate summary from current data.
 

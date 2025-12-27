@@ -26,7 +26,7 @@ class ScrollableCanvas(ttk.Frame):
         # Create canvas and scrollbar
         self.canvas = tk.Canvas(self, highlightthickness=0, borderwidth=0)
         self.scrollbar = ttk.Scrollbar(
-            self, orient="vertical", command=self.canvas.yview, style="Vertical.TScrollbar"
+            self, orient="vertical", command=self.canvas.yview, style="Dark.Vertical.TScrollbar"
         )
         self.container = ttk.Frame(self.canvas, style="TFrame")
         

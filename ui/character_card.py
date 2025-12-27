@@ -73,8 +73,42 @@ class CharacterCard(ttk.Frame):
         
         self.photo_image = None  # Keep reference to prevent GC
         self._expanded = True # Accordion state
+        self.is_used = False # State for "Added" indicator
 
         self._build_ui()
+
+    def set_used_state(self, is_used):
+        """Update visual state to show if character is already in prompt."""
+        if self.is_used == is_used:
+            return
+        self.is_used = is_used
+        
+        if is_used:
+            # Show "Added" indicator
+            if not hasattr(self, "used_label"):
+                self.used_label = tk.Label(
+                    self.photo_canvas, 
+                    text="✓", 
+                    bg="#4caf50", 
+                    fg="white", 
+                    font=("Segoe UI", 10, "bold")
+                )
+                # Place in top-right corner of photo
+                self.photo_canvas.create_window(
+                    int(self.photo_canvas.cget("width")) - 12, 
+                    12, 
+                    window=self.used_label, 
+                    anchor="center",
+                    tags="used_indicator"
+                )
+            # Ensure it's visible (in case it was hidden, though create_window persists)
+            # Actually, create_window items are persistent. We can just create it once.
+        else:
+            # Remove indicator
+            self.photo_canvas.delete("used_indicator")
+            if hasattr(self, "used_label"):
+                self.used_label.destroy()
+                del self.used_label
 
     def _on_enter(self, event):
         """Handle mouse enter (hover)."""
@@ -224,8 +258,8 @@ class CharacterCard(ttk.Frame):
                     bg=panel_bg, 
                     fg=accent_color,
                     font=("Segoe UI", 8, "bold"),
-                    padx=6,
-                    pady=2,
+                    padx=10, # Increased horizontal padding
+                    pady=3,  # Increased vertical padding
                     cursor="hand2"
                 )
                 lbl.pack()
@@ -988,6 +1022,14 @@ class CharacterGalleryPanel(ttk.Frame):
         except Exception:
             from utils import logger
             logger.exception("Failed to update tag list")
+
+    def update_used_status(self, used_names):
+        """Update the used status for all visible cards."""
+        used_set = set(used_names)
+        for widget in self.cards_container.winfo_children():
+            if isinstance(widget, CharacterCard):
+                is_used = widget.character_name in used_set
+                widget.set_used_state(is_used)
 
     def _clear_search(self):
         """Clear search entry."""

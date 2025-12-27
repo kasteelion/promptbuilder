@@ -150,8 +150,14 @@ The placeholders will be replaced with actual character names when inserted."""
             anchor="w", pady=(0, 5)
         )
 
-        self.content_text = scrolledtext.ScrolledText(
-            main_frame, 
+        # Refactor 3: custom dark scrollbar
+        content_frame = ttk.Frame(main_frame, style="TFrame")
+        content_frame.pack(fill="both", expand=True, pady=(0, 10))
+        content_frame.columnconfigure(0, weight=1)
+        content_frame.rowconfigure(0, weight=1)
+
+        self.content_text = tk.Text(
+            content_frame, 
             wrap="word", 
             height=8, 
             font=("Consolas", 10),
@@ -160,9 +166,17 @@ The placeholders will be replaced with actual character names when inserted."""
             insertbackground=input_fg,
             relief="flat",
             padx=10,
-            pady=10
+            pady=10,
+            highlightthickness=0,
+            borderwidth=0
         )
-        self.content_text.pack(fill="both", expand=True, pady=(0, 10))
+        self.content_text.grid(row=0, column=0, sticky="nsew")
+        
+        content_scroll = ttk.Scrollbar(
+            content_frame, orient="vertical", command=self.content_text.yview, style="Dark.Vertical.TScrollbar"
+        )
+        content_scroll.grid(row=0, column=1, sticky="ns")
+        self.content_text.configure(yscrollcommand=content_scroll.set)
 
         # Validation message
         self.validation_label = ttk.Label(

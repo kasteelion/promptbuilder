@@ -71,8 +71,20 @@ class EditTab:
         self.save_data_btn.grid(row=0, column=2, padx=(10, 0))
 
         # Editor text widget - Refactor 1
-        self.editor_text = scrolledtext.ScrolledText(self.tab, wrap="word")
-        self.editor_text.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0, 15))
+        # Refactor 3: custom dark scrollbar
+        editor_frame = ttk.Frame(self.tab, style="TFrame")
+        editor_frame.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0, 15))
+        editor_frame.columnconfigure(0, weight=1)
+        editor_frame.rowconfigure(0, weight=1)
+
+        self.editor_text = tk.Text(editor_frame, wrap="word", highlightthickness=0, borderwidth=0)
+        self.editor_text.grid(row=0, column=0, sticky="nsew")
+        
+        editor_scroll = ttk.Scrollbar(
+            editor_frame, orient="vertical", command=self.editor_text.yview, style="Dark.Vertical.TScrollbar"
+        )
+        editor_scroll.grid(row=0, column=1, sticky="ns")
+        self.editor_text.configure(yscrollcommand=editor_scroll.set)
 
     def _on_file_selected(self, event):
         """Handle file selection change."""

@@ -137,8 +137,20 @@ class PreviewPanel:
         add_ghost_btn(controls_frame, "🔄 Reload", self.on_reload, 0, 4)
 
         # Preview text widget with scrollbar - Refactor 1
-        self.preview_text = scrolledtext.ScrolledText(self.parent, wrap="word")
-        self.preview_text.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0, 15))
+        # Refactor 3: Switch to custom dark scrollbar
+        text_frame = ttk.Frame(self.parent, style="TFrame")
+        text_frame.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0, 15))
+        text_frame.columnconfigure(0, weight=1)
+        text_frame.rowconfigure(0, weight=1)
+
+        self.preview_text = tk.Text(text_frame, wrap="word", highlightthickness=0, borderwidth=0)
+        self.preview_text.grid(row=0, column=0, sticky="nsew")
+        
+        preview_scroll = ttk.Scrollbar(
+            text_frame, orient="vertical", command=self.preview_text.yview, style="Dark.Vertical.TScrollbar"
+        )
+        preview_scroll.grid(row=0, column=1, sticky="ns")
+        self.preview_text.configure(yscrollcommand=preview_scroll.set)
 
         # Bind Ctrl+C for copy and Ctrl+S for save
         self.preview_text.bind("<Control-c>", lambda e: self.copy_prompt())

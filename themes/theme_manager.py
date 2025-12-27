@@ -463,7 +463,23 @@ class ThemeManager:
         except Exception:
             pass
 
-        # Scrollbar with better visibility
+        # Scrollbar Style - Refactor 3: Final Visual Cleanup
+        self.style.configure(
+            "Dark.Vertical.TScrollbar",
+            background="#333333",
+            troughcolor="#1E1E1E",
+            bordercolor="#121212",
+            arrowcolor="white",
+            width=10,
+            borderwidth=0
+        )
+        self.style.map(
+            "Dark.Vertical.TScrollbar",
+            background=[("active", "#444444"), ("pressed", "#555555")],
+            arrowcolor=[("active", "white")]
+        )
+
+        # Legacy Vertical.TScrollbar (fallback mapping)
         self.style.configure(
             "Vertical.TScrollbar",
             background=text_bg,
