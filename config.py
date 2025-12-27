@@ -12,9 +12,9 @@ Note: UI-specific constants have been moved to ui/constants.py
 # Default theme
 DEFAULT_THEME = "Dark"
 
-# Font settings
-DEFAULT_FONT_FAMILY = "Consolas"
-DEFAULT_FONT_SIZE = 12
+# Fonts
+DEFAULT_FONT_FAMILY = "Lexend" # Prioritize custom font
+DEFAULT_FONT_SIZE = 10
 
 # Theme definitions
 THEMES = {
