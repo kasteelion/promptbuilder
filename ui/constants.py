@@ -67,4 +67,4 @@ FLOW_FRAME_REFLOW_DELAY_MS = 50  # Delay before retrying reflow when window not 
 # Preferences settings
 
 # Character photo thumbnail size
-CHARACTER_CARD_SIZE = 100  # Width and height of character photo thumbnail
+CHARACTER_CARD_SIZE = 140  # Increased for larger photos

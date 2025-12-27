@@ -26,7 +26,7 @@ class ScrollableCanvas(ttk.Frame):
         # Create canvas and scrollbar
         self.canvas = tk.Canvas(self, highlightthickness=0, borderwidth=0)
         self.scrollbar = ttk.Scrollbar(
-            self, orient="vertical", command=self.canvas.yview, style="Dark.Vertical.TScrollbar"
+            self, orient="vertical", command=self.canvas.yview, style="Themed.Vertical.TScrollbar"
         )
         self.container = ttk.Frame(self.canvas, style="TFrame")
         
@@ -181,6 +181,7 @@ class CollapsibleFrame(ttk.Frame):
         super().__init__(parent, *args, **kwargs, style="Card.TFrame")
         self.columnconfigure(0, weight=1)
         self._text = text
+        self.pill_buttons = [] # Track for theme updates
 
         # Header frame with distinct styling - Refactor 1 & 3
         self._header = ttk.Frame(self, style="TFrame", padding=(10, 5))
@@ -188,31 +189,76 @@ class CollapsibleFrame(ttk.Frame):
         
         # Explicitly set background for the header frame if needed - Refactor 3
         try:
-            bg = self.cget("background")
-            self._header.configure(style="TFrame")
-        except: pass
+            style = ttk.Style()
+            panel_bg = style.lookup("TFrame", "background")
+            accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
+        except:
+            panel_bg = "#f0f0f0"
+            accent = "#0078d7"
+
         self._header.columnconfigure(0, weight=1)
 
-        self._toggle_btn = ttk.Button(
+        self._toggle_btn = tk.Button(
             self._header, 
             text=("▾ " if opened else "▸ ") + text, 
             command=self._toggle_cb, 
-            style="Title.TLabel", # Use typography header style
-            width=25
+            bg=panel_bg,
+            fg=accent,
+            font=("Segoe UI", 11, "bold"),
+            relief="flat",
+            anchor="w",
+            padx=5,
+            cursor="hand2"
         )
-        self._toggle_btn.grid(row=0, column=0, sticky="w")
+        self._toggle_btn.grid(row=0, column=0, sticky="ew")
+        
+        # Container for header actions (to prevent cut-off)
+        self._actions = ttk.Frame(self._header, style="TFrame")
+        self._actions.grid(row=0, column=1, sticky="e")
 
-        self._clear_btn = None
+        # Helper for Pill buttons in widgets
+        def add_pill(text, command, col):
+            # Outer Frame (The Border)
+            pill = tk.Frame(self._actions, bg=accent, padx=1, pady=1)
+            pill.grid(row=0, column=col, padx=2)
+            
+            # Inner Label (The hollow center)
+            lbl = tk.Label(
+                pill, 
+                text=text, 
+                bg=panel_bg, 
+                fg=accent,
+                font=("Segoe UI", 8, "bold"),
+                padx=8,
+                pady=2,
+                cursor="hand2"
+            )
+            lbl.pack()
+            lbl._base_bg = panel_bg
+            
+            def on_enter(e, l=lbl): l.config(bg="#333333")
+            def on_leave(e, l=lbl):
+                try:
+                    s = ttk.Style()
+                    base = s.lookup("TFrame", "background")
+                except: base = l._base_bg
+                l.config(bg=base)
+                
+            lbl.bind("<Enter>", on_enter)
+            lbl.bind("<Leave>", on_leave)
+            lbl.bind("<Button-1>", lambda e: command() if command else None)
+            
+            self.pill_buttons.append((pill, lbl))
+            return pill, lbl
+
+        self._clear_btn_parts = None
         if show_clear:
-            self._clear_btn = ttk.Button(self._header, text="✕ Clear", width=8, style="Ghost.TButton")
-            self._clear_btn.grid(row=0, column=1, sticky="e", padx=(4, 0))
+            self._clear_btn_parts = add_pill("✕ Clear", None, 0)
 
-        self._import_btn = None
+        self._import_btn_parts = None
         if show_import:
-            self._import_btn = ttk.Button(self._header, text="📥 Import", width=8, style="Link.TButton")
-            # If both clear and import exist, place them side by side
-            col = 2 if show_clear else 1
-            self._import_btn.grid(row=0, column=col, sticky="e", padx=(4, 0))
+            col = 1 if show_clear else 0
+            self._import_btn_parts = add_pill("📥 Import", None, col)
 
         # Content frame - Refactor 1
         self._content = ttk.Frame(self, style="TFrame", padding=(15, 10))
@@ -246,6 +292,18 @@ class CollapsibleFrame(ttk.Frame):
         except Exception:
             pass
 
+    def apply_theme(self, theme):
+        """Update custom widgets with theme colors. (Refactor 3)"""
+        accent = theme.get("accent", "#0078d7")
+        panel_bg = theme.get("panel_bg", theme["bg"])
+        
+        self._toggle_btn.config(bg=panel_bg, fg=accent)
+        
+        for frame, lbl in self.pill_buttons:
+            frame.config(bg=accent)
+            lbl._base_bg = panel_bg
+            lbl.config(bg=panel_bg, fg=accent)
+
     def set_opened(self, opened):
         """Programmatically set the opened/collapsed state."""
         if self._open != opened:
@@ -253,12 +311,14 @@ class CollapsibleFrame(ttk.Frame):
             self._update_state()
 
     def set_clear_command(self, cmd):
-        if self._clear_btn:
-            self._clear_btn.config(command=cmd)
+        if self._clear_btn_parts:
+            # Rebind label click
+            self._clear_btn_parts[1].bind("<Button-1>", lambda e: cmd())
 
     def set_import_command(self, cmd):
-        if self._import_btn:
-            self._import_btn.config(command=cmd)
+        if self._import_btn_parts:
+            # Rebind label click
+            self._import_btn_parts[1].bind("<Button-1>", lambda e: cmd())
 
     def get_header_frame(self):
         """Return the header frame to allow adding custom widgets."""

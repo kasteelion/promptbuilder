@@ -297,7 +297,9 @@ class CharactersTab:
         self.create_shared_btn.grid(row=0, column=2, sticky="ew", padx=(4, 0))
         
         def on_shared_enter(e): self.create_shared_btn.config(bg="#333333")
-        def on_shared_leave(e): self.create_shared_btn.config(bg=getattr(self, "_last_pbg", "#ffffff"))
+        def on_shared_leave(e): 
+            bg = getattr(self, "_last_pbg", "#ffffff")
+            self.create_shared_btn.config(bg=bg)
         self.create_shared_btn.bind("<Enter>", on_shared_enter)
         self.create_shared_btn.bind("<Leave>", on_shared_leave)
 
@@ -346,7 +348,9 @@ class CharactersTab:
         self.create_char_btn.grid(row=0, column=1, sticky="ew", padx=(4, 0))
         
         def on_char_enter(e): self.create_char_btn.config(bg="#333333")
-        def on_char_leave(e): self.create_char_btn.config(bg=getattr(self, "_last_pbg", "#ffffff"))
+        def on_char_leave(e): 
+            bg = getattr(self, "_last_pbg", "#ffffff")
+            self.create_char_btn.config(bg=bg)
         self.create_char_btn.bind("<Enter>", on_char_enter)
         self.create_char_btn.bind("<Leave>", on_char_leave)
 

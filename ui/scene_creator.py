@@ -170,7 +170,7 @@ class SceneCreatorDialog:
             highlightthickness=0,
             borderwidth=0
         )
-        desc_scroll = ttk.Scrollbar(desc_frame, orient="vertical", command=self.description_text.yview, style="Dark.Vertical.TScrollbar")
+        desc_scroll = ttk.Scrollbar(desc_frame, orient="vertical", command=self.description_text.yview, style="Themed.Vertical.TScrollbar")
         self.description_text.configure(yscrollcommand=desc_scroll.set)
 
         # Add placeholder text

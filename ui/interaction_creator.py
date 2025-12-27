@@ -173,7 +173,7 @@ The placeholders will be replaced with actual character names when inserted."""
         self.content_text.grid(row=0, column=0, sticky="nsew")
         
         content_scroll = ttk.Scrollbar(
-            content_frame, orient="vertical", command=self.content_text.yview, style="Dark.Vertical.TScrollbar"
+            content_frame, orient="vertical", command=self.content_text.yview, style="Themed.Vertical.TScrollbar"
         )
         content_scroll.grid(row=0, column=1, sticky="ns")
         self.content_text.configure(yscrollcommand=content_scroll.set)

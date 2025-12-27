@@ -101,14 +101,19 @@ class CharacterCard(ttk.Frame):
                     anchor="center",
                     tags="used_indicator"
                 )
-            # Ensure it's visible (in case it was hidden, though create_window persists)
-            # Actually, create_window items are persistent. We can just create it once.
+            
+            # Apply subtle highlight to card - Refactor 3
+            accent = self.theme_colors.get("accent", "#0078d7")
+            self.configure(style="Selected.Card.TFrame")
         else:
             # Remove indicator
             self.photo_canvas.delete("used_indicator")
             if hasattr(self, "used_label"):
                 self.used_label.destroy()
                 del self.used_label
+            
+            # Restore normal style
+            self.configure(style="Card.TFrame")
 
     def _on_enter(self, event):
         """Handle mouse enter (hover)."""
@@ -127,112 +132,71 @@ class CharacterCard(ttk.Frame):
             pass
 
     def _build_ui(self):
-        """Build the card UI."""
-        self.configure(relief="flat", borderwidth=0, padding=0)
+        """Build the card UI with a vertical stacked layout. (Refactor 3)"""
+        self.configure(relief="flat", borderwidth=0, padding=10)
         
-        # Header Row (Refactor 3: Accordion)
-        self.header = ttk.Frame(self, style="TFrame", cursor="hand2")
-        self.header.pack(fill="x", padx=12, pady=8)
-        
-        self.name_label = ttk.Label(
-            self.header,
-            text=self.character_name,
-            style="Bold.TLabel",
-            wraplength=250,
-            justify="left",
-        )
-        self.name_label.pack(side="left", anchor="w")
-        
-        self.toggle_indicator = ttk.Label(self.header, text="▼", style="Muted.TLabel")
-        self.toggle_indicator.pack(side="right", padx=5)
-        
-        # Bind toggle
-        self.header.bind("<Button-1>", lambda e: self.toggle_visibility())
-        self.name_label.bind("<Button-1>", lambda e: self.toggle_visibility())
+        # Main container (Vertical stack)
+        container = ttk.Frame(self, style="TFrame")
+        container.pack(fill="both", expand=True)
 
-        # Main Content Container (Collapsible)
-        self.container = ttk.Frame(self, style="TFrame", padding=(12, 0, 12, 12))
-        self.container.pack(fill="both", expand=True)
-        
-        # Horizontal layout: photo on left, summary/info on right
-        left_size = int(CHARACTER_CARD_SIZE * 1.4)
-
-        # Photo frame on the left
-        photo_frame = ttk.Frame(self.container, style="TFrame")
-        photo_frame.pack(side="left", padx=(0, 10))
-
+        # Photo frame on Top
+        photo_size = int(CHARACTER_CARD_SIZE) # Use full increased base size (140px)
         self.photo_canvas = tk.Canvas(
-            photo_frame,
-            width=left_size,
-            height=left_size,
+            container,
+            width=photo_size,
+            height=photo_size,
             bg=self.theme_colors.get("panel_bg", self.theme_colors.get("text_bg", "#ffffff")),
             highlightthickness=1,
             highlightbackground=self.theme_colors.get("border", "#cccccc"),
             cursor="hand2",
         )
-        self.photo_canvas.pack()
+        self.photo_canvas.pack(pady=(0, 10))
         self.photo_canvas.bind("<Button-1>", lambda e: self._on_photo_click())
 
-        center = left_size // 2
+        center = photo_size // 2
         self.placeholder_text = self.photo_canvas.create_text(
             center,
             center,
-            text="📷\nClick to\nadd photo",
+            text="📷",
             fill=self.theme_colors.get("fg", "#666666"),
-            font=("Segoe UI", 9),
+            font=("Segoe UI", 14), # Slightly larger icon
             justify="center",
         )
 
-        # Info frame on the right
-        info_frame = ttk.Frame(self.container)
-        info_frame.pack(side="left", fill="both", expand=True)
+        # Name Row (Centered)
+        name_frame = ttk.Frame(container)
+        name_frame.pack(fill="x")
 
-        fav_row = ttk.Frame(info_frame)
-        fav_row.pack(fill="x")
-
-        self.fav_btn_var = tk.StringVar(value="☆")
-        # Refactor 3: Enhanced Ghost Favorite Button
-        self.fav_btn = tk.Button(
-            fav_row, 
-            textvariable=self.fav_btn_var, 
-            width=3, 
-            command=self._toggle_favorite,
-            bg=self.theme_colors.get("panel_bg", "#ffffff"),
-            fg=self.theme_colors.get("accent", "#0078d7"),
-            highlightbackground=self.theme_colors.get("accent", "#0078d7"),
-            highlightthickness=2, # Increased thickness
-            relief="flat",
-            font=("Segoe UI", 9)
+        self.name_label = ttk.Label(
+            name_frame,
+            text=self.character_name,
+            style="Bold.TLabel",
+            wraplength=240,
+            justify="center",
+            anchor="center"
         )
-        self.fav_btn.pack(side="right")
-        
-        def on_fav_enter(e): self.fav_btn.config(bg="#333333")
-        def on_fav_leave(e): self.fav_btn.config(bg=self.theme_colors.get("panel_bg", "#ffffff"))
-        self.fav_btn.bind("<Enter>", on_fav_enter)
-        self.fav_btn.bind("<Leave>", on_fav_leave)
-        
-        self._update_fav_star()
+        self.name_label.pack(fill="x")
 
         # Use explicit summary if present
         summary = self.character_data.get("summary")
         if not summary:
             appearance = self.character_data.get("appearance", "")
             first_line = appearance.split("\n")[0] if appearance else ""
-            summary = (first_line[:180] + "...") if len(first_line) > 180 else first_line
+            summary = (first_line[:120] + "...") if len(first_line) > 120 else first_line
 
-        # Refactor 2: Fix Text Wrapping
-        desc_label = ttk.Label(
-            info_frame,
+        # Description (Centered, Wrapped)
+        self.desc_label = ttk.Label(
+            container,
             text=summary,
-            font=("Segoe UI", 9),
+            font=("Segoe UI", 8),
             foreground="gray",
-            wraplength=260, # Forced wrapping
-            justify="left",
-            anchor="w"
+            wraplength=240,
+            justify="center",
+            anchor="center"
         )
-        desc_label.pack(anchor="w", pady=(0, 8))
+        self.desc_label.pack(pady=(4, 8), fill="x")
 
-        # Tags display (Refactor 1: Masking Technique for Tags)
+        # Tags display (Centered)
         raw_tags = self.character_data.get("tags") or []
         if isinstance(raw_tags, str):
             raw_tags = [t.strip().lower() for t in raw_tags.split(",") if t.strip()]
@@ -240,62 +204,82 @@ class CharacterCard(ttk.Frame):
         tags = self._sort_tags_by_category(raw_tags, self.categorized_tags_map)
 
         if tags:
-            tags_frame = FlowFrame(info_frame, padding_x=4, padding_y=4)
-            tags_frame.pack(anchor="w", pady=(0, 6), fill="x")
+            # Show all tags (Refactor 3 Fix)
+            tags_frame = FlowFrame(container, padding_x=2, padding_y=2)
+            tags_frame.pack(pady=(0, 10), fill="x")
             
             accent_color = self.theme_colors.get("accent", "#0078d7")
-            # CRITICAL: Use opaque hex for panel background to mask correctly
             panel_bg = self.theme_colors.get("panel_bg", "#1E1E1E") 
 
             for t in tags:
-                # Outer Frame (The Border)
                 pill = tk.Frame(tags_frame, bg=accent_color, padx=1, pady=1)
-                
-                # Inner Label (The hollow center with padding)
                 lbl = tk.Label(
                     pill, 
                     text=t, 
                     bg=panel_bg, 
                     fg=accent_color,
-                    font=("Segoe UI", 8, "bold"),
-                    padx=10, # Increased horizontal padding
-                    pady=3,  # Increased vertical padding
+                    font=("Segoe UI", 8, "bold"), # Increased font size
+                    padx=10,
+                    pady=4, # Increased vertical padding
                     cursor="hand2"
                 )
                 lbl.pack()
                 lbl.bind("<Button-1>", lambda e, v=t: self._handle_tag_click(v))
-                
-                # Register with flow frame
                 tags_frame._children.append(pill)
             
             tags_frame._schedule_reflow()
 
-        # Buttons row
-        btn_frame = ttk.Frame(info_frame)
-        btn_frame.pack(fill="x", pady=(4, 0))
+        # Action Buttons (Pill Style)
+        btn_frame = ttk.Frame(container)
+        btn_frame.pack(fill="x")
 
-        add_btn = ttk.Button(btn_frame, text="➕ Add", command=self._on_add_clicked, width=10, style="TButton")
-        add_btn.pack(side="left", padx=(0, 6))
-
-        # Refactor 3: Enhanced Ghost Edit Button
-        edit_btn = tk.Button(
+        # Add button: Primary
+        self.add_btn = ttk.Button(
             btn_frame, 
-            text="✏️ Edit", 
-            command=self._on_edit_clicked, 
-            width=10,
-            bg=panel_bg,
-            fg=accent_color,
-            highlightbackground=accent_color,
-            highlightthickness=2, # Increased thickness
-            relief="flat",
-            font=("Segoe UI", 9)
+            text="➕ Add", 
+            command=self._on_add_clicked, 
+            width=8,
+            style="TButton"
         )
-        edit_btn.pack(side="left")
+        self.add_btn.pack(side="left", expand=True, padx=2)
+
+        # Edit button: Ghost
+        self.edit_btn = tk.Button(
+            btn_frame, 
+            text="✏️", 
+            command=self._on_edit_clicked, 
+            width=3,
+            bg=self.theme_colors.get("panel_bg", "#ffffff"),
+            fg=self.theme_colors.get("accent", "#0078d7"),
+            highlightbackground=self.theme_colors.get("accent", "#0078d7"),
+            highlightthickness=2,
+            relief="flat"
+        )
+        self.edit_btn.pack(side="left", padx=2)
         
-        def on_edit_enter(e): edit_btn.config(bg="#333333")
-        def on_edit_leave(e): edit_btn.config(bg=panel_bg)
-        edit_btn.bind("<Enter>", on_edit_enter)
-        edit_btn.bind("<Leave>", on_edit_leave)
+        # Hover for edit
+        self.edit_btn.bind("<Enter>", lambda e: self.edit_btn.config(bg="#333333"))
+        self.edit_btn.bind("<Leave>", lambda e: self.edit_btn.config(bg=self.theme_colors.get("panel_bg", "#ffffff")))
+
+        # Favorite button
+        self.fav_btn_var = tk.StringVar(value="☆")
+        self.fav_btn = tk.Button(
+            btn_frame, 
+            textvariable=self.fav_btn_var, 
+            width=3, 
+            command=self._toggle_favorite,
+            bg=self.theme_colors.get("panel_bg", "#ffffff"),
+            fg=self.theme_colors.get("accent", "#0078d7"),
+            highlightbackground=self.theme_colors.get("accent", "#0078d7"),
+            highlightthickness=2,
+            relief="flat"
+        )
+        self.fav_btn.pack(side="left", padx=2)
+        
+        self.fav_btn.bind("<Enter>", lambda e: self.fav_btn.config(bg="#333333"))
+        self.fav_btn.bind("<Leave>", lambda e: self.fav_btn.config(bg=self.theme_colors.get("panel_bg", "#ffffff")))
+        
+        self._update_fav_star()
 
     def toggle_visibility(self, event=None):
         """Toggle the visibility of the card contents. (Refactor 3)"""
@@ -1129,7 +1113,7 @@ class CharacterGalleryPanel(ttk.Frame):
     def _render_cards_batch(self, char_list, start_index, row, col):
         """Render a batch of character cards."""
         BATCH_SIZE = 8  # Number of cards to render per frame
-        max_cols = 1    # 1 card per row for better visibility in narrow panel
+        max_cols = 1    # Reverted to 1 column
         
         end_index = min(start_index + BATCH_SIZE, len(char_list))
         
@@ -1355,3 +1339,11 @@ class CharacterGalleryPanel(ttk.Frame):
         self.scrollable_canvas.canvas.configure(bg=self.theme_colors.get("bg", "#f0f0f0"))
         # Redisplay all characters to update their theme colors
         self._display_characters()
+        
+        # After redisplay, we need to sync used status (Refactor 3)
+        try:
+            app = self.winfo_toplevel()
+            if hasattr(app, "characters_tab"):
+                selected_names = [c["name"] for c in app.characters_tab.get_selected_characters()]
+                self.update_used_status(selected_names)
+        except: pass

@@ -81,7 +81,7 @@ class EditTab:
         self.editor_text.grid(row=0, column=0, sticky="nsew")
         
         editor_scroll = ttk.Scrollbar(
-            editor_frame, orient="vertical", command=self.editor_text.yview, style="Dark.Vertical.TScrollbar"
+            editor_frame, orient="vertical", command=self.editor_text.yview, style="Themed.Vertical.TScrollbar"
         )
         editor_scroll.grid(row=0, column=1, sticky="ns")
         self.editor_text.configure(yscrollcommand=editor_scroll.set)

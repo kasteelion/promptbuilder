@@ -458,12 +458,13 @@ class PromptBuilderApp:
         notes_content.columnconfigure(0, weight=1)
         create_tooltip(self.notes_collapsible, TOOLTIPS.get("notes", ""))
 
-        # Interaction template selector (with category grouping)
+        # Interaction template selector (Refactor 3: Spacing & Pill Buttons)
         interaction_control = ttk.Frame(notes_content, style="TFrame")
-        interaction_control.grid(row=0, column=0, sticky="ew", padx=4, pady=(6, 4))
+        interaction_control.grid(row=0, column=0, sticky="ew", padx=4, pady=(6, 10))
         interaction_control.columnconfigure(1, weight=1)
         interaction_control.columnconfigure(3, weight=1)
 
+        # Row 0: Selectors
         ttk.Label(interaction_control, text="Category:", style="TLabel").grid(
             row=0, column=0, sticky="w", padx=(0, 6)
         )
@@ -476,7 +477,7 @@ class PromptBuilderApp:
             placeholder="Search category...",
             width=15
         )
-        self.interaction_cat_combo.grid(row=0, column=1, sticky="w", padx=(0, 10))
+        self.interaction_cat_combo.grid(row=0, column=1, sticky="ew", padx=(0, 10))
 
         ttk.Label(interaction_control, text="Template:", style="TLabel").grid(
             row=0, column=2, sticky="w", padx=(0, 6)
@@ -492,20 +493,45 @@ class PromptBuilderApp:
         )
         self.interaction_combo.grid(row=0, column=3, sticky="ew")
 
-        insert_btn = ttk.Button(
-            interaction_control, text="Insert", command=self._insert_interaction_template
-        )
-        insert_btn.grid(row=0, column=4, padx=(6, 0))
+        # Row 1: Action Buttons (Pill Style)
+        action_btn_frame = ttk.Frame(interaction_control, style="TFrame")
+        action_btn_frame.grid(row=1, column=0, columnspan=4, sticky="ew", pady=(10, 0))
+        
+        self.notes_pill_buttons = [] # Track for theme updates
+        
+        def add_notes_pill(text, command):
+            try:
+                style = ttk.Style()
+                pbg = style.lookup("TFrame", "background")
+                accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
+            except:
+                pbg = "#ffffff"
+                accent = "#0078d7"
+                
+            pill = tk.Frame(action_btn_frame, bg=accent, padx=1, pady=1)
+            pill.pack(side="left", padx=(0, 6))
+            
+            lbl = tk.Label(
+                pill, text=text, bg=pbg, fg=accent,
+                font=("Segoe UI", 8, "bold"), padx=10, pady=2, cursor="hand2"
+            )
+            lbl.pack()
+            lbl._base_bg = pbg
+            
+            def on_e(e, l=lbl): l.config(bg="#333333")
+            def on_l(e, l=lbl):
+                try: l.config(bg=ttk.Style().lookup("TFrame", "background"))
+                except: l.config(bg=l._base_bg)
+                
+            lbl.bind("<Enter>", on_e)
+            lbl.bind("<Leave>", on_l)
+            lbl.bind("<Button-1>", lambda e: command())
+            self.notes_pill_buttons.append((pill, lbl))
+            return pill
 
-        refresh_btn = ttk.Button(
-            interaction_control, text="🔄", command=self._refresh_interaction_template, width=3
-        )
-        refresh_btn.grid(row=0, column=5, padx=(4, 0))
-
-        create_btn = ttk.Button(
-            interaction_control, text="+ Create", command=self._create_new_interaction
-        )
-        create_btn.grid(row=0, column=6, padx=(4, 0))
+        add_notes_pill("📥 Insert Template", self._insert_interaction_template)
+        add_notes_pill("🔄 Refresh", self._refresh_interaction_template)
+        add_notes_pill("✨ Create New", self._create_new_interaction)
 
         self.notes_text = tk.Text(notes_content, wrap="word", height=4)
         self.notes_text.grid(row=1, column=0, sticky="nsew", padx=4, pady=(4, 6))
@@ -972,6 +998,13 @@ class PromptBuilderApp:
             self.theme_manager.apply_text_widget_theme(widget, theme)
         
         # Apply manual Phase 3 fixes
+        # Update Notes & Interactions pill buttons
+        if hasattr(self, "notes_pill_buttons"):
+            for frame, lbl in self.notes_pill_buttons:
+                frame.config(bg=accent)
+                lbl._base_bg = panel_bg
+                lbl.config(bg=panel_bg, fg=accent)
+
         # Force summary box background
         if not getattr(self, "_summary_modified", False):
             self.theme_manager.apply_text_widget_theme(self.summary_text, theme)
@@ -1004,6 +1037,17 @@ class PromptBuilderApp:
 
         # Apply to dynamic character action texts and custom buttons
         self.characters_tab.apply_theme_to_action_texts(self.theme_manager, theme)
+        
+        # Refactor 3: Update custom CollapsibleFrames
+        for cf in [self.scene_collapsible, self.notes_collapsible, 
+                   self.summary_collapsible, self.preview_collapsible]:
+            if hasattr(cf, "apply_theme"):
+                cf.apply_theme(theme)
+        
+        # Also in characters_tab bulk editor
+        if hasattr(self.characters_tab, "bulk_container"):
+            self.characters_tab.bulk_container.apply_theme(theme)
+
         # Refresh character items to pick up manual button overrides
         for item in self.characters_tab.chars_container.winfo_children():
             if hasattr(item, "_update_theme_overrides"):

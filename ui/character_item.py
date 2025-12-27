@@ -330,7 +330,7 @@ class CharacterItem(ttk.Frame):
         accent_color = self.char_def.get("signature_color", theme.get("accent", "#0078d7"))
         if not str(accent_color).startswith("#"): accent_color = theme.get("accent", "#0078d7")
         panel_bg = theme.get("panel_bg", theme.get("bg", "#ffffff"))
-        self._last_pbg = panel_bg
+        self._last_pbg = panel_bg # Store for hover restoration
 
         # Update Ghost buttons
         for btn in self.controls_frame.winfo_children():

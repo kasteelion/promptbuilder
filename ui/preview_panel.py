@@ -42,6 +42,7 @@ class PreviewPanel:
         self.status_callback = status_callback
         self.clear_callback = clear_callback
         self.toast_callback = toast_callback
+        self.pill_buttons = [] # Track for theme updates
 
         self._build_ui()
 
@@ -87,54 +88,57 @@ class PreviewPanel:
 
         # Get current theme for manual button overrides
         theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-        self.ghost_buttons = [] # Track for theme updates
 
-        # Helper for Ghost buttons in Phase 3
-        def add_ghost_btn(parent, text, command, row, col):
+        # Helper for Pill buttons in Phase 3
+        def add_pill_btn(parent, text, command, row, col):
             pbg = theme.get("panel_bg", "#ffffff")
             accent = theme.get("accent", "#0078d7")
             
-            btn = tk.Button(
-                parent, 
+            # Outer Frame (The Border)
+            pill = tk.Frame(parent, bg=accent, padx=1, pady=1)
+            pill.grid(row=row, column=col, padx=2)
+            
+            # Inner Label (The hollow center)
+            lbl = tk.Label(
+                pill, 
                 text=text, 
-                command=command,
-                bg=pbg,
+                bg=pbg, 
                 fg=accent,
-                highlightbackground=accent,
-                highlightthickness=2, # Increased thickness
-                relief="flat",
-                font=("Segoe UI", 9),
-                padx=10
+                font=("Segoe UI", 9, "bold"),
+                padx=12,
+                pady=3,
+                cursor="hand2"
             )
-            btn.grid(row=row, column=col, padx=2)
+            lbl.pack()
             
-            def on_enter(e, b=btn): b.config(bg="#333333")
-            def on_leave(e, b=btn, bg=pbg): b.config(bg=bg)
-            btn.bind("<Enter>", on_enter)
-            btn.bind("<Leave>", on_leave)
+            # Hover restoration storage
+            lbl._base_bg = pbg
             
-            self.ghost_buttons.append(btn)
-            return btn
+            def on_enter(e, l=lbl): l.config(bg="#333333")
+            def on_leave(e, l=lbl):
+                try:
+                    current_theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                    base = current_theme.get("panel_bg", "#ffffff")
+                except:
+                    base = l._base_bg
+                l.config(bg=base)
+                
+            lbl.bind("<Enter>", on_enter)
+            lbl.bind("<Leave>", on_leave)
+            lbl.bind("<Button-1>", lambda e: command())
+            
+            self.pill_buttons.append((pill, lbl))
+            return pill
 
-        # Copy menu button
-        copy_menu_btn = ttk.Menubutton(controls_frame, text="📋 Copy", style="Ghost.TButton")
-        copy_menu_btn.grid(row=0, column=0, padx=2)
+        # Refactor 3: Pill style for Copy, Save, Clear, Randomize, Reload
+        add_pill_btn(controls_frame, "📋 Copy", self._show_copy_menu_pill, 0, 0)
+        # Store for menu access
+        self.copy_btn_frame, self.copy_btn_lbl = self.pill_buttons[-1]
 
-        copy_menu = tk.Menu(copy_menu_btn, tearoff=0)
-        copy_menu_btn["menu"] = copy_menu
-        copy_menu.add_command(label="Full Prompt", command=self.copy_prompt, accelerator="Ctrl+C")
-        copy_menu.add_separator()
-        copy_menu.add_command(
-            label="Characters Section", command=lambda: self._copy_section("characters")
-        )
-        copy_menu.add_command(label="Scene Section", command=lambda: self._copy_section("scene"))
-        copy_menu.add_command(label="Notes Section", command=lambda: self._copy_section("notes"))
-
-        # Refactor 3: Ghost style for Save, Clear, Randomize, Reload
-        add_ghost_btn(controls_frame, "💾 Save", self.save_prompt, 0, 1)
-        add_ghost_btn(controls_frame, "🗑️ Clear", self._on_clear, 0, 2)
-        add_ghost_btn(controls_frame, "🎲 Randomize", self.on_randomize, 0, 3)
-        add_ghost_btn(controls_frame, "🔄 Reload", self.on_reload, 0, 4)
+        add_pill_btn(controls_frame, "💾 Save", self.save_prompt, 0, 1)
+        add_pill_btn(controls_frame, "🗑️ Clear", self._on_clear, 0, 2)
+        add_pill_btn(controls_frame, "🎲 Randomize", self.on_randomize, 0, 3)
+        add_pill_btn(controls_frame, "🔄 Reload", self.on_reload, 0, 4)
 
         # Preview text widget with scrollbar - Refactor 1
         # Refactor 3: Switch to custom dark scrollbar
@@ -147,7 +151,7 @@ class PreviewPanel:
         self.preview_text.grid(row=0, column=0, sticky="nsew")
         
         preview_scroll = ttk.Scrollbar(
-            text_frame, orient="vertical", command=self.preview_text.yview, style="Dark.Vertical.TScrollbar"
+            text_frame, orient="vertical", command=self.preview_text.yview, style="Themed.Vertical.TScrollbar"
         )
         preview_scroll.grid(row=0, column=1, sticky="ns")
         self.preview_text.configure(yscrollcommand=preview_scroll.set)
@@ -156,16 +160,28 @@ class PreviewPanel:
         self.preview_text.bind("<Control-c>", lambda e: self.copy_prompt())
         self.preview_text.bind("<Control-s>", lambda e: self.save_prompt())
 
-        # Styling for tags is applied by ThemeManager via `apply_preview_theme`
-
         # Callback for getting current prompt
         self.get_prompt_callback = None
         self.validate_callback = None
         self.randomize_callback = None
 
-    def _on_theme_selected(self, event):
-        """Handle theme selection change."""
-        self.on_theme_change(self.theme_var.get())
+    def _show_copy_menu_pill(self):
+        """Show the copy dropdown menu at the pill button location."""
+        copy_menu = tk.Menu(self.copy_btn_lbl, tearoff=0)
+        copy_menu.add_command(label="Full Prompt", command=self.copy_prompt, accelerator="Ctrl+C")
+        copy_menu.add_separator()
+        copy_menu.add_command(
+            label="Characters Section", command=lambda: self._copy_section("characters")
+        )
+        copy_menu.add_command(label="Scene Section", command=lambda: self._copy_section("scene")
+        )
+        copy_menu.add_command(label="Notes Section", command=lambda: self._copy_section("notes")
+        )
+        
+        # Position menu under button
+        x = self.copy_btn_lbl.winfo_rootx()
+        y = self.copy_btn_lbl.winfo_rooty() + self.copy_btn_lbl.winfo_height()
+        copy_menu.post(x, y)
 
     def set_callbacks(self, get_prompt, validate, randomize):
         """Set callbacks for getting prompt data.
@@ -184,8 +200,11 @@ class PreviewPanel:
         accent = theme.get("accent", "#0078d7")
         panel_bg = theme.get("panel_bg", theme["bg"])
         
-        for btn in self.ghost_buttons:
-            btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
+        if hasattr(self, "pill_buttons"):
+            for frame, lbl in self.pill_buttons:
+                frame.config(bg=accent)
+                lbl._base_bg = panel_bg
+                lbl.config(bg=panel_bg, fg=accent)
 
     def update_preview(self, prompt_text):
         """Update preview with formatted prompt text.
@@ -254,7 +273,7 @@ class PreviewPanel:
                 continue
 
             # Section headers like **APPEARANCE:** or **CHARACTER 1: NAME**
-            if line.startswith("**") and line.endswith(":**"):
+            if line.startswith("**") and line.endswith("::"):
                 label = line[2:-3]  # Remove ** and :**
                 self.preview_text.insert("end", label + ":\n", "section_label")
                 continue

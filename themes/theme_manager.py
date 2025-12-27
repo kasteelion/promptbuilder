@@ -463,23 +463,23 @@ class ThemeManager:
         except Exception:
             pass
 
-        # Scrollbar Style - Refactor 3: Final Visual Cleanup
+        # Scrollbar Style - Refactor 3: Dynamic Theme-aware Scrollbars
         self.style.configure(
-            "Dark.Vertical.TScrollbar",
-            background="#333333",
-            troughcolor="#1E1E1E",
-            bordercolor="#121212",
-            arrowcolor="white",
+            "Themed.Vertical.TScrollbar",
+            background=text_bg,
+            troughcolor=bg,
+            bordercolor=border,
+            arrowcolor=accent,
             width=10,
             borderwidth=0
         )
         self.style.map(
-            "Dark.Vertical.TScrollbar",
-            background=[("active", "#444444"), ("pressed", "#555555")],
-            arrowcolor=[("active", "white")]
+            "Themed.Vertical.TScrollbar",
+            background=[("active", accent), ("pressed", accent_hover)],
+            arrowcolor=[("active", bg)]
         )
 
-        # Legacy Vertical.TScrollbar (fallback mapping)
+        # Legacy/Standard mapping
         self.style.configure(
             "Vertical.TScrollbar",
             background=text_bg,
