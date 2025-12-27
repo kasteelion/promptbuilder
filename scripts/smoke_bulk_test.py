@@ -38,7 +38,7 @@ ct.selected_characters = [
 ct._refresh_list()
 
 # Choose a shared outfit name from bulk_outfit_combo values
-vals = ct.bulk_outfit_combo["values"]
+vals = ct.bulk_outfit_combo.all_values
 print("Bulk outfits count:", len(vals))
 if vals:
     ct.bulk_outfit_var.set(vals[0])

@@ -146,6 +146,12 @@ class CollapsibleFrame(ttk.Frame):
         # Header frame with distinct styling - Refactor 1 & 3
         self._header = ttk.Frame(self, style="TFrame", padding=(10, 5))
         self._header.grid(row=0, column=0, sticky="ew")
+        
+        # Explicitly set background for the header frame if needed - Refactor 3
+        try:
+            bg = self.cget("background")
+            self._header.configure(style="TFrame")
+        except: pass
         self._header.columnconfigure(0, weight=1)
 
         self._toggle_btn = ttk.Button(

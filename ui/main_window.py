@@ -353,7 +353,7 @@ class PromptBuilderApp:
         SECTION_PAD_Y = (10, 15)
         INTERNAL_PAD_X = 12
 
-        # Convenience controls row (Expand/Collapse All)
+        # Convenience controls row (Expand/Collapse All) - Refactor 3
         controls_frame = ttk.Frame(right_frame, style="TFrame")
         controls_frame.grid(row=0, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=(10, 0))
         
@@ -363,10 +363,18 @@ class PromptBuilderApp:
                 section.set_opened(state)
             self.right_scroll_container.update_scroll_region()
 
-        ttk.Button(controls_frame, text="Collapse All", 
-                   command=lambda: _set_all_collapsible(False), style="Link.TButton").pack(side="right", padx=2)
-        ttk.Button(controls_frame, text="Expand All", 
-                   command=lambda: _set_all_collapsible(True), style="Link.TButton").pack(side="right", padx=2)
+        # Get panel background safely for manual button overrides
+        try:
+            panel_bg = ttk.Style().lookup("TFrame", "background")
+        except:
+            panel_bg = "#ffffff"
+
+        tk.Button(controls_frame, text="Collapse All", 
+                   command=lambda: _set_all_collapsible(False), 
+                   bg=panel_bg, fg="gray", borderwidth=0, relief="flat", font=("Segoe UI", 8)).pack(side="right", padx=2)
+        tk.Button(controls_frame, text="Expand All", 
+                   command=lambda: _set_all_collapsible(True), 
+                   bg=panel_bg, fg="gray", borderwidth=0, relief="flat", font=("Segoe UI", 8)).pack(side="right", padx=2)
 
         # Scene section (compact)
         self.scene_collapsible = CollapsibleFrame(right_frame, text="🎬 Scene", opened=True, show_clear=True)
@@ -490,7 +498,7 @@ class PromptBuilderApp:
 
         self.notes_text.bind("<KeyRelease>", _on_notes_change)
 
-        # Summary section
+        # Summary section - Refactor 1
         self.summary_collapsible = CollapsibleFrame(right_frame, text="📋 Prompt Summary", opened=True, show_import=True)
         self.summary_collapsible.grid(row=3, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=SECTION_PAD_Y)
         self.summary_collapsible.set_import_command(self.menu_actions.import_from_text)
@@ -508,15 +516,13 @@ class PromptBuilderApp:
         def _on_summary_focus_in(e):
             self._summary_modified = True
             theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-            # Use text_bg or a fallback that isn't hardcoded white
+            # Fix Refactor 1: Global Input Styling
             bg = theme.get("text_bg", theme.get("bg", "#ffffff"))
             fg = theme.get("text_fg", theme.get("fg", "#000000"))
-            self.summary_text.config(background=bg, foreground=fg)
+            self.summary_text.config(background=bg, foreground=fg, insertbackground=fg)
 
         def _on_summary_change(e):
             self._summary_modified = True
-            # Change icon or text of the import button to show it's ready to apply? 
-            # For now, keeping it simple.
 
         self.summary_text.bind("<FocusIn>", _on_summary_focus_in)
         self.summary_text.bind("<KeyRelease>", _on_summary_change)
@@ -552,9 +558,19 @@ class PromptBuilderApp:
         toolbar_frame = ttk.Frame(self.root, style="TFrame")
         toolbar_frame.pack(side="top", fill="x", padx=4, pady=4)
 
-        # Helper to create styled toolbar buttons
+        # Helper to create styled toolbar buttons - Refactor 3
         def add_tool_btn(parent, text, command, tooltip=None, width=None):
-            btn = ttk.Button(parent, text=text, command=command, style="Ghost.TButton")
+            # Try to get background safely
+            try: 
+                bg = parent.cget("background")
+            except: 
+                try: bg = ttk.Style().lookup("TFrame", "background")
+                except: bg = "#ffffff"
+            
+            btn = tk.Button(
+                parent, text=text, command=command,
+                bg=bg, relief="flat", highlightthickness=1, padx=5
+            )
             if width:
                 btn.config(width=width)
             btn.pack(side="left", padx=2)
@@ -910,20 +926,29 @@ class PromptBuilderApp:
             theme_name: Name of theme to apply
         """
         theme = self.theme_manager.apply_theme(theme_name)
+        accent = theme.get("accent", "#0078d7")
+        panel_bg = theme.get("panel_bg", theme["bg"])
 
         # Apply to text widgets - Refactor 2
         self.theme_manager.apply_preview_theme(self.preview_panel.preview_text, theme)
         for widget in [self.scene_text, self.notes_text, self.summary_text, self.edit_tab.editor_text]:
             self.theme_manager.apply_text_widget_theme(widget, theme)
         
+        # Apply manual Phase 3 fixes
+        # Force summary box background
+        if not getattr(self, "_summary_modified", False):
+            self.theme_manager.apply_text_widget_theme(self.summary_text, theme)
+        
+        # Force custom buttons in characters tab
+        if hasattr(self.characters_tab, "create_shared_btn"):
+            self.characters_tab.create_shared_btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
+        if hasattr(self.characters_tab, "create_char_btn"):
+            self.characters_tab.create_char_btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
+
         # Apply to search entries if they exist
         if hasattr(self, "character_gallery") and hasattr(self.character_gallery, "search_entry"):
              # CharacterGalleryPanel search entry
              self.theme_manager.apply_entry_theme(self.character_gallery.search_entry, theme)
-
-        # Reset summary background if not modified
-        if not getattr(self, "_summary_modified", False):
-            self.theme_manager.apply_text_widget_theme(self.summary_text, theme)
 
         # Apply to canvas
         self.theme_manager.apply_canvas_theme(self.characters_tab.chars_canvas, theme)

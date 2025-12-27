@@ -85,6 +85,23 @@ class PreviewPanel:
         controls_frame.columnconfigure(3, weight=0)
         controls_frame.columnconfigure(4, weight=0)
 
+        # Helper for Ghost buttons in Phase 3
+        def add_ghost_btn(parent, text, command, row, col):
+            btn = tk.Button(
+                parent, 
+                text=text, 
+                command=command,
+                bg=theme.get("panel_bg", "#ffffff"),
+                fg=theme.get("accent", "#0078d7"),
+                highlightbackground=theme.get("accent", "#0078d7"),
+                highlightthickness=1,
+                relief="flat",
+                font=("Segoe UI", 9),
+                padx=10
+            )
+            btn.grid(row=row, column=col, padx=2)
+            return btn
+
         # Copy menu button
         copy_menu_btn = ttk.Menubutton(controls_frame, text="📋 Copy", style="Ghost.TButton")
         copy_menu_btn.grid(row=0, column=0, padx=2)
@@ -99,17 +116,11 @@ class PreviewPanel:
         copy_menu.add_command(label="Scene Section", command=lambda: self._copy_section("scene"))
         copy_menu.add_command(label="Notes Section", command=lambda: self._copy_section("notes"))
 
-        # Save button
-        ttk.Button(controls_frame, text="💾 Save", command=self.save_prompt, style="Ghost.TButton").grid(row=0, column=1, padx=2)
-
-        # Clear button
-        ttk.Button(controls_frame, text="🗑️ Clear", command=self._on_clear, style="Ghost.TButton").grid(row=0, column=2, padx=2)
-
-        # Randomize button
-        ttk.Button(controls_frame, text="🎲 Randomize", command=self.on_randomize, style="Ghost.TButton").grid(row=0, column=3, padx=2)
-
-        # Reload button
-        ttk.Button(controls_frame, text="🔄 Reload", command=self.on_reload, style="Ghost.TButton").grid(row=0, column=4, padx=2)
+        # Refactor 3: Ghost style for Save, Clear, Randomize, Reload
+        add_ghost_btn(controls_frame, "💾 Save", self.save_prompt, 0, 1)
+        add_ghost_btn(controls_frame, "🗑️ Clear", self._on_clear, 0, 2)
+        add_ghost_btn(controls_frame, "🎲 Randomize", self.on_randomize, 0, 3)
+        add_ghost_btn(controls_frame, "🔄 Reload", self.on_reload, 0, 4)
 
         # Preview text widget with scrollbar - Refactor 1
         self.preview_text = scrolledtext.ScrolledText(self.parent, wrap="word")

@@ -214,31 +214,44 @@ class CharacterItem(ttk.Frame):
             scheme_combo.pack(side="left")
             scheme_combo.bind("<<ComboboxSelected>>", lambda e: self.callbacks["update_color_scheme"](self.index, scheme_var.get()))
 
-        # Footer Actions (Refactor 2: Secondary Actions)
+        # Footer Actions (Refactor 3: Ghost/Link Hierarchy)
         footer = ttk.Frame(self.controls_frame)
         footer.pack(fill="x")
 
-        # Move Up/Down use Ghost style
+        accent_color = self.char_def.get("signature_color", "#0078d7")
+        if not accent_color.startswith("#"): accent_color = "#0078d7"
+        
+        # Get theme colors safely
+        try:
+            style = ttk.Style()
+            panel_bg = style.lookup("TFrame", "background")
+        except:
+            panel_bg = "#ffffff"
+
+        # Move Up/Down use Ghost style overrides
         move_frame = ttk.Frame(footer)
         move_frame.pack(side="left")
         
         if self.index > 0:
-            ttk.Button(
-                move_frame, text="↑ Up", style="Ghost.TButton", width=6, 
-                command=lambda: self.callbacks["move_up"](self.index)
+            tk.Button(
+                move_frame, text="↑ Up", width=6, command=lambda: self.callbacks["move_up"](self.index),
+                bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=1,
+                relief="flat", font=("Segoe UI", 8)
             ).pack(side="left", padx=2)
         
         num_characters = self.callbacks.get("get_num_characters", lambda: 0)()
         if self.index < num_characters - 1:
-            ttk.Button(
-                move_frame, text="↓ Down", style="Ghost.TButton", width=6, 
-                command=lambda: self.callbacks["move_down"](self.index)
+            tk.Button(
+                move_frame, text="↓ Down", width=6, command=lambda: self.callbacks["move_down"](self.index),
+                bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=1,
+                relief="flat", font=("Segoe UI", 8)
             ).pack(side="left", padx=2)
 
-        # Remove uses Link style
-        ttk.Button(
-            footer, text="✕ Remove Character", style="Link.TButton", 
-            command=lambda: self.callbacks["remove_character"](self.index)
+        # Remove uses Link style override
+        tk.Button(
+            footer, text="✕ Remove Character", command=lambda: self.callbacks["remove_character"](self.index),
+            bg=panel_bg, fg="gray", borderwidth=0, relief="flat", font=("Segoe UI", 8),
+            activeforeground="red"
         ).pack(side="right")
 
     def _on_outfit_cat_select(self, val):

@@ -157,12 +157,18 @@ class CharacterCard(ttk.Frame):
         fav_row.pack(fill="x")
 
         self.fav_btn_var = tk.StringVar(value="☆")
-        self.fav_btn = ttk.Button(
+        # Refactor 3: Ghost Favorite Button
+        self.fav_btn = tk.Button(
             fav_row, 
             textvariable=self.fav_btn_var, 
             width=3, 
             command=self._toggle_favorite,
-            style="Ghost.TButton" # Secondary action
+            bg=self.theme_colors.get("panel_bg", "#ffffff"),
+            fg=self.theme_colors.get("accent", "#0078d7"),
+            highlightbackground=self.theme_colors.get("accent", "#0078d7"),
+            highlightthickness=1,
+            relief="flat",
+            font=("Segoe UI", 9)
         )
         self.fav_btn.pack(side="right")
         self._update_fav_star()
@@ -184,7 +190,7 @@ class CharacterCard(ttk.Frame):
         )
         desc_label.pack(anchor="w", pady=(0, 8))
 
-        # Tags display (Refactor 4: Outlined Pill)
+        # Tags display (Refactor 2: Outlined Pill)
         raw_tags = self.character_data.get("tags") or []
         if isinstance(raw_tags, str):
             raw_tags = [t.strip().lower() for t in raw_tags.split(",") if t.strip()]
@@ -199,7 +205,7 @@ class CharacterCard(ttk.Frame):
             panel_bg = self.theme_colors.get("panel_bg", "#ffffff")
 
             for t in tags:
-                # Create a pill-shaped container (the border)
+                # Create a pill-shaped container (the border) - Refactor 2
                 pill = tk.Frame(tags_frame, bg=accent_color, padx=1, pady=1)
                 
                 lbl = tk.Label(
@@ -227,7 +233,19 @@ class CharacterCard(ttk.Frame):
         add_btn = ttk.Button(btn_frame, text="➕ Add", command=self._on_add_clicked, width=10, style="TButton")
         add_btn.pack(side="left", padx=(0, 6))
 
-        edit_btn = ttk.Button(btn_frame, text="✏️ Edit", command=self._on_edit_clicked, width=10, style="Ghost.TButton")
+        # Refactor 3: Ghost Edit Button (Using tk.Button for direct styling control)
+        edit_btn = tk.Button(
+            btn_frame, 
+            text="✏️ Edit", 
+            command=self._on_edit_clicked, 
+            width=10,
+            bg=panel_bg,
+            fg=accent_color,
+            highlightbackground=accent_color,
+            highlightthickness=1,
+            relief="flat",
+            font=("Segoe UI", 9)
+        )
         edit_btn.pack(side="left")
 
     def toggle_visibility(self, event=None):
@@ -330,10 +348,16 @@ class CharacterCard(ttk.Frame):
         if self.prefs:
             is_fav = self.prefs.is_favorite("favorite_characters", self.character_name)
             self.fav_btn_var.set("★" if is_fav else "☆")
+            
+            accent = self.theme_colors.get("accent", "#0078d7")
+            panel_bg = self.theme_colors.get("panel_bg", "#ffffff")
+            
             if is_fav:
-                self.fav_btn.configure(style="Accent.TButton")
+                # Primary style for favorite
+                self.fav_btn.configure(bg=accent, fg="white")
             else:
-                self.fav_btn.configure(style="TButton")
+                # Ghost style for non-favorite
+                self.fav_btn.configure(bg=panel_bg, fg=accent)
 
     def _preview_photo(self):
         """Show full-size photo preview in a popup window."""

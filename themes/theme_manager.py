@@ -70,7 +70,7 @@ def _parse_yaml_like(lines):
         k = k.strip()
         v = v.strip()
         # strip quotes
-        if (v.startswith('"') and v.endswith('"')) or (v.startswith("'"') and v.endswith("'"')):
+        if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
             v = v[1:-1]
         d[k] = v
     return d

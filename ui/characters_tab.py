@@ -282,9 +282,18 @@ class CharactersTab:
         ttk.Button(
             btn_frame, text="✓ Apply to Selected", command=self._apply_bulk_to_selected
         ).grid(row=0, column=1, sticky="ew", padx=2)
-        ttk.Button(
-            btn_frame, text="✨ Create Shared Outfit", command=self._create_shared_outfit, style="Ghost.TButton"
-        ).grid(row=0, column=2, sticky="ew", padx=(4, 0))
+        # Refactor 3: Ghost style for Create Shared Outfit
+        self.create_shared_btn = tk.Button(
+            btn_frame, 
+            text="✨ Create Shared Outfit", 
+            command=self._create_shared_outfit,
+            bg=self.theme_colors.get("panel_bg", "#ffffff") if hasattr(self, "theme_colors") else "#ffffff",
+            fg="#0078d7", # Fallback, will be updated by apply_theme
+            highlightthickness=1,
+            relief="flat",
+            font=("Segoe UI", 9)
+        )
+        self.create_shared_btn.grid(row=0, column=2, sticky="ew", padx=(4, 0))
 
         # Add character section
         add = ttk.LabelFrame(self.tab, text="👥 Add Character", style="TLabelframe", padding=12)
@@ -316,9 +325,19 @@ class CharactersTab:
         ttk.Button(button_frame, text="+ Add to Prompt", command=self._add_character).grid(
             row=0, column=0, sticky="ew", padx=(0, 4)
         )
-        ttk.Button(
-            button_frame, text="✨ Create New Character", command=self._create_new_character, style="Ghost.TButton"
-        ).grid(row=0, column=1, sticky="ew", padx=(4, 0))
+        
+        # Refactor 3: Ghost style for Create New Character
+        self.create_char_btn = tk.Button(
+            button_frame, 
+            text="✨ Create New Character", 
+            command=self._create_new_character,
+            bg="#ffffff", # Fallback
+            fg="#0078d7", # Fallback
+            highlightthickness=1,
+            relief="flat",
+            font=("Segoe UI", 9)
+        )
+        self.create_char_btn.grid(row=0, column=1, sticky="ew", padx=(4, 0))
 
         # Use ScrollableCanvas for selected characters
         self.scrollable_canvas = ScrollableCanvas(self.tab)
