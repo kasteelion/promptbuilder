@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Theme management for the application."""
 
 import os
@@ -69,7 +70,7 @@ def _parse_yaml_like(lines):
         k = k.strip()
         v = v.strip()
         # strip quotes
-        if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
+        if (v.startswith('"') and v.endswith('"')) or (v.startswith("'"') and v.endswith("'"')):
             v = v[1:-1]
         d[k] = v
     return d
@@ -280,7 +281,8 @@ class ThemeManager:
 
         # Custom widget styles
         self.style.configure("Collapsible.TFrame", background=panel_bg, borderwidth=0, relief="flat")
-        self.style.configure("Card.TFrame", background=panel_bg, borderwidth=0, relief="flat")
+        self.style.configure("Card.TFrame", background=panel_bg, borderwidth=1, bordercolor=border, relief="solid")
+        self.style.configure("Selected.Card.TFrame", background=panel_bg, borderwidth=2, bordercolor=accent, relief="solid")
         
         # Typography-based Headers (Refactor 3)
         self.style.configure(
@@ -289,6 +291,18 @@ class ThemeManager:
             background=panel_bg, 
             foreground=accent,
             padding=(0, s(5))
+        )
+
+        # Notebook tabs with better selection contrast
+        self.style.configure("TNotebook", background=bg, bordercolor=border, borderwidth=0)
+        self.style.configure(
+            "TNotebook.Tab", background=bg, foreground=fg, bordercolor=border, padding=[s(10), s(4)],
+            font=(None, s(9))
+        )
+        self.style.map(
+            "TNotebook.Tab",
+            background=[("selected", selected_bg), ("active", text_bg)],
+            foreground=[("selected", accent), ("active", fg)],
         )
 
         # Combobox/Entry with better contrast and visibility
@@ -350,7 +364,7 @@ class ThemeManager:
         # Ghost Button (Refactor 2: Medium Importance)
         self.style.configure(
             "Ghost.TButton",
-            background=bg,
+            background=panel_bg,
             foreground=accent,
             bordercolor=accent,
             borderwidth=1,
@@ -367,9 +381,9 @@ class ThemeManager:
         # Link Button (Refactor 2: Low Importance)
         self.style.configure(
             "Link.TButton",
-            background=bg,
+            background=panel_bg,
             foreground=fg,
-            bordercolor=bg,
+            bordercolor=panel_bg,
             borderwidth=0,
             padding=[s(5), s(2)],
             font=(None, s(9))
@@ -377,7 +391,7 @@ class ThemeManager:
         self.style.map(
             "Link.TButton",
             foreground=[("active", accent)],
-            background=[("active", bg)],
+            background=[("active", panel_bg)],
         )
 
         # Accent Button (deprecated in favor of TButton primary, but keeping for compat)
@@ -414,28 +428,28 @@ class ThemeManager:
         # Muted label for small helper text
         self.style.configure("Muted.TLabel", font=(None, s(8)), background=panel_bg, foreground=border)
         
-        # Tag-style (Refactor 4: Outlined)
+        # Tag-style (Refactor 4: Outlined Pill)
         tag_fg = accent
-        tag_bg = text_bg
+        tag_bg = panel_bg
         self.style.configure(
             "Tag.TLabel",
             font=(None, s(8), "bold"),
             background=tag_bg,
             foreground=tag_fg,
-            padding=(s(6), s(2)),
+            padding=(s(8), s(2)),
             borderwidth=1,
             relief="solid",
             bordercolor=accent
         )
 
-        # Tag-style button for interactive chips (Refactor 4: Outlined)
+        # Tag-style button for interactive chips (Refactor 4: Outlined Pill)
         try:
             self.style.configure(
                 "Tag.TButton",
                 font=(None, s(8), "bold"),
                 background=tag_bg,
                 foreground=tag_fg,
-                padding=[s(6), s(2)],
+                padding=[s(8), s(2)],
                 bordercolor=accent,
                 borderwidth=1,
                 relief="solid"
@@ -443,7 +457,7 @@ class ThemeManager:
             self.style.map(
                 "Tag.TButton",
                 background=[("active", accent), ("pressed", accent_hover)],
-                foreground=[("active", bg), ("pressed", bg)],
+                foreground=[("active", panel_bg), ("pressed", panel_bg)],
                 bordercolor=[("active", accent), ("pressed", accent_hover)],
             )
         except Exception:
@@ -459,24 +473,18 @@ class ThemeManager:
             arrowcolor=fg,
         )
 
-        # Custom widget styles
-        self.style.configure("Collapsible.TFrame", background=panel_bg, borderwidth=0, relief="flat")
-        self.style.configure("Card.TFrame", background=panel_bg, borderwidth=1, bordercolor=border, relief="solid")
-        self.style.configure("Selected.Card.TFrame", background=panel_bg, borderwidth=2, bordercolor=accent, relief="solid")
-
-
     def apply_text_widget_theme(self, widget, theme):
-        """Apply theme colors to a tk.Text widget. (Refactor 2)"""
-        text_bg = theme["text_bg"]
-        text_fg = theme["text_fg"]
+        """Apply theme colors to a tk.Text widget. (Refactor 1: Global Input Styling)"""
+        input_bg = theme["text_bg"]
+        input_fg = theme["text_fg"]
         accent = theme["accent"]
         
         # Dynamic caret color
-        caret_color = text_fg
+        caret_color = "white" if self._is_dark(input_bg) else "black"
         
         widget.config(
-            bg=text_bg,
-            fg=text_fg,
+            bg=input_bg,
+            fg=input_fg,
             insertbackground=caret_color,
             selectbackground=accent,
             selectforeground=theme["bg"],
@@ -489,20 +497,24 @@ class ThemeManager:
         )
 
     def apply_entry_theme(self, widget, theme):
-        """Apply theme colors to a ttk.Entry or tk.Entry widget. (Refactor 2)"""
-        text_bg = theme["text_bg"]
-        text_fg = theme["text_fg"]
+        """Apply theme colors to a ttk.Entry or tk.Entry widget. (Refactor 1)"""
+        input_bg = theme["text_bg"]
+        input_fg = theme["text_fg"]
         accent = theme["accent"]
+        caret_color = "white" if self._is_dark(input_bg) else "black"
         
         if isinstance(widget, ttk.Entry):
-            # ttk widgets are mostly styled via style.configure
-            pass
+            # For ttk.Entry, we style the TEntry element via style.configure
+            # but we can force the insertbackground here
+            try:
+                widget.config(insertbackground=caret_color)
+            except Exception: pass
         else:
             # tk.Entry
             widget.config(
-                bg=text_bg,
-                fg=text_fg,
-                insertbackground=text_fg,
+                bg=input_bg,
+                fg=input_fg,
+                insertbackground=caret_color,
                 selectbackground=accent,
                 selectforeground=theme["bg"],
                 relief="flat",
@@ -511,19 +523,37 @@ class ThemeManager:
                 highlightcolor=accent
             )
 
+    def _is_dark(self, hex_color):
+        """Simple check if a hex color is dark."""
+        if not hex_color or not hex_color.startswith("#"):
+            return True
+        try:
+            hex_color = hex_color.lstrip('#')
+            r, g, b = tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+            # HSP color model formula
+            hsp = (0.299 * (r * r) + 0.587 * (g * g) + 0.114 * (b * b)) ** 0.5
+            return hsp < 127.5
+        except Exception:
+            return True
+
     def apply_preview_theme(self, widget, theme):
-        """Apply theme colors to preview widget with formatted tags. (Refactor 2)"""
+        """Apply theme colors to preview widget with formatted tags. (Refactor 1)"""
+        input_bg = theme["preview_bg"]
+        input_fg = theme["preview_fg"]
+        accent = theme["accent"]
+        caret_color = "white" if self._is_dark(input_bg) else "black"
+        
         # Base widget colors
         widget.config(
-            bg=theme["preview_bg"],
-            fg=theme["preview_fg"],
-            insertbackground=theme["preview_fg"],
-            selectbackground=theme["accent"],
-            selectforeground=theme["preview_fg"],
+            bg=input_bg,
+            fg=input_fg,
+            insertbackground=caret_color,
+            selectbackground=accent,
+            selectforeground=input_fg,
             relief="flat",
             highlightthickness=1,
             highlightbackground=theme["border"],
-            highlightcolor=theme["accent"],
+            highlightcolor=accent,
             padx=15,
             pady=15
         )

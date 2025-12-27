@@ -30,7 +30,7 @@ _IMAGE_CACHE: dict = {}
 
 
 class CharacterCard(ttk.Frame):
-    """A visual card showing character with photo, name, and quick actions."""
+    """A visual card showing character with photo, name, and quick actions with accordion behavior."""
 
     def __init__(
         self,
@@ -72,14 +72,13 @@ class CharacterCard(ttk.Frame):
         self.categorized_tags_map = categorized_tags_map or {}
         
         self.photo_image = None  # Keep reference to prevent GC
+        self._expanded = True # Accordion state
 
         self._build_ui()
 
     def _on_enter(self, event):
         """Handle mouse enter (hover)."""
-        # Modern hover effect: change background or border color
-        self.configure(relief="solid", borderwidth=1)
-        # If theme manager is available, we could change bg too
+        self.configure(style="Selected.Card.TFrame" if self._expanded else "Card.TFrame")
         try:
             self.name_label.config(foreground=self.theme_colors.get("accent", "#0078d7"))
         except Exception:
@@ -87,7 +86,7 @@ class CharacterCard(ttk.Frame):
 
     def _on_leave(self, event):
         """Handle mouse leave."""
-        self.configure(relief="flat", borderwidth=1)
+        self.configure(style="Card.TFrame")
         try:
             self.name_label.config(foreground=self.theme_colors.get("fg", "black"))
         except Exception:
@@ -95,18 +94,37 @@ class CharacterCard(ttk.Frame):
 
     def _build_ui(self):
         """Build the card UI."""
-        # Use a flatter card style - Refactor 1
-        self.configure(relief="flat", borderwidth=0, padding=12)
+        self.configure(relief="flat", borderwidth=0, padding=0)
+        
+        # Header Row (Refactor 3: Accordion)
+        self.header = ttk.Frame(self, style="TFrame", cursor="hand2")
+        self.header.pack(fill="x", padx=12, pady=8)
+        
+        self.name_label = ttk.Label(
+            self.header,
+            text=self.character_name,
+            style="Bold.TLabel",
+            wraplength=250,
+            justify="left",
+        )
+        self.name_label.pack(side="left", anchor="w")
+        
+        self.toggle_indicator = ttk.Label(self.header, text="▼", style="Muted.TLabel")
+        self.toggle_indicator.pack(side="right", padx=5)
+        
+        # Bind toggle
+        self.header.bind("<Button-1>", lambda e: self.toggle_visibility())
+        self.name_label.bind("<Button-1>", lambda e: self.toggle_visibility())
+
+        # Main Content Container (Collapsible)
+        self.container = ttk.Frame(self, style="TFrame", padding=(12, 0, 12, 12))
+        self.container.pack(fill="both", expand=True)
         
         # Horizontal layout: photo on left, summary/info on right
         left_size = int(CHARACTER_CARD_SIZE * 1.4)
 
-        # Container with a clear border look
-        container = ttk.Frame(self)
-        container.pack(fill="both", expand=True)
-
         # Photo frame on the left
-        photo_frame = ttk.Frame(container, style="TFrame")
+        photo_frame = ttk.Frame(self.container, style="TFrame")
         photo_frame.pack(side="left", padx=(0, 10))
 
         self.photo_canvas = tk.Canvas(
@@ -132,38 +150,28 @@ class CharacterCard(ttk.Frame):
         )
 
         # Info frame on the right
-        info_frame = ttk.Frame(container)
+        info_frame = ttk.Frame(self.container)
         info_frame.pack(side="left", fill="both", expand=True)
 
-        name_row = ttk.Frame(info_frame)
-        name_row.pack(fill="x", anchor="w")
-
-        self.name_label = ttk.Label(
-            name_row,
-            text=self.character_name,
-            style="Bold.TLabel",
-            wraplength=220,
-            justify="left",
-        )
-        self.name_label.pack(side="left", anchor="w")
+        fav_row = ttk.Frame(info_frame)
+        fav_row.pack(fill="x")
 
         self.fav_btn_var = tk.StringVar(value="☆")
         self.fav_btn = ttk.Button(
-            name_row, 
+            fav_row, 
             textvariable=self.fav_btn_var, 
             width=3, 
             command=self._toggle_favorite,
-            style="TButton"
+            style="Ghost.TButton" # Secondary action
         )
-        self.fav_btn.pack(side="right", padx=(4, 0))
+        self.fav_btn.pack(side="right")
         self._update_fav_star()
 
-        # Use explicit summary if present, otherwise fallback to appearance snippet
+        # Use explicit summary if present
         summary = self.character_data.get("summary")
         if not summary:
             appearance = self.character_data.get("appearance", "")
             first_line = appearance.split("\n")[0] if appearance else ""
-            # Shorten to reasonable length
             summary = (first_line[:180] + "...") if len(first_line) > 180 else first_line
 
         desc_label = ttk.Label(
@@ -174,9 +182,9 @@ class CharacterCard(ttk.Frame):
             wraplength=260,
             justify="left",
         )
-        desc_label.pack(anchor="w", pady=(4, 8))
+        desc_label.pack(anchor="w", pady=(0, 8))
 
-        # Tags display (small gray labels) - SORTED BY CATEGORY
+        # Tags display (Refactor 4: Outlined Pill)
         raw_tags = self.character_data.get("tags") or []
         if isinstance(raw_tags, str):
             raw_tags = [t.strip().lower() for t in raw_tags.split(",") if t.strip()]
@@ -184,32 +192,35 @@ class CharacterCard(ttk.Frame):
         tags = self._sort_tags_by_category(raw_tags, self.categorized_tags_map)
 
         if tags:
-            # Use FlowFrame so tags wrap naturally like outfits
             tags_frame = FlowFrame(info_frame, padding_x=4, padding_y=4)
             tags_frame.pack(anchor="w", pady=(0, 6), fill="x")
-            for t in tags:
-                try:
-                    btn = tags_frame.add_button(
-                        text=t, style="Tag.TButton", command=(lambda v=t: self._handle_tag_click(v))
-                    )
-                except Exception:
-                    btn = tags_frame.add_button(
-                        text=t, command=(lambda v=t: self._handle_tag_click(v))
-                    )
-                try:
-                    btn.configure(cursor="hand2")
-                except Exception:
-                    pass
-            # Schedule a reflow so layout is applied soon and tags are visible.
-            try:
-                tags_frame._schedule_reflow()
-            except Exception:
-                try:
-                    tags_frame.after(20, tags_frame._reflow)
-                except Exception:
-                    pass
+            
+            accent_color = self.theme_colors.get("accent", "#0078d7")
+            panel_bg = self.theme_colors.get("panel_bg", "#ffffff")
 
-        # Buttons row under info
+            for t in tags:
+                # Create a pill-shaped container (the border)
+                pill = tk.Frame(tags_frame, bg=accent_color, padx=1, pady=1)
+                
+                lbl = tk.Label(
+                    pill, 
+                    text=t, 
+                    bg=panel_bg, 
+                    fg=accent_color,
+                    font=("Segoe UI", 8, "bold"),
+                    padx=8,
+                    pady=2,
+                    cursor="hand2"
+                )
+                lbl.pack()
+                lbl.bind("<Button-1>", lambda e, v=t: self._handle_tag_click(v))
+                
+                # Register with flow frame
+                tags_frame._children.append(pill)
+            
+            tags_frame._schedule_reflow()
+
+        # Buttons row
         btn_frame = ttk.Frame(info_frame)
         btn_frame.pack(fill="x", pady=(4, 0))
 
@@ -218,6 +229,22 @@ class CharacterCard(ttk.Frame):
 
         edit_btn = ttk.Button(btn_frame, text="✏️ Edit", command=self._on_edit_clicked, width=10, style="Ghost.TButton")
         edit_btn.pack(side="left")
+
+    def toggle_visibility(self, event=None):
+        """Toggle the visibility of the card contents. (Refactor 3)"""
+        if self._expanded:
+            self.container.pack_forget()
+            self.toggle_indicator.config(text="▶")
+            self._expanded = False
+        else:
+            self.container.pack(fill="both", expand=True)
+            self.toggle_indicator.config(text="▼")
+            self._expanded = True
+        
+        # Trigger parent scroll update
+        try:
+            self.master.master.master.scrollable_canvas.update_scroll_region()
+        except Exception: pass
 
     def _sort_tags_by_category(self, tags, categorized_map):
         """Sort tags based on category priority."""

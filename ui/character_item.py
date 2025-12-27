@@ -70,8 +70,8 @@ class CharacterItem(ttk.Frame):
         self.title_label = ttk.Label(self.header, text=title_text, style="Bold.TLabel")
         self.title_label.pack(side="left")
         
-        # Indicator
-        self.toggle_indicator = ttk.Label(self.header, text="▾" if self._expanded else "▸", style="Muted.TLabel")
+        # Indicator - Refactor 3
+        self.toggle_indicator = ttk.Label(self.header, text="▼" if self._expanded else "▶", style="Muted.TLabel")
         self.toggle_indicator.pack(side="right", padx=5)
 
         # Controls container (The part that collapses)
@@ -79,9 +79,10 @@ class CharacterItem(ttk.Frame):
         if self._expanded:
             self.controls_frame.pack(fill="x")
             
-        # Bind toggle to header and label
+        # Bind toggle to header, title and handle - Refactor 3
         self.header.bind("<Button-1>", lambda e: self.toggle_collapse())
         self.title_label.bind("<Button-1>", lambda e: self.toggle_collapse())
+        self.drag_handle.bind("<Button-1>", lambda e: self.toggle_collapse())
 
         # --- Content inside controls_frame ---
         
@@ -252,10 +253,10 @@ class CharacterItem(ttk.Frame):
         self.callbacks["update_pose_category"](self.index, val, self.preset_combo)
 
     def toggle_collapse(self):
-        """Toggle the visibility of controls."""
+        """Toggle the visibility of controls. (Refactor 3: Accordion)"""
         if self._expanded:
             self.controls_frame.pack_forget()
-            self.toggle_indicator.config(text="▸")
+            self.toggle_indicator.config(text="▶")
             self._expanded = False
         else:
             # Auto-collapse others if requested by parent/tab
@@ -263,7 +264,7 @@ class CharacterItem(ttk.Frame):
                 self.callbacks["auto_collapse"](self.index)
             
             self.controls_frame.pack(fill="x")
-            self.toggle_indicator.config(text="▾")
+            self.toggle_indicator.config(text="▼")
             self._expanded = True
             
         self.char_data["_expanded"] = self._expanded
