@@ -13,9 +13,13 @@ Built with a "data-first" philosophy, the application uses human-readable Markdo
 *   **Intuitive GUI:** A professional, responsive Tkinter interface with collapsible panels and real-time feedback.
 *   **Character Management:** A gallery-based selection system for managing extensive character libraries.
 *   **Modular Character Design:** Refined "Ingredient-based" character descriptions for maximum flexibility across varied prompt contexts (e.g., Noir, Sports, Fantasy).
+*   **Natural Language Import:** Import full prompt configurations (characters, scenes, poses) directly from raw text or LLM outputs.
+*   **LLM Workflow Integration:** Dedicated tools for exporting "knowledge injection" data to LLMs and structured import formats for AI-assisted prompting.
 *   **Identity Locks:** Maintain character consistency by "locking" core physical traits separately from outfits or actions.
+*   **Signature Colors:** Assign unique hex codes to characters that dynamically update outfit colors using the `((default:Color) or (signature))` syntax.
 *   **Outfit Traits & Specializations:** A dynamic multi-select checkbox system for specialized gear (e.g., *Softball Face Mask*, *Volleyball Libero*, *Baseball Catcher*).
 *   **Interaction Templates:** Use placeholders (e.g., `{char1}`, `{char2}`) to define complex multi-character scenes with cinematic framing.
+*   **Data Analysis Explorers:** Visual tools to analyze tag distributions and browse the outfit library by category and feature support.
 *   **Structured Outfits:** Support for detailed outfit definitions with automatic "one-piece" detection and team color substitution.
 *   **Optimized UX:** Advanced searchable comboboxes with keyboard navigation, auto-focus, and double-click shortcuts.
 *   **Real-time Preview:** Instant prompt generation with adaptive validation and condensed summary view.

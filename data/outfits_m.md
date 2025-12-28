@@ -39,6 +39,12 @@ Ribbed moisture-wicking henley (fitted tightly in ((default:olive green) or (sig
 ### Studded Harness Style
 **Mesh tank top or sleeveless tee** (black); **leather body harness** (strappy geometric details across chest); **black cargo pants or utility kilt** (heavy hardware, buckles). *Accessories:* Combat boots, leather wrist cuffs, silver rings. *Hair/Makeup:* Messy texture or undercut, guyliner or dark eye makeup optional.
 
+### Skater Culture
+Oversized **graphic t-shirt**; baggy **durable work pants**; **canvas skate shoes**. *Accessories:* Beanie, chain wallet, earbuds around neck. *Hair/Makeup:* Tousled natural hair, clean-shaven or stubble.
+
+### Light Academia
+**Cable knit sweater** (cream or beige); **tailored trousers** (tan or gray); **leather oxfords or loafers**. *Accessories:* Leather satchel, reading glasses, book prop. *Hair/Makeup:* Neat side part or tousled Ivy League cut, clean-shaven or neat stubble.
+
 ---
 
 ## Athletic & Sports
@@ -116,8 +122,14 @@ Fitted **white v-neck tee** (classic cotton); **tailored chinos** (((default:rus
 ### Default Character
 tight white tank top, low rise distressed jean shorts
 
-### Casual - Country Pin-Up
+### Country Casual
 **Red and white gingham button-down shirt** (short sleeves or rolled up, tucked in); **fitted blue jeans** (dark wash, straight leg); **brown leather belt** with large western buckle; **leather work boots**. *Accessories:* Straw hat (optional), handkerchief in back pocket. *Hair/Makeup:* Natural hair, clean-shaven or light stubble, charming smile.
+
+### Vintage Denim
+**Ribbed Muscle Tank** (((default:white)) cotton, fitted silhouette, soft texture); **Denim Jacket** (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons, heavy sturdy fabric); **Flared Jeans** (dark blue denim, fitted through thigh with dramatic flare at hem, contrast stitching). *Accessories:* ((default:red)) paisley bandana tied around neck, silver rings. *Hair/Makeup:* Textured wavy hair or shag cut, clean-shaven or stubble, natural appearance.
+
+### Retro Tracksuit
+**Striped Tank Top** (fitted silhouette, horizontal red and white pin-stripes); **Athletic Track Shorts** (matching orange-red fabric, white vertical side stripes, elastic waistband, retro cut); **Oversized Bomber Jacket** (matching red hue, voluminous sleeves). *Accessories:* Simple gold chain necklace, minimal jewelry. *Hair/Makeup:* Messy bun or textured hair; natural fresh-faced look.
 
 ---
 
@@ -133,7 +145,7 @@ Oversized **graphic hoodie or layered long-sleeve tees** (pastel or bold anime p
 
 ## Character & Costume
 
-### Bunny
+### Casino Dealer
 Sleek **black satin vest** over bare chest; **black dress pants** (tailored fit); **sheer black socks**. *Accessories:* Tall black rabbit ears, white bow tie, white cuffs. *Hair/Makeup:* **Hair neatly styled**; clean-shaven or subtle grooming, calm confident expression, realistic anime shading, elegant not provocative.
 
 ### Superhero
@@ -145,13 +157,13 @@ Sleek **form-fitting bodysuit** (((default:black) or (signature)) matte or high-
 ### Barbershop Quartet
 Classic **pinstriped vest** over **white button-up shirt**; **matching pinstriped trousers**; **bowtie** (((default:red) or (signature))); **boater hat** with matching ribbon. *Accessories:* Arm garters, cane prop. *Hair/Makeup:* Neat vintage grooming.
 
-### Phantom of the Opera
+### Opera Masquerade
 Tailored **black suit** with **white dress shirt** and **black cravat**; flowing **black cape** with red silk lining; iconic **white half-mask** obscuring side of face. *Accessories:* Rose prop, signet ring. *Hair/Makeup:* Slicked back dark hair, intense shadowed eyes.
 
-### Beauty and the Beast
+### Fairytale Village
 Fitted **red vest** over a **yellow collared shirt** (sleeves rolled up to show biceps); **tight black trousers**; **tall brown leather boots**. *Accessories:* Wide leather belt with large buckle, hunting quiver optional. *Hair/Makeup:* Hair in a low ponytail, clean-shaven or stubble, arrogant smirk, hyper-masculine focus.
 
-### Maid Outfit
+### Service Uniform
 Traditional **black butler-style suit** (tailored jacket and trousers); **crisp white dress shirt**; **black bow tie**; **polished black dress shoes**. *Accessories:* White gloves, pocket square. *Hair/Makeup:* Neat, polished styling.
 
 ### Soft Aesthetic
@@ -347,7 +359,7 @@ Flowing **thobe or robe** (white or cream silk with gold embroidery); **sirwal p
 ### Oktoberfest
 **Checkered button-down shirt** (red, blue, or green gingham); **leather breeches (Lederhosen)** (knee-length or short, embroidered); **H-suspenders** with chest piece; **wool socks** (slouched or knee-high); **Haferl shoes** (traditional leather shoes). *Accessories:* Alpine hat (Tyrolean hat) with feather. *Hair/Makeup:* Natural grooming, healthy glow.
 
-### Dance - Matador
+### Matador
 **Embroidered matador jacket** (chaquetilla) in black with gold bullion detailing; **fitted high-waist trousers** (taleguilla) with matching side embroidery; **white dress shirt** with ruffled front; **red satin sash** (faja). *Accessories:* Black dress shoes or slippers, pink or white socks, traditional montera hat (optional). *Hair/Makeup:* Slicked back hair, stern passionate expression.
 
 ### Pop Star - Futuristic Glam
@@ -534,4 +546,103 @@ Traditional **formal kimono** (silk in deep colors like navy, forest green, or b
 
 ### Wedding
 **Classic black tuxedo** (wool-blend with satin lapels, tailored fit); **white wing-tip dress shirt**; **black silk bow tie**; **patent leather dress shoes**. *Accessories:* Silver cufflinks, white flower boutonniere, silk pocket square. *Hair/Makeup:* Impeccably styled hair, clean-shaven or perfectly groomed facial hair.
+### Luxury Silk Robe Set
+**Silk kimono-style robe** (((default:navy or burgundy) or (signature)) pure silk, mid-thigh length with contrast piping); **matching silk pajama pants** (relaxed fit). *Accessories:* Velvet slippers, simple watch. *Hair/Makeup:* Neatly groomed hair, fresh clean-shaven or groomed beard, relaxed luxury vibe.
+
+### Classic Striped Pajamas
+**Button-front pajama top** (((default:navy and white) or (signature)) vertical stripe cotton poplin, chest pocket with piped edges); **matching pajama pants** (elastic waist with drawstring, straight leg). *Accessories:* Leather slippers, reading glasses. *Hair/Makeup:* Natural hair, minimal grooming, relaxed expression.
+
+### Oversized Shirt Lounge
+**Oversized t-shirt** (((default:white or gray) or (signature)) soft cotton, worn loose); **flannel lounge pants** or **boxers**. *Accessories:* Coffee mug prop. *Hair/Makeup:* Messy hair, morning stubble, casual vibe.
+
+### Cozy Onesie
+**Full-body fleece onesie** (((default:gray or plaid) or (signature)) with hood, zip-front closure); **matching hood**. *Accessories:* Hot cocoa mug. *Hair/Makeup:* Relaxed natural hair, comfortable expression.
+
+### Spa Day Ensemble
+**Plush terry cloth robe** (((default:white) or (signature)), knee-length with shawl collar, belt tie at waist); **white tank top and shorts** underneath; **spa slippers**. *Accessories:* Rolled towel over shoulder. *Hair/Makeup:* Fresh clean skin, relaxation mode.
+
+### Satin Sleepwear
+**Satin pajama set** (((default:black or midnight blue) or (signature)) luxe satin, button-down top and pants); **bare feet** or **slippers**. *Accessories:* Simple watch. *Hair/Makeup:* Neatly groomed, sophisticated evening lounge look.
+
+### Rodeo Champion
+**Rhinestone-embellished western shirt** (((default:black or royal blue) or (signature)) with pearl snaps, fitted silhouette, ornate yoke with embroidery); **statement belt** (wide leather with large silver trophy buckle); **bootcut jeans** (dark wash, starched); **cowboy boots** (exotic leather, polished). *Accessories:* Cowboy hat (felt or straw, pristine), bolo tie, leather gloves. *Hair/Makeup:* Clean-cut or rugged handsome look, confident competition smile.
+
+### Sheriff
+**Khaki uniform shirt** (short sleeves with epaulettes, badge over left pocket, multiple pockets with button flaps); **dark brown leather duty belt** (with holster, handcuffs, radio); **matching khaki pants** (straight leg with pressed crease); **black duty boots** (polished leather, lace-up). *Accessories:* Silver star badge, wide-brimmed campaign hat, aviator sunglasses. *Hair/Makeup:* Short strict haircut, clean-shaven or mustache, authoritative expression.
+
+### Ranch Hand
+**Worn denim work shirt** (((default:faded blue) or (signature)), long sleeves rolled to forearm, slightly distressed); **canvas work vest** (carhartt style); **durable work jeans** (straight leg, authentic wear patterns); **sturdy work boots** (brown leather with visible scuffs, lace-up). *Accessories:* Leather work gloves, bandana around neck, worn baseball cap or cowboy hat. *Hair/Makeup:* Natural hair, sun-kissed skin, stubble or beard, honest hardworking expression.
+
+### Oil Tycoon
+**Tailored western blazer** (((default:cream or tan) or (signature)) with western yoke detailing, suede trim); **crisp dress shirt** (white or pastel); **tailored trousers** (high-waist, western cut); **luxury cowboy boots** (alligator or ostrich). *Accessories:* Bolo tie with turquoise or silver slide, large signet ring, Stetson hat (high quality), leather briefcase. *Hair/Makeup:* Slicked back hair, well-groomed facial hair, confident commanding presence.
+
+### K-Pop Idol Performance
+**Oversized graphic jacket** (((default:neon or monochrome) or (signature)) with straps and buckles); **mesh tank top** or **ripped tee**; **cargo pants** (with chains and zippers); **chunky high-top sneakers**. *Accessories:* Layered silver necklaces, multiple rings, ear cuffs, bucket hat or headband. *Hair/Makeup:* Styled colorful hair (undercut or messy texture), stage makeup (guyliner, contour), charismatic idol expression.
+
+### Parisian Chic
+**Breton stripe shirt** (((default:navy and white) or (signature)) long sleeve, boat neck); **slim-fit chinos** (camel or navy); **leather loafers** or **clean white sneakers**. *Accessories:* Navy blazer (optional, thrown over shoulder), sunglasses, leather satchel. *Hair/Makeup:* Natural styled hair, clean-shaven or stubble, effortless sophisticated vibe.
+
+### Italian Riviera Summer
+**Linen button-down shirt** (((default:white or pale blue) or (signature)), rolled sleeves, unbuttoned at top); **linen trousers** (beige or white, relaxed fit); **leather sandals** or **loafers**. *Accessories:* Panama hat, designer sunglasses, leather bracelet. *Hair/Makeup:* Tousled hair, sun-kissed skin, relaxed vacation luxury.
+
+### Nordic Minimalist
+**Chunky knit sweater** (((default:gray or cream) or (signature)) wool, crew neck); **black tapered trousers** (minimalist cut); **leather boots** or **minimalist sneakers**. *Accessories:* Beanie, simple backpack, wool scarf. *Hair/Makeup:* Neat natural hair, minimal grooming, understated cool.
+
+### Graduation
+**Black academic gown** (floor-length, open front); **matching mortarboard cap**; **dress shirt and tie** underneath; **dress pants**; **dress shoes**. *Accessories:* Graduation tassel, diploma holder. *Hair/Makeup:* Neat grooming, proud expression.
+
+### Prom Formal
+**Classic tuxedo** (((default:black or midnight blue) or (signature)) satin lapels); **crisp white dress shirt** (pleated front); **bow tie** (matching vest or cummerbund); **dress shoes** (patent leather). *Accessories:* Boutonniere, cufflinks, watch. *Hair/Makeup:* Styled hair, fresh grooming, youthful excitement.
+
+### Summer Festival Yukata
+**Cotton men's yukata** (((default:navy, gray, or subtle geometric pattern) or (signature))); **kaku-obi** (men's sash, tied low on hips); **geta sandals**. *Accessories:* Uchiwa fan, kinchaku bag. *Hair/Makeup:* Natural hair, relaxed festive vibe.
+
+### Red Carpet Gala
+**Bespoke tuxedo** (((default:velvet or textured fabric) or (signature)) modern cut); **dress shirt** (hidden buttons); **bow tie** or **necktie**; **designer dress shoes**. *Accessories:* Luxury watch, cufflinks, pocket square. *Hair/Makeup:* Impeccable grooming, confident star presence.
+
+### 1920s Jazz Age
+**Three-piece wool suit** (((default:pinstripe or tweed) or (signature)) sack coat style); **club collar shirt**; **patterned tie**; **oxford shoes**. *Accessories:* Newsboy cap or fedora, pocket watch chain. *Hair/Makeup:* Slicked hair with side part, clean-shaven or thin mustache, Jazz Age dapper.
+
+### 1960s Mod
+**Slim-fit suit** (((default:sharkskin or bold color) or (signature)) narrow lapels, cigarette pants); **turtleneck** or **button-down with skinny tie**; **Chelsea boots**. *Accessories:* Wayfarer sunglasses. *Hair/Makeup:* Mop-top haircut or neat side part, clean-shaven, youthful energy.
+
+### 1980s Power Dressing
+**Double-breasted suit** (((default:gray or navy pinstripe) or (signature)) wide shoulders, loose fit); **contrast collar shirt** (striped body, white collar); **power tie** (bold red or yellow print); **loafers**. *Accessories:* Suspenders, large gold watch, briefcase. *Hair/Makeup:* Blow-dried hair, clean-shaven, assertive yuppie look.
+
+### 1990s Grunge
+**Flannel shirt** (((default:plaid) or (signature)) worn open over t-shirt); **band t-shirt** (vintage); **ripped jeans** (baggy fit); **combat boots** or **high-top sneakers**. *Accessories:* Beanie, chain wallet. *Hair/Makeup:* Long messy hair (curtains style), stubble or goatee, disaffected attitude.
+
+### Rock Concert Performer
+**Leather vest** or **jacket** (studded, worn open); **band t-shirt** or **mesh tank**; **leather pants** or **ripped jeans**; **heavy boots**. *Accessories:* Wristbands, rings, chain belt, guitar prop. *Hair/Makeup:* Long hair or messy style, guyliner, intense stage presence.
+
+### Circus Ringmaster
+**Red tailcoat** (((default:bright red) or (signature)) with gold braiding and epaulettes); **white dress shirt**; **black trousers** (with side stripe); **tall riding boots**. *Accessories:* Top hat, white gloves, whip or baton. *Hair/Makeup:* Waxed mustache (optional), dramatic grooming, commanding showman.
+
+### Stage Magician
+**Tailored tuxedo** (((default:black) or (signature)) tails coat); **white wing-tip shirt**; **white bow tie**; **black trousers**; **patent shoes**. *Accessories:* Top hat, white gloves, wand, deck of cards, cape (black with red lining). *Hair/Makeup:* Slicked back hair, goatee or clean-shaven, mysterious expression.
+
+### K-Pop Stage Outfit
+**Statement jacket** (((default:military style or embellished) or (signature))); **harness** or **body chains**; **leather pants** or **uniform trousers**; **combat boots**. *Accessories:* Fingerless gloves, earpiece microphone, multiple earrings. *Hair/Makeup:* Styled hair (mullet or undercut), stage makeup, fierce performance look.
+
+### Stand-Up Comedian
+**Casual blazer** (((default:textured or velvet) or (signature))); **graphic tee** or **button-down**; **dark jeans**; **sneakers**. *Accessories:* Microphone prop. *Hair/Makeup:* Natural grooming, relaxed confident stance.
+
+### Rain Day Chic
+**Trench coat** (((default:beige or navy) or (signature)) classic cut); **sweater and jeans** underneath; **duck boots** or **leather boots**. *Accessories:* Umbrella. *Hair/Makeup:* Natural hair, practical grooming.
+
+### Yellow Slicker Classic
+**Yellow rain jacket** (rubberized, hood up); **jeans** or **work pants**; **rubber boots**. *Accessories:* Sou'wester hat (optional). *Hair/Makeup:* Natural, rugged rainy day look.
+
+### Spring Garden Party
+**Linen suit** (((default:light blue or tan) or (signature))); **floral or pastel dress shirt**; **loafers**. *Accessories:* Straw boater hat (optional), pocket square. *Hair/Makeup:* Neat grooming, fresh spring vibe.
+
+### Resort Wear Luxury
+**Polo shirt** or **guayabera** (((default:white or pastel) or (signature))); **tailored shorts** or **linen trousers**; **boat shoes**. *Accessories:* Sunglasses, leather belt. *Hair/Makeup:* Relaxed grooming, vacation style.
+
+### Steampunk Aviator
+**Leather bomber jacket** (brown with shearling collar); **utility vest**; **cargo pants** or **breeches**; **tall boots**. *Accessories:* Aviator goggles, leather cap, scarf, compass. *Hair/Makeup:* Windblown hair, rugged grooming, adventurous look.
+
+### Gothic Aristocrat
+**Ouji style outfit** (**ruffled blouse**, **vest** or **tailcoat**, **pumpkin shorts** or **knickerbockers**, **high socks**); **dress shoes**. *Accessories:* Mini top hat, bow tie, cane. *Hair/Makeup:* Styled hair, pale skin, dramatic aristocratic look.
+
 # Fantasy Class Outfits (Male)

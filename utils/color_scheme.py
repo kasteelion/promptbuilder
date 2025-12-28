@@ -39,16 +39,21 @@ def substitute_signature_color(text: str, signature_color: str, use_signature: b
     
     Syntax 1: ((default:white) or (signature)) 
               Uses character sig color if active, else 'white'.
-    Syntax 2: {signature_color}
+    Syntax 2: ((default:white) or (signature) text)
+              Uses character sig color + ' text' if active, else 'white'.
+    Syntax 3: {signature_color}
               Uses character sig color if active, else 'vibrant color'.
     """
     # 1. Handle conditional block syntax
-    pattern = re.compile(r"\(\(default:(.*?)\)\s+or\s+\(signature\)\)", re.IGNORECASE)
+    # Allow optional text after (signature) before the closing paren
+    pattern = re.compile(r"\(\(default:(.*?)\)\s+or\s+\(signature\)(.*?)\)", re.IGNORECASE)
     
     def replacer(match):
         default_val = match.group(1).strip()
+        sig_suffix = match.group(2) # preserve spacing if present
+        
         if use_signature and signature_color:
-            return signature_color
+            return signature_color + sig_suffix
         return default_val
         
     text = pattern.sub(replacer, text)

@@ -40,7 +40,8 @@ class MenuActions:
     def import_from_text(self):
         """Show text import dialog or apply current summary box."""
         # If user is currently editing the summary box, just apply it
-        if getattr(self.app, "_summary_modified", False):
+        # Check the panel directly instead of a stale app flag
+        if hasattr(self.app, "summary_panel") and self.app.summary_panel.is_modified:
             return self.app._import_from_summary_box()
             
         available_chars = list(self.app.characters.keys())
@@ -51,6 +52,26 @@ class MenuActions:
             self.app._update_status("Imported configuration from text")
             
         return self.app.dialog_manager.show_text_import(available_chars, on_success)
+
+    def bulk_prompt_generator(self):
+        """Open the bulk prompt generator tool."""
+        # We need to construct a PromptBuilder instance for the tool
+        # Re-using the app's loaded data
+        from core.builder import PromptBuilder
+        
+        builder = PromptBuilder(
+            self.app.characters,
+            self.app.base_prompts,
+            self.app.poses,
+            self.app.color_schemes,
+            self.app.modifiers
+        )
+        
+        return self.app.dialog_manager.show_bulk_generator(
+            self.app.data_loader,
+            self.app.poses,
+            builder
+        )
 
     def undo(self):
         return self.app._undo()

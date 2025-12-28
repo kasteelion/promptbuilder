@@ -82,6 +82,9 @@ class MenuManager:
             label="🏗️ Export for LLM (Content Creation)...", command=self.callbacks["export_for_llm_creation"]
         )
         file_menu.add_command(
+            label="🚀 Bulk Prompt Generator...", command=self.callbacks["bulk_prompt_generator"]
+        )
+        file_menu.add_command(
             label="📥 Import Configuration...", command=self.callbacks["import_config"]
         )
         file_menu.add_command(

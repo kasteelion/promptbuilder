@@ -1,0 +1,1855 @@
+### char_24_hallie_base.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Hallie Bennett**
+**Appearance:**
+* **Body:** Soft Natural frame; soft flesh with natural give; balanced proportions with soft hourglass tendency—rounded shoulders, moderate bust, defined waist with gentle softness, full hips and thighs; moderate height (5'5"-5'6"); soft athletic build with underlying functional strength, visible in legs and core when engaged but softened by feminine curves; approachable active presence.
+* **Face:** Soft, round-oval face with gentle cheek fullness; slightly almond-shaped dark brown eyes; warm, easy smile with slight upturn at mouth corners; overall approachable, open expression.
+* **Hair:** Shoulder-length wavy hair; sun-kissed light brown with natural blonde highlights; moderate density and natural movement suited to low-maintenance styles.
+* **Skin:** Light-fair with neutral undertones and soft, healthy glow; minimal permanent markings.
+**Outfit:**
+- Top: Black sleeveless crop top with cutout detail at chest
+- Bottom: Black fitted leggings or athletic tights
+- Footwear: Black and white athletic shoes
+- Accessories: Black digital watch on left wrist, delicate silver necklace with small pendant, dark red/brown sunglasses resting on top of head
+- Hair/Makeup: Hair styled with soft waves, loose; minimal makeup visible
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_57_roxanna_base.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Roxanna Perez**
+**Appearance:**
+* **Body:** Theatrical Romantic frame (Kibbe); lush flesh; compact delicate bone structure; double-tapered proportions; short to moderately short vertical line; concentrated physical presence.
+
+* **Face:** Balanced-soft facial structure with subtle sharpness; oval face; moderate midface projection; large almond-shaped eyes; softly defined tapered jawline; full lips; resting expression calm and self-possessed.
+
+* **Hair:** Type 1C–2A straight to slightly wavy; high density; long length; no shrinkage; side part; asymmetrical swept silhouette; glossy surface finish.
+
+* **Skin:** Medium olive skin tone; warm-neutral undertone; smooth satin finish; no prominent markings.
+**Outfit:**
+- Top: Casual fitted black crop tee or simple fitted tee (training-ready but everyday wearable)
+- Bottom: High-waist dark denim shorts or relaxed black training shorts (casual tone similar to other characters)
+- Footwear: Supportive training sneakers or neutral casual sneakers
+- Accessories: Wrist tape (casual wrist wrap), simple stud earrings, small pendant necklace
+- Makeup/Hair: Minimal makeup for casual looks; hair tied back in a low ponytail or loose braid
+- Signature: Wrist tape / casual ring gear nod
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_41_lila_gym.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Lila Reyes**
+**Appearance:**
+* **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
+* **Face:** Balanced-soft structure; round-oval face (Filipino features) with gentle angles; full cheeks (genetic, visible even lean); large round-almond eyes, moderately spaced, deep dark brown; small refined nose; soft jawline shows slight definition at low body fat; neutral resting expression is focused and determined with quiet confidence.
+* **Hair:** Type 1B straight; very high density; long length to mid-back; high-gloss sheen; jet black; commonly worn in high ponytail (gym), sleek bun, or loose and straight (casual).
+* **Skin:** Deep tan with warm golden-brown undertones (Filipino coloring—naturally darker than East Asian); smooth healthy finish with natural warmth; slight muscle definition visible but not extreme.
+**Outfit:**
+Fitted **((default:athletic top) or (signature) top)** (technical knit); high-waist **athletic shorts or leggings** (technical fabric). *Accessories:* Fitness watch or tracker, hair in ponytail. *Hair/Makeup:* Minimal or no makeup.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_25_hana_gym.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Hana Park**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; compact rounded proportions; petite vertical.
+* **Face:** Delicate compact structure; round face; plush cheeks; large expressive eyes; youthful neutral expression.
+* **Hair:** Type 1 straight; fine-to-medium density; blunt shoulder-length cut; off-center part; smooth dewy finish; dark brown to black.
+* **Skin:** Light warm-beige skin with clear finish.
+**Outfit:**
+Fitted **((default:athletic top) or (signature) top)** (technical knit); high-waist **athletic shorts or leggings** (technical fabric). *Accessories:* Fitness watch or tracker, hair in ponytail. *Hair/Makeup:* Minimal or no makeup.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_27_harper_comfort.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Harper Mae Sullivan**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-wave flesh blend; balanced proportions with gentle curves and natural waist definition; moderate vertical; soft athletic build with graceful ease.
+* **Face:** Soft oval-to-heart facial structure; gentle rounded features; warm expressive blue-green eyes with slight upward tilt, moderately spaced; constellation of freckles across nose and cheeks; soft defined jawline; neutral resting expression is warm and inviting with easy dimpled smile and sparkling eyes.
+* **Hair:** Type 2B-2C waves; high density; long sun-lightened layers past shoulders; natural loose part; healthy bounce; warm honey-blonde with natural golden highlights from sun exposure; commonly worn half-up with loose tendrils or in relaxed low ponytail.
+* **Skin:** Fair-to-light warm peachy undertones with natural healthy glow; prominent freckles across nose, cheeks, and shoulders that intensify with sun; soft luminous finish.
+**Outfit:**
+Oversized **((default:cozy top) or (signature) top)** (sweater or hoodie); comfortable **bottoms** (leggings or joggers); **soft footwear**. *Accessories:* Minimal jewelry. *Hair/Makeup:* Minimal makeup, relaxed hairstyle.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_18_elena_comfort.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Outfit:**
+Oversized **((default:cozy top) or (signature) top)** (sweater or hoodie); comfortable **bottoms** (leggings or joggers); **soft footwear**. *Accessories:* Minimal jewelry. *Hair/Makeup:* Minimal makeup, relaxed hairstyle.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_36_kassandra_cyber_tactical_combat.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Outfit:**
+**Mock-neck Compression Jumpsuit** (a form-fitting, full-length base layer made of high-sheen {primary_color} spandex and reinforced nylon panels); **Reinforced Tactical Corsetry** (an integrated {secondary_color} midsection harness with metallic buckle details and structured boning); **Asymmetrical Tech-Overlay** (laser-cut {accent} leather geometric patterns stitched across the shoulders and down the outer thighs for a futuristic, armor-like silhouette). *Accessories:* Matching {primary_color} fingerless tactical gloves with metallic plating; heavy-duty lace-up wrestling boots with reinforced shinguards; a detachable high-collared capelet for the entrance. *Hair/Makeup:* Sleek, high-gloss "wet look" hair pulled back from the face; bold high-contrast smoky eye with {accent} metallic liner; matte nude lip and sharp, athletic contouring.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_43_luna_cyberpunk.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Luna Vex**
+**Appearance:**
+* **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
+* **Face:** Classic heart-shaped silhouette with a broad, smooth forehead and high, soft cheekbones that become prominent when she smiles; delicate, pointed chin creating a sharp taper from the mid-face; soft but clean and well-defined jawline; focal wide-set almond-shaped eyes in captivating light grey-blue; framed by naturally high-arched, manicured dark brown eyebrows sitting well above the orbital bone; signature sharp black winged eyeliner that accentuates the upward curve of her eyes; petite, straight nose bridge with a soft rounded tip and characteristic "scrunch" when laughing; wide, expressive mouth with a prominent philtrum and a broad, radiant smile revealing straight white teeth; deep endearing smile lines (nasolabial folds) and pronounced "crow's feet" signal genuine warmth and joy.
+* **Hair:** Type 2A (wavy); medium density; soft, voluminous layered silhouette; shoulder-length; varying part pattern (side or center); glossy sheen with styled "wet-look" roots; common styling includes loose, face-framing waves. Split-dye neon magenta pink and electric blue/amethyst purple.
+* **Skin:** Fair/Light depth; neutral-cool undertones; smooth, luminous surface finish; natural "crow's feet" laugh lines around the eyes.
+**Outfit:**
+Cropped **tech-fabric jacket** with asymmetric cut; **high-waist tactical pants** with straps; **platform boots**. *Accessories:* LED accents, tech goggles, geometric jewelry. *Hair/Makeup:* Bold graphic liner, **hair in a futuristic style or with temporary color accents**, futuristic styling.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_54_priya_yoga_athleisure.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Priya Sharma**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
+* **Face:** Soft oval face with gentle rounded features; warm expressive dark brown eyes; friendly approachable expression; fuller cheeks; soft jawline; warm genuine smile.
+* **Hair:** Type 2B-2C waves; medium-high density; long dark brown hair (almost black at roots) with warm caramel-brown highlights throughout mid-lengths and ends; natural body and volume; beachy waves.
+* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow.
+**Outfit:**
+High-waist **yoga leggings** (stretchy technical fabric in solid color or subtle pattern); cropped **athletic tank or sports bra**; oversized **zip-up hoodie or cardigan** (worn open); **slip-on sneakers**. *Accessories:* Yoga mat bag, water bottle, minimal jewelry. *Hair/Makeup:* Hair in messy bun or ponytail, fresh minimal makeup.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_64_talia_yoga_athleisure.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Talia Levi**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave-lush flesh quality; voluptuous hourglass proportions with pronounced bust (full D-DD), defined waist, and rounded hips; moderate-to-tall vertical (5'7"); soft density with feminine curves, visible décolletage, rounded shoulders, and shapely legs; magnetizing sensual presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-diamond shape; high pronounced cheekbones with sculpted planes; large almond-shaped wide-set eyes in deep amber-brown with naturally seductive heavy-lidded quality and penetrating direct gaze; full shapely lips; defined angular jawline; neutral resting expression is knowing and self-assured with slight sultry smile and unwavering confident eye contact that holds just a beat too long.
+
+* **Hair:** Type 2B-2C waves; very high density; voluminous cascading silhouette; long length past mid-back; natural loose center part; healthy high-sheen finish; commonly worn loose and wild with tousled volume, half-up with face-framing tendrils, or low messy bun showing neck; rich dark chocolate brown with warm caramel highlights.
+
+* **Skin:** Medium-tan with warm golden-olive undertones and luminous sun-kissed finish; beauty mark above upper lip on left side; smooth healthy Mediterranean glow.
+**Outfit:**
+High-waist **yoga leggings** (stretchy technical fabric in solid color or subtle pattern); cropped **athletic tank or sports bra**; oversized **zip-up hoodie or cardigan** (worn open); **slip-on sneakers**. *Accessories:* Yoga mat bag, water bottle, minimal jewelry. *Hair/Makeup:* Hair in messy bun or ponytail, fresh minimal makeup.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_23_freydis_winter_holiday.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Freydis Holm**
+**Appearance:**
+* **Body:** Flamboyant Natural; powerful athletic flesh with clear muscle definition; broad structured shoulders and long limbs; tall vertical (5'10"-6'0"); high density throughout with visible strength in back, core, and thighs; rugged statuesque presence that commands space.
+* **Face:** Strong-angled structure; sharp square-to-oval shape; high prominent cheekbones; powerful defined jawline; intense blue-gray eyes; moderate spacing; piercing steady gaze; straight, slightly prominent nose; expressive mouth with a firm set; neutral expression is fiercely composed with a hint of predatory awareness.
+* **Hair:** Type 2B-2C; high density; rugged voluminous silhouette; very long (waist-length) with thick, rugged texture; asymmetric part; matte finish; complex asymmetric side braids feeding into a larger central braid or high ponytail. Ash-blonde or strawberry-blonde with sun-faded highlights.
+* **Skin:** Fair; cool-under-tones; weathered matte finish; scattered light freckles across bridge of nose and shoulders; a few faint, well-healed battle scars—one across the left eyebrow and another on the right shoulder.
+**Outfit:**
+**Velvet or satin dress** (knee-length or midi in deep jewel tones - emerald, burgundy, navy); **tights or stockings**; **heeled boots or pumps**. *Accessories:* Statement jewelry, clutch, elegant coat or shawl. *Hair/Makeup:* Festive styling with shimmer, bold lip in berry or red tones, hair in elegant curls or updo.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_49_mei_winter_holiday.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large features—specifically an extremely full, heavy bust (F-G cup) that is her most prominent physical trait—balanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow.
+**Outfit:**
+**Velvet or satin dress** (knee-length or midi in deep jewel tones - emerald, burgundy, navy); **tights or stockings**; **heeled boots or pumps**. *Accessories:* Statement jewelry, clutch, elegant coat or shawl. *Hair/Makeup:* Festive styling with shimmer, bold lip in berry or red tones, hair in elegant curls or updo.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_24_hallie_swimwear.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Hallie Bennett**
+**Appearance:**
+* **Body:** Soft Natural frame; soft flesh with natural give; balanced proportions with soft hourglass tendency—rounded shoulders, moderate bust, defined waist with gentle softness, full hips and thighs; moderate height (5'5"-5'6"); soft athletic build with underlying functional strength, visible in legs and core when engaged but softened by feminine curves; approachable active presence.
+* **Face:** Soft, round-oval face with gentle cheek fullness; slightly almond-shaped dark brown eyes; warm, easy smile with slight upturn at mouth corners; overall approachable, open expression.
+* **Hair:** Shoulder-length wavy hair; sun-kissed light brown with natural blonde highlights; moderate density and natural movement suited to low-maintenance styles.
+* **Skin:** Light-fair with neutral undertones and soft, healthy glow; minimal permanent markings.
+**Outfit:**
+Simple **((default:bikini) or (signature) bikini)**. *Accessories:* None specified. *Hair/Makeup:* Minimal waterproof makeup.
+
+---
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_41_lila_swimwear.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Lila Reyes**
+**Appearance:**
+* **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
+* **Face:** Balanced-soft structure; round-oval face (Filipino features) with gentle angles; full cheeks (genetic, visible even lean); large round-almond eyes, moderately spaced, deep dark brown; small refined nose; soft jawline shows slight definition at low body fat; neutral resting expression is focused and determined with quiet confidence.
+* **Hair:** Type 1B straight; very high density; long length to mid-back; high-gloss sheen; jet black; commonly worn in high ponytail (gym), sleek bun, or loose and straight (casual).
+* **Skin:** Deep tan with warm golden-brown undertones (Filipino coloring—naturally darker than East Asian); smooth healthy finish with natural warmth; slight muscle definition visible but not extreme.
+**Outfit:**
+Simple **((default:bikini) or (signature) bikini)**. *Accessories:* None specified. *Hair/Makeup:* Minimal waterproof makeup.
+
+---
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_57_roxanna_cocktail_party.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Roxanna Perez**
+**Appearance:**
+* **Body:** Theatrical Romantic frame (Kibbe); lush flesh; compact delicate bone structure; double-tapered proportions; short to moderately short vertical line; concentrated physical presence.
+
+* **Face:** Balanced-soft facial structure with subtle sharpness; oval face; moderate midface projection; large almond-shaped eyes; softly defined tapered jawline; full lips; resting expression calm and self-possessed.
+
+* **Hair:** Type 1C–2A straight to slightly wavy; high density; long length; no shrinkage; side part; asymmetrical swept silhouette; glossy surface finish.
+
+* **Skin:** Medium olive skin tone; warm-neutral undertone; smooth satin finish; no prominent markings.
+**Outfit:**
+**Cocktail dress** (knee-length or midi, elegant fabric like satin or lace in jewel tones); **heeled pumps or strappy sandals**. *Accessories:* Statement earrings, clutch purse, delicate bracelet. *Hair/Makeup:* Elegant updo or styled waves, sophisticated makeup with bold lip.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_25_hana_cocktail_party.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Hana Park**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; compact rounded proportions; petite vertical.
+* **Face:** Delicate compact structure; round face; plush cheeks; large expressive eyes; youthful neutral expression.
+* **Hair:** Type 1 straight; fine-to-medium density; blunt shoulder-length cut; off-center part; smooth dewy finish; dark brown to black.
+* **Skin:** Light warm-beige skin with clear finish.
+**Outfit:**
+**Cocktail dress** (knee-length or midi, elegant fabric like satin or lace in jewel tones); **heeled pumps or strappy sandals**. *Accessories:* Statement earrings, clutch purse, delicate bracelet. *Hair/Makeup:* Elegant updo or styled waves, sophisticated makeup with bold lip.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_27_harper_bohemian.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Harper Mae Sullivan**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-wave flesh blend; balanced proportions with gentle curves and natural waist definition; moderate vertical; soft athletic build with graceful ease.
+* **Face:** Soft oval-to-heart facial structure; gentle rounded features; warm expressive blue-green eyes with slight upward tilt, moderately spaced; constellation of freckles across nose and cheeks; soft defined jawline; neutral resting expression is warm and inviting with easy dimpled smile and sparkling eyes.
+* **Hair:** Type 2B-2C waves; high density; long sun-lightened layers past shoulders; natural loose part; healthy bounce; warm honey-blonde with natural golden highlights from sun exposure; commonly worn half-up with loose tendrils or in relaxed low ponytail.
+* **Skin:** Fair-to-light warm peachy undertones with natural healthy glow; prominent freckles across nose, cheeks, and shoulders that intensify with sun; soft luminous finish.
+**Outfit:**
+Flowing **maxi dress or skirt** with ethnic prints; loose **peasant blouse**; **strappy sandals**. *Accessories:* Layered necklaces, bangles, fringe bag, wide-brim hat. *Hair/Makeup:* Natural makeup, loose waves with braided accents.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_43_luna_bohemian.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Luna Vex**
+**Appearance:**
+* **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
+* **Face:** Classic heart-shaped silhouette with a broad, smooth forehead and high, soft cheekbones that become prominent when she smiles; delicate, pointed chin creating a sharp taper from the mid-face; soft but clean and well-defined jawline; focal wide-set almond-shaped eyes in captivating light grey-blue; framed by naturally high-arched, manicured dark brown eyebrows sitting well above the orbital bone; signature sharp black winged eyeliner that accentuates the upward curve of her eyes; petite, straight nose bridge with a soft rounded tip and characteristic "scrunch" when laughing; wide, expressive mouth with a prominent philtrum and a broad, radiant smile revealing straight white teeth; deep endearing smile lines (nasolabial folds) and pronounced "crow's feet" signal genuine warmth and joy.
+* **Hair:** Type 2A (wavy); medium density; soft, voluminous layered silhouette; shoulder-length; varying part pattern (side or center); glossy sheen with styled "wet-look" roots; common styling includes loose, face-framing waves. Split-dye neon magenta pink and electric blue/amethyst purple.
+* **Skin:** Fair/Light depth; neutral-cool undertones; smooth, luminous surface finish; natural "crow's feet" laugh lines around the eyes.
+**Outfit:**
+Flowing **maxi dress or skirt** with ethnic prints; loose **peasant blouse**; **strappy sandals**. *Accessories:* Layered necklaces, bangles, fringe bag, wide-brim hat. *Hair/Makeup:* Natural makeup, loose waves with braided accents.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_36_kassandra_office.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Outfit:**
+Tailored **blazer** (structured fabric); **blouse or button-up shirt**; **dress pants or pencil skirt** (knee-length). *Accessories:* Simple watch, minimal jewelry, professional bag. *Hair/Makeup:* Polished, professional styling.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_18_elena_office.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Outfit:**
+Tailored **blazer** (structured fabric); **blouse or button-up shirt**; **dress pants or pencil skirt** (knee-length). *Accessories:* Simple watch, minimal jewelry, professional bag. *Hair/Makeup:* Polished, professional styling.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_48_maya_tech_athletic_compression.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Maya Rose**
+**Appearance:**
+* **Body:** Soft Natural frame with balanced curves; moderate-to-tall vertical line; natural waist definition; relaxed athletic build.
+* **Face:** Soft oval face with gentle angles; warm expressive eyes; bright genuine smile; approachable features with natural definition.
+* **Hair:** Type 2B-2C waves to loose curls; medium-high density; long layered cut past shoulders; natural movement and body; warm golden-brown to honey tones with dimensional highlights.
+* **Skin:** Warm medium beige with golden undertones; natural healthy glow.
+**Outfit:**
+Long-sleeve compression top (high-neck technical nylon-spandex blend in charcoal, ultra-fitted to highlight torso and shoulder definition); Matching high-waist compression leggings (thick elasticated waistband, moisture-wicking matte finish). *Accessories:* Black fitness tracker; wireless earbuds. *Hair/Makeup:* Sleek ponytail; natural dewy skin; minimal makeup.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_48_maya_comfort.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Maya Rose**
+**Appearance:**
+* **Body:** Soft Natural frame with balanced curves; moderate-to-tall vertical line; natural waist definition; relaxed athletic build.
+* **Face:** Soft oval face with gentle angles; warm expressive eyes; bright genuine smile; approachable features with natural definition.
+* **Hair:** Type 2B-2C waves to loose curls; medium-high density; long layered cut past shoulders; natural movement and body; warm golden-brown to honey tones with dimensional highlights.
+* **Skin:** Warm medium beige with golden undertones; natural healthy glow.
+**Outfit:**
+Oversized **((default:cozy top) or (signature) top)** (sweater or hoodie); comfortable **bottoms** (leggings or joggers); **soft footwear**. *Accessories:* Minimal jewelry. *Hair/Makeup:* Minimal makeup, relaxed hairstyle.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_21_esme_cyber_tactical_combat.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Esme Dubois**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight refined flesh; narrow balanced proportions; tall vertical.
+* **Face:** Long classical facial structure; oval face; fine planar features; delicate jaw; serene composed expression.
+* **Hair:** Type 1 straight; medium density; long sleek cut; center part; smooth satin finish; often worn in low bun; dark brown.
+* **Skin:** Fair neutral skin with luminous clarity.
+**Outfit:**
+**Mock-neck Compression Jumpsuit** (a form-fitting, full-length base layer made of high-sheen {primary_color} spandex and reinforced nylon panels); **Reinforced Tactical Corsetry** (an integrated {secondary_color} midsection harness with metallic buckle details and structured boning); **Asymmetrical Tech-Overlay** (laser-cut {accent} leather geometric patterns stitched across the shoulders and down the outer thighs for a futuristic, armor-like silhouette). *Accessories:* Matching {primary_color} fingerless tactical gloves with metallic plating; heavy-duty lace-up wrestling boots with reinforced shinguards; a detachable high-collared capelet for the entrance. *Hair/Makeup:* Sleek, high-gloss "wet look" hair pulled back from the face; bold high-contrast smoky eye with {accent} metallic liner; matte nude lip and sharp, athletic contouring.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_21_esme_bohemian.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Esme Dubois**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight refined flesh; narrow balanced proportions; tall vertical.
+* **Face:** Long classical facial structure; oval face; fine planar features; delicate jaw; serene composed expression.
+* **Hair:** Type 1 straight; medium density; long sleek cut; center part; smooth satin finish; often worn in low bun; dark brown.
+* **Skin:** Fair neutral skin with luminous clarity.
+**Outfit:**
+Flowing **maxi dress or skirt** with ethnic prints; loose **peasant blouse**; **strappy sandals**. *Accessories:* Layered necklaces, bangles, fringe bag, wide-brim hat. *Hair/Makeup:* Natural makeup, loose waves with braided accents.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_24_hallie_gym.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Hallie Bennett**
+**Appearance:**
+* **Body:** Soft Natural frame; soft flesh with natural give; balanced proportions with soft hourglass tendency—rounded shoulders, moderate bust, defined waist with gentle softness, full hips and thighs; moderate height (5'5"-5'6"); soft athletic build with underlying functional strength, visible in legs and core when engaged but softened by feminine curves; approachable active presence.
+* **Face:** Soft, round-oval face with gentle cheek fullness; slightly almond-shaped dark brown eyes; warm, easy smile with slight upturn at mouth corners; overall approachable, open expression.
+* **Hair:** Shoulder-length wavy hair; sun-kissed light brown with natural blonde highlights; moderate density and natural movement suited to low-maintenance styles.
+* **Skin:** Light-fair with neutral undertones and soft, healthy glow; minimal permanent markings.
+**Outfit:**
+Fitted **((default:athletic top) or (signature) top)** (technical knit); high-waist **athletic shorts or leggings** (technical fabric). *Accessories:* Fitness watch or tracker, hair in ponytail. *Hair/Makeup:* Minimal or no makeup.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_24_hallie_casual_robes.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Hallie Bennett**
+**Appearance:**
+* **Body:** Soft Natural frame; soft flesh with natural give; balanced proportions with soft hourglass tendency—rounded shoulders, moderate bust, defined waist with gentle softness, full hips and thighs; moderate height (5'5"-5'6"); soft athletic build with underlying functional strength, visible in legs and core when engaged but softened by feminine curves; approachable active presence.
+* **Face:** Soft, round-oval face with gentle cheek fullness; slightly almond-shaped dark brown eyes; warm, easy smile with slight upturn at mouth corners; overall approachable, open expression.
+* **Hair:** Shoulder-length wavy hair; sun-kissed light brown with natural blonde highlights; moderate density and natural movement suited to low-maintenance styles.
+* **Skin:** Light-fair with neutral undertones and soft, healthy glow; minimal permanent markings.
+**Outfit:**
+Flowing **long-sleeve robe** (white in soft cotton or linen fabric, modest wrap-around style); **simple belt** at waist; **barefoot** or **soft slippers**. *Accessories:* Minimal jewelry. *Hair/Makeup:* Natural relaxed styling.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_57_roxanna_ribbed_bodysuit.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Roxanna Perez**
+**Appearance:**
+* **Body:** Theatrical Romantic frame (Kibbe); lush flesh; compact delicate bone structure; double-tapered proportions; short to moderately short vertical line; concentrated physical presence.
+
+* **Face:** Balanced-soft facial structure with subtle sharpness; oval face; moderate midface projection; large almond-shaped eyes; softly defined tapered jawline; full lips; resting expression calm and self-possessed.
+
+* **Hair:** Type 1C–2A straight to slightly wavy; high density; long length; no shrinkage; side part; asymmetrical swept silhouette; glossy surface finish.
+
+* **Skin:** Medium olive skin tone; warm-neutral undertone; smooth satin finish; no prominent markings.
+**Outfit:**
+Sleeveless scoop-neck bodysuit (high-density ribbed knit in cream, form-fitting construction that emphasizes the underbust contour); High-leg cut silhouette (worn under low-waist denim shorts). *Accessories:* Simple gold chain necklace; small hoop earrings. *Hair/Makeup:* Loose natural waves; peachy lip gloss; fresh-faced glow.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_57_roxanna_streetwear.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Roxanna Perez**
+**Appearance:**
+* **Body:** Theatrical Romantic frame (Kibbe); lush flesh; compact delicate bone structure; double-tapered proportions; short to moderately short vertical line; concentrated physical presence.
+
+* **Face:** Balanced-soft facial structure with subtle sharpness; oval face; moderate midface projection; large almond-shaped eyes; softly defined tapered jawline; full lips; resting expression calm and self-possessed.
+
+* **Hair:** Type 1C–2A straight to slightly wavy; high density; long length; no shrinkage; side part; asymmetrical swept silhouette; glossy surface finish.
+
+* **Skin:** Medium olive skin tone; warm-neutral undertone; smooth satin finish; no prominent markings.
+**Outfit:**
+Oversized **graphic hoodie or sweatshirt**; **cargo pants or joggers**; **chunky sneakers**. *Accessories:* Baseball cap or beanie, crossbody bag, chain necklace. *Hair/Makeup:* Natural or minimal makeup, casual hairstyle.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_41_lila_tech_athletic_compression.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Lila Reyes**
+**Appearance:**
+* **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
+* **Face:** Balanced-soft structure; round-oval face (Filipino features) with gentle angles; full cheeks (genetic, visible even lean); large round-almond eyes, moderately spaced, deep dark brown; small refined nose; soft jawline shows slight definition at low body fat; neutral resting expression is focused and determined with quiet confidence.
+* **Hair:** Type 1B straight; very high density; long length to mid-back; high-gloss sheen; jet black; commonly worn in high ponytail (gym), sleek bun, or loose and straight (casual).
+* **Skin:** Deep tan with warm golden-brown undertones (Filipino coloring—naturally darker than East Asian); smooth healthy finish with natural warmth; slight muscle definition visible but not extreme.
+**Outfit:**
+Long-sleeve compression top (high-neck technical nylon-spandex blend in charcoal, ultra-fitted to highlight torso and shoulder definition); Matching high-waist compression leggings (thick elasticated waistband, moisture-wicking matte finish). *Accessories:* Black fitness tracker; wireless earbuds. *Hair/Makeup:* Sleek ponytail; natural dewy skin; minimal makeup.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_41_lila_comfort.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Lila Reyes**
+**Appearance:**
+* **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
+* **Face:** Balanced-soft structure; round-oval face (Filipino features) with gentle angles; full cheeks (genetic, visible even lean); large round-almond eyes, moderately spaced, deep dark brown; small refined nose; soft jawline shows slight definition at low body fat; neutral resting expression is focused and determined with quiet confidence.
+* **Hair:** Type 1B straight; very high density; long length to mid-back; high-gloss sheen; jet black; commonly worn in high ponytail (gym), sleek bun, or loose and straight (casual).
+* **Skin:** Deep tan with warm golden-brown undertones (Filipino coloring—naturally darker than East Asian); smooth healthy finish with natural warmth; slight muscle definition visible but not extreme.
+**Outfit:**
+Oversized **((default:cozy top) or (signature) top)** (sweater or hoodie); comfortable **bottoms** (leggings or joggers); **soft footwear**. *Accessories:* Minimal jewelry. *Hair/Makeup:* Minimal makeup, relaxed hairstyle.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_25_hana_school_uniform.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Hana Park**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; compact rounded proportions; petite vertical.
+* **Face:** Delicate compact structure; round face; plush cheeks; large expressive eyes; youthful neutral expression.
+* **Hair:** Type 1 straight; fine-to-medium density; blunt shoulder-length cut; off-center part; smooth dewy finish; dark brown to black.
+* **Skin:** Light warm-beige skin with clear finish.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_25_hana_japanese_harajuku_streetwear.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Hana Park**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; compact rounded proportions; petite vertical.
+* **Face:** Delicate compact structure; round face; plush cheeks; large expressive eyes; youthful neutral expression.
+* **Hair:** Type 1 straight; fine-to-medium density; blunt shoulder-length cut; off-center part; smooth dewy finish; dark brown to black.
+* **Skin:** Light warm-beige skin with clear finish.
+**Outfit:**
+Oversized **graphic anime or kawaii print hoodie** or **layered long-sleeve tees** (pastel colors with bold prints); **pleated mini skirt** (plaid or solid in pink, lavender, or black) or **wide-leg cargo pants** (with chains and patches); **platform sneakers or chunky Mary Janes**. *Accessories:* Multiple hair clips (butterfly, star, or heart shapes), layered chain necklaces, mini backpack or crossbody bag with keychains, arm warmers or fingerless gloves, colorful leg warmers over socks. *Hair/Makeup:* Hair in twin tails, space buns, or half-up with colorful streaks (pink, blue, purple), doll-like makeup with aegyo-sal (under-eye brightening), gradient lips, circle lenses, blush on nose and cheeks, optional small stickers near eyes.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_36_kassandra_gladiator_armor.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_36_kassandra_toga.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_54_priya_saree__fitted_.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Priya Sharma**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
+* **Face:** Soft oval face with gentle rounded features; warm expressive dark brown eyes; friendly approachable expression; fuller cheeks; soft jawline; warm genuine smile.
+* **Hair:** Type 2B-2C waves; medium-high density; long dark brown hair (almost black at roots) with warm caramel-brown highlights throughout mid-lengths and ends; natural body and volume; beachy waves.
+* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_54_priya_salwar_kameez__loose_.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Priya Sharma**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
+* **Face:** Soft oval face with gentle rounded features; warm expressive dark brown eyes; friendly approachable expression; fuller cheeks; soft jawline; warm genuine smile.
+* **Hair:** Type 2B-2C waves; medium-high density; long dark brown hair (almost black at roots) with warm caramel-brown highlights throughout mid-lengths and ends; natural body and volume; beachy waves.
+* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_18_elena_modern_power_suit.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Outfit:**
+Compression-fit tailored blazer (structured {primary_color} wool-blend, worn with no shirt underneath to emphasize the plunging neckline and torso silhouette); Cigarette-style trousers (matching {primary_color} fabric, high-waisted and cropped at the ankle with a sharp front crease). *Accessories:* Slim {secondary_color} leather belt; minimalist {accent} watch; pointed-toe stiletto pumps. *Hair/Makeup:* Sleek low ponytail with a precise center part; bold matte lipstick in deep red; neutral polished eye makeup.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_18_elena_casual_robes.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Outfit:**
+Flowing **long-sleeve robe** (white in soft cotton or linen fabric, modest wrap-around style); **simple belt** at waist; **barefoot** or **soft slippers**. *Accessories:* Minimal jewelry. *Hair/Makeup:* Natural relaxed styling.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_43_luna_goth_corset.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Luna Vex**
+**Appearance:**
+* **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
+* **Face:** Classic heart-shaped silhouette with a broad, smooth forehead and high, soft cheekbones that become prominent when she smiles; delicate, pointed chin creating a sharp taper from the mid-face; soft but clean and well-defined jawline; focal wide-set almond-shaped eyes in captivating light grey-blue; framed by naturally high-arched, manicured dark brown eyebrows sitting well above the orbital bone; signature sharp black winged eyeliner that accentuates the upward curve of her eyes; petite, straight nose bridge with a soft rounded tip and characteristic "scrunch" when laughing; wide, expressive mouth with a prominent philtrum and a broad, radiant smile revealing straight white teeth; deep endearing smile lines (nasolabial folds) and pronounced "crow's feet" signal genuine warmth and joy.
+* **Hair:** Type 2A (wavy); medium density; soft, voluminous layered silhouette; shoulder-length; varying part pattern (side or center); glossy sheen with styled "wet-look" roots; common styling includes loose, face-framing waves. Split-dye neon magenta pink and electric blue/amethyst purple.
+* **Skin:** Fair/Light depth; neutral-cool undertones; smooth, luminous surface finish; natural "crow's feet" laugh lines around the eyes.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_43_luna_oversized_band_tee.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Luna Vex**
+**Appearance:**
+* **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
+* **Face:** Classic heart-shaped silhouette with a broad, smooth forehead and high, soft cheekbones that become prominent when she smiles; delicate, pointed chin creating a sharp taper from the mid-face; soft but clean and well-defined jawline; focal wide-set almond-shaped eyes in captivating light grey-blue; framed by naturally high-arched, manicured dark brown eyebrows sitting well above the orbital bone; signature sharp black winged eyeliner that accentuates the upward curve of her eyes; petite, straight nose bridge with a soft rounded tip and characteristic "scrunch" when laughing; wide, expressive mouth with a prominent philtrum and a broad, radiant smile revealing straight white teeth; deep endearing smile lines (nasolabial folds) and pronounced "crow's feet" signal genuine warmth and joy.
+* **Hair:** Type 2A (wavy); medium density; soft, voluminous layered silhouette; shoulder-length; varying part pattern (side or center); glossy sheen with styled "wet-look" roots; common styling includes loose, face-framing waves. Split-dye neon magenta pink and electric blue/amethyst purple.
+* **Skin:** Fair/Light depth; neutral-cool undertones; smooth, luminous surface finish; natural "crow's feet" laugh lines around the eyes.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_57_roxanna_tech_athletic_compression.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Roxanna Perez**
+**Appearance:**
+* **Body:** Theatrical Romantic frame (Kibbe); lush flesh; compact delicate bone structure; double-tapered proportions; short to moderately short vertical line; concentrated physical presence.
+
+* **Face:** Balanced-soft facial structure with subtle sharpness; oval face; moderate midface projection; large almond-shaped eyes; softly defined tapered jawline; full lips; resting expression calm and self-possessed.
+
+* **Hair:** Type 1C–2A straight to slightly wavy; high density; long length; no shrinkage; side part; asymmetrical swept silhouette; glossy surface finish.
+
+* **Skin:** Medium olive skin tone; warm-neutral undertone; smooth satin finish; no prominent markings.
+**Outfit:**
+Long-sleeve compression top (high-neck technical nylon-spandex blend in charcoal, ultra-fitted to highlight torso and shoulder definition); Matching high-waist compression leggings (thick elasticated waistband, moisture-wicking matte finish). *Accessories:* Black fitness tracker; wireless earbuds. *Hair/Makeup:* Sleek ponytail; natural dewy skin; minimal makeup.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_57_roxanna_catsuit.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Roxanna Perez**
+**Appearance:**
+* **Body:** Theatrical Romantic frame (Kibbe); lush flesh; compact delicate bone structure; double-tapered proportions; short to moderately short vertical line; concentrated physical presence.
+
+* **Face:** Balanced-soft facial structure with subtle sharpness; oval face; moderate midface projection; large almond-shaped eyes; softly defined tapered jawline; full lips; resting expression calm and self-possessed.
+
+* **Hair:** Type 1C–2A straight to slightly wavy; high density; long length; no shrinkage; side part; asymmetrical swept silhouette; glossy surface finish.
+
+* **Skin:** Medium olive skin tone; warm-neutral undertone; smooth satin finish; no prominent markings.
+**Outfit:**
+Sleek **form-fitting bodysuit** (black high-shine latex or spandex); **integrated cowl/mask** with cat-ear details; **full-length sleeves** with **clawed gloves**; **knee-high stiletto boots**. *Accessories:* Utility belt, stylized whip prop. *Hair/Makeup:* Mask obscuring upper face, intense eyes, bold lip.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_24_hallie_jeans___tee.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Hallie Bennett**
+**Appearance:**
+* **Body:** Soft Natural frame; soft flesh with natural give; balanced proportions with soft hourglass tendency—rounded shoulders, moderate bust, defined waist with gentle softness, full hips and thighs; moderate height (5'5"-5'6"); soft athletic build with underlying functional strength, visible in legs and core when engaged but softened by feminine curves; approachable active presence.
+* **Face:** Soft, round-oval face with gentle cheek fullness; slightly almond-shaped dark brown eyes; warm, easy smile with slight upturn at mouth corners; overall approachable, open expression.
+* **Hair:** Shoulder-length wavy hair; sun-kissed light brown with natural blonde highlights; moderate density and natural movement suited to low-maintenance styles.
+* **Skin:** Light-fair with neutral undertones and soft, healthy glow; minimal permanent markings.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_24_hallie_silk_slip_dress.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Hallie Bennett**
+**Appearance:**
+* **Body:** Soft Natural frame; soft flesh with natural give; balanced proportions with soft hourglass tendency—rounded shoulders, moderate bust, defined waist with gentle softness, full hips and thighs; moderate height (5'5"-5'6"); soft athletic build with underlying functional strength, visible in legs and core when engaged but softened by feminine curves; approachable active presence.
+* **Face:** Soft, round-oval face with gentle cheek fullness; slightly almond-shaped dark brown eyes; warm, easy smile with slight upturn at mouth corners; overall approachable, open expression.
+* **Hair:** Shoulder-length wavy hair; sun-kissed light brown with natural blonde highlights; moderate density and natural movement suited to low-maintenance styles.
+* **Skin:** Light-fair with neutral undertones and soft, healthy glow; minimal permanent markings.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_18_elena_velvet_dress.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_18_elena_sequin_gown.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_36_kassandra_leather_armor.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_36_kassandra_plate_armor.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_49_mei_knit_sweater.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large features—specifically an extremely full, heavy bust (F-G cup) that is her most prominent physical trait—balanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_49_mei_vinyl_skirt_set.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large features—specifically an extremely full, heavy bust (F-G cup) that is her most prominent physical trait—balanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow.
+**Pose/Action:**
+Neutral Portrait
+---
+
+### char_41_lila_base.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Lila Reyes**
+**Appearance:**
+* **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
+* **Face:** Balanced-soft structure; round-oval face (Filipino features) with gentle angles; full cheeks (genetic, visible even lean); large round-almond eyes, moderately spaced, deep dark brown; small refined nose; soft jawline shows slight definition at low body fat; neutral resting expression is focused and determined with quiet confidence.
+* **Hair:** Type 1B straight; very high density; long length to mid-back; high-gloss sheen; jet black; commonly worn in high ponytail (gym), sleek bun, or loose and straight (casual).
+* **Skin:** Deep tan with warm golden-brown undertones (Filipino coloring—naturally darker than East Asian); smooth healthy finish with natural warmth; slight muscle definition visible but not extreme.
+**Outfit:**
+- Top: Bright teal fitted crop tank (ribbed athletic material, shows abs and shoulder definition)
+- Bottom: High-waist black compression shorts (mid-thigh length, shows quad development)
+- Footwear: Minimalist black and white training shoes (flat sole for lifting)
+- Accessories: Simple black digital watch (tracks workouts), small gold stud earrings, gym bag always present (meal prep containers visible), lifting straps hanging from bag, resistance bands, foam roller
+- Hair/Makeup: High tight ponytail secured with thick hair tie; minimal makeup—tinted sunscreen, filled brows, lip balm
+**Pose/Action:**
+Fighting Stance
+---
+
+### char_25_hana_base.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Hana Park**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; compact rounded proportions; petite vertical.
+* **Face:** Delicate compact structure; round face; plush cheeks; large expressive eyes; youthful neutral expression.
+* **Hair:** Type 1 straight; fine-to-medium density; blunt shoulder-length cut; off-center part; smooth dewy finish; dark brown to black.
+* **Skin:** Light warm-beige skin with clear finish.
+**Outfit:**
+- Top: Oversized cream knit sweater with dropped shoulders (falls to mid-thigh)
+- Bottom: High-waist pleated mini skirt in soft brown with subtle texture
+- Footwear: White platform sneakers or Mary Jane flats
+- Accessories: Small silver heart stud earrings, delicate silver necklace, mini crossbody bag
+- Hair/Makeup: Half-up with claw clip, loose face-framing pieces; soft K-beauty makeup
+**Pose/Action:**
+Teasing/Laughing
+---
+
+### char_18_elena_base.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Outfit:**
+- Top: Champagne-colored silk camisole with lace trim, tucked in.
+- Bottom: High-waisted crimson wide-leg trousers (tailored perfectly to waist).
+- Footwear: Nude pointed-toe stiletto pumps.
+- Accessories: Gold statement earrings (vintage), dainty gold chain necklace, designer clutch.
+- Hair/Makeup: Voluminous blowout; signature sharp winged liner and matte raspberry lipstick; long acrylic nails in a soft ombre.
+**Pose/Action:**
+Ignoring You (Phone)
+---
+
+### char_36_kassandra_base.webp
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+Character Accuracy
+Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
+
+Body Types
+Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
+
+Hair & Clothing
+Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
+
+Details
+ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
+
+---
+
+**SCENE/SETTING:**
+Studio lighting, plain white background. High-contrast professional photography.
+---
+
+**CHARACTER: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Outfit:**
+- Top: Crimson red fitted racerback tank top
+- Bottom: High-waist black compression leggings
+- Footwear: Black lightweight running shoes with gold accents
+- Accessories: Simple gold hoop earrings, gold hair cuff
+- Hair/Makeup: Intricate high braid; natural glowy skin
+**Pose/Action:**
+Protecting You
+---

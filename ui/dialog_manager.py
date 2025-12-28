@@ -1083,3 +1083,109 @@ class DialogManager:
             from utils import logger
             logger.exception("Error showing tag distribution")
             self.show_error("Error", f"Failed to generate tag distribution: {e}")
+
+    def show_bulk_generator(self, data_loader, poses_data, builder) -> None:
+        """Show bulk prompt generator dialog."""
+        import bulk # Import local module
+
+        dialog = tk.Toplevel(self.root)
+        dialog.title("BULK PROMPT GENERATOR")
+        dialog.geometry("900x700")
+        dialog.transient(self.root)
+        
+        if hasattr(self.root, "theme_manager"):
+            self.root.theme_manager.theme_toplevel(dialog)
+
+        main_frame = ttk.Frame(dialog, padding=20)
+        main_frame.pack(fill="both", expand=True)
+
+        # Instructions
+        ttk.Label(main_frame, text="PASTE PROMPT CONFIGURATIONS:", style="Title.TLabel").pack(anchor="w")
+        ttk.Label(main_frame, text="Format: 'PROMPT CONFIG' blocks with 'Base:', 'Scene:', '[1] Character Name', etc.", style="Muted.TLabel").pack(anchor="w", pady=(0, 10))
+
+        # Input / Output Notebook
+        nb = ttk.Notebook(main_frame, style="TNotebook")
+        nb.pack(fill="both", expand=True)
+
+        input_tab = ttk.Frame(nb, style="TFrame")
+        nb.add(input_tab, text="INPUT")
+        
+        output_tab = ttk.Frame(nb, style="TFrame")
+        nb.add(output_tab, text="GENERATED OUTPUTS")
+
+        # Input Text
+        input_frame = ttk.Frame(input_tab, padding=5)
+        input_frame.pack(fill="both", expand=True)
+        
+        input_text = tk.Text(input_frame, wrap="word", font=("Lexend", 9), highlightthickness=0, borderwidth=0)
+        input_text.pack(side="left", fill="both", expand=True)
+        
+        # Add demo text
+        input_text.insert("1.0", bulk.DEMO_TEXT)
+
+        input_scroll = ttk.Scrollbar(input_frame, orient="vertical", command=input_text.yview, style="Themed.Vertical.TScrollbar")
+        input_scroll.pack(side="right", fill="y")
+        input_text.configure(yscrollcommand=input_scroll.set)
+
+        # Output Text
+        output_frame = ttk.Frame(output_tab, padding=5)
+        output_frame.pack(fill="both", expand=True)
+        
+        output_text = tk.Text(output_frame, wrap="word", font=("Lexend", 9), highlightthickness=0, borderwidth=0)
+        output_text.pack(side="left", fill="both", expand=True)
+        
+        output_scroll = ttk.Scrollbar(output_frame, orient="vertical", command=output_text.yview, style="Themed.Vertical.TScrollbar")
+        output_scroll.pack(side="right", fill="y")
+        output_text.configure(yscrollcommand=output_scroll.set)
+
+        # Actions
+        btn_frame = ttk.Frame(main_frame)
+        btn_frame.pack(fill="x", pady=(15, 0))
+
+        def generate():
+            raw = input_text.get("1.0", "end").strip()
+            if not raw: return
+            
+            try:
+                raw_configs = bulk.parse_bulk_text(raw)
+                output_text.delete("1.0", "end")
+                
+                count = 0
+                for idx, conf in enumerate(raw_configs):
+                    try:
+                        resolved = bulk.resolve_config(conf, data_loader, poses_data)
+                        prompt = builder.generate(resolved)
+                        
+                        output_text.insert("end", f"--- PROMPT {idx+1} ---\n", "title")
+                        output_text.insert("end", prompt + "\n\n\n")
+                        count += 1
+                    except Exception as e:
+                        output_text.insert("end", f"Error generating prompt {idx+1}: {e}\n\n", "error")
+                
+                output_text.tag_configure("title", font=("Lexend", 10, "bold"), foreground="#0078d7") # Fallback color
+                output_text.tag_configure("error", foreground="red")
+                
+                nb.select(output_tab)
+                self.show_info("Success", f"Generated {count} prompts.")
+                
+            except Exception as e:
+                self.show_error("Generation Error", str(e))
+
+        def copy_output():
+            content = output_text.get("1.0", "end").strip()
+            if content:
+                self.root.clipboard_clear()
+                self.root.clipboard_append(content)
+                self.show_info("Copied", "All prompts copied to clipboard!")
+
+        ttk.Button(btn_frame, text="GENERATE", command=generate, style="TButton").pack(side="right", padx=5)
+        ttk.Button(btn_frame, text="COPY OUTPUT", command=copy_output).pack(side="right", padx=5)
+        ttk.Button(btn_frame, text="CLOSE", command=dialog.destroy).pack(side="right", padx=5)
+
+        def _apply(t):
+            self.root.theme_manager.apply_text_widget_theme(input_text, t)
+            self.root.theme_manager.apply_text_widget_theme(output_text, t)
+            output_text.tag_configure("title", foreground=t.get("accent", "#0078d7"))
+            
+        self._register_dialog(dialog, _apply)
+        _apply(self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}))

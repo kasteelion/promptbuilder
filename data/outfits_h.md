@@ -92,6 +92,22 @@
 - **Accessories:** Studded accessories, minimal jewelry
 - **Makeup:** Warm-toned natural makeup with coral or peachy lip
 
+### Skater Culture
+- **Hijab:** Jersey hijab in black or neutral with a beanie worn over it
+- **Top:** Oversized graphic t-shirt over a long-sleeve black base layer
+- **Bottom:** Baggy durable work pants (cuffed at ankle)
+- **Footwear:** Canvas skate shoes
+- **Accessories:** Simple chain necklace, mini backpack
+- **Makeup:** Natural minimal makeup
+
+### Light Academia
+- **Hijab:** Soft pashmina or cotton hijab in cream or beige (elegant wrap)
+- **Top:** Long-sleeve cable knit sweater tunic (modest length)
+- **Bottom:** Tailored wide-leg trousers or pleated maxi skirt (tan or light gray)
+- **Footwear:** Brown leather loafers or ankle boots
+- **Accessories:** Vintage satchel, reading glasses, simple gold watch
+- **Makeup:** Soft natural makeup, warm tones
+
 ---
 
 ## Athletic & Sports
@@ -284,13 +300,29 @@
 - **Accessories:** Small gold studs
 - **Makeup:** Natural minimal makeup
 
-### Casual - Country Pin-Up
+### Country Casual
 - **Hijab:** White cotton hijab tied with a red gingham ribbon or bow
 - **Top:** Long-sleeve red and white gingham button-down shirt (modest fit, tunic length)
 - **Bottom:** High-waist wide-leg denim jeans or denim maxi skirt
 - **Footwear:** Brown leather boots
 - **Accessories:** Woven belt, basket prop (optional)
 - **Makeup:** Fresh natural makeup, rosy cheeks
+
+### Vintage Denim
+- **Hijab:** ((default:Red)) paisley print chiffon hijab with retro styling
+- **Top:** **White ribbed long-sleeve top** (fitted silhouette, soft texture) worn under **Denim Jacket** (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons)
+- **Bottom:** **Wide-Leg Denim Trousers** (dark blue denim, high-waist, flare at hem)
+- **Footwear:** Platform boots
+- **Accessories:** Large silver hoop earrings, chunky rings
+- **Makeup:** Sharp winged black eyeliner, heavy rosy blush on cheekbones, bold matte lipstick
+
+### Retro Tracksuit
+- **Hijab:** Red or white jersey sports hijab (secure but relaxed wrap)
+- **Top:** **Striped Long-Sleeve Tunic** (horizontal red and white pin-stripes, modest length, loose fit) under **Oversized Bomber Jacket** (matching red hue, voluminous sleeves)
+- **Bottom:** **Athletic Track Pants** (matching orange-red fabric, white vertical side stripes, elastic waistband)
+- **Footwear:** Retro sneakers
+- **Accessories:** Simple gold pendant necklace
+- **Makeup:** Natural, fresh-faced makeup look with subtle lip color
 
 ---
 
@@ -316,7 +348,7 @@
 
 ## Character & Costume
 
-### Bunny
+### Casino Dealer
 - **Hijab:** Black silk or satin hijab with secure wrap
 - **Top:** Long-sleeve black satin modest bodysuit (high neck, tailored fit)
 - **Bottom:** Black dress pants (slim fit)
@@ -348,7 +380,7 @@
 - **Accessories:** Bowtie (((default:red) or (signature))), boater hat with ribbon, arm garters
 - **Makeup:** Polished vintage-inspired makeup
 
-### Phantom of the Opera
+### Opera Masquerade
 - **Hijab:** Soft white silk or lace-trimmed hijab (flowing romantic drape)
 - **Top:** Long-sleeve **white modest gown** (silk or satin with lace details, high neck)
 - **Bottom:** N/A (full-length gown)
@@ -356,7 +388,7 @@
 - **Accessories:** Candelabra prop, delicate jewelry
 - **Makeup:** Romantic natural makeup, look of wonder
 
-### Beauty and the Beast
+### Fairytale Village
 - **Hijab:** Blue cotton hijab with neat wrap and white ribbon accent
 - **Top:** Long-sleeve blue pinafore-style tunic over a **white modest peasant blouse** (high neck)
 - **Bottom:** Matching blue full-length skirt or trousers with **white apron**
@@ -364,7 +396,7 @@
 - **Accessories:** Blue hair ribbon (on hijab), basket with books
 - **Makeup:** Natural fresh-faced makeup
 
-### Maid Outfit
+### Service Uniform
 - **Hijab:** Black or white chiffon hijab with neat professional wrap
 - **Top:** Long-sleeve black modest dress with high white collar
 - **Bottom:** Matching full skirt (knee-length or longer) with white apron
@@ -756,7 +788,7 @@
 - **Accessories:** Delicate necklace, flower pinned to hijab
 - **Makeup:** Natural rosy makeup, fresh-faced glow
 
-### Dance - Matador
+### Matador
 - **Hijab:** Black satin hijab with red rose accent (secure neat wrap)
 - **Top:** Long-sleeve black tunic with gold embroidery (simulating bolero jacket look, high neck)
 - **Bottom:** Full-length flowing red circle skirt or wide-leg black trousers with side embroidery
@@ -1279,4 +1311,268 @@
 - **Footwear:** White satin heeled pumps
 - **Accessories:** Pearl necklace, bridal bouquet of fresh flowers, delicate gold bracelet
 - **Makeup:** Soft romantic makeup with glowing skin and soft pink tones
+### Luxury Silk Robe Set
+- **Hijab:** Silk sleep turban or wrapped scarf in champagne
+- **Top:** **Silk kimono-style robe** (((default:champagne) or (signature)) pure silk, full length with long sleeves); **matching silk tunic** underneath
+- **Bottom:** **Silk wide-leg pajama pants** (relaxed fit)
+- **Footwear:** Velvet slippers
+- **Accessories:** Silk sleep mask, pearl studs
+- **Makeup:** Fresh dewy skin, natural pink lip
+
+### Classic Striped Pajamas
+- **Hijab:** Soft jersey sleep cap in navy or white
+- **Top:** **Button-front pajama tunic** (((default:navy and white) or (signature)) vertical stripe cotton, long sleeves, mid-thigh length)
+- **Bottom:** **Matching pajama pants** (relaxed straight leg)
+- **Footwear:** Cozy slipper socks
+- **Accessories:** Reading glasses
+- **Makeup:** No makeup, relaxed expression
+
+### Oversized Shirt Lounge
+- **Hijab:** Messy jersey wrap or instant hijab in neutral tone
+- **Top:** **Oversized men's style button-down tunic** (((default:white or light blue) or (signature)) crisp cotton, knee-length, long sleeves)
+- **Bottom:** **Loose lounge pants** or **leggings**
+- **Footwear:** Thick cozy socks
+- **Accessories:** Coffee mug prop
+- **Makeup:** Fresh-faced, casual morning vibe
+
+### Cozy Onesie
+- **Hijab:** Jersey hijab worn under hood
+- **Top:** **Full-body fleece onesie** (((default:pastel pink or gray) or (signature)) loose fit, long sleeves); **hood** up
+- **Bottom:** Full length legs (part of onesie)
+- **Footwear:** Fuzzy slipper boots
+- **Accessories:** Hot cocoa mug, stuffed animal
+- **Makeup:** No makeup, playful cozy expression
+
+### Spa Day Ensemble
+- **Hijab:** White towel wrap or turban style
+- **Top:** **Plush terry cloth robe** (((default:white) or (signature)), full length with long sleeves)
+- **Bottom:** **White loose trousers** underneath
+- **Footwear:** Spa slippers
+- **Accessories:** Cucumber slices, face mask applied
+- **Makeup:** Glowing fresh skin, relaxation mode
+
+### Satin Sleepwear
+- **Hijab:** Satin wrap in matching color
+- **Top:** **Long-sleeve satin maxi dress** (((default:deep emerald or ruby red) or (signature)) loose modest cut)
+- **Bottom:** N/A
+- **Footwear:** Satin mules
+- **Accessories:** Delicate gold chain
+- **Makeup:** Subtle evening glow, romantic styling
+
+### Rodeo Champion
+- **Hijab:** Satin hijab in turquoise or pink under cowboy hat
+- **Top:** **Rhinestone-embellished western tunic** (((default:turquoise or hot pink) or (signature)) long sleeves, high neck, fitted waist, longer hem)
+- **Bottom:** **Bootcut jeans** (dark wash) or **denim maxi skirt**
+- **Footwear:** Tall cowboy boots
+- **Accessories:** White felt cowboy hat, statement western jewelry, rodeo sash
+- **Makeup:** Full glam makeup, confident smile
+
+### Sheriff
+- **Hijab:** Khaki hijab (neat military tuck) under campaign hat
+- **Top:** **Khaki uniform tunic** (long sleeves with epaulettes, badge, multiple pockets, mid-thigh length)
+- **Bottom:** **Matching khaki trousers** (straight leg)
+- **Footwear:** Black duty boots
+- **Accessories:** Silver star badge, wide-brimmed campaign hat, aviator sunglasses
+- **Makeup:** Minimal makeup, authoritative expression
+
+### Ranch Hand
+- **Hijab:** Cotton bandana-print or solid blue hijab (practical wrap)
+- **Top:** **Worn denim work tunic** (((default:faded blue) or (signature)), long sleeves, durable fabric)
+- **Bottom:** **Loose work jeans** or **denim maxi skirt**
+- **Footwear:** Sturdy work boots
+- **Accessories:** Leather gloves, leather belt
+- **Makeup:** Natural sun-kissed skin, minimal makeup
+
+### Oil Tycoon
+- **Hijab:** Cream or tan silk hijab (elegant drape) under western hat
+- **Top:** **Tailored western blazer** (((default:cream or tan) or (signature)) long line); **silk high-neck blouse** underneath
+- **Bottom:** **Tailored wide-leg trousers** or **maxi skirt**
+- **Footwear:** Luxury cowboy boots
+- **Accessories:** Bolo tie, statement ring, designer western hat, briefcase
+- **Makeup:** Refined makeup, confident presence
+
+### K-Pop Idol Performance
+- **Hijab:** Street-style jersey hijab (black or neon) with cap or beanie over it
+- **Top:** **Oversized athletic jacket** (((default:holographic or pastel) or (signature))); **long-sleeve mesh top** or **graphic tunic** underneath
+- **Bottom:** **Baggy cargo pants** with straps or **maxi skirt** with street details
+- **Footwear:** Chunky platform sneakers
+- **Accessories:** Layered chains, hoop earrings, LED accessories
+- **Makeup:** Glass skin, gradient lips, rhinestone stickers, idol glow
+
+### Parisian Chic
+- **Hijab:** Red silk scarf tied loosely or turban style with neck coverage
+- **Top:** **Striped Breton tunic** (((default:navy and white) or (signature)) long sleeves, boat neck, mid-thigh)
+- **Bottom:** **Straight-leg jeans** or **black cigarette pants**
+- **Footwear:** Leather ballet flats
+- **Accessories:** Structured handbag, gold jewelry, sunglasses
+- **Makeup:** Minimal chic makeup, red lip
+
+### Italian Riviera Summer
+- **Hijab:** White or pastel chiffon hijab (breezy drape) under sun hat
+- **Top:** **Linen button-down tunic** (((default:white or soft yellow) or (signature)), oversized, long sleeves)
+- **Bottom:** **Wide-leg linen palazzo pants**
+- **Footwear:** Espadrille wedges
+- **Accessories:** Oversized straw hat, statement sunglasses, woven tote
+- **Makeup:** Bronzed glow, minimal makeup
+
+### Nordic Minimalist
+- **Hijab:** Jersey or knit hijab in oatmeal or gray (simple wrap)
+- **Top:** **Oversized turtleneck sweater tunic** (((default:oatmeal or charcoal) or (signature)) chunky knit, knee length)
+- **Bottom:** **Slim-fit trousers** or **leggings**
+- **Footwear:** Minimalist leather sneakers
+- **Accessories:** Geometric jewelry, leather backpack
+- **Makeup:** Fresh skin, nude lip, understated elegance
+
+### Graduation
+- **Hijab:** Color-coordinated with gown or black (neat wrap) under mortarboard
+- **Top:** **Black academic gown** (floor-length); **modest dress** or **outfit** underneath
+- **Bottom:** Visible hem of dress or pants
+- **Footwear:** Dress shoes
+- **Accessories:** Mortarboard cap, tassel, diploma
+- **Makeup:** Polished photo-ready makeup
+
+### Prom Formal
+- **Hijab:** Satin or chiffon hijab matching gown color (glamorous style)
+- **Top:** **Floor-length formal gown** (((default:jewel tone) or (signature)) long sleeves, high neck, modest silhouette)
+- **Bottom:** Full skirt (part of gown)
+- **Footwear:** Heeled sandals
+- **Accessories:** Statement earrings (visible), corsage, clutch
+- **Makeup:** Full glam makeup, dramatic eyes
+
+### Summer Festival Yukata
+- **Hijab:** Cotton hijab matching yukata pattern (neat style) with hair ornament
+- **Top:** **Cotton yukata** (((default:floral pattern) or (signature)) traditional modest robe)
+- **Bottom:** Full length (part of yukata)
+- **Footwear:** Geta sandals (worn with tabi socks or barefoot)
+- **Accessories:** Obi sash, kinchaku bag, paper fan
+- **Makeup:** Soft pink tones, fresh summer look
+
+### Red Carpet Gala
+- **Hijab:** Couture silk or embellished hijab (architectural drape)
+- **Top:** **Haute couture gown** (((default:dramatic silhouette) or (signature)) floor length, long sleeves, high neck, cape details)
+- **Bottom:** Full skirt
+- **Footwear:** Designer heels
+- **Accessories:** Diamond jewelry, designer clutch
+- **Makeup:** Flawless contour, dramatic eyes, star presence
+
+### 1920s Jazz Age
+- **Hijab:** Beaded skullcap style or turban hijab with feather accent
+- **Top:** **Dropped-waist modest dress** (((default:black and gold) or (signature)) long sleeves, knee length or longer with fringe)
+- **Bottom:** **Opaque tights** or **straight-leg pants** if dress is short
+- **Footwear:** T-strap heels
+- **Accessories:** Long pearl necklace, beaded clutch
+- **Makeup:** Dark smoky eyes, cupid's bow lips
+
+### 1960s Mod
+- **Hijab:** White or bold colored jersey hijab (sleek neat wrap)
+- **Top:** **Modest shift dress** (((default:geometric print) or (signature)) long sleeves, knee length)
+- **Bottom:** **Opaque white tights** or **straight-leg trousers**
+- **Footwear:** White go-go boots
+- **Accessories:** Large geometric earrings, sunglasses
+- **Makeup:** Graphic eyeliner, pale lips, Twiggy style
+
+### 1980s Power Dressing
+- **Hijab:** Silk hijab in bold color (tucked in or turban style)
+- **Top:** **Oversized blazer** (((default:bold color) or (signature)) shoulder pads); **high-neck blouse**
+- **Bottom:** **Pleated midi skirt** or **trousers**
+- **Footwear:** Pumps
+- **Accessories:** Chunky gold jewelry, briefcase
+- **Makeup:** Bright eyeshadow, bold blush, strong brows
+
+### 1990s Grunge
+- **Hijab:** Black jersey hijab (loose wrap) or beanie over hijab
+- **Top:** **Oversized flannel shirt** (((default:plaid) or (signature))); **long-sleeve band tee** underneath
+- **Bottom:** **Baggy jeans** or **maxi floral skirt** with combat boots
+- **Footwear:** Combat boots
+- **Accessories:** Choker, backpack
+- **Makeup:** Brown lip, smudged liner, grunge vibe
+
+### Rock Concert Performer
+- **Hijab:** Black studded hijab or turban with safety pins
+- **Top:** **Leather jacket** or **vest**; **long-sleeve mesh top** with lining or **graphic tunic**
+- **Bottom:** **Leather maxi skirt** or **wide-leg pants**
+- **Footwear:** Platform boots
+- **Accessories:** Chains, studded wristbands, guitar prop
+- **Makeup:** Heavy smoky eyes, dark lip, fierce attitude
+
+### Circus Ringmaster
+- **Hijab:** Black satin hijab (neat tuck) under top hat
+- **Top:** **Red tailcoat** (((default:bright red) or (signature)) gold trim); **white high-neck ruffled shirt**
+- **Bottom:** **Black wide-leg trousers** or **maxi skirt**
+- **Footwear:** Tall boots
+- **Accessories:** Top hat, white gloves, baton
+- **Makeup:** Theatrical definition, red lips
+
+### Stage Magician
+- **Hijab:** Black satin hijab (sleek wrap) under top hat
+- **Top:** **Tuxedo jacket** (((default:black) or (signature)) long tails); **white high-neck shirt**; **bow tie**
+- **Bottom:** **Black trousers** or **full skirt**
+- **Footwear:** Oxford shoes
+- **Accessories:** Top hat, white gloves, wand, cards
+- **Makeup:** Classic stage makeup, mysterious expression
+
+### K-Pop Stage Outfit
+- **Hijab:** Metallic or sequins hijab (secure performance wrap)
+- **Top:** **Structured jacket** (((default:futuristic) or (signature))); **long-sleeve modest bodysuit** or **tunic**
+- **Bottom:** **Cargo pants** or **maxi skirt** with hardware
+- **Footwear:** Thigh-high boots or chunky sneakers
+- **Accessories:** Body harness, rings, mic headset
+- **Makeup:** Glitter accents, gradient lip, fierce look
+
+### Stand-Up Comedian
+- **Hijab:** Jersey hijab in solid color (casual wrap)
+- **Top:** **Fitted blazer** (((default:solid color) or (signature))); **graphic tee** or **blouse**
+- **Bottom:** **Dark jeans** or **trousers**
+- **Footwear:** Sneakers or loafers
+- **Accessories:** Microphone prop
+- **Makeup:** Natural polished makeup, confident smile
+
+### Rain Day Chic
+- **Hijab:** Water-resistant hijab or tucked into coat
+- **Top:** **Classic trench coat** (((default:beige) or (signature)) belted, long line); **sweater** underneath
+- **Bottom:** **Jeans** or **trousers**
+- **Footwear:** Rain boots
+- **Accessories:** Umbrella, crossbody bag
+- **Makeup:** Waterproof minimal makeup
+
+### Yellow Slicker Classic
+- **Hijab:** Tucked into hood or simple jersey
+- **Top:** **Yellow rain jacket** (long modest cut); **long sleeves**
+- **Bottom:** **Rain pants** or **jeans**
+- **Footwear:** Rubber boots
+- **Accessories:** Rain hat (optional)
+- **Makeup:** Natural, fresh face
+
+### Spring Garden Party
+- **Hijab:** Pastel chiffon hijab (flowing drape) with flower crown
+- **Top:** **Floral maxi dress** (((default:pastel print) or (signature)) long sleeves, modest high neck)
+- **Bottom:** Full skirt (part of dress)
+- **Footwear:** Heeled sandals or flats
+- **Accessories:** Straw hat, woven bag
+- **Makeup:** Soft pinks, fresh spring look
+
+### Resort Wear Luxury
+- **Hijab:** White or cream silk hijab (elegant wrap)
+- **Top:** **Linen tunic** (((default:white) or (signature)) long loose fit)
+- **Bottom:** **Wide-leg linen trousers**
+- **Footwear:** Flat leather sandals
+- **Accessories:** Sun hat, sunglasses, gold jewelry
+- **Makeup:** Bronzed glow, nude lip
+
+### Steampunk Aviator
+- **Hijab:** Brown leather-look or jersey hijab (aviator cap style)
+- **Top:** **Leather corset vest** over **white poet blouse** (billowy long sleeves)
+- **Bottom:** **Long brown skirt** with bustle or **wide-leg trousers**
+- **Footwear:** Lace-up boots
+- **Accessories:** Goggles on hijab, gears jewelry, gloves
+- **Makeup:** Natural with defined eyes
+
+### Gothic Aristocrat
+- **Hijab:** Black lace-trimmed hijab with large bow
+- **Top:** **Black and white modest dress** (long sleeves, high neck, knee length or longer with layers)
+- **Bottom:** **Full skirt** with petticoat; **opaque tights**
+- **Footwear:** Platform Mary Janes
+- **Accessories:** Parasol, lace cuffs, handbag
+- **Makeup:** Doll-like, pale skin, dark lips
+
 # Fantasy Class Outfits (Hijabi)
