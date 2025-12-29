@@ -978,6 +978,12 @@ class CharacterGalleryPanel(ttk.Frame):
         # initially empty
         self._render_selected_tags()
 
+        # Tag filter section
+        tag_frame = ttk.Frame(self, style="TFrame")
+        tag_frame.pack(fill="x", padx=12, pady=(0, 10))
+        tag_frame.columnconfigure(1, weight=1)
+        tag_frame.columnconfigure(3, weight=1)
+
         # Get current theme colors for manual overrides if needed
         try:
             theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
