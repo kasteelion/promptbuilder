@@ -51,6 +51,7 @@ class CharacterItem(ttk.Frame):
         self.color_schemes = color_schemes
         self.theme_manager = theme_manager
         self.modifiers = callbacks.get("get_modifiers", lambda: {})()
+        self.framing_options = callbacks.get("get_framing", lambda: {})()
         self.callbacks = callbacks
         
         # Use existing expanded state or default to True for new items
@@ -276,7 +277,29 @@ class CharacterItem(ttk.Frame):
             command=self._randomize_pose
         )
         self.rand_pose_btn.pack(side="left", padx=(10, 0))
+        from utils import create_tooltip
         create_tooltip(self.rand_pose_btn, "Randomize pose for this character")
+
+        # Framing / Shot Type Section (New)
+        framing_section = ttk.Frame(self.controls_frame)
+        framing_section.pack(fill="x", pady=(0, 10))
+        
+        ttk.Label(framing_section, text="🎥 Framing:", style="Bold.TLabel").pack(side="left")
+        
+        framing_var = tk.StringVar(value=self.char_data.get("framing_mode", ""))
+        self.framing_combo = SearchableCombobox(
+            framing_section,
+            theme_manager=self.theme_manager,
+            values=[""] + sorted(list(self.framing_options.keys())),
+            textvariable=framing_var,
+            on_select=lambda val: [
+                self.char_data.update({"framing_mode": val}),
+                self.callbacks["on_change"]()
+            ],
+            placeholder="Portrait / Framing...",
+            width=25
+        )
+        self.framing_combo.pack(side="left", padx=10, fill="x", expand=True)
 
         # Action note text area
         ttk.Label(

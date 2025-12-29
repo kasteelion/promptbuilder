@@ -30,7 +30,8 @@ class PromptController:
             self.ctx.base_prompts,
             self.ctx.poses,
             self.ctx.color_schemes,
-            self.ctx.modifiers
+            self.ctx.modifiers,
+            self.ctx.framing
         )
         return builder.generate(config)
 
@@ -48,7 +49,8 @@ class PromptController:
             self.ctx.base_prompts,
             self.ctx.poses,
             self.ctx.color_schemes,
-            self.ctx.modifiers
+            self.ctx.modifiers,
+            self.ctx.framing
         )
         return builder.generate_summary(config)
 

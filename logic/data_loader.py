@@ -660,3 +660,37 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
             from utils import logger
             logger.exception("Error loading modifiers")
             return default_modifiers
+
+    def load_framing(self):
+        """Load and parse framing.md file. Creates file if not found."""
+        f = self._find_data_file("framing.md")
+        cache_key = "framing"
+
+        # Check if cache is valid
+        if f.exists():
+            try:
+                mtime = f.stat().st_mtime
+                if cache_key in self._cache and self._file_mtimes.get(cache_key) == mtime:
+                    return self._cache[cache_key]
+                self._file_mtimes[cache_key] = mtime
+            except OSError:
+                pass
+
+        default_framing = {
+            "Full Body": "full body shot showing the character from head to toe,"
+        }
+
+        if not f.exists():
+            return default_framing
+
+        try:
+            text = f.read_text(encoding="utf-8")
+            # Use the same parser as modifiers since format is identical
+            framing = MarkdownParser.parse_modifiers(text)
+            result = framing if framing else default_framing
+            self._cache[cache_key] = result
+            return result
+        except Exception:
+            from utils import logger
+            logger.exception("Error loading framing")
+            return default_framing

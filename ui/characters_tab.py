@@ -901,6 +901,7 @@ class CharactersTab:
             "auto_collapse": self._auto_collapse_others, # Added Refactor 1
             "get_num_characters": lambda: len(self.selected_characters),
             "get_modifiers": lambda: getattr(self.parent.winfo_toplevel(), "modifiers", {}),
+            "get_framing": lambda: getattr(self.parent.winfo_toplevel(), "framing", {}),
             "update_scroll": self.scrollable_canvas.update_scroll_region,
             "on_change": self.on_change
         }

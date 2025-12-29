@@ -17,6 +17,7 @@ class PromptBuilder:
         poses: Dict[str, Dict[str, str]],
         color_schemes: Dict[str, Dict[str, str]] = None,
         modifiers: Dict[str, str] = None,
+        framing: Dict[str, str] = None,
     ):
         """Initialize the prompt builder.
 
@@ -26,12 +27,14 @@ class PromptBuilder:
             poses: Dictionary of pose categories and presets
             color_schemes: Dictionary of color schemes
             modifiers: Dictionary of outfit modifiers
+            framing: Dictionary of framing modifiers
         """
         self.characters = characters
         self.base_prompts = base_prompts
         self.poses = poses
         self.color_schemes = color_schemes or {}
         self.modifiers = modifiers or {}
+        self.framing = framing or {}
 
     def generate(self, config: Dict[str, Any]) -> str:
         """Generate a formatted prompt from configuration.
@@ -59,6 +62,12 @@ class PromptBuilder:
             pose = char.get("action_note") or self.poses.get(char.get("pose_category"), {}).get(
                 char.get("pose_preset"), ""
             )
+            
+            # Apply framing modifier if selected
+            framing_name = char.get("framing_mode")
+            framing_text = self.framing.get(framing_name, "")
+            if framing_text:
+                pose = f"{framing_text} {pose}"
             
             # Apply outfit modifiers/traits if selected
             # Support both single string (legacy) and list of traits

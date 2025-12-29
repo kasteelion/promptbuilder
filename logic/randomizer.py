@@ -8,7 +8,7 @@ from utils.interaction_helpers import fill_template
 class PromptRandomizer:
     """Generates random character, outfit, and pose combinations."""
 
-    def __init__(self, characters, base_prompts, poses, scenes=None, interactions=None, color_schemes=None, modifiers=None):
+    def __init__(self, characters, base_prompts, poses, scenes=None, interactions=None, color_schemes=None, modifiers=None, framing=None):
         """Initialize randomizer with data.
 
         Args:
@@ -19,6 +19,7 @@ class PromptRandomizer:
             interactions: Interaction templates dict (category -> template -> description)
             color_schemes: Color schemes dict
             modifiers: Outfit modifiers dict
+            framing: Framing modifiers dict
         """
         self.characters = characters
         self.base_prompts = base_prompts
@@ -27,6 +28,7 @@ class PromptRandomizer:
         self.interactions = interactions or {}
         self.color_schemes = color_schemes or {}
         self.modifiers = modifiers or {}
+        self.framing = framing or {}
 
     def randomize(self, num_characters=None, include_scene=False, include_notes=False):
         """Generate random prompt configuration.
@@ -202,12 +204,18 @@ class PromptRandomizer:
             if pose_presets:
                 pose_preset = random.choice(list(pose_presets.keys()))
 
+        # Random framing mode if applicable
+        framing_mode = ""
+        if self.framing and random.random() < 0.3:
+            framing_mode = random.choice(list(self.framing.keys()))
+
         return {
             "name": char_name,
             "outfit": outfit_name,
             "outfit_traits": outfit_traits,
             "pose_category": pose_category,
             "pose_preset": pose_preset,
+            "framing_mode": framing_mode,
             "action_note": "",
         }
 

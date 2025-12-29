@@ -32,6 +32,7 @@ class AppContext:
         self.interactions: Dict[str, Any] = {}
         self.color_schemes: Dict[str, Any] = {}
         self.modifiers: Dict[str, str] = {}
+        self.framing: Dict[str, str] = {}
         
         self.randomizer: Optional[PromptRandomizer] = None
 
@@ -57,6 +58,7 @@ class AppContext:
             self.interactions = self.data_loader.load_interactions()
             self.color_schemes = self.data_loader.load_color_schemes()
             self.modifiers = self.data_loader.load_modifiers()
+            self.framing = self.data_loader.load_framing()
             
             self.randomizer = PromptRandomizer(
                 self.characters, 
@@ -65,7 +67,8 @@ class AppContext:
                 self.scenes, 
                 self.interactions,
                 self.color_schemes,
-                self.modifiers
+                self.modifiers,
+                self.framing
             )
         except Exception as e:
             # Wrap any loading error into DataLoadError if it isn't already

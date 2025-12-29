@@ -148,8 +148,10 @@ class PromptBuilderApp:
         self.interactions = self.ctx.interactions
         self.color_schemes = self.ctx.color_schemes
         self.modifiers = self.ctx.modifiers
+        self.framing = self.ctx.framing
         # Expose to root for easier access by components
         self.root.modifiers = self.modifiers
+        self.root.framing = self.framing
         self.randomizer = self.ctx.randomizer
         
         self.theme_manager = self.ctx.theme_manager
@@ -413,9 +415,10 @@ class PromptBuilderApp:
         controls_frame.grid(row=0, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=(15, 0))
         
         def _set_all_collapsible(state):
-            for section in [self.scene_collapsible, self.notes_collapsible, 
-                           self.summary_collapsible, self.preview_collapsible]:
-                section.set_opened(state)
+            for panel in [self.scene_panel, self.notes_panel, 
+                           self.summary_panel]:
+                panel.set_opened(state)
+            self.preview_collapsible.set_opened(state)
             self.right_scroll_container.update_scroll_region()
 
         # Get panel background safely for manual button overrides
