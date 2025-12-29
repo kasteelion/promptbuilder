@@ -173,6 +173,15 @@ class CharacterItem(ttk.Frame):
             width=25
         )
         self.outfit_combo.pack(side="left", fill="x", expand=True)
+        
+        # Random outfit button
+        self.rand_outfit_btn = ttk.Button(
+            outfit_row, text="🎲", width=3, style="Ghost.TButton",
+            command=self._randomize_outfit
+        )
+        self.rand_outfit_btn.pack(side="left", padx=(10, 0))
+        from utils import create_tooltip
+        create_tooltip(self.rand_outfit_btn, "Randomize outfit for this character")
 
         # Signature Color Checkbox - Refactor 6: Pill Strategy
         sig_color = self.char_def.get("signature_color")
@@ -260,6 +269,14 @@ class CharacterItem(ttk.Frame):
             width=20
         )
         self.preset_combo.pack(side="left", fill="x", expand=True)
+        
+        # Random pose button
+        self.rand_pose_btn = ttk.Button(
+            pose_section, text="🎲", width=3, style="Ghost.TButton",
+            command=self._randomize_pose
+        )
+        self.rand_pose_btn.pack(side="left", padx=(10, 0))
+        create_tooltip(self.rand_pose_btn, "Randomize pose for this character")
 
         # Action note text area
         ttk.Label(
@@ -331,6 +348,16 @@ class CharacterItem(ttk.Frame):
             down_btn.bind("<Enter>", lambda e, b=down_btn: b.config(bg=self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")))
             down_btn.bind("<Leave>", lambda e, b=down_btn: b.config(bg=self._last_pbg))
 
+        # Solo Randomize button (Refactor 3: Ghost style)
+        self.solo_rand_btn = tk.Button(
+            move_frame, text="🎲 SOLO RANDOMIZE", width=18, command=self._solo_randomize,
+            bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=2,
+            relief="flat", font=("Lexend", 8, "bold")
+        )
+        self.solo_rand_btn.pack(side="left", padx=(10, 2))
+        self.solo_rand_btn.bind("<Enter>", lambda e: self.solo_rand_btn.config(bg=self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")))
+        self.solo_rand_btn.bind("<Leave>", lambda e: self.solo_rand_btn.config(bg=self._last_pbg))
+
         # Remove uses Link style override - Refactor 5: Lexend
         self.remove_btn = tk.Button(
             footer, text="✕ REMOVE CHARACTER", command=lambda: self.callbacks["remove_character"](self.index),
@@ -361,6 +388,60 @@ class CharacterItem(ttk.Frame):
         self.preset_combo.set_values(presets)
         self.preset_combo.set("")
         self.callbacks["update_pose_category"](self.index, val, self.preset_combo)
+
+    def _randomize_outfit(self):
+        """Pick a random outfit for this character."""
+        import random
+        outfits = sorted(list(self.char_def.get("outfits", {}).keys()))
+        if outfits:
+            choice = random.choice(outfits)
+            # Find category for this outfit to update the cat combo
+            for cat, c_outfits in self.char_def.get("outfits_categorized", {}).items():
+                if choice in c_outfits:
+                    self.outfit_cat_combo.set(cat)
+                    self.outfit_combo.set_values(sorted(list(c_outfits.keys())))
+                    break
+            
+            self.callbacks["update_outfit"](self.index, choice)
+
+    def _randomize_pose(self):
+        """Pick a random pose for this character."""
+        import random
+        if not self.all_poses:
+            return
+            
+        cat = random.choice(list(self.all_poses.keys()))
+        presets = self.all_poses.get(cat, {})
+        if presets:
+            preset = random.choice(list(presets.keys()))
+            self.pcat_combo.set(cat)
+            self.preset_combo.set_values([""] + sorted(list(presets.keys())))
+            self.callbacks["update_pose_preset"](self.index, preset)
+
+    def _solo_randomize(self):
+        """Randomize outfit, traits, and pose all at once."""
+        self._randomize_outfit()
+        self._randomize_pose()
+        
+        # Randomize signature color if applicable
+        import random
+        if hasattr(self, "sig_pill_lbl"):
+            use_sig = random.random() < 0.5
+            self.sig_var.set(use_sig)
+            self.char_data["use_signature_color"] = use_sig
+            self.sig_pill_lbl.config(text=f"✓ USE SIGNATURE COLOR" if use_sig else "USE SIGNATURE COLOR")
+            
+        # Randomize traits if applicable
+        # We look for checkbuttons in controls_frame
+        for child in self.controls_frame.winfo_children():
+            if isinstance(child, FlowFrame):
+                for widget in getattr(child, "_children", []):
+                    if isinstance(widget, ttk.Checkbutton):
+                        # Randomly toggle
+                        if random.random() < 0.3:
+                            widget.invoke()
+        
+        self.callbacks["on_change"]()
 
     def toggle_collapse(self):
         """Toggle the visibility of controls. (Refactor 3: Accordion)"""

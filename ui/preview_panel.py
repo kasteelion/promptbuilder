@@ -145,6 +145,27 @@ class PreviewPanel:
         add_pill_btn(controls_frame, "💾 Save", self.save_prompt, 1, 1)
         add_pill_btn(controls_frame, "🗑️ Clear", self._on_clear, 1, 2)
 
+        # Quick Actions Row (New)
+        # We'll use a slightly different style for these secondary quick-actions
+        quick_frame = ttk.Frame(hdr, style="TFrame")
+        quick_frame.grid(row=0, column=0, sticky="w", padx=(15, 0))
+        
+        def add_quick_link(parent, text, command, tooltip):
+            btn = tk.Button(
+                parent, text=text, command=command,
+                bg=theme.get("panel_bg", "#1e1e1e"), 
+                fg=theme.get("accent", "#0078d7"),
+                borderwidth=0, relief="flat", cursor="hand2",
+                font=("Lexend", 8, "bold", "underline")
+            )
+            btn.pack(side="left", padx=5)
+            from utils import create_tooltip
+            create_tooltip(btn, tooltip)
+            return btn
+
+        self.quick_copy_btn = add_quick_link(quick_frame, "⚡ QUICK COPY", self.copy_prompt, "Copy full prompt immediately")
+        self.open_editor_btn = add_quick_link(quick_frame, "📝 OPEN IN EDITOR", self._open_in_external_editor, "Open prompt in system default text editor")
+
         # Preview text widget with scrollbar - Refactor 1
         # Refactor 3: Switch to custom dark scrollbar
         text_frame = ttk.Frame(self.parent, style="TFrame")
@@ -169,6 +190,41 @@ class PreviewPanel:
         self.get_prompt_callback = None
         self.validate_callback = None
         self.randomize_callback = None
+
+    def _open_in_external_editor(self):
+        """Save current prompt to a temp file and open in system default editor."""
+        if not self.get_prompt_callback:
+            return
+            
+        error = self.validate_callback() if self.validate_callback else None
+        if error:
+            if self.toast_callback: self.toast_callback(error, "warning", 3500)
+            return
+
+        prompt = self.get_prompt_callback()
+        import tempfile
+        import os
+        import subprocess
+        import platform
+
+        try:
+            # Create a named temporary file that persists after closing
+            with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False, encoding='utf-8') as tf:
+                tf.write(prompt)
+                temp_path = tf.name
+
+            if platform.system() == "Windows":
+                os.startfile(temp_path)
+            elif platform.system() == "Darwin": # macOS
+                subprocess.run(["open", temp_path])
+            else: # Linux
+                subprocess.run(["xdg-open", temp_path])
+                
+            if self.toast_callback:
+                self.toast_callback("Opening in external editor...", "info", 2000)
+        except Exception as e:
+            logger.exception("Failed to open external editor")
+            messagebox.showerror("Error", f"Could not open editor: {e}")
 
     def _show_copy_menu_pill(self):
         """Show the copy dropdown menu at the pill button location."""
@@ -210,6 +266,12 @@ class PreviewPanel:
                 frame.config(bg=accent)
                 lbl._base_bg = panel_bg
                 lbl.config(bg=panel_bg, fg=accent)
+                
+        # Update quick links
+        if hasattr(self, "quick_copy_btn"):
+            self.quick_copy_btn.config(bg=panel_bg, fg=accent)
+        if hasattr(self, "open_editor_btn"):
+            self.open_editor_btn.config(bg=panel_bg, fg=accent)
 
     def update_preview(self, prompt_text):
         """Update preview with formatted prompt text.

@@ -861,6 +861,21 @@ class CharacterGalleryPanel(ttk.Frame):
         self.search_entry.pack(fill="x", ipady=2)
         self.search_entry.insert(0, "SEARCH...")
         
+        # Clear search button (X)
+        self.search_clear_btn = tk.Label(
+            search_frame, text="✕", font=("Arial", 8), 
+            fg="gray", cursor="hand2", bg=self.theme_colors.get("text_bg", "#1e1e1e")
+        )
+        self.search_clear_btn.bind("<Button-1>", lambda e: self._clear_search())
+        
+        def _on_search_key(e=None):
+            if self.search_var.get() and self.search_var.get() != "SEARCH...":
+                self.search_clear_btn.place(relx=1.0, rely=0.5, x=-25, anchor="e")
+            else:
+                self.search_clear_btn.place_forget()
+        
+        self.search_var.trace_add("write", lambda *args: _on_search_key())
+
         # Selected tags area (chips) shown under the search box
         def on_focus_in(e):
             if self.search_entry.get() == "SEARCH...":
@@ -1079,6 +1094,11 @@ class CharacterGalleryPanel(ttk.Frame):
     def _clear_search(self):
         """Clear search entry."""
         self.search_var.set("")
+        if self.focus_get() != self.search_entry:
+            self.search_entry.delete(0, tk.END)
+            self.search_entry.insert(0, "SEARCH...")
+        if hasattr(self, "search_clear_btn"):
+            self.search_clear_btn.place_forget()
         self._display_characters()
 
     def _display_characters(self):
