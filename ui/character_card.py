@@ -225,50 +225,9 @@ class CharacterCard(ttk.Frame):
         self.desc_label.pack(pady=(4, 8), fill="x")
 
         # Tags display (Centered)
-        raw_tags = self.character_data.get("tags") or []
-        if isinstance(raw_tags, str):
-            raw_tags = [t.strip().lower() for t in raw_tags.split(",") if t.strip()]
-        
-        tags = self._sort_tags_by_category(raw_tags, self.categorized_tags_map)
-
-        if tags:
-            # Show all tags (Refactor 3 Fix)
-            tags_frame = FlowFrame(container, padding_x=2, padding_y=2)
-            tags_frame.pack(pady=(0, 10), fill="x")
-            
-            # Get theme colors
-            pbg = self.theme_colors.get("panel_bg", "#1e1e1e")
-            accent = self.theme_colors.get("accent", "#0078d7")
-
-            for t in tags:
-                pill = tk.Frame(tags_frame, bg=accent, padx=1, pady=1)
-                lbl = tk.Label(
-                    pill, 
-                    text=t, 
-                    bg=pbg, 
-                    fg=accent,
-                    font=("Lexend", 8, "bold"),
-                    padx=10,
-                    pady=4,
-                    cursor="hand2"
-                )
-                lbl.pack()
-                lbl._base_bg = pbg
-                
-                def on_tag_enter(e, l=lbl):
-                    try:
-                        hbg = self.theme_colors.get("hover_bg", "#333333")
-                    except: hbg = "#333333"
-                    l.config(bg=hbg)
-                def on_tag_leave(e, l=lbl):
-                    l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
-                
-                lbl.bind("<Enter>", on_tag_enter)
-                lbl.bind("<Leave>", on_tag_leave)
-                lbl.bind("<Button-1>", lambda e, v=t: self._handle_tag_click(v))
-                tags_frame._children.append(pill)
-            
-            tags_frame._schedule_reflow()
+        self.tags_container = FlowFrame(container, padding_x=2, padding_y=2)
+        self.tags_container.pack(pady=(0, 10), fill="x")
+        self._build_ui_tags()
 
         # Action Buttons (Pill Style)
         btn_frame = ttk.Frame(container)
@@ -324,6 +283,82 @@ class CharacterCard(ttk.Frame):
         
         self._update_fav_star()
 
+
+    def _update_theme_overrides(self, theme):
+        """Update manual overrides when theme changes."""
+        self.theme_colors = theme
+        pbg = theme.get("panel_bg", theme.get("text_bg", "#1e1e1e"))
+        border = theme.get("border", theme.get("bg", "#333333"))
+        fg = theme.get("fg", "white")
+        accent = theme.get("accent", "#0078d7")
+
+        if hasattr(self, "photo_canvas"):
+            self.photo_canvas.config(bg=pbg, highlightbackground=border)
+            try:
+                self.photo_canvas.itemconfig(self.placeholder_text, fill=fg)
+            except Exception: pass
+
+        if hasattr(self, "name_label"):
+            self.name_label.config(foreground=fg)
+            
+        if hasattr(self, "fav_btn"):
+            self._update_fav_star()
+            
+        # Re-build tags to apply new colors
+        self._build_ui_tags()
+
+    def _build_ui_tags(self):
+        """Build or refresh the tags section."""
+        if not hasattr(self, "tags_container"):
+            return
+            
+        # Clear existing
+        try:
+            self.tags_container.clear()
+        except Exception:
+            for w in self.tags_container.winfo_children(): w.destroy()
+            
+        raw_tags = self.character_data.get("tags") or []
+        if isinstance(raw_tags, str):
+            raw_tags = [t.strip().lower() for t in raw_tags.split(",") if t.strip()]
+        
+        tags = self._sort_tags_by_category(raw_tags, self.categorized_tags_map)
+        
+        if not tags:
+            return
+            
+        pbg = self.theme_colors.get("panel_bg", "#1e1e1e")
+        accent = self.theme_colors.get("accent", "#0078d7")
+
+        for t in tags:
+            pill = tk.Frame(self.tags_container, bg=accent, padx=1, pady=1)
+            lbl = tk.Label(
+                pill, 
+                text=t, 
+                bg=pbg, 
+                fg=accent,
+                font=("Lexend", 8, "bold"),
+                padx=10,
+                pady=4,
+                cursor="hand2"
+            )
+            lbl.pack()
+            lbl._base_bg = pbg
+            
+            def on_tag_enter(e, l=lbl):
+                try:
+                    hbg = self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")
+                except: hbg = "#333333"
+                l.config(bg=hbg)
+            def on_tag_leave(e, l=lbl):
+                l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
+            
+            lbl.bind("<Enter>", on_tag_enter)
+            lbl.bind("<Leave>", on_tag_leave)
+            lbl.bind("<Button-1>", lambda e, v=t: self._handle_tag_click(v))
+            self.tags_container._children.append(pill)
+        
+        self.tags_container._schedule_reflow()
 
     def toggle_visibility(self, event=None):
         """Toggle the visibility of the card contents. (Refactor 3)"""

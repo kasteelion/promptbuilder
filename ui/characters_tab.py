@@ -171,6 +171,28 @@ class CharactersTab:
 
         self._refresh_list()
 
+    def _update_theme_overrides(self, theme):
+        """Update manual button overrides when theme changes."""
+        pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+        accent = theme.get("accent", "#0078d7")
+        self._last_pbg = pbg
+
+        # Update Bulk Buttons
+        if hasattr(self, "create_shared_btn"):
+            self.create_shared_btn.config(bg=pbg, fg=accent, highlightbackground=accent)
+            
+        # Update Add Character Buttons
+        if hasattr(self, "create_char_btn"):
+            self.create_char_btn.config(bg=pbg, fg=accent, highlightbackground=accent)
+
+        # Update Pill Toggles
+        if hasattr(self, "pill_buttons_info"):
+            for frame, lbl, text, variable in self.pill_buttons_info:
+                frame.config(bg=accent)
+                lbl.config(bg=pbg, fg=accent)
+                lbl._base_bg = pbg
+                lbl.config(text=f"✓ {text}" if variable.get() else text)
+
     def _on_bulk_cat_select(self, val):
         """Handle bulk category selection."""
         outfits = sorted(list(self.categorized_all.get(val, set())))
@@ -474,12 +496,17 @@ class CharactersTab:
 
         # Use ScrollableCanvas for selected characters
         self.scrollable_canvas = ScrollableCanvas(self.tab)
-        self.scrollable_canvas.grid(row=3, column=0, sticky="nsew", padx=10, pady=SECTION_PAD_Y)
+        self.scrollable_canvas.grid(row=3, column=0, sticky="nsew", padx=6, pady=SECTION_PAD_Y)
 
         # Get container for characters
         self.chars_container = self.scrollable_canvas.get_container()
         # Keep reference to canvas for backward compatibility
         self.chars_canvas = self.scrollable_canvas.canvas
+        
+        # Register for theme updates
+        if self.theme_manager:
+            self.theme_manager.register(self.bulk_container, self.bulk_container.apply_theme)
+            self.theme_manager.register(self.tab, self._update_theme_overrides)
 
     def _safe_update_canvas_width(self, width):
         """Safely update canvas window width.
