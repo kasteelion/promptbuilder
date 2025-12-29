@@ -22,6 +22,19 @@ class WindowStateController:
             return False
         saved_geometry = self.prefs.get("window_geometry")
         saved_state = self.prefs.get("window_state")
+        
+        # Safe Geometry Check: 
+        # If the saved geometry is suspiciously small, ignore it.
+        if saved_geometry:
+            try:
+                # Format: 1200x800+100+100
+                size_part = saved_geometry.split('+')[0]
+                w, h = map(int, size_part.split('x'))
+                if w < 400 or h < 400:
+                    saved_geometry = None # Discard collapsed geometry
+            except Exception:
+                saved_geometry = None
+
         if saved_geometry:
             try:
                 self.root.geometry(saved_geometry)

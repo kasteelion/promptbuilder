@@ -50,6 +50,13 @@ class PromptBuilderApp:
         self.root = root
         self.root.title("Prompt Builder — Group Picture Generator")
 
+        # Hide window during setup to prevent flickering/resizing
+        self.root.withdraw()
+        
+        # Set a hard minimum size for the entire window - Refactor 1
+        self.root.update_idletasks()
+        self.root.minsize(1000, 700) # Prevents the "hilarious collapse"
+
         # Initialize Application Context
         self.ctx = AppContext(self.root)
         self.ctx.initialize_ui_services()
