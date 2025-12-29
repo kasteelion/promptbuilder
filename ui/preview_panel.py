@@ -151,14 +151,39 @@ class PreviewPanel:
         quick_frame.grid(row=0, column=0, sticky="w", padx=(15, 0))
         
         def add_quick_link(parent, text, command, tooltip):
+            # Get theme colors
+            try:
+                theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                accent = theme.get("accent", "#0078d7")
+                pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            except:
+                accent = "#0078d7"
+                pbg = "#1e1e1e"
+
             btn = tk.Button(
                 parent, text=text, command=command,
-                bg=theme.get("panel_bg", "#1e1e1e"), 
-                fg=theme.get("accent", "#0078d7"),
+                bg=pbg, 
+                fg=accent,
                 borderwidth=0, relief="flat", cursor="hand2",
-                font=("Lexend", 8, "bold", "underline")
+                font=("Lexend", 8, "bold", "underline"),
+                activebackground=pbg,
+                activeforeground=accent
             )
             btn.pack(side="left", padx=5)
+            btn._base_bg = pbg
+            
+            def on_q_enter(e, b=btn):
+                try:
+                    theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                    hbg = theme.get("hover_bg", "#333333")
+                except: hbg = "#333333"
+                b.config(bg=hbg)
+            def on_q_leave(e, b=btn):
+                b.config(bg=getattr(b, "_base_bg", "#1e1e1e"))
+                
+            btn.bind("<Enter>", on_q_enter)
+            btn.bind("<Leave>", on_q_leave)
+            
             from utils import create_tooltip
             create_tooltip(btn, tooltip)
             return btn
@@ -268,10 +293,10 @@ class PreviewPanel:
                 lbl.config(bg=panel_bg, fg=accent)
                 
         # Update quick links
-        if hasattr(self, "quick_copy_btn"):
-            self.quick_copy_btn.config(bg=panel_bg, fg=accent)
-        if hasattr(self, "open_editor_btn"):
-            self.open_editor_btn.config(bg=panel_bg, fg=accent)
+        for btn in [getattr(self, "quick_copy_btn", None), getattr(self, "open_editor_btn", None)]:
+            if btn:
+                btn.config(bg=panel_bg, fg=accent, activebackground=panel_bg, activeforeground=accent)
+                btn._base_bg = panel_bg
 
     def update_preview(self, prompt_text):
         """Update preview with formatted prompt text.

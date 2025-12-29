@@ -422,24 +422,34 @@ class PromptBuilderApp:
             self.right_scroll_container.update_scroll_region()
 
         # Get panel background safely for manual button overrides
-        try:
-            tm = self.theme_manager
-            theme = tm.themes.get(tm.current_theme, {})
-            panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
-            muted_fg = theme.get("border", "gray")
-        except:
-            panel_bg = "#1e1e1e"
-            muted_fg = "gray"
+        theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+        muted_fg = theme.get("border", "gray")
 
         self.collapse_all_btn = tk.Button(controls_frame, text="COLLAPSE ALL", 
                    command=lambda: _set_all_collapsible(False), 
-                   bg=panel_bg, fg=muted_fg, borderwidth=0, relief="flat", font=("Lexend", 8, "bold"))
+                   bg=panel_bg, fg=muted_fg, borderwidth=0, relief="flat", font=("Lexend", 8, "bold"),
+                   cursor="hand2")
         self.collapse_all_btn.pack(side="right", padx=2)
         
         self.expand_all_btn = tk.Button(controls_frame, text="EXPAND ALL", 
                    command=lambda: _set_all_collapsible(True), 
-                   bg=panel_bg, fg=muted_fg, borderwidth=0, relief="flat", font=("Lexend", 8, "bold"))
+                   bg=panel_bg, fg=muted_fg, borderwidth=0, relief="flat", font=("Lexend", 8, "bold"),
+                   cursor="hand2")
         self.expand_all_btn.pack(side="right", padx=2)
+        
+        def on_btn_enter(e, b):
+            try:
+                curr_theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                hbg = curr_theme.get("hover_bg", "#333333")
+            except: hbg = "#333333"
+            b.config(bg=hbg)
+        def on_btn_leave(e, b):
+            b.config(bg=panel_bg)
+            
+        for b in [self.collapse_all_btn, self.expand_all_btn]:
+            b.bind("<Enter>", lambda e, btn=b: on_btn_enter(e, btn))
+            b.bind("<Leave>", lambda e, btn=b: on_btn_leave(e, btn))
 
 
 
