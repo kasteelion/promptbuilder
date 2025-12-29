@@ -56,6 +56,7 @@ class CharactersTab:
         self.scenes = {}
         self.selected_characters = []
         self.categorized_all = {}
+        self.pill_buttons_info = [] # Track for theme updates
 
         # Debounce tracking for action notes
         self._action_note_after_ids = {}
@@ -79,6 +80,10 @@ class CharactersTab:
         accent = theme.get("accent", "#0078d7")
         panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
         self._last_pbg = panel_bg
+        
+        # Update bulk container - Refactor 3
+        if hasattr(self, "bulk_container"):
+            self.bulk_container.apply_theme(theme)
         
         # Update custom buttons
         if hasattr(self, "create_shared_btn"):
@@ -291,12 +296,14 @@ class CharactersTab:
 
         # Helper for Pill Toggle buttons in CharactersTab
         def add_pill_toggle(parent, text, variable, command=None, tooltip=None):
-            # Get current theme colors
-            theme = self.tab.winfo_toplevel().theme_manager.themes.get(
-                self.tab.winfo_toplevel().theme_manager.current_theme, {}
-            )
-            pbg = theme.get("panel_bg", "#1e1e1e")
-            accent = theme.get("accent", "#0078d7")
+            # Get current theme colors safely
+            pbg = "#1e1e1e"
+            accent = "#0078d7"
+            
+            if self.theme_manager and self.theme_manager.current_theme in self.theme_manager.themes:
+                theme = self.theme_manager.themes[self.theme_manager.current_theme]
+                pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+                accent = theme.get("accent", "#0078d7")
                 
             frame = tk.Frame(parent, bg=accent, padx=1, pady=1)
             
@@ -334,8 +341,6 @@ class CharactersTab:
                 create_tooltip(lbl, tooltip)
                 
             # Track for theme updates
-            if not hasattr(self, "pill_toggles"): self.pill_buttons_info = [] # Reuse or new?
-            if not hasattr(self, "pill_buttons_info"): self.pill_buttons_info = []
             self.pill_buttons_info.append((frame, lbl, text, variable))
             return frame
 

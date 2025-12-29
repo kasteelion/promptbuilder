@@ -507,6 +507,13 @@ class PromptBuilderApp:
         self.preview_panel.set_callbacks(
             self._generate_prompt, self._validate_prompt, self.randomize_all
         )
+        
+        # Register for theme updates - Refactor 3
+        if self.theme_manager:
+            self.theme_manager.register(self.preview_collapsible, self.preview_collapsible.apply_theme)
+            self.theme_manager.register(self.scene_panel, self.scene_panel.apply_theme)
+            self.theme_manager.register(self.notes_panel, self.notes_panel.apply_theme)
+            self.theme_manager.register(self.summary_panel, self.summary_panel.apply_theme)
 
         # Initialize scene presets
         # (Handled internally by ScenePanel now)

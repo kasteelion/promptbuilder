@@ -93,8 +93,14 @@ class PreviewPanel:
 
         # Helper for Pill buttons in Phase 3
         def add_pill_btn(parent, text, command, row, col):
-            pbg = theme.get("panel_bg", theme.get("text_bg", "#1e1e1e"))
-            accent = theme.get("accent", "#0078d7")
+            # Get current theme colors safely
+            try:
+                theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                pbg = theme.get("panel_bg", theme.get("text_bg", "#1e1e1e"))
+                accent = theme.get("accent", "#0078d7")
+            except:
+                pbg = "#1e1e1e"
+                accent = "#0078d7"
             
             # Outer Frame (The Border)
             pill = tk.Frame(parent, bg=accent, padx=1, pady=1)
@@ -103,10 +109,10 @@ class PreviewPanel:
             # Inner Label (The hollow center)
             lbl = tk.Label(
                 pill, 
-                text=text, 
+                text=text.upper(), 
                 bg=pbg, 
                 fg=accent,
-                font=("Lexend", 9, "bold"), # Refactor 5
+                font=("Lexend", 8, "bold"), # Refactor 5
                 padx=12,
                 pady=3,
                 cursor="hand2"
