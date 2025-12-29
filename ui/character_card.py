@@ -287,9 +287,9 @@ class CharacterCard(ttk.Frame):
     def _update_theme_overrides(self, theme):
         """Update manual overrides when theme changes."""
         self.theme_colors = theme
-        pbg = theme.get("panel_bg", theme.get("text_bg", "#1e1e1e"))
-        border = theme.get("border", theme.get("bg", "#333333"))
-        fg = theme.get("fg", "white")
+        pbg = theme.get("panel_bg", theme.get("bg", "#f0f0f0"))
+        border = theme.get("border", theme.get("bg", "#cccccc"))
+        fg = theme.get("fg", "black")
         accent = theme.get("accent", "#0078d7")
 
         if hasattr(self, "photo_canvas"):
@@ -327,7 +327,7 @@ class CharacterCard(ttk.Frame):
         if not tags:
             return
             
-        pbg = self.theme_colors.get("panel_bg", "#1e1e1e")
+        pbg = self.theme_colors.get("panel_bg", self.theme_colors.get("bg", "#f0f0f0"))
         accent = self.theme_colors.get("accent", "#0078d7")
 
         for t in tags:
@@ -351,7 +351,7 @@ class CharacterCard(ttk.Frame):
                 except: hbg = "#333333"
                 l.config(bg=hbg)
             def on_tag_leave(e, l=lbl):
-                l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
+                l.config(bg=getattr(l, "_base_bg", "#f0f0f0"))
             
             lbl.bind("<Enter>", on_tag_enter)
             lbl.bind("<Leave>", on_tag_leave)
@@ -1498,7 +1498,7 @@ class CharacterGalleryPanel(ttk.Frame):
         # Update fav pill
         if hasattr(self, "fav_pill_frame"):
             accent = self.theme_colors.get("accent", "#0078d7")
-            pbg = self.theme_colors.get("panel_bg", self.theme_colors.get("text_bg", "#1e1e1e"))
+            pbg = self.theme_colors.get("panel_bg", self.theme_colors.get("bg", "#f0f0f0"))
             self.fav_pill_frame.config(bg=accent)
             self.fav_pill_lbl.config(bg=pbg, fg=accent)
             self.fav_pill_lbl._base_bg = pbg

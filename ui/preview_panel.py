@@ -152,50 +152,12 @@ class PreviewPanel:
         add_pill_btn(controls_frame, "🗑️ Clear", self._on_clear, 1, 2)
 
         # Quick Actions Row (New)
-        # We'll use a slightly different style for these secondary quick-actions
+        # We'll use the same pill style for these actions
         quick_frame = ttk.Frame(hdr, style="TFrame")
         quick_frame.grid(row=0, column=0, sticky="w", padx=(15, 0))
         
-        def add_quick_link(parent, text, command, tooltip):
-            # Get theme colors
-            try:
-                theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-                accent = theme.get("accent", "#0078d7")
-                pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
-            except:
-                accent = "#0078d7"
-                pbg = "#1e1e1e"
-
-            btn = tk.Button(
-                parent, text=text, command=command,
-                bg=pbg, 
-                fg=accent,
-                borderwidth=0, relief="flat", cursor="hand2",
-                font=("Lexend", 8, "bold", "underline"),
-                activebackground=pbg,
-                activeforeground=accent
-            )
-            btn.pack(side="left", padx=5)
-            btn._base_bg = pbg
-            
-            def on_q_enter(e, b=btn):
-                try:
-                    theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-                    hbg = theme.get("hover_bg", "#333333")
-                except: hbg = "#333333"
-                b.config(bg=hbg)
-            def on_q_leave(e, b=btn):
-                b.config(bg=getattr(b, "_base_bg", "#1e1e1e"))
-                
-            btn.bind("<Enter>", on_q_enter)
-            btn.bind("<Leave>", on_q_leave)
-            
-            from utils import create_tooltip
-            create_tooltip(btn, tooltip)
-            return btn
-
-        self.quick_copy_btn = add_quick_link(quick_frame, "⚡ QUICK COPY", self.copy_prompt, "Copy full prompt immediately")
-        self.open_editor_btn = add_quick_link(quick_frame, "📝 OPEN IN EDITOR", self._open_in_external_editor, "Open prompt in system default text editor")
+        self.quick_copy_btn = add_pill_btn(quick_frame, "⚡ QUICK COPY", self.copy_prompt, 0, 0)
+        self.open_editor_btn = add_pill_btn(quick_frame, "📝 OPEN IN EDITOR", self._open_in_external_editor, 0, 1)
 
         # Preview text widget with scrollbar - Refactor 1
         # Refactor 3: Switch to custom dark scrollbar
@@ -297,12 +259,6 @@ class PreviewPanel:
                 frame.config(bg=accent)
                 lbl._base_bg = panel_bg
                 lbl.config(bg=panel_bg, fg=accent)
-                
-        # Update quick links
-        for btn in [getattr(self, "quick_copy_btn", None), getattr(self, "open_editor_btn", None)]:
-            if btn:
-                btn.config(bg=panel_bg, fg=accent, activebackground=panel_bg, activeforeground=accent)
-                btn._base_bg = panel_bg
 
     def update_preview(self, prompt_text):
         """Update preview with formatted prompt text.
