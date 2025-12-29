@@ -694,10 +694,29 @@ class PromptBuilderApp:
         self.font_manager.reset_font_size()
 
     def _on_closing(self):
-        """Handle theme change from menu.
+        """Handle window closing - save preferences."""
+        # Use WindowStateController to save geometry, state, and sash positions
+        if hasattr(self, "window_state_controller"):
+            self.window_state_controller.save_geometry_and_state()
 
-        Args:
-            theme_name: Name of new theme
+        # Save current theme
+        if hasattr(self, "menu_manager") and self.menu_manager:
+            self.prefs.set("last_theme", self.menu_manager.get_theme())
+
+        # Save last base prompt
+        base_prompt = self.characters_tab.get_base_prompt_name()
+        if base_prompt:
+            self.prefs.set("last_base_prompt", base_prompt)
+
+        # Shutdown preview controller if present
+        try:
+            if self.preview_controller:
+                self.preview_controller.shutdown()
+        except Exception:
+            logger.exception("Error shutting down preview controller")
+
+        self.root.destroy()
+
     def _change_theme(self, theme_name):
         """Handle theme change from menu.
 
