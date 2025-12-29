@@ -474,32 +474,32 @@ class CharactersTab:
         )
         
         # Refactor 3: Ghost style for Create New Character
-        self.create_char_btn = tk.Button(
-            button_frame, 
-            text="✨ Create New Character", 
-            command=self._create_new_character,
-            bg=pbg,
-            fg="#0078d7", # Fallback
-            highlightthickness=2, # Increased thickness
-            relief="flat",
-            font=("Lexend", 9)
-        )
-        self.create_char_btn.grid(row=0, column=1, sticky="ew", padx=(4, 0))
-        
-        def on_char_enter(e):
-            try:
-                tm = self.tab.winfo_toplevel().theme_manager
-                theme = tm.themes.get(tm.current_theme, {})
-                hbg = theme.get("hover_bg", "#333333")
-            except: hbg = "#333333"
-            self.create_char_btn.config(bg=hbg)
-        def on_char_leave(e): 
-            bg = getattr(self, "_last_pbg", "#ffffff")
-            self.create_char_btn.config(bg=bg)
-        self.create_char_btn.bind("<Enter>", on_char_enter)
-        self.create_char_btn.bind("<Leave>", on_char_leave)
-
-        # Use ScrollableCanvas for selected characters
+                self.create_char_btn = tk.Button(
+                    button_frame, 
+                    text="✨ Create New Character", 
+                    command=self._create_new_character, 
+                    bg=pbg,
+                    fg=accent,
+                    highlightbackground=accent,
+                    highlightthickness=2, # Increased thickness
+                    relief="flat",
+                    font=("Lexend", 9)
+                )
+                self.create_char_btn.grid(row=0, column=1, sticky="ew", padx=(4, 0))
+                self.create_char_btn._base_bg = pbg
+                
+                def on_char_enter(e):
+                    try:
+                        tm = self.tab.winfo_toplevel().theme_manager
+                        theme = tm.themes.get(tm.current_theme, {})
+                        hbg = theme.get("hover_bg", "#333333")
+                    except: hbg = "#333333"
+                    self.create_char_btn.config(bg=hbg)
+                def on_char_leave(e): 
+                    self.create_char_btn.config(bg=getattr(self.create_char_btn, "_base_bg", "#1e1e1e"))
+                self.create_char_btn.bind("<Enter>", on_char_enter)
+                self.create_char_btn.bind("<Leave>", on_char_leave)
+                # Use ScrollableCanvas for selected characters
         self.scrollable_canvas = ScrollableCanvas(self.tab)
         self.scrollable_canvas.grid(row=3, column=0, sticky="nsew", padx=6, pady=SECTION_PAD_Y)
 

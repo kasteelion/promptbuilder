@@ -253,13 +253,22 @@ class CharacterCard(ttk.Frame):
             fg=accent,
             highlightbackground=accent,
             highlightthickness=2,
-            relief="flat"
+            relief="flat",
+            cursor="hand2"
         )
         self.edit_btn.pack(side="left", padx=2)
+        self.edit_btn._base_bg = pbg
         
         # Hover for edit
-        def on_edit_enter(e): self.edit_btn.config(bg=self.theme_colors.get("hover_bg", self.theme_colors.get("selected_bg", "#333333")))
-        def on_edit_leave(e): self.edit_btn.config(bg=self.theme_colors.get("panel_bg", self.theme_colors.get("bg", "#1e1e1e")))
+        def on_edit_enter(e): 
+            try:
+                theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                hbg = theme.get("hover_bg", "#333333")
+                self.edit_btn.config(bg=hbg)
+            except: pass
+            
+        def on_edit_leave(e): 
+            self.edit_btn.config(bg=getattr(self.edit_btn, "_base_bg", "#1e1e1e"))
         
         self.edit_btn.bind("<Enter>", on_edit_enter)
         self.edit_btn.bind("<Leave>", on_edit_leave)
@@ -269,15 +278,25 @@ class CharacterCard(ttk.Frame):
             btn_frame, 
             textvariable=self.fav_btn_var,
             command=self._toggle_favorite,
-            bg=self.theme_colors.get("panel_bg", self.theme_colors.get("bg", "#1e1e1e")),
-            fg=self.theme_colors.get("accent", "#0078d7"),
+            bg=pbg,
+            fg=accent,
             relief="flat",
-            font=("Lexend", 11)
+            font=("Lexend", 11),
+            cursor="hand2"
         )
         self.fav_btn.pack(side="right")
+        self.fav_btn._base_bg = pbg
         
-        def on_fav_enter(e): self.fav_btn.config(bg=self.theme_colors.get("hover_bg", self.theme_colors.get("selected_bg", "#333333")))
-        def on_fav_leave(e): self.fav_btn.config(bg=self.theme_colors.get("panel_bg", pbg))
+        def on_fav_enter(e): 
+            try:
+                theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                hbg = theme.get("hover_bg", "#333333")
+                self.fav_btn.config(bg=hbg)
+            except: pass
+            
+        def on_fav_leave(e): 
+            self.fav_btn.config(bg=getattr(self.fav_btn, "_base_bg", "#1e1e1e"))
+            
         self.fav_btn.bind("<Enter>", on_fav_enter)
         self.fav_btn.bind("<Leave>", on_fav_leave)
         
@@ -350,10 +369,9 @@ class CharacterCard(ttk.Frame):
                     hbg = self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")
                 except: hbg = "#333333"
                 l.config(bg=hbg)
-            def on_tag_leave(e, l=lbl):
-                l.config(bg=getattr(l, "_base_bg", "#f0f0f0"))
-            
-            lbl.bind("<Enter>", on_tag_enter)
+                            def on_tag_leave(e, l=lbl):
+                                l.config(bg=getattr(l, "_base_bg", pbg))
+                        lbl.bind("<Enter>", on_tag_enter)
             lbl.bind("<Leave>", on_tag_leave)
             lbl.bind("<Button-1>", lambda e, v=t: self._handle_tag_click(v))
             self.tags_container._children.append(pill)
@@ -467,9 +485,11 @@ class CharacterCard(ttk.Frame):
             if is_fav:
                 # Primary style for favorite
                 self.fav_btn.configure(bg=accent, fg="white")
+                self.fav_btn._base_bg = accent
             else:
                 # Ghost style for non-favorite
                 self.fav_btn.configure(bg=panel_bg, fg=accent)
+                self.fav_btn._base_bg = panel_bg
 
     def _preview_photo(self):
         """Show full-size photo preview in a popup window."""
@@ -995,8 +1015,13 @@ class CharacterGalleryPanel(ttk.Frame):
             self._display_characters()
 
         def on_f_enter(e):
-            hbg = self.theme_colors.get("hover_bg", "#333333")
-            self.fav_pill_lbl.config(bg=hbg)
+            try:
+                tm = self.theme_manager
+                curr_theme = tm.themes.get(tm.current_theme, {})
+                hbg = curr_theme.get("hover_bg", "#333333")
+                self.fav_pill_lbl.config(bg=hbg)
+            except: pass
+            
         def on_f_leave(e):
             self.fav_pill_lbl.config(bg=getattr(self.fav_pill_lbl, "_base_bg", "#1e1e1e"))
 
