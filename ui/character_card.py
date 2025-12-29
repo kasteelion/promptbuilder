@@ -978,16 +978,14 @@ class CharacterGalleryPanel(ttk.Frame):
         # initially empty
         self._render_selected_tags()
 
-        # Tag filter section
-        tag_frame = ttk.Frame(self, style="TFrame")
-        tag_frame.pack(fill="x", padx=12, pady=(0, 10))
-        tag_frame.columnconfigure(1, weight=1)
-        tag_frame.columnconfigure(3, weight=1)
-
         # Get current theme colors for manual overrides if needed
-        theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-        pbg = theme.get("panel_bg", "#1e1e1e")
-        accent = theme.get("accent", "#0078d7")
+        try:
+            theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+            pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            accent = theme.get("accent", "#0078d7")
+        except:
+            pbg = "#1e1e1e"
+            accent = "#0078d7"
 
         ttk.Label(tag_frame, text="Cat:", style="Muted.TLabel").grid(row=0, column=0, sticky="w")
         self.tag_category_var = tk.StringVar(value="All")
@@ -1446,6 +1444,11 @@ class CharacterGalleryPanel(ttk.Frame):
         """Refresh the display (used when theme changes)."""
         if theme:
             self.theme_colors = theme
+        else:
+            try:
+                tm = self.winfo_toplevel().theme_manager
+                self.theme_colors = tm.themes.get(tm.current_theme, {})
+            except: pass
             
         # Update canvas background
         bg = self.theme_colors.get("bg", "#121212")
@@ -1458,6 +1461,12 @@ class CharacterGalleryPanel(ttk.Frame):
             self.fav_pill_frame.config(bg=accent)
             self.fav_pill_lbl.config(bg=pbg, fg=accent)
             self.fav_pill_lbl._base_bg = pbg
+            
+        # Update tag combos
+        if hasattr(self, "tag_cat_combo"):
+            self.tag_cat_combo.apply_theme(self.theme_colors)
+        if hasattr(self, "tag_combo"):
+            self.tag_combo.apply_theme(self.theme_colors)
 
         # Redisplay all characters to update their theme colors
         self._display_characters()

@@ -238,6 +238,17 @@ class LiteCharactersTab(CharactersTab):
         tag_frame.columnconfigure(1, weight=1)
         tag_frame.columnconfigure(3, weight=1)
 
+        # Get current theme colors for manual overrides if needed
+        try:
+            theme = self.tab.winfo_toplevel().theme_manager.themes.get(
+                self.tab.winfo_toplevel().theme_manager.current_theme, {}
+            )
+            pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            accent = theme.get("accent", "#0078d7")
+        except:
+            pbg = "#1e1e1e"
+            accent = "#0078d7"
+
         ttk.Label(tag_frame, text="Cat:", style="Muted.TLabel").grid(row=0, column=0, sticky="w")
         self.tag_category_var = tk.StringVar(value="All")
         self.tag_cat_combo = SearchableCombobox(

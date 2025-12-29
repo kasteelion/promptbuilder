@@ -192,10 +192,13 @@ class CollapsibleFrame(ttk.Frame):
         self._header.grid(row=0, column=0, sticky="ew")
         
         # Explicitly set background for the header frame if needed - Refactor 3
+        # Use semantic theme lookups
+        theme = {}
         try:
-            style = ttk.Style()
-            panel_bg = style.lookup("TFrame", "background")
-            accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
+            tm = parent.winfo_toplevel().theme_manager
+            theme = tm.themes.get(tm.current_theme, {})
+            panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            accent = theme.get("accent", "#0078d7")
         except:
             panel_bg = "#1e1e1e"
             accent = "#0078d7"
@@ -212,9 +215,12 @@ class CollapsibleFrame(ttk.Frame):
             relief="flat",
             anchor="w",
             padx=5,
-            cursor="hand2"
+            cursor="hand2",
+            activebackground=panel_bg,
+            activeforeground=accent
         )
         self._toggle_btn.grid(row=0, column=0, sticky="ew")
+        self._toggle_btn._base_bg = panel_bg
         
         # Container for header actions (to prevent cut-off)
         self._actions = ttk.Frame(self._header, style="TFrame")
@@ -303,7 +309,8 @@ class CollapsibleFrame(ttk.Frame):
         accent = theme.get("accent", theme.get("fg", "#0078d7"))
         panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
         
-        self._toggle_btn.config(bg=panel_bg, fg=accent)
+        self._toggle_btn.config(bg=panel_bg, fg=accent, activebackground=panel_bg, activeforeground=accent)
+        self._toggle_btn._base_bg = panel_bg
         
         for frame, lbl in self.pill_buttons:
             frame.config(bg=accent)
