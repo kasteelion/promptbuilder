@@ -421,10 +421,10 @@ class PromptBuilderApp:
             self.preview_collapsible.set_opened(state)
             self.right_scroll_container.update_scroll_region()
 
-        # Get panel background safely for manual button overrides
         theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
         panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
         muted_fg = theme.get("border", "gray")
+        self._last_panel_bg = panel_bg # Store for hover logic
 
         self.collapse_all_btn = tk.Button(controls_frame, text="COLLAPSE ALL", 
                    command=lambda: _set_all_collapsible(False), 
@@ -445,7 +445,7 @@ class PromptBuilderApp:
             except: hbg = "#333333"
             b.config(bg=hbg)
         def on_btn_leave(e, b):
-            b.config(bg=panel_bg)
+            b.config(bg=getattr(self, "_last_panel_bg", "#1e1e1e"))
             
         for b in [self.collapse_all_btn, self.expand_all_btn]:
             b.bind("<Enter>", lambda e, btn=b: on_btn_enter(e, btn))
@@ -778,6 +778,7 @@ class PromptBuilderApp:
         """
         theme = self.theme_manager.apply_theme(theme_name)
         panel_bg = theme.get("panel_bg", theme["bg"])
+        self._last_panel_bg = panel_bg # Update stored background for hover logic
 
         # Manual updates for remaining non-modular components
         if hasattr(self, "collapse_all_btn"):
