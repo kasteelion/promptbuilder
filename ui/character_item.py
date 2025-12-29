@@ -377,11 +377,26 @@ class CharacterItem(ttk.Frame):
         self.solo_rand_btn = tk.Button(
             move_frame, text="🎲 SOLO RANDOMIZE", width=18, command=self._solo_randomize,
             bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=2,
-            relief="flat", font=("Lexend", 8, "bold")
+            relief="flat", font=("Lexend", 8, "bold"),
+            cursor="hand2", # Use hand cursor
+            activebackground=panel_bg,
+            activeforeground=accent_color
         )
         self.solo_rand_btn.pack(side="left", padx=(10, 2))
-        self.solo_rand_btn.bind("<Enter>", lambda e: self.solo_rand_btn.config(bg=self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")))
-        self.solo_rand_btn.bind("<Leave>", lambda e: self.solo_rand_btn.config(bg=self._last_pbg))
+        
+        def _on_solo_enter(e):
+            if not self.theme_manager: return
+            try:
+                theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                hbg = theme.get("hover_bg", "#333333")
+                self.solo_rand_btn.config(bg=hbg)
+            except: pass
+            
+        def _on_solo_leave(e):
+            self.solo_rand_btn.config(bg=getattr(self, "_last_pbg", "#1e1e1e"))
+
+        self.solo_rand_btn.bind("<Enter>", _on_solo_enter)
+        self.solo_rand_btn.bind("<Leave>", _on_solo_leave)
 
         # Remove uses Link style override - Refactor 5: Lexend
         self.remove_btn = tk.Button(
@@ -499,30 +514,106 @@ class CharacterItem(ttk.Frame):
         else:
             self.config(style="Card.TFrame")
 
-    def _update_theme_overrides(self, theme):
-        """Update manual button overrides when theme changes. (Refactor 3)"""
-        accent_color = self.char_def.get("signature_color", theme.get("accent", "#0078d7"))
-        if not str(accent_color).startswith("#"): accent_color = theme.get("accent", "#0078d7")
-        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
-        self._last_pbg = panel_bg # Store for hover restoration
+        def _update_theme_overrides(self, theme):
 
-        # Update sig pill - Refactor 6
-        if hasattr(self, "sig_pill_frame"):
-            accent = theme.get("accent", "#0078d7")
-            self.sig_pill_frame.config(bg=accent)
-            self.sig_pill_lbl.config(bg=panel_bg, fg=accent)
-            self.sig_pill_lbl._base_bg = panel_bg
-            self.sig_pill_lbl.config(text=f"✓ USE SIGNATURE COLOR" if self.sig_var.get() else "USE SIGNATURE COLOR")
+            """Update manual button overrides when theme changes. (Refactor 3)"""
 
-        # Update nested comboboxes - Refactor 3
-        for cb in ["outfit_cat_combo", "outfit_combo", "pcat_combo", "preset_combo"]:
-            if hasattr(self, cb):
-                getattr(self, cb).apply_theme(theme)
+            accent_color = self.char_def.get("signature_color", theme.get("accent", "#0078d7"))
 
-        # Update Ghost buttons
-        for btn in self.controls_frame.winfo_children():
-            if isinstance(btn, tk.Button):
-                if "↑" in btn.cget("text") or "↓" in btn.cget("text"):
-                    btn.config(bg=panel_bg, fg=accent_color, highlightbackground=accent_color)
-                elif "✕" in btn.cget("text"):
-                    btn.config(bg=panel_bg) # Link button stays muted gray/red
+            if not str(accent_color).startswith("#"): accent_color = theme.get("accent", "#0078d7")
+
+            panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+
+            border = theme.get("border", "#333333")
+
+            fg = theme.get("fg", "white")
+
+            self._last_pbg = panel_bg # Store for hover restoration
+
+    
+
+            # Update Header
+
+            if hasattr(self, "header"):
+
+                self.header.config(bg=panel_bg)
+
+            if hasattr(self, "toggle_indicator"):
+
+                self.toggle_indicator.config(foreground=theme.get("border", "gray"))
+
+            if hasattr(self, "title_label"):
+
+                self.title_label.config(foreground=fg)
+
+            if hasattr(self, "drag_handle"):
+
+                self.drag_handle.config(foreground=theme.get("border", "gray"))
+
+    
+
+            # Update swatch border
+
+            if hasattr(self, "swatch"):
+
+                self.swatch.config(highlightbackground=border)
+
+    
+
+            # Update sig pill - Refactor 6
+
+            if hasattr(self, "sig_pill_frame"):
+
+                accent = theme.get("accent", "#0078d7")
+
+                self.sig_pill_frame.config(bg=accent)
+
+                self.sig_pill_lbl.config(bg=panel_bg, fg=accent)
+
+                self.sig_pill_lbl._base_bg = panel_bg
+
+                self.sig_pill_lbl.config(text=f"✓ USE SIGNATURE COLOR" if self.sig_var.get() else "USE SIGNATURE COLOR")
+
+    
+
+            # Update nested comboboxes - Refactor 3
+
+            for cb in ["outfit_cat_combo", "outfit_combo", "pcat_combo", "preset_combo", "framing_combo"]:
+
+                if hasattr(self, cb):
+
+                    getattr(self, cb).apply_theme(theme)
+
+    
+
+            # Update manual buttons (Move Up/Down/Solo)
+
+            if hasattr(self, "solo_rand_btn"):
+
+                self.solo_rand_btn.config(bg=panel_bg, fg=accent_color, highlightbackground=accent_color, activebackground=panel_bg, activeforeground=accent_color)
+
+                
+
+            # Update Move buttons
+
+            for child in self.controls_frame.winfo_children():
+
+                # Buttons might be nested in move_frame
+
+                if isinstance(child, ttk.Frame):
+
+                    for sub in child.winfo_children():
+
+                        if isinstance(sub, tk.Button) and any(x in sub.cget("text") for x in ["↑", "↓"]):
+
+                            sub.config(bg=panel_bg, fg=accent_color, highlightbackground=accent_color, activebackground=panel_bg, activeforeground=accent_color)
+
+    
+
+            # Update Remove Button
+
+            if hasattr(self, "remove_btn"):
+
+                self.remove_btn.config(bg=panel_bg, fg=theme.get("border", "gray"), activebackground=panel_bg)
+
+    

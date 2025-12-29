@@ -592,6 +592,9 @@ class SearchableCombobox(ttk.Frame):
 
     def set(self, value):
         """Set current value."""
+        if not hasattr(self, "entry") or not self.entry.winfo_exists():
+            return
+
         if value:
             self._selected_value.set(value)
             self.entry.config(foreground="")
