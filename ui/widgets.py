@@ -31,6 +31,7 @@ class ScrollableCanvas(ttk.Frame):
         self.container = ttk.Frame(self.canvas, style="TFrame")
         
         self._scroll_after_id = None # Debounce tracking for scroll region updates
+        self._resize_after_id = None # Debounce tracking for canvas width updates
 
         # Create canvas window and sync width
         self._window = self.canvas.create_window((0, 0), window=self.container, anchor="nw")
@@ -38,10 +39,21 @@ class ScrollableCanvas(ttk.Frame):
 
         # Bind canvas width to window width for proper wrapping and filling
         def update_window_width(event):
-            # Ensure the inner container fills the canvas width
-            self.canvas.itemconfig(self._window, width=event.width)
-            # Update scroll region when canvas resizes
-            self.after_idle(self.update_scroll_region)
+            if self._resize_after_id:
+                self.after_cancel(self._resize_after_id)
+            
+            def _do_resize():
+                try:
+                    if self.canvas.winfo_exists():
+                        # Ensure the inner container fills the canvas width
+                        self.canvas.itemconfig(self._window, width=event.width)
+                        # Update scroll region when canvas resizes
+                        self.update_scroll_region()
+                except Exception: pass
+                self._resize_after_id = None
+
+            # Small 20ms debounce to prevent layout thrashing during movement
+            self._resize_after_id = self.after(20, _do_resize)
 
         self.canvas.bind("<Configure>", update_window_width)
 

@@ -344,7 +344,7 @@ class PromptBuilderApp:
         self.character_gallery.pack(fill="both", expand=True)
 
         if self.gallery_visible:
-            self.main_paned.add(self.gallery_frame, width=300) 
+            self.main_paned.add(self.gallery_frame, width=300, minsize=200) 
 
         # Use PanedWindow directly for main content
         paned = tk.PanedWindow(
@@ -356,11 +356,11 @@ class PromptBuilderApp:
             sashrelief="flat",
             showhandle=False
         )
-        self.main_paned.add(paned) 
+        self.main_paned.add(paned, minsize=400) 
 
         # Left side: Notebook with tabs
         self.notebook = ttk.Notebook(paned, style="TNotebook")
-        paned.add(self.notebook, width=550) 
+        paned.add(self.notebook, width=550, minsize=300) 
 
         # Create tabs
         self.characters_tab = CharactersTab(
@@ -402,7 +402,7 @@ class PromptBuilderApp:
 
         # Right side: Scrollable container for collapsible sections
         self.right_scroll_container = ScrollableCanvas(paned)
-        paned.add(self.right_scroll_container) 
+        paned.add(self.right_scroll_container, minsize=250) 
         right_frame = self.right_scroll_container.get_container()
         right_frame.columnconfigure(0, weight=1)
 
