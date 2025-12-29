@@ -124,13 +124,12 @@ class LiteCharactersTab(CharactersTab):
 
         # Helper for Pill Toggle (copied from original)
         def add_pill_toggle(parent, text, variable, command=None, tooltip=None):
-            try:
-                style = ttk.Style()
-                pbg = style.lookup("TFrame", "background")
-                accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
-            except:
-                pbg = "#1e1e1e"
-                accent = "#0078d7"
+            # Get current theme colors
+            theme = self.tab.winfo_toplevel().theme_manager.themes.get(
+                self.tab.winfo_toplevel().theme_manager.current_theme, {}
+            )
+            pbg = theme.get("panel_bg", "#1e1e1e")
+            accent = theme.get("accent", "#0078d7")
                 
             frame = tk.Frame(parent, bg=accent, padx=1, pady=1)
             initial_text = f"✓ {text}" if variable.get() else text
@@ -147,13 +146,12 @@ class LiteCharactersTab(CharactersTab):
             def on_e(e, l=lbl):
                 try:
                     tm = self.tab.winfo_toplevel().theme_manager
-                    theme = tm.themes.get(tm.current_theme, {})
-                    hbg = theme.get("hover_bg", "#333333")
+                    curr_theme = tm.themes.get(tm.current_theme, {})
+                    hbg = curr_theme.get("hover_bg", "#333333")
                 except: hbg = "#333333"
                 l.config(bg=hbg)
             def on_l(e, l=lbl):
-                try: l.config(bg=ttk.Style().lookup("TFrame", "background"))
-                except: l.config(bg=l._base_bg)
+                l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
                 
             lbl.bind("<Button-1>", toggle)
             lbl.bind("<Enter>", on_e)
@@ -208,8 +206,22 @@ class LiteCharactersTab(CharactersTab):
         ttk.Button(btn_frame, text="✓ Apply to All", command=self._apply_bulk_to_all).grid(row=0, column=0, sticky="ew", padx=(0, 4))
         ttk.Button(btn_frame, text="✓ Apply to Selected", command=self._apply_bulk_to_selected).grid(row=0, column=1, sticky="ew", padx=2)
         
-        self.create_shared_btn = tk.Button(btn_frame, text="✨ Create Shared Outfit", command=self._create_shared_outfit, relief="flat", font=("Lexend", 9))
+        self.create_shared_btn = tk.Button(
+            btn_frame, 
+            text="✨ Create Shared Outfit", 
+            command=self._create_shared_outfit, 
+            bg=pbg,
+            fg=accent,
+            highlightbackground=accent,
+            highlightthickness=2,
+            relief="flat", 
+            font=("Lexend", 9)
+        )
         self.create_shared_btn.grid(row=0, column=2, sticky="ew", padx=(4, 0))
+        self.create_shared_btn._base_bg = pbg
+        
+        self.create_shared_btn.bind("<Enter>", lambda e: self.create_shared_btn.config(bg=theme.get("hover_bg", "#333333")))
+        self.create_shared_btn.bind("<Leave>", lambda e: self.create_shared_btn.config(bg=getattr(self.create_shared_btn, "_base_bg", "#1e1e1e")))
 
 
         # 3. Add Character (MODIFIED with Tagging)
@@ -230,6 +242,7 @@ class LiteCharactersTab(CharactersTab):
         self.tag_category_var = tk.StringVar(value="All")
         self.tag_cat_combo = SearchableCombobox(
             tag_frame,
+            theme_manager=self.theme_manager, # Pass theme manager
             textvariable=self.tag_category_var,
             on_select=lambda val: self._update_tag_list(),
             placeholder="Category...",
@@ -241,6 +254,7 @@ class LiteCharactersTab(CharactersTab):
         self.tag_var = tk.StringVar()
         self.tag_combo = SearchableCombobox(
             tag_frame,
+            theme_manager=self.theme_manager, # Pass theme manager
             textvariable=self.tag_var,
             on_select=self._add_selected_tag,
             placeholder="Filter by tag...",
@@ -280,8 +294,28 @@ class LiteCharactersTab(CharactersTab):
             row=0, column=0, sticky="ew", padx=(0, 4)
         )
         
-        self.create_char_btn = tk.Button(button_frame, text="✨ Create New Character", command=self._create_new_character, relief="flat", font=("Lexend", 9))
+        theme = self.tab.winfo_toplevel().theme_manager.themes.get(
+            self.tab.winfo_toplevel().theme_manager.current_theme, {}
+        )
+        pbg = theme.get("panel_bg", "#1e1e1e")
+        accent = theme.get("accent", "#0078d7")
+
+        self.create_char_btn = tk.Button(
+            button_frame, 
+            text="✨ Create New Character", 
+            command=self._create_new_character, 
+            bg=pbg,
+            fg=accent,
+            highlightbackground=accent,
+            highlightthickness=2,
+            relief="flat", 
+            font=("Lexend", 9)
+        )
         self.create_char_btn.grid(row=0, column=1, sticky="ew", padx=(4, 0))
+        self.create_char_btn._base_bg = pbg
+        
+        self.create_char_btn.bind("<Enter>", lambda e: self.create_char_btn.config(bg=theme.get("hover_bg", "#333333")))
+        self.create_char_btn.bind("<Leave>", lambda e: self.create_char_btn.config(bg=getattr(self.create_char_btn, "_base_bg", "#1e1e1e")))
 
 
         # 4. Selected Characters List (Same as original)

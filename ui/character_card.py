@@ -236,6 +236,10 @@ class CharacterCard(ttk.Frame):
             tags_frame = FlowFrame(container, padding_x=2, padding_y=2)
             tags_frame.pack(pady=(0, 10), fill="x")
             
+            # Get theme colors
+            pbg = self.theme_colors.get("panel_bg", "#1e1e1e")
+            accent = self.theme_colors.get("accent", "#0078d7")
+
             for t in tags:
                 pill = tk.Frame(tags_frame, bg=accent, padx=1, pady=1)
                 lbl = tk.Label(
@@ -249,6 +253,18 @@ class CharacterCard(ttk.Frame):
                     cursor="hand2"
                 )
                 lbl.pack()
+                lbl._base_bg = pbg
+                
+                def on_tag_enter(e, l=lbl):
+                    try:
+                        hbg = self.theme_colors.get("hover_bg", "#333333")
+                    except: hbg = "#333333"
+                    l.config(bg=hbg)
+                def on_tag_leave(e, l=lbl):
+                    l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
+                
+                lbl.bind("<Enter>", on_tag_enter)
+                lbl.bind("<Leave>", on_tag_leave)
                 lbl.bind("<Button-1>", lambda e, v=t: self._handle_tag_click(v))
                 tags_frame._children.append(pill)
             
@@ -968,10 +984,16 @@ class CharacterGalleryPanel(ttk.Frame):
         tag_frame.columnconfigure(1, weight=1)
         tag_frame.columnconfigure(3, weight=1)
 
+        # Get current theme colors for manual overrides if needed
+        theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+        pbg = theme.get("panel_bg", "#1e1e1e")
+        accent = theme.get("accent", "#0078d7")
+
         ttk.Label(tag_frame, text="Cat:", style="Muted.TLabel").grid(row=0, column=0, sticky="w")
         self.tag_category_var = tk.StringVar(value="All")
         self.tag_cat_combo = SearchableCombobox(
             tag_frame,
+            theme_manager=self.theme_manager, # Pass theme manager
             textvariable=self.tag_category_var,
             on_select=lambda val: self._update_tag_list(),
             placeholder="Category...",
@@ -983,6 +1005,7 @@ class CharacterGalleryPanel(ttk.Frame):
         self.tag_var = tk.StringVar()
         self.tag_combo = SearchableCombobox(
             tag_frame,
+            theme_manager=self.theme_manager, # Pass theme manager
             textvariable=self.tag_var,
             on_select=self._add_selected_tag,
             placeholder="Search tag...",

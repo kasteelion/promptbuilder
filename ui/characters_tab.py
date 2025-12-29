@@ -269,13 +269,12 @@ class CharactersTab:
 
         # Helper for Pill Toggle buttons in CharactersTab
         def add_pill_toggle(parent, text, variable, command=None, tooltip=None):
-            try:
-                style = ttk.Style()
-                pbg = style.lookup("TFrame", "background")
-                accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
-            except:
-                pbg = "#1e1e1e"
-                accent = "#0078d7"
+            # Get current theme colors
+            theme = self.tab.winfo_toplevel().theme_manager.themes.get(
+                self.tab.winfo_toplevel().theme_manager.current_theme, {}
+            )
+            pbg = theme.get("panel_bg", "#1e1e1e")
+            accent = theme.get("accent", "#0078d7")
                 
             frame = tk.Frame(parent, bg=accent, padx=1, pady=1)
             
@@ -298,13 +297,12 @@ class CharactersTab:
             def on_e(e, l=lbl):
                 try:
                     tm = self.tab.winfo_toplevel().theme_manager
-                    theme = tm.themes.get(tm.current_theme, {})
-                    hbg = theme.get("hover_bg", "#333333")
+                    curr_theme = tm.themes.get(tm.current_theme, {})
+                    hbg = curr_theme.get("hover_bg", "#333333")
                 except: hbg = "#333333"
                 l.config(bg=hbg)
             def on_l(e, l=lbl):
-                try: l.config(bg=ttk.Style().lookup("TFrame", "background"))
-                except: l.config(bg=l._base_bg)
+                l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
                 
             lbl.bind("<Button-1>", toggle)
             lbl.bind("<Enter>", on_e)
@@ -385,29 +383,35 @@ class CharactersTab:
             btn_frame, text="✓ Apply to Selected", command=self._apply_bulk_to_selected
         ).grid(row=0, column=1, sticky="ew", padx=2)
         # Refactor 3: Ghost style for Create Shared Outfit
-        pbg = self.theme_colors.get("panel_bg", "#ffffff") if hasattr(self, "theme_colors") else "#ffffff"
+        theme = self.tab.winfo_toplevel().theme_manager.themes.get(
+            self.tab.winfo_toplevel().theme_manager.current_theme, {}
+        )
+        pbg = theme.get("panel_bg", "#1e1e1e")
+        accent = theme.get("accent", "#0078d7")
+        
         self.create_shared_btn = tk.Button(
             btn_frame, 
             text="✨ Create Shared Outfit", 
             command=self._create_shared_outfit,
             bg=pbg,
-            fg="#0078d7", # Fallback, will be updated by apply_theme
+            fg=accent,
+            highlightbackground=accent,
             highlightthickness=2, # Increased thickness
             relief="flat",
             font=("Lexend", 9) # Refactor 5
         )
         self.create_shared_btn.grid(row=0, column=2, sticky="ew", padx=(4, 0))
+        self.create_shared_btn._base_bg = pbg
         
         def on_shared_enter(e):
             try:
                 tm = self.tab.winfo_toplevel().theme_manager
-                theme = tm.themes.get(tm.current_theme, {})
-                hbg = theme.get("hover_bg", "#333333")
+                curr_theme = tm.themes.get(tm.current_theme, {})
+                hbg = curr_theme.get("hover_bg", "#333333")
             except: hbg = "#333333"
             self.create_shared_btn.config(bg=hbg)
         def on_shared_leave(e): 
-            bg = getattr(self, "_last_pbg", "#ffffff")
-            self.create_shared_btn.config(bg=bg)
+            self.create_shared_btn.config(bg=getattr(self.create_shared_btn, "_base_bg", "#1e1e1e"))
         self.create_shared_btn.bind("<Enter>", on_shared_enter)
         self.create_shared_btn.bind("<Leave>", on_shared_leave)
 
