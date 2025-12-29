@@ -106,10 +106,13 @@ class CharacterCard(ttk.Frame):
             # Show "Added" indicator
             if not hasattr(self, "used_label"):
                 accent = self.theme_colors.get("accent", "#0078d7")
+                # Use a color that contrasts well with the photo background, 
+                # but try to stick to theme values if possible. 
+                # Success green is standard, but let's make it slightly more themed.
                 self.used_label = tk.Label(
                     self.photo_canvas, 
                     text="✓", 
-                    bg="#4caf50", # Keep green for success/added
+                    bg=accent, 
                     fg="white", 
                     font=("Lexend", 10, "bold")
                 )
@@ -617,11 +620,12 @@ class CharacterCard(ttk.Frame):
             # Show placeholder if PIL not available
             self.photo_canvas.delete("all")
             center = CHARACTER_CARD_SIZE // 2
+            fg_color = self.theme_colors.get("fg", "#666666")
             self.photo_canvas.create_text(
                 center,
                 center,
                 text="📷\nPIL not\ninstalled",
-                fill=self.theme_colors.get("fg", "#666666"),
+                fill=fg_color,
                 font=("Lexend", 8),
                 justify="center",
             )
@@ -862,9 +866,10 @@ class CharacterGalleryPanel(ttk.Frame):
         self.search_entry.insert(0, "SEARCH...")
         
         # Clear search button (X)
+        pbg = self.theme_colors.get("text_bg", self.theme_colors.get("bg", "#1e1e1e"))
         self.search_clear_btn = tk.Label(
             search_frame, text="✕", font=("Arial", 8), 
-            fg="gray", cursor="hand2", bg=self.theme_colors.get("text_bg", "#1e1e1e")
+            fg="gray", cursor="hand2", bg=pbg
         )
         self.search_clear_btn.bind("<Button-1>", lambda e: self._clear_search())
         

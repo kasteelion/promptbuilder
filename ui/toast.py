@@ -63,15 +63,21 @@ class ToastManager:
         # Simple color mapping per level
         bg = self.bg
         fg = self.fg
+        
+        # Pull theme if available for level-specific overrides
+        theme = {}
+        if self.theme_manager:
+            theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+
         if level == "success":
             bg = self.accent
             fg = "#ffffff"
         elif level == "error":
-            bg = "#b00020"
+            bg = theme.get("error", "#b00020")
             fg = "#ffffff"
         elif level == "warning":
-            bg = "#e07b00"
-            fg = "#000000"
+            bg = theme.get("warning", "#e07b00")
+            fg = theme.get("text_bg", "#000000")
 
         # Use a label with wrap
         lbl = tk.Label(frm, text=message, justify="left", wraplength=380, bg=bg, fg=fg)

@@ -81,9 +81,11 @@ class CharacterItem(ttk.Frame):
         sig_color = self.char_def.get("signature_color", "")
         if sig_color:
             try:
+                # Use theme border color
+                border_color = theme.get("border", "#666666")
                 self.swatch = tk.Canvas(self.header, width=12, height=12, 
                                       bg=sig_color, highlightthickness=1, 
-                                      highlightbackground="#666666", cursor="hand2")
+                                      highlightbackground=border_color, cursor="hand2")
                 self.swatch.pack(side="left", padx=10)
                 from utils import create_tooltip
                 create_tooltip(self.swatch, f"Signature Color: {sig_color}")
@@ -385,7 +387,7 @@ class CharacterItem(ttk.Frame):
         self.remove_btn = tk.Button(
             footer, text="✕ REMOVE CHARACTER", command=lambda: self.callbacks["remove_character"](self.index),
             bg=panel_bg, fg=muted_fg, borderwidth=0, relief="flat", font=("Lexend", 8, "bold"),
-            activeforeground="red"
+            activeforeground=accent_color
         )
         self.remove_btn.pack(side="right")
 

@@ -78,17 +78,17 @@ class CharacterCreatorDialog:
         
         # Update cancel btn manual overrides
         if hasattr(self, "cancel_btn"):
-            self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground="gray")
+            border_color = theme.get("border", "gray")
+            self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground=border_color)
             self.cancel_btn._base_bg = pbg
 
         # Handle placeholders
         for text_widget in [self.appearance_text, self.outfit_text]:
-            if "skin tone" in text_widget.get("1.0", "2.0").lower() or "- **top:**" in text_widget.get("1.0", "2.0").lower():
-                try:
-                    tm = self.parent.theme_manager
-                    theme = tm.themes.get(tm.current_theme, {})
-                    pfg = theme.get("placeholder_fg", "#666666")
-                except: pfg = "#666666"
+            # Simple check if content is still the placeholder
+            # If so, use placeholder color
+            content = text_widget.get("1.0", "end").strip()
+            if not content or "[Skin tone]" in content or "- **Top:**" in content:
+                pfg = theme.get("placeholder_fg", "#666666")
                 text_widget.config(foreground=pfg)
             else:
                 text_widget.config(foreground=theme.get("text_fg", "white"))

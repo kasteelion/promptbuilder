@@ -85,6 +85,7 @@ class SearchableCombobox(ttk.Frame):
         self._update_clear_btn_visibility()
 
         # Get initial colors from theme if available
+        # Default fallbacks if no theme loaded
         panel_bg = "#1e1e1e"
         accent = "#0078d7"
         border = "#333333"
@@ -92,16 +93,17 @@ class SearchableCombobox(ttk.Frame):
         
         if self.theme_manager and self.theme_manager.current_theme in self.theme_manager.themes:
             theme = self.theme_manager.themes[self.theme_manager.current_theme]
-            panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
-            accent = theme.get("accent", "#0078d7")
+            panel_bg = theme.get("panel_bg", theme.get("bg", panel_bg))
+            accent = theme.get("accent", accent)
             border = theme.get("border", panel_bg)
-            sel_bg = theme.get("hover_bg", theme.get("selected_bg", "#333333"))
+            sel_bg = theme.get("hover_bg", theme.get("selected_bg", border))
         else:
             try:
                 style = ttk.Style()
-                panel_bg = style.lookup("TFrame", "background")
-                accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
+                panel_bg = style.lookup("TFrame", "background") or panel_bg
+                accent = style.lookup("Tag.TLabel", "bordercolor") or accent
                 border = style.lookup("Card.TFrame", "bordercolor") or accent
+                sel_bg = style.lookup("TNotebook.Tab", "background", [("selected", "")]) or border
             except: pass
 
         # Dropdown button - Refactor 3: Ghost style

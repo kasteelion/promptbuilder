@@ -67,6 +67,7 @@ class SummaryPanel(CollapsibleFrame):
         theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
         bg = theme.get("text_bg", theme.get("bg", "#ffffff"))
         fg = theme.get("text_fg", theme.get("fg", "#000000"))
+        # Re-apply theme correctly
         self.text.config(background=bg, foreground=fg, insertbackground=fg)
 
     def _on_change(self, event):

@@ -95,16 +95,22 @@ class NotesPanel(CollapsibleFrame):
         action_frame = ttk.Frame(control, style="TFrame")
         action_frame.grid(row=1, column=0, columnspan=4, sticky="ew", pady=(10, 0))
         
+        # Get initial colors from theme if possible
+        theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+        accent = theme.get("accent", "#0078d7")
+        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+
         def add_pill(text, command):
             # Styling is handled by apply_theme via registry
-            pill = tk.Frame(action_frame, bg="#0078d7", padx=1, pady=1)
+            pill = tk.Frame(action_frame, bg=accent, padx=1, pady=1)
             pill.pack(side="left", padx=(0, 6))
             
             lbl = tk.Label(
-                pill, text=text, bg="#1e1e1e", fg="#0078d7",
+                pill, text=text, bg=panel_bg, fg=accent,
                 font=("Lexend", 8, "bold"), padx=10, pady=2, cursor="hand2"
             )
             lbl.pack()
+            lbl._base_bg = panel_bg
             
             def on_e(e, l=lbl):
                 try:

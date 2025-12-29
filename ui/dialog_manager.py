@@ -353,7 +353,9 @@ class DialogManager:
             # Formatting tags
             detail_text.tag_configure("title", font=("Lexend", 14, "bold"), foreground=self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}).get("accent", "#0078d7"))
             detail_text.tag_configure("bold", font=("Lexend", 10, "bold"))
-            detail_text.tag_configure("muted", foreground="gray")
+            tm = self.root.theme_manager
+            theme = tm.themes.get(tm.current_theme, {})
+            detail_text.tag_configure("muted", foreground=theme.get("border", "gray"))
 
             populate_tree()
             
@@ -414,7 +416,8 @@ class DialogManager:
                 
                 # Color Swatch
                 try:
-                    swatch = tk.Frame(row, width=20, height=20, bg=val, highlightthickness=1, highlightbackground="gray")
+                    border_color = self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}).get("border", "gray")
+                    swatch = tk.Frame(row, width=20, height=20, bg=val, highlightthickness=1, highlightbackground=border_color)
                     swatch.pack(side="left", padx=5)
                 except: pass
                 
