@@ -698,6 +698,11 @@ class PromptBuilderApp:
 
         Args:
             theme_name: Name of new theme
+    def _change_theme(self, theme_name):
+        """Handle theme change from menu.
+
+        Args:
+            theme_name: Name of new theme
         """
         if hasattr(self, "menu_manager") and self.menu_manager:
             self.menu_manager.set_theme(theme_name)
