@@ -34,7 +34,7 @@ class TextParser:
         
         # Comprehensive list of labels that mark the start of a new field
         ALL_LABELS = [
-            "Base:", "Scene:", "Outfit:", "Colors?:", "Sig:", "Pose:", "Note:", 
+            "Base:", "Scene:", "Outfit:", "Traits:", "Colors?:", "Sig:", "Pose:", "Note:", 
             "Notes?:", "---", r"\[\d+\]"
         ]
 
@@ -76,6 +76,7 @@ class TextParser:
                 char_entry = {
                     "name": name,
                     "outfit": "Base",
+                    "outfit_traits": [],
                     "pose_category": "",
                     "pose_preset": "",
                     "action_note": "",
@@ -84,6 +85,11 @@ class TextParser:
                 }
                 
                 char_entry["outfit"] = get_field("Outfit:", block)
+                
+                traits_val = get_field("Traits:", block)
+                if traits_val:
+                    char_entry["outfit_traits"] = [t.strip() for t in traits_val.split(",") if t.strip()]
+                
                 char_entry["pose_preset"] = get_field("Pose:", block)
                 char_entry["action_note"] = get_field("Note:", block)
                 char_entry["color_scheme"] = get_field("Colors?:", block)

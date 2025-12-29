@@ -13,7 +13,7 @@ def generate_llm_export_text(ctx: Any) -> str:
         "Output MUST be in this specific format for the app to parse it.",
         "Each character has a modifier that notes whether a character is male, female, or hijabi, and the program automatically adjusts accordingly.",
         "Each character has, in addition to the outfits listed below, a default outfit that is casual and true to the character, and that outfit is just called 'Base'",
-        "Some athletic poses may be hard to for a text to image model to interpret, so make sure that if you expect a pose to be complex to write the pose carefully with attention to anatomical detail."
+        "Some athletic poses may be hard for a text to image model to interpret, so make sure that if you expect a pose to be complex to write the pose carefully with attention to anatomical detail.",
         "IMPORTANT: Each field (Outfit, Pose, etc.) SHOULD be on its own new line for best results.",
         "",
         "### PROMPT CONFIG ###",
@@ -22,6 +22,7 @@ def generate_llm_export_text(ctx: Any) -> str:
         "---",
         "[1] [Character Name]",
         "Outfit: [Outfit Name]",
+        "Traits: [Trait1, Trait2]",
         "Colors: [Color Scheme Name]",
         "Sig: [Yes or No]",
         "Pose: [Pose Name]",
@@ -31,10 +32,12 @@ def generate_llm_export_text(ctx: Any) -> str:
         "RULES:",
         "- Use [1], [2], [3] to start each character block.",
         "- Character and Outfit names must match the catalog exactly.",
+        "- 'Traits' are specialized gear (e.g. Libero, Facemask) found in the OUTFIT MODIFIERS section.",
         "- 'Sig: Yes' applies the character's unique signature color to the outfit.",
         "- If a pose is not in the presets, write a custom description in the 'Pose' field.",
         "- Outfits marked with (🎨) support 'Colors: [Scheme]'.",
         "- Outfits marked with (✨) support 'Sig: Yes'.",
+        "- Outfits marked with (🛠️) support 'Traits: [Trait]'.",
         "",
         "--- CATALOG BEGINS ---",
         ""
@@ -57,7 +60,7 @@ def generate_llm_export_text(ctx: Any) -> str:
 
     # 4. Outfits (Consolidated)
     lines.append("## OUTFIT LIBRARY")
-    lines.append("Legend: 🎨 = Supports Team Colors, ✨ = Supports Signature Color")
+    lines.append("Legend: 🎨 = Supports Team Colors, ✨ = Supports Signature Color, 🛠️ = Supports Specialized Traits")
     
     outfit_data = generate_consolidated_outfit_data()
     for cat_name in sorted(outfit_data.keys()):
@@ -68,6 +71,7 @@ def generate_llm_export_text(ctx: Any) -> str:
             indicators = ""
             if data["has_color_scheme"]: indicators += " 🎨"
             if data["has_signature"]: indicators += " ✨"
+            if data.get("has_modifier"): indicators += " 🛠️"
             lines.append(f"  * {out_name}{indicators}")
     lines.append("")
 
@@ -81,6 +85,12 @@ def generate_llm_export_text(ctx: Any) -> str:
     # 6. Color Schemes
     lines.append("## TEAM COLOR SCHEMES (Apply to 🎨 outfits)")
     lines.append(", ".join(sorted(ctx.color_schemes.keys())))
+
+    # 7. Modifiers
+    lines.append("\n## OUTFIT MODIFIERS (Apply to 🛠️ outfits)")
+    lines.append("Format: Trait Name")
+    for mod_name in sorted(ctx.modifiers.keys()):
+        lines.append(f"- {mod_name}")
     
     lines.append("\n--- CATALOG ENDS ---")
     

@@ -76,6 +76,21 @@ class CharacterItem(ttk.Frame):
         self.title_label = ttk.Label(self.header, text=title_text, style="Bold.TLabel")
         self.title_label.pack(side="left")
         
+        # Signature color swatch (new)
+        sig_color = self.char_def.get("signature_color", "")
+        if sig_color:
+            try:
+                self.swatch = tk.Canvas(self.header, width=12, height=12, 
+                                      bg=sig_color, highlightthickness=1, 
+                                      highlightbackground="#666666", cursor="hand2")
+                self.swatch.pack(side="left", padx=10)
+                from utils import create_tooltip
+                create_tooltip(self.swatch, f"Signature Color: {sig_color}")
+                # Also bind toggle to swatch
+                self.swatch.bind("<Button-1>", lambda e: self.toggle_collapse())
+            except Exception:
+                pass # Invalid color format
+        
         # Indicator - Refactor 3
         self.toggle_indicator = ttk.Label(self.header, text="▼" if self._expanded else "▶", style="Muted.TLabel")
         self.toggle_indicator.pack(side="right", padx=5)

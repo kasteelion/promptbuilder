@@ -121,6 +121,7 @@ def wizard_main():
             new_char = {
                 "name": char_name,
                 "outfit": "Base",
+                "outfit_traits": [],
                 "pose_category": "General",
                 "pose_preset": "Standing",
                 "color_scheme": "The Standard",
@@ -129,6 +130,7 @@ def wizard_main():
 
             # Outfit Selection
             outfits_cat = char_data.get("outfits_categorized", {})
+            outfit = "Base"
             if outfits_cat:
                 cat_list = sorted(list(outfits_cat.keys()))
                 cat = get_choice(cat_list, f"Select Outfit Category for {char_name}", allow_cancel=True)
@@ -137,6 +139,26 @@ def wizard_main():
                     outfit = get_choice(outfit_list, f"Select {cat} Outfit", allow_cancel=True)
                     if outfit:
                         new_char["outfit"] = outfit
+            
+            # Modifier/Trait Selection
+            outfit_desc = str(char_data.get("outfits", {}).get(outfit, ""))
+            if "{modifier}" in outfit_desc and modifiers:
+                print_header("Select Specialized Traits")
+                print("Selected outfit supports modifiers. Select traits (Enter 'done' when finished):")
+                mod_keys = sorted(list(modifiers.keys()))
+                selected_traits = []
+                while True:
+                    choice = get_choice(mod_keys + ["Done selecting"], "Available Traits", allow_cancel=False)
+                    if choice == "Done selecting":
+                        break
+                    if choice not in selected_traits:
+                        selected_traits.append(choice)
+                        print(f"Added: {choice}")
+                    else:
+                        selected_traits.remove(choice)
+                        print(f"Removed: {choice}")
+                    print(f"Current selection: {', '.join(selected_traits) if selected_traits else 'None'}")
+                new_char["outfit_traits"] = selected_traits
 
             # Color Scheme
             scheme_names = sorted(list(schemes.keys()))

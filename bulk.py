@@ -315,6 +315,7 @@ def main():
     parser = argparse.ArgumentParser(description="Bulk Prompt Generator")
     parser.add_argument("input_file", nargs="?", help="Path to input text file")
     parser.add_argument("--demo", action="store_true", help="Run with demo text")
+    parser.add_argument("--output", "-o", help="Path to output text file")
     
     args = parser.parse_args()
     
@@ -353,14 +354,24 @@ def main():
     
     print(f"Found {len(raw_configs)} configs.\n")
     
+    all_prompts = []
     for idx, raw_conf in enumerate(raw_configs):
         resolved_conf = resolve_config(raw_conf, loader, poses)
         
         prompt = builder.generate(resolved_conf)
+        all_prompts.append(f"--- PROMPT {idx+1} ---\n{prompt}")
         
         print(f"--- PROMPT {idx+1} ---")
         print(prompt)
         print("\n\n")
+
+    if args.output:
+        try:
+            with open(args.output, "w", encoding="utf-8") as f:
+                f.write("\n\n".join(all_prompts))
+            print(f"Saved {len(all_prompts)} prompts to: {args.output}")
+        except Exception as e:
+            print(f"Error saving output file: {e}")
 
 if __name__ == "__main__":
     main()
