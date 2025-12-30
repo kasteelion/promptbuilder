@@ -52,12 +52,12 @@
 - **Bottom:** Black leather maxi skirt or wide-leg leather trousers
 - **Footwear:** Black heeled boots
 - **Accessories:** Black beret (worn over hijab), fingerless black leather gloves
-- **Makeup:** ((default:Red) or (signature)) lipstick, black winged eyeliner, ((default:red) or (signature)) eye shadow
+- **Makeup:** bold red lipstick, black winged eyeliner, subtle red eye shadow
 
 ### Cyber-Tactical Combat
 - **Hijab:** High-sheen technical jersey hijab in **{primary_color}** with a secure aerodynamic wrap and metallic **{accent}** trim
-- **Top:** **Mock-neck Compression Tunic** (a form-fitting, full-length modest base layer made of high-sheen **{primary_color}** technical fabric and reinforced nylon panels); **Reinforced Tactical Harness** (an integrated **{secondary_color}** midsection and torso harness with metallic buckle details and structured webbing)
-- **Bottom:** **Full-length Compression Leggings** with integrated **Asymmetrical Tech-Overlay** (laser-cut **{accent}** leather geometric patterns stitched down the outer thighs for a futuristic, armored silhouette)
+- **Top:** Mock-neck Compression Tunic (a form-fitting, full-length modest base layer made of high-sheen **{primary_color}** technical fabric and reinforced nylon panels); **Reinforced Tactical Harness** (an integrated **{secondary_color}** midsection and torso harness with metallic buckle details and structured webbing)
+- **Bottom:** Full-length Compression Leggings with integrated **Asymmetrical Tech-Overlay** (laser-cut **{accent}** leather geometric patterns stitched down the outer thighs for a futuristic, armored silhouette)
 - **Footwear:** Heavy-duty lace-up wrestling boots with reinforced shinguards
 - **Accessories:** Matching **{primary_color}** fingerless tactical gloves with metallic plating; a detachable high-collared entrance capelet (full coverage)
 - **Makeup:** Sleek hijab wrap secured for action; bold high-contrast smoky eye with **{accent}** metallic liner; matte nude lip and sharp, athletic contouring
@@ -78,8 +78,8 @@
 
 ### Tactical Scout
 - **Hijab:** Practical tactical hijab in **((default:olive green) or (signature))** with a secure aerodynamic wrap.
-- **Top:** **Ribbed moisture-wicking tunic** (long-sleeve, modest fit in **((default:olive green) or (signature))**, featuring reinforced elbow patches).
-- **Bottom:** **Tactical leggings** (technical **{secondary_color}** compression fabric with integrated side pockets and mesh ventilation).
+- **Top:** Ribbed moisture-wicking tunic (long-sleeve, modest fit in **((default:olive green) or (signature))**, featuring reinforced elbow patches).
+- **Bottom:** Tactical leggings (technical **{secondary_color}** compression fabric with integrated side pockets and mesh ventilation).
 - **Footwear:** Rugged mid-calf leather boots.
 - **Accessories:** Heavy-duty utility belt with **{accent}** hardware; black digital fitness watch.
 - **Makeup:** Secure hijab wrap; fresh-faced "outdoorsy" glow; tinted lip balm.
@@ -218,17 +218,17 @@
 
 ### Street-Dance Set
 - **Hijab:** Jersey hijab in **((default:vibrant orange) or (signature))** with an urban wrap style.
-- **Top:** **Technical fleece hoodie** (long-sleeve, modest length in **((default:vibrant orange) or (signature))**, featuring an oversized hood) worn over a long-sleeve black base layer.
-- **Bottom:** **Full-length black athletic leggings** with **{secondary_color}** side-stripes and a high-compression waistband.
+- **Top:** Technical fleece hoodie (long-sleeve, modest length in **((default:vibrant orange) or (signature))**, featuring an oversized hood) worn over a long-sleeve black base layer.
+- **Bottom:** Full-length black athletic leggings with **{secondary_color}** side-stripes and a high-compression waistband.
 - **Footwear:** Chunky **{accent}** platform sneakers.
 - **Accessories:** Layered silver chain necklaces; oversized hoop earrings.
 - **Makeup:** Graphic winged eyeliner; glossy nude lip.
 
 ### Pro Wrestling
-- **Hijab:** **Sports hijab** (black with ((default:red) or (signature)) trim, secure fit for athletic movement)
+- **Hijab:** Sports hijab (black with ((default:red) or (signature)) trim, secure fit for athletic movement)
 - **Top:** Long-sleeve athletic **bodysuit** (black base with bold ((default:red) or (signature)) geometric panels and accents down arms and sides)
-- **Bottom:** **Wrestling tights or leggings** (full-length, continuing the black and ((default:red) or (signature)) color scheme)
-- **Footwear:** **Wrestling boots** (standard lace-up style)
+- **Bottom:** Wrestling tights or leggings (full-length, continuing the black and ((default:red) or (signature)) color scheme)
+- **Footwear:** Wrestling boots (standard lace-up style)
 - **Accessories:** Knee pads (under tights or over), elbow pads optional, wrestling gloves, wrist tape, personalized logo or text on gear
 - **Makeup:** Hijab fully secured for action, natural makeup with defined features visible, determined athletic expression, professional wrestling presence
 
@@ -310,16 +310,16 @@
 
 ### Vintage Denim
 - **Hijab:** ((default:Red)) paisley print chiffon hijab with retro styling
-- **Top:** **White ribbed long-sleeve top** (fitted silhouette, soft texture) worn under **Denim Jacket** (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons)
-- **Bottom:** **Wide-Leg Denim Trousers** (dark blue denim, high-waist, flare at hem)
+- **Top:** White ribbed long-sleeve top (fitted silhouette, soft texture) worn under **Denim Jacket** (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons)
+- **Bottom:** Wide-Leg Denim Trousers (dark blue denim, high-waist, flare at hem)
 - **Footwear:** Platform boots
 - **Accessories:** Large silver hoop earrings, chunky rings
 - **Makeup:** Sharp winged black eyeliner, heavy rosy blush on cheekbones, bold matte lipstick
 
 ### Retro Tracksuit
 - **Hijab:** Red or white jersey sports hijab (secure but relaxed wrap)
-- **Top:** **Striped Long-Sleeve Tunic** (horizontal red and white pin-stripes, modest length, loose fit) under **Oversized Bomber Jacket** (matching red hue, voluminous sleeves)
-- **Bottom:** **Athletic Track Pants** (matching orange-red fabric, white vertical side stripes, elastic waistband)
+- **Top:** Striped Long-Sleeve Tunic (horizontal red and white pin-stripes, modest length, loose fit) under **Oversized Bomber Jacket** (matching red hue, voluminous sleeves)
+- **Bottom:** Athletic Track Pants (matching orange-red fabric, white vertical side stripes, elastic waistband)
 - **Footwear:** Retro sneakers
 - **Accessories:** Simple gold pendant necklace
 - **Makeup:** Natural, fresh-faced makeup look with subtle lip color
@@ -642,7 +642,9 @@
 - **Bottom:** Cargo pants with pockets
 - **Footwear:** Steel-toed boots
 - **Accessories:** Tool belt, goggles, gadgets, gloves
-- **Makeup:** Inventive expression, grease smudges## Film Noir
+- **Makeup:** Inventive expression, grease smudges
+
+## Film Noir
 
 ### Jazz Club Patron
 - **Hijab:** Dark-colored silk hijab (plum, burgundy, or charcoal) with elegant draping
@@ -722,8 +724,8 @@
 
 ### Sculpted Bandage Set
 - **Hijab:** Heavy silk hijab in **((default:black) or (signature))** with an elegant formal wrap.
-- **Top:** **Sculpted bandage gown** (long-sleeve, modest high-neck design, constructed from heavy **((default:black) or (signature))** elasticated ribbing); Cross-over strap detailing (**((default:charcoal) or (signature))** accent straps creating a structural "X" shape across the chest).
-- **Bottom:** **Matching sculpted maxi skirt** (floor-length, form-fitting).
+- **Top:** Sculpted bandage gown (long-sleeve, modest high-neck design, constructed from heavy **((default:black) or (signature))** elasticated ribbing); Cross-over strap detailing (**((default:charcoal) or (signature))** accent straps creating a structural "X" shape across the chest).
+- **Bottom:** Matching sculpted maxi skirt (floor-length, form-fitting).
 - **Footwear:** Strappy **((default:silver) or (signature))** high heels or elegant flats.
 - **Accessories:** Vintage-inspired gold clutch; statement cocktail ring.
 - **Makeup:** Sultry smoky eye in charcoal and **((default:black) or (signature))**; deep plum or crimson lipstick.
@@ -918,11 +920,11 @@
 
 ### Modern Power Suit
 - **Hijab:** Structured silk hijab in **{primary_color}** with a sharp professional wrap.
-- **Top:** **Modern tailored blazer** (long-sleeve, structured **{primary_color}** wool-blend, modest length falling to mid-thigh) worn over a matching high-neck **{primary_color}** modest tunic.
-- **Bottom:** **Tailored trousers** (matching **{primary_color}** fabric, high-waisted with a sharp front crease).
+- **Top:** Modern tailored blazer (long-sleeve, structured **{primary_color}** wool-blend, modest length falling to mid-thigh) worn over a matching high-neck **{primary_color}** modest tunic.
+- **Bottom:** Tailored trousers (matching **{primary_color}** fabric, high-waisted with a sharp front crease).
 - **Footwear:** Pointed-toe low-heeled pumps or loafers.
 - **Accessories:** Slim **{secondary_color}** leather belt; minimalist **{accent}** watch.
-- **Makeup:** Professional natural makeup; bold matte lipstick in **((default:deep red) or (signature))**.
+- **Makeup:** Professional natural makeup; bold matte lipstick in deep red.
 
 ### Office
 - **Hijab:** Structured chiffon hijab in charcoal gray with neat professional wrap
@@ -1073,59 +1075,59 @@
 - **Makeup:** Minimal makeup with defined brows, focused game expression
 
 ### Beach Volleyball
-- **Hijab:** **High-performance sports swim hijab** in **{primary_color}** (chlorine-resistant **matte lycra** with a secure aerodynamic wrap and **sculpted fit**)
-- **Top:** **Long-sleeve professional swim tunic** for **{team}** featuring **asymmetric color-blocked panels**{modifier}; body in **{primary_color}** with **{secondary_color} sleeves**; fabric is a premium **honeycomb-textured technical swim fabric**; **metallic foil team logo** on the chest; tunic features **scalloped side vents** and falls to mid-thigh with a **contoured athletic silhouette**
-- **Bottom:** **Full-length performance swim leggings** in **{primary_color}** with **{secondary_color} double-needle flatlock stitching** for maximum durability and comfort
-- **Footwear:** **Barefoot** with a **thin layer of sand-dusted skin** or **black neoprene sand socks**
-- **Accessories:** **Mirrored polarized sports sunglasses** ({accent}) with a **secure strap**, **performance visor** in **{primary_color}** with **rhinestone-encrusted team initials** (worn over hijab), waterproof fitness watch
-- **Makeup:** **Athletic glow** with waterproof sunscreen, minimal natural makeup, and coral lip tint
+- **Hijab:** High-performance sports swim hijab in **{primary_color}** (chlorine-resistant **matte lycra** with a secure aerodynamic wrap and **sculpted fit**)
+- **Top:** Long-sleeve professional swim tunic for **{team}** featuring **asymmetric color-blocked panels**{modifier}; body in **{primary_color}** with **{secondary_color} sleeves**; fabric is a premium **honeycomb-textured technical swim fabric**; **metallic foil team logo** on the chest; tunic features **scalloped side vents** and falls to mid-thigh with a **contoured athletic silhouette**
+- **Bottom:** Full-length performance swim leggings in **{primary_color}** with **{secondary_color} double-needle flatlock stitching** for maximum durability and comfort
+- **Footwear:** Barefoot with a **thin layer of sand-dusted skin** or **black neoprene sand socks**
+- **Accessories:** Mirrored polarized sports sunglasses ({accent}) with a **secure strap**, **performance visor** in **{primary_color}** with **rhinestone-encrusted team initials** (worn over hijab), waterproof fitness watch
+- **Makeup:** Athletic glow with waterproof sunscreen, minimal natural makeup, and coral lip tint
 
 ### Bowling
 - **Hijab:** Sports hijab in {primary_color} (breathable, practical)
 - **Top:** Fitted performance polo or athletic top for {team} in {primary_color} with {secondary_color} accents (moisture-wicking fabric with team logo, modest high neck){modifier}
-- **Bottom:** **BLACK athletic midi skirt** with built-in full-length leggings
+- **Bottom:** BLACK athletic midi skirt with built-in full-length leggings
 - **Footwear:** Bowling shoes ({accent})
 - **Accessories:** Wrist support optional, simple gold studs
 - **Makeup:** Minimal makeup, hair secured
 
 ### Cheerleading - Away
-- **Hijab:** **Black** sports hijab with rhinestone scatter pattern (secure tuck)
+- **Hijab:** Black sports hijab with rhinestone scatter pattern (secure tuck)
 - **Top:** Long-sleeve modest performance tunic{modifier}; **opaque black** upper chest panel (simulating mesh look) with heavy **crystal rhinestone** gradient; bodice in **{secondary_color}** ending in a distinct **scalloped hem** at mid-thigh
 - **Bottom:** Straight-leg athletic pants in **{secondary_color}**
 - **Footwear:** White cheer shoes
-- **Accessories:** **Black** hair bow attached to hijab, rhinestone cuffs
+- **Accessories:** Black hair bow attached to hijab, rhinestone cuffs
 - **Makeup:** Performance makeup with subtle shimmer
 
 ### Cheerleading - Home
-- **Hijab:** **Black** sports hijab with rhinestone scatter pattern (secure tuck)
+- **Hijab:** Black sports hijab with rhinestone scatter pattern (secure tuck)
 - **Top:** Long-sleeve modest performance tunic{modifier}; **opaque black** upper chest panel (simulating mesh look) with heavy **crystal rhinestone** gradient; bodice in **{primary_color}** ending in a distinct **scalloped hem** at mid-thigh
 - **Bottom:** Straight-leg athletic pants in **{primary_color}**
 - **Footwear:** White cheer shoes
-- **Accessories:** **White** hair bow attached to hijab, rhinestone cuffs
+- **Accessories:** White hair bow attached to hijab, rhinestone cuffs
 - **Makeup:** Performance makeup with subtle shimmer
 
 ### Esports Jersey
-- **Hijab:** **Black** jersey hijab (sleek wrap)
+- **Hijab:** Black jersey hijab (sleek wrap)
 - **Top:** Long-sleeve **pro-style jersey** for **{team}** with modest loose fit{modifier}; **white** torso base with **black** sleeves; bold **{primary_color}** sash stripe cutting diagonally across the chest
-- **Bottom:** **Black** wide-leg track pants
+- **Bottom:** Black wide-leg track pants
 - **Footwear:** High-top sneakers
 - **Accessories:** Gaming headset (worn over hijab), wristbands
 - **Makeup:** Minimal, fresh look
 
 ### Boxing
-- **Hijab:** **Breathable sports hijab** in **{primary_color}** (secure aerodynamic wrap with a **matte finish**)
-- **Top:** **Long-sleeve performance tunic** in **{primary_color}** with **{secondary_color} mesh side panels**{modifier}; fabric is a premium **satin-finish technical blend**; tunic falls to mid-thigh with a **scalloped hem**
-- **Bottom:** **Full-length performance leggings** in **{primary_color}** worn under **satin boxing shorts** in **{primary_color}** featuring a **wide 4-inch {secondary_color} elastic waistband**
-- **Footwear:** **High-top boxing shoes** ({accent}) with thin rubber soles
-- **Accessories:** **10oz pro-style boxing gloves** in **{accent}** with a **glossy finish**, matching hand wraps, clear mouthguard
+- **Hijab:** Breathable sports hijab in **{primary_color}** (secure aerodynamic wrap with a **matte finish**)
+- **Top:** Long-sleeve performance tunic in **{primary_color}** with **{secondary_color} mesh side panels**{modifier}; fabric is a premium **satin-finish technical blend**; tunic falls to mid-thigh with a **scalloped hem**
+- **Bottom:** Full-length performance leggings in **{primary_color}** worn under **satin boxing shorts** in **{primary_color}** featuring a **wide 4-inch {secondary_color} elastic waistband**
+- **Footwear:** High-top boxing shoes ({accent}) with thin rubber soles
+- **Accessories:** 10oz pro-style boxing gloves in **{accent}** with a **glossy finish**, matching hand wraps, clear mouthguard
 - **Makeup:** Focused intensity, minimal waterproof makeup
 
 ### MMA
-- **Hijab:** **High-performance tactical hijab** in **{primary_color}** (secure tuck with **sculpted fit**)
-- **Top:** **Long-sleeve compression tunic** for **{team}**{modifier}; body in **{primary_color}** with **{secondary_color} flatlock stitching** and a **sublimated geometric pattern**; fabric is a **heavy-duty matte lycra**
-- **Bottom:** **Full-length performance leggings** in **{primary_color}** with **silicone-grip waistband**
-- **Footwear:** **Barefoot** with **matching {primary_color} ankle sleeves**
-- **Accessories:** **4oz open-palm MMA gloves** in **{accent}** with **reinforced padding**, hand wraps, black mouthguard
+- **Hijab:** High-performance tactical hijab in **{primary_color}** (secure tuck with **sculpted fit**)
+- **Top:** Long-sleeve compression tunic for **{team}**{modifier}; body in **{primary_color}** with **{secondary_color} flatlock stitching** and a **sublimated geometric pattern**; fabric is a **heavy-duty matte lycra**
+- **Bottom:** Full-length performance leggings in **{primary_color}** with **silicone-grip waistband**
+- **Footwear:** Barefoot with **matching {primary_color} ankle sleeves**
+- **Accessories:** 4oz open-palm MMA gloves in **{accent}** with **reinforced padding**, hand wraps, black mouthguard
 - **Makeup:** Determined game-face, athletic sheen
 
 ### Soccer - Away
@@ -1185,20 +1187,20 @@
 - **Makeup:** Minimal makeup
 
 ### Volleyball - Away
-- **Hijab:** **High-performance sports hijab** in **{secondary_color}** featuring a **matte finish** and **aerodynamic secure tuck**
-- **Top:** **Long-sleeve fitted performance tunic** for **{team}** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes**; body in **{secondary_color}** with **{primary_color} wraparound piping** and a **sublimated geometric pattern**; fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** in **{primary_color}** with a **glossy finish** centered on chest and back; tunic falls to mid-thigh with a **scalloped hem**
-- **Bottom:** **Full-length performance compression leggings** in **{secondary_color}** with **{primary_color} reinforced flatlock seams**
-- **Footwear:** **Professional court shoes** ({accent}) with **gum rubber soles** and **visible gel-cushioning**
-- **Accessories:** **Low-profile gel-cushioned knee pads** in **{secondary_color}** (worn over leggings), **matching sweatbands** on wrists with embroidered team logo, athletic tape on fingers
-- **Makeup:** **Performance makeup** including sweat-resistant foundation, **subtle shimmer on cheekbones**, and a natural pink lip balm
+- **Hijab:** High-performance sports hijab in **{secondary_color}** featuring a **matte finish** and **aerodynamic secure tuck**
+- **Top:** Long-sleeve fitted performance tunic for **{team}** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes**; body in **{secondary_color}** with **{primary_color} wraparound piping** and a **sublimated geometric pattern**; fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** in **{primary_color}** with a **glossy finish** centered on chest and back; tunic falls to mid-thigh with a **scalloped hem**
+- **Bottom:** Full-length performance compression leggings in **{secondary_color}** with **{primary_color} reinforced flatlock seams**
+- **Footwear:** Professional court shoes ({accent}) with **gum rubber soles** and **visible gel-cushioning**
+- **Accessories:** Low-profile gel-cushioned knee pads in **{secondary_color}** (worn over leggings), **matching sweatbands** on wrists with embroidered team logo, athletic tape on fingers
+- **Makeup:** Performance makeup including sweat-resistant foundation, **subtle shimmer on cheekbones**, and a natural pink lip balm
 
 ### Volleyball - Home
-- **Hijab:** **High-performance sports hijab** in **{primary_color}** featuring a **matte finish** and **aerodynamic secure tuck**
-- **Top:** **Long-sleeve fitted performance tunic** for **{team}** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes**; body in **{primary_color}** with **{secondary_color} wraparound piping** and a **sublimated geometric pattern**; fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** in **{secondary_color}** with a **glossy finish** centered on chest and back; tunic falls to mid-thigh with a **scalloped hem**
-- **Bottom:** **Full-length performance compression leggings** in **{primary_color}** with **{secondary_color} reinforced flatlock seams**
-- **Footwear:** **Professional court shoes** ({accent}) with **gum rubber soles** and **visible gel-cushioning**
-- **Accessories:** **Low-profile gel-cushioned knee pads** in **{primary_color}** (worn over leggings), **matching sweatbands** on wrists with embroidered team logo, athletic tape on fingers
-- **Makeup:** **Performance makeup** including sweat-resistant foundation, **subtle shimmer on cheekbones**, and a natural pink lip balm
+- **Hijab:** High-performance sports hijab in **{primary_color}** featuring a **matte finish** and **aerodynamic secure tuck**
+- **Top:** Long-sleeve fitted performance tunic for **{team}** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes**; body in **{primary_color}** with **{secondary_color} wraparound piping** and a **sublimated geometric pattern**; fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** in **{secondary_color}** with a **glossy finish** centered on chest and back; tunic falls to mid-thigh with a **scalloped hem**
+- **Bottom:** Full-length performance compression leggings in **{primary_color}** with **{secondary_color} reinforced flatlock seams**
+- **Footwear:** Professional court shoes ({accent}) with **gum rubber soles** and **visible gel-cushioning**
+- **Accessories:** Low-profile gel-cushioned knee pads in **{primary_color}** (worn over leggings), **matching sweatbands** on wrists with embroidered team logo, athletic tape on fingers
+- **Makeup:** Performance makeup including sweat-resistant foundation, **subtle shimmer on cheekbones**, and a natural pink lip balm
 
 ### Wrestling
 - **Hijab:** Sports hijab in {primary_color} (breathable technical fabric, extremely secure for grappling)
@@ -1311,33 +1313,34 @@
 - **Footwear:** White satin heeled pumps
 - **Accessories:** Pearl necklace, bridal bouquet of fresh flowers, delicate gold bracelet
 - **Makeup:** Soft romantic makeup with glowing skin and soft pink tones
+
 ### Luxury Silk Robe Set
 - **Hijab:** Silk sleep turban or wrapped scarf in champagne
-- **Top:** **Silk kimono-style robe** (((default:champagne) or (signature)) pure silk, full length with long sleeves); **matching silk tunic** underneath
-- **Bottom:** **Silk wide-leg pajama pants** (relaxed fit)
+- **Top:** Silk kimono-style robe (((default:champagne) or (signature)) pure silk, full length with long sleeves); **matching silk tunic** underneath
+- **Bottom:** Silk wide-leg pajama pants (relaxed fit)
 - **Footwear:** Velvet slippers
 - **Accessories:** Silk sleep mask, pearl studs
 - **Makeup:** Fresh dewy skin, natural pink lip
 
 ### Classic Striped Pajamas
 - **Hijab:** Soft jersey sleep cap in navy or white
-- **Top:** **Button-front pajama tunic** (((default:navy and white) or (signature)) vertical stripe cotton, long sleeves, mid-thigh length)
-- **Bottom:** **Matching pajama pants** (relaxed straight leg)
+- **Top:** Button-front pajama tunic (((default:navy and white) or (signature)) vertical stripe cotton, long sleeves, mid-thigh length)
+- **Bottom:** Matching pajama pants (relaxed straight leg)
 - **Footwear:** Cozy slipper socks
 - **Accessories:** Reading glasses
 - **Makeup:** No makeup, relaxed expression
 
 ### Oversized Shirt Lounge
 - **Hijab:** Messy jersey wrap or instant hijab in neutral tone
-- **Top:** **Oversized men's style button-down tunic** (((default:white or light blue) or (signature)) crisp cotton, knee-length, long sleeves)
-- **Bottom:** **Loose lounge pants** or **leggings**
+- **Top:** Oversized men's style button-down tunic (((default:white or light blue) or (signature)) crisp cotton, knee-length, long sleeves)
+- **Bottom:** Loose lounge pants or **leggings**
 - **Footwear:** Thick cozy socks
 - **Accessories:** Coffee mug prop
 - **Makeup:** Fresh-faced, casual morning vibe
 
 ### Cozy Onesie
 - **Hijab:** Jersey hijab worn under hood
-- **Top:** **Full-body fleece onesie** (((default:pastel pink or gray) or (signature)) loose fit, long sleeves); **hood** up
+- **Top:** Full-body fleece onesie (((default:pastel pink or gray) or (signature)) loose fit, long sleeves); **hood** up
 - **Bottom:** Full length legs (part of onesie)
 - **Footwear:** Fuzzy slipper boots
 - **Accessories:** Hot cocoa mug, stuffed animal
@@ -1345,15 +1348,15 @@
 
 ### Spa Day Ensemble
 - **Hijab:** White towel wrap or turban style
-- **Top:** **Plush terry cloth robe** (((default:white) or (signature)), full length with long sleeves)
-- **Bottom:** **White loose trousers** underneath
+- **Top:** Plush terry cloth robe (((default:white) or (signature)), full length with long sleeves)
+- **Bottom:** White loose trousers underneath
 - **Footwear:** Spa slippers
 - **Accessories:** Cucumber slices, face mask applied
 - **Makeup:** Glowing fresh skin, relaxation mode
 
 ### Satin Sleepwear
 - **Hijab:** Satin wrap in matching color
-- **Top:** **Long-sleeve satin maxi dress** (((default:deep emerald or ruby red) or (signature)) loose modest cut)
+- **Top:** Long-sleeve satin maxi dress (((default:deep emerald or ruby red) or (signature)) loose modest cut)
 - **Bottom:** N/A
 - **Footwear:** Satin mules
 - **Accessories:** Delicate gold chain
@@ -1361,71 +1364,71 @@
 
 ### Rodeo Champion
 - **Hijab:** Satin hijab in turquoise or pink under cowboy hat
-- **Top:** **Rhinestone-embellished western tunic** (((default:turquoise or hot pink) or (signature)) long sleeves, high neck, fitted waist, longer hem)
-- **Bottom:** **Bootcut jeans** (dark wash) or **denim maxi skirt**
+- **Top:** Rhinestone-embellished western tunic (((default:turquoise or hot pink) or (signature)) long sleeves, high neck, fitted waist, longer hem)
+- **Bottom:** Bootcut jeans (dark wash) or **denim maxi skirt**
 - **Footwear:** Tall cowboy boots
 - **Accessories:** White felt cowboy hat, statement western jewelry, rodeo sash
 - **Makeup:** Full glam makeup, confident smile
 
 ### Sheriff
 - **Hijab:** Khaki hijab (neat military tuck) under campaign hat
-- **Top:** **Khaki uniform tunic** (long sleeves with epaulettes, badge, multiple pockets, mid-thigh length)
-- **Bottom:** **Matching khaki trousers** (straight leg)
+- **Top:** Khaki uniform tunic (long sleeves with epaulettes, badge, multiple pockets, mid-thigh length)
+- **Bottom:** Matching khaki trousers (straight leg)
 - **Footwear:** Black duty boots
 - **Accessories:** Silver star badge, wide-brimmed campaign hat, aviator sunglasses
 - **Makeup:** Minimal makeup, authoritative expression
 
 ### Ranch Hand
 - **Hijab:** Cotton bandana-print or solid blue hijab (practical wrap)
-- **Top:** **Worn denim work tunic** (((default:faded blue) or (signature)), long sleeves, durable fabric)
-- **Bottom:** **Loose work jeans** or **denim maxi skirt**
+- **Top:** Worn denim work tunic (((default:faded blue) or (signature)), long sleeves, durable fabric)
+- **Bottom:** Loose work jeans or **denim maxi skirt**
 - **Footwear:** Sturdy work boots
 - **Accessories:** Leather gloves, leather belt
 - **Makeup:** Natural sun-kissed skin, minimal makeup
 
 ### Oil Tycoon
 - **Hijab:** Cream or tan silk hijab (elegant drape) under western hat
-- **Top:** **Tailored western blazer** (((default:cream or tan) or (signature)) long line); **silk high-neck blouse** underneath
-- **Bottom:** **Tailored wide-leg trousers** or **maxi skirt**
+- **Top:** Tailored western blazer (((default:cream or tan) or (signature)) long line); **silk high-neck blouse** underneath
+- **Bottom:** Tailored wide-leg trousers or **maxi skirt**
 - **Footwear:** Luxury cowboy boots
 - **Accessories:** Bolo tie, statement ring, designer western hat, briefcase
 - **Makeup:** Refined makeup, confident presence
 
 ### K-Pop Idol Performance
 - **Hijab:** Street-style jersey hijab (black or neon) with cap or beanie over it
-- **Top:** **Oversized athletic jacket** (((default:holographic or pastel) or (signature))); **long-sleeve mesh top** or **graphic tunic** underneath
-- **Bottom:** **Baggy cargo pants** with straps or **maxi skirt** with street details
+- **Top:** Oversized athletic jacket (((default:holographic or pastel) or (signature))); **long-sleeve mesh top** or **graphic tunic** underneath
+- **Bottom:** Baggy cargo pants with straps or **maxi skirt** with street details
 - **Footwear:** Chunky platform sneakers
 - **Accessories:** Layered chains, hoop earrings, LED accessories
 - **Makeup:** Glass skin, gradient lips, rhinestone stickers, idol glow
 
 ### Parisian Chic
 - **Hijab:** Red silk scarf tied loosely or turban style with neck coverage
-- **Top:** **Striped Breton tunic** (((default:navy and white) or (signature)) long sleeves, boat neck, mid-thigh)
-- **Bottom:** **Straight-leg jeans** or **black cigarette pants**
+- **Top:** Striped Breton tunic (((default:navy and white) or (signature)) long sleeves, boat neck, mid-thigh)
+- **Bottom:** Straight-leg jeans or **black cigarette pants**
 - **Footwear:** Leather ballet flats
 - **Accessories:** Structured handbag, gold jewelry, sunglasses
 - **Makeup:** Minimal chic makeup, red lip
 
 ### Italian Riviera Summer
 - **Hijab:** White or pastel chiffon hijab (breezy drape) under sun hat
-- **Top:** **Linen button-down tunic** (((default:white or soft yellow) or (signature)), oversized, long sleeves)
-- **Bottom:** **Wide-leg linen palazzo pants**
+- **Top:** Linen button-down tunic (((default:white or soft yellow) or (signature)), oversized, long sleeves)
+- **Bottom:** Wide-leg linen palazzo pants
 - **Footwear:** Espadrille wedges
 - **Accessories:** Oversized straw hat, statement sunglasses, woven tote
 - **Makeup:** Bronzed glow, minimal makeup
 
 ### Nordic Minimalist
 - **Hijab:** Jersey or knit hijab in oatmeal or gray (simple wrap)
-- **Top:** **Oversized turtleneck sweater tunic** (((default:oatmeal or charcoal) or (signature)) chunky knit, knee length)
-- **Bottom:** **Slim-fit trousers** or **leggings**
+- **Top:** Oversized turtleneck sweater tunic (((default:oatmeal or charcoal) or (signature)) chunky knit, knee length)
+- **Bottom:** Slim-fit trousers or **leggings**
 - **Footwear:** Minimalist leather sneakers
 - **Accessories:** Geometric jewelry, leather backpack
 - **Makeup:** Fresh skin, nude lip, understated elegance
 
 ### Graduation
 - **Hijab:** Color-coordinated with gown or black (neat wrap) under mortarboard
-- **Top:** **Black academic gown** (floor-length); **modest dress** or **outfit** underneath
+- **Top:** Black academic gown (floor-length); **modest dress** or **outfit** underneath
 - **Bottom:** Visible hem of dress or pants
 - **Footwear:** Dress shoes
 - **Accessories:** Mortarboard cap, tassel, diploma
@@ -1433,7 +1436,7 @@
 
 ### Prom Formal
 - **Hijab:** Satin or chiffon hijab matching gown color (glamorous style)
-- **Top:** **Floor-length formal gown** (((default:jewel tone) or (signature)) long sleeves, high neck, modest silhouette)
+- **Top:** Floor-length formal gown (((default:jewel tone) or (signature)) long sleeves, high neck, modest silhouette)
 - **Bottom:** Full skirt (part of gown)
 - **Footwear:** Heeled sandals
 - **Accessories:** Statement earrings (visible), corsage, clutch
@@ -1441,7 +1444,7 @@
 
 ### Summer Festival Yukata
 - **Hijab:** Cotton hijab matching yukata pattern (neat style) with hair ornament
-- **Top:** **Cotton yukata** (((default:floral pattern) or (signature)) traditional modest robe)
+- **Top:** Cotton yukata (((default:floral pattern) or (signature)) traditional modest robe)
 - **Bottom:** Full length (part of yukata)
 - **Footwear:** Geta sandals (worn with tabi socks or barefoot)
 - **Accessories:** Obi sash, kinchaku bag, paper fan
@@ -1449,7 +1452,7 @@
 
 ### Red Carpet Gala
 - **Hijab:** Couture silk or embellished hijab (architectural drape)
-- **Top:** **Haute couture gown** (((default:dramatic silhouette) or (signature)) floor length, long sleeves, high neck, cape details)
+- **Top:** Haute couture gown (((default:dramatic silhouette) or (signature)) floor length, long sleeves, high neck, cape details)
 - **Bottom:** Full skirt
 - **Footwear:** Designer heels
 - **Accessories:** Diamond jewelry, designer clutch
@@ -1457,95 +1460,95 @@
 
 ### 1920s Jazz Age
 - **Hijab:** Beaded skullcap style or turban hijab with feather accent
-- **Top:** **Dropped-waist modest dress** (((default:black and gold) or (signature)) long sleeves, knee length or longer with fringe)
-- **Bottom:** **Opaque tights** or **straight-leg pants** if dress is short
+- **Top:** Dropped-waist modest dress (((default:black and gold) or (signature)) long sleeves, knee length or longer with fringe)
+- **Bottom:** Opaque tights or **straight-leg pants** if dress is short
 - **Footwear:** T-strap heels
 - **Accessories:** Long pearl necklace, beaded clutch
 - **Makeup:** Dark smoky eyes, cupid's bow lips
 
 ### 1960s Mod
 - **Hijab:** White or bold colored jersey hijab (sleek neat wrap)
-- **Top:** **Modest shift dress** (((default:geometric print) or (signature)) long sleeves, knee length)
-- **Bottom:** **Opaque white tights** or **straight-leg trousers**
+- **Top:** Modest shift dress (((default:geometric print) or (signature)) long sleeves, knee length)
+- **Bottom:** Opaque white tights or **straight-leg trousers**
 - **Footwear:** White go-go boots
 - **Accessories:** Large geometric earrings, sunglasses
 - **Makeup:** Graphic eyeliner, pale lips, Twiggy style
 
 ### 1980s Power Dressing
 - **Hijab:** Silk hijab in bold color (tucked in or turban style)
-- **Top:** **Oversized blazer** (((default:bold color) or (signature)) shoulder pads); **high-neck blouse**
-- **Bottom:** **Pleated midi skirt** or **trousers**
+- **Top:** Oversized blazer (((default:bold color) or (signature)) shoulder pads); **high-neck blouse**
+- **Bottom:** Pleated midi skirt or **trousers**
 - **Footwear:** Pumps
 - **Accessories:** Chunky gold jewelry, briefcase
 - **Makeup:** Bright eyeshadow, bold blush, strong brows
 
 ### 1990s Grunge
 - **Hijab:** Black jersey hijab (loose wrap) or beanie over hijab
-- **Top:** **Oversized flannel shirt** (((default:plaid) or (signature))); **long-sleeve band tee** underneath
-- **Bottom:** **Baggy jeans** or **maxi floral skirt** with combat boots
+- **Top:** Oversized flannel shirt (((default:plaid) or (signature))); **long-sleeve band tee** underneath
+- **Bottom:** Baggy jeans or **maxi floral skirt** with combat boots
 - **Footwear:** Combat boots
 - **Accessories:** Choker, backpack
 - **Makeup:** Brown lip, smudged liner, grunge vibe
 
 ### Rock Concert Performer
 - **Hijab:** Black studded hijab or turban with safety pins
-- **Top:** **Leather jacket** or **vest**; **long-sleeve mesh top** with lining or **graphic tunic**
-- **Bottom:** **Leather maxi skirt** or **wide-leg pants**
+- **Top:** Leather jacket or **vest**; **long-sleeve mesh top** with lining or **graphic tunic**
+- **Bottom:** Leather maxi skirt or **wide-leg pants**
 - **Footwear:** Platform boots
 - **Accessories:** Chains, studded wristbands, guitar prop
 - **Makeup:** Heavy smoky eyes, dark lip, fierce attitude
 
 ### Circus Ringmaster
 - **Hijab:** Black satin hijab (neat tuck) under top hat
-- **Top:** **Red tailcoat** (((default:bright red) or (signature)) gold trim); **white high-neck ruffled shirt**
-- **Bottom:** **Black wide-leg trousers** or **maxi skirt**
+- **Top:** Red tailcoat (((default:bright red) or (signature)) gold trim); **white high-neck ruffled shirt**
+- **Bottom:** Black wide-leg trousers or **maxi skirt**
 - **Footwear:** Tall boots
 - **Accessories:** Top hat, white gloves, baton
 - **Makeup:** Theatrical definition, red lips
 
 ### Stage Magician
 - **Hijab:** Black satin hijab (sleek wrap) under top hat
-- **Top:** **Tuxedo jacket** (((default:black) or (signature)) long tails); **white high-neck shirt**; **bow tie**
-- **Bottom:** **Black trousers** or **full skirt**
+- **Top:** Tuxedo jacket (((default:black) or (signature)) long tails); **white high-neck shirt**; **bow tie**
+- **Bottom:** Black trousers or **full skirt**
 - **Footwear:** Oxford shoes
 - **Accessories:** Top hat, white gloves, wand, cards
 - **Makeup:** Classic stage makeup, mysterious expression
 
 ### K-Pop Stage Outfit
 - **Hijab:** Metallic or sequins hijab (secure performance wrap)
-- **Top:** **Structured jacket** (((default:futuristic) or (signature))); **long-sleeve modest bodysuit** or **tunic**
-- **Bottom:** **Cargo pants** or **maxi skirt** with hardware
+- **Top:** Structured jacket (((default:futuristic) or (signature))); **long-sleeve modest bodysuit** or **tunic**
+- **Bottom:** Cargo pants or **maxi skirt** with hardware
 - **Footwear:** Thigh-high boots or chunky sneakers
 - **Accessories:** Body harness, rings, mic headset
 - **Makeup:** Glitter accents, gradient lip, fierce look
 
 ### Stand-Up Comedian
 - **Hijab:** Jersey hijab in solid color (casual wrap)
-- **Top:** **Fitted blazer** (((default:solid color) or (signature))); **graphic tee** or **blouse**
-- **Bottom:** **Dark jeans** or **trousers**
+- **Top:** Fitted blazer (((default:solid color) or (signature))); **graphic tee** or **blouse**
+- **Bottom:** Dark jeans or **trousers**
 - **Footwear:** Sneakers or loafers
 - **Accessories:** Microphone prop
 - **Makeup:** Natural polished makeup, confident smile
 
 ### Rain Day Chic
 - **Hijab:** Water-resistant hijab or tucked into coat
-- **Top:** **Classic trench coat** (((default:beige) or (signature)) belted, long line); **sweater** underneath
-- **Bottom:** **Jeans** or **trousers**
+- **Top:** Classic trench coat (((default:beige) or (signature)) belted, long line); **sweater** underneath
+- **Bottom:** Jeans or **trousers**
 - **Footwear:** Rain boots
 - **Accessories:** Umbrella, crossbody bag
 - **Makeup:** Waterproof minimal makeup
 
 ### Yellow Slicker Classic
 - **Hijab:** Tucked into hood or simple jersey
-- **Top:** **Yellow rain jacket** (long modest cut); **long sleeves**
-- **Bottom:** **Rain pants** or **jeans**
+- **Top:** Yellow rain jacket (long modest cut); **long sleeves**
+- **Bottom:** Rain pants or **jeans**
 - **Footwear:** Rubber boots
 - **Accessories:** Rain hat (optional)
 - **Makeup:** Natural, fresh face
 
 ### Spring Garden Party
 - **Hijab:** Pastel chiffon hijab (flowing drape) with flower crown
-- **Top:** **Floral maxi dress** (((default:pastel print) or (signature)) long sleeves, modest high neck)
+- **Top:** Floral maxi dress (((default:pastel print) or (signature)) long sleeves, modest high neck)
 - **Bottom:** Full skirt (part of dress)
 - **Footwear:** Heeled sandals or flats
 - **Accessories:** Straw hat, woven bag
@@ -1553,24 +1556,24 @@
 
 ### Resort Wear Luxury
 - **Hijab:** White or cream silk hijab (elegant wrap)
-- **Top:** **Linen tunic** (((default:white) or (signature)) long loose fit)
-- **Bottom:** **Wide-leg linen trousers**
+- **Top:** Linen tunic (((default:white) or (signature)) long loose fit)
+- **Bottom:** Wide-leg linen trousers
 - **Footwear:** Flat leather sandals
 - **Accessories:** Sun hat, sunglasses, gold jewelry
 - **Makeup:** Bronzed glow, nude lip
 
 ### Steampunk Aviator
 - **Hijab:** Brown leather-look or jersey hijab (aviator cap style)
-- **Top:** **Leather corset vest** over **white poet blouse** (billowy long sleeves)
-- **Bottom:** **Long brown skirt** with bustle or **wide-leg trousers**
+- **Top:** Leather corset vest over **white poet blouse** (billowy long sleeves)
+- **Bottom:** Long brown skirt with bustle or **wide-leg trousers**
 - **Footwear:** Lace-up boots
 - **Accessories:** Goggles on hijab, gears jewelry, gloves
 - **Makeup:** Natural with defined eyes
 
 ### Gothic Aristocrat
 - **Hijab:** Black lace-trimmed hijab with large bow
-- **Top:** **Black and white modest dress** (long sleeves, high neck, knee length or longer with layers)
-- **Bottom:** **Full skirt** with petticoat; **opaque tights**
+- **Top:** Black and white modest dress (long sleeves, high neck, knee length or longer with layers)
+- **Bottom:** Full skirt with petticoat; **opaque tights**
 - **Footwear:** Platform Mary Janes
 - **Accessories:** Parasol, lace cuffs, handbag
 - **Makeup:** Doll-like, pale skin, dark lips

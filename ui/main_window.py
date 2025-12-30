@@ -347,6 +347,7 @@ class PromptBuilderApp:
             on_add_callback=self._on_gallery_character_selected,
             theme_manager=self.theme_manager,
             theme_colors=self.theme_manager.themes.get(DEFAULT_THEME, {}),
+            on_create_callback=self._create_new_character
         )
         self.character_gallery.pack(fill="both", expand=True)
 
@@ -365,13 +366,11 @@ class PromptBuilderApp:
         )
         self.main_paned.add(paned, minsize=400) 
 
-        # Left side: Notebook with tabs
-        self.notebook = ttk.Notebook(paned, style="TNotebook")
-        paned.add(self.notebook, width=550, minsize=300) 
+        # Left side: Characters Tab (Main Area)
+        # Notebook removed to clean up UI (single view)
 
-        # Create tabs
         self.characters_tab = CharactersTab(
-            self.notebook,
+            paned, # Added directly to paned window
             self.data_loader,
             self.theme_manager,
             self.character_controller,
@@ -380,29 +379,11 @@ class PromptBuilderApp:
             self._save_state_for_undo,
         )
         
-        # Lazy load EditTab to improve startup performance
-        self.edit_tab = None
-        self.notebook.add(ttk.Frame(self.notebook, style="TFrame"), text="Edit Data")
+        # Configure pane properties
+        paned.paneconfigure(self.characters_tab.tab, width=550, minsize=300)
         
-        def _on_tab_changed(event):
-            selected_tab = self.notebook.select()
-            tab_text = self.notebook.tab(selected_tab, "text")
-            if tab_text == "Edit Data" and self.edit_tab is None:
-                # Build EditTab on demand
-                # First, find the empty frame we added
-                tab_frame = self.notebook.nametowidget(selected_tab)
-                self.edit_tab = EditTab(
-                    self.notebook, 
-                    self.data_loader, 
-                    self.theme_manager,
-                    self.reload_data, 
-                    existing_frame=tab_frame
-                )
-                # Re-apply theme to ensure it matches
-                current_theme = self.theme_manager.current_theme or self.prefs.get("last_theme", DEFAULT_THEME)
-                self._apply_theme(current_theme)
-
-        self.notebook.bind("<<NotebookTabChanged>>", _on_tab_changed)
+        # EditTab removed (functionality moved to Asset Manager tool)
+        # self.notebook.bind("<<NotebookTabChanged>>", _on_tab_changed) - Removed
 
         # Load data into tabs
         self.characters_tab.load_data(self.characters, self.base_prompts, self.poses, self.scenes)
@@ -546,6 +527,7 @@ class PromptBuilderApp:
                 bg=bg, relief="flat", highlightthickness=2, padx=10,
                 font=("Lexend", 9)
             )
+            btn._base_bg = bg # Store for hover restoration
             
             def on_btn_enter(e, b=btn):
                 try:
@@ -554,9 +536,7 @@ class PromptBuilderApp:
                 except: hbg = "#333333"
                 b.config(bg=hbg)
             def on_btn_leave(e, b=btn):
-                try: curr_bg = parent.cget("background")
-                except: curr_bg = bg
-                b.config(bg=curr_bg)
+                b.config(bg=getattr(b, "_base_bg", "#121212"))
             
             btn.bind("<Enter>", on_btn_enter)
             btn.bind("<Leave>", on_btn_leave)
@@ -797,6 +777,7 @@ class PromptBuilderApp:
             accent = theme.get("accent", "#0078d7")
             for btn in self.toolbar_buttons:
                 btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
+                btn._base_bg = panel_bg # Update for hover logic
 
         # Refactor 5: Update status bar
         if hasattr(self, "status_bar"):
@@ -931,6 +912,15 @@ class PromptBuilderApp:
             logger.info("Interaction templates reloaded successfully")
         except Exception:
             logger.exception("Error reloading interaction templates")
+
+    def _create_new_character(self):
+        """Open dialog to create a new character."""
+        try:
+            from .character_creator import CharacterCreatorDialog
+            dialog = CharacterCreatorDialog(self.root, self.data_loader, self.reload_data)
+            dialog.show()
+        except Exception:
+            logger.exception("Failed to open Character Creator")
 
     def _create_new_interaction(self):
         """Open dialog to create a new interaction template."""

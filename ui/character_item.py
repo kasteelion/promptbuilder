@@ -64,61 +64,17 @@ class CharacterItem(ttk.Frame):
 
     def _build_ui(self):
         """Build the character item UI components."""
-        # Header Row (Refactor 1: Accordion)
-        self.header = ttk.Frame(self, style="TFrame", cursor="hand2")
-        self.header.pack(fill="x", padx=10, pady=8)
-        
-        # Drag handle
-        self.drag_handle = ttk.Label(self.header, text="⠿", cursor="fleur", font=(None, 12))
-        self.drag_handle.pack(side="left", padx=(0, 10))
-        
-        # Title - Refactor 5: Semantic Typography
-        title_text = f"#{self.index + 1} — {self.char_name.upper()}"
-        self.title_label = ttk.Label(self.header, text=title_text, style="Bold.TLabel")
-        self.title_label.pack(side="left")
-        
-        # Signature color swatch (new)
-        sig_color = self.char_def.get("signature_color", "")
-        if sig_color:
-            try:
-                # Use theme border color
-                border_color = theme.get("border", "#666666")
-                self.swatch = tk.Canvas(self.header, width=12, height=12, 
-                                      bg=sig_color, highlightthickness=1, 
-                                      highlightbackground=border_color, cursor="hand2")
-                self.swatch.pack(side="left", padx=10)
-                from utils import create_tooltip
-                create_tooltip(self.swatch, f"Signature Color: {sig_color}")
-                # Also bind toggle to swatch
-                self.swatch.bind("<Button-1>", lambda e: self.toggle_collapse())
-            except Exception:
-                pass # Invalid color format
-        
-        # Indicator - Refactor 3
-        self.toggle_indicator = ttk.Label(self.header, text="▼" if self._expanded else "▶", style="Muted.TLabel")
-        self.toggle_indicator.pack(side="right", padx=5)
-
-        # Controls container (The part that collapses)
-        self.controls_frame = ttk.Frame(self, style="TFrame", padding=(15, 5, 15, 15))
-        if self._expanded:
-            self.controls_frame.pack(fill="x")
-            
-        # Bind toggle to header, title and handle - Refactor 3
-        for widget in [self.header, self.title_label, self.drag_handle, self.toggle_indicator]:
-            widget.bind("<Button-1>", lambda e: self.toggle_collapse())
-            # Hover effect for clearer affordance
-            widget.bind("<Enter>", self._on_header_hover)
-            widget.bind("<Leave>", self._on_header_leave)
-
         # Get initial colors from theme if available
         panel_bg = "#1e1e1e"
         muted_fg = "gray"
+        accent = "#0078d7"
         theme = {}
         
         if self.theme_manager and self.theme_manager.current_theme in self.theme_manager.themes:
             theme = self.theme_manager.themes[self.theme_manager.current_theme]
             panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
             muted_fg = theme.get("border", "gray")
+            accent = theme.get("accent", "#0078d7")
         else:
             try:
                 style = ttk.Style()
@@ -126,6 +82,75 @@ class CharacterItem(ttk.Frame):
             except: pass
             
         self._last_pbg = panel_bg
+
+        # Header Row (Refactor 1: Accordion)
+        self.header = ttk.Frame(self, style="TFrame", cursor="hand2")
+        self.header.pack(fill="x", padx=5, pady=2)
+        
+        # Configure Grid: [Handle] [Title] [Swatch] [Spacer] [Summary] [Remove] [Toggle]
+        self.header.columnconfigure(3, weight=1) # Spacer push
+        
+        # 0. Drag handle
+        self.drag_handle = ttk.Label(self.header, text="⠿", cursor="fleur", font=(None, 12))
+        self.drag_handle.grid(row=0, column=0, padx=(10, 10), pady=10)
+        
+        # 1. Title
+        title_text = f"#{self.index + 1} — {self.char_name.upper()}"
+        self.title_label = ttk.Label(self.header, text=title_text, style="Bold.TLabel")
+        self.title_label.grid(row=0, column=1, sticky="w")
+        
+        # 2. Signature color swatch
+        sig_color = self.char_def.get("signature_color", "")
+        if sig_color:
+            try:
+                border_color = theme.get("border", "#666666")
+                self.swatch = tk.Canvas(self.header, width=10, height=10, 
+                                      bg=sig_color, highlightthickness=1, 
+                                      highlightbackground=border_color, cursor="hand2")
+                self.swatch.grid(row=0, column=2, padx=10)
+                from utils import create_tooltip
+                create_tooltip(self.swatch, f"Signature Color: {sig_color}")
+                self.swatch.bind("<Button-1>", lambda e: self.toggle_collapse())
+            except Exception: pass
+
+        # 4. Summary Label (Visible when collapsed)
+        self.summary_label = ttk.Label(self.header, text=self._get_summary_text(), style="Muted.TLabel")
+        if not self._expanded:
+            self.summary_label.grid(row=0, column=4, padx=15, sticky="e")
+
+        # 5. Header Actions (Remove)
+        self.remove_btn = tk.Button(
+            self.header, text="✕", command=lambda: self.callbacks["remove_character"](self.index),
+            bg=panel_bg, fg=muted_fg, borderwidth=0, relief="flat", font=("Lexend", 9, "bold"),
+            padx=8, cursor="hand2"
+        )
+        self.remove_btn.grid(row=0, column=5, padx=2)
+        self.remove_btn._base_bg = panel_bg
+        
+        def on_remove_enter(e): 
+            try:
+                theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                accent = theme.get("accent", "#0078d7")
+                self.remove_btn.config(fg=accent)
+            except: self.remove_btn.config(fg="red")
+        def on_remove_leave(e): self.remove_btn.config(fg=muted_fg)
+        self.remove_btn.bind("<Enter>", on_remove_enter)
+        self.remove_btn.bind("<Leave>", on_remove_leave)
+
+        # 6. Toggle Indicator
+        self.toggle_indicator = ttk.Label(self.header, text="▼" if self._expanded else "▶", style="Muted.TLabel")
+        self.toggle_indicator.grid(row=0, column=6, padx=(5, 15))
+
+        # Controls container (The part that collapses)
+        self.controls_frame = ttk.Frame(self, style="TFrame", padding=(15, 5, 15, 15))
+        if self._expanded:
+            self.controls_frame.pack(fill="x")
+            
+        # Bind toggle to grid elements
+        for widget in [self.header, self.title_label, self.drag_handle, self.toggle_indicator]:
+            widget.bind("<Button-1>", lambda e: self.toggle_collapse())
+            widget.bind("<Enter>", self._on_header_hover)
+            widget.bind("<Leave>", self._on_header_leave)
 
         # --- Content inside controls_frame ---
         
@@ -348,34 +373,50 @@ class CharacterItem(ttk.Frame):
         accent_color = self.char_def.get("signature_color", theme.get("accent", "#0078d7"))
         if not str(accent_color).startswith("#"): accent_color = theme.get("accent", "#0078d7")
         
-        # Move Up/Down use Ghost style overrides
-        move_frame = ttk.Frame(self.controls_frame)
-        move_frame.pack(side="left")
+        # Actions Frame (Centered)
+        actions_frame = ttk.Frame(footer)
+        actions_frame.pack(anchor="center")
         
         if self.index > 0:
             up_btn = tk.Button(
-                move_frame, text="↑ UP", width=6, command=lambda: self.callbacks["move_up"](self.index),
+                actions_frame, text="↑ UP", width=6, command=lambda: self.callbacks["move_up"](self.index),
                 bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=2,
                 relief="flat", font=("Lexend", 8, "bold")
             )
             up_btn.pack(side="left", padx=2)
-            up_btn.bind("<Enter>", lambda e, b=up_btn: b.config(bg=self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")))
-            up_btn.bind("<Leave>", lambda e, b=up_btn: b.config(bg=self._last_pbg))
+            
+            def _on_up_enter(e):
+                if not self.theme_manager: return
+                try:
+                    hbg = self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")
+                    up_btn.config(bg=hbg)
+                except: pass
+            
+            up_btn.bind("<Enter>", _on_up_enter)
+            up_btn.bind("<Leave>", lambda e: up_btn.config(bg=self._last_pbg))
         
         num_characters = self.callbacks.get("get_num_characters", lambda: 0)()
         if self.index < num_characters - 1:
             down_btn = tk.Button(
-                move_frame, text="↓ DOWN", width=6, command=lambda: self.callbacks["move_down"](self.index),
+                actions_frame, text="↓ DOWN", width=6, command=lambda: self.callbacks["move_down"](self.index),
                 bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=2,
                 relief="flat", font=("Lexend", 8, "bold")
             )
             down_btn.pack(side="left", padx=2)
-            down_btn.bind("<Enter>", lambda e, b=down_btn: b.config(bg=self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")))
-            down_btn.bind("<Leave>", lambda e, b=down_btn: b.config(bg=self._last_pbg))
+            
+            def _on_down_enter(e):
+                if not self.theme_manager: return
+                try:
+                    hbg = self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")
+                    down_btn.config(bg=hbg)
+                except: pass
+                
+            down_btn.bind("<Enter>", _on_down_enter)
+            down_btn.bind("<Leave>", lambda e: down_btn.config(bg=self._last_pbg))
 
         # Solo Randomize button (Refactor 3: Ghost style)
         self.solo_rand_btn = tk.Button(
-            move_frame, text="🎲 SOLO RANDOMIZE", width=18, command=self._solo_randomize,
+            actions_frame, text="🎲 SOLO RANDOMIZE", width=18, command=self._solo_randomize,
             bg=panel_bg, fg=accent_color, highlightbackground=accent_color, highlightthickness=2,
             relief="flat", font=("Lexend", 8, "bold"),
             cursor="hand2", # Use hand cursor
@@ -397,14 +438,6 @@ class CharacterItem(ttk.Frame):
 
         self.solo_rand_btn.bind("<Enter>", _on_solo_enter)
         self.solo_rand_btn.bind("<Leave>", _on_solo_leave)
-
-        # Remove uses Link style override - Refactor 5: Lexend
-        self.remove_btn = tk.Button(
-            footer, text="✕ REMOVE CHARACTER", command=lambda: self.callbacks["remove_character"](self.index),
-            bg=panel_bg, fg=muted_fg, borderwidth=0, relief="flat", font=("Lexend", 8, "bold"),
-            activeforeground=accent_color
-        )
-        self.remove_btn.pack(side="right")
 
     def _on_header_hover(self, event):
         """Highlight header on hover."""
@@ -488,8 +521,18 @@ class CharacterItem(ttk.Frame):
         if self._expanded:
             self.controls_frame.pack_forget()
             self.toggle_indicator.config(text="▶")
+            
+            # Show summary in header when collapsed
+            if hasattr(self, "summary_label"):
+                self.summary_label.config(text=self._get_summary_text())
+                self.summary_label.grid(row=0, column=4, padx=15, sticky="e")
+                
             self._expanded = False
         else:
+            # Hide summary when expanded
+            if hasattr(self, "summary_label"):
+                self.summary_label.grid_forget()
+
             # Auto-collapse others if requested by parent/tab
             if self.callbacks.get("auto_collapse"):
                 self.callbacks["auto_collapse"](self.index)
@@ -514,106 +557,64 @@ class CharacterItem(ttk.Frame):
         else:
             self.config(style="Card.TFrame")
 
-        def _update_theme_overrides(self, theme):
+    def _get_summary_text(self):
+        """Generate a short summary string for the header."""
+        outfit = self.char_data.get("outfit", "None")
+        pose = self.char_data.get("pose_preset", "None")
+        # Truncate if too long
+        if len(outfit) > 20: outfit = outfit[:17] + "..."
+        if len(pose) > 20: pose = pose[:17] + "..."
+        return f"{outfit} | {pose}".upper()
 
-            """Update manual button overrides when theme changes. (Refactor 3)"""
+    def _update_theme_overrides(self, theme):
+        """Update manual button overrides when theme changes. (Refactor 3)"""
+        accent_color = self.char_def.get("signature_color", theme.get("accent", "#0078d7"))
+        if not str(accent_color).startswith("#"): 
+            accent_color = theme.get("accent", "#0078d7")
+        
+        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+        border = theme.get("border", "#333333")
+        fg = theme.get("fg", "white")
+        self._last_pbg = panel_bg # Store for hover restoration
 
-            accent_color = self.char_def.get("signature_color", theme.get("accent", "#0078d7"))
+        # Update Header
+        # Note: ttk.Frame and ttk.Label do not support 'bg' or 'foreground' options via config().
+        # They are styled via the global style defined in theme_manager.
+        
+        # Update swatch border
+        if hasattr(self, "swatch"):
+            self.swatch.config(highlightbackground=border)
 
-            if not str(accent_color).startswith("#"): accent_color = theme.get("accent", "#0078d7")
+        # Update sig pill - Refactor 6
+        if hasattr(self, "sig_pill_frame"):
+            accent = theme.get("accent", "#0078d7")
+            self.sig_pill_frame.config(bg=accent)
+            self.sig_pill_lbl.config(bg=panel_bg, fg=accent)
+            self.sig_pill_lbl._base_bg = panel_bg
+            self.sig_pill_lbl.config(text="✓ USE SIGNATURE COLOR" if self.sig_var.get() else "USE SIGNATURE COLOR")
 
-            panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+        # Update nested comboboxes - Refactor 3
+        for cb in ["outfit_cat_combo", "outfit_combo", "pcat_combo", "preset_combo", "framing_combo"]:
+            if hasattr(self, cb):
+                getattr(self, cb).apply_theme(theme)
 
-            border = theme.get("border", "#333333")
-
-            fg = theme.get("fg", "white")
-
-            self._last_pbg = panel_bg # Store for hover restoration
-
-    
-
-            # Update Header
-
-            if hasattr(self, "header"):
-
-                self.header.config(bg=panel_bg)
-
-            if hasattr(self, "toggle_indicator"):
-
-                self.toggle_indicator.config(foreground=theme.get("border", "gray"))
-
-            if hasattr(self, "title_label"):
-
-                self.title_label.config(foreground=fg)
-
-            if hasattr(self, "drag_handle"):
-
-                self.drag_handle.config(foreground=theme.get("border", "gray"))
-
-    
-
-            # Update swatch border
-
-            if hasattr(self, "swatch"):
-
-                self.swatch.config(highlightbackground=border)
-
-    
-
-            # Update sig pill - Refactor 6
-
-            if hasattr(self, "sig_pill_frame"):
-
-                accent = theme.get("accent", "#0078d7")
-
-                self.sig_pill_frame.config(bg=accent)
-
-                self.sig_pill_lbl.config(bg=panel_bg, fg=accent)
-
-                self.sig_pill_lbl._base_bg = panel_bg
-
-                self.sig_pill_lbl.config(text=f"✓ USE SIGNATURE COLOR" if self.sig_var.get() else "USE SIGNATURE COLOR")
-
-    
-
-            # Update nested comboboxes - Refactor 3
-
-            for cb in ["outfit_cat_combo", "outfit_combo", "pcat_combo", "preset_combo", "framing_combo"]:
-
-                if hasattr(self, cb):
-
-                    getattr(self, cb).apply_theme(theme)
-
-    
-
-            # Update manual buttons (Move Up/Down/Solo)
-
-            if hasattr(self, "solo_rand_btn"):
-
-                self.solo_rand_btn.config(bg=panel_bg, fg=accent_color, highlightbackground=accent_color, activebackground=panel_bg, activeforeground=accent_color)
-
-                
-
-            # Update Move buttons
-
+        # Update manual buttons (Move Up/Down/Solo)
+        if hasattr(self, "solo_rand_btn"):
+            self.solo_rand_btn.config(bg=panel_bg, fg=accent_color, highlightbackground=accent_color, 
+                                     activebackground=panel_bg, activeforeground=accent_color)
+            
+        # Update Move buttons
+        if hasattr(self, "controls_frame"):
             for child in self.controls_frame.winfo_children():
-
                 # Buttons might be nested in move_frame
-
                 if isinstance(child, ttk.Frame):
-
                     for sub in child.winfo_children():
-
                         if isinstance(sub, tk.Button) and any(x in sub.cget("text") for x in ["↑", "↓"]):
+                            sub.config(bg=panel_bg, fg=accent_color, highlightbackground=accent_color, 
+                                      activebackground=panel_bg, activeforeground=accent_color)
 
-                            sub.config(bg=panel_bg, fg=accent_color, highlightbackground=accent_color, activebackground=panel_bg, activeforeground=accent_color)
-
-    
-
-            # Update Remove Button
-
-            if hasattr(self, "remove_btn"):
-
-                self.remove_btn.config(bg=panel_bg, fg=theme.get("border", "gray"), activebackground=panel_bg)
+        # Update Remove Button
+        if hasattr(self, "remove_btn"):
+            self.remove_btn.config(bg=panel_bg, fg=theme.get("border", "gray"), activebackground=panel_bg)
 
     

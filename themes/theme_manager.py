@@ -451,14 +451,25 @@ class ThemeManager:
         )
 
         # Scrollbar Style
+        # Define a simplified layout without arrows for a modern look
+        try:
+            self.style.layout("Themed.Vertical.TScrollbar", [
+                ('Vertical.Scrollbar.trough', {'children': [
+                    ('Vertical.Scrollbar.thumb', {'expand': '1', 'sticky': 'nswe'})
+                ], 'sticky': 'ns'})
+            ])
+        except Exception:
+            pass
+
         self.style.configure(
             "Themed.Vertical.TScrollbar",
-            background=text_bg,
+            background=theme.get("scrollbar_thumb", border), # Use border or specific key for better visibility
             troughcolor=bg,
             bordercolor=border,
             arrowcolor=accent,
             width=10,
-            borderwidth=0
+            borderwidth=0,
+            relief="flat"
         )
         self.style.map(
             "Themed.Vertical.TScrollbar",

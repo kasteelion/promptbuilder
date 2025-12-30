@@ -1,4 +1,5 @@
 ### Oliver St. James
+**Photo:** oliver_st_james_photo.jpeg
 
 **Tags:** male, british, casual, soft, approachable, gay, hipster, indie
 

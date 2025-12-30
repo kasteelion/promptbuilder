@@ -64,23 +64,32 @@ class ScrollableCanvas(ttk.Frame):
         # Reserve fixed space for scrollbar so content doesn't jump
         self.columnconfigure(1, minsize=16) 
         
-        # Performance: Use 'state' to show/hide handle instead of grid_forget/pack_forget
-        def show_scrollbar(event=None):
-            # Only show if needed - Refactor 3 Fix
-            if self._is_scrolling_needed():
-                try: self.scrollbar.config(state="normal")
-                except: pass
-            
-        def hide_scrollbar(event=None):
-            try: self.scrollbar.config(state="disabled")
-            except: pass
+        self._hide_scrollbar_timer = None
 
+        def _cancel_hide_timer():
+            if self._hide_scrollbar_timer:
+                self.after_cancel(self._hide_scrollbar_timer)
+                self._hide_scrollbar_timer = None
+
+        def show_scrollbar(event=None):
+            _cancel_hide_timer()
+            if self._is_scrolling_needed():
+                self.scrollbar.grid(row=0, column=1, sticky="ns")
+            
+        def schedule_hide_scrollbar(event=None):
+            _cancel_hide_timer()
+            # Delay hiding to allow moving between canvas and scrollbar
+            self._hide_scrollbar_timer = self.after(400, lambda: self.scrollbar.grid_remove())
+
+        # Bind to both to handle transitions smoothly
         self.canvas.bind("<Enter>", show_scrollbar)
-        self.canvas.bind("<Leave>", hide_scrollbar)
-        self.scrollbar.bind("<Enter>", show_scrollbar)
+        self.canvas.bind("<Leave>", schedule_hide_scrollbar)
         
-        # Initially disabled
-        hide_scrollbar()
+        self.scrollbar.bind("<Enter>", show_scrollbar)
+        self.scrollbar.bind("<Leave>", schedule_hide_scrollbar)
+        
+        # Initially hidden
+        self.scrollbar.grid_remove()
 
         # Bind mousewheel
         self.canvas.bind("<MouseWheel>", self._on_mousewheel)
@@ -153,9 +162,15 @@ class ScrollableCanvas(ttk.Frame):
                 
                 # Performance Fix: Check if scrollbar handle should be visible
                 if not self._is_scrolling_needed():
-                    self.scrollbar.config(state="disabled")
+                    self.scrollbar.grid_remove()
                 else:
-                    self.scrollbar.config(state="normal")
+                    # Only grid if mouse is over? No, we should probably respect the hover logic 
+                    # OR just show it if it's needed and we are in a state where it should be shown.
+                    # For now, let's respect the hover behavior: don't auto-show unless hovered.
+                    # But if we want it to be user-friendly, maybe show it if it WAS shown?
+                    # Let's keep it simple: Hidden by default, shown on hover.
+                    # So we don't force show here, just ensure it's hidden if NOT needed.
+                    pass
                 
                 self._scroll_after_id = None
             except Exception:

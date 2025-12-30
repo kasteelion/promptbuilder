@@ -1,4 +1,5 @@
 ### Elias Thorne
+**Photo:** elias_thorne_photo.jpeg
 
 **Tags:** male, caucasian, silver-fox, chic, commanding, gay, minimalist, sophisticated
 

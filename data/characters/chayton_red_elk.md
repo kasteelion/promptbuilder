@@ -1,4 +1,5 @@
 ### Chayton Red-Elk
+**Photo:** chayton_redelk_photo.jpeg
 
 **Tags:** male, indigenous, rugged, creative, intellectual, long-hair, modern
 

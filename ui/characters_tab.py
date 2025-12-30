@@ -68,7 +68,12 @@ class CharactersTab:
         self._refreshing = False
 
         self.tab = ttk.Frame(parent, style="TFrame")
-        parent.add(self.tab, text="Prompt Builder")
+        try:
+            parent.add(self.tab, text="Prompt Builder")
+        except tk.TclError:
+            # Fallback for PanedWindow or other containers that don't support 'text'
+            # If parent is PanedWindow, it might need weight/minsize which are usually configured after
+            parent.add(self.tab)
 
         self._build_ui()
         
@@ -90,6 +95,8 @@ class CharactersTab:
             self.create_shared_btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
         if hasattr(self, "create_char_btn"):
             self.create_char_btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
+        if hasattr(self, "create_style_btn"):
+            self.create_style_btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
 
         # Update pill toggles
         if hasattr(self, "pill_buttons_info"):
@@ -182,13 +189,23 @@ class CharactersTab:
         accent = theme.get("accent", "#0078d7")
         self._last_pbg = pbg
 
+        # Title Card
+        if hasattr(self, "title_lbl"):
+            self.title_lbl.config(bg=pbg, fg=accent)
+
         # Update Bulk Buttons
         if hasattr(self, "create_shared_btn"):
             self.create_shared_btn.config(bg=pbg, fg=accent, highlightbackground=accent)
+            self.create_shared_btn._base_bg = pbg
             
         # Update Add Character Buttons
         if hasattr(self, "create_char_btn"):
             self.create_char_btn.config(bg=pbg, fg=accent, highlightbackground=accent)
+            self.create_char_btn._base_bg = pbg
+
+        if hasattr(self, "create_style_btn"):
+            self.create_style_btn.config(bg=pbg, fg=accent, highlightbackground=accent)
+            self.create_style_btn._base_bg = pbg
 
         # Update Pill Toggles
         if hasattr(self, "pill_buttons_info"):
@@ -207,14 +224,29 @@ class CharactersTab:
     def _build_ui(self):
         """Build the characters tab UI."""
         self.tab.columnconfigure(0, weight=1)
-        self.tab.rowconfigure(3, weight=1)  # Selected characters area expands
+        self.tab.rowconfigure(4, weight=1)  # Selected characters area expands
 
         # Standard section padding - Refactor 1
         SECTION_PAD_Y = (10, 15)
+        PAD_X = 15
+        
+        # Title Card
+        title_frame = ttk.Frame(self.tab)
+        title_frame.grid(row=0, column=0, sticky="ew", padx=PAD_X, pady=(20, 5))
+        
+        accent = "#0078d7"
+        try:
+            tm = self.tab.winfo_toplevel().theme_manager
+            theme = tm.themes.get(tm.current_theme, {})
+            accent = theme.get("accent", "#0078d7")
+        except: pass
+        
+        self.title_lbl = tk.Label(title_frame, text="✨ PROMPT BUILDER", font=("Lexend", 16, "bold"), fg=accent, bg=self._last_pbg if hasattr(self, "_last_pbg") else "#1e1e1e")
+        self.title_lbl.pack(side="top", pady=5)
 
         # Base prompt selector - Refactor 5: Semantic Typography
         bp = ttk.LabelFrame(self.tab, text="📋 BASE PROMPT (STYLE)", style="TLabelframe", padding=12)
-        bp.grid(row=0, column=0, sticky="ew", padx=10, pady=SECTION_PAD_Y)
+        bp.grid(row=1, column=0, sticky="ew", padx=PAD_X, pady=SECTION_PAD_Y)
         bp.columnconfigure(0, weight=1)
         help_label = ttk.Label(bp, text="Choose a base art style", style="Muted.TLabel")
         help_label.grid(row=0, column=0, columnspan=2, sticky="w", padx=4, pady=(4, 2))
@@ -231,13 +263,42 @@ class CharactersTab:
         self.base_combo.grid(row=1, column=0, sticky="ew", padx=(4, 2), pady=(2, 6))
         create_tooltip(self.base_combo, TOOLTIPS.get("base_prompt", ""))
 
-        ttk.Button(bp, text="✨ Create Style", command=self._create_new_style).grid(
-            row=1, column=1, sticky="ew", padx=(2, 4), pady=(2, 6)
+        # Refactor 3: Ghost style for Create Style
+        theme = self.tab.winfo_toplevel().theme_manager.themes.get(
+            self.tab.winfo_toplevel().theme_manager.current_theme, {}
         )
+        pbg = theme.get("panel_bg", "#1e1e1e")
+        accent = theme.get("accent", "#0078d7")
+
+        self.create_style_btn = tk.Button(
+            bp, 
+            text="✨ Create Style", 
+            command=self._create_new_style, 
+            bg=pbg,
+            fg=accent,
+            highlightbackground=accent,
+            highlightthickness=2,
+            relief="flat",
+            font=("Lexend", 9)
+        )
+        self.create_style_btn.grid(row=1, column=1, sticky="ew", padx=(2, 4), pady=(2, 6))
+        self.create_style_btn._base_bg = pbg
+
+        def on_style_enter(e):
+            try:
+                tm = self.tab.winfo_toplevel().theme_manager
+                theme = tm.themes.get(tm.current_theme, {})
+                hbg = theme.get("hover_bg", "#333333")
+            except: hbg = "#333333"
+            self.create_style_btn.config(bg=hbg)
+        def on_style_leave(e): 
+            self.create_style_btn.config(bg=getattr(self.create_style_btn, "_base_bg", "#1e1e1e"))
+        self.create_style_btn.bind("<Enter>", on_style_enter)
+        self.create_style_btn.bind("<Leave>", on_style_leave)
 
         # Bulk outfit editor section (Collapsible) - Refactor 5
         self.bulk_container = CollapsibleFrame(self.tab, text="⚡ BULK OUTFIT EDITOR")
-        self.bulk_container.grid(row=1, column=0, sticky="ew", padx=10, pady=SECTION_PAD_Y)
+        self.bulk_container.grid(row=3, column=0, sticky="ew", padx=PAD_X, pady=SECTION_PAD_Y)
         # Start collapsed
         self.bulk_container.set_opened(False)
 
@@ -312,7 +373,7 @@ class CharactersTab:
             
             lbl = tk.Label(
                 frame, text=initial_text, bg=pbg, fg=accent,
-                font=("Lexend", 8, "bold"), padx=8, pady=2, cursor="hand2"
+                font=("Lexend", 8, "bold"), padx=10, pady=2, cursor="hand2"
             )
             lbl.pack()
             lbl._base_bg = pbg
@@ -444,7 +505,7 @@ class CharactersTab:
 
         # Add character section - Refactor 5
         add = ttk.LabelFrame(self.tab, text="👥 ADD CHARACTER", style="TLabelframe", padding=12)
-        add.grid(row=2, column=0, sticky="ew", padx=10, pady=SECTION_PAD_Y)
+        add.grid(row=2, column=0, sticky="ew", padx=PAD_X, pady=SECTION_PAD_Y)
         add.columnconfigure(0, weight=1)
         char_help = ttk.Label(
             add, text="Select a character and press Add or Enter", style="Muted.TLabel"
@@ -474,34 +535,34 @@ class CharactersTab:
         )
         
         # Refactor 3: Ghost style for Create New Character
-                self.create_char_btn = tk.Button(
-                    button_frame, 
-                    text="✨ Create New Character", 
-                    command=self._create_new_character, 
-                    bg=pbg,
-                    fg=accent,
-                    highlightbackground=accent,
-                    highlightthickness=2, # Increased thickness
-                    relief="flat",
-                    font=("Lexend", 9)
-                )
-                self.create_char_btn.grid(row=0, column=1, sticky="ew", padx=(4, 0))
-                self.create_char_btn._base_bg = pbg
-                
-                def on_char_enter(e):
-                    try:
-                        tm = self.tab.winfo_toplevel().theme_manager
-                        theme = tm.themes.get(tm.current_theme, {})
-                        hbg = theme.get("hover_bg", "#333333")
-                    except: hbg = "#333333"
-                    self.create_char_btn.config(bg=hbg)
-                def on_char_leave(e): 
-                    self.create_char_btn.config(bg=getattr(self.create_char_btn, "_base_bg", "#1e1e1e"))
-                self.create_char_btn.bind("<Enter>", on_char_enter)
-                self.create_char_btn.bind("<Leave>", on_char_leave)
-                # Use ScrollableCanvas for selected characters
+        self.create_char_btn = tk.Button(
+            button_frame, 
+            text="✨ Create New Character", 
+            command=self._create_new_character, 
+            bg=pbg,
+            fg=accent,
+            highlightbackground=accent,
+            highlightthickness=2, # Increased thickness
+            relief="flat",
+            font=("Lexend", 9)
+        )
+        self.create_char_btn.grid(row=0, column=1, sticky="ew", padx=(4, 0))
+        self.create_char_btn._base_bg = pbg
+        
+        def on_char_enter(e):
+            try:
+                tm = self.tab.winfo_toplevel().theme_manager
+                theme = tm.themes.get(tm.current_theme, {})
+                hbg = theme.get("hover_bg", "#333333")
+            except: hbg = "#333333"
+            self.create_char_btn.config(bg=hbg)
+        def on_char_leave(e): 
+            self.create_char_btn.config(bg=getattr(self.create_char_btn, "_base_bg", "#1e1e1e"))
+        self.create_char_btn.bind("<Enter>", on_char_enter)
+        self.create_char_btn.bind("<Leave>", on_char_leave)
+        # Use ScrollableCanvas for selected characters
         self.scrollable_canvas = ScrollableCanvas(self.tab)
-        self.scrollable_canvas.grid(row=3, column=0, sticky="nsew", padx=6, pady=SECTION_PAD_Y)
+        self.scrollable_canvas.grid(row=4, column=0, sticky="nsew", padx=PAD_X, pady=SECTION_PAD_Y)
 
         # Get container for characters
         self.chars_container = self.scrollable_canvas.get_container()
@@ -950,7 +1011,8 @@ class CharactersTab:
                 all_characters=self.characters,
                 all_poses=self.poses,
                 color_schemes=color_schemes,
-                callbacks=callbacks
+                callbacks=callbacks,
+                theme_manager=self.theme_manager
             )
             item.pack(fill="x", pady=(0, 8), padx=4)
 

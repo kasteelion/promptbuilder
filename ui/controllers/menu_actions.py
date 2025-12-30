@@ -114,7 +114,10 @@ class MenuActions:
         return self.app.dialog_manager.show_characters_summary()
 
     def show_outfits_summary(self):
-        return self.app.dialog_manager.show_outfits_summary()
+        return self.app.dialog_manager.show_outfits_summary(
+            data_loader=self.app.data_controller.data_loader,
+            on_reload=self.app.reload_data
+        )
 
     def show_color_schemes_summary(self):
         return self.app.dialog_manager.show_color_schemes_summary()

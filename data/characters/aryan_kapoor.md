@@ -1,4 +1,5 @@
 ### Aryan Kapoor
+**Photo:** aryan_kapoor_photo.jpeg
 
 **Tags:** male, indian, chic, commanding, corporate, bearded, luxury
 

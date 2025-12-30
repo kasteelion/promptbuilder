@@ -261,113 +261,25 @@ class DialogManager:
         self._register_dialog(dialog, _apply)
         _apply(self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}))
 
-    def show_outfits_summary(self) -> None:
-        """Show the interactive outfit library explorer."""
+    def show_outfits_summary(self, data_loader=None, on_reload=None) -> None:
+        """Show the Asset Manager (replacing Outfits Summary)."""
         try:
-            from utils.outfit_summary import generate_consolidated_outfit_data
+            from ui.asset_editor import AssetEditorDialog
             
-            data = generate_consolidated_outfit_data()
+            if not data_loader:
+                # Attempt to find data_loader on root if not provided
+                if hasattr(self.root, "data_loader"):
+                    data_loader = self.root.data_loader
+                else:
+                    messagebox.showerror("Error", "Data Loader not provided to Asset Manager.")
+                    return
+
+            tm = getattr(self.root, "theme_manager", None)
             
-            dialog = tk.Toplevel(self.root)
-            dialog.title("OUTFIT LIBRARY EXPLORER")
-            dialog.geometry("1000x700")
-            dialog.transient(self.root)
+            AssetEditorDialog(self.root, data_loader, tm, on_reload_callback=on_reload)
             
-            if hasattr(self.root, "theme_manager"):
-                self.root.theme_manager.theme_toplevel(dialog)
-
-            main_frame = ttk.Frame(dialog, padding=20)
-            main_frame.pack(fill="both", expand=True)
-
-            # Left side: Category/Outfit List
-            # Right side: Details
-            paned = tk.PanedWindow(main_frame, orient="horizontal", bd=0, sashwidth=6, sashrelief="flat")
-            paned.pack(fill="both", expand=True)
-
-            list_frame = ttk.Frame(paned, style="TFrame")
-            paned.add(list_frame, width=350)
-
-            detail_frame = ttk.Frame(paned, style="TFrame")
-            paned.add(detail_frame)
-
-            # Search
-            search_var = tk.StringVar()
-            ttk.Entry(list_frame, textvariable=search_var, style="TEntry").pack(fill="x", pady=(0, 10))
-
-            tree = ttk.Treeview(list_frame, columns=("Indicators"), show="tree", selectmode="browse")
-            tree.pack(side="left", fill="both", expand=True)
-            
-            vsb = ttk.Scrollbar(list_frame, orient="vertical", command=tree.yview)
-            vsb.pack(side="right", fill="y")
-            tree.configure(yscrollcommand=vsb.set)
-
-            # Detail area
-            detail_text = tk.Text(detail_frame, wrap="word", font=("Lexend", 10), padx=20, pady=20, borderwidth=0)
-            detail_text.pack(fill="both", expand=True)
-            
-            def populate_tree():
-                tree.delete(*tree.get_children())
-                search = search_var.get().lower()
-                
-                for cat in sorted(data.keys()):
-                    cat_id = tree.insert("", "end", text=cat.upper(), open=True)
-                    for out_name in sorted(data[cat].keys()):
-                        if search and search not in out_name.lower() and search not in cat.lower():
-                            continue
-                        
-                        out_data = data[cat][out_name]
-                        indicators = []
-                        if out_data["has_color_scheme"]: indicators.append("🎨")
-                        if out_data["has_signature"]: indicators.append("✨")
-                        
-                        tree.insert(cat_id, "end", text=out_name, values=(" ".join(indicators),), tags=(out_name, cat))
-
-            def on_select(event):
-                selection = tree.selection()
-                if not selection: return
-                
-                item = tree.item(selection[0])
-                name = item["text"]
-                # Skip category headers
-                if not item["tags"]: return
-                
-                cat = item["tags"][1]
-                out_data = data[cat][name]
-                
-                detail_text.config(state="normal")
-                detail_text.delete("1.0", "end")
-                
-                detail_text.insert("end", f"{name.upper()}\n", "title")
-                detail_text.insert("end", f"Category: {cat}\n\n", "muted")
-                
-                for mod, desc in out_data["variations"].items():
-                    mod_name = {"F": "Female", "M": "Male", "H": "Hijabi"}.get(mod, mod)
-                    detail_text.insert("end", f"--- {mod_name} Variation ---\n", "bold")
-                    detail_text.insert("end", f"{desc}\n\n")
-                
-                detail_text.config(state="disabled")
-
-            tree.bind("<<TreeviewSelect>>", on_select)
-            search_var.trace_add("write", lambda *args: populate_tree())
-
-            # Formatting tags
-            detail_text.tag_configure("title", font=("Lexend", 14, "bold"), foreground=self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}).get("accent", "#0078d7"))
-            detail_text.tag_configure("bold", font=("Lexend", 10, "bold"))
-            tm = self.root.theme_manager
-            theme = tm.themes.get(tm.current_theme, {})
-            detail_text.tag_configure("muted", foreground=theme.get("border", "gray"))
-
-            populate_tree()
-            
-            def _apply(t):
-                self.root.theme_manager.apply_text_widget_theme(detail_text, t)
-                paned.config(bg=t.get("border", "#333333"))
-            
-            self._register_dialog(dialog, _apply)
-            _apply(self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}))
-
         except Exception as e:
-            self.show_error("Explorer Error", f"Failed to load outfit data: {str(e)}")
+            messagebox.showerror("Error", f"Failed to open Asset Manager:\n{e}")
 
     def show_color_schemes_summary(self) -> None:
         """Show color schemes summary dialog."""
@@ -1181,7 +1093,30 @@ class DialogManager:
                 self.root.clipboard_append(content)
                 self.show_info("Copied", "All prompts copied to clipboard!")
 
+        def export_to_txt():
+            content = output_text.get("1.0", "end").strip()
+            if not content:
+                self.show_error("Export Error", "Nothing to export!")
+                return
+            
+            from tkinter import filedialog
+            from pathlib import Path
+            
+            filename = filedialog.asksaveasfilename(
+                defaultextension=".txt",
+                filetypes=[("Text files", "*.txt"), ("All files", "*.*")],
+                title="Export Bulk Prompts"
+            )
+            
+            if filename:
+                try:
+                    Path(filename).write_text(content, encoding="utf-8")
+                    self.show_info("Success", f"Prompts exported to {Path(filename).name}")
+                except Exception as e:
+                    self.show_error("Export Error", f"Failed to save file: {e}")
+
         ttk.Button(btn_frame, text="GENERATE", command=generate, style="TButton").pack(side="right", padx=5)
+        ttk.Button(btn_frame, text="EXPORT TO TXT", command=export_to_txt).pack(side="right", padx=5)
         ttk.Button(btn_frame, text="COPY OUTPUT", command=copy_output).pack(side="right", padx=5)
         ttk.Button(btn_frame, text="CLOSE", command=dialog.destroy).pack(side="right", padx=5)
 

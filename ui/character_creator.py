@@ -7,6 +7,7 @@ import logic.parsers as parsers
 from logic.parsers import MarkdownParser
 from ui.widgets import ScrollableCanvas
 from utils import (
+    create_tooltip,
     get_character_template,
     get_character_template_description,
     get_character_template_names,

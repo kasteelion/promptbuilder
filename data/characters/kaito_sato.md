@@ -1,4 +1,5 @@
 ### Kaito Sato
+**Photo:** kaito_sato_photo.jpeg
 
 **Tags:** male, japanese, edgy, street-style, techwear, athletic, energetic
 

@@ -1,4 +1,5 @@
 ### Callum Doherty
+**Photo:** callum_doherty_photo.jpeg
 
 **Tags:** male, celtic, rugged, playful, freckled, red-haired, craftsman, confident
 

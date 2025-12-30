@@ -210,7 +210,7 @@ THEMES = {
         "text_fg": "#FFFFFF",
         "accent": "#FFB612",
         "accent_hover": "#e6a410",
-        "border": "#FFB612",
+        "border": "#3d5e56", # Softened border (was same as accent)
         "selected_bg": "#3d5e56",
     },
     "Packers Light": {

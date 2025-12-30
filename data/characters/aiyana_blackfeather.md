@@ -34,8 +34,4 @@
 **Outfits:**
 
 #### Base
-- **Top:** Simple white cotton crew neck tee with subtle Indigenous artist graphic
-- **Bottom:** High-waist dark denim jeans (straight leg)
-- **Footwear:** Brown leather ankle boots with fringe detail
-- **Accessories:** Large turquoise and silver squash blossom necklace, turquoise stud earrings, silver cuff bracelet with traditional stamping, beaded hair ties on braids, small leather medicine bag on thin leather cord
-- **Hair/Makeup:** Hair in two long braids wrapped with leather and beaded ties; natural makeup
+Minimalist Suede Top (rich terracotta color, soft genuine suede texture, modern boxy cut with cap sleeves, matte finish); High-Waist Jeans (dark indigo wash, straight leg cut, rigid premium denim, structured fit). Accessories: Large turquoise and silver squash blossom necklace (statement piece), turquoise stud earrings, heavy silver cuff bracelet with traditional stamping, small leather medicine bag on thin cord. Hair/Makeup: Two waist-length braids wrapped with leather strips and beaded ties; fresh natural skin with defined brows.

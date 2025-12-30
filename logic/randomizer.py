@@ -105,12 +105,15 @@ class PromptRandomizer:
         # Get random base prompt
         base_prompt = random.choice(list(self.base_prompts.keys())) if self.base_prompts else ""
         
-        # Get random color scheme
+        # Get random color scheme - Weight 'Default' higher (30% chance)
         color_scheme = "Default (No Scheme)"
-        if self.color_schemes:
-            # Filter out "Default" to make randomization more interesting, or keep it?
-            # Let's keep it as a valid option but maybe weighted less? Simple random choice for now.
+        if self.color_schemes and random.random() > 0.3:
             color_scheme = random.choice(list(self.color_schemes.keys()))
+
+        # Roll once for framing to ensure consistency across characters
+        prompt_framing = ""
+        if self.framing and random.random() < 0.25:
+            prompt_framing = random.choice(list(self.framing.keys()))
 
         # Get random characters
         available_chars = list(self.characters.keys())
@@ -144,6 +147,15 @@ class PromptRandomizer:
             )
             # Apply color scheme to character data so UI can pick it up
             char_data["color_scheme"] = color_scheme
+            
+            # Consistent framing
+            if prompt_framing:
+                char_data["framing_mode"] = prompt_framing
+                
+            # 25% chance to use signature color if outfit might support it
+            if random.random() < 0.25:
+                char_data["use_signature_color"] = True
+                
             selected_characters.append(char_data)
 
         # Generate notes string from the pre-selected template
@@ -154,6 +166,16 @@ class PromptRandomizer:
         elif generate_interaction:
              # Fallback if no interactions loaded or something went wrong
             notes_text = self._generate_random_notes(selected_characters)
+        
+        # 10% chance for a generic action/focus note if notes still empty
+        if not notes_text and random.random() < 0.1:
+            notes_text = random.choice([
+                "Focus on cinematic lighting and texture.",
+                "Wide angle shot showing the full environment.",
+                "Emphasis on the characters' expressions.",
+                "High contrast with deep shadows.",
+                "Soft, dreamlike atmosphere."
+            ])
 
         config = {
             "selected_characters": selected_characters,
@@ -204,18 +226,13 @@ class PromptRandomizer:
             if pose_presets:
                 pose_preset = random.choice(list(pose_presets.keys()))
 
-        # Random framing mode if applicable
-        framing_mode = ""
-        if self.framing and random.random() < 0.3:
-            framing_mode = random.choice(list(self.framing.keys()))
-
         return {
             "name": char_name,
             "outfit": outfit_name,
             "outfit_traits": outfit_traits,
             "pose_category": pose_category,
             "pose_preset": pose_preset,
-            "framing_mode": framing_mode,
+            "framing_mode": "", # Handled at prompt level
             "action_note": "",
         }
 

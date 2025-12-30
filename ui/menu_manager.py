@@ -136,18 +136,16 @@ class MenuManager:
         tools_menu.add_separator()
 
         tools_menu.add_command(
-            label="📊 Characters Summary", command=self.callbacks["show_characters_summary"]
+            label="📊 Character Stats", command=self.callbacks["show_characters_summary"]
         )
         tools_menu.add_command(
-            label="👗 Outfits Summary", command=self.callbacks["show_outfits_summary"]
+            label="📦 Asset Manager", command=self.callbacks["show_outfits_summary"]
         )
         tools_menu.add_command(
-            label="🎨 Team Colors Summary",
-            command=self.callbacks["show_color_schemes_summary"]
+            label="🎨 Color Schemes", command=self.callbacks["show_color_schemes_summary"]
         )
         tools_menu.add_command(
-            label="🏷️ Tag Distribution Summary",
-            command=self.callbacks["show_tag_summary"]
+            label="🔖 Tag Stats", command=self.callbacks["show_tag_summary"]
         )
 
     def _build_view_menu(self):

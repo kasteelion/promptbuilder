@@ -1,4 +1,5 @@
 ### Elena Rosales
+**Photo:** elena_rosales_photo.jpeg
 
 **Tags:** female, latina, chic, curvy, high-femme, lesbian, glamorous, commanding
 

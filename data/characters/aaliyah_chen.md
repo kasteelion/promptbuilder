@@ -1,5 +1,5 @@
 ### Aaliyah Chen
-**Photo:** aaliyah_chen_photo_1765692796.png
+**Photo:** aaliyah_chen_photo.png
 
 **Tags:** female, mixed-heritage, athletic, bohemian, approachable, minimalist
 

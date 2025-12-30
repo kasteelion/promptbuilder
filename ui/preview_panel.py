@@ -52,48 +52,27 @@ class PreviewPanel:
 
     def _build_ui(self) -> None:
         """Build the preview panel UI."""
-        if self.header_parent == self.parent:
-            self.parent.rowconfigure(1, weight=1)
-            self.parent.columnconfigure(0, weight=1)
-            header_row = 0
-        else:
-            self.parent.rowconfigure(0, weight=1)
-            self.parent.columnconfigure(0, weight=1)
-            header_row = 0
+        # Configure layout: Header (0), Text (1), Footer (2)
+        self.parent.columnconfigure(0, weight=1)
+        self.parent.rowconfigure(1, weight=1)
 
-        # Header with buttons - Refactor 1
+        # --- Header (Generation Controls) ---
         hdr = ttk.Frame(self.header_parent, style="TFrame")
         if self.header_parent == self.parent:
-            hdr.grid(row=header_row, column=0, sticky="ew", padx=12, pady=(15, 10))
+            hdr.grid(row=0, column=0, sticky="ew", padx=12, pady=(15, 5))
         else:
-            # When in a separate header (like a CollapsibleFrame header), use grid
-            # Position it in column 1 (after the toggle button)
             hdr.grid(row=0, column=1, sticky="ew", padx=(10, 0))
             self.header_parent.columnconfigure(1, weight=1)
             
-        hdr.columnconfigure(0, weight=1)
+        hdr.columnconfigure(0, weight=1) # Spacer
 
-        # Only show title if we're in the default parent
         if self.header_parent == self.parent:
-            ttk.Label(hdr, text="📄 Prompt Preview", style="Title.TLabel").grid(
-                row=0, column=0, sticky="w"
-            )
+            ttk.Label(hdr, text="📄 Prompt Preview", style="Title.TLabel").pack(side="left")
 
-        # Right-side controls - Use grid for better layout control
         controls_frame = ttk.Frame(hdr, style="TFrame")
-        controls_frame.grid(row=0, column=1, sticky="e", padx=(5, 0))
-        
-        # Configure button grid
-        controls_frame.columnconfigure(0, weight=0)
-        controls_frame.columnconfigure(1, weight=0)
-        controls_frame.columnconfigure(2, weight=0)
+        controls_frame.pack(side="right")
 
-        # Get current theme for manual button overrides
-        theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-
-        # Helper for Pill buttons in Phase 3
-        def add_pill_btn(parent, text, command, row, col):
-            # Get current theme colors safely
+        def add_pill_btn(parent, text, command, side="left"):
             try:
                 theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
                 pbg = theme.get("panel_bg", theme.get("text_bg", "#1e1e1e"))
@@ -102,24 +81,14 @@ class PreviewPanel:
                 pbg = "#1e1e1e"
                 accent = "#0078d7"
             
-            # Outer Frame (The Border)
             pill = tk.Frame(parent, bg=accent, padx=1, pady=1)
-            pill.grid(row=row, column=col, padx=2, pady=2)
+            pill.pack(side=side, padx=2)
             
-            # Inner Label (The hollow center)
             lbl = tk.Label(
-                pill, 
-                text=text.upper(), 
-                bg=pbg, 
-                fg=accent,
-                font=("Lexend", 8, "bold"), # Refactor 5
-                padx=12,
-                pady=3,
-                cursor="hand2"
+                pill, text=text.upper(), bg=pbg, fg=accent,
+                font=("Lexend", 8, "bold"), padx=10, pady=2, cursor="hand2"
             )
             lbl.pack()
-            
-            # Hover restoration storage
             lbl._base_bg = pbg
             
             def on_enter(e, l=lbl):
@@ -134,35 +103,17 @@ class PreviewPanel:
             lbl.bind("<Enter>", on_enter)
             lbl.bind("<Leave>", on_leave)
             lbl.bind("<Button-1>", lambda e: command())
-            
             self.pill_buttons.append((pill, lbl))
-            return pill
+            return pill, lbl
 
-        # Refactor 3: Pill style for Copy, Save, Clear, Randomize, Reload
-        # Row 0: Generation/Data Actions
-        add_pill_btn(controls_frame, "🎲 Randomize", self.on_randomize, 0, 1)
-        add_pill_btn(controls_frame, "🔄 Reload", self.on_reload, 0, 2)
+        # Header Buttons
+        add_pill_btn(controls_frame, "🎲 Randomize", self.on_randomize)
+        add_pill_btn(controls_frame, "🔄 Reload", self.on_reload)
+        self.quick_copy_btn = add_pill_btn(controls_frame, "⚡ Copy", self.copy_prompt)[0]
 
-        # Row 1: File/Clipboard Actions
-        add_pill_btn(controls_frame, "📋 Copy", self._show_copy_menu_pill, 1, 0)
-        # Store for menu access
-        self.copy_btn_frame, self.copy_btn_lbl = self.pill_buttons[-1]
-
-        add_pill_btn(controls_frame, "💾 Save", self.save_prompt, 1, 1)
-        add_pill_btn(controls_frame, "🗑️ Clear", self._on_clear, 1, 2)
-
-        # Quick Actions Row (New)
-        # We'll use the same pill style for these actions
-        quick_frame = ttk.Frame(hdr, style="TFrame")
-        quick_frame.grid(row=0, column=0, sticky="w", padx=(15, 0))
-        
-        self.quick_copy_btn = add_pill_btn(quick_frame, "⚡ QUICK COPY", self.copy_prompt, 0, 0)
-        self.open_editor_btn = add_pill_btn(quick_frame, "📝 OPEN IN EDITOR", self._open_in_external_editor, 0, 1)
-
-        # Preview text widget with scrollbar - Refactor 1
-        # Refactor 3: Switch to custom dark scrollbar
+        # --- Text Area ---
         text_frame = ttk.Frame(self.parent, style="TFrame")
-        text_frame.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0, 15))
+        text_frame.grid(row=1, column=0, sticky="nsew", padx=12, pady=(5, 5))
         text_frame.columnconfigure(0, weight=1)
         text_frame.rowconfigure(0, weight=1)
 
@@ -175,7 +126,22 @@ class PreviewPanel:
         preview_scroll.grid(row=0, column=1, sticky="ns")
         self.preview_text.configure(yscrollcommand=preview_scroll.set)
 
-        # Bind Ctrl+C for copy and Ctrl+S for save
+        # --- Footer (File Actions) ---
+        footer = ttk.Frame(self.parent, style="TFrame")
+        footer.grid(row=2, column=0, sticky="ew", padx=12, pady=(0, 15))
+        
+        # Right: File Actions
+        f_right = ttk.Frame(footer, style="TFrame")
+        f_right.pack(side="right")
+        
+        pill, lbl = add_pill_btn(f_right, "📋 Options", self._show_copy_menu_pill)
+        self.copy_btn_frame, self.copy_btn_lbl = pill, lbl
+        
+        self.open_editor_btn = add_pill_btn(f_right, "📝 Edit", self._open_in_external_editor)[0]
+        add_pill_btn(f_right, "💾 Save", self.save_prompt)
+        add_pill_btn(f_right, "🗑️ Clear", self._on_clear)
+
+        # Bindings
         self.preview_text.bind("<Control-c>", lambda e: self.copy_prompt())
         self.preview_text.bind("<Control-s>", lambda e: self.save_prompt())
 

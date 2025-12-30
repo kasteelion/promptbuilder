@@ -12,6 +12,7 @@ from utils import create_tooltip, logger
 
 from .constants import CHARACTER_CARD_SIZE
 from .searchable_combobox import SearchableCombobox
+from .image_cropper import ImageCropperDialog
 
 # Optional PIL import for image handling
 try:
@@ -103,12 +104,9 @@ class CharacterCard(ttk.Frame):
         self.is_used = is_used
         
         if is_used:
-            # Show "Added" indicator
+            # Create "Added" indicator if missing
             if not hasattr(self, "used_label"):
                 accent = self.theme_colors.get("accent", "#0078d7")
-                # Use a color that contrasts well with the photo background, 
-                # but try to stick to theme values if possible. 
-                # Success green is standard, but let's make it slightly more themed.
                 self.used_label = tk.Label(
                     self.photo_canvas, 
                     text="✓", 
@@ -116,26 +114,17 @@ class CharacterCard(ttk.Frame):
                     fg="white", 
                     font=("Lexend", 10, "bold")
                 )
-                # Place in top-right corner of photo
-                self.photo_canvas.create_window(
-                    int(self.photo_canvas.cget("width")) - 12, 
-                    12, 
-                    window=self.used_label, 
-                    anchor="center",
-                    tags="used_indicator"
-                )
-            
             # Apply subtle highlight to card - Refactor 3
             self.configure(style="Selected.Card.TFrame")
         else:
-            # Remove indicator
-            self.photo_canvas.delete("used_indicator")
+            # Cleanup indicator
             if hasattr(self, "used_label"):
                 self.used_label.destroy()
                 del self.used_label
-            
             # Restore normal style
             self.configure(style="Card.TFrame")
+            
+        self._update_overlays()
 
     def _on_enter(self, event):
         """Handle mouse enter (hover)."""
@@ -273,32 +262,40 @@ class CharacterCard(ttk.Frame):
         self.edit_btn.bind("<Enter>", on_edit_enter)
         self.edit_btn.bind("<Leave>", on_edit_leave)
         
-        self.fav_btn_var = tk.StringVar()
-        self.fav_btn = tk.Button(
-            btn_frame, 
-            textvariable=self.fav_btn_var,
-            command=self._toggle_favorite,
-            bg=pbg,
-            fg=accent,
-            relief="flat",
-            font=("Lexend", 11),
-            cursor="hand2"
+        # Favorite overlay on photo (Top-Left)
+        self.fav_label = tk.Label(
+            self.photo_canvas, 
+            text="☆", 
+            bg=pbg, 
+            fg=accent, 
+            font=("Lexend", 12),
+            cursor="hand2",
+            padx=4, pady=0
         )
-        self.fav_btn.pack(side="right")
-        self.fav_btn._base_bg = pbg
+        self.fav_label._base_bg = pbg
+        
+        self.photo_canvas.create_window(
+            15, 
+            15, 
+            window=self.fav_label, 
+            anchor="center",
+            tags="fav_indicator"
+        )
+        
+        self.fav_label.bind("<Button-1>", lambda e: self._toggle_favorite())
         
         def on_fav_enter(e): 
             try:
                 theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
                 hbg = theme.get("hover_bg", "#333333")
-                self.fav_btn.config(bg=hbg)
+                self.fav_label.config(bg=hbg)
             except: pass
             
         def on_fav_leave(e): 
-            self.fav_btn.config(bg=getattr(self.fav_btn, "_base_bg", "#1e1e1e"))
+            self.fav_label.config(bg=getattr(self.fav_label, "_base_bg", "#1e1e1e"))
             
-        self.fav_btn.bind("<Enter>", on_fav_enter)
-        self.fav_btn.bind("<Leave>", on_fav_leave)
+        self.fav_label.bind("<Enter>", on_fav_enter)
+        self.fav_label.bind("<Leave>", on_fav_leave)
         
         self._update_fav_star()
 
@@ -317,10 +314,7 @@ class CharacterCard(ttk.Frame):
                 self.photo_canvas.itemconfig(self.placeholder_text, fill=fg)
             except Exception: pass
 
-        if hasattr(self, "name_label"):
-            self.name_label.config(foreground=fg)
-            
-        if hasattr(self, "fav_btn"):
+        if hasattr(self, "fav_label"):
             self._update_fav_star()
             
         # Re-build tags to apply new colors
@@ -369,9 +363,9 @@ class CharacterCard(ttk.Frame):
                     hbg = self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")
                 except: hbg = "#333333"
                 l.config(bg=hbg)
-                            def on_tag_leave(e, l=lbl):
-                                l.config(bg=getattr(l, "_base_bg", pbg))
-                        lbl.bind("<Enter>", on_tag_enter)
+            def on_tag_leave(e, l=lbl):
+                l.config(bg=getattr(l, "_base_bg", pbg))
+            lbl.bind("<Enter>", on_tag_enter)
             lbl.bind("<Leave>", on_tag_leave)
             lbl.bind("<Button-1>", lambda e, v=t: self._handle_tag_click(v))
             self.tags_container._children.append(pill)
@@ -475,21 +469,26 @@ class CharacterCard(ttk.Frame):
 
     def _update_fav_star(self):
         """Update favorite star icon based on preference."""
-        if self.prefs:
+        if self.prefs and hasattr(self, "fav_label"):
             is_fav = self.prefs.is_favorite("favorite_characters", self.character_name)
-            self.fav_btn_var.set("★" if is_fav else "☆")
+            self.fav_label.config(text="★" if is_fav else "☆")
             
             accent = self.theme_colors.get("accent", "#0078d7")
+            # For overlay, we want contrast. If not fav, maybe standard panel bg? 
+            # Or semi-transparent? Tkinter doesn't do real transparency well.
+            # We'll use panel_bg.
             panel_bg = self.theme_colors.get("panel_bg", self.theme_colors.get("bg", "#1e1e1e"))
             
             if is_fav:
                 # Primary style for favorite
-                self.fav_btn.configure(bg=accent, fg="white")
-                self.fav_btn._base_bg = accent
+                self.fav_label.configure(bg=accent, fg="white")
+                self.fav_label._base_bg = accent
             else:
                 # Ghost style for non-favorite
-                self.fav_btn.configure(bg=panel_bg, fg=accent)
-                self.fav_btn._base_bg = panel_bg
+                self.fav_label.configure(bg=panel_bg, fg=accent)
+                self.fav_label._base_bg = panel_bg
+                
+            self._update_overlays()
 
     def _preview_photo(self):
         """Show full-size photo preview in a popup window."""
@@ -743,11 +742,49 @@ class CharacterCard(ttk.Frame):
             self.photo_image = ImageTk.PhotoImage(pil_img)
             self.photo_canvas.delete("all")
             self.photo_canvas.create_image(0, 0, image=self.photo_image, anchor="nw")
+            
+            # Re-draw overlays after clearing canvas
+            self._update_overlays()
         except tk.TclError:
             # Widget likely destroyed
             pass
         except Exception:
             logger.exception("Failed to create PhotoImage from PIL image")
+
+    def _update_overlays(self):
+        """Re-draw all photo overlays (fav star, used checkmark)."""
+        if not hasattr(self, "photo_canvas") or not self.photo_canvas.winfo_exists():
+            return
+            
+        try:
+            w = int(self.photo_canvas.cget("width"))
+            h = int(self.photo_canvas.cget("height"))
+        except Exception:
+            w = h = 140
+
+        # 1. Favorite Star (Top Right)
+        self.photo_canvas.delete("fav_indicator")
+        if hasattr(self, "fav_label"):
+            self.photo_canvas.create_window(
+                w - 18, 
+                18, 
+                window=self.fav_label, 
+                anchor="center",
+                tags="fav_indicator"
+            )
+            
+        # 2. Used Checkmark (Bottom Right)
+        self.photo_canvas.delete("used_indicator")
+        if self.is_used and hasattr(self, "used_label"):
+            try:
+                self.photo_canvas.create_window(
+                    w - 18, 
+                    h - 18, 
+                    window=self.used_label, 
+                    anchor="center",
+                    tags="used_indicator"
+                )
+            except Exception: pass
 
     def _change_photo(self):
         """Open file dialog to change character photo."""
@@ -759,34 +796,31 @@ class CharacterCard(ttk.Frame):
         if not filepath:
             return
 
+        # Open Cropper
+        cropper = ImageCropperDialog(self.winfo_toplevel(), filepath, self.theme_manager)
+        cropped_image = cropper.show()
+        
+        if not cropped_image:
+            return
+
         # Copy to characters folder
         try:
             chars_dir = self.data_loader._find_characters_dir()
             chars_dir.mkdir(parents=True, exist_ok=True)
 
-            source = Path(filepath)
             # Create safe filename
             safe_name = self.character_name.lower().replace(" ", "_")
             safe_name = "".join(c for c in safe_name if c.isalnum() or c == "_")
-            dest = chars_dir / f"{safe_name}_photo{source.suffix}"
+            dest = chars_dir / f"{safe_name}_photo.png"
 
-            # Copy file
+            # Save cropped image
             try:
-                shutil.copy2(source, dest)
+                cropped_image.save(dest, "PNG")
             except PermissionError:
-                # Destination file may be locked by another process (preview open).
-                # Try a unique filename fallback (timestamp) to avoid overwrite conflicts.
                 import time
-
                 ts = int(time.time())
-                dest = chars_dir / f"{safe_name}_photo_{ts}{source.suffix}"
-                try:
-                    shutil.copy2(source, dest)
-                except Exception:
-                    from utils import logger
-
-                    logger.exception("Auto-captured exception")
-                    raise
+                dest = chars_dir / f"{safe_name}_photo_{ts}.png"
+                cropped_image.save(dest, "PNG")
 
             # Update character data
             relative_path = dest.name
@@ -796,7 +830,7 @@ class CharacterCard(ttk.Frame):
             self._update_character_file(relative_path)
 
             # Display the photo
-            self._display_photo(dest)
+            self._display_photo(cropped_image) # Pass PIL image directly
 
             # Callback
             if self.on_photo_change:
@@ -865,7 +899,7 @@ class CharacterCard(ttk.Frame):
 class CharacterGalleryPanel(ttk.Frame):
     """Side panel showing character cards in a scrollable gallery."""
 
-    def __init__(self, parent, data_loader, prefs, on_add_callback, theme_manager=None, theme_colors=None):
+    def __init__(self, parent, data_loader, prefs, on_add_callback, theme_manager=None, theme_colors=None, on_create_callback=None):
         """Initialize character gallery.
 
         Args:
@@ -875,12 +909,14 @@ class CharacterGalleryPanel(ttk.Frame):
             on_add_callback: Function to call when adding character
             theme_manager: Optional ThemeManager instance
             theme_colors: Theme color dict
+            on_create_callback: Function to call when creating a new character
         """
         super().__init__(parent, style="TFrame")
 
         self.data_loader = data_loader
         self.prefs = prefs
         self.on_add_callback = on_add_callback
+        self.on_create_callback = on_create_callback
         self.theme_manager = theme_manager
         self.theme_colors = theme_colors or {}
         self.characters = {}
@@ -925,6 +961,13 @@ class CharacterGalleryPanel(ttk.Frame):
         )
         self.random_btn.pack(side="right", padx=(2, 0))
         create_tooltip(self.random_btn, "Add a random character from the current list")
+
+        if self.on_create_callback:
+            self.create_btn = ttk.Button(
+                header, text="➕", width=3, command=self.on_create_callback, style="Ghost.TButton"
+            )
+            self.create_btn.pack(side="right", padx=(2, 0))
+            create_tooltip(self.create_btn, "Create a new character")
 
         # Search box with placeholder effect
         search_frame = ttk.Frame(self, style="TFrame")
