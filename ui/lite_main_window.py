@@ -11,17 +11,13 @@ from utils import create_tooltip, logger
 # Imports required for _build_ui
 from .main_window import PromptBuilderApp
 from .lite_characters_tab import LiteCharactersTab
-from .character_card import CharacterGalleryPanel # Not used but good to have if we revert
-from .characters_tab import CharactersTab
 from .controllers.menu_actions import MenuActions
-from .controllers.gallery import GalleryController
 from .menu_manager import MenuManager
 from .preview_panel import PreviewPanel
 from .scene_panel import ScenePanel
 from .notes_panel import NotesPanel
 from .summary_panel import SummaryPanel
 from .widgets import CollapsibleFrame, ScrollableCanvas
-from .edit_tab import EditTab
 
 class LitePromptBuilderApp(PromptBuilderApp):
     """Lite version of PromptBuilderApp without character gallery images."""
@@ -103,7 +99,7 @@ class LitePromptBuilderApp(PromptBuilderApp):
         )
         self.status_bar.pack(side="bottom", fill="x")
 
-        # Create a paned window for main content (No gallery pane)
+        # Create a paned window for main content
         try:
             panel_bg = ttk.Style().lookup("TFrame", "background")
         except:
@@ -122,39 +118,17 @@ class LitePromptBuilderApp(PromptBuilderApp):
 
         # In Lite mode, we skip the gallery frame entirely
         self.gallery_frame = None
-        
-        # Dummy gallery to prevent crashes in inherited methods
-        class DummyGallery:
-            def load_characters(self, *args): pass
-            def update_used_status(self, *args): pass
-            @property
-            def theme_colors(self): return {}
-            @theme_colors.setter
-            def theme_colors(self, val): pass
-            def _refresh_display(self): pass
-            
-        self.character_gallery = DummyGallery()
         self.gallery_visible = False
+        
+        # Class Dummy for compatibility
+        class Dummy:
+            def update_used_status(self, *args): pass
+            def _refresh_display(self, *args): pass
+        self.character_gallery = Dummy()
 
-        # Use PanedWindow directly for main content
-        paned = tk.PanedWindow(
-            self.main_paned, 
-            orient="horizontal",
-            bg=panel_bg,
-            bd=0,
-            sashwidth=6,
-            sashrelief="flat",
-            showhandle=False
-        )
-        self.main_paned.add(paned) 
-
-        # Left side: Notebook with tabs
-        self.notebook = ttk.Notebook(paned, style="TNotebook")
-        paned.add(self.notebook, width=550) 
-
-        # Create tabs - USE LITE CHARACTERS TAB
+        # Left side: Lite Characters Tab (Directly in main area)
         self.characters_tab = LiteCharactersTab(
-            self.notebook,
+            self.main_paned,
             self.data_loader,
             self.theme_manager,
             self.character_controller,
@@ -162,34 +136,11 @@ class LitePromptBuilderApp(PromptBuilderApp):
             self.reload_data,
             self._save_state_for_undo,
         )
-        
-        # Lazy load EditTab
-        self.edit_tab = None
-        self.notebook.add(ttk.Frame(self.notebook, style="TFrame"), text="Edit Data")
-        
-        def _on_tab_changed(event):
-            selected_tab = self.notebook.select()
-            tab_text = self.notebook.tab(selected_tab, "text")
-            if tab_text == "Edit Data" and self.edit_tab is None:
-                tab_frame = self.notebook.nametowidget(selected_tab)
-                self.edit_tab = EditTab(
-                    self.notebook, 
-                    self.data_loader, 
-                    self.theme_manager,
-                    self.reload_data, 
-                    existing_frame=tab_frame
-                )
-                current_theme = self.theme_manager.current_theme or self.prefs.get("last_theme", DEFAULT_THEME)
-                self._apply_theme(current_theme)
-
-        self.notebook.bind("<<NotebookTabChanged>>", _on_tab_changed)
-
-        # Load data into tabs
-        self.characters_tab.load_data(self.characters, self.base_prompts, self.poses, self.scenes)
+        self.main_paned.add(self.characters_tab.tab, width=550, minsize=300)
 
         # Right side: Scrollable container for collapsible sections
-        self.right_scroll_container = ScrollableCanvas(paned)
-        paned.add(self.right_scroll_container) 
+        self.right_scroll_container = ScrollableCanvas(self.main_paned)
+        self.main_paned.add(self.right_scroll_container, minsize=250) 
         right_frame = self.right_scroll_container.get_container()
         right_frame.columnconfigure(0, weight=1)
 
@@ -201,8 +152,8 @@ class LitePromptBuilderApp(PromptBuilderApp):
         controls_frame.grid(row=0, column=0, sticky="ew", padx=INTERNAL_PAD_X, pady=(15, 0))
         
         def _set_all_collapsible(state):
-            for section in [self.scene_collapsible, self.notes_collapsible, 
-                           self.summary_collapsible, self.preview_collapsible]:
+            for section in [self.scene_panel, self.notes_panel, 
+                           self.summary_panel, self.preview_collapsible]:
                 section.set_opened(state)
             self.right_scroll_container.update_scroll_region()
 
@@ -260,7 +211,6 @@ class LitePromptBuilderApp(PromptBuilderApp):
         # Preview panel
         self.preview_collapsible = CollapsibleFrame(right_frame, text="🔍 PROMPT PREVIEW", opened=True)
         self.preview_collapsible.grid(row=4, column=0, sticky="nsew", padx=INTERNAL_PAD_X, pady=(SECTION_PAD_Y[0], 20))
-        create_tooltip(self.preview_collapsible, "The full generated prompt for copying")
         preview_content = self.preview_collapsible.get_content_frame()
         preview_header = self.preview_collapsible.get_header_frame()
 
@@ -278,6 +228,9 @@ class LitePromptBuilderApp(PromptBuilderApp):
         self.preview_panel.set_callbacks(
             self._generate_prompt, self._validate_prompt, self.randomize_all
         )
+
+        # Load data into characters_tab
+        self.characters_tab.load_data(self.characters, self.base_prompts, self.poses, self.scenes)
 
     def _toggle_character_gallery(self):
         """No-op for Lite version."""
@@ -302,17 +255,16 @@ class LitePromptBuilderApp(PromptBuilderApp):
                 bg=bg, relief="flat", highlightthickness=2, padx=10,
                 font=("Lexend", 9)
             )
+            btn._base_bg = bg
             
             def on_btn_enter(e, b=btn):
                 try:
                     theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
                     hbg = theme.get("hover_bg", "#333333")
-                except: hbg = "#333333"
-                b.config(bg=hbg)
+                    b.config(bg=hbg)
+                except: pass
             def on_btn_leave(e, b=btn):
-                try: curr_bg = parent.cget("background")
-                except: curr_bg = bg
-                b.config(bg=curr_bg)
+                b.config(bg=getattr(b, "_base_bg", "#121212"))
             
             btn.bind("<Enter>", on_btn_enter)
             btn.bind("<Leave>", on_btn_leave)
@@ -340,7 +292,5 @@ class LitePromptBuilderApp(PromptBuilderApp):
         
         # Tools
         add_tool_btn(toolbar_frame, "🎲 Randomize", self.randomize_all, "Randomize Everything (Alt+R)")
-        # NO Gallery Button
         
         ttk.Frame(toolbar_frame).pack(side="left", fill="x", expand=True)
-

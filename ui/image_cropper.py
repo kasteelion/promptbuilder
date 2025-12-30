@@ -3,7 +3,14 @@
 
 import tkinter as tk
 from tkinter import ttk
-from PIL import Image, ImageTk
+
+try:
+    from PIL import Image, ImageTk
+    HAS_PIL = True
+except ImportError:
+    HAS_PIL = False
+    Image = None
+    ImageTk = None
 
 from ui.widgets import ScrollableCanvas
 from themes import ThemeManager
@@ -19,6 +26,9 @@ class ImageCropperDialog:
             image_path: Path to source image
             theme_manager: ThemeManager instance
         """
+        if not HAS_PIL:
+            return
+
         self.parent = parent
         self.image_path = image_path
         self.theme_manager = theme_manager
