@@ -2,12 +2,11 @@
 """Lite version of CharactersTab with integrated tagging."""
 
 import tkinter as tk
-from tkinter import messagebox, ttk
+from tkinter import ttk
 
 from config import TOOLTIPS
 from utils import create_tooltip, logger
 from .characters_tab import CharactersTab
-from .character_item import CharacterItem
 from .searchable_combobox import SearchableCombobox
 from .widgets import CollapsibleFrame, FlowFrame, ScrollableCanvas
 

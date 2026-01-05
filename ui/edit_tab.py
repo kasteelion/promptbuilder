@@ -2,8 +2,8 @@
 
 import re
 import tkinter as tk
-from tkinter import messagebox, scrolledtext, ttk
-from typing import Callable, List, Dict, Optional, Tuple
+from tkinter import messagebox, ttk
+from typing import Callable, List, Dict
 
 from logic.parsers import MarkdownParser
 from utils import create_tooltip

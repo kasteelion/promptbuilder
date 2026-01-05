@@ -326,6 +326,20 @@ Canvas texture, cracked paint artifacts, and atmospheric smoke/embers. The palet
 
 ---
 
+Emirichu Animation Style
+Rendering
+Clean digital vector illustration with flat cel-shading. Smooth, anti-aliased line art with consistent medium-weight outlines. Minimal shading using one to two tones per area for subtle depth while maintaining a 2D animation aesthetic. Soft gradients only where needed. Even, friendly lighting creating a warm, inviting atmosphere. Bright, cheerful color palette with pastel undertones and well-balanced saturated hues that pop without overwhelming. Colors are vibrant but harmonious, never harsh.
+Character Accuracy
+Large, expressive doe eyes that dominate the face and convey strong emotions (joy, surprise, concern). Eyes feature simple but effective highlights and reflections. Small simplified noses (often just dots or tiny curved lines). Expressive eyebrows that enhance comedic timing and emotional readability. Round, cherubic faces with soft jawlines. Mouths are simple but convey clear emotions. Features are consistently cute and approachable, optimized for relatability and storytelling.
+Body Types
+Chibi-influenced proportions with slightly shortened limbs. Soft, rounded body shapes using gentle curves throughout. Simplified anatomy with minimal angular details. Bodies are "squishy" and non-threatening. Hand shapes are simplified (often mitten-like or stubby fingers). Overall silhouette is compact and endearing. Proportions favor expressiveness over realism.
+Hair & Clothing
+Hair: Large, chunky shapes with simplified strand detail. Soft, flowing forms that move as unified masses. Gentle curves define the hair volume with minimal individual strands. Shading uses one or two tones maximum. Clothing: Clean, simplified designs that read clearly at any size. Folds are minimal and stylized using soft curved lines. Fabric drapes naturally but with simplified physics. Details like buttons or patterns are oversized and graphic for readability.
+Details
+Simplified backgrounds that complement rather than compete with characters. Occasional floating iconography (hearts, sparkles, sweat drops, exclamation marks) for emotional emphasis. Soft drop shadows beneath characters. Clean composition optimized for animation and screen-based viewing. Overall aesthetic balances cuteness with relatability, perfect for YouTube storytime animation and comedic scenarios. Style is distinctly modern digital creator aesthetic—polished yet personal, professional yet approachable.
+
+---
+
 ## Standard / Neutral
 
 Rendering

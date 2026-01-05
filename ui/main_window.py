@@ -6,14 +6,9 @@ import tkinter as tk
 from tkinter import ttk
 from typing import Optional
 
-from config import DEFAULT_THEME, TOOLTIPS, DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
+from config import DEFAULT_THEME, DEFAULT_FONT_SIZE
 from core.app_context import AppContext
-from core.builder import PromptBuilder
-from core.exceptions import DataLoadError
-from logic import DataLoader, PromptRandomizer, validate_prompt_config
-from themes import ThemeManager
-from utils import PreferencesManager, create_tooltip, logger
-from utils.interaction_helpers import fill_template
+from utils import create_tooltip, logger
 
 from .character_card import CharacterGalleryPanel
 from .characters_tab import CharactersTab
@@ -25,7 +20,6 @@ from .controllers.character_controller import CharacterController
 from .controllers.data_controller import DataController
 from .controllers.window_state import WindowStateController
 from .dialog_manager import DialogManager
-from .edit_tab import EditTab
 from .font_manager import FontManager
 from .menu_manager import MenuManager
 from .preview_controller import PreviewController
@@ -302,7 +296,7 @@ class PromptBuilderApp:
             theme = tm.themes.get(tm.current_theme, {})
             main_bg = theme.get("bg", "#121212")
             muted_fg = theme.get("border", "gray")
-        except:
+        except Exception:
             main_bg = "#121212"
             muted_fg = "gray"
 
@@ -322,7 +316,7 @@ class PromptBuilderApp:
         # Refactor 1: Invisible Splitter styling
         try:
             panel_bg = style.lookup("TFrame", "background")
-        except:
+        except Exception:
             panel_bg = "#1e1e1e"
 
         self.main_paned = tk.PanedWindow(
@@ -430,7 +424,8 @@ class PromptBuilderApp:
             try:
                 curr_theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
                 hbg = curr_theme.get("hover_bg", "#333333")
-            except: hbg = "#333333"
+            except Exception:
+                hbg = "#333333"
             b.config(bg=hbg)
         def on_btn_leave(e, b):
             b.config(bg=getattr(self, "_last_panel_bg", "#1e1e1e"))
@@ -518,9 +513,11 @@ class PromptBuilderApp:
             # Try to get background safely
             try: 
                 bg = parent.cget("background")
-            except: 
-                try: bg = ttk.Style().lookup("TFrame", "background")
-                except: bg = "#121212"
+            except Exception: 
+                try: 
+                    bg = ttk.Style().lookup("TFrame", "background")
+                except Exception: 
+                    bg = "#121212"
             
             btn = tk.Button(
                 parent, text=text, command=command,
@@ -533,7 +530,8 @@ class PromptBuilderApp:
                 try:
                     theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
                     hbg = theme.get("hover_bg", "#333333")
-                except: hbg = "#333333"
+                except Exception: 
+                    hbg = "#333333"
                 b.config(bg=hbg)
             def on_btn_leave(e, b=btn):
                 b.config(bg=getattr(b, "_base_bg", "#121212"))
@@ -790,29 +788,8 @@ class PromptBuilderApp:
                 for child in self.main_paned.winfo_children():
                     if isinstance(child, tk.PanedWindow):
                         child.config(bg=panel_bg)
-            except Exception: pass
-
-        # Update specialized controllers/services
-        if hasattr(self, "gallery_controller") and self.gallery_controller:
-            self.gallery_controller.apply_theme(theme)
-
-        if hasattr(self, "toasts"):
-            try:
-                self.toasts.apply_theme(theme)
-            except Exception: pass
-
-        if hasattr(self, "dialog_manager"):
-            self.dialog_manager.apply_theme(theme)
-
-        # Update PanedWindow backgrounds for invisible splitters - Refactor 1
-        if hasattr(self, "main_paned"):
-            try:
-                self.main_paned.config(bg=panel_bg)
-                # Find the inner paned window (it's a child of main_paned)
-                for child in self.main_paned.winfo_children():
-                    if isinstance(child, tk.PanedWindow):
-                        child.config(bg=panel_bg)
-            except: pass
+            except Exception:
+                pass
 
         # Apply to character gallery (use controller if available)
         if hasattr(self, "gallery_controller") and self.gallery_controller:
@@ -974,7 +951,7 @@ class PromptBuilderApp:
             theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
             panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
             accent = theme.get("accent", "#0078d7")
-        except:
+        except Exception:
             panel_bg = "#1e1e1e"
             accent = "#0078d7"
 

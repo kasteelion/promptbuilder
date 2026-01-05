@@ -4,9 +4,8 @@
 import tkinter as tk
 from tkinter import ttk
 
-from config import DEFAULT_THEME, TOOLTIPS, DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
-from core.app_context import AppContext
-from utils import create_tooltip, logger
+from config import DEFAULT_THEME
+from utils import create_tooltip
 
 # Imports required for _build_ui
 from .main_window import PromptBuilderApp

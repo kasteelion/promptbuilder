@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 """Dialog management for the application."""
 
-import platform
-import sys
-import threading
 import tkinter as tk
-from tkinter import messagebox, ttk, scrolledtext
+from tkinter import messagebox, ttk
 
 from typing import Callable, Optional
 
@@ -331,7 +328,8 @@ class DialogManager:
                     border_color = self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}).get("border", "gray")
                     swatch = tk.Frame(row, width=20, height=20, bg=val, highlightthickness=1, highlightbackground=border_color)
                     swatch.pack(side="left", padx=5)
-                except: pass
+                except Exception:
+                    pass
                 
                 ttk.Label(row, text=val, style="Muted.TLabel").pack(side="left")
 
@@ -471,7 +469,7 @@ class DialogManager:
                 theme = tm.themes.get(tm.current_theme, {})
                 accent = theme.get("accent", "#0078d7")
                 pbg = theme.get("panel_bg", "#1e1e1e")
-            except:
+            except Exception:
                 accent = "#0078d7"
                 pbg = "#1e1e1e"
                 
@@ -627,7 +625,9 @@ class DialogManager:
                     style = ttk.Style()
                     accent = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
                     bg = style.lookup("TFrame", "background")
-                except: accent = "#0078d7"; bg = "#1e1e1e"
+                except Exception:
+                    accent = "#0078d7"
+                    bg = "#1e1e1e"
                 
                 f = tk.Frame(parent, bg=accent, padx=1, pady=1)
                 l = tk.Label(f, text=text, bg=bg, fg=accent, font=("Lexend", 8, "bold"), padx=12, pady=3, cursor="hand2")
@@ -917,7 +917,9 @@ class DialogManager:
                         style = ttk.Style()
                         accent_color = style.lookup("Tag.TLabel", "bordercolor") or "#0078d7"
                         pbg = style.lookup("TFrame", "background")
-                    except: accent_color = "#0078d7"; pbg = "#1e1e1e"
+                    except Exception:
+                        accent_color = "#0078d7"
+                        pbg = "#1e1e1e"
 
                     pill_frame = tk.Frame(item_frame, bg=accent_color, padx=1, pady=1)
                     pill_frame.pack(side="left")
@@ -1059,7 +1061,8 @@ class DialogManager:
 
         def generate():
             raw = input_text.get("1.0", "end").strip()
-            if not raw: return
+            if not raw:
+                return
             
             try:
                 raw_configs = bulk.parse_bulk_text(raw)

@@ -5,9 +5,7 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 
 from config import TOOLTIPS
-from utils import create_tooltip, logger
-from utils.outfit_color_check import outfit_has_color_vars
-from utils.color_scheme import parse_color_schemes
+from utils import create_tooltip
 
 from .base_style_creator import BaseStyleCreatorDialog
 from .character_creator import CharacterCreatorDialog
@@ -15,7 +13,7 @@ from .character_item import CharacterItem
 from .outfit_creator import CharacterOutfitCreatorDialog, SharedOutfitCreatorDialog
 from .pose_creator import PoseCreatorDialog
 from .searchable_combobox import SearchableCombobox
-from .widgets import CollapsibleFrame, FlowFrame, ScrollableCanvas
+from .widgets import CollapsibleFrame, ScrollableCanvas
 
 
 class CharactersTab:
@@ -239,7 +237,8 @@ class CharactersTab:
             tm = self.tab.winfo_toplevel().theme_manager
             theme = tm.themes.get(tm.current_theme, {})
             accent = theme.get("accent", "#0078d7")
-        except: pass
+        except Exception:
+            pass
         
         self.title_lbl = tk.Label(title_frame, text="✨ PROMPT BUILDER", font=("Lexend", 16, "bold"), fg=accent, bg=self._last_pbg if hasattr(self, "_last_pbg") else "#1e1e1e")
         self.title_lbl.pack(side="top", pady=5)
@@ -289,9 +288,10 @@ class CharactersTab:
                 tm = self.tab.winfo_toplevel().theme_manager
                 theme = tm.themes.get(tm.current_theme, {})
                 hbg = theme.get("hover_bg", "#333333")
-            except: hbg = "#333333"
+            except Exception:
+                hbg = "#333333"
             self.create_style_btn.config(bg=hbg)
-        def on_style_leave(e): 
+        def on_style_leave(e):
             self.create_style_btn.config(bg=getattr(self.create_style_btn, "_base_bg", "#1e1e1e"))
         self.create_style_btn.bind("<Enter>", on_style_enter)
         self.create_style_btn.bind("<Leave>", on_style_leave)
@@ -382,14 +382,16 @@ class CharactersTab:
                 new_val = not variable.get()
                 variable.set(new_val)
                 lbl.config(text=f"✓ {text}" if new_val else text)
-                if command: command()
+                if command:
+                    command()
                 
             def on_e(e, l=lbl):
                 try:
                     tm = self.tab.winfo_toplevel().theme_manager
                     curr_theme = tm.themes.get(tm.current_theme, {})
                     hbg = curr_theme.get("hover_bg", "#333333")
-                except: hbg = "#333333"
+                except Exception:
+                    hbg = "#333333"
                 l.config(bg=hbg)
             def on_l(e, l=lbl):
                 l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
@@ -1194,9 +1196,12 @@ class CharactersTab:
         
         for mod in modifiers:
             label = mod
-            if mod == "F": label = "F (Female)"
-            elif mod == "M": label = "M (Male)"
-            elif mod == "H": label = "H (Hijabi)"
+            if mod == "F":
+                label = "F (Female)"
+            elif mod == "M":
+                label = "M (Male)"
+            elif mod == "H":
+                label = "H (Hijabi)"
             
             ttk.Radiobutton(frame, text=label, variable=choice_var, value=mod).pack(anchor="w", pady=2)
 

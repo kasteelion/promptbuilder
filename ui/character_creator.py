@@ -10,7 +10,6 @@ from utils import (
     create_tooltip,
     get_character_template,
     get_character_template_description,
-    get_character_template_names,
     logger,
 )
 from utils.notification import notify

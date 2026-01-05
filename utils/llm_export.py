@@ -1,6 +1,6 @@
 ﻿"""Utility for exporting application data in an LLM-friendly format."""
 
-from typing import Dict, Any, List
+from typing import Dict, Any
 from utils.outfit_summary import generate_consolidated_outfit_data
 
 def generate_llm_export_text(ctx: Any) -> str:

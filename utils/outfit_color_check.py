@@ -1,5 +1,4 @@
 import re
-from utils.color_scheme import parse_color_schemes
 
 def outfit_has_color_vars(outfit_text: str) -> bool:
     """Return True if outfit text contains color scheme placeholders."""

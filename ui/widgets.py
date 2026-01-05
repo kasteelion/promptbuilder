@@ -49,7 +49,8 @@ class ScrollableCanvas(ttk.Frame):
                         self.canvas.itemconfig(self._window, width=event.width)
                         # Update scroll region when canvas resizes
                         self.update_scroll_region()
-                except Exception: pass
+                except Exception:
+                    pass
                 self._resize_after_id = None
 
             # Small 20ms debounce to prevent layout thrashing during movement
@@ -164,12 +165,7 @@ class ScrollableCanvas(ttk.Frame):
                 if not self._is_scrolling_needed():
                     self.scrollbar.grid_remove()
                 else:
-                    # Only grid if mouse is over? No, we should probably respect the hover logic 
-                    # OR just show it if it's needed and we are in a state where it should be shown.
-                    # For now, let's respect the hover behavior: don't auto-show unless hovered.
-                    # But if we want it to be user-friendly, maybe show it if it WAS shown?
-                    # Let's keep it simple: Hidden by default, shown on hover.
-                    # So we don't force show here, just ensure it's hidden if NOT needed.
+                    # Let hover logic handle showing it
                     pass
                 
                 self._scroll_after_id = None
@@ -226,7 +222,7 @@ class CollapsibleFrame(ttk.Frame):
             theme = tm.themes.get(tm.current_theme, {})
             panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
             accent = theme.get("accent", "#0078d7")
-        except:
+        except Exception:
             panel_bg = "#1e1e1e"
             accent = "#0078d7"
 
@@ -278,7 +274,8 @@ class CollapsibleFrame(ttk.Frame):
                     tm = self.master.winfo_toplevel().theme_manager
                     theme = tm.themes.get(tm.current_theme, {})
                     hbg = theme.get("hover_bg", "#333333")
-                except: hbg = "#333333"
+                except Exception:
+                    hbg = "#333333"
                 l.config(bg=hbg)
             def on_leave(e, l=lbl):
                 l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))

@@ -220,7 +220,7 @@ class CharacterItem(ttk.Frame):
                 new_val = not self.sig_var.get()
                 self.sig_var.set(new_val)
                 self.char_data["use_signature_color"] = new_val
-                self.sig_pill_lbl.config(text=f"✓ USE SIGNATURE COLOR" if new_val else "USE SIGNATURE COLOR")
+                self.sig_pill_lbl.config(text="✓ USE SIGNATURE COLOR" if new_val else "USE SIGNATURE COLOR")
                 self.callbacks["on_change"]()
                 
             sig_frame = ttk.Frame(self.controls_frame)
@@ -502,7 +502,7 @@ class CharacterItem(ttk.Frame):
             use_sig = random.random() < 0.5
             self.sig_var.set(use_sig)
             self.char_data["use_signature_color"] = use_sig
-            self.sig_pill_lbl.config(text=f"✓ USE SIGNATURE COLOR" if use_sig else "USE SIGNATURE COLOR")
+            self.sig_pill_lbl.config(text="✓ USE SIGNATURE COLOR" if use_sig else "USE SIGNATURE COLOR")
             
         # Randomize traits if applicable
         # We look for checkbuttons in controls_frame

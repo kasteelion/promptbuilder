@@ -213,7 +213,8 @@ def resolve_config(config, loader, poses_data):
                         char["pose_preset"] = pname
                         found_pose = True
                         break
-                if found_pose: break
+                if found_pose:
+                    break
             
             if not found_pose:
                 # Treat as custom note

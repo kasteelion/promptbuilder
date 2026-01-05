@@ -10,7 +10,6 @@ This script will:
   "Appearance (Identity Locks):" block.
 """
 
-import os
 import re
 from pathlib import Path
 import shutil
@@ -37,7 +36,7 @@ def migrate_character_file(file_path: Path):
 
     # 1. Check if already migrated
     if "Appearance (Identity Locks):" in content:
-        print(f"  INFO: Skipping, already in new format.")
+        print("  INFO: Skipping, already in new format.")
         return
 
     # 2. Backup the original file

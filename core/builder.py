@@ -1,7 +1,7 @@
 import re
 from typing import Any, Dict, List
 
-from utils.color_scheme import parse_color_schemes, substitute_colors, substitute_signature_color
+from utils.color_scheme import substitute_colors, substitute_signature_color
 from utils.text_utils import normalize_blank_lines
 
 from .renderers import CharacterRenderer, NotesRenderer, OutfitRenderer, PoseRenderer, SceneRenderer

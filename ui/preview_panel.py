@@ -4,7 +4,7 @@
 import re
 import tkinter as tk
 from pathlib import Path
-from tkinter import filedialog, messagebox, scrolledtext, ttk
+from tkinter import filedialog, messagebox, ttk
 from typing import Callable, Optional
 
 from utils import logger

@@ -2,7 +2,6 @@
 Script to validate color_schemes.md for correct format and completeness.
 """
 import re
-from pathlib import Path
 
 SCHEME_HEADER = re.compile(r"^## (.+)")
 PRIMARY = re.compile(r"^- \*\*primary:\*\* (.+)")

@@ -50,7 +50,7 @@ def main(argv=None):
 
     except KeyboardInterrupt:
         log("Application closed by user (Ctrl+C)")
-    except Exception as e:
+    except Exception:
         import traceback
         log(f"FATAL ERROR: {traceback.format_exc()}", level=40)
     finally:

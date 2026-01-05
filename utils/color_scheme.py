@@ -1,6 +1,5 @@
 import re
-from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict
 
 def parse_color_schemes(filepath: str) -> Dict[str, Dict[str, str]]:
     """Parse color_schemes.md into a dictionary of schemes."""

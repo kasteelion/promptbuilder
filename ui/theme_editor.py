@@ -53,7 +53,8 @@ class ThemeEditorDialog:
         try:
             current_theme = theme_manager.themes.get(theme_manager.current_theme, {})
             self.apply_theme(current_theme)
-        except: pass
+        except Exception:
+            pass
 
     def apply_theme(self, theme):
         """Apply theme to all dialog widgets. (Refactor 3)"""
@@ -67,8 +68,10 @@ class ThemeEditorDialog:
         for k in self.KEYS:
             val = self.entries[k].get()
             if not val:
-                try: self.swatches[k].config(bg=pbg)
-                except: pass
+                try:
+                    self.swatches[k].config(bg=pbg)
+                except Exception:
+                    pass
 
     def _build_ui(self):
         main = ttk.Frame(self.dialog, style="TFrame", padding=15)

@@ -43,7 +43,8 @@ class BaseStyleCreatorDialog:
         try:
             current_theme = parent.theme_manager.themes.get(parent.theme_manager.current_theme, {})
             self.apply_theme(current_theme)
-        except: pass
+        except Exception:
+            pass
 
         # Center on parent
         self.dialog.update_idletasks()
@@ -70,7 +71,8 @@ class BaseStyleCreatorDialog:
                 tm = self.parent.theme_manager
                 theme = tm.themes.get(tm.current_theme, {})
                 pfg = theme.get("placeholder_fg", "#666666")
-            except: pfg = "#666666"
+            except Exception:
+                pfg = "#666666"
             self.description_text.config(foreground=pfg)
         else:
             self.description_text.config(foreground=theme.get("text_fg", "white"))
@@ -204,7 +206,8 @@ Details
                     tm = self.winfo_toplevel().theme_manager
                     theme = tm.themes.get(tm.current_theme, {})
                     pfg = theme.get("placeholder_fg", "#666666")
-                except: pfg = "#666666"
+                except Exception:
+                    pfg = "#666666"
                 self.description_text.config(foreground=pfg)
 
         self.description_text.bind("<FocusIn>", on_focus_in)
@@ -235,9 +238,11 @@ Details
                 tm = self.winfo_toplevel().theme_manager
                 theme = tm.themes.get(tm.current_theme, {})
                 hbg = theme.get("hover_bg", "#333333")
-            except: hbg = "#333333"
+            except Exception:
+                hbg = "#333333"
             self.cancel_btn.config(bg=hbg)
-        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", "#1e1e1e"))
+        def on_c_leave(e):
+            self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", "#1e1e1e"))
         self.cancel_btn.bind("<Enter>", on_c_enter)
         self.cancel_btn.bind("<Leave>", on_c_leave)
 

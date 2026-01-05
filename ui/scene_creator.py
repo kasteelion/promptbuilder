@@ -198,11 +198,12 @@ class SceneCreatorDialog:
             if not self.description_text.get("1.0", "end").strip():
                 self.description_text.insert("1.0", placeholder)
                 try:
-            tm = self.winfo_toplevel().theme_manager
-            theme = tm.themes.get(tm.current_theme, {})
-            pfg = theme.get("placeholder_fg", "#666666")
-        except: pfg = "#666666"
-        self.description_text.config(foreground=pfg)
+                    tm = self.winfo_toplevel().theme_manager
+                    theme = tm.themes.get(tm.current_theme, {})
+                    pfg = theme.get("placeholder_fg", "#666666")
+                except Exception:
+                    pfg = "#666666"
+                self.description_text.config(foreground=pfg)
 
         self.description_text.bind("<FocusIn>", on_focus_in)
         self.description_text.bind("<FocusOut>", on_focus_out)
@@ -265,11 +266,12 @@ class SceneCreatorDialog:
             placeholder = "[Describe the environmental setting, background details, lighting conditions, and atmosphere.]"
             self.description_text.insert("1.0", placeholder)
             try:
-            tm = self.winfo_toplevel().theme_manager
-            theme = tm.themes.get(tm.current_theme, {})
-            pfg = theme.get("placeholder_fg", "#666666")
-        except: pfg = "#666666"
-        self.description_text.config(foreground=pfg)
+                tm = self.winfo_toplevel().theme_manager
+                theme = tm.themes.get(tm.current_theme, {})
+                pfg = theme.get("placeholder_fg", "#666666")
+            except Exception:
+                pfg = "#666666"
+            self.description_text.config(foreground=pfg)
         else:
             # Insert template content with normal text color
             if content:

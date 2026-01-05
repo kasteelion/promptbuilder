@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Controller for data lifecycle and synchronization."""
 
-from typing import Callable, Optional
+from typing import Callable
 from utils import logger
 
 

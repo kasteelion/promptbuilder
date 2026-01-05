@@ -12,8 +12,6 @@ except ImportError:
     Image = None
     ImageTk = None
 
-from ui.widgets import ScrollableCanvas
-from themes import ThemeManager
 
 class ImageCropperDialog:
     """Dialog for cropping and positioning character photos."""

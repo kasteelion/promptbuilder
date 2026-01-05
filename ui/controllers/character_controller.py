@@ -2,9 +2,8 @@
 """Controller for character-related business logic."""
 
 import shutil
-import tkinter as tk
 from tkinter import messagebox
-from typing import Optional, List
+from typing import List
 
 from utils import logger
 

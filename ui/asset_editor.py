@@ -7,10 +7,8 @@ Replaces the functionality of the integrated Edit Tab and Outfits Summary.
 import tkinter as tk
 from tkinter import ttk, messagebox
 import re
-from pathlib import Path
 
 from logic import MarkdownParser
-from utils import create_tooltip
 
 class AssetEditorDialog:
     def __init__(self, parent, data_loader, theme_manager, on_reload_callback=None):
@@ -112,15 +110,18 @@ class AssetEditorDialog:
                                 
                                 # Icons
                                 icons = []
-                                if out_info.get("has_color_scheme"): icons.append("🎨")
-                                if out_info.get("has_signature"): icons.append("✨")
+                                if out_info.get("has_color_scheme"):
+                                    icons.append("🎨")
+                                if out_info.get("has_signature"):
+                                    icons.append("✨")
                                 
                                 display_text = out_name
                                 if icons:
                                     display_text += " " + " ".join(icons)
             
                                 self.tree.insert(cat_id, "end", text=display_text, values=("__LIBRARY__", "outfit", out_name))
-        except: pass
+        except Exception:
+            pass
 
         # 2. Raw Files
         cats = {
@@ -133,7 +134,8 @@ class AssetEditorDialog:
         
         for f in files:
             # Skip characters.md specifically
-            if f == "characters.md" or f.endswith("/characters.md"): continue
+            if f == "characters.md" or f.endswith("/characters.md"):
+                continue
 
             # Determine category
             if f.startswith("characters") or "characters/" in f:
@@ -151,7 +153,8 @@ class AssetEditorDialog:
 
     def _add_subnodes(self, parent_id, filename):
         content = self._read_file_content(filename)
-        if not content: return
+        if not content:
+            return
         
         try:
             if filename.startswith("outfits"):
@@ -176,14 +179,16 @@ class AssetEditorDialog:
                         oid = self.tree.insert(char_node, "end", text="Outfits", values=(filename, "section", "Outfits"))
                         for out in info["outfits"]:
                             self.tree.insert(oid, "end", text=out, values=(filename, "outfit", out))
-        except: pass
+        except Exception:
+            pass
 
     def _read_file_content(self, filename):
         try:
             path = self._resolve_path(filename)
             if path and path.exists():
                 return path.read_text(encoding="utf-8")
-        except: pass
+        except Exception:
+            pass
         return ""
 
     def _resolve_path(self, filename):
@@ -194,11 +199,13 @@ class AssetEditorDialog:
 
     def _on_tree_select(self, event):
         sel = self.tree.selection()
-        if not sel: return
+        if not sel:
+            return
         
         item = self.tree.item(sel[0])
         values = item["values"]
-        if not values: return
+        if not values:
+            return
         
         filename = values[0]
         node_type = values[1] if len(values) > 1 else "file"
@@ -230,12 +237,17 @@ class AssetEditorDialog:
         if extra:
             term = extra
             if node_type == "outfit":
-                if filename.startswith("outfits"): term = f"### {extra}" 
-                else: term = f"**{extra}:**"
-            elif node_type == "category": term = f"## {extra}"
+                if filename.startswith("outfits"):
+                    term = f"### {extra}" 
+                else:
+                    term = f"**{extra}:**"
+            elif node_type == "category":
+                term = f"## {extra}"
             elif node_type == "section":
-                if extra == "Appearance": term = "**Appearance:**"
-                elif extra == "Outfits": term = "**Outfits:**"
+                if extra == "Appearance":
+                    term = "**Appearance:**"
+                elif extra == "Outfits":
+                    term = "**Outfits:**"
             
             self._find_and_show(term)
 
@@ -251,7 +263,8 @@ class AssetEditorDialog:
                 out_data = cons_data[cat][outfit_name]
                 break
         
-        if not out_data: return
+        if not out_data:
+            return
         
         self.lbl_filename.config(text=f"Comparison: {outfit_name}")
         self.editor_text.config(state="normal")
@@ -279,12 +292,14 @@ class AssetEditorDialog:
             self.editor_text.tag_add("search_match", pos, f"{pos} lineend")
 
     def _save_file(self):
-        if not self.current_file_path or self.is_consolidated_mode: return
+        if not self.current_file_path or self.is_consolidated_mode:
+            return
         content = self.editor_text.get("1.0", "end-1c")
         try:
             self.current_file_path.write_text(content, encoding="utf-8")
             self.lbl_status.config(text=f"Saved {self.current_file_path.name}")
-            if self.on_reload: self.on_reload()
+            if self.on_reload:
+                self.on_reload()
         except Exception as e:
             messagebox.showerror("Error", str(e))
 
@@ -292,7 +307,8 @@ class AssetEditorDialog:
         self.lbl_status.config(text="Validation checks passed (basic).")
 
     def _on_key_release(self, event):
-        if self.is_consolidated_mode: return
+        if self.is_consolidated_mode:
+            return
         if event.keysym in ("Return", "BackSpace", "Delete") or len(event.char) > 0:
             self._highlight_syntax()
 

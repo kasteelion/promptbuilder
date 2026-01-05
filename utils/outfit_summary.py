@@ -62,7 +62,6 @@ def generate_consolidated_outfit_data(data_dir=None):
     raw_data = generate_outfit_data(data_dir)
     consolidated = {}
     
-    import re
     
     # Iterate through all modifiers
     for mod, categories in raw_data.items():

@@ -52,7 +52,6 @@ def extract_appearance(file_path, include_base=False):
             ].strip()
 
     # Capture style notes: HTML comment blocks and lines starting with '//' (preserve their content)
-    import re
 
     style_notes_parts = []
     # Find HTML comment blocks inside the appearance section

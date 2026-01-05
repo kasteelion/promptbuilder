@@ -2,10 +2,9 @@
 """Condensed prompt summary and quick-import panel."""
 
 import tkinter as tk
-from tkinter import ttk
-from typing import Callable, Optional
+from typing import Callable
 
-from utils import create_tooltip, logger
+from utils import create_tooltip
 from .widgets import CollapsibleFrame
 
 

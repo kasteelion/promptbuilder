@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """Visual character card widget with photo support."""
 
-import shutil
 import random
 import tkinter as tk
 from pathlib import Path
@@ -24,7 +23,6 @@ except ImportError:
     logger.info("PIL/Pillow not available. Character photos will not be displayed.")
     logger.info("Install Pillow for photo support: pip install Pillow")
 
-import threading
 
 # Simple in-memory cache for resized/cropped PIL images keyed by (path, w, h)
 _IMAGE_CACHE: dict = {}
@@ -126,21 +124,35 @@ class CharacterCard(ttk.Frame):
             
         self._update_overlays()
 
-    def _on_enter(self, event):
-        """Handle mouse enter (hover)."""
-        self.configure(style="Selected.Card.TFrame" if self._expanded else "Card.TFrame")
-        try:
-            self.name_label.config(foreground=self.theme_colors.get("accent", "#0078d7"))
-        except Exception:
-            pass
+        def _on_enter(self, event):
 
-    def _on_leave(self, event):
-        """Handle mouse leave."""
-        self.configure(style="Card.TFrame")
-        try:
-            self.name_label.config(foreground=self.theme_colors.get("fg", "white"))
-        except Exception:
-            pass
+            """Handle mouse enter (hover)."""
+
+            self.configure(style="Selected.Card.TFrame" if self._expanded else "Card.TFrame")
+
+            try:
+
+                self.name_label.config(foreground=self.theme_colors.get("accent", "#0078d7"))
+
+            except Exception:
+
+                pass
+
+    
+
+        def _on_leave(self, event):
+
+            """Handle mouse leave."""
+
+            self.configure(style="Card.TFrame")
+
+            try:
+
+                self.name_label.config(foreground=self.theme_colors.get("fg", "white"))
+
+            except Exception:
+
+                pass
 
     def _build_ui(self):
         """Build the card UI with a vertical stacked layout. (Refactor 3)"""
@@ -254,7 +266,8 @@ class CharacterCard(ttk.Frame):
                 theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
                 hbg = theme.get("hover_bg", "#333333")
                 self.edit_btn.config(bg=hbg)
-            except: pass
+            except Exception:
+                pass
             
         def on_edit_leave(e): 
             self.edit_btn.config(bg=getattr(self.edit_btn, "_base_bg", "#1e1e1e"))
@@ -289,7 +302,8 @@ class CharacterCard(ttk.Frame):
                 theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
                 hbg = theme.get("hover_bg", "#333333")
                 self.fav_label.config(bg=hbg)
-            except: pass
+            except Exception:
+                pass
             
         def on_fav_leave(e): 
             self.fav_label.config(bg=getattr(self.fav_label, "_base_bg", "#1e1e1e"))
@@ -312,7 +326,8 @@ class CharacterCard(ttk.Frame):
             self.photo_canvas.config(bg=pbg, highlightbackground=border)
             try:
                 self.photo_canvas.itemconfig(self.placeholder_text, fill=fg)
-            except Exception: pass
+            except Exception:
+                pass
 
         if hasattr(self, "fav_label"):
             self._update_fav_star()
@@ -329,7 +344,8 @@ class CharacterCard(ttk.Frame):
         try:
             self.tags_container.clear()
         except Exception:
-            for w in self.tags_container.winfo_children(): w.destroy()
+            for w in self.tags_container.winfo_children():
+                w.destroy()
             
         raw_tags = self.character_data.get("tags") or []
         if isinstance(raw_tags, str):
@@ -386,7 +402,8 @@ class CharacterCard(ttk.Frame):
         # Trigger parent scroll update
         try:
             self.master.master.master.scrollable_canvas.update_scroll_region()
-        except Exception: pass
+        except Exception:
+            pass
 
     def _sort_tags_by_category(self, tags, categorized_map):
         """Sort tags based on category priority."""
@@ -784,7 +801,8 @@ class CharacterCard(ttk.Frame):
                     anchor="center",
                     tags="used_indicator"
                 )
-            except Exception: pass
+            except Exception:
+                pass
 
     def _change_photo(self):
         """Open file dialog to change character photo."""
@@ -1557,7 +1575,8 @@ class CharacterGalleryPanel(ttk.Frame):
             try:
                 tm = self.winfo_toplevel().theme_manager
                 self.theme_colors = tm.themes.get(tm.current_theme, {})
-            except: pass
+            except Exception:
+                pass
             
         # Update canvas background
         bg = self.theme_colors.get("bg", "#121212")
@@ -1586,4 +1605,5 @@ class CharacterGalleryPanel(ttk.Frame):
             if hasattr(app, "characters_tab"):
                 selected_names = [c["name"] for c in app.characters_tab.get_selected_characters()]
                 self.update_used_status(selected_names)
-        except: pass
+        except Exception:
+            pass
