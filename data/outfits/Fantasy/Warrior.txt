@@ -1,0 +1,24 @@
+tags: [Combat, Fantasy]
+
+[F]
+- **Top:** Fitted armor-inspired bodice (leather or faux-leather with metal accents)
+- **Bottom:** high-waist pants or skirt with side slits (((default:dark colors) or (signature)), movement-friendly)
+- **Footwear:** knee-high boots (sturdy with buckles).
+- **Accessories:** Arm bracers, belt with pouches, weapon prop (sword or bow).
+- **Hair/Makeup:** Hair in warrior braids or ponytail, natural makeup with defined features.
+
+[M]
+- **Top:** Fitted armor-inspired vest or chest piece (leather or faux-leather with metal accents)
+- **Bottom:** tactical pants (dark colors, movement-friendly)
+- **Footwear:** knee-high boots (sturdy with buckles).
+- **Accessories:** Arm bracers, belt with pouches, weapon prop (sword or axe).
+- **Hair/Makeup:** Hair in warrior style or short, natural grooming with defined features.
+
+[H]
+- **Hijab:** Practical tactical hijab in dark color (charcoal or deep brown) with secure warrior-style wrap
+- **Top:** Long-sleeve fitted armor-inspired tunic (leather-look or structured fabric with protective details, high neck, falls to mid-thigh)
+- **Bottom:** High-waist tactical pants with utility details (dark colors, movement-friendly)
+- **Footwear:** Knee-high boots (sturdy with buckles)
+- **Accessories:** Arm bracers (worn over sleeves), utility belt with pouches, weapon prop (sword or bow)
+- **Makeup:** Natural makeup with defined features, warrior aesthetic
+

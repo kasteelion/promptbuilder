@@ -1,0 +1,20 @@
+tags: [Intimate, Lounge]
+
+[F]
+- **Top:** A **((default:intimate apparel set) or (signature) lingerie set)** (bra and brief/boy short combination) in a flattering style.
+- **Accessories:** Minimal jewelry.
+- **Hair/Makeup:** Soft, intimate styling.
+
+[M]
+- **Top:** Fitted boxer briefs or briefs in a ((default:flattering style and color) or (signature) color).
+- **Accessories:** Minimal jewelry.
+- **Hair/Makeup:** Soft, intimate grooming.
+
+[H]
+- **Hijab:** Soft silk hijab in champagne with intimate draping
+- **Top:** Long-sleeve modest slip dress in ((default:champagne) or (signature)) silk (high neckline, falls to ankles)
+- **Bottom:** N/A
+- **Footwear:** Barefoot or delicate slippers
+- **Accessories:** Delicate gold jewelry
+- **Makeup:** Soft, intimate styling
+

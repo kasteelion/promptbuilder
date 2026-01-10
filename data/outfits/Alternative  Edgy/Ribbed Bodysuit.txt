@@ -1,0 +1,21 @@
+tags: [Casual, Edgy]
+
+[F]
+- **Top:** Sleeveless scoop-neck bodysuit (high-density ribbed knit in ((default:cream) or (signature)), form-fitting construction that emphasizes the underbust contour)
+- **Bottom:** High-leg cut silhouette (worn under low-waist denim shorts).
+- **Accessories:** Simple gold chain necklace; small hoop earrings.
+- **Hair/Makeup:** Loose natural waves; peachy lip gloss; fresh-faced glow.
+
+[M]
+- **Top:** Sleeveless scoop-neck ribbed tank (high-density ribbed knit in ((default:cream) or (signature)), form-fitting construction that emphasizes chest and abdominal definition)
+- **Bottom:** Worn tucked into low-waist distressed denim shorts.
+- **Accessories:** Simple gold chain necklace; small silver watch.
+- **Hair/Makeup:** Tousled natural hair; clean-shaven or neat stubble; fresh-faced look.
+
+[H]
+- **Hijab:** Soft ribbed knit hijab in ((default:cream) or (signature)) with a relaxed wrap
+- **Top:** Long-sleeve ribbed modest tunic (high-density ribbed knit in ((default:cream) or (signature)), form-fitting construction, high neck)
+- **Bottom:** Matching ribbed leggings or worn with modest denim midi-skirt
+- **Accessories:** Simple gold chain necklace; small gold studs
+- **Makeup:** Peachy lip gloss; fresh-faced glow
+

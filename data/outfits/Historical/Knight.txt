@@ -1,0 +1,24 @@
+tags: [Armor, Combat, Fantasy]
+
+[F]
+- **Top:** Polished plate armor bodice (steel or silver with embossed details)
+- **Bottom:** armored pauldrons and gauntlets
+- **Footwear:** chainmail skirt or **armored tassets** (knee-length with leather underneath); **steel greaves and sabatons** (shin and foot protection); **sturdy leather boots**.
+- **Accessories:** Longsword and shield (heraldic design), knight's helm with plume (carried or worn), cape in ((default:house colors) or (signature)).
+- **Hair/Makeup:** Hair pulled back in practical bun or braid, minimal makeup, determined expression.
+
+[M]
+- **Top:** Polished plate armor breastplate (steel or silver with embossed details)
+- **Bottom:** armored pauldrons and gauntlets
+- **Footwear:** chainmail hauberk underneath; **armored tassets**; **steel greaves and sabatons**; **sturdy leather boots**.
+- **Accessories:** Longsword and shield (heraldic design), knight's helm with plume (carried or worn), cape in ((default:house colors) or (signature)).
+- **Hair/Makeup:** Short groomed hair or practical warrior cut, clean-shaven or beard, determined expression.
+
+[H]
+- **Hijab:** Chainmail coif or armored hijab (silver or steel mesh) with secure undercap
+- **Top:** Polished plate armor bodice over long-sleeve gambeson or tunic
+- **Bottom:** Armored skirt (tassets) over full-length trousers or mail leggings
+- **Footwear:** Steel greaves and sabatons
+- **Accessories:** Longsword, shield, cape in ((default:house colors) or (signature))
+- **Makeup:** Determined expression, natural skin
+

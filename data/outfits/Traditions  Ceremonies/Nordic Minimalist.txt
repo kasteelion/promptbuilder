@@ -1,0 +1,24 @@
+tags: [Casual, Fashion, Minimalist]
+
+[F]
+- **Top:** Oversized turtleneck sweater (((default:oatmeal, charcoal, or cream) or (signature)) chunky knit, merino wool)
+- **Bottom:** slim-fit trousers (black or gray, tailored ankle length)
+- **Footwear:** minimalist leather sneakers (white or neutral, clean lines).
+- **Accessories:** Simple geometric jewelry (silver or gold), structured leather backpack or tote, wool scarf in neutral tone.
+- **Hair/Makeup:** Sleek straight hair or simple low bun, minimal makeup focusing on healthy skin, nude lip, subtle definition, Scandinavian understated elegance.
+
+[M]
+- **Top:** Chunky knit sweater (((default:gray or cream) or (signature)) wool, crew neck)
+- **Bottom:** black tapered trousers (minimalist cut)
+- **Footwear:** leather boots or **minimalist sneakers**.
+- **Accessories:** Beanie, simple backpack, wool scarf.
+- **Hair/Makeup:** Neat natural hair, minimal grooming, understated cool.
+
+[H]
+- **Hijab:** Jersey or knit hijab in oatmeal or gray (simple wrap)
+- **Top:** Oversized turtleneck sweater tunic (((default:oatmeal or charcoal) or (signature)) chunky knit, knee length)
+- **Bottom:** Slim-fit trousers or **leggings**
+- **Footwear:** Minimalist leather sneakers
+- **Accessories:** Geometric jewelry, leather backpack
+- **Makeup:** Fresh skin, nude lip, understated elegance
+

@@ -1,0 +1,22 @@
+tags: [Sport, Workout]
+
+[F]
+- **Top:** Fitted **((default:athletic top) or (signature) top)** (technical knit)
+- **Bottom:** high-waist **athletic shorts or leggings** (technical fabric).
+- **Accessories:** Fitness watch or tracker, hair in ponytail.
+- **Hair/Makeup:** Minimal or no makeup.
+
+[M]
+- **Top:** Fitted **((default:athletic tank or t-shirt) or (signature) top)** (technical knit)
+- **Bottom:** athletic shorts or joggers (technical fabric).
+- **Accessories:** Fitness watch or tracker.
+- **Hair/Makeup:** Minimal grooming.
+
+[H]
+- **Hijab:** Sports hijab in charcoal gray (breathable technical fabric)
+- **Top:** Long-sleeve fitted athletic top in ((default:teal) or (signature)) (technical knit, high neck)
+- **Bottom:** High-waist full-length athletic leggings (technical fabric)
+- **Footwear:** Athletic sneakers
+- **Accessories:** Fitness watch or tracker, small gold studs
+- **Makeup:** Minimal or no makeup
+

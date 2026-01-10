@@ -30,6 +30,8 @@ from .summary_panel import SummaryPanel
 from .searchable_combobox import SearchableCombobox
 from .state_manager import StateManager
 from .widgets import CollapsibleFrame, ScrollableCanvas
+from .components.toolbar import ToolbarComponent
+from .components.status_bar import StatusBarComponent
 
 
 class PromptBuilderApp:
@@ -280,37 +282,26 @@ class PromptBuilderApp:
         self.menu_manager = MenuManager(self.root, menu_callbacks)
 
         # Build Toolbar
-        self._build_toolbar()
+        toolbar_callbacks = {
+            "save_preset": self._save_preset,
+            "load_preset": self._load_preset,
+            "undo": self._undo,
+            "redo": self._redo,
+            "randomize": self.randomize_all,
+            "toggle_gallery": self._toggle_character_gallery
+        }
+        self.toolbar_component = ToolbarComponent(self.root, toolbar_callbacks, theme_manager=self.theme_manager)
 
         # Bind keyboard shortcuts
         self._bind_keyboard_shortcuts()
 
         # Main container with optional character gallery
-        main_container = ttk.Frame(self.root)
+        # Use tk.Frame for specific background control to avoid white flashes
+        main_container = tk.Frame(self.root, bg="#1e1e1e")
         main_container.pack(fill="both", expand=True)
 
         # Status bar at bottom (Refactor 1: Spatial Layout - No Borders)
-        # Attempt to get bg color safely
-        try:
-            tm = self.theme_manager
-            theme = tm.themes.get(tm.current_theme, {})
-            main_bg = theme.get("bg", "#121212")
-            muted_fg = theme.get("border", "gray")
-        except Exception:
-            main_bg = "#121212"
-            muted_fg = "gray"
-
-        self.status_bar = tk.Label(
-            main_container,
-            text="READY",
-            anchor="w",
-            bg=main_bg,
-            fg=muted_fg,
-            font=("Lexend", 8, "bold"),
-            padx=15,
-            pady=5
-        )
-        self.status_bar.pack(side="bottom", fill="x")
+        self.status_bar_component = StatusBarComponent(main_container, theme_manager=self.theme_manager)
 
         # Create a paned window for gallery + main content
         # Refactor 1: Invisible Splitter styling
@@ -497,77 +488,20 @@ class PromptBuilderApp:
             self.theme_manager.register(self.scene_panel, self.scene_panel.apply_theme)
             self.theme_manager.register(self.notes_panel, self.notes_panel.apply_theme)
             self.theme_manager.register(self.summary_panel, self.summary_panel.apply_theme)
+            
+            # Register newly extracted components
+            # This ensures they update when theme changes or init
+            self.theme_manager.register(self.status_bar_component.label, lambda t: self.status_bar_component.apply_theme(t))
+            self.theme_manager.register(self.toolbar_component.frame, lambda t: self.toolbar_component.apply_theme(t))
+            
+            # Register right scroll container to ensure it follows theme changes (e.g., Light mode)
+            # Use panel_bg or bg as appropriate; ScrollableCanvas typically uses bg
+            self.theme_manager.register(self.right_scroll_container, self.right_scroll_container.apply_theme)
 
         # Initialize scene presets
         # (Handled internally by ScenePanel now)
 
-    def _build_toolbar(self):
-        """Build the top toolbar with common actions."""
-        toolbar_frame = ttk.Frame(self.root, style="TFrame")
-        toolbar_frame.pack(side="top", fill="x", padx=4, pady=4)
-        
-        self.toolbar_buttons = [] # Track for theme updates
 
-        # Helper to create styled toolbar buttons - Refactor 5: Lexend
-        def add_tool_btn(parent, text, command, tooltip=None, width=None):
-            # Try to get background safely
-            try: 
-                bg = parent.cget("background")
-            except Exception: 
-                try: 
-                    bg = ttk.Style().lookup("TFrame", "background")
-                except Exception: 
-                    bg = "#121212"
-            
-            btn = tk.Button(
-                parent, text=text, command=command,
-                bg=bg, relief="flat", highlightthickness=2, padx=10,
-                font=("Lexend", 9)
-            )
-            btn._base_bg = bg # Store for hover restoration
-            
-            def on_btn_enter(e, b=btn):
-                try:
-                    theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-                    hbg = theme.get("hover_bg", "#333333")
-                except Exception: 
-                    hbg = "#333333"
-                b.config(bg=hbg)
-            def on_btn_leave(e, b=btn):
-                b.config(bg=getattr(b, "_base_bg", "#121212"))
-            
-            btn.bind("<Enter>", on_btn_enter)
-            btn.bind("<Leave>", on_btn_leave)
-            
-            if width:
-                btn.config(width=width)
-            btn.pack(side="left", padx=2)
-            if tooltip:
-                create_tooltip(btn, tooltip)
-            
-            self.toolbar_buttons.append(btn)
-            return btn
-
-        # File actions
-        add_tool_btn(toolbar_frame, "💾", self._save_preset, "Save Preset", width=3)
-        add_tool_btn(toolbar_frame, "📂", self._load_preset, "Load Preset", width=3)
-        
-        ttk.Separator(toolbar_frame, orient="vertical").pack(side="left", fill="y", padx=4, pady=2)
-
-        # Edit actions
-        add_tool_btn(toolbar_frame, "↩️", self._undo, "Undo (Ctrl+Z)", width=3)
-        add_tool_btn(toolbar_frame, "↪️", self._redo, "Redo (Ctrl+Y)", width=3)
-
-        ttk.Separator(toolbar_frame, orient="vertical").pack(side="left", fill="y", padx=4, pady=2)
-        
-        # Tools
-        add_tool_btn(toolbar_frame, "🎲 Randomize", self.randomize_all, "Randomize Everything (Alt+R)")
-        add_tool_btn(toolbar_frame, "👥 Gallery", self._toggle_character_gallery, "Toggle Character Gallery (Ctrl+G)")
-        
-        # Spacer
-        ttk.Frame(toolbar_frame).pack(side="left", fill="x", expand=True)
-
-        # Right side actions (Theme toggle could go here, but menu is fine)
 
     def _initialize_managers(self):
         """Initialize managers that depend on UI elements."""
@@ -771,15 +705,12 @@ class PromptBuilderApp:
         if hasattr(self, "expand_all_btn"):
             self.expand_all_btn.config(bg=panel_bg, fg=theme.get("border", "gray"))
             
-        if hasattr(self, "toolbar_buttons"):
-            accent = theme.get("accent", "#0078d7")
-            for btn in self.toolbar_buttons:
-                btn.config(bg=panel_bg, fg=accent, highlightbackground=accent)
-                btn._base_bg = panel_bg # Update for hover logic
+        if hasattr(self, "toolbar_component"):
+            self.toolbar_component.apply_theme(theme)
 
         # Refactor 5: Update status bar
-        if hasattr(self, "status_bar"):
-            self.status_bar.config(bg=theme["bg"], fg=theme.get("border", "gray"))
+        if hasattr(self, "status_bar_component"):
+            self.status_bar_component.apply_theme(theme)
         
         # Update PanedWindow backgrounds for invisible splitters - Refactor 1
         if hasattr(self, "main_paned"):
@@ -862,8 +793,8 @@ class PromptBuilderApp:
         Args:
             message: Status message to display
         """
-        if hasattr(self, "status_bar"):
-            self.status_bar.config(text=message)
+        if hasattr(self, "status_bar_component"):
+            self.status_bar_component.update_status(message)
 
     def _generate_prompt_or_error(self):
         """Bridge for PreviewController/Panel."""
@@ -1063,38 +994,10 @@ class PromptBuilderApp:
                 "Some previously selected characters were removed as they no longer exist in the updated data.",
             )
 
-    def _update_ui_after_reload(self):
-        """Update UI components with new data."""
-        # Update character selection validity
-        new_chars_keys = set(self.characters.keys())
-        selected = self.characters_tab.get_selected_characters()
-        updated_selected = []
-        chars_removed = False
-
-        for c in selected:
-            if c["name"] in new_chars_keys:
-                c.setdefault("pose_category", "")
-                c.setdefault("pose_preset", "")
-                c.setdefault("action_note", "")
-                updated_selected.append(c)
-            else:
-                chars_removed = True
-
-        self.characters_tab.selected_characters = updated_selected
-
-        if chars_removed:
-            self.dialog_manager.show_info(
-                "Reload Info",
-                "Some previously selected characters were removed as they no longer exist in the updated data.",
-            )
-
         # Reload data in tabs/panels
         self.characters_tab.load_data(self.characters, self.base_prompts, self.poses, self.scenes)
         self.scene_panel.update_presets(self.scenes)
         self.notes_panel.update_presets(self.interactions)
-        
-        if self.edit_tab:
-            self.edit_tab._refresh_file_list()
 
         # Re-apply theme
         current = self.prefs.get("last_theme") or None
@@ -1120,29 +1023,7 @@ class PromptBuilderApp:
 
         self.schedule_preview_update()
 
-        # Re-apply theme
-        current = self.prefs.get("last_theme") or None
-        if current:
-            try:
-                self._apply_theme(current)
-                if hasattr(self, "menu_manager") and self.menu_manager:
-                    self.menu_manager.refresh_theme_menu()
-            except Exception:
-                logger.debug("Failed to re-apply theme after reload")
 
-        # Reload character gallery
-        if hasattr(self, "gallery_controller") and self.gallery_controller:
-            try:
-                self.gallery_controller.load_characters(self.characters)
-            except Exception:
-                logger.exception("Failed to reload gallery via GalleryController")
-        elif hasattr(self, "character_gallery"):
-            try:
-                self.character_gallery.load_characters(self.characters)
-            except Exception:
-                logger.exception("Failed to reload character_gallery")
-
-        self.schedule_preview_update()
 
     def _import_from_summary_box(self):
         """Parse and apply the text currently in the summary box."""

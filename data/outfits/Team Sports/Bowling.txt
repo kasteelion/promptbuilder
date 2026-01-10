@@ -1,0 +1,24 @@
+tags: [Bowling, Sport, Team]
+
+[F]
+- **Top:** Fitted **performance polo** for **{team}** in **{primary_color} with {secondary_color} accents** (moisture-wicking fabric with team logo and name on back){modifier}
+- **Bottom:** BLACK athletic skirt (tailored fit)
+- **Footwear:** bowling shoes ({accent}).
+- **Accessories:** Wrist support optional, team logo on collar.
+- **Hair/Makeup:** Hair in ponytail or secured, neat makeup.
+
+[M]
+- **Top:** Fitted **performance polo** in **{primary_color} with {secondary_color} accents** (moisture-wicking fabric with team logo and name on back)
+- **Bottom:** BLACK performance pants (tailored fit)
+- **Footwear:** bowling shoes ({accent}).
+- **Accessories:** Wrist support optional, team logo on collar.
+- **Hair/Makeup:** Hair short or secured, neat grooming.
+
+[H]
+- **Hijab:** Sports hijab in {primary_color} (breathable, practical)
+- **Top:** Fitted performance polo or athletic top for {team} in {primary_color} with {secondary_color} accents (moisture-wicking fabric with team logo, modest high neck){modifier}
+- **Bottom:** BLACK athletic midi skirt with built-in full-length leggings
+- **Footwear:** Bowling shoes ({accent})
+- **Accessories:** Wrist support optional, simple gold studs
+- **Makeup:** Minimal makeup, hair secured
+

@@ -1,0 +1,24 @@
+tags: [Jazz, Party, Vintage]
+
+[F]
+- **Top:** Dropped-waist dress (((default:black, gold, or silver) or (signature)) with heavy beading and fringe, knee-length or slightly above, sleeveless or cap sleeves)
+- **Bottom:** sheer stockings (with seam up back)
+- **Footwear:** T-strap heels (low heel, Mary Jane style).
+- **Accessories:** Long pearl necklace (multiple strands, can be knotted), feathered headband or jeweled headpiece, elbow-length gloves (optional), beaded clutch, cigarette holder.
+- **Hair/Makeup:** Finger waves or Marcel waves (slicked close to head), short bob haircut, dark smoky eyes, thin defined eyebrows, dark lipstick in cupid's bow shape (burgundy or deep red), beauty mark optional, Jazz Age glamour.
+
+[M]
+- **Top:** Three-piece wool suit (((default:pinstripe or tweed) or (signature)) sack coat style)
+- **Bottom:** club collar shirt
+- **Footwear:** patterned tie; **oxford shoes**.
+- **Accessories:** Newsboy cap or fedora, pocket watch chain.
+- **Hair/Makeup:** Slicked hair with side part, clean-shaven or thin mustache, Jazz Age dapper.
+
+[H]
+- **Hijab:** Beaded skullcap style or turban hijab with feather accent
+- **Top:** Dropped-waist modest dress (((default:black and gold) or (signature)) long sleeves, knee length or longer with fringe)
+- **Bottom:** Opaque tights or **straight-leg pants** if dress is short
+- **Footwear:** T-strap heels
+- **Accessories:** Long pearl necklace, beaded clutch
+- **Makeup:** Dark smoky eyes, cupid's bow lips
+

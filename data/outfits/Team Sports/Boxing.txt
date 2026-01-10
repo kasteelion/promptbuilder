@@ -1,0 +1,24 @@
+tags: [Boxing, Combat, Sport]
+
+[F]
+- **Top:** Professional satin boxing set for **{team}**{modifier}
+- **Bottom:** fitted **athletic tank** in **{primary_color}** with **{secondary_color} mesh side panels**
+- **Footwear:** high-waist **satin boxing shorts** in **{primary_color}** featuring a **wide 4-inch {secondary_color} elastic waistband** with the **{team}** name embroidered in **bold metallic script** across the center; deep **side-slits** for mobility; **matching {primary_color} hand wraps** visible under **10oz pro-style boxing gloves** in **{accent}** with a **glossy finish**; **high-top boxing shoes** ({accent}) with thin soles and reinforced ankles.
+- **Accessories:** Clear mouthguard, athletic tape on wrists.
+- **Hair/Makeup:** Tight Dutch braids pinned close to the head, focused intensity, slight sheen of sweat, minimal waterproof makeup.
+
+[M]
+- **Top:** Professional satin boxing set for **{team}**{modifier}
+- **Bottom:** bare chest or fitted **athletic tank** in **{primary_color}**
+- **Footwear:** high-waist **satin boxing shorts** in **{primary_color}** featuring a **wide 4-inch {secondary_color} elastic waistband** with the **{team}** name embroidered in **bold block letters**; deep **side-slits** for maximum leg movement; **matching {primary_color} hand wraps** visible under **12oz pro-style boxing gloves** in **{accent}** with a **matte finish**; **high-top boxing shoes** ({accent}) with thin rubber soles and pivot-point traction.
+- **Accessories:** Clear mouthguard, athletic tape on wrists.
+- **Hair/Makeup:** Hair short or tied back, intense focused gaze, sheen of sweat on chest and shoulders.
+
+[H]
+- **Hijab:** Breathable sports hijab in **{primary_color}** (secure aerodynamic wrap with a **matte finish**)
+- **Top:** Long-sleeve performance tunic in **{primary_color}** with **{secondary_color} mesh side panels**{modifier}; fabric is a premium **satin-finish technical blend**; tunic falls to mid-thigh with a **scalloped hem**
+- **Bottom:** Full-length performance leggings in **{primary_color}** worn under **satin boxing shorts** in **{primary_color}** featuring a **wide 4-inch {secondary_color} elastic waistband**
+- **Footwear:** High-top boxing shoes ({accent}) with thin rubber soles
+- **Accessories:** 10oz pro-style boxing gloves in **{accent}** with a **glossy finish**, matching hand wraps, clear mouthguard
+- **Makeup:** Focused intensity, minimal waterproof makeup
+

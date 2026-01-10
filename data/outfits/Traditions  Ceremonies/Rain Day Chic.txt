@@ -1,0 +1,24 @@
+tags: [Casual, Rain, Weather]
+
+[F]
+- **Top:** Classic trench coat (((default:khaki or navy) or (signature)) water-resistant gabardine, belted waist, double-breasted)
+- **Bottom:** layered outfit underneath (jeans and sweater or dress)
+- **Footwear:** rain boots (tall rubber wellies in solid color or pattern).
+- **Accessories:** Clear bubble umbrella or classic rain umbrella, crossbody bag (water-resistant), silk scarf at neck.
+- **Hair/Makeup:** Hair protected (under hood or styled in low bun), minimal waterproof makeup (tinted lip balm, waterproof mascara), fresh rainy-day glow.
+
+[M]
+- **Top:** Trench coat (((default:beige or navy) or (signature)) classic cut)
+- **Bottom:** sweater and jeans underneath
+- **Footwear:** duck boots or **leather boots**.
+- **Accessories:** Umbrella.
+- **Hair/Makeup:** Natural hair, practical grooming.
+
+[H]
+- **Hijab:** Water-resistant hijab or tucked into coat
+- **Top:** Classic trench coat (((default:beige) or (signature)) belted, long line); **sweater** underneath
+- **Bottom:** Jeans or **trousers**
+- **Footwear:** Rain boots
+- **Accessories:** Umbrella, crossbody bag
+- **Makeup:** Waterproof minimal makeup
+

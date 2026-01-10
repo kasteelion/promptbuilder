@@ -1,0 +1,24 @@
+tags: [Fantasy, Magic]
+
+[F]
+- **Top:** Long flowing robes (((default:deep blue, purple, or midnight black) or (signature)) with silver or gold arcane symbols and trim)
+- **Bottom:** wide pointed hat (matching robes with star or moon decorations)
+- **Footwear:** leather belt with pouches; **soft leather boots**.
+- **Accessories:** Wooden staff with crystal or orb at top, spellbook, component pouches, mystical amulet.
+- **Hair/Makeup:** Long flowing hair (often silver, white, or dark) in loose waves or half-up with strands, wise expression, possible age marks or timeless beauty, ethereal glow.
+
+[M]
+- **Top:** Long flowing robes (((default:deep blue, purple, or midnight black) or (signature)) with silver or gold arcane symbols and trim)
+- **Bottom:** wide pointed hat (matching robes with star or moon decorations)
+- **Footwear:** leather belt with pouches; **soft leather boots**.
+- **Accessories:** Wooden staff with crystal or orb at top, spellbook, component pouches, mystical amulet.
+- **Hair/Makeup:** Long hair and beard (often silver, white, or dark), wise expression, possible age marks, ethereal glow.
+
+[H]
+- **Hijab:** ((default:Deep blue or purple) or (signature)) hijab with star/moon embroidery, worn under pointed hat
+- **Top:** Long flowing robes (((default:coordinating with hijab) or (signature))) with arcane symbols, modest high neck
+- **Bottom:** Matching trousers under robes
+- **Footwear:** Soft leather boots
+- **Accessories:** Staff, spellbook, amulet, belt with pouches
+- **Makeup:** Wise expression, ethereal glow
+

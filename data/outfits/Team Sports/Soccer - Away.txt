@@ -1,0 +1,24 @@
+tags: [Soccer, Sport, Team]
+
+[F]
+- **Top:** Fitted performance jersey for **{team}** with **raglan sleeves** and **ventilated mesh back panel**{modifier}
+- **Bottom:** body in **{secondary_color}** with **{primary_color} chest stripe** and **shoulder accent blocks**
+- **Footwear:** team crest on left chest, **player number** on back in **bold {primary_color}** with **white shadow**; **athletic shorts** in **{secondary_color}** with **{primary_color} side stripes** and **elastic contrast waistband**; **knee-high performance socks** in **{secondary_color}** with **{accent} horizontal stripes** at calf and ankle; **soccer cleats** ({accent} with studs).
+- **Accessories:** Shin guards with compression sleeves, captain's armband optional, hair tie.
+- **Hair/Makeup:** Hair in secure Dutch braid or low ponytail, minimal makeup, game-ready expression.
+
+[M]
+- **Top:** Fitted performance jersey for **{team}** with **raglan sleeves** and **ventilated mesh back panel**{modifier}
+- **Bottom:** body in **{secondary_color}** with **{primary_color} chest stripe** and **shoulder accent blocks**
+- **Footwear:** team crest on left chest, **player number** on back in **bold {primary_color}** with **white shadow**; **athletic shorts** in **{secondary_color}** with **{primary_color} side stripes** and **elastic contrast waistband**; **knee-high performance socks** in **{secondary_color}** with **{accent} horizontal stripes** at calf and ankle; **soccer cleats** (with studs).
+- **Accessories:** Shin guards with compression sleeves, captain's armband optional, sweatbands.
+- **Hair/Makeup:** Hair short or secured in small bun, minimal grooming, determined expression.
+
+[H]
+- **Hijab:** Sports hijab in {secondary_color} with {primary_color} stripe detail (breathable moisture-wicking fabric, secure fit)
+- **Top:** Long-sleeve fitted performance jersey for **{team}** with **raglan sleeves** and **ventilated mesh back panel**{modifier}; body in **{secondary_color}** with **{primary_color} chest stripe** and **shoulder accent blocks**; **team crest** on left chest, **player number** on back in **bold {primary_color}** with **white shadow**
+- **Bottom:** Full-length athletic leggings in **{secondary_color}** with **{primary_color} side stripes** and **elastic contrast waistband**
+- **Footwear:** Soccer cleats ({accent} with studs)
+- **Accessories:** Shin guards with compression sleeves, captain's armband optional, hair secured, sweatbands
+- **Makeup:** Minimal makeup, game-ready expression with natural focus
+

@@ -3,6 +3,8 @@
 ## [Unreleased]
 
 ### Added
+- **Smart Randomization Coherence:** Implemented "Cascading Context" logic where tags from the selected Base Style (e.g., "Sports Action") strictly enforce thematic consistency in subsequent selections (Poses, Outfits).
+- **Strict Theme Filtering:** The randomizer now prioritizes exact tag matches over generic ones, significantly improving the logical consistency of generated prompts (e.g., ensuring "Sports" styles only select "Sports" poses).
 - **Export for LLM:** New utility to export a condensed catalog of characters, outfits, and poses along with system instructions. Designed for "knowledge injection" into LLMs to generate valid prompt configurations.
 - **Victoria's Secret Magazine Base Prompt:** Added a new "High-Fashion Glamour" art style designed for high-end fashion photography aesthetics.
 - **Natural Language Import:** New feature to import entire prompt configurations from raw text. Supports two formats: standard app summaries and a new structured LLM-friendly block format. Includes fuzzy character matching.
@@ -45,6 +47,8 @@
 - **SearchableCombobox:** Added full theme support including hover states and placeholders.
 - **Theme Contrast:** Improved accessibility for Nord, Monokai, and One Dark themes by adjusting border and text background contrast while maintaining palette authenticity.
 - **UI:** Improved `CharacterItem` to show a signature color swatch if applicable.
+- **Data Standardization:** Renamed `Sport` tags to `Sports` in `data/poses.md` and standardized category names for reliable matching.
+- **Base Prompts:** Refined tags for "Sports Action" style to remove ambiguous terms, preventing unrelated pose selection.
 
 ### Refactored
 - **MainWindow Decomposition:** Broken down the monolithic `MainWindow` into reusable functional components: `ScenePanel`, `NotesPanel`, and `SummaryPanel`.

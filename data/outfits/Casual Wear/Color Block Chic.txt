@@ -1,0 +1,22 @@
+tags: [Casual, Fashion]
+
+[F]
+- **Top:** Fitted **white v-neck tee** (short sleeves, classic cotton)
+- **Bottom:** high-waist **tailored pants** (((default:rust orange, burnt orange, or terracotta) or (signature)) in ankle length with front seam detail).
+- **Accessories:** Delicate gold necklace, minimal jewelry.
+- **Hair/Makeup:** Straight hair with center or side part, natural everyday makeup with groomed brows.
+
+[M]
+- **Top:** Fitted **white v-neck tee** (classic cotton)
+- **Bottom:** tailored chinos (((default:rust orange, burnt orange, or terracotta) or (signature))).
+- **Accessories:** Brown leather belt, simple watch, white sneakers or loafers.
+- **Hair/Makeup:** Natural grooming, side-parted or neatly styled hair.
+
+[H]
+- **Hijab:** Rust orange or white cotton hijab with neat wrap
+- **Top:** Long-sleeve white tunic or top (classic cotton)
+- **Bottom:** High-waist tailored pants in ((default:rust orange or terracotta) or (signature)) (ankle length or full length)
+- **Footwear:** Loafers or flats
+- **Accessories:** Delicate gold necklace, minimal jewelry
+- **Makeup:** Natural everyday makeup with groomed brows
+

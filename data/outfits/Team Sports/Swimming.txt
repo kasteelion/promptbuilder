@@ -1,0 +1,24 @@
+tags: [Sport, Swim, Water]
+
+[F]
+- **Top:** Performance one-piece swimsuit with a **solid black** central body panel for hydrodynamics
+- **Bottom:** contoured side panels in **{primary_color}** framed by thin **{secondary_color}** piping
+- **Footwear:** racerback strap design with open back.
+- **Accessories:** White swim cap with **{primary_color}** logo, mirrored racing goggles ({accent}).
+- **Hair/Makeup:** Wet skin texture, waterproof makeup.
+
+[M]
+- **Top:** Performance one-piece swimsuit with a **solid black** central body panel for hydrodynamics
+- **Bottom:** contoured side panels in **{primary_color}** framed by thin **{secondary_color}** piping
+- **Footwear:** racerback strap design with open back.
+- **Accessories:** White swim cap with **{primary_color}** logo, mirrored racing goggles ({accent}).
+- **Hair/Makeup:** Wet skin texture, waterproof makeup.
+
+[H]
+- **Hijab:** Swim hijab in **black** with **{primary_color}** rim (quick-dry technical fabric)
+- **Top:** Long-sleeve modest swim tunic featuring a **solid black** central panel; contoured side panels in **{primary_color}** framed by thin **{secondary_color}** piping; loose fit through the body
+- **Bottom:** Full-length swim leggings in **black**
+- **Footwear:** None
+- **Accessories:** Mirrored racing goggles ({accent})
+- **Makeup:** Waterproof natural makeup
+

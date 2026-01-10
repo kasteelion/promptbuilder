@@ -22,11 +22,41 @@ class PresetParser:
                 presets.setdefault(current, {})
                 continue
 
-            item = re.match(r"^-\s+\*\*([^:]+):\*\*\s*(.+)$", line)
+            # Match: - **Name** (Tag1, Tag2): Description
+            # Group 1: Name
+            # Group 2: (Tags) - Optional
+            # Group 3: Description
+            item = re.match(r"^-\s+\*\*([^\*]+)\*\*\s*(\([^)]+\))?\s*:\s*(.+)$", line)
+            
+            # Fallback for old format without colon if needed, or stricter?
+            # Existing regex was: r"^-\s+\*\*([^:]+):\*\*\s*(.+)$"
+            
             if item:
                 name = item.group(1).strip()
-                desc = item.group(2).strip()
-                presets.setdefault(current, {})[name] = desc
+                tags_str = item.group(2)
+                desc = item.group(3).strip()
+                
+                tags = []
+                if tags_str:
+                    # Remove parens and split
+                    content_inner = tags_str[1:-1]
+                    tags = [t.strip() for t in content_inner.split(",") if t.strip()]
+
+                presets.setdefault(current, {})[name] = {
+                    "description": desc,
+                    "tags": tags
+                }
+            else:
+                # Try fallback for "Name: Description" without tags if strict regex failed
+                # (The previous regex handled Name: Description)
+                simple_item = re.match(r"^-\s+\*\*([^:]+):\*\*\s*(.+)$", line)
+                if simple_item and not item:
+                    name = simple_item.group(1).strip()
+                    desc = simple_item.group(2).strip()
+                    presets.setdefault(current, {})[name] = {
+                        "description": desc,
+                        "tags": []
+                    }
 
         return presets
 

@@ -1,0 +1,24 @@
+tags: [Sport, Team, Volleyball]
+
+[F]
+- **Top:** Fitted sleeveless performance jersey for **{team}** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes** along the sides{modifier}
+- **Bottom:** body in **{primary_color}** with **{secondary_color} wraparound piping** and a **sublimated geometric pattern**
+- **Footwear:** fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** centered on the chest and back with a **glossy {secondary_color} finish**; **high-waist compression shorts** in **{primary_color}** with **wide {secondary_color} comfort waistband** and **reinforced flatlock seams**; **low-profile gel-cushioned knee pads** in **{primary_color}** with **breathable mesh backing**; **professional court shoes** ({accent}) featuring **gum rubber soles** and **translucent heel cushioning**.
+- **Accessories:** Primary-color sweatbands with embroidered logo, athletic tape on fingers, matching hair ribbon.
+- **Hair/Makeup:** High tight ponytail with extreme volume, sweat-resistant performance makeup including **subtle shimmer on cheekbones** and a natural pink lip balm.
+
+[M]
+- **Top:** Fitted sleeveless performance jersey for **{team}** featuring **raglan-style shoulder panels** and **reinforced flat-seam construction**{modifier}
+- **Bottom:** body in **{primary_color}** with **{secondary_color} honeycomb-weave technical mesh panels** on the sides and back
+- **Footwear:** moisture-wicking fabric with a **subtle matte sheen**; **bold metallic team number** in **{secondary_color}** with a **silver block-shadow** centered on front and back; **lightweight athletic shorts** in **{primary_color}** with **{secondary_color} laser-cut side vents** and **internal drawstring waistband**; **low-profile gel knee pads** in **{primary_color}**; **professional volleyball shoes** ({accent}) with **non-marking high-grip soles** and **visible air-cushioning**.
+- **Accessories:** Primary-color sweatbands on wrists with embroidered team initials, athletic tape on fingers.
+- **Hair/Makeup:** Hair short or secured, minimal grooming, competitive focus.
+
+[H]
+- **Hijab:** High-performance sports hijab in **{primary_color}** featuring a **matte finish** and **aerodynamic secure tuck**
+- **Top:** Long-sleeve fitted performance tunic for **{team}** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes**; body in **{primary_color}** with **{secondary_color} wraparound piping** and a **sublimated geometric pattern**; fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** in **{secondary_color}** with a **glossy finish** centered on chest and back; tunic falls to mid-thigh with a **scalloped hem**
+- **Bottom:** Full-length performance compression leggings in **{primary_color}** with **{secondary_color} reinforced flatlock seams**
+- **Footwear:** Professional court shoes ({accent}) with **gum rubber soles** and **visible gel-cushioning**
+- **Accessories:** Low-profile gel-cushioned knee pads in **{primary_color}** (worn over leggings), **matching sweatbands** on wrists with embroidered team logo, athletic tape on fingers
+- **Makeup:** Performance makeup including sweat-resistant foundation, **subtle shimmer on cheekbones**, and a natural pink lip balm
+

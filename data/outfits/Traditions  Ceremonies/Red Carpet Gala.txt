@@ -1,0 +1,24 @@
+tags: [Celebrity, Event, Formal]
+
+[F]
+- **Top:** Haute couture gown (((default:dramatic silhouette in luxe fabric) or (signature)) - options include: mermaid cut with train, ballgown with voluminous skirt, sleek column with high slit, architectural sculptural design)
+- **Bottom:** designer heels (stiletto, embellished, statement making)
+- **Footwear:** floor-length elegant construction.
+- **Accessories:** Statement jewelry (diamond or precious stones), designer clutch (minaudière or jeweled), possible fur stole or dramatic cape, hair jewelry or tiara for ultra-formal.
+- **Hair/Makeup:** Red carpet worthy hair (Old Hollywood waves, sleek chignon, or avant-garde style), full professional makeup with contouring, dramatic eyes, bold or nude lip depending on dress, photographer-ready perfection, confident star presence.
+
+[M]
+- **Top:** Bespoke tuxedo (((default:velvet or textured fabric) or (signature)) modern cut)
+- **Bottom:** dress shirt (hidden buttons)
+- **Footwear:** bow tie or **necktie**; **designer dress shoes**.
+- **Accessories:** Luxury watch, cufflinks, pocket square.
+- **Hair/Makeup:** Impeccable grooming, confident star presence.
+
+[H]
+- **Hijab:** Couture silk or embellished hijab (architectural drape)
+- **Top:** Haute couture gown (((default:dramatic silhouette) or (signature)) floor length, long sleeves, high neck, cape details)
+- **Bottom:** Full skirt
+- **Footwear:** Designer heels
+- **Accessories:** Diamond jewelry, designer clutch
+- **Makeup:** Flawless contour, dramatic eyes, star presence
+

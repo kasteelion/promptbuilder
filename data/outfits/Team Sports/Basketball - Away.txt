@@ -1,0 +1,24 @@
+tags: [Basketball, Sport, Team]
+
+[F]
+- **Top:** Sleeveless performance jersey for **{team}** with **athletic mesh panels** on sides{modifier}
+- **Bottom:** primary body in **{secondary_color}** with **contrasting {primary_color} shoulder stripes** and **double side piping**
+- **Footwear:** bold team number on front and back in **{primary_color}** with **white outline**; **moisture-wicking athletic shorts** in **{secondary_color}** with **{primary_color} side stripe** and **contrast waistband**; **basketball shoes** ({accent}, high-tops or low-tops with ankle support).
+- **Accessories:** Matching headband with team logo, compression arm sleeve optional, wristbands.
+- **Hair/Makeup:** Hair secured in high ponytail with team-colored scrunchie, minimal makeup with defined brows.
+
+[M]
+- **Top:** Sleeveless performance jersey for **{team}** with **athletic mesh panels** on sides{modifier}
+- **Bottom:** primary body in **{secondary_color}** with **contrasting {primary_color} shoulder stripes** and **double side piping**
+- **Footwear:** bold team number on front and back in **{primary_color}** with **white outline**; **moisture-wicking athletic shorts** in **{secondary_color}** with **{primary_color} side stripe** and **contrast waistband**; **basketball shoes** (high-tops or low-tops with ankle support).
+- **Accessories:** Matching headband with team logo, compression arm sleeve optional, wristbands.
+- **Hair/Makeup:** Hair short or secured, minimal grooming, focused game face.
+
+[H]
+- **Hijab:** Sports hijab in {secondary_color} with {primary_color} contrast trim (breathable technical fabric, secure tuck)
+- **Top:** Long-sleeve fitted athletic top for **{team}** with **athletic mesh side panels**{modifier}; body in **{secondary_color}** with **{primary_color} shoulder stripes** and **double side piping**; **bold team number** on front and back in **{primary_color}** with **white outline**; **team logo** on chest
+- **Bottom:** Full-length athletic leggings in **{secondary_color}** with **{primary_color} side stripe** and **contrast waistband**
+- **Footwear:** Basketball shoes ({accent}, high-tops or low-tops with ankle support)
+- **Accessories:** Matching wristbands, compression arm sleeve optional, hair secured
+- **Makeup:** Minimal makeup with defined brows, focused game expression
+

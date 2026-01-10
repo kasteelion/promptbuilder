@@ -1,0 +1,24 @@
+tags: [Fancy, Historical]
+
+[F]
+- **Top:** Fitted bodice (brocade, velvet, or damask fabric in ((default:burgundy) or (signature)) with subtle pattern or texture)
+- **Bottom:** v-neckline **long fitted sleeves** with **ruffle cuffs**
+- **Footwear:** full floor-length skirt (gathered and voluminous, matching bodice fabric).
+- **Accessories:** Simple pendant necklace on black cord or ribbon, period-appropriate jewelry (minimal and understated).
+- **Hair/Makeup:** Long flowing hair worn down with soft waves or partially pulled back, natural elegant makeup with pink or mauve eyeshadow, defined brows, rose or berry lip tone, classic beauty aesthetic.
+
+[M]
+- **Top:** Doublet (fitted jacket in velvet, brocade, or damask - ((default:jewel tones like burgundy, forest green, or navy) or (signature)))
+- **Bottom:** shirt (white linen with ruffled cuffs and collar visible)
+- **Footwear:** breeches (matching or contrasting fabric); **hose**; **tall leather boots**.
+- **Accessories:** Leather belt with dagger (prop), flat cap or bonnet, heavy gold chain.
+- **Hair/Makeup:** Shoulder-length hair or neat cut, well-groomed beard or mustache.
+
+[H]
+- **Hijab:** Coordinated veil, wimple, or simple hijab in ((default:period-appropriate fabric - white, cream, or matching gown) or (signature))
+- **Top:** Long-sleeve fitted bodice gown (brocade or velvet in ((default:deep jewel tones) or (signature))) with high neckline or chemise underneath
+- **Bottom:** Full floor-length gathered skirt (matching bodice)
+- **Footwear:** Period-appropriate shoes
+- **Accessories:** Simple pendant necklace, period jewelry
+- **Makeup:** Natural elegant makeup, classic beauty aesthetic
+

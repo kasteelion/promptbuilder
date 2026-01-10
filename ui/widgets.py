@@ -24,7 +24,8 @@ class ScrollableCanvas(ttk.Frame):
         self.rowconfigure(0, weight=1)
 
         # Create canvas and scrollbar
-        self.canvas = tk.Canvas(self, highlightthickness=0, borderwidth=0)
+        # Default to dark bg to prevent white flash
+        self.canvas = tk.Canvas(self, highlightthickness=0, borderwidth=0, bg="#1e1e1e")
         self.scrollbar = ttk.Scrollbar(
             self, orient="vertical", command=self.canvas.yview, style="Themed.Vertical.TScrollbar"
         )
@@ -36,6 +37,9 @@ class ScrollableCanvas(ttk.Frame):
         # Create canvas window and sync width
         self._window = self.canvas.create_window((0, 0), window=self.container, anchor="nw")
         self.canvas.configure(yscrollcommand=self.scrollbar.set)
+        
+        # Auto-update scroll region when inner content changes size
+        self.container.bind("<Configure>", lambda e: self.update_scroll_region())
 
         # Bind canvas width to window width for proper wrapping and filling
         def update_window_width(event):
@@ -144,36 +148,36 @@ class ScrollableCanvas(ttk.Frame):
                 if not self.winfo_exists():
                     return
                     
-                # Use requested height as primary source (much faster than winfo_y() loops)
-                req_h = self.container.winfo_reqheight()
-                req_w = self.container.winfo_reqwidth()
+                # Always force an idle update to ensure geometries are calculated
+                self.container.update_idletasks()
                 
-                # Performance Optimization: 
-                # If req_h is very small but we have children, we might need a manual check.
-                # Otherwise, winfo_reqheight is usually accurate for pack/grid containers.
-                content_height = req_h
+                # Get the bounding box of all items in the canvas
+                bbox = self.canvas.bbox("all")
                 
-                if content_height < 100: # Heuristic: if suspiciously small, verify with bbox
-                    bbox = self.canvas.bbox("all")
-                    if bbox:
-                        content_height = max(content_height, bbox[3])
-                
-                # Apply with padding for a clean look at the bottom
-                self.canvas.config(scrollregion=(0, 0, req_w, content_height + 32))
-                
-                # Performance Fix: Check if scrollbar handle should be visible
-                if not self._is_scrolling_needed():
-                    self.scrollbar.grid_remove()
+                if bbox:
+                    # Calculate height from bbox
+                    # Add padding to ensuring the last item isn't cut off
+                    content_width = max(self.container.winfo_reqwidth(), bbox[2])
+                    content_height = bbox[3] + 50 
+                    
+                    self.canvas.config(scrollregion=(0, 0, content_width, content_height))
                 else:
-                    # Let hover logic handle showing it
-                    pass
+                    # Fallback to reqheight if bbox empty (shouldn't happen if window is created)
+                    self.canvas.config(scrollregion=(0, 0, self.container.winfo_reqwidth(), self.container.winfo_reqheight() + 50))
+                
+                # Check visibility
+                if self._is_scrolling_needed():
+                     # Let hover logic handle showing it, but we can update state if needed
+                     pass
+                else:
+                    self.scrollbar.grid_remove()
                 
                 self._scroll_after_id = None
             except Exception:
                 self._scroll_after_id = None
 
         # Coalesce multiple layout calls into one update
-        self._scroll_after_id = self.after(30, _apply)
+        self._scroll_after_id = self.after(50, _apply)
 
     def _is_scrolling_needed(self):
         """Check if the content height exceeds the viewable height. (Refactor 3)"""

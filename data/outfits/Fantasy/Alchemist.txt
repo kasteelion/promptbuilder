@@ -1,0 +1,24 @@
+tags: [Fantasy, Potion, Science]
+
+[F]
+- **Top:** Practical leather vest or apron (with many pockets)
+- **Bottom:** loose shirt (with rolled sleeves)
+- **Footwear:** fitted pants tucked into boots; **sturdy work boots**; **protective goggles** (on head or around neck).
+- **Accessories:** Bandolier of potion vials (multiple colors), mortar and pestle, ingredient pouches, bomb pouches, notebook for formulas, leather gloves.
+- **Hair/Makeup:** Hair tied back for safety (bun or ponytail), minimal makeup, possibly stained fingers from work, curious intelligent expression.
+
+[M]
+- **Top:** Practical leather vest or apron (with many pockets)
+- **Bottom:** loose shirt (with rolled sleeves)
+- **Footwear:** fitted pants tucked into boots; **sturdy work boots**; **protective goggles** (on head or around neck).
+- **Accessories:** Bandolier of potion vials (multiple colors), mortar and pestle, ingredient pouches, bomb pouches, notebook for formulas, leather gloves.
+- **Hair/Makeup:** Hair tied back for safety, possibly stained fingers from work, curious intelligent expression.
+
+[H]
+- **Hijab:** Practical secure hijab (tucked in), protective material
+- **Top:** Leather apron or vest over long-sleeve shirt
+- **Bottom:** Fitted pants with many pockets
+- **Footwear:** Sturdy work boots
+- **Accessories:** Goggles, potions bandolier, gloves
+- **Makeup:** Curious expression, possibly smudge marks
+

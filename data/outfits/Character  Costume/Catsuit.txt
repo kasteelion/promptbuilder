@@ -1,0 +1,24 @@
+tags: [Costume, Edgy, Latex]
+
+[F]
+- **Top:** Sleek **form-fitting bodysuit** (((default:black) or (signature)) high-shine latex or spandex)
+- **Bottom:** integrated cowl/mask with cat-ear details
+- **Footwear:** full-length sleeves with **clawed gloves**; **knee-high stiletto boots**.
+- **Accessories:** Utility belt, stylized whip prop.
+- **Hair/Makeup:** Mask obscuring upper face, intense eyes, bold lip.
+
+[M]
+- **Top:** Sleek **form-fitting bodysuit** (((default:black) or (signature)) matte or high-shine finish)
+- **Bottom:** tactical cowl/mask
+- **Footwear:** full-length sleeves; **reinforced combat boots**.
+- **Accessories:** Tactical belt, grappling hook prop.
+- **Hair/Makeup:** Mask obscuring upper face, focused intense gaze.
+
+[H]
+- **Hijab:** Sleek high-shine jersey or leather-look hijab (secure, aerodynamic wrap)
+- **Top:** Long-sleeve **form-fitting modest bodysuit** (((default:black) or (signature)) with reinforced seams)
+- **Bottom:** Full-length matching high-shine leggings
+- **Footwear:** Knee-high combat or stiletto boots
+- **Accessories:** Stylized cat-ear headband (worn over hijab), utility belt, whip prop
+- **Makeup:** Intense eyes, bold dark lip
+

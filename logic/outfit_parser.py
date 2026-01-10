@@ -22,25 +22,45 @@ class OutfitParser:
         for line in content.splitlines():
             section_match = _SECTION_RE.match(line)
             if section_match:
-                if current_section is not None and current_outfit and current_desc:
-                    shared_outfits.setdefault(current_section, {})[current_outfit] = "\n".join(
-                        current_desc
-                    ).strip()
+                if current_section is not None and current_outfit:
+                    # Save previous
+                    outfit_data = {
+                        "description": "\n".join(current_desc).strip(),
+                        "tags": current_tags
+                    }
+                    shared_outfits.setdefault(current_section, {})[current_outfit] = outfit_data
 
                 current_section = section_match.group(1).strip()
                 shared_outfits.setdefault(current_section, {})
                 current_outfit = None
+                current_tags = []
                 current_desc = []
                 continue
 
-            outfit_match = _SUBSECTION_RE.match(line)
+            # Match ### Name (Tags)
+            outfit_match = re.match(r"^###\s+(.+)$", line)
             if outfit_match and current_section is not None:
-                if current_outfit and current_desc:
-                    shared_outfits.setdefault(current_section, {})[current_outfit] = "\n".join(
-                        current_desc
-                    ).strip()
+                if current_outfit:
+                    # Save previous
+                    outfit_data = {
+                        "description": "\n".join(current_desc).strip(),
+                        "tags": current_tags
+                    }
+                    shared_outfits.setdefault(current_section, {})[current_outfit] = outfit_data
 
-                current_outfit = outfit_match.group(1).strip()
+                raw_name = outfit_match.group(1).strip()
+                
+                # Check for tags in parens
+                name = raw_name
+                tags = []
+                tag_match = re.search(r"\(([^)]+)\)$", raw_name)
+                if tag_match:
+                    tags_str = tag_match.group(1)
+                    tags = [t.strip() for t in tags_str.split(",") if t.strip()]
+                    name = raw_name[:tag_match.start()].strip()
+
+                current_outfit = name
+                current_tags = tags
                 current_desc = []
                 continue
 
@@ -50,10 +70,12 @@ class OutfitParser:
                 elif current_desc:
                     current_desc.append(line)
 
-        if current_section is not None and current_outfit and current_desc:
-            shared_outfits.setdefault(current_section, {})[current_outfit] = "\n".join(
-                current_desc
-            ).strip()
+        if current_section is not None and current_outfit:
+            outfit_data = {
+                "description": "\n".join(current_desc).strip(),
+                "tags": current_tags
+            }
+            shared_outfits.setdefault(current_section, {})[current_outfit] = outfit_data
 
         normalized: dict = {}
         for sec_name, outfits in shared_outfits.items():
@@ -114,3 +136,69 @@ class OutfitParser:
         final_categorized.update(categorized_outfits)
 
         return merged_outfits, final_categorized
+
+    @staticmethod
+    def parse_outfits_directory(directory_path):
+        """Parse outfits from the new unified directory structure.
+        
+        Structure: data/outfits/<Category>/<OutfitName>.txt
+        
+        Returns:
+            dict: { "F": { Cat: { Name: Data } }, "M": ..., "H": ... }
+        """
+        import re
+        from pathlib import Path
+        
+        result = {"F": {}, "M": {}, "H": {}}
+        
+        root = Path(directory_path)
+        if not root.exists():
+            return result
+
+        # Iterate through categories (subdirectories)
+        for cat_dir in root.iterdir():
+            if not cat_dir.is_dir():
+                continue
+                
+            category = cat_dir.name
+            
+            # Iterate through outfit files
+            for outfit_file in cat_dir.glob("*.txt"):
+                try:
+                    content = outfit_file.read_text(encoding="utf-8")
+                    name = outfit_file.stem
+                    
+                    # Parse Tags
+                    tags = []
+                    tags_match = re.search(r"^tags:\s*\[(.*?)\]", content, re.MULTILINE)
+                    if tags_match:
+                        tags_str = tags_match.group(1)
+                        tags = [t.strip() for t in tags_str.split(",") if t.strip()]
+                    
+                    # Parse Sections: [F], [M], [H]
+                    parts = re.split(r"^\[([FMH])\]", content, flags=re.MULTILINE)
+                    # parts[0] is header/tags, then alternating Key, Content
+                    
+                    # Iterate parts starting from index 1
+                    for i in range(1, len(parts), 2):
+                        modifier = parts[i]
+                        body = parts[i+1].strip()
+                        
+                        # Skip if body is empty or explicitly missing content marker
+                        if not body or body.startswith("- Content missing"):
+                            continue
+                            
+                        item_data = {
+                            "description": body,
+                            "tags": tags
+                        }
+                        
+                        result.setdefault(modifier, {}).setdefault(category, {})[name] = item_data
+                        
+                except Exception as e:
+                    from utils import logger
+                    logger.error(f"Error parsing outfit file {outfit_file}: {e}")
+                    
+        # Normalize Common category if needed (not strictly required if folders are correct)
+        return result
+

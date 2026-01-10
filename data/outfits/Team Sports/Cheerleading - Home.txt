@@ -1,0 +1,24 @@
+tags: [Cheer, Sport, Team]
+
+[F]
+- **Top:** High-neck performance crop top featuring a **sheer black mesh yoke** and long sleeves
+- **Bottom:** bodice in **{primary_color}** with a distinct **scalloped hemline**
+- **Footwear:** entire top heavily encrusted with **crystal rhinestones** in a gradient scatter. **Fitted cheer skirt** in **{primary_color}** with matching **scalloped hem** and rhinestone trim.
+- **Accessories:** White hair bow with crystal center, cheer shoes.
+- **Hair/Makeup:** High pony with volume, performance makeup with rhinestone accents near eyes.
+
+[M]
+- **Top:** Fitted **sleeveless or short-sleeve athletic top** for **{team}** in **{primary_color} with {secondary_color} accents** (performance fabric with team name/logo)
+- **Bottom:** athletic shorts in **{primary_color} with {secondary_color} accents**
+- **Footwear:** cheer shoes ({primary_color} with team color accents).
+- **Accessories:** Wristbands optional.
+- **Hair/Makeup:** Hair styled or secured, minimal grooming.
+
+[H]
+- **Hijab:** Black sports hijab with rhinestone scatter pattern (secure tuck)
+- **Top:** Long-sleeve modest performance tunic{modifier}; **opaque black** upper chest panel (simulating mesh look) with heavy **crystal rhinestone** gradient; bodice in **{primary_color}** ending in a distinct **scalloped hem** at mid-thigh
+- **Bottom:** Straight-leg athletic pants in **{primary_color}**
+- **Footwear:** White cheer shoes
+- **Accessories:** White hair bow attached to hijab, rhinestone cuffs
+- **Makeup:** Performance makeup with subtle shimmer
+

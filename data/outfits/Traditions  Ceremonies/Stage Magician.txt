@@ -1,0 +1,24 @@
+tags: [Costume, Magic, Performance]
+
+[F]
+- **Top:** Tailored tuxedo jacket (((default:black with satin lapels) or (signature)), fitted with hidden pockets)
+- **Bottom:** white dress shirt (with wing collar or standard)
+- **Footwear:** bow tie (black satin or ((signature))); **tailored pants** (matching jacket); **oxford shoes** (polished black).
+- **Accessories:** Top hat (collapsible for tricks), white gloves, deck of cards, wand, silk scarves (for pulling from pockets), cape (optional, dramatic black with colored lining).
+- **Hair/Makeup:** Sleek styled hair (updo or styled down), classic stage makeup (defined features, red lip, possibly dramatic eyes), mysterious charismatic expression.
+
+[M]
+- **Top:** Tailored tuxedo (((default:black) or (signature)) tails coat)
+- **Bottom:** white wing-tip shirt
+- **Footwear:** white bow tie; **black trousers**; **patent shoes**.
+- **Accessories:** Top hat, white gloves, wand, deck of cards, cape (black with red lining).
+- **Hair/Makeup:** Slicked back hair, goatee or clean-shaven, mysterious expression.
+
+[H]
+- **Hijab:** Black satin hijab (sleek wrap) under top hat
+- **Top:** Tuxedo jacket (((default:black) or (signature)) long tails); **white high-neck shirt**; **bow tie**
+- **Bottom:** Black trousers or **full skirt**
+- **Footwear:** Oxford shoes
+- **Accessories:** Top hat, white gloves, wand, cards
+- **Makeup:** Classic stage makeup, mysterious expression
+

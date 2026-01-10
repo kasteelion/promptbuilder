@@ -1,0 +1,24 @@
+tags: [Combat, Fantasy, Magic]
+
+[F]
+- **Top:** Elegant jacket (((default:red) or (signature)) with white trim, Renaissance-inspired with epaulettes)
+- **Bottom:** white ruffled shirt underneath
+- **Footwear:** fitted pants or split skirt (white or cream); **red cape** (knee-length); **tall leather boots** (((default:red or brown) or (signature)) with cuffs).
+- **Accessories:** Rapier at hip, spell focus (wand or small orb), feathered cap, magical jewelry, component pouch.
+- **Hair/Makeup:** Stylish hair (often with distinctive styling or color streak), confident makeup with red accents, balanced expression showing both martial and magical prowess.
+
+[M]
+- **Top:** Elegant jacket (((default:red) or (signature)) with white trim, Renaissance-inspired with epaulettes)
+- **Bottom:** white ruffled shirt underneath
+- **Footwear:** fitted pants (white or cream); **red cape** (knee-length); **tall leather boots** (((default:red or brown) or (signature)) with cuffs).
+- **Accessories:** Rapier at hip, spell focus (wand or small orb), feathered cap, magical jewelry, component pouch.
+- **Hair/Makeup:** Stylish hair (often with distinctive styling or color streak), confident expression showing both martial and magical prowess.
+
+[H]
+- **Hijab:** ((default:Red) or (signature)) hijab with white trim, worn under feathered cap
+- **Top:** ((default:Red) or (signature)) Renaissance-style jacket over white ruffled shirt
+- **Bottom:** Fitted white pants or split skirt
+- **Footwear:** Tall red or brown boots
+- **Accessories:** Rapier, wand, cape
+- **Makeup:** Confident with red accents, balanced expression
+

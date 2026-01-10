@@ -1,0 +1,24 @@
+tags: [Combat, MMA, Sport]
+
+[F]
+- **Top:** Elite mixed martial arts kit for **{team}**
+- **Bottom:** high-impact athletic sports bra in **{primary_color}** with **{secondary_color} contrast binding** and a **sublimated geometric pattern**
+- **Footwear:** matching **short athletic-cut compression shorts** in **{primary_color}** with a **silicone-grip waistband** and **scalloped side-slits**; fabric is a **heavy-duty matte lycra**; **4oz open-palm MMA gloves** in **{accent}** with **reinforced knuckle padding**; **matching {secondary_color} ankle sleeves**; **barefoot** with a **ready athletic stance**.
+- **Accessories:** Black mouthguard, athletic tape on fingers.
+- **Hair/Makeup:** Cornrow braids for maximum security, determined game-face, faint sheen of sweat on shoulders and forehead.
+
+[M]
+- **Top:** Elite mixed martial arts kit for **{team}**
+- **Bottom:** bare chest or **compression top** in **{primary_color}** with **{secondary_color} side panels**
+- **Footwear:** board-style MMA shorts in **{primary_color}** featuring a **reinforced split-seam** and **triple-stitched seams**; lightweight **ripstop fabric** with a **sublimated {secondary_color} logo** on the left leg; **4oz open-palm grappling gloves** in **{accent}** with **extra wrist support**; **barefoot** with **athletic tape on toes**.
+- **Accessories:** Black mouthguard, hand wraps under gloves.
+- **Hair/Makeup:** Hair secured or short, fierce competitive expression, light sheen of sweat.
+
+[H]
+- **Hijab:** High-performance tactical hijab in **{primary_color}** (secure tuck with **sculpted fit**)
+- **Top:** Long-sleeve compression tunic for **{team}**{modifier}; body in **{primary_color}** with **{secondary_color} flatlock stitching** and a **sublimated geometric pattern**; fabric is a **heavy-duty matte lycra**
+- **Bottom:** Full-length performance leggings in **{primary_color}** with **silicone-grip waistband**
+- **Footwear:** Barefoot with **matching {primary_color} ankle sleeves**
+- **Accessories:** 4oz open-palm MMA gloves in **{accent}** with **reinforced padding**, hand wraps, black mouthguard
+- **Makeup:** Determined game-face, athletic sheen
+

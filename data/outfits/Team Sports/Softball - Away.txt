@@ -1,0 +1,24 @@
+tags: [Softball, Sport, Team]
+
+[F]
+- **Top:** Performance softball jersey for **{team}** with **contrast raglan sleeves**{modifier}
+- **Bottom:** body in **{secondary_color}** with **{primary_color} sleeve color blocks** and **double chest stripe**
+- **Footwear:** team name arched across front, **player number** on back in **{primary_color}** with **white outline**; **gray belted softball pants** with **athletic taper** and **{primary_color} double side piping**; **team visor** in **{secondary_color}** with **{primary_color} embroidered logo**; **molded cleats** ({accent}).
+- **Accessories:** Batting gloves with team colors, wristbands, eyeblack stickers, hair tie.
+- **Hair/Makeup:** Hair in practical ponytail pulled through visor or boxer braids, minimal makeup, competitive expression.
+
+[M]
+- **Top:** Performance softball jersey for **{team}** with **contrast raglan sleeves**{modifier}
+- **Bottom:** body in **{secondary_color}** with **{primary_color} sleeve color blocks** and **double chest stripe**
+- **Footwear:** team name arched across front, **player number** on back in **{primary_color}** with **white outline**; **gray belted softball pants** with **athletic taper** and **{primary_color} double side piping**; **team cap** in **{secondary_color}** with **{primary_color} embroidered logo**; **molded cleats**.
+- **Accessories:** Batting gloves with team colors, wristbands, eyeblack.
+- **Hair/Makeup:** Hair short or secured under cap, minimal grooming, game-ready focus.
+
+[H]
+- **Hijab:** Sports hijab in {secondary_color} (breathable, secure fit)
+- **Top:** Long-sleeve softball jersey for {team} in {secondary_color} with {primary_color} accents (button-up or pullover, team logo and number, modest fit){modifier}
+- **Bottom:** Gray softball pants (belted, with {primary_color} piping) worn over full-length {accent} leggings
+- **Footwear:** Cleats ({accent})
+- **Accessories:** Team cap or visor (worn over hijab), batting gloves, wristbands optional, small gold studs
+- **Makeup:** Minimal makeup
+

@@ -1,0 +1,24 @@
+tags: [Costume, Music, Vintage]
+
+[F]
+- **Top:** Classic **pinstriped vest** over **white button-up shirt**
+- **Bottom:** matching pinstriped trousers
+- **Footwear:** bowtie (((default:red) or (signature))); **boater hat** with matching ribbon.
+- **Accessories:** Arm garters, cane prop.
+- **Hair/Makeup:** Polished vintage styling.
+
+[M]
+- **Top:** Classic **pinstriped vest** over **white button-up shirt**
+- **Bottom:** matching pinstriped trousers
+- **Footwear:** bowtie (((default:red) or (signature))); **boater hat** with matching ribbon.
+- **Accessories:** Arm garters, cane prop.
+- **Hair/Makeup:** Neat vintage grooming.
+
+[H]
+- **Hijab:** Matching colored hijab (neat wrap) under boater hat
+- **Top:** Long-sleeve white button-up tunic under a **pinstriped vest**
+- **Bottom:** Matching **pinstriped trousers** (full length)
+- **Footwear:** Oxford shoes
+- **Accessories:** Bowtie (((default:red) or (signature))), boater hat with ribbon, arm garters
+- **Makeup:** Polished vintage-inspired makeup
+

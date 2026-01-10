@@ -1,0 +1,24 @@
+tags: [Football, Sport, Team]
+
+[F]
+- **Top:** Fitted performance jersey for **{team}** in **{secondary_color}** with **{primary_color} numbers**
+- **Bottom:** athletic shorts (pocketless) in **{secondary_color}** or **compression leggings**
+- **Footwear:** flag belt in **{accent}** with hanging flags; **cleats**.
+- **Accessories:** Wristbands, mouthguard, receiver gloves.
+- **Hair/Makeup:** Ponytail or braid, sporty look.
+
+[M]
+- **Top:** Athletic performance jersey for **{team}** in **{secondary_color}** with **{primary_color} numbers**
+- **Bottom:** athletic shorts (pocketless) in **{secondary_color}** with **{primary_color} side stripes**
+- **Footwear:** flag belt in **{accent}** with hanging flags; **cleats**.
+- **Accessories:** Wristbands, mouthguard, receiver gloves.
+- **Hair/Makeup:** Athletic functional.
+
+[H]
+- **Hijab:** Sports hijab in {secondary_color} (secure athletic wrap)
+- **Top:** Long-sleeve performance jersey for {team} in {secondary_color} with {primary_color} numbers (modest loose fit)
+- **Bottom:** Full-length athletic joggers in {secondary_color} (pocketless); **flag belt** in {accent} with three hanging flags worn over top
+- **Footwear:** Cleats ({accent})
+- **Accessories:** Receiver gloves, mouthguard
+- **Makeup:** Minimal, sweat-resistant
+

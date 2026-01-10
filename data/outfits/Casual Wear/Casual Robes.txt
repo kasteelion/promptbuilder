@@ -1,0 +1,24 @@
+tags: [Casual, Home]
+
+[F]
+- **Top:** Flowing **long-sleeve robe** (((default:white) or (signature)) in soft cotton or linen fabric, modest wrap-around style)
+- **Bottom:** simple belt at waist
+- **Footwear:** barefoot or **soft slippers**.
+- **Accessories:** Minimal jewelry.
+- **Hair/Makeup:** Natural relaxed styling.
+
+[M]
+- **Top:** Flowing **long-sleeve robe** (((default:white) or (signature)) in soft cotton or linen fabric, wrap-around style)
+- **Bottom:** simple belt at waist
+- **Footwear:** barefoot or **soft slippers**.
+- **Accessories:** Minimal jewelry.
+- **Hair/Makeup:** Natural relaxed grooming.
+
+[H]
+- **Hijab:** Soft jersey hijab (((default:white) or (signature)) with relaxed draping)
+- **Top:** Long-sleeve flowing **modest robe** (((default:white) or (signature)) in soft cotton or linen, wrap-around style)
+- **Bottom:** Matching full-length trousers
+- **Footwear:** Barefoot or soft slippers
+- **Accessories:** Minimal jewelry
+- **Makeup:** Natural relaxed look
+

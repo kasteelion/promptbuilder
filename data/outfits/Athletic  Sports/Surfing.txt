@@ -1,0 +1,24 @@
+tags: []
+
+[F]
+- **Top:** Long-sleeve neoprene wetsuit or rash guard (fitted, featuring bold color-blocking in {primary_color} and {secondary_color})
+- **Bottom:** matching bikini bottoms or board shorts
+- **Footwear:** barefoot with sand-dusted skin.
+- **Accessories:** Surfboard prop in **{accent}** (held under arm or standing nearby), waterproof fitness watch.
+- **Hair/Makeup:** "Salt-water" textured hair, wet skin finish, minimal waterproof makeup.
+
+[M]
+- **Top:** Long-sleeve neoprene wetsuit or rash guard (fitted, featuring bold color-blocking in {primary_color} and {secondary_color})
+- **Bottom:** matching board shorts
+- **Footwear:** barefoot with sand-dusted skin.
+- **Accessories:** Surfboard prop in **{accent}** (held under arm or standing nearby), waterproof digital watch.
+- **Hair/Makeup:** "Salt-water" textured hair, wet skin finish, natural grooming.
+
+[H]
+- **Hijab:** Neoprene swim hijab in **{primary_color}** (secure aerodynamic wrap)
+- **Top:** Long-sleeve neoprene wetsuit or rash guard (fitted, modest high-neck, full-length sleeves, bold color-blocking in **{primary_color}** and **{secondary_color}**)
+- **Bottom:** Full-length matching swim leggings or wetsuit bottom
+- **Footwear:** Barefoot with sand-dusted skin
+- **Accessories:** Surfboard prop in **{accent}**, waterproof fitness watch
+- **Makeup:** Wet skin finish, minimal waterproof makeup
+

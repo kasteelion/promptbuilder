@@ -1,0 +1,22 @@
+tags: []
+
+[F]
+- **Top:** High-neck leotard (sleek performance lycra with bold geometric patterns in {primary_color} and {secondary_color}, featuring {accent} metallic foil accents)
+- **Bottom:** barefoot or athletic toe-wraps.
+- **Accessories:** Chalk dust on hands, matching hair scrunchie.
+- **Hair/Makeup:** Tight secure bun, focused athletic expression, minimal makeup.
+
+[M]
+- **Top:** High-neck singlet or unitard (sleek performance lycra with bold geometric patterns in {primary_color} and {secondary_color}, featuring {accent} metallic accents)
+- **Bottom:** barefoot.
+- **Accessories:** Chalk dust on hands and shoulders.
+- **Hair/Makeup:** Neat cropped hair or secured style, focused athletic expression.
+
+[H]
+- **Hijab:** Tight-fitting sports hijab in **{primary_color}** (secure aerodynamic fit)
+- **Top:** High-neck long-sleeve leotard (sleek performance lycra with bold geometric patterns in **{primary_color}** and **{secondary_color}**, featuring **{accent}** metallic foil accents, full coverage)
+- **Bottom:** Full-length matching athletic leggings
+- **Footwear:** Barefoot or athletic toe-wraps
+- **Accessories:** Chalk dust on hands, matching decorative hijab pin
+- **Makeup:** Focused athletic expression, minimal makeup
+

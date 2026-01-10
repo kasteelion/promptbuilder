@@ -1,0 +1,23 @@
+tags: []
+
+[F]
+- **Top:** Lycra performance dress ({primary_color} with {secondary_color} accents, featuring sheer mesh inserts and heavy {accent} crystal/sequin embellishments)
+- **Bottom:** flesh-toned skating tights
+- **Footwear:** silver figure skates.
+- **Accessories:** Crystal hair clips, delicate jewelry.
+- **Hair/Makeup:** Sleek high bun or ponytail, dramatic performance makeup with glitter accents.
+
+[M]
+- **Top:** Fitted lycra performance suit ({primary_color} with {secondary_color} accents, featuring metallic {accent} piping and crystal details)
+- **Bottom:** silver figure skates.
+- **Accessories:** Simple watch or athletic tape.
+- **Hair/Makeup:** Neat slicked hair, focused performance expression, polished grooming.
+
+[H]
+- **Hijab:** Performance hijab in **{primary_color}** (shimmering technical fabric, secure aerodynamic wrap) with **{accent}** crystal accents
+- **Top:** Long-sleeve modest figure skating dress (performance lycra in **{primary_color}** with **{secondary_color}** inserts and heavy **{accent}** crystal/sequin embellishments, full-length opaque sleeves)
+- **Bottom:** Flesh-toned skating tights over full-coverage athletic leggings
+- **Footwear:** Silver figure skates
+- **Accessories:** Crystal hijab pins, delicate silver jewelry
+- **Makeup:** Performance makeup with glitter accents
+

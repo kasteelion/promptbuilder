@@ -1,0 +1,22 @@
+tags: [Avant-Garde, Edgy, Fashion, Formal]
+
+[F]
+- **Top:** Midi-length bandage dress (constructed from heavy, elasticated ((default:black) or (signature)) ribbing designed to sculpt and define the silhouette)
+- **Bottom:** Cross-over halter neckline (((default:charcoal) or (signature)) accent straps that create a structural "X" shape across the chest).
+- **Accessories:** Strappy ((default:silver) or (signature)) high heels; vintage-inspired gold clutch; statement cocktail ring.
+- **Hair/Makeup:** Voluminous Hollywood waves; sultry smoky eye in charcoal and ((default:black) or (signature)); deep plum or crimson lipstick.
+
+[M]
+- **Top:** Sculpted compression suit (constructed from heavy, elasticated ((default:black) or (signature)) ribbing designed to define the athletic silhouette)
+- **Bottom:** Cross-over chest harness (((default:charcoal) or (signature)) accent straps that create a structural "X" shape across the torso).
+- **Accessories:** Polished **((default:silver) or (signature))** dress shoes; metallic wrist cuff; statement ring.
+- **Hair/Makeup:** Neatly styled hair with high volume; sharp features; intense focused expression.
+
+[H]
+- **Hijab:** Heavy silk hijab in **((default:black) or (signature))** with an elegant formal wrap.
+- **Top:** Sculpted bandage gown (long-sleeve, modest high-neck design, constructed from heavy **((default:black) or (signature))** elasticated ribbing); Cross-over strap detailing (**((default:charcoal) or (signature))** accent straps creating a structural "X" shape across the chest).
+- **Bottom:** Matching sculpted maxi skirt (floor-length, form-fitting).
+- **Footwear:** Strappy **((default:silver) or (signature))** high heels or elegant flats.
+- **Accessories:** Vintage-inspired gold clutch; statement cocktail ring.
+- **Makeup:** Sultry smoky eye in charcoal and **((default:black) or (signature))**; deep plum or crimson lipstick.
+

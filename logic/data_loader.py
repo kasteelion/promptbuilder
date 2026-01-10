@@ -87,6 +87,12 @@ class DataLoader:
         if not data_dir.exists():
             data_dir = self.base_dir
 
+        # [NEW] Check for unified outfits directory first
+        outfits_dir = data_dir / "outfits"
+        if outfits_dir.exists() and outfits_dir.is_dir():
+            return MarkdownParser.parse_outfits_directory(outfits_dir)
+
+
         # Migration logic for legacy outfits.md
         legacy = self._find_data_file("outfits.md")
         f_f = data_dir / "outfits_f.md"

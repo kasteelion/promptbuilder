@@ -68,7 +68,7 @@ class OutfitRenderer:
         if isinstance(outfit, dict):
             keys = ["Top", "Bottom", "Footwear", "Accessories", "Hair", "Makeup"]
             present = [f"- {k}: {outfit[k]}" for k in keys if outfit.get(k)]
-            extras = [f"- {k}: {v}" for k, v in outfit.items() if k not in keys]
+            extras = [f"- {k}: {v}" for k, v in outfit.items() if k not in keys and k != "tags"]
             lines = present + extras
             return (
                 "\n".join(lines)

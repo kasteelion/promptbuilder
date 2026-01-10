@@ -1,0 +1,21 @@
+tags: [Sci-Fi, Sport]
+
+[F]
+- **Top:** Long-sleeve compression top (high-neck technical nylon-spandex blend in ((default:charcoal) or (signature)), ultra-fitted to highlight torso and shoulder definition)
+- **Bottom:** Matching high-waist compression leggings (thick elasticated waistband, moisture-wicking matte finish).
+- **Accessories:** Black fitness tracker; wireless earbuds.
+- **Hair/Makeup:** Sleek ponytail; natural dewy skin; minimal makeup.
+
+[M]
+- **Top:** Long-sleeve compression shirt (high-neck technical nylon-spandex blend in ((default:charcoal) or (signature)), ultra-fitted to highlight muscle definition in the chest, shoulders, and arms)
+- **Bottom:** Matching compression leggings (thick elasticated waistband, moisture-wicking matte finish).
+- **Accessories:** Black fitness tracker; wireless earbuds.
+- **Hair/Makeup:** Short neat hairstyle; natural clean skin; well-groomed.
+
+[H]
+- **Hijab:** Technical jersey sports hijab in ((default:charcoal) or (signature)) with a secure aerodynamic wrap
+- **Top:** Long-sleeve compression tunic (high-neck technical nylon-spandex blend in ((default:charcoal) or (signature)), modest length, ultra-fitted to highlight athletic silhouette)
+- **Bottom:** Matching compression leggings (thick elasticated waistband, moisture-wicking matte finish)
+- **Accessories:** Black fitness tracker; wireless earbuds
+- **Makeup:** Natural dewy skin; minimal makeup
+

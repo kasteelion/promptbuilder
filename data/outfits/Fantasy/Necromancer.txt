@@ -1,0 +1,24 @@
+tags: [Dark, Fantasy, Magic]
+
+[F]
+- **Top:** Dark robes (((default:black, deep purple, or charcoal) or (signature)) with tattered edges and bone decorations)
+- **Bottom:** hooded cloak
+- **Footwear:** skull motif accessories (belt, shoulder pieces); **black leather boots** (knee-high).
+- **Accessories:** Staff topped with skull or dark crystal, bone jewelry, spell tome bound in dark leather, vials of mysterious substances, death motifs throughout.
+- **Hair/Makeup:** Pale complexion, dark hair (black or white) in straight severe style, dark dramatic eye makeup with black or deep purple, black or dark lips, haunting expression.
+
+[M]
+- **Top:** Dark robes (((default:black, deep purple, or charcoal) or (signature)) with tattered edges and bone decorations)
+- **Bottom:** hooded cloak
+- **Footwear:** skull motif accessories (belt, shoulder pieces); **black leather boots** (knee-high).
+- **Accessories:** Staff topped with skull or dark crystal, bone jewelry, spell tome bound in dark leather, vials of mysterious substances, death motifs throughout.
+- **Hair/Makeup:** Pale complexion, dark hair (black or white) in sleek or messy style, dark dramatic eye circles, haunting expression.
+
+[H]
+- **Hijab:** ((default:Black) or (signature)) hooded hijab with tattered edges or bone clasp
+- **Top:** Dark robes (((default:coordinating with hijab) or (signature))) with high collar and long sleeves
+- **Bottom:** Black trousers or long skirt
+- **Footwear:** Black leather boots
+- **Accessories:** Skull staff, bone jewelry, dark tome
+- **Makeup:** Pale complexion, dark dramatic eyes, haunting expression
+

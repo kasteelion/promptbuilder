@@ -1,0 +1,24 @@
+tags: [Event, Formal, Youth]
+
+[F]
+- **Top:** Floor-length formal gown (((default:jewel tone - sapphire, emerald, ruby) or (signature)) with embellishments - sequins, beading, or lace, various necklines - sweetheart, halter, off-shoulder)
+- **Bottom:** strappy heeled sandals (metallic or matching color)
+- **Footwear:** formal silhouette (A-line, mermaid, or ballgown style).
+- **Accessories:** Statement earrings, delicate bracelet or corsage worn on wrist, small clutch purse (metallic or beaded), tiara or decorative hair piece optional.
+- **Hair/Makeup:** Dramatic formal hairstyle (elaborate updo, cascading curls, or sleek waves), full glam makeup with shimmer, false lashes, bold lip, youthful excitement and elegance.
+
+[M]
+- **Top:** Classic tuxedo (((default:black or midnight blue) or (signature)) satin lapels)
+- **Bottom:** crisp white dress shirt (pleated front)
+- **Footwear:** bow tie (matching vest or cummerbund); **dress shoes** (patent leather).
+- **Accessories:** Boutonniere, cufflinks, watch.
+- **Hair/Makeup:** Styled hair, fresh grooming, youthful excitement.
+
+[H]
+- **Hijab:** Satin or chiffon hijab matching gown color (glamorous style)
+- **Top:** Floor-length formal gown (((default:jewel tone) or (signature)) long sleeves, high neck, modest silhouette)
+- **Bottom:** Full skirt (part of gown)
+- **Footwear:** Heeled sandals
+- **Accessories:** Statement earrings (visible), corsage, clutch
+- **Makeup:** Full glam makeup, dramatic eyes
+

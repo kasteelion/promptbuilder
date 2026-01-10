@@ -1,0 +1,24 @@
+tags: [Sport, Team, Volleyball]
+
+[F]
+- **Top:** Professional athletic bikini set for **{team}**{modifier}
+- **Bottom:** racerback top featuring a **sculpted compression fit** and a **sheer mesh center-chest cutout**
+- **Footwear:** bodice in **{primary_color}** with **{secondary_color} side-binding** and a **metallic foil team logo** on the left; fabric is a premium **honeycomb-textured matte lycra**; matching **high-cut athletic bottoms** with **asymmetric color-blocked panels** in **{secondary_color}** and **thick double-needle flatlock stitching**; **barefoot** with a **thin layer of sand-dusted skin**.
+- **Accessories:** Mirrored polarized sports sunglasses ({accent}) with a **secure neck strap**, **performance visor** in **{primary_color}** featuring **rhinestone-encrusted team initials**, waterproof fitness watch.
+- **Hair/Makeup:** Sleek boxer braids with flyaways secured, **athletic sun-kissed glow** with high-SPF tinted moisturizer, waterproof mascara, and a natural coral lip tint.
+
+[M]
+- **Top:** Professional performance board shorts for **{team}** featuring **sublimated geometric graphics** in **{primary_color}** on a **{secondary_color} base**
+- **Bottom:** high-tech **4-way ripstop stretch fabric** with a **water-repellent matte finish**
+- **Footwear:** mid-thigh athletic cut with **taped side seams** and **scalloped hems** for maximum mobility; **team crest** in **metallic silicone** on the right leg; **barefoot** with **sand-dusted skin**.
+- **Accessories:** Mirrored wraparound sports sunglasses ({accent}) with polarized lenses, **performance visor** in **{primary_color}** with **3D-embroidered team logo**, athletic waterproof watch.
+- **Hair/Makeup:** Sunscreen, minimal grooming, hair short or secured, focused competitive expression.
+
+[H]
+- **Hijab:** High-performance sports swim hijab in **{primary_color}** (chlorine-resistant **matte lycra** with a secure aerodynamic wrap and **sculpted fit**)
+- **Top:** Long-sleeve professional swim tunic for **{team}** featuring **asymmetric color-blocked panels**{modifier}; body in **{primary_color}** with **{secondary_color} sleeves**; fabric is a premium **honeycomb-textured technical swim fabric**; **metallic foil team logo** on the chest; tunic features **scalloped side vents** and falls to mid-thigh with a **contoured athletic silhouette**
+- **Bottom:** Full-length performance swim leggings in **{primary_color}** with **{secondary_color} double-needle flatlock stitching** for maximum durability and comfort
+- **Footwear:** Barefoot with a **thin layer of sand-dusted skin** or **black neoprene sand socks**
+- **Accessories:** Mirrored polarized sports sunglasses ({accent}) with a **secure strap**, **performance visor** in **{primary_color}** with **rhinestone-encrusted team initials** (worn over hijab), waterproof fitness watch
+- **Makeup:** Athletic glow with waterproof sunscreen, minimal natural makeup, and coral lip tint
+

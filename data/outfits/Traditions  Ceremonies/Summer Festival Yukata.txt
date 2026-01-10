@@ -1,0 +1,24 @@
+tags: [Cultural, Festival, Summer]
+
+[F]
+- **Top:** Cotton yukata (((default:vibrant patterns - florals, goldfish, fireworks) or (signature)) on white or pastel base, lighter than kimono)
+- **Bottom:** yukata obi (decorative sash, pre-tied or bow style, contrasting color)
+- **Footwear:** geta sandals (wooden platform sandals with fabric thong straps).
+- **Accessories:** Decorative hair ornament (kanzashi or flower), small drawstring bag (kinchaku), paper fan (uchiwa), festival items (goldfish bag, candy apple).
+- **Hair/Makeup:** Hair in simple updo or half-up with ornaments, soft makeup with focus on fresh summer beauty, pink or coral tones, traditional meets modern.
+
+[M]
+- **Top:** Cotton men's yukata (((default:navy, gray, or subtle geometric pattern) or (signature)))
+- **Bottom:** kaku-obi (men's sash, tied low on hips)
+- **Footwear:** geta sandals.
+- **Accessories:** Uchiwa fan, kinchaku bag.
+- **Hair/Makeup:** Natural hair, relaxed festive vibe.
+
+[H]
+- **Hijab:** Cotton hijab matching yukata pattern (neat style) with hair ornament
+- **Top:** Cotton yukata (((default:floral pattern) or (signature)) traditional modest robe)
+- **Bottom:** Full length (part of yukata)
+- **Footwear:** Geta sandals (worn with tabi socks or barefoot)
+- **Accessories:** Obi sash, kinchaku bag, paper fan
+- **Makeup:** Soft pink tones, fresh summer look
+

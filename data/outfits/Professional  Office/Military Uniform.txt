@@ -1,0 +1,24 @@
+tags: [Job, Military, Professional]
+
+[F]
+- **Top:** Tailored **military tunic/jacket** (((default:olive drab, navy, or charcoal) or (signature)) with brass buttons and epaulettes)
+- **Bottom:** matching trousers
+- **Footwear:** polished combat boots.
+- **Accessories:** Beret or garrison cap, rank insignia, service medals.
+- **Hair/Makeup:** Practical hair in secure bun, neutral focused expression.
+
+[M]
+- **Top:** Tailored **military tunic/jacket** (((default:olive drab, navy, or charcoal) or (signature)) with brass buttons and epaulettes)
+- **Bottom:** matching trousers
+- **Footwear:** polished combat boots.
+- **Accessories:** Beret or garrison cap, rank insignia, service medals.
+- **Hair/Makeup:** Clean-cut hair, clean-shaven or neat facial hair, focused military bearing.
+
+[H]
+- **Hijab:** Practical cotton hijab (((default:olive drab, navy, or charcoal) or (signature)) with secure wrap) under a beret or garrison cap
+- **Top:** Tailored **military tunic/jacket** (((default:olive drab, navy, or charcoal) or (signature)) with brass buttons, high neck)
+- **Bottom:** Matching full-length trousers
+- **Footwear:** Polished combat boots
+- **Accessories:** Rank insignia, service medals
+- **Makeup:** Focused heroic expression
+

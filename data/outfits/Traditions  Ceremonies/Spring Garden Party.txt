@@ -1,0 +1,24 @@
+tags: [Event, Semi-Formal, Spring]
+
+[F]
+- **Top:** Floral midi dress (((default:pastel floral print on light background) or (signature)), flowing fabric like chiffon or cotton, fit-and-flare or wrap style)
+- **Bottom:** nude or pastel heeled sandals (strappy or block heel)
+- **Footwear:** light cardigan (optional, for layering).
+- **Accessories:** Wide-brimmed straw hat with ribbon, delicate gold jewelry, small clutch or woven bag, fresh flower in hair or as boutonniere.
+- **Hair/Makeup:** Soft romantic waves or braided updo, fresh spring makeup (peachy blush, natural pink lip, subtle shimmer), garden party elegance.
+
+[M]
+- **Top:** Linen suit (((default:light blue or tan) or (signature)))
+- **Bottom:** floral or pastel dress shirt
+- **Footwear:** loafers.
+- **Accessories:** Straw boater hat (optional), pocket square.
+- **Hair/Makeup:** Neat grooming, fresh spring vibe.
+
+[H]
+- **Hijab:** Pastel chiffon hijab (flowing drape) with flower crown
+- **Top:** Floral maxi dress (((default:pastel print) or (signature)) long sleeves, modest high neck)
+- **Bottom:** Full skirt (part of dress)
+- **Footwear:** Heeled sandals or flats
+- **Accessories:** Straw hat, woven bag
+- **Makeup:** Soft pinks, fresh spring look
+

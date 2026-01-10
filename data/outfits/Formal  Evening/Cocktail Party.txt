@@ -1,0 +1,23 @@
+tags: [Elegant, Formal, Party, Social]
+
+[F]
+- **Top:** Cocktail dress (knee-length or midi, elegant fabric like satin or lace in jewel tones)
+- **Bottom:** heeled pumps or strappy sandals.
+- **Accessories:** Statement earrings, clutch purse, delicate bracelet.
+- **Hair/Makeup:** Elegant updo or styled waves, sophisticated makeup with bold lip.
+
+[M]
+- **Top:** Dress shirt (crisp cotton) with **dress pants** (tailored fit in ((default:dark colors) or (signature)))
+- **Bottom:** blazer or sport coat
+- **Footwear:** leather dress shoes.
+- **Accessories:** Watch, simple cufflinks, leather belt.
+- **Hair/Makeup:** Neat styled hair, well-groomed facial hair.
+
+[H]
+- **Hijab:** Luxurious silk or satin hijab in jewel tone (emerald, sapphire, or burgundy) with elegant draping and crystal pin
+- **Top:** Long-sleeve cocktail tunic dress in matching jewel tone (knee-length or midi, elegant fabric with modest high neckline)
+- **Bottom:** N/A or flowing midi skirt in matching fabric
+- **Footwear:** Heeled pumps or strappy sandals in coordinating color
+- **Accessories:** Statement earrings, delicate bracelet, clutch purse
+- **Makeup:** Sophisticated makeup with bold lip in complementary shade
+

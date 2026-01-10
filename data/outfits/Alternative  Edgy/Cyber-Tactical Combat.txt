@@ -1,0 +1,24 @@
+tags: [Combat, Edgy, Sci-Fi]
+
+[F]
+- **Top:** Mock-neck Compression Jumpsuit (a form-fitting, full-length base layer made of high-sheen {primary_color} spandex and reinforced nylon panels)
+- **Bottom:** Reinforced Tactical Corsetry (an integrated {secondary_color} midsection harness with metallic buckle details and structured boning)
+- **Footwear:** Asymmetrical Tech-Overlay (laser-cut {accent} leather geometric patterns stitched across the shoulders and down the outer thighs for a futuristic, armor-like silhouette).
+- **Accessories:** Matching {primary_color} fingerless tactical gloves with metallic plating; heavy-duty lace-up wrestling boots with reinforced shinguards; a detachable high-collared capelet for the entrance.
+- **Hair/Makeup:** Sleek, high-gloss "wet look" hair pulled back from the face; bold high-contrast smoky eye with {accent} metallic liner; matte nude lip and sharp, athletic contouring.
+
+[M]
+- **Top:** Mock-neck Compression Suit (a form-fitting, full-length base layer made of high-sheen {primary_color} technical spandex and reinforced nylon panels)
+- **Bottom:** Reinforced Tactical Harness (an integrated {secondary_color} chest and midsection harness with metallic buckle details and industrial webbing)
+- **Footwear:** Asymmetrical Tech-Overlay (laser-cut {accent} leather geometric patterns stitched across the chest and down the outer thighs for a futuristic, armored silhouette).
+- **Accessories:** Matching {primary_color} fingerless tactical gloves with metallic plating; heavy-duty lace-up combat boots with reinforced shinguards; a detachable high-collared entrance coat with structural shoulders.
+- **Hair/Makeup:** Sharp slicked-back hair with a high-shine finish; bold high-contrast architectural eye paint with {accent} metallic accents; clean-shaven or sharp stubble with high-definition contouring.
+
+[H]
+- **Hijab:** High-sheen technical jersey hijab in **{primary_color}** with a secure aerodynamic wrap and metallic **{accent}** trim
+- **Top:** Mock-neck Compression Tunic (a form-fitting, full-length modest base layer made of high-sheen **{primary_color}** technical fabric and reinforced nylon panels); **Reinforced Tactical Harness** (an integrated **{secondary_color}** midsection and torso harness with metallic buckle details and structured webbing)
+- **Bottom:** Full-length Compression Leggings with integrated **Asymmetrical Tech-Overlay** (laser-cut **{accent}** leather geometric patterns stitched down the outer thighs for a futuristic, armored silhouette)
+- **Footwear:** Heavy-duty lace-up wrestling boots with reinforced shinguards
+- **Accessories:** Matching **{primary_color}** fingerless tactical gloves with metallic plating; a detachable high-collared entrance capelet (full coverage)
+- **Makeup:** Sleek hijab wrap secured for action; bold high-contrast smoky eye with **{accent}** metallic liner; matte nude lip and sharp, athletic contouring
+

@@ -1,0 +1,24 @@
+tags: [Combat, Fantasy, Holy]
+
+[F]
+- **Top:** Silver or white plate armor bodice (ornate with holy symbols and gold trim)
+- **Bottom:** flowing ((default:white) or (signature)) tabard (emblazoned with holy symbol over armor)
+- **Footwear:** armored leg plates over **white or silver pants**; **white cape** with gold clasp; **silver boots** (knee-high with armor plates).
+- **Accessories:** Holy sword (glowing or blessed), shield with divine insignia, prayer beads or holy symbol necklace.
+- **Hair/Makeup:** Long flowing hair (blonde or light brown) in loose waves or half-up style, radiant natural makeup with soft glow, serene expression.
+
+[M]
+- **Top:** Silver or white plate armor breastplate (ornate with holy symbols and gold trim)
+- **Bottom:** flowing ((default:white) or (signature)) tabard (emblazoned with holy symbol over armor)
+- **Footwear:** armored leg plates over **chainmail**; **white cape** with gold clasp; **silver boots** (heavy armor).
+- **Accessories:** Holy sword (glowing or blessed), shield with divine insignia, prayer beads or holy symbol necklace.
+- **Hair/Makeup:** Groomed hair (blonde or light brown), radiant natural appearance, serene expression.
+
+[H]
+- **Hijab:** ((default:White) or (signature)) silk or heavy cotton hijab with gold trim or circlet
+- **Top:** Silver or white plate armor bodice with flowing ((default:white) or (signature)) tabard over long sleeves
+- **Bottom:** Armored leg plates over white trousers
+- **Footwear:** Silver armored boots
+- **Accessories:** Holy sword, shield, prayer beads, white cape
+- **Makeup:** Radiant natural makeup, serene expression
+

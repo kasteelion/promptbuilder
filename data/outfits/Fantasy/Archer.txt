@@ -1,0 +1,24 @@
+tags: [Combat, Fantasy, Range]
+
+[F]
+- **Top:** Fitted leather jerkin or tunic (((default:forest green or olive) or (signature)) with mobility slits and reinforced stitching)
+- **Bottom:** asymmetric chest guard (hardened leather, strapped over upper torso to protect from bowstring)
+- **Footwear:** fitted trousers (earth tones or black, flexible fabric tucked into boots); **knee-high boots** (soft leather with flat soles for silent movement).
+- **Accessories:** Quiver with fletched arrows (slung across back or hip), leather bracers (forearm guards), shooting glove or finger tabs, longbow or recurve bow prop, hooded cowl.
+- **Hair/Makeup:** Hair secured tightly in braid or ponytail away from face, sharp focused gaze ("eagle eye"), natural makeup or optional camouflage face paint.
+
+[M]
+- **Top:** Fitted leather jerkin or tunic (((default:forest green or olive) or (signature)) with mobility slits and reinforced stitching)
+- **Bottom:** asymmetric chest guard (hardened leather, strapped over upper torso to protect from bowstring)
+- **Footwear:** fitted trousers (earth tones or black, flexible fabric tucked into boots); **knee-high boots** (soft leather with flat soles for silent movement).
+- **Accessories:** Quiver with fletched arrows (slung across back or hip), leather bracers (forearm guards), shooting glove or finger tabs, longbow or recurve bow prop, hooded cowl.
+- **Hair/Makeup:** Hair secured away from face, sharp focused gaze ("eagle eye"), natural grooming or optional camouflage face paint.
+
+[H]
+- **Hijab:** Practical tactical hijab in **((default:forest green) or (signature))** with secure aerodynamic wrap
+- **Top:** Long-sleeve fitted leather jerkin or tunic (high-neck modest cut, **((default:forest green or olive) or (signature))** with reinforced stitching) and **asymmetric chest guard**
+- **Bottom:** Full-length fitted trousers (earth tones or black, flexible fabric)
+- **Footwear:** Knee-high soft leather boots with flat soles
+- **Accessories:** Quiver with arrows, leather bracers, shooting glove, longbow or recurve bow, hooded cowl
+- **Makeup:** Sharp focused gaze, natural makeup or optional camouflage face paint
+

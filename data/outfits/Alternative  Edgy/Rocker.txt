@@ -1,0 +1,24 @@
+tags: [Edgy, Music]
+
+[F]
+- **Top:** Fitted **((default:bold colored) or (signature)) top**
+- **Bottom:** skinny jeans or leather pants with distressing
+- **Footwear:** leather jacket; **boots**.
+- **Accessories:** Metal jewelry, belt.
+- **Hair/Makeup:** Smoky or bold makeup.
+
+[M]
+- **Top:** Fitted **graphic tee or tank**
+- **Bottom:** skinny jeans or leather pants with distressing
+- **Footwear:** leather jacket; **boots**.
+- **Accessories:** Metal jewelry, studded belt.
+- **Hair/Makeup:** Edgy styling, longer hair optional.
+
+[H]
+- **Hijab:** Black jersey hijab with edgy wrap style
+- **Top:** Long-sleeve fitted tunic in ((default:deep burgundy) or (signature)) with leather jacket over (structured, modest length)
+- **Bottom:** Black skinny jeans with subtle distressing
+- **Footwear:** Black ankle boots with metal details
+- **Accessories:** Silver geometric earrings, leather belt with metal buckle
+- **Makeup:** Smoky or bold makeup with deep lip
+

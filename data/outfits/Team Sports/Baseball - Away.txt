@@ -1,0 +1,24 @@
+tags: [Baseball, Sport, Team]
+
+[F]
+- **Top:** Baseball jersey for **{team}** in **{secondary_color} with {primary_color} accents** (button-up, team logo and number){modifier}
+- **Bottom:** gray baseball pants (belted, with {primary_color} piping)
+- **Footwear:** team cap ({secondary_color} with {primary_color} logo); **cleats** ({accent}).
+- **Accessories:** Batting gloves, wristbands optional.
+- **Hair/Makeup:** Hair in ponytail or braid, minimal makeup.
+
+[M]
+- **Top:** Baseball jersey for **{team}** in **{secondary_color} with {primary_color} accents** (button-up, team logo and number){modifier}
+- **Bottom:** gray baseball pants (belted, with {primary_color} piping)
+- **Footwear:** team cap ({secondary_color} with {primary_color} logo); **cleats** ({accent}).
+- **Accessories:** Batting gloves, wristbands optional.
+- **Hair/Makeup:** Hair short or secured, minimal grooming.
+
+[H]
+- **Hijab:** Sports hijab in {secondary_color} (breathable, secure fit)
+- **Top:** Long-sleeve baseball jersey for {team} in {secondary_color} with {primary_color} accents (button-up, team logo and number, modest fit){modifier}
+- **Bottom:** Gray baseball pants (belted, with {primary_color} piping) worn over full-length {accent} leggings
+- **Footwear:** Cleats ({accent})
+- **Accessories:** Team cap (worn over hijab), batting gloves, wristbands optional, small gold studs
+- **Makeup:** Minimal makeup
+

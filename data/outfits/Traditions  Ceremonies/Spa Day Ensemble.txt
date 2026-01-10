@@ -1,0 +1,24 @@
+tags: [Lounge, Relax, Spa]
+
+[F]
+- **Top:** Plush terry cloth robe (((default:white) or (signature)), knee-length with shawl collar, belt tie at waist)
+- **Bottom:** white tank top and shorts underneath
+- **Footwear:** spa slippers (open-toe terry cloth).
+- **Accessories:** Hair towel wrap turban, cucumber slices, face mask applied, rolled towel.
+- **Hair/Makeup:** Hair wrapped in towel, glowing fresh skin with sheet mask or clay mask, relaxation mode.
+
+[M]
+- **Top:** Plush terry cloth robe (((default:white) or (signature)), knee-length with shawl collar, belt tie at waist)
+- **Bottom:** white tank top and shorts underneath
+- **Footwear:** spa slippers.
+- **Accessories:** Rolled towel over shoulder.
+- **Hair/Makeup:** Fresh clean skin, relaxation mode.
+
+[H]
+- **Hijab:** White towel wrap or turban style
+- **Top:** Plush terry cloth robe (((default:white) or (signature)), full length with long sleeves)
+- **Bottom:** White loose trousers underneath
+- **Footwear:** Spa slippers
+- **Accessories:** Cucumber slices, face mask applied
+- **Makeup:** Glowing fresh skin, relaxation mode
+

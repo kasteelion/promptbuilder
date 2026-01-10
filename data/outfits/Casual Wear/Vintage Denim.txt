@@ -1,0 +1,24 @@
+tags: [Casual, Vintage]
+
+[F]
+- **Top:** Halter Crop Top (((default:white)) ribbed knit cotton, fitted silhouette, tie-neck closure, soft texture)
+- **Bottom:** Denim Jacket (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons, heavy sturdy fabric)
+- **Footwear:** Bell Bottom Jeans (high-waisted rise, dark blue denim, form-fitting thighs with dramatic flare at the hem, contrast stitching).
+- **Accessories:** ((default:red)) paisley bandana tied as a headband, large silver hoop earrings.
+- **Hair/Makeup:** Voluminous blown-out waves, sharp winged black eyeliner, heavy rosy blush on cheekbones, bold matte lipstick.
+
+[M]
+- **Top:** Ribbed Muscle Tank (((default:white)) cotton, fitted silhouette, soft texture)
+- **Bottom:** Denim Jacket (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons, heavy sturdy fabric)
+- **Footwear:** Flared Jeans (dark blue denim, fitted through thigh with dramatic flare at hem, contrast stitching).
+- **Accessories:** ((default:red)) paisley bandana tied around neck, silver rings.
+- **Hair/Makeup:** Textured wavy hair or shag cut, clean-shaven or stubble, natural appearance.
+
+[H]
+- **Hijab:** ((default:Red)) paisley print chiffon hijab with retro styling
+- **Top:** White ribbed long-sleeve top (fitted silhouette, soft texture) worn under **Denim Jacket** (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons)
+- **Bottom:** Wide-Leg Denim Trousers (dark blue denim, high-waist, flare at hem)
+- **Footwear:** Platform boots
+- **Accessories:** Large silver hoop earrings, chunky rings
+- **Makeup:** Sharp winged black eyeliner, heavy rosy blush on cheekbones, bold matte lipstick
+

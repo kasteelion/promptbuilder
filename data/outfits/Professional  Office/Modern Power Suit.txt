@@ -1,0 +1,22 @@
+tags: [Fashion, Formal, Professional]
+
+[F]
+- **Top:** Compression-fit tailored blazer (structured {primary_color} wool-blend, worn with no shirt underneath to emphasize the plunging neckline and torso silhouette)
+- **Bottom:** Cigarette-style trousers (matching {primary_color} fabric, high-waisted and cropped at the ankle with a sharp front crease).
+- **Accessories:** Slim {secondary_color} leather belt; minimalist {accent} watch; pointed-toe stiletto pumps.
+- **Hair/Makeup:** Sleek low ponytail with a precise center part; bold matte lipstick in ((default:deep red) or (signature)); neutral polished eye makeup.
+
+[M]
+- **Top:** Compression-fit tailored blazer (structured {primary_color} wool-blend, slim-cut and worn over a bare chest or minimalist tank to emphasize the chest and torso silhouette)
+- **Bottom:** Tailored trousers (matching {primary_color} fabric, slim-fit with a sharp front crease).
+- **Accessories:** Slim {secondary_color} leather belt; minimalist {accent} watch; polished leather loafers.
+- **Hair/Makeup:** Sleek neatly styled hair with a precise part; clean-shaven or well-groomed stubble; neutral polished appearance.
+
+[H]
+- **Hijab:** Structured silk hijab in **{primary_color}** with a sharp professional wrap.
+- **Top:** Modern tailored blazer (long-sleeve, structured **{primary_color}** wool-blend, modest length falling to mid-thigh) worn over a matching high-neck **{primary_color}** modest tunic.
+- **Bottom:** Tailored trousers (matching **{primary_color}** fabric, high-waisted with a sharp front crease).
+- **Footwear:** Pointed-toe low-heeled pumps or loafers.
+- **Accessories:** Slim **{secondary_color}** leather belt; minimalist **{accent}** watch.
+- **Makeup:** Professional natural makeup; bold matte lipstick in deep red.
+

@@ -47,7 +47,12 @@ class PromptBuilder:
         """
         parts: List[str] = []
 
-        base = self.base_prompts.get(config.get("base_prompt"), "")
+        base_data = self.base_prompts.get(config.get("base_prompt"), "")
+        if isinstance(base_data, dict):
+            base = base_data.get("description", "")
+        else:
+            base = base_data
+
         if base:
             parts.append(base)
         parts.append("---")

@@ -1,0 +1,24 @@
+tags: [Circus, Costume, Performance]
+
+[F]
+- **Top:** Red tailcoat jacket (((default:bright red) or (signature)) with gold military-style buttons and trim, fitted through torso with dramatic tails)
+- **Bottom:** white dress shirt with ruffled jabot
+- **Footwear:** black dress pants (high-waist, fitted); **tall black boots** (riding boot style, polished).
+- **Accessories:** Black top hat with red ribbon, white gloves, whistle on chain, riding crop or baton, gold epaulettes on shoulders.
+- **Hair/Makeup:** Hair in polished updo or slicked back style, theatrical makeup (defined features, red lips, possibly white face paint accents), commanding presence, showmanship expression.
+
+[M]
+- **Top:** Red tailcoat (((default:bright red) or (signature)) with gold braiding and epaulettes)
+- **Bottom:** white dress shirt
+- **Footwear:** black trousers (with side stripe); **tall riding boots**.
+- **Accessories:** Top hat, white gloves, whip or baton.
+- **Hair/Makeup:** Waxed mustache (optional), dramatic grooming, commanding showman.
+
+[H]
+- **Hijab:** Black satin hijab (neat tuck) under top hat
+- **Top:** Red tailcoat (((default:bright red) or (signature)) gold trim); **white high-neck ruffled shirt**
+- **Bottom:** Black wide-leg trousers or **maxi skirt**
+- **Footwear:** Tall boots
+- **Accessories:** Top hat, white gloves, baton
+- **Makeup:** Theatrical definition, red lips
+

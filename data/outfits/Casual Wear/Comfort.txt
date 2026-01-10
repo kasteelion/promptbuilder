@@ -1,0 +1,24 @@
+tags: [Casual, Home]
+
+[F]
+- **Top:** Oversized **((default:cozy top) or (signature) top)** (sweater or hoodie)
+- **Bottom:** comfortable **bottoms** (leggings or joggers)
+- **Footwear:** soft footwear.
+- **Accessories:** Minimal jewelry.
+- **Hair/Makeup:** Minimal makeup, relaxed hairstyle.
+
+[M]
+- **Top:** Oversized **((default:cozy hoodie or sweatshirt) or (signature) top)**
+- **Bottom:** comfortable **joggers or sweatpants**
+- **Footwear:** soft sneakers or slides.
+- **Accessories:** Minimal jewelry.
+- **Hair/Makeup:** Minimal grooming, relaxed hairstyle.
+
+[H]
+- **Hijab:** Soft jersey hijab in light gray with simple wrap
+- **Top:** Oversized ((default:cream) or (signature)) ribbed knit sweater (long sleeves, falls to hip)
+- **Bottom:** High-waist black joggers with tapered leg (soft cotton blend)
+- **Footwear:** White slip-on sneakers
+- **Accessories:** Small gold studs, simple watch
+- **Makeup:** Minimal (tinted moisturizer, mascara, lip balm)
+

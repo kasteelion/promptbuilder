@@ -1,0 +1,24 @@
+tags: [Formal, Rich, Western]
+
+[F]
+- **Top:** Tailored western blazer (((default:cream or tan) or (signature)) with western yoke detailing, leather trim)
+- **Bottom:** silk western shirt (with bolo tie, subtle sheen)
+- **Footwear:** tailored trousers (high-waist, pressed crease); **luxury cowboy boots** (exotic leather - ostrich or alligator, understated elegance).
+- **Accessories:** Bolo tie with turquoise or silver slide, large statement ring, designer western hat (felt, impeccably maintained), leather briefcase or portfolio.
+- **Hair/Makeup:** Sophisticated styled hair (sleek waves or polished updo), refined makeup with emphasis on power and wealth, confident commanding presence.
+
+[M]
+- **Top:** Tailored western blazer (((default:cream or tan) or (signature)) with western yoke detailing, suede trim)
+- **Bottom:** crisp dress shirt (white or pastel)
+- **Footwear:** tailored trousers (high-waist, western cut); **luxury cowboy boots** (alligator or ostrich).
+- **Accessories:** Bolo tie with turquoise or silver slide, large signet ring, Stetson hat (high quality), leather briefcase.
+- **Hair/Makeup:** Slicked back hair, well-groomed facial hair, confident commanding presence.
+
+[H]
+- **Hijab:** Cream or tan silk hijab (elegant drape) under western hat
+- **Top:** Tailored western blazer (((default:cream or tan) or (signature)) long line); **silk high-neck blouse** underneath
+- **Bottom:** Tailored wide-leg trousers or **maxi skirt**
+- **Footwear:** Luxury cowboy boots
+- **Accessories:** Bolo tie, statement ring, designer western hat, briefcase
+- **Makeup:** Refined makeup, confident presence
+

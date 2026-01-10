@@ -23,6 +23,7 @@ Built with a "data-first" philosophy, the application uses human-readable Markdo
 *   **Structured Outfits:** Support for detailed outfit definitions with automatic "one-piece" detection and team color substitution.
 *   **Optimized UX:** Advanced searchable comboboxes with keyboard navigation, auto-focus, and double-click shortcuts.
 *   **Real-time Preview:** Instant prompt generation with adaptive validation and condensed summary view.
+*   **Smart Coherence Engine:** Advanced randomization logic that ensures thematic consistency (e.g., a "Sports" style will automatically select compatible sports poses and outfits).
 *   **Advanced Theming:** Built-in theme editor for customizing colors, fonts, and UI scaling.
 *   **Extensible Data:** Add characters, scenes, and interactions simply by editing Markdown files.
 *   **Privacy First:** Fully local execution with no cloud dependencies or tracking.

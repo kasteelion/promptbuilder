@@ -1,0 +1,24 @@
+tags: [Fantasy, Historical]
+
+[F]
+- **Top:** Medieval-inspired outfit with flowing fabrics in ((default:earthy tones) or (signature))
+- **Bottom:** corset or bodice
+- **Footwear:** skirt or breeches; **boots**.
+- **Accessories:** Fantasy jewelry, decorative elements.
+- **Hair/Makeup:** Natural or fantasy-inspired makeup.
+
+[M]
+- **Top:** Medieval-inspired tunic or shirt with flowing fabrics
+- **Bottom:** vest or doublet
+- **Footwear:** breeches or pants; **boots**.
+- **Accessories:** Fantasy jewelry, sword belt, decorative elements.
+- **Hair/Makeup:** Natural or fantasy-inspired grooming, period hairstyle.
+
+[H]
+- **Hijab:** Medieval-inspired flowing veil in cream (can be worn over or as part of fantasy costume)
+- **Top:** Long-sleeve modest medieval dress with laced bodice overlay (high neckline, flowing fabrics)
+- **Bottom:** Long flowing skirt in rich jewel tone
+- **Footwear:** Leather boots
+- **Accessories:** Fantasy jewelry, decorative belt, small pouch
+- **Makeup:** Natural or fantasy-inspired makeup
+

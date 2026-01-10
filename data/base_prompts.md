@@ -4,7 +4,7 @@ Different base style prompts for your character images. Select one from the drop
 
 ---
 
-## Cyberpunk Neon
+## Cyberpunk Neon (Cyberpunk, Sci-Fi, Dark)
 
 Rendering
 Ray-traced digital rendering with high-contrast chiaroscuro. Dominant cyan and magenta rim lighting against deep matte blacks. Heavy volumetric fog, bloom effects on light sources, and chromatic aberration at the edges. Wet-surface reflections and a distinct digital noise overlay.
@@ -23,7 +23,7 @@ Glitch art artifacts, holographic UI overlays in the foreground, and lens flare 
 
 ---
 
-## Watercolor Impressionistic
+## Watercolor Impressionistic (Artistic, Soft, Traditional)
 
 Rendering
 Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines.
@@ -42,7 +42,7 @@ Splatter droplets, dry-brush scratch marks, and visible pencil under-drawing. Th
 
 ---
 
-## Low-Poly 3D
+## Low-Poly 3D (Retro, 3D, Artistic)
 
 Rendering
 Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
@@ -61,7 +61,7 @@ Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are 
 
 ---
 
-## Soft Semi-Realistic: "Quiet Confidence"
+## Soft Semi-Realistic: "Quiet Confidence" (Realistic, Soft, Cinematic)
 
 Rendering
 Cinematic digital painting with an anamorphic lens simulation. Soft, diffused "Golden Hour" lighting. Subtle film grain and shallow depth of field. The rendering focuses on subsurface scattering (light passing through skin) for a warm, living glow.
@@ -80,7 +80,7 @@ Dust motes floating in light shafts. Muted, analogous color palettes (earth tone
 
 ---
 
-## Photorealistic: "High-Fidelity Candid"
+## Photorealistic: "High-Fidelity Candid" (Realistic, High Definition, Photography)
 
 Rendering
 8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
@@ -99,7 +99,7 @@ ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic
 
 ---
 
-## Anime Style: "Dynamic Cel-Shaded"
+## Anime Style: "Dynamic Cel-Shaded" (Anime, 2D, Vibrant)
 
 Rendering
 High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
@@ -118,7 +118,7 @@ Details
 
 ---
 
-## Digital Painting: "Expressive Impasto"
+## Digital Painting: "Expressive Impasto" (Artistic, Painterly, Fantasy)
 
 Rendering
 Thick, painterly application simulating oil or acrylics. Visible brush strokes with directional texture. Heavy use of "Chiaroscuro" (dramatic light and dark contrast). Edges range from sharp palette-knife cuts to soft blended strokes.
@@ -137,7 +137,7 @@ Canvas weave texture visible in the background. Color vibration (placing complem
 
 ---
 
-## Sketch Style: "Energetic Line Art"
+## Sketch Style: "Energetic Line Art" (Artistic, Monochrome, Sketch)
 
 Rendering
 Monochromatic graphite or charcoal aesthetic. White or off-white paper background. Lines vary frantically in weight and opacity. Visible "construction lines" and erasure marks left in the final image to show the process.
@@ -156,7 +156,7 @@ Smudge marks, graphite dust, and handwritten artistic notes. The lighting is pur
 
 ---
 
-## Vintage Pin-Up: "Glamorous Airbrush"
+## Vintage Pin-Up: "Glamorous Airbrush" (Vintage, Retro, Glamour)
 
 Rendering
 1950s commercial illustration style. Smooth, airbrushed gradients with soft vector-like outlines. High-key, flattering studio lighting. Colors are warm, vibrant, and nostalgic (technicolor simulation).
@@ -175,7 +175,7 @@ Vignette fading at the corners. A slight "bloom" effect on highlights. Props are
 
 ---
 
-## Shonen Anime: "Battle-Ready Dynamic"
+## Shonen Anime: "Battle-Ready Dynamic" (Anime, Action, Dynamic)
 
 Rendering
 Aggressive cel-shading with heavy black shadows. High contrast "Impact" lighting. Line art is thick, varied, and jagged. Color palette is intense, using primary colors and harsh lighting effects.
@@ -194,7 +194,7 @@ Details
 
 ---
 
-## Shojo Anime: "Romantic Sparkle"
+## Shojo Anime: "Romantic Sparkle" (Anime, Cute, Soft)
 
 Rendering
 Soft, pastel-heavy cel-shading. Lines are thin, sepia or colored (not black), and delicate. Lighting is "overexposed" with soft gradients. Texture overlays of bubbles, flowers, or sparkles are common.
@@ -213,7 +213,7 @@ Bokeh effects (light orbs). Floral framing. The atmosphere is dreamy and hazy. A
 
 ---
 
-## Film Noir: "Shadows and Smoke"
+## Film Noir: "Shadows and Smoke" (Vintage, Cinematic, Dark, Monochrome)
 
 Rendering
 Black and white (or extremely desaturated sepia). High-contrast "Low Key" lighting. Deep, crushing blacks and stark white highlights. Film grain and scratch textures simulate aged celluloid.
@@ -232,7 +232,7 @@ Venetian blind shadow slats cast across the image. Volumetric cigarette smoke or
 
 ---
 
-## Classic Anime: "Clean Cel Animation"
+## Classic Anime: "Clean Cel Animation" (Anime, Retro, 90s)
 
 Rendering
 1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
@@ -251,7 +251,7 @@ Hand-painted watercolor style backgrounds (static). Minimal visual effects—no 
 
 ---
 
-## Artgerm Style: "Luminous Digital Fantasy"
+## Artgerm Style: "Luminous Digital Fantasy" (Artistic, Digital, Glamour, Fantasy)
 
 Rendering
 Hyper-polished digital airbrushing. Skin is rendered to look like porcelain or high-quality silicone. Lighting is dramatic, usually featuring a strong cool rim light on one side and a warm key light on the other.
@@ -269,7 +269,7 @@ Details
 Subtle particle effects (embers, petals). The background is usually a solid color gradient or a simple abstract halo to keep the focus entirely on the character's face and lighting.
 ---
 
-## Cinematic 3D Animation
+## Cinematic 3D Animation (3D, Cinematic, Cute)
 
 Rendering
 Pre-rendered 3D animation aesthetic. Soft, global illumination with high-quality subsurface scattering. Vibrant, cinematic lighting with a focus on "appeal" and clarity. Smooth, clean surfaces with subtle tactile textures.
@@ -288,7 +288,7 @@ Soft bloom on highlights, subtle lens flare. Backgrounds are high-detail but des
 
 ---
 
-## Western Comic Book
+## Western Comic Book (Comic, 2D, Graphic)
 
 Rendering
 High-contrast ink illustration. Bold, black "brush-work" for shadows and outlines. Flat or Ben-Day dot coloring (halftone). High-key lighting with dramatic, graphic shadow placement.
@@ -307,7 +307,7 @@ Action sound effects (suggested by composition), heavy border lines, and graphic
 
 ---
 
-## Classic Fantasy Oil
+## Classic Fantasy Oil (Fantasy, Traditional, Artistic)
 
 Rendering
 Traditional oil on canvas. Warm, amber-toned glazes and visible, "lost-and-found" edges. High chiaroscuro contrast. Lighting feels like torchlight or magic-glow against dark, earthy backgrounds.
@@ -326,7 +326,7 @@ Canvas texture, cracked paint artifacts, and atmospheric smoke/embers. The palet
 
 ---
 
-Emirichu Animation Style
+## Emirichu Animation Style (Anime, Cute, 2D, Flat)
 Rendering
 Clean digital vector illustration with flat cel-shading. Smooth, anti-aliased line art with consistent medium-weight outlines. Minimal shading using one to two tones per area for subtle depth while maintaining a 2D animation aesthetic. Soft gradients only where needed. Even, friendly lighting creating a warm, inviting atmosphere. Bright, cheerful color palette with pastel undertones and well-balanced saturated hues that pop without overwhelming. Colors are vibrant but harmonious, never harsh.
 Character Accuracy
@@ -340,7 +340,7 @@ Simplified backgrounds that complement rather than compete with characters. Occa
 
 ---
 
-## Standard / Neutral
+## Standard / Neutral (Realistic, Neutral, Photography)
 
 Rendering
 Balanced digital photography. Neutral white-balance and natural lighting. Clean, high-resolution finish without specific filter bias. Sharp focus across the subject with natural depth-of-field.
@@ -359,7 +359,7 @@ Minimal visual effects. A clean, professional studio or natural background. This
 
 ---
 
-## Victoria's Secret Magazine: "High-Fashion Glamour"
+## Victoria's Secret Magazine: "High-Fashion Glamour" (Glamour, Realistic, Fashion)
 
 Rendering
 Ultra-glamorous high-fashion photography style. High-key studio lighting with a mix of soft-boxes and dramatic ring lights. 8K resolution with a "glossy magazine" finish. Warm, sun-kissed color palette with subtle pink and gold undertones. Shallow depth of field with a soft, expensive-looking bokeh.
@@ -378,7 +378,7 @@ Soft bloom on highlights, subtle lens flare, and a faint shimmering particle eff
 
 ---
 
-## Sports Action: "Frozen Velocity"
+## Sports Action: "Frozen Velocity" (Sports, Realistic)
 
 Rendering
 High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
@@ -397,7 +397,7 @@ Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background i
 
 ---
 
-## Chibi Style: "Super Deformed"
+## Chibi Style: "Super Deformed" (Anime, Cute, Chibi)
 
 Rendering
 Soft-shaded vector illustration or vinyl toy aesthetic. Bright, pastel, or primary-heavy color palettes. Gradient shading is minimal and smooth, giving surfaces a matte plastic or "squishy" appearance. Thick, rounded line art (or lineless "sticker" style).
@@ -416,7 +416,7 @@ Floating iconography (hearts, stars, sweat drops, anger veins) near the head. Ba
 
 ---
 
-## Vintage Film: "Analog Nostalgia"
+## Vintage Film: "Analog Nostalgia" (Vintage, Photography, Realistic)
 
 Rendering
 Simulates 35mm film stock (Kodak Portra or Fujifilm styling) from the 1990s. Soft, slightly washed-out blacks and warm, yellow-green highlights. Visible film grain (ISO 400-800). Flash photography aesthetic: bright, direct light falloff leaving the background in darkness.
@@ -435,7 +435,7 @@ Light leaks (orange/red burns) on the edges of the frame. A digital orange "Date
 
 ---
 
-## American Romanticism: "The Sublime Landscape"
+## American Romanticism: "The Sublime Landscape" (Artistic, Traditional, Landscape)
 
 Rendering
 19th-century oil painting style (Hudson River School). Luminism: focus on the effects of light on landscape and atmosphere. Soft, invisible brushstrokes creating a glowing, hazy atmosphere. Dramatic lighting contrasts between storm clouds and "God rays" of sunlight.
@@ -454,7 +454,7 @@ Dramatic environmental elements: jagged cliffs, mist-filled valleys, gnarled oak
 
 ---
 
-## Stop-Motion Animation: "Handcrafted Clay"
+## Stop-Motion Animation: "Handcrafted Clay" (Artistic, 3D, Quirky)
 
 Rendering
 Simulates physical photography of miniature models (Laika or Aardman style). Shallow depth of field (macro photography aesthetic). Lighting is cinematic but interacts with physical textures like clay, silicone, or felt. No motion blur; movement is suggested by replacement animation.
@@ -473,7 +473,7 @@ Visible texture of the materials (thumbprints, brush bristles). Dust motes in th
 
 ---
 
-## Ligne Claire: "Clean Line Comic"
+## Ligne Claire: "Clean Line Comic" (Comic, 2D, Clean)
 
 Rendering
 "Clear Line" style (reminiscent of Hergé/Tintin or Moebius). Uniform, continuous black outlines of consistent width. No hatching or cross-hatching. Colors are flat, vivid, and unmodulated (no gradients).

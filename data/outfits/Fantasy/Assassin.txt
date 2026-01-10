@@ -1,0 +1,24 @@
+tags: [Combat, Fantasy, Stealth]
+
+[F]
+- **Top:** Form-fitting black bodysuit or leather armor (reinforced at vital areas)
+- **Bottom:** armored bracers
+- **Footwear:** tactical belt with hidden weapon holsters; **silent boots** (soft-soled).
+- **Accessories:** Twin daggers or short swords, hidden blade mechanisms, poison vials, mask or hood for identity concealment, smoke bombs.
+- **Hair/Makeup:** Hair secured tightly (bun, braid, or short), face paint or mask, minimal makeup, cold calculating expression.
+
+[M]
+- **Top:** Form-fitting black bodysuit or leather armor (reinforced at vital areas)
+- **Bottom:** armored bracers
+- **Footwear:** tactical belt with hidden weapon holsters; **silent boots** (soft-soled).
+- **Accessories:** Twin daggers or short swords, hidden blade mechanisms, poison vials, mask or hood for identity concealment, smoke bombs.
+- **Hair/Makeup:** Hair secured tightly or short, face paint or mask, cold calculating expression.
+
+[H]
+- **Hijab:** Black ninja-style wrap or tight hood covering neck and chest
+- **Top:** Form-fitting black modest bodysuit or tunic with armored bracers
+- **Bottom:** Tactical trousers or leggings with skirt overlay
+- **Footwear:** Silent boots
+- **Accessories:** Twin daggers, poison vials, mask (optional)
+- **Makeup:** Cold calculating expression, minimal makeup
+

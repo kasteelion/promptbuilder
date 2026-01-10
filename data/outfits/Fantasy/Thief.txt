@@ -1,0 +1,24 @@
+tags: [Fantasy, Stealth]
+
+[F]
+- **Top:** Fitted leather vest or corset (dark brown or black)
+- **Bottom:** tight leather pants
+- **Footwear:** hooded cloak (dark color for stealth); **soft leather boots** (designed for silent movement).
+- **Accessories:** Lockpick tools in belt, throwing daggers, coin purse, small satchel for loot, fingerless gloves.
+- **Hair/Makeup:** Dark hair pulled back in practical ponytail or braid, minimal makeup, smudged kohl for night work, cunning expression.
+
+[M]
+- **Top:** Fitted leather vest (dark brown or black)
+- **Bottom:** tight leather pants
+- **Footwear:** hooded cloak (dark color for stealth); **soft leather boots** (designed for silent movement).
+- **Accessories:** Lockpick tools in belt, throwing daggers, coin purse, small satchel for loot, fingerless gloves.
+- **Hair/Makeup:** Dark hair (short or tied back), subtle stubble, smudged kohl for night work, cunning expression.
+
+[H]
+- **Hijab:** Dark secure wrap (brown or black) for stealth, no loose ends
+- **Top:** Fitted leather vest over long-sleeve dark tunic
+- **Bottom:** Loose trousers allowing movement, tucked into boots
+- **Footwear:** Soft leather silent boots
+- **Accessories:** Lockpicks, coin purse, dagger, fingerless gloves
+- **Makeup:** Minimal, smudged kohl, cunning expression
+

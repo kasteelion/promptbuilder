@@ -1,0 +1,22 @@
+tags: [Combat, Edgy, Outdoor]
+
+[F]
+- **Top:** Ribbed moisture-wicking henley (fitted tightly in ((default:olive green) or (signature)), featuring a three-button neckline and reinforced elbow patches)
+- **Bottom:** High-waist tactical leggings (technical {secondary_color} compression fabric with integrated side pockets and mesh ventilation).
+- **Accessories:** Heavy-duty utility belt with {accent} hardware; rugged mid-calf leather boots; black digital fitness watch.
+- **Hair/Makeup:** Practical boxer braids; fresh-faced "outdoorsy" glow; minimal waterproof mascara and tinted lip balm.
+
+[M]
+- **Top:** Ribbed moisture-wicking henley (fitted tightly in ((default:olive green) or (signature)), featuring a three-button neckline and reinforced elbow patches)
+- **Bottom:** Tactical compression pants (technical {secondary_color} fabric with integrated side pockets and mesh ventilation).
+- **Accessories:** Heavy-duty utility belt with {accent} hardware; rugged combat boots; black digital fitness watch.
+- **Hair/Makeup:** Short practical hair or man-bun; rugged "outdoorsy" appearance; minimal grooming.
+
+[H]
+- **Hijab:** Practical tactical hijab in **((default:olive green) or (signature))** with a secure aerodynamic wrap.
+- **Top:** Ribbed moisture-wicking tunic (long-sleeve, modest fit in **((default:olive green) or (signature))**, featuring reinforced elbow patches).
+- **Bottom:** Tactical leggings (technical **{secondary_color}** compression fabric with integrated side pockets and mesh ventilation).
+- **Footwear:** Rugged mid-calf leather boots.
+- **Accessories:** Heavy-duty utility belt with **{accent}** hardware; black digital fitness watch.
+- **Makeup:** Secure hijab wrap; fresh-faced "outdoorsy" glow; tinted lip balm.
+

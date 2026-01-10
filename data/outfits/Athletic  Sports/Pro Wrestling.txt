@@ -1,0 +1,30 @@
+tags: []
+
+[F]
+- **Top:** Athletic **sports bra or crop top** (((default:red) or (signature)) metallic spandex with black piping detail and center zipper accent)
+- **Bottom:** high-waisted **wrestling briefs** (matching ((default:red) or (signature)) with black trim)
+- **Footwear:** fishnet tights (black, full-length); elbow-length **arm sleeves** (((default:red) or (signature)) spandex, single arm or matching pair); knee-high **wrestling boots** (black leather with multiple buckle straps and platform sole).
+- **Accessories:** ((default:red) or (signature)) knee pads (under fishnets), choker or collar (((default:red) or (signature)) to match outfit), wrist tape (black or ((default:red) or (signature))), hair ties matching gear colors.
+- **Hair/Makeup:** dramatic smoky eye makeup with bold winged liner, contoured cheekbones, bold ((default:red) or (signature)) or dark lip.
+
+---
+
+[M]
+- **Top:** Wrestling **trunks or long tights** (((default:red) or (signature)) with black side panels and metallic trim)
+- **Bottom:** bare chest or matching **wrestling vest**
+- **Footwear:** high-top **wrestling boots** (black with ((default:red) or (signature)) laces); **knee pads** (((default:red) or (signature))).
+- **Accessories:** Wrist tape (black or ((default:red) or (signature))), elbow pads, championship belt optional.
+- **Hair/Makeup:** Intense focused expression, hair styled or slicked back for action.
+
+---
+
+[H]
+- **Hijab:** Sports hijab (black with ((default:red) or (signature)) trim, secure fit for athletic movement)
+- **Top:** Long-sleeve athletic **bodysuit** (black base with bold ((default:red) or (signature)) geometric panels and accents down arms and sides)
+- **Bottom:** Wrestling tights or leggings (full-length, continuing the black and ((default:red) or (signature)) color scheme)
+- **Footwear:** Wrestling boots (standard lace-up style)
+- **Accessories:** Knee pads (under tights or over), elbow pads optional, wrestling gloves, wrist tape, personalized logo or text on gear
+- **Makeup:** Hijab fully secured for action, natural makeup with defined features visible, determined athletic expression, professional wrestling presence
+
+---
+

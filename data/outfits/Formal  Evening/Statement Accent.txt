@@ -1,0 +1,23 @@
+tags: [Bold, Fashion, Formal]
+
+[F]
+- **Top:** Off-shoulder mini dress (black bodycon silhouette, structured fit)
+- **Bottom:** integrated ((default:white) or (signature)) off-shoulder band with **long fabric extensions that tie into an oversized bow at the back** (draped across shoulder blades with long trailing ends).
+- **Accessories:** Delicate gold necklace, rings, strappy heels or ankle-strap sandals (white or nude).
+- **Hair/Makeup:** Loose waves or beachy curls with natural volume, natural glam makeup with defined eyes and nude lip.
+
+[M]
+- **Top:** Black tailored suit (slim fit, modern cut)
+- **Bottom:** white dress shirt (crisp)
+- **Footwear:** velvet bow tie or tie (((default:black or deep jewel tone) or (signature))).
+- **Accessories:** Pocket square (white or matching tie), polished dress shoes, cufflinks.
+- **Hair/Makeup:** Polished grooming, slicked back or neatly styled hair.
+
+[H]
+- **Hijab:** White or black silk hijab with elegant drape
+- **Top:** Long-sleeve fitted evening gown (black bodycon silhouette) with integrated ((default:white) or (signature)) shoulder band detail adapted for modesty (white sash or bow detail at back)
+- **Bottom:** Full-length skirt (part of gown)
+- **Footwear:** Strappy heels
+- **Accessories:** Delicate gold necklace, rings
+- **Makeup:** Natural glam makeup with defined eyes and nude lip
+

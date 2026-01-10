@@ -1,0 +1,26 @@
+tags: [Seasonal, Summer, Swim]
+
+[F]
+- **Top:** Simple **((default:bikini) or (signature) bikini)**.
+- **Accessories:** None specified.
+- **Hair/Makeup:** Minimal waterproof makeup.
+
+---
+
+[M]
+- **Top:** Simple **((default:swim trunks or board shorts) or (signature) swimwear)**.
+- **Accessories:** None specified.
+- **Hair/Makeup:** Minimal grooming.
+
+---
+
+[H]
+- **Hijab:** Swim hijab in navy blue (quick-dry technical fabric)
+- **Top:** Long-sleeve modest swim tunic in ((default:navy blue) or (signature)) (falls to mid-thigh)
+- **Bottom:** Full-coverage swim leggings
+- **Footwear:** Water-friendly sandals
+- **Accessories:** Waterproof watch, UV-protective sunglasses
+- **Makeup:** Minimal waterproof makeup
+
+---
+

@@ -1,0 +1,28 @@
+tags: [Casual, Lounge, Sleep]
+
+[F]
+- **Top:** Soft **((default:pajama set) or (signature) pajama set)** (matching top and shorts/pants) or **nightgown**
+- **Bottom:** fuzzy slippers or socks.
+- **Accessories:** None or minimal.
+- **Hair/Makeup:** No makeup, hair down or in loose bun.
+
+---
+
+[M]
+- **Top:** ((default:Pajama pants or shorts) or (signature) pajama set) with **t-shirt or tank**
+- **Bottom:** slippers or socks.
+- **Accessories:** None or minimal.
+- **Hair/Makeup:** Minimal grooming, hair natural.
+
+---
+
+[H]
+- **Hijab:** Soft cotton jersey sleep hijab in cream or light gray with relaxed draping
+- **Top:** Long-sleeve soft pajama top in ((default:comfortable fabric) or (signature) color) (modest, comfortable fabric)
+- **Bottom:** Comfortable pajama pants in matching set
+- **Footwear:** Fuzzy slippers or cozy socks
+- **Accessories:** None or minimal
+- **Makeup:** No makeup
+
+---
+

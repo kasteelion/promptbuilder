@@ -1,0 +1,24 @@
+tags: [Fantasy, Magic]
+
+[F]
+- **Top:** Fitted bodice or corset (((default:rich jewel tones - emerald, sapphire, ruby) or (signature)) with magical shimmer)
+- **Bottom:** flowing skirt with high slits (for mobility, layered with sheer overlay)
+- **Footwear:** arm sleeves (detached, sheer with arcane patterns); **heeled boots or strappy sandals**.
+- **Accessories:** Ornate staff or wand, crystal jewelry (necklace, circlet, rings), magical tome or grimoire, glowing amulet.
+- **Hair/Makeup:** Long dramatic hair (often with unnatural colors - silver, violet, crimson) in flowing curls, dramatic makeup with shimmer, mystical eyes, confident powerful expression.
+
+[M]
+- **Top:** Fitted tunic or vest (((default:rich jewel tones - emerald, sapphire, ruby) or (signature)) with magical shimmer)
+- **Bottom:** fitted pants
+- **Footwear:** flowing long coat or robe (open front); **heeled boots**.
+- **Accessories:** Ornate staff or wand, crystal jewelry (necklace, rings), magical tome or grimoire, glowing amulet.
+- **Hair/Makeup:** Stylish hair (often with unnatural colors - silver, violet, crimson), sharp features, mystical eyes, confident powerful expression.
+
+[H]
+- **Hijab:** Shimmering silk hijab in ((default:jewel tone - emerald, sapphire, ruby) or (signature)) with circlet
+- **Top:** Fitted bodice or corset over sheer long-sleeve overlay or matching top
+- **Bottom:** Flowing full skirt with modest layers
+- **Footwear:** Heeled boots
+- **Accessories:** Staff or wand, crystal jewelry, glowing amulet
+- **Makeup:** Dramatic shimmer makeup, mystical eyes
+

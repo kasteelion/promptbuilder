@@ -146,6 +146,14 @@ class BaseStyleCreatorDialog:
         self.name_entry.pack(fill="x", pady=(0, 15))
         self.name_entry.focus()
 
+        # Tags
+        ttk.Label(main_frame, text="TAGS (COMMA-SEPARATED):", style="Bold.TLabel").pack(
+            anchor="w", pady=(0, 4)
+        )
+        self.tags_var = tk.StringVar()
+        self.tags_entry = ttk.Entry(main_frame, textvariable=self.tags_var, style="TEntry")
+        self.tags_entry.pack(fill="x", pady=(0, 15))
+
         # Style description
         ttk.Label(main_frame, text="STYLE DESCRIPTION:", style="Bold.TLabel").pack(
             anchor="w", pady=(0, 4)
@@ -320,6 +328,7 @@ Holographic displays, circuit patterns, rain-slicked atmosphere."""
         """Validate and create the base style."""
         name = self.name_var.get().strip()
         description = self.description_text.get("1.0", "end").strip()
+        tags = self.tags_var.get().strip()
 
         # Validate
         if not name:
@@ -336,7 +345,10 @@ Holographic displays, circuit patterns, rain-slicked atmosphere."""
             return
 
         # Read existing base_prompts.md
-        prompts_file = self.data_loader.base_dir / "base_prompts.md"
+        prompts_file = self.data_loader.base_dir / "data" / "base_prompts.md"
+        # Fallback to root if data/ not found (though data_loader handles this usually)
+        if not prompts_file.exists():
+             prompts_file = self.data_loader.base_dir / "base_prompts.md"
 
         try:
             if prompts_file.exists():
@@ -345,7 +357,8 @@ Holographic displays, circuit patterns, rain-slicked atmosphere."""
                 content = "# Base Style Prompts\n\nDifferent base style prompts for your character images. Select one from the dropdown in the app.\n\n---\n\n"
 
             # Add new style section
-            new_section = f"\n## {name}\n\n{description}\n\n---\n"
+            header = f"{name} ({tags})" if tags else name
+            new_section = f"\n## {header}\n\n{description}\n\n---\n"
             content += new_section
 
             # Write back to file

@@ -1,0 +1,24 @@
+tags: [Esports, Sport, Team]
+
+[F]
+- **Top:** Pro-style V-neck jersey for **{team}** featuring an **asymmetric diagonal design**
+- **Bottom:** white torso base with contrasting **black** sleeves and side panels
+- **Footwear:** a bold **{primary_color}** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** athletic joggers or leggings.
+- **Accessories:** Gaming headset, wristbands.
+- **Hair/Makeup:** Sleek styling, minimal modern makeup.
+
+[M]
+- **Top:** Pro-style V-neck jersey for **{team}** featuring an **asymmetric diagonal design**
+- **Bottom:** white torso base with contrasting **black** sleeves and side panels
+- **Footwear:** a bold **{primary_color}** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** tactical-style joggers.
+- **Accessories:** Gaming headset, smart watch.
+- **Hair/Makeup:** Clean modern styling.
+
+[H]
+- **Hijab:** Black jersey hijab (sleek wrap)
+- **Top:** Long-sleeve **pro-style jersey** for **{team}** with modest loose fit{modifier}; **white** torso base with **black** sleeves; bold **{primary_color}** sash stripe cutting diagonally across the chest
+- **Bottom:** Black wide-leg track pants
+- **Footwear:** High-top sneakers
+- **Accessories:** Gaming headset (worn over hijab), wristbands
+- **Makeup:** Minimal, fresh look
+

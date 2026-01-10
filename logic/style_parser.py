@@ -8,14 +8,33 @@ class StyleParser:
 
     @staticmethod
     def parse_base_prompts(content: str):
-        """Parse base style prompts from markdown content."""
+        """Parse base style prompts from markdown content.
+        
+        Returns:
+            dict: { name: { "description": str, "tags": list } }
+        """
         prompts = {}
+        # Simple split by header
         parts = re.split(r"^##\s+(.+)$", content, flags=re.MULTILINE)
+        
         for i in range(1, len(parts), 2):
-            name = parts[i].strip()
+            raw_header = parts[i].strip()
             body = parts[i + 1].strip() if i + 1 < len(parts) else ""
             body = re.sub(r"\n*---\s*$", "", body).strip()
-            prompts[name] = body
+            
+            # Extract tags from header: Name (Tag1, Tag2)
+            name = raw_header
+            tags = []
+            tag_match = re.search(r"\(([^)]+)\)$", raw_header)
+            if tag_match:
+                tags_str = tag_match.group(1)
+                tags = [t.strip() for t in tags_str.split(",") if t.strip()]
+                name = raw_header[:tag_match.start()].strip()
+            
+            prompts[name] = {
+                "description": body,
+                "tags": tags
+            }
         return prompts
 
     @staticmethod

@@ -1,0 +1,22 @@
+tags: []
+
+[F]
+- **Top:** Micro-crop tech-fleece hoodie (ending just below the bust in ((default:vibrant orange) or (signature)), featuring an oversized hood and raw-edge hem)
+- **Bottom:** High-waist biker shorts (black technical spandex with {secondary_color} side-stripes and a high-compression waistband).
+- **Accessories:** Chunky {accent} platform sneakers; layered silver chain necklaces; oversized hoop earrings.
+- **Hair/Makeup:** High "space buns" with loose face-framing tendrils; graphic winged eyeliner; glossy nude lip.
+
+[M]
+- **Top:** Technical fleece hoodie (cropped to the waist in ((default:vibrant orange) or (signature)), featuring an oversized hood and raw-edge hem)
+- **Bottom:** Technical athletic shorts (black spandex with {secondary_color} side-stripes worn over matching compression leggings).
+- **Accessories:** Chunky {accent} sneakers; layered silver chain necklaces; oversized silver watch.
+- **Hair/Makeup:** Messy textured hair or dreadlocks; urban "street style" appearance; minimal grooming.
+
+[H]
+- **Hijab:** Jersey hijab in **((default:vibrant orange) or (signature))** with an urban wrap style.
+- **Top:** Technical fleece hoodie (long-sleeve, modest length in **((default:vibrant orange) or (signature))**, featuring an oversized hood) worn over a long-sleeve black base layer.
+- **Bottom:** Full-length black athletic leggings with **{secondary_color}** side-stripes and a high-compression waistband.
+- **Footwear:** Chunky **{accent}** platform sneakers.
+- **Accessories:** Layered silver chain necklaces; oversized hoop earrings.
+- **Makeup:** Graphic winged eyeliner; glossy nude lip.
+
