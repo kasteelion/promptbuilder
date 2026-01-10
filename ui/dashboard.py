@@ -332,10 +332,8 @@ class DashboardDialog:
         # 2. Tag Consistency
         # Load global tags for reference
         global_tags = set()
-        tag_file = self.data_loader._find_data_file("tags.md")
-        if tag_file.exists():
-            from logic.markdown_parser import MarkdownParser
-            tag_data = MarkdownParser.parse_tags(tag_file.read_text(encoding="utf-8"))
+        tag_data = self.data_loader.load_categorized_tags()
+        if tag_data:
             for cat_tags in tag_data.values():
                 for t in cat_tags:
                     global_tags.add(t.lower())
