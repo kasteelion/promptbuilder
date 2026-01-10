@@ -54,6 +54,11 @@ class CharactersTab:
         self.scenes = {}
         self.selected_characters = []
         self.categorized_all = {}
+        
+        # Filtering State
+        self.selected_tags = []
+        self.categorized_tags_map = {}
+        
         self.pill_buttons_info = [] # Track for theme updates
 
         # Debounce tracking for action notes
@@ -136,6 +141,25 @@ class CharactersTab:
         self.poses = poses
         if scenes:
             self.scenes = scenes
+
+        # Load tagging data
+        try:
+            self.categorized_tags_map = self.data_loader.load_categorized_tags()
+        except Exception:
+            self.categorized_tags_map = {}
+            
+        # Initialize tag UI if it exists
+        if hasattr(self, "tag_cat_combo"):
+            self._update_tag_categories()
+            self._update_tag_list()
+        
+        # Initial filter
+        self._filter_characters()
+
+    def _update_tag_categories(self):
+        categories = ["All"] + sorted(list(self.categorized_tags_map.keys()))
+        if hasattr(self, "tag_cat_combo"):
+            self.tag_cat_combo.set_values(categories)
 
         # Update UI - preserve current selections
         current_base = self.base_combo.get()
@@ -532,6 +556,45 @@ class CharactersTab:
         button_frame.columnconfigure(0, weight=1)
         button_frame.columnconfigure(1, weight=1)
 
+        # Tag filter section
+        tag_frame = ttk.Frame(add, style="TFrame")
+        tag_frame.grid(row=0, column=0, columnspan=2, sticky="ew", padx=4, pady=(0, 10))
+        tag_frame.columnconfigure(1, weight=1)
+        tag_frame.columnconfigure(3, weight=1)
+
+        ttk.Label(tag_frame, text="Cat:", style="Muted.TLabel").grid(row=0, column=0, sticky="w")
+        self.tag_category_var = tk.StringVar(value="All")
+        self.tag_cat_combo = SearchableCombobox(
+            tag_frame,
+            theme_manager=self.theme_manager,
+            textvariable=self.tag_category_var,
+            on_select=lambda val: self._update_tag_list(),
+            placeholder="Category...",
+            width=10
+        )
+        self.tag_cat_combo.grid(row=0, column=1, sticky="ew", padx=(2, 4))
+
+        ttk.Label(tag_frame, text="Tag:", style="Muted.TLabel").grid(row=0, column=2, sticky="w")
+        self.tag_var = tk.StringVar()
+        self.tag_combo = SearchableCombobox(
+            tag_frame,
+            theme_manager=self.theme_manager,
+            textvariable=self.tag_var,
+            on_select=self._add_selected_tag,
+            placeholder="Filter by tag...",
+            width=12
+        )
+        self.tag_combo.grid(row=0, column=3, sticky="ew", padx=(2, 4))
+
+        self.clear_tags_btn = ttk.Button(tag_frame, text="✕", width=3, command=self._clear_tag_filter)
+        self.clear_tags_btn.grid(row=0, column=4)
+        create_tooltip(self.clear_tags_btn, "Clear tag filters")
+        
+        # Selected tags area (chips) - using FlowFrame relative ref
+        from .widgets import FlowFrame
+        self.selected_tags_frame = FlowFrame(add, padding_x=8, padding_y=6)
+        self.selected_tags_frame.grid(row=1, column=0, columnspan=2, sticky="ew", padx=4, pady=(0, 10))
+
         ttk.Button(button_frame, text="+ Add to Prompt", command=self._add_character).grid(
             row=0, column=0, sticky="ew", padx=(0, 4)
         )
@@ -793,25 +856,112 @@ class CharactersTab:
         char_listbox.bind("<Double-Button-1>", lambda e: on_ok())
         dialog.wait_window()
 
-    def _filter_characters(self):
-        """Filter character dropdown based on search text."""
-        search = self.char_search_var.get().lower()
 
-        # Get currently used characters
+    def _update_tag_list(self):
+        try:
+            cat = self.tag_category_var.get()
+            used = set()
+            for _, data in (self.characters or {}).items():
+                char_tags = data.get("tags") or []
+                if isinstance(char_tags, str):
+                    char_tags = [t.strip().lower() for t in char_tags.split(",") if t.strip()]
+                for t in char_tags: used.add(t)
+            if cat == "All": tag_values = sorted(list(used))
+            else:
+                cat_tags = set([t.lower() for t in self.categorized_tags_map.get(cat, [])])
+                tag_values = sorted(list(used & cat_tags))
+            if hasattr(self, "tag_combo"):
+                self.tag_combo.set_values(tag_values)
+                self.tag_var.set("")
+                
+                # Update search placeholder with count
+                count = len(tag_values)
+                if count > 0:
+                    self.tag_combo.set_placeholder(f"Select tag ({count})...")
+                else:
+                    self.tag_combo.set_placeholder("No tags found")
+                
+        except Exception: 
+            from utils import logger
+            logger.exception("Failed to update tag list")
+
+    def _add_selected_tag(self, tag_value: str):
+        if not tag_value: return
+        if tag_value not in self.selected_tags:
+            self.selected_tags.append(tag_value)
+            self._render_selected_tags()
+            self._filter_characters()
+        self.tag_var.set("")
+
+    def _remove_selected_tag(self, tag_value: str):
+        if tag_value in self.selected_tags:
+            self.selected_tags.remove(tag_value)
+            self._render_selected_tags()
+            self._filter_characters()
+
+    def _clear_tag_filter(self):
+        self.tag_category_var.set("All")
+        self.tag_var.set("")
+        self.selected_tags = []
+        self._render_selected_tags()
+        self.__update_tag_list_safe()
+        self._filter_characters()
+        
+    def __update_tag_list_safe(self):
+        if hasattr(self, "_update_tag_list"):
+            self._update_tag_list()
+
+    def _render_selected_tags(self):
+        try: self.selected_tags_frame.clear()
+        except Exception:
+            for w in self.selected_tags_frame.winfo_children(): w.destroy()
+        if not self.selected_tags: return
+        for t in self.selected_tags:
+            self.selected_tags_frame.add_button(text=f"{t} ✕", style="Accent.TButton", command=lambda v=t: self._remove_selected_tag(v))
+
+    def _filter_characters(self, *args):
+        """Filter character dropdown based on search text and tags."""
+        # Check if we have search variable (might not be initialized early)
+        if not hasattr(self, "char_var"): return
+        
+        search_text = self.char_var.get().lower()
         used = {c["name"] for c in self.selected_characters}
-        available = [k for k in self.characters.keys() if k not in used]
+        candidates = []
+        
+        for name, data in self.characters.items():
+            if name in used: continue
+            
+            # 1. Filter by Tag
+            if self.selected_tags:
+                char_tags = data.get("tags") or []
+                if isinstance(char_tags, str):
+                    char_tags = [t.strip().lower() for t in char_tags.split(",") if t.strip()]
+                else: 
+                    char_tags = [str(t).strip().lower() for t in char_tags]
+                    
+                # Strict AND logic: Character must have ALL selected tags
+                has_all = True
+                for required_tag in self.selected_tags:
+                    if required_tag.lower() not in char_tags:
+                        has_all = False
+                        break
+                if not has_all: continue
 
-        if search:
-            # Filter by search term
-            filtered = [c for c in available if search in c.lower()]
-            self.char_combo.set_values(sorted(filtered))
-        else:
-            # Show all available
-            self.char_combo.set_values(sorted(available))
-
+            # 2. Filter by Search Text
+            if search_text and search_text not in name.lower():
+                continue
+                
+            candidates.append(name)
+            
+        self.char_combo.set_values(sorted(candidates))
+        
         # Clear selection if current selection not in filtered list
-        if self.char_var.get() not in self.char_combo.all_values:
-            self.char_var.set("")
+        if self.char_var.get() and self.char_var.get() not in self.char_combo.all_values:
+             # Only clear if it's not a partial match typing (SearchableCombobox handles this usually, 
+             # but we want to avoid auto-clearing while user types. 
+             # Actually, simpler: just let SearchableCombobox handle text. 
+             # If we clear it, we interrupt typing.)
+             pass
 
     def _add_character(self):
         """Add selected character to the list."""
@@ -1276,8 +1426,12 @@ class CharactersTab:
                 lbl.config(text=f"✓ {text}" if var.get() else text)
 
         # Update searchable comboboxes - Refactor 3
-        for widget in [self.base_combo, self.bulk_cat_combo, self.bulk_outfit_combo, 
-                       self.bulk_scheme_combo, self.char_combo]:
+        widgets_to_theme = [self.base_combo, self.bulk_cat_combo, self.bulk_outfit_combo, 
+                       self.bulk_scheme_combo, self.char_combo]
+        if hasattr(self, "tag_cat_combo"): widgets_to_theme.append(self.tag_cat_combo)
+        if hasattr(self, "tag_combo"): widgets_to_theme.append(self.tag_combo)
+        
+        for widget in widgets_to_theme:
             if hasattr(widget, "apply_theme"):
                 widget.apply_theme(theme)
 

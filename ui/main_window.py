@@ -37,13 +37,18 @@ from .components.status_bar import StatusBarComponent
 class PromptBuilderApp:
     """Main application class for Prompt Builder."""
 
-    def __init__(self, root: tk.Tk):
+    def __init__(self, root: tk.Tk, data_loader=None, preferences=None, theme_manager=None, lite_mode=False):
         """Initialize the application.
 
         Args:
             root: Tkinter root window
+            data_loader: Optional DataLoader instance
+            preferences: Optional Preferences instance
+            theme_manager: Optional ThemeManager instance
+            lite_mode: If True, interface is simplified (no gallery)
         """
         self.root = root
+        self.lite_mode = lite_mode
         self.root.title("Prompt Builder — Group Picture Generator")
 
         # Hide window during setup to prevent flickering/resizing
@@ -57,8 +62,18 @@ class PromptBuilderApp:
         self.ctx = AppContext(self.root)
         self.ctx.initialize_ui_services()
 
-        # Initialize preferences first (via context)
-        self.prefs = self.ctx.prefs
+        # Initialize preferences
+        self.prefs = preferences if preferences else self.ctx.prefs
+        
+        # Initialize data loader - if provided, we should probably override context or just use it
+        # Ideally AppContext should manage this, but for now we follow the existing pattern
+        # If injected, we assign it. If not, we wait for _initialize_data_references
+        if data_loader:
+            self.data_loader = data_loader
+        if theme_manager:
+            self.theme_manager = theme_manager
+
+        # Initialize managers (font and state managers will be set up after UI)
 
         # Initialize managers (font and state managers will be set up after UI)
         self.font_manager: Optional[FontManager] = None
@@ -325,22 +340,32 @@ class PromptBuilderApp:
         self.main_paned.pack(side="top", fill="both", expand=True)
 
         # Left side: Character Gallery (collapsible, starts visible by default)
-        self.gallery_frame = ttk.Frame(self.main_paned, style="TFrame", width=300) # Slightly wider
-        self.gallery_visible = self.prefs.get("gallery_visible", True)
+        if not self.lite_mode:
+            self.gallery_frame = ttk.Frame(self.main_paned, style="TFrame", width=300) # Slightly wider
+            self.gallery_visible = self.prefs.get("gallery_visible", True)
 
-        self.character_gallery = CharacterGalleryPanel(
-            self.gallery_frame,
-            self.data_loader,
-            self.prefs,
-            on_add_callback=self._on_gallery_character_selected,
-            theme_manager=self.theme_manager,
-            theme_colors=self.theme_manager.themes.get(DEFAULT_THEME, {}),
-            on_create_callback=self._create_new_character
-        )
-        self.character_gallery.pack(fill="both", expand=True)
+            self.character_gallery = CharacterGalleryPanel(
+                self.gallery_frame,
+                self.data_loader,
+                self.prefs,
+                on_add_callback=self._on_gallery_character_selected,
+                theme_manager=self.theme_manager,
+                theme_colors=self.theme_manager.themes.get(DEFAULT_THEME, {}),
+                on_create_callback=self._create_new_character
+            )
+            self.character_gallery.pack(fill="both", expand=True)
 
-        if self.gallery_visible:
-            self.main_paned.add(self.gallery_frame, width=300, minsize=200) 
+            if self.gallery_visible:
+                self.main_paned.add(self.gallery_frame, width=300, minsize=200) 
+        else:
+            self.gallery_frame = None
+            self.gallery_visible = False
+            # Create a dummy object for gallery controller calls if any remain
+            class DummyGallery:
+                def update_used_status(self, *args): pass
+                def _refresh_display(self, *args): pass
+                def load_characters(self, *args): pass
+            self.character_gallery = DummyGallery() 
 
         # Use PanedWindow directly for main content
         paned = tk.PanedWindow(
@@ -1403,12 +1428,24 @@ class PromptBuilderApp:
             self._update_status(f"Auto-detected theme: {detected_theme}")
 
     def _toggle_character_gallery(self):
-        """Toggle the character gallery panel visibility."""
-        self.gallery_visible = not self.gallery_visible
+        """Toggle visibility of the character gallery."""
+        if self.lite_mode or not self.gallery_frame:
+            return
+
+        if self.gallery_visible:
+            self.main_paned.forget(self.gallery_frame)
+            self.gallery_visible = False
+        else:
+            self.main_paned.add(self.gallery_frame, before=self.main_paned.panes()[0], width=300, minsize=200)
+            self.gallery_visible = True
+        
+        # Save preference
+        self.prefs.set("gallery_visible", self.gallery_visible)
+        
+        # Update menu checkmark
         if hasattr(self, "menu_manager") and self.menu_manager:
             self.menu_manager.set_gallery_visible(self.gallery_visible)
-        self.prefs.set("gallery_visible", self.gallery_visible)
-
+        
         # Delegate gallery show/hide to controller when available
         if hasattr(self, "gallery_controller") and self.gallery_controller:
             try:

@@ -10,7 +10,7 @@ import os
 import tkinter as tk
 from debug_log import init_debug_log, log, close_debug_log
 from utils import font_loader
-from ui.lite_main_window import LitePromptBuilderApp
+from ui import PromptBuilderApp
 
 def main(argv=None):
     """Entry point for the Lite application."""
@@ -20,7 +20,7 @@ def main(argv=None):
     try:
         # Load custom font (Lexend)
         try:
-            base_dir = os.path.dirname(os.path.abspath(__file__))
+            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
             font_path = os.path.join(base_dir, "ui", "Lexend-VariableFont_wght.ttf")
             
             if os.path.exists(font_path):
@@ -42,7 +42,7 @@ def main(argv=None):
             pass
 
         # Launch Lite App
-        app = LitePromptBuilderApp(root)
+        app = PromptBuilderApp(root, lite_mode=True)
         
         log("Entering mainloop...")
         root.mainloop()

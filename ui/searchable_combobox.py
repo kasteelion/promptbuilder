@@ -612,6 +612,16 @@ class SearchableCombobox(ttk.Frame):
         self.favorites = set(favorites) if favorites else set()
         self._filter_cache.clear()
 
+    def set_placeholder(self, text):
+        """Update the placeholder text."""
+        old_placeholder = self.placeholder
+        self.placeholder = text
+        
+        # If currently showing old placeholder or empty, update to new one
+        current_val = self._selected_value.get()
+        if not current_val or current_val == old_placeholder:
+            self._set_placeholder_mode(True)
+
     def apply_theme(self, theme):
         """Apply theme to custom widgets. (Refactor 3)"""
         accent = theme.get("accent", "#0078d7")

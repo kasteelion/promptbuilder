@@ -4,95 +4,71 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Project Status: Beta](https://img.shields.io/badge/status-beta-orange.svg)]()
 
-Prompt Builder is a sophisticated desktop application designed to streamline the creation and management of detailed prompts, characters, themes, and presets for AI image-generation workflows (e.g., Stable Diffusion, Midjourney). It simplifies the construction of complex, multi-character prompts while ensuring consistency and creative flexibility.
+**Prompt Builder** is a powerful desktop application for crafting detailed, consistent AI art prompts. It combines a visual character gallery, dynamic tag filtering, and smart randomization to streamline your workflow for Stable Diffusion, Midjourney, and other generative AI tools.
 
-Built with a "data-first" philosophy, the application uses human-readable Markdown files for all content, allowing for easy extension and customization without modifying code.
+Built with a **local-first** philosophy, all content—characters, outfits, poses—is stored as simple Markdown and Text files, making it infinitely extensible and hackable.
+
+---
 
 ## 🌟 Key Features
 
-*   **Intuitive GUI:** A professional, responsive Tkinter interface with collapsible panels and real-time prompt building.
-*   **Character Management:** A gallery-based selection system for managing extensive character libraries with favoriting.
-*   **Modular Asset Architecture:** Unified `.txt` outfit files and modular character descriptions for maximum flexibility and easy maintenance.
-*   **Context-Aware Modifiers (Traits):** A dynamic multi-select checkbox system for specialized gear (e.g., *Softball Face Mask*, *Volleyball Libero*) defined locally within outfit files.
-*   **Smart Coherence Engine:** Advanced randomization logic that ensures thematic consistency (e.g., a "Sports" style automatically triggers compatible sports poses and outfits).
-*   **Natural Language Import:** Import full prompt configurations (characters, scenes, poses) directly from raw text or LLM summaries.
-*   **LLM Workflow Integration:** Specialized tools for exporting "knowledge injection" data to LLMs and structured templates for AI-assisted character creation.
-*   **Signature Colors:** Assign unique hex codes to characters that dynamically personalizes uniform/outfit colors.
-*   **Interaction Library:** Use placeholders (e.g., `{char1}`, `{char2}`) to define complex multi-character scenes with cinematic framing.
-*   **Data Health & Analytics:** Built-in tools to analyze tag distributions, browse asset libraries, and ensure data integrity.
-*   **Optimized UX:** Advanced searchable comboboxes, keyboard shortcuts (Alt+R to Randomize), and high-contrast dark mode.
-*   **Extensible Data:** Add content simply by dropping `.txt` or `.md` files into the `data/` directory.
-*   **Privacy First:** Fully local execution with no cloud dependencies or tracking.
+*   **🎨 Visual Gallery:** Browse your character library with large previews and instant selection.
+*   **🏷️ Smart Tag Filtering:** Find characters instantly by filtering tags (e.g., `female`, `fantasy`, `sci-fi`) with real-time search.
+*   **👗 Modular Wardrobe:** Apply unified outfit presets (defined in `.txt` files) to *any* character. Mix and match with context-aware "Modifiers" (e.g., *Soccer* outfit → *Goalie* variant).
+*   **🎲 Coherence Engine:** Randomize styles, outfits, and poses while maintaining thematic consistency.
+*   **⚡ Bulk Actions:** Apply outfits, color schemes, or signature colors to multiple characters at once.
+*   **📝 Natural Language Import:** Paste raw text descriptions to auto-generate character data.
+*   **🔒 Privacy Focused:** Runs 100% locally. No cloud, no tracking.
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-### Prerequisites
-
-*   **Python 3.8 or higher**: [Download Python](https://www.python.org/downloads/)
-*   **Tkinter**: Usually included with Python. On Linux, you may need to install it:
-    *   `sudo apt install python3-tk` (Ubuntu/Debian)
-    *   `sudo dnf install python3-tkinter` (Fedora)
-
-### Installation
-
+### 1. Installation
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/promptbuilder_github.git
-    cd promptbuilder_github
+    git clone https://github.com/yourusername/promptbuilder.git
+    cd promptbuilder
     ```
-
-2.  **(Optional) Create a virtual environment**:
-    ```bash
-    python -m venv venv
-    # Windows
-    .\venv\Scripts\activate
-    # macOS/Linux
-    source venv/bin/activate
-    ```
-
-3.  **Install dependencies** (only standard library is required for core app, but some scripts use `Pillow`):
+2.  **Install dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
 
-### Running the App
+### 2. Launching the App
+*   **Terminal:** Run `python main.py`
+*   **Windows (No Terminal):** Double-click `launchers/run_app.vbs` to start silently.
 
-Execute the main script to start the application:
+## 📚 Documentation
 
-```bash
-python main.py
-```
+Detailed guides can be found in the `docs/` directory:
 
-*For Windows users, see [LAUNCH.md](LAUNCH.md) for instructions on running the app without a terminal.*
+*   **[User Guide](docs/text-import.md)**: How to use the Natural Language Import feature.
+*   **[Character System](docs/character-flexibility.md)**: Deep dive into defining characters and traits.
+*   **[Interaction Templates](docs/interaction-templates.md)**: creating complex multi-character scenes.
+*   **[Data Formats](docs/data-formats.md)**: Reference for `.md` and `.txt` file structures.
+
+### For Developers
+*   **[Architecture](docs/architecture.md)**: System design and module overview.
+*   **[Development](docs/development.md)**: Setup, testing, and contribution guidelines.
+*   **[API Reference](docs/api.md)**: Internal class and method documentation.
 
 ## 📂 Project Structure
 
 ```text
-├── core/           # Prompt assembly and rendering engine
-├── logic/          # Data parsing, validation, and business logic
-├── ui/             # Tkinter GUI components and controllers
-├── utils/          # Shared utilities (logging, preferences, notifications)
-├── data/           # Markdown-based content (characters, outfits, scenes)
-├── tests/          # Automated test suite
-└── docs/           # Detailed documentation and guides
+├── core/           # Prompt assembly & rendering logic
+├── data/           # User content (Characters, Outfits, Poses)
+├── docs/           # Documentation guides
+├── launchers/      # One-click startup scripts
+├── logic/          # Business logic & data management
+├── ui/             # Tkinter GUI components
+├── utils/          # Logging, config, & preferences
+├── main.py         # Entry point
+└── runner.py       # Application bootstrap
 ```
-
-## 🛠️ Development
-
-For information on setting up a development environment, running tests, and contributing, please see:
-
-*   **[Development Guide](docs/development.md)**
-*   **[Contributing](CONTRIBUTING.md)**
-*   **[Architecture Overview](docs/architecture.md)**
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
-Contributions are welcome! Whether it's reporting a bug, suggesting a feature, or submitting a pull request, please see our [Contributing Guidelines](CONTRIBUTING.md) to get started.
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on reporting bugs and submitting pull requests.
 
-## 📧 Contact
+## 📜 License
 
-For support or questions, please open an issue on the GitHub repository.
+This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
