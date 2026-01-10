@@ -174,6 +174,21 @@ class OutfitParser:
                     if tags_match:
                         tags_str = tags_match.group(1)
                         tags = [t.strip() for t in tags_str.split(",") if t.strip()]
+
+                    # Parse Modifiers (YAML-style block)
+                    # modifiers:
+                    #   Name: Description
+                    modifiers = {}
+                    modifiers_match = re.search(r"^modifiers:\s*(.*?)(?=\n\[|\Z)", content, re.DOTALL | re.MULTILINE)
+                    if modifiers_match:
+                        mod_block = modifiers_match.group(1)
+                        # Find lines looking like "  Key: Value"
+                        for line in mod_block.splitlines():
+                            line = line.strip()
+                            if not line: continue
+                            if ":" in line:
+                                key, val = line.split(":", 1)
+                                modifiers[key.strip()] = val.strip()
                     
                     # Parse Sections: [F], [M], [H]
                     parts = re.split(r"^\[([FMH])\]", content, flags=re.MULTILINE)
@@ -190,7 +205,8 @@ class OutfitParser:
                             
                         item_data = {
                             "description": body,
-                            "tags": tags
+                            "tags": tags,
+                            "modifiers": modifiers
                         }
                         
                         result.setdefault(modifier, {}).setdefault(category, {})[name] = item_data

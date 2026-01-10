@@ -75,13 +75,28 @@ class PromptBuilder:
                 pose = f"{framing_text} {pose}"
             
             # Apply outfit modifiers/traits if selected
-            # Support both single string (legacy) and list of traits
             traits = char.get("outfit_traits", [])
             if not traits and char.get("outfit_modifier"):
                 traits = [char.get("outfit_modifier")]
             
-            modifier_parts = [self.modifiers.get(t, "") for t in traits if t in self.modifiers]
-            # Filter out empty strings and join with space (since text usually includes its own commas)
+            # Local modifiers defined within the outfit file itself
+            local_modifiers = {}
+            if isinstance(outfit, dict) and "modifiers" in outfit:
+                local_modifiers = outfit.get("modifiers", {})
+            
+            # Global/legacy custom modifiers from character data
+            custom_modifiers = char.get("custom_modifiers", {})
+            
+            modifier_parts = []
+            for t in traits:
+                # Priority: 1. Local (Outfit-specific), 2. Custom (Char-specific), 3. Global
+                if t in local_modifiers:
+                    modifier_parts.append(local_modifiers[t])
+                elif t in custom_modifiers:
+                    modifier_parts.append(custom_modifiers[t])
+                elif t in self.modifiers:
+                    modifier_parts.append(self.modifiers[t])
+            
             modifier_text = "".join(modifier_parts).strip()
             
             scheme_name = char.get("color_scheme")
@@ -104,6 +119,9 @@ class PromptBuilder:
                 outfit = outfit.copy()
                 for k, v in outfit.items():
                     if isinstance(v, str):
+                        # Skip metadata keys during substitution to be safe
+                        if k in ("tags", "modifiers"): continue
+                        
                         v = re.sub(r"\{modifier\}", modifier_text, v)
                         v = substitute_signature_color(v, sig_color, use_sig)
                         outfit[k] = substitute_colors(v, scheme)

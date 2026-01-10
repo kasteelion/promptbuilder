@@ -1,4 +1,7 @@
 tags: [Sport, Team, Volleyball]
+modifiers:
+  Libero: , wearing a contrasting {secondary_color} jersey to denote libero position,
+  Defensive Specialist: , wearing low-profile elbow pads and extra-thick floor-sliding knee pads in {secondary_color},
 
 [F]
 - **Top:** Fitted sleeveless performance jersey for **{team}** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes** along the sides{modifier}

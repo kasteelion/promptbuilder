@@ -9,34 +9,25 @@ def generate_llm_export_text(ctx: Any) -> str:
     # 1. System Instructions
     lines = [
         "### SYSTEM INSTRUCTIONS for PromptBuilder ###",
-        "You are a creative director. Use the provided catalog to generate prompt configurations.",
-        "Output MUST be in this specific format for the app to parse it.",
-        "Each character has a modifier that notes whether a character is male, female, or hijabi, and the program automatically adjusts accordingly.",
-        "Each character has, in addition to the outfits listed below, a default outfit that is casual and true to the character, and that outfit is just called 'Base'",
-        "Some athletic poses may be hard for a text to image model to interpret, so make sure that if you expect a pose to be complex to write the pose carefully with attention to anatomical detail.",
-        "IMPORTANT: Each field (Outfit, Pose, etc.) SHOULD be on its own new line for best results.",
+        "You are an expert creative director. Your goal is to generate high-coherence image prompts.",
+        "Output MUST be in the specific format below for the app to parse it.",
         "",
-        "### PROMPT CONFIG ###",
+        "### COHERENCE RULES ###",
+        "1. **Strict Base Styles**: The selected 'Base' (Art Style) sets the visual rules. Choose Poses and Outfits that match its Tags (e.g., if Base is 'Cyberpunk', strictly prefer Sci-Fi/Tech content).",
+        "2. **Smart Defaults**: Gender variants ([F]/[M]/[H]) are handled automatically. You only need to select the Outfit Name.",
+        "3. **Anatomy**: For complex poses, provide detailed anatomical descriptions in the 'Pose' field if a preset doesn't fit.",
+        "",
+        "### PROMPT CONFIG FORMAT ###",
         "Base: [Name of Art Style]",
         "Scene: [Paragraph describing environment and lighting]",
         "---",
         "[1] [Character Name]",
         "Outfit: [Outfit Name]",
-        "Colors: [Color Scheme Name]",
-        "Sig: [Yes or No]",
-        "Pose: [Pose Name]",
+        "Colors: [Color Scheme Name] (Only for 🎨 items)",
+        "Sig: [Yes or No] (Only for ✨ items)",
+        "Pose: [Pose Name or Custom Description]",
         "---",
         "Notes: [Interaction details between characters]",
-        "",
-        "RULES:",
-        "- Use [1], [2], [3] to start each character block.",
-        "- Character and Outfit names must match the catalog exactly.",
-        "- Traits: [Trait] is a RARE field for specialized gear (e.g. Facemask). Use ONLY if the outfit explicitly supports it (🛠️).",
-        "- 'Sig: Yes' applies the character's unique signature color to the outfit.",
-        "- If a pose is not in the presets, write a custom description in the 'Pose' field.",
-        "- Outfits marked with (🎨) support 'Colors: [Scheme]'.",
-        "- Outfits marked with (✨) support 'Sig: Yes'.",
-        "- Outfits marked with (🛠️) support 'Traits: [Trait]'.",
         "",
         "--- CATALOG BEGINS ---",
         ""
@@ -44,8 +35,13 @@ def generate_llm_export_text(ctx: Any) -> str:
 
     # 2. Base Prompts (Art Styles)
     lines.append("## AVAILABLE ART STYLES (Base)")
-    for name in sorted(ctx.base_prompts.keys()):
-        lines.append(f"- {name}")
+    for name, data in sorted(ctx.base_prompts.items()):
+        tags_str = ""
+        if isinstance(data, dict):
+            t_list = data.get("tags", [])
+            if t_list:
+                tags_str = f" [Tags: {', '.join(t_list)}]"
+        lines.append(f"- {name}{tags_str}")
     lines.append("")
 
     # 3. Characters
@@ -59,7 +55,7 @@ def generate_llm_export_text(ctx: Any) -> str:
 
     # 4. Outfits (Consolidated)
     lines.append("## OUTFIT LIBRARY")
-    lines.append("Legend: 🎨 = Supports Team Colors, ✨ = Supports Signature Color, 🛠️ = Supports Specialized Traits")
+    lines.append("Legend: 🎨 = Team Colors, ✨ = Signature Color, 🛠️ = Traits")
     
     outfit_data = generate_consolidated_outfit_data()
     for cat_name in sorted(outfit_data.keys()):
@@ -68,10 +64,17 @@ def generate_llm_export_text(ctx: Any) -> str:
         for out_name in sorted(outfits.keys()):
             data = outfits[out_name]
             indicators = ""
-            if data["has_color_scheme"]: indicators += " 🎨"
-            if data["has_signature"]: indicators += " ✨"
+            if data.get("has_color_scheme"): indicators += " 🎨"
+            if data.get("has_signature"): indicators += " ✨"
             if data.get("has_modifier"): indicators += " 🛠️"
-            lines.append(f"  * {out_name}{indicators}")
+            
+            # Add Tags
+            tags_str = ""
+            t_list = data.get("tags", [])
+            if t_list:
+                tags_str = f" [Tags: {', '.join(t_list)}]"
+                
+            lines.append(f"  * {out_name}{indicators}{tags_str}")
     lines.append("")
 
     # 5. Poses
@@ -140,17 +143,25 @@ def get_content_creation_prompts(ctx: Any) -> Dict[str, str]:
     # Section 2: Outfits
     outfit_section = [
         "### 2. OUTFIT SYNTAX ###",
-        "Format (Markdown):",
-        "### [Outfit Name]",
-        "- **Top:** [Description]",
+        "Format (Saved as .txt file):",
+        "tags: [Tag1, Tag2, Tag3]",
+        "",
+        "[F]",
+        "- **Top:** [Description for Femme frame]",
         "- **Bottom:** [Description]",
-        "- **Footwear:** [Description]",
-        "- **Accessories:** [Description]",
-        "- **Hair/Makeup:** [Description]",
+        "",
+        "[M]",
+        "- **Top:** [Description for Masc frame]",
+        "- **Bottom:** [Description]",
+        "",
+        "[H]",
+        "- **Top:** [Description for Hijabi frame]",
+        "- **Bottom:** [Description]",
         "",
         "Rules:",
-        "- Use detailed, visual descriptions for each item.",
-        "- Accessories and Hair/Makeup are optional but recommended.",
+        "- Start file with 'tags: [...]' header.",
+        "- Create sections using [F], [M], [H] headers to handle gender variations.",
+        "- Use detailed, visual descriptions.",
         "- Use {primary_color}, {secondary_color}, {accent} placeholders for team outfits.",
         "- Use ((default:color) or (signature)) for signature color support.",
         ""

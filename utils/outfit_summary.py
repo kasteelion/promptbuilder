@@ -28,6 +28,12 @@ def generate_outfit_data(data_dir=None):
 
     outfits = {}
     
+    # 1. Try New Directory Structure (Preferred)
+    outfits_dir = data_dir / "outfits"
+    if outfits_dir.exists() and outfits_dir.is_dir():
+        return OutfitParser.parse_outfits_directory(outfits_dir)
+
+    # 2. Fallback to Legacy Files
     for modifier in ["f", "m", "h"]:
         file_path = data_dir / f"outfits_{modifier}.md"
         if file_path.exists():
@@ -69,25 +75,45 @@ def generate_consolidated_outfit_data(data_dir=None):
             if cat not in consolidated:
                 consolidated[cat] = {}
             
-            for name, desc in outfits.items():
+            for name, data in outfits.items():
                 if name not in consolidated[cat]:
                     consolidated[cat][name] = {
                         "variations": {},
                         "has_color_scheme": False,
-                        "has_signature": False
+                        "has_signature": False,
+                        "tags": []
                     }
                 
-                # Add variation
-                consolidated[cat][name]["variations"][mod] = desc
+                # 'data' is a dict: {'description': str, 'tags': list}
+                # We need the description string for the variations map and checks
+                desc_str = data.get("description", "")
                 
-                # Check modifiers
-                if "{primary_color}" in desc or "{secondary_color}" in desc or "{accent}" in desc:
+                # Add variation
+                consolidated[cat][name]["variations"][mod] = desc_str
+                
+                # Check modifiers in the description text
+                if "{primary_color}" in desc_str or "{secondary_color}" in desc_str or "{accent}" in desc_str:
                     consolidated[cat][name]["has_color_scheme"] = True
                 
-                if "(signature)" in desc or "**Signature Color:**" in desc: # Check for signature syntax
+                if "(signature)" in desc_str or "**Signature Color:**" in desc_str: # Check for signature syntax
                     # The syntax in outfits is ((default:...) or (signature))
-                    if "(signature)" in desc:
+                    if "(signature)" in desc_str:
                         consolidated[cat][name]["has_signature"] = True
+
+            # Extract tags (if available in any variation)
+            # Assuming tags are consistent across gender variations for the same outfit name
+            # We check the raw data structure: parsed = {mod: {cat: {name: {description, tags}}}}
+            if "tags" not in consolidated[cat][name]:
+                # Try to find tags in the current item
+                raw_item = raw_data.get(mod, {}).get(cat, {}).get(name)
+                if raw_item and isinstance(raw_item, dict):
+                    t = raw_item.get("tags")
+                    if t:
+                        consolidated[cat][name]["tags"] = t
+                    else:
+                        consolidated[cat][name]["tags"] = []
+                else:
+                    consolidated[cat][name]["tags"] = []
 
     return consolidated
 

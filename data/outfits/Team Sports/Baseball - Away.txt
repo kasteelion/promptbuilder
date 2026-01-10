@@ -1,4 +1,7 @@
 tags: [Baseball, Sport, Team]
+modifiers:
+  Hitting: , wearing a batting helmet and batting gloves, holding a wooden baseball bat in a focused hitting stance,
+  Catcher: , wearing full catcher's gear—including chest protector, leg guards, and catcher's mask, crouching behind home plate with a oversized catcher's mitt,
 
 [F]
 - **Top:** Baseball jersey for **{team}** in **{secondary_color} with {primary_color} accents** (button-up, team logo and number){modifier}

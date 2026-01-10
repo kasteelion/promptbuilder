@@ -1,4 +1,6 @@
 tags: [Boxing, Combat, Sport]
+modifiers:
+  Headgear: , wearing protective padded boxing headgear in {secondary_color},
 
 [F]
 - **Top:** Professional satin boxing set for **{team}**{modifier}

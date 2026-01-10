@@ -101,7 +101,8 @@ class AssetEditorDialog:
         cons_id = self.tree.insert("", "end", text="Outfit Library", open=True)
         try:
                         from utils.outfit_summary import generate_consolidated_outfit_data
-                        data_dir = self.data_loader._find_data_file("outfits_f.md").parent
+                        # Search for data relative to data_loader base
+                        data_dir = Path(self.data_loader.base_dir) / "data"
                         cons_data = generate_consolidated_outfit_data(data_dir)
                         for cat in sorted(cons_data.keys()):
                             cat_id = self.tree.insert(cons_id, "end", text=cat.upper(), values=("__LIBRARY__", "category", cat))
@@ -126,10 +127,19 @@ class AssetEditorDialog:
         # 2. Raw Files
         cats = {
             "characters": self.tree.insert("", "end", text="Characters", open=False),
-            "outfits": self.tree.insert("", "end", text="Outfits (Raw Files)", open=False),
+            "outfits": self.tree.insert("", "end", text="Outfits (Modular)", open=False),
             "data": self.tree.insert("", "end", text="Data", open=False),
         }
         
+        # Scan data/outfits directory recursively for .txt files
+        outfit_base = Path(self.data_loader.base_dir) / "data" / "outfits"
+        if outfit_base.exists():
+            for txt_file in sorted(outfit_base.rglob("*.txt")):
+                rel_path = txt_file.relative_to(outfit_base.parent.parent)
+                category = txt_file.parent.name
+                display = f"{category} / {txt_file.stem}"
+                self.tree.insert(cats["outfits"], "end", text=display, values=(str(rel_path).replace("\\", "/"), "file"))
+
         files = self.data_loader.get_editable_files()
         
         for f in files:
@@ -192,9 +202,15 @@ class AssetEditorDialog:
         return ""
 
     def _resolve_path(self, filename):
+        base = Path(self.data_loader.base_dir)
+        # Try direct path relative to base
+        if (base / filename).exists():
+            return base / filename
+        
         char_dir = self.data_loader._find_characters_dir()
         if char_dir.exists() and (char_dir / filename).exists():
             return char_dir / filename
+        
         return self.data_loader._find_data_file(filename)
 
     def _on_tree_select(self, event):

@@ -3,6 +3,7 @@
 
 import tkinter as tk
 from tkinter import ttk
+import random
 
 from utils.outfit_color_check import outfit_has_color_vars
 import re
@@ -210,6 +211,11 @@ class CharacterItem(ttk.Frame):
         self.rand_outfit_btn.pack(side="left", padx=(10, 0))
         from utils import create_tooltip
         create_tooltip(self.rand_outfit_btn, "Randomize outfit for this character")
+
+        # Traits (Local Modifiers) Row
+        self.traits_frame = ttk.Frame(self.controls_frame)
+        self.traits_frame.pack(fill="x", pady=(0, 10))
+        self._update_modifier_ui()
 
         # Signature Color Checkbox - Refactor 6: Pill Strategy
         sig_color = self.char_def.get("signature_color")
@@ -462,6 +468,56 @@ class CharacterItem(ttk.Frame):
         self.preset_combo.set("")
         self.callbacks["update_pose_category"](self.index, val, self.preset_combo)
 
+    def _update_modifier_ui(self):
+        """Update the traits/modifiers UI based on the current outfit."""
+        if not hasattr(self, "traits_frame"):
+            return
+            
+        # Clear existing
+        for w in self.traits_frame.winfo_children():
+            w.destroy()
+            
+        current_outfit = self.char_data.get("outfit", "")
+        outfit_data = self.char_def.get("outfits", {}).get(current_outfit, {})
+        
+        if not isinstance(outfit_data, dict):
+            return
+            
+        local_mods = outfit_data.get("modifiers", {})
+        if not local_mods:
+            return
+            
+        ttk.Label(self.traits_frame, text="🏷️ Traits:", style="Bold.TLabel").pack(side="left")
+        
+        self.mods_flow = FlowFrame(self.traits_frame)
+        self.mods_flow.pack(side="left", fill="x", expand=True, padx=10)
+        
+        current_traits = self.char_data.get("outfit_traits", [])
+        
+        for name in sorted(local_mods.keys()):
+            var = tk.BooleanVar(value=name in current_traits)
+            cb = ttk.Checkbutton(
+                self.mods_flow,
+                text=name,
+                variable=var,
+                command=lambda n=name, v=var: self._on_modifier_toggle(n, v.get())
+            )
+            cb.pack(side="left", padx=2)
+            self.mods_flow._children.append(cb)
+            
+    def _on_modifier_toggle(self, name, checked):
+        """Handle trait checkbox toggle."""
+        traits = self.char_data.get("outfit_traits", [])
+        if checked:
+            if name not in traits:
+                traits.append(name)
+        else:
+            if name in traits:
+                traits.remove(name)
+        
+        self.char_data["outfit_traits"] = traits
+        self.callbacks["on_change"]()
+
     def _randomize_outfit(self):
         """Pick a random outfit for this character."""
         import random
@@ -494,25 +550,29 @@ class CharacterItem(ttk.Frame):
     def _solo_randomize(self):
         """Randomize outfit, traits, and pose all at once."""
         self._randomize_outfit()
+        # Note: _randomize_outfit might trigger a tab refresh, making 'self' invalid!
+        if not self.winfo_exists():
+            return
+            
         self._randomize_pose()
+        if not self.winfo_exists():
+            return
         
         # Randomize signature color if applicable
-        import random
         if hasattr(self, "sig_pill_lbl"):
             use_sig = random.random() < 0.5
             self.sig_var.set(use_sig)
             self.char_data["use_signature_color"] = use_sig
             self.sig_pill_lbl.config(text="✓ USE SIGNATURE COLOR" if use_sig else "USE SIGNATURE COLOR")
             
-        # Randomize traits if applicable
-        # We look for checkbuttons in controls_frame
-        for child in self.controls_frame.winfo_children():
-            if isinstance(child, FlowFrame):
-                for widget in getattr(child, "_children", []):
-                    if isinstance(widget, ttk.Checkbutton):
-                        # Randomly toggle
-                        if random.random() < 0.3:
-                            widget.invoke()
+        # Randomize traits if applicable from the new UI
+        if hasattr(self, "mods_flow"):
+            traits = []
+            available = [w.cget("text") for w in self.mods_flow.winfo_children() if isinstance(w, ttk.Checkbutton)]
+            for name in available:
+                if random.random() < 0.3:
+                    traits.append(name)
+            self.char_data["outfit_traits"] = traits
         
         self.callbacks["on_change"]()
 

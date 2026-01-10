@@ -1,4 +1,8 @@
 tags: [Softball, Sport, Team]
+modifiers:
+  Infielder (Face Mask): , wearing a protective metal infield facemask,
+  Hitting: , wearing a batting helmet and batting gloves, holding a composite softball bat in a ready hitting stance,
+  Catcher: , wearing specialized softball catcher's gear—including a chest protector, shin guards, and a hockey-style catcher's mask, crouching in position with a large softball mitt ready for the pitch,
 
 [F]
 - **Top:** Performance softball jersey for **{team}** with **contrast raglan sleeves**{modifier}

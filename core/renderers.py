@@ -41,39 +41,39 @@ class OutfitRenderer:
         """Render outfit dictionary to formatted text.
 
         Args:
-            outfit: Dictionary with outfit components. Standard keys include:
-                   - Top: Upper body clothing
-                   - Bottom: Lower body clothing
-                   - Footwear: Shoes, boots, etc.
-                   - Accessories: Jewelry, bags, etc.
-                   - Hair: Hairstyle description
-                   - Makeup: Makeup description
-                   Additional keys are treated as custom fields.
+            outfit: Dictionary with outfit components.
             mode: Output mode - "detailed" for multi-line format with labels,
                  anything else for compact single-line format
 
         Returns:
             Formatted outfit text. Empty string if outfit is empty or None.
-
-        Examples:
-            >>> outfit = {"Top": "Blue shirt", "Bottom": "Jeans"}
-            >>> OutfitRenderer.render(outfit, "detailed")
-            '- Top: Blue shirt\\n- Bottom: Jeans'
-
-            >>> OutfitRenderer.render(outfit, "compact")
-            'Blue shirt; Jeans'
         """
         if not outfit:
             return ""
         if isinstance(outfit, dict):
+            # Known metadata keys to exclude from final prompt rendering
+            meta_keys = {"tags", "modifiers"}
+            
             keys = ["Top", "Bottom", "Footwear", "Accessories", "Hair", "Makeup"]
+            # Filter standard keys that exist
             present = [f"- {k}: {outfit[k]}" for k in keys if outfit.get(k)]
-            extras = [f"- {k}: {v}" for k, v in outfit.items() if k not in keys and k != "tags"]
+            
+            # Additional keys that aren't metadata or standard keys
+            extras = []
+            for k, v in outfit.items():
+                if k in meta_keys or k in keys:
+                    continue
+                if k == "description":
+                    # If it's a unified description, add it without the label for better flow
+                    extras.append(str(v))
+                else:
+                    extras.append(f"- {k}: {v}")
+                    
             lines = present + extras
             return (
                 "\n".join(lines)
                 if mode == "detailed"
-                else "; ".join([entry.split(": ")[1] for entry in lines])
+                else "; ".join([entry.split(": ", 1)[1] if ": " in entry else entry for entry in lines])
             )
         return outfit
 

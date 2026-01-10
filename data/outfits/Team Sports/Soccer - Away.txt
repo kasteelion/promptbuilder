@@ -1,4 +1,7 @@
 tags: [Soccer, Sport, Team]
+modifiers:
+  Goalie: , wearing long sleeves and padded goalkeeper gloves, standing alert between the goalposts,
+  Captain: , wearing a prominent captain's armband in {accent} with a bold "C" on the left arm,
 
 [F]
 - **Top:** Fitted performance jersey for **{team}** with **raglan sleeves** and **ventilated mesh back panel**{modifier}

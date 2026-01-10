@@ -388,10 +388,24 @@ class PromptRandomizer:
 
         # Random outfit modifier
         outfit_traits = []
-        outfit_desc = self._get_description(outfits.get(outfit_name, ""))
-        if "{modifier}" in outfit_desc and self.modifiers:
-            if random.random() < 0.4:
-                random_trait = random.choice(list(self.modifiers.keys()))
+        
+        # New: Get structured data which might contain local modifiers
+        outfit_data = outfits.get(outfit_name, "")
+        outfit_desc = self._get_description(outfit_data)
+        
+        # Check for local modifiers
+        local_modifiers = {}
+        if isinstance(outfit_data, dict):
+            local_modifiers = outfit_data.get("modifiers", {})
+
+        if "{modifier}" in outfit_desc:
+            # Prioritize local modifiers if they exist
+            # If local modifiers are defined for this outfit, ONLY use those.
+            # This ensures thematic coherence (no boxing headgear on volleyball players).
+            available_modifiers = local_modifiers if local_modifiers else self.modifiers
+            
+            if available_modifiers and random.random() < 0.4:
+                random_trait = random.choice(list(available_modifiers.keys()))
                 outfit_traits.append(random_trait)
 
         # Random pose
@@ -412,6 +426,7 @@ class PromptRandomizer:
             "name": char_name,
             "outfit": outfit_name,
             "outfit_traits": outfit_traits,
+            "custom_modifiers": local_modifiers, # Pass localized modifier definitions to builder
             "pose_category": pose_category,
             "pose_preset": pose_preset,
             "framing_mode": "", 

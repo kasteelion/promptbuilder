@@ -1,4 +1,8 @@
 tags: [Football, Sport, Team]
+modifiers:
+  Quarterback: , wearing a quarterback's wrist coach playbook on the left forearm and a clear protective visor attached to the helmet,
+  Lineman: , wearing extra-large shoulder pads and a neck roll for neck protection,
+  Receiver: , wearing sticky receiver gloves and a streamlined helmet visor,
 
 [F]
 - **Top:** Molded shoulder pads (rigid, high-gloss {secondary_color} plastic shells with a distinct, thick outer edge that is clearly separate from the fabric underneath

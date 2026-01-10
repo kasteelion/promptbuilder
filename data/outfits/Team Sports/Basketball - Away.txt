@@ -1,4 +1,6 @@
 tags: [Basketball, Sport, Team]
+modifiers:
+  Shooting Sleeve: , wearing a padded compression shooting sleeve on the right arm in {accent} and a matching moisture-wicking headband,
 
 [F]
 - **Top:** Sleeveless performance jersey for **{team}** with **athletic mesh panels** on sides{modifier}

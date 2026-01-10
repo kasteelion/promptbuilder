@@ -111,7 +111,16 @@ class MenuActions:
         return self.app._toggle_auto_theme()
 
     def show_characters_summary(self):
-        return self.app.dialog_manager.show_characters_summary()
+        return self.app.dialog_manager.show_characters_summary(
+            data_loader=self.app.data_controller.data_loader,
+            theme_manager=self.app.theme_manager
+        )
+
+    def show_dashboard(self):
+        return self.app.dialog_manager.show_dashboard(
+            data_loader=self.app.data_controller.data_loader,
+            theme_manager=self.app.theme_manager
+        )
 
     def show_outfits_summary(self):
         return self.app.dialog_manager.show_outfits_summary(
@@ -123,7 +132,10 @@ class MenuActions:
         return self.app.dialog_manager.show_color_schemes_summary()
 
     def show_tag_summary(self):
-        return self.app.dialog_manager.show_tag_summary()
+        return self.app.dialog_manager.show_tag_summary(
+            data_loader=self.app.data_controller.data_loader,
+            theme_manager=self.app.theme_manager
+        )
 
     def show_welcome(self):
         return self.app.dialog_manager.show_welcome()

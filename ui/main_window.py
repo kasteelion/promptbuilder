@@ -263,6 +263,7 @@ class PromptBuilderApp:
             "change_theme": self.menu_actions.change_theme,
             "get_themes": lambda: self.theme_manager.themes,
             "toggle_auto_theme": self.menu_actions.toggle_auto_theme,
+            "show_dashboard": self.menu_actions.show_dashboard,
             "show_characters_summary": self.menu_actions.show_characters_summary,
             "show_outfits_summary": self.menu_actions.show_outfits_summary,
             "show_color_schemes_summary": self.menu_actions.show_color_schemes_summary,

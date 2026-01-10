@@ -10,22 +10,18 @@ Built with a "data-first" philosophy, the application uses human-readable Markdo
 
 ## 🌟 Key Features
 
-*   **Intuitive GUI:** A professional, responsive Tkinter interface with collapsible panels and real-time feedback.
-*   **Character Management:** A gallery-based selection system for managing extensive character libraries.
-*   **Modular Character Design:** Refined "Ingredient-based" character descriptions for maximum flexibility across varied prompt contexts (e.g., Noir, Sports, Fantasy).
-*   **Natural Language Import:** Import full prompt configurations (characters, scenes, poses) directly from raw text or LLM outputs.
-*   **LLM Workflow Integration:** Dedicated tools for exporting "knowledge injection" data to LLMs and structured import formats for AI-assisted prompting.
-*   **Identity Locks:** Maintain character consistency by "locking" core physical traits separately from outfits or actions.
-*   **Signature Colors:** Assign unique hex codes to characters that dynamically update outfit colors using the `((default:Color) or (signature))` syntax.
-*   **Outfit Traits & Specializations:** A dynamic multi-select checkbox system for specialized gear (e.g., *Softball Face Mask*, *Volleyball Libero*, *Baseball Catcher*).
-*   **Interaction Templates:** Use placeholders (e.g., `{char1}`, `{char2}`) to define complex multi-character scenes with cinematic framing.
-*   **Data Analysis Explorers:** Visual tools to analyze tag distributions and browse the outfit library by category and feature support.
-*   **Structured Outfits:** Support for detailed outfit definitions with automatic "one-piece" detection and team color substitution.
-*   **Optimized UX:** Advanced searchable comboboxes with keyboard navigation, auto-focus, and double-click shortcuts.
-*   **Real-time Preview:** Instant prompt generation with adaptive validation and condensed summary view.
-*   **Smart Coherence Engine:** Advanced randomization logic that ensures thematic consistency (e.g., a "Sports" style will automatically select compatible sports poses and outfits).
-*   **Advanced Theming:** Built-in theme editor for customizing colors, fonts, and UI scaling.
-*   **Extensible Data:** Add characters, scenes, and interactions simply by editing Markdown files.
+*   **Intuitive GUI:** A professional, responsive Tkinter interface with collapsible panels and real-time prompt building.
+*   **Character Management:** A gallery-based selection system for managing extensive character libraries with favoriting.
+*   **Modular Asset Architecture:** Unified `.txt` outfit files and modular character descriptions for maximum flexibility and easy maintenance.
+*   **Context-Aware Modifiers (Traits):** A dynamic multi-select checkbox system for specialized gear (e.g., *Softball Face Mask*, *Volleyball Libero*) defined locally within outfit files.
+*   **Smart Coherence Engine:** Advanced randomization logic that ensures thematic consistency (e.g., a "Sports" style automatically triggers compatible sports poses and outfits).
+*   **Natural Language Import:** Import full prompt configurations (characters, scenes, poses) directly from raw text or LLM summaries.
+*   **LLM Workflow Integration:** Specialized tools for exporting "knowledge injection" data to LLMs and structured templates for AI-assisted character creation.
+*   **Signature Colors:** Assign unique hex codes to characters that dynamically personalizes uniform/outfit colors.
+*   **Interaction Library:** Use placeholders (e.g., `{char1}`, `{char2}`) to define complex multi-character scenes with cinematic framing.
+*   **Data Health & Analytics:** Built-in tools to analyze tag distributions, browse asset libraries, and ensure data integrity.
+*   **Optimized UX:** Advanced searchable comboboxes, keyboard shortcuts (Alt+R to Randomize), and high-contrast dark mode.
+*   **Extensible Data:** Add content simply by dropping `.txt` or `.md` files into the `data/` directory.
 *   **Privacy First:** Fully local execution with no cloud dependencies or tracking.
 
 ## 🚀 Getting Started
