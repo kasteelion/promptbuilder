@@ -8,9 +8,12 @@
 **Gender:** F
 **Signature Color:** #FF0000
 
+**Traits:**
+- Glasses: sharp professional black-framed rectangular glasses
+
 **Appearance:**
 * **Body:** Flamboyant Gamine frame; straight athletic flesh; compact athletic proportions; petite vertical line; sharp and energized presence.
-* **Face:** Angular sculpted structure; square-leaning oval face; strong jawline; intense dark brown eyes wearing sharp, professional black-framed rectangular glasses; restrained confident expression that reflects her focused discipline.
+* **Face:** Angular sculpted structure; square-leaning oval face; strong jawline; intense dark brown eyes; restrained confident expression that reflects her focused discipline.
 * **Hair:** Type 1 straight; medium density; dark black with matte texture; choppy layers and versatile alternative styling options; drawn to sharp, edgy cuts.
 * **Skin:** Light neutral skin with matte clarity; smooth even finish.
 

@@ -83,28 +83,41 @@ class PresetParser:
                 continue
 
             if current:
-                item = re.match(r"^-\s+\*\*([^:]+):\*\*\s*(.*)$", line)
+                # Match: - **Name** (Tags): Description  OR  - **Name**: Description
+                item = re.match(r"^-\s+\*\*([^\*]+)\*\*\s*(\([^)]+\))?\s*:\s*(.*)$", line)
                 if item:
-                    name = item.group(1).strip()
-                    desc = item.group(2).strip()
+                    raw_name = item.group(1).strip()
+                    tags_str = item.group(2)
+                    desc = item.group(3).strip()
                     
-                    # Extract min characters from name if present (e.g., "(2+)" or "(3)")
+                    name = raw_name
+                    tags = []
+                    
+                    if tags_str:
+                        # Remove parens and split
+                        content_inner = tags_str[1:-1]
+                        tags = [t.strip() for t in content_inner.split(",") if t.strip()]
+                    
+                    # Extract min characters from name if present (e.g., "Interaction (2+)")
+                    # Note: We need to be careful if title has both tags and count in parens 
+                    # But usually format is **Name (2+)** (Tags): 
+                    # Let's assume (2+) is part of the name inside **
+                    
                     min_chars = 1
                     char_match = re.search(r"\((\d+)\+?\)", name)
                     if char_match:
                         min_chars = int(char_match.group(1))
                     
-                    # Also infer from placeholders in description (e.g. {char3} -> needs 3)
-                    # Find all {charN} patterns
+                    # Also infer from placeholders in description
                     placeholders = re.findall(r"\{char(\d+)\}", desc)
                     if placeholders:
                         max_placeholder = max(int(p) for p in placeholders)
                         min_chars = max(min_chars, max_placeholder)
                     
-                    # Store as structured dict
                     interactions[current][name] = {
                         "description": re.sub(r"^\([^)]+\)\s*", "", desc),
-                        "min_chars": min_chars
+                        "min_chars": min_chars,
+                        "tags": tags
                     }
 
         interactions = {k: v for k, v in interactions.items() if v}

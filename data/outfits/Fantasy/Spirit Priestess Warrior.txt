@@ -1,0 +1,18 @@
+tags: [Fantasy, Warrior, Priestess, Combat, Spiritual, Athletic]
+modifiers:
+  Staff: ", holding a tall wooden staff topped with a large {signature_color} spirit-crystal, its grip bound in weathered leather"
+
+[F]
+- **Top:** Halter-style crossover wrap in white linen. Two wide fabric panels cross at the neck/upper chest, creating an X-shape that wraps around the back of the neck for support. The crossed panels create a large keyhole cutout at center chest before the fabric wraps snugly around the ribcage, ending just below the bust in a cropped silhouette that exposes the midriff. The wrap is secured at the back with ties or tuck. Prominent {signature_color} crystal pendant on leather cord rests at sternum. Wide leather belt with large {signature_color} spirit-crystal set into buckle at center front.
+
+- **Bottom:** Warrior wrap-skirt in white linen falling to knee-length with deep side splits for mobility. Central loincloth panel in matching white linen hangs from belt to mid-thigh, visible through the front opening. Leather leg wraps crisscrossing from ankle to mid-calf.{modifier}
+
+[M]
+- **Top:** Shirtless, Brown leather pauldron on shoulder with matching leather vambrace on forearm. Prominent {signature_color} crystal pendant on leather cord at sternum. Wide leather belt with large {signature_color} spirit-crystal buckle at center front.
+
+- **Bottom:** Warrior's kilt in brown and white linen falling to just above knee with central white loincloth panel extending from belt to mid-thigh. Leather leg wraps crisscrossing from ankle to mid-calf.{modifier}
+
+[H]
+- **Top:** Long-sleeve white linen tunic base layer. Brown leather pauldron on shoulder with matching vambrace. White linen hijab wrapped securely for movement. Prominent {signature_color} crystal pendant on leather cord at sternum. Wide leather belt with large {signature_color} spirit-crystal buckle.
+
+- **Bottom:** Warrior wrap-skirt in white linen falling to knee-length with modest side splits, worn over ankle-length brown linen sirwal (loose trousers). Central white loincloth panel hangs from belt to mid-thigh. Leather leg wraps over sirwal from ankle to mid-calf.{modifier}

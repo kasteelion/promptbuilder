@@ -5,10 +5,13 @@
 **Gender:** F
 **Signature Color:** #2E8B57
 
+**Traits:**
+- Glasses: thin black rectangular glasses
+
 **Appearance:**
 
 * **Body:** Soft Natural frame; natural flesh with wave softness; soft hourglass-pear proportions with full hips, thighs and bust, soft rounded belly, subtly defined shoulders; petite-to-moderate vertical (5'2"-5'4"); voluptuous short-stack build with concentrated curves and grounded presence.
-* **Face:** Balanced-soft facial structure; round-oval face; deep almond-shaped eyes with steady observant gaze (sometimes wears glasses); soft jawline; neutral resting expression is steady and observant with signature warmth showing in subtle corner smile.
+* **Face:** Balanced-soft facial structure; round-oval face; deep almond-shaped eyes with steady observant gaze; soft jawline; neutral resting expression is steady and observant with signature warmth showing in subtle corner smile.
 * **Hair:** Type 2B waves; medium density; long controlled cut with natural body; matte finish; dark brown.
 * **Skin:** Warm tan with golden-brown undertones and natural matte-soft finish.
 
@@ -37,5 +40,5 @@
 - **Top:** skin-tight teal-blue fine-knit crew neck tee
 - **Bottom:** High-waist dark charcoal gray denim shorts
 - **Footwear:** Practical low-profile canvas slip-on shoes
-- **Accessories:** Simple silver stud earrings, thin silver chain necklace, thin black rectangular glasses
+- **Accessories:** Simple silver stud earrings, thin silver chain necklace
 - **Hair/Makeup:** Hair loosely tied back

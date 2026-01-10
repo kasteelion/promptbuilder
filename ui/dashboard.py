@@ -155,6 +155,27 @@ class TagAnalyzer(ttk.Frame):
         self.data_loader = data_loader
         self.tm = theme_manager
         
+        # Header with Controls
+        header = ttk.Frame(self, padding=(0, 0, 0, 10))
+        header.pack(fill="x")
+        
+        ttk.Label(header, text="ASSET TYPE:", style="Bold.TLabel").pack(side="left")
+        
+        self.asset_type_var = tk.StringVar(value="Characters")
+        self.type_combo = ttk.Combobox(
+            header, 
+            textvariable=self.asset_type_var,
+            values=["Characters", "Outfits", "Scenes", "Poses", "Interactions", "Global Matrix"],
+            state="readonly",
+            width=20,
+            font=("Lexend", 9)
+        )
+        self.type_combo.pack(side="left", padx=10)
+        self.type_combo.bind("<<ComboboxSelected>>", lambda e: self.refresh())
+        
+        ttk.Button(header, text="🔄 REFRESH", command=self.refresh, style="Small.TButton").pack(side="right")
+        
+        # Main Content
         self.scroll = ScrollableCanvas(self)
         self.scroll.pack(fill="both", expand=True)
         self.container = self.scroll.get_container()
@@ -166,28 +187,178 @@ class TagAnalyzer(ttk.Frame):
         for child in self.container.winfo_children():
             child.destroy()
             
-        chars = self.data_loader.load_characters()
-        if not chars: return
+        asset_type = self.asset_type_var.get()
         
+        if asset_type == "Global Matrix":
+            self._show_global_matrix()
+            self.scroll.refresh_mousewheel_bindings()
+            self.scroll.update_scroll_region()
+            return
+
         tag_counts = {}
-        for data in chars.values():
-            tags = data.get("tags") or []
-            if isinstance(tags, str):
-                tags = [t.strip().lower() for t in tags.split(",") if t.strip()]
-            for t in tags:
-                tag_counts[t] = tag_counts.get(t, 0) + 1
-                
-        ttk.Label(self.container, text="TAG DISTRIBUTION", style="Title.TLabel").pack(pady=10)
+        
+        try:
+            if asset_type == "Characters":
+                data = self.data_loader.load_characters()
+                for d in data.values():
+                    self._add_tags(tag_counts, d.get("tags"))
+                    
+            elif asset_type == "Outfits":
+                data = self.data_loader.load_outfits()
+                # Structure: {'F': {Cat: {Name: Data}}, ...}
+                for gender_data in data.values():
+                    for cat_data in gender_data.values():
+                        for item in cat_data.values():
+                            self._add_tags(tag_counts, item.get("tags"))
+
+            elif asset_type == "Scenes":
+                data = self.data_loader.load_presets("scenes.md")
+                # Structure: {Cat: {Name: Data}}
+                for cat_data in data.values():
+                    for item in cat_data.values():
+                        self._add_tags(tag_counts, item.get("tags"))
+                        
+            elif asset_type == "Poses":
+                data = self.data_loader.load_presets("poses.md")
+                for cat_data in data.values():
+                    for item in cat_data.values():
+                        self._add_tags(tag_counts, item.get("tags"))
+                        
+            elif asset_type == "Interactions":
+                data = self.data_loader.load_interactions()
+                for cat_data in data.values():
+                    for item in cat_data.values():
+                        self._add_tags(tag_counts, item.get("tags"))
+
+        except Exception as e:
+            ttk.Label(self.container, text=f"Error loading {asset_type} tags:\n{e}", foreground="red").pack(pady=20)
+            return
+
+        if not tag_counts:
+            ttk.Label(self.container, text=f"No tags found for {asset_type}.", style="Muted.TLabel").pack(pady=20)
+            return
+
+        ttk.Label(self.container, text=f"{asset_type.upper()} TAG DISTRIBUTION", style="Title.TLabel").pack(pady=10)
         
         # Sort and display
         sorted_tags = sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)
-        for tag, count in sorted_tags:
-            row = ttk.Frame(self.container)
-            row.pack(fill="x", pady=2, padx=20)
-            ttk.Label(row, text=tag.upper(), width=20).pack(side="left")
-            ttk.Label(row, text=str(count), style="Bold.TLabel").pack(side="right")
+        
+        # Grid layout for better density
+        grid_frame = ttk.Frame(self.container)
+        grid_frame.pack(fill="x", padx=10)
+        grid_frame.columnconfigure(0, weight=1)
+        grid_frame.columnconfigure(1, weight=1)
+        
+        for idx, (tag, count) in enumerate(sorted_tags):
+            col = idx % 2
+            row = idx // 2
             
+            pbg = self.tm.themes.get(self.tm.current_theme, {}).get("panel_bg", "#1e1e1e") if self.tm else "#1e1e1e"
+            card = tk.Frame(grid_frame, bg=pbg, padx=10, pady=5)
+            card.grid(row=row, column=col, sticky="ew", padx=5, pady=2)
+            
+            # Inner labels
+            fg = self.tm.themes.get(self.tm.current_theme, {}).get("fg", "white") if self.tm else "white"
+            tk.Label(card, text=tag.upper(), bg=pbg, fg=fg, font=("Lexend", 9)).pack(side="left")
+            tk.Label(card, text=str(count), bg=pbg, fg="gray", font=("Lexend", 9, "bold")).pack(side="right")
+            
+        self.scroll.refresh_mousewheel_bindings()
         self.scroll.update_scroll_region()
+
+    def _show_global_matrix(self):
+        """Display a cross-reference matrix of tags across all asset types."""
+        # Aggregate data
+        matrix = {} # {tag: {type: count}}
+        
+        def process_tags(source_name, tags):
+            if not tags: return
+            if isinstance(tags, str):
+                tags = [t.strip().lower() for t in tags.split(",") if t.strip()]
+            for t in tags:
+                t = str(t).strip().lower()
+                if t:
+                    if t not in matrix:
+                        matrix[t] = {"total": 0}
+                    matrix[t][source_name] = matrix[t].get(source_name, 0) + 1
+                    matrix[t]["total"] += 1
+
+        # Load all data
+        try:
+            # Characters
+            chars = self.data_loader.load_characters()
+            for d in chars.values(): process_tags("Chars", d.get("tags"))
+            
+            # Outfits
+            outfits = self.data_loader.load_outfits()
+            for gd in outfits.values():
+                for cat in gd.values():
+                    for item in cat.values(): process_tags("Outfits", item.get("tags"))
+            
+            # Scenes
+            scenes = self.data_loader.load_presets("scenes.md")
+            for cat in scenes.values():
+                for item in cat.values(): process_tags("Scenes", item.get("tags"))
+                
+            # Poses
+            poses = self.data_loader.load_presets("poses.md")
+            for cat in poses.values():
+                for item in cat.values(): process_tags("Poses", item.get("tags"))
+                
+            # Interactions
+            interactions = self.data_loader.load_interactions()
+            for cat in interactions.values():
+                for item in cat.values(): process_tags("Interact", item.get("tags"))
+                
+        except Exception as e:
+            ttk.Label(self.container, text=f"Error building matrix: {e}", foreground="red").pack()
+            return
+
+        ttk.Label(self.container, text="GLOBAL TAG MATRIX", style="Title.TLabel").pack(pady=10)
+        
+        # Header Row
+        headers = ["TAG", "TOTAL", "CHARS", "OUTFITS", "SCENES", "POSES", "INTERACT"]
+        h_frame = ttk.Frame(self.container)
+        h_frame.pack(fill="x", padx=10, pady=5)
+        
+        for i, h in enumerate(headers):
+            h_frame.columnconfigure(i, weight=1 if i == 0 else 0)
+            width = 20 if i == 0 else 8
+            lbl = ttk.Label(h_frame, text=h, width=width, font=("Lexend", 9, "bold"))
+            lbl.grid(row=0, column=i, sticky="w" if i == 0 else "e", padx=5)
+
+        ttk.Separator(self.container, orient="horizontal").pack(fill="x", padx=10, pady=5)
+        
+        # Data Rows
+        sorted_tags = sorted(matrix.items(), key=lambda x: x[1]["total"], reverse=True)
+        
+        pbg = self.tm.themes.get(self.tm.current_theme, {}).get("panel_bg", "#1e1e1e") if self.tm else "#1e1e1e"
+        fg = self.tm.themes.get(self.tm.current_theme, {}).get("fg", "white") if self.tm else "white"
+        
+        for t, counts in sorted_tags:
+            row = tk.Frame(self.container, bg=pbg, pady=2)
+            row.pack(fill="x", padx=10, pady=1)
+            row.columnconfigure(0, weight=1)
+            
+            # Tag Name
+            tk.Label(row, text=t.upper(), bg=pbg, fg=fg, font=("Lexend", 9), anchor="w").grid(row=0, column=0, sticky="ew", padx=5)
+            
+            # Counts
+            cols = ["total", "Chars", "Outfits", "Scenes", "Poses", "Interact"]
+            for i, key in enumerate(cols):
+                val = counts.get(key, "-")
+                lbl = tk.Label(row, text=str(val), bg=pbg, fg="gray" if val == "-" else fg, width=8, anchor="e", font=("Lexend", 9))
+                lbl.grid(row=0, column=i+1, padx=5)
+
+    def _add_tags(self, counts, tags):
+        """Helper to safely add tags to counter."""
+        if not tags: return
+        if isinstance(tags, str):
+            tags = [t.strip().lower() for t in tags.split(",") if t.strip()]
+        
+        for t in tags:
+            t = str(t).strip().lower() # Normalization
+            if t:
+                counts[t] = counts.get(t, 0) + 1
 
     def apply_theme(self, theme):
         self.scroll.apply_theme(theme)

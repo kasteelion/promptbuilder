@@ -12,6 +12,7 @@ _MODIFIER_RE = re.compile(r"\*\*Modifier:\*\*\s*(.+?)(?:\n\s*\*\*|$)")
 _SUMMARY_RE = re.compile(r"\*\*Summary:\*\*\s*(.+?)(?:\n\s*\*\*|$)", re.DOTALL)
 _TAGS_RE = re.compile(r"\*\*Tags:\*\*\s*(.+?)(?:\n\s*\*\*|$)", re.DOTALL)
 _SIGNATURE_COLOR_RE = re.compile(r"\*\*Signature Color:\*\*\s*(.+?)(?:\n\s*\*\*|$)")
+_TRAITS_RE = re.compile(r"\*\*Traits:\*\*\s*(.*?)(?=\n\s*\*\*|\n\s*-{3,}|$)", re.DOTALL)
 _IDENTITY_LOCKS_HEADER_RE = re.compile(
     r"^Appearance\s*\(Identity Locks\):\s*$", re.IGNORECASE | re.MULTILINE
 )
@@ -165,6 +166,20 @@ class CharacterParser:
             if sig_match:
                 signature_color = sig_match.group(1).strip()
 
+            traits = {}
+            traits_match = _TRAITS_RE.search(body)
+            if traits_match:
+                trait_block = traits_match.group(1).strip()
+                for line in trait_block.splitlines():
+                    line = line.strip()
+                    if line.startswith("- "):
+                        content_trait = line[2:].strip()
+                        if ":" in content_trait:
+                            t_name, t_desc = content_trait.split(":", 1)
+                            traits[t_name.strip().strip("*")] = t_desc.strip()
+                        else:
+                            traits[content_trait.strip().strip("*")] = content_trait.strip()
+
             for o_name, o_val in list(outfits.items()):
                 if isinstance(o_val, dict):
                     bottom_key = None
@@ -215,6 +230,7 @@ class CharacterParser:
                 "gender_explicit": gender_explicit,
                 "modifier": modifier,
                 "signature_color": signature_color,
+                "traits": traits,
             }
 
         validated_chars = {}

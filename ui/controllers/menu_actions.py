@@ -137,6 +137,17 @@ class MenuActions:
             theme_manager=self.app.theme_manager
         )
 
+    def show_health_check(self):
+        """Open the health check tab in Dashboard."""
+        return self.app.dialog_manager.show_health_check(
+            data_loader=self.app.data_controller.data_loader,
+            theme_manager=self.app.theme_manager
+        )
+
+    def open_data_folder(self):
+        """Open local data folder."""
+        return self.app.dialog_manager.open_data_folder(self.app.data_loader)
+
     def show_welcome(self):
         return self.app.dialog_manager.show_welcome()
 

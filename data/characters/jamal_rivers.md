@@ -8,10 +8,13 @@
 **Gender:** M
 **Signature Color:** #800020
 
+**Traits:**
+- Glasses: thin wire-frame glasses
+
 **Appearance:**
 
 * **Body:** Soft Classic frame; natural flesh; balanced proportions with gentle width; moderate vertical; composed presence with natural ease.
-* **Face:** Balanced refined facial structure; oval face; warm intelligent eyes behind wire-frame glasses; defined features; calm thoughtful expression.
+* **Face:** Balanced refined facial structure; oval face; warm intelligent eyes; defined features; calm thoughtful expression.
 * **Hair:** Type 4A-4B coils; medium density; short natural cut with slight taper; well-maintained; matte finish.
 * **Skin:** Deep brown skin with warm undertones and smooth finish.
 
@@ -33,6 +36,6 @@
 - **Top:** Soft burgundy merino wool v-neck sweater over white oxford shirt (collar visible)
 - **Bottom:** Navy blue chino pants with tailored fit
 - **Footwear:** Brown leather oxford shoes
-- **Accessories:** Silver watch with brown leather strap, thin wire-frame glasses, canvas and leather messenger bag
+- **Accessories:** Silver watch with brown leather strap, canvas and leather messenger bag
 - **Hair/Makeup:** Short natural hair with clean lineup; clean-shaven
 - **Grooming:** Well-maintained short natural hair; clear skin

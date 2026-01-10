@@ -167,8 +167,16 @@ class ScrollableCanvas(ttk.Frame):
                 
                 # Check visibility
                 if self._is_scrolling_needed():
-                     # Let hover logic handle showing it, but we can update state if needed
-                     pass
+                     # If the mouse is already over the canvas, ensure scrollbar is visible
+                     # This fixes the "lost scrollbar" when content grows while hovering
+                     try:
+                         # Get mouse position relative to widget
+                         x, y = self.winfo_pointerxy()
+                         widget = self.winfo_containing(x, y)
+                         if widget and (str(widget).startswith(str(self))):
+                             self.scrollbar.grid(row=0, column=1, sticky="ns")
+                     except Exception:
+                         pass
                 else:
                     self.scrollbar.grid_remove()
                 
@@ -177,7 +185,8 @@ class ScrollableCanvas(ttk.Frame):
                 self._scroll_after_id = None
 
         # Coalesce multiple layout calls into one update
-        self._scroll_after_id = self.after(50, _apply)
+        # Increased to 120ms to allow FlowFrame's 50ms reflow to complete first
+        self._scroll_after_id = self.after(120, _apply)
 
     def _is_scrolling_needed(self):
         """Check if the content height exceeds the viewable height. (Refactor 3)"""
@@ -190,7 +199,8 @@ class ScrollableCanvas(ttk.Frame):
             region = self.canvas.cget("scrollregion").split()
             if region and len(region) >= 4:
                 content_height = float(region[3])
-                return content_height > view_height
+                # Add 2px epsilon to handle floating point rounding in layouts
+                return content_height > (view_height + 2)
         except Exception: 
             pass
         return False

@@ -8,6 +8,9 @@
 **Gender:** M
 **Signature Color:** #CC5500
 
+**Traits:**
+- Glasses: minimalist wire-frame glasses for reading
+
 **Appearance:**
 * **Body:** Flamboyant Natural frame; tall and broad (6'1"-6'2"); "inverted triangle" torso with broad shoulders tapering to a trim waist; long limbs; moves with a heavy, deliberate grace; solid, functional muscularity without being gym-obsessed.
 * **Face:** Strong, sculptural planes; high, flat cheekbones; strong nose with a prominent bridge; deep-set, dark brown eyes that look *through* you rather than at you; stoic resting face that breaks into a slow, genuine smile.

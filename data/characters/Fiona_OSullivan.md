@@ -5,12 +5,16 @@
 **Gender:** F
 **Signature Color:** #228B22
 
+**Traits:**
+- Glasses: stylish tortoiseshell glasses
+- Freckles: generous constellation of freckles across nose, cheeks, shoulders, and arms
+
 **Appearance:**
 
 * **Body:** Soft Natural plus-size frame; wave-type plush softness; soft pear-hourglass proportions; moderate vertical.
-* **Face:** Soft-balanced facial structure; round-oval face with warm open planes; expressive hazel-green eyes **framed by practical but stylish tortoiseshell glasses**; warm engaging smile; soft jawline; radiant joyful expression that reflects her generous spirit.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes; expressive hazel-green eyes; warm engaging smile; soft jawline; radiant joyful expression that reflects her generous spirit.
 * **Hair:** Type 2B-2C waves; high density; long layered cut with natural body; side part; soft natural volume with gentle frizz; copper-red to auburn with natural variation.
-* **Skin:** Fair rosy-toned skin with soft glow; generous constellation of freckles across nose, cheeks, shoulders, and arms that intensify with sun exposure.
+* **Skin:** Fair rosy-toned skin with soft glow; smooth complexion.
 
 **Age Presentation:** mid-30s presentation; warm, settled.
 **Vibe / Energy:** open, generous, comforting.

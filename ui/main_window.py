@@ -268,6 +268,8 @@ class PromptBuilderApp:
             "show_outfits_summary": self.menu_actions.show_outfits_summary,
             "show_color_schemes_summary": self.menu_actions.show_color_schemes_summary,
             "show_tag_summary": self.menu_actions.show_tag_summary,
+            "show_health_check": self.menu_actions.show_health_check,
+            "open_data_folder": self.menu_actions.open_data_folder,
             "show_welcome": self.menu_actions.show_welcome,
             "show_shortcuts": self.menu_actions.show_shortcuts,
             "show_about": self.menu_actions.show_about,

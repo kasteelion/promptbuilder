@@ -516,6 +516,19 @@ class DialogManager:
         """Show tag distribution (now part of Dashboard)."""
         self.show_dashboard(data_loader, theme_manager, initial_tab=2)
 
+    def show_health_check(self, data_loader=None, theme_manager=None) -> None:
+        """Show health check (now part of Dashboard)."""
+        self.show_dashboard(data_loader, theme_manager, initial_tab=3)
+
+    def open_data_folder(self, data_loader) -> None:
+        """Open the data directory in the system file explorer."""
+        import os
+        path = data_loader.base_dir / "data"
+        if path.exists():
+            os.startfile(path)
+        else:
+            self.show_error("Error", f"Data directory not found: {path}")
+
     def show_bulk_generator(self, data_loader, poses_data, builder) -> None:
         """Show bulk prompt generator dialog."""
         import bulk # Import local module

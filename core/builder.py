@@ -125,11 +125,27 @@ class PromptBuilder:
                         v = re.sub(r"\{modifier\}", modifier_text, v)
                         v = substitute_signature_color(v, sig_color, use_sig)
                         outfit[k] = substitute_colors(v, scheme)
+            # Apply character-level traits if selected
+            char_traits = char.get("character_traits", [])
+            char_traits_def = data.get("traits", {})
+            appearance = data.get("appearance", "")
+            
+            trait_texts = []
+            for ct in char_traits:
+                if ct in char_traits_def:
+                    trait_texts.append(char_traits_def[ct])
+            
+            if trait_texts:
+                # Append traits to appearance, ensuring proper punctuation
+                if appearance and not appearance.endswith((".", ";")):
+                    appearance += ";"
+                appearance += " " + "; ".join(trait_texts)
+
             parts.append(
                 CharacterRenderer.render(
                     idx,
                     char["name"],
-                    data.get("appearance", ""),
+                    appearance,
                     OutfitRenderer.render(outfit),
                     PoseRenderer.render(pose),
                 )

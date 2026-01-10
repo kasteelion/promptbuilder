@@ -155,6 +155,11 @@ class CharacterItem(ttk.Frame):
 
         # --- Content inside controls_frame ---
         
+        # Character-Specific Traits (Identity)
+        self.char_traits_frame = ttk.Frame(self.controls_frame)
+        self.char_traits_frame.pack(fill="x", pady=(0, 10))
+        self._update_character_traits_ui()
+
         # Outfit Section
         outfit_row = ttk.Frame(self.controls_frame)
         outfit_row.pack(fill="x", pady=(0, 10))
@@ -467,6 +472,53 @@ class CharacterItem(ttk.Frame):
         self.preset_combo.set_values(presets)
         self.preset_combo.set("")
         self.callbacks["update_pose_category"](self.index, val, self.preset_combo)
+
+    def _update_character_traits_ui(self):
+        """Update the character-level identity traits UI."""
+        if not hasattr(self, "char_traits_frame"):
+            return
+            
+        # Clear existing
+        for w in self.char_traits_frame.winfo_children():
+            w.destroy()
+            
+        char_traits_def = self.char_def.get("traits", {})
+        if not char_traits_def:
+            return
+            
+        ttk.Label(self.char_traits_frame, text="✨ Identity:", style="Bold.TLabel").pack(side="left")
+        
+        flow = FlowFrame(self.char_traits_frame)
+        flow.pack(side="left", fill="x", expand=True, padx=10)
+        
+        current_traits = self.char_data.get("character_traits", [])
+        
+        for name in sorted(char_traits_def.keys()):
+            # Initialize if not present (default to unchecked for now, 
+            # though user might want a way to specify default in MD)
+            var = tk.BooleanVar(value=name in current_traits)
+            cb = ttk.Checkbutton(
+                flow,
+                text=name,
+                variable=var,
+                command=lambda n=name, v=var: self._on_char_trait_toggle(n, v.get())
+            )
+            cb.pack(side="left", padx=2)
+            flow._children.append(cb)
+
+    def _on_char_trait_toggle(self, name, checked):
+        """Handle character-level trait checkbox toggle."""
+        traits = self.char_data.get("character_traits", [])
+        if checked:
+            if name not in traits:
+                traits.append(name)
+        else:
+            if name in traits:
+                traits.remove(name)
+        
+        self.char_data["character_traits"] = traits
+        self.callbacks["on_change"]()
+
 
     def _update_modifier_ui(self):
         """Update the traits/modifiers UI based on the current outfit."""

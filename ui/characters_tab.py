@@ -1120,15 +1120,6 @@ class CharactersTab:
         # If below all items, drop at end
         return len(self.selected_characters)
 
-        # Update scroll region and refresh mousewheel bindings
-        self.scrollable_canvas.refresh_mousewheel_bindings()
-        self.scrollable_canvas.update_scroll_region()
-
-        # Defer on_change to avoid event queue overflow
-        self.tab.after(1, self.on_change)
-        self._refresh_list() # Potential infinite recursion? Fixed by _refreshing guard.
-        self._refreshing = False
-
     def _find_character_file(self, character_name):
         """Locate the markdown file for a character by scanning the characters dir.
 

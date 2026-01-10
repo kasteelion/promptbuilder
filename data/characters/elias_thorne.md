@@ -8,6 +8,9 @@
 **Gender:** M
 **Signature Color:** #708090
 
+**Traits:**
+- Glasses: thick-rimmed black architectural glasses
+
 **Appearance:**
 * **Body:** Dramatic frame; tall and lean (6'1"-6'2"); maintained simply through discipline (yoga/pilates); narrow shoulders and long lines; moves with a fluid, ageless elegance; clothes hang on him like he is a mannequin.
 * **Face:** Long, narrow, and angular; deep-set, intelligent grey eyes; distinctive aquiline nose; sharp cheekbones; clean-shaven or a very close stubble; expression is usually one of amused detachment or critical observation.

@@ -5,6 +5,10 @@
 **Gender:** F
 **Signature Color:** #50C878
 
+**Traits:**
+- Bindi: small black bindi dot on forehead
+- Nose Stud: tiny sparkling silver nose stud
+
 **Appearance:**
 
 * **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
@@ -31,5 +35,5 @@
 - **Top:** Deep emerald green halter top with criss-cross neckline, crossover front, large breast keyhole cutout, cleavage cutout, crop style showing midriff, sleeveless with bare shoulders, tight fitted silhouette
 - **Bottom:** Warm bronze cotton-blend lehenga skirt with high front slit, matte finish with subtle texture, draped and pleated style, ankle-length with natural movement
 - **Footwear:** Simple tan leather flat sandals or low wedge sandals
-- **Accessories:** Small gold hoop earrings, single delicate gold chain with small Om pendant, 2-3 thin gold bangles on one wrist, small black bindi dot on forehead, fitness tracker on opposite wrist
+- **Accessories:** Small gold hoop earrings, single delicate gold chain with small Om pendant, 2-3 thin gold bangles on one wrist, fitness tracker on opposite wrist
 - **Hair/Makeup:** Natural loose waves with slight center part, voluminous beachy texture, warm highlights catching light; minimal fresh makeup with light mascara, naturally full groomed brows, nude-mauve lip color, hint of warm blush, natural dewy finish

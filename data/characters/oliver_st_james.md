@@ -8,11 +8,15 @@
 **Gender:** M
 **Signature Color:** #DAA520
 
+**Traits:**
+- Glasses: round gold wire-frame glasses
+- Freckles: scattered freckles across the nose and arms
+
 **Appearance:**
 * **Body:** Soft Natural frame; average height (5'9"-5'10"); "Otter" build—slim but not skinny, with a soft, natural muscularity and a bit of fuzz; rounded shoulders; comfortable and lived-in physicality.
-* **Face:** Oval face with soft features; warm, crinkling blue eyes behind round wire-frame glasses; nose is slightly button-like; jawline is softened by a scruffy, well-maintained short beard (strawberry blonde/ginger tone).
+* **Face:** Oval face with soft features; warm, crinkling blue eyes; nose is slightly button-like; jawline is softened by a scruffy, well-maintained short beard (strawberry blonde/ginger tone).
 * **Hair:** Type 2C curls; medium density; messy "mop top" style that looks better when tousled; light brown/dark blonde; often falling into his eyes.
-* **Skin:** Fair to light; pinkish warm undertones; prone to blushing; scattered freckles across the nose and arms.
+* **Skin:** Fair to light; pinkish warm undertones; prone to blushing; smooth complexion.
 
 **Age Presentation:** mid-20s
 **Vibe / Energy:** cozy, intellectual, sweet, sincere, approachable, neurotic-charming.
@@ -26,5 +30,5 @@
 - **Top:** Chunky cable-knit sweater in mustard yellow or oatmeal, sleeves pulled over hands.
 - **Bottom:** Vintage straight-leg corduroy pants in dark brown, cuffed.
 - **Footwear:** Worn-in Converse Chuck 70s or desert boots.
-- **Accessories:** Round gold wire-frame glasses, brown leather satchel, maybe a scarf.
+- **Accessories:** brown leather satchel, maybe a scarf.
 - **Hair/Makeup:** Messy natural curls; natural grooming.

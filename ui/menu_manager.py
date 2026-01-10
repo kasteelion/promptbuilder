@@ -144,6 +144,18 @@ class MenuManager:
         tools_menu.add_command(
             label="🎨 Color Schemes", command=self.callbacks["show_color_schemes_summary"]
         )
+        tools_menu.add_command(
+            label="🏷️ Tag Analysis", command=self.callbacks["show_tag_summary"]
+        )
+        tools_menu.add_command(
+            label="🩺 Health Check", command=self.callbacks["show_health_check"]
+        )
+
+        tools_menu.add_separator()
+
+        tools_menu.add_command(
+            label="📂 Open Data Folder", command=self.callbacks["open_data_folder"]
+        )
 
     def _build_view_menu(self):
         """Build View menu with theme and display options."""
