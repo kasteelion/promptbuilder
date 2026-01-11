@@ -153,7 +153,7 @@ class PromptRandomizer:
                 
         return normal, mood, blocked
 
-    def randomize(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, candidates=5):
+    def randomize(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, candidates=5, match_outfits_prob=0.3):
         """Generate multiple candidates and return the highest scoring one."""
         best_config = None
         best_score = -float('inf')
@@ -165,7 +165,7 @@ class PromptRandomizer:
         # print(f"Generating {candidates} candidates...")
         
         for _ in range(candidates):
-            config = self._generate_single_candidate(num_characters, include_scene, include_notes, forced_base_prompt)
+            config = self._generate_single_candidate(num_characters, include_scene, include_notes, forced_base_prompt, match_outfits_prob=match_outfits_prob)
             score = self._score_candidate(config)
             
             # print(f"Candidate score: {score}")
@@ -228,7 +228,7 @@ class PromptRandomizer:
             
         return score
 
-    def _generate_single_candidate(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None):
+    def _generate_single_candidate(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, match_outfits_prob=0.3):
         """Generate a single random prompt configuration."""
         # Step 1: Resolve conflicts between Interactions and Poses
         generate_interaction = include_notes
@@ -349,8 +349,8 @@ class PromptRandomizer:
 
         # -- SMART LOGIC END --
 
-        # For pairs, 70% chance to use matching outfits
-        use_matching_outfits = num_to_select >= 2 and random.random() < 0.7
+        # For pairs, randomized chance to use matching outfits (default 30%)
+        use_matching_outfits = num_to_select >= 2 and random.random() < match_outfits_prob
         matching_outfit = None
 
         if use_matching_outfits:

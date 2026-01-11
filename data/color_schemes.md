@@ -146,3 +146,8 @@
 - **secondary:** #000000
 - **accent:** #FFFFFF
 - **team:** The Tidal Sharks
+## The Standard
+- **primary:** white
+- **secondary:** black
+- **accent:** blue
+- **team:** Standard Team

@@ -9,9 +9,9 @@ from logic.data_loader import DataLoader
 from logic.randomizer import PromptRandomizer
 from core.builder import PromptBuilder
 
-def generate_prompts_only(count=20):
+def generate_prompts_only(count=20, match_outfits_prob=0.3):
     """Generate prompts and save to text files without browser automation."""
-    print(f"Generating {count} prompts...")
+    print(f"Generating {count} prompts (Match Outfit Prob: {match_outfits_prob})...")
     
     loader = DataLoader()
     chars = loader.load_characters()
@@ -34,16 +34,18 @@ def generate_prompts_only(count=20):
         
     print(f"Prompts will be saved to: {output_dir}")
     
+    timestamp = int(time.time())
+    
     for i in range(count):
         print(f"  Randomizing prompt {i+1}...")
         config = randomizer.randomize(
             num_characters=None, # Random count
             include_scene=True,
-            include_notes=True
+            include_notes=True,
+            match_outfits_prob=match_outfits_prob
         )
         prompt_text = builder.generate(config)
         
-        timestamp = int(time.time())
         base_filename = f"gen_only_{timestamp}_{i+1}"
         
         # Save Prompt as Text File
@@ -57,10 +59,18 @@ def generate_prompts_only(count=20):
 
 if __name__ == "__main__":
     count = 20
-    if len(sys.argv) > 1:
+    prob = 0.3
+    
+    # Simple argument parsing
+    args = sys.argv[1:]
+    if args:
         try:
-            count = int(sys.argv[1])
+            # First arg is count
+            count = int(args[0])
+            # Second arg could be prob
+            if len(args) > 1:
+                prob = float(args[1])
         except ValueError:
             pass
             
-    generate_prompts_only(count)
+    generate_prompts_only(count, prob)
