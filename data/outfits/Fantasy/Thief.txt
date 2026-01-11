@@ -1,4 +1,4 @@
-tags: [Fantasy, Stealth]
+tags: [fantasy, Stealth]
 
 [F]
 - **Top:** Fitted leather vest or corset (dark brown or black)
@@ -21,4 +21,3 @@ tags: [Fantasy, Stealth]
 - **Footwear:** Soft leather silent boots
 - **Accessories:** Lockpicks, coin purse, dagger, fingerless gloves
 - **Makeup:** Minimal, smudged kohl, cunning expression
-

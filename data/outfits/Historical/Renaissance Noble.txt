@@ -1,4 +1,4 @@
-tags: [Fancy, Historical]
+tags: [Fancy, historical]
 
 [F]
 - **Top:** Fitted bodice (brocade, velvet, or damask fabric in ((default:burgundy) or (signature)) with subtle pattern or texture)
@@ -21,4 +21,3 @@ tags: [Fancy, Historical]
 - **Footwear:** Period-appropriate shoes
 - **Accessories:** Simple pendant necklace, period jewelry
 - **Makeup:** Natural elegant makeup, classic beauty aesthetic
-

@@ -1,0 +1,65 @@
+# METADATA
+Scene: Inside luxury vehicle, leather seats, dashboard visible, windshield view of road, intimate enclosed space.
+Base_Prompt: Low-Poly 3D
+Character: Lucía Reyes | Outfit: 1920s Jazz Age | Pose: None
+Character: Hallie Bennett | Outfit: Pop Star - Futuristic Glam | Pose: None
+Interaction: Custom
+Score: 190
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Inside luxury vehicle, leather seats, dashboard visible, windshield view of road, intimate enclosed space.
+---
+
+**CHARACTER: Lucía Reyes**
+**Appearance:**
+* **Body:** Romantic frame; wave plush softness; full hourglass proportions; moderate vertical.
+* **Face:** Rounded facial structure; heart-shaped face; full cheeks; warm expressive eyes; joyful resting expression.
+* **Hair:** Type 2B–2C waves; high density; long layered cut; side part; healthy sheen.
+* **Skin:** Warm golden skin with radiant glow.
+**Outfit:**
+- **Top:** Dropped-waist dress (black, gold, or silver with heavy beading and fringe, knee-length or slightly above, sleeveless or cap sleeves)
+- **Bottom:** sheer stockings (with seam up back)
+- **Footwear:** T-strap heels (low heel, Mary Jane style).
+- **Accessories:** Long pearl necklace (multiple strands, can be knotted), feathered headband or jeweled headpiece, elbow-length gloves (optional), beaded clutch, cigarette holder.
+- **Hair/Makeup:** Finger waves or Marcel waves (slicked close to head), short bob haircut, dark smoky eyes, thin defined eyebrows, dark lipstick in cupid's bow shape (burgundy or deep red), beauty mark optional, Jazz Age glamour.
+**Pose/Action:**
+medium shot showing the character from the waist up,
+---
+
+**CHARACTER 2: Hallie Bennett**
+**Appearance:**
+* **Body:** Soft Natural frame; soft flesh with natural give; balanced proportions with soft hourglass tendency—rounded shoulders, moderate bust, defined waist with gentle softness, full hips and thighs; moderate height (5'5"-5'6"); soft athletic build with underlying functional strength, visible in legs and core when engaged but softened by feminine curves; approachable active presence.
+* **Face:** Soft, round-oval face with gentle cheek fullness; slightly almond-shaped dark brown eyes; warm, easy smile with slight upturn at mouth corners; overall approachable, open expression.
+* **Hair:** Shoulder-length wavy hair; sun-kissed light brown with natural blonde highlights; moderate density and natural movement suited to low-maintenance styles.
+* **Skin:** Light-fair with neutral undertones and soft, healthy glow; minimal permanent markings.
+**Outfit:**
+- **Top:** Metallic or holographic bodysuit (form-fitting with geometric cutouts, iridescent blue and silver)
+- **Bottom:** armored shoulder piece (asymmetric, sculptural design on one shoulder)
+- **Footwear:** short pleated skirt (black with metallic blue overlay or trim); **thigh-high stockings** (black opaque or with blue accents); **platform boots** (knee-high, futuristic design with metallic details).
+- **Accessories:** Statement hair piece (large geometric or crystalline design), futuristic jewelry (angular, metallic), LED or light-up elements optional, microphone prop.
+- **Hair/Makeup:** Dramatic avant-garde hairstyle (high fashion updo, sleek ponytail, or bold color - blue, purple, silver), holographic or metallic makeup with shimmer, graphic eyeliner, glossy lips, confident stage presence, pop star energy.
+
+---
+**Pose/Action:**
+medium shot showing the character from the waist up,
+---
+
+**Additional Notes:**
+Hallie Bennett leaning back against Lucía Reyes's chest while both sitting or standing.

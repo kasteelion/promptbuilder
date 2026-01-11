@@ -1,4 +1,4 @@
-tags: [Combat, MMA, Sport]
+tags: [combat, MMA, Sport]
 
 [F]
 - **Top:** Elite mixed martial arts kit for **{team}**
@@ -21,4 +21,3 @@ tags: [Combat, MMA, Sport]
 - **Footwear:** Barefoot with **matching {primary_color} ankle sleeves**
 - **Accessories:** 4oz open-palm MMA gloves in **{accent}** with **reinforced padding**, hand wraps, black mouthguard
 - **Makeup:** Determined game-face, athletic sheen
-

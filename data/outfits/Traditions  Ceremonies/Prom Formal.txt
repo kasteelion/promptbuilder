@@ -1,4 +1,4 @@
-tags: [Event, Formal, Youth]
+tags: [event, formal, Youth]
 
 [F]
 - **Top:** Floor-length formal gown (((default:jewel tone - sapphire, emerald, ruby) or (signature)) with embellishments - sequins, beading, or lace, various necklines - sweetheart, halter, off-shoulder)
@@ -21,4 +21,3 @@ tags: [Event, Formal, Youth]
 - **Footwear:** Heeled sandals
 - **Accessories:** Statement earrings (visible), corsage, clutch
 - **Makeup:** Full glam makeup, dramatic eyes
-

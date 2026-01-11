@@ -1,0 +1,80 @@
+# METADATA
+Scene: Wooden boat deck, ocean horizon, billowing sails, sea breeze, nautical ropes and equipment.
+Base_Prompt: Cyberpunk Neon
+Character: Luna Vex | Outfit: Catsuit | Pose: None
+Character: Maki Cruz | Outfit: Warrior | Pose: None
+Character: Marcus Thompson | Outfit: Hunter | Pose: None
+Interaction: Custom
+Score: 140
+
+Generate an image of: Rendering
+Ray-traced digital rendering with high-contrast chiaroscuro. Dominant cyan and magenta rim lighting against deep matte blacks. Heavy volumetric fog, bloom effects on light sources, and chromatic aberration at the edges. Wet-surface reflections and a distinct digital noise overlay.
+
+Character Accuracy
+Sharp, angular facial geometry with high-contrast shading. Expressions are rendered with dramatic under-lighting or silhouette emphasis. Focus on hard-surface modeling for features, giving skin a synthetic or plasticky sheen.
+
+Body Types
+Anatomy defined by harsh lighting highlights rather than soft gradients. Musculature or body shape is accentuated by reflective contours. Silhouettes are cut sharp against the background with glowing edge detection.
+
+Hair & Clothing
+Hair: Rendered as synthetic fiber with high specularity (shine). Clothing: Materials appear as latex, matte carbon fiber, or translucent plastic. integrated light strips and glowing tech-wear accents are baked into the texture maps.
+
+Details
+Glitch art artifacts, holographic UI overlays in the foreground, and lens flare streaks. Backgrounds feature out-of-focus bokeh of city lights. The overall atmosphere is oppressive, high-tech, and gritty.
+
+---
+
+**SCENE/SETTING:**
+Wooden boat deck, ocean horizon, billowing sails, sea breeze, nautical ropes and equipment.
+---
+
+**CHARACTER: Luna Vex**
+**Appearance:**
+* **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
+* **Face:** Classic heart-shaped silhouette with a broad, smooth forehead and high, soft cheekbones that become prominent when she smiles; delicate, pointed chin creating a sharp taper from the mid-face; soft but clean and well-defined jawline; focal wide-set almond-shaped eyes in captivating light grey-blue; framed by naturally high-arched, manicured dark brown eyebrows sitting well above the orbital bone; signature sharp black winged eyeliner that accentuates the upward curve of her eyes; petite, straight nose bridge with a soft rounded tip and characteristic "scrunch" when laughing; wide, expressive mouth with a prominent philtrum and a broad, radiant smile revealing straight white teeth; deep endearing smile lines (nasolabial folds) and pronounced "crow's feet" signal genuine warmth and joy.
+* **Hair:** Type 2A (wavy); medium density; soft, voluminous layered silhouette; shoulder-length; varying part pattern (side or center); glossy sheen with styled "wet-look" roots; common styling includes loose, face-framing waves. Split-dye neon magenta pink and electric blue/amethyst purple.
+* **Skin:** Fair/Light depth; neutral-cool undertones; smooth, luminous surface finish; natural "crow's feet" laugh lines around the eyes.
+**Outfit:**
+- **Top:** Sleek **form-fitting bodysuit** (black high-shine latex or spandex)
+- **Bottom:** integrated cowl/mask with cat-ear details
+- **Footwear:** full-length sleeves with **clawed gloves**; **knee-high stiletto boots**.
+- **Accessories:** Utility belt, stylized whip prop.
+- **Hair/Makeup:** Mask obscuring upper face, intense eyes, bold lip.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Maki Cruz**
+**Appearance:**
+* **Body:** Flamboyant Natural; straight athletic flesh with lean definition; balanced proportions; subtle shoulder width; straight hip line; moderate vertical (5'6"-5'7"); functional athletic build with core strength; developed calves and quadriceps; visible forearm definition; grounded street-athlete presence.
+* **Face:** Balanced-soft structure; rounded square shape; broad forehead; softly defined jawline; midface cheekbone prominence with subtle definition; medium almond-shaped eyes; moderate spacing; dark brown to black irises; monolid or minimal crease structure; direct casual gaze; broad nose bridge with rounded tip; neutral resting expression shows relaxed confidence with a slight asymmetric smirk.
+* **Hair:** Type 1B; high density; straight silhouette with medium length to shoulders; no defined part; pushed back casually; matte to low-sheen finish; commonly worn loose and natural, tucked behind ears, or in a low messy bun. Deep black-brown.
+* **Skin:** Medium tan; warm golden-yellow undertones; natural matte finish; healthy resilience; scattered small scars on elbows and knees.
+**Outfit:**
+- **Top:** Fitted armor-inspired bodice (leather or faux-leather with metal accents)
+- **Bottom:** high-waist pants or skirt with side slits (dark colors, movement-friendly)
+- **Footwear:** knee-high boots (sturdy with buckles).
+- **Accessories:** Arm bracers, belt with pouches, weapon prop (sword or bow).
+- **Hair/Makeup:** Hair in warrior braids or ponytail, natural makeup with defined features.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Marcus Thompson**
+**Appearance:**
+* **Body:** Natural male frame; straight athletic flesh; inverted rectangle proportions; moderate-to-tall vertical.
+* **Face:** Balanced-strong facial structure; square-leaning oval face; defined jaw; warm eyes; calm open expression.
+* **Hair:** Type 4A coils; medium density; short fade with textured top; clean lineup; matte-satin finish; black.
+* **Skin:** Deep brown skin with neutral undertones.
+**Outfit:**
+- **Top:** Leather armor vest (brown or forest green with fur trim)
+- **Bottom:** fitted pants (earth tones)
+- **Footwear:** hooded cloak (green or brown for camouflage); **sturdy leather boots** (calf-high).
+- **Accessories:** Longbow and quiver of arrows (worn on back), hunting knife, animal companion (hawk, wolf, or hunting dog), rope and survival gear, leather gloves.
+- **Hair/Makeup:** Practical hair (short or tied back), natural sun-kissed look, earth tone accents, alert focused expression.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Luna Vex and Maki Cruz performing traditional cultural greeting, specific gesture appropriate to culture, respectful interaction.

@@ -21,4 +21,3 @@ tags: [Sport, Swim, Water]
 - **Footwear:** None
 - **Accessories:** Mirrored racing goggles ({accent})
 - **Makeup:** Waterproof natural makeup
-

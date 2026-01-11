@@ -1,6 +1,6 @@
 import os
 
-from themes.theme_manager import ThemeManager
+from ui.themes.theme_manager import ThemeManager
 
 
 class _FakeStyle:

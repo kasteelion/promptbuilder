@@ -1,4 +1,4 @@
-tags: [Avant-Garde, Edgy, Fashion, Formal]
+tags: [Avant-Garde, Edgy, Fashion, formal]
 
 [F]
 - **Top:** Midi-length bandage dress (constructed from heavy, elasticated ((default:black) or (signature)) ribbing designed to sculpt and define the silhouette)
@@ -19,4 +19,3 @@ tags: [Avant-Garde, Edgy, Fashion, Formal]
 - **Footwear:** Strappy **((default:silver) or (signature))** high heels or elegant flats.
 - **Accessories:** Vintage-inspired gold clutch; statement cocktail ring.
 - **Makeup:** Sultry smoky eye in charcoal and **((default:black) or (signature))**; deep plum or crimson lipstick.
-

@@ -1,0 +1,65 @@
+# METADATA
+Scene: Gothic cathedral, soaring arched ceilings, stained glass windows casting colored light, stone pillars, reverent atmosphere.
+Base_Prompt: Cyberpunk Neon
+Character: Kassandra Lykaios | Outfit: Color Block Chic | Pose: None
+Character: Talia Levi | Outfit: Cold Weather - Athletic | Pose: None
+Interaction: Custom
+Score: 110
+
+Generate an image of: Rendering
+Ray-traced digital rendering with high-contrast chiaroscuro. Dominant cyan and magenta rim lighting against deep matte blacks. Heavy volumetric fog, bloom effects on light sources, and chromatic aberration at the edges. Wet-surface reflections and a distinct digital noise overlay.
+
+Character Accuracy
+Sharp, angular facial geometry with high-contrast shading. Expressions are rendered with dramatic under-lighting or silhouette emphasis. Focus on hard-surface modeling for features, giving skin a synthetic or plasticky sheen.
+
+Body Types
+Anatomy defined by harsh lighting highlights rather than soft gradients. Musculature or body shape is accentuated by reflective contours. Silhouettes are cut sharp against the background with glowing edge detection.
+
+Hair & Clothing
+Hair: Rendered as synthetic fiber with high specularity (shine). Clothing: Materials appear as latex, matte carbon fiber, or translucent plastic. integrated light strips and glowing tech-wear accents are baked into the texture maps.
+
+Details
+Glitch art artifacts, holographic UI overlays in the foreground, and lens flare streaks. Backgrounds feature out-of-focus bokeh of city lights. The overall atmosphere is oppressive, high-tech, and gritty.
+
+---
+
+**SCENE/SETTING:**
+Gothic cathedral, soaring arched ceilings, stained glass windows casting colored light, stone pillars, reverent atmosphere.
+---
+
+**CHARACTER: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Outfit:**
+- **Top:** Fitted **white v-neck tee** (short sleeves, classic cotton)
+- **Bottom:** high-waist **tailored pants** (rust orange, burnt orange, or terracotta in ankle length with front seam detail).
+- **Accessories:** Delicate gold necklace, minimal jewelry.
+- **Hair/Makeup:** Straight hair with center or side part, natural everyday makeup with groomed brows.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Examining futuristic weapon or tool, checking power cell or calibration, professional soldier or mercenary stance.
+---
+
+**CHARACTER 2: Talia Levi**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave-lush flesh quality; voluptuous hourglass proportions with pronounced bust (full D-DD), defined waist, and rounded hips; moderate-to-tall vertical (5'7"); soft density with feminine curves, visible décolletage, rounded shoulders, and shapely legs; magnetizing sensual presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-diamond shape; high pronounced cheekbones with sculpted planes; large almond-shaped wide-set eyes in deep amber-brown with naturally seductive heavy-lidded quality and penetrating direct gaze; full shapely lips; defined angular jawline; neutral resting expression is knowing and self-assured with slight sultry smile and unwavering confident eye contact that holds just a beat too long.
+
+* **Hair:** Type 2B-2C waves; very high density; voluminous cascading silhouette; long length past mid-back; natural loose center part; healthy high-sheen finish; commonly worn loose and wild with tousled volume, half-up with face-framing tendrils, or low messy bun showing neck; rich dark chocolate brown with warm caramel highlights.
+
+* **Skin:** Medium-tan with warm golden-olive undertones and luminous sun-kissed finish; beauty mark above upper lip on left side; smooth healthy Mediterranean glow.
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined leggings (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, headband ear-warmers, sports sunglasses.
+- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Hands held apart in front of the chest, fingers curved as if holding a sphere of light, face illuminated by a glow from between the palms.
+---
+
+**Additional Notes:**
+Kassandra Lykaios passing the baton to Talia Levi mid-sprint, perfectly timed athletic coordination.

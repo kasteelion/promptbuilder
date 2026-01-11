@@ -1,4 +1,4 @@
-tags: [China, Cultural, Historical, Traditional]
+tags: [chinese, Cultural, historical, traditional]
 
 [F]
 - **Top:** Hanfu dress (flowing robes in silk - red, gold, or pastel with embroidered details)
@@ -21,4 +21,3 @@ tags: [China, Cultural, Historical, Traditional]
 - **Footwear:** Embroidered slippers
 - **Accessories:** Ornate hairpins and combs on hijab, jade jewelry, decorative fan, flowing ribbons
 - **Makeup:** Natural makeup with red lip, porcelain complexion aesthetic
-

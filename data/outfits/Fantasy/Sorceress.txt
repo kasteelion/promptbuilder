@@ -1,4 +1,4 @@
-tags: [Fantasy, Magic]
+tags: [fantasy, Magic]
 
 [F]
 - **Top:** Fitted bodice or corset (((default:rich jewel tones - emerald, sapphire, ruby) or (signature)) with magical shimmer)
@@ -21,4 +21,3 @@ tags: [Fantasy, Magic]
 - **Footwear:** Heeled boots
 - **Accessories:** Staff or wand, crystal jewelry, glowing amulet
 - **Makeup:** Dramatic shimmer makeup, mystical eyes
-

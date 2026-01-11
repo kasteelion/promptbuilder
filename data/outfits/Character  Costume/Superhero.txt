@@ -1,4 +1,4 @@
-tags: [Costume, Hero]
+tags: [costume, hero]
 
 [F]
 - **Top:** ((default:White) or (signature)) **bodysuit** (form-fitting spandex with high-cut legs)
@@ -21,4 +21,3 @@ tags: [Costume, Hero]
 - **Footwear:** Armored **boots** (knee-high, tactical design)
 - **Accessories:** Utility belt (tactical with pouches), Cape (optional, attached at shoulders), protective gauntlets or arm guards, hero mask (optional, coordinating with hijab)
 - **Makeup:** strong defined brows visible, natural makeup with focus on eyes, determined heroic expression
-

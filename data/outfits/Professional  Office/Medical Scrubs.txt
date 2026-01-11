@@ -1,4 +1,4 @@
-tags: [Job, Medical, Professional]
+tags: [Job, medical, professional]
 
 [F]
 - **Top:** Scrub top (v-neck or round neck in ((default:solid color - navy, teal, or burgundy) or (signature)))
@@ -21,4 +21,3 @@ tags: [Job, Medical, Professional]
 - **Footwear:** Comfortable sneakers or clogs (white or matching color)
 - **Accessories:** Stethoscope around neck, ID badge, watch, hair secured
 - **Makeup:** Natural minimal makeup
-

@@ -1,4 +1,4 @@
-tags: [Combat, Edgy, Sci-Fi]
+tags: [combat, Edgy, sci-fi]
 
 [F]
 - **Top:** Mock-neck Compression Jumpsuit (a form-fitting, full-length base layer made of high-sheen {primary_color} spandex and reinforced nylon panels)
@@ -21,4 +21,3 @@ tags: [Combat, Edgy, Sci-Fi]
 - **Footwear:** Heavy-duty lace-up wrestling boots with reinforced shinguards
 - **Accessories:** Matching **{primary_color}** fingerless tactical gloves with metallic plating; a detachable high-collared entrance capelet (full coverage)
 - **Makeup:** Sleek hijab wrap secured for action; bold high-contrast smoky eye with **{accent}** metallic liner; matte nude lip and sharp, athletic contouring
-

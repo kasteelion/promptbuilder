@@ -1,4 +1,4 @@
-tags: [Fantasy, Historical, Martial Arts]
+tags: [fantasy, historical, Martial Arts]
 
 [F]
 - **Top:** Simple cloth wraps (chest binding in earth tones)
@@ -27,4 +27,3 @@ tags: [Fantasy, Historical, Martial Arts]
 - **Makeup:** Minimal, serene focused expression
 
 ---
-

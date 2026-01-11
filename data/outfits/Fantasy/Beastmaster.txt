@@ -1,4 +1,4 @@
-tags: [Combat, Fantasy, Nature]
+tags: [combat, fantasy, nature]
 
 [F]
 - **Top:** Leather armor (decorated with animal motifs - claws, teeth, fur accents)
@@ -21,4 +21,3 @@ tags: [Combat, Fantasy, Nature]
 - **Footwear:** Leather boots with traction
 - **Accessories:** Spear or staff, animal companion, bone jewelry
 - **Makeup:** Tribal face paint, fierce expression
-

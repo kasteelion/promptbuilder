@@ -1,0 +1,63 @@
+# METADATA
+Scene: Rain-slicked street, neon signs in multiple languages, steam vents, holographic advertisements, dystopian night atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Enzo Rossi | Outfit: 1960s Mod | Pose: None
+Character: Kaito Sato | Outfit: Retro Bowling | Pose: None
+Interaction: Custom
+Score: 235
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Rain-slicked street, neon signs in multiple languages, steam vents, holographic advertisements, dystopian night atmosphere.
+---
+
+**CHARACTER: Enzo Rossi**
+**Appearance:**
+* **Body:** Dramatic Natural male frame; straight muscular flesh; inverted triangle proportions; commanding vertical presence.
+* **Face:** Angular sculpted structure; square-leaning oval face; strong jaw; intense eyes; restrained confident expression.
+* **Hair:** Type 2A–2B waves; medium density; medium-length layered cut; tousled; no rigid part; soft sheen.
+* **Skin:** Warm olive skin with matte finish.
+**Outfit:**
+- **Top:** Slim-fit suit (#191970 narrow lapels, cigarette pants)
+- **Bottom:** turtleneck or **button-down with skinny tie**
+- **Footwear:** Chelsea boots.
+- **Accessories:** Wayfarer sunglasses.
+- **Hair/Makeup:** Mop-top haircut or neat side part, clean-shaven, youthful energy.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Leaping in the air, arms extended to catch the football, eyes locked on the ball, athletic dynamic pose.
+---
+
+**CHARACTER 2: Kaito Sato**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; wiry and compact; defined, sinewy muscle (climber/skater build); shorter vertical (5'6"-5'7"); extremely agile and fast-twitch; straight lines with sharp edges; projects nervous, electric energy.
+* **Face:** Angular, diamond-shaped face; sharp, pointed chin; narrow eyes that are often squinting in focus or widening in adrenaline; mischievous grin that shows teeth; features are delicate but sharp.
+* **Hair:** Type 1B straight; medium density; undercut with a long, choppy top; bleached platinum blonde (almost white) with roots showing; often messy or swept forward.
+* **Skin:** Fair with cool undertones; prone to flushing when active; usually has a band-aid or small scrape on the cheek or knuckles.
+**Outfit:**
+- **Top:** Retro button-down **bowling shirt** (two-tone, name embroidered on chest)
+- **Top:** **Polo shirt**
+- **Bottom:** Straight-leg **chinos** or **jeans**
+- **Footwear:** **Rental bowling shoes** (red and blue/tan leather)
+- **Accessories:** Wrist brace, rosin bag.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Hair slicked back or damp, just out of shower or pool aesthetic, towel around shoulders optional.
+---
+
+**Additional Notes:**
+Enzo Rossi mounted on top of Kaito Sato, knees tight to Kaito Sato's ribs, creating pincer pressure. Enzo Rossi's hips are heavy and low, sitting on Kaito Sato's stomach/chest with weight distributed forward. Feet are hooked under Kaito Sato's legs or posted wide for base. Enzo Rossi's posture is upright, torso at 60-70 degree angle, head and shoulders over Kaito Sato's face. Arms are positioned for striking—one hand posted on the mat beside Kaito Sato's head for base, other hand cocked back ready to deliver ground strikes. Kaito Sato is on their back defending, both arms up protecting face and head, elbows tight, forearms creating shield. Kaito Sato's legs may be flat or knees bent trying to buck. Both in realistic mount position with proper weight distribution. Enzo Rossi shows dominant body language with controlled aggression, Kaito Sato shows defensive tension. Visible muscle engagement in core, shoulders, and arms. Both faces show intensity—Enzo Rossi with focused predatory expression, Kaito Sato with defensive concentration. They look into each others eyes.

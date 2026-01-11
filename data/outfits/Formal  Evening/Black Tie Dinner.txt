@@ -1,4 +1,4 @@
-tags: [Dinner, Elegant, Formal, Luxury]
+tags: [Dinner, elegant, formal, luxury]
 
 [F]
 - **Top:** Floor-length evening gown (silk, velvet, or chiffon in black or deep jewel tone)
@@ -21,4 +21,3 @@ tags: [Dinner, Elegant, Formal, Luxury]
 - **Footwear:** Elegant heels
 - **Accessories:** Fine jewelry, embellished clutch
 - **Makeup:** Glamorous evening makeup
-

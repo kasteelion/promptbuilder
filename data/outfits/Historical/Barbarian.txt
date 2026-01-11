@@ -1,18 +1,18 @@
-tags: [Combat, Fantasy, Tribal]
+tags: [combat, fantasy, Tribal]
 
 [F]
 - **Top:** Leather or fur bikini top (tribal design with bone or tooth decorations)
 - **Bottom:** fur or leather loincloth with **leather straps**
 - **Footwear:** fur boots (calf-high); **arm and leg wraps** (((default:leather or fur) or (signature))).
 - **Accessories:** Large battle axe or two-handed sword, bone jewelry, war paint on face and body, trophy necklace (teeth, claws).
-- **Hair/Makeup:** Wild untamed hair (often with braids or dreadlocks), fierce war paint, tribal markings, intense warrior expression.
+- **Hair/Makeup:** Wild untamed hair (often with braids or dreadlocks), fierce war paint, tribal markings, Intense warrior expression.
 
 [M]
 - **Top:** Bare chest with **leather harness** (tribal design)
 - **Bottom:** fur or leather loincloth or **pants** with **leather straps**
 - **Footwear:** fur boots (calf-high); **arm and leg wraps** (leather or fur).
 - **Accessories:** Large battle axe or two-handed sword, bone jewelry, war paint on face and body, trophy necklace (teeth, claws).
-- **Hair/Makeup:** Wild untamed hair (often with braids or dreadlocks), fierce war paint, tribal markings, intense warrior expression.
+- **Hair/Makeup:** Wild untamed hair (often with braids or dreadlocks), fierce war paint, tribal markings, Intense warrior expression.
 
 [H]
 - **Hijab:** Rugged wrap style (earth tones) with leather bands or bone accessories
@@ -20,5 +20,4 @@ tags: [Combat, Fantasy, Tribal]
 - **Bottom:** Leather trousers with fur leg wraps and loincloth overlay
 - **Footwear:** Fur-lined boots
 - **Accessories:** Battle axe, bone jewelry, war paint
-- **Makeup:** Fierce war paint, intense expression
-
+- **Makeup:** Fierce war paint, Intense expression

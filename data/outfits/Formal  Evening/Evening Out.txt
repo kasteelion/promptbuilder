@@ -1,4 +1,4 @@
-tags: [Date, Formal, Night]
+tags: [Date, formal, Night]
 
 [F]
 - **Top:** Fitted **top or dress** in an elegant fabric
@@ -20,4 +20,3 @@ tags: [Date, Formal, Night]
 - **Footwear:** Black heeled ankle boots
 - **Accessories:** Statement gold geometric earrings, gold cuff bracelet, small structured clutch
 - **Makeup:** Dramatic with bronze-toned eyeshadow and berry lip
-

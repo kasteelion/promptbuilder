@@ -1,4 +1,4 @@
-tags: [Fantasy, Steampunk, Tech]
+tags: [fantasy, Steampunk, tech]
 
 [F]
 - **Top:** Practical work vest (leather with tool loops)
@@ -21,4 +21,3 @@ tags: [Fantasy, Steampunk, Tech]
 - **Footwear:** Steel-toed boots
 - **Accessories:** Tool belt, goggles, gadgets, gloves
 - **Makeup:** Inventive expression, grease smudges
-

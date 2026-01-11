@@ -1,4 +1,4 @@
-tags: [Costume, Fantasy, Pirate]
+tags: [costume, fantasy, Pirate]
 
 [F]
 - **Top:** Off-shoulder peasant blouse (black chiffon with flowing bell sleeves)
@@ -21,4 +21,3 @@ tags: [Costume, Fantasy, Pirate]
 - **Footwear:** Knee-high boots
 - **Accessories:** Wide belt with large buckle, compass prop, layered necklaces
 - **Makeup:** Smoky eye, dark aesthetic, mysterious expression
-

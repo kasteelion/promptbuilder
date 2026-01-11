@@ -2,7 +2,7 @@
 **Photo:** harald_bjornson_photo.png
 
 **Photo:** [harald_photo.png]
-**Tags:** male, nordic, massive, rugged, commanding, bearded
+**Tags:**   male, bearded, commanding, massive, nordic, rugged
 **Summary:** Harald Bjornson is a mountain of a man, embodying sheer physical power and indomitable will. His presence is heavy and immovable, like a granite cliff. He carries himself with the quiet, terrifying calm of a man who doesn't need to raise his voice to be heard. He is a modern echo of an ancient archetype—rugged, weathered, and undeniably dominant.
 **Gender:** M
 **Signature Color:** #4A5D23
@@ -22,7 +22,7 @@
 //- Style preferences: modern-warrior aesthetic—heavy shearling jackets, tactical cargo pants, thick denim, and reinforced flannel in forest green, navy, and charcoal
 //- Jewelry preference: heavy bronze or iron pieces—thick rings, a leather cord with a hammer pendant, wide leather wrist cuffs
 //- General vibe: modern-day jarl, ancient strength in a high-tech world
-//- Viking markers: braided beard, scars, massive build, intense gaze, weathered skin
+//- Viking markers: braided beard, scars, massive build, Intense gaze, weathered skin
 
 ---
 

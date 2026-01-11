@@ -6,7 +6,7 @@ Keep this file minimal: delegate runtime behavior to `Runner` in
 
 import sys
 import os
-from runner import Runner
+from core.runner import Runner
 from utils import logger, font_loader
 
 def main(argv=None):

@@ -1,4 +1,4 @@
-tags: [Classic, Lounge, Sleep]
+tags: [Classic, lounge, sleep]
 
 [F]
 - **Top:** Button-front pajama top (((default:navy and white) or (signature)) vertical stripe cotton poplin, chest pocket with piped edges)
@@ -19,4 +19,3 @@ tags: [Classic, Lounge, Sleep]
 - **Footwear:** Cozy slipper socks
 - **Accessories:** Reading glasses
 - **Makeup:** No makeup, relaxed expression
-

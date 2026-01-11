@@ -9,7 +9,7 @@ from tkinter import ttk
 
 from logic.data_loader import DataLoader
 from ui.characters_tab import CharactersTab
-from themes.theme_manager import ThemeManager
+from ui.themes.theme_manager import ThemeManager
 from ui.controllers.character_controller import CharacterController
 
 root = tk.Tk()

@@ -1,10 +1,10 @@
-tags: [Cold, Outdoor, Sport]
+tags: [Cold, outdoor, Sport]
 
 [F]
 - **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
 - **Bottom:** fleece-lined leggings (black or charcoal)
 - **Footwear:** waterproof hiking boots.
-- **Accessories:** Thermal gloves, headband ear-warmers, sports sunglasses.
+- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
 - **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
 
 [M]
@@ -19,6 +19,5 @@ tags: [Cold, Outdoor, Sport]
 - **Top:** Sleek insulated thermal jacket over long-sleeve technical base layer
 - **Bottom:** Fleece-lined athletic leggings (charcoal gray)
 - **Footwear:** Waterproof hiking boots
-- **Accessories:** Thermal gloves, headband ear-warmers (worn over hijab), sports sunglasses
+- **Accessories:** Thermal gloves, headband ear-warmers (worn over hijab), Sport sunglasses
 - **Makeup:** Fresh-faced "winter glow"
-

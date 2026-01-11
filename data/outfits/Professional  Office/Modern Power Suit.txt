@@ -1,4 +1,4 @@
-tags: [Fashion, Formal, Professional]
+tags: [Fashion, formal, professional]
 
 [F]
 - **Top:** Compression-fit tailored blazer (structured {primary_color} wool-blend, worn with no shirt underneath to emphasize the plunging neckline and torso silhouette)
@@ -19,4 +19,3 @@ tags: [Fashion, Formal, Professional]
 - **Footwear:** Pointed-toe low-heeled pumps or loafers.
 - **Accessories:** Slim **{secondary_color}** leather belt; minimalist **{accent}** watch.
 - **Makeup:** Professional natural makeup; bold matte lipstick in deep red.
-

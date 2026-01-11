@@ -1,4 +1,4 @@
-tags: [Elegant, Formal, Party, Social]
+tags: [elegant, formal, party, social]
 
 [F]
 - **Top:** Cocktail dress (knee-length or midi, elegant fabric like satin or lace in jewel tones)
@@ -20,4 +20,3 @@ tags: [Elegant, Formal, Party, Social]
 - **Footwear:** Heeled pumps or strappy sandals in coordinating color
 - **Accessories:** Statement earrings, delicate bracelet, clutch purse
 - **Makeup:** Sophisticated makeup with bold lip in complementary shade
-

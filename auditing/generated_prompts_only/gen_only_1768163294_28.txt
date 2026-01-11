@@ -1,0 +1,83 @@
+# METADATA
+Scene: Urban rooftop setting, city skyline in background, sunset lighting, modern outdoor furniture.
+Base_Prompt: Artgerm Style: "Luminous Digital Fantasy"
+Character: Priya Sharma | Outfit: Necromancer | Pose: None
+Character: Maki Cruz | Outfit: Necromancer | Pose: None
+Character: Roxanna Perez | Outfit: Necromancer | Pose: None
+Interaction: Custom
+Score: 122
+
+Generate an image of: Rendering
+Hyper-polished digital airbrushing. Skin is rendered to look like porcelain or high-quality silicone. Lighting is dramatic, usually featuring a strong cool rim light on one side and a warm key light on the other.
+
+Character Accuracy
+The "Supermodel" face: perfect symmetry, small nose, full lips, large almond eyes. Makeup is always flawless and high-fashion. Expressions are confident, alluring, and piercing.
+
+Body Types
+Idealized "Comic Book Hero" proportions. Athletic but curvy, with impossible grace. Muscles are defined but smooth. The figure always has a sense of "floating" or weightless elegance.
+
+Hair & Clothing
+Hair: The signature element—rendered as flowing liquid silk with incredible volume and distinct individual strands flowing in the wind. Clothing: Tight-fitting, glossy textures (latex, metal, silk).
+
+Details
+Subtle particle effects (embers, petals). The background is usually a solid color gradient or a simple abstract halo to keep the focus entirely on the character's face and lighting.
+
+---
+
+**SCENE/SETTING:**
+Urban rooftop setting, city skyline in background, sunset lighting, modern outdoor furniture.
+---
+
+**CHARACTER: Priya Sharma**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
+* **Face:** Soft oval face with gentle rounded features; warm expressive dark brown eyes; friendly approachable expression; fuller cheeks; soft jawline; warm genuine smile.
+* **Hair:** Type 2B-2C waves; medium-high density; long dark brown hair (almost black at roots) with warm caramel-brown highlights throughout mid-lengths and ends; natural body and volume; beachy waves.
+* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow. small black bindi dot on forehead
+**Outfit:**
+- **Top:** Dark robes (black, deep purple, or charcoal with tattered edges and bone decorations)
+- **Bottom:** hooded cloak
+- **Footwear:** skull motif accessories (belt, shoulder pieces); **black leather boots** (knee-high).
+- **Accessories:** Staff topped with skull or dark crystal, bone jewelry, spell tome bound in dark leather, vials of mysterious substances, death motifs throughout.
+- **Hair/Makeup:** Pale complexion, dark hair (black or white) in straight severe style, dark dramatic eye makeup with black or deep purple, black or dark lips, haunting expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Hands gently adjusting flower crown, soft smile, dreamy romantic expression, natural grace.
+---
+
+**CHARACTER 2: Maki Cruz**
+**Appearance:**
+* **Body:** Flamboyant Natural; straight athletic flesh with lean definition; balanced proportions; subtle shoulder width; straight hip line; moderate vertical (5'6"-5'7"); functional athletic build with core strength; developed calves and quadriceps; visible forearm definition; grounded street-athlete presence.
+* **Face:** Balanced-soft structure; rounded square shape; broad forehead; softly defined jawline; midface cheekbone prominence with subtle definition; medium almond-shaped eyes; moderate spacing; dark brown to black irises; monolid or minimal crease structure; direct casual gaze; broad nose bridge with rounded tip; neutral resting expression shows relaxed confidence with a slight asymmetric smirk.
+* **Hair:** Type 1B; high density; straight silhouette with medium length to shoulders; no defined part; pushed back casually; matte to low-sheen finish; commonly worn loose and natural, tucked behind ears, or in a low messy bun. Deep black-brown.
+* **Skin:** Medium tan; warm golden-yellow undertones; natural matte finish; healthy resilience; scattered small scars on elbows and knees.
+**Outfit:**
+- **Top:** Dark robes (black, deep purple, or charcoal with tattered edges and bone decorations)
+- **Bottom:** hooded cloak
+- **Footwear:** skull motif accessories (belt, shoulder pieces); **black leather boots** (knee-high).
+- **Accessories:** Staff topped with skull or dark crystal, bone jewelry, spell tome bound in dark leather, vials of mysterious substances, death motifs throughout.
+- **Hair/Makeup:** Pale complexion, dark hair (black or white) in straight severe style, dark dramatic eye makeup with black or deep purple, black or dark lips, haunting expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Hand gently touching own shoulder or collarbone, head tilted, soft sensual expression.
+---
+
+**CHARACTER 3: Roxanna Perez**
+**Appearance:**
+* **Body:** Theatrical Romantic frame (Kibbe); lush flesh; compact delicate bone structure; double-tapered proportions; short to moderately short vertical line; concentrated physical presence.
+
+* **Face:** Balanced-soft facial structure with subtle sharpness; oval face; moderate midface projection; large almond-shaped eyes; softly defined tapered jawline; full lips; resting expression calm and self-possessed.
+
+* **Hair:** Type 1C–2A straight to slightly wavy; high density; long length; no shrinkage; side part; asymmetrical swept silhouette; glossy surface finish.
+
+* **Skin:** Medium olive skin tone; warm-neutral undertone; smooth satin finish; no prominent markings.
+**Outfit:**
+- **Top:** Dark robes (#800080 with tattered edges and bone decorations)
+- **Bottom:** hooded cloak
+- **Footwear:** skull motif accessories (belt, shoulder pieces); **black leather boots** (knee-high).
+- **Accessories:** Staff topped with skull or dark crystal, bone jewelry, spell tome bound in dark leather, vials of mysterious substances, death motifs throughout.
+- **Hair/Makeup:** Pale complexion, dark hair (black or white) in straight severe style, dark dramatic eye makeup with black or deep purple, black or dark lips, haunting expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Mid-motion flipping a long coat or jacket onto shoulders, confident smirk, ready for action.
+---
+
+**Additional Notes:**
+Priya Sharma and Maki Cruz locked in standing clinch, bodies pressed together in tight space. Both fighting for underhooks and overhooks—arms battling for dominant collar ties or body locks. Heads pressed together, foreheads touching or one head pressed to other's shoulder, preventing strikes. Hips close, each trying to control opponent's posture. Legs positioned in staggered stance for balance and potential knee strikes. Arms show muscle strain and grip tension, hands clasping behind head, neck, or back. Both pushing and pulling, testing weight distribution. Visible exertion in facial expressions—grimacing, heavy breathing. Sweat dripping, muscles flexed throughout upper body and core.

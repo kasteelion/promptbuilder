@@ -1,0 +1,64 @@
+# METADATA
+Scene: Luxury cruise deck, ocean horizon, deck chairs, gentle sea breeze, vacation leisure atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Leonidas Stratos | Outfit: Softball | Pose: None
+Character: Jordan Vance | Outfit: African Print Contemporary | Pose: None
+Interaction: Custom
+Score: 190
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Luxury cruise deck, ocean horizon, deck chairs, gentle sea breeze, vacation leisure atmosphere.
+---
+
+**CHARACTER: Leonidas Stratos**
+**Appearance:**
+* **Body:** Dramatic; elite athletic flesh; "Adonis belt" and deep core definition; broad square shoulders and a narrow, powerful waist; moderate-to-tall vertical (6'0"-6'2"); extremely high muscle density with sharp vascularity; movements are precise, economical, and explosive.
+* **Face:** Severe-classical structure; sharp, chiseled features; high nasal bridge; deep-set, hawk-like amber-brown eyes; prominent cheekbones and a squared, resolute jawline; neutral expression is intense and watchful, radiating a sense of absolute focus.
+* **Hair:** Type 1B-2A; medium density; disciplined short-to-medium silhouette; no defined part; low sheen; tight, disciplined crop or rough swept-back style. Dark chestnut or black.
+* **Skin:** Deep olive; warm golden undertones; smooth firm texture; surgically-precise scars on pectoral and outer thigh; tanned.
+**Outfit:**
+- **Top:** Softball jersey for **Standard Team** in **white** with **black** accents
+- **Bottom:** Softball pants
+- **Footwear:** Cleats
+- **Accessories:** Cap.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Jordan Vance**
+**Appearance:**
+* **Body:** Dramatic; extremely tall vertical at 6'4"; narrow but powerfully muscled frame with very long limbs and large, capable hands; lean athletic density with defined abdominal markers and elongated, powerful leg muscles; springy and explosive presence.
+* **Face:** Sharp-balanced structure; long oval face with defined, high cheekbones; large almond-shaped dark brown eyes with long, voluminous lashes and an alert gaze; straight athletic nose; wide expressive mouth with full, defined lips often breaking into a confident, radiant grin; sharply defined jawline.
+* **Hair:** Type 4A–4B coils; high density; typically worn in long, sleek knotless braids that fall to her waist, often adorned with subtle gold beads or team-colored threads to maintain a polished, glamorous silhouette.
+* **Skin:** Deep ebony depth with neutral-cool undertones; smooth almost polished finish; athletic glow with visible muscle definition; long, manicured almond-shaped nails in a signature vibrant color or French tip.
+**Outfit:**
+- **Top:** Fitted **peplum top or off-shoulder blouse** (vibrant African print - Ankara, Kente, or Dashiki patterns in bold colors like orange, teal, purple, gold)
+- **Bottom:** pencil skirt or wide-leg pants (matching or complementary print, high-waist)
+- **Footwear:** strappy sandals or block heels.
+- **Accessories:** Statement earrings (large hoops or geometric designs), wrapped headscarf or headband in matching fabric, bangles, beaded necklace.
+- **Hair/Makeup:** Natural hair in afro, braids, locs, or twisted updo; bold makeup with warm tones, defined brows, glowing skin with golden undertones.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Leonidas Stratos giving Jordan Vance an enthusiastic high five, both smiling with celebratory energy

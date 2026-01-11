@@ -1,4 +1,4 @@
-tags: [Fantasy, Warrior, Priestess, Combat, Spiritual, Athletic]
+tags: [fantasy, warrior, priestess, combat, Spiritual, Athletic]
 modifiers:
   Staff: ", holding a tall wooden staff topped with a large {signature_color} spirit-crystal, its grip bound in weathered leather"
 

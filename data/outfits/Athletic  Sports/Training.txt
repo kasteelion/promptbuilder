@@ -1,4 +1,4 @@
-tags: [Combat, Sport]
+tags: [combat, Sport]
 
 [F]
 - **Top:** Fitted **sports bra** with minimal detailing
@@ -19,4 +19,3 @@ tags: [Combat, Sport]
 - **Footwear:** Athletic training shoes
 - **Accessories:** Lightweight grappling gloves, ankle tape for support
 - **Makeup:** Minimal makeup
-

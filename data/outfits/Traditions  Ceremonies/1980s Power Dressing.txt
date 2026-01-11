@@ -1,4 +1,4 @@
-tags: [Business, Retro, Vintage]
+tags: [Business, Retro, vintage]
 
 [F]
 - **Top:** Structured blazer (((default:bold color - red, royal blue, or fuchsia) or (signature)) with exaggerated shoulder pads, double-breasted with large buttons)
@@ -21,4 +21,3 @@ tags: [Business, Retro, Vintage]
 - **Footwear:** Pumps
 - **Accessories:** Chunky gold jewelry, briefcase
 - **Makeup:** Bright eyeshadow, bold blush, strong brows
-

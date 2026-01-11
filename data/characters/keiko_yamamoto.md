@@ -1,7 +1,7 @@
 ### Keiko Yamamoto
 **Photo:** keiko_yamamoto_photo.png
 
-**Tags:** female, japanese, athletic, creative, edgy, intense, sharp
+**Tags:**   female, athletic, creative, edgy, intense, japanese, sharp
 
 **Summary:** Sharp and rebellious, Keiko channels creative intensity through deliberate edge. Her athletic build and focused gaze give her an air of controlled defiance—artistic, disciplined, and unapologetically bold.
 
@@ -14,7 +14,7 @@
 **Appearance:**
 * **Body:** Flamboyant Gamine frame; straight athletic flesh; compact athletic proportions; petite vertical line; sharp and energized presence.
 * **Face:** Angular sculpted structure; square-leaning oval face; strong jawline; intense dark brown eyes; restrained confident expression that reflects her focused discipline.
-* **Hair:** Type 1 straight; medium density; dark black with matte texture; choppy layers and versatile alternative styling options; drawn to sharp, edgy cuts.
+* **Hair:** Type 1 straight; medium density; dark black with matte texture; choppy layers and versatile alternative styling options; drawn to sharp, Edgy cuts.
 * **Skin:** Light neutral skin with matte clarity; smooth even finish.
 
 **Age Presentation:** late 20s presentation; sharp, energized.

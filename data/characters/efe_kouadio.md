@@ -5,7 +5,7 @@
 
 **Summary:** Efe embodies the warmth and approachable charm of the girl next door with distinctly Nigerian flair. Her natural textured hair and luminous smile create an aura of genuine sweetness and self-assurance. She carries herself with an easy confidence that makes people feel immediately comfortable, radiating the kind of friendly energy that turns strangers into friends. Her style is playful yet put-together, mixing vibrant colors with casual comfort in a way that feels effortlessly cute and authentically her.
 
-**Tags:** black, female, approachable, commanding, minimalist, playful, textured-hair
+**Tags:**   black, approachable, commanding, female, minimalist, playful, textured-hair
 
 **Gender:** F
 **Signature Color:** #FF7F50
@@ -32,7 +32,7 @@
 // - Nigerian influences: Rich warm colors (coral, yellow, orange, purple), gold jewelry always, vibrant prints occasionally, warm expressive energy
 // - Color palette: Warm vibrant colors (coral, mustard, burnt orange, plum, burgundy), soft pastels, comfortable neutrals (cream, tan, soft gray)
 // - Signature elements: Luminous dewy skin, dimpled smile, natural bouncy hair, gold jewelry (always), playful accessories
-// - Cute markers: Fitted tees with fun details, high-waist denim, casual sundresses, sneakers or sandals, colorful hair accessories
+// - Cute markers: Fitted tees with fun details, high-waist denim, Casual sundresses, sneakers or sandals, colorful hair accessories
 // - Girl-next-door aesthetic: Approachable, sweet, slightly playful but never overdone—the kind of girl you’d chat with at the market or coffee shop
 // - Outfit formula: Fitted comfortable top + high-waist bottom + bouncy natural hair + gold jewelry + friendly smile
 // - Style range: Casual-cute everyday (fitted tees, jeans, sneakers) to sweet-feminine (sundresses, sandals, hair accessories)

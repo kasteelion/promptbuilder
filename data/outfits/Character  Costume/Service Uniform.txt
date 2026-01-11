@@ -1,4 +1,4 @@
-tags: [Butler, Costume, Maid]
+tags: [Butler, costume, Maid]
 
 [F]
 - **Top:** Traditional **black dress with white apron** (knee-length)
@@ -21,4 +21,3 @@ tags: [Butler, Costume, Maid]
 - **Footwear:** Black Mary Jane shoes
 - **Accessories:** White lace headpiece (on hijab), white wrist cuffs
 - **Makeup:** Neat, polished styling
-

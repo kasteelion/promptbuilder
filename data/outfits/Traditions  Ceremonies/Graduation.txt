@@ -1,4 +1,4 @@
-tags: [Event, Formal]
+tags: [event, formal]
 
 [F]
 - **Top:** Black academic gown (floor-length polyester with bell sleeves, open front)
@@ -21,4 +21,3 @@ tags: [Event, Formal]
 - **Footwear:** Dress shoes
 - **Accessories:** Mortarboard cap, tassel, diploma
 - **Makeup:** Polished photo-ready makeup
-

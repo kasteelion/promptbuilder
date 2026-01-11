@@ -11,8 +11,8 @@ import sys
 import traceback
 from typing import Optional
 
-from cli import parse_cli
-from debug_log import close_debug_log, init_debug_log, log
+from utils.cli import parse_cli
+from utils.debug_log import close_debug_log, init_debug_log, log
 
 
 class Runner:
@@ -27,7 +27,7 @@ class Runner:
 
     def _check_python_compatibility(self) -> None:
         if sys.version_info < (3, 8):
-            from compat import print_version_error
+            from utils.compat import print_version_error
 
             print_version_error()
             sys.exit(1)
@@ -60,7 +60,7 @@ class Runner:
 
         if self.cli_args.check_compat:
             try:
-                from compat import print_compatibility_report
+                from utils.compat import print_compatibility_report
 
                 print_compatibility_report()
             except ImportError:
@@ -71,7 +71,7 @@ class Runner:
         try:
             import tkinter as tk
         except ImportError:
-            from compat import print_tkinter_error
+            from utils.compat import print_tkinter_error
 
             print_tkinter_error()
             close_debug_log()

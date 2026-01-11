@@ -1,4 +1,4 @@
-tags: [Event, Semi-Formal, Spring]
+tags: [event, Semi-Formal, Spring]
 
 [F]
 - **Top:** Floral midi dress (((default:pastel floral print on light background) or (signature)), flowing fabric like chiffon or cotton, fit-and-flare or wrap style)
@@ -21,4 +21,3 @@ tags: [Event, Semi-Formal, Spring]
 - **Footwear:** Heeled sandals or flats
 - **Accessories:** Straw hat, woven bag
 - **Makeup:** Soft pinks, fresh spring look
-

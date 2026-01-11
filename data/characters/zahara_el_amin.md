@@ -1,7 +1,7 @@
 ### Zahara El-Amin
 **Photo:** zahara_elamin_photo.png
 
-**Tags:** north-african, female, intellectual, creative, hijabi, cultural, chic
+**Tags:**   north-african, chic, creative, cultural, female, hijabi, intellectual
 
 **Summary:** Zahara is a visionary architect who views the world through the lens of Moorish geometry and modern minimalism. Her presence is a deliberate blend of historical depth and contemporary sharp-intelligence. She is often found with a sketchbook in hand, translating the intricate patterns of the Alhambra into modern structural designs. Her style is impeccable, defined by high-contrast silks and an observant, analytical gaze.
 
@@ -18,7 +18,7 @@
 * **Skin:** Rich mahogany depth with warm, luminous undertones (Sub-Saharan/North African transition); smooth matte finish; clear, even complexion that catches the light on high points of the face.
 
 **Age Presentation:** early 30s; mature, professional, and intellectually formidable.
-**Vibe / Energy:** intellectual, creative, chic, focused, cultural.
+**Vibe / Energy:** intellectual, creative, Chic, focused, cultural.
 **Bearing:** composed and still; every movement is precise and economical; stands with a perfectly straight back, radiating a sense of quiet authority.
 
 // Style Notes:

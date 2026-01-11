@@ -1,4 +1,4 @@
-tags: [Fantasy, Healer, Holy]
+tags: [fantasy, healer, Holy]
 
 [F]
 - **Top:** White or cream hooded robes (flowing with gold trim and holy symbols)
@@ -21,4 +21,3 @@ tags: [Fantasy, Healer, Holy]
 - **Footwear:** Simple sandals or modest boots
 - **Accessories:** Holy symbol necklace, staff, prayer beads
 - **Makeup:** Soft natural makeup, compassionate expression
-

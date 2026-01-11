@@ -1,4 +1,4 @@
-tags: [Boxing, Combat, Sport]
+tags: [Boxing, combat, Sport]
 modifiers:
   Headgear: , wearing protective padded boxing headgear in {secondary_color},
 
@@ -14,7 +14,7 @@ modifiers:
 - **Bottom:** bare chest or fitted **athletic tank** in **{primary_color}**
 - **Footwear:** high-waist **satin boxing shorts** in **{primary_color}** featuring a **wide 4-inch {secondary_color} elastic waistband** with the **{team}** name embroidered in **bold block letters**; deep **side-slits** for maximum leg movement; **matching {primary_color} hand wraps** visible under **12oz pro-style boxing gloves** in **{accent}** with a **matte finish**; **high-top boxing shoes** ({accent}) with thin rubber soles and pivot-point traction.
 - **Accessories:** Clear mouthguard, athletic tape on wrists.
-- **Hair/Makeup:** Hair short or tied back, intense focused gaze, sheen of sweat on chest and shoulders.
+- **Hair/Makeup:** Hair short or tied back, Intense focused gaze, sheen of sweat on chest and shoulders.
 
 [H]
 - **Hijab:** Breathable sports hijab in **{primary_color}** (secure aerodynamic wrap with a **matte finish**)
@@ -23,4 +23,3 @@ modifiers:
 - **Footwear:** High-top boxing shoes ({accent}) with thin rubber soles
 - **Accessories:** 10oz pro-style boxing gloves in **{accent}** with a **glossy finish**, matching hand wraps, clear mouthguard
 - **Makeup:** Focused intensity, minimal waterproof makeup
-

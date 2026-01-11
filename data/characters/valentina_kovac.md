@@ -1,7 +1,7 @@
 ### Valentina "Tina" Kovač
 **Photo:** valentina_tina_kovač_photo.png
 
-**Tags:** eastern-european, female, romani, thin, bohemian, creative, edgy, adventurous, intense, angular
+**Tags:**   eastern-european, adventurous, angular, bohemian, creative, edgy, female, intense, romani, thin
 
 **Summary:** Tina moves through the world like smoke—elusive, ethereal, impossible to pin down. Her Romani heritage shows in her restless energy and natural theatricality, while her ectomorphic build gives her an almost otherworldly quality. She's all angles and intensity, burning through life with creative fire that seems to consume her slight frame. Street art is her language, and the city is her canvas. There's a wildness to her that civilized spaces can't quite contain.
 
@@ -10,7 +10,7 @@
 
 **Appearance:**
 * **Body:** Dramatic frame; straight thin flesh with minimal softness; narrow angular proportions with long limbs, prominent joints (elbows, wrists, knees), flat planes, minimal bust (A cup), straight hips, long fingers and toes; tall-moderate vertical (5'8"-5'9"); very low body density—visible bone structure, delicate appearance but wiry strength, lean muscle definition without bulk; bird-like presence that seems too delicate yet surprisingly resilient.
-* **Face:** Sharp angular structure; long oval-to-diamond face; high prominent cheekbones creating dramatic shadows; deep-set eyes, almond-shaped, close-set, intense dark brown to black with penetrating gaze; strong straight nose with high bridge; defined angular jawline; hollow cheeks even at healthy weight; neutral resting expression is intense and assessing with slight suspicious edge—reads as guarded or challenging.
+* **Face:** Sharp angular structure; long oval-to-diamond face; high prominent cheekbones creating dramatic shadows; deep-set eyes, almond-shaped, close-set, Intense dark brown to black with penetrating gaze; strong straight nose with high bridge; defined angular jawline; hollow cheeks even at healthy weight; neutral resting expression is intense and assessing with slight suspicious edge—reads as guarded or challenging.
 * **Hair:** Type 2C-3A waves/curls; medium-high density but fine texture; long length past shoulders; no defined part, tousled and wild; matte-to-low sheen finish; deliberately unkempt aesthetic; commonly worn loose and chaotic, half-up with tendrils escaping, or messy bun with pieces falling; deep black-brown with occasional henna-red undertones or temporary colored streaks (artistic expression).
 * **Skin:** Light-olive with warm golden undertones (Roma coloring); smooth but slightly weathered from outdoor living/art-making; paint stains semi-permanent on hands and forearms; small scattered tattoos (DIY stick-and-poke aesthetic); natural bohemian finish.
 

@@ -1,4 +1,4 @@
-tags: [Bridal, Event, Formal, Wedding]
+tags: [Bridal, event, formal, Wedding]
 
 [F]
 - **Top:** Elegant floor-length wedding gown (white or ivory lace and silk, sweetheart neckline, flowing silhouette)
@@ -21,4 +21,3 @@ tags: [Bridal, Event, Formal, Wedding]
 - **Footwear:** White satin heeled pumps
 - **Accessories:** Pearl necklace, bridal bouquet of fresh flowers, delicate gold bracelet
 - **Makeup:** Soft romantic makeup with glowing skin and soft pink tones
-

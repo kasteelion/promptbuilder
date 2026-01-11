@@ -1,4 +1,4 @@
-tags: [Lounge, Relax, Spa]
+tags: [lounge, Relax, Spa]
 
 [F]
 - **Top:** Plush terry cloth robe (((default:white) or (signature)), knee-length with shawl collar, belt tie at waist)
@@ -21,4 +21,3 @@ tags: [Lounge, Relax, Spa]
 - **Footwear:** Spa slippers
 - **Accessories:** Cucumber slices, face mask applied
 - **Makeup:** Glowing fresh skin, relaxation mode
-

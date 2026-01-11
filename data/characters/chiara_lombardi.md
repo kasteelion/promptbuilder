@@ -1,7 +1,7 @@
 ### Chiara Lombardi
 **Photo:** chiara_lombardi_photo.png
 
-**Tags:** female, mediterranean, chic, creative, intellectual, minimalist, playful, vintage-inspired
+**Tags:**   female, chic, creative, intellectual, mediterranean, minimalist, playful, vintage-inspired
 
 **Summary:** Cultured and self-possessed, Chiara blends artistic sensibility with timeless sophistication. Her confidence is subtle and knowing, expressed through measured movement, expressive eyes, and an ease that suggests experience and depth.
 

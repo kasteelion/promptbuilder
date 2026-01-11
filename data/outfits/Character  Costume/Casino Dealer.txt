@@ -1,4 +1,4 @@
-tags: [Costume, Job]
+tags: [costume, Job]
 
 [F]
 - **Top:** Sleek **black satin bodysuit**
@@ -20,4 +20,3 @@ tags: [Costume, Job]
 - **Footwear:** Black dress shoes or heels
 - **Accessories:** Tall black rabbit ears (worn over hijab), white bow tie, white wrist cuffs
 - **Makeup:** Soft elegant makeup, realistic anime shading
-

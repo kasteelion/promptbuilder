@@ -1,4 +1,4 @@
-tags: [Bold, Fashion, Formal]
+tags: [Bold, Fashion, formal]
 
 [F]
 - **Top:** Off-shoulder mini dress (black bodycon silhouette, structured fit)
@@ -7,7 +7,7 @@ tags: [Bold, Fashion, Formal]
 - **Hair/Makeup:** Loose waves or beachy curls with natural volume, natural glam makeup with defined eyes and nude lip.
 
 [M]
-- **Top:** Black tailored suit (slim fit, modern cut)
+- **Top:** Black tailored suit (slim fit, Modern cut)
 - **Bottom:** white dress shirt (crisp)
 - **Footwear:** velvet bow tie or tie (((default:black or deep jewel tone) or (signature))).
 - **Accessories:** Pocket square (white or matching tie), polished dress shoes, cufflinks.
@@ -20,4 +20,3 @@ tags: [Bold, Fashion, Formal]
 - **Footwear:** Strappy heels
 - **Accessories:** Delicate gold necklace, rings
 - **Makeup:** Natural glam makeup with defined eyes and nude lip
-

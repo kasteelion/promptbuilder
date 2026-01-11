@@ -1,7 +1,7 @@
 ### Julian Blackwood
 **Photo:** julian_blackwood_photo.jpeg
 
-**Tags:** male, caucasian, alternative, goth, romantic, soft, creative
+**Tags:**   male, alternative, caucasian, creative, goth, romantic, soft
 
 **Summary:** Julian is a study in dark romanticism—a modern poet with the soul of a Victorian ghost. He rejects traditional masculinity for something softer, more ornate, and emotionally fluid. He exists in dimly lit coffee shops and backstage shadows, carrying an air of beautiful melancholy that draws people in who want to be understood.
 

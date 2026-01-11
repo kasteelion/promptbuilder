@@ -1,7 +1,7 @@
 ### Diesel Murphy
 **Photo:** diesel_murphy_photo.png
 
-**Tags:** female, rugged, commanding, lesbian
+**Tags:**   female, commanding, lesbian, rugged
 
 **Summary:** Diesel lives with wrench in hand and grease under her nails. Her butch presentation is authentic feminine masculinity—she's unmistakably a woman who simply expresses herself through masculine aesthetics and body language. In male-dominated garage spaces, she commands respect through skill and quiet confidence rather than trying to be "one of the guys." Vintage cars are her language of love and precision, and she speaks it fluently with calloused hands and an encyclopedic knowledge of carburetors.
 
@@ -34,7 +34,7 @@
 //- Signature elements: steel-toe boots always, worn-in jeans, flannel shirts (sleeves rolled to show forearms), work gloves hanging from back pocket, grease rag
 //- Vintage car culture: classic rock aesthetic, hot rod references, knows every engine sound, car show regular
 //- Butch lesbian identity markers: intentional masculine presentation, carabiner on belt loop, short practical nails, confident claiming of space, part of visible queer community
-//- Physical tells of femaleness: hip structure visible even in loose pants, chest binding not present (small chest, sports bra suffices), hand size proportional to female frame, facial structure clearly female despite angular features
+//- Physical tells of femaleness: hip structure visible even in loose pants, chest binding not present (small chest, Sport bra suffices), hand size proportional to female frame, facial structure clearly female despite angular features
 //- Color palette: navy blue, charcoal gray, black, olive green, rust orange (vintage car colors)
 //- Always carries: multi-tool, shop rag, car keys on carabiner
 //- Practical modifications: reinforced work pants, doubled fabric at knees, pockets everywhere

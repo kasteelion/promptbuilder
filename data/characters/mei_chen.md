@@ -2,7 +2,7 @@
 **Photo:** mei_chen_photo.png
 
 **Photo:** [mei_chen_photo.png]
-**Tags:** chinese-american, female, curvy, plus-size, edgy, approachable, commanding, playful
+**Tags:**   chinese-american, approachable, commanding, curvy, edgy, female, playful, plus-size
 **Summary:** Mei blends voluptuous curves with youthful sweetness in an unexpectedly magnetic combination. Her petite stature concentrates her curves into a compact, attention-commanding presence—soft and inviting yet undeniably provocative. She navigates femininity with playful confidence, mixing kawaii aesthetics with body-conscious choices that celebrate her figure. There's a knowing quality to her sweetness, a self-awareness that makes her charm feel deliberate rather than accidental.
 **Gender:** F
 **Signature Color:** #FF69B4
@@ -22,7 +22,7 @@
 //Style preferences: body-conscious cute silhouettes that celebrate curves—crop tops, fitted knits, mini skirts, off-shoulder pieces in soft feminine tones with playful edge—baby pink, lavender, white, soft blue, cream, black accents
 //Jewelry preference: silver and white gold, delicate layered pieces with cute charms
 //General vibe: kawaii meets sensual, playfully provocative, sweet femininity with confident body awareness
-//Asian-American aesthetic: K-fashion and J-fashion influences, cute accessories, modern East Asian beauty standards
+//Asian-American aesthetic: K-fashion and J-fashion influences, cute accessories, Modern East Asian beauty standards
 //Carries youthful confidence—body-positive, playfully flirtatious, sweetly self-aware
 //Style balances cute and provocative; emphasizes curves through fitted silhouettes while maintaining youthful sweetness
 //Signature element: mixing kawaii accessories with body-conscious cuts

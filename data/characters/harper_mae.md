@@ -3,7 +3,7 @@
 
 **Summary:** Harper Mae embodies Southern warmth with an effortless, sun-kissed charm. Her presence feels like a front porch summer afternoon—sweet tea, genuine laughter, and the kind of hospitality that makes everyone feel like family. She radiates approachable beauty, where freckles and natural grace create a girl-next-door magnetism that's impossible to resist.
 
-**Tags:** female, approachable, minimalist, freckled, southern, sun-kissed
+**Tags:**   female, approachable, freckled, minimalist, southern, sun-kissed
 
 **Gender:** F
 **Signature Color:** #FFD700
@@ -33,4 +33,3 @@
 - **Footwear:** Cognac brown leather gladiator sandals with braided straps
 - **Accessories:** Delicate gold layered necklaces (one with small magnolia pendant), small gold hoop earrings, woven straw crossbody bag with leather trim, thin leather wrap bracelet
 - **Hair/Makeup:** Hair in loose beachy waves with half-up style secured by small claw clip; natural dewy makeup emphasizing freckles with peachy blush and glossy nude-pink lip
-

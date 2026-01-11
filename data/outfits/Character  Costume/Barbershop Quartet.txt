@@ -1,4 +1,4 @@
-tags: [Costume, Music, Vintage]
+tags: [costume, Music, vintage]
 
 [F]
 - **Top:** Classic **pinstriped vest** over **white button-up shirt**
@@ -21,4 +21,3 @@ tags: [Costume, Music, Vintage]
 - **Footwear:** Oxford shoes
 - **Accessories:** Bowtie (((default:red) or (signature))), boater hat with ribbon, arm garters
 - **Makeup:** Polished vintage-inspired makeup
-

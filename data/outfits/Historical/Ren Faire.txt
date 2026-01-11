@@ -1,4 +1,4 @@
-tags: [Fantasy, Historical]
+tags: [fantasy, historical]
 
 [F]
 - **Top:** Medieval-inspired outfit with flowing fabrics in ((default:earthy tones) or (signature))
@@ -21,4 +21,3 @@ tags: [Fantasy, Historical]
 - **Footwear:** Leather boots
 - **Accessories:** Fantasy jewelry, decorative belt, small pouch
 - **Makeup:** Natural or fantasy-inspired makeup
-

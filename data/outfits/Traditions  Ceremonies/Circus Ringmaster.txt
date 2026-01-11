@@ -1,4 +1,4 @@
-tags: [Circus, Costume, Performance]
+tags: [Circus, costume, Performance]
 
 [F]
 - **Top:** Red tailcoat jacket (((default:bright red) or (signature)) with gold military-style buttons and trim, fitted through torso with dramatic tails)
@@ -21,4 +21,3 @@ tags: [Circus, Costume, Performance]
 - **Footwear:** Tall boots
 - **Accessories:** Top hat, white gloves, baton
 - **Makeup:** Theatrical definition, red lips
-

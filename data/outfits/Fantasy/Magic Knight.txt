@@ -1,4 +1,4 @@
-tags: [Combat, Fantasy, Magic]
+tags: [combat, fantasy, Magic]
 
 [F]
 - **Top:** Enchanted armor (lighter plate with magical runes glowing along edges)
@@ -21,4 +21,3 @@ tags: [Combat, Fantasy, Magic]
 - **Footwear:** Mystical armored boots
 - **Accessories:** Enchanted sword, spellbook, glowing runes
 - **Makeup:** Powerful expression, hints of magical glow
-

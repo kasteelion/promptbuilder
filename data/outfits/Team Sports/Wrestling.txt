@@ -1,4 +1,4 @@
-tags: [Combat, Sport, Wrestling]
+tags: [combat, Sport, Wrestling]
 
 [F]
 - **Top:** Fitted **singlet** in **{primary_color} with {secondary_color} accents** (lycra/spandex performance fabric with team logo)
@@ -25,4 +25,3 @@ tags: [Combat, Sport, Wrestling]
 - **Makeup:** No makeup, hair tied back securely
 
 ---
-

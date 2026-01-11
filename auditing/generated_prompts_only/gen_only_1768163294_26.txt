@@ -1,0 +1,43 @@
+# METADATA
+Scene: Crowded living room, colored lights, people mingling, music playing, casual celebration energy.
+Base_Prompt: Low-Poly 3D
+Character: Diesel Murphy | Outfit: 1950s Server | Pose: None
+Score: 170
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Crowded living room, colored lights, people mingling, music playing, casual celebration energy.
+---
+
+**CHARACTER: Diesel Murphy**
+**Appearance:**
+* **Body:** Natural frame; straight athletic flesh with functional density; balanced proportions with broadened shoulders from upper body work, minimal waist definition, and straight hip line; moderate-to-tall vertical (5'7"-5'8"); working-class athletic build with developed forearms and shoulders from mechanical work, strong hands, visible core strength, practical muscle without aesthetic focus; distinctly female frame with masculine presentation and movement patterns; grounded capable presence.
+
+* **Face:** Balanced-angular structure; square-to-rectangular face shape with broad forehead and strong defined jawline; minimal midface projection with subtle cheekbones; medium-to-small eyes with moderate-close spacing, hazel-brown color, minimal lid exposure, direct no-nonsense gaze; straight broad nose with flat bridge and squared tip; strong angular jawline with masculine definition; neutral resting expression shows calm confidence with closed-mouth straight line and steady assessing gaze; rare smile is crooked and genuine.
+
+* **Hair:** Type 2A; medium density; very short length (pixie-to-undercut style); no defined part, textured and pushed back; matte finish; commonly worn tousled and practical, sometimes with small amount of pomade for control; dark brown with sun-lightened tips from outdoor work.
+
+* **Skin:** Light-medium tone with neutral-warm undertones and natural matte finish; scattered scars on hands and forearms from mechanical work; permanent grease staining under short fingernails and in hand creases; sun exposure on forearms and face; textured from outdoor work.
+**Outfit:**
+- **Top:** Pastel blue vintage **1950s waitress dress** (soft matte cotton-blend fabric, crisp white pointed collar and sleeve cuffs, knee-length A-line skirt).
+- **Accessories:** None specified.
+- **Hair/Makeup:** None specified. worn tightly to enhance underbust contour
+**Pose/Action:**
+Dramatic back arch, head tilted back, arms gracefully positioned, showgirl flourish.
+---

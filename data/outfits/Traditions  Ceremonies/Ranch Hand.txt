@@ -1,4 +1,4 @@
-tags: [Job, Outdoor, Western]
+tags: [Job, outdoor, Western]
 
 [F]
 - **Top:** Worn denim work shirt (((default:faded blue) or (signature)), long sleeves rolled to forearm, slightly distressed)
@@ -21,4 +21,3 @@ tags: [Job, Outdoor, Western]
 - **Footwear:** Sturdy work boots
 - **Accessories:** Leather gloves, leather belt
 - **Makeup:** Natural sun-kissed skin, minimal makeup
-

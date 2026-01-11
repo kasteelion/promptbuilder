@@ -1,4 +1,4 @@
-tags: [Chic, Fashion, Formal]
+tags: [Chic, Fashion, formal]
 
 [F]
 - **Top:** Structured **black blazer** draped over shoulders
@@ -21,4 +21,3 @@ tags: [Chic, Fashion, Formal]
 - **Footwear:** Pointed-toe pumps or stilettos
 - **Accessories:** Designer sunglasses, quilted leather handbag, gold hoops
 - **Makeup:** Low low-maintenance chic, bold red lip
-

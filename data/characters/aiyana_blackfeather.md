@@ -1,7 +1,7 @@
 ### Aiyana Blackfeather
 **Photo:** aiyana_blackfeather_photo.png
 
-**Tags:** female, indigenous, athletic, chic, creative, traditional, commanding, cultural, minimalist
+**Tags:**   female, athletic, chic, commanding, creative, cultural, indigenous, minimalist, traditional
 
 **Summary:** Aiyana moves between worlds with the grace of someone deeply rooted in both. Her powwow dancing carries generations of tradition in every precise footfall, while her contemporary presence speaks to Indigenous identity that refuses to be confined to the past. She embodies cultural continuity—honoring ancestors while claiming space in the present with athletic power and unshakeable dignity.
 
@@ -34,4 +34,4 @@
 **Outfits:**
 
 #### Base
-Minimalist Suede Top (rich terracotta color, soft genuine suede texture, modern boxy cut with cap sleeves, matte finish); High-Waist Jeans (dark indigo wash, straight leg cut, rigid premium denim, structured fit). Accessories: Large turquoise and silver squash blossom necklace (statement piece), turquoise stud earrings, heavy silver cuff bracelet with traditional stamping, small leather medicine bag on thin cord. Hair/Makeup: Two waist-length braids wrapped with leather strips and beaded ties; fresh natural skin with defined brows.
+Minimalist Suede Top (rich terracotta color, soft genuine suede texture, Modern boxy cut with cap sleeves, matte finish); High-Waist Jeans (dark indigo wash, straight leg cut, rigid premium denim, structured fit). Accessories: Large turquoise and silver squash blossom necklace (statement piece), turquoise stud earrings, heavy silver cuff bracelet with traditional stamping, small leather medicine bag on thin cord. Hair/Makeup: Two waist-length braids wrapped with leather strips and beaded ties; fresh natural skin with defined brows.

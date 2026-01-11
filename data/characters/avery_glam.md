@@ -1,7 +1,7 @@
 ### Avery Blake
 **Photo:** avery_blake_photo.png
 
-**Tags:** female, athletic, creative, edgy, commanding, dramatic
+**Tags:**   female, athletic, commanding, creative, dramatic, edgy
 
 **Summary:** Avery embodies dangerous glamour—a rock goddess who traded the stage for the ring without losing an ounce of attitude. Her presence is dark, dramatic, and unapologetically provocative: jet-black hair cascading like a curtain, smokey eyes that could stop traffic, and an edge sharp enough to draw blood. She moves with calculated sensuality and fierce confidence, equal parts seductress and warrior.
 
@@ -22,7 +22,7 @@
 
 **Vibe / Energy:** edgy, provocative, rebellious, darkly glamorous, fiercely confident.
 
-**Bearing:** sensual movement, edgy
+**Bearing:** sensual movement, Edgy
 
 //Aesthetic inspired by rock-star wrestlers—where punk attitude meets ring performance
 //Dark dramatic makeup is signature—never seen without heavy smokey eyes
@@ -39,6 +39,5 @@
 - **Footwear:** knee-high boots
 - **Accessories:** Studded leather belt (worn through loops or slung low on hips), studded leather cuff bracelet, layered silver chain necklaces (mix of lengths), silver hoop or stud earrings,
 - **Hair/Makeup:** Pin-straight jet-black hair worn long and loose or half-up; signature heavy smokey eye makeup with black eyeshadow, thick black eyeliner, false lashes, nude-to-mauve lips, dramatic contour
-
 
 

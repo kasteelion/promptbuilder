@@ -1,4 +1,4 @@
-tags: [Cultural, Formal, Traditional]
+tags: [Cultural, formal, traditional]
 
 [F]
 - **Top:** Traditional **silk kimono** (vibrant color with intricate nature motifs like cranes or blossoms)
@@ -21,4 +21,3 @@ tags: [Cultural, Formal, Traditional]
 - **Footwear:** Tabi socks and zori sandals
 - **Accessories:** Obi (wide decorative sash), ornate kanzashi on hijab, decorative fan
 - **Makeup:** Traditional updo aesthetic, porcelain foundation, red lip
-

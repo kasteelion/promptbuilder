@@ -21,4 +21,3 @@ tags: [Sport, Team, Track]
 - **Footwear:** Track spikes or running shoes ({accent})
 - **Accessories:** Race number bib, hair secured
 - **Makeup:** Minimal makeup
-

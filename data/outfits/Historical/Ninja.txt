@@ -1,4 +1,4 @@
-tags: [Historical, Japan, Stealth]
+tags: [historical, japanese, Stealth]
 
 [F]
 - **Top:** Black or dark purple shinobi shozoku (fitted jacket and pants)
@@ -21,4 +21,3 @@ tags: [Historical, Japan, Stealth]
 - **Footwear:** Tabi boots
 - **Accessories:** Katana, shuriken, smoke bombs
 - **Makeup:** Focused eyes, disciplined expression
-

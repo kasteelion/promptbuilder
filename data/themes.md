@@ -241,4 +241,3 @@ accent_hover: "#9db3f5"
 border: "#414868"
 selected_bg: "#292e42"
 ```
-

@@ -1,4 +1,4 @@
-tags: [Cultural, Formal, Japan, Traditional]
+tags: [Cultural, formal, japanese, traditional]
 
 [F]
 - **Top:** Elegant **kimono** (silk in white, red, or gold with nature motifs - cherry blossoms, cranes)
@@ -21,4 +21,3 @@ tags: [Cultural, Formal, Japan, Traditional]
 - **Footwear:** Tabi socks and ornate sandals
 - **Accessories:** Ornate kanzashi on hijab, delicate fan, obi-inspired decorative belt
 - **Makeup:** Pale foundation base, subtle red lip, defined eyes
-

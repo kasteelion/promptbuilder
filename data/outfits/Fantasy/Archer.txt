@@ -1,4 +1,4 @@
-tags: [Combat, Fantasy, Range]
+tags: [combat, fantasy, Range]
 
 [F]
 - **Top:** Fitted leather jerkin or tunic (((default:forest green or olive) or (signature)) with mobility slits and reinforced stitching)
@@ -21,4 +21,3 @@ tags: [Combat, Fantasy, Range]
 - **Footwear:** Knee-high soft leather boots with flat soles
 - **Accessories:** Quiver with arrows, leather bracers, shooting glove, longbow or recurve bow, hooded cowl
 - **Makeup:** Sharp focused gaze, natural makeup or optional camouflage face paint
-

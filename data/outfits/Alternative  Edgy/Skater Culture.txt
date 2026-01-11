@@ -1,4 +1,4 @@
-tags: [Casual, Skate, Urban]
+tags: [Casual, Skate, urban]
 
 [F]
 - **Top:** Oversized **graphic t-shirt** (worn loose, vintage wash)
@@ -21,4 +21,3 @@ tags: [Casual, Skate, Urban]
 - **Footwear:** Canvas skate shoes
 - **Accessories:** Simple chain necklace, mini backpack
 - **Makeup:** Natural minimal makeup
-

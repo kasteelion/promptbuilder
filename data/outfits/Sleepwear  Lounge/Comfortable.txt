@@ -1,4 +1,4 @@
-tags: [Casual, Lounge, Sleep]
+tags: [Casual, lounge, sleep]
 
 [F]
 - **Top:** Soft **((default:pajama set) or (signature) pajama set)** (matching top and shorts/pants) or **nightgown**
@@ -25,4 +25,3 @@ tags: [Casual, Lounge, Sleep]
 - **Makeup:** No makeup
 
 ---
-

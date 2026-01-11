@@ -1,4 +1,4 @@
-tags: [Job, Professional, Service]
+tags: [Job, professional, Service]
 
 [F]
 - **Top:** Black button-down shirt (long or short sleeve, crisp)
@@ -21,4 +21,3 @@ tags: [Job, Professional, Service]
 - **Footwear:** Black non-slip work shoes
 - **Accessories:** Black waist apron (optional), server pad
 - **Makeup:** Minimal, professional
-

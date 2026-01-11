@@ -1,4 +1,4 @@
-tags: [Job, Military, Professional]
+tags: [Job, Military, professional]
 
 [F]
 - **Top:** Tailored **military tunic/jacket** (((default:olive drab, navy, or charcoal) or (signature)) with brass buttons and epaulettes)
@@ -21,4 +21,3 @@ tags: [Job, Military, Professional]
 - **Footwear:** Polished combat boots
 - **Accessories:** Rank insignia, service medals
 - **Makeup:** Focused heroic expression
-

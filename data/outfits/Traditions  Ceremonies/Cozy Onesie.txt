@@ -1,4 +1,4 @@
-tags: [Cute, Lounge, Sleep]
+tags: [Cute, lounge, sleep]
 
 [F]
 - **Top:** Full-body fleece onesie (((default:pastel pink or gray) or (signature)) with hood, zip-front closure, kangaroo pocket)
@@ -20,4 +20,3 @@ tags: [Cute, Lounge, Sleep]
 - **Footwear:** Fuzzy slipper boots
 - **Accessories:** Hot cocoa mug, stuffed animal
 - **Makeup:** No makeup, playful cozy expression
-

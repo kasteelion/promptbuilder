@@ -1,7 +1,7 @@
 ### Esme Dubois
 **Photo:** esme_dubois_photo.png
 **Summary:** Esme moves with quiet precision and ballet-trained grace. Her presence is refined and fluid, marked by discipline, elegance, and a serene confidence that feels effortless rather than performative.
-**Tags:** female, chic, creative, minimalist
+**Tags:**   female, chic, creative, minimalist
 **Gender:** F
 **Signature Color:** #FFB6C1
 

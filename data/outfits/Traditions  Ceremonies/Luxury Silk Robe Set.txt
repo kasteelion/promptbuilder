@@ -1,4 +1,4 @@
-tags: [Home, Lounge, Luxury]
+tags: [Home, lounge, luxury, Sexy]
 
 [F]
 - **Top:** Silk kimono-style robe (((default:champagne) or (signature)) pure silk charmeuse, mid-thigh length with contrast piping)
@@ -20,4 +20,3 @@ tags: [Home, Lounge, Luxury]
 - **Footwear:** Velvet slippers
 - **Accessories:** Silk sleep mask, pearl studs
 - **Makeup:** Fresh dewy skin, natural pink lip
-

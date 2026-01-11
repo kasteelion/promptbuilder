@@ -1,4 +1,4 @@
-tags: [Edgy, Fashion]
+tags: [Edgy, Fashion, cyberpunk]
 
 [F]
 - **Top:** Fitted **((default:red) or (signature)) turtleneck** (form-fitting knit)
@@ -21,4 +21,3 @@ tags: [Edgy, Fashion]
 - **Footwear:** Black heeled boots
 - **Accessories:** Black beret (worn over hijab), fingerless black leather gloves
 - **Makeup:** bold red lipstick, black winged eyeliner, subtle red eye shadow
-

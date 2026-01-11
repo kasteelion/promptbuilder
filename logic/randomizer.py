@@ -71,17 +71,43 @@ class PromptRandomizer:
 
     # Define tag aliases/groups to expand thematic matching
     TAG_ALIASES = {
-        "athletic": ["sport", "active", "training", "gym"],
-        "sport": ["athletic", "active"],
+        "athletic": ["sport", "sports", "active", "training", "gym"],
+        "sport": ["sports", "athletic", "active"],
+        "sports": ["sport", "athletic", "active"],
         "creative": ["art", "artistic"],
         "art": ["creative", "artistic"],
         "vintage": ["retro", "nostalgic", "old-school"],
         "retro": ["vintage", "nostalgic"],
         "soft": ["gentle", "calm", "pastel"],
         "edgy": ["alternative", "dark", "cool"],
-        "luxury": ["rich", "expensive", "elegant", "fashion"],
+        "luxury": ["rich", "expensive", "elegant", "fashion", "glamour"],
+        "glamour": ["luxury", "fashion", "elegant", "style"],
         "western": ["rugged", "outdoorsy", "casual", "edgy"],
         "cottagecore": ["soft", "nature", "vintage", "calm"],
+        "combat": ["action", "dynamic", "intense"],
+        "action": ["combat", "dynamic", "intense"],
+        "fantasy": ["magic", "mythology"],
+        "intense": ["dramatic", "dynamic"],
+        "dramatic": ["intense", "theatrical"],
+        "anime": ["japanese", "2d"],
+        "rugged": ["outdoor", "nature", "western", "action", "gritty"],
+        "commanding": ["urban", "office", "luxury", "formal", "work"],
+        "chic": ["fashion", "luxury", "urban", "modern", "city"],
+        "minimalist": ["modern", "studio", "clean", "simple", "indoor"],
+        "approachable": ["casual", "home", "cozy", "warm", "social"],
+        "playful": ["fun", "colorful", "casual", "active", "outdoor"],
+        "intellectual": ["library", "office", "quiet", "indoor", "school"],
+        "outdoorsy": ["nature", "hiking", "adventure", "park", "forest"],
+        "traditional": ["cultural", "history", "classic", "temple"],
+        # Bridges for under-represented styles
+        "japanese": ["anime", "manga"],
+        "modern": ["realistic", "contemporary", "urban"],
+        "casual": ["realistic", "everyday", "life"],
+        "detailed": ["high definition", "realistic"],
+        "portrait": ["photography", "realistic"],
+        # Universal Realism (Make Photorealistic the default baseline)
+        "female": ["realistic", "high definition", "photography"],
+        "male": ["realistic", "high definition", "photography"],
     }
 
     def _expand_tags(self, tags):
@@ -153,7 +179,7 @@ class PromptRandomizer:
                 
         return normal, mood, blocked
 
-    def randomize(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, candidates=5, match_outfits_prob=0.3):
+    def randomize(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, candidates=10, match_outfits_prob=0.3):
         """Generate multiple candidates and return the highest scoring one."""
         best_config = None
         best_score = -float('inf')
@@ -178,54 +204,124 @@ class PromptRandomizer:
         # But maybe it's useful? Let's leave it for now or explicitly remove it if strict schema needed.
         # best_config.pop("metadata", None)
         
+        if best_config and "metadata" in best_config:
+            best_config["metadata"]["score"] = best_score
+            
         return best_config
 
     def _score_candidate(self, config):
-        """Score a generated configuration based on heuristics."""
+        """Score a generated configuration based on heuristics for high-quality variety."""
         score = 0
+        breakdown = {
+            "mood_matches": 0,
+            "style_matches": 0,
+            "interaction_matches": 0,
+            "tag_matches": 0,
+            "diversity_bonus": 0,
+            "repetitive_penalty": 0,
+            "warnings": []
+        }
+        
         metadata = config.get("metadata", {})
-        active_moods = metadata.get("moods", set())
-        active_moods_lower = {m.lower() for m in active_moods}
         
-        # 1. Completeness (+5 for key sections)
-        if config.get("scene"):
-            score += 5
-        if config.get("notes"):
-            score += 5
-            
-        # 2. Mood Alignment (+10 per item matching mood)
-        if active_moods_lower:
-            for char in config.get("selected_characters", []):
-                # Check Outfit
-                outfit_name = char.get("outfit")
-                # We need to look up tags. Only possible if we have access to raw data.
-                # Assuming outfit name is unique per character, or we assume the randomizer did its job.
-                # But to VERIFY, we should look it up.
-                char_def = self.characters.get(char.get("name"), {})
-                outfits = char_def.get("outfits", {})
-                if outfit_name in outfits:
-                    data = outfits[outfit_name]
-                    tags = [t.lower() for t in self._get_tags(data)]
-                    if any(m in tags for m in active_moods_lower):
-                        score += 10
-                        
-                # Check Pose
-                pose_cat = char.get("pose_category")
-                if pose_cat and pose_cat in self.poses:
-                    # Check tags of the category (we assume category tags proxy for pose tags often)
-                    # We sadly don't verify individual pose preset tags easily here without doing a deep lookup
-                    # equivalent to the randomizer's work. 
-                    # Let's check the Category Name matches mood
-                    if any(m in pose_cat.lower() for m in active_moods_lower):
-                        score += 5
+        # Expand moods for broader matching
+        raw_moods = metadata.get("moods", [])
+        active_moods = self._expand_tags([m.lower() for m in raw_moods])
         
-        # 3. Repetitiveness Penalty
-        # Simple check for repeated unique words in description
-        text_content = (config.get("scene", "") + " " + config.get("notes", "")).lower()
-        words = [w for w in text_content.split() if len(w) > 4] # Ignore small words
-        if len(words) > len(set(words)) + 2: # Allow small overlap
-            score -= 5
+        if not active_moods:
+            breakdown["warnings"].append("No active moods/context found for thematic scoring.")
+
+        # 1. Base Structure (+5 each) - Always awarded for being a valid config
+        if config.get("scene"): score += 5
+        if config.get("notes"): score += 5
             
+        # 2. Art Style Alignment (+25 per matching expanded mood) - INCREASED FROM +15
+        base_prompt_name = config.get("base_prompt")
+        if base_prompt_name and active_moods:
+            base_style_data = self.base_prompts.get(base_prompt_name, {})
+            style_tags = self._expand_tags([t.lower() for t in self._get_tags(base_style_data)])
+            style_matches = len(style_tags.intersection(active_moods))
+            points = style_matches * 25  # INCREASED FROM 15
+            score += points
+            breakdown["style_matches"] = points
+            
+            # NEW: Style-Scene Mismatch Penalty (-30 if style blocks scene theme)
+            scene_tags = metadata.get("scene_tags", [])
+            scene_themes = self._expand_tags([t.lower() for t in scene_tags])
+            _, _, style_blocks = self._extract_special_tags(self._get_tags(base_style_data))
+            
+            for theme in scene_themes:
+                if theme in style_blocks:
+                    penalty = 30
+                    score -= penalty
+                    breakdown["mismatch_penalty"] = breakdown.get("mismatch_penalty", 0) - penalty
+                    breakdown["warnings"].append(f"Style '{base_prompt_name}' blocks scene theme '{theme}'")
+
+        # 3. Dynamic Thematic Character Alignment
+        selected_chars = config.get("selected_characters", [])
+        outfit_names = set()
+        
+        for char in selected_chars:
+            char_name = char.get("name")
+            char_def = self.characters.get(char_name, {})
+            outfit_name = char.get("outfit")
+            outfit_names.add(outfit_name)
+            
+            # A) Outfit Tags vs Scene Moods (+30 per match) - HIGHEST TIER, INCREASED FROM +20
+            outfits_dict = char_def.get("outfits", {})
+            outfit_data = outfits_dict.get(outfit_name)
+            if outfit_data and active_moods:
+                tags = self._expand_tags([t.lower() for t in self._get_tags(outfit_data)])
+                matches = len(tags.intersection(active_moods))
+                points = matches * 30  # INCREASED FROM 20
+                score += points
+                breakdown["mood_matches"] += points
+            elif not outfit_data and active_moods:
+                breakdown["warnings"].append(f"No outfit data found for {char_name}'s {outfit_name}")
+            
+            # B) Pose Alignment (+10 per category match) - MEDIUM TIER
+            pose_cat = char.get("pose_category")
+            if pose_cat and active_moods:
+                if any(m in pose_cat.lower() for m in active_moods):
+                    score += 10
+                    breakdown["tag_matches"] += 10
+                    
+            # C) Character Trait Alignment (+5 per match) - LOW TIER
+            char_tags = self._expand_tags([t.lower() for t in char_def.get("tags", [])])
+            char_matches = len(char_tags.intersection(active_moods))
+            points = char_matches * 5
+            score += points
+            breakdown["tag_matches"] += points
+
+        # 4. Interaction Alignment (+10 per match)
+        interaction_tags = self._expand_tags([t.lower() for t in metadata.get("interaction_tags", [])])
+        if interaction_tags and active_moods:
+            interaction_matches = len(interaction_tags.intersection(active_moods))
+            points = interaction_matches * 10
+            score += points
+            breakdown["interaction_matches"] = points
+
+        # 5. Group Diversity / Variety (+5 per unique outfit)
+        if len(selected_chars) > 1:
+            points = len(outfit_names) * 5
+            score += points
+            breakdown["diversity_bonus"] = points
+            
+        # 6. Repetitiveness Penalty (-2 per repeated word > 4 chars)
+        text_content = f"{config.get('scene', '')} {config.get('notes', '')}".lower()
+        clean_text = text_content.replace(',', ' ').replace('.', ' ').replace('!', ' ').replace('?', ' ')
+        words = [w for w in clean_text.split() if len(w) > 4]
+        seen_words = set()
+        penalty = 0
+        for w in words:
+            if w in seen_words:
+                penalty += 2
+            seen_words.add(w)
+        
+        score -= penalty
+        breakdown["repetitive_penalty"] = -penalty
+            
+        metadata["score_breakdown"] = breakdown
         return score
 
     def _generate_single_candidate(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, match_outfits_prob=0.3):
@@ -311,6 +407,12 @@ class PromptRandomizer:
                 _, scene_moods, scene_blocked = self._extract_special_tags(scene_tags)
                 context_moods.update(scene_moods)
                 context_blocked.update(scene_blocked)
+                
+                # Treat high-level scene tags as moods for scoring
+                CORE_THEMES = {"fantasy", "cyberpunk", "sci-fi", "noir", "sports", "western", "historical", "alternative"}
+                for t in scene_tags:
+                    if t.lower() in CORE_THEMES:
+                        context_moods.add(t.strip())
 
         # Move Color Scheme selection down (after characters are randomized)
         color_scheme = "Default (No Scheme)"
@@ -337,9 +439,14 @@ class PromptRandomizer:
                 context_moods.update(bp_mood)
                 context_blocked.update(bp_blocked)
                 
+                # Treat high-level art style tags as moods for scoring if they are significant
+                CORE_THEMES = {"fantasy", "cyberpunk", "sci-fi", "noir", "sports", "western", "historical", "alternative"}
                 for t in tags:
-                    base_prompt_tags.add(t.lower())
-        
+                    t_lower = t.lower()
+                    base_prompt_tags.add(t_lower)
+                    if t_lower in CORE_THEMES:
+                        context_moods.add(t.strip())
+
         # Add Moods to Base Tags for theming
         # Moods act as strong theme drivers
         base_prompt_tags.update([m.lower() for m in context_moods])
@@ -397,9 +504,10 @@ class PromptRandomizer:
 
         # Generate notes
         notes_text = ""
+        interaction_tags = []
         if generate_interaction:
             # Smart Interaction Selection
-            notes_text = self._generate_random_notes(
+            notes_text, interaction_tags = self._generate_random_notes(
                 selected_characters, 
                 scene_category, 
                 context_tags=character_context_tags,
@@ -414,6 +522,8 @@ class PromptRandomizer:
                 "High contrast with deep shadows.",
                 "Soft, dreamlike atmosphere."
             ])
+            # Give generic notes some generic tags for scoring
+            interaction_tags = ["cinematic", "lighting", "creative"]
 
         config = {
             "selected_characters": selected_characters,
@@ -422,7 +532,8 @@ class PromptRandomizer:
             "notes": notes_text,
             "color_scheme": color_scheme,
             "metadata": {
-                "moods": context_moods
+                "moods": list(context_moods),
+                "interaction_tags": interaction_tags
             }
         }
 
@@ -573,8 +684,9 @@ class PromptRandomizer:
 
         # 3. Select category
         selected_category = ""
-        # Boosted smart chance 
-        if matching_categories and random.random() < 0.9: 
+        # Reduced probability from 0.9 to 0.2 to prioritize variety/wholistic generation
+        # relying on Outfit adaptation to maintain coherence (Scene-First approach)
+        if matching_categories and random.random() < 0.2: 
             selected_category = random.choice(matching_categories)
         else:
             selected_category = random.choice(available_categories)
@@ -726,6 +838,24 @@ class PromptRandomizer:
         available_categories = list(categorized_outfits.keys())
         matching_categories = list(preferred_categories)
 
+        # -- CONTEXT-AWARE BLOCKING (Logic Update) --
+        # Block specific categories based on scene
+        blocked_categories = set()
+        
+        scene_lower = scene_category.lower()
+        if any(x in scene_lower for x in ["gym", "sports", "training", "workout"]):
+            blocked_categories.update(["Formal", "Business", "Evening", "Gala", "Elegant"])
+        elif any(x in scene_lower for x in ["office", "street", "winter", "city", "urban"]):
+            blocked_categories.update(["Swimwear", "Bikini", "Lingerie"])
+        
+        # Filter available and matching categories
+        available_categories = [c for c in available_categories if c not in blocked_categories]
+        matching_categories = [c for c in matching_categories if c not in blocked_categories]
+        
+        # If we blocked everything, revert to available (safety net)
+        if not available_categories:
+             available_categories = list(categorized_outfits.keys())
+
         # 3. Selection
         target_category = ""
         # Boosted smart chance 
@@ -744,8 +874,16 @@ class PromptRandomizer:
             valid_outfits = []
             for name, data in outfits_in_cat.items():
                  item_tags = [t.lower() for t in self._get_tags(data)]
+                 
+                 # DEBUG PRINT
+                 if "noir" in blocked_tags or "pop" in blocked_tags:
+                    print(f"[DEBUG] Checking {name}: tags={item_tags}, blocked={blocked_tags}")
+                 
                  if not any(bt in item_tags for bt in blocked_tags):
                      valid_outfits.append(name)
+                 else:
+                     # pass
+                     print(f"[DEBUG] BLOCKED {name}")
             
             # If we filtered everything, try falling back to all available outfits (minus blocked)
             if not valid_outfits:
@@ -1023,16 +1161,17 @@ class PromptRandomizer:
                         if not template_tags_lower.intersection(context_tags_lower):
                             continue
                             
-                    eligible_templates.append(desc)
+                    eligible_templates.append((desc, tags))
 
         if eligible_templates:
-            template = random.choice(eligible_templates)
+            # Pick a random template and its tags
+            template_text, template_tags = random.choice(eligible_templates)
 
             # Fill template with character names
             char_names = [char["name"] for char in selected_characters]
-            return fill_template(template, char_names)
+            return fill_template(template_text, char_names), template_tags
             
-        return ""
+        return "", []
 
     def _select_smart_base_prompt(self, base_prompts, char_tags, scene_category):
         """Select a base prompt that matches character tags or scene context.
@@ -1074,7 +1213,15 @@ class PromptRandomizer:
                     preferred_prompts.add(name)
                     
         matching = list(preferred_prompts)
-        if matching and random.random() < 0.7:
+        
+        # DRASTIC MEASURE: Explicitly favor Photorealism if it is a valid match
+        # This ensures it becomes the "Default" style as requested by user.
+        photo_match = next((k for k in matching if "Photorealistic" in k), None)
+        if photo_match and random.random() < 0.5:
+            return photo_match
+
+        # Probability 0.65: Selection from matching pool
+        if matching and random.random() < 0.65:
              return random.choice(matching)
              
         # Fallback to completely random

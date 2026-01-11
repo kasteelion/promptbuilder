@@ -1,4 +1,4 @@
-tags: [Costume, Fancy, Vintage]
+tags: [costume, Fancy, vintage]
 
 [F]
 - **Top:** Elegant **white silk dressing gown** or **period evening dress** (lace trim, off-shoulder)
@@ -11,7 +11,7 @@ tags: [Costume, Fancy, Vintage]
 - **Bottom:** flowing **black cape** with red silk lining
 - **Footwear:** iconic **white half-mask** obscuring side of face.
 - **Accessories:** Rose prop, signet ring.
-- **Hair/Makeup:** Slicked back dark hair, intense shadowed eyes.
+- **Hair/Makeup:** Slicked back dark hair, Intense shadowed eyes.
 
 [H]
 - **Hijab:** Soft white silk or lace-trimmed hijab (flowing romantic drape)
@@ -20,4 +20,3 @@ tags: [Costume, Fancy, Vintage]
 - **Footwear:** Delicate white slippers or pumps
 - **Accessories:** Candelabra prop, delicate jewelry
 - **Makeup:** Romantic natural makeup, look of wonder
-

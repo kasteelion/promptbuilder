@@ -1,4 +1,4 @@
-tags: [Combat, Fantasy]
+tags: [combat, fantasy]
 
 [F]
 - **Top:** Fitted armor-inspired bodice (leather or faux-leather with metal accents)
@@ -21,4 +21,3 @@ tags: [Combat, Fantasy]
 - **Footwear:** Knee-high boots (sturdy with buckles)
 - **Accessories:** Arm bracers (worn over sleeves), utility belt with pouches, weapon prop (sword or bow)
 - **Makeup:** Natural makeup with defined features, warrior aesthetic
-

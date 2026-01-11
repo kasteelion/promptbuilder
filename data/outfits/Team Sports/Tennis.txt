@@ -21,4 +21,3 @@ tags: [Sport, Team, Tennis]
 - **Footwear:** Tennis shoes ({accent}, court-appropriate with reinforced toe)
 - **Accessories:** Visor in {primary_color} with {secondary_color} logo (worn over hijab) optional, matching wristbands, hair secured
 - **Makeup:** Minimal waterproof makeup with tinted lip balm, athletic glow
-

@@ -1,0 +1,82 @@
+# METADATA
+Scene: Urban asphalt court, chain-link fence, worn basketball hoop, city skyline in background, graffiti on walls, gritty athletic vibe.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Jin Park | Outfit: Japanese Harajuku Streetwear | Pose: None
+Character: Marisol Rivera | Outfit: Basketball | Pose: None
+Character: Marcus Thompson | Outfit: African Print Contemporary | Pose: None
+Interaction: Custom
+Score: 210
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Urban asphalt court, chain-link fence, worn basketball hoop, city skyline in background, graffiti on walls, gritty athletic vibe.
+---
+
+**CHARACTER: Jin Park**
+**Appearance:**
+* **Body:** Dramatic male frame; straight lean flesh; narrow rectangle proportions; moderate-to-tall vertical; poised and understated presence with natural grace.
+* **Face:** Long delicate facial structure; oval face; soft jawline; gentle observant eyes; reserved thoughtful expression that suggests deep introspection.
+* **Hair:** Type 1 straight; medium density; dark brown to black with soft matte finish; naturally fine texture; versatile K-fashion styling options.
+* **Skin:** Light neutral skin with smooth even finish and soft clarity. minimalist thin wire-frame glasses
+**Outfit:**
+- **Top:** Oversized **graphic hoodie or layered long-sleeve tees** (pastel or bold anime prints)
+- **Bottom:** wide-leg cargo pants (with straps, chains, and patches) or **plaid bondage pants**
+- **Footwear:** chunky platform sneakers.
+- **Accessories:** Bucket hat or beanie, crossbody bag with keychains, layered chain necklaces, fingerless gloves.
+- **Hair/Makeup:** Colorful hair streaks or styled messy hair, face stickers optional, bold street style.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing at a control panel, both hands on interface, leaning forward slightly, concentrated on screens, command center energy.
+---
+
+**CHARACTER 2: Marisol Rivera**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; compact balanced proportions with defined waist, toned limbs, and visible muscle definition; moderate vertical (5'5"-5'6"); athletic build with clean controlled lines, functional strength, and mixed-heritage features—Japanese bone structure with Puerto Rican curves, creating distinctive balanced aesthetics; athletic graceful presence.
+* **Face:** Balanced classical structure with mixed heritage features; oval face with subtle Japanese angularity softened by Puerto Rican warmth; firm clean planes; calm almond-shaped eyes that tilt slightly upward (Japanese influence) with warm expressive quality (Puerto Rican warmth), moderately spaced, dark brown; defined jawline; neutral expression shows calm composure with subtle knowing smile that brightens when engaged; beauty mark near left eye.
+* **Hair:** Type 1B-1C straight with slight natural wave; medium-high density; long sleek cut with healthy satin sheen; dark brown to black; versatile styling options including ponytails and braids.
+* **Skin:** Warm golden-olive skin with bronzed finish and natural radiance.
+**Outfit:**
+- **Top:** Basketball jersey for **Standard Team**  (sleeveless, wide shoulder cut)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Shooting sleeve, headband.
+- **Hair/Makeup:** Ponytail or bun.
+**Pose/Action:**
+full body shot showing the character from head to toe, Low wrestling stance, arms extended ready to engage, knees bent, explosive ready energy.
+---
+
+**CHARACTER 3: Marcus Thompson**
+**Appearance:**
+* **Body:** Natural male frame; straight athletic flesh; inverted rectangle proportions; moderate-to-tall vertical.
+* **Face:** Balanced-strong facial structure; square-leaning oval face; defined jaw; warm eyes; calm open expression.
+* **Hair:** Type 4A coils; medium density; short fade with textured top; clean lineup; matte-satin finish; black.
+* **Skin:** Deep brown skin with neutral undertones.
+**Outfit:**
+- **Top:** Dashiki shirt or fitted button-down (vibrant African print - Ankara, Kente, or Dashiki patterns in bold colors like orange, teal, purple, gold)
+- **Bottom:** matching trousers or solid colored chinos
+- **Footwear:** leather sandals or loafers.
+- **Accessories:** Beaded necklace or bracelet, leather wristband.
+- **Hair/Makeup:** Natural grooming, neat hairstyle.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe, Focused intently on cleaning or checking a weapon, sharp focus, dangerous calm, professional demeanor.
+---
+
+**Additional Notes:**
+Jin Park spinning Marisol Rivera around in joyful embrace.

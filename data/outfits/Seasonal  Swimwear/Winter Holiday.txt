@@ -1,4 +1,4 @@
-tags: [Formal, Seasonal, Winter]
+tags: [formal, Seasonal, Winter]
 
 [F]
 - **Top:** Velvet or satin dress (knee-length or midi in ((default:deep jewel tones - emerald, burgundy, navy) or (signature)))
@@ -21,4 +21,3 @@ tags: [Formal, Seasonal, Winter]
 - **Footwear:** Heeled boots or pumps in coordinating color
 - **Accessories:** Statement jewelry, small elegant clutch, elegant shawl
 - **Makeup:** Festive styling with shimmer, bold lip in berry or red tones
-

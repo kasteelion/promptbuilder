@@ -1,4 +1,4 @@
-tags: [Fashion, Performance, Pop]
+tags: [Fashion, Performance, pop]
 
 [F]
 - **Top:** Cropped athletic jacket (((default:holographic silver or pastel purple) or (signature)) with geometric panels, oversized fit worn off one shoulder)
@@ -21,4 +21,3 @@ tags: [Fashion, Performance, Pop]
 - **Footwear:** Chunky platform sneakers
 - **Accessories:** Layered chains, hoop earrings, LED accessories
 - **Makeup:** Glass skin, gradient lips, rhinestone stickers, idol glow
-

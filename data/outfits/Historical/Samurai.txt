@@ -1,4 +1,4 @@
-tags: [Combat, Historical, Japan]
+tags: [combat, historical, japanese]
 
 [F]
 - **Top:** Ornate d (chest armor) (lacquered plates in red, black, or gold with family crest)
@@ -21,4 +21,3 @@ tags: [Combat, Historical, Japan]
 - **Footwear:** Tabi boots or waraji with socks
 - **Accessories:** Katana, wakizashi, sash with family mon
 - **Makeup:** Honorable composed expression, natural features
-

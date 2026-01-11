@@ -1,4 +1,4 @@
-tags: [Fantasy, Nature, Range]
+tags: [fantasy, nature, Range]
 
 [F]
 - **Top:** Leather armor vest (brown or forest green with fur trim)
@@ -21,4 +21,3 @@ tags: [Fantasy, Nature, Range]
 - **Footwear:** Sturdy calf-high boots
 - **Accessories:** Longbow, quiver, hooded cloak, leather gloves
 - **Makeup:** Natural sun-kissed makeup, focused expression
-

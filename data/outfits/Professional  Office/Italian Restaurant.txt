@@ -1,4 +1,4 @@
-tags: [Job, Professional, Service]
+tags: [Job, professional, Service]
 
 [F]
 - **Top:** Crisp white button-down shirt (rolled sleeves or fitted)
@@ -27,4 +27,3 @@ tags: [Job, Professional, Service]
 - **Makeup:** Polished, classic look
 
 ---
-

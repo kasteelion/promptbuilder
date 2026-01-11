@@ -1,0 +1,48 @@
+# METADATA
+Scene: Professional photo studio, seamless backdrop, umbrella lights, reflectors, clean creative workspace.
+Base_Prompt: Low-Poly 3D
+Character: Isla MacLeod | Outfit: Retro Tracksuit | Pose: None
+Interaction: Custom
+Score: 175
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Professional photo studio, seamless backdrop, umbrella lights, reflectors, clean creative workspace.
+---
+
+**CHARACTER: Isla MacLeod**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; delicate balanced proportions; petite vertical; soft gentle presence.
+* **Face:** Soft delicate facial structure; heart-shaped face; gentle features; large dreamy eyes in gray-blue; soft dusting of freckles; serene contemplative expression.
+* **Hair:** Type 2A waves; fine-medium density; shoulder-length layered cut; loose natural part; soft wispy texture; matte-satin finish; auburn with natural red tones.
+* **Skin:** Fair cool-toned skin with soft pink undertones; light freckles across nose and cheeks.
+**Outfit:**
+- **Top:** Striped Camisole (fitted silhouette, spaghetti straps, horizontal red and white pin-stripes, cropped midriff length)
+- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, vintage dolphin hem cut)
+- **Footwear:** Oversized Bomber Jacket (matching red hue, worn slouched off-the-shoulders, voluminous sleeves, fabric draped around elbows).
+- **Accessories:** Simple gold pendant necklace, minimal jewelry.
+- **Hair/Makeup:** Low messy bun with loose face-framing strands; natural, fresh-faced makeup look with subtle lip color.
+
+---
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders, Soft lighting pose, face tilted toward light, serene expression, gentle wind in hair.
+---
+
+**Additional Notes:**
+Emphasis on the characters' expressions.

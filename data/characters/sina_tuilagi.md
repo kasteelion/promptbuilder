@@ -1,7 +1,7 @@
 ### Sina Tuilagi
 **Photo:** sina_tuilagi_photo.jpeg
 
-**Tags:** female, pacific-islander, athletic, strong, chic, commanding, cultural, tatau, traditional-modern-fusion
+**Tags:**   female, athletic, chic, commanding, cultural, pacific-islander, strong, tatau, traditional-modern-fusion
 
 **Gender:** F
 **Signature Color:** #FF8C00

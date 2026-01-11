@@ -1,4 +1,4 @@
-tags: [Edgy, Sci-Fi]
+tags: [Edgy, sci-fi]
 
 [F]
 - **Top:** Cropped **tech-fabric jacket** with asymmetric cut
@@ -21,4 +21,3 @@ tags: [Edgy, Sci-Fi]
 - **Footwear:** Platform boots with metallic accents
 - **Accessories:** LED accent jewelry, tech-inspired geometric pieces
 - **Makeup:** Bold graphic liner, futuristic styling
-

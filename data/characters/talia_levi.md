@@ -1,7 +1,7 @@
 ### Talia Levi
 **Photo:** talia_levi_photo.png
 
-**Tags:** female, israeli, mediterranean, edgy, commanding
+**Tags:**   female, commanding, edgy, israeli, mediterranean
 
 **Summary:** Noa commands attention through unapologetic sensuality and magnetic presence. Her confidence is body-forward and deliberate, moving through space with the kind of self-possession that makes people pause mid-conversation. There's nothing performative about her allure—it's simply who she is, worn as naturally as sun-warmed skin.
 
@@ -40,4 +40,3 @@
 - **Footwear:** Strappy tan leather heeled sandals with ankle wrap
 - **Accessories:** Layered delicate gold necklaces (one with hamsa pendant), medium gold hoop earrings, thin gold stacked bangles, woven straw crossbody bag with leather trim
 - **Hair/Makeup:** Hair in loose tousled waves with volume; warm bronzed makeup with defined eyes, glossy nude-rose lip
-

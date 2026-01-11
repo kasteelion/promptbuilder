@@ -13,4 +13,3 @@ tags: []
 - **Footwear:** Dance shoes appropriate to style
 - **Accessories:** Minimal, hair secured
 - **Makeup:** Natural stage-appropriate makeup
-

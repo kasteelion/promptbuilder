@@ -1,4 +1,4 @@
-tags: [Cultural, Formal, India, Traditional]
+tags: [Cultural, formal, indian, traditional]
 
 [F]
 - **Top:** Saree (5-9 yards of draped silk, chiffon, or georgette fabric in vibrant colors - red, royal blue, emerald, fuchsia, or gold with embroidered borders, sequins, or zari work)
@@ -21,4 +21,3 @@ tags: [Cultural, Formal, India, Traditional]
 - **Footwear:** Embellished sandals
 - **Accessories:** Gold jewelry set, bindi, maang tikka, bangles
 - **Makeup:** Kohl-lined eyes, defined brows, natural or red lip, henna designs
-

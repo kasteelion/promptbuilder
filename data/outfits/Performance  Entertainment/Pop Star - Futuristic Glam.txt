@@ -1,4 +1,4 @@
-tags: [Fashion, Performance, Sci-Fi]
+tags: [Fashion, Performance, sci-fi]
 
 [F]
 - **Top:** Metallic or holographic bodysuit (form-fitting with geometric cutouts, iridescent blue and silver)
@@ -27,4 +27,3 @@ tags: [Fashion, Performance, Sci-Fi]
 - **Makeup:** Holographic highlighter, graphic liner, confident stage presence
 
 ---
-

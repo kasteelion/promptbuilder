@@ -1,4 +1,4 @@
-tags: [Cultural, India, Religious, Traditional]
+tags: [Cultural, indian, Religious, traditional]
 
 [F]
 - **Top:** Silk sari (vibrant colors - red, gold, royal blue, or emerald with ornate gold embroidery and border)
@@ -21,4 +21,3 @@ tags: [Cultural, India, Religious, Traditional]
 - **Footwear:** Ornate sandals or barefoot
 - **Accessories:** Elaborate gold jewelry set (necklace, earrings, bangles, anklets), bindi, maang tikka (forehead jewelry), fresh flower accents (on hijab)
 - **Makeup:** Dramatic eye makeup with kohl, natural lip
-

@@ -1,4 +1,4 @@
-tags: [Fantasy, Magic]
+tags: [fantasy, Magic]
 
 [F]
 - **Top:** Long flowing robes (((default:deep blue, purple, or midnight black) or (signature)) with silver or gold arcane symbols and trim)
@@ -21,4 +21,3 @@ tags: [Fantasy, Magic]
 - **Footwear:** Soft leather boots
 - **Accessories:** Staff, spellbook, amulet, belt with pouches
 - **Makeup:** Wise expression, ethereal glow
-

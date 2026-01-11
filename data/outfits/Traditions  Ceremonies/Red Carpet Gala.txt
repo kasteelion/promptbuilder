@@ -1,4 +1,4 @@
-tags: [Celebrity, Event, Formal]
+tags: [Celebrity, event, formal]
 
 [F]
 - **Top:** Haute couture gown (((default:dramatic silhouette in luxe fabric) or (signature)) - options include: mermaid cut with train, ballgown with voluminous skirt, sleek column with high slit, architectural sculptural design)
@@ -21,4 +21,3 @@ tags: [Celebrity, Event, Formal]
 - **Footwear:** Designer heels
 - **Accessories:** Diamond jewelry, designer clutch
 - **Makeup:** Flawless contour, dramatic eyes, star presence
-

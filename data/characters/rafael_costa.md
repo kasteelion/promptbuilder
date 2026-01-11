@@ -1,7 +1,7 @@
 ### Rafael Costa
 **Photo:** rafael_costa_photo.png
 
-**Tags:** latina, male, creative, approachable, playful
+**Tags:**   latina, approachable, creative, male, playful
 
 **Summary:** Rafael carries creative energy that feels both grounded and effervescent. His presence blends artistic sensitivity with warm approachability, moving through space with the easy confidence of someone comfortable in their own skin. There's a theatrical quality to his gestures that never feels performative—just naturally expressive.
 

@@ -1,4 +1,4 @@
-tags: [Edgy, Music]
+tags: [Edgy, Music, cyberpunk]
 
 [F]
 - **Top:** Fitted **((default:bold colored) or (signature)) top**
@@ -21,4 +21,3 @@ tags: [Edgy, Music]
 - **Footwear:** Black ankle boots with metal details
 - **Accessories:** Silver geometric earrings, leather belt with metal buckle
 - **Makeup:** Smoky or bold makeup with deep lip
-

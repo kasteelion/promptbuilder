@@ -1,4 +1,4 @@
-tags: [Combat, Fantasy, Holy]
+tags: [combat, fantasy, Holy]
 
 [F]
 - **Top:** Silver or white plate armor bodice (ornate with holy symbols and gold trim)
@@ -21,4 +21,3 @@ tags: [Combat, Fantasy, Holy]
 - **Footwear:** Silver armored boots
 - **Accessories:** Holy sword, shield, prayer beads, white cape
 - **Makeup:** Radiant natural makeup, serene expression
-

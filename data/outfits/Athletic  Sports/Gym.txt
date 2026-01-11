@@ -19,4 +19,3 @@ tags: [Sport, Workout]
 - **Footwear:** Athletic sneakers
 - **Accessories:** Fitness watch or tracker, small gold studs
 - **Makeup:** Minimal or no makeup
-

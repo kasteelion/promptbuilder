@@ -1,4 +1,4 @@
-tags: [Dark, Fantasy, Magic]
+tags: [Dark, fantasy, Magic]
 
 [F]
 - **Top:** Dark robes (((default:black, deep purple, or charcoal) or (signature)) with tattered edges and bone decorations)
@@ -21,4 +21,3 @@ tags: [Dark, Fantasy, Magic]
 - **Footwear:** Black leather boots
 - **Accessories:** Skull staff, bone jewelry, dark tome
 - **Makeup:** Pale complexion, dark dramatic eyes, haunting expression
-

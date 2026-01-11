@@ -4,7 +4,7 @@ from tkinter import ttk
 from typing import Optional, Dict, Any, TYPE_CHECKING
 
 from logic import DataLoader, PromptRandomizer
-from themes import ThemeManager
+from ui.themes import ThemeManager
 from utils import PreferencesManager, logger
 from .exceptions import DataLoadError
 

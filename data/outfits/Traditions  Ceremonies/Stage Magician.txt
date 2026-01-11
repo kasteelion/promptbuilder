@@ -1,4 +1,4 @@
-tags: [Costume, Magic, Performance]
+tags: [costume, Magic, Performance]
 
 [F]
 - **Top:** Tailored tuxedo jacket (((default:black with satin lapels) or (signature)), fitted with hidden pockets)
@@ -21,4 +21,3 @@ tags: [Costume, Magic, Performance]
 - **Footwear:** Oxford shoes
 - **Accessories:** Top hat, white gloves, wand, cards
 - **Makeup:** Classic stage makeup, mysterious expression
-

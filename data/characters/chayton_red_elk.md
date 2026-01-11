@@ -1,7 +1,7 @@
 ### Chayton Red-Elk
 **Photo:** chayton_redelk_photo.jpeg
 
-**Tags:** male, indigenous, rugged, creative, intellectual, long-hair, modern
+**Tags:**   male, creative, indigenous, intellectual, long-hair, modern, rugged
 
 **Summary:** Chayton bridges the gap between ancestral tradition and modern minimalism. An architect by trade, he sees structure in nature and nature in structure. He possesses a quiet, grounding gravity—he speaks rarely, but when he does, the room listens. He is the calm in the center of the storm, radiating a deep, earthen reliability.
 

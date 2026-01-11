@@ -21,4 +21,3 @@ tags: [Practical, Rain, Weather]
 - **Footwear:** Rubber boots
 - **Accessories:** Rain hat (optional)
 - **Makeup:** Natural, fresh face
-

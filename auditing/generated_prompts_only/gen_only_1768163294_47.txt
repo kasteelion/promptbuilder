@@ -1,0 +1,63 @@
+# METADATA
+Scene: Data center interior, rows of server racks, blinking LED lights, cool blue lighting, high-tech environment.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Enzo Rossi | Outfit: Vintage Denim | Pose: None
+Character: Lila Reyes | Outfit: Vintage Denim | Pose: None
+Interaction: Custom
+Score: 160
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Data center interior, rows of server racks, blinking LED lights, cool blue lighting, high-tech environment.
+---
+
+**CHARACTER: Enzo Rossi**
+**Appearance:**
+* **Body:** Dramatic Natural male frame; straight muscular flesh; inverted triangle proportions; commanding vertical presence.
+* **Face:** Angular sculpted structure; square-leaning oval face; strong jaw; intense eyes; restrained confident expression.
+* **Hair:** Type 2A–2B waves; medium density; medium-length layered cut; tousled; no rigid part; soft sheen.
+* **Skin:** Warm olive skin with matte finish.
+**Outfit:**
+- **Top:** Ribbed Muscle Tank (((default:white)) cotton, fitted silhouette, soft texture)
+- **Bottom:** Denim Jacket (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons, heavy sturdy fabric)
+- **Footwear:** Flared Jeans (dark blue denim, fitted through thigh with dramatic flare at hem, contrast stitching).
+- **Accessories:** ((default:red)) paisley bandana tied around neck, silver rings.
+- **Hair/Makeup:** Textured wavy hair or shag cut, clean-shaven or stubble, natural appearance.
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing at ball return carousel, hand resting on return mechanism, watching for ball, casual ready stance, between-frames energy.
+---
+
+**CHARACTER 2: Lila Reyes**
+**Appearance:**
+* **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
+* **Face:** Balanced-soft structure; round-oval face (Filipino features) with gentle angles; full cheeks (genetic, visible even lean); large round-almond eyes, moderately spaced, deep dark brown; small refined nose; soft jawline shows slight definition at low body fat; neutral resting expression is focused and determined with quiet confidence.
+* **Hair:** Type 1B straight; very high density; long length to mid-back; high-gloss sheen; jet black; commonly worn in high ponytail (gym), sleek bun, or loose and straight (casual).
+* **Skin:** Deep tan with warm golden-brown undertones (Filipino coloring—naturally darker than East Asian); smooth healthy finish with natural warmth; slight muscle definition visible but not extreme.
+**Outfit:**
+- **Top:** Halter Crop Top (((default:white)) ribbed knit cotton, fitted silhouette, tie-neck closure, soft texture)
+- **Bottom:** Denim Jacket (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons, heavy sturdy fabric)
+- **Footwear:** Bell Bottom Jeans (high-waisted rise, dark blue denim, form-fitting thighs with dramatic flare at the hem, contrast stitching).
+- **Accessories:** ((default:red)) paisley bandana tied as a headband, large silver hoop earrings.
+- **Hair/Makeup:** Voluminous blown-out waves, sharp winged black eyeliner, heavy rosy blush on cheekbones, bold matte lipstick.
+**Pose/Action:**
+wide shot with the character framed within the environment, Mid-dance move, arms swinging and legs lifted in a dynamic, slightly awkward celebratory motion.
+---
+
+**Additional Notes:**
+Enzo Rossi and Lila Reyes in mirrored poses, matching each other's stance and gestures

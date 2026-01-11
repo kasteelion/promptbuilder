@@ -1,0 +1,71 @@
+# METADATA
+Scene: Opulent space station interior, floor-to-ceiling windows showing Earth or stars, zero-gravity lounge, premium futuristic aesthetic.
+Base_Prompt: Watercolor Impressionistic
+Character: Luna Vex | Outfit: Casino Dealer | Pose: None
+Character: Suki Nakamura | Outfit: Default Character | Pose: None
+Character: Harper Mae Sullivan | Outfit: Chef | Pose: None
+Score: 120
+
+Generate an image of: Rendering
+Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines.
+
+Character Accuracy
+Facial features are suggested through shadow shapes and color temperature shifts rather than line art. Eyes and expressions are soft and diffused. Likeness is captured through "gestural" paint application rather than photographic precision.
+
+Body Types
+Figures are grounded in gesture drawing techniques. Limbs and torso shapes are defined by broad washes of color. Edges of the body dissolve softly into the background, creating a dreamy, ethereal connection to the environment.
+
+Hair & Clothing
+Hair: Rendered as loose, flowing pools of color with wet edges. Clothing: Fabrics are depicted through variegation in color saturation. Folds are soft gradients where paint creates "blooms." No sharp stitching or texture detailing.
+
+Details
+Splatter droplets, dry-brush scratch marks, and visible pencil under-drawing. The palette is harmonious and desaturated. Backgrounds are abstract washes suggesting environment without explicit detail.
+
+---
+
+**SCENE/SETTING:**
+Opulent space station interior, floor-to-ceiling windows showing Earth or stars, zero-gravity lounge, premium futuristic aesthetic.
+---
+
+**CHARACTER: Luna Vex**
+**Appearance:**
+* **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
+* **Face:** Classic heart-shaped silhouette with a broad, smooth forehead and high, soft cheekbones that become prominent when she smiles; delicate, pointed chin creating a sharp taper from the mid-face; soft but clean and well-defined jawline; focal wide-set almond-shaped eyes in captivating light grey-blue; framed by naturally high-arched, manicured dark brown eyebrows sitting well above the orbital bone; signature sharp black winged eyeliner that accentuates the upward curve of her eyes; petite, straight nose bridge with a soft rounded tip and characteristic "scrunch" when laughing; wide, expressive mouth with a prominent philtrum and a broad, radiant smile revealing straight white teeth; deep endearing smile lines (nasolabial folds) and pronounced "crow's feet" signal genuine warmth and joy.
+* **Hair:** Type 2A (wavy); medium density; soft, voluminous layered silhouette; shoulder-length; varying part pattern (side or center); glossy sheen with styled "wet-look" roots; common styling includes loose, face-framing waves. Split-dye neon magenta pink and electric blue/amethyst purple.
+* **Skin:** Fair/Light depth; neutral-cool undertones; smooth, luminous surface finish; natural "crow's feet" laugh lines around the eyes.
+**Outfit:**
+- **Top:** Sleek **black satin bodysuit**
+- **Bottom:** sheer black tights.
+- **Accessories:** Tall black rabbit ears, white collar with bow tie, crisp white cuffs.
+- **Hair/Makeup:** Hair worn loose and flowing; subtle soft makeup, calm confident expression, realistic anime shading, elegant not provocative.
+**Pose/Action:**
+Hand gently touching own shoulder or collarbone, head tilted, soft sensual expression.
+---
+
+**CHARACTER 2: Suki Nakamura**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight refined flesh; narrow balanced proportions; tall elegant vertical; controlled precise presence.
+* **Face:** Balanced angular structure; oval face with subtle angles; defined cheekbones; dark almond eyes; serene focused expression.
+* **Hair:** Type 1 straight; medium density; blunt mid-length bob with micro-fringe; precise geometric cut; high-shine finish.
+* **Skin:** Light neutral-cool skin with porcelain clarity.
+**Outfit:**
+- **Top:** tight white bandeau top, high leg low cut jean shorts
+**Pose/Action:**
+Standing or sitting in front of mirror, making eye contact with reflection, intimate self-aware pose.
+---
+
+**CHARACTER 3: Harper Mae Sullivan**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-wave flesh blend; balanced proportions with gentle curves and natural waist definition; moderate vertical; soft athletic build with graceful ease.
+* **Face:** Soft oval-to-heart facial structure; gentle rounded features; warm expressive blue-green eyes with slight upward tilt, moderately spaced; constellation of freckles across nose and cheeks; soft defined jawline; neutral resting expression is warm and inviting with easy dimpled smile and sparkling eyes.
+* **Hair:** Type 2B-2C waves; high density; long sun-lightened layers past shoulders; natural loose part; healthy bounce; warm honey-blonde with natural golden highlights from sun exposure; commonly worn half-up with loose tendrils or in relaxed low ponytail.
+* **Skin:** Fair-to-light warm peachy undertones with natural healthy glow; prominent freckles across nose, cheeks, and shoulders that intensify with sun; soft luminous finish.
+**Outfit:**
+- **Top:** **Chef's jacket** (double-breasted white cotton, folded cuffs, cloth buttons)
+- **Bottom:** Black-and-white checkered trousers (houndstooth pattern)
+- **Footwear:** Slip-resistant **black clogs** or kitchen shoes.
+- **Accessories:** White **apron** (tied at waist), kitchen towel tucked into apron string, chef's hat (toque) or hairnet.
+- **Hair/Makeup:** Hair tied back securely, minimal makeup, focused expression.
+**Pose/Action:**
+Partially hidden behind door, wall, or curtain, playful flirty peek, mysterious smile.
+---

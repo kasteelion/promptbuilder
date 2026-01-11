@@ -1,18 +1,18 @@
-tags: [Fantasy, Magic, Nature]
+tags: [fantasy, Magic, nature]
 
 [F]
 - **Top:** Earth-toned robes or tunic (((default:forest green, brown, moss green) or (signature)) with leaf patterns)
 - **Bottom:** leather vest or bodice (with natural wood buttons)
 - **Footwear:** flowing skirt or pants (layered natural fabrics); **barefoot** or **soft leather sandals**; **flower crown or vine circlet**.
 - **Accessories:** Wooden staff (gnarled with living vines or flowers), herb pouches, animal companion (owl, wolf, or deer), natural jewelry (wood, stone, flowers).
-- **Hair/Makeup:** Natural flowing hair (often with flowers, leaves, or vines woven in), earthy makeup tones, freckles, sun-kissed glow, peaceful expression.
+- **Hair/Makeup:** Natural flowing hair (often with flowers, leaves, or vines woven in), earthy makeup tones, freckles, sun-kissed glow, Peaceful expression.
 
 [M]
 - **Top:** Earth-toned robes or tunic (((default:forest green, brown, moss green) or (signature)) with leaf patterns)
 - **Bottom:** leather vest (with natural wood buttons)
 - **Footwear:** loose pants (natural fabrics); **barefoot** or **soft leather sandals**; **vine circlet**.
 - **Accessories:** Wooden staff (gnarled with living vines or flowers), herb pouches, animal companion (owl, wolf, or deer), natural jewelry (wood, stone).
-- **Hair/Makeup:** Natural messy hair (often with leaves or vines woven in), earthy tones, freckles, sun-kissed glow, peaceful expression.
+- **Hair/Makeup:** Natural messy hair (often with leaves or vines woven in), earthy tones, freckles, sun-kissed glow, Peaceful expression.
 
 [H]
 - **Hijab:** ((default:Earth-toned - moss green, brown) or (signature)) hijab adorned with living vines or flowers
@@ -21,4 +21,3 @@ tags: [Fantasy, Magic, Nature]
 - **Footwear:** Soft leather boots or sandals
 - **Accessories:** Wooden staff, herb pouches, animal companion
 - **Makeup:** Earthy tones, freckles, sun-kissed glow
-

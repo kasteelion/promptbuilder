@@ -1,4 +1,4 @@
-tags: [Formal, Job, Professional]
+tags: [formal, Job, professional]
 
 [F]
 - **Top:** Tailored **blazer** (structured fabric)
@@ -21,4 +21,3 @@ tags: [Formal, Job, Professional]
 - **Footwear:** Black pointed-toe low heeled pumps
 - **Accessories:** Small gold hoop earrings, simple gold watch, structured leather tote
 - **Makeup:** Professional and polished with neutral tones
-

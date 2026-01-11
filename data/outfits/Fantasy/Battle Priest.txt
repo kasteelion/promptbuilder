@@ -1,4 +1,4 @@
-tags: [Combat, Fantasy, Holy]
+tags: [combat, fantasy, Holy]
 
 [F]
 - **Top:** Blessed chainmail or scale armor (silver or white with holy engravings)
@@ -21,4 +21,3 @@ tags: [Combat, Fantasy, Holy]
 - **Footwear:** Armored boots
 - **Accessories:** Mace or war hammer, shield, holy water
 - **Makeup:** Determined expression, natural makeup
-

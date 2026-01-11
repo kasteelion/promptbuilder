@@ -1,0 +1,80 @@
+# METADATA
+Scene: Gothic cathedral, soaring arched ceilings, stained glass windows casting colored light, stone pillars, reverent atmosphere.
+Base_Prompt: Watercolor Impressionistic
+Character: Astrid Nielsen | Outfit: Cottagecore | Pose: None
+Character: Sina Tuilagi | Outfit: Cottagecore | Pose: None
+Character: Lila Reyes | Outfit: Cottagecore | Pose: None
+Interaction: Custom
+Score: 469
+
+Generate an image of: Rendering
+Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines.
+
+Character Accuracy
+Facial features are suggested through shadow shapes and color temperature shifts rather than line art. Eyes and expressions are soft and diffused. Likeness is captured through "gestural" paint application rather than photographic precision.
+
+Body Types
+Figures are grounded in gesture drawing techniques. Limbs and torso shapes are defined by broad washes of color. Edges of the body dissolve softly into the background, creating a dreamy, ethereal connection to the environment.
+
+Hair & Clothing
+Hair: Rendered as loose, flowing pools of color with wet edges. Clothing: Fabrics are depicted through variegation in color saturation. Folds are soft gradients where paint creates "blooms." No sharp stitching or texture detailing.
+
+Details
+Splatter droplets, dry-brush scratch marks, and visible pencil under-drawing. The palette is harmonious and desaturated. Backgrounds are abstract washes suggesting environment without explicit detail.
+
+---
+
+**SCENE/SETTING:**
+Gothic cathedral, soaring arched ceilings, stained glass windows casting colored light, stone pillars, reverent atmosphere.
+---
+
+**CHARACTER: Astrid Nielsen**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight flesh; narrow balanced rectangle proportions; tall vertical line; refined posture with precise alignment; statuesque and poised.
+* **Face:** Long balanced facial structure; soft oval face; firm planar skin with clear definition; narrow straight nose; light blue deep-set eyes with cool observant gaze; serene neutral resting expression that suggests depth and composure.
+* **Hair:** Type 1 straight hair; medium density; platinum blonde with smooth high-shine finish; naturally straight and fine; takes blunt, precise cuts well.
+* **Skin:** Fair cool-toned skin with porcelain clarity and smooth even texture.
+**Outfit:**
+- **Top:** Flowing **floral midi dress** or **linen blouse** with **high-waist skirt**
+- **Bottom:** flat leather sandals or boots.
+- **Accessories:** Woven basket, delicate gold jewelry, floral hair clip.
+- **Hair/Makeup:** Soft natural makeup, loose waves or braids.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Sina Tuilagi**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with wave softness; balanced proportions with moderate shoulders, defined waist, and rounded hips; moderate vertical (5'6"-5'7"); athletic-natural build with functional strength, soft curves over muscle, powerful legs, strong core, and grounded Pacific Islander physicality; traditional tatau (pe'a-inspired geometric patterns) visible on left thigh and right shoulder/upper arm; commanding warm presence combining ancestral strength with contemporary confidence.
+
+* **Face:** Balanced-soft facial structure with strong underlying bones; round-oval face shape with full cheeks and gentle breadth; moderate-to-wide midface with prominent cheekbones creating natural definition; large almond-shaped eyes with moderate spacing, deep brown to black irises, warm direct gaze; broad nose with rounded bridge and full tip; strong rounded jawline; neutral resting expression shows calm pride with slight natural smile and warm welcoming eye contact; expressions are openly warm and culturally confident.
+
+* **Hair:** Type 3A; very high density; long length past shoulders; no defined part, naturally voluminous; low-to-moderate sheen with healthy texture; commonly worn loose and full with natural curl pattern, half-up with decorative clip, or in low bun with face-framing waves; deep black-brown with warm undertones and natural dimension.
+
+* **Skin:** Deep tan with warm golden-brown undertones and natural luminous finish; bronze-to-brown complexion with sun-kissed richness; smooth healthy texture with island resilience; tatau (traditional Samoan tattoos) visible with cultural geometric patterns in black ink.
+**Outfit:**
+- **Top:** Flowing **floral midi dress** or **linen blouse** with **high-waist skirt**
+- **Bottom:** flat leather sandals or boots.
+- **Accessories:** Woven basket, delicate gold jewelry, floral hair clip.
+- **Hair/Makeup:** Soft natural makeup, loose waves or braids.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Lila Reyes**
+**Appearance:**
+* **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
+* **Face:** Balanced-soft structure; round-oval face (Filipino features) with gentle angles; full cheeks (genetic, visible even lean); large round-almond eyes, moderately spaced, deep dark brown; small refined nose; soft jawline shows slight definition at low body fat; neutral resting expression is focused and determined with quiet confidence.
+* **Hair:** Type 1B straight; very high density; long length to mid-back; high-gloss sheen; jet black; commonly worn in high ponytail (gym), sleek bun, or loose and straight (casual).
+* **Skin:** Deep tan with warm golden-brown undertones (Filipino coloring—naturally darker than East Asian); smooth healthy finish with natural warmth; slight muscle definition visible but not extreme.
+**Outfit:**
+- **Top:** Flowing **floral midi dress** or **linen blouse** with **high-waist skirt**
+- **Bottom:** flat leather sandals or boots.
+- **Accessories:** Woven basket, delicate gold jewelry, floral hair clip.
+- **Hair/Makeup:** Soft natural makeup, loose waves or braids.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Astrid Nielsen standing over Sina Tuilagi with a weapon leveled at their throat, Astrid Nielsen showing cold dominance while Sina Tuilagi looks up with a mixture of defiance and respect.

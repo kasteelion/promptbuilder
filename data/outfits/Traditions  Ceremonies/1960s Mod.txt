@@ -1,4 +1,4 @@
-tags: [Fashion, Retro, Vintage]
+tags: [Fashion, Retro, vintage]
 
 [F]
 - **Top:** Shift dress (((default:bold geometric print or color-blocked) or (signature)) A-line silhouette, above knee length, sleeveless or short sleeves)
@@ -21,4 +21,3 @@ tags: [Fashion, Retro, Vintage]
 - **Footwear:** White go-go boots
 - **Accessories:** Large geometric earrings, sunglasses
 - **Makeup:** Graphic eyeliner, pale lips, Twiggy style
-

@@ -1,18 +1,18 @@
-tags: [Casual, Urban]
+tags: [Casual, urban]
 
 [F]
 - **Top:** Oversized **graphic hoodie or sweatshirt**
 - **Bottom:** cargo pants or joggers
 - **Footwear:** chunky sneakers.
 - **Accessories:** Baseball cap or beanie, crossbody bag, chain necklace.
-- **Hair/Makeup:** Natural or minimal makeup, casual hairstyle.
+- **Hair/Makeup:** Natural or minimal makeup, Casual hairstyle.
 
 [M]
 - **Top:** Oversized **graphic hoodie or sweatshirt**
 - **Bottom:** cargo pants or joggers
 - **Footwear:** chunky sneakers.
 - **Accessories:** Baseball cap or beanie, crossbody bag or backpack, chain necklace.
-- **Hair/Makeup:** Natural grooming, casual hairstyle.
+- **Hair/Makeup:** Natural grooming, Casual hairstyle.
 
 [H]
 - **Hijab:** Jersey hijab in black with urban style wrap
@@ -21,4 +21,3 @@ tags: [Casual, Urban]
 - **Footwear:** Chunky sneakers
 - **Accessories:** Small gold hoops, crossbody bag, simple chain necklace
 - **Makeup:** Natural or minimal makeup
-

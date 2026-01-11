@@ -1,4 +1,4 @@
-tags: [Armor, Combat, Fantasy]
+tags: [armor, combat, fantasy]
 
 [F]
 - **Top:** Polished plate armor bodice (steel or silver with embossed details)
@@ -21,4 +21,3 @@ tags: [Armor, Combat, Fantasy]
 - **Footwear:** Steel greaves and sabatons
 - **Accessories:** Longsword, shield, cape in ((default:house colors) or (signature))
 - **Makeup:** Determined expression, natural skin
-

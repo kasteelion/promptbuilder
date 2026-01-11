@@ -1,4 +1,4 @@
-tags: [Combat, Fantasy, Stealth]
+tags: [combat, fantasy, Stealth]
 
 [F]
 - **Top:** Form-fitting black bodysuit or leather armor (reinforced at vital areas)
@@ -21,4 +21,3 @@ tags: [Combat, Fantasy, Stealth]
 - **Footwear:** Silent boots
 - **Accessories:** Twin daggers, poison vials, mask (optional)
 - **Makeup:** Cold calculating expression, minimal makeup
-

@@ -6,7 +6,7 @@
 - celtic
 - chinese-american
 - eastern-european
-- female
+- Female
 - filipino
 - indian
 - indigenous
@@ -15,7 +15,7 @@
 - jamaican
 - japanese
 - latina
-- male
+- Male
 - british
 - mediterranean
 - mixed-heritage
@@ -37,9 +37,9 @@
 - thin
 
 ## Style
-- edgy
-- casual
-- chic
+- Edgy
+- Casual
+- Chic
 - bohemian
 - formal
 - vintage
@@ -54,7 +54,7 @@
 - alternative
 - corporate
 - goth
-- modern
+- Modern
 - street-style
 - techwear
 - high-femme
@@ -69,7 +69,7 @@
 - adventurous
 - approachable
 - commanding
-- intense
+- Intense
 - intellectual
 - minimalist
 - cultural

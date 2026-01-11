@@ -1,4 +1,4 @@
-tags: [Cultural, Egypt, Historical, Mythological, Mythology]
+tags: [Cultural, egyptian, historical, Mythological, Mythology]
 
 [F]
 - **Top:** Fitted **white linen sheath dress** (floor-length with gold beaded collar)
@@ -21,4 +21,3 @@ tags: [Cultural, Egypt, Historical, Mythological, Mythology]
 - **Footwear:** Golden sandals
 - **Accessories:** Ornate golden collar necklace (usekh), golden arm cuffs and wrist bangles, gold belt
 - **Makeup:** Dramatic winged eyeliner, defined brows, gold accents on skin
-

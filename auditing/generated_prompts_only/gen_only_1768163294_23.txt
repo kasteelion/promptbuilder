@@ -1,0 +1,59 @@
+# METADATA
+Scene: Trendy minimalist cafe, wooden tables, hanging plants, espresso machine, large windows, patrons with laptops, cozy urban social atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Mela Hart | Outfit: Vintage Tap | Pose: None
+Character: Fiona O'Sullivan | Outfit: Oversized Shirt Lounge | Pose: None
+Score: 185
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Trendy minimalist cafe, wooden tables, hanging plants, espresso machine, large windows, patrons with laptops, cozy urban social atmosphere.
+---
+
+**CHARACTER: Mela Hart**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall vertical line; broad shoulders; long limbs; somewhat straight silhouette; moderate bust and hip definition; athletic and springy presence.
+* **Face:** Oval shape; high cheekbones; full lips; prominent expressive eyes; straight nose bridge; defined jawline; bright and buoyant neutral expression.
+* **Hair:** Type 4A (Natural texture) with Type 2B/2C (Wavy/Curly) ends; long, dark brown braids throughout the hair with loose wavy curls at the bottom; high shine; braids are a signature identity feature.
+* **Skin:** Deep brown with warm golden undertones and luminous satin finish.
+**Outfit:**
+- **Top:** Fitted **Art Deco-style bodice** (pearl white or champagne satin with geometric beading, sequins, and crystal embellishments in symmetrical patterns)
+- **Bottom:** high-cut performance briefs (matching color with coordinated beadwork)
+- **Footwear:** sheer nude stockings with back seam; **T-strap heeled shoes** (silver or gold, 1930s style).
+- **Accessories:** Towering white feathered headpiece (ostrich plumes arranged in tiered vertical display), long white opera gloves (satin), geometric Art Deco jewelry (crystal armband or statement necklace).
+- **Hair/Makeup:** Finger waves or Marcel waves in platinum blonde, thin arched eyebrows, dark red cupid's bow lips, dramatic winged eyeliner, theatrical 1930s stage makeup with shimmer on cheeks and collarbones.
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders, Soft lighting pose, face tilted toward light, serene expression, gentle wind in hair.
+---
+
+**CHARACTER 2: Fiona O'Sullivan**
+**Appearance:**
+* **Body:** Soft Natural plus-size frame; wave-type plush softness; soft pear-hourglass proportions; moderate vertical.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes; expressive hazel-green eyes; warm engaging smile; soft jawline; radiant joyful expression that reflects her generous spirit.
+* **Hair:** Type 2B-2C waves; high density; long layered cut with natural body; side part; soft natural volume with gentle frizz; copper-red to auburn with natural variation.
+* **Skin:** Fair rosy-toned skin with soft glow; smooth complexion. stylish tortoiseshell glasses
+**Outfit:**
+- **Top:** Oversized men's style button-down shirt (white or light blue crisp cotton, ending mid-thigh, sleeves rolled to elbow)
+- **Bottom:** bare legs
+- **Footwear:** thick cozy socks.
+- **Accessories:** Coffee mug prop, messy bun scrunchie.
+- **Hair/Makeup:** Hair in messy bun or loose, fresh-faced no makeup look, casual morning vibe.
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders, Partially hidden behind door, wall, or curtain, playful flirty peek, mysterious smile.
+---

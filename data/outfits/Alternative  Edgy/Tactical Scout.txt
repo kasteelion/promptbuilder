@@ -1,4 +1,4 @@
-tags: [Combat, Edgy, Outdoor]
+tags: [combat, Edgy, outdoor]
 
 [F]
 - **Top:** Ribbed moisture-wicking henley (fitted tightly in ((default:olive green) or (signature)), featuring a three-button neckline and reinforced elbow patches)
@@ -19,4 +19,3 @@ tags: [Combat, Edgy, Outdoor]
 - **Footwear:** Rugged mid-calf leather boots.
 - **Accessories:** Heavy-duty utility belt with **{accent}** hardware; black digital fitness watch.
 - **Makeup:** Secure hijab wrap; fresh-faced "outdoorsy" glow; tinted lip balm.
-

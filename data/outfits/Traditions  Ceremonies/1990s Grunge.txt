@@ -1,4 +1,4 @@
-tags: [Casual, Grunge, Vintage]
+tags: [Casual, Grunge, vintage]
 
 [F]
 - **Top:** Oversized flannel shirt (((default:plaid in muted colors) or (signature)), worn open or tied at waist)
@@ -21,4 +21,3 @@ tags: [Casual, Grunge, Vintage]
 - **Footwear:** Combat boots
 - **Accessories:** Choker, backpack
 - **Makeup:** Brown lip, smudged liner, grunge vibe
-

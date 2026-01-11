@@ -1,4 +1,4 @@
-tags: [Fantasy, Potion, Science]
+tags: [fantasy, Potion, Science]
 
 [F]
 - **Top:** Practical leather vest or apron (with many pockets)
@@ -21,4 +21,3 @@ tags: [Fantasy, Potion, Science]
 - **Footwear:** Sturdy work boots
 - **Accessories:** Goggles, potions bandolier, gloves
 - **Makeup:** Curious expression, possibly smudge marks
-

@@ -1,4 +1,4 @@
-tags: [Combat, Fantasy, Magic]
+tags: [combat, fantasy, Magic]
 
 [F]
 - **Top:** Elegant jacket (((default:red) or (signature)) with white trim, Renaissance-inspired with epaulettes)
@@ -21,4 +21,3 @@ tags: [Combat, Fantasy, Magic]
 - **Footwear:** Tall red or brown boots
 - **Accessories:** Rapier, wand, cape
 - **Makeup:** Confident with red accents, balanced expression
-

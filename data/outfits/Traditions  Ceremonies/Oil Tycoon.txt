@@ -1,4 +1,4 @@
-tags: [Formal, Rich, Western]
+tags: [formal, Rich, Western]
 
 [F]
 - **Top:** Tailored western blazer (((default:cream or tan) or (signature)) with western yoke detailing, leather trim)
@@ -21,4 +21,3 @@ tags: [Formal, Rich, Western]
 - **Footwear:** Luxury cowboy boots
 - **Accessories:** Bolo tie, statement ring, designer western hat, briefcase
 - **Makeup:** Refined makeup, confident presence
-

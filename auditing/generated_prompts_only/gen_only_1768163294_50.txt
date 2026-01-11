@@ -1,0 +1,45 @@
+# METADATA
+Scene: Grand manor entrance hall, marble floors, sweeping staircase, crystal chandelier, ornate molding, elegant opulence.
+Base_Prompt: Sketch Style: "Energetic Line Art"
+Character: Samira Mansour | Outfit: Cowboy | Pose: None
+Score: 70
+
+Generate an image of: Rendering
+Monochromatic graphite or charcoal aesthetic. White or off-white paper background. Lines vary frantically in weight and opacity. Visible "construction lines" and erasure marks left in the final image to show the process.
+
+Character Accuracy
+Focus on the "essence" of the face. Features may be loosely defined or merely suggested. Eyes are focal points with higher detail, while peripheral features fade into rough sketches.
+
+Body Types
+Gestural anatomy. The figure is defined by action lines and rhythm. Joints and muscles are marked with quick, scribbled notation. The body often fades into non-existence at the edges.
+
+Hair & Clothing
+Hair: Rapid, sweeping strokes showing direction. Clothing: Outlines only, with cross-hatching used for shadow density. Folds are indicated by quick, zigzagging lines.
+
+Details
+Smudge marks, graphite dust, and handwritten artistic notes. The lighting is purely suggested by the density of the hatch marks.
+
+---
+
+**SCENE/SETTING:**
+Grand manor entrance hall, marble floors, sweeping staircase, crystal chandelier, ornate molding, elegant opulence.
+---
+
+**CHARACTER: Samira Mansour**
+**Appearance:**
+* **Body:** Soft Natural; balanced proportions with soft curves; moderate vertical (5'6"); natural athletic density with a defined waist and soft shoulders; poised and culturally connected presence.
+* **Face:** Soft-balanced structure; oval face with high, smooth cheekbones; large expressive dark brown eyes framed by naturally thick, groomed eyebrows; straight refined nose; full lips with a natural cupid's bow; soft jawline; warm engaging expression that feels both wise and welcoming.
+* **Hair:** (Covered) Typically styled in voluminous dark curls beneath her hijab.
+* **Skin:** Rich golden-olive depth (North African coloring); smooth luminous finish; natural healthy glow enhanced by traditional skincare oils.
+**Outfit:**
+- **Hijab:** Denim blue or tan chiffon hijab with neat practical wrap
+- **Top:** Western-style button-down shirt (with yolk detailing and pearl snaps, modest fit)
+- **Bottom:** Blue jeans with decorative belt or leather chaps
+- **Footwear:** Pointed-toe cowboy boots with stitching
+- **Accessories:** Wide-brimmed cowboy hat (worn over hijab), ornate silver belt buckle, neck kerchief
+- **Makeup:** Sun-kissed makeup with light freckles
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing or sitting in front of mirror, making eye contact with reflection, intimate self-aware pose.
+---
