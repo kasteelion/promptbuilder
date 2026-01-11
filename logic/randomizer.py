@@ -650,6 +650,16 @@ class PromptRandomizer:
             pose_presets = self.poses.get(pose_category, {})
             # Filter Blocked Poses within category
             valid_pose_names = list(pose_presets.keys())
+            
+            # Context-Aware Blocking
+            # Prevent "Satin Sheets" in public spaces
+            # Ideally this should be tag-based, but for the specific recurring issue:
+            if "satin sheets" in str(pose_presets).lower() and scene_category not in ["Bedroom", "Studio", "Indoors"]:
+                 valid_pose_names = [
+                     name for name in valid_pose_names 
+                     if "satin sheets" not in name.lower() and "bed" not in name.lower()
+                 ]
+
             if blocked_tags:
                  valid_pose_names = [
                      name for name in valid_pose_names 
