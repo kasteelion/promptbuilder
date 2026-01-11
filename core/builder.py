@@ -66,9 +66,15 @@ class PromptBuilder:
         for idx, char in enumerate(config.get("selected_characters", [])):
             data = self.characters.get(char["name"], {})
             outfit = data.get("outfits", {}).get(char.get("outfit", ""), "")
-            pose = char.get("action_note") or self.poses.get(char.get("pose_category"), {}).get(
+            pose_raw = char.get("action_note") or self.poses.get(char.get("pose_category"), {}).get(
                 char.get("pose_preset"), ""
             )
+            
+            # Handle both string and structured dict formats
+            if isinstance(pose_raw, dict):
+                pose = pose_raw.get("description", "")
+            else:
+                pose = pose_raw
             
             # Apply framing modifier if selected
             framing_name = char.get("framing_mode")
@@ -170,6 +176,12 @@ class PromptBuilder:
         """
         summary_parts = []
         
+        # 1. Art Style
+        base_prompt = config.get("base_prompt")
+        if base_prompt and base_prompt != "Default":
+            summary_parts.append(f"🎨 **{base_prompt}**")
+        
+        # 2. Scene
         scene = config.get("scene", "").strip()
         if scene:
             # First line of scene or first 50 chars
@@ -178,6 +190,13 @@ class PromptBuilder:
                 short_scene = short_scene[:57] + "..."
             summary_parts.append(f"🎬 {short_scene}")
             
+        # 3. Moods (from metadata if provided by randomizer)
+        metadata = config.get("metadata", {})
+        if metadata and "moods" in metadata and metadata["moods"]:
+            moods = sorted(list(metadata["moods"]))
+            summary_parts.append(f"✨ **Moods**: {', '.join(moods)}")
+
+        # 4. Characters
         chars = config.get("selected_characters", [])
         if chars:
             char_summaries = []
@@ -186,32 +205,55 @@ class PromptBuilder:
                 outfit = char.get("outfit", "Base")
                 pose = char.get("pose_preset") or "Default"
                 if char.get("action_note"):
-                    pose = "Custom"
+                    pose = "Custom Action"
                 
                 parts = [outfit]
                 scheme_name = char.get("color_scheme")
-                if scheme_name:
-                    scheme = self.color_schemes.get(scheme_name, {})
-                    if "team" in scheme:
-                        parts.append(scheme["team"])
                 
-                # Add signature color info if active
-                if char.get("use_signature_color"):
-                    char_def = self.characters.get(name, {})
+                # Check if outfit actually uses color schemes or signature colors
+                char_def = self.characters.get(name, {})
+                outfit_data = char_def.get("outfits", {}).get(outfit, "")
+                
+                # Convert outfit data to a checkable string
+                outfit_str = ""
+                if isinstance(outfit_data, dict):
+                    outfit_str = " ".join(str(v) for k, v in outfit_data.items() if isinstance(v, str))
+                else:
+                    outfit_str = str(outfit_data)
+                
+                supports_schemes = any(f"{{{k}}}" in outfit_str for k in ("primary_color", "secondary_color", "accent"))
+                supports_sig = "{signature_color}" in outfit_str or "(signature)" in outfit_str
+                
+                if scheme_name and scheme_name not in ("Default (No Scheme)", "The Standard") and supports_schemes:
+                    scheme = self.color_schemes.get(scheme_name)
+                    if scheme:
+                        team_name = scheme.get("team", scheme_name)
+                        parts.append(team_name)
+                
+                # Add signature color info if active AND supported
+                if char.get("use_signature_color") and supports_sig:
                     sig_color = char_def.get("signature_color")
                     if sig_color:
                         parts.append(f"Sig: {sig_color}")
 
                 parts.append(pose)
                 
-                char_summaries.append(f"{name} ({', '.join(parts)})")
-            summary_parts.append("👥 " + ", ".join(char_summaries))
+                char_summaries.append(f"   **{name}** ({' • '.join(parts)})")
             
+            summary_parts.append("👥 **Characters**:")
+            summary_parts.extend(char_summaries)
+            
+        # 5. Interaction/Notes
         notes = config.get("notes", "").strip()
         if notes:
+            # Check if this looks like a tagged interaction
+            is_interaction = "(" in notes and ")" in notes and ":" in notes
+            icon = "🤝" if is_interaction else "📝"
+            label = "Interaction" if is_interaction else "Action"
+            
             short_notes = notes.split("\n")[0]
-            if len(short_notes) > 60:
-                short_notes = short_notes[:57] + "..."
-            summary_parts.append(f"📝 {short_notes}")
+            if len(short_notes) > 70:
+                short_notes = short_notes[:67] + "..."
+            summary_parts.append(f"{icon} **{label}**: {short_notes}")
             
         return "\n".join(summary_parts) if summary_parts else "No characters or scene selected."

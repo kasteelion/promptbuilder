@@ -771,6 +771,9 @@ class PromptBuilderApp:
             include_notes=True,
         )
 
+        # Store metadata for the summary panel
+        self._current_metadata = config.get("metadata", {})
+
         self.characters_tab.set_selected_characters(config["selected_characters"])
         self.characters_tab.set_base_prompt(config["base_prompt"])
 
@@ -842,6 +845,7 @@ class PromptBuilderApp:
             "base_prompt": self.characters_tab.get_base_prompt_name(),
             "scene": self.scene_panel.get_text(),
             "notes": self.notes_panel.get_text(),
+            "metadata": getattr(self, "_current_metadata", {})
         }
 
     def _restore_state(self, state):

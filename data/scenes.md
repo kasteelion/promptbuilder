@@ -15,10 +15,12 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 - **Attic Space** (Indoor, Home, Vintage, Cozy): Converted attic room, sloped ceiling, skylight, cozy intimate space, vintage stored items.
 - **Basement Rec Room** (Indoor, Home, Casual): Finished basement, comfortable seating, entertainment setup, mood lighting, relaxed hangout space.
-- **Bedroom** (Indoor, Home, Cozy, Intimate): Cozy bedroom setting, soft morning light, comfortable bedding, warm intimate atmosphere.
-- **Home Office** (Indoor, Home, Work): Personal workspace, desk with computer, bookshelves, window light, productive comfortable atmosphere.
-- **Kitchen** (Indoor, Home, Cooking): Modern kitchen interior, natural light from windows, marble countertops, stainless appliances.
-- **Laundry Room** (Indoor, Home, Chores): Bright laundry room, washer and dryer, folding counter, domestic everyday atmosphere.
+- **Bedroom** (Indoor, Home, Cozy, Intimate, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Cozy bedroom setting, soft morning light, comfortable bedding, warm intimate atmosphere.
+- **Gourmet Kitchen** (Home, Indoor, Cooking, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Spacious modern kitchen, marble countertops, high-end appliances, island with stools, warm pendant lighting, high-detail culinary setting.
+- **Home Office** (Professional, Indoor, Office, Tech, Work, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Organized personal workspace, dual monitors, ergonomic chair, bookshelf, organized desk, warm desk lamp, professional daytime setting.
+- **Kitchen Counter** (Home, Indoor, Casual, Cooking, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Casual morning kitchen, sunny window, breakfast on counter, coffee mugs, cozy domestic vibe.
+- **Modern Living Room** (Home, Indoor, Relaxed, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Clean minimalist interior, large sectional sofa, flat-screen TV, indoor plants, soft natural light, cozy domestic atmosphere.
+- **Science Laboratory** (Work, Indoor, Tech, Science, Medical, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume, Block:Swimwear): Pristine lab environment, stainless steel benches, microscopes, glass beakers, glowing chemical samples, cold professional lighting.
 - **Walk-In Closet** (Indoor, Home, Fashion): Spacious closet, organized clothing racks, shoe displays, mirror, luxury personal space.
 
 ---
@@ -27,37 +29,37 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 - **Abandoned Warehouse** (Urban, Gritty, Industrial): Vast, empty warehouse interior, high ceilings, broken windows letting in shafts of daylight, dusty concrete floor, derelict industrial atmosphere.
 - **Brick Wall Urban** (Urban, Street): Exposed red brick wall background, industrial urban setting, textured surface, natural daylight, gritty city character.
-- **City Street** (Urban, Outdoor): Urban street scene, modern buildings, pedestrian area, natural daylight, city atmosphere.
+- **City Street** (Urban, Outdoor, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Urban street scene, modern buildings, pedestrian area, natural daylight, city atmosphere.
 - **Construction Site** (Urban, Industrial, Work): Active construction zone, exposed steel beams, safety netting, heavy machinery visible, bright daylight, dynamic unfinished environment.
 - **Fire Escape Alley** (Urban, Dark, Alley): Narrow urban alleyway, view up a dark metal fire escape, wet pavement, harsh shadows, gritty late-night atmosphere.
 - **Garden** (Nature, Outdoor): Lush garden setting, flowering plants, winding pathways, dappled sunlight through leaves.
 - **Park** (Nature, Outdoor, Urban): Sunny park setting, green grass, trees in background, natural daylight, peaceful environment.
 - **Rooftop** (Urban, Outdoor, City): Urban rooftop setting, city skyline in background, sunset lighting, modern outdoor furniture.
-- **Subway Platform** (Urban, Indoor, Transit): Underground subway station, tiled walls, bright fluorescent lighting, tracks in the background, bustling, fast-paced environment.
+- **Subway Platform** (Urban, Indoor, Transit, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Underground subway station, tiled walls, bright fluorescent lighting, tracks in the background, bustling, fast-paced environment.
 
 ---
 
 ## Indoor Social Spaces
 
-- **Coffee Shop** (Indoor, Social, Cafe): Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter.
-- **Library** (Indoor, Quiet, School): Quiet library setting, tall bookshelves, reading tables, soft natural light from windows, peaceful ambiance.
-- **Restaurant** (Indoor, Dining, Date): Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
+- **Coffee Shop** (Indoor, Social, Cafe, Mood:Cozy): Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter.
+- **Library** (Indoor, Quiet, School, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Quiet library setting, tall bookshelves, reading tables, soft natural light from windows, peaceful ambiance.
+- **Restaurant** (Indoor, Dining, Date, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
 
 ---
 
 ## Shopping & Retail
 
-- **Boutique Interior** (Indoor, Retail, Fashion, Luxury): Upscale clothing boutique, elegant displays, soft lighting, mirrors, sophisticated shopping atmosphere.
-- **Mall Corridor** (Indoor, Retail): Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
-- **Record Store** (Indoor, Retail, Music, Vintage): Independent record shop, wooden bins of vinyl, posters on walls, counter with turntable, music culture vibe.
-- **Thrift Store** (Indoor, Retail, Vintage): Casual thrift store, crowded racks, mixed lighting, bargain-hunting treasure-trove atmosphere.
-- **Vintage Shop** (Indoor, Retail, Vintage): Eclectic vintage store, racks of retro clothing, antique decor, nostalgic treasure-hunt vibe.
+- **Boutique Interior** (Indoor, Retail, Fashion, Luxury, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume, Block:Sport, Block:Combat, Block:Lounge, Block:Sleep): Upscale clothing boutique, elegant displays, soft lighting, mirrors, sophisticated shopping atmosphere.
+- **Mall Corridor** (Indoor, Retail, Block:Fantasy, Block:Armor): Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
+- **Record Store** (Indoor, Retail, Music, Vintage, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume, Block:Sport, Block:Combat, Block:Lounge, Block:Sleep): Independent record shop, wooden bins of vinyl, posters on walls, counter with turntable, music culture vibe.
+- **Thrift Store** (Indoor, Retail, Vintage, Block:Fantasy, Block:Armor, Block:Swimwear): Casual thrift store, crowded racks, mixed lighting, bargain-hunting treasure-trove atmosphere.
+- **Vintage Shop** (Indoor, Retail, Vintage, Block:Fantasy, Block:Armor, Block:Swimwear): Eclectic vintage store, racks of retro clothing, antique decor, nostalgic treasure-hunt vibe.
 
 ---
 
 ## Transportation
 
-- **Airport Terminal** (Travel, Modern, Busy): Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+- **Airport Terminal** (Travel, Modern, Busy, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume, Block:Tactical): Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
 - **Boat Deck** (Travel, Ocean, Outdoor): Wooden boat deck, ocean horizon, billowing sails, sea breeze, nautical ropes and equipment.
 - **Car Interior** (Travel, Vehicle, Intimate): Inside luxury vehicle, leather seats, dashboard visible, windshield view of road, intimate enclosed space.
 - **Cruise Ship Deck** (Travel, Luxury, Ocean): Luxury cruise deck, ocean horizon, deck chairs, gentle sea breeze, vacation leisure atmosphere.
@@ -67,9 +69,9 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 ## Sports & Athletics
 
-- **American Football Field** (Sport, Outdoor): Outdoor American football field, marked with yard lines, goalposts at each end, stadium lights or bright daylight.
-- **Basketball Court** (Sport, Indoor): Indoor basketball court, polished hardwood floor, hoops at each end, boundary lines, gym atmosphere.
-- **Beach Volleyball Court** (Sport, Beach, Outdoor): Sand volleyball court on a sunny beach, net in the center, ocean and sky in the background, relaxed but competitive atmosphere.
+- **American Football Field** (Sport, Football, Outdoor): Outdoor American football field, marked with yard lines, goalposts at each end, stadium lights or bright daylight.
+- **Basketball Court** (Sport, Basketball, Indoor): Indoor basketball court, polished hardwood floor, hoops at each end, boundary lines, gym atmosphere.
+- **Beach Volleyball Court** (Sport, Beach, Outdoor, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Sand volleyball court on a sunny beach, net in the center, ocean and sky in the background, relaxed but competitive atmosphere.
 - **Bowling Alley lanes** (Sport, Bowling, Indoor): View down polished bowling lanes, pins at end, ball return visible, overhead scoring displays, lane numbers, recreational atmosphere.
 - **Bowling Alley Seating Area** (Sport, Bowling, Social): Behind-the-lane perspective, molded plastic seats, ball return carousel in foreground, scoring monitor overhead, personal lane space, casual team area.
 - **Bowling Alley Approach** (Sport, Bowling): Close view of hardwood approach area, foul line visible, polished lane extending into distance, arrows and dots on floor, player perspective from starting position.
@@ -81,7 +83,7 @@ Quick scene descriptions for your prompts. Edit or add your own!
 - **Cosmic Bowling** (Sport, Bowling, Glow, Party): Darkened bowling alley with black lights, neon lane bumpers glowing, colorful projected lights, music and party atmosphere, nighttime special event energy.
 - **Dance Studio** (Sport, Art, Dance): Professional dance studio, barre along mirrored wall, polished hardwood floor, bright natural lighting, artistic atmosphere.
 - **Gymnastics Center** (Sport, Gym): Gymnastics training facility, foam pit, balance beams, uneven bars, spring floor, athletic training energy.
-- **Indoor Volleyball Court** (Sport, Indoor): Gymnasium volleyball court, wooden floor, net at center, boundary lines, team sport setting.
+- **Indoor Volleyball Court** (Sport, Volleyball, Indoor): Gymnasium volleyball court, wooden floor, net at center, boundary lines, team sport setting.
 - **Volleyball Net Close-up** (Sport, Detail): Tight shot focused on the white volleyball net, players visible through the mesh, intense competition at the net.
 - **Soccer Goal View** (Sport, Soccer): From behind the soccer net, looking out at the field, goalie in position, tension of an incoming attack.
 - **Soccer Sidelines** (Sport, Soccer): View from the team bench, water bottles and equipment in foreground, green field and players in background.
@@ -104,11 +106,11 @@ Quick scene descriptions for your prompts. Edit or add your own!
 ## Entertainment & Culture
 
 - **Arcade** (Entertainment, Neon, Retro): Retro arcade interior, glowing game cabinets, neon lights, carpet floor, nostalgic energetic vibe.
-- **Art Gallery** (Culture, Art, Indoor): White gallery walls, spotlit artwork, polished concrete floors, minimalist aesthetic, quiet sophisticated space.
+- **Art Gallery** (Culture, Art, Indoor, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume, Block:Sport, Block:Combat, Block:Lounge, Block:Sleep): White gallery walls, spotlit artwork, polished concrete floors, minimalist aesthetic, quiet sophisticated space.
 - **Casino Floor** (Entertainment, Luxury, Gambling): Vibrant casino interior, slot machines, card tables, dramatic lighting, luxurious decor, bustling energy.
 - **Concert Hall** (Entertainment, Music, Formal): Grand concert hall interior inspired by Victorian Gothic architecture, tiered orchestra seating facing ornate stage, high vaulted ceiling with intricate decorative plasterwork, warm ambient lighting from chandeliers, rich red velvet seats, a elaborate proscenium arch with gold detailing, excellent acoustics, formal classical music atmosphere.
-- **Concert Stage** (Entertainment, Music, Party): Large concert stage, dramatic colored spotlights, smoke effects, microphone stand, energetic crowd visible.
-- **Museum Hall** (Culture, History, Indoor): High ceilings, large open space, displayed artifacts/art, clean bright lighting, polished floors, formal quiet atmosphere.
+- **Concert Stage** (Entertainment, Music, Party, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Large concert stage, dramatic colored spotlights, smoke effects, microphone stand, energetic crowd visible.
+- **Museum Hall** (Culture, History, Indoor, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume, Block:Sport, Block:Combat, Block:Lounge, Block:Sleep): High ceilings, large open space, displayed artifacts/art, clean bright lighting, polished floors, formal quiet atmosphere.
 - **Theater Backstage** (Entertainment, Drama): Behind theater curtains, props and costumes visible, dim working lights, cluttered creative chaos.
 
 ---
@@ -192,7 +194,7 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 ## Cyberpunk & Futuristic
 
-- **Cyber Cafe** (Cyberpunk, Tech, Social): Dimly lit internet cafe, glowing screens, neon accents, futuristic casual gathering space.
+- **Cyber Cafe** (Cyberpunk, Tech, Social, Block:Fantasy, Block:Medieval, Block:Armor, Block:Swimwear): Dimly lit internet cafe, glowing screens, neon accents, futuristic casual gathering space.
 - **Data Stream** (Cyberpunk, Abstract, Tech): Abstract digital environment, flowing data visualization, glowing circuit patterns, virtual reality aesthetic.
 - **Futuristic Skybridge** (Cyberpunk, Sci-Fi, City): Glass skybridge between towers, city far below, sleek architecture, sci-fi metropolitan feeling.
 - **Hacker Den** (Cyberpunk, Dark, Tech): Dark room, multiple glowing monitors, tangled cables, blue screen glow, underground tech vibe.
@@ -203,11 +205,13 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 ## Medical & Professional
 
-- **Hospital Corridor** (Medical, Clean, Scary): Clean clinical hallway, white walls, medical equipment visible, fluorescent lighting, professional healthcare setting.
-- **Laboratory** (Medical, Sci-Fi, Work): Clean modern lab, stainless steel equipment, bright white lighting, scientific instruments, clinical atmosphere.
-- **Medical Exam Room** (Medical, Indoor): Small exam room, medical bed with paper cover, equipment on walls, sink, clinical sterile atmosphere.
-- **Operating Room** (Medical, Intense): Surgical suite, bright overhead lights, stainless steel equipment, monitors, sterile blue-green color scheme.
-- **Server Room** (Tech, Sci-Fi, Work): Data center interior, rows of server racks, blinking LED lights, cool blue lighting, high-tech environment.
+- **Hospital Corridor** (Medical, Clean, Scary, Block:Fantasy, Block:Medieval, Block:Armor, Block:Swimwear): Clean clinical hallway, white walls, medical equipment visible, fluorescent lighting, professional healthcare setting.
+- **Art Studio** (Creative, Indoor, Art, Work, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Spacious sunlit studio, wooden floor splattered with paint, canvasses leaning against walls, large easels, messy worktable with brushes and jars, large industrial windows, creative professional atmosphere.
+- **Basketball Court - Outdoor** (Sports, Outdoor, Athletic, Basketball, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Urban asphalt court, chain-link fence, worn basketball hoop, city skyline in background, graffiti on walls, gritty athletic vibe.
+- **Coffee Shop - Modern** (Social, Indoor, Cafe, Tech, Block:Fantasy, Block:Medieval, Block:Armor, Block:Costume): Trendy minimalist cafe, wooden tables, hanging plants, espresso machine, large windows, patrons with laptops, cozy urban social atmosphere.
+- **Medical Exam Room** (Medical, Indoor, Block:Fantasy, Block:Medieval, Block:Armor, Block:Swimwear): Small exam room, medical bed with paper cover, equipment on walls, sink, clinical sterile atmosphere.
+- **Operating Room** (Medical, Intense, Block:Fantasy, Block:Medieval, Block:Armor, Block:Swimwear): Surgical suite, bright overhead lights, stainless steel equipment, monitors, sterile blue-green color scheme.
+- **Server Room** (Tech, Sci-Fi, Work, Block:Fantasy, Block:Medieval, Block:Armor, Block:Swimwear): Data center interior, rows of server racks, blinking LED lights, cool blue lighting, high-tech environment.
 
 ---
 
@@ -228,7 +232,7 @@ Quick scene descriptions for your prompts. Edit or add your own!
 ## Vacation & Resort
 
 - **Beach Cabana** (Vacation, Beach, Luxury): Private beach cabana, billowing white curtains, daybed, ocean view, exclusive relaxation atmosphere.
-- **Mountain Resort** (Vacation, Winter, Cozy): Alpine lodge exterior, snow-capped peaks, wooden deck, cozy mountain retreat atmosphere.
+- **Mountain Resort** (Vacation, Winter, Cozy, Block:Swimwear): Alpine lodge exterior, snow-capped peaks, wooden deck, cozy mountain retreat atmosphere.
 - **Tiki Bar** (Vacation, Party, Beach): Beachside tiki bar, thatched roof, bamboo decor, tropical drinks, sunset colors, island party vibes.
 - **Tropical Resort Pool** (Vacation, Pool, Luxury): Infinity pool overlooking ocean, palm trees, lounge chairs, tropical drinks, luxury vacation vibe.
 

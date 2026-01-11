@@ -46,7 +46,7 @@ class SummaryPanel(CollapsibleFrame):
         create_tooltip(self, "Condensed overview. You can edit this text and click 'Apply' to update the whole prompt.")
         self.set_import_command(self.on_import)
         
-        self.text = tk.Text(content, wrap="word", height=3)
+        self.text = tk.Text(content, wrap="word", height=6)
         self.text.grid(row=0, column=0, sticky="ew", padx=4, pady=6)
         create_tooltip(self.text, "Condensed overview. Click 'Import' to load from text.")
         

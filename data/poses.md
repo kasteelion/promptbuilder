@@ -37,7 +37,10 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Painter at Easel (Seated)** (Art, Creative, Sitting): Sitting on a stool in front of a wooden easel, palette in one hand and brush in the other, focused intently on the canvas.
 - **Painter at Easel (Standing)** (Art, Creative, Standing): Standing before an easel, arm extended to make a brushstroke, stepping back slightly to judge the work, creative focus.
 - **Phone Check** (Casual, Tech): Looking down at phone screen, soft smile, casual modern moment, candid natural pose.
+- **Chopping Vegetables** (Cooking, Domestic, Standing): Standing at kitchen counter, holding chef's knife, focused on chopping fresh vegetables on a cutting board, skilled culinary technique.
+- **Stirring Pot** (Cooking, Domestic, Standing): Standing over a stove, holding a wooden spoon, stirring a large pot with one hand while the other steadying the handle, savory steam rising.
 - **Reading** (Casual, Reading, Relaxed): Holding book or phone, engaged in reading, relaxed seated or standing position.
+- **Presenting** (Work, Professional, Standing): Standing near a monitor or document, gesturing toward it with one hand while looking at an audience, confident professional delivery.
 
 ---
 
@@ -61,6 +64,9 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Dancing** (Dynamic, Dance): Mid-dance motion, fluid graceful movement, arms in expressive position.
 - **Dress Twirl** (Dynamic, Fun): Mid-spin motion, dress or skirt flowing outward, playful joyful expression, arms out.
 - **Stretching** (Dynamic, Morning): Arms stretched overhead, back arched slightly, eyes closed, sensual morning energy.
+- **Dribbling** (Sports, Basketball, Dynamic): Low athletic stance, eyes up, one hand dribbling a basketball on asphalt or court, mid-stride motion.
+- **Shooting Hoop** (Sports, Basketball, Dynamic): Mid-air or high-release shot, arm extended toward hoop, flick of the wrist, focused concentration.
+- **Warming Up** (Sports, Athletic, Standing): Stretching a limb or jogging in place, preparing for physical activity, focused athletic mindset.
 - **Wind Blown** (Dynamic, Dramatic): Hair blowing in wind, hand holding hair back, looking into distance, cinematic feel.
 
 ---
@@ -99,56 +105,65 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 
 ---
 
-## Sports
+## Bowling
 
-- **Ball Return Wait** (Sports, Bowling): Standing at ball return carousel, hand resting on return mechanism, watching for ball, casual ready stance, between-frames energy.
-- **Basketball Dribbling** (Sports, Basketball, Action): Low athletic stance, one hand dribbling the ball, other arm out for protection, eyes on the court.
-- **Basketball Layup** (Sports, Basketball, Jump): Jumping toward the hoop, one arm extended high with the ball, body in controlled motion.
-- **Basketball Shot** (Sports, Basketball, Action): Arms extended overhead in shooting form, wrists flexed, ball release moment, eyes on target.
-- **Bowling Address Position** (Sport, Bowling): Standing at foul line, bowling ball held at chest height with both hands, focused gaze down the lane at pins, knees slightly bent, ready stance before approach.
-- **Bowling Approach** (Sports, Bowling, Action): Mid-walk down approach (3-4 steps), ball swinging back behind body, opposite arm out for balance, focused on target, athletic momentum.
-- **Bowling Deep Lunge Release** (Sports, Bowling, Dynamic): Extreme athletic lunge position at release point, front leg bent deeply with knee almost touching the lane, back leg extended straight behind in wide split-stance, bowling arm extended downward and forward completing release motion.
-- **Bowling Follow-Through** (Sports, Bowling, Pose): Arm extended forward after release, hand in graceful follow-through position reaching toward pins, opposite arm out for balance, front knee bent, classic finish pose.
-- **Bowling Portrait** (Sports, Bowling, Portrait): Standing upright facing camera in relaxed confident pose, holding bowling ball cradled in both hands at waist/hip level, warm genuine smile, professional portrait stance.
-- **Bowling Release (Low Angle)** (Sports, Bowling, Action): Dynamic athletic crouch at foul line, front knee deeply bent at 90 degrees, back leg extended straight behind, arm extended forward in powerful follow-through, low ground-level perspective.
-- **Bowling Victory Arms Up** (Sports, Bowling, Happy): Both arms raised overhead in triumph after strike, wide smile, celebratory energy, standing near foul line or approach area.
-- **Checking Score Monitor** (Sports, Bowling, Casual): Looking up at overhead scoring display, hand shading eyes or pointing at screen, reading results, competitive focus.
-- **Cheerleading Jump** (Sports, Cheer, Jump): Mid-cheer jump (toe touch, pike, or herkie), legs extended, arms in position, spirited energy.
-- **Disappointed Stance** (Sports, Emotion, Sad): Standing at foul line after split or gutter ball, hands on hips or hand to forehead, disappointed but lighthearted expression, sports frustration.
-- **Fighter Stance** (Sports, Combat, Action): Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
-- **Flag Football Catch** (Sports, Football, Action): Leaping in the air, arms extended to catch the football, eyes locked on the ball, athletic dynamic pose.
-- **Flag Football Quarterback Throw** (Sports, Football, Throw): Arm cocked back ready to throw, weight on back foot, scanning the field, leadership presence.
-- **Flag Football Ready Stance** (Sports, Football, Ready): Knees bent, hands ready at waist level, intense focus, ready to react to the play.
-- **Grappling Position** (Sports, Combat, MMA): Low wrestling stance, arms extended ready to engage, knees bent, explosive ready energy.
-- **Ground Control** (Sports, Combat, Ground): On mat in dominant position, knee on ground, controlled powerful posture, competitive intensity.
-- **Heavy Bag Strike** (Sports, Combat, Gym): Mid-punch or kick to heavy bag, dynamic motion, powerful extension, training intensity.
-- **Holding Multiple Balls** (Sports, Bowling, Funny): Arms cradling 2-3 bowling balls at once, testing different weights, ball selection process, focused shopping expression.
-- **Jump Rope** (Sports, Gym, Cardio): Mid-jump motion, rope blurred in motion, athletic form, training montage energy.
-- **Lacing Bowling Shoes** (Sports, Bowling, Casual): Sitting on bench, bent forward tying rental bowling shoes, casual pre-game preparation moment.
-- **Pin Watching** (Sports, Bowling, Waiting): Standing just past foul line, watching pins fall, arm still extended from release, hopeful or excited expression, anticipating the result.
-- **Polishing Ball** (Sports, Bowling, Prep): Standing at ball return area, towel in hand, carefully wiping/polishing bowling ball, focused preparation, pre-bowl ritual.
-- **Sitting Lane Seat** (Sports, Bowling, Relaxed): Sitting in molded plastic lane seating, relaxed posture, bowling shoes on, between frames, casual comfortable pose.
-- **Soccer Dribbling** (Sports, Soccer, Run): Mid-stride with soccer ball at feet, focused gaze ahead, athletic movement, dynamic energy.
-- **Soccer Goalkeeper Save** (Sports, Soccer, Dive): Diving sideways with arms extended, hands reaching for the ball, intense focus, athletic desperation.
-- **Soccer Kick** (Sports, Soccer, Action): Mid-kick motion, leg extended toward ball, arms out for balance, dynamic athletic energy.
-- **Softball/Baseball Batting Stance** (Sports, Baseball, Ready): Standing at the plate, holding bat over shoulder, knees slightly bent, focused gaze on the pitcher.
-- **Softball/Baseball Catching** (Sports, Baseball, Catch): Crouched with glove extended, ready to receive the ball, alert expression.
-- **Softball/Baseball Pitching Windup** (Sports, Baseball, Pitch): Mid-motion pitching, leg lifted, arm cocked back, focused intensity.
-- **Sparring Guard** (Sports, Combat, Guard): Defensive position, one arm extended in fist, other protecting face, alert watchful expression.
-- **Stretching Pre-Fight** (Sports, Stretch, Gym): Deep lunge stretch, arms overhead or extended, focused concentration, warming up energy.
-- **Swimming Dive** (Sports, Swim, Dive): Streamlined diving position, arms extended forward, body horizontal, entering water, competitive form.
-- **Tennis Serve** (Sports, Tennis, Serve): Racket raised high overhead, ball toss with opposite hand, arched back, serving motion.
-- **Track Starting Block** (Sports, Run, Ready): Crouched in starting position, hands on ground, explosive ready stance, intense focus.
+- **Ball Return Wait** (Bowling): Standing at ball return carousel, hand resting on return mechanism, watching for ball, casual ready stance, between-frames energy.
+- **Bowling Address Position** (Bowling): Standing at foul line, bowling ball held at chest height with both hands, focused gaze down the lane at pins, knees slightly bent, ready stance before approach.
+- **Bowling Approach** (Bowling, Action): Mid-walk down approach (3-4 steps), ball swinging back behind body, opposite arm out for balance, focused on target, athletic momentum.
+- **Bowling Deep Lunge Release** (Bowling, Dynamic): Extreme athletic lunge position at release point, front leg bent deeply with knee almost touching the lane, back leg extended straight behind in wide split-stance, bowling arm extended downward and forward completing release motion.
+- **Bowling Follow-Through** (Bowling, Pose): Arm extended forward after release, hand in graceful follow-through position reaching toward pins, opposite arm out for balance, front knee bent, classic finish pose.
+- **Bowling Portrait** (Bowling, Portrait): Standing upright facing camera in relaxed confident pose, holding bowling ball cradled in both hands at waist/hip level, warm genuine smile, professional portrait stance.
+- **Bowling Release (Low Angle)** (Bowling, Action): Dynamic athletic crouch at foul line, front knee deeply bent at 90 degrees, back leg extended straight behind, arm extended forward in powerful follow-through, low ground-level perspective.
+- **Bowling Victory Arms Up** (Bowling, Happy): Both arms raised overhead in triumph after strike, wide smile, celebratory energy, standing near foul line or approach area.
+- **Checking Score Monitor** (Bowling, Casual): Looking up at overhead scoring display, hand shading eyes or pointing at screen, reading results, competitive focus.
+- **Disappointed Stance** (Bowling, Emotion, Sad): Standing at foul line after split or gutter ball, hands on hips or hand to forehead, disappointed but lighthearted expression, sports frustration.
+- **Holding Multiple Balls** (Bowling, Funny): Arms cradling 2-3 bowling balls at once, testing different weights, ball selection process, focused shopping expression.
+- **Lacing Bowling Shoes** (Bowling, Casual): Sitting on bench, bent forward tying rental bowling shoes, casual pre-game preparation moment.
+- **Pin Watching** (Bowling, Waiting): Standing just past foul line, watching pins fall, arm still extended from release, happy or excited expression, anticipating the result.
+- **Polishing Ball** (Bowling, Prep): Standing at ball return area, towel in hand, carefully wiping/polishing bowling ball, focused preparation, pre-bowl ritual.
+- **Sitting Lane Seat** (Bowling, Relaxed): Sitting in molded plastic lane seating, relaxed posture, bowling shoes on, between frames, casual comfortable pose.
+
+## Team Sports
+
+- **Basketball Dribbling** (Basketball, Action): Low athletic stance, one hand dribbling the ball, other arm out for protection, eyes on the court.
+- **Basketball Layup** (Basketball, Jump): Jumping toward the hoop, one arm extended high with the ball, body in controlled motion.
+- **Basketball Shot** (Basketball, Action): Arms extended overhead in shooting form, wrists flexed, ball release moment, eyes on target.
+- **Cheerleading Jump** (Cheer, Jump): Mid-cheer jump (toe touch, pike, or herkie), legs extended, arms in position, spirited energy.
+- **Cheerleading Liberty** (Cheer, Balance): Standing on one locked leg, other leg bent with foot at the knee, arms in a high "V" position, bright energetic smile.
+- **Flag Football Catch** (Football, Action): Leaping in the air, arms extended to catch the football, eyes locked on the ball, athletic dynamic pose.
+- **Flag Football Quarterback Throw** (Football, Throw): Arm cocked back ready to throw, weight on back foot, scanning the field, leadership presence.
+- **Flag Football Ready Stance** (Football, Ready): Knees bent, hands ready at waist level, intense focus, ready to react to the play.
+- **High V Cheer** (Cheer, Pose): Standing with legs apart, arms held high in a sharp V shape, fists tight, radiating spirited team energy.
+- **Pompom Shake** (Cheer, Action): Dynamic mid-motion pose, arms extended to the sides with pom-poms blurred in motion, joyful and high-energy.
+- **Soccer Dribbling** (Soccer, Run): Mid-stride with soccer ball at feet, focused gaze ahead, athletic movement, dynamic energy.
+- **Soccer Goalkeeper Save** (Soccer, Dive): Diving sideways with arms extended, hands reaching for the ball, intense focus, athletic desperation.
+- **Soccer Kick** (Soccer, Action): Mid-kick motion, leg extended toward ball, arms out for balance, dynamic athletic energy.
+- **Softball/Baseball Batting Stance** (Baseball, Ready): Standing at the plate, holding bat over shoulder, knees slightly bent, focused gaze on the pitcher.
+- **Softball/Baseball Catching** (Baseball, Catch): Crouched with glove extended, ready to receive the ball, alert expression.
+- **Softball/Baseball Pitching Windup** (Baseball, Pitch): Mid-motion pitching, leg lifted, arm cocked back, focused intensity.
+- **Tennis Serve** (Tennis, Serve): Racket raised high overhead, ball toss with opposite hand, arched back, serving motion.
+- **Professional Tennis Serve** (Tennis, Serve): Body arched back in a deep "trophy position," racket head dropped behind the back, tossing hand high in the air, maximum kinetic tension.
+- **Three-Point Shot** (Basketball, Shoot): Mid-jump at the arc, body perfectly aligned, arm extended high with a flick of the wrist, eyes locked on the distant hoop.
 - **Victory Pose** (Sports, Winner, Happy): Arms raised triumphantly overhead, confident smile, championship energy, standing tall.
-- **Volleyball Dig** (Sports, Volleyball, Action): Low athletic crouch, arms extended together in a platform, focused on the incoming ball, ready to pass.
-- **Volleyball Serve** (Sports, Volleyball, Serve): Jumping with arm extended overhead, ball contact moment, powerful athletic form, focused upward gaze.
-- **Volleyball Set** (Sports, Volleyball, Action): Standing with hands raised above head, fingers spread, prepared to guide the ball upward, focused concentration.
-- **Volleyball Spike** (Sports, Volleyball, Attack): Mid-air jump, body arched, arm cocked back ready to strike the volleyball over the net, intense focused expression.
-- **Three-Point Shot** (Sports, Basketball, Shoot): Mid-jump at the arc, body perfectly aligned, arm extended high with a flick of the wrist, eyes locked on the distant hoop.
-- **Professional Tennis Serve** (Sports, Tennis, Serve): Body arched back in a deep "trophy position," racket head dropped behind the back, tossing hand high in the air, maximum kinetic tension.
-- **Cheerleading Liberty** (Sports, Cheer, Balance): Standing on one locked leg, other leg bent with foot at the knee, arms in a high "V" position, bright energetic smile.
-- **High V Cheer** (Sports, Cheer, Pose): Standing with legs apart, arms held high in a sharp V shape, fists tight, radiating spirited team energy.
-- **Pompom Shake** (Sports, Cheer, Action): Dynamic mid-motion pose, arms extended to the sides with pom-poms blurred in motion, joyful and high-energy.
+- **Volleyball Dig** (Volleyball, Action): Low athletic crouch, arms extended together in a platform, focused on the incoming ball, ready to pass.
+- **Volleyball Serve** (Volleyball, Serve): Jumping with arm extended overhead, ball contact moment, powerful athletic form, focused upward gaze.
+- **Volleyball Set** (Volleyball, Action): Standing with hands raised above head, fingers spread, prepared to guide the ball upward, focused concentration.
+- **Volleyball Spike** (Volleyball, Attack): Mid-air jump, body arched, arm cocked back ready to strike the volleyball over the net, intense focused expression.
+
+## Combat Sports
+
+- **Fighter Stance** (Combat, Action): Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
+- **Grappling Position** (Combat, MMA): Low wrestling stance, arms extended ready to engage, knees bent, explosive ready energy.
+- **Ground Control** (Combat, Ground): On mat in dominant position, knee on ground, controlled powerful posture, competitive intensity.
+- **Heavy Bag Strike** (Combat, Gym): Mid-punch or kick to heavy bag, dynamic motion, powerful extension, training intensity.
+- **Sparring Guard** (Combat, Guard): Defensive position, one arm extended in fist, other protecting face, alert watchful expression.
+
+## Gym & Fitness
+
+- **Jump Rope** (Gym, Cardio): Mid-jump motion, rope blurred in motion, athletic form, training montage energy.
+- **Stretching Pre-Fight** (Gym, Stretch): Deep lunge stretch, arms overhead or extended, focused concentration, warming up energy.
+- **Swimming Dive** (Swim, Dive): Streamlined diving position, arms extended forward, body horizontal, entering water, competitive form.
+- **Track Starting Block** (Run, Ready): Crouched in starting position, hands on ground, explosive ready stance, intense focus.
 
 ---
 
@@ -206,14 +221,6 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 
 ---
 
-## Sports (Gym)
-
-- **Barbell Rack Back View (Low Angle)** (Sports, Gym, Fitness, Weights): Standing at barbell rack facing away from camera, back arched, one leg extended straight back with foot on toes, other leg bent supporting weight, torso leaning forward toward bar, hands resting on barbell, low camera angle from behind emphasizing leg extension and back curve, dramatic athletic aesthetic.
-- **Cable Machine Mirror Selfie** (Sports, Gym, Selfie, Fitness): Standing at cable machine in side profile to mirror, one arm extended fully gripping cable handle at shoulder height, opposite hand holding phone up for selfie, body in athletic stance with slight lean, hip cocked, headphones on, mirror captures side view showing arm extension and engaged posture.
-- **Floor Kneeling Mirror Selfie (Front Angle)** (Sports, Gym, Selfie, Pose): Kneeling upright on gym floor facing mirror, sitting back slightly on heels, knees apart, torso upright, one hand holding phone up at face level for selfie, other arm relaxed at side, direct eye contact with camera through mirror, straight-on front angle capturing full upper body and kneeling position.
-- **Ground Sitting Lean Back** (Sports, Gym, Relaxed, Selfie): Sitting on floor with legs extended to one side, leaning back on one arm for support, other hand holding phone for low-angle selfie, body angled toward camera, relaxed casual +pose, legs bent or crossed, camera positioned low capturing upward angle.
-- **Window Sill Seated Side Angle** (Gym, Relaxed, Pose): Sitting sideways on window ledge or sill, one leg bent with foot on sill, other leg dangling down, torso twisted toward camera, hand holding phone near face, natural window light from behind, side-to-three-quarter angle capturing silhouette and contemplative mood.
-- **Barbell Back Squat (Eye Level Front)** (Sports, Gym, Weights, Squat): Deep squat position with loaded barbell resting on upper back/trapezius, hands gripping bar wider than shoulders, thighs parallel to ground or below parallel, chest up and out, back straight, knees tracking over toes, eyes focused straight ahead, camera at standing eye level capturing frontal view showing full squat depth and form, power rack visible in background.
 
 ---
 

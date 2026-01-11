@@ -27,4 +27,19 @@ promptbuilder_debug.log
 presets/
 data/presets/
 
+# Generated Content
+generated_images/
+generated_prompts_only/
+generated_prompts.txt
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# Automation / Temp
+chrome_profile/
+test_*.py
+check_*.py
+gen_*.py
+
 

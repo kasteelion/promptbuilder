@@ -5,7 +5,7 @@ modifiers:
   Classic: , wearing a spandex bodysuit with a cape
 
 [F]
-- **Top:** ((default:Black or Deep Red) or (signature)) **armored bodice** (structured leather or plating with angular cutouts and distinct **shoulder guards**){modifier}
+- **Top:** ((default:Black) or (signature)) **armored bodice** (structured leather or plating with angular cutouts and distinct **shoulder guards**){modifier}
 - **Bottom:** **asymmetric floor-length loincloth** or split skirt worn over **fitted leggings**
 - **Footwear:** thigh-high **armored boots** with metal hardware.
 - **Accessories:** Elbow-length **gauntlets** or leather arm wraps, wide belt with heavy metallic ring buckle, optional cape.

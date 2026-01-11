@@ -12,6 +12,7 @@ import time
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from logic.data_loader import DataLoader
+from logic.randomizer import PromptRandomizer
 from core.builder import PromptBuilder
 
 def clear_screen():
@@ -76,8 +77,13 @@ def wizard_main():
         schemes = loader.load_color_schemes()
         print("Loading modifiers...")
         modifiers = loader.load_modifiers()
+        print("Loading interaction templates...")
+        interactions = loader.load_interactions()
+        print("Loading framing options...")
+        framing = loader.load_framing()
         
         builder = PromptBuilder(chars, base_prompts, poses, schemes, modifiers)
+        randomizer = PromptRandomizer(chars, base_prompts, poses, scenes, interactions, schemes, modifiers, framing)
         print("Ready!")
         time.sleep(0.5)
     except Exception as e:
@@ -103,9 +109,10 @@ def wizard_main():
         print("1. Add Character")
         print("2. Set Scene")
         print("3. Set Base Prompt Style")
-        print("4. Generate Prompt")
-        print("5. Clear All")
-        print("6. Exit")
+        print("4. Randomize")
+        print("5. Generate Prompt")
+        print("6. Clear All")
+        print("7. Exit")
 
         choice = input("\nSelect action: ").strip()
 
@@ -202,6 +209,31 @@ def wizard_main():
                 config["base_prompt"] = style
 
         elif choice == "4":
+            # Randomize
+            try:
+                num_chars_input = input("How many characters? (1-5, default random): ").strip()
+                num_chars = int(num_chars_input) if num_chars_input.isdigit() else None
+                
+                # Use randomizer
+                new_config = randomizer.randomize(
+                    num_characters=num_chars,
+                    include_scene=True,
+                    include_notes=True
+                )
+                
+                # Update config
+                config["selected_characters"] = new_config["selected_characters"]
+                config["base_prompt"] = new_config["base_prompt"]
+                config["scene"] = new_config.get("scene", "")
+                config["notes"] = new_config.get("notes", "")
+                
+                print("\n✨ Randomized successfully!")
+                input("Press Enter to continue...")
+            except Exception as e:
+                print(f"Randomization failed: {e}")
+                input("Press Enter to continue...")
+
+        elif choice == "5":
             # Generate
             clear_screen()
             result = builder.generate(config)
@@ -233,13 +265,13 @@ def wizard_main():
             else:
                 input("Press Enter to continue...")
 
-        elif choice == "5":
+        elif choice == "6":
             config["selected_characters"] = []
             config["scene"] = ""
             print("Cleared.")
             time.sleep(0.5)
 
-        elif choice == "6":
+        elif choice == "7":
             print("Goodbye!")
             break
 

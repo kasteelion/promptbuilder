@@ -69,6 +69,49 @@ class PromptRandomizer:
                 
         return matching_names
 
+    # Define tag aliases/groups to expand thematic matching
+    TAG_ALIASES = {
+        "athletic": ["sport", "active", "training", "gym"],
+        "sport": ["athletic", "active"],
+        "creative": ["art", "artistic"],
+        "art": ["creative", "artistic"],
+        "vintage": ["retro", "nostalgic", "old-school"],
+        "retro": ["vintage", "nostalgic"],
+        "soft": ["gentle", "calm", "pastel"],
+        "edgy": ["alternative", "dark", "cool"],
+        "luxury": ["rich", "expensive", "elegant", "fashion"],
+        "western": ["rugged", "outdoorsy", "casual", "edgy"],
+        "cottagecore": ["soft", "nature", "vintage", "calm"],
+    }
+
+    def _expand_tags(self, tags):
+        """Expand tags with aliases/groups."""
+        expanded = set(tags)
+        for t in tags:
+            t_lower = t.lower()
+            if t_lower in self.TAG_ALIASES:
+                expanded.update(self.TAG_ALIASES[t_lower])
+        return expanded
+
+    def _check_color_support(self, char_name, outfit_name):
+        """Check if an outfit supports color substitution or signature colors."""
+        char_def = self.characters.get(char_name, {})
+        outfit_data = char_def.get("outfits", {}).get(outfit_name, "")
+        
+        # Convert outfit data to a checkable string
+        outfit_str = ""
+        if isinstance(outfit_data, dict):
+            # Check all values in the dict (Top, Bottom, etc.)
+            outfit_str = " ".join(str(v) for k, v in outfit_data.items() if isinstance(v, str))
+        else:
+            outfit_str = str(outfit_data)
+        
+        # Check for color placeholders
+        has_schemes = any(f"{{{k}}}" in outfit_str for k in ("primary_color", "secondary_color", "accent"))
+        has_sig = "{signature_color}" in outfit_str or "(signature)" in outfit_str
+        
+        return has_schemes or has_sig
+
     def randomize(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None):
         """Generate random prompt configuration.
 
@@ -86,7 +129,108 @@ class PromptRandomizer:
                 - notes: Random notes text (if include_notes=True)
                 - color_scheme: Random color scheme name
         """
-        # Step 0: Resolve conflicts between Interactions and Poses
+    def _extract_special_tags(self, tags):
+        """Extract special tags (Mood:, Block:) from a list of tags.
+        
+        Args:
+            tags: List/Set of tags.
+            
+        Returns:
+            tuple: (normal_tags, mood_tags, blocked_tags)
+        """
+        normal = set()
+        mood = set()
+        blocked = set()
+        
+        for t in tags:
+            t_str = str(t)
+            if t_str.startswith("Mood:"):
+                mood.add(t_str[5:].strip())
+            elif t_str.startswith("Block:"):
+                blocked.add(t_str[6:].strip().lower()) # Block tags are case-insensitive for matching
+            else:
+                normal.add(t_str)
+                
+        return normal, mood, blocked
+
+    def randomize(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, candidates=5):
+        """Generate multiple candidates and return the highest scoring one."""
+        best_config = None
+        best_score = -float('inf')
+        
+        # If we are forcing a prompt or have specific constraints, we might want fewer candidates to save time?
+        # But for quality, consistent N is better.
+        
+        # Debug: Print that we are running Monte Carlo
+        # print(f"Generating {candidates} candidates...")
+        
+        for _ in range(candidates):
+            config = self._generate_single_candidate(num_characters, include_scene, include_notes, forced_base_prompt)
+            score = self._score_candidate(config)
+            
+            # print(f"Candidate score: {score}")
+            
+            if score > best_score:
+                best_score = score
+                best_config = config
+        
+        # Clean up metadata before returning if it's not needed for the consumer
+        # But maybe it's useful? Let's leave it for now or explicitly remove it if strict schema needed.
+        # best_config.pop("metadata", None)
+        
+        return best_config
+
+    def _score_candidate(self, config):
+        """Score a generated configuration based on heuristics."""
+        score = 0
+        metadata = config.get("metadata", {})
+        active_moods = metadata.get("moods", set())
+        active_moods_lower = {m.lower() for m in active_moods}
+        
+        # 1. Completeness (+5 for key sections)
+        if config.get("scene"):
+            score += 5
+        if config.get("notes"):
+            score += 5
+            
+        # 2. Mood Alignment (+10 per item matching mood)
+        if active_moods_lower:
+            for char in config.get("selected_characters", []):
+                # Check Outfit
+                outfit_name = char.get("outfit")
+                # We need to look up tags. Only possible if we have access to raw data.
+                # Assuming outfit name is unique per character, or we assume the randomizer did its job.
+                # But to VERIFY, we should look it up.
+                char_def = self.characters.get(char.get("name"), {})
+                outfits = char_def.get("outfits", {})
+                if outfit_name in outfits:
+                    data = outfits[outfit_name]
+                    tags = [t.lower() for t in self._get_tags(data)]
+                    if any(m in tags for m in active_moods_lower):
+                        score += 10
+                        
+                # Check Pose
+                pose_cat = char.get("pose_category")
+                if pose_cat and pose_cat in self.poses:
+                    # Check tags of the category (we assume category tags proxy for pose tags often)
+                    # We sadly don't verify individual pose preset tags easily here without doing a deep lookup
+                    # equivalent to the randomizer's work. 
+                    # Let's check the Category Name matches mood
+                    if any(m in pose_cat.lower() for m in active_moods_lower):
+                        score += 5
+        
+        # 3. Repetitiveness Penalty
+        # Simple check for repeated unique words in description
+        text_content = (config.get("scene", "") + " " + config.get("notes", "")).lower()
+        words = [w for w in text_content.split() if len(w) > 4] # Ignore small words
+        if len(words) > len(set(words)) + 2: # Allow small overlap
+            score -= 5
+            
+        return score
+
+    def _generate_single_candidate(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None):
+        """Generate a single random prompt configuration."""
+        # Step 1: Resolve conflicts between Interactions and Poses
         generate_interaction = include_notes
         generate_poses = True
         
@@ -100,23 +244,10 @@ class PromptRandomizer:
                 generate_interaction = False
             # else: Mixed (keep both True)
 
-        # Step 1: Select Interaction first (if requested)
-        selected_interaction_template = None
-        min_chars_needed = 1
-        
-        if generate_interaction and self.interactions:
-            all_templates = []
-            for category, templates in self.interactions.items():
-                for name, data in templates.items():
-                    if isinstance(data, dict):
-                        all_templates.append((data.get("description", ""), data.get("min_chars", 1)))
-                    else:
-                        all_templates.append((data, 1))
-            
-            if all_templates:
-                selected_interaction_template, min_chars_needed = random.choice(all_templates)
-
         # Step 2: Determine number of characters
+        # If we want interaction, we prefer multi-character unless forced otherwise
+        min_chars_needed = 2 if generate_interaction else 1
+        
         if num_characters is None or num_characters == 0:
             lower_bound = max(1, min_chars_needed)
             upper_bound = max(3, lower_bound)
@@ -128,7 +259,6 @@ class PromptRandomizer:
             num_characters = max(1, min(num_characters, 5))
 
         # Get random base prompt
-        # Get random base prompt (fallback/initial)
         base_prompt = ""
         if forced_base_prompt and self.base_prompts and forced_base_prompt in self.base_prompts:
             base_prompt = forced_base_prompt
@@ -143,7 +273,8 @@ class PromptRandomizer:
                 "base_prompt": base_prompt, 
                 "scene": "", 
                 "notes": "",
-                "color_scheme": "Default (No Scheme)"
+                "color_scheme": "Default (No Scheme)",
+                "metadata": {"moods": set()}
             }
 
         num_to_select = min(num_characters, len(available_chars))
@@ -157,39 +288,63 @@ class PromptRandomizer:
             tags = char_def.get("tags", [])
             for t in tags:
                 combined_tags.add(t.lower())
+        
+        # Expand tags with aliases (e.g. athletic -> sport)
+        combined_tags = self._expand_tags(combined_tags)
+
+        # Maintain Context Sets
+        context_moods = set()
+        context_blocked = set()
 
         # Select Scene (Smart)
         scene_text = ""
         scene_category = ""
+        scene_tags = []
+        
         if include_scene:
-            scene_category, scene_text = self._select_smart_scene(combined_tags)
+            # Generate scene with metadata (Smart Selection)
+            scene_text, scene_category, scene_tags = self._select_smart_scene(combined_tags)
+            
+            # Add scene tags to context (if any)
+            if scene_tags:
+                combined_tags.update([t.lower() for t in scene_tags])
+                _, scene_moods, scene_blocked = self._extract_special_tags(scene_tags)
+                context_moods.update(scene_moods)
+                context_blocked.update(scene_blocked)
 
-        # Smart Color Scheme Selection
+        # Move Color Scheme selection down (after characters are randomized)
         color_scheme = "Default (No Scheme)"
-        if self.color_schemes and random.random() > 0.3:
-            color_scheme = self._select_smart_color_scheme(combined_tags, scene_category)
 
         # Smart Framing Selection
         prompt_framing = ""
-        if self.framing and random.random() < 0.25:
-            prompt_framing = self._select_smart_framing(num_to_select)
+        # Check if scene had Frame tags?
+        # If we are suppressing poses (Interaction Dominant), we MUST have framing to avoid blank section.
+        framing_chance = 1.0 if not generate_poses else 0.7
+        if self.framing and random.random() < framing_chance: 
+            prompt_framing = self._select_smart_framing(num_to_select, context_tags=combined_tags, scene_category=scene_category)
 
         # Smart Base Prompt Selection (Override)
         if self.base_prompts and not forced_base_prompt:
              base_prompt = self._select_smart_base_prompt(self.base_prompts, combined_tags, scene_category)
 
-        # Extract tags from the selected base prompt to influence Pose/Outfit
+        # Extract tags from the selected base prompt
         base_prompt_tags = set()
         if base_prompt and base_prompt in self.base_prompts:
             bp_data = self.base_prompts[base_prompt]
             if isinstance(bp_data, dict):
                 tags = bp_data.get("tags", [])
+                _, bp_mood, bp_blocked = self._extract_special_tags(tags)
+                context_moods.update(bp_mood)
+                context_blocked.update(bp_blocked)
+                
                 for t in tags:
                     base_prompt_tags.add(t.lower())
         
+        # Add Moods to Base Tags for theming
+        # Moods act as strong theme drivers
+        base_prompt_tags.update([m.lower() for m in context_moods])
+        
         # Add base prompt tags to the context for character randomization
-        # We don't modify combined_tags directly to keep debugging clean, 
-        # but we pass a union to the character randomizer
         character_context_tags = combined_tags.union(base_prompt_tags)
 
         # -- SMART LOGIC END --
@@ -199,9 +354,16 @@ class PromptRandomizer:
         matching_outfit = None
 
         if use_matching_outfits:
-            matching_outfit = self._find_matching_outfit(selected_char_names)
+            matching_outfit = self._find_matching_outfit(
+                selected_char_names, 
+                context_tags=character_context_tags, 
+                scene_category=scene_category,
+                blocked_tags=context_blocked
+            )
 
         selected_characters = []
+        any_supports_color = False
+        
         for char_name in selected_char_names:
             char_data = self._randomize_character(
                 char_name, 
@@ -209,26 +371,40 @@ class PromptRandomizer:
                 include_pose=generate_poses,
                 scene_category=scene_category, # Pass scene context
                 context_tags=character_context_tags, # Pass expanded context
-                theme_tags=base_prompt_tags # Pass base tags specifically as theme enforcers
+                theme_tags=base_prompt_tags, # Pass base tags specifically as theme enforcers
+                blocked_tags=context_blocked # Pass blocked tags
             )
-            char_data["color_scheme"] = color_scheme
             
-            if prompt_framing:
-                char_data["framing_mode"] = prompt_framing
+            # Check if THIS specific character's outfit supports colors
+            if self._check_color_support(char_name, char_data.get("outfit", "")):
+                any_supports_color = True
                 
             if random.random() < 0.25:
                 char_data["use_signature_color"] = True
                 
             selected_characters.append(char_data)
 
+        # Smart Color Scheme Selection (Only if someone can use it)
+        if any_supports_color and self.color_schemes and random.random() > 0.3:
+            combined_search_tags = character_context_tags.union([m.lower() for m in context_moods])
+            color_scheme = self._select_smart_color_scheme(combined_search_tags, scene_category)
+        
+        # Apply color scheme to all (for consistency across the group if they DO use it)
+        for char in selected_characters:
+            char["color_scheme"] = color_scheme
+            if prompt_framing:
+                char["framing_mode"] = prompt_framing
+
         # Generate notes
         notes_text = ""
-        if selected_interaction_template:
-            char_names = [char["name"] for char in selected_characters]
-            notes_text = fill_template(selected_interaction_template, char_names)
-        elif generate_interaction:
+        if generate_interaction:
             # Smart Interaction Selection
-            notes_text = self._generate_random_notes(selected_characters, scene_category)
+            notes_text = self._generate_random_notes(
+                selected_characters, 
+                scene_category, 
+                context_tags=character_context_tags,
+                blocked_tags=context_blocked
+            )
         
         if not notes_text and random.random() < 0.1:
             notes_text = random.choice([
@@ -244,16 +420,21 @@ class PromptRandomizer:
             "base_prompt": base_prompt,
             "scene": scene_text,
             "notes": notes_text,
-            "color_scheme": color_scheme
+            "color_scheme": color_scheme,
+            "metadata": {
+                "moods": context_moods
+            }
         }
 
         return config
 
-    def _select_smart_framing(self, num_characters):
-        """Select a framing type appropriate for the number of characters.
+    def _select_smart_framing(self, num_characters, context_tags=None, scene_category=""):
+        """Select a framing type appropriate for the number of characters and context.
         
         Args:
             num_characters: Number of characters in the scene.
+            context_tags: Set of tags describing the content (optional).
+            scene_category: Category of the scene (optional).
             
         Returns:
             str: Selected framing name.
@@ -263,18 +444,52 @@ class PromptRandomizer:
 
         all_framings = list(self.framing.keys())
         
-        # Define categories conceptually
+        # Define mapping
+        # Maps keywords in tags -> Preferred Framing Categories
+        tag_map = {
+            "portrait": ["Close-up"],
+            "face": ["Close-up"],
+            "makeup": ["Close-up"],
+            "detail": ["Close-up"],
+            "fashion": ["Full Body", "Cowboy Shot"],
+            "outfit": ["Full Body", "Cowboy Shot"],
+            "shoes": ["Full Body"],
+            "action": ["Full Body", "Wide Shot", "Cowboy Shot"],
+            "landscape": ["Wide Shot"],
+            "scenic": ["Wide Shot"],
+        }
+        
+        # 1. Check Tags
+        preferred_framings = []
+        if context_tags:
+            for tag in context_tags:
+                tag_lower = tag.lower()
+                for key, targets in tag_map.items():
+                    if key in tag_lower:
+                        preferred_framings.extend(targets)
+                        
+        if preferred_framings and random.random() < 0.7:
+             # Try to find valid names in our loaded framing dict
+             valid_preferred = [f for f in preferred_framings if f in self.framing]
+             if valid_preferred:
+                 return random.choice(valid_preferred)
+        
+        # 2. Check Number of Characters (Fallback/Override)
         close_types = [f for f in all_framings if any(x in f.lower() for x in ["close", "portrait", "face", "head"])]
-        wide_types = [f for f in all_framings if any(x in f.lower() for x in ["wide", "full", "long", "cinematic", "scenic"])]
+        wide_types = [f for f in all_framings if any(x in f.lower() for x in ["wide", "full", "long", "cinematic", "scenic", "group"])]
         
         if num_characters == 1:
-            # Single character: Bias towards close-ups/portraits (60%), regular random (40%)
-            if close_types and random.random() < 0.6:
+            # Single character: Bias slightly towards close/mid unless tags said otherwise
+            if close_types and random.random() < 0.4:
                 return random.choice(close_types)
         elif num_characters >= 3:
-            # Groups: Bias strongly towards wide/full shots (80%)
-            if wide_types and random.random() < 0.8:
+            # Groups: Bias STRONGLY vs Close-ups (physically hard to fit)
+            if wide_types:
                 return random.choice(wide_types)
+            # If no wide types found, return random but avoid close-ups if possible
+            non_close = [f for f in all_framings if f not in close_types]
+            if non_close:
+                return random.choice(non_close)
         
         # Default fallback
         return random.choice(all_framings)
@@ -313,10 +528,14 @@ class PromptRandomizer:
         return random.choice(all_schemes)
 
     def _select_smart_scene(self, tags):
-        """Select a scene that matches the provided tags/themes."""
+        """Select a scene that matches the provided tags/themes.
+        
+        Returns:
+            tuple: (scene_description, category_name, scene_tags)
+        """
         if not self.scenes:
             # Fallback
-            return "", self._generate_random_scene()
+            return self._generate_random_scene()
 
         # 1. Identify preferred scene categories based on tags
         # Logic: We match tag strings against category names roughly
@@ -364,11 +583,12 @@ class PromptRandomizer:
         presets = self.scenes.get(selected_category, {})
         if presets:
             preset_name = random.choice(list(presets.keys()))
-            return selected_category, self._get_description(presets[preset_name])
+            preset_data = presets[preset_name]
+            return self._get_description(preset_data), selected_category, self._get_tags(preset_data)
         
-        return "", ""
+        return "", "", []
 
-    def _randomize_character(self, char_name, forced_outfit=None, include_pose=True, scene_category="", context_tags=None, theme_tags=None):
+    def _randomize_character(self, char_name, forced_outfit=None, include_pose=True, scene_category="", context_tags=None, theme_tags=None, blocked_tags=None):
         """Generate random outfit and pose for a character."""
         char_def = self.characters.get(char_name, {})
         outfits = char_def.get("outfits", {})
@@ -378,13 +598,16 @@ class PromptRandomizer:
         # Merge with session context tags if provided
         if context_tags:
             tags = tags.union(context_tags)
+            
+        # Expand tags with aliases
+        tags = self._expand_tags(tags)
 
         outfit_name = ""
         if forced_outfit and forced_outfit in outfits:
             outfit_name = forced_outfit
         elif outfits:
             # Smart Outfit Selection
-            outfit_name = self._select_smart_outfit(outfits, categorized_outfits, tags, scene_category)
+            outfit_name = self._select_smart_outfit(outfits, categorized_outfits, tags, scene_category, blocked_tags)
 
         # Random outfit modifier
         outfit_traits = []
@@ -408,24 +631,50 @@ class PromptRandomizer:
                 random_trait = random.choice(list(available_modifiers.keys()))
                 outfit_traits.append(random_trait)
 
+        # Extract outfit tags to influence pose
+        outfit_tags = []
+        if isinstance(outfit_data, dict):
+            outfit_tags = outfit_data.get("tags", [])
+        
+        # Add outfit tags to the context for pose selection
+        pose_context_tags = tags.union(outfit_tags)
+
         # Random pose
         pose_category = ""
         pose_preset = ""
         
         if include_pose and self.poses:
             # Smart Pose Selection
-            pose_category = self._select_smart_pose(self.poses, tags, scene_category, char_def.get("personality", ""), theme_tags=theme_tags)
+            pose_category = self._select_smart_pose(self.poses, pose_context_tags, scene_category, char_def.get("personality", ""), theme_tags=theme_tags, blocked_tags=blocked_tags)
             
             pose_presets = self.poses.get(pose_category, {})
-            # Filter poses within category if we want deep tagging?
-            # For now just pick random within category, maybe improve later to use _filter_items_by_tags here too
-            if pose_presets:
-                pose_preset = random.choice(list(pose_presets.keys()))
+            # Filter Blocked Poses within category
+            valid_pose_names = list(pose_presets.keys())
+            if blocked_tags:
+                 valid_pose_names = [
+                     name for name in valid_pose_names 
+                     if not any(
+                         bt in (t.lower() for t in self._get_tags(pose_presets[name])) 
+                         for bt in blocked_tags
+                     )
+                 ]
+            
+            if valid_pose_names:
+                pose_preset = random.choice(valid_pose_names)
+
+        # Random Character Traits (e.g. Glasses, Freckles)
+        # 90% chance to include a trait if available
+        selected_character_traits = []
+        available_traits = char_def.get("traits", {})
+        if available_traits and random.random() < 0.9:
+            # Pick one random trait
+            selected_character_traits.append(random.choice(list(available_traits.keys())))
 
         return {
             "name": char_name,
             "outfit": outfit_name,
             "outfit_traits": outfit_traits,
+            "character_traits": selected_character_traits,
             "custom_modifiers": local_modifiers, # Pass localized modifier definitions to builder
             "pose_category": pose_category,
             "pose_preset": pose_preset,
@@ -433,7 +682,7 @@ class PromptRandomizer:
             "action_note": "",
         }
 
-    def _select_smart_outfit(self, all_outfits, categorized_outfits, char_tags, scene_category):
+    def _select_smart_outfit(self, all_outfits, categorized_outfits, char_tags, scene_category, blocked_tags=None):
         """Select an outfit that matches character tags or scene context."""
         if not categorized_outfits:
             return random.choice(list(all_outfits.keys()))
@@ -478,12 +727,38 @@ class PromptRandomizer:
 
         # Pick outfit from category
         outfits_in_cat = categorized_outfits.get(target_category, {})
+        
+        # -- BLOCKING LOGIC --
+        if blocked_tags and outfits_in_cat:
+            # Filter out blocked outfits
+            valid_outfits = []
+            for name, data in outfits_in_cat.items():
+                 item_tags = [t.lower() for t in self._get_tags(data)]
+                 if not any(bt in item_tags for bt in blocked_tags):
+                     valid_outfits.append(name)
+            
+            # If we filtered everything, try falling back to all available outfits (minus blocked)
+            if not valid_outfits:
+                # Emergency fallback: Search GLOBAL list
+                for name, data in all_outfits.items():
+                     item_tags = [t.lower() for t in self._get_tags(data)]
+                     if not any(bt in item_tags for bt in blocked_tags):
+                         valid_outfits.append(name)
+            
+            if valid_outfits:
+                return random.choice(valid_outfits)
+            
+            # If STILL no valid outfits (everything blocked?), return basic fallback
+            # Ideally this shouldn't happen unless "Block:Clothing" exists
+            # Just return something random and hope for the best
+            return random.choice(list(outfits_in_cat.keys()))
+
         if outfits_in_cat:
             return random.choice(list(outfits_in_cat.keys()))
         
         return random.choice(list(all_outfits.keys()))
 
-    def _select_smart_pose(self, all_poses, char_tags, scene_category, personality, theme_tags=None):
+    def _select_smart_pose(self, all_poses, char_tags, scene_category, personality, theme_tags=None, blocked_tags=None):
         """Select a pose category that matches character or scene."""
         available_categories = list(all_poses.keys())
         if not available_categories:
@@ -537,16 +812,38 @@ class PromptRandomizer:
                 matching_categories = strict_matches
         
         # Boosted smart chance (was 0.6)
+        target_category = ""
         if matching_categories and random.random() < 0.95:
-            return random.choice(matching_categories)
-            
-        return random.choice(available_categories)
+             target_category = random.choice(matching_categories)
+        else:
+             target_category = random.choice(available_categories)
+             
+        # -- BLOCKING LOGIC --
+        # Ideally we should check if the category ITSELF is blocked?
+        # Or just let the subsequent preset filtering handle it?
+        # Let's check if the category name contains a blocked tag
+        if blocked_tags:
+            # If target category name contains a blocked tag, try to pick another
+            cat_lower = target_category.lower()
+            if any(bt in cat_lower for bt in blocked_tags):
+                # Try to find a safe category
+                safe_categories = [
+                    c for c in available_categories 
+                    if not any(bt in c.lower() for bt in blocked_tags)
+                ]
+                if safe_categories:
+                    target_category = random.choice(safe_categories)
+        
+        return target_category
 
-    def _find_matching_outfit(self, char_names):
+    def _find_matching_outfit(self, char_names, context_tags=None, scene_category="", blocked_tags=None):
         """Find a common outfit name that exists for all characters.
 
         Args:
             char_names: List of character names
+            context_tags: Context tags for smart selection
+            scene_category: Scene category for smart selection
+            blocked_tags: Tags to excluding
 
         Returns:
             str: Name of a matching outfit, or None if no common outfit found
@@ -566,13 +863,69 @@ class PromptRandomizer:
         for outfit_set in outfit_sets[1:]:
             common_outfits &= outfit_set
 
-        # Return random outfit from common outfits, or None
+        # Return smart choice from common outfits
         if common_outfits:
-            return random.choice(list(common_outfits))
+            candidates = list(common_outfits)
+            
+            # 1. Filter Blocked Tags (if we can inspect outfit tags)
+            # This is tricky because we need to check the outfit definition for EACH character.
+            # But usually if they share the name, the tags are similar?
+            # Let's check the first character's definition of this outfit.
+            final_candidates = []
+            
+            first_char = self.characters.get(char_names[0], {})
+            first_char_outfits = first_char.get("outfits", {})
+            
+            for outfit_name in candidates:
+                # Check for blocking
+                is_blocked = False
+                outfit_data = first_char_outfits.get(outfit_name)
+                outfit_tags = [t.lower() for t in self._get_tags(outfit_data)]
+                
+                if blocked_tags and any(bt in outfit_tags for bt in blocked_tags):
+                    is_blocked = True
+                    
+                if not is_blocked:
+                    final_candidates.append(outfit_name)
+            
+            if not final_candidates:
+                return None
+                
+            # 2. Smart Selection (Match Scene/Context)
+            # Prioritize outfits that match context tags
+            preferred = []
+            search_tags = set()
+            if context_tags:
+                search_tags.update(t.lower() for t in context_tags)
+            if scene_category:
+                search_tags.add(scene_category.lower())
+                
+            for outfit_name in final_candidates:
+                outfit_data = first_char_outfits.get(outfit_name)
+                outfit_tags = [t.lower() for t in self._get_tags(outfit_data)]
+                outfit_name_lower = outfit_name.lower()
+                
+                # Check match
+                # Name match
+                if any(t in outfit_name_lower for t in search_tags):
+                    preferred.append(outfit_name)
+                    continue
+                # Tag match
+                if any(t in outfit_tags for t in search_tags):
+                    preferred.append(outfit_name)
+                    
+            if preferred and random.random() < 0.8:
+                return random.choice(preferred)
+                
+            return random.choice(final_candidates)
         return None
 
     def _generate_random_scene(self):
-        """Generate a random scene description from scene presets."""
+        """Generate a random scene description from scene presets.
+        
+        Returns:
+             tuple: (description, category, tags)
+        """
         if not self.scenes:
             # Fallback if no scenes loaded
             scene_elements = [
@@ -582,21 +935,28 @@ class PromptRandomizer:
                 "A dramatic outdoor landscape",
                 "A minimalist studio setting",
             ]
-            return random.choice(scene_elements)
+            return random.choice(scene_elements), "Fallback", []
 
         # Pick random category and preset
         category = random.choice(list(self.scenes.keys()))
         presets = self.scenes[category]
         if presets:
             preset_name = random.choice(list(presets.keys()))
-            return self._get_description(presets[preset_name])
-        return ""
+            data = presets[preset_name]
+            desc = self._get_description(data)
+            tags = self._get_tags(data)
+            return desc, category, tags
+            
+        return "", "", []
 
-    def _generate_random_notes(self, selected_characters, scene_category=""):
+    def _generate_random_notes(self, selected_characters, scene_category="", context_tags=None, blocked_tags=None):
         """Generate random interaction template filled with character names.
 
         Args:
             selected_characters: List of selected character dicts with 'name' key
+            scene_category: Category of the scene
+            context_tags: Set of context tags (e.g. from characters, scene, base prompt)
+            blocked_tags: Set of tags to block (e.g. from scene)
 
         Returns:
             str: Random interaction text with character names filled in
@@ -616,26 +976,44 @@ class PromptRandomizer:
         # Collect all eligible templates across all categories
         eligible_templates = []
         
+        context_tags_lower = {t.lower() for t in context_tags} if context_tags else set()
+
         for category, templates in self.interactions.items():
             for name, data in templates.items():
                 # Handle both new structured format and legacy string format
+                tags = []
                 if isinstance(data, dict):
                     desc = data.get("description", "")
                     min_chars = data.get("min_chars", 1)
+                    tags = data.get("tags", [])
                 else:
                     desc = data
                     min_chars = 1
                     
                 # Check if we have enough characters
                 if num_chars >= min_chars:
-                    # Smart filtering based on scene
-                    if scene_category:
-                        # Simple heuristic: prioritize templates that might match the scene?
-                        # For now, we rely on random chance, maybe improve later.
-                        # But we can filter by interaction key words if we had them.
-                        eligible_templates.append(desc)
-                    else:
-                        eligible_templates.append(desc)
+                    # TAG FILTERING logic (Interaction Pairs)
+                    # If template has tags, we check for compatibility.
+                    # Rule: If template has specific tags (e.g. "Basketball"), AT LEAST ONE must be present in context.
+                    # Exception: "Sport" is generic. If templates only have "Sport", maybe we allow?
+                    # Better Rule: If template has tags, INTERSECTION with context must be > 0.
+                    
+                    if tags:
+                        template_tags_lower = {t.lower() for t in tags}
+                        
+                        # BLOCKING logic
+                        if blocked_tags:
+                            blocked_lower = {b.lower() for b in blocked_tags}
+                            # Check for "Block:Tag" format
+                            raw_blocked = {b.split(":", 1)[1].lower() for b in blocked_lower if b.startswith("block:")}
+                            if template_tags_lower.intersection(raw_blocked):
+                                continue
+
+                        # SMART FILTERING logic
+                        if not template_tags_lower.intersection(context_tags_lower):
+                            continue
+                            
+                    eligible_templates.append(desc)
 
         if eligible_templates:
             template = random.choice(eligible_templates)

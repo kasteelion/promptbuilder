@@ -115,40 +115,62 @@ class TextParser:
             line = line.strip()
             if not line: continue
             
+            # Handle icons/labels
+            if line.startswith("🎨"):
+                config["base_prompt"] = line[1:].strip().strip("*")
+                continue
             if line.startswith("🎬"):
                 config["scene"] = line[1:].strip()
                 continue
-            if line.startswith("📝"):
+            if line.startswith("📝") or line.startswith("🤝"):
                 config["notes"] = line[1:].strip()
+                # Clean up bold labels if present
+                config["notes"] = re.sub(r"^\*\*(?:Action|Interaction)\*\*:\s*", "", config["notes"])
+                continue
+            if line.startswith("✨"):
+                # Moods are primarily for display, might not need strict parsing back
                 continue
             
+            if "Style:" in line:
+                config["base_prompt"] = line.split("Style:", 1)[1].strip()
+                continue
             if "Scene:" in line:
                 config["scene"] = line.split("Scene:", 1)[1].strip()
                 continue
-            if "Notes:" in line:
-                config["notes"] = line.split("Notes:", 1)[1].strip()
+            if "Notes:" in line or "Note:" in line:
+                config["notes"] = line.split("ote:", 1)[1].strip()
                 continue
                 
-            char_match = re.search(r"(?:\[\d+\]\s*)?([^(]+)\(([^)]+)\)", line)
-            if char_match:
-                raw_name = char_match.group(1).strip()
-                # Clean up (F) etc
-                raw_name = re.sub(r"\s*\([FmMHh]\)\s*", "", raw_name)
-                name = TextParser._fuzzy_match(raw_name, available_characters)
-                
-                if name:
-                    params = [p.strip() for p in char_match.group(2).split(",")]
-                    char_entry = {
-                        "name": name,
-                        "outfit": params[0] if len(params) > 0 else "Base",
-                        "pose_preset": params[-1] if len(params) > 1 else "",
-                        "use_signature_color": any("Sig:" in p for p in params)
-                    }
-                    if len(params) == 3:
-                        char_entry["color_scheme"] = params[1]
-                    config["selected_characters"].append(char_entry)
+            # Support multiple characters per line using finditer
+            char_matches = list(re.finditer(r"(?:[👥\[]\d*\]?\s*)?(\**[^(*]+\**)\(([^)]+)\)", line))
+            if char_matches:
+                for char_match in char_matches:
+                    raw_name = char_match.group(1).strip().strip("*")
+                    # Clean up (F) etc
+                    raw_name = re.sub(r"\s*\([FmMHh]\)\s*", "", raw_name)
+                    # Strip icons like 👥
+                    raw_name = re.sub(r"^[^\w\s]+", "", raw_name).strip()
+                    
+                    name = TextParser._fuzzy_match(raw_name, available_characters)
+                    
+                    if name:
+                        # Support both ',' and ' • ' as separators
+                        params_text = char_match.group(2).replace(" • ", ",")
+                        params = [p.strip() for p in params_text.split(",")]
+                        char_entry = {
+                            "name": name,
+                            "outfit": params[0] if len(params) > 0 else "Base",
+                            "pose_preset": params[-1] if len(params) > 1 else "",
+                            "use_signature_color": any("Sig:" in p for p in params)
+                        }
+                        if len(params) >= 3:
+                            # Try to find something that looks like a color scheme (usually the middle one)
+                            char_entry["color_scheme"] = params[1]
+                        config["selected_characters"].append(char_entry)
             else:
-                name = TextParser._fuzzy_match(line, available_characters)
+                # Direct name match (only if no characters with parens were found)
+                clean_line = re.sub(r"^[^\w\s]+", "", line).strip().strip("*")
+                name = TextParser._fuzzy_match(clean_line, available_characters)
                 if name:
                     config["selected_characters"].append({"name": name, "outfit": "Base", "pose_preset": ""})
                     
