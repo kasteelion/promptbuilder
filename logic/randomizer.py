@@ -875,15 +875,8 @@ class PromptRandomizer:
             for name, data in outfits_in_cat.items():
                  item_tags = [t.lower() for t in self._get_tags(data)]
                  
-                 # DEBUG PRINT
-                 if "noir" in blocked_tags or "pop" in blocked_tags:
-                    print(f"[DEBUG] Checking {name}: tags={item_tags}, blocked={blocked_tags}")
-                 
                  if not any(bt in item_tags for bt in blocked_tags):
                      valid_outfits.append(name)
-                 else:
-                     # pass
-                     print(f"[DEBUG] BLOCKED {name}")
             
             # If we filtered everything, try falling back to all available outfits (minus blocked)
             if not valid_outfits:
