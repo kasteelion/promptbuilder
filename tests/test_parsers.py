@@ -1,108 +1,98 @@
-import textwrap
+import unittest
+from logic.character_parser import CharacterParser
 
-from logic.parsers import MarkdownParser
+class TestCharacterParser(unittest.TestCase):
 
+    def test_parse_basic_character(self):
+        markdown = """
+### Test Char
+**Appearance:** A test character.
+**Gender:** F
+**Outfits:**
+- **Outfit 1:** Description 1
+"""
+        chars = CharacterParser.parse_characters(markdown)
+        self.assertIn("Test Char", chars)
+        self.assertEqual(chars["Test Char"]["appearance"], "A test character.")
+        self.assertEqual(chars["Test Char"]["gender"], "F")
+        self.assertIn("Outfit 1", chars["Test Char"]["outfits"])
+        self.assertEqual(chars["Test Char"]["outfits"]["Outfit 1"], "Description 1")
 
-def test_parse_base_prompts():
-    md = textwrap.dedent(
-        """
-        ## Default
-        A gentle illustration style.
-        ---
+    def test_parse_multiple_characters(self):
+        markdown = """
+### Char 1
+**Appearance:** Appearance 1
+**Outfits:**
+- **O1:** D1
 
-        ## High Contrast
-        Sharp, dramatic lighting.
-        ---
-        """
-    )
-    prompts = MarkdownParser.parse_base_prompts(md)
-    assert "Default" in prompts
-    assert prompts["Default"].startswith("A gentle illustration")
-    assert "High Contrast" in prompts
+### Char 2
+**Appearance:** Appearance 2
+**Outfits:**
+- **O2:** D2
+"""
+        chars = CharacterParser.parse_characters(markdown)
+        self.assertEqual(len(chars), 2)
+        self.assertIn("Char 1", chars)
+        self.assertIn("Char 2", chars)
 
+    def test_parse_structured_outfit(self):
+        markdown = """
+### Structured Char
+**Appearance:** Look
+**Outfits:**
+#### School Uniform
+- Top: White shirt
+- Bottom: Blue skirt
+- Shoes: Loafers
+"""
+        chars = CharacterParser.parse_characters(markdown)
+        outfits = chars["Structured Char"]["outfits"]
+        self.assertIn("School Uniform", outfits)
+        self.assertIsInstance(outfits["School Uniform"], dict)
+        self.assertEqual(outfits["School Uniform"]["Top"], "White shirt")
+        self.assertEqual(outfits["School Uniform"]["Bottom"], "Blue skirt")
 
-def test_parse_shared_outfits_and_merge():
-    md = textwrap.dedent(
-        """
-        ## Common Outfits
-        ### Casual
-        A simple casual outfit with tee and jeans.
+    def test_missing_appearance_handled_gracefully(self):
+        markdown = """
+### Ghost Char
+**Outfits:**
+- **O1:** D1
+"""
+        chars = CharacterParser.parse_characters(markdown)
+        # Parser adds empty appearance if missing
+        self.assertEqual(chars["Ghost Char"]["appearance"], "")
 
-        ### Formal
-        Elegant evening dress.
-        """
-    )
-    shared = MarkdownParser.parse_shared_outfits(md)
-    assert "Common" in shared
-    assert "Casual" in shared["Common"]
-    assert shared["Common"]["Formal"].startswith("Elegant")
+    def test_invalid_character_block(self):
+        # A block without a name header shouldn't crash it, but might be skipped or handled specific way
+        # Based on current logic, split happens on ### so text before first ### is ignored
+        markdown = """
+Random text
+### Valid Char
+**Appearance:** OK
+"""
+        chars = CharacterParser.parse_characters(markdown)
+        self.assertEqual(len(chars), 1)
+        self.assertIn("Valid Char", chars)
 
-    # merge with character outfits overriding common
-    char_data = {"outfits": {"Casual": "Character-specific casual"}}
-    merged, categorized = MarkdownParser.merge_character_outfits(char_data, shared, "Alice")
-    assert merged["Casual"] == "Character-specific casual"
-    assert "Formal" in merged
+    def test_identity_locks(self):
+        text = """
+Appearance (Identity Locks):
+- Body: Tall
+- Face: Round
+- Hair: Short
+- Skin: Pale
+Age Presentation: 20s
+"""
+        result = CharacterParser.parse_identity_locks(text)
+        self.assertIsNotNone(result)
+        self.assertEqual(result["Body"], "Tall")
+        self.assertEqual(result["Face"], "Round")
+        self.assertEqual(result["Age Presentation"], "20s")
 
+    def test_identity_locks_none(self):
+        text = "Just some random text."
+        result = CharacterParser.parse_identity_locks(text)
+        self.assertIsNone(result)
 
-def test_parse_presets():
-    md = textwrap.dedent(
-        """
-        ## General
-        - **Standing:** Standing naturally, arms at sides
-        - **Sitting:** Sitting on a chair
-
-        ## Outdoors
-        - **Beach:** Sandy shore at sunset
-        """
-    )
-    presets = MarkdownParser.parse_presets(md)
-    assert "General" in presets
-    assert "Standing" in presets["General"]
-    assert presets["Outdoors"]["Beach"].startswith("Sandy")
-
-
-def test_parse_characters_structured_outfits_one_piece():
-    md = textwrap.dedent(
-        """
-        ### Nora
-        **Appearance:** Tall, olive skin
-        **Outfits:**
-
-        #### Base
-        - **Top:** Crop top
-        - **Bottom:** N/A
-        - **Footwear:** Sandals
-
-        #### Summer Dress
-        - **Top:** Light fabric
-        # continuation line example
-        - **Accessories:** Sunglasses
-        """
-    )
-
-    chars = MarkdownParser.parse_characters(md)
-    assert "Nora" in chars
-    outfits = chars["Nora"]["outfits"]
-    assert "Base" in outfits
-    # Bottom should be canonicalized to None for one-piece
-    base = outfits["Base"]
-    assert isinstance(base, dict)
-    assert base.get("Bottom") is None
-    assert base.get("one_piece") is True
-
-
-def test_parse_characters_legacy_list_format():
-    md = textwrap.dedent(
-        """
-        ### Sam
-        **Appearance:** Short build
-        **Outfits:**
-        - **Base:** Casual tee and jeans
-        - **Sport:** Tracksuit
-        """
-    )
-    chars = MarkdownParser.parse_characters(md)
-    assert "Sam" in chars
-    outfits = chars["Sam"]["outfits"]
-    assert outfits["Base"].startswith("Casual tee")
-    assert outfits["Sport"].startswith("Tracksuit")
+if __name__ == '__main__':
+    unittest.main()

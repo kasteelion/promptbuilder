@@ -84,11 +84,22 @@ class PresetParser:
 
             if current:
                 # Match: - **Name** (Tags): Description  OR  - **Name**: Description
+                # Also handle **Name:** Description (colon inside bold)
                 item = re.match(r"^-\s+\*\*([^\*]+)\*\*\s*(\([^)]+\))?\s*:\s*(.*)$", line)
-                if item:
-                    raw_name = item.group(1).strip()
-                    tags_str = item.group(2)
-                    desc = item.group(3).strip()
+                item_inside = re.match(r"^-\s+\*\*([^\*]+):\*\*\s*(\([^)]+\))?\s*(.*)$", line)
+                
+                if item or item_inside:
+                    if item:
+                        raw_name = item.group(1).strip()
+                        tags_str = item.group(2)
+                        desc = item.group(3).strip()
+                    else:
+                        raw_name = item_inside.group(1).strip()
+                        tags_str = item_inside.group(2)
+                        desc = item_inside.group(3).strip()
+                        if desc.startswith(":"): # Handle weird edge case
+                             desc = desc[1:].strip()
+
                     
                     name = raw_name
                     tags = []

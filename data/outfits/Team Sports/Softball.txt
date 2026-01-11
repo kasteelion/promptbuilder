@@ -1,0 +1,25 @@
+tags: [Sport, Team, Softball]
+modifiers:
+  Home: in **{primary_color}** with **{secondary_color}** accents
+  Away: in **{secondary_color}** with **{primary_color}** accents
+  Home Catcher: in **{primary_color}**, wearing catcher's gear
+  Away Catcher: in **{secondary_color}**, wearing catcher's gear
+
+[F]
+- **Top:** Softball jersey (button down or v-neck) for **{team}** {modifier}
+- **Bottom:** Softball pants (knee length) with belt and high socks
+- **Footwear:** Cleats
+- **Accessories:** Visor or bow (optional), batting gloves.
+- **Hair/Makeup:** Braids with ribbons.
+
+[M]
+- **Top:** Softball jersey for **{team}** {modifier}
+- **Bottom:** Softball pants
+- **Footwear:** Cleats
+- **Accessories:** Cap.
+
+[H]
+- **Hijab:** Sport hijab (tucked)
+- **Top:** Long sleeve under jersey for **{team}** {modifier}
+- **Bottom:** Loose softball pants
+- **Footwear:** Cleats

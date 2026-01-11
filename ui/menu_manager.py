@@ -350,4 +350,49 @@ class MenuManager:
         Returns:
             True if gallery is visible
         """
-        return self.gallery_visible_var.get()
+    def bind_shortcuts(self):
+        """Bind keyboard shortcuts to their callback actions."""
+        shortcuts = [
+            ("<Control-z>", "undo"),
+            ("<Control-Z>", "undo"),
+            ("<Control-y>", "redo"),
+            ("<Control-Y>", "redo"),
+            ("<Control-Shift-s>", "save_preset"),
+            ("<Control-Shift-S>", "save_preset"),
+            ("<Control-Shift-o>", "load_preset"),
+            ("<Control-Shift-O>", "load_preset"),
+            ("<Control-plus>", "increase_font"),
+            ("<Control-equal>", "increase_font"),
+            ("<Control-minus>", "decrease_font"),
+            ("<Control-0>", "reset_font"),
+            ("<Alt-r>", "randomize_all"),
+            ("<Alt-R>", "randomize_all"),
+            ("<Control-g>", "toggle_character_gallery"),
+            ("<Control-G>", "toggle_character_gallery"),
+        ]
+
+        import inspect
+
+        for key, action_name in shortcuts:
+            handler = self.callbacks.get(action_name)
+            if not handler:
+                continue
+
+            # Determine whether handler expects an event parameter.
+            try:
+                sig = inspect.signature(handler)
+                # Count positional parameters (exclude VAR_POSITIONAL/VAR_KEYWORD)
+                pos_params = [
+                    p
+                    for p in sig.parameters.values()
+                    if p.kind in (p.POSITIONAL_ONLY, p.POSITIONAL_OR_KEYWORD)
+                ]
+                if len(pos_params) == 0:
+                    # Handler expects no args
+                    self.root.bind(key, lambda e, h=handler: h())
+                else:
+                    # Handler expects at least one arg (event)
+                    self.root.bind(key, lambda e, h=handler: h(e))
+            except (ValueError, TypeError):
+                # Fallback: call with event argument
+                self.root.bind(key, lambda e, h=handler: h(e))

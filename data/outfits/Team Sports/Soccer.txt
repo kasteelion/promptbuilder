@@ -1,0 +1,26 @@
+tags: [Sport, Team, Soccer]
+modifiers:
+  Home: in **{primary_color}** with **{secondary_color}** trim
+  Away: in **{secondary_color}** with **{primary_color}** trim
+  Home Goalkeeper: in **{accent}** (contrasting goalkeeper kit), wearing padded goalkeeper gloves
+  Away Goalkeeper: in **{accent}** (contrasting goalkeeper kit), wearing padded goalkeeper gloves
+
+[F]
+- **Top:** Soccer jersey for **{team}** {modifier} (fitted)
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks over shin guards.
+- **Accessories:** Shin guards.
+- **Hair/Makeup:** Ponytail or bun, minimal makeup.
+
+[M]
+- **Top:** Soccer jersey for **{team}** {modifier}
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks.
+- **Accessories:** Shin guards.
+
+[H]
+- **Hijab:** Sport hijab (tucked)
+- **Top:** Long sleeve compression top under jersey for **{team}** {modifier}
+- **Bottom:** Leggings under soccer shorts
+- **Footwear:** Cleats
+- **Accessories:** Shin guards.

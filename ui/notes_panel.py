@@ -8,6 +8,7 @@ from typing import Callable, Optional, List
 from config import TOOLTIPS
 from utils import create_tooltip
 from utils.interaction_helpers import fill_template
+from .components.pill_button import PillButton
 from .searchable_combobox import SearchableCombobox
 from .widgets import CollapsibleFrame
 
@@ -47,7 +48,7 @@ class NotesPanel(CollapsibleFrame):
         self.get_selected_char_names = get_selected_char_names
         
         self._after_id: Optional[str] = None
-        self.pill_buttons_refs = []
+        # self.pill_buttons_refs no longer needed as PillButton handles itself
         
         self._build_internal_ui()
         self._setup_theming()
@@ -95,41 +96,9 @@ class NotesPanel(CollapsibleFrame):
         action_frame = ttk.Frame(control, style="TFrame")
         action_frame.grid(row=1, column=0, columnspan=4, sticky="ew", pady=(10, 0))
         
-        # Get initial colors from theme if possible
-        theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-        accent = theme.get("accent", "#0078d7")
-        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
-
-        def add_pill(text, command):
-            # Styling is handled by apply_theme via registry
-            pill = tk.Frame(action_frame, bg=accent, padx=1, pady=1)
-            pill.pack(side="left", padx=(0, 6))
-            
-            lbl = tk.Label(
-                pill, text=text, bg=panel_bg, fg=accent,
-                font=("Lexend", 8, "bold"), padx=10, pady=2, cursor="hand2"
-            )
-            lbl.pack()
-            lbl._base_bg = panel_bg
-            
-            def on_e(e, l=lbl):
-                try:
-                    theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-                    l.config(bg=theme.get("hover_bg", "#333333"))
-                except: l.config(bg="#333333")
-                
-            def on_l(e, l=lbl):
-                l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
-                
-            lbl.bind("<Enter>", on_e)
-            lbl.bind("<Leave>", on_l)
-            lbl.bind("<Button-1>", lambda e: command())
-            self.pill_buttons_refs.append((pill, lbl))
-            return pill
-
-        add_pill("📥 Insert Template", self._insert_template)
-        add_pill("🔄 Refresh", self._refresh_template)
-        add_pill("✨ Create New", self.create_interaction_callback)
+        PillButton(action_frame, "📥 Insert Template", self._insert_template, self.theme_manager).pack(side="left", padx=(0, 6))
+        PillButton(action_frame, "🔄 Refresh", self._refresh_template, self.theme_manager).pack(side="left", padx=(0, 6))
+        PillButton(action_frame, "✨ Create New", self.create_interaction_callback, self.theme_manager).pack(side="left", padx=(0, 6))
 
         self.text = tk.Text(content, wrap="word", height=4)
         self.text.grid(row=1, column=0, sticky="nsew", padx=4, pady=(4, 6))
@@ -147,14 +116,7 @@ class NotesPanel(CollapsibleFrame):
     def _apply_custom_theme(self, theme):
         """Manual update for custom frame/label components."""
         self.apply_theme(theme) # Base CollapsibleFrame logic
-        
-        accent = theme.get("accent", "#0078d7")
-        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
-        
-        for frame, lbl in self.pill_buttons_refs:
-            frame.config(bg=accent)
-            lbl._base_bg = panel_bg
-            lbl.config(bg=panel_bg, fg=accent)
+        # PillButtons handle themselves via their own registration
 
     def _clear_text(self):
         """Clear the text area."""
@@ -169,8 +131,8 @@ class NotesPanel(CollapsibleFrame):
 
     def _insert_template(self):
         """Insert selected template with character names filled."""
-        cat = self.category_var.get()
-        name = self.template_var.get()
+        cat = self.cat_combo.get()
+        name = self.template_combo.get()
 
         if not cat or not name or cat not in self.interactions or name not in self.interactions[cat]:
             return
@@ -203,8 +165,8 @@ class NotesPanel(CollapsibleFrame):
 
     def _refresh_template(self):
         """Replace notes with re-filled current template."""
-        cat = self.category_var.get()
-        name = self.template_var.get()
+        cat = self.cat_combo.get()
+        name = self.template_combo.get()
 
         if not cat or not name or cat not in self.interactions or name not in self.interactions[cat]:
             return
@@ -225,14 +187,14 @@ class NotesPanel(CollapsibleFrame):
         if new_interactions_data is not None:
             self.interactions = new_interactions_data
             
-        cat = self.category_var.get()
+        cat = self.cat_combo.get()
         if cat and cat in self.interactions:
-            self.template_combo.set_values([""] + sorted(list(self.interactions[cat].keys())))
+            self.template_combo.set_values(sorted(list(self.interactions[cat].keys())))
         else:
-            self.template_combo.set_values([""])
+            self.template_combo.set_values([])
         
-        self.template_var.set("")
-        self.cat_combo.set_values([""] + sorted(list(self.interactions.keys())))
+        self.template_combo.set("")
+        self.cat_combo.set_values(sorted(list(self.interactions.keys())))
 
     def get_text(self) -> str:
         """Get the current notes text."""

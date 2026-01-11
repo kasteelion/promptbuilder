@@ -1,0 +1,23 @@
+tags: [Sport, Team, Basketball]
+modifiers:
+  Home: in **{primary_color}** with **{secondary_color}** trim
+  Away: in **{secondary_color}** with **{primary_color}** trim
+
+[F]
+- **Top:** Basketball jersey for **{team}** {modifier} (sleeveless, wide shoulder cut)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Shooting sleeve, headband.
+- **Hair/Makeup:** Ponytail or bun.
+
+[M]
+- **Top:** Basketball jersey for **{team}** {modifier} (sleeveless)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Arm sleeve, wristbands.
+
+[H]
+- **Hijab:** Sport hijab (tucked in)
+- **Top:** Long sleeve compression shirt under basketball jersey for **{team}** {modifier}
+- **Bottom:** Leggings under basketball shorts
+- **Footwear:** High-top basketball sneakers

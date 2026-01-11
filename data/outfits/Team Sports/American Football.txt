@@ -1,0 +1,31 @@
+tags: [Football, Sport, Team]
+modifiers:
+  Home: in **{primary_color} with {secondary_color} accents**
+  Away: in **{secondary_color} with {primary_color} accents**
+  Home Quarterback: in **{primary_color} with {secondary_color} accents**, wearing a quarterback's wrist coach playbook on the left forearm and a clear protective visor attached to the helmet
+  Away Quarterback: in **{secondary_color} with {primary_color} accents**, wearing a quarterback's wrist coach playbook on the left forearm and a clear protective visor attached to the helmet
+  Home Lineman: in **{primary_color} with {secondary_color} accents**, wearing extra-large shoulder pads and a neck roll for neck protection
+  Away Lineman: in **{secondary_color} with {primary_color} accents**, wearing extra-large shoulder pads and a neck roll for neck protection
+  Home Receiver: in **{primary_color} with {secondary_color} accents**, wearing sticky receiver gloves and a streamlined helmet visor
+  Away Receiver: in **{secondary_color} with {primary_color} accents**, wearing sticky receiver gloves and a streamlined helmet visor
+
+[F]
+- **Top:** Molded shoulder pads (rigid, high-gloss {secondary_color} plastic shells with a distinct, thick outer edge that is clearly separate from the fabric underneath
+- **Bottom:** protective design and {team} logo shield reflecting stadium lights sharply)
+- **Footwear:** Sports performance top (crop-style {modifier}, made of ultra-matte moisture-wicking compression fabric that absorbs light, showing slight compression wrinkles where the rigid edge of the shoulder pad presses against the body); Low-rise athletic shorts (minimal coverage design in {secondary_color} with {primary_color} accents, team number on hip); Compression arm sleeves ({secondary_color} extending to mid-bicep with {primary_color} striping); Athletic socks (knee-high {secondary_color} or mixed black with {primary_color} bands); Professional football cleats (Nike or Adidas style with {accent} detailing). Accessories: Hockey-style helmet with clear polycarbonate visor and {team} branding, {secondary_color} athletic headband worn under helmet, {team}-branded gloves with grip palms, knee pads with logo, eye black strips, {accent} wristbands, athletic tape on fingers. Hair/Makeup: Long hair in high ponytail, braids, or curls secured with headband for mobility, camera-ready makeup with defined eyes and contouring, waterproof and sweat-resistant long-wear formula, natural glam suitable for stadium lighting and broadcast television.
+- {modifier}
+
+[M]
+- **Top:** Football jersey for **{team}** {modifier} (mesh performance fabric with team number)
+- **Bottom:** padded football pants (knee-length)
+- **Footwear:** football cleats.
+- **Accessories:** Helmet ({primary_color} with {secondary_color} face mask), **shoulder pads** (worn under jersey), mouthguard.
+- **Hair/Makeup:** Minimal grooming.
+
+[H]
+- **Hijab:** Sports hijab (breathable technical fabric, secure tuck)
+- **Top:** football jersey for {team} {modifier} (modest fit) worn over long-sleeve {accent} compression top
+- **Bottom:** padded football pants (knee-length with secure fit); with full-length {accent} leggings underneath
+- **Footwear:** Football cleats ({accent})
+- **Accessories:** Mouthguard, wrist coach band, football helmet
+- **Makeup:** Minimal waterproof makeup

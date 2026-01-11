@@ -1,0 +1,23 @@
+tags: [Sport, Team, Football]
+modifiers:
+  Home: in **{primary_color}** with **{secondary_color}** accents
+  Away: in **{secondary_color}** with **{primary_color}** accents
+
+[F]
+- **Top:** Flag football jersey for **{team}** {modifier} (t-shirt cut)
+- **Bottom:** Athletic shorts with flag belt (velcro flags at hips)
+- **Footwear:** Cleats or turf shoes
+- **Accessories:** Mouthguard, wristbands.
+- **Hair/Makeup:** Ponytail.
+
+[M]
+- **Top:** Flag football jersey for **{team}** {modifier} (t-shirt cut)
+- **Bottom:** Athletic shorts with flag belt
+- **Footwear:** Cleats
+- **Accessories:** Mouthguard.
+
+[H]
+- **Hijab:** Sport hijab
+- **Top:** Long sleeve under jersey for **{team}** {modifier}
+- **Bottom:** Leggings under shorts with flag belt
+- **Footwear:** Cleats

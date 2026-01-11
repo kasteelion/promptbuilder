@@ -1,0 +1,25 @@
+tags: [Sport, Team, Cheer]
+modifiers:
+  Home: in **{primary_color}** with **{secondary_color}** shell
+  Away: in **{secondary_color}** with **{primary_color}** shell
+  Home Captain: in **{primary_color}** with **{secondary_color}** shell, holding megaphone
+  Away Captain: in **{secondary_color}** with **{primary_color}** shell, holding megaphone
+
+[F]
+- **Top:** Cheer shell / crop top {modifier} with **{team}** lettering
+- **Bottom:** Pleated cheer skirt {modifier}
+- **Footwear:** White cheer sneakers with white socks
+- **Accessories:** Pom-poms ({primary_color} and {secondary_color}), hair bow.
+- **Hair/Makeup:** High ponytail, heavy stage makeup (glitter, bright lip).
+
+[M]
+- **Top:** Cheer t-shirt or polo {modifier}
+- **Bottom:** Athletic shorts or pants
+- **Footwear:** Athletic sneakers
+- **Accessories:** Megaphone (optional).
+
+[H]
+- **Hijab:** Sport hijab in {primary_color} (tucked)
+- **Top:** Long sleeve bodystocking under cheer shell {modifier}
+- **Bottom:** Leggings under cheer skirt
+- **Footwear:** Cheer sneakers

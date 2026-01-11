@@ -1,0 +1,27 @@
+tags: [Costume, Villain]
+modifiers:
+  Armored: , wearing spiked dark plate armor
+  Sorcerer: , wearing flowing dark robes with arcane sigils
+  Classic: , wearing a spandex bodysuit with a cape
+
+[F]
+- **Top:** ((default:Black or Deep Red) or (signature)) **armored bodice** (structured leather or plating with angular cutouts and distinct **shoulder guards**){modifier}
+- **Bottom:** **asymmetric floor-length loincloth** or split skirt worn over **fitted leggings**
+- **Footwear:** thigh-high **armored boots** with metal hardware.
+- **Accessories:** Elbow-length **gauntlets** or leather arm wraps, wide belt with heavy metallic ring buckle, optional cape.
+- **Hair/Makeup:** Smoky eye makeup, dark lipstick, hair slicked back or in a high combat ponytail.
+
+[M]
+- **Top:** ((default:Black or Deep Red) or (signature)) **armored tunic or bodysuit** (imposing silhouette){modifier}
+- **Bottom:** heavy pants or armored greaves
+- **Footwear:** heavy combat boots with steel toes.
+- **Accessories:** Heavy flowing cape, intimidating full-face mask or cowl, gauntlets.
+- **Hair/Makeup:** Intimidating stare, scars (optional).
+
+[H]
+- **Hijab:** Dark flowing hijab styled like a cowl or hood
+- **Top:** modest **armored tunic** or long coat with high collar{modifier}
+- **Bottom:** tactical pants or full skirt
+- **Footwear:** heavy boots
+- **Accessories:** Dramatic cape, mask over eyes (optional), dark gloves.
+- **Makeup:** Intense, dark eyeliner.

@@ -1,0 +1,27 @@
+tags: [Costume, Hero, Tactical]
+modifiers:
+  Stealth: , all black matte stealth gear
+  Heavy: , full heavy riot armor plates
+  Recon: , lightweight gear with communication headset
+
+[F]
+- **Top:** **Tactical body armor** over moisture-wicking combat shirt ((default:Navy or Black) or (signature)){modifier}
+- **Bottom:** Multi-pocket **tactical pants** with holster straps
+- **Footwear:** Professional **combat boots** (flat sole, grip tread).
+- **Accessories:** Utility belt with pouches, drop-leg holster, fingerless gloves, communication earpiece. **NO CAPE.**
+- **Hair/Makeup:** Practical ponytail or braid, grease/dirt/camo paint, determined expression.
+
+[M]
+- **Top:** **Plate carrier vest** over combat shirt ((default:Olive or Black) or (signature)){modifier}
+- **Bottom:** Reinforced **tactical trousers** with knee pads
+- **Footwear:** Heavy-duty **combat boots**.
+- **Accessories:** Utility belt, chest rig, tactical gloves, watch.
+- **Hair/Makeup:** Short practical cut, stubble (optional).
+
+[H]
+- **Hijab:** Secure **tactical hijab** (tucked into collar, matte fabric)
+- **Top:** Long-sleeve combat shirt under **tactical vest**{modifier}
+- **Bottom:** Loose-fit **tactical cargo pants**
+- **Footwear:** Combat boots
+- **Accessories:** Utility belt, gloves, protective eyewear.
+- **Makeup:** Minimal/None.

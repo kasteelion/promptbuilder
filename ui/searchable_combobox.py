@@ -34,6 +34,7 @@ class SearchableCombobox(ttk.Frame):
         self.placeholder = placeholder
         self.favorites = set()
         self._selected_value = textvariable or tk.StringVar()
+        self._is_placeholder_active = False
         
         # Track dropdown state
         self.dropdown = None
@@ -146,6 +147,8 @@ class SearchableCombobox(ttk.Frame):
         # Set initial placeholder
         if not self._selected_value.get():
             self._set_placeholder_mode(True)
+        else:
+             self._is_placeholder_active = False
             
         # Bind global click to handle click-away closing
         try:
@@ -190,6 +193,7 @@ class SearchableCombobox(ttk.Frame):
 
     def _set_placeholder_mode(self, active):
         """Set entry placeholder mode (gray text)."""
+        self._is_placeholder_active = active
         if active:
             self._selected_value.set(self.placeholder)
             pfg = "#666666"
@@ -215,15 +219,19 @@ class SearchableCombobox(ttk.Frame):
 
     def _update_clear_btn_visibility(self):
         """Show/hide X button based on content."""
+        if getattr(self, "_is_placeholder_active", False):
+            self.clear_btn.grid_remove()
+            return
+            
         val = self._selected_value.get()
-        if val and val != self.placeholder:
+        if val:
             self.clear_btn.grid(row=0, column=1, sticky="w", padx=(2, 0))
         else:
             self.clear_btn.grid_remove()
 
     def _on_focus_in(self, event):
         """Handle entry focus."""
-        if self._selected_value.get() == self.placeholder:
+        if self._is_placeholder_active:
             self._set_placeholder_mode(False)
         
         # Auto-select all text on focus
@@ -242,23 +250,41 @@ class SearchableCombobox(ttk.Frame):
 
     def _check_hide_dropdown(self):
         """Check if we should hide dropdown after focus loss."""
+        if not self.winfo_exists():
+            return
+            
         try:
             focus = self.focus_get()
         except Exception:
             # focus_get() can raise KeyError if focus is on an internal widget like 'popdown'
             self._hide_dropdown()
             return
+            
+        if focus is None:
+            self._hide_dropdown()
+            return
 
-        if self.dropdown and self.dropdown.winfo_exists():
-            # Check if focus is in dropdown or its children
-            try:
-                if focus == self.dropdown or focus == self.listbox or focus == self.entry:
-                    return
-                # Check if focus is a child of the listbox (like scrollbar)
+        # Check if focus is still within this component (entry, dropdown, listbox, buttons)
+        try:
+            # Check if focus is the entry itself
+            if focus == self.entry:
+                return
+            
+            # Check if focus is in dropdown
+            if self.dropdown and self.dropdown.winfo_exists():
                 if str(focus).startswith(str(self.dropdown)):
                     return
-            except Exception:
-                pass
+            
+            # Check if focus is one of our buttons
+            if hasattr(self, 'dropdown_btn') and focus == self.dropdown_btn:
+                return
+            if hasattr(self, 'fav_btn') and focus == self.fav_btn:
+                return
+            if hasattr(self, 'clear_btn') and focus == self.clear_btn:
+                return
+
+        except Exception:
+            pass
         self._hide_dropdown()
 
     def _build_dropdown(self):
@@ -293,12 +319,17 @@ class SearchableCombobox(ttk.Frame):
             self._hide_dropdown()
             return
 
-        # Measure font height for accurate row height
+        # Use accurate font metrics
         from tkinter import font as tkfont
         f = tkfont.Font(font=("Lexend", 9))
-        line_h = f.metrics("linespace") + 4
+        self._line_h = f.metrics("linespace") + 4
         
-        h = max(30, min(300, (num_items * line_h) + 6))
+        # Calculate exact height needed
+        req_h = (num_items * self._line_h) + 4
+        
+        # Cap at max height (e.g. 10 items)
+        max_h = 300
+        h = min(max_h, req_h)
         
         # Flip if it would go off bottom
         if y + h > screen_h - 60:
@@ -338,9 +369,12 @@ class SearchableCombobox(ttk.Frame):
         )
         self.listbox.pack(side="left", fill="both", expand=True)
 
-        scrollbar = ttk.Scrollbar(frame, orient="vertical", command=self.listbox.yview, style="Themed.Vertical.TScrollbar")
-        scrollbar.pack(side="right", fill="y")
-        self.listbox.config(yscrollcommand=scrollbar.set)
+        self.scrollbar = ttk.Scrollbar(frame, orient="vertical", command=self.listbox.yview, style="Themed.Vertical.TScrollbar")
+        self.listbox.config(yscrollcommand=self.scrollbar.set)
+
+        # Only pack scrollbar if needed
+        if num_items * self._line_h > h:
+            self.scrollbar.pack(side="right", fill="y")
 
         # Populate with filtered values
         for item in filtered_items:
@@ -399,9 +433,9 @@ class SearchableCombobox(ttk.Frame):
 
     def _get_filtered_values(self):
         """Get list of values matching current search term with smart prioritization."""
-        search_term = self._selected_value.get().lower()
-        if search_term == self.placeholder.lower():
-            search_term = ""
+        search_term = ""
+        if not getattr(self, "_is_placeholder_active", False):
+            search_term = self._selected_value.get().lower()
             
         # Check cache
         cache_key = (search_term, tuple(sorted(list(self.favorites))), tuple(self.all_values))
@@ -458,8 +492,17 @@ class SearchableCombobox(ttk.Frame):
                 self.listbox.insert(tk.END, item)
                 
             # Adjust height
-            h = max(40, min(300, (len(filtered) * 22) + 6))
+            # Adjust height using stored line height
+            req_h = (len(filtered) * getattr(self, "_line_h", 22)) + 4
+            h = min(300, req_h)
             self.dropdown.wm_geometry(f"{self.winfo_width()}x{h}")
+            
+            # Update scrollbar visibility
+            if hasattr(self, "scrollbar"):
+                if len(filtered) * getattr(self, "_line_h", 22) > h:
+                    self.scrollbar.pack(side="right", fill="y")
+                else:
+                    self.scrollbar.pack_forget()
 
             # Highlight first match if searching
             if self.listbox.size() > 0 and self._selected_value.get():
@@ -532,10 +575,11 @@ class SearchableCombobox(ttk.Frame):
             self._on_listbox_select()
         else:
             # If dropdown hidden, maybe just trigger select with current text
-            val = self._selected_value.get()
-            if val and val != self.placeholder:
-                if self.on_select:
-                    self.on_select(val)
+            if not getattr(self, "_is_placeholder_active", False):
+                val = self._selected_value.get()
+                if val:
+                    if self.on_select:
+                        self.on_select(val)
 
     def _on_listbox_select(self, event=None):
         """Handle listbox selection."""
@@ -549,8 +593,14 @@ class SearchableCombobox(ttk.Frame):
             # Remove favorite star if present
             if value.startswith("★ "):
                 value = value[2:]
+            
+            if value:
+                self._selected_value.set(value)
+                self._is_placeholder_active = False
+                self.entry.config(foreground="")
+            else:
+                self._set_placeholder_mode(True)
                 
-            self._selected_value.set(value)
             self._hide_dropdown()
             self._update_clear_btn_visibility()
             
@@ -587,8 +637,9 @@ class SearchableCombobox(ttk.Frame):
 
     def get(self):
         """Get current value (strips placeholder)."""
-        val = self._selected_value.get()
-        return "" if val == self.placeholder else val
+        if getattr(self, "_is_placeholder_active", False):
+            return ""
+        return self._selected_value.get()
 
     def set(self, value):
         """Set current value."""
@@ -597,6 +648,7 @@ class SearchableCombobox(ttk.Frame):
 
         if value:
             self._selected_value.set(value)
+            self._is_placeholder_active = False
             self.entry.config(foreground="")
         else:
             self._set_placeholder_mode(True)

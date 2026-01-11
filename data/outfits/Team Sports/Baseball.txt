@@ -1,0 +1,29 @@
+tags: [Sport, Team, Baseball]
+modifiers:
+  Home: in **{primary_color}** with **{secondary_color}** pinstripes and lettering
+  Away: in **gray** with **{primary_color}** lettering and **{secondary_color}** trim
+  Home Pitcher: in **{primary_color}** with **{secondary_color}** pinstripes, wearing a specialized protective glove on the non-throwing hand
+  Away Pitcher: in **gray** with **{secondary_color}** trim, wearing a specialized protective glove on the non-throwing hand
+  Home Catcher: in **{primary_color}** with **{secondary_color}** pinstripes, wearing full catcher's gear (chest protector, shin guards, face mask)
+  Away Catcher: in **gray** with **{secondary_color}** trim, wearing full catcher's gear (chest protector, shin guards, face mask)
+
+[F]
+- **Top:** Button-down baseball jersey for **{team}** {modifier} (tucked in)
+- **Bottom:** Softball-style pants (knee length, fitted) with belt and high socks
+- **Footwear:** Baseball cleats
+- **Accessories:** Baseball cap with team logo, batting glove (in pocket or wearing), eye black.
+- **Hair/Makeup:** Ponytail cap-hair, practical makeup.
+
+[M]
+- **Top:** Button-down baseball jersey for **{team}** {modifier} (tucked in)
+- **Bottom:** Baseball pants (long, loose over shoe OR knee high with socks)
+- **Footwear:** Metal cleats
+- **Accessories:** Baseball cap with team logo, leather glove.
+- **Hair/Makeup:** Minimal.
+
+[H]
+- **Hijab:** Sport hijab (tucked into collar) under baseball cap
+- **Top:** Long sleeve compression shirt under button-down baseball jersey for **{team}** {modifier}
+- **Bottom:** Loose fit baseball pants
+- **Footwear:** Cleats
+- **Accessories:** Glove, cap.

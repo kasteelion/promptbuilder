@@ -1,10 +1,12 @@
 import re
 from typing import Any, Dict, List
+import re
 
 from utils.color_scheme import substitute_colors, substitute_signature_color
 from utils.text_utils import normalize_blank_lines
 
 from .renderers import CharacterRenderer, NotesRenderer, OutfitRenderer, PoseRenderer, SceneRenderer
+from .definitions import PromptConfig, SelectedCharacterConfig
 
 
 class PromptBuilder:
@@ -36,7 +38,7 @@ class PromptBuilder:
         self.modifiers = modifiers or {}
         self.framing = framing or {}
 
-    def generate(self, config: Dict[str, Any]) -> str:
+    def generate(self, config: PromptConfig) -> str:
         """Generate a formatted prompt from configuration.
 
         Args:
@@ -157,7 +159,7 @@ class PromptBuilder:
         out = "\n\n".join([p for p in parts if p])
         return normalize_blank_lines(out)
 
-    def generate_summary(self, config: Dict[str, Any]) -> str:
+    def generate_summary(self, config: PromptConfig) -> str:
         """Generate a condensed summary of the prompt.
 
         Args:

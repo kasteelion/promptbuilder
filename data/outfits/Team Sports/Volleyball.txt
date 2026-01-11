@@ -1,0 +1,28 @@
+tags: [Sport, Team, Volleyball]
+modifiers:
+  Home: in **{primary_color}** with **{secondary_color}** wraparound piping
+  Away: in **{secondary_color}** with **{primary_color}** wraparound piping
+  Home Libero: in **{secondary_color}** (contrasting libero jersey)
+  Away Libero: in **{primary_color}** (contrasting libero jersey)
+
+[F]
+- **Top:** Fitted sleeveless performance jersey for **{team}** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes** {modifier}
+- **Bottom:** body matching jersey base color with **sublimated geometric pattern**
+- **Footwear:** fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** centered on the chest and back; **high-waist compression shorts** matching base color with **wide comfort waistband** and **reinforced flatlock seams**; **low-profile gel-cushioned knee pads**; **professional court shoes** ({accent}) featuring **gum rubber soles**.
+- **Accessories:** Sweatbands with embroidered logo, athletic tape on fingers, matching hair ribbon.
+- **Hair/Makeup:** High tight ponytail with extreme volume, sweat-resistant performance makeup including **subtle shimmer on cheekbones** and a natural pink lip balm.
+
+[M]
+- **Top:** Fitted sleeveless performance jersey for **{team}** featuring **raglan-style shoulder panels** and **reinforced flat-seam construction** {modifier}
+- **Bottom:** body matching jersey base color with **honeycomb-weave technical mesh panels** on the sides and back
+- **Footwear:** moisture-wicking fabric with a **subtle matte sheen**; **bold metallic team number** with a **silver block-shadow** centered on front and back; **lightweight athletic shorts** matching base color with **laser-cut side vents** and **internal drawstring waistband**; **low-profile gel knee pads**; **professional volleyball shoes** ({accent}) with **non-marking high-grip soles**.
+- **Accessories:** Sweatbands on wrists with embroidered team initials, athletic tape on fingers.
+- **Hair/Makeup:** Hair short or secured, minimal grooming, competitive focus.
+
+[H]
+- **Hijab:** High-performance sports hijab matching base color featuring a **matte finish** and **aerodynamic secure tuck**
+- **Top:** Long-sleeve fitted performance tunic for **{team}** featuring **asymmetric shoulder panels**; body matching base color with **sublimated geometric pattern**; fabric is a **high-sheen technical spandex**; **bold metallic team number**; tunic falls to mid-thigh with a **scalloped hem** {modifier}
+- **Bottom:** Full-length performance compression leggings matching base color
+- **Footwear:** Professional court shoes ({accent}) with **gum rubber soles**
+- **Accessories:** Low-profile gel-cushioned knee pads (worn over leggings), **matching sweatbands** on wrists
+- **Makeup:** Performance makeup including sweat-resistant foundation, **subtle shimmer on cheekbones**, and a natural pink lip balm
