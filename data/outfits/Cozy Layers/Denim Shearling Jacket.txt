@@ -1,0 +1,51 @@
+tags: [Casual, Winter, Edgy, Denim, Streetwear]
+
+modifiers:
+  Vintage: in **vintage acid-wash denim** with cream shearling
+  Black: in **black denim** with black shearling lining
+  Cropped: in a **modern cropped silhouette**
+  Oversized: in an **oversized boyfriend fit**
+
+[F]
+- **Top:** Denim shearling aviator jacket {modifier} over fitted thermal.
+  - **Fit:** Aviator style {modifier}.
+  - **Material:** Denim with shearling lining.
+  - **Pattern:** Acid-wash or Solid {modifier}.
+  - **Neckline:** Shearling collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Black skinny jeans or leather leggings.
+  - **Fit:** Form-fitting; Skintight.
+  - **Material:** Denim or Leather.
+  - **Waist:** High-waisted.
+  - **Length:** Ankle-length.
+- **Footwear:** Combat boots (Doc Martens style).
+- **Accessories:** Black beanie; fingerless gloves.
+
+[M]
+- **Top:** Heavy denim trucker jacket with shearling collar {modifier} and plaid flannel.
+  - **Fit:** Trucker fit {modifier}.
+  - **Material:** Heavy denim; Flannel.
+  - **Neckline:** Shearling collar.
+  - **Sleeve:** Long.
+- **Bottom:** Raw denim jeans (indigo).
+  - **Fit:** Straight.
+  - **Material:** Raw denim.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Red Wing style boots.
+- **Accessories:** Knit beanie; leather gloves.
+
+[H]
+- **Hijab:** Ribbed knit hijab (black or grey) for warmth.
+- **Top:** Oversized denim shearling jacket {modifier} over long sleeve base.
+  - **Fit:** Modest oversized.
+  - **Material:** matching denim/shearling.
+  - **Neckline:** High-neck modesty under shearling collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Straight-leg cargo pants or jeans.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Chunky platform boots.
+- **Accessories:** Crossbody bag; warm gloves.

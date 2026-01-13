@@ -4,7 +4,7 @@ Different base style prompts for your character images. Select one from the drop
 
 ---
 
-## Cyberpunk Neon (cyberpunk, sci-fi, dark, mood:futuristic, mood:dark, mood:gritty, block:classical, block:historical, block:formal, block:cute, block:cottagecore)
+## Cyberpunk Neon (cyberpunk, sci-fi, dark, Mood:Futuristic, Mood:Dark, Mood:Gritty, Block:Classical, Block:Historical, Block:Formal, Block:Cute, Block:Cottagecore)
 
 Rendering
 Ray-traced digital rendering with high-contrast chiaroscuro. Dominant cyan and magenta rim lighting against deep matte blacks. Heavy volumetric fog, bloom effects on light sources, and chromatic aberration at the edges. Wet-surface reflections and a distinct digital noise overlay.
@@ -23,7 +23,7 @@ Glitch art artifacts, holographic UI overlays in the foreground, and lens flare 
 
 ---
 
-## Watercolor Impressionistic (artistic, soft, traditional, mood:soft, mood:dreamy, mood:peaceful, block:cyberpunk, block:sci-fi, block:dark, block:combat)
+## Watercolor Impressionistic (artistic, soft, traditional, Mood:Soft, Mood:Dreamy, Mood:Peaceful, Block:Cyberpunk, Block:Sci-Fi, Block:Dark, Block:Combat)
 
 Rendering
 Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines.
@@ -39,25 +39,6 @@ Hair: Rendered as loose, flowing pools of color with wet edges. Clothing: Fabric
 
 Details
 Splatter droplets, dry-brush scratch marks, and visible pencil under-drawing. The palette is harmonious and desaturated. Backgrounds are abstract washes suggesting environment without explicit detail.
-
----
-
-## Low-Poly 3D (retro, 3d, artistic, dynamic, mood:playful, mood:retro, block:formal, block:intimate, block:sexy)
-
-Rendering
-Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
-
-Character Accuracy
-Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
-
-Body Types
-Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
-
-Hair & Clothing
-Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
-
-Details
-Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
 
 ---
 
@@ -80,10 +61,12 @@ Dust motes floating in light shafts. Muted, analogous color palettes (earth tone
 
 ---
 
-## Photorealistic: "High-Fidelity Candid" (realistic, high-definition, photography)
+## Photorealistic: "High-Fidelity Candid" (realistic, high-definition, photography, Mood:Realistic, weight:4.0)
 
 Rendering
 8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+## Standard / Neutral (realistic, neutral, photography, Mood:Realistic, weight:3.0)
 
 Character Accuracy
 Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
@@ -99,7 +82,7 @@ ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic
 
 ---
 
-## Anime Style: "Dynamic Cel-Shaded" (anime, 2d, vibrant, action, sport, athletic, mood:dynamic, mood:energetic, block:noir, block:historical)
+## Anime Style: "Dynamic Cel-Shaded" (anime, 2d, vibrant, action, sport, athletic, Mood:Dynamic, Mood:Energetic, Block:Noir, Block:Historical)
 
 Rendering
 High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
@@ -118,7 +101,7 @@ Details
 
 ---
 
-## Digital Painting: "Expressive Impasto" (artistic, painterly, fantasy, mood:dramatic, mood:artistic, block:cyberpunk, block:sci-fi)
+## Digital Painting: "Expressive Impasto" (artistic, painterly, fantasy, Mood:Dramatic, Mood:Artistic, Block:Cyberpunk, Block:Sci-Fi)
 
 Rendering
 Thick, painterly application simulating oil or acrylics. Visible brush strokes with directional texture. Heavy use of "Chiaroscuro" (dramatic light and dark contrast). Edges range from sharp palette-knife cuts to soft blended strokes.
@@ -137,7 +120,7 @@ Canvas weave texture visible in the background. Color vibration (placing complem
 
 ---
 
-## Sketch Style: "Energetic Line Art" (artistic, monochrome, sketch, mood:raw, mood:artistic, block:formal, block:luxury)
+## Sketch Style: "Energetic Line Art" (artistic, monochrome, sketch, Mood:Raw, Mood:Artistic, Block:Formal, Block:Luxury)
 
 Rendering
 Monochromatic graphite or charcoal aesthetic. White or off-white paper background. Lines vary frantically in weight and opacity. Visible "construction lines" and erasure marks left in the final image to show the process.
@@ -213,7 +196,7 @@ Bokeh effects (light orbs). Floral framing. The atmosphere is dreamy and hazy. A
 
 ---
 
-## Film Noir: "Shadows and Smoke" (vintage, cinematic, dark, monochrome, mood:dark, mood:dramatic, mood:mysterious, block:cute, block:bright, block:sport, block:cheerful)
+## Film Noir: "Shadows and Smoke" (vintage, cinematic, dark, monochrome, Mood:Dark, Mood:Dramatic, Mood:Mysterious, Block:Cute, Block:Bright, Block:Sport, Block:Cheerful)
 
 Rendering
 Black and white (or extremely desaturated sepia). High-contrast "Low Key" lighting. Deep, crushing blacks and stark white highlights. Film grain and scratch textures simulate aged celluloid.
@@ -232,7 +215,7 @@ Venetian blind shadow slats cast across the image. Volumetric cigarette smoke or
 
 ---
 
-## Classic Anime: "Clean Cel Animation" (anime, retro, 90s, mood:nostalgic, mood:casual, block:noir, block:horror)
+## Classic Anime: "Clean Cel Animation" (anime, retro, 90s, Mood:Nostalgic, Mood:Casual, Block:Noir, Block:Horror)
 
 Rendering
 1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
@@ -251,7 +234,7 @@ Hand-painted watercolor style backgrounds (static). Minimal visual effects—no 
 
 ---
 
-## Artgerm Style: "Luminous Digital Fantasy" (artistic, digital, glamour, fantasy, mood:glamorous, mood:elegant, block:gritty, block:combat, block:sport)
+## Artgerm Style: "Luminous Digital Fantasy" (artistic, digital, glamour, fantasy, Mood:Glamorous, Mood:Elegant, Block:Gritty, Block:Combat, Block:Sport)
 
 Rendering
 Hyper-polished digital airbrushing. Skin is rendered to look like porcelain or high-quality silicone. Lighting is dramatic, usually featuring a strong cool rim light on one side and a warm key light on the other.
@@ -270,7 +253,7 @@ Subtle particle effects (embers, petals). The background is usually a solid colo
 
 ---
 
-## Cinematic 3D Animation (3d, cinematic, cute, dynamic, mood:polished, mood:appealing, block:noir, block:gritty)
+## Cinematic 3D Animation (3d, cinematic, cute, dynamic, Mood:Polished, Mood:Appealing, Block:Noir, Block:Gritty, weight:2.0)
 
 Rendering
 Pre-rendered 3D animation aesthetic. Soft, global illumination with high-quality subsurface scattering. Vibrant, cinematic lighting with a focus on "appeal" and clarity. Smooth, clean surfaces with subtle tactile textures.
@@ -289,7 +272,7 @@ Soft bloom on highlights, subtle lens flare. Backgrounds are high-detail but des
 
 ---
 
-## Western Comic Book (comic, 2d, graphic, action, athletic, mood:heroic, mood:dynamic, block:intimate, block:soft, block:peaceful)
+## Western Comic Book (comic, 2d, graphic, action, athletic, Mood:Heroic, Mood:Dynamic, Block:Intimate, Block:Soft, Block:Peaceful)
 
 Rendering
 High-contrast ink illustration. Bold, black "brush-work" for shadows and outlines. Flat or Ben-Day dot coloring (halftone). High-key lighting with dramatic, graphic shadow placement.
@@ -308,7 +291,7 @@ Action sound effects (suggested by composition), heavy border lines, and graphic
 
 ---
 
-## Classic Fantasy Oil (fantasy, traditional, artistic, block:modern, block:pop, block:tech, block:sci-fi, block:cyberpunk, block:sport, block:action)
+## Classic Fantasy Oil (fantasy, traditional, artistic, Block:Modern, Block:Pop, Block:Tech, Block:Sci-Fi, Block:Cyberpunk, Block:Sport, Block:Action)
 
 Rendering
 Traditional oil on canvas. Warm, amber-toned glazes and visible, "lost-and-found" edges. High chiaroscuro contrast. Lighting feels like torchlight or magic-glow against dark, earthy backgrounds.
@@ -342,25 +325,6 @@ Simplified backgrounds that complement rather than compete with characters. Occa
 
 ---
 
-## Standard / Neutral (realistic, neutral, photography)
-
-Rendering
-Balanced digital photography. Neutral white-balance and natural lighting. Clean, high-resolution finish without specific filter bias. Sharp focus across the subject with natural depth-of-field.
-
-Character Accuracy
-Clear and accurate representation of the character's base traits. Neutral, versatile expressions. The focus is on a high-fidelity "default" look.
-
-Body Types
-Natural, unstylized anatomy. Accurate weight and proportion representation. Posture is relaxed and natural.
-
-Hair & Clothing
-Hair: Clean, realistic rendering with natural shine. Clothing: Basic material representation (cotton, denim, etc.) with standard physics and folding.
-
-Details
-Minimal visual effects. A clean, professional studio or natural background. This style acts as a high-quality foundation for any subject.
-
----
-
 ## Victoria's Secret Magazine: "High-Fashion Glamour" (glamour, realistic, fashion, mood:glamorous, mood:sexy, mood:luxurious, block:gritty, block:combat, block:sport, block:cyberpunk)
 
 Rendering
@@ -380,7 +344,7 @@ Soft bloom on highlights, subtle lens flare, and a faint shimmering particle eff
 
 ---
 
-## Sports Action: "Frozen Velocity" (sport, realistic, mood:dynamic, mood:athletic, mood:intense, block:formal, block:intimate, block:lounge, block:elegant, block:work, block:professional, block:fantasy, block:historical, block:costume, block:vintage, block:noir, block:nightlife, block:party, block:scholarly, block:edgy, block:office)
+## Sports Action: "Frozen Velocity" (sport, mood:dynamic, mood:athletic, mood:intense, block:formal, block:intimate, block:lounge, block:elegant, block:work, block:professional, block:fantasy, block:historical, block:costume, block:vintage, block:noir, block:nightlife, block:party, block:scholarly, block:edgy, block:office, weight:0.5)
 
 Rendering
 High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
@@ -399,7 +363,7 @@ Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background i
 
 ---
 
-## Chibi Style: "Super Deformed" (anime, cute, chibi, mood:cute, mood:playful, mood:cheerful, block:dark, block:noir, block:horror, block:gritty, block:sexy)
+## Chibi Style: "Super Deformed" (anime, cute, chibi, mood:cute, mood:playful, mood:cheerful, block:dark, block:noir, block:horror, block:gritty, block:sexy, weight:0.8)
 
 Rendering
 Soft-shaded vector illustration or vinyl toy aesthetic. Bright, pastel, or primary-heavy color palettes. Gradient shading is minimal and smooth, giving surfaces a matte plastic or "squishy" appearance. Thick, rounded line art (or lineless "sticker" style).
@@ -437,7 +401,7 @@ Light leaks (orange/red burns) on the edges of the frame. A digital orange "Date
 
 ---
 
-## American Romanticism: "The Sublime Landscape" (artistic, traditional, landscape)
+## American Romanticism: "The Sublime Landscape" (artistic, traditional, landscape, nature, outdoor)
 
 Rendering
 19th-century oil painting style (Hudson River School). Luminism: focus on the effects of light on landscape and atmosphere. Soft, invisible brushstrokes creating a glowing, hazy atmosphere. Dramatic lighting contrasts between storm clouds and "God rays" of sunlight.
@@ -456,7 +420,7 @@ Dramatic environmental elements: jagged cliffs, mist-filled valleys, gnarled oak
 
 ---
 
-## Stop-Motion Animation: "Handcrafted Clay" (artistic, 3d, quirky)
+## Stop-Motion Animation: "Handcrafted Clay" (artistic, 3d, quirky, creative, toy)
 
 Rendering
 Simulates physical photography of miniature models (Laika or Aardman style). Shallow depth of field (macro photography aesthetic). Lighting is cinematic but interacts with physical textures like clay, silicone, or felt. No motion blur; movement is suggested by replacement animation.

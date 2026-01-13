@@ -1,0 +1,59 @@
+# METADATA
+Scene: 
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Freydis Holm | Outfit: Lumberjack | Pose: None
+Character: Amina Benali | Outfit: Cold Weather - Cozy | Pose: None
+Interaction: Custom
+Score: 195
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**CHARACTER: Freydis Holm**
+**Appearance:**
+* **Body:** Flamboyant Natural; powerful athletic flesh with clear muscle definition; broad structured shoulders and long limbs; tall vertical (5'10"-6'0"); high density throughout with visible strength in back, core, and thighs; rugged statuesque presence that commands space.
+* **Face:** Strong-angled structure; sharp square-to-oval shape; high prominent cheekbones; powerful defined jawline; intense blue-gray eyes; moderate spacing; piercing steady gaze; straight, slightly prominent nose; expressive mouth with a firm set; neutral expression is fiercely composed with a hint of predatory awareness.
+* **Hair:** Type 2B-2C; high density; rugged voluminous silhouette; very long (waist-length) with thick, rugged texture; asymmetric part; matte finish; complex asymmetric side braids feeding into a larger central braid or high ponytail. Ash-blonde or strawberry-blonde with sun-faded highlights.
+* **Skin:** Fair; cool-under-tones; weathered matte finish; scattered light freckles across bridge of nose and shoulders; a few faint, well-healed battle scars—one across the left eyebrow and another on the right shoulder.
+**Outfit:**
+- **Top:** Red and black buffalo plaid flannel shirt (thick cotton, buttoned or worn open over a white tank)
+- **Bottom:** distressed blue jeans (straight leg, rugged denim)
+- **Footwear:** brown leather work boots.
+- **Accessories:** Leather belt with large buckle, small axe prop (optional), wool beanie.
+- **Hair/Makeup:** Loose natural waves or a messy bun, minimal "outdoorsy" makeup.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**CHARACTER 2: Amina Benali**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-soft flesh; balanced proportions with gentle curves, defined waist, moderate bust (C cup), soft rounded hips; moderate height (5'5"-5'6"); soft feminine build with subtle athleticism from maintaining posture during long streams; desk-athlete presence—comfortable in gaming chairs for hours.
+* **Face:** Soft-balanced facial structure; oval-to-heart face shape with gentle angles; smooth clear planes; large expressive almond-shaped eyes, wide-set, dark brown with natural warmth and camera-aware sparkle; defined arched eyebrows (professionally maintained); straight refined nose; full lips with natural cupid's bow; soft jawline; warm engaging expression—the "streaming face" of genuine enthusiasm mixed with performative energy; dimples when smiling fully.
+* **Hair:** Type 2B-2C waves; very high density; long length past shoulders to mid-back; natural volume and body; center or slight side part; healthy high-gloss finish; commonly worn loose with volume (camera-ready), half-up with claw clip (casual streams), or sleek ponytail (competitive mode); rich dark brown to black with subtle caramel balayage highlights framing face.
+* **Skin:** Medium-tan with warm golden-olive undertones (North African coloring); smooth luminous finish; flawless complexion maintained for camera work; natural healthy glow enhanced by ring lights and skincare routine. stylish clear-framed gaming glasses with a slight cat-eye shape
+**Outfit:**
+- **Top:** Oversized chunky-knit cable sweater (cream, soft gray, or forest green)
+- **Bottom:** thick wool-blend leggings or corduroy pants
+- **Footwear:** fur-lined boots.
+- **Accessories:** Large infinity scarf, matching knit mittens and pom-pom beanie.
+- **Hair/Makeup:** Soft loose waves, rosy cheeks and berry-tinted lip.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**Additional Notes:**
+Freydis Holm and Amina Benali in athletic wear showing off physique or flexing muscles with confidence. Both in strong poses displaying fitness progress—bicep flex with arms bent, showing abs, or athletic stance. Standing side by side or facing each other comparing muscles playfully. Wearing form-fitting athletic wear—sports bras, leggings, tank tops, athletic shorts showing defined physiques. Expressions confident and determined, or playfully competitive. Muscles engaged and defined, showing workout pump. Setting is gym—weights visible, mirrors, equipment in background. Lighting harsh gym fluorescents or dramatic shadowing emphasizing muscle definition. Both may be sweaty with hair pulled back, water bottles visible, creating authentic workout moment. Poses convey fitness motivation energy—"grind," "gains," strength and dedication. Body language shows pride in progress and mutual motivation. Optional: mid-workout action poses, spotting each other, or post-workout victory poses.

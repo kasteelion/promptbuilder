@@ -1,0 +1,80 @@
+# METADATA
+Scene: Rustic inn interior, wooden beams, stone fireplace, candlelight, long wooden tables, fantasy atmosphere.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Mei Chen | Outfit: African Royalty | Pose: None
+Character: Kendra Mitchell | Outfit: Lumberjack | Pose: None
+Character: Rosa Torres | Outfit: Military Uniform | Pose: None
+Interaction: Custom
+Score: 148
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Rustic inn interior, wooden beams, stone fireplace, candlelight, long wooden tables, fantasy atmosphere.
+---
+
+**CHARACTER: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large features—specifically an extremely full, heavy bust (F-G cup) that is her most prominent physical trait—balanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow.
+**Outfit:**
+- **Top:** Colorful wrapper skirt (traditional African print or kente cloth)
+- **Bottom:** fitted top or bustier (matching or complementary)
+- **Footwear:** head wrap (gele - elaborately tied).
+- **Accessories:** Bold gold jewelry (chunky necklaces, bangles, earrings), beaded accessories.
+- **Hair/Makeup:** Hair wrapped in gele or natural styles, bold makeup with rich colors, glowing skin.
+**Pose/Action:**
+full body shot showing the character from head to toe, Mid-air or high-release shot, arm extended toward hoop, flick of the wrist, focused concentration.
+---
+
+**CHARACTER 2: Kendra Mitchell**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; broad inverted triangle proportions with wide shoulders, long limbs, and subtle waist definition; tall (5'9"); strong defined muscle with visible shoulder caps, toned arms, and powerful legs; commanding physical presence.
+* **Face:** Strong angular structure; oblong-square face; prominent bone structure with high broad cheekbones; almond-shaped wide-set hazel-green eyes; strong defined jawline; neutral resting expression is confident and direct with penetrating gaze; smile is wide, genuine, and slightly asymmetric with infectious energy.
+* **Hair:** Type 3B curls; high density; shoulder-length layered cut; side part; voluminous natural texture; matte-satin finish; commonly worn loose and free or in high messy bun; warm chestnut brown with golden highlights.
+* **Skin:** Medium tan with warm golden undertones and healthy athletic glow; faint freckles across nose and shoulders.
+**Outfit:**
+- **Top:** Red and black buffalo plaid flannel shirt (thick cotton, buttoned or worn open over a white tank)
+- **Bottom:** distressed blue jeans (straight leg, rugged denim)
+- **Footwear:** brown leather work boots.
+- **Accessories:** Leather belt with large buckle, small axe prop (optional), wool beanie.
+- **Hair/Makeup:** Loose natural waves or a messy bun, minimal "outdoorsy" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Jumping with arm extended overhead, ball contact moment, powerful athletic form, focused upward gaze.
+---
+
+**CHARACTER 3: Rosa Torres**
+**Appearance:**
+* **Body:** Soft Gamine; soft wave flesh; compact proportions with short limbs and moderate torso; petite vertical (5'0"-5'2"); soft athletic build with rounded shoulders; gentle arm definition; naturally full thighs and soft midsection; curvy-compact presence.
+* **Face:** Soft-rounded structure; round-oval shape; distinctively soft full cheeks; youthful warmth; short midface with gentle cheekbone prominence; large almond-shaped eyes; close-set spacing; dark brown irises with warm sparkle; soft rounded jawline; open genuine smile with direct friendly gaze.
+* **Hair:** Type 2B-2C; medium density; moderate voluminous waves; mid-back length; no defined part; low sheen; worn loose in off-the-face style. Dark brown or black.
+* **Skin:** Medium-tan; warm golden undertones; slight surface sheen; clear even texture.
+**Outfit:**
+- **Top:** Tailored **military tunic/jacket** (olive drab, navy, or charcoal with brass buttons and epaulettes)
+- **Bottom:** matching trousers
+- **Footwear:** polished combat boots.
+- **Accessories:** Beret or garrison cap, rank insignia, service medals.
+- **Hair/Makeup:** Practical hair in secure bun, neutral focused expression.
+**Pose/Action:**
+full body shot showing the character from head to toe, Crouched in starting position, hands on ground, explosive ready stance, Intense focus.
+---
+
+**Additional Notes:**
+Mei Chen handing a small, glowing data-shard to Kendra Mitchell, their fingers brushing briefly, a sense of high-stakes cooperation and secrecy.

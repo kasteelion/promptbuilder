@@ -1,23 +1,47 @@
 tags: [Casual, Fashion, Minimalist]
 
 [F]
-- **Top:** Oversized turtleneck sweater (((default:oatmeal, charcoal, or cream) or (signature)) chunky knit, merino wool)
-- **Bottom:** slim-fit trousers (black or gray, tailored ankle length)
-- **Footwear:** minimalist leather sneakers (white or neutral, clean lines).
-- **Accessories:** Simple geometric jewelry (silver or gold), structured leather backpack or tote, wool scarf in neutral tone.
-- **Hair/Makeup:** Sleek straight hair or simple low bun, minimal makeup focusing on healthy skin, nude lip, subtle definition, Scandinavian understated elegance.
+- **Top:** Oversized chunky knit turtleneck sweater.
+  - **Fit:** Oversized chunky.
+  - **Material:** Merino wool.
+  - **Pattern:** Solid ((default:oatmeal, charcoal, or cream)).
+  - **Neckline:** Turtleneck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Slim-fit tailored trousers.
+  - **Fit:** Slim-fit tailored.
+  - **Material:** Stiff cotton or wool.
+  - **Pattern:** Solid.
+  - **Waist:** Natural.
+  - **Length:** Ankle-length.
+- **Footwear:** Minimalist leather sneakers.
+- **Accessories:** Geometric jewelry; structured leather bag; wool scarf.
 
 [M]
-- **Top:** Chunky knit sweater (((default:gray or cream) or (signature)) wool, crew neck)
-- **Bottom:** black tapered trousers (minimalist cut)
-- **Footwear:** leather boots or **minimalist sneakers**.
-- **Accessories:** Beanie, simple backpack, wool scarf.
-- **Hair/Makeup:** Neat natural hair, minimal grooming, understated cool.
+- **Top:** Chunky knit crew neck sweater.
+  - **Fit:** Relaxed chunky.
+  - **Material:** Wool.
+  - **Pattern:** Solid ((default:gray or cream)).
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Black tapered trousers.
+  - **Fit:** Tapered minimalist.
+  - **Material:** Tailored fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Leather boots or minimalist sneakers.
+- **Accessories:** Beanie; wool scarf.
 
 [H]
-- **Hijab:** Jersey or knit hijab in oatmeal or gray (simple wrap)
-- **Top:** Oversized turtleneck sweater tunic (((default:oatmeal or charcoal) or (signature)) chunky knit, knee length)
-- **Bottom:** Slim-fit trousers or **leggings**
-- **Footwear:** Minimalist leather sneakers
-- **Accessories:** Geometric jewelry, leather backpack
-- **Makeup:** Fresh skin, nude lip, understated elegance
+- **Hijab:** Jersey or knit hijab in oatmeal or gray.
+- **Top:** Oversized turtleneck sweater tunic.
+  - **Fit:** Oversized modest.
+  - **Material:** Chunky knit wool.
+  - **Neckline:** Turtleneck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Slim-fit trousers or leggings.
+  - **Fit:** Slim-fit.
+  - **Material:** Cotton.
+  - **Waist:** Natural.
+  - **Length:** Ankle or Full length.
+- **Footwear:** Minimalist leather sneakers.
+- **Accessories:** Geometric jewelry; leather backpack.

@@ -1,0 +1,58 @@
+# METADATA
+Scene: Active construction zone, exposed steel beams, safety netting, heavy machinery visible, bright daylight, dynamic unfinished environment.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Marcus Thompson | Outfit: Soccer | Pose: None
+Character: Zahara El-Amin | Outfit: Soccer | Pose: None
+Score: 225
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Active construction zone, exposed steel beams, safety netting, heavy machinery visible, bright daylight, dynamic unfinished environment.
+---
+
+**CHARACTER: Marcus Thompson**
+**Appearance:**
+* **Body:** Natural male frame; straight athletic flesh; inverted rectangle proportions; moderate-to-tall vertical.
+* **Face:** Balanced-strong facial structure; square-leaning oval face; defined jaw; warm eyes; calm open expression.
+* **Hair:** Type 4A coils; medium density; short fade with textured top; clean lineup; matte-satin finish; black.
+* **Skin:** Deep brown skin with neutral undertones.
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team** in **black** with **white** trim
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks.
+- **Accessories:** Shin guards.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, On mat in dominant position, knee on ground, controlled powerful posture, competitive intensity.
+---
+
+**CHARACTER 2: Zahara El-Amin**
+**Appearance:**
+* **Body:** Dramatic; tall vertical (5'9"); lean and angular frame with long limbs; graceful, measured density; poised and commanding presence.
+* **Face:** Sharp-balanced structure; diamond face shape with high, prominent cheekbones; large, intelligent dark brown eyes; straight, high-bridged nose; well-defined, narrow jawline; neutral expression is focused and contemplative.
+* **Hair:** (Covered) Long dark hair typically styled in a low, secure bun beneath her hijab.
+* **Skin:** Rich mahogany depth with warm, luminous undertones (Sub-Saharan/North African transition); smooth matte finish; clear, even complexion that catches the light on high points of the face. signature thick-rimmed designer glasses in deep amber tortoise-shell
+**Outfit:**
+- **Hijab:** Sport hijab (tucked)
+- **Top:** Long sleeve compression top under jersey for **Standard Team**
+- **Bottom:** Leggings under soccer shorts
+- **Footwear:** Cleats
+- **Accessories:** Shin guards.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Hand near chin or temple, thoughtful expression, contemplative pose.
+---

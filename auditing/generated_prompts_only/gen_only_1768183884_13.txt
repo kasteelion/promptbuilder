@@ -1,0 +1,92 @@
+# METADATA
+Scene: Elegant reception hall, decorated tables, dance floor, romantic celebration atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Oliver St. James | Outfit: 1970s Disco | Pose: None
+Character: Sina Tuilagi | Outfit: 1970s Disco | Pose: None
+Character: Talia Levi | Outfit: 1970s Disco | Pose: None
+Interaction: Custom
+Score: 305
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Elegant reception hall, decorated tables, dance floor, romantic celebration atmosphere.
+---
+
+**CHARACTER: Oliver St. James**
+**Appearance:**
+* **Body:** Soft Natural frame; average height (5'9"-5'10"); "Otter" build—slim but not skinny, with a soft, natural muscularity and a bit of fuzz; rounded shoulders; comfortable and lived-in physicality.
+* **Face:** Oval face with soft features; warm, crinkling blue eyes; nose is slightly button-like; jawline is softened by a scruffy, well-maintained short beard (strawberry blonde/ginger tone).
+* **Hair:** Type 2C curls; medium density; messy "mop top" style that looks better when tousled; light brown/dark blonde; often falling into his eyes.
+* **Skin:** Fair to light; pinkish warm undertones; prone to blushing; smooth complexion.
+**Outfit:**
+- **Top:** Patterned silk shirt (bold geometric or floral print, worn with open collar)
+- **Bottom:** flared trousers or bell-bottoms (white, polyester, or bold color)
+- **Footwear:** platform shoes or **heeled boots**.
+- **Accessories:** Gold medallion necklace, wide belt, aviator sunglasses.
+- **Hair/Makeup:** Feathered hair, afro, or shag cut; sideburns or mustache.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe, Head and shoulders frame, direct eye contact with camera, exaggerated facial expression to match audio, hand possibly near the mouth or chin.
+---
+
+**CHARACTER 2: Sina Tuilagi**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with wave softness; balanced proportions with moderate shoulders, defined waist, and rounded hips; moderate vertical (5'6"-5'7"); athletic-natural build with functional strength, soft curves over muscle, powerful legs, strong core, and grounded Pacific Islander physicality; traditional tatau (pe'a-inspired geometric patterns) visible on left thigh and right shoulder/upper arm; commanding warm presence combining ancestral strength with contemporary confidence.
+
+* **Face:** Balanced-soft facial structure with strong underlying bones; round-oval face shape with full cheeks and gentle breadth; moderate-to-wide midface with prominent cheekbones creating natural definition; large almond-shaped eyes with moderate spacing, deep brown to black irises, warm direct gaze; broad nose with rounded bridge and full tip; strong rounded jawline; neutral resting expression shows calm pride with slight natural smile and warm welcoming eye contact; expressions are openly warm and culturally confident.
+
+* **Hair:** Type 3A; very high density; long length past shoulders; no defined part, naturally voluminous; low-to-moderate sheen with healthy texture; commonly worn loose and full with natural curl pattern, half-up with decorative clip, or in low bun with face-framing waves; deep black-brown with warm undertones and natural dimension.
+
+* **Skin:** Deep tan with warm golden-brown undertones and natural luminous finish; bronze-to-brown complexion with sun-kissed richness; smooth healthy texture with island resilience; tatau (traditional Samoan tattoos) visible with cultural geometric patterns in black ink.
+**Outfit:**
+- **Top:** Halter jumpsuit or **wrap dress** (metallic fabric, sequins, or bold geometric prints in gold, silver, turquoise, or hot pink)
+- **Bottom:** wide-leg pants or **flared skirt**
+- **Footwear:** platform heels or boots (chunky, metallic, or patent leather).
+- **Accessories:** Large hoop earrings, layered gold chain necklaces, wide belt (metallic or embellished), headband or silk scarf in hair, oversized sunglasses.
+- **Hair/Makeup:** Feathered layers with volume and wings, afro, or long flowing waves; shimmery eyeshadow (blue, purple, or gold), thick mascara, glossy lips, disco ball glow with highlighter on cheekbones.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe, Focused intently on cleaning or checking a weapon, sharp focus, dangerous calm, professional demeanor.
+---
+
+**CHARACTER 3: Talia Levi**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave-lush flesh quality; voluptuous hourglass proportions with pronounced bust (full D-DD), defined waist, and rounded hips; moderate-to-tall vertical (5'7"); soft density with feminine curves, visible décolletage, rounded shoulders, and shapely legs; magnetizing sensual presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-diamond shape; high pronounced cheekbones with sculpted planes; large almond-shaped wide-set eyes in deep amber-brown with naturally seductive heavy-lidded quality and penetrating direct gaze; full shapely lips; defined angular jawline; neutral resting expression is knowing and self-assured with slight sultry smile and unwavering confident eye contact that holds just a beat too long.
+
+* **Hair:** Type 2B-2C waves; very high density; voluminous cascading silhouette; long length past mid-back; natural loose center part; healthy high-sheen finish; commonly worn loose and wild with tousled volume, half-up with face-framing tendrils, or low messy bun showing neck; rich dark chocolate brown with warm caramel highlights.
+
+* **Skin:** Medium-tan with warm golden-olive undertones and luminous sun-kissed finish; beauty mark above upper lip on left side; smooth healthy Mediterranean glow.
+**Outfit:**
+- **Top:** Halter jumpsuit or **wrap dress** (metallic fabric, sequins, or bold geometric prints in gold, silver, turquoise, or hot pink)
+- **Bottom:** wide-leg pants or **flared skirt**
+- **Footwear:** platform heels or boots (chunky, metallic, or patent leather).
+- **Accessories:** Large hoop earrings, layered gold chain necklaces, wide belt (metallic or embellished), headband or silk scarf in hair, oversized sunglasses.
+- **Hair/Makeup:** Feathered layers with volume and wings, afro, or long flowing waves; shimmery eyeshadow (blue, purple, or gold), thick mascara, glossy lips, disco ball glow with highlighter on cheekbones.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe, Walking calmly towards the camera with a neutral, unshakable expression while chaos is suggested in the background.
+---
+
+**Additional Notes:**
+Oliver St. James and Sina Tuilagi backlit by warm sunset glow, positioned to maximize golden hour lighting magic. Warm golden-orange light creates rim lighting effect around edges of bodies and hair, creating angelic halo glow. Both in dreamy relaxed poses—Oliver St. James and Sina Tuilagi standing close, one looking at the other or both gazing toward horizon. Expressions peaceful and contemplative, soft smiles or serene faces. Hair catching light creating luminous effect. Bodies positioned so sunlight filters through creating lens flare effect. Poses natural and romantic—hands gently touching, arms loosely around each other, or standing close in comfortable silence. Clothing light and flowing, catching golden light. Background shows horizon with sun low in sky, creating gradient from golden-orange to deep purple-blue. Soft atmospheric mood emphasizing beauty and fleeting perfect moment. Composition artistic—subjects may be silhouetted or softly lit from side. Overall feeling: magical, romantic, and cinematic. Time of day and lighting quality are the stars of this shot.

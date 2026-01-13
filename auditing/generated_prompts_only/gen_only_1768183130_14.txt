@@ -1,0 +1,82 @@
+# METADATA
+Scene: Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Nora Alvarez | Outfit: Cold Weather - Athletic | Pose: None
+Character: Avery Blake | Outfit: Swimwear | Pose: None
+Character: Keiko Yamamoto | Outfit: Tech-Athletic Compression | Pose: None
+Interaction: Custom
+Score: 490
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
+---
+
+**CHARACTER: Nora Alvarez**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with wave softness; soft hourglass-pear proportions with full hips, thighs and bust, soft rounded belly, subtly defined shoulders; petite-to-moderate vertical (5'2"-5'4"); voluptuous short-stack build with concentrated curves and grounded presence.
+* **Face:** Balanced-soft facial structure; round-oval face; deep almond-shaped eyes with steady observant gaze; soft jawline; neutral resting expression is steady and observant with signature warmth showing in subtle corner smile.
+* **Hair:** Type 2B waves; medium density; long controlled cut with natural body; matte finish; dark brown.
+* **Skin:** Warm tan with golden-brown undertones and natural matte-soft finish. thin black rectangular glasses
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined leggings (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
+- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Avery Blake**
+**Appearance:**
+* **Body:** Soft Natural frame; lean-toned flesh quality; athletic hourglass proportions with moderate bust (C cup), defined shoulders with visible arm tone, trim waist with toned abs, shapely hips, and powerful legs; moderate vertical (5'6"); athletic density with controlled strength, sculpted core, and muscular thighs; provocatively confident presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-heart shape; high defined cheekbones with dramatic contouring; large almond-shaped eyes in dark brown/black with heavy smokey eye makeup creating intense smoldering gaze, moderately spaced; straight refined nose; full pouty lips; strong defined jawline; neutral resting expression is sultry and defiant with piercing direct stare and slight knowing smirk that radiates "I dare you."
+
+* **Hair:** Type 1B straight; very high density; ultra-sleek long cut reaching mid-back to waist; center part or dramatic side-swept; jet-black color with raven shine; glass-smooth texture like liquid ink; commonly worn completely straight and flowing, half-up with volume at crown, or high ponytail; always impeccably smooth and glossy.
+
+* **Skin:** Very fair/pale with cool undertones and smooth porcelain-ivory finish;
+**Outfit:**
+- **Top:** Simple **bikini**.
+- **Accessories:** None specified.
+- **Hair/Makeup:** Minimal waterproof makeup.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Keiko Yamamoto**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact athletic proportions; petite vertical line; sharp and energized presence.
+* **Face:** Angular sculpted structure; square-leaning oval face; strong jawline; intense dark brown eyes; restrained confident expression that reflects her focused discipline.
+* **Hair:** Type 1 straight; medium density; dark black with matte texture; choppy layers and versatile alternative styling options; drawn to sharp, Edgy cuts.
+* **Skin:** Light neutral skin with matte clarity; smooth even finish. sharp professional black-framed rectangular glasses
+**Outfit:**
+- **Top:** Long-sleeve compression top (high-neck technical nylon-spandex blend in charcoal, ultra-fitted to highlight torso and shoulder definition)
+- **Bottom:** Matching high-waist compression leggings (thick elasticated waistband, moisture-wicking matte finish).
+- **Accessories:** Black fitness tracker; wireless earbuds.
+- **Hair/Makeup:** Sleek ponytail; natural dewy skin; minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Nora Alvarez and Avery Blake meeting at mid-court or field, jumping for a high-impact high-five, arms reaching high, expressions of joy and triumph.

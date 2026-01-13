@@ -1,23 +1,45 @@
 tags: [Dinner, elegant, formal, luxury]
 
 [F]
-- **Top:** Floor-length evening gown (silk, velvet, or chiffon in black or deep jewel tone)
-- **Bottom:** fitted bodice with elegant neckline
-- **Footwear:** full skirt.
-- **Accessories:** Fine jewelry (diamonds or pearls), evening clutch, heels.
-- **Hair/Makeup:** Sophisticated updo or Hollywood waves; glamorous makeup.
+- **Top:** Fitted evening gown bodice.
+  - **Fit:** Fitted; Structured.
+  - **Material:** Velvet; Silk chiffon; Satin.
+  - **Pattern:** Solid ((deep jewel tone - emerald, sapphire)).
+  - **Neckline:** Elegant boat neck or off-shoulder.
+  - **Sleeve:** Cap sleeves or strapless.
+- **Bottom:** Full ballgown or column skirt.
+  - **Fit:** Full or Slim column.
+  - **Material:** matching fabric.
+  - **Waist:** High natural waist.
+  - **Length:** Floor-length.
+- **Footwear:** High heels.
+- **Accessories:** Fine diamond or pearl jewelry; evening clutch.
 
 [M]
-- **Top:** Black tuxedo (satin lapels)
-- **Bottom:** white dress shirt (pleated or plain front)
-- **Footwear:** black bow tie.
-- **Accessories:** Cufflinks, black patent leather shoes, cummerbund or vest (optional).
-- **Hair/Makeup:** Clean-shaven or groomed beard, neat hair.
+- **Top:** Classic black tuxedo jacket with satin lapels.
+  - **Fit:** Tailored.
+  - **Material:** Wool barathea; Satin lapels.
+  - **Neckline:** Wing collar dress shirt.
+  - **Sleeve:** Long sleeves (French cuff).
+- **Bottom:** Tailored tuxedo trousers.
+  - **Fit:** Slim or Classic fit.
+  - **Material:** matching wool.
+  - **Waist:** High-waisted with cummerbund.
+  - **Length:** Full length with break.
+- **Footwear:** Black patent leather shoes.
+- **Accessories:** Black bow tie; cufflinks; studs.
 
 [H]
-- **Hijab:** Satin or silk hijab in black or matching deep jewel tone with elegant drape
-- **Top:** Modest floor-length evening gown (high neck, long sleeves, tailored fit)
-- **Bottom:** N/A (gown)
-- **Footwear:** Elegant heels
-- **Accessories:** Fine jewelry, embellished clutch
-- **Makeup:** Glamorous evening makeup
+- **Hijab:** Satin hijab in matching tone with elegant drape.
+- **Top:** Long-sleeve evening gown with high neck.
+  - **Fit:** Tailored modest.
+  - **Material:** Satin; Silk.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching floor-length skirt.
+  - **Fit:** A-line or Straight.
+  - **Material:** matching fabric.
+  - **Waist:** Natural waist.
+  - **Length:** Floor-length.
+- **Footwear:** Elegant heels.
+- **Accessories:** Embellished clutch; fine jewelry.

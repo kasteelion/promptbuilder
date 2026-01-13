@@ -1,22 +1,45 @@
 tags: [costume, Job]
 
 [F]
-- **Top:** Sleek **black satin bodysuit**
-- **Bottom:** sheer black tights.
-- **Accessories:** Tall black rabbit ears, white collar with bow tie, crisp white cuffs.
-- **Hair/Makeup:** Hair worn loose and flowing; subtle soft makeup, calm confident expression, realistic anime shading, elegant not provocative.
+- **Top:** Sleek black satin bodysuit with white collar and bow tie.
+  - **Fit:** Skin-tight; Sleek.
+  - **Material:** Black satin.
+  - **Pattern:** Solid.
+  - **Neckline:** High-neck collar with bow tie.
+  - **Sleeve:** Sleeveless with crisp white cuffs.
+- **Bottom:** Sheer black tights.
+  - **Fit:** Skin-tight.
+  - **Material:** Nylon.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** High heels.
+- **Accessories:** Tall black rabbit ears; white wrist cuffs.
 
 [M]
-- **Top:** Sleek **black satin vest** over bare chest
-- **Bottom:** black dress pants (tailored fit)
-- **Footwear:** sheer black socks.
-- **Accessories:** Tall black rabbit ears, white bow tie, white cuffs.
-- **Hair/Makeup:** Hair neatly styled; clean-shaven or subtle grooming, calm confident expression, realistic anime shading, elegant not provocative.
+- **Top:** Sleek black satin vest over bare chest.
+  - **Fit:** Tailored fit.
+  - **Material:** Black satin.
+  - **Neckline:** White bow tie neck piece.
+  - **Sleeve:** Sleeveless with white cuffs.
+- **Bottom:** Black dress pants.
+  - **Fit:** Tailored fit.
+  - **Material:** fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Sheer black socks.
+- **Accessories:** Tall black rabbit ears; white bow tie; white cuffs.
 
 [H]
-- **Hijab:** Black silk or satin hijab with secure wrap
-- **Top:** Long-sleeve black satin modest bodysuit (high neck, tailored fit)
-- **Bottom:** Black dress pants (slim fit)
-- **Footwear:** Black dress shoes or heels
-- **Accessories:** Tall black rabbit ears (worn over hijab), white bow tie, white wrist cuffs
-- **Makeup:** Soft elegant makeup, realistic anime shading
+- **Hijab:** Black silk or satin hijab with secure wrap.
+- **Top:** Long-sleeve black satin modest bodysuit.
+  - **Fit:** Tailored fit; High neck.
+  - **Material:** Black satin.
+  - **Neckline:** High neck with white bow tie.
+  - **Sleeve:** Long sleeves with white cuffs.
+- **Bottom:** Black dress pants.
+  - **Fit:** Slim fit.
+  - **Material:** fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Black dress shoes or heels.
+- **Accessories:** Tall black rabbit ears (over hijab); white bow tie; white wrist cuffs.

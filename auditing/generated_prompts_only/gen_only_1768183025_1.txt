@@ -1,0 +1,80 @@
+# METADATA
+Scene: High-vaulted hall dominated by a massive, floor-to-ceiling glass wall into a deep blue ocean world. Swaying kelp and marine life create moving shadows, and the entire space is bathed in a tranquil, shifting blue light from the water.
+Base_Prompt: Watercolor Impressionistic
+Character: Sitara Saanvi | Outfit: Druid | Pose: None
+Character: Yuki Tanaka | Outfit: Cold Weather - Cozy | Pose: None
+Character: Celine Voss | Outfit: Indian Formal | Pose: None
+Interaction: Custom
+Score: 145
+
+Generate an image of: Rendering
+Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines.
+
+Character Accuracy
+Facial features are suggested through shadow shapes and color temperature shifts rather than line art. Eyes and expressions are soft and diffused. Likeness is captured through "gestural" paint application rather than photographic precision.
+
+Body Types
+Figures are grounded in gesture drawing techniques. Limbs and torso shapes are defined by broad washes of color. Edges of the body dissolve softly into the background, creating a dreamy, ethereal connection to the environment.
+
+Hair & Clothing
+Hair: Rendered as loose, flowing pools of color with wet edges. Clothing: Fabrics are depicted through variegation in color saturation. Folds are soft gradients where paint creates "blooms." No sharp stitching or texture detailing.
+
+Details
+Splatter droplets, dry-brush scratch marks, and visible pencil under-drawing. The palette is harmonious and desaturated. Backgrounds are abstract washes suggesting environment without explicit detail.
+
+---
+
+**SCENE/SETTING:**
+High-vaulted hall dominated by a massive, floor-to-ceiling glass wall into a deep blue ocean world. Swaying kelp and marine life create moving shadows, and the entire space is bathed in a tranquil, shifting blue light from the water.
+---
+
+**CHARACTER: Sitara Saanvi**
+**Appearance:**
+* **Body:** Romantic frame; soft lush flesh quality; hourglass proportions with defined waist; moderate height (5'4"); soft rounded density with lush bust and hips, delicate wrists and ankles; alluring captivating presence.
+* **Face:** Soft rounded structure; heart shape; large expressive dark brown almond eyes with dazzled flirtatious quality; softly curved jawline; neutral resting expression is slightly pouting and sensual.
+* **Hair:** Type 2C waves; medium-high density; dark glossy black with high sheen; long voluminous hair that takes styling well; commonly worn in glamorous, vintage-inspired styles.
+* **Skin:** Medium tan with warm golden-olive undertones and luminous smooth surface finish; small delicate beauty mark near lip.
+**Outfit:**
+- **Top:** Earth-toned robes or tunic (forest green, brown, moss green with leaf patterns)
+- **Bottom:** leather vest or bodice (with natural wood buttons)
+- **Footwear:** flowing skirt or pants (layered natural fabrics); **barefoot** or **soft leather sandals**; **flower crown or vine circlet**.
+- **Accessories:** Wooden staff (gnarled with living vines or flowers), herb pouches, animal companion (owl, wolf, or deer), natural jewelry (wood, stone, flowers).
+- **Hair/Makeup:** Natural flowing hair (often with flowers, leaves, or vines woven in), earthy makeup tones, freckles, sun-kissed glow, Peaceful expression.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Yuki Tanaka**
+**Appearance:**
+- **Body:** Romantic frame; wave plush softness; lush hourglass proportions with a defined waist and soft rounded curves; moderate vertical (5'4"-5'5"); soft and inviting presence with a delicate-yet-grounded build; "tranquil strength" presence—quietly durable but appearing fragile.
+- **Face:** Rounded-soft facial structure; heart-shaped face with high-but-soft cheekbones; smooth clear planes; large expressive almond-shaped eyes, deep dark brown, reflecting a gentle and observant nature; soft-tapered eyebrows in a natural arc; refined nose with a soft bridge; full youthful lips held in a shy-but-warm expression that radiates a quiet, intimate confidence.
+- **Hair:** Type 2A waves; high density; long length past shoulders; silky dark obsidian hair with natural volume and a luminous healthy sheen; side-parted with soft-framed layers; takes soft, romantic styling well; commonly worn in loose curls or pinned back with a delicate accessory.
+- **Skin:** Light warm skin with soft golden-cream undertones (Japanese heritage); smooth satin finish with a natural healthy glow; flawless texture maintained by traditional and modern skincare.
+**Outfit:**
+- **Top:** Oversized chunky-knit cable sweater (cream, soft gray, or forest green)
+- **Bottom:** thick wool-blend leggings or corduroy pants
+- **Footwear:** fur-lined boots.
+- **Accessories:** Large infinity scarf, matching knit mittens and pom-pom beanie.
+- **Hair/Makeup:** Soft loose waves, rosy cheeks and berry-tinted lip.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Celine Voss**
+**Appearance:**
+* **Body:** Dramatic frame; straight dense flesh; narrow rectangle proportions; tall controlled vertical.
+* **Face:** Angular sculptural structure; square-leaning oval face; sharp jaw; unreadable neutral expression.
+* **Hair:** Type 1 straight; high density; blunt jaw-length bob; precise alignment; matte finish.
+* **Skin:** Cool pale skin with porcelain finish.
+**Outfit:**
+- **Top:** Saree (5-9 yards of draped silk, chiffon, or georgette fabric in vibrant colors - red, royal blue, emerald, fuchsia, or gold with embroidered borders, sequins, or zari work)
+- **Bottom:** fitted blouse (choli) (short sleeves, sleeveless, or cap sleeves with matching or contrasting embellishments)
+- **Footwear:** petticoat (underskirt in matching color); **embellished sandals or heels**.
+- **Accessories:** Gold jewelry set (necklace, earrings, bangles - multiple on each wrist, anklets optional), bindi (forehead decoration), maang tikka (center-part hair jewelry), clutch or small purse, draped pallu (end piece) over shoulder.
+- **Hair/Makeup:** Hair in elegant bun with jasmine flowers or loose waves with side part, dramatic kohl-lined eyes, defined brows, natural or red lip, henna designs on hands optional.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Sitara Saanvi encouraging Yuki Tanaka with motivational gestures, supportive body language, uplifting energy

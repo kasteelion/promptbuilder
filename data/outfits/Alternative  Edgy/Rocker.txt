@@ -1,23 +1,49 @@
 tags: [Edgy, Music, cyberpunk]
 
 [F]
-- **Top:** Fitted **((default:bold colored) or (signature)) top**
-- **Bottom:** skinny jeans or leather pants with distressing
-- **Footwear:** leather jacket; **boots**.
-- **Accessories:** Metal jewelry, belt.
-- **Hair/Makeup:** Smoky or bold makeup.
+- **Top:** Fitted ((default:bold colored) or (signature)) top.
+  - **Fit:** Fitted.
+  - **Material:** Cotton or Leather.
+  - **Pattern:** Solid or Graphic.
+  - **Neckline:** V-neck or Crew.
+  - **Sleeve:** Long or Sleeveless.
+- **Bottom:** Skinny jeans or leather pants.
+  - **Fit:** Skinny tight.
+  - **Material:** Denim or Leather.
+  - **Pattern:** Distressed.
+  - **Waist:** Mid-rise.
+  - **Length:** Ankle-length stacked.
+- **Footwear:** Leather boots.
+- **Accessories:** Leather jacket, Metal jewelry, belt.
 
 [M]
-- **Top:** Fitted **graphic tee or tank**
-- **Bottom:** skinny jeans or leather pants with distressing
-- **Footwear:** leather jacket; **boots**.
-- **Accessories:** Metal jewelry, studded belt.
-- **Hair/Makeup:** Edgy styling, longer hair optional.
+- **Top:** Fitted graphic tee or tank.
+  - **Fit:** Slim muscle fit.
+  - **Material:** Cotton vintage jersey.
+  - **Pattern:** Graphic band logo.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Short or Sleeveless.
+- **Bottom:** Skinny jeans or leather pants.
+  - **Fit:** Skinny.
+  - **Material:** Denim or Leather.
+  - **Pattern:** Distressing/Rips.
+  - **Waist:** Low-rise.
+  - **Length:** Full length.
+- **Footwear:** Leather boots.
+- **Accessories:** Leather jacket, Metal jewelry, studded belt.
 
 [H]
-- **Hijab:** Black jersey hijab with edgy wrap style
-- **Top:** Long-sleeve fitted tunic in ((default:deep burgundy) or (signature)) with leather jacket over (structured, modest length)
-- **Bottom:** Black skinny jeans with subtle distressing
-- **Footwear:** Black ankle boots with metal details
-- **Accessories:** Silver geometric earrings, leather belt with metal buckle
-- **Makeup:** Smoky or bold makeup with deep lip
+- **Hijab:** Black jersey hijab with edgy wrap style.
+- **Top:** Long-sleeve fitted tunic in ((default:deep burgundy) or (signature)).
+  - **Fit:** Structured modest.
+  - **Material:** Cotton blend.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Black skinny jeans.
+  - **Fit:** Skinny.
+  - **Material:** Denim.
+  - **Pattern:** Subtle distressing.
+  - **Waist:** Mid-rise.
+  - **Length:** Ankle-length.
+- **Footwear:** Black ankle boots with metal details.
+- **Accessories:** Leather jacket, Silver geometric earrings, leather belt.

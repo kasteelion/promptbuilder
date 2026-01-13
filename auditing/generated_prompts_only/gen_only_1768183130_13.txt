@@ -1,0 +1,80 @@
+# METADATA
+Scene: Data center interior, rows of server racks, blinking LED lights, cool blue lighting, high-tech environment.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Oliver St. James | Outfit: Cold Weather - Athletic | Pose: None
+Character: Aaliyah Chen | Outfit: Wasteland Scavenger | Pose: None
+Character: Jordan Vance | Outfit: Space Crew | Pose: None
+Interaction: Custom
+Score: 305
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Data center interior, rows of server racks, blinking LED lights, cool blue lighting, high-tech environment.
+---
+
+**CHARACTER: Oliver St. James**
+**Appearance:**
+* **Body:** Soft Natural frame; average height (5'9"-5'10"); "Otter" build—slim but not skinny, with a soft, natural muscularity and a bit of fuzz; rounded shoulders; comfortable and lived-in physicality.
+* **Face:** Oval face with soft features; warm, crinkling blue eyes; nose is slightly button-like; jawline is softened by a scruffy, well-maintained short beard (strawberry blonde/ginger tone).
+* **Hair:** Type 2C curls; medium density; messy "mop top" style that looks better when tousled; light brown/dark blonde; often falling into his eyes.
+* **Skin:** Fair to light; pinkish warm undertones; prone to blushing; smooth complexion. round gold wire-frame glasses
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined joggers or technical pants (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, tech beanie, polarized sports sunglasses.
+- **Hair/Makeup:** Polished grooming, fresh-faced "winter glow".
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Aaliyah Chen**
+**Appearance:**
+* **Body:** Natural frame; natural flesh with slight wave softness; balanced athletic build with subtle curve; moderate height and vertical line; grounded and capable presence.
+* **Face:** Balanced-soft facial structure; oval face with gentle angles; warm expressive dark eyes with direct inviting gaze; soft jawline; serene neutral expression that easily breaks into a warm genuine smile.
+* **Hair:** Type 3B–3C curls; high density; natural dark brown curls with healthy volume and sheen; versatile styling options including loose curls and protective styles.
+* **Skin:** Warm golden-brown skin with a natural sun-touched glow and soft satin finish.
+**Outfit:**
+- **Top:** Distressed tank top under a patchwork leather vest made from recycled scraps.
+- **Bottom:** Torn cargo pants reinforced with tire rubber and metal plates.
+- **Footwear:** Mismatched heavy boots wrapped in duct tape.
+- **Accessories:** Sand goggles, respirator mask hanging around neck, bandolier of scavenged parts.
+- **Hair/Makeup:** Messy braid with dust, war paint or grease smudges on face.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Jordan Vance**
+**Appearance:**
+* **Body:** Dramatic; extremely tall vertical at 6'4"; narrow but powerfully muscled frame with very long limbs and large, capable hands; lean athletic density with defined abdominal markers and elongated, powerful leg muscles; springy and explosive presence.
+* **Face:** Sharp-balanced structure; long oval face with defined, high cheekbones; large almond-shaped dark brown eyes with long, voluminous lashes and an alert gaze; straight athletic nose; wide expressive mouth with full, defined lips often breaking into a confident, radiant grin; sharply defined jawline.
+* **Hair:** Type 4A–4B coils; high density; typically worn in long, sleek knotless braids that fall to her waist, often adorned with subtle gold beads or team-colored threads to maintain a polished, glamorous silhouette.
+* **Skin:** Deep ebony depth with neutral-cool undertones; smooth almost polished finish; athletic glow with visible muscle definition; long, manicured almond-shaped nails in a signature vibrant color or French tip.
+**Outfit:**
+- **Top:** Form-fitting flight suit in pristine white with color-coded division stripes on shoulders.
+- **Bottom:** Matching flight suit bottoms with magnetic utility pockets.
+- **Footwear:** Magnetic gravity boots (mag-boots) in grey.
+- **Accessories:** Wrist comms unit, ID badge on chest, oxygen rebreather pack (small).
+- **Hair/Makeup:** Practical ponytail, clean natural makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Oliver St. James and Aaliyah Chen performing traditional cultural greeting, specific gesture appropriate to culture, respectful interaction.

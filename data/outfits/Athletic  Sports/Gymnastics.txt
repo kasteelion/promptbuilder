@@ -6,21 +6,46 @@ modifiers:
   Training: , wearing warm-up sweats over leotard
 
 [F]
-- **Top:** High-neck leotard (sleek performance lycra with bold geometric patterns in {primary_color} and {secondary_color}, featuring {accent} metallic foil accents){modifier}
-- **Bottom:** barefoot or athletic toe-wraps.
+- **Top:** Low-back High-neck Leotard.
+  - **Fit:** Skin-tight aerodynamic.
+  - **Material:** Performance Lycra/Foil.
+  - **Pattern:** Geometric {primary_color} and {secondary_color}.
+  - **Neckline:** High-neck.
+  - **Sleeve:** 3/4 or Long Sleeve.
+- **Bottom:** Bare legs (Leotard cut).
+  - **Fit:** High-cut leg.
+  - **Material:** Lycra.
+  - **Waist:** Natural.
+  - **Length:** Leotard brief.
+- **Footwear:** Barefoot or athletic toe-wraps.
 - **Accessories:** Matching hair scrunchie.
-- **Hair/Makeup:** Tight secure bun, focused athletic expression, performance makeup with glitter accents.
 
 [M]
-- **Top:** High-neck singlet or unitard (sleek performance lycra with bold geometric patterns in {primary_color} and {secondary_color}, featuring {accent} metallic accents){modifier}
-- **Bottom:** barefoot or stirrup pants in {primary_color}.
-- **Accessories:** Chalk dust on hands and shoulders.
-- **Hair/Makeup:** Neat cropped hair or secured style, focused athletic expression.
+- **Top:** High-neck singlet or unitard.
+  - **Fit:** Skin-tight.
+  - **Material:** Performance Lycra.
+  - **Pattern:** Geometric details.
+  - **Neckline:** Scoop/High-neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Stirrup pants or shorts.
+  - **Fit:** Tight.
+  - **Material:** Lycra.
+  - **Waist:** Elastic.
+  - **Length:** Full with stirrup.
+- **Footwear:** Barefoot.
+- **Accessories:** Chalk dust.
 
 [H]
-- **Hijab:** Tight-fitting sports hijab in **{primary_color}** (secure aerodynamic fit)
-- **Top:** High-neck long-sleeve leotard (sleek performance lycra with bold geometric patterns in **{primary_color}** and **{secondary_color}**, featuring **{accent}** metallic foil accents, full coverage){modifier}
-- **Bottom:** Full-length matching athletic leggings
-- **Footwear:** Barefoot or athletic toe-wraps
-- **Accessories:** Matching decorative hijab pin
-- **Makeup:** Focused athletic expression, performance makeup
+- **Hijab:** Tight-fitting sports hijab in **{primary_color}**.
+- **Top:** High-neck long-sleeve leotard.
+  - **Fit:** Skin-tight modest.
+  - **Material:** Performance Lycra.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length matching athletic leggings.
+  - **Fit:** Tight.
+  - **Material:** Lycra.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Barefoot or toe-wraps.
+- **Accessories:** Decorative hijab pin.

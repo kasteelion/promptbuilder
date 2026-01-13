@@ -1,23 +1,46 @@
 tags: [Casual, Cold, Comfort]
 
 [F]
-- **Top:** Oversized chunky-knit cable sweater (cream, soft gray, or forest green)
-- **Bottom:** thick wool-blend leggings or corduroy pants
-- **Footwear:** fur-lined boots.
-- **Accessories:** Large infinity scarf, matching knit mittens and pom-pom beanie.
-- **Hair/Makeup:** Soft loose waves, rosy cheeks and berry-tinted lip.
+- **Top:** Oversized chunky-knit cable sweater.
+  - **Fit:** Oversized; Chunky.
+  - **Material:** Wool or Cotton knit.
+  - **Pattern:** Cable-knit pattern.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Long sleeves extending past wrists.
+- **Bottom:** Thick wool-blend leggings or corduroy pants.
+  - **Fit:** Fitted or Straight.
+  - **Material:** Wool-blend or Corduroy.
+  - **Waist:** Natural.
+  - **Length:** Ankle-length.
+- **Footwear:** Fur-lined boots.
+- **Accessories:** Large infinity scarf; matching knit mittens and pom-pom beanie.
 
 [M]
-- **Top:** Oversized chunky-knit cable sweater (cream, soft gray, or forest green)
-- **Bottom:** thick wool-blend trousers or corduroy pants
-- **Footwear:** fur-lined boots.
-- **Accessories:** Large knit scarf, matching mittens and beanie.
-- **Hair/Makeup:** Natural tousled hair, rosy cheeks and groomed appearance.
+- **Top:** Oversized chunky-knit cable sweater.
+  - **Fit:** Oversized.
+  - **Material:** Cable-knit wool.
+  - **Neckline:** Crew neck or Mock neck.
+  - **Sleeve:** Long.
+- **Bottom:** Thick wool-blend trousers or corduroy pants.
+  - **Fit:** Relaxed.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Fur-lined boots.
+- **Accessories:** Large knit scarf; matching mittens and beanie.
 
 [H]
-- **Hijab:** Chunky-knit wool hijab in cream or forest green
-- **Top:** Oversized cable-knit sweater over modest long-sleeve top
-- **Bottom:** Thick wool-blend leggings or corduroy trousers
-- **Footwear:** Fur-lined boots
-- **Accessories:** Large infinity scarf, matching knit mittens and pom-pom beanie (worn over hijab)
-- **Makeup:** Rosy cheeks and berry-tinted lip
+- **Hijab:** Chunky-knit wool hijab.
+- **Top:** Oversized cable-knit sweater over modest long-sleeve top.
+  - **Fit:** Modest oversized.
+  - **Material:** matching wool.
+  - **Pattern:** Cable-knit.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Thick wool-blend leggings or corduroy trousers.
+  - **Fit:** Relaxed.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Fur-lined boots.
+- **Accessories:** Large infinity scarf; matching mittens.

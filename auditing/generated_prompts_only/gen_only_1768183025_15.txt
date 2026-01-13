@@ -1,0 +1,58 @@
+# METADATA
+Scene: Eclectic vintage store, racks of retro clothing, antique decor, nostalgic treasure-hunt vibe.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Maya Rose | Outfit: Ribbed Bodysuit | Pose: None
+Character: Zara Washington | Outfit: Surfing | Pose: None
+Score: 180
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Eclectic vintage store, racks of retro clothing, antique decor, nostalgic treasure-hunt vibe.
+---
+
+**CHARACTER: Maya Rose**
+**Appearance:**
+* **Body:** Soft Natural frame with balanced curves; moderate-to-tall vertical line; natural waist definition; relaxed athletic build.
+* **Face:** Soft oval face with gentle angles; warm expressive eyes; bright genuine smile; approachable features with natural definition.
+* **Hair:** Type 2B-2C waves to loose curls; medium-high density; long layered cut past shoulders; natural movement and body; warm golden-brown to honey tones with dimensional highlights.
+* **Skin:** Warm medium beige with golden undertones; natural healthy glow.
+**Outfit:**
+- **Top:** Sleeveless scoop-neck bodysuit (high-density ribbed knit in cream, form-fitting construction that emphasizes the underbust contour)
+- **Bottom:** High-leg cut silhouette (worn under low-waist denim shorts).
+- **Accessories:** Simple gold chain necklace; small hoop earrings.
+- **Hair/Makeup:** Loose natural waves; peachy lip gloss; fresh-faced glow.
+**Pose/Action:**
+Pulling leather jacket onto shoulders, mid-motion, confident smirk, cool effortless vibe.
+---
+
+**CHARACTER 2: Zara Washington**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
+* **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
+* **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
+* **Skin:** Deep rich brown skin with luminous depth.
+**Outfit:**
+- **Top:** Long-sleeve neoprene wetsuit or rash guard (fitted, featuring bold color-blocking in #FF00FF and #00FFFF)
+- **Bottom:** matching bikini bottoms or board shorts
+- **Footwear:** barefoot with sand-dusted skin.
+- **Accessories:** Surfboard prop in **#FFFF00** (held under arm or standing nearby), waterproof fitness watch.
+- **Hair/Makeup:** "Salt-water" textured hair, wet skin finish, minimal waterproof makeup.
+**Pose/Action:**
+Hand near chin or temple, thoughtful expression, contemplative pose.
+---

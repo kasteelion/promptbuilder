@@ -1,0 +1,80 @@
+# METADATA
+Scene: Sound booth interior, microphone setup, acoustic foam walls, dim mood lighting, creative focus atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Lila Reyes | Outfit: MMA | Pose: None
+Character: Mela Hart | Outfit: MMA | Pose: None
+Character: Celine Voss | Outfit: MMA | Pose: None
+Interaction: Custom
+Score: 722
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Sound booth interior, microphone setup, acoustic foam walls, dim mood lighting, creative focus atmosphere.
+---
+
+**CHARACTER: Lila Reyes**
+**Appearance:**
+* **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
+* **Face:** Balanced-soft structure; round-oval face (Filipino features) with gentle angles; full cheeks (genetic, visible even lean); large round-almond eyes, moderately spaced, deep dark brown; small refined nose; soft jawline shows slight definition at low body fat; neutral resting expression is focused and determined with quiet confidence.
+* **Hair:** Type 1B straight; very high density; long length to mid-back; high-gloss sheen; jet black; commonly worn in high ponytail (gym), sleek bun, or loose and straight (casual).
+* **Skin:** Deep tan with warm golden-brown undertones (Filipino coloring—naturally darker than East Asian); smooth healthy finish with natural warmth; slight muscle definition visible but not extreme.
+**Outfit:**
+- **Top:** Elite mixed martial arts kit for **The Polar Bears**
+- **Bottom:** high-impact athletic sports bra in **#FF6600** with **#000000 contrast binding** and a **sublimated geometric pattern**
+- **Footwear:** matching **short athletic-cut compression shorts** in **#FF6600** with a **silicone-grip waistband** and **scalloped side-slits**; fabric is a **heavy-duty matte lycra**; **4oz open-palm MMA gloves** in **#FFFFFF** with **reinforced knuckle padding**; **matching #000000 ankle sleeves**; **barefoot** with a **ready athletic stance**.
+- **Accessories:** Black mouthguard, athletic tape on fingers.
+- **Hair/Makeup:** Cornrow braids for maximum security, determined game-face, faint sheen of sweat on shoulders and forehead.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Mela Hart**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall vertical line; broad shoulders; long limbs; somewhat straight silhouette; moderate bust and hip definition; athletic and springy presence.
+* **Face:** Oval shape; high cheekbones; full lips; prominent expressive eyes; straight nose bridge; defined jawline; bright and buoyant neutral expression.
+* **Hair:** Type 4A (Natural texture) with Type 2B/2C (Wavy/Curly) ends; long, dark brown braids throughout the hair with loose wavy curls at the bottom; high shine; braids are a signature identity feature.
+* **Skin:** Deep brown with warm golden undertones and luminous satin finish.
+**Outfit:**
+- **Top:** Elite mixed martial arts kit for **The Polar Bears**
+- **Bottom:** high-impact athletic sports bra in **#FF6600** with **#000000 contrast binding** and a **sublimated geometric pattern**
+- **Footwear:** matching **short athletic-cut compression shorts** in **#FF6600** with a **silicone-grip waistband** and **scalloped side-slits**; fabric is a **heavy-duty matte lycra**; **4oz open-palm MMA gloves** in **#FFFFFF** with **reinforced knuckle padding**; **matching #000000 ankle sleeves**; **barefoot** with a **ready athletic stance**.
+- **Accessories:** Black mouthguard, athletic tape on fingers.
+- **Hair/Makeup:** Cornrow braids for maximum security, determined game-face, faint sheen of sweat on shoulders and forehead.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Celine Voss**
+**Appearance:**
+* **Body:** Dramatic frame; straight dense flesh; narrow rectangle proportions; tall controlled vertical.
+* **Face:** Angular sculptural structure; square-leaning oval face; sharp jaw; unreadable neutral expression.
+* **Hair:** Type 1 straight; high density; blunt jaw-length bob; precise alignment; matte finish.
+* **Skin:** Cool pale skin with porcelain finish.
+**Outfit:**
+- **Top:** Elite mixed martial arts kit for **The Polar Bears**
+- **Bottom:** high-impact athletic sports bra in **#FF6600** with **#000000 contrast binding** and a **sublimated geometric pattern**
+- **Footwear:** matching **short athletic-cut compression shorts** in **#FF6600** with a **silicone-grip waistband** and **scalloped side-slits**; fabric is a **heavy-duty matte lycra**; **4oz open-palm MMA gloves** in **#FFFFFF** with **reinforced knuckle padding**; **matching #000000 ankle sleeves**; **barefoot** with a **ready athletic stance**.
+- **Accessories:** Black mouthguard, athletic tape on fingers.
+- **Hair/Makeup:** Cornrow braids for maximum security, determined game-face, faint sheen of sweat on shoulders and forehead.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Lila Reyes and Mela Hart in pre-fight weigh-in confrontation, standing forehead-to-head or nearly touching. Arms at sides or held back by officials/coaches, preventing physical contact. Bodies are tense, coiled energy barely contained. Facial expressions showing psychological warfare—stone-faced intensity, trash talk mid-sentence, or aggressive scowls. Neck muscles tensed, veins visible from adrenaline and weight cut strain. Shoulders and traps flexed. Both leaning slightly forward into each other's space, neither backing down. Eye contact is unwavering, predatory. Background shows weigh-in stage setup, scales, promotional banners, or crowd of media. Coaching teams may be visible at edges trying to separate or control their fighters. Raw power on display, mutual respect mixed with aggression.

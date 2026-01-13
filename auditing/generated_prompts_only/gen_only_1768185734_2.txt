@@ -1,0 +1,76 @@
+# METADATA
+Scene: Vibrant urban street scene with modern glass buildings and a stone pedestrian area. Bright daylight with sharp reflections. Sound of distant traffic and city bustle, energetic atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Samira Mansour | Outfit: Base | Pose: None
+Character: Aaliyah Chen | Outfit: Tennis | Pose: None
+Character: Harald Bjornson | Outfit: Digital Nomad Rain | Pose: None
+Score: 340
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Vibrant urban street scene with modern glass buildings and a stone pedestrian area. Bright daylight with sharp reflections. Sound of distant traffic and city bustle, energetic atmosphere.
+---
+
+**CHARACTER: Samira Mansour**
+**Appearance:**
+* **Body:** Soft Natural; balanced proportions with soft curves; moderate vertical (5'6"); natural athletic density with a defined waist and soft shoulders; poised and culturally connected presence.
+* **Face:** Soft-balanced structure; oval face with high, smooth cheekbones; large expressive dark brown eyes framed by naturally thick, groomed eyebrows; straight refined nose; full lips with a natural cupid's bow; soft jawline; warm engaging expression that feels both wise and welcoming.
+* **Hair:** (Covered) Typically styled in voluminous dark curls beneath her hijab.
+* **Skin:** Rich golden-olive depth (North African coloring); smooth luminous finish; natural healthy glow enhanced by traditional skincare oils.
+**Outfit:**
+- Top: Long-sleeve silk tunic in deep terracotta with intricate gold embroidery at the neckline
+- Bottom: Wide-leg cream linen trousers with a sharp pressed crease
+- Footwear: Gold leather pointed-toe flat mules
+- Accessories: Chiffon hijab in saffron yellow with an elegant side-drape; layered gold coins necklace; simple gold bands on her fingers
+- Hair/Makeup: Hijab covers hair; makeup is polished with a focus on kohl-lined eyes and a matte nude lip
+**Pose/Action:**
+wide shot with the character framed within the environment, Walking naturally, mid-stride, relaxed movement, looking forward.
+---
+
+**CHARACTER 2: Aaliyah Chen**
+**Appearance:**
+* **Body:** Natural frame; natural flesh with slight wave softness; balanced athletic build with subtle curve; moderate height and vertical line; grounded and capable presence.
+* **Face:** Balanced-soft facial structure; oval face with gentle angles; warm expressive dark eyes with direct inviting gaze; soft jawline; serene neutral expression that easily breaks into a warm genuine smile.
+* **Hair:** Type 3B–3C curls; high density; natural dark brown curls with healthy volume and sheen; versatile styling options including loose curls and protective styles.
+* **Skin:** Warm golden-brown skin with a natural sun-touched glow and soft satin finish.
+**Outfit:**
+- **Top:** Performance tank top for **The Mountain Buffalo** with **racerback design** and **contrast binding**
+- **Bottom:** body in **#000000** with **#CFB87C color-blocked side panels** and **subtle team logo** on chest
+- **Footwear:** athletic skirt with built-in compression shorts in **#000000** featuring **#CFB87C pleated inserts** and **contrast waistband with hidden ball pockets**; **tennis shoes** (#FFFFFF, court-appropriate with reinforced toe).
+- **Accessories:** Visor in **#000000** with **#CFB87C logo**, matching wristbands, hair tie.
+- **Hair/Makeup:** Hair in sporty ponytail or braid with flyaways secured, minimal waterproof makeup with tinted lip balm, athletic glow.
+**Pose/Action:**
+wide shot with the character framed within the environment, Hair blowing in wind, hand holding hair back, looking into distance, cinematic feel.
+---
+
+**CHARACTER 3: Harald Bjornson**
+**Appearance:**
+* **Body:** Flamboyant Natural; massive, heavily muscled frame with broad, powerful shoulders and a deep chest; long limbs with thick wrists and large, calloused hands; tall vertical (6'2"-6'4"); high muscle density with functional power visible in every movement; an imposing, statuesque presence.
+* **Face:** Rugged-angular structure; square face shape with a prominent heavy brow and a stone-like jawline; deep-set piercing blue eyes under thick, expressive eyebrows; straight, strong nose; neutral expression is calm but intense, radiating a sense of grave authority.
+* **Hair:** Type 2B; thick coarse density; rough swept-back silhouette; past shoulders; swept-back; low sheen; single thick warrior braid at the back. Rich golden-blonde or light brown.
+* **Skin:** Fair; warm-neutral undertones; weathered and sun-toughened texture; prominent scar running down the right cheek and another across the knuckles; tanned.
+**Outfit:**
+- **Top:** Boxy, water-resistant navy tech-jacket with translucent charcoal PVC paneling and numerosi oversized neon-blue zippers and hardware.
+- **Bottom:** Baggy, multi-pocket rain-trousers in a heavy-duty navy nylon with high-contrast neon-blue stitching and reinforced waterproof seams.
+- **Footwear:** Sturdy, terrain-adaptive rain-boots with a thick, sculpted neon-blue sole and reinforced waterproof construction.
+- **Accessories:** A robust tactical rain-backpack with integrated electronic waterproofing; a pair of high-visibility neon-blue tech-gloves.
+- **Hair/Makeup:** Practical wet-look short cut; resilient skin texture with a healthy outdoor glow; alert, focused expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Mid-jump motion, rope blurred in motion, athletic form, training montage energy.
+---

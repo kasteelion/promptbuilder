@@ -1,0 +1,78 @@
+# METADATA
+Scene: Futuristic command center, holographic displays, captain's chair, viewport showing stars, sleek high-tech atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Diego Morales | Outfit: Costume - Gypsy Fortune Teller Pirate | Pose: None
+Character: Kaia Vaitupu | Outfit: Tennis | Pose: None
+Character: Sitara Saanvi | Outfit: Private Detective | Pose: None
+Score: 255
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Futuristic command center, holographic displays, captain's chair, viewport showing stars, sleek high-tech atmosphere.
+---
+
+**CHARACTER: Diego Morales**
+**Appearance:**
+- **Body:** Natural Athletic frame; natural-toned flesh with sun-touched warmth; inverted rectangle proportions with broad shoulders, slim waist, and defined muscle groups without bulk; moderate height (5'11"-6'0"); relaxed athletic build—lean and flexible from years of surfing; "effortless strength" presence—capable but never posturing.
+- **Face:** Balanced-angular structure; oval face shape; firm jawline that softens when he smiles; expressive almond-shaped eyes, wide-set, warm hazel with golden flecks that catch the light; natural dark eyebrows with a slight arch; straight nose with a subtle bridge; full mouth often quirked into a friendly half-smile; expressive neutral expression that reads as engaged and helpful.
+- **Hair:** Type 2B-2C waves; thick high density; medium length textured cut, shorter on sides with volume on top; loose natural side part; matte-satin finish with sun-bleached highlights at the tips; commonly worn tousled and "salt-water" styled, or loosely pushed back during work.
+- **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
+**Outfit:**
+- **Top:** Billowy white shirt (sleeves rolled)
+- **Bottom:** embroidered vest or **leather jerkin**
+- **Footwear:** loose trousers (striped or earth tone, ragged hem); **wide fabric sash** at waist; **brown leather boots**.
+- **Accessories:** Headscarf or bandana, gold hoop earring, layered necklaces, coin belt.
+- **Hair/Makeup:** Long hair or messy style, bronzed skin, mysterious expression.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing in profile, one leg bent with calf flexed, torso twisted toward the camera, hands gripped together to pop the chest and bicep.
+---
+
+**CHARACTER 2: Kaia Vaitupu**
+**Appearance:**
+- **Body:** Statuesque Athletic frame; warm golden-bronze skin with a luminous, hydrated finish; soft-rectangular proportions with strong, graceful posture; tall stature (5'10"-5'11"); refined athletic build with long limbs and elegant muscle definition; "quiet authority" presence—composed and commanding.
+- **Face:** Strong heart-shaped structure; defined cheekbones that catch the light; firm, graceful jawline; large, deep-set dark brown eyes with a steady, intelligent gaze; thick, natural dark eyebrows with a soft arch; straight, elegant nose; full, well-defined mouth with a composed neutral expression; presence conveys deep concentration and intellectual clarity.
+- **Hair:** Type 1A-1B straight; high density and lustrous sheen; waist-length dark ebony hair, often worn in a sharp, high-shine ponytail or loose with a precise center part; matte-satin finish with silver-blue holographic highlights woven through the strands.
+- **Skin:** Deep golden-bronze with warm radiant undertones; flawless, smooth texture; subtle traditional geometric "tatau" patterns on her forearms that pulse with a faint cyan glow; healthy, hydrated "digital office" glow.
+**Outfit:**
+- **Top:** Performance tank top for **The Storm Breakers** with **racerback design** and **contrast binding**
+- **Bottom:** body in **#002244** with **#69BE28 color-blocked side panels** and **subtle team logo** on chest
+- **Footwear:** athletic skirt with built-in compression shorts in **#002244** featuring **#69BE28 pleated inserts** and **contrast waistband with hidden ball pockets**; **tennis shoes** (#A5ACAF, court-appropriate with reinforced toe).
+- **Accessories:** Visor in **#002244** with **#69BE28 logo**, matching wristbands, hair tie.
+- **Hair/Makeup:** Hair in sporty ponytail or braid with flyaways secured, minimal waterproof makeup with tinted lip balm, athletic glow.
+**Pose/Action:**
+wide shot with the character framed within the environment, On mat in dominant position, knee on ground, controlled powerful posture, competitive intensity.
+---
+
+**CHARACTER 3: Sitara Saanvi**
+**Appearance:**
+* **Body:** Romantic frame; soft lush flesh quality; hourglass proportions with defined waist; moderate height (5'4"); soft rounded density with lush bust and hips, delicate wrists and ankles; alluring captivating presence.
+* **Face:** Soft rounded structure; heart shape; large expressive dark brown almond eyes with dazzled flirtatious quality; softly curved jawline; neutral resting expression is slightly pouting and sensual.
+* **Hair:** Type 2C waves; medium-high density; dark glossy black with high sheen; long voluminous hair that takes styling well; commonly worn in glamorous, vintage-inspired styles.
+* **Skin:** Medium tan with warm golden-olive undertones and luminous smooth surface finish; small delicate beauty mark near lip.
+**Outfit:**
+- **Top:** Fitted **white button-down shirt** (crisp cotton)
+- **Bottom:** high-waist trousers (dark gray or black wool)
+- **Footwear:** trench coat (beige or tan gabardine, belted); **oxford shoes or low heels**.
+- **Accessories:** Fedora hat, shoulder holster visible under coat, notebook in pocket.
+- **Hair/Makeup:** Hair in practical updo or waves, minimal makeup, serious expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing naturally, relaxed posture, arms at sides, gentle weight shift to one leg.
+---

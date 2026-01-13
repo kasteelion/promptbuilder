@@ -1,0 +1,63 @@
+# METADATA
+Scene: High-end fashion studio, dress forms, fabric bolts, sketches on walls, sophisticated creative space.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Freydis Holm | Outfit: Nordic Minimalist | Pose: None
+Character: Amina Benali | Outfit: Nordic Minimalist | Pose: None
+Interaction: Custom
+Score: 203
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+High-end fashion studio, dress forms, fabric bolts, sketches on walls, sophisticated creative space.
+---
+
+**CHARACTER: Freydis Holm**
+**Appearance:**
+* **Body:** Flamboyant Natural; powerful athletic flesh with clear muscle definition; broad structured shoulders and long limbs; tall vertical (5'10"-6'0"); high density throughout with visible strength in back, core, and thighs; rugged statuesque presence that commands space.
+* **Face:** Strong-angled structure; sharp square-to-oval shape; high prominent cheekbones; powerful defined jawline; intense blue-gray eyes; moderate spacing; piercing steady gaze; straight, slightly prominent nose; expressive mouth with a firm set; neutral expression is fiercely composed with a hint of predatory awareness.
+* **Hair:** Type 2B-2C; high density; rugged voluminous silhouette; very long (waist-length) with thick, rugged texture; asymmetric part; matte finish; complex asymmetric side braids feeding into a larger central braid or high ponytail. Ash-blonde or strawberry-blonde with sun-faded highlights.
+* **Skin:** Fair; cool-under-tones; weathered matte finish; scattered light freckles across bridge of nose and shoulders; a few faint, well-healed battle scars—one across the left eyebrow and another on the right shoulder.
+**Outfit:**
+- **Top:** Oversized turtleneck sweater (oatmeal, charcoal, or cream chunky knit, merino wool)
+- **Bottom:** slim-fit trousers (black or gray, tailored ankle length)
+- **Footwear:** minimalist leather sneakers (white or neutral, clean lines).
+- **Accessories:** Simple geometric jewelry (silver or gold), structured leather backpack or tote, wool scarf in neutral tone.
+- **Hair/Makeup:** Sleek straight hair or simple low bun, minimal makeup focusing on healthy skin, nude lip, subtle definition, Scandinavian understated elegance.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Amina Benali**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-soft flesh; balanced proportions with gentle curves, defined waist, moderate bust (C cup), soft rounded hips; moderate height (5'5"-5'6"); soft feminine build with subtle athleticism from maintaining posture during long streams; desk-athlete presence—comfortable in gaming chairs for hours.
+* **Face:** Soft-balanced facial structure; oval-to-heart face shape with gentle angles; smooth clear planes; large expressive almond-shaped eyes, wide-set, dark brown with natural warmth and camera-aware sparkle; defined arched eyebrows (professionally maintained); straight refined nose; full lips with natural cupid's bow; soft jawline; warm engaging expression—the "streaming face" of genuine enthusiasm mixed with performative energy; dimples when smiling fully.
+* **Hair:** Type 2B-2C waves; very high density; long length past shoulders to mid-back; natural volume and body; center or slight side part; healthy high-gloss finish; commonly worn loose with volume (camera-ready), half-up with claw clip (casual streams), or sleek ponytail (competitive mode); rich dark brown to black with subtle caramel balayage highlights framing face.
+* **Skin:** Medium-tan with warm golden-olive undertones (North African coloring); smooth luminous finish; flawless complexion maintained for camera work; natural healthy glow enhanced by ring lights and skincare routine. stylish clear-framed gaming glasses with a slight cat-eye shape
+**Outfit:**
+- **Top:** Oversized turtleneck sweater (#C3B1E1 chunky knit, merino wool)
+- **Bottom:** slim-fit trousers (black or gray, tailored ankle length)
+- **Footwear:** minimalist leather sneakers (white or neutral, clean lines).
+- **Accessories:** Simple geometric jewelry (silver or gold), structured leather backpack or tote, wool scarf in neutral tone.
+- **Hair/Makeup:** Sleek straight hair or simple low bun, minimal makeup focusing on healthy skin, nude lip, subtle definition, Scandinavian understated elegance.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Freydis Holm attempting an armbar submission from their back (from the guard). Amina Benali is in Freydis Holm's guard. Freydis Holm has isolated one of Amina Benali's arms and thrown their legs high on Amina Benali's upper body. Freydis Holm's left leg is across Amina Benali's neck/face, with the heel digging in. Freydis Holm's right leg is pinching tightly across Amina Benali's back or ribs, controlling their posture. Both of Freydis Holm's legs are squeezing together like scissors to keep Amina Benali trapped. Freydis Holm has a two-on-one grip on Amina Benali's trapped arm, pulling it tight to their own chest. Crucially, Freydis Holm controls the wrist so that Amina Benali's thumb is pointing up towards the ceiling. Freydis Holm lifts their hips off the mat, applying pressure to Amina Benali's elbow to hyperextend it. Amina Benali's arm is straight and being bent backwards at the elbow. Amina Benali is trying to defend by stacking their weight onto Freydis Holm or by trying to pull their arm free, their face a mask of pain and strain. Freydis Holm's expression is one of intense focus, using their whole body to apply pressure for the finish.

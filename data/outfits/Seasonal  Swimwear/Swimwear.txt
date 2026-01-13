@@ -1,25 +1,45 @@
 tags: [Seasonal, Summer, Swim]
 
 [F]
-- **Top:** Simple **((default:bikini) or (signature) bikini)**.
-- **Accessories:** None specified.
-- **Hair/Makeup:** Minimal waterproof makeup.
-
----
+- **Top:** Simple bikini or one-piece swimsuit ({modifier}).
+  - **Fit:** Fitted; Minimal.
+  - **Material:** Lycra/Spandex.
+  - **Pattern:** Solid or {modifier}.
+  - **Neckline:** Halter or Scoop.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Integrated matching swimsuit section.
+  - **Fit:** Fitted.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Bikini cut.
+- **Footwear:** Barefoot or flip-flops.
+- **Accessories:** Sunglasses optional.
 
 [M]
-- **Top:** Simple **((default:swim trunks or board shorts) or (signature) swimwear)**.
-- **Accessories:** None specified.
-- **Hair/Makeup:** Minimal grooming.
-
----
+- **Top:** Bare chest or swim rash guard.
+  - **Fit:** Relaxed or Fitted.
+  - **Material:** Spandex/Polyester.
+  - **Neckline:** Crew neck (rash guard).
+  - **Sleeve:** Sleeveless or Long.
+- **Bottom:** Swim trunks or board shorts ({modifier}).
+  - **Fit:** Standard swim fit.
+  - **Material:** Quick-dry fabric.
+  - **Waist:** Drawstring.
+  - **Length:** Knee-length.
+- **Footwear:** Barefoot or flip-flops.
+- **Accessories:** Sunglasses.
 
 [H]
-- **Hijab:** Swim hijab in navy blue (quick-dry technical fabric)
-- **Top:** Long-sleeve modest swim tunic in ((default:navy blue) or (signature)) (falls to mid-thigh)
-- **Bottom:** Full-coverage swim leggings
-- **Footwear:** Water-friendly sandals
-- **Accessories:** Waterproof watch, UV-protective sunglasses
-- **Makeup:** Minimal waterproof makeup
-
----
+- **Hijab:** Swim hijab in navy blue (quick-dry technical fabric).
+- **Top:** Long-sleeve modest swim tunic ({modifier}).
+  - **Fit:** Modest fitted; Mid-thigh length.
+  - **Material:** Technical swim fabric.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-coverage swim leggings in navy blue.
+  - **Fit:** Fitted; Modest.
+  - **Material:** matching.
+  - **Waist:** Elastic.
+  - **Length:** Ankle-length.
+- **Footwear:** Water-friendly sandals.
+- **Accessories:** Waterproof watch; UV-protective sunglasses.

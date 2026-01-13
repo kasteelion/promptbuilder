@@ -1,23 +1,45 @@
 tags: [Bridal, event, formal, Wedding]
 
 [F]
-- **Top:** Elegant floor-length wedding gown (white or ivory lace and silk, sweetheart neckline, flowing silhouette)
-- **Bottom:** sheer lace veil (optional, pinned to hair)
-- **Footwear:** satin heeled pumps.
-- **Accessories:** Pearl necklace and earrings, bridal bouquet of fresh flowers, delicate gold bracelet.
-- **Hair/Makeup:** Soft romantic curls or elegant updo, glowing bridal makeup with soft pink tones.
+- **Top:** Sweetheart bodice with lace cap sleeves.
+  - **Fit:** Fitted; Structured.
+  - **Material:** Lace; Silk; Tulle.
+  - **Pattern:** Floral lace.
+  - **Neckline:** Sweetheart.
+  - **Sleeve:** Sleeveless or lace cap sleeve.
+- **Bottom:** Flowing skirt with train.
+  - **Fit:** Full and voluminous.
+  - **Material:** matching fabric.
+  - **Waist:** Basque waist.
+  - **Length:** Floor-length with train.
+- **Footwear:** Satin pumps.
+- **Accessories:** Sheer lace veil; pearl necklace; fresh flower bouquet.
 
 [M]
-- **Top:** Classic black tuxedo (wool-blend with satin lapels, tailored fit)
-- **Bottom:** white wing-tip dress shirt
-- **Footwear:** black silk bow tie; **patent leather dress shoes**.
-- **Accessories:** Silver cufflinks, white flower boutonniere, silk pocket square.
-- **Hair/Makeup:** Impeccably styled hair, clean-shaven or perfectly groomed facial hair.
+- **Top:** Classic black tuxedo jacket with satin lapels.
+  - **Fit:** Formal tailored.
+  - **Material:** Wool-blend; Satin.
+  - **Neckline:** Wing tip collared white shirt.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching tuxedo trousers.
+  - **Fit:** Classic formal.
+  - **Material:** wool-blend.
+  - **Waist:** High natural waist.
+  - **Length:** Full length.
+- **Footwear:** Patent leather shoes.
+- **Accessories:** Black silk bow tie; silver cufflinks; white boutonnieres.
 
 [H]
-- **Hijab:** Luxurious white silk hijab with intricate lace trim, delicate crystal pins, and floor-length sheer lace veil attached
-- **Top:** Elegant long-sleeve wedding gown (white or ivory lace and silk, modest high neckline, flowing silhouette)
-- **Bottom:** N/A (gown is floor-length)
-- **Footwear:** White satin heeled pumps
-- **Accessories:** Pearl necklace, bridal bouquet of fresh flowers, delicate gold bracelet
-- **Makeup:** Soft romantic makeup with glowing skin and soft pink tones
+- **Hijab:** Silk hijab with lace trim and attached veil.
+- **Top:** Long-sleeve wedding gown with high neck.
+  - **Fit:** Modest flowing.
+  - **Material:** Lace; Silk.
+  - **Neckline:** High modest neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching flowing skirt.
+  - **Fit:** A-line.
+  - **Material:** matching fabric.
+  - **Waist:** Natural waist.
+  - **Length:** Floor-length.
+- **Footwear:** Satin pumps.
+- **Accessories:** Pearl necklace; gold bracelet; bouquet.

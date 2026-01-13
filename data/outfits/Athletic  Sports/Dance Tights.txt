@@ -1,15 +1,41 @@
 tags: []
 
 [F]
-- **Top:** Nude colored bodysuit
+- **Top:** Nude colored bodysuit.
+  - **Fit:** Second-skin.
+  - **Material:** Nylon mesh.
+  - **Pattern:** Solid Nude.
+  - **Neckline:** Scoop.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Full-length nude tights.
+  - **Fit:** Tight.
+  - **Material:** Sheer nylon.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Barefoot or dance shoes.
 
 [M]
-- **Top:** Nude colored compression shirt and tights
+- **Top:** Nude compression shirt.
+  - **Fit:** Compression.
+  - **Material:** Spandex.
+  - **Neckline:** Crew.
+  - **Sleeve:** Short.
+- **Bottom:** Nude tights.
+  - **Fit:** Tight.
+  - **Material:** Nylon.
+  - **Waist:** Elastic.
+  - **Length:** Full length.
+- **Footwear:** Barefoot or dance shoes.
 
 [H]
-- **Hijab:** Sports hijab in nude/beige tone (secure, breathable)
-- **Top:** Long-sleeve nude colored modest dance bodysuit (high neck, full coverage)
-- **Bottom:** Full-length nude dance tights
-- **Footwear:** Dance shoes appropriate to style
-- **Accessories:** Minimal, hair secured
-- **Makeup:** Natural stage-appropriate makeup
+- **Hijab:** Sports hijab in nude/beige tone.
+- **Top:** Long-sleeve nude modest bodysuit.
+  - **Fit:** Fitted modest.
+  - **Material:** Opaque Lycra.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length nude dance tights.
+  - **Fit:** Tight.
+  - **Material:** Nylon.
+  - **Length:** Full length.
+- **Footwear:** Dance shoes.

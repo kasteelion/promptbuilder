@@ -6,20 +6,44 @@ modifiers:
   Away Catcher: in **{secondary_color}**, wearing catcher's gear
 
 [F]
-- **Top:** Softball jersey (button down or v-neck) for **{team}** {modifier}
-- **Bottom:** Softball pants (knee length) with belt and high socks
-- **Footwear:** Cleats
-- **Accessories:** Visor or bow (optional), batting gloves.
-- **Hair/Makeup:** Braids with ribbons.
+- **Top:** Button-down or V-neck softball jersey for {team} {modifier}.
+  - **Fit:** Fitted; Tucked in.
+  - **Material:** Polyester blend.
+  - **Pattern:** {modifier}; Bold lettering.
+  - **Neckline:** Button-down or V-neck.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Softball pants with belt and high socks.
+  - **Fit:** Fitted; Padded for sliding.
+  - **Material:** Durable athletic fabric.
+  - **Waist:** Belted.
+  - **Length:** Knee length.
+- **Footwear:** Softball cleats.
+- **Accessories:** Visor or hair bow; batting gloves.
 
 [M]
-- **Top:** Softball jersey for **{team}** {modifier}
-- **Bottom:** Softball pants
-- **Footwear:** Cleats
+- **Top:** Softball jersey for {team} {modifier}.
+  - **Fit:** Standard athletic.
+  - **Material:** Polyester blend.
+  - **Neckline:** V-neck.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Softball pants.
+  - **Fit:** Relaxed.
+  - **Material:** fabric.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Cleats.
 - **Accessories:** Cap.
 
 [H]
-- **Hijab:** Sport hijab (tucked)
-- **Top:** Long sleeve under jersey for **{team}** {modifier}
-- **Bottom:** Loose softball pants
-- **Footwear:** Cleats
+- **Hijab:** Sport hijab (tucked).
+- **Top:** Long sleeve under jersey for {team} {modifier}.
+  - **Fit:** Modest layered.
+  - **Material:** cotton under tech-mesh.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Loose softball pants.
+  - **Fit:** Loose fit.
+  - **Material:** matching.
+  - **Waist:** Belted.
+  - **Length:** Full length.
+- **Footwear:** Cleats.

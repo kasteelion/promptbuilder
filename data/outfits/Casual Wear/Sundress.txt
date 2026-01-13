@@ -1,21 +1,49 @@
-tags: [Casual, social, Summer, Vacation]
+modifiers:
+  Picnic: in **classic gingham check** with eyelet trim
+  Garden: in **botanical-print cotton voile**
+  Beach: in **crinkle-gauze linen**
 
 [F]
-- **Top:** **Lightweight floral sundress** (knee-length or midi, thin straps or ruffled sleeves)
-- **Bottom:** flowy skirt of the dress
-- **Footwear:** Strappy **sandals** or espadrilles.
-- **Accessories:** Wide-brim straw hat, woven wicker bag, sunglasses.
-- **Hair/Makeup:** Loose waves, sun-kissed makeup, glowing skin.
+- **Top:** Shirred bodice sundress {modifier}.
+  - **Fit:** Fitted shirred bodice.
+  - **Material:** Cotton or Linen.
+  - **Pattern:** Variable {modifier}.
+  - **Neckline:** Square necklace with ruffle straps.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Tiered midi skirt (Integrated).
+  - **Fit:** A-line tiered.
+  - **Material:** Matching fabric.
+  - **Pattern:** Side slit.
+  - **Waist:** Natural.
+  - **Length:** Midi-length.
+- **Footwear:** Jute-sole wedge espadrilles.
+- **Accessories:** Raffia tote bag; cat-eye sunglasses.
 
 [M]
-- **Top:** **Linen button-down shirt** (short sleeve, unbuttoned at collar) or a light polo
-- **Bottom:** Cotton or linen shorts (khaki, light blue, or white)
-- **Footwear:** Boat shoes or leather sandals.
-- **Accessories:** Sunglasses, canvas belt.
+- **Top:** Cuban collar short-sleeve shirt.
+  - **Fit:** Relaxed.
+  - **Material:** Slub linen.
+  - **Pattern:** Solid or Patterned.
+  - **Neckline:** Cuban collar.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Tailored chino shorts.
+  - **Fit:** Tailored (5-inch inseam).
+  - **Material:** Stretch-cotton twill.
+  - **Waist:** Braided leather belt.
+  - **Length:** Short (above knee).
+- **Footwear:** Leather boat shoes or woven loafers.
+- **Accessories:** Clubmaster sunglasses.
 
 [H]
-- **Hijab:** Lightweight chiffon or georgette hijab in a pastel or floral print
-- **Top:** **Maxi-length tiered dress** with long sleeves (lightweight breathable fabric)
-- **Bottom:** full-length flowy skirt
-- **Footwear:** Flat sandals or wedge espadrilles
-- **Accessories:** Straw handbag, sunglasses, light jewelry.
+- **Hijab:** Chiffon hijab in pastel shade.
+- **Top:** Long-sleeve prairie maxi dress {modifier}.
+  - **Fit:** High neck with smocked yoke.
+  - **Material:** Cotton or Linen.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dress skirt (Integrated).
+  - **Fit:** Full-volume tiered.
+  - **Material:** Matching fabric.
+  - **Length:** Floor-length.
+- **Footwear:** Flat leather sandals.
+- **Accessories:** Woven straw basket bag.

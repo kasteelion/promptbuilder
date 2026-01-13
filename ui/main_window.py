@@ -6,7 +6,7 @@ import tkinter as tk
 from tkinter import ttk
 from typing import Optional
 
-from config import DEFAULT_THEME, DEFAULT_FONT_SIZE
+from core.config import DEFAULT_THEME, DEFAULT_FONT_SIZE
 from core.app_context import AppContext
 from utils import create_tooltip, logger
 

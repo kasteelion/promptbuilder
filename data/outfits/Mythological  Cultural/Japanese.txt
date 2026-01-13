@@ -1,23 +1,46 @@
 tags: [Cultural, formal, japanese, traditional]
 
 [F]
-- **Top:** Elegant **kimono** (silk in white, red, or gold with nature motifs - cherry blossoms, cranes)
-- **Bottom:** obi (wide decorative belt)
-- **Footwear:** tabi socks and **zori sandals**.
-- **Accessories:** Ornate kanzashi (hair ornaments) with flowers or divine symbols, delicate fan.
-- **Hair/Makeup:** Traditional updo with decorative pins, pale foundation, subtle red lip, defined eyes.
+- **Top:** Elegant silk kimono.
+  - **Fit:** Graceful layered robes.
+  - **Material:** Silk.
+  - **Pattern:** Nature motifs (cherry blossoms, cranes).
+  - **Neckline:** Cross-collar (V-neck).
+  - **Sleeve:** Long flowing sleeves.
+- **Bottom:** Obi (wide decorative belt) and integrated robe floor.
+  - **Fit:** Wrapped.
+  - **Material:** matching silk.
+  - **Waist:** Wide decorative obi.
+  - **Length:** Floor-length.
+- **Footwear:** Tabi socks and zori sandals.
+- **Accessories:** Ornate kanzashi (hair ornaments); delicate fan.
 
 [M]
-- **Top:** Formal kimono (silk in white, black, or deep colors with nature or divine motifs)
-- **Bottom:** hakama (wide-legged pants)
-- **Footwear:** obi (wide belt); **tabi socks** and **geta sandals**.
-- **Accessories:** Ornate fan, sword at waist optional, ceremonial headpiece.
-- **Hair/Makeup:** Traditional topknot or neat styling, minimal facial hair.
+- **Top:** Formal silk kimono.
+  - **Fit:** Structured; Formal.
+  - **Material:** Silk.
+  - **Pattern:** Nature or Divine motifs.
+  - **Neckline:** Cross-collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Hakama wide-legged pants.
+  - **Fit:** Wide-legged.
+  - **Material:** matching high-quality fabric.
+  - **Waist:** Wide obi belt.
+  - **Length:** Floor-length.
+- **Footwear:** Tabi socks and geta sandals.
+- **Accessories:** Ornate fan; sword (optional); ceremonial headpiece.
 
 [H]
-- **Hijab:** Silk hijab in white, red, or gold with elegant Japanese-inspired draping, ornate kanzashi (hair ornaments) attached
-- **Top:** Long-sleeve elegant kimono-inspired robe (silk with nature motifs - cherry blossoms, cranes, high neck with elegant draping)
-- **Bottom:** Flowing pants or under-robe in coordinating silk
-- **Footwear:** Tabi socks and ornate sandals
-- **Accessories:** Ornate kanzashi on hijab, delicate fan, obi-inspired decorative belt
-- **Makeup:** Pale foundation base, subtle red lip, defined eyes
+- **Hijab:** Silk hijab with elegant Japanese-inspired draping.
+- **Top:** Long-sleeve kimono-inspired robe.
+  - **Fit:** Modest loose.
+  - **Material:** Silk nature motifs.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long wide sleeves.
+- **Bottom:** Flowing pants or under-robe.
+  - **Fit:** Relaxed.
+  - **Material:** matching silk.
+  - **Waist:** Obi-inspired decorative belt.
+  - **Length:** Floor-length.
+- **Footwear:** Tabi socks and ornate sandals.
+- **Accessories:** Ornate kanzashi attached to hijab; delicate fan.

@@ -1,23 +1,46 @@
 tags: [combat, fantasy]
 
 [F]
-- **Top:** Fitted armor-inspired bodice (leather or faux-leather with metal accents)
-- **Bottom:** high-waist pants or skirt with side slits (((default:dark colors) or (signature)), movement-friendly)
-- **Footwear:** knee-high boots (sturdy with buckles).
-- **Accessories:** Arm bracers, belt with pouches, weapon prop (sword or bow).
-- **Hair/Makeup:** Hair in warrior braids or ponytail, natural makeup with defined features.
+- **Top:** Fitted armor-inspired bodice with metal accents.
+  - **Fit:** Structured; Snug fitting.
+  - **Material:** Leather or Faux-leather.
+  - **Pattern:** Metal plate detailing.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Sleeveless or Short.
+- **Bottom:** High-waist pants or skirt with side slits.
+  - **Fit:** Form-fitting or Flowing with movement slits.
+  - **Material:** Heavy fabric; Leather accents.
+  - **Pattern:** Solid ((dark colors)).
+  - **Waist:** Wide buckle belt.
+  - **Length:** Ankle or Knee length.
+- **Footwear:** Sturdy knee-high boots with buckles.
+- **Accessories:** Arm bracers; belt with pouches; sword or bow prop.
 
 [M]
-- **Top:** Fitted armor-inspired vest or chest piece (leather or faux-leather with metal accents)
-- **Bottom:** tactical pants (dark colors, movement-friendly)
-- **Footwear:** knee-high boots (sturdy with buckles).
-- **Accessories:** Arm bracers, belt with pouches, weapon prop (sword or axe).
-- **Hair/Makeup:** Hair in warrior style or short, natural grooming with defined features.
+- **Top:** Fitted armor-inspired vest or chest piece.
+  - **Fit:** Structured.
+  - **Material:** Leather/Metal accents.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Tactical pants.
+  - **Fit:** Relaxed for movement.
+  - **Material:** Durable fabric.
+  - **Waist:** Utility belt.
+  - **Length:** Full.
+- **Footwear:** Sturdy knee-high boots.
+- **Accessories:** Arm bracers; pouches; sword or axe prop.
 
 [H]
-- **Hijab:** Practical tactical hijab in dark color (charcoal or deep brown) with secure warrior-style wrap
-- **Top:** Long-sleeve fitted armor-inspired tunic (leather-look or structured fabric with protective details, high neck, falls to mid-thigh)
-- **Bottom:** High-waist tactical pants with utility details (dark colors, movement-friendly)
-- **Footwear:** Knee-high boots (sturdy with buckles)
-- **Accessories:** Arm bracers (worn over sleeves), utility belt with pouches, weapon prop (sword or bow)
-- **Makeup:** Natural makeup with defined features, warrior aesthetic
+- **Hijab:** Practical tactical hijab in charcoal or deep brown.
+- **Top:** Long-sleeve fitted armor-inspired tunic.
+  - **Fit:** Modest structured.
+  - **Material:** Leather-look fabric.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist tactical pants.
+  - **Fit:** Straight leg.
+  - **Material:** matching dark fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Knee-high boots with buckles.
+- **Accessories:** Arm bracers (over sleeves); utility belt; sword or bow.

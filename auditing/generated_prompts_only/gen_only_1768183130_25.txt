@@ -1,0 +1,80 @@
+# METADATA
+Scene: Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Marisol Rivera | Outfit: Track and Field | Pose: None
+Character: Chiara Lombardi | Outfit: Tennis | Pose: None
+Character: Efe Kouadio | Outfit: Lumberjack | Pose: None
+Interaction: Custom
+Score: 445
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+---
+
+**CHARACTER: Marisol Rivera**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; compact balanced proportions with defined waist, toned limbs, and visible muscle definition; moderate vertical (5'5"-5'6"); athletic build with clean controlled lines, functional strength, and mixed-heritage features—Japanese bone structure with Puerto Rican curves, creating distinctive balanced aesthetics; athletic graceful presence.
+* **Face:** Balanced classical structure with mixed heritage features; oval face with subtle Japanese angularity softened by Puerto Rican warmth; firm clean planes; calm almond-shaped eyes that tilt slightly upward (Japanese influence) with warm expressive quality (Puerto Rican warmth), moderately spaced, dark brown; defined jawline; neutral expression shows calm composure with subtle knowing smile that brightens when engaged; beauty mark near left eye.
+* **Hair:** Type 1B-1C straight with slight natural wave; medium-high density; long sleek cut with healthy satin sheen; dark brown to black; versatile styling options including ponytails and braids.
+* **Skin:** Warm golden-olive skin with bronzed finish and natural radiance.
+**Outfit:**
+- **Top:** Fitted performance crop top for **The Aero Aces** with **racerback straps** and **mesh ventilation panels**
+- **Bottom:** body in **#5BC2E7** with **#002244 diagonal chest stripe** and **team logo**
+- **Footwear:** high-cut athletic briefs in **#5BC2E7** with **#002244 side binding** and **streamlined hip cut for mobility**; **track spikes or racing flats** (#FFFFFF, event-specific).
+- **Accessories:** Race number bib pinned at hip, timing chip anklet, hair secured in aerodynamic style.
+- **Hair/Makeup:** Hair in slicked-back ponytail or tight bun, minimal makeup, focused expression.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Chiara Lombardi**
+**Appearance:**
+* **Body:** Soft Classic frame; natural–wave flesh blend; balanced proportions with gentle curve; moderate vertical.
+* **Face:** Balanced sculpted facial structure; oval face; soft cheek fullness; strong brows; expressive eyes; calm knowing expression.
+* **Hair:** Type 2B–2C waves; high density; layered medium-long cut; natural volume; loose part; satin finish.
+* **Skin:** Warm Mediterranean-toned skin with healthy glow.
+**Outfit:**
+- **Top:** Performance tank top for **The Aero Aces** with **racerback design** and **contrast binding**
+- **Bottom:** body in **#5BC2E7** with **#002244 color-blocked side panels** and **subtle team logo** on chest
+- **Footwear:** athletic skirt with built-in compression shorts in **#5BC2E7** featuring **#002244 pleated inserts** and **contrast waistband with hidden ball pockets**; **tennis shoes** (#FFFFFF, court-appropriate with reinforced toe).
+- **Accessories:** Visor in **#5BC2E7** with **#002244 logo**, matching wristbands, hair tie.
+- **Hair/Makeup:** Hair in sporty ponytail or braid with flyaways secured, minimal waterproof makeup with tinted lip balm, athletic glow.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Efe Kouadio**
+**Appearance:**
+- **Body:** Soft Natural frame; natural soft flesh; balanced proportions with gentle curves, defined waist, full hips, soft rounded features, moderate shoulders; moderate vertical (5’5”-5’6”); natural curvy build with soft harmonious lines and welcoming presence.
+- **Face:** Soft-balanced facial structure; round-oval face with warm open planes and full cheeks that enhance smile; expressive round-almond eyes with bright engaged quality, wide-set, warm dark brown with natural sparkle; full lips with natural upward curve that creates dimpled smile; smooth forehead; radiant joyful expression that lights up her whole face.
+- **Hair:** Type 4A coils; high density; medium-length natural textured style with defined curl pattern and bouncy voluminous shape; healthy soft finish with natural sheen; black to dark brown.
+- **Skin:** Deep warm brown with rich golden undertones and natural luminous dewy finish.
+**Outfit:**
+- **Top:** Red and black buffalo plaid flannel shirt (thick cotton, buttoned or worn open over a white tank)
+- **Bottom:** distressed blue jeans (straight leg, rugged denim)
+- **Footwear:** brown leather work boots.
+- **Accessories:** Leather belt with large buckle, small axe prop (optional), wool beanie.
+- **Hair/Makeup:** Loose natural waves or a messy bun, minimal "outdoorsy" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Marisol Rivera and Chiara Lombardi in a defensive stance together, shoulders nearly touching, eyes scanning the "opponents" ahead, collaborative strategic positioning.

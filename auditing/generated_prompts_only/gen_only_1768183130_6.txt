@@ -1,0 +1,82 @@
+# METADATA
+Scene: Eclectic vintage store, racks of retro clothing, antique decor, nostalgic treasure-hunt vibe.
+Base_Prompt: Low-Poly 3D
+Character: Jena Marlowe | Outfit: Nightclub Singer | Pose: None
+Character: Avery Blake | Outfit: Training | Pose: None
+Character: Mei Chen | Outfit: Streetwear | Pose: None
+Interaction: Custom
+Score: 216
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Eclectic vintage store, racks of retro clothing, antique decor, nostalgic treasure-hunt vibe.
+---
+
+**CHARACTER: Jena Marlowe**
+**Appearance:**
+* **Body:** Soft Dramatic–Romantic blend; elongated but light vertical; gentle hourglass with soft waist emphasis; overall delicacy rather than dramatic weight.
+* **Face:** Soft oval face with balanced proportions; medium-large bright eyes; refined nose; gentle jawline; warm, approachable expression with an easy smile.
+* **Hair:** Light honey-blonde; Type 2A–2B loose waves; fine-to-medium density; long hair with soft volume; luminous natural-looking highlights; healthy glossy finish.
+* **Skin:** Fair to light neutral-warm tone with a natural satin glow; fresh and luminous in daylight.
+**Outfit:**
+- **Top:** Fitted **sequined cocktail dress** (black or deep red, knee-length with sweetheart neckline)
+- **Bottom:** seamed stockings
+- **Footwear:** peep-toe heels.
+- **Accessories:** Long gloves, feather boa, vintage microphone.
+- **Hair/Makeup:** Victory rolls or finger waves, dramatic winged eyeliner, dark red lips.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Avery Blake**
+**Appearance:**
+* **Body:** Soft Natural frame; lean-toned flesh quality; athletic hourglass proportions with moderate bust (C cup), defined shoulders with visible arm tone, trim waist with toned abs, shapely hips, and powerful legs; moderate vertical (5'6"); athletic density with controlled strength, sculpted core, and muscular thighs; provocatively confident presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-heart shape; high defined cheekbones with dramatic contouring; large almond-shaped eyes in dark brown/black with heavy smokey eye makeup creating intense smoldering gaze, moderately spaced; straight refined nose; full pouty lips; strong defined jawline; neutral resting expression is sultry and defiant with piercing direct stare and slight knowing smirk that radiates "I dare you."
+
+* **Hair:** Type 1B straight; very high density; ultra-sleek long cut reaching mid-back to waist; center part or dramatic side-swept; jet-black color with raven shine; glass-smooth texture like liquid ink; commonly worn completely straight and flowing, half-up with volume at crown, or high ponytail; always impeccably smooth and glossy.
+
+* **Skin:** Very fair/pale with cool undertones and smooth porcelain-ivory finish;
+**Outfit:**
+- **Top:** Fitted **sports bra** with minimal detailing
+- **Bottom:** high-waist **athletic shorts**.
+- **Accessories:** Lightweight grappling gloves; **ankle tape** for support.
+- **Hair/Makeup:** Minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large features—specifically an extremely full, heavy bust (F-G cup) that is her most prominent physical trait—balanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow.
+**Outfit:**
+- **Top:** Oversized **graphic hoodie or sweatshirt** in heavy-gauge loopback cotton; matte finish with high-contrast screen print
+- **Bottom:** multi-pocket **cargo pants** in a durable technical ripstop fabric with adjustable drawstrings at the ankle
+- **Footwear:** chunky multi-textured sneakers with mesh panels and reflective detailing
+- **Accessories:** Distressed baseball cap, nylon crossbody bag with tactical buckles, silver curb chain necklace
+- **Hair/Makeup:** Natural or minimal makeup with a focus on skin texture; effortless "street-ready" bun or ponytail
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Jena Marlowe applying triangle choke on Avery Blake from bottom position. Jena Marlowe on their back with Avery Blake trapped between their legs. Jena Marlowe's right leg is wrapped over Avery Blake's shoulder and behind their neck, right ankle or calf pressing into Avery Blake's left shoulder/neck. Jena Marlowe's left leg crosses over their right ankle/shin, creating the "triangle" lock, squeezing Avery Blake's head and one arm. Jena Marlowe's hips are angled and elevated, pulling Avery Blake's head down while pushing their trapped arm across their own throat to complete the choke. Jena Marlowe grips behind Avery Blake's head or controls their trapped arm, pulling downward. Avery Blake is bent forward, one arm trapped inside the triangle alongside their head, other arm possibly posting on mat trying to posture up. Avery Blake's face shows oxygen deprivation, redness, possible panic. Jena Marlowe shows controlled technique, adjusting angles with precision. Both display full-body effort—legs flexed hard, core engaged, arms fighting for control.

@@ -1,21 +1,45 @@
 tags: [work, professional, Science, tech]
 
 [F]
-- **Top:** **White lab coat** (knee-length, buttoned) over a smart-casual blouse or charcoal turtleneck
-- **Bottom:** Professional slacks or dark chinos
-- **Footwear:** Comfortable **flat loafers** or sneakers (non-slip).
-- **Accessories:** ID badge clipped to pocket, protective safety goggles (perched on forehead or worn), disposable gloves (tucked in pocket), ballpoint pen.
-- **Hair/Makeup:** Hair tied back in a neat bun or ponytail, logical and focused expression.
+- **Top:** Knee-length buttoned white lab coat.
+  - **Fit:** Classic; Layered over smart-casual blouse or turtleneck.
+  - **Material:** Cotton or Twill.
+  - **Pattern:** Solid white.
+  - **Neckline:** Lapel collar coat.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Professional slacks or dark chinos.
+  - **Fit:** Straight or Slim.
+  - **Material:** Canvas or Wool blend.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Comfortable flat loafers or non-slip sneakers.
+- **Accessories:** ID badge; safety goggles; pen in pocket; disposable gloves.
 
 [M]
-- **Top:** **White lab coat** (knee-length, buttoned) over a button-down shirt
-- **Bottom:** Professional slacks
+- **Top:** Knee-length buttoned white lab coat over button-down shirt.
+  - **Fit:** Standard.
+  - **Material:** fabric.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long.
+- **Bottom:** Professional slacks.
+  - **Fit:** Straight.
+  - **Material:** fabric.
+  - **Waist:** Natural.
+  - **Length:** Full.
 - **Footwear:** Brown or black leather shoes.
-- **Accessories:** ID badge, safety glasses, pen in pocket.
+- **Accessories:** ID badge; safety glasses; pen.
 
 [H]
-- **Hijab:** Neutral jersey hijab (white, gray, or black) tucked into the lab coat collar
-- **Top:** **White lab coat** (long-sleeve, knee-length) over a modest tunic
-- **Bottom:** Professional trousers or long skirt
-- **Footwear:** Flat professional shoes
-- **Accessories:** Safety goggles, ID badge.
+- **Hijab:** Neutral jersey hijab tucked into lab coat collar.
+- **Top:** Long-sleeve knee-length white lab coat over modest tunic.
+  - **Fit:** Modest layered.
+  - **Material:** fabric.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Professional trousers or long skirt.
+  - **Fit:** Straight.
+  - **Material:** fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Flat professional shoes.
+- **Accessories:** Safety goggles; ID badge.

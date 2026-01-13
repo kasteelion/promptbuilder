@@ -1,23 +1,46 @@
 tags: [Job, outdoor, Western]
 
 [F]
-- **Top:** Red and black buffalo plaid flannel shirt (thick cotton, buttoned or worn open over a white tank)
-- **Bottom:** distressed blue jeans (straight leg, rugged denim)
-- **Footwear:** brown leather work boots.
-- **Accessories:** Leather belt with large buckle, small axe prop (optional), wool beanie.
-- **Hair/Makeup:** Loose natural waves or a messy bun, minimal "outdoorsy" makeup.
+- **Top:** Red and black buffalo plaid flannel shirt.
+  - **Fit:** Boxy; Buttoned or Open over white tank.
+  - **Material:** Thick cotton flannel.
+  - **Pattern:** Buffalo plaid (red/black).
+  - **Neckline:** Pointed collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Distressed blue jeans.
+  - **Fit:** straight leg; Rugged.
+  - **Material:** Distressed denim.
+  - **Waist:** Natural with leather belt and large buckle.
+  - **Length:** Full leg.
+- **Footwear:** Brown leather work boots.
+- **Accessories:** Small axe prop (optional); wool beanie.
 
 [M]
-- **Top:** Red and black buffalo plaid flannel shirt (heavyweight, buttoned or worn open over a white tank)
-- **Bottom:** distressed blue jeans (straight leg, rugged denim)
+- **Top:** heavyweight buffalo plaid flannel shirt.
+  - **Fit:** Boxy.
+  - **Material:** heavy cotton.
+  - **Pattern:** Red and black plaid.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long.
+- **Bottom:** distressed blue jeans.
+  - **Fit:** Straight leg.
+  - **Material:** Rugged denim.
+  - **Waist:** Brass buckle belt.
+  - **Length:** Full.
 - **Footwear:** brown leather work boots.
-- **Accessories:** Leather belt with brass buckle, wood-splitting axe prop (optional), knit beanie.
-- **Hair/Makeup:** Natural tousled hair or short cropped style, light stubble or well-groomed beard.
+- **Accessories:** wood-splitting axe prop; knit beanie.
 
 [H]
-- **Hijab:** Red jersey hijab with simple practical wrap
-- **Top:** Red and black buffalo plaid flannel shirt (thick cotton, modest fit) over long-sleeve white base layer
-- **Bottom:** Rugged blue jeans (straight leg, full length)
-- **Footwear:** Brown leather work boots
-- **Accessories:** Leather belt with brass buckle, knit beanie (worn over hijab)
-- **Makeup:** Natural "outdoorsy" makeup
+- **Hijab:** Red jersey hijab with simple practical wrap.
+- **Top:** Red and black buffalo plaid flannel over long-sleeve white base.
+  - **Fit:** Modest boxy.
+  - **Material:** cotton flannel.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Rugged blue jeans.
+  - **Fit:** Straight leg.
+  - **Material:** Denim.
+  - **Waist:** Leather belt with brass buckle.
+  - **Length:** Full length.
+- **Footwear:** Brown leather work boots.
+- **Accessories:** Knit beanie (over hijab).

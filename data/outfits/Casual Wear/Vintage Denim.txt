@@ -1,23 +1,51 @@
 tags: [Casual, vintage]
+modifiers:
+  Bell Bottom: featuring **dramatic bell bottoms** with a high-waisted rise and tight thigh
+  Mom Jean: in a **classic tapered mom-jean cut** with a relaxed hip
+  Wide Leg: in a **slouchy wide-leg silhouette** pooling at the ankles
+  Flare: with a **subtle bootcut flare** and raw hem
 
 [F]
-- **Top:** Halter Crop Top (((default:white)) ribbed knit cotton, fitted silhouette, tie-neck closure, soft texture)
-- **Bottom:** Denim Jacket (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons, heavy sturdy fabric)
-- **Footwear:** Bell Bottom Jeans (high-waisted rise, dark blue denim, form-fitting thighs with dramatic flare at the hem, contrast stitching).
-- **Accessories:** ((default:red)) paisley bandana tied as a headband, large silver hoop earrings.
-- **Hair/Makeup:** Voluminous blown-out waves, sharp winged black eyeliner, heavy rosy blush on cheekbones, bold matte lipstick.
+- **Top:** Halter Crop Top.
+  - **Fit:** Fitted silhouette.
+  - **Material:** Ribbed knit cotton.
+  - **Pattern:** Solid ((default:white)).
+  - **Neckline:** Tie-neck closure.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Vintage Blue Jeans {modifier}.
+  - **Fit:** Variable {modifier}.
+  - **Material:** Heavyweight denim.
+  - **Pattern:** Contrast stitching.
+  - **Waist:** High-waisted.
+  - **Length:** Ankle-length or pooling.
+- **Footwear:** Platform clogs or canvas sneakers.
+- **Accessories:** Paisley bandana, silver hoop earrings.
 
 [M]
-- **Top:** Ribbed Muscle Tank (((default:white)) cotton, fitted silhouette, soft texture)
-- **Bottom:** Denim Jacket (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons, heavy sturdy fabric)
-- **Footwear:** Flared Jeans (dark blue denim, fitted through thigh with dramatic flare at hem, contrast stitching).
-- **Accessories:** ((default:red)) paisley bandana tied around neck, silver rings.
-- **Hair/Makeup:** Textured wavy hair or shag cut, clean-shaven or stubble, natural appearance.
+- **Top:** Ribbed Muscle Tank.
+  - **Fit:** Fitted.
+  - **Material:** White Ribbed cotton.
+  - **Pattern:** Solid.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Vintage Blue Jeans {modifier}.
+  - **Fit:** Variable {modifier}.
+  - **Material:** Heavyweight denim.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Leather boots or canvas sneakers.
+- **Accessories:** Paisley bandana, silver rings.
 
 [H]
-- **Hijab:** ((default:Red)) paisley print chiffon hijab with retro styling
-- **Top:** White ribbed long-sleeve top (fitted silhouette, soft texture) worn under **Denim Jacket** (vintage indigo wash, oversized boyfriend cut, distressed cuffs, copper buttons)
-- **Bottom:** Wide-Leg Denim Trousers (dark blue denim, high-waist, flare at hem)
-- **Footwear:** Platform boots
-- **Accessories:** Large silver hoop earrings, chunky rings
-- **Makeup:** Sharp winged black eyeliner, heavy rosy blush on cheekbones, bold matte lipstick
+- **Hijab:** Paisley print chiffon hijab with retro styling.
+- **Top:** Ribbed long-sleeve top under Denim Jacket.
+  - **Fit:** Fitted top; Oversized jacket.
+  - **Material:** Ribbed cotton; Vintage indigo denim.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Vintage Blue Jeans {modifier}.
+  - **Fit:** Variable {modifier}.
+  - **Material:** Heavyweight denim.
+  - **Length:** Full length.
+- **Footwear:** Platform boots.
+- **Accessories:** Large silver hoop earrings.

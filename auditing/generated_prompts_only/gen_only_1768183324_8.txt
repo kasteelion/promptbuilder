@@ -1,0 +1,89 @@
+# METADATA
+Scene: Trendy minimalist cafe, wooden tables, hanging plants, espresso machine, large windows, patrons with laptops, cozy urban social atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Talia Levi | Outfit: Retro Tracksuit | Pose: None
+Character: Aaliyah Chen | Outfit: Retro Tracksuit | Pose: None
+Character: Aryan Kapoor | Outfit: Retro Tracksuit | Pose: None
+Interaction: Custom
+Score: 555
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Trendy minimalist cafe, wooden tables, hanging plants, espresso machine, large windows, patrons with laptops, cozy urban social atmosphere.
+---
+
+**CHARACTER: Talia Levi**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave-lush flesh quality; voluptuous hourglass proportions with pronounced bust (full D-DD), defined waist, and rounded hips; moderate-to-tall vertical (5'7"); soft density with feminine curves, visible décolletage, rounded shoulders, and shapely legs; magnetizing sensual presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-diamond shape; high pronounced cheekbones with sculpted planes; large almond-shaped wide-set eyes in deep amber-brown with naturally seductive heavy-lidded quality and penetrating direct gaze; full shapely lips; defined angular jawline; neutral resting expression is knowing and self-assured with slight sultry smile and unwavering confident eye contact that holds just a beat too long.
+
+* **Hair:** Type 2B-2C waves; very high density; voluminous cascading silhouette; long length past mid-back; natural loose center part; healthy high-sheen finish; commonly worn loose and wild with tousled volume, half-up with face-framing tendrils, or low messy bun showing neck; rich dark chocolate brown with warm caramel highlights.
+
+* **Skin:** Medium-tan with warm golden-olive undertones and luminous sun-kissed finish; beauty mark above upper lip on left side; smooth healthy Mediterranean glow.
+**Outfit:**
+- **Top:** Striped Camisole (fitted silhouette, spaghetti straps, horizontal red and white pin-stripes, cropped midriff length)
+- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, vintage dolphin hem cut)
+- **Footwear:** Oversized Bomber Jacket (matching red hue, worn slouched off-the-shoulders, voluminous sleeves, fabric draped around elbows).
+- **Accessories:** Simple gold pendant necklace, minimal jewelry.
+- **Hair/Makeup:** Low messy bun with loose face-framing strands; natural, fresh-faced makeup look with subtle lip color.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Aaliyah Chen**
+**Appearance:**
+* **Body:** Natural frame; natural flesh with slight wave softness; balanced athletic build with subtle curve; moderate height and vertical line; grounded and capable presence.
+* **Face:** Balanced-soft facial structure; oval face with gentle angles; warm expressive dark eyes with direct inviting gaze; soft jawline; serene neutral expression that easily breaks into a warm genuine smile.
+* **Hair:** Type 3B–3C curls; high density; natural dark brown curls with healthy volume and sheen; versatile styling options including loose curls and protective styles.
+* **Skin:** Warm golden-brown skin with a natural sun-touched glow and soft satin finish.
+**Outfit:**
+- **Top:** Striped Camisole (fitted silhouette, spaghetti straps, horizontal red and white pin-stripes, cropped midriff length)
+- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, vintage dolphin hem cut)
+- **Footwear:** Oversized Bomber Jacket (matching red hue, worn slouched off-the-shoulders, voluminous sleeves, fabric draped around elbows).
+- **Accessories:** Simple gold pendant necklace, minimal jewelry.
+- **Hair/Makeup:** Low messy bun with loose face-framing strands; natural, fresh-faced makeup look with subtle lip color.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Aryan Kapoor**
+**Appearance:**
+* **Body:** Dramatic Classic frame; moderate muscularity with a lean, tailored silhouette; balanced proportions that look exceptional in suiting; moderate vertical (5'10"-5'11"); posture is military-straight but relaxed; projects a refined, expensive stability.
+* **Face:** Symmetrical, high-contrast structure; strong square jawline covered by a meticulously groomed "designer stubble" to short boxed beard; high cheekbones; piercing amber-brown eyes with thick lashes; straight aristocratic nose; expression is usually a knowing, confident smirk.
+* **Hair:** Type 2A waves; high density; styled in a classic "quiff" or side-part with volume; sides are tapered clean; glossy, healthy finish; jet black with a blueish tint under light.
+* **Skin:** Medium-deep tan with warm golden-olive undertones; hyper-smooth texture suggestive of a high-end skincare routine.
+**Outfit:**
+- **Top:** Striped Tank Top (fitted silhouette, horizontal red and white pin-stripes)
+- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, retro cut)
+- **Footwear:** Oversized Bomber Jacket (matching red hue, voluminous sleeves).
+- **Accessories:** Simple gold chain necklace, minimal jewelry.
+- **Hair/Makeup:** Messy bun or textured hair; natural fresh-faced look.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Talia Levi giving Aaliyah Chen a thumbs up gesture, showing approval and encouragement

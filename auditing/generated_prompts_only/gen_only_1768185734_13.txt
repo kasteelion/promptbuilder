@@ -1,0 +1,81 @@
+# METADATA
+Scene: Neon-drenched city street, holographic billboards, chrome and glass architecture, purple and pink color scheme, futuristic noir.
+Base_Prompt: Low-Poly 3D
+Character: Diego Morales | Outfit: Avant-Garde Architectural | Pose: None
+Character: Sina Tuilagi | Outfit: Irish Step Dance | Pose: None
+Character: Audrey Thorne | Outfit: 1970s Disco | Pose: None
+Score: 280
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Neon-drenched city street, holographic billboards, chrome and glass architecture, purple and pink color scheme, futuristic noir.
+---
+
+**CHARACTER: Diego Morales**
+**Appearance:**
+- **Body:** Natural Athletic frame; natural-toned flesh with sun-touched warmth; inverted rectangle proportions with broad shoulders, slim waist, and defined muscle groups without bulk; moderate height (5'11"-6'0"); relaxed athletic build—lean and flexible from years of surfing; "effortless strength" presence—capable but never posturing.
+- **Face:** Balanced-angular structure; oval face shape; firm jawline that softens when he smiles; expressive almond-shaped eyes, wide-set, warm hazel with golden flecks that catch the light; natural dark eyebrows with a slight arch; straight nose with a subtle bridge; full mouth often quirked into a friendly half-smile; expressive neutral expression that reads as engaged and helpful.
+- **Hair:** Type 2B-2C waves; thick high density; medium length textured cut, shorter on sides with volume on top; loose natural side part; matte-satin finish with sun-bleached highlights at the tips; commonly worn tousled and "salt-water" styled, or loosely pushed back during work.
+- **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
+**Outfit:**
+- **Top:** Oversized structural blazer with severe boxy shoulders; in a **high-gloss patent** finish reflecting studio lights; heavy wool in charcoal grey
+- **Bottom:** Wide-leg trousers with deep double pleats and a dropped crotch; raw hem
+- **Footwear:** Chunky platform derby shoes with metal toe caps
+- **Accessories:** Silver industrial chain choker, minimalist leather harness over the blazer
+- **Hair/Makeup:** Buzz cut or sharp undercut; silver ear cuff; contour-heavy makeup
+**Pose/Action:**
+wide shot with the character framed within the environment, Hair blowing in wind, hand holding hair back, looking into distance, cinematic feel.
+---
+
+**CHARACTER 2: Sina Tuilagi**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with wave softness; balanced proportions with moderate shoulders, defined waist, and rounded hips; moderate vertical (5'6"-5'7"); athletic-natural build with functional strength, soft curves over muscle, powerful legs, strong core, and grounded Pacific Islander physicality; traditional tatau (pe'a-inspired geometric patterns) visible on left thigh and right shoulder/upper arm; commanding warm presence combining ancestral strength with contemporary confidence.
+
+* **Face:** Balanced-soft facial structure with strong underlying bones; round-oval face shape with full cheeks and gentle breadth; moderate-to-wide midface with prominent cheekbones creating natural definition; large almond-shaped eyes with moderate spacing, deep brown to black irises, warm direct gaze; broad nose with rounded bridge and full tip; strong rounded jawline; neutral resting expression shows calm pride with slight natural smile and warm welcoming eye contact; expressions are openly warm and culturally confident.
+
+* **Hair:** Type 3A; very high density; long length past shoulders; no defined part, naturally voluminous; low-to-moderate sheen with healthy texture; commonly worn loose and full with natural curl pattern, half-up with decorative clip, or in low bun with face-framing waves; deep black-brown with warm undertones and natural dimension.
+
+* **Skin:** Deep tan with warm golden-brown undertones and natural luminous finish; bronze-to-brown complexion with sun-kissed richness; smooth healthy texture with island resilience; tatau (traditional Samoan tattoos) visible with cultural geometric patterns in black ink.
+**Outfit:**
+- **Top:** Traditional dress (solid color - emerald green, royal blue, or black with Celtic embroidery and crystals)
+- **Bottom:** fitted bodice with high neck and long sleeves or cap sleeves
+- **Footwear:** full skirt (above knee, pleated or A-line); **Irish dance hard shoes** (black leather with fiberglass heel and toe taps).
+- **Accessories:** Celtic brooch or cape clasp, matching headband or tiara, competition number pinned to dress, white or tan poodle socks.
+- **Hair/Makeup:** Tight ringlet curls (wig or styled), hair pulled back with decorative headband, natural stage makeup with defined eyes and pink lips.
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing near a monitor or document, gesturing toward it with one hand while looking at an audience, confident professional delivery.
+---
+
+**CHARACTER 3: Audrey Thorne**
+**Appearance:**
+* **Body:** Heavy Curvy Hourglass / Spoon Shape; statuesque height at 5'7"; 43.5-37-48 proportions; thick, soft flesh quality; substantial bust carried high, transitioning into a defined but thick waist, which flares dramatically into wide, shelf-like hips and heavy thighs; bottom-heavy silhouette balanced by a full chest; voluptuous density with soft anatomical markers.
+* **Face:** Soft Heart-shaped structure with a "baby face" quality; full, rounded cheeks (apple cheeks) and a soft, non-angular jawline; gentle chin; distinctively pale, porcelain complexion with pink undertones; focal heavy-lidded / slightly hooded eyes with hazel-brown irises and relaxed, downward-sloping upper lids giving a calm, sultry expression; natural, slightly arched brows; small to medium mouth width with full, pillowy lips and a clearly defined cupid's bow.
+* **Hair:** Type 2B (wavy); high density; tousled, voluminous layered silhouette; collarbone-length; deep side part with height at the root; healthy natural sheen; common styling includes a loose, textured blowout. Medium chestnut brown with copper/golden undertones.
+* **Skin:** Fair/Light depth; cool pink undertones with a smooth, matte-satin finish; clear complexion with natural flushing on the cheeks.
+**Outfit:**
+- **Top:** Halter jumpsuit or **wrap dress** (metallic fabric, sequins, or bold geometric prints in gold, silver, turquoise, or hot pink)
+- **Bottom:** wide-leg pants or **flared skirt**
+- **Footwear:** platform heels or boots (chunky, metallic, or patent leather).
+- **Accessories:** Large hoop earrings, layered gold chain necklaces, wide belt (metallic or embellished), headband or silk scarf in hair, oversized sunglasses.
+- **Hair/Makeup:** Feathered layers with volume and wings, afro, or long flowing waves; shimmery eyeshadow (blue, purple, or gold), thick mascara, glossy lips, disco ball glow with highlighter on cheekbones.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment, Sitting on a stool in front of a wooden easel, palette in one hand and brush in the other, focused intently on the canvas.
+---

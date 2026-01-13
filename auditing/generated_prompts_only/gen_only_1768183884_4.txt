@@ -1,0 +1,65 @@
+# METADATA
+Scene: Pristine lab environment, stainless steel benches, microscopes, glass beakers, glowing chemical samples, cold professional lighting.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Marcus Thompson | Outfit: Wrestling | Pose: None
+Character: Theo Okonkwo | Outfit: Wrestling | Pose: None
+Interaction: Custom
+Score: 555
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Pristine lab environment, stainless steel benches, microscopes, glass beakers, glowing chemical samples, cold professional lighting.
+---
+
+**CHARACTER: Marcus Thompson**
+**Appearance:**
+* **Body:** Natural male frame; straight athletic flesh; inverted rectangle proportions; moderate-to-tall vertical.
+* **Face:** Balanced-strong facial structure; square-leaning oval face; defined jaw; warm eyes; calm open expression.
+* **Hair:** Type 4A coils; medium density; short fade with textured top; clean lineup; matte-satin finish; black.
+* **Skin:** Deep brown skin with neutral undertones.
+**Outfit:**
+- **Top:** Fitted **singlet** in **white with black accents** (lycra/spandex performance fabric with team logo)
+- **Bottom:** wrestling shoes (blue, lightweight with ankle support).
+- **Accessories:** Knee pads optional.
+- **Hair/Makeup:** Hair short or tied back and messy.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Theo Okonkwo**
+**Appearance:**
+* **Body:** Natural frame; natural-to-soft flesh; balanced proportions; moderate-to-tall vertical; relaxed athletic build with natural ease.
+* **Face:** Balanced-warm facial structure; square-leaning oval face; warm expressive eyes; full lips; easy genuine smile; open welcoming expression.
+* **Hair:** Type 4C coils; high density; short fade with textured top styled in mini twists; clean lineup; matte finish.
+* **Skin:** Deep rich brown skin with warm undertones and healthy glow.
+**Outfit:**
+- **Top:** Fitted **singlet** in **white with black accents** (lycra/spandex performance fabric with team logo)
+- **Bottom:** wrestling shoes (blue, lightweight with ankle support).
+- **Accessories:** Knee pads optional.
+- **Hair/Makeup:** Hair short or tied back and messy.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Marcus Thompson offering a piece of food from their bento box to Theo Okonkwo with chopsticks. Theo Okonkwo leaning in to take it, slightly embarrassed or happy. A cute, everyday lunch interaction.

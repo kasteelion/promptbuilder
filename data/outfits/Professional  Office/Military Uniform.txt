@@ -1,23 +1,45 @@
 tags: [Job, Military, professional]
 
 [F]
-- **Top:** Tailored **military tunic/jacket** (((default:olive drab, navy, or charcoal) or (signature)) with brass buttons and epaulettes)
-- **Bottom:** matching trousers
-- **Footwear:** polished combat boots.
-- **Accessories:** Beret or garrison cap, rank insignia, service medals.
-- **Hair/Makeup:** Practical hair in secure bun, neutral focused expression.
+- **Top:** Tailored military tunic/jacket with brass buttons and epaulettes.
+  - **Fit:** Structured; Tailored.
+  - **Material:** Wool or heavy blend.
+  - **Pattern:** Solid ((olive drab, navy, or charcoal)).
+  - **Neckline:** High collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching uniform trousers.
+  - **Fit:** Straight leg with crease.
+  - **Material:** matching.
+  - **Waist:** Natural with uniform belt.
+  - **Length:** Full length.
+- **Footwear:** Polished combat boots.
+- **Accessories:** Beret or garrison cap; rank insignia; service medals.
 
 [M]
-- **Top:** Tailored **military tunic/jacket** (((default:olive drab, navy, or charcoal) or (signature)) with brass buttons and epaulettes)
-- **Bottom:** matching trousers
-- **Footwear:** polished combat boots.
-- **Accessories:** Beret or garrison cap, rank insignia, service medals.
-- **Hair/Makeup:** Clean-cut hair, clean-shaven or neat facial hair, focused military bearing.
+- **Top:** Tailored military tunic/jacket with brass buttons and epaulettes.
+  - **Fit:** Structured.
+  - **Material:** Heavy fabric.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long.
+- **Bottom:** Matching trousers.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Polished combat boots.
+- **Accessories:** Beret or cap; rank insignia; medals.
 
 [H]
-- **Hijab:** Practical cotton hijab (((default:olive drab, navy, or charcoal) or (signature)) with secure wrap) under a beret or garrison cap
-- **Top:** Tailored **military tunic/jacket** (((default:olive drab, navy, or charcoal) or (signature)) with brass buttons, high neck)
-- **Bottom:** Matching full-length trousers
-- **Footwear:** Polished combat boots
-- **Accessories:** Rank insignia, service medals
-- **Makeup:** Focused heroic expression
+- **Hijab:** Practical cotton hijab under beret or garrison cap.
+- **Top:** Tailored military tunic with high neck.
+  - **Fit:** Modest structured.
+  - **Material:** matching fabric.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching full-length trousers.
+  - **Fit:** Straight.
+  - **Material:** fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Polished combat boots.
+- **Accessories:** Rank insignia; medals; beret.

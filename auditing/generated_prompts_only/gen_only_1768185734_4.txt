@@ -1,0 +1,80 @@
+# METADATA
+Scene: Retro arcade interior, glowing game cabinets, neon lights, carpet floor, nostalgic energetic vibe.
+Base_Prompt: Low-Poly 3D
+Character: Efe Kouadio | Outfit: 1960s Mod | Pose: None
+Character: Leilani Te'o | Outfit: 1960s Mod | Pose: None
+Character: Maya Rose | Outfit: 1960s Mod | Pose: None
+Interaction: Custom
+Score: 475
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Retro arcade interior, glowing game cabinets, neon lights, carpet floor, nostalgic energetic vibe.
+---
+
+**CHARACTER: Efe Kouadio**
+**Appearance:**
+- **Body:** Soft Natural frame; natural soft flesh; balanced proportions with gentle curves, defined waist, full hips, soft rounded features, moderate shoulders; moderate vertical (5’5”-5’6”); natural curvy build with soft harmonious lines and welcoming presence.
+- **Face:** Soft-balanced facial structure; round-oval face with warm open planes and full cheeks that enhance smile; expressive round-almond eyes with bright engaged quality, wide-set, warm dark brown with natural sparkle; full lips with natural upward curve that creates dimpled smile; smooth forehead; radiant joyful expression that lights up her whole face.
+- **Hair:** Type 4A coils; high density; medium-length natural textured style with defined curl pattern and bouncy voluminous shape; healthy soft finish with natural sheen; black to dark brown.
+- **Skin:** Deep warm brown with rich golden undertones and natural luminous dewy finish.
+**Outfit:**
+- **Top:** Shift dress (#FF7F50 A-line silhouette, above knee length, sleeveless or short sleeves)
+- **Bottom:** white go-go boots (knee-high, low block heel, patent leather)
+- **Footwear:** matching tights (opaque white or colored).
+- **Accessories:** Large geometric earrings, headband or hair bow, oversized sunglasses (round or cat-eye), small structured handbag.
+- **Hair/Makeup:** Voluminous bouffant or sleek bob with heavy bangs, dramatic graphic eyeliner (heavy black with white in waterline), pale lips, defined lashes (real or drawn on lower lash line), Twiggy-inspired mod makeup, youthful 60s energy.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Leilani Te'o**
+**Appearance:**
+* **Body:** Dramatic Natural; massive, heavily muscled frame with broad powerful shoulders and a deep chest; 45-35-50 proportions; tall height at 6'0"; EXTREME muscle density with visible definition in her "capped" delts, thick biceps, and powerful quads; heavy but athletic presence.
+* **Face:** Rugged-soft structure; square-oval face with a strong, well-defined jawline and high prominent cheekbones; large dark brown eyes with a steady, direct gaze; full expressive mouth; neutral resting expression is calm but intense, radiating a sense of quiet authority.
+* **Hair:** Type 3A–3B curls; high density; long length past her shoulders; naturally thick dark hair often worn half-up to keep it out of her face during training; healthy natural sheen.
+* **Skin:** Deep warm tan with rich golden-brown undertones (Polynesian coloring); smooth surface with visible muscle separation creating deep shadows; elaborate traditional 'tatau' patterns visible on one shoulder and upper arm.
+**Outfit:**
+- **Top:** Shift dress (#008080 A-line silhouette, above knee length, sleeveless or short sleeves)
+- **Bottom:** white go-go boots (knee-high, low block heel, patent leather)
+- **Footwear:** matching tights (opaque white or colored).
+- **Accessories:** Large geometric earrings, headband or hair bow, oversized sunglasses (round or cat-eye), small structured handbag.
+- **Hair/Makeup:** Voluminous bouffant or sleek bob with heavy bangs, dramatic graphic eyeliner (heavy black with white in waterline), pale lips, defined lashes (real or drawn on lower lash line), Twiggy-inspired mod makeup, youthful 60s energy.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Maya Rose**
+**Appearance:**
+* **Body:** Soft Natural frame with balanced curves; moderate-to-tall vertical line; natural waist definition; relaxed athletic build.
+* **Face:** Soft oval face with gentle angles; warm expressive eyes; bright genuine smile; approachable features with natural definition.
+* **Hair:** Type 2B-2C waves to loose curls; medium-high density; long layered cut past shoulders; natural movement and body; warm golden-brown to honey tones with dimensional highlights.
+* **Skin:** Warm medium beige with golden undertones; natural healthy glow.
+**Outfit:**
+- **Top:** Shift dress (#DEB887 A-line silhouette, above knee length, sleeveless or short sleeves)
+- **Bottom:** white go-go boots (knee-high, low block heel, patent leather)
+- **Footwear:** matching tights (opaque white or colored).
+- **Accessories:** Large geometric earrings, headband or hair bow, oversized sunglasses (round or cat-eye), small structured handbag.
+- **Hair/Makeup:** Voluminous bouffant or sleek bob with heavy bangs, dramatic graphic eyeliner (heavy black with white in waterline), pale lips, defined lashes (real or drawn on lower lash line), Twiggy-inspired mod makeup, youthful 60s energy.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Efe Kouadio and Leilani Te'o performing traditional cultural greeting, specific gesture appropriate to culture, respectful interaction.

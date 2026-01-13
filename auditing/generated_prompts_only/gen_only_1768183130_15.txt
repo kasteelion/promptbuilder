@@ -1,0 +1,64 @@
+# METADATA
+Scene: Advanced research facility, transparent screens, robotic arms, glowing samples, sterile futuristic environment.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Jax Chen | Outfit: Gymnastics | Pose: None
+Character: Marisol Rivera | Outfit: African Print Contemporary | Pose: None
+Interaction: Custom
+Score: 375
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Advanced research facility, transparent screens, robotic arms, glowing samples, sterile futuristic environment.
+---
+
+**CHARACTER: Jax Chen**
+**Appearance:**
+- **Body:** Explosive-Athletic frame; olive-toned skin with a vibrant, high-oxygenated flush; inverted triangle proportions with powerful, broad shoulders and a narrow, muscular waist; tall stature (6'1"-6'2"); high-performance build with dense, defined muscle groups and visible vascularity; "kinetic potential" presence—vibrant and dangerous.
+- **Face:** Sharp, aerodynamic structure; high, defined cheekbones; narrow, powerful jawline; intense, wide-set dark eyes that possess a piercing, high-speed focus; sharp, straight eyebrows with a low, aggressive set; straight, thin nose; firm mouth with a determined set; expression is one of maximum effort and singular focus.
+- **Hair:** Type 1A straight; medium density; kept in a sharp, high-fade with a short, textured top; matte-satin finish with vibrant neon orange tips that seem to vibrate with his movement.
+- **Skin:** Vibrant olive with warm, high-energy undertones; smooth, taut texture with visible "muscle-mapping" micro-textures in the dermis; beads of high-intensity sweat reflecting light; "high-performance" glow.
+**Outfit:**
+- **Top:** High-neck singlet or unitard (sleek performance lycra with bold geometric patterns in #00758F and #000000, featuring #FFFFFF metallic accents), holding a shimmer ribbon wand, outfit adorned with sequins
+- **Bottom:** barefoot or stirrup pants in #00758F.
+- **Accessories:** Chalk dust on hands and shoulders.
+- **Hair/Makeup:** Neat cropped hair or secured style, focused athletic expression.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Marisol Rivera**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; compact balanced proportions with defined waist, toned limbs, and visible muscle definition; moderate vertical (5'5"-5'6"); athletic build with clean controlled lines, functional strength, and mixed-heritage features—Japanese bone structure with Puerto Rican curves, creating distinctive balanced aesthetics; athletic graceful presence.
+* **Face:** Balanced classical structure with mixed heritage features; oval face with subtle Japanese angularity softened by Puerto Rican warmth; firm clean planes; calm almond-shaped eyes that tilt slightly upward (Japanese influence) with warm expressive quality (Puerto Rican warmth), moderately spaced, dark brown; defined jawline; neutral expression shows calm composure with subtle knowing smile that brightens when engaged; beauty mark near left eye.
+* **Hair:** Type 1B-1C straight with slight natural wave; medium-high density; long sleek cut with healthy satin sheen; dark brown to black; versatile styling options including ponytails and braids.
+* **Skin:** Warm golden-olive skin with bronzed finish and natural radiance.
+**Outfit:**
+- **Top:** Fitted **peplum top or off-shoulder blouse** (vibrant African print - Ankara, Kente, or Dashiki patterns in bold colors like orange, teal, purple, gold)
+- **Bottom:** pencil skirt or wide-leg pants (matching or complementary print, high-waist)
+- **Footwear:** strappy sandals or block heels.
+- **Accessories:** Statement earrings (large hoops or geometric designs), wrapped headscarf or headband in matching fabric, bangles, beaded necklace.
+- **Hair/Makeup:** Natural hair in afro, braids, locs, or twisted updo; bold makeup with warm tones, defined brows, glowing skin with golden undertones.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Jax Chen chasing after Marisol Rivera, both in motion with playful or determined energy

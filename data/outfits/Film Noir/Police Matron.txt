@@ -1,23 +1,45 @@
 tags: [noir, Uniform, vintage, work]
 
 [F]
-- **Top:** Dark blazer (navy or charcoal, structured shoulders)
-- **Bottom:** matching skirt (below knee)
-- **Footwear:** white blouse (buttoned high); **oxford shoes or low heels**.
-- **Accessories:** Badge pinned to lapel, simple watch, hair net.
-- **Hair/Makeup:** Severe bun or tight waves, minimal makeup, stern expression.
+- **Top:** Dark структурированной blazer over white high-neck blouse.
+  - **Fit:** Structured shoulders.
+  - **Material:** Navy or charcoal wool; Cotton.
+  - **Pattern:** Solid.
+  - **Neckline:** High-neck buttoned.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching below-knee skirt.
+  - **Fit:** Straight.
+  - **Material:** matching wool.
+  - **Waist:** Natural.
+  - **Length:** Below-knee.
+- **Footwear:** Oxford shoes or low heels.
+- **Accessories:** Badge pinned to lapel; simple watch; hair net.
 
 [M]
-- **Top:** Police uniform shirt (dark blue with badge)
-- **Bottom:** uniform pants (matching)
-- **Footwear:** duty belt; **polished black shoes**.
-- **Accessories:** Badge, handcuffs on belt, cap.
-- **Hair/Makeup:** Short neat hair, clean-shaven, stern expression.
+- **Top:** Dark blue police uniform shirt and badge.
+  - **Fit:** Professional.
+  - **Material:** Durable cotton.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long.
+- **Bottom:** Matching uniform pants.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Duty belt.
+  - **Length:** Full.
+- **Footwear:** Polished black shoes.
+- **Accessories:** Badge; handcuffs on belt; cap.
 
 [H]
-- **Hijab:** Dark navy hijab with severe neat wrap
-- **Top:** Long-sleeve dark blazer (navy or charcoal, structured shoulders) over white high-collar blouse
-- **Bottom:** Matching midi skirt (below knee)
-- **Footwear:** Oxford shoes or low heels
-- **Accessories:** Badge pinned to lapel, simple watch, no jewelry
-- **Makeup:** Minimal makeup, stern expression
+- **Hijab:** Dark navy hijab with severe neat wrap.
+- **Top:** Long-sleeve dark blazer over white high-collar blouse.
+  - **Fit:** Modest structured.
+  - **Material:** Wool; Cotton.
+  - **Neckline:** High-collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching midi skirt.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Below-knee.
+- **Footwear:** Oxford shoes or low heels.
+- **Accessories:** Badge pinned to lapel; simple watch.

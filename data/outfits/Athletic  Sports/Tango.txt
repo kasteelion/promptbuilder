@@ -1,23 +1,44 @@
 tags: []
 
 [F]
-- **Top:** Fitted tango dress (knee-length to midi with high slit, elegant fabric in red, black, or jewel tone)
-- **Bottom:** seamed stockings
-- **Footwear:** tango heels (strappy with ankle support).
-- **Accessories:** Statement earrings, hair ornament optional.
-- **Hair/Makeup:** Hair in sleek updo or dramatic waves, bold red lip, sultry eye makeup, Intense expression.
+- **Top:** Fitted tango dress.
+  - **Fit:** Form-fitting.
+  - **Material:** Silk/Satin.
+  - **Pattern:** Solid (Red/Black).
+  - **Neckline:** Halter or V-neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Skirt with high slit over stockings.
+  - **Fit:** Slit A-line.
+  - **Material:** Satin.
+  - **Waist:** Natural.
+  - **Length:** Midi.
+- **Footwear:** Tango heels (strappy).
+- **Accessories:** Statement earrings.
 
 [M]
-- **Top:** Black dress pants (tailored, slim fit)
-- **Bottom:** white dress shirt (slightly open collar) or **black fitted shirt**
-- **Footwear:** suspenders optional; **leather dress shoes**.
-- **Accessories:** Simple watch, hair slicked or styled back.
-- **Hair/Makeup:** Polished grooming, Intense focused expression.
+- **Top:** White dress shirt or black fitted shirt.
+  - **Fit:** Fitted tailored.
+  - **Material:** Cotton.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Black dress pants.
+  - **Fit:** Slim tailored.
+  - **Material:** Wool gabardine.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Leather dress shoes.
+- **Accessories:** Suspenders (optional).
 
 [H]
-- **Hijab:** Sleek black or deep red silk hijab with elegant dramatic draping
-- **Top:** Long-sleeve fitted tango-inspired top (high neck in elegant fabric - black, red, or jewel tone, falls to mid-thigh)
-- **Bottom:** High-waist fitted midi skirt with modest slit (elegant fabric, worn with coordinating leggings)
-- **Footwear:** Tango heels (strappy with ankle support)
-- **Accessories:** Statement gold earrings, decorative hijab pin
-- **Makeup:** Bold red lip, sultry eye makeup with dramatic lashes, Intense expression
+- **Hijab:** Sleek silk hijab with dramatic draping.
+- **Top:** Long-sleeve fitted tango top.
+  - **Fit:** Fitted modest.
+  - **Material:** Silk/Satin.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist fitted midi skirt.
+  - **Fit:** A-line with modest slit/leggings.
+  - **Material:** Satin.
+  - **Length:** Midi/Maxi.
+- **Footwear:** Tango heels.
+- **Accessories:** Gold earrings, hijab pin.

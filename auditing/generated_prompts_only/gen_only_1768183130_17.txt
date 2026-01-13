@@ -1,0 +1,76 @@
+# METADATA
+Scene: Tight shot focused on the white volleyball net, players visible through the mesh, Intense competition at the net.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Harper Mae Sullivan | Outfit: Cold Weather - Cozy | Pose: None
+Character: Hana Park | Outfit: Beach Volleyball | Pose: None
+Character: Hallie Bennett | Outfit: Esports Jersey | Pose: None
+Score: 425
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Tight shot focused on the white volleyball net, players visible through the mesh, Intense competition at the net.
+---
+
+**CHARACTER: Harper Mae Sullivan**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-wave flesh blend; balanced proportions with gentle curves and natural waist definition; moderate vertical; soft athletic build with graceful ease.
+* **Face:** Soft oval-to-heart facial structure; gentle rounded features; warm expressive blue-green eyes with slight upward tilt, moderately spaced; constellation of freckles across nose and cheeks; soft defined jawline; neutral resting expression is warm and inviting with easy dimpled smile and sparkling eyes.
+* **Hair:** Type 2B-2C waves; high density; long sun-lightened layers past shoulders; natural loose part; healthy bounce; warm honey-blonde with natural golden highlights from sun exposure; commonly worn half-up with loose tendrils or in relaxed low ponytail.
+* **Skin:** Fair-to-light warm peachy undertones with natural healthy glow; prominent freckles across nose, cheeks, and shoulders that intensify with sun; soft luminous finish.
+**Outfit:**
+- **Top:** Oversized chunky-knit cable sweater (cream, soft gray, or forest green)
+- **Bottom:** thick wool-blend leggings or corduroy pants
+- **Footwear:** fur-lined boots.
+- **Accessories:** Large infinity scarf, matching knit mittens and pom-pom beanie.
+- **Hair/Makeup:** Soft loose waves, rosy cheeks and berry-tinted lip.
+**Pose/Action:**
+wide shot with the character framed within the environment, Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
+---
+
+**CHARACTER 2: Hana Park**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; compact rounded proportions; petite vertical.
+* **Face:** Delicate compact structure; round face; plush cheeks; large expressive eyes; youthful neutral expression.
+* **Hair:** Type 1 straight; fine-to-medium density; blunt shoulder-length cut; off-center part; smooth dewy finish; dark brown to black.
+* **Skin:** Light warm-beige skin with clear finish.
+**Outfit:**
+- **Top:** Professional athletic bikini set for **Standard Team**, wearing a contrasting black jersey to denote libero position,
+- **Bottom:** racerback top featuring a **sculpted compression fit** and a **sheer mesh center-chest cutout**
+- **Footwear:** bodice in **white** with **black side-binding** and a **metallic foil team logo** on the left; fabric is a premium **honeycomb-textured matte lycra**; matching **high-cut athletic bottoms** with **asymmetric color-blocked panels** in **black** and **thick double-needle flatlock stitching**; **barefoot** with a **thin layer of sand-dusted skin**.
+- **Accessories:** Mirrored polarized sports sunglasses (blue) with a **secure neck strap**, **performance visor** in **white** featuring **rhinestone-encrusted team initials**, waterproof fitness watch.
+- **Hair/Makeup:** Sleek boxer braids with flyaways secured, **athletic sun-kissed glow** with high-SPF tinted moisturizer, waterproof mascara, and a natural coral lip tint.
+**Pose/Action:**
+wide shot with the character framed within the environment, Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
+---
+
+**CHARACTER 3: Hallie Bennett**
+**Appearance:**
+* **Body:** Soft Natural frame; soft flesh with natural give; balanced proportions with soft hourglass tendency—rounded shoulders, moderate bust, defined waist with gentle softness, full hips and thighs; moderate height (5'5"-5'6"); soft athletic build with underlying functional strength, visible in legs and core when engaged but softened by feminine curves; approachable active presence.
+* **Face:** Soft, round-oval face with gentle cheek fullness; slightly almond-shaped dark brown eyes; warm, easy smile with slight upturn at mouth corners; overall approachable, open expression.
+* **Hair:** Shoulder-length wavy hair; sun-kissed light brown with natural blonde highlights; moderate density and natural movement suited to low-maintenance styles.
+* **Skin:** Light-fair with neutral undertones and soft, healthy glow; minimal permanent markings.
+**Outfit:**
+- **Top:** Pro-style V-neck jersey for **Standard Team** featuring an **asymmetric diagonal design**
+- **Bottom:** white torso base with contrasting **black** sleeves and side panels
+- **Footwear:** a bold **white** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** athletic joggers or leggings.
+- **Accessories:** Gaming headset, wristbands.
+- **Hair/Makeup:** Sleek styling, minimal modern makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Arching backward with hands and feet on the ground, creating a graceful bridge, impressive flexibility.
+---

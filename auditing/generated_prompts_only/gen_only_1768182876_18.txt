@@ -1,0 +1,62 @@
+# METADATA
+Scene: Casual morning kitchen, sunny window, breakfast on counter, coffee mugs, cozy domestic vibe.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Harald Bjornson | Outfit: 1950s Server | Pose: None
+Character: Silas Burnside | Outfit: Color Block Chic | Pose: None
+Interaction: Custom
+Score: 210
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Casual morning kitchen, sunny window, breakfast on counter, coffee mugs, cozy domestic vibe.
+---
+
+**CHARACTER: Harald Bjornson**
+**Appearance:**
+* **Body:** Flamboyant Natural; massive, heavily muscled frame with broad, powerful shoulders and a deep chest; long limbs with thick wrists and large, calloused hands; tall vertical (6'2"-6'4"); high muscle density with functional power visible in every movement; an imposing, statuesque presence.
+* **Face:** Rugged-angular structure; square face shape with a prominent heavy brow and a stone-like jawline; deep-set piercing blue eyes under thick, expressive eyebrows; straight, strong nose; neutral expression is calm but intense, radiating a sense of grave authority.
+* **Hair:** Type 2B; thick coarse density; rough swept-back silhouette; past shoulders; swept-back; low sheen; single thick warrior braid at the back. Rich golden-blonde or light brown.
+* **Skin:** Fair; warm-neutral undertones; weathered and sun-toughened texture; prominent scar running down the right cheek and another across the knuckles; tanned.
+**Outfit:**
+- **Top:** White short-sleeve dress shirt (crisp cotton, button-up)
+- **Bottom:** black trousers (tailored)
+- **Footwear:** bow tie (red or black); **white paper soda jerk hat** with colored trim.
+- **Accessories:** Waist apron, order pad.
+- **Hair/Makeup:** Clean-cut 50s grooming.
+**Pose/Action:**
+wide shot with the character framed within the environment, Holding unlit cigarette or vape elegantly, exhaling upward, moody contemplative expression.
+---
+
+**CHARACTER 2: Silas Burnside**
+**Appearance:**
+* **Body:** Flamboyant Natural; bear-like frame; broad, heavy shoulders and a deep barrel chest; thick functional muscle covered by a healthy layer of "winter insulation"; tall vertical (6'3"-6'5"); massive, calloused hands; moves with a heavy, confident lumber.
+* **Face:** Broad, square structure with weathered, rosy cheeks; warm crinkling eyes that disappear when he smiles; and his signature grooming: thick, bushy sideburns that flare out and connect to a heavy mustache, leaving his strong, square chin completely clean-shaven (the classic "Friendly Mutton Chops").
+* **Hair:** Type 1B-2A; thick, coarse density; short, practical cut often messy from hat wear; salt-and-pepper coloring.
+* **Skin:** Fair-to-medium; cool undertones; perpetually wind-chapped or sun-reddened; rugged texture with deep laugh lines.
+**Outfit:**
+- **Top:** Fitted **white v-neck tee** (classic cotton)
+- **Bottom:** tailored chinos (rust orange, burnt orange, or terracotta).
+- **Accessories:** Brown leather belt, simple watch, white sneakers or loafers.
+- **Hair/Makeup:** Natural grooming, side-parted or neatly styled hair.
+**Pose/Action:**
+wide shot with the character framed within the environment, Crouching low fashion squat, arm resting on knee, camera-ready, trendy photo-ready pose.
+---
+
+**Additional Notes:**
+Harald Bjornson pinning Silas Burnside against wall in dramatic kabedon pose with intense romantic tension.

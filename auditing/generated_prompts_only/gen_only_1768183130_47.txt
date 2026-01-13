@@ -1,0 +1,66 @@
+# METADATA
+Scene: Clean clinical hallway, white walls, medical equipment visible, fluorescent lighting, professional healthcare setting.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Diesel Murphy | Outfit: Solarpunk | Pose: None
+Character: Elara Soledad | Outfit: Bohemian | Pose: None
+Interaction: Custom
+Score: 180
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Clean clinical hallway, white walls, medical equipment visible, fluorescent lighting, professional healthcare setting.
+---
+
+**CHARACTER: Diesel Murphy**
+**Appearance:**
+* **Body:** Natural frame; straight athletic flesh with functional density; balanced proportions with broadened shoulders from upper body work, minimal waist definition, and straight hip line; moderate-to-tall vertical (5'7"-5'8"); working-class athletic build with developed forearms and shoulders from mechanical work, strong hands, visible core strength, practical muscle without aesthetic focus; distinctly female frame with masculine presentation and movement patterns; grounded capable presence.
+
+* **Face:** Balanced-angular structure; square-to-rectangular face shape with broad forehead and strong defined jawline; minimal midface projection with subtle cheekbones; medium-to-small eyes with moderate-close spacing, hazel-brown color, minimal lid exposure, direct no-nonsense gaze; straight broad nose with flat bridge and squared tip; strong angular jawline with masculine definition; neutral resting expression shows calm confidence with closed-mouth straight line and steady assessing gaze; rare smile is crooked and genuine.
+
+* **Hair:** Type 2A; medium density; very short length (pixie-to-undercut style); no defined part, textured and pushed back; matte finish; commonly worn tousled and practical, sometimes with small amount of pomade for control; dark brown with sun-lightened tips from outdoor work.
+
+* **Skin:** Light-medium tone with neutral-warm undertones and natural matte finish; scattered scars on hands and forearms from mechanical work; permanent grease staining under short fingernails and in hand creases; sun exposure on forearms and face; textured from outdoor work.
+**Outfit:**
+- **Top:** Lightweight cream-colored linen wrap top with bioluminescent green embroidery patterns that pulse softly with a natural rhythm.
+- **Bottom:** High-waisted, wide-leg trousers in a structured plant-fiber weave with a soft moss-green hue and integrated solar-cell thread.
+- **Footwear:** Flexible, recycled-polymer sandals with a woven vine-like aesthetic and soft cork soles.
+- **Accessories:** A pair of leaf-shaped silver earrings with embedded micro-LEDs; a minimalist wood-and-copper bracelet.
+- **Hair/Makeup:** Loose, natural waves with embedded small glowing flowers; soft, ethereal facial highlights in a pale green.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**CHARACTER 2: Elara Soledad**
+**Appearance:**
+* **Body:** Dramatic Classic frame; lean taut flesh; long limbs with balanced proportions; tall (6'1"); dense sculpted muscle over strong bone structure with visible traps, defined deltoids, and powerful legs; commanding athletic presence.
+* **Face:** Strong angular structure; oval-square shape; strong pronounced cheekbones; almond-shaped wide-set deep mahogany brown eyes; sharply defined jawline; neutral resting expression is stoic and observant with unwavering gaze; smile is rare but genuine and transforms expression into warm intensity.
+* **Hair:** Type 4C coils; very dense; voluminous naturally forming wide halo; waist length; center-parted often pulled back for practicality; low sheen; commonly styled in thick braids or high functional bun; black-brown.
+* **Skin:** Deep warm brown with golden undertones and smooth almost polished surface finish; faint linear scars on upper arms and shoulders.
+**Outfit:**
+- **Top:** Flowing **maxi dress or skirt** in lightweight gathered cotton with intricate ethnic block prints; matte finish, soft fabric folds
+- **Bottom:** semi-sheer **peasant blouse** with delicate smocking and lace inserts, off-shoulder style
+- **Footwear:** strappy weathered leather sandals with beaded details
+- **Accessories:** Layered tarnished silver necklaces, wooden bangles, suede fringe bag, floppy wool wide-brim hat
+- **Hair/Makeup:** Natural dewy makeup, loose beachy waves with small braided accents; artistic "sun-kissed" look
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**Additional Notes:**
+Diesel Murphy and Elara Soledad sharing a single umbrella during a gentle rain, walking close together to stay dry, a sense of quiet intimacy and protection.

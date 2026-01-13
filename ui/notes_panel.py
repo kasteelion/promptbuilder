@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import ttk
 from typing import Callable, Optional, List
 
-from config import TOOLTIPS
+from core.config import TOOLTIPS
 from utils import create_tooltip
 from utils.interaction_helpers import fill_template
 from .components.pill_button import PillButton

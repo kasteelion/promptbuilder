@@ -1,23 +1,44 @@
 tags: []
 
 [F]
-- **Top:** Fitted dance dress (knee-length or shorter with flared skirt, asymmetric hem, or high slit in red, black, or jewel tones with sequins or fringe)
-- **Bottom:** dance bodysuit or fitted top with **flowing skirt** alternative
-- **Footwear:** Latin dance heels (2.5-3 inch, open-toe, T-strap in nude or metallic).
-- **Accessories:** Statement earrings (chandelier or hoop style), hair flower or decorative comb.
-- **Hair/Makeup:** Hair in sleek bun with side part, dramatic waves, or high ponytail; bold makeup with smoky eyes, false lashes, red or berry lip, bronzed contouring, passionate expression.
+- **Top:** Fitted dance dress.
+  - **Fit:** Form-fitting asymmetrical.
+  - **Material:** Sequin/Fringe.
+  - **Pattern:** Solid Jewel Tones.
+  - **Neckline:** High-neck or Asymmetric.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Flared skirt (part of dress).
+  - **Fit:** Flared movement.
+  - **Material:** Chiffon/Fringe.
+  - **Waist:** Natural.
+  - **Length:** Knee-length.
+- **Footwear:** Latin dance heels (strappy).
+- **Accessories:** Statement earrings, hair flower.
 
 [M]
-- **Top:** Latin dance shirt (black or deep jewel tone, deep V-neck or fitted button-down, often with sheer or satin details)
-- **Bottom:** Latin dance trousers (high-waisted, fitted through thigh, flared at hem)
+- **Top:** Latin dance shirt.
+  - **Fit:** Fitted.
+  - **Material:** Satin or Sheer blend.
+  - **Neckline:** Deep V or Button-down.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Latin dance trousers.
+  - **Fit:** Fitted thigh flared hem.
+  - **Material:** Dance Gabardine.
+  - **Waist:** High-waisted.
+  - **Length:** Full length.
 - **Footwear:** Latin dance shoes (Cuban heel).
-- **Accessories:** Simple belt, minimal jewelry.
-- **Hair/Makeup:** Slicked back hair, Intense focused expression, bronzed skin.
+- **Accessories:** Simple belt.
 
 [H]
-- **Hijab:** Red or black vibrant hijab (securely wrapped or turban style)
-- **Top:** Long-sleeve fitted dance top (red, black, or jewel tone with sequins)
-- **Bottom:** Flowing maxi skirt with ruffle details (designed for movement)
-- **Footwear:** Latin dance heels
-- **Accessories:** Statement earrings, flower on hijab
-- **Makeup:** Bold red lip, passionate expression
+- **Hijab:** Vibrant hijab with secure wrap/turban style.
+- **Top:** Long-sleeve fitted dance top.
+  - **Fit:** Fitted modest.
+  - **Material:** Sequin fabric.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Flowing maxi skirt.
+  - **Fit:** Flowing ruffle.
+  - **Material:** Chiffon.
+  - **Length:** Floor-length.
+- **Footwear:** Latin dance heels.
+- **Accessories:** Statement earrings, flower on hijab.

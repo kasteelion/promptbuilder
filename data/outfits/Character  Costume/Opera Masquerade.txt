@@ -1,22 +1,45 @@
 tags: [costume, Fancy, vintage]
 
 [F]
-- **Top:** Elegant **white silk dressing gown** or **period evening dress** (lace trim, off-shoulder)
-- **Bottom:** delicate jewelry.
-- **Accessories:** Candelabra prop.
-- **Hair/Makeup:** Long flowing hair in romantic curls, fresh natural makeup, look of awe or wonder.
+- **Top:** Elegant white silk dressing gown or period evening dress.
+  - **Fit:** Off-shoulder silk; Lace trim.
+  - **Material:** Silk; Lace.
+  - **Pattern:** Solid with lace details.
+  - **Neckline:** Off-shoulder.
+  - **Sleeve:** Long or Short lace-trimmed sleeves.
+- **Bottom:** N/A (full-length gown).
+  - **Fit:** Period silhouette.
+  - **Material:** matching silk.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Period-appropriate heels.
+- **Accessories:** Candelabra prop; delicate jewelry.
 
 [M]
-- **Top:** Tailored **black suit** with **white dress shirt** and **black cravat**
-- **Bottom:** flowing **black cape** with red silk lining
-- **Footwear:** iconic **white half-mask** obscuring side of face.
-- **Accessories:** Rose prop, signet ring.
-- **Hair/Makeup:** Slicked back dark hair, Intense shadowed eyes.
+- **Top:** Tailored black suit with white dress shirt and black cravat.
+  - **Fit:** Tailored.
+  - **Material:** Wool suit; Silk cravat.
+  - **Neckline:** Collared shirt with cravat.
+  - **Sleeve:** Long.
+- **Bottom:** Black dress trousers and flowing black cape.
+  - **Fit:** Standard fit; Long cape.
+  - **Material:** matching wool; red silk lining (cape).
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Iconic white half-mask obscuring side of face.
+- **Accessories:** Rose prop; signet ring.
 
 [H]
-- **Hijab:** Soft white silk or lace-trimmed hijab (flowing romantic drape)
-- **Top:** Long-sleeve **white modest gown** (silk or satin with lace details, high neck)
-- **Bottom:** N/A (full-length gown)
-- **Footwear:** Delicate white slippers or pumps
-- **Accessories:** Candelabra prop, delicate jewelry
-- **Makeup:** Romantic natural makeup, look of wonder
+- **Hijab:** Soft white silk or lace-trimmed hijab with flowing romantic drape.
+- **Top:** Long-sleeve white modest gown.
+  - **Fit:** Modest silk/satin.
+  - **Material:** Silk or Satin; Lace.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** N/A (full-length gown).
+  - **Fit:** Straight modest.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Delicate white slippers or pumps.
+- **Accessories:** Candelabra prop; delicate jewelry.

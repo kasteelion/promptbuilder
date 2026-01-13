@@ -1,0 +1,78 @@
+# METADATA
+Scene: Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
+Base_Prompt: Chibi Style: "Super Deformed"
+Character: Silas Burnside | Outfit: Cozy Onesie | Pose: None
+Character: Lucía Reyes | Outfit: Cozy Onesie | Pose: None
+Character: Natsumi Maki | Outfit: Cozy Onesie | Pose: None
+Score: 195
+
+Generate an image of: Rendering
+Soft-shaded vector illustration or vinyl toy aesthetic. Bright, pastel, or primary-heavy color palettes. Gradient shading is minimal and smooth, giving surfaces a matte plastic or "squishy" appearance. Thick, rounded line art (or lineless "sticker" style).
+
+Character Accuracy
+Extreme anatomical exaggeration (SD or Super Deformed). Heads are 1:1 or 1:2 ratio with the body. Eyes are massive, taking up 50% of the face, with simplified sparkles. Noses are absent or mere dots. Mouths are simple curves.
+
+Body Types
+"Bean" shaped torsos. Limbs are short, stubby cylinders with no muscle definition. Hands are simple spheres or "mitten" shapes; feet are rounded nubs. The silhouette is fundamentally cute and non-threatening.
+
+Hair & Clothing
+Hair: Simplified into large, chunky shapes with high volume and minimal strand detail. Clothing: Reduced to iconic elements—details like shoelaces or buttons are oversized and simplified for readability.
+
+Details
+Floating iconography (hearts, stars, sweat drops, anger veins) near the head. Backgrounds are simple patterns (polka dots, stripes) or solid soft colors. A thick white outline often surrounds the entire character like a die-cut sticker.
+
+---
+
+**SCENE/SETTING:**
+Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
+---
+
+**CHARACTER: Silas Burnside**
+**Appearance:**
+* **Body:** Flamboyant Natural; bear-like frame; broad, heavy shoulders and a deep barrel chest; thick functional muscle covered by a healthy layer of "winter insulation"; tall vertical (6'3"-6'5"); massive, calloused hands; moves with a heavy, confident lumber.
+* **Face:** Broad, square structure with weathered, rosy cheeks; warm crinkling eyes that disappear when he smiles; and his signature grooming: thick, bushy sideburns that flare out and connect to a heavy mustache, leaving his strong, square chin completely clean-shaven (the classic "Friendly Mutton Chops").
+* **Hair:** Type 1B-2A; thick, coarse density; short, practical cut often messy from hat wear; salt-and-pepper coloring.
+* **Skin:** Fair-to-medium; cool undertones; perpetually wind-chapped or sun-reddened; rugged texture with deep laugh lines.
+**Outfit:**
+- **Top:** Full-body fleece onesie (gray or plaid with hood, zip-front closure)
+- **Bottom:** matching hood.
+- **Accessories:** Hot cocoa mug.
+- **Hair/Makeup:** Relaxed natural hair, comfortable expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Arm extended forward after release, hand in graceful follow-through position reaching toward pins, opposite arm out for balance, front knee bent, classic finish pose.
+---
+
+**CHARACTER 2: Lucía Reyes**
+**Appearance:**
+* **Body:** Romantic frame; wave plush softness; full hourglass proportions; moderate vertical.
+* **Face:** Rounded facial structure; heart-shaped face; full cheeks; warm expressive eyes; joyful resting expression.
+* **Hair:** Type 2B–2C waves; high density; long layered cut; side part; healthy sheen.
+* **Skin:** Warm golden skin with radiant glow.
+**Outfit:**
+- **Top:** Full-body fleece onesie (pastel pink or gray with hood, zip-front closure, kangaroo pocket)
+- **Bottom:** matching hood (with animal ears - bunny, bear, or cat)
+- **Footwear:** fuzzy slipper boots built-in or separate.
+- **Accessories:** Hot cocoa mug, oversized stuffed animal.
+- **Hair/Makeup:** Hair loose and casual, no makeup, playful cozy expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Traditional Japanese bow, upper body bent forward, hands positioned respectfully, formal posture.
+---
+
+**CHARACTER 3: Natsumi Maki**
+**Appearance:**
+* **Body:** Soft Natural Kibbe type; soft-lean flesh quality with slight musculature; balanced proportions with moderate waist definition and gently rounded hips; petite vertical line (5'2"-5'4" range); athletic density with visible core engagement, subtle oblique definition, toned arms with feminine softness, low-moderate body fat distribution; compact, energized presence quality.
+
+* **Face:** Delicate angular structure with soft edges; heart-shaped, tapering to a gently pointed chin; midface slightly compressed with cheekbones positioned high and moderately prominent; large, round-almond shaped eyes with moderate-wide spacing, dark brown to nearly black irises, thick upper lash line with defined fold, significant lid exposure when open; straight, refined nose with softly defined bridge and rounded tip; smooth jawline tapering from cheekbones to chin; direct, engaging gaze with subtle intensity; naturally full lips with pronounced cupid's bow and plumper lower lip, often slightly parted; youthful softness
+
+* **Hair:** Type 2A; Medium density; Platinum ash blonde; **Signature Messy high bun with tendrils**; Shoulder-length base; No part, pulled up; Matte sheen; **Loosely twisted bun on crown with face-framing wisps**;
+
+* **Skin:** Porcelain depth with cool-neutral undertones and soft matte-to-luminous finish; smooth, even texture with minimal visible pores; fair to very light complexion with subtle translucency; uniformly pale throughout face, neck, and body with slight natural warmth in cheeks when animated; delicate, refined quality that catches light softly.
+**Outfit:**
+- **Top:** Full-body fleece onesie (#FF1493 with hood, zip-front closure, kangaroo pocket)
+- **Bottom:** matching hood (with animal ears - bunny, bear, or cat)
+- **Footwear:** fuzzy slipper boots built-in or separate.
+- **Accessories:** Hot cocoa mug, oversized stuffed animal.
+- **Hair/Makeup:** Hair loose and casual, no makeup, playful cozy expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Adjusting over-ear headphones, eyes closed or looking away, lost in music, Peaceful moment.
+---

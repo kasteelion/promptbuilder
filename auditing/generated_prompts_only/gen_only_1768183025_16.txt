@@ -1,0 +1,41 @@
+# METADATA
+Scene: Palm trees surrounding water, sand dunes in background, Arabian Nights atmosphere, golden sunlight.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Jena Marlowe | Outfit: Gymnastics | Pose: None
+Score: 295
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Palm trees surrounding water, sand dunes in background, Arabian Nights atmosphere, golden sunlight.
+---
+
+**CHARACTER: Jena Marlowe**
+**Appearance:**
+* **Body:** Soft Dramatic–Romantic blend; elongated but light vertical; gentle hourglass with soft waist emphasis; overall delicacy rather than dramatic weight.
+* **Face:** Soft oval face with balanced proportions; medium-large bright eyes; refined nose; gentle jawline; warm, approachable expression with an easy smile.
+* **Hair:** Light honey-blonde; Type 2A–2B loose waves; fine-to-medium density; long hair with soft volume; luminous natural-looking highlights; healthy glossy finish.
+* **Skin:** Fair to light neutral-warm tone with a natural satin glow; fresh and luminous in daylight.
+**Outfit:**
+- **Top:** High-neck leotard (sleek performance lycra with bold geometric patterns in #CC0033 and #003366, featuring #FFFFFF metallic foil accents), hands coated in white chalk, wearing leather wrist grips
+- **Bottom:** barefoot or athletic toe-wraps.
+- **Accessories:** Matching hair scrunchie.
+- **Hair/Makeup:** Tight secure bun, focused athletic expression, performance makeup with glitter accents.
+**Pose/Action:**
+Hair blowing in wind, hand holding hair back, looking into distance, cinematic feel.
+---

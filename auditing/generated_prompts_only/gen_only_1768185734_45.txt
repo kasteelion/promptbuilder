@@ -1,0 +1,63 @@
+# METADATA
+Scene: Infinity pool overlooking ocean, palm trees, lounge chairs, tropical drinks, luxury vacation vibe.
+Base_Prompt: Watercolor Impressionistic
+Character: Chayton Red-Elk | Outfit: Soft Aesthetic | Pose: None
+Character: Oliver St. James | Outfit: Soft Aesthetic | Pose: None
+Interaction: Custom
+Score: 425
+
+Generate an image of: Rendering
+Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines.
+
+Character Accuracy
+Facial features are suggested through shadow shapes and color temperature shifts rather than line art. Eyes and expressions are soft and diffused. Likeness is captured through "gestural" paint application rather than photographic precision.
+
+Body Types
+Figures are grounded in gesture drawing techniques. Limbs and torso shapes are defined by broad washes of color. Edges of the body dissolve softly into the background, creating a dreamy, ethereal connection to the environment.
+
+Hair & Clothing
+Hair: Rendered as loose, flowing pools of color with wet edges. Clothing: Fabrics are depicted through variegation in color saturation. Folds are soft gradients where paint creates "blooms." No sharp stitching or texture detailing.
+
+Details
+Splatter droplets, dry-brush scratch marks, and visible pencil under-drawing. The palette is harmonious and desaturated. Backgrounds are abstract washes suggesting environment without explicit detail.
+
+---
+
+**SCENE/SETTING:**
+Infinity pool overlooking ocean, palm trees, lounge chairs, tropical drinks, luxury vacation vibe.
+---
+
+**CHARACTER: Chayton Red-Elk**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall and broad (6'1"-6'2"); "inverted triangle" torso with broad shoulders tapering to a trim waist; long limbs; moves with a heavy, deliberate grace; solid, functional muscularity without being gym-obsessed.
+* **Face:** Strong, sculptural planes; high, flat cheekbones; strong nose with a prominent bridge; deep-set, dark brown eyes that look *through* you rather than at you; stoic resting face that breaks into a slow, genuine smile.
+* **Hair:** Type 1A straight; very high density; waist-length; usually worn in a single clean braid down the back or a half-up knot; midnight black with a healthy, low sheen.
+* **Skin:** Rich, medium-reddish brown (copper tone); smooth but weathered texture; faint acne scars on temples adding character. minimalist wire-frame glasses for reading
+**Outfit:**
+- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
+- **Bottom:** relaxed fit chinos or cropped pants (black or pastel)
+- **Footwear:** crew socks; **canvas sneakers or loafers**.
+- **Accessories:** Chain necklaces, small crossbody bag or backpack.
+- **Hair/Makeup:** Soft styled hair with face-framing pieces, minimal grooming.
+**Pose/Action:**
+medium shot showing the character from the waist up,
+---
+
+**CHARACTER 2: Oliver St. James**
+**Appearance:**
+* **Body:** Soft Natural frame; average height (5'9"-5'10"); "Otter" build—slim but not skinny, with a soft, natural muscularity and a bit of fuzz; rounded shoulders; comfortable and lived-in physicality.
+* **Face:** Oval face with soft features; warm, crinkling blue eyes; nose is slightly button-like; jawline is softened by a scruffy, well-maintained short beard (strawberry blonde/ginger tone).
+* **Hair:** Type 2C curls; medium density; messy "mop top" style that looks better when tousled; light brown/dark blonde; often falling into his eyes.
+* **Skin:** Fair to light; pinkish warm undertones; prone to blushing; smooth complexion. round gold wire-frame glasses
+**Outfit:**
+- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
+- **Bottom:** relaxed fit chinos or cropped pants (black or pastel)
+- **Footwear:** crew socks; **canvas sneakers or loafers**.
+- **Accessories:** Chain necklaces, small crossbody bag or backpack.
+- **Hair/Makeup:** Soft styled hair with face-framing pieces, minimal grooming.
+**Pose/Action:**
+medium shot showing the character from the waist up,
+---
+
+**Additional Notes:**
+Chayton Red-Elk leaning in close to whisper something to Oliver St. James while they both look at a piece of art in a grand gallery, a shared secret in a quiet, public space.

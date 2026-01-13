@@ -1,29 +1,45 @@
 tags: [Job, professional, Service]
 
 [F]
-- **Top:** Crisp white button-down shirt (rolled sleeves or fitted)
-- **Bottom:** black fitted vest
-- **Footwear:** black dress trousers; **long white bistro apron** (tied at waist).
-- **Accessories:** Black tie (optional), corkscrew/wine key, black non-slip shoes.
-- **Hair/Makeup:** Polished, neat hair, classic makeup.
-
----
+- **Top:** Crisp white button-down shirt and black vest.
+  - **Fit:** Fitted vest; Rolled sleeves.
+  - **Material:** Cotton shirt; Polyester vest.
+  - **Pattern:** Solid.
+  - **Neckline:** Collared shirt.
+  - **Sleeve:** Long sleeves (rolled).
+- **Bottom:** Black dress trousers.
+  - **Fit:** Fitted/Tailored.
+  - **Material:** matching.
+  - **Waist:** Long white bistro apron tied at waist.
+  - **Length:** Full length.
+- **Footwear:** Black non-slip shoes.
+- **Accessories:** Wine key; (optional) black tie.
 
 [M]
-- **Top:** White dress shirt (long sleeve, buttoned up)
-- **Bottom:** black vest (fitted)
-- **Footwear:** black dress pants; **long white bistro apron**.
-- **Accessories:** Black tie, wine key, black dress shoes.
-- **Hair/Makeup:** Professional grooming.
-
----
+- **Top:** White dress shirt and black fitted vest.
+  - **Fit:** Tailored.
+  - **Material:** Cotton/Polyester.
+  - **Neckline:** Buttoned up.
+  - **Sleeve:** Long.
+- **Bottom:** Black dress pants.
+  - **Fit:** Straight.
+  - **Material:** fabric.
+  - **Waist:** Long white bistro apron.
+  - **Length:** Full.
+- **Footwear:** Black dress shoes.
+- **Accessories:** Black tie; wine key.
 
 [H]
-- **Hijab:** Black or white hijab (crisp, professional wrap)
-- **Top:** White long-sleeve button-down shirt (crisp cotton)
-- **Bottom:** Black wide-leg trousers
-- **Footwear:** Black dress shoes or non-slip shoes
-- **Accessories:** Black fitted vest, long white bistro apron, optional black tie (worn loose)
-- **Makeup:** Polished, classic look
-
----
+- **Hijab:** Black or white crisp professional wrap hijab.
+- **Top:** White long-sleeve button-down shirt.
+  - **Fit:** Modest crisp.
+  - **Material:** Cotton.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Black wide-leg trousers.
+  - **Fit:** Wide-leg.
+  - **Material:** fabric.
+  - **Waist:** Long white bistro apron; black vest.
+  - **Length:** Floor-length.
+- **Footwear:** Black shoes.
+- **Accessories:** Wine key; (optional) black tie.

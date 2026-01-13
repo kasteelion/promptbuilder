@@ -1,21 +1,47 @@
 tags: []
 
 [F]
-- **Top:** Micro-crop tech-fleece hoodie (ending just below the bust in ((default:vibrant orange) or (signature)), featuring an oversized hood and raw-edge hem)
-- **Bottom:** High-waist biker shorts (black technical spandex with {secondary_color} side-stripes and a high-compression waistband).
-- **Accessories:** Chunky {accent} platform sneakers; layered silver chain necklaces; oversized hoop earrings.
-- **Hair/Makeup:** High "space buns" with loose face-framing tendrils; graphic winged eyeliner; glossy nude lip.
+- **Top:** Micro-crop tech-fleece hoodie.
+  - **Fit:** Oversized cropped.
+  - **Material:** Tech-fleece.
+  - **Pattern:** Solid ((default:vibrant orange) or (signature)).
+  - **Neckline:** Hooded.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist biker shorts.
+  - **Fit:** Compression.
+  - **Material:** Technical spandex.
+  - **Pattern:** Side-stripes.
+  - **Waist:** High-waist.
+  - **Length:** Mid-thigh.
+- **Footwear:** Chunky platform sneakers.
+- **Accessories:** Silver chain necklaces, hoop earrings.
 
 [M]
-- **Top:** Technical fleece hoodie (cropped to the waist in ((default:vibrant orange) or (signature)), featuring an oversized hood and raw-edge hem)
-- **Bottom:** Technical athletic shorts (black spandex with {secondary_color} side-stripes worn over matching compression leggings).
-- **Accessories:** Chunky {accent} sneakers; layered silver chain necklaces; oversized silver watch.
-- **Hair/Makeup:** Messy textured hair or dreadlocks; urban "street style" appearance; minimal grooming.
+- **Top:** Technical fleece hoodie (cropped).
+  - **Fit:** Cropped boxy.
+  - **Material:** Tech-fleece.
+  - **Neckline:** Hooded.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Technical athletic shorts over leggings.
+  - **Fit:** Layered athletic.
+  - **Material:** Spandex/Mesh.
+  - **Waist:** Elastic.
+  - **Length:** Knee-length (shorts).
+- **Footwear:** Chunky sneakers.
+- **Accessories:** Silver chains, oversized watch.
 
 [H]
-- **Hijab:** Jersey hijab in **((default:vibrant orange) or (signature))** with an urban wrap style.
-- **Top:** Technical fleece hoodie (long-sleeve, modest length in **((default:vibrant orange) or (signature))**, featuring an oversized hood) worn over a long-sleeve black base layer.
-- **Bottom:** Full-length black athletic leggings with **{secondary_color}** side-stripes and a high-compression waistband.
-- **Footwear:** Chunky **{accent}** platform sneakers.
-- **Accessories:** Layered silver chain necklaces; oversized hoop earrings.
-- **Makeup:** Graphic winged eyeliner; glossy nude lip.
+- **Hijab:** Jersey hijab in **((default:vibrant orange) or (signature))**.
+- **Top:** Technical fleece hoodie over base layer.
+  - **Fit:** Relaxed modest.
+  - **Material:** Tech-fleece.
+  - **Neckline:** Hooded.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length athletic leggings.
+  - **Fit:** Compression.
+  - **Material:** Spandex.
+  - **Pattern:** Side-stripes.
+  - **Waist:** High-waist.
+  - **Length:** Full-length.
+- **Footwear:** Chunky platform sneakers.
+- **Accessories:** Silver chains, hoop earrings.

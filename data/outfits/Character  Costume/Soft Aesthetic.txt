@@ -1,23 +1,46 @@
 tags: [costume, Cute, soft]
 
 [F]
-- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
-- **Bottom:** pleated mini skirt (black, plaid, or pastel)
-- **Footwear:** thigh-high socks with stripes; **platform sneakers or Mary Janes**.
-- **Accessories:** Chain necklaces, hair clips, small crossbody bag.
-- **Hair/Makeup:** Blush on nose and cheeks, winged eyeliner, glossy lips, hair in space buns or half-up with face-framing pieces.
+- **Top:** Oversized pastel striped long-sleeve shirt or anime graphic tee.
+  - **Fit:** Oversized; Slouchy.
+  - **Material:** Cotton.
+  - **Pattern:** Pastel stripes or anime graphic.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Pleated mini skirt.
+  - **Fit:** Flared; Pleated.
+  - **Material:** Poly-blend.
+  - **Pattern:** Black, Plaid, or Pastel.
+  - **Waist:** High-waisted.
+  - **Length:** Mini length.
+- **Footwear:** Thigh-high socks with stripes; platform sneakers or Mary Janes.
+- **Accessories:** Chain necklaces; hair clips; small crossbody bag.
 
 [M]
-- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
-- **Bottom:** relaxed fit chinos or cropped pants (black or pastel)
-- **Footwear:** crew socks; **canvas sneakers or loafers**.
-- **Accessories:** Chain necklaces, small crossbody bag or backpack.
-- **Hair/Makeup:** Soft styled hair with face-framing pieces, minimal grooming.
+- **Top:** Oversized pastel striped long-sleeve shirt or anime graphic tee.
+  - **Fit:** Oversized.
+  - **Material:** Cotton.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Long.
+- **Bottom:** Relaxed fit chinos or cropped pants.
+  - **Fit:** Relaxed or Cropped.
+  - **Material:** Black or Pastel fabric.
+  - **Waist:** Natural.
+  - **Length:** Ankle length.
+- **Footwear:** Crew socks; canvas sneakers or loafers.
+- **Accessories:** Chain necklaces; small crossbody bag or backpack.
 
 [H]
-- **Hijab:** Pastel colored jersey hijab with soft draping
-- **Top:** Oversized pastel striped long-sleeve shirt or anime graphic tee (modest length)
-- **Bottom:** Pleated maxi skirt or wide-leg pastel pants
-- **Footwear:** Platform sneakers or Mary Janes
-- **Accessories:** Chain necklaces, colorful clips on hijab, small crossbody bag
-- **Makeup:** Blush on nose and cheeks, winged eyeliner, glossy lips
+- **Hijab:** Pastel colored jersey hijab with soft draping.
+- **Top:** Oversized pastel striped shirt or anime graphic tee.
+  - **Fit:** Modest oversized.
+  - **Material:** Cotton.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Pleated maxi skirt or wide-leg pastel pants.
+  - **Fit:** Flowing or Wide-leg.
+  - **Material:** fabric.
+  - **Waist:** Natural.
+  - **Length:** Floor length.
+- **Footwear:** Platform sneakers or Mary Janes.
+- **Accessories:** Chain necklaces; colorful clips on hijab; small crossbody bag.

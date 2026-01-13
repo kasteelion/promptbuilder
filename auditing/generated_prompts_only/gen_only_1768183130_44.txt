@@ -1,0 +1,81 @@
+# METADATA
+Scene: Sound booth interior, microphone setup, acoustic foam walls, dim mood lighting, creative focus atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Zahara El-Amin | Outfit: Comfort | Pose: None
+Character: Mei Chen | Outfit: Ballet | Pose: None
+Character: Keiko Yamamoto | Outfit: 1900s Coastal New England | Pose: None
+Interaction: Custom
+Score: 255
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Sound booth interior, microphone setup, acoustic foam walls, dim mood lighting, creative focus atmosphere.
+---
+
+**CHARACTER: Zahara El-Amin**
+**Appearance:**
+* **Body:** Dramatic; tall vertical (5'9"); lean and angular frame with long limbs; graceful, measured density; poised and commanding presence.
+* **Face:** Sharp-balanced structure; diamond face shape with high, prominent cheekbones; large, intelligent dark brown eyes; straight, high-bridged nose; well-defined, narrow jawline; neutral expression is focused and contemplative.
+* **Hair:** (Covered) Long dark hair typically styled in a low, secure bun beneath her hijab.
+* **Skin:** Rich mahogany depth with warm, luminous undertones (Sub-Saharan/North African transition); smooth matte finish; clear, even complexion that catches the light on high points of the face. signature thick-rimmed designer glasses in deep amber tortoise-shell
+**Outfit:**
+- **Hijab:** Soft jersey hijab in light gray with simple wrap
+- **Top:** Oversized cream ribbed knit sweater (long sleeves, falls to hip)
+- **Bottom:** High-waist black joggers with tapered leg (soft cotton blend)
+- **Footwear:** White slip-on sneakers
+- **Accessories:** Small gold studs, simple watch
+- **Makeup:** Minimal (tinted moisturizer, mascara, lip balm)
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large features—specifically an extremely full, heavy bust (F-G cup) that is her most prominent physical trait—balanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow.
+**Outfit:**
+- **Top:** Leotard (black, pink, or color-coordinated)
+- **Bottom:** pink ballet tights
+- **Footwear:** pink ballet slippers (soft leather or satin).
+- **Accessories:** Hair secured in classical bun, minimal jewelry.
+- **Hair/Makeup:** Natural makeup, hair in neat bun with hairnet.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Keiko Yamamoto**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact athletic proportions; petite vertical line; sharp and energized presence.
+* **Face:** Angular sculpted structure; square-leaning oval face; strong jawline; intense dark brown eyes; restrained confident expression that reflects her focused discipline.
+* **Hair:** Type 1 straight; medium density; dark black with matte texture; choppy layers and versatile alternative styling options; drawn to sharp, Edgy cuts.
+* **Skin:** Light neutral skin with matte clarity; smooth even finish. sharp professional black-framed rectangular glasses
+**Outfit:**
+- **Top:** Edwardian-style summer dress (white or cream linen with lace inserts and high collar)
+- **Bottom:** wide-brimmed straw hat with ribbon
+- **Footwear:** lace-up boots.
+- **Accessories:** Parasol prop, delicate locket.
+- **Hair/Makeup:** Hair in an elegant pompadour or soft updo, romantic vintage makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Zahara El-Amin and Mei Chen lifting a heavy object together, coordinating their strength and effort

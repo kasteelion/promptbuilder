@@ -1,23 +1,48 @@
 tags: []
 
 [F]
-- **Top:** Flowing linen pants (((default:white or cream) or (signature)), wide leg, high-waist with tie belt)
-- **Bottom:** matching linen blouse (button-down or sleeveless, slightly oversized)
-- **Footwear:** flat leather sandals (tan or gold, minimal straps).
-- **Accessories:** Oversized sun hat (natural straw), designer sunglasses, statement earrings (gold or turquoise), woven beach tote, layered delicate necklaces.
-- **Hair/Makeup:** Effortless beach waves or low chignon, bronzed sun-kissed makeup (minimal coverage, glowing skin, nude lip), resort vacation luxury, sophisticated relaxation.
+- **Top:** Slightly oversized linen blouse.
+  - **Fit:** Oversized relaxed.
+  - **Material:** Lightweight Linen.
+  - **Pattern:** Solid.
+  - **Neckline:** Partially unbuttoned collar.
+  - **Sleeve:** Long or Sleeveless options.
+- **Bottom:** High-waist wide-leg linen pants.
+  - **Fit:** Wide leg; Flowing.
+  - **Material:** Linen.
+  - **Pattern:** Solid ((default:white or cream)).
+  - **Waist:** High-waisted with tie belt.
+  - **Length:** Floor-length.
+- **Footwear:** Flat leather sandals with minimal straps.
+- **Accessories:** Oversized straw hat; designer sunglasses; statement earrings.
 
 [M]
-- **Top:** Polo shirt or **guayabera** (((default:white or pastel) or (signature)))
-- **Bottom:** tailored shorts or **linen trousers**
-- **Footwear:** boat shoes.
-- **Accessories:** Sunglasses, leather belt.
-- **Hair/Makeup:** Relaxed grooming, vacation style.
+- **Top:** Polo shirt or guayabera.
+  - **Fit:** Tailored relaxed.
+  - **Material:** Pique cotton or Linen.
+  - **Pattern:** Solid ((default:white or pastel)).
+  - **Neckline:** Collared.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Tailored shorts or linen trousers.
+  - **Fit:** Straight leg.
+  - **Material:** Cotton twill or Linen.
+  - **Waist:** Leather belt.
+  - **Length:** Knee-length or Full.
+- **Footwear:** Boat shoes.
+- **Accessories:** Designer sunglasses.
 
 [H]
-- **Hijab:** White or cream silk hijab (elegant wrap)
-- **Top:** Linen tunic (((default:white) or (signature)) long loose fit)
-- **Bottom:** Wide-leg linen trousers
-- **Footwear:** Flat leather sandals
-- **Accessories:** Sun hat, sunglasses, gold jewelry
-- **Makeup:** Bronzed glow, nude lip
+- **Hijab:** White or cream silk hijab with elegant wrap.
+- **Top:** Long loose-fit linen tunic.
+  - **Fit:** Relaxed modest.
+  - **Material:** Linen.
+  - **Pattern:** Solid.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Wide-leg linen trousers.
+  - **Fit:** Flowing.
+  - **Material:** Linen.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Flat leather sandals.
+- **Accessories:** Sun hat; sunglasses.

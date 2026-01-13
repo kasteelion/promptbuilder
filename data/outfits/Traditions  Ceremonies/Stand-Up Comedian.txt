@@ -1,23 +1,48 @@
 tags: [Casual, Performance, Stage]
 
 [F]
-- **Top:** Fitted blazer (((default:solid color or subtle pattern) or (signature)), tailored but comfortable)
-- **Bottom:** graphic t-shirt or **simple blouse** (casual but intentional)
-- **Footwear:** dark jeans (well-fitted, no distressing) or **dress pants**; **comfortable stylish shoes** (loafers, ankle boots, or clean sneakers).
-- **Accessories:** Minimal jewelry (watch, simple necklace or earrings), possibly glasses (functional or style), microphone prop.
-- **Hair/Makeup:** Styled but natural hair (down with movement or practical updo), camera-ready makeup (natural but polished, defined features for stage lights), approachable confident expression, comedy club ready.
+- **Top:** Fitted blazer over graphic t-shirt.
+  - **Fit:** Tailored but comfortable.
+  - **Material:** Wool or Cotton mix.
+  - **Pattern:** Solid or subtle pattern.
+  - **Neckline:** Peaked lapel.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dark well-fitted jeans.
+  - **Fit:** Slim-straight.
+  - **Material:** Dark indigo denim.
+  - **Pattern:** Solid.
+  - **Waist:** Natural.
+  - **Length:** Ankle or Full length.
+- **Footwear:** Stylish loafers or ankle boots.
+- **Accessories:** microphone prop; watch.
 
 [M]
-- **Top:** Casual blazer (((default:textured or velvet) or (signature)))
-- **Bottom:** graphic tee or **button-down**
-- **Footwear:** dark jeans; **sneakers**.
+- **Top:** Casual blazer over button-down.
+  - **Fit:** Relaxed tailored.
+  - **Material:** Textured or Velvet.
+  - **Pattern:** Solid.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dark jeans.
+  - **Fit:** Straight.
+  - **Material:** Denim.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Clean sneakers.
 - **Accessories:** Microphone prop.
-- **Hair/Makeup:** Natural grooming, relaxed confident stance.
 
 [H]
-- **Hijab:** Jersey hijab in solid color (casual wrap)
-- **Top:** Fitted blazer (((default:solid color) or (signature))); **graphic tee** or **blouse**
-- **Bottom:** Dark jeans or **trousers**
-- **Footwear:** Sneakers or loafers
-- **Accessories:** Microphone prop
-- **Makeup:** Natural polished makeup, confident smile
+- **Hijab:** Jersey hijab in solid color.
+- **Top:** Fitted blazer over graphic tee or blouse.
+  - **Fit:** Modest tailored.
+  - **Material:** Cotton.
+  - **Pattern:** Solid.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dark jeans or trousers.
+  - **Fit:** Straight.
+  - **Material:** Denim.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Sneakers or loafers.
+- **Accessories:** Microphone prop.

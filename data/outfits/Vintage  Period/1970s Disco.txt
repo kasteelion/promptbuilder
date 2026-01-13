@@ -1,29 +1,51 @@
-tags: [party, Retro, vintage]
+modifiers:
+  Studio: in **liquid gold lamé**
+  Boogie: in **shimmering Qiana nylon** with bold floral print
+  Hustle: in **stretchy double-knit polyester** (turquoise/purple)
+
+tags: [Vintage, 1970s, Disco, Glamour]
 
 [F]
-- **Top:** Halter jumpsuit or **wrap dress** (metallic fabric, sequins, or bold geometric prints in gold, silver, turquoise, or hot pink)
-- **Bottom:** wide-leg pants or **flared skirt**
-- **Footwear:** platform heels or boots (chunky, metallic, or patent leather).
-- **Accessories:** Large hoop earrings, layered gold chain necklaces, wide belt (metallic or embellished), headband or silk scarf in hair, oversized sunglasses.
-- **Hair/Makeup:** Feathered layers with volume and wings, afro, or long flowing waves; shimmery eyeshadow (blue, purple, or gold), thick mascara, glossy lips, disco ball glow with highlighter on cheekbones.
-
----
+- **Top:** Halter-neck jumpsuit {modifier}.
+  - **Fit:** Fitted torso.
+  - **Material:** {modifier} (Lamé/Nylon/Polyester).
+  - **Pattern:** Shimmering or Bold Floral.
+  - **Neckline:** Plunging halter V-neck with sash tie.
+  - **Sleeve:** Sleeveless (open back).
+- **Bottom:** Integrated bell-bottom legs.
+  - **Fit:** Extreme flare from the knee down.
+  - **Material:** matching {modifier}.
+  - **Waist:** Natural waist (belted/sash).
+  - **Length:** Floor-length (concealing platforms).
+- **Footwear:** Cork-wedge platform shoes.
+- **Accessories:** Oversized amber sunglasses; disco-ball earrings; feather boa.
 
 [M]
-- **Top:** Patterned silk shirt (bold geometric or floral print, worn with open collar)
-- **Bottom:** flared trousers or bell-bottoms (white, polyester, or bold color)
-- **Footwear:** platform shoes or **heeled boots**.
-- **Accessories:** Gold medallion necklace, wide belt, aviator sunglasses.
-- **Hair/Makeup:** Feathered hair, afro, or shag cut; sideburns or mustache.
-
----
+- **Top:** Silk-blend shirt with oversized dagger collar.
+  - **Fit:** Slim fit; Unbuttoned to mid-chest.
+  - **Material:** Silk-blend.
+  - **Pattern:** Solid or Patterned.
+  - **Neckline:** Deep V (open collar).
+  - **Sleeve:** Long sleeves (buttoned cuff).
+- **Bottom:** High-waisted gabardine flared trousers.
+  - **Fit:** Slim hip; Flared leg.
+  - **Material:** Gabardine.
+  - **Waist:** High-waisted with wide leather belt.
+  - **Length:** Floor-length flare.
+- **Footwear:** Two-tone stacked heel boots.
+- **Accessories:** Gold medallion necklace; wide leather belt with brass plate.
 
 [H]
-- **Hijab:** Shimmery turban-style hijab or sequined hijab (gold, silver, or bold color)
-- **Top:** Long-sleeve halter-neck style jumpsuit (modified for modesty) or long-sleeve sequin top
-- **Bottom:** Wide-leg pants (palazzo or flared) in metallic or bold print
-- **Footwear:** Platform heels
-- **Accessories:** Large hoop earrings (if visible), layered chains, oversized sunglasses
-- **Makeup:** Shimmery eyeshadow, glossy lips, disco glow
-
----
+- **Hijab:** Lurex-threaded turban hijab styled high.
+- **Top:** Long-sleeve sequined tunic with bishop sleeves.
+  - **Fit:** Relaxed; Modest.
+  - **Material:** Sequins; Metallic jersey.
+  - **Neckline:** High mock-neck.
+  - **Sleeve:** Long bishop sleeves.
+- **Bottom:** Palazzo pants.
+  - **Fit:** Fluid palazzo; Maximal width.
+  - **Material:** matching metallic jersey.
+  - **Waist:** High waist (obscured).
+  - **Length:** Floor-length.
+- **Footwear:** Silver platform boots.
+- **Accessories:** Tinted aviators; statement hoop earrings.

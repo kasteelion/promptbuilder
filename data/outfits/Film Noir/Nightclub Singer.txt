@@ -1,23 +1,45 @@
 tags: [noir, Performance, vintage]
 
 [F]
-- **Top:** Fitted **sequined cocktail dress** (black or deep red, knee-length with sweetheart neckline)
-- **Bottom:** seamed stockings
-- **Footwear:** peep-toe heels.
-- **Accessories:** Long gloves, feather boa, vintage microphone.
-- **Hair/Makeup:** Victory rolls or finger waves, dramatic winged eyeliner, dark red lips.
+- **Top:** Fitted sequined cocktail dress.
+  - **Fit:** Fitted; Structured.
+  - **Material:** Sequin; Silk.
+  - **Pattern:** Black or deep red sequins.
+  - **Neckline:** Sweetheart.
+  - **Sleeve:** Long gloves (accessory).
+- **Bottom:** N/A (knee-length dress).
+  - **Fit:** Form-fitting.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Knee-length with seamed stockings.
+- **Footwear:** Peep-toe heels.
+- **Accessories:** Long gloves; feather boa; vintage microphone.
 
 [M]
-- **Top:** Tuxedo (black with satin lapels)
-- **Bottom:** dress shirt (white with studs)
-- **Footwear:** bow tie; **patent leather shoes**.
-- **Accessories:** Boutonniere, cufflinks.
-- **Hair/Makeup:** Slicked-back hair, clean-shaven, polished appearance.
+- **Top:** Black tuxedo with satin lapels and white dress shirt.
+  - **Fit:** Tailored.
+  - **Material:** Wool; Satin; Cotton.
+  - **Neckline:** Bow tie.
+  - **Sleeve:** Long.
+- **Bottom:** Matching tuxedo trousers.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Patent leather shoes.
+- **Accessories:** Boutonniere; cufflinks.
 
 [H]
-- **Hijab:** Black or deep red silk hijab with glamorous draping
-- **Top:** Long-sleeve fitted tunic (black or deep red with subtle sequin detail, high neck, falls to floor)
-- **Bottom:** Full-length skirt (black satin with elegant drape)
-- **Footwear:** Peep-toe heels
-- **Accessories:** Long gloves (satin), feather boa, vintage microphone (prop), statement earrings
-- **Makeup:** Dramatic winged eyeliner, dark red lips, glamorous styling
+- **Hijab:** Black or deep red silk hijab with glamorous draping.
+- **Top:** Long-sleeve fitted tunic with sequin detail.
+  - **Fit:** Modest fitted.
+  - **Material:** Silk/Sequin blend.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length black satin skirt.
+  - **Fit:** Elegant drape.
+  - **Material:** Satin.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Peep-toe heels.
+- **Accessories:** Long satin gloves; feather boa; vintage microphone (prop).

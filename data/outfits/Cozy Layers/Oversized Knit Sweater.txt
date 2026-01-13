@@ -1,0 +1,52 @@
+tags: [Casual, Winter, Cozy, Knitwear, Soft]
+
+modifiers:
+  Cable: featuring a **chunky cable-knit pattern**
+  Mohair: in a **fuzzy brushed mohair** texture
+  Striped: with **bold horizontal stripes**
+  Slouchy: with an **off-shoulder slouchy fit**
+
+[F]
+- **Top:** Oversized knit sweater {modifier}.
+  - **Fit:** Oversized {modifier}.
+  - **Material:** Wool, Cotton, or Mohair knit.
+  - **Pattern:** Cable, Striped, or {modifier}.
+  - **Neckline:** Crew neck or Off-shoulder.
+  - **Sleeve:** Long sleeves extending past wrists.
+- **Bottom:** Fleece-lined leggings or skinny jeans.
+  - **Fit:** Fitted.
+  - **Material:** Spandex or Denim.
+  - **Waist:** Natural.
+  - **Length:** Ankle-length.
+- **Footwear:** UGG-style boots or thick wool socks.
+- **Accessories:** Messy bun scrunchie; ceramic mug (prop).
+
+[M]
+- **Top:** Heavy fisherman's sweater {modifier}.
+  - **Fit:** Relaxed; Thick wool.
+  - **Material:** Wool knit.
+  - **Pattern:** Ribbed or {modifier}.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Long.
+- **Bottom:** Corduroy trousers or dark denim.
+  - **Fit:** Straight.
+  - **Material:** Corduroy or Denim.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Leather work boots.
+- **Accessories:** Beanie; leather watch strap.
+
+[H]
+- **Hijab:** Soft jersey hijab tucked into sweater neckline.
+- **Top:** Oversized long-line knit sweater {modifier}.
+  - **Fit:** Modest oversized; Knee-length.
+  - **Material:** matching soft knit.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Straight-leg corduroy pants.
+  - **Fit:** Straight.
+  - **Material:** Corduroy.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Ankle boots or chunky sneakers.
+- **Accessories:** Knitted gloves; minimal rings.

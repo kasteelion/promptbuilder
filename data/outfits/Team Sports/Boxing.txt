@@ -3,23 +3,47 @@ modifiers:
   Headgear: , wearing protective padded boxing headgear in {secondary_color},
 
 [F]
-- **Top:** Professional satin boxing set for **{team}**{modifier}
-- **Bottom:** fitted **athletic tank** in **{primary_color}** with **{secondary_color} mesh side panels**
-- **Footwear:** high-waist **satin boxing shorts** in **{primary_color}** featuring a **wide 4-inch {secondary_color} elastic waistband** with the **{team}** name embroidered in **bold metallic script** across the center; deep **side-slits** for mobility; **matching {primary_color} hand wraps** visible under **10oz pro-style boxing gloves** in **{accent}** with a **glossy finish**; **high-top boxing shoes** ({accent}) with thin soles and reinforced ankles.
-- **Accessories:** Clear mouthguard, athletic tape on wrists.
-- **Hair/Makeup:** Tight Dutch braids pinned close to the head, focused intensity, slight sheen of sweat, minimal waterproof makeup.
+- **Top:** Fitted athletic tank with mesh side panels.
+  - **Fit:** Compression fit.
+  - **Material:** {primary_color} tech-fabric; {secondary_color} mesh.
+  - **Pattern:** Solid with side panels.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** High-waist satin boxing shorts with side-slits.
+  - **Fit:** Wide 4-inch elastic waistband.
+  - **Material:** {primary_color} satin.
+  - **Pattern:** {team} name embroidered in bold metallic script.
+  - **Waist:** High-waist elastic.
+  - **Length:** Mid-thigh.
+- **Footwear:** High-top boxing shoes ({accent}).
+- **Accessories:** 10oz pro-style boxing gloves ({accent}); matching hand wraps; mouthguard.
 
 [M]
-- **Top:** Professional satin boxing set for **{team}**{modifier}
-- **Bottom:** bare chest or fitted **athletic tank** in **{primary_color}**
-- **Footwear:** high-waist **satin boxing shorts** in **{primary_color}** featuring a **wide 4-inch {secondary_color} elastic waistband** with the **{team}** name embroidered in **bold block letters**; deep **side-slits** for maximum leg movement; **matching {primary_color} hand wraps** visible under **12oz pro-style boxing gloves** in **{accent}** with a **matte finish**; **high-top boxing shoes** ({accent}) with thin rubber soles and pivot-point traction.
-- **Accessories:** Clear mouthguard, athletic tape on wrists.
-- **Hair/Makeup:** Hair short or tied back, Intense focused gaze, sheen of sweat on chest and shoulders.
+- **Top:** Bare chest or fitted athletic tank.
+  - **Fit:** Athletic.
+  - **Material:** {primary_color} fabric or Skin.
+  - **Neckline:** N/A or Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** High-waist satin boxing shorts with side-slits.
+  - **Fit:** Wide 4-inch elastic waistband.
+  - **Material:** {primary_color} satin.
+  - **Pattern:** {team} name in bold block letters.
+  - **Waist:** High-waist.
+  - **Length:** Mid-thigh.
+- **Footwear:** High-top boxing shoes ({accent}).
+- **Accessories:** 12oz pro-style boxing gloves ({accent}); matching hand wraps; mouthguard.
 
 [H]
-- **Hijab:** Breathable sports hijab in **{primary_color}** (secure aerodynamic wrap with a **matte finish**)
-- **Top:** Long-sleeve performance tunic in **{primary_color}** with **{secondary_color} mesh side panels**{modifier}; fabric is a premium **satin-finish technical blend**; tunic falls to mid-thigh with a **scalloped hem**
-- **Bottom:** Full-length performance leggings in **{primary_color}** worn under **satin boxing shorts** in **{primary_color}** featuring a **wide 4-inch {secondary_color} elastic waistband**
-- **Footwear:** High-top boxing shoes ({accent}) with thin rubber soles
-- **Accessories:** 10oz pro-style boxing gloves in **{accent}** with a **glossy finish**, matching hand wraps, clear mouthguard
-- **Makeup:** Focused intensity, minimal waterproof makeup
+- **Hijab:** Breathable sports hijab in {primary_color} with matte finish.
+- **Top:** Long-sleeve performance tunic {modifier}.
+  - **Fit:** Mid-thigh length; Scalloped hem.
+  - **Material:** {primary_color} satin-finish technical blend; {secondary_color} mesh side panels.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length performance leggings under satin boxing shorts.
+  - **Fit:** Tight under Loose.
+  - **Material:** {primary_color} fabrics.
+  - **Waist:** Wide 4-inch elastic waistband.
+  - **Length:** Full length.
+- **Footwear:** High-top boxing shoes ({accent}).
+- **Accessories:** 10oz pro-style boxing gloves ({accent}); hand wraps; mouthguard.

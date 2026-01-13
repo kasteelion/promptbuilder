@@ -1,23 +1,46 @@
 tags: [Cultural, indian, Religious, traditional]
 
 [F]
-- **Top:** Silk sari (vibrant colors - red, gold, royal blue, or emerald with ornate gold embroidery and border)
-- **Bottom:** fitted choli blouse
-- **Footwear:** ornate sandals or barefoot.
-- **Accessories:** Elaborate gold jewelry set (necklace, earrings, bangles, anklets), bindi, nose ring, maang tikka (forehead jewelry), fresh flower garland.
-- **Hair/Makeup:** Hair in elegant braid with flowers, dramatic eye makeup with kohl, natural lip.
+- **Top:** Fitted choli blouse and silk sari.
+  - **Fit:** Fitted blouse; Elaborately draped sari.
+  - **Material:** Silk.
+  - **Pattern:** Ornate gold embroidery and border.
+  - **Neckline:** Scoop neck or Sweetheart choli.
+  - **Sleeve:** Cap sleeves (choli).
+- **Bottom:** Wrapped silk sari.
+  - **Fit:** Wrapped and pleated.
+  - **Material:** matching silk in vibrant colors.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Ornate sandals or barefoot.
+- **Accessories:** Elaborate gold jewelry set (necklace, earrings, bangles, anklets); bindi; maang tikka.
 
 [M]
-- **Top:** Silk dhoti (wrapped lower garment in vibrant colors - saffron, red, white, or gold with ornate borders)
-- **Bottom:** bare chest or **silk shawl** draped over shoulders
-- **Footwear:** ornate sandals or barefoot.
-- **Accessories:** Elaborate gold jewelry (necklaces, arm bands, sacred thread), tilak mark on forehead, rudraksha beads.
-- **Hair/Makeup:** Hair in topknot or loose with crown, defined features, sacred markings.
+- **Top:** Bare chest or silk shawl draped over shoulders.
+  - **Fit:** Ceremonially draped shawl.
+  - **Material:** Silk.
+  - **Pattern:** Ornate borders.
+  - **Neckline:** Shawl drape.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Silk dhoti wrapped lower garment.
+  - **Fit:** traditional wrap.
+  - **Material:** Silk.
+  - **Waist:** Wrapped.
+  - **Length:** Ankle-length.
+- **Footwear:** Ornate sandals or barefoot.
+- **Accessories:** Elaborate gold necklaces and arm bands; sacred thread; tilak mark.
 
 [H]
-- **Hijab:** Silk hijab in vibrant color (red, gold, royal blue, or emerald) with elegant draping that complements sari style
-- **Top:** Long-sleeve fitted modest choli-style top with ornate embroidery (high neck, coordinating with sari color)
-- **Bottom:** Flowing silk skirt or pants styled to complement sari draping (vibrant color with ornate gold embroidery and border)
-- **Footwear:** Ornate sandals or barefoot
-- **Accessories:** Elaborate gold jewelry set (necklace, earrings, bangles, anklets), bindi, maang tikka (forehead jewelry), fresh flower accents (on hijab)
-- **Makeup:** Dramatic eye makeup with kohl, natural lip
+- **Hijab:** Silk hijab in vibrant color with elegant draping complementing sari style.
+- **Top:** Long-sleeve fitted modest choli-style top.
+  - **Fit:** Modest fitted.
+  - **Material:** Silk; Ornate embroidery.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Flowing silk skirt or pants styled to complement sari draping.
+  - **Fit:** Draped; Elegant.
+  - **Material:** matching silk with gold borders.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Ornate sandals or barefoot.
+- **Accessories:** Full gold jewelry set; bindi; maang tikka; flower accents (on hijab).

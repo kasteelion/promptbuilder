@@ -1,0 +1,80 @@
+# METADATA
+Scene: Secluded rooftop overlooking a sea of distant city lights under a clear midnight sky. The pale moonlight creates sharp, cool highlights on architectural details, and the air is still and quiet. Intimate, introspective atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Marley Thompson | Outfit: Cold Weather - Athletic | Pose: None
+Character: Theo Okonkwo | Outfit: Cold Weather - Athletic | Pose: None
+Character: Mei Chen | Outfit: Cold Weather - Athletic | Pose: None
+Interaction: Custom
+Score: 405
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Secluded rooftop overlooking a sea of distant city lights under a clear midnight sky. The pale moonlight creates sharp, cool highlights on architectural details, and the air is still and quiet. Intimate, introspective atmosphere.
+---
+
+**CHARACTER: Marley Thompson**
+**Appearance:**
+* **Body:** Romantic frame; wave-lush flesh quality; voluptuous hourglass proportions with full bust (DD-E cup), dramatically defined waist, wide rounded hips, full thighs; moderate height (5'5"-5'6"); soft density with feminine curves throughout, rounded shoulders, shapely legs; magnetizing maternal presence.
+* **Face:** Soft-rounded facial structure; heart-to-round face shape; full cheeks with natural warmth; large expressive dark brown eyes, wide-set, warm inviting gaze; full lips with natural cupid's bow; soft jawline; neutral resting expression is serene and welcoming with gentle smile—radiates nurturing warmth and domestic contentment.
+* **Hair:** Type 4A coils; very high density; medium-long length (past shoulders); high volume and body; commonly worn in protective styles that are polished and feminine—twist-outs with defined curls, elegant bun with decorative pins, braided crown styles, occasionally heat-styled into bouncy curls for special occasions; natural black with warm brown undertones; always well-maintained and styled.
+* **Skin:** Deep warm brown with rich golden undertones; smooth luminous finish; healthy glow from good skincare; natural radiance.
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined leggings (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
+- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Theo Okonkwo**
+**Appearance:**
+* **Body:** Natural frame; natural-to-soft flesh; balanced proportions; moderate-to-tall vertical; relaxed athletic build with natural ease.
+* **Face:** Balanced-warm facial structure; square-leaning oval face; warm expressive eyes; full lips; easy genuine smile; open welcoming expression.
+* **Hair:** Type 4C coils; high density; short fade with textured top styled in mini twists; clean lineup; matte finish.
+* **Skin:** Deep rich brown skin with warm undertones and healthy glow.
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined joggers or technical pants (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, tech beanie, polarized sports sunglasses.
+- **Hair/Makeup:** Polished grooming, fresh-faced "winter glow".
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large features—specifically an extremely full, heavy bust (F-G cup) that is her most prominent physical trait—balanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow.
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined leggings (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
+- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Marley Thompson and Theo Okonkwo walking together.

@@ -1,0 +1,65 @@
+# METADATA
+Scene: Neon-drenched city street, holographic billboards, chrome and glass architecture, purple and pink color scheme, futuristic noir.
+Base_Prompt: Low-Poly 3D
+Character: Jax Chen | Outfit: 1950s Server | Pose: None
+Character: Keiko Yamamoto | Outfit: Light Academia | Pose: None
+Interaction: Custom
+Score: 218
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Neon-drenched city street, holographic billboards, chrome and glass architecture, purple and pink color scheme, futuristic noir.
+---
+
+**CHARACTER: Jax Chen**
+**Appearance:**
+- **Body:** Explosive-Athletic frame; olive-toned skin with a vibrant, high-oxygenated flush; inverted triangle proportions with powerful, broad shoulders and a narrow, muscular waist; tall stature (6'1"-6'2"); high-performance build with dense, defined muscle groups and visible vascularity; "kinetic potential" presence—vibrant and dangerous.
+- **Face:** Sharp, aerodynamic structure; high, defined cheekbones; narrow, powerful jawline; intense, wide-set dark eyes that possess a piercing, high-speed focus; sharp, straight eyebrows with a low, aggressive set; straight, thin nose; firm mouth with a determined set; expression is one of maximum effort and singular focus.
+- **Hair:** Type 1A straight; medium density; kept in a sharp, high-fade with a short, textured top; matte-satin finish with vibrant neon orange tips that seem to vibrate with his movement.
+- **Skin:** Vibrant olive with warm, high-energy undertones; smooth, taut texture with visible "muscle-mapping" micro-textures in the dermis; beads of high-intensity sweat reflecting light; "high-performance" glow.
+**Outfit:**
+- **Top:** White short-sleeve dress shirt (crisp cotton, button-up)
+- **Bottom:** black trousers (tailored)
+- **Footwear:** bow tie (red or black); **white paper soda jerk hat** with colored trim.
+- **Accessories:** Waist apron, order pad.
+- **Hair/Makeup:** Clean-cut 50s grooming.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**CHARACTER 2: Keiko Yamamoto**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact athletic proportions; petite vertical line; sharp and energized presence.
+* **Face:** Angular sculpted structure; square-leaning oval face; strong jawline; intense dark brown eyes; restrained confident expression that reflects her focused discipline.
+* **Hair:** Type 1 straight; medium density; dark black with matte texture; choppy layers and versatile alternative styling options; drawn to sharp, Edgy cuts.
+* **Skin:** Light neutral skin with matte clarity; smooth even finish. sharp professional black-framed rectangular glasses
+**Outfit:**
+- **Top:** Cable knit sweater (cream or beige, soft wool)
+- **Bottom:** pleated midi skirt or tailored trousers (light brown tweed or tan)
+- **Footwear:** leather loafers or oxfords (brown).
+- **Accessories:** Vintage satchel, reading glasses, simple watch.
+- **Hair/Makeup:** Soft waves or low bun, fresh natural makeup, soft nude lip.
+
+---
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**Additional Notes:**
+Jax Chen and Keiko Yamamoto posing close together for photo, bodies angled slightly toward camera at 30-degree angle. Both with hands on hips in power pose—fingers spread, elbows out creating triangular negative space, or one arm around each other's waist/shoulder. Heads tilted toward each other at 15-20 degree angle, temples nearly touching or 2-3 inches apart. Wide genuine smiles showing teeth, eyes bright and engaged. Chins slightly lowered in flattering angle. Weight on one leg with hip popped, creating S-curve in posture. Hair styled and voluminous. Makeup camera-ready with highlight on cheekbones. Outfits coordinated but not identical—complementary colors or styles. Instagram-ready energy with polished, put-together aesthetic. Body language confident and poised. Background suggests social event, party, or aesthetic location.

@@ -1,0 +1,55 @@
+# METADATA
+Scene: Organized personal workspace with ergonomic chair and dual monitors. Soft blue glow from screens balanced by a warm desk lamp. Quiet focus, scent of books and electronics.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Camila Vargas | Outfit: Skater Culture | Pose: None
+Character: Diego Morales | Outfit: Dance Tights | Pose: None
+Score: 290
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Organized personal workspace with ergonomic chair and dual monitors. Soft blue glow from screens balanced by a warm desk lamp. Quiet focus, scent of books and electronics.
+---
+
+**CHARACTER: Camila Vargas**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; compact resilient flesh quality; petite but broad shoulders, long-torso-short-leg proportion; short (5'0"); tightly-wound sinewy muscle over sharp bone structure with defined calves and forearms; fiery and disciplined presence.
+* **Face:** Angular slightly sharp structure; elongated diamond shape; prominent high arching brows and strong chin; large intensely focused dark hazel eyes; defined narrow jawline; neutral resting expression is serious, contained, and observant.
+* **Hair:** Type 1B; medium density; mid-back length; pure black; very glossy with high sheen; takes precision styling well.
+* **Skin:** Olive with cool undertones and soft matte finish; smooth and disciplined surface.
+**Outfit:**
+- **Top:** Oversized **graphic t-shirt** (worn loose, vintage wash)
+- **Bottom:** baggy **durable pants** (Dickies style, cuffed at ankle)
+- **Footwear:** canvas skate shoes (Vans or Converse style).
+- **Accessories:** Beanie, chain wallet, skate tool visible in pocket.
+- **Hair/Makeup:** Messy effortless hair, minimal natural makeup.
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders, Standing with a skateboard tucked under one arm, relaxed posture, urban background.
+---
+
+**CHARACTER 2: Diego Morales**
+**Appearance:**
+- **Body:** Natural Athletic frame; natural-toned flesh with sun-touched warmth; inverted rectangle proportions with broad shoulders, slim waist, and defined muscle groups without bulk; moderate height (5'11"-6'0"); relaxed athletic build—lean and flexible from years of surfing; "effortless strength" presence—capable but never posturing.
+- **Face:** Balanced-angular structure; oval face shape; firm jawline that softens when he smiles; expressive almond-shaped eyes, wide-set, warm hazel with golden flecks that catch the light; natural dark eyebrows with a slight arch; straight nose with a subtle bridge; full mouth often quirked into a friendly half-smile; expressive neutral expression that reads as engaged and helpful.
+- **Hair:** Type 2B-2C waves; thick high density; medium length textured cut, shorter on sides with volume on top; loose natural side part; matte-satin finish with sun-bleached highlights at the tips; commonly worn tousled and "salt-water" styled, or loosely pushed back during work.
+- **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
+**Outfit:**
+- **Top:** Nude colored compression shirt and tights
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders, Mid-punch or kick to heavy bag, dynamic motion, powerful extension, training intensity.
+---

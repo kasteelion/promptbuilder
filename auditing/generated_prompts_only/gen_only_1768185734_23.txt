@@ -1,0 +1,83 @@
+# METADATA
+Scene: Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Kassandra Lykaios | Outfit: Cold Weather - Athletic | Pose: None
+Character: Kaia Vaitupu | Outfit: Cold Weather - Athletic | Pose: None
+Character: Sina Tuilagi | Outfit: Cold Weather - Athletic | Pose: None
+Interaction: Custom
+Score: 470
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+---
+
+**CHARACTER: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined leggings (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
+- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Kaia Vaitupu**
+**Appearance:**
+- **Body:** Statuesque Athletic frame; warm golden-bronze skin with a luminous, hydrated finish; soft-rectangular proportions with strong, graceful posture; tall stature (5'10"-5'11"); refined athletic build with long limbs and elegant muscle definition; "quiet authority" presence—composed and commanding.
+- **Face:** Strong heart-shaped structure; defined cheekbones that catch the light; firm, graceful jawline; large, deep-set dark brown eyes with a steady, intelligent gaze; thick, natural dark eyebrows with a soft arch; straight, elegant nose; full, well-defined mouth with a composed neutral expression; presence conveys deep concentration and intellectual clarity.
+- **Hair:** Type 1A-1B straight; high density and lustrous sheen; waist-length dark ebony hair, often worn in a sharp, high-shine ponytail or loose with a precise center part; matte-satin finish with silver-blue holographic highlights woven through the strands.
+- **Skin:** Deep golden-bronze with warm radiant undertones; flawless, smooth texture; subtle traditional geometric "tatau" patterns on her forearms that pulse with a faint cyan glow; healthy, hydrated "digital office" glow.
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined leggings (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
+- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Sina Tuilagi**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with wave softness; balanced proportions with moderate shoulders, defined waist, and rounded hips; moderate vertical (5'6"-5'7"); athletic-natural build with functional strength, soft curves over muscle, powerful legs, strong core, and grounded Pacific Islander physicality; traditional tatau (pe'a-inspired geometric patterns) visible on left thigh and right shoulder/upper arm; commanding warm presence combining ancestral strength with contemporary confidence.
+
+* **Face:** Balanced-soft facial structure with strong underlying bones; round-oval face shape with full cheeks and gentle breadth; moderate-to-wide midface with prominent cheekbones creating natural definition; large almond-shaped eyes with moderate spacing, deep brown to black irises, warm direct gaze; broad nose with rounded bridge and full tip; strong rounded jawline; neutral resting expression shows calm pride with slight natural smile and warm welcoming eye contact; expressions are openly warm and culturally confident.
+
+* **Hair:** Type 3A; very high density; long length past shoulders; no defined part, naturally voluminous; low-to-moderate sheen with healthy texture; commonly worn loose and full with natural curl pattern, half-up with decorative clip, or in low bun with face-framing waves; deep black-brown with warm undertones and natural dimension.
+
+* **Skin:** Deep tan with warm golden-brown undertones and natural luminous finish; bronze-to-brown complexion with sun-kissed richness; smooth healthy texture with island resilience; tatau (traditional Samoan tattoos) visible with cultural geometric patterns in black ink.
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined leggings (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
+- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Kassandra Lykaios and Kaia Vaitupu backlit by warm sunset glow, positioned to maximize golden hour lighting magic. Warm golden-orange light creates rim lighting effect around edges of bodies and hair, creating angelic halo glow. Both in dreamy relaxed poses—Kassandra Lykaios and Kaia Vaitupu standing close, one looking at the other or both gazing toward horizon. Expressions peaceful and contemplative, soft smiles or serene faces. Hair catching light creating luminous effect. Bodies positioned so sunlight filters through creating lens flare effect. Poses natural and romantic—hands gently touching, arms loosely around each other, or standing close in comfortable silence. Clothing light and flowing, catching golden light. Background shows horizon with sun low in sky, creating gradient from golden-orange to deep purple-blue. Soft atmospheric mood emphasizing beauty and fleeting perfect moment. Composition artistic—subjects may be silhouetted or softly lit from side. Overall feeling: magical, romantic, and cinematic. Time of day and lighting quality are the stars of this shot.

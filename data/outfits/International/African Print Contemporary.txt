@@ -1,29 +1,46 @@
 tags: [African, Cultural, Fashion]
 
 [F]
-- **Top:** Fitted **peplum top or off-shoulder blouse** (vibrant African print - Ankara, Kente, or Dashiki patterns in bold colors like orange, teal, purple, gold)
-- **Bottom:** pencil skirt or wide-leg pants (matching or complementary print, high-waist)
-- **Footwear:** strappy sandals or block heels.
-- **Accessories:** Statement earrings (large hoops or geometric designs), wrapped headscarf or headband in matching fabric, bangles, beaded necklace.
-- **Hair/Makeup:** Natural hair in afro, braids, locs, or twisted updo; bold makeup with warm tones, defined brows, glowing skin with golden undertones.
-
----
+- **Top:** Fitted peplum top or off-shoulder blouse.
+  - **Fit:** Fitted; Peplum or Off-shoulder.
+  - **Material:** Vibrant African print (Ankara, Kente, or Dashiki).
+  - **Pattern:** Bold bold tribal.
+  - **Neckline:** Sweetheart or Scoop.
+  - **Sleeve:** Cap sleeves or Sleeveless.
+- **Bottom:** Pencil skirt or wide-leg pants.
+  - **Fit:** Form-fitting (skirt) or wide-leg (pants).
+  - **Material:** matching or complementary print.
+  - **Waist:** High-waisted.
+  - **Length:** Knee-length or Floor-length.
+- **Footwear:** Strappy sandals or block heels.
+- **Accessories:** Statement earrings (large hoops); wrapped headscarf or headband.
 
 [M]
-- **Top:** Dashiki shirt or fitted button-down (vibrant African print - Ankara, Kente, or Dashiki patterns in bold colors like orange, teal, purple, gold)
-- **Bottom:** matching trousers or solid colored chinos
-- **Footwear:** leather sandals or loafers.
-- **Accessories:** Beaded necklace or bracelet, leather wristband.
-- **Hair/Makeup:** Natural grooming, neat hairstyle.
-
----
+- **Top:** Dashiki shirt or fitted button-down.
+  - **Fit:** Standard fit.
+  - **Material:** African print fabric.
+  - **Pattern:** Bold patterns in orange, teal, purple, gold.
+  - **Neckline:** Collared or V-neck.
+  - **Sleeve:** Long or Short.
+- **Bottom:** Matching trousers or solid colored chinos.
+  - **Fit:** Straight.
+  - **Material:** matching or Chino.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Leather sandals or loafers.
+- **Accessories:** Beaded necklace or bracelet; leather wristband.
 
 [H]
-- **Hijab:** Matching African print head wrap (gele style or simple wrap)
-- **Top:** Long-sleeve peplum top or blouse in vibrant African print (Ankara, Kente, etc.)
-- **Bottom:** Matching maxi pencil skirt or wide-leg pants
-- **Footwear:** Strappy sandals or block heels
-- **Accessories:** Statement earrings, bangles, beaded necklace
-- **Makeup:** Bold makeup with warm tones, glowing skin
-
----
+- **Hijab:** Matching African print head wrap (gele style).
+- **Top:** Long-sleeve peplum top or blouse in vibrant African print.
+  - **Fit:** Modest fitted.
+  - **Material:** matching prints.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching maxi pencil skirt or wide-leg pants.
+  - **Fit:** Full length modest.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Strappy sandals or block heels.
+- **Accessories:** Statement earrings; bangles; beaded necklace.

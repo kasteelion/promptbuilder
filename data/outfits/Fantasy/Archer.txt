@@ -1,23 +1,48 @@
 tags: [combat, fantasy, Range]
 
 [F]
-- **Top:** Fitted leather jerkin or tunic (((default:forest green or olive) or (signature)) with mobility slits and reinforced stitching)
-- **Bottom:** asymmetric chest guard (hardened leather, strapped over upper torso to protect from bowstring)
-- **Footwear:** fitted trousers (earth tones or black, flexible fabric tucked into boots); **knee-high boots** (soft leather with flat soles for silent movement).
-- **Accessories:** Quiver with fletched arrows (slung across back or hip), leather bracers (forearm guards), shooting glove or finger tabs, longbow or recurve bow prop, hooded cowl.
-- **Hair/Makeup:** Hair secured tightly in braid or ponytail away from face, sharp focused gaze ("eagle eye"), natural makeup or optional camouflage face paint.
+- **Top:** Fitted leather jerkin with asymmetric chest guard.
+  - **Fit:** Fitted with mobility slits.
+  - **Material:** Hardened and reinforced leather.
+  - **Pattern:** Solid ((default:forest green or olive)).
+  - **Neckline:** High-neck collar.
+  - **Sleeve:** Sleeveless or short.
+- **Bottom:** Fitted trousers.
+  - **Fit:** Flexible fitted.
+  - **Material:** Durable cloth.
+  - **Pattern:** Earth tones.
+  - **Waist:** Low or Mid-rise.
+  - **Length:** Tucked into boots.
+- **Footwear:** Knee-high soft leather boots with flat soles.
+- **Accessories:** Quiver of arrows; leather bracers; hooded cowl; longbow.
 
 [M]
-- **Top:** Fitted leather jerkin or tunic (((default:forest green or olive) or (signature)) with mobility slits and reinforced stitching)
-- **Bottom:** asymmetric chest guard (hardened leather, strapped over upper torso to protect from bowstring)
-- **Footwear:** fitted trousers (earth tones or black, flexible fabric tucked into boots); **knee-high boots** (soft leather with flat soles for silent movement).
-- **Accessories:** Quiver with fletched arrows (slung across back or hip), leather bracers (forearm guards), shooting glove or finger tabs, longbow or recurve bow prop, hooded cowl.
-- **Hair/Makeup:** Hair secured away from face, sharp focused gaze ("eagle eye"), natural grooming or optional camouflage face paint.
+- **Top:** Fitted leather jerkin with chest guard.
+  - **Fit:** Fitted.
+  - **Material:** Leather.
+  - **Pattern:** Solid ((default:forest green or olive)).
+  - **Neckline:** Collared.
+  - **Sleeve:** Sleeveless/Short.
+- **Bottom:** Fitted flexible trousers.
+  - **Fit:** Fitted.
+  - **Material:** Flexible fabric.
+  - **Waist:** Natural.
+  - **Length:** Tucked in.
+- **Footwear:** Knee-high soft leather boots.
+- **Accessories:** Quiver; bracers; longbow; hooded cowl.
 
 [H]
-- **Hijab:** Practical tactical hijab in **((default:forest green) or (signature))** with secure aerodynamic wrap
-- **Top:** Long-sleeve fitted leather jerkin or tunic (high-neck modest cut, **((default:forest green or olive) or (signature))** with reinforced stitching) and **asymmetric chest guard**
-- **Bottom:** Full-length fitted trousers (earth tones or black, flexible fabric)
-- **Footwear:** Knee-high soft leather boots with flat soles
-- **Accessories:** Quiver with arrows, leather bracers, shooting glove, longbow or recurve bow, hooded cowl
-- **Makeup:** Sharp focused gaze, natural makeup or optional camouflage face paint
+- **Hijab:** Practical tactical hijab securely wrapped.
+- **Top:** Long-sleeve fitted leather jerkin with asymmetric chest guard.
+  - **Fit:** Fitted modest cut.
+  - **Material:** Reinforced leather and Cloth.
+  - **Pattern:** Forest green.
+  - **Neckline:** High-neck modest.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length fitted trousers.
+  - **Fit:** Flexible.
+  - **Material:** Earth-toned fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Knee-high soft leather boots.
+- **Accessories:** Quiver; bracers; longbow; cowl.

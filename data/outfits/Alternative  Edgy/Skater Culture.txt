@@ -1,23 +1,45 @@
 tags: [Casual, Skate, urban]
 
 [F]
-- **Top:** Oversized **graphic t-shirt** (worn loose, vintage wash)
-- **Bottom:** baggy **durable pants** (Dickies style, cuffed at ankle)
-- **Footwear:** canvas skate shoes (Vans or Converse style).
-- **Accessories:** Beanie, chain wallet, skate tool visible in pocket.
-- **Hair/Makeup:** Messy effortless hair, minimal natural makeup.
+- **Top:** Oversized graphic t-shirt.
+  - **Fit:** Oversized loose.
+  - **Material:** Heavy cotton jersey.
+  - **Pattern:** Vintage graphic.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Short sleeves (drop shoulder).
+- **Bottom:** Baggy durable pants (Dickies style).
+  - **Fit:** Baggy straight leg.
+  - **Material:** Canvas or Twill.
+  - **Waist:** Low-waist.
+  - **Length:** Cuffed at ankle.
+- **Footwear:** Canvas skate shoes (Vans or Converse).
+- **Accessories:** Beanie, chain wallet, skate tool.
 
 [M]
-- **Top:** Oversized **graphic t-shirt**
-- **Bottom:** baggy **durable work pants**
-- **Footwear:** canvas skate shoes.
-- **Accessories:** Beanie, chain wallet, earbuds around neck.
-- **Hair/Makeup:** Tousled natural hair, clean-shaven or stubble.
+- **Top:** Oversized graphic t-shirt.
+  - **Fit:** Oversized boxy.
+  - **Material:** Cotton jersey.
+  - **Pattern:** Screenprint graphic.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Baggy durable work pants.
+  - **Fit:** Baggy.
+  - **Material:** Heavy twill.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Canvas skate shoes.
+- **Accessories:** Beanie, chain wallet, earbuds.
 
 [H]
-- **Hijab:** Jersey hijab in black or neutral with a beanie worn over it
-- **Top:** Oversized graphic t-shirt over a long-sleeve black base layer
-- **Bottom:** Baggy durable work pants (cuffed at ankle)
-- **Footwear:** Canvas skate shoes
-- **Accessories:** Simple chain necklace, mini backpack
-- **Makeup:** Natural minimal makeup
+- **Hijab:** Jersey hijab in black or neutral with beanie.
+- **Top:** Oversized graphic t-shirt over long-sleeve base layer.
+  - **Fit:** Oversized layer.
+  - **Material:** Cotton jersey.
+  - **Neckline:** High crew.
+  - **Sleeve:** Long (base layer).
+- **Bottom:** Baggy durable work pants.
+  - **Fit:** Loose straight leg.
+  - **Material:** Twill.
+  - **Length:** Cuffed at ankle.
+- **Footwear:** Canvas skate shoes.
+- **Accessories:** Chain necklace, mini backpack.

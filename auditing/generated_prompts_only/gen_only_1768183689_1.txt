@@ -1,0 +1,83 @@
+# METADATA
+Scene: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Zara Washington | Outfit: Soccer | Pose: None
+Character: Astrid Nielsen | Outfit: Soccer | Pose: None
+Character: Avery Blake | Outfit: Soccer | Pose: None
+Interaction: Custom
+Score: 520
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter.
+---
+
+**CHARACTER: Zara Washington**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
+* **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
+* **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
+* **Skin:** Deep rich brown skin with luminous depth.
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team**  (fitted)
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks over shin guards.
+- **Accessories:** Shin guards.
+- **Hair/Makeup:** Ponytail or bun, minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Astrid Nielsen**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight flesh; narrow balanced rectangle proportions; tall vertical line; refined posture with precise alignment; statuesque and poised.
+* **Face:** Long balanced facial structure; soft oval face; firm planar skin with clear definition; narrow straight nose; light blue deep-set eyes with cool observant gaze; serene neutral resting expression that suggests depth and composure.
+* **Hair:** Type 1 straight hair; medium density; platinum blonde with smooth high-shine finish; naturally straight and fine; takes blunt, precise cuts well.
+* **Skin:** Fair cool-toned skin with porcelain clarity and smooth even texture.
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team**  (fitted)
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks over shin guards.
+- **Accessories:** Shin guards.
+- **Hair/Makeup:** Ponytail or bun, minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Avery Blake**
+**Appearance:**
+* **Body:** Soft Natural frame; lean-toned flesh quality; athletic hourglass proportions with moderate bust (C cup), defined shoulders with visible arm tone, trim waist with toned abs, shapely hips, and powerful legs; moderate vertical (5'6"); athletic density with controlled strength, sculpted core, and muscular thighs; provocatively confident presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-heart shape; high defined cheekbones with dramatic contouring; large almond-shaped eyes in dark brown/black with heavy smokey eye makeup creating intense smoldering gaze, moderately spaced; straight refined nose; full pouty lips; strong defined jawline; neutral resting expression is sultry and defiant with piercing direct stare and slight knowing smirk that radiates "I dare you."
+
+* **Hair:** Type 1B straight; very high density; ultra-sleek long cut reaching mid-back to waist; center part or dramatic side-swept; jet-black color with raven shine; glass-smooth texture like liquid ink; commonly worn completely straight and flowing, half-up with volume at crown, or high ponytail; always impeccably smooth and glossy.
+
+* **Skin:** Very fair/pale with cool undertones and smooth porcelain-ivory finish;
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team**  (fitted)
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks over shin guards.
+- **Accessories:** Shin guards.
+- **Hair/Makeup:** Ponytail or bun, minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Zara Washington and Astrid Nielsen approaching each other from opposite sides of the octagon cage, walking toward center for opening bell. Both in fight-ready position—hands taped or gloved, mouthguards in, corner teams behind them giving final instructions. Zara Washington enters from left side, Astrid Nielsen from right, converging at center. Bodies loose and warm, bouncing slightly on feet, shaking out arms. Facial expressions transitioning from calm focus to fight mode intensity. Referee between them preparing to give final instructions. Cage fence visible in background, arena lights bright overhead. Both sizing each other up during this final approach, reading body language and energy. Optional: corner men wiping down fighters, applying Vaseline, giving pep talks. Moment of truth energy, anticipation at peak before violence begins.

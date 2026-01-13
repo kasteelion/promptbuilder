@@ -1,0 +1,77 @@
+# METADATA
+Scene: Outdoor track and field stadium, red running lanes, white lane lines, bleachers in background, open sky above.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Sitara Saanvi | Outfit: Training | Pose: None
+Character: Maki Cruz | Outfit: Training | Pose: None
+Character: Suki Nakamura | Outfit: Training | Pose: None
+Interaction: Custom
+Score: 445
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Outdoor track and field stadium, red running lanes, white lane lines, bleachers in background, open sky above.
+---
+
+**CHARACTER: Sitara Saanvi**
+**Appearance:**
+* **Body:** Romantic frame; soft lush flesh quality; hourglass proportions with defined waist; moderate height (5'4"); soft rounded density with lush bust and hips, delicate wrists and ankles; alluring captivating presence.
+* **Face:** Soft rounded structure; heart shape; large expressive dark brown almond eyes with dazzled flirtatious quality; softly curved jawline; neutral resting expression is slightly pouting and sensual.
+* **Hair:** Type 2C waves; medium-high density; dark glossy black with high sheen; long voluminous hair that takes styling well; commonly worn in glamorous, vintage-inspired styles.
+* **Skin:** Medium tan with warm golden-olive undertones and luminous smooth surface finish; small delicate beauty mark near lip.
+**Outfit:**
+- **Top:** Fitted **sports bra** with minimal detailing
+- **Bottom:** high-waist **athletic shorts**.
+- **Accessories:** Lightweight grappling gloves; **ankle tape** for support.
+- **Hair/Makeup:** Minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Maki Cruz**
+**Appearance:**
+* **Body:** Flamboyant Natural; straight athletic flesh with lean definition; balanced proportions; subtle shoulder width; straight hip line; moderate vertical (5'6"-5'7"); functional athletic build with core strength; developed calves and quadriceps; visible forearm definition; grounded street-athlete presence.
+* **Face:** Balanced-soft structure; rounded square shape; broad forehead; softly defined jawline; midface cheekbone prominence with subtle definition; medium almond-shaped eyes; moderate spacing; dark brown to black irises; monolid or minimal crease structure; direct casual gaze; broad nose bridge with rounded tip; neutral resting expression shows relaxed confidence with a slight asymmetric smirk.
+* **Hair:** Type 1B; high density; straight silhouette with medium length to shoulders; no defined part; pushed back casually; matte to low-sheen finish; commonly worn loose and natural, tucked behind ears, or in a low messy bun. Deep black-brown.
+* **Skin:** Medium tan; warm golden-yellow undertones; natural matte finish; healthy resilience; scattered small scars on elbows and knees.
+**Outfit:**
+- **Top:** Fitted **sports bra** with minimal detailing
+- **Bottom:** high-waist **athletic shorts**.
+- **Accessories:** Lightweight grappling gloves; **ankle tape** for support.
+- **Hair/Makeup:** Minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Suki Nakamura**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight refined flesh; narrow balanced proportions; tall elegant vertical; controlled precise presence.
+* **Face:** Balanced angular structure; oval face with subtle angles; defined cheekbones; dark almond eyes; serene focused expression.
+* **Hair:** Type 1 straight; medium density; blunt mid-length bob with micro-fringe; precise geometric cut; high-shine finish.
+* **Skin:** Light neutral-cool skin with porcelain clarity.
+**Outfit:**
+- **Top:** Fitted **sports bra** with minimal detailing
+- **Bottom:** high-waist **athletic shorts**.
+- **Accessories:** Lightweight grappling gloves; **ankle tape** for support.
+- **Hair/Makeup:** Minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Sitara Saanvi and Maki Cruz jogging or sprinting side-by-side on a track or trail, synchronized movement, focused athletic breathing, determined expressions.

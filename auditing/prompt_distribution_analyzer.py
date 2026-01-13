@@ -99,26 +99,24 @@ def analyze_prompt_distribution(directory):
     print(f"\n# Prompt Distribution Analysis")
     print(f"\nTotal Prompts Analyzed: {total_prompts}\n")
     
-    # Print top distributions
-    print("## Top 10 Scenes")
-    for scene, count in sorted(scene_counts.items(), key=lambda x: x[1], reverse=True)[:10]:
-        print(f"  {scene}: {count}")
+    def print_dist(title, data, total, limit=10):
+        print(f"\n## {title}")
+        sorted_items = sorted(data.items(), key=lambda x: x[1], reverse=True)
+        
+        for item, count in sorted_items[:limit]:
+            percentage = (count / total) * 100
+            flag = ""
+            if percentage > 20 and len(data) > 3: # Simple overweight heuristic
+                 flag = " ⚠️ OVERWEIGHTED"
+            print(f"  {item}: {count} ({percentage:.1f}%){flag}")
+
+    print_dist("Top 10 Scenes", scene_counts, total_prompts)
+    print_dist("Top 10 Base Prompts (Art Styles)", base_prompt_counts, total_prompts)
     
-    print("\n## Top 10 Base Prompts (Art Styles)")
-    for bp, count in sorted(base_prompt_counts.items(), key=lambda x: x[1], reverse=True)[:10]:
-        print(f"  {bp}: {count}")
-    
-    print("\n## Top 10 Outfits")
-    for outfit, count in sorted(outfit_counts.items(), key=lambda x: x[1], reverse=True)[:10]:
-        print(f"  {outfit}: {count}")
-    
-    print("\n## Top 10 Poses")
-    for pose, count in sorted(pose_counts.items(), key=lambda x: x[1], reverse=True)[:10]:
-        print(f"  {pose}: {count}")
-    
-    print("\n## Interactions")
-    for interaction, count in sorted(interaction_counts.items(), key=lambda x: x[1], reverse=True):
-        print(f"  {interaction}: {count}")
+    # Outfits might not be present in every prompt, but we use total_prompts as denominator for impact
+    print_dist("Top 10 Outfits", outfit_counts, total_prompts)
+    print_dist("Top 10 Poses", pose_counts, total_prompts)
+    print_dist("Interactions", interaction_counts, total_prompts)
     
     # Generate Mermaid Sankey (simplified - top items only)
     print("\n## Mermaid Distribution Flow\n")
@@ -161,7 +159,7 @@ if __name__ == "__main__":
         sys.exit(1)
     
     # Create output file path
-    output_dir = os.path.join(parent_dir, "output", "reports")
+    output_dir = os.path.join(script_dir, "reports")
     os.makedirs(output_dir, exist_ok=True)
     output_file = os.path.join(output_dir, "prompt_distribution_report.md")
     

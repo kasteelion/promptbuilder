@@ -1,23 +1,47 @@
 tags: [Casual, Home]
 
 [F]
-- **Top:** Flowing **long-sleeve robe** (((default:white) or (signature)) in soft cotton or linen fabric, modest wrap-around style)
-- **Bottom:** simple belt at waist
-- **Footwear:** barefoot or **soft slippers**.
+- **Top:** Flowing long-sleeve robe.
+  - **Fit:** Relaxed wrap.
+  - **Material:** Soft cotton or linen.
+  - **Pattern:** Solid ((default:white) or (signature)).
+  - **Neckline:** Wrap V-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Wrap closure with simple belt.
+  - **Fit:** Drapey.
+  - **Material:** Matching cotton/linen.
+  - **Waist:** Cinched belt.
+  - **Length:** Ankle-length.
+- **Footwear:** Soft slippers or barefoot.
 - **Accessories:** Minimal jewelry.
-- **Hair/Makeup:** Natural relaxed styling.
 
 [M]
-- **Top:** Flowing **long-sleeve robe** (((default:white) or (signature)) in soft cotton or linen fabric, wrap-around style)
-- **Bottom:** simple belt at waist
-- **Footwear:** barefoot or **soft slippers**.
+- **Top:** Flowing long-sleeve robe.
+  - **Fit:** Over-sized wrap.
+  - **Material:** Soft linen.
+  - **Pattern:** Solid ((default:white) or (signature)).
+  - **Neckline:** Wrap.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Waist tie belt.
+  - **Fit:** Loose.
+  - **Material:** Matching fabric.
+  - **Waist:** Belted.
+  - **Length:** Calf-length.
+- **Footwear:** Soft slippers or barefoot.
 - **Accessories:** Minimal jewelry.
-- **Hair/Makeup:** Natural relaxed grooming.
 
 [H]
-- **Hijab:** Soft jersey hijab (((default:white) or (signature)) with relaxed draping)
-- **Top:** Long-sleeve flowing **modest robe** (((default:white) or (signature)) in soft cotton or linen, wrap-around style)
-- **Bottom:** Matching full-length trousers
-- **Footwear:** Barefoot or soft slippers
-- **Accessories:** Minimal jewelry
-- **Makeup:** Natural relaxed look
+- **Hijab:** Soft jersey hijab with relaxed draping.
+- **Top:** Long-sleeve flowing modest robe.
+  - **Fit:** Full coverage wrap.
+  - **Material:** Soft cotton.
+  - **Pattern:** Solid.
+  - **Neckline:** High-neck wrap.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching full-length trousers.
+  - **Fit:** Relaxed straight leg.
+  - **Material:** matching cotton.
+  - **Waist:** internal elastic.
+  - **Length:** Floor-length.
+- **Footwear:** Soft slippers.
+- **Accessories:** Minimal jewelry.

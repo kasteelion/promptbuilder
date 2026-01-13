@@ -1,23 +1,46 @@
 tags: [Fashion, Retro, vintage]
 
 [F]
-- **Top:** Shift dress (((default:bold geometric print or color-blocked) or (signature)) A-line silhouette, above knee length, sleeveless or short sleeves)
-- **Bottom:** white go-go boots (knee-high, low block heel, patent leather)
-- **Footwear:** matching tights (opaque white or colored).
-- **Accessories:** Large geometric earrings, headband or hair bow, oversized sunglasses (round or cat-eye), small structured handbag.
-- **Hair/Makeup:** Voluminous bouffant or sleek bob with heavy bangs, dramatic graphic eyeliner (heavy black with white in waterline), pale lips, defined lashes (real or drawn on lower lash line), Twiggy-inspired mod makeup, youthful 60s energy.
+- **Top:** A-line Shift dress.
+  - **Fit:** A-line silhouette.
+  - **Material:** Structural cotton or polyester.
+  - **Pattern:** Bold geometric or color-blocked.
+  - **Neckline:** Jewel or Boat neck.
+  - **Sleeve:** Sleeveless or Short.
+- **Bottom:** Opaque matching tights.
+  - **Fit:** Tight.
+  - **Material:** Nylon.
+  - **Waist:** High-waist (under dress).
+  - **Length:** Full footed.
+- **Footwear:** White patent leather go-go boots.
+- **Accessories:** Large geometric earrings; headband; oversized sunglasses.
 
 [M]
-- **Top:** Slim-fit suit (((default:sharkskin or bold color) or (signature)) narrow lapels, cigarette pants)
-- **Bottom:** turtleneck or **button-down with skinny tie**
+- **Top:** Slim-fit suit jacket or Turtleneck.
+  - **Fit:** Slim-fit narrow.
+  - **Material:** Sharkskin wool or Jersey.
+  - **Neckline:** Turtleneck or Collared.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Cigarette pants.
+  - **Fit:** Narrow skinny.
+  - **Material:** Sharkskin.
+  - **Waist:** Natural.
+  - **Length:** Ankle-length.
 - **Footwear:** Chelsea boots.
 - **Accessories:** Wayfarer sunglasses.
-- **Hair/Makeup:** Mop-top haircut or neat side part, clean-shaven, youthful energy.
 
 [H]
-- **Hijab:** White or bold colored jersey hijab (sleek neat wrap)
-- **Top:** Modest shift dress (((default:geometric print) or (signature)) long sleeves, knee length)
-- **Bottom:** Opaque white tights or **straight-leg trousers**
-- **Footwear:** White go-go boots
-- **Accessories:** Large geometric earrings, sunglasses
-- **Makeup:** Graphic eyeliner, pale lips, Twiggy style
+- **Hijab:** White or bold colored jersey hijab (neat wrap).
+- **Top:** Modest Shift dress.
+  - **Fit:** A-line modest.
+  - **Material:** Structural fabric.
+  - **Pattern:** Geometric print.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Straight-leg trousers.
+  - **Fit:** Slim straight.
+  - **Material:** Cotton.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** White go-go boots.
+- **Accessories:** Large geometric earrings.

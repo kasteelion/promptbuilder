@@ -35,7 +35,8 @@ def generate_prompts(count=10, match_outfits_prob=0.3):
             num_characters=None, # Random count
             include_scene=True,
             include_notes=True,
-            match_outfits_prob=match_outfits_prob
+            match_outfits_prob=match_outfits_prob,
+            candidates=1
         )
         prompt_text = builder.generate(config)
         score = config.get("metadata", {}).get("score", 0)
@@ -132,9 +133,7 @@ def run_local_generation(count=10, match_outfits_prob=0.3):
             # Check internal metadata for specific keys
             score_meta = config.get("metadata", {})
             if "interaction" in score_meta:
-                 # If it's stored there
-                 i_val = score_meta["interaction"]
-                 i_name = i_val.get("name", str(i_val)) if isinstance(i_val, dict) else str(i_val)
+                 i_name = score_meta["interaction"]
                  meta_block += f"Interaction: {i_name}\n"
             else:
                  # Fallback: Use first few words of notes? or Skip.

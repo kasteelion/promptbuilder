@@ -1,0 +1,62 @@
+# METADATA
+Scene: Cascading waterfall, misty spray, surrounding rocks covered in moss, lush greenery, soft diffused light through canopy.
+Base_Prompt: Watercolor Impressionistic
+Character: Theo Okonkwo | Outfit: Cottagecore | Pose: None
+Character: Kendra Mitchell | Outfit: Cottagecore | Pose: None
+Interaction: Custom
+Score: 355
+
+Generate an image of: Rendering
+Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines.
+
+Character Accuracy
+Facial features are suggested through shadow shapes and color temperature shifts rather than line art. Eyes and expressions are soft and diffused. Likeness is captured through "gestural" paint application rather than photographic precision.
+
+Body Types
+Figures are grounded in gesture drawing techniques. Limbs and torso shapes are defined by broad washes of color. Edges of the body dissolve softly into the background, creating a dreamy, ethereal connection to the environment.
+
+Hair & Clothing
+Hair: Rendered as loose, flowing pools of color with wet edges. Clothing: Fabrics are depicted through variegation in color saturation. Folds are soft gradients where paint creates "blooms." No sharp stitching or texture detailing.
+
+Details
+Splatter droplets, dry-brush scratch marks, and visible pencil under-drawing. The palette is harmonious and desaturated. Backgrounds are abstract washes suggesting environment without explicit detail.
+
+---
+
+**SCENE/SETTING:**
+Cascading waterfall, misty spray, surrounding rocks covered in moss, lush greenery, soft diffused light through canopy.
+---
+
+**CHARACTER: Theo Okonkwo**
+**Appearance:**
+* **Body:** Natural frame; natural-to-soft flesh; balanced proportions; moderate-to-tall vertical; relaxed athletic build with natural ease.
+* **Face:** Balanced-warm facial structure; square-leaning oval face; warm expressive eyes; full lips; easy genuine smile; open welcoming expression.
+* **Hair:** Type 4C coils; high density; short fade with textured top styled in mini twists; clean lineup; matte finish.
+* **Skin:** Deep rich brown skin with warm undertones and healthy glow.
+**Outfit:**
+- **Top:** Flowing **linen button-up shirt** (rolled sleeves)
+- **Bottom:** high-waist trousers or shorts with suspenders
+- **Footwear:** leather boots or loafers.
+- **Accessories:** Woven basket, simple jewelry, flat cap.
+- **Hair/Makeup:** Natural grooming, tousled hair or neat styling.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Kendra Mitchell**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; broad inverted triangle proportions with wide shoulders, long limbs, and subtle waist definition; tall (5'9"); strong defined muscle with visible shoulder caps, toned arms, and powerful legs; commanding physical presence.
+* **Face:** Strong angular structure; oblong-square face; prominent bone structure with high broad cheekbones; almond-shaped wide-set hazel-green eyes; strong defined jawline; neutral resting expression is confident and direct with penetrating gaze; smile is wide, genuine, and slightly asymmetric with infectious energy.
+* **Hair:** Type 3B curls; high density; shoulder-length layered cut; side part; voluminous natural texture; matte-satin finish; commonly worn loose and free or in high messy bun; warm chestnut brown with golden highlights.
+* **Skin:** Medium tan with warm golden undertones and healthy athletic glow; faint freckles across nose and shoulders.
+**Outfit:**
+- **Top:** Flowing **floral midi dress** or **linen blouse** with **high-waist skirt**
+- **Bottom:** flat leather sandals or boots.
+- **Accessories:** Woven basket, delicate gold jewelry, floral hair clip.
+- **Hair/Makeup:** Soft natural makeup, loose waves or braids.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Theo Okonkwo casually leaning on Kendra Mitchell, relaxed pose showing familiarity and comfort

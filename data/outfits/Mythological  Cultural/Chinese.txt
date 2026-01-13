@@ -1,23 +1,46 @@
 tags: [chinese, Cultural, historical, traditional]
 
 [F]
-- **Top:** Hanfu dress (flowing robes in silk - red, gold, or pastel with embroidered details)
-- **Bottom:** wide sleeves
-- **Footwear:** trained embroidered slippers.
-- **Accessories:** Ornate hairpins and combs, jade jewelry, decorative fan, flowing ribbons in hair.
-- **Hair/Makeup:** Elegant updo with decorative pins and ornaments, natural makeup with red lip, porcelain complexion.
+- **Top:** Hanfu dress with wide sleeves.
+  - **Fit:** Flowing; Layered robes.
+  - **Material:** Silk.
+  - **Pattern:** Embroidered details; Floral motifs.
+  - **Neckline:** Cross-collar (Y-neck).
+  - **Sleeve:** Wide flowing sleeves.
+- **Bottom:** Integrated floor-length skirt.
+  - **Fit:** Voluminous.
+  - **Material:** matching silk.
+  - **Waist:** Natural with flowing ribbons.
+  - **Length:** Floor-length.
+- **Footwear:** Trained embroidered slippers.
+- **Accessories:** Ornate hairpins and combs; jade jewelry; decorative fan.
 
 [M]
-- **Top:** Hanfu robe (flowing silk robes in red, gold, or imperial yellow with dragon embroidery)
-- **Bottom:** wide sleeves
-- **Footwear:** black boots with upturned toes.
-- **Accessories:** Ornate headpiece or crown, jade jewelry, ceremonial sword, long beard.
-- **Hair/Makeup:** Hair in topknot with ornate pin, styled facial hair, refined features.
+- **Top:** Hanfu robe with dragon embroidery.
+  - **Fit:** Flowing; Imperial.
+  - **Material:** Silk.
+  - **Pattern:** Dragon embroidery.
+  - **Neckline:** Cross-collar.
+  - **Sleeve:** Wide sleeves.
+- **Bottom:** Integrated matching robe floors.
+  - **Fit:** Loose.
+  - **Material:** Silk.
+  - **Waist:** Silk sash.
+  - **Length:** Full.
+- **Footwear:** Black boots with upturned toes.
+- **Accessories:** Ornate headpiece or crown; jade jewelry; ceremonial sword.
 
 [H]
-- **Hijab:** Silk hijab in vibrant color (red, gold, or pastel) with elegant Chinese-inspired draping, ornate hairpins and decorative ornaments attached
-- **Top:** Long-sleeve elegant hanfu-style robe (flowing silk with embroidered details, high neck, wide sleeves)
-- **Bottom:** Flowing pants or under-robe in coordinating silk
-- **Footwear:** Embroidered slippers
-- **Accessories:** Ornate hairpins and combs on hijab, jade jewelry, decorative fan, flowing ribbons
-- **Makeup:** Natural makeup with red lip, porcelain complexion aesthetic
+- **Hijab:** Silk hijab in vibrant color with Chinese-inspired draping.
+- **Top:** Long-sleeve elegant hanfu-style robe.
+  - **Fit:** Modest loose.
+  - **Material:** Silk.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long wide sleeves.
+- **Bottom:** Flowing pants or under-robe.
+  - **Fit:** Relaxed.
+  - **Material:** matching silk.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Embroidered slippers.
+- **Accessories:** Ornate hairpins/combs on hijab; jade jewelry; decorative fan.

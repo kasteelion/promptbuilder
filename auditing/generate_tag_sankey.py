@@ -133,6 +133,23 @@ def resolve_tags(metadata, loader_data):
         
     return extracted
 
+# Tag Category Mappings for Simplification
+TAG_CATEGORIES = {
+    'Anatomy/Body': ['curvy', 'hourglass', 'petite', 'tall', 'busty', 'thick', 'substantial', 'toned', 'muscular', 'slim', 'athletic', 'frame', 'proportions', 'shape', 'density', 'silhouett'],
+    'Face/Features': ['face', 'eyes', 'lips', 'nose', 'brows', 'cheek', 'complexion', 'expression', 'chin', 'jawline', 'forehead'],
+    'Hair/Style': ['hair', 'wave', 'curl', 'straight', 'density', 'volume', 'part', 'length', 'chestnut', 'espresso', 'caramel', 'blowout'],
+    'Mood/Vibe': ['confident', 'sultry', 'calm', 'approach', 'friendly', 'intense', 'serious', 'happy', 'focused', 'energy', 'expression'],
+    'Theme/Genre': ['fantasy', 'medieval', 'sci-fi', 'cyberpunk', 'modern', 'gothic', 'retro', 'vintage', 'historical', 'futuristic', 'noir', 'mytholog', 'traditional'],
+    'Action/Pose': ['stand', 'sit', 'lean', 'run', 'walk', 'jump', 'dodge', 'fight', 'pose', 'action', 'interact', 'cradl', 'shoot', 'pitch', 'catch']
+}
+
+def get_tag_category(tag, default="Other"):
+    t = tag.lower()
+    for cat, keywords in TAG_CATEGORIES.items():
+        if any(kw in t for kw in keywords):
+            return cat
+    return default
+
 def generate_sankey():
     print("Loading data...")
     loader = DataLoader()
@@ -173,20 +190,26 @@ def generate_sankey():
         meta = parse_metadata(p)
         tags = resolve_tags(meta, data_store)
         
-        # Link Char Tags -> Scene Tags
-        for ct in tags['char_tags']:
-            for st in tags['scene_tags']:
-                c2s[(ct, st)] += 1
+        # Aggregate tags into categories for cleaner flow
+        char_cats = {get_tag_category(t, "Char") for t in tags['char_tags']}
+        scene_cats = {get_tag_category(t, "Scene") for t in tags['scene_tags']}
+        style_cats = {get_tag_category(t, "Style") for t in tags['style_tags']}
+        outfit_cats = {get_tag_category(t, "Outfit") for t in tags['outfit_tags']}
+
+        # Link Scene Categories -> Style Categories
+        for sc in scene_cats:
+            for st in style_cats:
+                s2st[(sc, st)] += 1
                 
-        # Link Scene Tags -> Style Tags
-        for st in tags['scene_tags']:
-            for sty in tags['style_tags']:
-                s2st[(st, sty)] += 1
+        # Link Scene Categories -> Style Categories
+        for sc in scene_cats:
+            for st in style_cats:
+                s2st[(sc, st)] += 1
                 
-        # Link Style Tags -> Outfit Tags
-        for sty in tags['style_tags']:
-            for ot in tags['outfit_tags']:
-                st2o[(sty, ot)] += 1
+        # Link Style Categories -> Outfit Categories
+        for st in style_cats:
+            for oc in outfit_cats:
+                st2o[(st, oc)] += 1
                 
     # Filter for top connections to avoid visual clutter
     TOP_N = 200
@@ -194,16 +217,15 @@ def generate_sankey():
     def get_top_links(link_dict, limit):
         return sorted(link_dict.items(), key=lambda x: x[1], reverse=True)[:limit]
         
-    top_c2s = get_top_links(c2s, TOP_N)
-    top_s2st = get_top_links(s2st, TOP_N)
-    top_st2o = get_top_links(st2o, TOP_N)
+    top_s2st = get_top_links(s2st, 500)
+    top_st2o = get_top_links(st2o, 500)
     
     # Build Node List
     labels = []
     label_map = {}
     
     def get_id(label, prefix):
-        full_label = f"{prefix}: {label.title()}"
+        full_label = f"{prefix}: {label}" # Aggregated labels don't need .title() usually
         if full_label not in label_map:
             label_map[full_label] = len(labels)
             labels.append(full_label)
@@ -213,10 +235,10 @@ def generate_sankey():
     targets = []
     values = []
     
-    # C -> S
-    for (src, dst), count in top_c2s:
-        s_id = get_id(src, "Char")
-        t_id = get_id(dst, "Scene")
+    # S -> Sty
+    for (src, dst), count in top_s2st:
+        s_id = get_id(src, "Scene")
+        t_id = get_id(dst, "Style")
         sources.append(s_id)
         targets.append(t_id)
         values.append(count)
@@ -229,7 +251,7 @@ def generate_sankey():
         targets.append(t_id)
         values.append(count)
         
-    # Sty -> O
+    # Style -> Outfit
     for (src, dst), count in top_st2o:
         s_id = get_id(src, "Style")
         t_id = get_id(dst, "Outfit")
@@ -237,35 +259,42 @@ def generate_sankey():
         targets.append(t_id)
         values.append(count)
         
+    # Aesthetic Palette
+    COLOR_BLUE = '#5C42E2'
+    COLOR_PURPLE = '#A163E5'
+    COLOR_PINK = '#FF6B8B'
+
     # Plot
     fig = go.Figure(data=[go.Sankey(
         node=dict(
             pad=15,
-            thickness=20,
-            line=dict(color="black", width=0.5),
+            thickness=15,
+            line=dict(color="#333", width=0.5),
             label=labels,
-            # Color logic: Purple (Char), Blue (Scene), Yellow (Style), Green (Outfit)
-            color=["#e1bee7" if "Char:" in l else 
-                   "#e1f5fe" if "Scene:" in l else 
-                   "#fff9c4" if "Style:" in l else 
-                   "#e8f5e9" for l in labels]
+            # Color logic: Alignment with Section 1
+            color=[COLOR_BLUE if "Scene:" in l else 
+                   COLOR_PURPLE if "Style:" in l else 
+                   COLOR_PINK if "Outfit:" in l else 
+                   COLOR_BLUE for l in labels]
         ),
         link=dict(
             source=sources,
             target=targets,
-            value=values
+            value=values,
+            label=[str(v) for v in values],
+            color="rgba(161, 99, 229, 0.4)"
         )
     )])
     
     fig.update_layout(
-        title_text="Tag Distribution Flow (Character -> Scene -> Style -> Outfit)",
+        title_text="Tag Distribution Flow (Scene -> Style -> Outfit)",
         font_size=10,
         height=800,
         width=1600
     )
     
-    output_path = Path("output/reports/tag_distribution_sankey.html")
-    img_path = Path("output/reports/tag_distribution_sankey.png")
+    output_path = Path("auditing/reports/tag_distribution_sankey.html")
+    img_path = Path("auditing/reports/tag_distribution_sankey.png")
     
     fig.write_html(str(output_path))
     print(f"Saved HTML to {output_path}")
@@ -279,57 +308,31 @@ def generate_sankey():
 
     # Generate Mermaid Diagram (Limit to Top 60 for edge safety)
     MERMAID_N = 60
-    mermaid_c2s = get_top_links(c2s, MERMAID_N)
-    mermaid_s2st = get_top_links(s2st, MERMAID_N)
-    mermaid_st2o = get_top_links(st2o, MERMAID_N)
+    mermaid_s2st = get_top_links(s2st, 200)
+    mermaid_st2o = get_top_links(st2o, 200)
 
-    mermaid_path = Path("output/reports/tag_distribution_flow.md")
-    generate_mermaid(mermaid_c2s, mermaid_s2st, mermaid_st2o, mermaid_path)
+    mermaid_path = Path("auditing/reports/tag_distribution_flow.md")
+    generate_mermaid(mermaid_s2st, mermaid_st2o, mermaid_path)
     print(f"Saved Mermaid Markdown to {mermaid_path}")
 
-def generate_mermaid(c2s, s2st, st2o, output_path):
-    with open(output_path, 'w', encoding='utf-8') as f:
+def generate_mermaid(s2st, st2o, output_path):
+    import json
+    with open(output_path, 'w', encoding='utf-8', newline='\n') as f:
         f.write("# Tag Distribution Flow\n\n")
         f.write("```mermaid\n")
-        f.write("graph LR\n")
+        f.write("sankey-beta\n")
         
-        # Styling
-        f.write("  classDef char fill:#e1bee7,stroke:#4a148c,stroke-width:2px,color:#000;\n")
-        f.write("  classDef scene fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000;\n")
-        f.write("  classDef artstyle fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,color:#000;\n")
-        f.write("  classDef outfit fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000;\n\n")
-        
-        def clean_id(label):
-            # Create a safe ID for Mermaid
-            clean = "".join(c for c in label if c.isalnum())
-            return clean if clean else "node"
+        def clean_label(text):
+            safe = "".join(c for c in text if c.isalnum() or c in " /-")
+            return f'"{safe[:30].strip()}"'
 
-        # Char -> Scene
-        f.write("  %% Character Tags -> Scene Tags\n")
-        for (src, dst), count in c2s:
-            s_id = "C_" + clean_id(src)
-            t_id = "S_" + clean_id(dst)
-            f.write(f"  {s_id}([{src}]) -->|{count}| {t_id}([{dst}])\n")
-            f.write(f"  class {s_id} char\n")
-            f.write(f"  class {t_id} scene\n")
-            
         # Scene -> Style
-        f.write("\n  %% Scene Tags -> Style Tags\n")
         for (src, dst), count in s2st:
-            s_id = "S_" + clean_id(src)
-            t_id = "St_" + clean_id(dst)
-            f.write(f"  {s_id} -->|{count}| {t_id}[{dst}]\n")
-            f.write(f"  class {s_id} scene\n")
-            f.write(f"  class {t_id} artstyle\n")
+            f.write(f"{clean_label(src)},{clean_label(dst)},{count}\n")
 
         # Style -> Outfit
-        f.write("\n  %% Style Tags -> Outfit Tags\n")
         for (src, dst), count in st2o:
-            s_id = "St_" + clean_id(src)
-            t_id = "O_" + clean_id(dst)
-            f.write(f"  {s_id} -->|{count}| {t_id}({dst})\n")
-            f.write(f"  class {s_id} artstyle\n")
-            f.write(f"  class {t_id} outfit\n")
+            f.write(f"{clean_label(src)},{clean_label(dst)},{count}\n")
             
         f.write("```\n")
 

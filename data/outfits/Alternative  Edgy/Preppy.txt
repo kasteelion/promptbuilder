@@ -1,23 +1,46 @@
 tags: [Edgy, School]
 
 [F]
-- **Top:** Cardigan or sweater vest layered over **collared shirt**
-- **Bottom:** pleated skirt or chinos
-- **Footwear:** loafers or oxfords.
+- **Top:** Cardigan or sweater vest layered over collared shirt.
+  - **Fit:** Fitted layered.
+  - **Material:** Cotton knit; Poplin.
+  - **Pattern:** Argyle or Solid.
+  - **Neckline:** Collared V-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Pleated skirt or chinos.
+  - **Fit:** Pleated A-line.
+  - **Material:** Cotton twill.
+  - **Pattern:** Plaid or Solid.
+  - **Waist:** Mid-rise.
+  - **Length:** Mini or Knee-length.
+- **Footwear:** Loafers or oxfords.
 - **Accessories:** Watch, simple studs, crossbody bag.
-- **Hair/Makeup:** Clean, polished styling.
 
 [M]
-- **Top:** Cardigan or sweater vest layered over **collared polo or shirt**
-- **Bottom:** chinos or dress shorts
-- **Footwear:** boat shoes or loafers.
+- **Top:** Cardigan or sweater vest layered over collared polo.
+  - **Fit:** Classic fit.
+  - **Material:** Cotton knit.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long or Short sleeves.
+- **Bottom:** Chinos or dress shorts.
+  - **Fit:** Straight leg.
+  - **Material:** Chino cloth.
+  - **Waist:** Natural belt line.
+  - **Length:** Ankle or Knee.
+- **Footwear:** Boat shoes or loafers.
 - **Accessories:** Watch, simple jewelry, messenger bag.
-- **Hair/Makeup:** Clean, polished styling.
 
 [H]
-- **Hijab:** Cotton hijab in sage green with simple neat wrap
-- **Top:** Cardigan over long-sleeve button-down tunic in white (structured, falls to mid-thigh)
-- **Bottom:** High-waist straight-leg jeans in dark wash or pleated midi skirt
-- **Footwear:** Brown leather loafers
-- **Accessories:** Delicate gold hoops, simple watch, canvas tote bag with books
-- **Makeup:** Clean, polished natural makeup
+- **Hijab:** Cotton hijab in sage green with simple neat wrap.
+- **Top:** Cardigan over long-sleeve button-down tunic.
+  - **Fit:** Structured modest tunic.
+  - **Material:** Cotton poplin.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist straight-leg jeans or pleated midi skirt.
+  - **Fit:** Straight leg.
+  - **Material:** Denim or Twill.
+  - **Waist:** High-waist.
+  - **Length:** Ankle or Midi.
+- **Footwear:** Brown leather loafers.
+- **Accessories:** Delicate gold hoops, simple watch, canvas tote bag.

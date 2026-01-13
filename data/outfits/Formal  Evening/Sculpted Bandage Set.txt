@@ -1,21 +1,47 @@
 tags: [Avant-Garde, Edgy, Fashion, formal]
 
 [F]
-- **Top:** Midi-length bandage dress (constructed from heavy, elasticated ((default:black) or (signature)) ribbing designed to sculpt and define the silhouette)
-- **Bottom:** Cross-over halter neckline (((default:charcoal) or (signature)) accent straps that create a structural "X" shape across the chest).
-- **Accessories:** Strappy ((default:silver) or (signature)) high heels; vintage-inspired gold clutch; statement cocktail ring.
-- **Hair/Makeup:** Voluminous Hollywood waves; sultry smoky eye in charcoal and ((default:black) or (signature)); deep plum or crimson lipstick.
+- **Top:** Heavy elasticated ribbing bandage bodice.
+  - **Fit:** Extreme bodycon compression.
+  - **Material:** Heavy elasticated ribbing.
+  - **Pattern:** Structural "X" with {secondary_color} accent straps.
+  - **Neckline:** Cross-over halter.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Matching bandage midi skirt.
+  - **Fit:** Structural bodycon.
+  - **Material:** matching ribbing.
+  - **Waist:** Sculpted natural waist.
+  - **Length:** Midi length.
+- **Footwear:** Strappy high heels.
+- **Accessories:** Vintage gold clutch; cocktail ring.
 
 [M]
-- **Top:** Sculpted compression suit (constructed from heavy, elasticated ((default:black) or (signature)) ribbing designed to define the athletic silhouette)
-- **Bottom:** Cross-over chest harness (((default:charcoal) or (signature)) accent straps that create a structural "X" shape across the torso).
-- **Accessories:** Polished **((default:silver) or (signature))** dress shoes; metallic wrist cuff; statement ring.
-- **Hair/Makeup:** Neatly styled hair with high volume; sharp features; intense focused expression.
+- **Top:** Sculpted compression suites with chest harness.
+  - **Fit:** Athletic compression sculpt.
+  - **Material:** Heavy elasticated ribbing.
+  - **Pattern:** Cross-over {secondary_color} chest harness straps.
+  - **Neckline:** Crew neck with harness.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching compression pants.
+  - **Fit:** Sculpted tight.
+  - **Material:** matching.
+  - **Waist:** Natural waist.
+  - **Length:** Full length.
+- **Footwear:** Polished dress shoes.
+- **Accessories:** Metallic wrist cuff; statement ring.
 
 [H]
-- **Hijab:** Heavy silk hijab in **((default:black) or (signature))** with an elegant formal wrap.
-- **Top:** Sculpted bandage gown (long-sleeve, modest high-neck design, constructed from heavy **((default:black) or (signature))** elasticated ribbing); Cross-over strap detailing (**((default:charcoal) or (signature))** accent straps creating a structural "X" shape across the chest).
-- **Bottom:** Matching sculpted maxi skirt (floor-length, form-fitting).
-- **Footwear:** Strappy **((default:silver) or (signature))** high heels or elegant flats.
-- **Accessories:** Vintage-inspired gold clutch; statement cocktail ring.
-- **Makeup:** Sultry smoky eye in charcoal and **((default:black) or (signature))**; deep plum or crimson lipstick.
+- **Hijab:** Heavy silk hijab in {primary_color}.
+- **Top:** Long-sleeve bandage gown with high neck.
+  - **Fit:** Sculpted modest fit.
+  - **Material:** Heavy elasticated ribbing.
+  - **Pattern:** Cross-over {secondary_color} strap detailing.
+  - **Neckline:** High modest neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching sculpted floor-length skirt.
+  - **Fit:** Maxi skirt flow.
+  - **Material:** matching ribbing.
+  - **Waist:** Sculpted waist.
+  - **Length:** Floor-length.
+- **Footwear:** Gold or polished shoes.
+- **Accessories:** Gold clutch.

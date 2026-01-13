@@ -1,0 +1,87 @@
+# METADATA
+Scene: Hard court surface, white boundary lines, net stretched across center, baseline visible, competitive atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Sina Tuilagi | Outfit: Pop Star - Futuristic Glam | Pose: None
+Character: Enzo Rossi | Outfit: Flamenco | Pose: None
+Character: Esme Dubois | Outfit: Pop Star - Futuristic Glam | Pose: None
+Interaction: Custom
+Score: 190
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Hard court surface, white boundary lines, net stretched across center, baseline visible, competitive atmosphere.
+---
+
+**CHARACTER: Sina Tuilagi**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with wave softness; balanced proportions with moderate shoulders, defined waist, and rounded hips; moderate vertical (5'6"-5'7"); athletic-natural build with functional strength, soft curves over muscle, powerful legs, strong core, and grounded Pacific Islander physicality; traditional tatau (pe'a-inspired geometric patterns) visible on left thigh and right shoulder/upper arm; commanding warm presence combining ancestral strength with contemporary confidence.
+
+* **Face:** Balanced-soft facial structure with strong underlying bones; round-oval face shape with full cheeks and gentle breadth; moderate-to-wide midface with prominent cheekbones creating natural definition; large almond-shaped eyes with moderate spacing, deep brown to black irises, warm direct gaze; broad nose with rounded bridge and full tip; strong rounded jawline; neutral resting expression shows calm pride with slight natural smile and warm welcoming eye contact; expressions are openly warm and culturally confident.
+
+* **Hair:** Type 3A; very high density; long length past shoulders; no defined part, naturally voluminous; low-to-moderate sheen with healthy texture; commonly worn loose and full with natural curl pattern, half-up with decorative clip, or in low bun with face-framing waves; deep black-brown with warm undertones and natural dimension.
+
+* **Skin:** Deep tan with warm golden-brown undertones and natural luminous finish; bronze-to-brown complexion with sun-kissed richness; smooth healthy texture with island resilience; tatau (traditional Samoan tattoos) visible with cultural geometric patterns in black ink.
+**Outfit:**
+- **Top:** Metallic or holographic bodysuit (form-fitting with geometric cutouts, iridescent blue and silver)
+- **Bottom:** armored shoulder piece (asymmetric, sculptural design on one shoulder)
+- **Footwear:** short pleated skirt (black with metallic blue overlay or trim); **thigh-high stockings** (black opaque or with blue accents); **platform boots** (knee-high, futuristic design with metallic details).
+- **Accessories:** Statement hair piece (large geometric or crystalline design), futuristic jewelry (angular, metallic), LED or light-up elements optional, microphone prop.
+- **Hair/Makeup:** Dramatic avant-garde hairstyle (high fashion updo, sleek ponytail, or bold color - blue, purple, silver), holographic or metallic makeup with shimmer, graphic eyeliner, glossy lips, confident stage presence, pop star energy.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe, Crouched in starting position, hands on ground, explosive ready stance, Intense focus.
+---
+
+**CHARACTER 2: Enzo Rossi**
+**Appearance:**
+- **Body:** Dramatic Natural male frame; straight muscular flesh with low body fat; inverted triangle proportions with a broad chest, powerful shoulders, and defined arms; moderate-tall vertical (6'1"-6'2"); commanding presence with a solid, grounded build; athletic power without being over-bulked.
+- **Face:** Angular sculpted structure; square-leaning oval face; strong set jawline with a prominent chin; intense deep-set eyes, almond-shaped, dark espresso brown with a focused and assessing gaze; natural thick eyebrows with a slight downward slant at the inner corners; strong straight nose with a subtle Grecian profile; firm-but-expressive mouth held in a restrained confident line; neutral expression is intense and authoritative.
+- **Hair:** Type 2A–2B waves; medium-high density; medium-length layered cut with natural volume; worn tousled and pushed back; no rigid part; soft natural sheen; rich jet black with a healthy finish.
+- **Skin:** Warm olive skin with a smooth matte texture (Mediterranean heritage); even tone with a natural "healthy" radiance; clear planes with no visible imperfections; natural groomed finish.
+**Outfit:**
+- **Top:** High-waist black trousers (fitted through thigh, slight flare at ankle)
+- **Bottom:** white dress shirt (crisp cotton, worn with rolled sleeves or vest)
+- **Footwear:** short bolero jacket or vest (black or red with embroidery); **flamenco shoes** (heeled with nails).
+- **Accessories:** Wide red or black sash at waist, optional hat.
+- **Hair/Makeup:** Slicked hair, clean-shaven or neat facial hair, passionate expression.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with both arms raised and flexed at 90 degrees, fists curled inward, showing maximum arm and shoulder definition, vacuum-waist pose.
+---
+
+**CHARACTER 3: Esme Dubois**
+**Appearance:**
+- **Body:** Dramatic Classic frame; straight refined flesh with minimal softness; narrow balanced proportions with long limbs and a graceful neck; tall-moderate vertical (5'8"-5'9"); lean disciplined build—visible muscle tone from years of ballet without bulk; high-poised presence—seems to hover rather than walk.
+- **Face:** Long classical facial structure; oval face shape with refined planar features; high forehead and a delicate-yet-firm jawline; deep-set calm gray-blue eyes, wide-spaced, reflecting a serene and analytical mind; straight defined nose; thin-moderate lips held in a composed line; serene neutral expression that reads as sophisticated and observant.
+- **Hair:** Type 1 straight; high density but fine texture; long length past mid-back; sleek silk-like finish; center-parted; commonly worn in a tight low ballerina bun (polished), or loose and tucked behind the ears (casual refinement); deep cool dark brown.
+- **Skin:** Fair neutral skin with luminous clarity and smooth texture; minimal visible pores or imperfections; translucent quality at the temples; natural healthy glow from a meticulous skincare routine.
+**Outfit:**
+- **Top:** Metallic or holographic bodysuit (form-fitting with geometric cutouts, iridescent blue and silver)
+- **Bottom:** armored shoulder piece (asymmetric, sculptural design on one shoulder)
+- **Footwear:** short pleated skirt (black with metallic blue overlay or trim); **thigh-high stockings** (black opaque or with blue accents); **platform boots** (knee-high, futuristic design with metallic details).
+- **Accessories:** Statement hair piece (large geometric or crystalline design), futuristic jewelry (angular, metallic), LED or light-up elements optional, microphone prop.
+- **Hair/Makeup:** Dramatic avant-garde hairstyle (high fashion updo, sleek ponytail, or bold color - blue, purple, silver), holographic or metallic makeup with shimmer, graphic eyeliner, glossy lips, confident stage presence, pop star energy.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe, One foot on the skateboard, the other pushing off the ground, mid-motion, forward momentum.
+---
+
+**Additional Notes:**
+Sina Tuilagi and Enzo Rossi standing face-to-face in dramatic promotional poster composition, positioned at center frame. Both in fighting stance but staged for camera—bodies angled 30-degrees toward each other, shoulders square to viewer. Faces are close, approximately 12-18 inches apart, eyes locked in intense stare-down. Chins slightly lowered, jaws clenched, expressions fierce and determined. Fists raised between them at chest/face height in guard position, knuckles nearly touching. Dramatic lighting from above and sides creating strong shadows and highlights on facial features and muscle definition. Background can be dark, smoky, or gradient. Both fighters mental intensity. Optional: flames, arena lights, or promotional graphics in background. Stance is powerful and symmetrical, weight evenly distributed, projecting equal threat and confidence.

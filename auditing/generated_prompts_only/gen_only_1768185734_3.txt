@@ -1,0 +1,61 @@
+# METADATA
+Scene: Lush greenery and flowering plants on a modern rooftop overlooking a sprawling city skyline. The sky is a gradient of deep orange and purple, casting a warm, romantic glow over the scene. Peaceful, sophisticated energy.
+Base_Prompt: Low-Poly 3D
+Character: Marisol Rivera | Outfit: Retro Bowling | Pose: None
+Character: Julian Blackwood | Outfit: Retro Bowling | Pose: None
+Score: 380
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Lush greenery and flowering plants on a modern rooftop overlooking a sprawling city skyline. The sky is a gradient of deep orange and purple, casting a warm, romantic glow over the scene. Peaceful, sophisticated energy.
+---
+
+**CHARACTER: Marisol Rivera**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; compact balanced proportions with defined waist, toned limbs, and visible muscle definition; moderate vertical (5'5"-5'6"); athletic build with clean controlled lines, functional strength, and mixed-heritage features—Japanese bone structure with Puerto Rican curves, creating distinctive balanced aesthetics; athletic graceful presence.
+* **Face:** Balanced classical structure with mixed heritage features; oval face with subtle Japanese angularity softened by Puerto Rican warmth; firm clean planes; calm almond-shaped eyes that tilt slightly upward (Japanese influence) with warm expressive quality (Puerto Rican warmth), moderately spaced, dark brown; defined jawline; neutral expression shows calm composure with subtle knowing smile that brightens when engaged; beauty mark near left eye.
+* **Hair:** Type 1B-1C straight with slight natural wave; medium-high density; long sleek cut with healthy satin sheen; dark brown to black; versatile styling options including ponytails and braids.
+* **Skin:** Warm golden-olive skin with bronzed finish and natural radiance.
+**Outfit:**
+- **Top:** Retro button-down **bowling shirt** (two-tone, name embroidered on chest)
+- **Top:** **Polo shirt** tucked in
+- **Bottom:** Cuffed **jeans** or **capris**
+- **Bottom:** **A-line skirt** (knee length)
+- **Footwear:** **Rental bowling shoes** (red and blue/tan leather, distinct look)
+- **Accessories:** Wrist brace, towel tucked in waistband.
+- **Hair/Makeup:** Ponytail or pinned back hair.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Standing at foul line, bowling ball held at chest height with both hands, focused gaze down the lane at pins, knees slightly bent, ready stance before approach.
+---
+
+**CHARACTER 2: Julian Blackwood**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; moderate height (5'8"); soft, slightly fleshy build but not overweight; narrow, sloping shoulders; delicate hands with long fingers (piano hands); fluid, languid physicality.
+* **Face:** Soft, oval shape with a "baby face" quality; full, pouty lips; large, liquid eyes in a pale grey-green; heavy, dark brows; permanent dark circles under eyes that enhance the "brooding" look.
+* **Hair:** Type 3A curls; high density; shoulder-length "wolf cut" or shag; messy, falling into eyes; dark chocolate brown, almost black.
+* **Skin:** Very pale/alabaster; cool undertones; translucent quality (veins visible on inner arms); scattering of tattoos on hands and neck.
+**Outfit:**
+- **Top:** Retro button-down **bowling shirt** (two-tone, name embroidered on chest)
+- **Top:** **Polo shirt**
+- **Bottom:** Straight-leg **chinos** or **jeans**
+- **Footwear:** **Rental bowling shoes** (red and blue/tan leather)
+- **Accessories:** Wrist brace, rosin bag.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Wide confident stance, head tilted back, hand making rock sign, rebellious energy.
+---

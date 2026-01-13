@@ -1,0 +1,76 @@
+# METADATA
+Scene: Foggy waterfront warehouse, wooden crates, dim overhead bulbs, noir crime scene atmosphere, mysterious shadows.
+Base_Prompt: Artgerm Style: "Luminous Digital Fantasy"
+Character: Chiara Lombardi | Outfit: Bridal Lingerie | Pose: None
+Character: Astrid Nielsen | Outfit: Bridal Lingerie | Pose: None
+Character: Silas Burnside | Outfit: Bridal Lingerie | Pose: None
+Score: 175
+
+Generate an image of: Rendering
+Hyper-polished digital airbrushing. Skin is rendered to look like porcelain or high-quality silicone. Lighting is dramatic, usually featuring a strong cool rim light on one side and a warm key light on the other.
+
+Character Accuracy
+The "Supermodel" face: perfect symmetry, small nose, full lips, large almond eyes. Makeup is always flawless and high-fashion. Expressions are confident, alluring, and piercing.
+
+Body Types
+Idealized "Comic Book Hero" proportions. Athletic but curvy, with impossible grace. Muscles are defined but smooth. The figure always has a sense of "floating" or weightless elegance.
+
+Hair & Clothing
+Hair: The signature element—rendered as flowing liquid silk with incredible volume and distinct individual strands flowing in the wind. Clothing: Tight-fitting, glossy textures (latex, metal, silk).
+
+Details
+Subtle particle effects (embers, petals). The background is usually a solid color gradient or a simple abstract halo to keep the focus entirely on the character's face and lighting.
+
+---
+
+**SCENE/SETTING:**
+Foggy waterfront warehouse, wooden crates, dim overhead bulbs, noir crime scene atmosphere, mysterious shadows.
+---
+
+**CHARACTER: Chiara Lombardi**
+**Appearance:**
+* **Body:** Soft Classic frame; natural–wave flesh blend; balanced proportions with gentle curve; moderate vertical.
+* **Face:** Balanced sculpted facial structure; oval face; soft cheek fullness; strong brows; expressive eyes; calm knowing expression.
+* **Hair:** Type 2B–2C waves; high density; layered medium-long cut; natural volume; loose part; satin finish.
+* **Skin:** Warm Mediterranean-toned skin with healthy glow.
+**Outfit:**
+- **Top:** White lace corset bustier; intricate beadwork
+- **Bottom:** Matching white lace thong; sheer white stockings with lace tops
+- **Footwear:** White satin bridal heels with ankle strap
+- **Accessories:** Short tulle veil; garter belt (blue ribbon detail); pearl necklace
+- **Hair/Makeup:** Half-up half-down hairstyle; soft bridal makeup; glowing skin
+**Pose/Action:**
+full body shot showing the character from head to toe, Regal standing position, chin lifted, arms positioned with divine authority, ethereal commanding presence.
+---
+
+**CHARACTER 2: Astrid Nielsen**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight flesh; narrow balanced rectangle proportions; tall vertical line; refined posture with precise alignment; statuesque and poised.
+* **Face:** Long balanced facial structure; soft oval face; firm planar skin with clear definition; narrow straight nose; light blue deep-set eyes with cool observant gaze; serene neutral resting expression that suggests depth and composure.
+* **Hair:** Type 1 straight hair; medium density; platinum blonde with smooth high-shine finish; naturally straight and fine; takes blunt, precise cuts well.
+* **Skin:** Fair cool-toned skin with porcelain clarity and smooth even texture.
+**Outfit:**
+- **Top:** White lace corset bustier; intricate beadwork
+- **Bottom:** Matching white lace thong; sheer white stockings with lace tops
+- **Footwear:** White satin bridal heels with ankle strap
+- **Accessories:** Short tulle veil; garter belt (blue ribbon detail); pearl necklace
+- **Hair/Makeup:** Half-up half-down hairstyle; soft bridal makeup; glowing skin
+**Pose/Action:**
+full body shot showing the character from head to toe, Showing back, looking over shoulder, hair swept to one side, elegant revealing pose.
+---
+
+**CHARACTER 3: Silas Burnside**
+**Appearance:**
+* **Body:** Flamboyant Natural; bear-like frame; broad, heavy shoulders and a deep barrel chest; thick functional muscle covered by a healthy layer of "winter insulation"; tall vertical (6'3"-6'5"); massive, calloused hands; moves with a heavy, confident lumber.
+* **Face:** Broad, square structure with weathered, rosy cheeks; warm crinkling eyes that disappear when he smiles; and his signature grooming: thick, bushy sideburns that flare out and connect to a heavy mustache, leaving his strong, square chin completely clean-shaven (the classic "Friendly Mutton Chops").
+* **Hair:** Type 1B-2A; thick, coarse density; short, practical cut often messy from hat wear; salt-and-pepper coloring.
+* **Skin:** Fair-to-medium; cool undertones; perpetually wind-chapped or sun-reddened; rugged texture with deep laugh lines.
+**Outfit:**
+- **Top:** White silk open shirt
+- **Bottom:** White silk boxers
+- **Footwear:** Barefoot
+- **Accessories:** Silver watch; wedding band
+- **Hair/Makeup:** Neatly groomed; soft smile
+**Pose/Action:**
+full body shot showing the character from head to toe, Leaning against a soft surface, one hand near the collarbone, eyes half-closed in a dreamy, high-fashion look.
+---

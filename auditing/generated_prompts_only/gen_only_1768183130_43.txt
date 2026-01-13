@@ -1,0 +1,76 @@
+# METADATA
+Scene: Pristine lab environment, stainless steel benches, microscopes, glass beakers, glowing chemical samples, cold professional lighting.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Yuki Tanaka | Outfit: American Football | Pose: None
+Character: Diesel Murphy | Outfit: American Football | Pose: None
+Character: Maki Cruz | Outfit: American Football | Pose: None
+Score: 530
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Pristine lab environment, stainless steel benches, microscopes, glass beakers, glowing chemical samples, cold professional lighting.
+---
+
+**CHARACTER: Yuki Tanaka**
+**Appearance:**
+- **Body:** Romantic frame; wave plush softness; lush hourglass proportions with a defined waist and soft rounded curves; moderate vertical (5'4"-5'5"); soft and inviting presence with a delicate-yet-grounded build; "tranquil strength" presence—quietly durable but appearing fragile.
+- **Face:** Rounded-soft facial structure; heart-shaped face with high-but-soft cheekbones; smooth clear planes; large expressive almond-shaped eyes, deep dark brown, reflecting a gentle and observant nature; soft-tapered eyebrows in a natural arc; refined nose with a soft bridge; full youthful lips held in a shy-but-warm expression that radiates a quiet, intimate confidence.
+- **Hair:** Type 2A waves; high density; long length past shoulders; silky dark obsidian hair with natural volume and a luminous healthy sheen; side-parted with soft-framed layers; takes soft, romantic styling well; commonly worn in loose curls or pinned back with a delicate accessory.
+- **Skin:** Light warm skin with soft golden-cream undertones (Japanese heritage); smooth satin finish with a natural healthy glow; flawless texture maintained by traditional and modern skincare.
+**Outfit:**
+- **Top:** Molded shoulder pads (rigid, high-gloss black plastic shells with a distinct, thick outer edge that is clearly separate from the fabric underneath
+- **Bottom:** protective design and Standard Team logo shield reflecting stadium lights sharply)
+- **Footwear:** Sports performance top (crop-style in **black with white accents**, wearing sticky receiver gloves and a streamlined helmet visor, made of ultra-matte moisture-wicking compression fabric that absorbs light, showing slight compression wrinkles where the rigid edge of the shoulder pad presses against the body); Low-rise athletic shorts (minimal coverage design in black with white accents, team number on hip); Compression arm sleeves (black extending to mid-bicep with white striping); Athletic socks (knee-high black or mixed black with white bands); Professional football cleats (Nike or Adidas style with blue detailing). Accessories: Hockey-style helmet with clear polycarbonate visor and Standard Team branding, black athletic headband worn under helmet, Standard Team-branded gloves with grip palms, knee pads with logo, eye black strips, blue wristbands, athletic tape on fingers. Hair/Makeup: Long hair in high ponytail, braids, or curls secured with headband for mobility, camera-ready makeup with defined eyes and contouring, waterproof and sweat-resistant long-wear formula, natural glam suitable for stadium lighting and broadcast television.
+- in **black with white accents**, wearing sticky receiver gloves and a streamlined helmet visor
+**Pose/Action:**
+full body shot showing the character from head to toe, Mid-punch or kick to heavy bag, dynamic motion, powerful extension, training intensity.
+---
+
+**CHARACTER 2: Diesel Murphy**
+**Appearance:**
+* **Body:** Natural frame; straight athletic flesh with functional density; balanced proportions with broadened shoulders from upper body work, minimal waist definition, and straight hip line; moderate-to-tall vertical (5'7"-5'8"); working-class athletic build with developed forearms and shoulders from mechanical work, strong hands, visible core strength, practical muscle without aesthetic focus; distinctly female frame with masculine presentation and movement patterns; grounded capable presence.
+
+* **Face:** Balanced-angular structure; square-to-rectangular face shape with broad forehead and strong defined jawline; minimal midface projection with subtle cheekbones; medium-to-small eyes with moderate-close spacing, hazel-brown color, minimal lid exposure, direct no-nonsense gaze; straight broad nose with flat bridge and squared tip; strong angular jawline with masculine definition; neutral resting expression shows calm confidence with closed-mouth straight line and steady assessing gaze; rare smile is crooked and genuine.
+
+* **Hair:** Type 2A; medium density; very short length (pixie-to-undercut style); no defined part, textured and pushed back; matte finish; commonly worn tousled and practical, sometimes with small amount of pomade for control; dark brown with sun-lightened tips from outdoor work.
+
+* **Skin:** Light-medium tone with neutral-warm undertones and natural matte finish; scattered scars on hands and forearms from mechanical work; permanent grease staining under short fingernails and in hand creases; sun exposure on forearms and face; textured from outdoor work.
+**Outfit:**
+- **Top:** Molded shoulder pads (rigid, high-gloss black plastic shells with a distinct, thick outer edge that is clearly separate from the fabric underneath
+- **Bottom:** protective design and Standard Team logo shield reflecting stadium lights sharply)
+- **Footwear:** Sports performance top (crop-style in **white with black accents**, wearing extra-large shoulder pads and a neck roll for neck protection, made of ultra-matte moisture-wicking compression fabric that absorbs light, showing slight compression wrinkles where the rigid edge of the shoulder pad presses against the body); Low-rise athletic shorts (minimal coverage design in black with white accents, team number on hip); Compression arm sleeves (black extending to mid-bicep with white striping); Athletic socks (knee-high black or mixed black with white bands); Professional football cleats (Nike or Adidas style with blue detailing). Accessories: Hockey-style helmet with clear polycarbonate visor and Standard Team branding, black athletic headband worn under helmet, Standard Team-branded gloves with grip palms, knee pads with logo, eye black strips, blue wristbands, athletic tape on fingers. Hair/Makeup: Long hair in high ponytail, braids, or curls secured with headband for mobility, camera-ready makeup with defined eyes and contouring, waterproof and sweat-resistant long-wear formula, natural glam suitable for stadium lighting and broadcast television.
+- in **white with black accents**, wearing extra-large shoulder pads and a neck roll for neck protection
+**Pose/Action:**
+full body shot showing the character from head to toe, Defensive position, one arm extended in fist, other protecting face, alert watchful expression.
+---
+
+**CHARACTER 3: Maki Cruz**
+**Appearance:**
+* **Body:** Flamboyant Natural; straight athletic flesh with lean definition; balanced proportions; subtle shoulder width; straight hip line; moderate vertical (5'6"-5'7"); functional athletic build with core strength; developed calves and quadriceps; visible forearm definition; grounded street-athlete presence.
+* **Face:** Balanced-soft structure; rounded square shape; broad forehead; softly defined jawline; midface cheekbone prominence with subtle definition; medium almond-shaped eyes; moderate spacing; dark brown to black irises; monolid or minimal crease structure; direct casual gaze; broad nose bridge with rounded tip; neutral resting expression shows relaxed confidence with a slight asymmetric smirk.
+* **Hair:** Type 1B; high density; straight silhouette with medium length to shoulders; no defined part; pushed back casually; matte to low-sheen finish; commonly worn loose and natural, tucked behind ears, or in a low messy bun. Deep black-brown.
+* **Skin:** Medium tan; warm golden-yellow undertones; natural matte finish; healthy resilience; scattered small scars on elbows and knees.
+**Outfit:**
+- **Top:** Molded shoulder pads (rigid, high-gloss black plastic shells with a distinct, thick outer edge that is clearly separate from the fabric underneath
+- **Bottom:** protective design and Standard Team logo shield reflecting stadium lights sharply)
+- **Footwear:** Sports performance top (crop-style , made of ultra-matte moisture-wicking compression fabric that absorbs light, showing slight compression wrinkles where the rigid edge of the shoulder pad presses against the body); Low-rise athletic shorts (minimal coverage design in black with white accents, team number on hip); Compression arm sleeves (black extending to mid-bicep with white striping); Athletic socks (knee-high black or mixed black with white bands); Professional football cleats (Nike or Adidas style with blue detailing). Accessories: Hockey-style helmet with clear polycarbonate visor and Standard Team branding, black athletic headband worn under helmet, Standard Team-branded gloves with grip palms, knee pads with logo, eye black strips, blue wristbands, athletic tape on fingers. Hair/Makeup: Long hair in high ponytail, braids, or curls secured with headband for mobility, camera-ready makeup with defined eyes and contouring, waterproof and sweat-resistant long-wear formula, natural glam suitable for stadium lighting and broadcast television.
+-
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with a skateboard tucked under one arm, relaxed posture, urban background.
+---

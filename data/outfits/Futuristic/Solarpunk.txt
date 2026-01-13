@@ -1,0 +1,53 @@
+modifiers:
+  Botanic: in **photosynthetic-green bio-fabric**
+  Cloud: in **white aerogel-linen blend**
+  Sun: in **iridescent amber solar-silk**
+
+tags: [Futuristic, Eco, Nature]
+
+[F]
+- **Top:** Asymmetric wrap tunic {modifier}.
+  - **Fit:** Relaxed; Draped.
+  - **Material:** Breathable linen; Bio-fabric.
+  - **Pattern:** Photovoltaic embroidery patterns.
+  - **Neckline:** Asymmetric wrap.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** High-waisted culottes.
+  - **Fit:** Structured; Flared.
+  - **Material:** Bamboo-fiber twill.
+  - **Pattern:** Integrated solar-cell trim.
+  - **Waist:** High-waisted.
+  - **Length:** Mid-calf (culottes).
+- **Footwear:** Ergonomic sandals from recycled mycelium leather and cork.
+- **Accessories:** Hydroponic glass-vial pendant; 3D-printed bioplastic bracelet.
+
+[M]
+- **Top:** Mandarin-collar field shirt {modifier}.
+  - **Fit:** Standard fit; Rolled sleeves.
+  - **Material:** Breathable hemp-silk.
+  - **Pattern:** Solar-panel shoulder patches.
+  - **Neckline:** Mandarin collar.
+  - **Sleeve:** Long (rolled).
+- **Bottom:** Practical gardener overalls.
+  - **Fit:** Durable; Loose fit.
+  - **Material:** Organic canvas.
+  - **Waist:** Reinforced knees.
+  - **Length:** Full.
+- **Footwear:** Woven hemp sneakers with plant-based rubber sole.
+- **Accessories:** Smart-watch (holographic); reusable hydration pack.
+
+[H]
+- **Hijab:** Cooling bio-silk hijab {modifier} with translucent layered drape.
+- **Top:** Long-line kimono-style jacket.
+  - **Fit:** Modest loose.
+  - **Material:** Bio-silk; Living-moss trim.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Fluid wide-leg trousers.
+  - **Fit:** Fluid.
+  - **Material:** Tencel fabric.
+  - **Pattern:** Solid.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Minimalist recycled platform sandals.
+- **Accessories:** Leaf-shaped solar brooch; AR glasses.

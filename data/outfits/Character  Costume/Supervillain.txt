@@ -5,23 +5,45 @@ modifiers:
   Classic: , wearing a spandex bodysuit with a cape
 
 [F]
-- **Top:** ((default:Black) or (signature)) **armored bodice** (structured leather or plating with angular cutouts and distinct **shoulder guards**){modifier}
-- **Bottom:** **asymmetric floor-length loincloth** or split skirt worn over **fitted leggings**
-- **Footwear:** thigh-high **armored boots** with metal hardware.
-- **Accessories:** Elbow-length **gauntlets** or leather arm wraps, wide belt with heavy metallic ring buckle, optional cape.
-- **Hair/Makeup:** Smoky eye makeup, dark lipstick, hair slicked back or in a high combat ponytail.
+- **Top:** Armored bodice with shoulder guards ((default:black)) {modifier}.
+  - **Fit:** Structured; Angular cutouts.
+  - **Material:** Leather or plating.
+  - **Pattern:** Solid with dark hardware.
+  - **Neckline:** V-neck or high-collar armor.
+  - **Sleeve:** Elbow-length gauntlets.
+- **Bottom:** Asymmetric floor-length loincloth or split skirt.
+  - **Fit:** Layered over fitted leggings.
+  - **Material:** Heavy fabric or leather.
+  - **Waist:** Wide belt with heavy metallic ring buckle.
+  - **Length:** Floor-length.
+- **Footwear:** Thigh-high armored boots with metal hardware.
+- **Accessories:** Cape (optional); leather arm wraps.
 
 [M]
-- **Top:** ((default:Black or Deep Red) or (signature)) **armored tunic or bodysuit** (imposing silhouette){modifier}
-- **Bottom:** heavy pants or armored greaves
-- **Footwear:** heavy combat boots with steel toes.
-- **Accessories:** Heavy flowing cape, intimidating full-face mask or cowl, gauntlets.
-- **Hair/Makeup:** Intimidating stare, scars (optional).
+- **Top:** Armored tunic or bodysuit ((default:black or deep red)) {modifier}.
+  - **Fit:** Imposing silhouette.
+  - **Material:** Heavy plating or spandex.
+  - **Neckline:** Intimidating cowl/mask.
+  - **Sleeve:** Long with gauntlets.
+- **Bottom:** Heavy pants or armored greaves.
+  - **Fit:** Baggy or fitted.
+  - **Material:** matching.
+  - **Waist:** Buckled belt.
+  - **Length:** Full.
+- **Footwear:** Heavy metal-toed combat boots.
+- **Accessories:** Heavy flowing cape; full-face mask.
 
 [H]
-- **Hijab:** Dark flowing hijab styled like a cowl or hood
-- **Top:** modest **armored tunic** or long coat with high collar{modifier}
-- **Bottom:** tactical pants or full skirt
-- **Footwear:** heavy boots
-- **Accessories:** Dramatic cape, mask over eyes (optional), dark gloves.
-- **Makeup:** Intense, dark eyeliner.
+- **Hijab:** Dark flowing hijab styled like a cowl or hood.
+- **Top:** Modest armored tunic or long coat with high collar {modifier}.
+  - **Fit:** Structured silhouette.
+  - **Material:** Dark armor plating/cloth.
+  - **Neckline:** High collar.
+  - **Sleeve:** Long sleeves with dark gloves.
+- **Bottom:** Tactical pants or full skirt.
+  - **Fit:** Straight or Voluminous.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Heavy combat boots.
+- **Accessories:** Dramatic cape; eye mask (optional).

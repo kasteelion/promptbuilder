@@ -1,0 +1,77 @@
+# METADATA
+Scene: Advanced research facility, transparent screens, robotic arms, glowing samples, sterile futuristic environment.
+Base_Prompt: Low-Poly 3D
+Character: Mei Chen | Outfit: 1960s Mod | Pose: None
+Character: Ines Santos | Outfit: 1960s Mod | Pose: None
+Character: Harald Bjornson | Outfit: 1960s Mod | Pose: None
+Score: 420
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Advanced research facility, transparent screens, robotic arms, glowing samples, sterile futuristic environment.
+---
+
+**CHARACTER: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large features—specifically an extremely full, heavy bust (F-G cup) that is her most prominent physical trait—balanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow.
+**Outfit:**
+- **Top:** Shift dress (bold geometric print or color-blocked A-line silhouette, above knee length, sleeveless or short sleeves)
+- **Bottom:** white go-go boots (knee-high, low block heel, patent leather)
+- **Footwear:** matching tights (opaque white or colored).
+- **Accessories:** Large geometric earrings, headband or hair bow, oversized sunglasses (round or cat-eye), small structured handbag.
+- **Hair/Makeup:** Voluminous bouffant or sleek bob with heavy bangs, dramatic graphic eyeliner (heavy black with white in waterline), pale lips, defined lashes (real or drawn on lower lash line), Twiggy-inspired mod makeup, youthful 60s energy.
+**Pose/Action:**
+full body shot showing the character from head to toe, Leaning against surface, Casual relaxed stance, arms crossed or one hand in pocket.
+---
+
+**CHARACTER 2: Ines Santos**
+**Appearance:**
+* **Body:** Soft Classic frame; balanced proportions with gentle curves; smooth, rounded contours; moderate height and vertical line; refined and graceful presence.
+* **Face:** Oval face shape with high, well-defined cheekbones; smooth, clear complexion with a natural glow; broad and genuine smile showing straight white teeth; warm, radiant expression.
+* **Eyes & Makeup:** Dark brown almond-shaped eyes; focal point is a sharp, precise black winged eyeliner (cat-eye style) flicking upward at the corners; dark, full, well-groomed eyebrows; natural soft rose-pink lip color.
+* **Hair:** Sleek, dark black hair; neat center part; pulled back tightly from the face into a low, polished bun or ponytail; smooth, high-gloss finish.
+* **Skin:** Warm, golden-tan complexion with a radiant, healthy glow; smooth satin texture.
+**Outfit:**
+- **Top:** Shift dress (bold geometric print or color-blocked A-line silhouette, above knee length, sleeveless or short sleeves)
+- **Bottom:** white go-go boots (knee-high, low block heel, patent leather)
+- **Footwear:** matching tights (opaque white or colored).
+- **Accessories:** Large geometric earrings, headband or hair bow, oversized sunglasses (round or cat-eye), small structured handbag.
+- **Hair/Makeup:** Voluminous bouffant or sleek bob with heavy bangs, dramatic graphic eyeliner (heavy black with white in waterline), pale lips, defined lashes (real or drawn on lower lash line), Twiggy-inspired mod makeup, youthful 60s energy.
+**Pose/Action:**
+full body shot showing the character from head to toe, Mid-walk down approach (3-4 steps), ball swinging back behind body, opposite arm out for balance, focused on target, athletic momentum.
+---
+
+**CHARACTER 3: Harald Bjornson**
+**Appearance:**
+* **Body:** Flamboyant Natural; massive, heavily muscled frame with broad, powerful shoulders and a deep chest; long limbs with thick wrists and large, calloused hands; tall vertical (6'2"-6'4"); high muscle density with functional power visible in every movement; an imposing, statuesque presence.
+* **Face:** Rugged-angular structure; square face shape with a prominent heavy brow and a stone-like jawline; deep-set piercing blue eyes under thick, expressive eyebrows; straight, strong nose; neutral expression is calm but intense, radiating a sense of grave authority.
+* **Hair:** Type 2B; thick coarse density; rough swept-back silhouette; past shoulders; swept-back; low sheen; single thick warrior braid at the back. Rich golden-blonde or light brown.
+* **Skin:** Fair; warm-neutral undertones; weathered and sun-toughened texture; prominent scar running down the right cheek and another across the knuckles; tanned.
+**Outfit:**
+- **Top:** Slim-fit suit (sharkskin or bold color narrow lapels, cigarette pants)
+- **Bottom:** turtleneck or **button-down with skinny tie**
+- **Footwear:** Chelsea boots.
+- **Accessories:** Wayfarer sunglasses.
+- **Hair/Makeup:** Mop-top haircut or neat side part, clean-shaven, youthful energy.
+**Pose/Action:**
+full body shot showing the character from head to toe, Arms raised triumphantly overhead, confident smile, championship energy, standing tall.
+---

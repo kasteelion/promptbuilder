@@ -1,23 +1,45 @@
 tags: [combat, historical, japanese]
 
 [F]
-- **Top:** Ornate d (chest armor) (lacquered plates in red, black, or gold with family crest)
-- **Bottom:** kusazuri (armored skirt) (overlapping plates)
-- **Footwear:** sode (shoulder guards); **kote (armored sleeves)**; **hakama pants** underneath; **traditional tabi and waraji** or **armored boots**.
-- **Accessories:** Katana and wakizashi (daisho pair), kabuto helmet with ornamental crest, silk sash with family mon.
-- **Hair/Makeup:** Hair in traditional topknot or elegant updo with kanzashi, natural makeup with defined features, honorable composed expression.
+- **Top:** Ornate dō (chest armor).
+  - **Fit:** Form-fitting lacquered plates.
+  - **Material:** Lacquered plates in red, black, or gold.
+  - **Pattern:** family crest (mon).
+  - **Neckline:** High-neck gorget.
+  - **Sleeve:** Sode (shoulder guards) and kote (armored sleeves).
+- **Bottom:** Kusazuri (armored skirt) over hakama pants.
+  - **Fit:** Overlapping plates.
+  - **Material:** matching lacquered steel.
+  - **Waist:** Silk sash with family mon.
+  - **Length:** Mid-thigh armor; Full length pants.
+- **Footwear:** Traditional tabi and waraji or armored boots.
+- **Accessories:** Katana and wakizashi (daisho pair); kabuto helmet with ornamental crest.
 
 [M]
-- **Top:** Ornate d (chest armor) (lacquered plates in red, black, or gold with family crest)
-- **Bottom:** kusazuri (armored skirt) (overlapping plates)
-- **Footwear:** sode (shoulder guards); **kote (armored sleeves)**; **hakama pants** underneath; **traditional tabi and waraji** or **armored boots**.
-- **Accessories:** Katana and wakizashi (daisho pair), kabuto helmet with ornamental crest, silk sash with family mon.
-- **Hair/Makeup:** Hair in traditional topknot (chonmage), clean-shaven or neat facial hair, honorable composed expression.
+- **Top:** Ornate dō (chest armor).
+  - **Fit:** Heavy; Structured armor.
+  - **Material:** Lacquered steel plates.
+  - **Neckline:** Gorget.
+  - **Sleeve:** Shoulder guards and armored sleeves.
+- **Bottom:** Kusazuri (armored skirt) over hakama pants.
+  - **Fit:** Articulated plates.
+  - **Material:** matching.
+  - **Waist:** Silk sash.
+  - **Length:** Full.
+- **Footwear:** Traditional tabi and waraji.
+- **Accessories:** Katana and wakizashi; kabuto helmet.
 
 [H]
-- **Hijab:** Secure wrap in black or red, worn under kabuto helmet or with headpiece
-- **Top:** Ornate dō (chest armor) over long-sleeve kimono-style top
-- **Bottom:** Hakama pants with armored thigh guards (haidate)
-- **Footwear:** Tabi boots or waraji with socks
-- **Accessories:** Katana, wakizashi, sash with family mon
-- **Makeup:** Honorable composed expression, natural features
+- **Hijab:** Secure wrap in black or red, worn under kabuto helmet.
+- **Top:** Ornate dō over long-sleeve kimono-style top.
+  - **Fit:** Modest armored.
+  - **Material:** Lacquered steel; Silk.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Hakama pants with armored thigh guards (haidate).
+  - **Fit:** Professional.
+  - **Material:** matching.
+  - **Waist:** Sash.
+  - **Length:** Full length.
+- **Footwear:** Tabi boots or waraji with socks.
+- **Accessories:** Katana; wakizashi; sash with family mon.

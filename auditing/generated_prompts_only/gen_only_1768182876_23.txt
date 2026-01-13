@@ -1,0 +1,77 @@
+# METADATA
+Scene: Neutral seamless backdrop, professional three-point studio lighting with softboxes, clean minimalist setup. Subtle hum of cooling fans, scent of fresh paint and ozone.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Harald Bjornson | Outfit: Gym | Pose: None
+Character: Chiara Lombardi | Outfit: Gym | Pose: None
+Character: Priya Sharma | Outfit: Gym | Pose: None
+Interaction: Custom
+Score: 307
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Neutral seamless backdrop, professional three-point studio lighting with softboxes, clean minimalist setup. Subtle hum of cooling fans, scent of fresh paint and ozone.
+---
+
+**CHARACTER: Harald Bjornson**
+**Appearance:**
+* **Body:** Flamboyant Natural; massive, heavily muscled frame with broad, powerful shoulders and a deep chest; long limbs with thick wrists and large, calloused hands; tall vertical (6'2"-6'4"); high muscle density with functional power visible in every movement; an imposing, statuesque presence.
+* **Face:** Rugged-angular structure; square face shape with a prominent heavy brow and a stone-like jawline; deep-set piercing blue eyes under thick, expressive eyebrows; straight, strong nose; neutral expression is calm but intense, radiating a sense of grave authority.
+* **Hair:** Type 2B; thick coarse density; rough swept-back silhouette; past shoulders; swept-back; low sheen; single thick warrior braid at the back. Rich golden-blonde or light brown.
+* **Skin:** Fair; warm-neutral undertones; weathered and sun-toughened texture; prominent scar running down the right cheek and another across the knuckles; tanned.
+**Outfit:**
+- **Top:** Fitted **athletic tank or t-shirt** (technical knit)
+- **Bottom:** athletic shorts or joggers (technical fabric).
+- **Accessories:** Fitness watch or tracker.
+- **Hair/Makeup:** Minimal grooming.
+**Pose/Action:**
+Traditional Japanese bow, upper body bent forward, hands positioned respectfully, formal posture.
+---
+
+**CHARACTER 2: Chiara Lombardi**
+**Appearance:**
+* **Body:** Soft Classic frame; natural–wave flesh blend; balanced proportions with gentle curve; moderate vertical.
+* **Face:** Balanced sculpted facial structure; oval face; soft cheek fullness; strong brows; expressive eyes; calm knowing expression.
+* **Hair:** Type 2B–2C waves; high density; layered medium-long cut; natural volume; loose part; satin finish.
+* **Skin:** Warm Mediterranean-toned skin with healthy glow.
+**Outfit:**
+- **Top:** Fitted **#808000 top** (technical knit)
+- **Bottom:** high-waist **athletic shorts or leggings** (technical fabric).
+- **Accessories:** Fitness watch or tracker, hair in ponytail.
+- **Hair/Makeup:** Minimal or no makeup.
+**Pose/Action:**
+On mat in dominant position, knee on ground, controlled powerful posture, competitive intensity.
+---
+
+**CHARACTER 3: Priya Sharma**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
+* **Face:** Soft oval face with gentle rounded features; warm expressive dark brown eyes; friendly approachable expression; fuller cheeks; soft jawline; warm genuine smile.
+* **Hair:** Type 2B-2C waves; medium-high density; long dark brown hair (almost black at roots) with warm caramel-brown highlights throughout mid-lengths and ends; natural body and volume; beachy waves.
+* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow. small black bindi dot on forehead
+**Outfit:**
+- **Top:** Fitted **athletic top** (technical knit)
+- **Bottom:** high-waist **athletic shorts or leggings** (technical fabric).
+- **Accessories:** Fitness watch or tracker, hair in ponytail.
+- **Hair/Makeup:** Minimal or no makeup.
+**Pose/Action:**
+Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
+---
+
+**Additional Notes:**
+Harald Bjornson and Chiara Lombardi locked in standing clinch, bodies pressed together in tight space. Both fighting for underhooks and overhooks—arms battling for dominant collar ties or body locks. Heads pressed together, foreheads touching or one head pressed to other's shoulder, preventing strikes. Hips close, each trying to control opponent's posture. Legs positioned in staggered stance for balance and potential knee strikes. Arms show muscle strain and grip tension, hands clasping behind head, neck, or back. Both pushing and pulling, testing weight distribution. Visible exertion in facial expressions—grimacing, heavy breathing. Sweat dripping, muscles flexed throughout upper body and core.

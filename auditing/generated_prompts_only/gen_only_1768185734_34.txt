@@ -1,0 +1,63 @@
+# METADATA
+Scene: Palm trees surrounding water, sand dunes in background, Arabian Nights atmosphere, golden sunlight.
+Base_Prompt: Digital Painting: "Expressive Impasto"
+Character: Siofra Quinn | Outfit: Knight | Pose: None
+Character: Valentina "Tina" Kovač | Outfit: Knight | Pose: None
+Interaction: Custom
+Score: 185
+
+Generate an image of: Rendering
+Thick, painterly application simulating oil or acrylics. Visible brush strokes with directional texture. Heavy use of "Chiaroscuro" (dramatic light and dark contrast). Edges range from sharp palette-knife cuts to soft blended strokes.
+
+Character Accuracy
+Likeness is captured through value planes rather than outlines. Features are constructed by blocks of color. Expressions are emotive and moody, emphasizing the "feeling" of the character over precise anatomy.
+
+Body Types
+Figures are sculpted with light and shadow. The solidity of the form is conveyed through the direction of the brushstrokes (e.g., strokes wrapping around the arm). Anatomy is artistic and interpretive.
+
+Hair & Clothing
+Hair: Painted as large masses and shapes, with loose strokes indicating strands. Clothing: Fabric texture is suggested by the roughness of the brushwork. Highlights on cloth are thick dabs of paint.
+
+Details
+Canvas weave texture visible in the background. Color vibration (placing complementary colors next to each other). Atmospheric perspective is achieved through loose, hazy brushwork in the distance.
+
+---
+
+**SCENE/SETTING:**
+Palm trees surrounding water, sand dunes in background, Arabian Nights atmosphere, golden sunlight.
+---
+
+**CHARACTER: Siofra Quinn**
+**Appearance:**
+* **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
+* **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
+* **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
+* **Skin:** Fair neutral skin with weathered undertone.
+**Outfit:**
+- **Top:** Polished plate armor bodice (steel or silver with embossed details)
+- **Bottom:** armored pauldrons and gauntlets
+- **Footwear:** chainmail skirt or **armored tassets** (knee-length with leather underneath); **steel greaves and sabatons** (shin and foot protection); **sturdy leather boots**.
+- **Accessories:** Longsword and shield (heraldic design), knight's helm with plume (carried or worn), cape in house colors.
+- **Hair/Makeup:** Hair pulled back in practical bun or braid, minimal makeup, determined expression.
+**Pose/Action:**
+medium shot showing the character from the waist up, Hand gently touching own shoulder or collarbone, head tilted, soft sensual expression.
+---
+
+**CHARACTER 2: Valentina "Tina" Kovač**
+**Appearance:**
+* **Body:** Dramatic frame; straight thin flesh with minimal softness; narrow angular proportions with long limbs, prominent joints (elbows, wrists, knees), flat planes, minimal bust (A cup), straight hips, long fingers and toes; tall-moderate vertical (5'8"-5'9"); very low body density—visible bone structure, delicate appearance but wiry strength, lean muscle definition without bulk; bird-like presence that seems too delicate yet surprisingly resilient.
+* **Face:** Sharp angular structure; long oval-to-diamond face; high prominent cheekbones creating dramatic shadows; deep-set eyes, almond-shaped, close-set, Intense dark brown to black with penetrating gaze; strong straight nose with high bridge; defined angular jawline; hollow cheeks even at healthy weight; neutral resting expression is intense and assessing with slight suspicious edge—reads as guarded or challenging.
+* **Hair:** Type 2C-3A waves/curls; medium-high density but fine texture; long length past shoulders; no defined part, tousled and wild; matte-to-low sheen finish; deliberately unkempt aesthetic; commonly worn loose and chaotic, half-up with tendrils escaping, or messy bun with pieces falling; deep black-brown with occasional henna-red undertones or temporary colored streaks (artistic expression).
+* **Skin:** Light-olive with warm golden undertones (Roma coloring); smooth but slightly weathered from outdoor living/art-making; paint stains semi-permanent on hands and forearms; small scattered tattoos (DIY stick-and-poke aesthetic); natural bohemian finish.
+**Outfit:**
+- **Top:** Polished plate armor bodice (steel or silver with embossed details)
+- **Bottom:** armored pauldrons and gauntlets
+- **Footwear:** chainmail skirt or **armored tassets** (knee-length with leather underneath); **steel greaves and sabatons** (shin and foot protection); **sturdy leather boots**.
+- **Accessories:** Longsword and shield (heraldic design), knight's helm with plume (carried or worn), cape in house colors.
+- **Hair/Makeup:** Hair pulled back in practical bun or braid, minimal makeup, determined expression.
+**Pose/Action:**
+medium shot showing the character from the waist up, One hand extended forward with palm open, the other hand tracing an arcane sigil in the air, glowing runes appearing around the wrist.
+---
+
+**Additional Notes:**
+Cinematic lighting, high detail.

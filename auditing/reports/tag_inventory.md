@@ -1,0 +1,1090 @@
+# Tag System Audit
+
+## Potential Conflicts (Synonyms/Casing)
+Tags that look similar (Singular/Plural or Capitalization mismatches):
+
+- **action**: Action, Block:Action, action
+- **anime**: Anime, anime
+- **armor**: Block:armor, armor
+- **artistic**: Artistic, Mood:Artistic, artistic
+- **athletic**: Athletic, athletic, mood:athletic
+- **casual**: Casual, Mood:Casual, casual
+- **cheerful**: Block:Cheerful, mood:cheerful
+- **chic**: Chic, chic
+- **clean**: Clean, clean
+- **cold**: Cold, cold
+- **combat**: Block:Combat, Block:combat, Combat, block:combat, combat
+- **confident**: Confident, confident
+- **corporate**: Corporate, corporate
+- **costume**: Block:costume, Costume, block:costume, costume
+- **cottagecore**: Block:Cottagecore, Cottagecore, cottagecore
+- **cozy**: Cozy, Mood:Cozy, cozy
+- **creative**: Creative, creative
+- **cultural**: Cultural, cultural
+- **cute**: Block:Cute, Cute, cute, mood:cute
+- **cyberpunk**: Block:Cyberpunk, Cyberpunk, block:cyberpunk, cyberpunk
+- **dark**: Block:Dark, Dark, Mood:Dark, block:dark, dark
+- **dramatic**: Dramatic, Mood:Dramatic, dramatic
+- **dynamic**: Dynamic, Mood:Dynamic, dynamic, mood:dynamic
+- **edgy**: Edgy, block:edgy, edgy
+- **elegant**: Elegant, Mood:Elegant, Mood:elegant, block:elegant, elegant
+- **energetic**: Mood:Energetic, energetic
+- **fantasy**: Block:fantasy, Fantasy, block:fantasy, fantasy
+- **fashion**: Fashion, fashion
+- **formal**: Block:Formal, Formal, block:formal, formal
+- **futuristic**: Futuristic, Mood:Futuristic
+- **glamorous**: Mood:Glamorous, glamorous, mood:glamorous
+- **glamour**: Glamour, glamour
+- **gothic**: Gothic, gothic
+- **gritty**: Block:Gritty, Mood:Gritty, block:gritty, gritty
+- **heroic**: Heroic, Mood:Heroic
+- **historical**: Block:Historical, Historical, block:historical, historical
+- **horror**: Block:Horror, block:horror
+- **indian**: Indian, indian
+- **indoor**: Indoor, indoor
+- **industrial**: Industrial, industrial
+- **intense**: Intense, intense, mood:intense
+- **intimate**: Block:Intimate, Intimate, block:intimate, intimate
+- **lounge**: Block:lounge, block:lounge, lounge
+- **luxury**: Block:Luxury, Luxury, luxury
+- **medical**: Medical, medical
+- **medieval**: Block:medieval, medieval
+- **minimalist**: Minimalist, minimalist
+- **modern**: Block:Modern, modern
+- **nature**: Nature, nature
+- **nightlife**: block:nightlife, nightlife
+- **noir**: Block:Noir, Noir, block:noir, noir
+- **office**: Office, block:office
+- **outdoor**: Outdoor, outdoor
+- **party**: Party, block:party, party
+- **peaceful**: Block:Peaceful, Mood:Peaceful, Peaceful
+- **playful**: Playful, mood:playful, playful
+- **pop**: Block:Pop, Pop, pop
+- **professional**: Professional, block:professional, professional
+- **rain**: Rain, rain
+- **realistic**: Mood:Realistic, realistic
+- **relaxed**: Relaxed, relaxed
+- **retro**: Retro, retro
+- **romantic**: Mood:romantic, Romantic, romantic
+- **rugged**: Rugged, rugged
+- **scholarly**: Scholarly, block:scholarly
+- **sci-fi**: Block:Sci-Fi, Sci-Fi, sci-fi
+- **sexy**: Sexy, block:sexy, mood:sexy
+- **sharp**: Sharp, sharp
+- **sleep**: Block:sleep, sleep
+- **social**: Social, social
+- **soft**: Block:Soft, Mood:Soft, Soft, soft
+- **sport**: Block:Sport, Sport, block:sport, sport
+- **sports**: Block:Sport, Sport, Sports, block:sport, sport
+- **summer**: Summer, summer
+- **tactical**: Block:tactical, Tactical, tactical
+- **tech**: Block:Tech, Tech, tech
+- **techwear**: Techwear, techwear
+- **urban**: Urban, urban
+- **villain**: Villain, villain
+- **vintage**: Vintage, block:vintage, vintage
+- **western**: Western, western
+- **work**: Work, block:work, work
+
+## 🚩 Orphaned/Potentially Dead Tags
+Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with logic aliases).
+
+### Base Prompts (Top 10)
+- Block:Action (1)
+- Block:Bright (1)
+- Block:Cheerful (1)
+- Block:Classical (1)
+- Block:Cottagecore (1)
+- Block:Cute (2)
+- block:cyberpunk (1)
+- block:dark (1)
+- block:edgy (1)
+- block:elegant (1)
+
+### Characters (Top 10)
+- alternative (1)
+- angular (1)
+- auburn hair (1)
+- bandana (1)
+- beach-aesthetic (1)
+- bearded (2)
+- british (1)
+- californian (1)
+- casual-chic (1)
+- celtic (2)
+
+### Interactions (Top 10)
+- all black (1)
+- approximately 45 degrees from home plate (1)
+- Behind the Plate (1)
+- Break (1)
+- Caring (10)
+- catcher (1)
+- coach/teammate (1)
+- Competitive (1)
+- Conflict (1)
+- Construction (1)
+
+### Outfits (Top 10)
+- 1890s (2)
+- 1900s (1)
+- 1970s (1)
+- Academic (1)
+- Alchemist (1)
+- armor (1)
+- Authority (1)
+- Autumn (1)
+- Avant-Garde (3)
+- Bioluminescent (1)
+
+### Poses (Top 10)
+- 3-4 steps (1)
+- Assassin (1)
+- Attack (1)
+- Attitude (2)
+- Back (2)
+- Balance (3)
+- Ballet (6)
+- Biker (1)
+- blade pointing down (1)
+- Blush (1)
+
+### Scenes (Top 10)
+- Abstract (1)
+- Alley (2)
+- Arena (2)
+- Arid (1)
+- Backstage (2)
+- Baking (1)
+- Beach (3)
+- Block:armor (29)
+- Block:medieval (26)
+- Block:sleep (4)
+
+
+## Tag Frequency by Source
+
+### Characters
+- female: 53
+- commanding: 31
+- chic: 29
+- athletic: 27
+- approachable: 26
+- minimalist: 24
+- playful: 22
+- creative: 19
+- male: 19
+- rugged: 11
+- curvy: 10
+- edgy: 10
+- intense: 10
+- strong: 9
+- soft: 9
+- intellectual: 8
+- black: 8
+- cultural: 7
+- latina: 6
+- petite: 5
+- japanese: 5
+- north-african: 4
+- plus-size: 4
+- bohemian: 3
+- mixed-heritage: 3
+- traditional: 3
+- hijabi: 3
+- indian: 3
+- nordic: 3
+- caucasian: 3
+- freckled: 3
+- mediterranean: 3
+- casual: 3
+- tall: 3
+- outdoorsy: 3
+- filipino: 3
+- pacific-islander: 3
+- adventurous: 3
+- indigenous: 2
+- bearded: 2
+- statuesque: 2
+- dramatic: 2
+- celtic: 2
+- red-haired: 2
+- thin: 2
+- controlled: 2
+- vintage-inspired: 2
+- lesbian: 2
+- gay: 2
+- sophisticated: 2
+- k-fashion: 2
+- ethereal: 2
+- energetic: 2
+- romantic: 2
+- steady: 2
+- greek: 2
+- content-creator: 1
+- middle eastern: 1
+- corporate: 1
+- luxury: 1
+- cool-toned: 1
+- auburn hair: 1
+- casual-chic: 1
+- soft dramatic: 1
+- confident: 1
+- craftsman: 1
+- passionate: 1
+- cold: 1
+- severe: 1
+- long-hair: 1
+- modern: 1
+- californian: 1
+- tan: 1
+- textured-hair: 1
+- glamorous: 1
+- high-femme: 1
+- silver-fox: 1
+- italian: 1
+- elegant: 1
+- generous: 1
+- massive: 1
+- southern: 1
+- sun-kissed: 1
+- dynamic: 1
+- high-performance: 1
+- neon-orange-signature: 1
+- alternative: 1
+- goth: 1
+- tech: 1
+- graceful: 1
+- cyan-signature: 1
+- street-style: 1
+- techwear: 1
+- sharp: 1
+- dark-asian: 1
+- resourceful: 1
+- earthy: 1
+- gold-signature: 1
+- bandana: 1
+- beach-aesthetic: 1
+- coral-signature: 1
+- fusion: 1
+- controversial: 1
+- cultural-fusion: 1
+- jamaican: 1
+- chinese-american: 1
+- deliberate: 1
+- glasses: 1
+- british: 1
+- hipster: 1
+- indie: 1
+- puerto rican: 1
+- midwestern: 1
+- tatau: 1
+- traditional-modern-fusion: 1
+- celtic-inspired: 1
+- geometric: 1
+- israeli: 1
+- rhythmic: 1
+- eastern-european: 1
+- angular: 1
+- romani: 1
+- funky: 1
+
+### Scenes
+- indoor: 39
+- Sport: 35
+- Block:fantasy: 29
+- Block:armor: 29
+- Block:medieval: 26
+- outdoor: 23
+- Block:costume: 21
+- urban: 21
+- nature: 16
+- luxury: 15
+- vintage: 14
+- tech: 12
+- noir: 11
+- historical: 10
+- Block:swimwear: 9
+- cyberpunk: 9
+- fantasy: 9
+- event: 9
+- Home: 8
+- intimate: 8
+- nightlife: 8
+- Night: 8
+- Dark: 7
+- School: 7
+- Retail: 7
+- Music: 7
+- Bowling: 7
+- party: 7
+- Sexy: 7
+- Indoor: 7
+- work: 6
+- social: 6
+- Gym: 6
+- creative: 6
+- Cultural: 6
+- sci-fi: 6
+- Anime: 6
+- travel: 5
+- Art: 5
+- Entertainment: 5
+- cottagecore: 5
+- Fantasy: 5
+- DND: 5
+- Nostalgia: 5
+- medical: 4
+- Block:Sport: 4
+- Block:combat: 4
+- Block:lounge: 4
+- Block:sleep: 4
+- Neon: 4
+- Water: 4
+- Vacation: 4
+- Studio: 3
+- cozy: 3
+- Fashion: 3
+- gritty: 3
+- industrial: 3
+- Basketball: 3
+- Beach: 3
+- Soccer: 3
+- Mood:Sensual: 3
+- adventurous: 3
+- Casual: 2
+- Cooking: 2
+- Office: 2
+- relaxed: 2
+- Alley: 2
+- City: 2
+- Cafe: 2
+- Quiet: 2
+- Ocean: 2
+- Arena: 2
+- Dance: 2
+- combat: 2
+- MMA: 2
+- Retro: 2
+- cultural: 2
+- formal: 2
+- Bedroom: 2
+- Mood:romantic: 2
+- Mood:Dark: 2
+- Summer: 2
+- Garden: 2
+- Castle: 2
+- Religious: 2
+- Gothic: 2
+- Victorian: 2
+- Spiritual: 2
+- Backstage: 2
+- Winter: 2
+- Fun: 2
+- Outdoor: 2
+- Minimal: 1
+- professional: 1
+- Science: 1
+- Street: 1
+- Transit: 1
+- Mood:Cozy: 1
+- approachable: 1
+- Dining: 1
+- Date: 1
+- modern: 1
+- Busy: 1
+- Block:tactical: 1
+- Vehicle: 1
+- Football: 1
+- action: 1
+- Glow: 1
+- Volleyball: 1
+- Detail: 1
+- Shower: 1
+- Changed: 1
+- traditional: 1
+- Swim: 1
+- Climbing: 1
+- Tennis: 1
+- Run: 1
+- Team: 1
+- Baseball: 1
+- Skater: 1
+- Gaming: 1
+- Gambling: 1
+- History: 1
+- Drama: 1
+- Bar: 1
+- Rave: 1
+- Craft: 1
+- Rustic: 1
+- Bathroom: 1
+- Arid: 1
+- Peaceful: 1
+- Adventure: 1
+- Baking: 1
+- Picnic: 1
+- Food: 1
+- Ruin: 1
+- japanese: 1
+- Desert: 1
+- Magical: 1
+- Forest: 1
+- Inn: 1
+- Ren Faire: 1
+- Abstract: 1
+- Clean: 1
+- Scary: 1
+- Athletic: 1
+- Intense: 1
+- Pool: 1
+- Mood:Futuristic: 1
+- Research: 1
+- Mood:elegant: 1
+- Circus: 1
+- Day: 1
+- Festival: 1
+- Concert: 1
+- Action: 1
+- Danger: 1
+- Nature: 1
+- Mystery: 1
+- Magic: 1
+- Mood:Peaceful: 1
+- Mood:Private: 1
+- Genkan: 1
+- Entrance: 1
+- rain: 1
+- Golden Hour: 1
+- Festive: 1
+- Social: 1
+- Mood:Serene: 1
+- Moody: 1
+- Spring: 1
+
+### Base Prompts
+- artistic: 7
+- anime: 6
+- realistic: 5
+- 2d: 4
+- cute: 4
+- soft: 3
+- traditional: 3
+- Block:Cyberpunk: 3
+- Block:Sci-Fi: 3
+- cinematic: 3
+- photography: 3
+- action: 3
+- Block:Noir: 3
+- fantasy: 3
+- vintage: 3
+- glamour: 3
+- Block:Sport: 3
+- dark: 2
+- Mood:Dark: 2
+- Block:Historical: 2
+- Block:Formal: 2
+- Block:Cute: 2
+- Block:Combat: 2
+- Mood:Realistic: 2
+- sport: 2
+- athletic: 2
+- Mood:Dynamic: 2
+- Mood:Dramatic: 2
+- Mood:Artistic: 2
+- monochrome: 2
+- retro: 2
+- dynamic: 2
+- Block:Gritty: 2
+- 3d: 2
+- comic: 2
+- block:gritty: 2
+- block:noir: 2
+- cyberpunk: 1
+- sci-fi: 1
+- Mood:Futuristic: 1
+- Mood:Gritty: 1
+- Block:Classical: 1
+- Block:Cottagecore: 1
+- Mood:Soft: 1
+- Mood:Dreamy: 1
+- Mood:Peaceful: 1
+- Block:Dark: 1
+- high-definition: 1
+- weight:4.0: 1
+- neutral: 1
+- weight:3.0: 1
+- vibrant: 1
+- Mood:Energetic: 1
+- painterly: 1
+- sketch: 1
+- Mood:Raw: 1
+- Block:Luxury: 1
+- Mood:Mysterious: 1
+- Block:Bright: 1
+- Block:Cheerful: 1
+- 90s: 1
+- Mood:Nostalgic: 1
+- Mood:Casual: 1
+- Block:Horror: 1
+- digital: 1
+- Mood:Glamorous: 1
+- Mood:Elegant: 1
+- Mood:Polished: 1
+- Mood:Appealing: 1
+- weight:2.0: 1
+- graphic: 1
+- Mood:Heroic: 1
+- Block:Intimate: 1
+- Block:Soft: 1
+- Block:Peaceful: 1
+- Block:Modern: 1
+- Block:Pop: 1
+- Block:Tech: 1
+- Block:Action: 1
+- flat: 1
+- fashion: 1
+- mood:glamorous: 1
+- mood:sexy: 1
+- mood:luxurious: 1
+- block:combat: 1
+- block:sport: 1
+- block:cyberpunk: 1
+- mood:dynamic: 1
+- mood:athletic: 1
+- mood:intense: 1
+- block:formal: 1
+- block:intimate: 1
+- block:lounge: 1
+- block:elegant: 1
+- block:work: 1
+- block:professional: 1
+- block:fantasy: 1
+- block:historical: 1
+- block:costume: 1
+- block:vintage: 1
+- block:nightlife: 1
+- block:party: 1
+- block:scholarly: 1
+- block:edgy: 1
+- block:office: 1
+- weight:0.5: 1
+- chibi: 1
+- mood:cute: 1
+- mood:playful: 1
+- mood:cheerful: 1
+- block:dark: 1
+- block:horror: 1
+- block:sexy: 1
+- weight:0.8: 1
+- landscape: 1
+- nature: 1
+- outdoor: 1
+- quirky: 1
+- creative: 1
+- toy: 1
+- clean: 1
+
+### Outfits
+- Casual: 29
+- Sport: 26
+- fantasy: 25
+- formal: 22
+- combat: 17
+- Edgy: 17
+- Cultural: 17
+- vintage: 16
+- costume: 16
+- Fashion: 14
+- historical: 14
+- Performance: 13
+- Team: 13
+- Vintage: 10
+- Job: 10
+- professional: 8
+- lounge: 8
+- traditional: 7
+- outdoor: 6
+- Formal: 6
+- Magic: 6
+- noir: 6
+- Futuristic: 6
+- High Fashion: 6
+- Glamour: 6
+- Western: 6
+- sci-fi: 5
+- Music: 5
+- Chic: 5
+- Retro: 5
+- Winter: 5
+- Elegant: 5
+- work: 5
+- Luxury: 5
+- event: 5
+- Cyberpunk: 5
+- Lingerie: 5
+- sleep: 5
+- textured: 4
+- Streetwear: 4
+- luxury: 4
+- Sci-Fi: 4
+- japanese: 4
+- Seasonal: 4
+- Summer: 4
+- Sexy: 4
+- cyberpunk: 3
+- Minimalist: 3
+- Cold: 3
+- Stealth: 3
+- Noir: 3
+- elegant: 3
+- Avant-Garde: 3
+- Rain: 3
+- Tech: 3
+- Runway: 3
+- Mythology: 3
+- Service: 3
+- Stage: 3
+- Scholarly: 2
+- Dark: 2
+- urban: 2
+- Athletic: 2
+- Boho: 2
+- Home: 2
+- soft: 2
+- social: 2
+- Pirate: 2
+- Fancy: 2
+- Cute: 2
+- hero: 2
+- Cozy: 2
+- Soft: 2
+- Science: 2
+- Range: 2
+- Holy: 2
+- nature: 2
+- tech: 2
+- Work: 2
+- Uniform: 2
+- Royal: 2
+- Bridal: 2
+- Wedding: 2
+- Modern Nomad: 2
+- Techwear: 2
+- African: 2
+- Mythological: 2
+- indian: 2
+- Festival: 2
+- Swim: 2
+- Specialty: 2
+- Pop: 2
+- Grunge: 2
+- Football: 2
+- Volleyball: 2
+- Bowling: 2
+- pop: 2
+- Weather: 2
+- 1890s: 2
+- School: 1
+- Skate: 1
+- Kink: 1
+- Workout: 1
+- Gymnastics: 1
+- 90s: 1
+- Country: 1
+- Basic: 1
+- Sharp: 1
+- Latex: 1
+- cottagecore: 1
+- Butler: 1
+- Maid: 1
+- villain: 1
+- tactical: 1
+- Comfort: 1
+- Academic: 1
+- Denim: 1
+- Knitwear: 1
+- Texture: 1
+- Velvet: 1
+- Potion: 1
+- Support: 1
+- Steampunk: 1
+- healer: 1
+- warrior: 1
+- priestess: 1
+- Spiritual: 1
+- Criminal: 1
+- Investigator: 1
+- Office: 1
+- Dinner: 1
+- party: 1
+- Date: 1
+- Night: 1
+- Bold: 1
+- Evening: 1
+- Gala: 1
+- Party: 1
+- Neon: 1
+- Extravagant: 1
+- Corporate: 1
+- Translucent: 1
+- Functional: 1
+- Neo-Tokyo: 1
+- Hack: 1
+- Eco: 1
+- Nature: 1
+- Space: 1
+- Clean: 1
+- Post-Apocalyptic: 1
+- Rugged: 1
+- Survival: 1
+- Structural: 1
+- Japanese Fashion: 1
+- Sustainable: 1
+- Fantasy: 1
+- Floral: 1
+- Couture: 1
+- Met Gala: 1
+- Tribal: 1
+- armor: 1
+- Martial Arts: 1
+- White: 1
+- Lace: 1
+- Intimate: 1
+- Wings: 1
+- Costume: 1
+- Old Hollywood: 1
+- Festive: 1
+- Red: 1
+- Pink: 1
+- chinese: 1
+- egyptian: 1
+- greek: 1
+- Religious: 1
+- medieval: 1
+- Noble: 1
+- Viking: 1
+- Dance: 1
+- Cooking: 1
+- medical: 1
+- Military: 1
+- Autumn: 1
+- intimate: 1
+- Diver: 1
+- Bioluminescent: 1
+- Scuba: 1
+- Alchemist: 1
+- Industrial: 1
+- Iconic: 1
+- Baseball: 1
+- Basketball: 1
+- Boxing: 1
+- Cheer: 1
+- Esports: 1
+- MMA: 1
+- Soccer: 1
+- Softball: 1
+- Water: 1
+- Tennis: 1
+- Track: 1
+- Wrestling: 1
+- Business: 1
+- Circus: 1
+- Classic: 1
+- gothic: 1
+- Vacation: 1
+- Rich: 1
+- Youth: 1
+- Celebrity: 1
+- Rock: 1
+- Cowboy: 1
+- Authority: 1
+- Relax: 1
+- Spa: 1
+- Semi-Formal: 1
+- Spring: 1
+- Practical: 1
+- 1900s: 1
+- Coastal: 1
+- 1970s: 1
+- Disco: 1
+- Menswear: 1
+- Style: 1
+- Detective: 1
+- western: 1
+- retro: 1
+- pinup: 1
+- summer: 1
+- casual: 1
+
+### Poses
+- Bowling: 15
+- Combat: 15
+- Action: 14
+- Standing: 13
+- Casual: 12
+- Fashion: 12
+- Fantasy: 11
+- Relaxed: 10
+- Dynamic: 10
+- Edgy: 10
+- Dance: 10
+- Cool: 9
+- Intimate: 9
+- Sexy: 9
+- Basic: 8
+- Sitting: 8
+- Sports: 8
+- Tech: 7
+- Artistic: 7
+- Social Media: 7
+- Basketball: 6
+- Emotion: 6
+- Gym: 6
+- Ballet: 6
+- Expressive: 5
+- Happy: 5
+- Urban: 5
+- Sci-Fi: 5
+- Portrait: 4
+- Walking: 4
+- Cute: 4
+- Skate: 4
+- Dramatic: 4
+- Cheer: 4
+- Volleyball: 4
+- Soft: 4
+- Cultural: 4
+- Bodybuilding: 4
+- Flex: 4
+- Stretch: 3
+- Esports: 3
+- Music: 3
+- Flirty: 3
+- Bedroom: 3
+- Flexible: 3
+- Jump: 3
+- Balance: 3
+- Football: 3
+- Ready: 3
+- Soccer: 3
+- Baseball: 3
+- Serve: 3
+- Magic: 3
+- Cyberpunk: 3
+- Confident: 2
+- Candid: 2
+- Floor: 2
+- Anime: 2
+- Reading: 2
+- Drinking: 2
+- Art: 2
+- Creative: 2
+- Cooking: 2
+- Domestic: 2
+- Professional: 2
+- Glamour: 2
+- Cozy: 2
+- Back: 2
+- Love: 2
+- Video: 2
+- Pose: 2
+- Sad: 2
+- Run: 2
+- Dive: 2
+- Tennis: 2
+- Elegant: 2
+- Attitude: 2
+- Divine: 2
+- Formal: 2
+- Weapon: 2
+- Intense: 2
+- peace/victory sign: 1
+- Quiet: 1
+- School: 1
+- Cafe: 1
+- Gaming: 1
+- Sit: 1
+- Seated: 1
+- Work: 1
+- Sassy: 1
+- Self: 1
+- Interior: 1
+- Trendy: 1
+- Squat: 1
+- Modeling: 1
+- Model: 1
+- Fun: 1
+- Morning: 1
+- Athletic: 1
+- Lighting: 1
+- Outdoor: 1
+- Playful: 1
+- Hiding: 1
+- Wet: 1
+- Shower: 1
+- Bathroom: 1
+- Reflection: 1
+- Romantic: 1
+- Expression: 1
+- Close-up: 1
+- TikTok: 1
+- Informative: 1
+- Meme: 1
+- 3-4 steps: 1
+- Low Angle: 1
+- Funny: 1
+- Waiting: 1
+- Prep: 1
+- toe touch: 1
+- pike: 1
+- or herkie: 1
+- Throw: 1
+- Catch: 1
+- Pitch: 1
+- Shoot: 1
+- Winner: 1
+- Attack: 1
+- MMA: 1
+- Ground: 1
+- Guard: 1
+- Cardio: 1
+- Swim: 1
+- Sport: 1
+- urban: 1
+- Gratitude: 1
+- Hip Hop: 1
+- Spin: 1
+- Smoking: 1
+- Biker: 1
+- Cottagecore: 1
+- Classy: 1
+- Vintage: 1
+- Japan: 1
+- Royal: 1
+- Indian: 1
+- Superhero: 1
+- Power: 1
+- Fly: 1
+- Dark: 1
+- Villain: 1
+- Radiance: 1
+- Knight: 1
+- Sword: 1
+- Samurai: 1
+- Katana: 1
+- Assassin: 1
+- Thief: 1
+- blade pointing down: 1
+- Mage: 1
+- Spell: 1
+- Muscles: 1
+- Chest: 1
+- Crab: 1
+- Brave: 1
+- Heroic: 1
+- Scared: 1
+- Fear: 1
+- Shy: 1
+- Blush: 1
+- Relief: 1
+
+### Interactions
+- Romantic: 34
+- Social: 30
+- Intimate: 23
+- Happy: 10
+- Caring: 10
+- Dance: 8
+- Fantasy: 8
+- Relaxed: 7
+- Dynamic: 7
+- Bedroom: 7
+- Tech: 6
+- Bowling: 6
+- Sport: 6
+- Magic: 6
+- Work: 4
+- Basketball: 4
+- Sexy: 4
+- Action: 4
+- Sci-Fi: 4
+- Outdoor: 3
+- Soccer: 3
+- Exercise: 3
+- Intense: 3
+- Football: 3
+- Performance: 3
+- Tactical: 3
+- Combat: 3
+- Gaming: 3
+- Task: 2
+- Casual: 2
+- Kitchen: 2
+- Cooking: 2
+- Helping: 2
+- Domestic: 2
+- Playful: 2
+- Baseball: 2
+- Wide Receiver: 2
+- Softball: 2
+- Volleyball: 2
+- Music: 2
+- Art: 2
+- Creative: 2
+- Heroic: 2
+- Esports: 2
+- Skate: 2
+- urban: 2
+- Gym: 2
+- Start from scratch: 1
+- Science: 1
+- Competitive: 1
+- Strength: 1
+- Game: 1
+- Conflict: 1
+- Athletic: 1
+- Break: 1
+- Medical: 1
+- Selfie: 1
+- Instruction: 1
+- Construction: 1
+- Office: 1
+- all black: 1
+- monochrome: 1
+- matching prints: 1
+- Height Difference: 1
+- Anime: 1
+- Lighting: 1
+- Cozy: 1
+- from the guard: 1
+- known as "hooks": 1
+- left foot forward: 1
+- right foot forward: 1
+- pitcher: 1
+- catcher: 1
+- Tennis: 1
+- striker: 1
+- goalie: 1
+- Cornerback: 1
+- Defender: 1
+- approximately 45 degrees from home plate: 1
+- Pitcher's Mound: 1
+- Home Plate: 1
+- Behind the Plate: 1
+- largest/closest: 1
+- mid-scale/mid-distance: 1
+- smallest/furthest: 1
+- right side: 1
+- implied: 1
+- the goalkeeper: 1
+- mid-release or follow-through: 1
+- Run: 1
+- Formal: 1
+- Historical: 1
+- Adventure: 1
+- Cyberpunk: 1
+- Sentai: 1
+- off-camera: 1
+- coach/teammate: 1
+- Sharing an Umbrella: 1

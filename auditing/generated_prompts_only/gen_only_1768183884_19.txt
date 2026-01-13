@@ -1,0 +1,63 @@
+# METADATA
+Scene: Tight shot focused on the white volleyball net, players visible through the mesh, Intense competition at the net.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Elena Rosales | Outfit: Skater Culture | Pose: None
+Character: Marley Thompson | Outfit: MMA | Pose: None
+Interaction: Custom
+Score: 375
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Tight shot focused on the white volleyball net, players visible through the mesh, Intense competition at the net.
+---
+
+**CHARACTER: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Outfit:**
+- **Top:** Oversized **graphic t-shirt** (worn loose, vintage wash)
+- **Bottom:** baggy **durable pants** (Dickies style, cuffed at ankle)
+- **Footwear:** canvas skate shoes (Vans or Converse style).
+- **Accessories:** Beanie, chain wallet, skate tool visible in pocket.
+- **Hair/Makeup:** Messy effortless hair, minimal natural makeup.
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders,
+---
+
+**CHARACTER 2: Marley Thompson**
+**Appearance:**
+* **Body:** Romantic frame; wave-lush flesh quality; voluptuous hourglass proportions with full bust (DD-E cup), dramatically defined waist, wide rounded hips, full thighs; moderate height (5'5"-5'6"); soft density with feminine curves throughout, rounded shoulders, shapely legs; magnetizing maternal presence.
+* **Face:** Soft-rounded facial structure; heart-to-round face shape; full cheeks with natural warmth; large expressive dark brown eyes, wide-set, warm inviting gaze; full lips with natural cupid's bow; soft jawline; neutral resting expression is serene and welcoming with gentle smile—radiates nurturing warmth and domestic contentment.
+* **Hair:** Type 4A coils; very high density; medium-long length (past shoulders); high volume and body; commonly worn in protective styles that are polished and feminine—twist-outs with defined curls, elegant bun with decorative pins, braided crown styles, occasionally heat-styled into bouncy curls for special occasions; natural black with warm brown undertones; always well-maintained and styled.
+* **Skin:** Deep warm brown with rich golden undertones; smooth luminous finish; healthy glow from good skincare; natural radiance.
+**Outfit:**
+- **Top:** Elite mixed martial arts kit for **Standard Team**
+- **Bottom:** high-impact athletic sports bra in **white** with **black contrast binding** and a **sublimated geometric pattern**
+- **Footwear:** matching **short athletic-cut compression shorts** in **white** with a **silicone-grip waistband** and **scalloped side-slits**; fabric is a **heavy-duty matte lycra**; **4oz open-palm MMA gloves** in **blue** with **reinforced knuckle padding**; **matching black ankle sleeves**; **barefoot** with a **ready athletic stance**.
+- **Accessories:** Black mouthguard, athletic tape on fingers.
+- **Hair/Makeup:** Cornrow braids for maximum security, determined game-face, faint sheen of sweat on shoulders and forehead.
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders,
+---
+
+**Additional Notes:**
+Elena Rosales and Marley Thompson standing near a rooftop ledge at night, city lights blurred in the background, a Moment of vulnerability and intense emotional connection.

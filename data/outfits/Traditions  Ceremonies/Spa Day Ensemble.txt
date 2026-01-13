@@ -1,23 +1,47 @@
 tags: [lounge, Relax, Spa]
 
 [F]
-- **Top:** Plush terry cloth robe (((default:white) or (signature)), knee-length with shawl collar, belt tie at waist)
-- **Bottom:** white tank top and shorts underneath
-- **Footwear:** spa slippers (open-toe terry cloth).
-- **Accessories:** Hair towel wrap turban, cucumber slices, face mask applied, rolled towel.
-- **Hair/Makeup:** Hair wrapped in towel, glowing fresh skin with sheet mask or clay mask, relaxation mode.
+- **Top:** Plush terry cloth robe over tank top.
+  - **Fit:** Oversized wrap.
+  - **Material:** Thick terry cloth.
+  - **Pattern:** Solid ((default:white)).
+  - **Neckline:** Shawl collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** White cotton shorts.
+  - **Fit:** Relaxed.
+  - **Material:** Cotton.
+  - **Waist:** Elastic.
+  - **Length:** Short (under robe).
+- **Footwear:** Open-toe terry cloth spa slippers.
+- **Accessories:** Towel wrap turban; cucumber slices; face mask.
 
 [M]
-- **Top:** Plush terry cloth robe (((default:white) or (signature)), knee-length with shawl collar, belt tie at waist)
-- **Bottom:** white tank top and shorts underneath
-- **Footwear:** spa slippers.
+- **Top:** Plush terry cloth robe.
+  - **Fit:** Relaxed wrap.
+  - **Material:** White Terry cloth.
+  - **Pattern:** Solid.
+  - **Neckline:** Shawl collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** White tank and shorts (underneath).
+  - **Fit:** Loose.
+  - **Material:** Cotton.
+  - **Waist:** Belted.
+  - **Length:** Knee-length.
+- **Footwear:** Spa slippers.
 - **Accessories:** Rolled towel over shoulder.
-- **Hair/Makeup:** Fresh clean skin, relaxation mode.
 
 [H]
-- **Hijab:** White towel wrap or turban style
-- **Top:** Plush terry cloth robe (((default:white) or (signature)), full length with long sleeves)
-- **Bottom:** White loose trousers underneath
-- **Footwear:** Spa slippers
-- **Accessories:** Cucumber slices, face mask applied
-- **Makeup:** Glowing fresh skin, relaxation mode
+- **Hijab:** White towel wrap or turban style.
+- **Top:** Plush terry cloth robe (full length).
+  - **Fit:** Full coverage wrap.
+  - **Material:** Terry cloth.
+  - **Pattern:** Solid White.
+  - **Neckline:** High-neck wrap.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** White loose trousers.
+  - **Fit:** Relaxed.
+  - **Material:** Cotton.
+  - **Waist:** Elastic.
+  - **Length:** Floor-length.
+- **Footwear:** Spa slippers.
+- **Accessories:** Cucumber slices; face mask.

@@ -4,7 +4,7 @@
 import tkinter as tk
 from tkinter import messagebox, ttk
 
-from config import TOOLTIPS
+from core.config import TOOLTIPS
 from utils import create_tooltip
 
 from .base_style_creator import BaseStyleCreatorDialog

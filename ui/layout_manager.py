@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
-from config import DEFAULT_THEME
+from core.config import DEFAULT_THEME
 from ui.character_card import CharacterGalleryPanel
 from ui.characters_tab import CharactersTab
 from ui.controllers.menu_actions import MenuActions

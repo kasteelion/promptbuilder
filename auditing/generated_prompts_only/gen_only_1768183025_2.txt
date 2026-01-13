@@ -1,0 +1,67 @@
+# METADATA
+Scene: Luxury cruise deck, ocean horizon, deck chairs, gentle sea breeze, vacation leisure atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Fiona O'Sullivan | Outfit: Retro Tracksuit | Pose: None
+Character: Lila Reyes | Outfit: Retro Tracksuit | Pose: None
+Interaction: Custom
+Score: 400
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Luxury cruise deck, ocean horizon, deck chairs, gentle sea breeze, vacation leisure atmosphere.
+---
+
+**CHARACTER: Fiona O'Sullivan**
+**Appearance:**
+* **Body:** Soft Natural plus-size frame; wave-type plush softness; soft pear-hourglass proportions; moderate vertical.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes; expressive hazel-green eyes; warm engaging smile; soft jawline; radiant joyful expression that reflects her generous spirit.
+* **Hair:** Type 2B-2C waves; high density; long layered cut with natural body; side part; soft natural volume with gentle frizz; copper-red to auburn with natural variation.
+* **Skin:** Fair rosy-toned skin with soft glow; smooth complexion. generous constellation of freckles across nose, cheeks, shoulders, and arms
+**Outfit:**
+- **Top:** Striped Camisole (fitted silhouette, spaghetti straps, horizontal red and white pin-stripes, cropped midriff length)
+- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, vintage dolphin hem cut)
+- **Footwear:** Oversized Bomber Jacket (matching red hue, worn slouched off-the-shoulders, voluminous sleeves, fabric draped around elbows).
+- **Accessories:** Simple gold pendant necklace, minimal jewelry.
+- **Hair/Makeup:** Low messy bun with loose face-framing strands; natural, fresh-faced makeup look with subtle lip color.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment, Carrying woven basket with flowers or produce, walking casually, cottagecore aesthetic, Peaceful energy.
+---
+
+**CHARACTER 2: Lila Reyes**
+**Appearance:**
+* **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
+* **Face:** Balanced-soft structure; round-oval face (Filipino features) with gentle angles; full cheeks (genetic, visible even lean); large round-almond eyes, moderately spaced, deep dark brown; small refined nose; soft jawline shows slight definition at low body fat; neutral resting expression is focused and determined with quiet confidence.
+* **Hair:** Type 1B straight; very high density; long length to mid-back; high-gloss sheen; jet black; commonly worn in high ponytail (gym), sleek bun, or loose and straight (casual).
+* **Skin:** Deep tan with warm golden-brown undertones (Filipino coloring—naturally darker than East Asian); smooth healthy finish with natural warmth; slight muscle definition visible but not extreme.
+**Outfit:**
+- **Top:** Striped Camisole (fitted silhouette, spaghetti straps, horizontal red and white pin-stripes, cropped midriff length)
+- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, vintage dolphin hem cut)
+- **Footwear:** Oversized Bomber Jacket (matching red hue, worn slouched off-the-shoulders, voluminous sleeves, fabric draped around elbows).
+- **Accessories:** Simple gold pendant necklace, minimal jewelry.
+- **Hair/Makeup:** Low messy bun with loose face-framing strands; natural, fresh-faced makeup look with subtle lip color.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment, Mid-punch or kick to heavy bag, dynamic motion, powerful extension, training intensity.
+---
+
+**Additional Notes:**
+Fiona O'Sullivan and Lila Reyes standing near a rooftop ledge at night, city lights blurred in the background, a Moment of vulnerability and intense emotional connection.

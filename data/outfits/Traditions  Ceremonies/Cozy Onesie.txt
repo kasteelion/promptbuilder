@@ -1,22 +1,31 @@
 tags: [Cute, lounge, sleep]
 
 [F]
-- **Top:** Full-body fleece onesie (((default:pastel pink or gray) or (signature)) with hood, zip-front closure, kangaroo pocket)
-- **Bottom:** matching hood (with animal ears - bunny, bear, or cat)
-- **Footwear:** fuzzy slipper boots built-in or separate.
-- **Accessories:** Hot cocoa mug, oversized stuffed animal.
-- **Hair/Makeup:** Hair loose and casual, no makeup, playful cozy expression.
+- **One-Piece:** Full-body fleece onesie with hood.
+  - **Fit:** Oversized baggy.
+  - **Material:** Fleece.
+  - **Pattern:** Solid ((default:pastel pink or gray)).
+  - **Neckline:** Hooded zip-front.
+  - **Sleeve:** Long sleeves.
+- **Footwear:** Built-in slipper feet or fuzzy boots.
+- **Accessories:** Hot cocoa mug; stuffed animal.
 
 [M]
-- **Top:** Full-body fleece onesie (((default:gray or plaid) or (signature)) with hood, zip-front closure)
-- **Bottom:** matching hood.
+- **One-Piece:** Full-body fleece onesie with hood.
+  - **Fit:** Relaxed.
+  - **Material:** Fleece.
+  - **Pattern:** Solid or Plaid.
+  - **Neckline:** Hooded.
+  - **Sleeve:** Long sleeves.
+- **Footwear:** Built-in or fuzzy slippers.
 - **Accessories:** Hot cocoa mug.
-- **Hair/Makeup:** Relaxed natural hair, comfortable expression.
 
 [H]
-- **Hijab:** Jersey hijab worn under hood
-- **Top:** Full-body fleece onesie (((default:pastel pink or gray) or (signature)) loose fit, long sleeves); **hood** up
-- **Bottom:** Full length legs (part of onesie)
-- **Footwear:** Fuzzy slipper boots
-- **Accessories:** Hot cocoa mug, stuffed animal
-- **Makeup:** No makeup, playful cozy expression
+- **Hijab:** Jersey hijab worn under hood.
+- **One-Piece:** Full-body fleece onesie (hood up).
+  - **Fit:** Loose modest.
+  - **Material:** Fleece.
+  - **Neckline:** High zip-neck.
+  - **Sleeve:** Long sleeves.
+- **Footwear:** Fuzzy slipper boots.
+- **Accessories:** Hot cocoa mug.

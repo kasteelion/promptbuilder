@@ -1,0 +1,67 @@
+# METADATA
+Scene: Pristine lab environment, stainless steel benches, microscopes, glass beakers, glowing chemical samples, cold professional lighting.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Ines Santos | Outfit: Esports Jersey | Pose: None
+Character: Talia Levi | Outfit: Esports Jersey | Pose: None
+Interaction: Custom
+Score: 300
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Pristine lab environment, stainless steel benches, microscopes, glass beakers, glowing chemical samples, cold professional lighting.
+---
+
+**CHARACTER: Ines Santos**
+**Appearance:**
+* **Body:** Soft Classic frame; balanced proportions with gentle curves; smooth, rounded contours; moderate height and vertical line; refined and graceful presence.
+* **Face:** Oval face shape with high, well-defined cheekbones; smooth, clear complexion with a natural glow; broad and genuine smile showing straight white teeth; warm, radiant expression.
+* **Eyes & Makeup:** Dark brown almond-shaped eyes; focal point is a sharp, precise black winged eyeliner (cat-eye style) flicking upward at the corners; dark, full, well-groomed eyebrows; natural soft rose-pink lip color.
+* **Hair:** Sleek, dark black hair; neat center part; pulled back tightly from the face into a low, polished bun or ponytail; smooth, high-gloss finish.
+* **Skin:** Warm, golden-tan complexion with a radiant, healthy glow; smooth satin texture.
+**Outfit:**
+- **Top:** Pro-style V-neck jersey for **The Gold Coast Kings** featuring an **asymmetric diagonal design**
+- **Bottom:** white torso base with contrasting **black** sleeves and side panels
+- **Footwear:** a bold **#552583** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** athletic joggers or leggings.
+- **Accessories:** Gaming headset, wristbands.
+- **Hair/Makeup:** Sleek styling, minimal modern makeup.
+**Pose/Action:**
+Standing with both arms raised and flexed at 90 degrees, fists curled inward, showing maximum arm and shoulder definition, vacuum-waist pose.
+---
+
+**CHARACTER 2: Talia Levi**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave-lush flesh quality; voluptuous hourglass proportions with pronounced bust (full D-DD), defined waist, and rounded hips; moderate-to-tall vertical (5'7"); soft density with feminine curves, visible décolletage, rounded shoulders, and shapely legs; magnetizing sensual presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-diamond shape; high pronounced cheekbones with sculpted planes; large almond-shaped wide-set eyes in deep amber-brown with naturally seductive heavy-lidded quality and penetrating direct gaze; full shapely lips; defined angular jawline; neutral resting expression is knowing and self-assured with slight sultry smile and unwavering confident eye contact that holds just a beat too long.
+
+* **Hair:** Type 2B-2C waves; very high density; voluminous cascading silhouette; long length past mid-back; natural loose center part; healthy high-sheen finish; commonly worn loose and wild with tousled volume, half-up with face-framing tendrils, or low messy bun showing neck; rich dark chocolate brown with warm caramel highlights.
+
+* **Skin:** Medium-tan with warm golden-olive undertones and luminous sun-kissed finish; beauty mark above upper lip on left side; smooth healthy Mediterranean glow.
+**Outfit:**
+- **Top:** Pro-style V-neck jersey for **The Gold Coast Kings** featuring an **asymmetric diagonal design**
+- **Bottom:** white torso base with contrasting **black** sleeves and side panels
+- **Footwear:** a bold **#552583** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** athletic joggers or leggings.
+- **Accessories:** Gaming headset, wristbands.
+- **Hair/Makeup:** Sleek styling, minimal modern makeup.
+**Pose/Action:**
+On mat in dominant position, knee on ground, controlled powerful posture, competitive intensity.
+---
+
+**Additional Notes:**
+Ines Santos applying triangle choke on Talia Levi from bottom position. Ines Santos on their back with Talia Levi trapped between their legs. Ines Santos's right leg is wrapped over Talia Levi's shoulder and behind their neck, right ankle or calf pressing into Talia Levi's left shoulder/neck. Ines Santos's left leg crosses over their right ankle/shin, creating the "triangle" lock, squeezing Talia Levi's head and one arm. Ines Santos's hips are angled and elevated, pulling Talia Levi's head down while pushing their trapped arm across their own throat to complete the choke. Ines Santos grips behind Talia Levi's head or controls their trapped arm, pulling downward. Talia Levi is bent forward, one arm trapped inside the triangle alongside their head, other arm possibly posting on mat trying to posture up. Talia Levi's face shows oxygen deprivation, redness, possible panic. Ines Santos shows controlled technique, adjusting angles with precision. Both display full-body effort—legs flexed hard, core engaged, arms fighting for control.

@@ -1,0 +1,81 @@
+# METADATA
+Scene: Clean minimalist interior, large sectional sofa, flat-screen TV, indoor plants, soft natural light, cozy domestic atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Callum Doherty | Outfit: Volleyball | Pose: None
+Character: Leilani Te'o | Outfit: Volleyball | Pose: None
+Character: Samira Mansour | Outfit: Volleyball | Pose: None
+Interaction: Custom
+Score: 530
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Clean minimalist interior, large sectional sofa, flat-screen TV, indoor plants, soft natural light, cozy domestic atmosphere.
+---
+
+**CHARACTER: Callum Doherty**
+**Appearance:**
+* **Body:** Natural frame; lean but defined muscularity (mesomorph leaning); moderate vertical (5'10"-5'11"); "wiry strength" developed from physical labor; forearms are notably toned and vascular; broad chest tapering to a narrow waist; moves with a loose, athletic agility.
+* **Face:** Angular and expressive; defined jawline that is often softened by a scruffy 5 o'clock shadow; bright, mischievous eyes in a piercing electric blue (striking contrast to hair); nose has a slight bump (maybe broken once in a rugby match); features are animated and quick to smile.
+* **Hair:** Type 2B waves; high density; vibrant, true copper-red (fox colored); cut in a "textured crop" or "modern mullet" style—shorter on sides, longer and messy on top/back; matte finish; often tousled by running hands through it.
+* **Skin:** Fair/Pale with pink undertones; heavily freckled—a constellation of rust-colored freckles covers his nose, cheeks, shoulders, and arms; prone to sunburn but currently has a "farmer's tan" on the arms.
+**Outfit:**
+- **Top:** Fitted sleeveless performance jersey for **The River City Lions** featuring **raglan-style shoulder panels** and **reinforced flat-seam construction**
+- **Bottom:** body matching jersey base color with **honeycomb-weave technical mesh panels** on the sides and back
+- **Footwear:** moisture-wicking fabric with a **subtle matte sheen**; **bold metallic team number** with a **silver block-shadow** centered on front and back; **lightweight athletic shorts** matching base color with **laser-cut side vents** and **internal drawstring waistband**; **low-profile gel knee pads**; **professional volleyball shoes** (#FFFFFF) with **non-marking high-grip soles**.
+- **Accessories:** Sweatbands on wrists with embroidered team initials, athletic tape on fingers.
+- **Hair/Makeup:** Hair short or secured, minimal grooming, competitive focus.
+**Pose/Action:**
+wide shot with the character framed within the environment, Mid-punch or kick to heavy bag, dynamic motion, powerful extension, training intensity.
+---
+
+**CHARACTER 2: Leilani Te'o**
+**Appearance:**
+* **Body:** Dramatic Natural; massive, heavily muscled frame with broad powerful shoulders and a deep chest; 45-35-50 proportions; tall height at 6'0"; EXTREME muscle density with visible definition in her "capped" delts, thick biceps, and powerful quads; heavy but athletic presence.
+* **Face:** Rugged-soft structure; square-oval face with a strong, well-defined jawline and high prominent cheekbones; large dark brown eyes with a steady, direct gaze; full expressive mouth; neutral resting expression is calm but intense, radiating a sense of quiet authority.
+* **Hair:** Type 3A–3B curls; high density; long length past her shoulders; naturally thick dark hair often worn half-up to keep it out of her face during training; healthy natural sheen.
+* **Skin:** Deep warm tan with rich golden-brown undertones (Polynesian coloring); smooth surface with visible muscle separation creating deep shadows; elaborate traditional 'tatau' patterns visible on one shoulder and upper arm.
+**Outfit:**
+- **Top:** Fitted sleeveless performance jersey for **The River City Lions** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes** in **#FE5000** with **#263B94** wraparound piping
+- **Bottom:** body matching jersey base color with **sublimated geometric pattern**
+- **Footwear:** fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** centered on the chest and back; **high-waist compression shorts** matching base color with **wide comfort waistband** and **reinforced flatlock seams**; **low-profile gel-cushioned knee pads**; **professional court shoes** (#FFFFFF) featuring **gum rubber soles**.
+- **Accessories:** Sweatbands with embroidered logo, athletic tape on fingers, matching hair ribbon.
+- **Hair/Makeup:** High tight ponytail with extreme volume, sweat-resistant performance makeup including **subtle shimmer on cheekbones** and a natural pink lip balm.
+**Pose/Action:**
+wide shot with the character framed within the environment, Streamlined diving position, arms extended forward, body horizontal, entering water, competitive form.
+---
+
+**CHARACTER 3: Samira Mansour**
+**Appearance:**
+* **Body:** Soft Natural; balanced proportions with soft curves; moderate vertical (5'6"); natural athletic density with a defined waist and soft shoulders; poised and culturally connected presence.
+* **Face:** Soft-balanced structure; oval face with high, smooth cheekbones; large expressive dark brown eyes framed by naturally thick, groomed eyebrows; straight refined nose; full lips with a natural cupid's bow; soft jawline; warm engaging expression that feels both wise and welcoming.
+* **Hair:** (Covered) Typically styled in voluminous dark curls beneath her hijab.
+* **Skin:** Rich golden-olive depth (North African coloring); smooth luminous finish; natural healthy glow enhanced by traditional skincare oils.
+**Outfit:**
+- **Hijab:** High-performance sports hijab matching base color featuring a **matte finish** and **aerodynamic secure tuck**
+- **Top:** Long-sleeve fitted performance tunic for **The River City Lions** featuring **asymmetric shoulder panels**; body matching base color with **sublimated geometric pattern**; fabric is a **high-sheen technical spandex**; **bold metallic team number**; tunic falls to mid-thigh with a **scalloped hem** in **#263B94** (contrasting libero jersey)
+- **Bottom:** Full-length performance compression leggings matching base color
+- **Footwear:** Professional court shoes (#FFFFFF) with **gum rubber soles**
+- **Accessories:** Low-profile gel-cushioned knee pads (worn over leggings), **matching sweatbands** on wrists
+- **Makeup:** Performance makeup including sweat-resistant foundation, **subtle shimmer on cheekbones**, and a natural pink lip balm
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing with arms crossed confidently, relaxed shoulders, natural stance.
+---
+
+**Additional Notes:**
+Callum Doherty fist bumping Leilani Te'o, knuckles meeting in casual friendly gesture

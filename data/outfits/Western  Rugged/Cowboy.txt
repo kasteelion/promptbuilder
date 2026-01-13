@@ -1,29 +1,46 @@
 tags: [historical, outdoor, Western]
 
 [F]
-- **Top:** Western-style button-down shirt (with yolk detailing and pearl snaps)
-- **Bottom:** fitted blue jeans or leather chaps
-- **Footwear:** pointed-toe cowboy boots with decorative stitching.
-- **Accessories:** Wide-brimmed felt cowboy hat, leather belt with ornate silver buckle, neck kerchief (red or blue).
-- **Hair/Makeup:** Long loose hair or braids, sun-kissed makeup with light freckles.
-
----
+- **Top:** Western-style button-down shirt.
+  - **Fit:** Tailored; Western.
+  - **Material:** Denim or Cotton.
+  - **Pattern:** Yolk detailing.
+  - **Neckline:** Pointed collar; Pearl snaps.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Fitted blue jeans or leather chaps.
+  - **Fit:** Fitted.
+  - **Material:** Denim or Leather.
+  - **Waist:** Natural with ornate silver buckle belt.
+  - **Length:** Full leg.
+- **Footwear:** Pointed-toe cowboy boots with decorative stitching.
+- **Accessories:** Wide-brimmed felt cowboy hat; neck kerchief (red or blue).
 
 [M]
-- **Top:** Western button-down shirt (with yolk detailing, pearl snaps, and embroidered accents)
-- **Bottom:** blue jeans or leather chaps
-- **Footwear:** pointed-toe cowboy boots with spurs.
-- **Accessories:** Felt cowboy hat (wide-brimmed), leather belt with large silver trophy buckle, silk neck kerchief.
-- **Hair/Makeup:** Natural hairstyle, sun-kissed appearance, determined expression.
-
----
+- **Top:** Western button-down shirt with embroidered accents.
+  - **Fit:** Standard western.
+  - **Material:** Cotton.
+  - **Pattern:** Yolk detailing and pearl snaps.
+  - **Neckline:** Pointed collar.
+  - **Sleeve:** Long.
+- **Bottom:** Blue jeans or leather chaps.
+  - **Fit:** Straight.
+  - **Material:** Denim/Leather.
+  - **Waist:** Large silver trophy buckle belt.
+  - **Length:** Full.
+- **Footwear:** Pointed-toe cowboy boots with spurs.
+- **Accessories:** Wide-brimmed felt cowboy hat; silk neck kerchief.
 
 [H]
-- **Hijab:** Denim blue or tan chiffon hijab with neat practical wrap
-- **Top:** Western-style button-down shirt (with yolk detailing and pearl snaps, modest fit)
-- **Bottom:** Blue jeans with decorative belt or leather chaps
-- **Footwear:** Pointed-toe cowboy boots with stitching
-- **Accessories:** Wide-brimmed cowboy hat (worn over hijab), ornate silver belt buckle, neck kerchief
-- **Makeup:** Sun-kissed makeup with light freckles
-
----
+- **Hijab:** Denim blue or tan chiffon hijab with neat practical wrap.
+- **Top:** Western-style button-down shirt.
+  - **Fit:** Modest fitted.
+  - **Material:** matching denim.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Blue jeans with decorative belt.
+  - **Fit:** Straight.
+  - **Material:** Denim.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Pointed-toe cowboy boots with stitching.
+- **Accessories:** Wide-brimmed cowboy hat (over hijab); ornate silver buckle; neck kerchief.

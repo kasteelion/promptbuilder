@@ -1,0 +1,77 @@
+# METADATA
+Scene: Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Samira Mansour | Outfit: Winter Holiday | Pose: None
+Character: Kendra Mitchell | Outfit: Indian Formal | Pose: None
+Character: Marley Thompson | Outfit: Esports Jersey | Pose: None
+Score: 175
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
+---
+
+**CHARACTER: Samira Mansour**
+**Appearance:**
+* **Body:** Soft Natural; balanced proportions with soft curves; moderate vertical (5'6"); natural athletic density with a defined waist and soft shoulders; poised and culturally connected presence.
+* **Face:** Soft-balanced structure; oval face with high, smooth cheekbones; large expressive dark brown eyes framed by naturally thick, groomed eyebrows; straight refined nose; full lips with a natural cupid's bow; soft jawline; warm engaging expression that feels both wise and welcoming.
+* **Hair:** (Covered) Typically styled in voluminous dark curls beneath her hijab.
+* **Skin:** Rich golden-olive depth (North African coloring); smooth luminous finish; natural healthy glow enhanced by traditional skincare oils.
+**Outfit:**
+- **Hijab:** Luxurious silk or velvet hijab in deep jewel tone (emerald, burgundy, or navy) with festive draping and crystal pin
+- **Top:** Long-sleeve velvet or satin tunic dress (knee-length or midi in matching jewel tone, high neckline)
+- **Bottom:** N/A or full-length skirt in matching fabric
+- **Footwear:** Heeled boots or pumps in coordinating color
+- **Accessories:** Statement jewelry, small elegant clutch, elegant shawl
+- **Makeup:** Festive styling with shimmer, bold lip in berry or red tones
+**Pose/Action:**
+full body shot showing the character from head to toe, Sitting at table with drink, looking out window or at camera, cozy aesthetic vibes.
+---
+
+**CHARACTER 2: Kendra Mitchell**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; broad inverted triangle proportions with wide shoulders, long limbs, and subtle waist definition; tall (5'9"); strong defined muscle with visible shoulder caps, toned arms, and powerful legs; commanding physical presence.
+* **Face:** Strong angular structure; oblong-square face; prominent bone structure with high broad cheekbones; almond-shaped wide-set hazel-green eyes; strong defined jawline; neutral resting expression is confident and direct with penetrating gaze; smile is wide, genuine, and slightly asymmetric with infectious energy.
+* **Hair:** Type 3B curls; high density; shoulder-length layered cut; side part; voluminous natural texture; matte-satin finish; commonly worn loose and free or in high messy bun; warm chestnut brown with golden highlights.
+* **Skin:** Medium tan with warm golden undertones and healthy athletic glow; faint freckles across nose and shoulders.
+**Outfit:**
+- **Top:** Saree (5-9 yards of draped silk, chiffon, or georgette fabric in vibrant colors - red, royal blue, emerald, fuchsia, or gold with embroidered borders, sequins, or zari work)
+- **Bottom:** fitted blouse (choli) (short sleeves, sleeveless, or cap sleeves with matching or contrasting embellishments)
+- **Footwear:** petticoat (underskirt in matching color); **embellished sandals or heels**.
+- **Accessories:** Gold jewelry set (necklace, earrings, bangles - multiple on each wrist, anklets optional), bindi (forehead decoration), maang tikka (center-part hair jewelry), clutch or small purse, draped pallu (end piece) over shoulder.
+- **Hair/Makeup:** Hair in elegant bun with jasmine flowers or loose waves with side part, dramatic kohl-lined eyes, defined brows, natural or red lip, henna designs on hands optional.
+**Pose/Action:**
+full body shot showing the character from head to toe, Holding a longsword with both hands above the head at a 45-degree angle, legs in a wide stable stance, ready to strike down.
+---
+
+**CHARACTER 3: Marley Thompson**
+**Appearance:**
+* **Body:** Romantic frame; wave-lush flesh quality; voluptuous hourglass proportions with full bust (DD-E cup), dramatically defined waist, wide rounded hips, full thighs; moderate height (5'5"-5'6"); soft density with feminine curves throughout, rounded shoulders, shapely legs; magnetizing maternal presence.
+* **Face:** Soft-rounded facial structure; heart-to-round face shape; full cheeks with natural warmth; large expressive dark brown eyes, wide-set, warm inviting gaze; full lips with natural cupid's bow; soft jawline; neutral resting expression is serene and welcoming with gentle smile—radiates nurturing warmth and domestic contentment.
+* **Hair:** Type 4A coils; very high density; medium-long length (past shoulders); high volume and body; commonly worn in protective styles that are polished and feminine—twist-outs with defined curls, elegant bun with decorative pins, braided crown styles, occasionally heat-styled into bouncy curls for special occasions; natural black with warm brown undertones; always well-maintained and styled.
+* **Skin:** Deep warm brown with rich golden undertones; smooth luminous finish; healthy glow from good skincare; natural radiance.
+**Outfit:**
+- **Top:** Pro-style V-neck jersey for **The Gold Coast Kings** featuring an **asymmetric diagonal design**
+- **Bottom:** white torso base with contrasting **black** sleeves and side panels
+- **Footwear:** a bold **#552583** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** athletic joggers or leggings.
+- **Accessories:** Gaming headset, wristbands.
+- **Hair/Makeup:** Sleek styling, minimal modern makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Mid-air or high-release shot, arm extended toward hoop, flick of the wrist, focused concentration.
+---

@@ -1,0 +1,80 @@
+# METADATA
+Scene: High ceilings, large open space, displayed artifacts/art, clean bright lighting, polished floors, formal quiet atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Priya Sharma | Outfit: Hindu | Pose: None
+Character: Kaito Sato | Outfit: Digital Nomad Rain | Pose: None
+Character: Jax Chen | Outfit: Ranch Hand | Pose: None
+Interaction: Custom
+Score: 235
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+High ceilings, large open space, displayed artifacts/art, clean bright lighting, polished floors, formal quiet atmosphere.
+---
+
+**CHARACTER: Priya Sharma**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
+* **Face:** Soft oval face with gentle rounded features; warm expressive dark brown eyes; friendly approachable expression; fuller cheeks; soft jawline; warm genuine smile.
+* **Hair:** Type 2B-2C waves; medium-high density; long dark brown hair (almost black at roots) with warm caramel-brown highlights throughout mid-lengths and ends; natural body and volume; beachy waves.
+* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow. small black bindi dot on forehead
+**Outfit:**
+- **Top:** Silk sari (vibrant colors - red, gold, royal blue, or emerald with ornate gold embroidery and border)
+- **Bottom:** fitted choli blouse
+- **Footwear:** ornate sandals or barefoot.
+- **Accessories:** Elaborate gold jewelry set (necklace, earrings, bangles, anklets), bindi, nose ring, maang tikka (forehead jewelry), fresh flower garland.
+- **Hair/Makeup:** Hair in elegant braid with flowers, dramatic eye makeup with kohl, natural lip.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Kaito Sato**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; wiry and compact; defined, sinewy muscle (climber/skater build); shorter vertical (5'6"-5'7"); extremely agile and fast-twitch; straight lines with sharp edges; projects nervous, electric energy.
+* **Face:** Angular, diamond-shaped face; sharp, pointed chin; narrow eyes that are often squinting in focus or widening in adrenaline; mischievous grin that shows teeth; features are delicate but sharp.
+* **Hair:** Type 1B straight; medium density; undercut with a long, choppy top; bleached platinum blonde (almost white) with roots showing; often messy or swept forward.
+* **Skin:** Fair with cool undertones; prone to flushing when active; usually has a band-aid or small scrape on the cheek or knuckles.
+**Outfit:**
+- **Top:** Boxy, water-resistant navy tech-jacket with translucent charcoal PVC paneling and numerosi oversized neon-blue zippers and hardware.
+- **Bottom:** Baggy, multi-pocket rain-trousers in a heavy-duty navy nylon with high-contrast neon-blue stitching and reinforced waterproof seams.
+- **Footwear:** Sturdy, terrain-adaptive rain-boots with a thick, sculpted neon-blue sole and reinforced waterproof construction.
+- **Accessories:** A robust tactical rain-backpack with integrated electronic waterproofing; a pair of high-visibility neon-blue tech-gloves.
+- **Hair/Makeup:** Practical wet-look short cut; resilient skin texture with a healthy outdoor glow; alert, focused expression.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Jax Chen**
+**Appearance:**
+- **Body:** Explosive-Athletic frame; olive-toned skin with a vibrant, high-oxygenated flush; inverted triangle proportions with powerful, broad shoulders and a narrow, muscular waist; tall stature (6'1"-6'2"); high-performance build with dense, defined muscle groups and visible vascularity; "kinetic potential" presence—vibrant and dangerous.
+- **Face:** Sharp, aerodynamic structure; high, defined cheekbones; narrow, powerful jawline; intense, wide-set dark eyes that possess a piercing, high-speed focus; sharp, straight eyebrows with a low, aggressive set; straight, thin nose; firm mouth with a determined set; expression is one of maximum effort and singular focus.
+- **Hair:** Type 1A straight; medium density; kept in a sharp, high-fade with a short, textured top; matte-satin finish with vibrant neon orange tips that seem to vibrate with his movement.
+- **Skin:** Vibrant olive with warm, high-energy undertones; smooth, taut texture with visible "muscle-mapping" micro-textures in the dermis; beads of high-intensity sweat reflecting light; "high-performance" glow.
+**Outfit:**
+- **Top:** Worn denim work shirt (faded blue, long sleeves rolled to forearm, slightly distressed)
+- **Bottom:** canvas work vest (carhartt style)
+- **Footwear:** durable work jeans (straight leg, authentic wear patterns); **sturdy work boots** (brown leather with visible scuffs, lace-up).
+- **Accessories:** Leather work gloves, bandana around neck, worn baseball cap or cowboy hat.
+- **Hair/Makeup:** Natural hair, sun-kissed skin, stubble or beard, honest hardworking expression.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Priya Sharma handing a small, glowing data-shard to Kaito Sato, their fingers brushing briefly, a sense of high-stakes cooperation and secrecy.

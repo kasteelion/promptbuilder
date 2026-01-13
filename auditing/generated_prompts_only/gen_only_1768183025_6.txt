@@ -1,0 +1,76 @@
+# METADATA
+Scene: Clean clinical hallway, white walls, medical equipment visible, fluorescent lighting, professional healthcare setting.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Leonidas Stratos | Outfit: Goth | Pose: None
+Character: Zara Washington | Outfit: Sundress | Pose: None
+Character: Elias Thorne | Outfit: Modern Nomad | Pose: None
+Score: 185
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Clean clinical hallway, white walls, medical equipment visible, fluorescent lighting, professional healthcare setting.
+---
+
+**CHARACTER: Leonidas Stratos**
+**Appearance:**
+* **Body:** Dramatic; elite athletic flesh; "Adonis belt" and deep core definition; broad square shoulders and a narrow, powerful waist; moderate-to-tall vertical (6'0"-6'2"); extremely high muscle density with sharp vascularity; movements are precise, economical, and explosive.
+* **Face:** Severe-classical structure; sharp, chiseled features; high nasal bridge; deep-set, hawk-like amber-brown eyes; prominent cheekbones and a squared, resolute jawline; neutral expression is intense and watchful, radiating a sense of absolute focus.
+* **Hair:** Type 1B-2A; medium density; disciplined short-to-medium silhouette; no defined part; low sheen; tight, disciplined crop or rough swept-back style. Dark chestnut or black.
+* **Skin:** Deep olive; warm golden undertones; smooth firm texture; surgically-precise scars on pectoral and outer thigh; tanned.
+**Outfit:**
+- **Top:** Black band tee or mesh shirt
+- **Bottom:** distressed black jeans with chains
+- **Footwear:** combat boots.
+- **Accessories:** Choker or collar, silver rings, studded belt.
+- **Hair/Makeup:** Hair styled to match the dark aesthetic, dark clothing aesthetic, eyeliner optional.
+**Pose/Action:**
+full body shot showing the character from head to toe, Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
+---
+
+**CHARACTER 2: Zara Washington**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
+* **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
+* **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
+* **Skin:** Deep rich brown skin with luminous depth.
+**Outfit:**
+- **Top:** **Lightweight floral sundress** (knee-length or midi, thin straps or ruffled sleeves)
+- **Bottom:** flowy skirt of the dress
+- **Footwear:** Strappy **sandals** or espadrilles.
+- **Accessories:** Wide-brim straw hat, woven wicker bag, sunglasses.
+- **Hair/Makeup:** Loose waves, sun-kissed makeup, glowing skin.
+**Pose/Action:**
+full body shot showing the character from head to toe, Dynamic athletic crouch at foul line, front knee deeply bent at 90 degrees, back leg extended straight behind, arm extended forward in powerful follow-through, low ground-level perspective.
+---
+
+**CHARACTER 3: Elias Thorne**
+**Appearance:**
+* **Body:** Dramatic frame; tall and lean (6'1"-6'2"); maintained simply through discipline (yoga/pilates); narrow shoulders and long lines; moves with a fluid, ageless elegance; clothes hang on him like he is a mannequin.
+* **Face:** Long, narrow, and angular; deep-set, intelligent grey eyes; distinctive aquiline nose; sharp cheekbones; clean-shaven or a very close stubble; expression is usually one of amused detachment or critical observation.
+* **Hair:** Type 1A straight; fine density; precision-cut textured crop, kept neat and short; striking pure silver/white color; matte finish.
+* **Skin:** Fair-cool; smooth texture with distinguished fine lines around eyes and forehead (the "character lines"); pale but healthy. thick-rimmed black architectural glasses
+**Outfit:**
+- **Top:** Multi-functional slate-gray tech-vest with integrated solar-panel panels and numerous reinforced gear loops, worn over a charcoal base layer.
+- **Bottom:** Articulated cargo trousers in a durable, rip-stop nylon blend with moisture-wicking properties and integrated gear holsters.
+- **Footwear:** Sturdy, all-terrain tech-boots with a rugged lug sole, reinforced toe cap, and quick-lace system.
+- **Accessories:** A robust tactical backpack with external modular attachment points; a pair of heavy-duty, touch-screen compatible gloves.
+- **Hair/Makeup:** Practical short fade; rugged, weathered skin texture; focused, alert expression.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with one hand extended, fingers spread as if manipulating a floating holographic display, focused expression, futuristic gesture.
+---

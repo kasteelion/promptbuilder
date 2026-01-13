@@ -1,0 +1,63 @@
+# METADATA
+Scene: Clean minimalist interior, large sectional sofa, flat-screen TV, indoor plants, soft natural light, cozy domestic atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Harper Mae Sullivan | Outfit: Basketball | Pose: None
+Character: Isla MacLeod | Outfit: Streetwear | Pose: None
+Interaction: Custom
+Score: 290
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Clean minimalist interior, large sectional sofa, flat-screen TV, indoor plants, soft natural light, cozy domestic atmosphere.
+---
+
+**CHARACTER: Harper Mae Sullivan**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-wave flesh blend; balanced proportions with gentle curves and natural waist definition; moderate vertical; soft athletic build with graceful ease.
+* **Face:** Soft oval-to-heart facial structure; gentle rounded features; warm expressive blue-green eyes with slight upward tilt, moderately spaced; constellation of freckles across nose and cheeks; soft defined jawline; neutral resting expression is warm and inviting with easy dimpled smile and sparkling eyes.
+* **Hair:** Type 2B-2C waves; high density; long sun-lightened layers past shoulders; natural loose part; healthy bounce; warm honey-blonde with natural golden highlights from sun exposure; commonly worn half-up with loose tendrils or in relaxed low ponytail.
+* **Skin:** Fair-to-light warm peachy undertones with natural healthy glow; prominent freckles across nose, cheeks, and shoulders that intensify with sun; soft luminous finish.
+**Outfit:**
+- **Top:** Basketball jersey for **Standard Team**  (sleeveless, wide shoulder cut)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Shooting sleeve, headband.
+- **Hair/Makeup:** Ponytail or bun.
+**Pose/Action:**
+medium shot showing the character from the waist up,
+---
+
+**CHARACTER 2: Isla MacLeod**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; delicate balanced proportions; petite vertical; soft gentle presence.
+* **Face:** Soft delicate facial structure; heart-shaped face; gentle features; large dreamy eyes in gray-blue; soft dusting of freckles; serene contemplative expression.
+* **Hair:** Type 2A waves; fine-medium density; shoulder-length layered cut; loose natural part; soft wispy texture; matte-satin finish; auburn with natural red tones.
+* **Skin:** Fair cool-toned skin with soft pink undertones; light freckles across nose and cheeks.
+**Outfit:**
+- **Top:** Oversized **graphic hoodie or sweatshirt** in heavy-gauge loopback cotton; matte finish with high-contrast screen print
+- **Bottom:** multi-pocket **cargo pants** in a durable technical ripstop fabric with adjustable drawstrings at the ankle
+- **Footwear:** chunky multi-textured sneakers with mesh panels and reflective detailing
+- **Accessories:** Distressed baseball cap, nylon crossbody bag with tactical buckles, silver curb chain necklace
+- **Hair/Makeup:** Natural or minimal makeup with a focus on skin texture; effortless "street-ready" bun or ponytail
+**Pose/Action:**
+medium shot showing the character from the waist up,
+---
+
+**Additional Notes:**
+Harper Mae Sullivan and Isla MacLeod standing side by side comparing heights, one measuring against the other

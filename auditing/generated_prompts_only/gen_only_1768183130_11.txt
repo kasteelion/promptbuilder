@@ -1,0 +1,80 @@
+# METADATA
+Scene: Winding stone pathway, flowering hedges, cottage in background, dappled sunlight, romantic countryside.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Diego Morales | Outfit: Ribbed Bodysuit | Pose: None
+Character: Rafael Costa | Outfit: Comfortable | Pose: None
+Character: Julian Blackwood | Outfit: Skater Culture | Pose: None
+Interaction: Custom
+Score: 445
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Winding stone pathway, flowering hedges, cottage in background, dappled sunlight, romantic countryside.
+---
+
+**CHARACTER: Diego Morales**
+**Appearance:**
+- **Body:** Natural Athletic frame; natural-toned flesh with sun-touched warmth; inverted rectangle proportions with broad shoulders, slim waist, and defined muscle groups without bulk; moderate height (5'11"-6'0"); relaxed athletic build—lean and flexible from years of surfing; "effortless strength" presence—capable but never posturing.
+- **Face:** Balanced-angular structure; oval face shape; firm jawline that softens when he smiles; expressive almond-shaped eyes, wide-set, warm hazel with golden flecks that catch the light; natural dark eyebrows with a slight arch; straight nose with a subtle bridge; full mouth often quirked into a friendly half-smile; expressive neutral expression that reads as engaged and helpful.
+- **Hair:** Type 2B-2C waves; thick high density; medium length textured cut, shorter on sides with volume on top; loose natural side part; matte-satin finish with sun-bleached highlights at the tips; commonly worn tousled and "salt-water" styled, or loosely pushed back during work.
+- **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
+**Outfit:**
+- **Top:** Sleeveless scoop-neck ribbed tank (high-density ribbed knit in cream, form-fitting construction that emphasizes chest and abdominal definition)
+- **Bottom:** Worn tucked into low-waist distressed denim shorts.
+- **Accessories:** Simple gold chain necklace; small silver watch.
+- **Hair/Makeup:** Tousled natural hair; clean-shaven or neat stubble; fresh-faced look.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Rafael Costa**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with slight wave; balanced proportions with gentle breadth; moderate vertical; relaxed athletic build with natural ease.
+* **Face:** Balanced-warm facial structure; oval-to-square face; warm expressive eyes; defined brows; easy smile; open welcoming expression.
+* **Hair:** Type 3A curls; high density; medium-length tousled cut; natural volume; soft matte-satin finish; often pushed back with slight forward fall.
+* **Skin:** Warm tan skin with golden undertones and healthy glow.
+**Outfit:**
+- **Top:** #A0522D pajama set with **t-shirt or tank**
+- **Bottom:** slippers or socks.
+- **Accessories:** None or minimal.
+- **Hair/Makeup:** Minimal grooming, hair natural.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Julian Blackwood**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; moderate height (5'8"); soft, slightly fleshy build but not overweight; narrow, sloping shoulders; delicate hands with long fingers (piano hands); fluid, languid physicality.
+* **Face:** Soft, oval shape with a "baby face" quality; full, pouty lips; large, liquid eyes in a pale grey-green; heavy, dark brows; permanent dark circles under eyes that enhance the "brooding" look.
+* **Hair:** Type 3A curls; high density; shoulder-length "wolf cut" or shag; messy, falling into eyes; dark chocolate brown, almost black.
+* **Skin:** Very pale/alabaster; cool undertones; translucent quality (veins visible on inner arms); scattering of tattoos on hands and neck.
+**Outfit:**
+- **Top:** Oversized **graphic t-shirt**
+- **Bottom:** baggy **durable work pants**
+- **Footwear:** canvas skate shoes.
+- **Accessories:** Beanie, chain wallet, earbuds around neck.
+- **Hair/Makeup:** Tousled natural hair, clean-shaven or stubble.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Diego Morales casually leaning on Rafael Costa, relaxed pose showing familiarity and comfort

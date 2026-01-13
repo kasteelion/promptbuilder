@@ -1,0 +1,77 @@
+# METADATA
+Scene: Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Elena Rosales | Outfit: Basketball | Pose: None
+Character: Keiko Yamamoto | Outfit: Pro Wrestling | Pose: None
+Character: Hallie Bennett | Outfit: Gym | Pose: None
+Score: 505
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
+---
+
+**CHARACTER: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Outfit:**
+- **Top:** Basketball jersey for **The Bay Bears**  (sleeveless, wide shoulder cut)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Shooting sleeve, headband.
+- **Hair/Makeup:** Ponytail or bun.
+**Pose/Action:**
+full body shot showing the character from head to toe, Stretching a limb or jogging in place, preparing for physical activity, focused athletic mindset.
+---
+
+**CHARACTER 2: Keiko Yamamoto**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact athletic proportions; petite vertical line; sharp and energized presence.
+* **Face:** Angular sculpted structure; square-leaning oval face; strong jawline; intense dark brown eyes; restrained confident expression that reflects her focused discipline.
+* **Hair:** Type 1 straight; medium density; dark black with matte texture; choppy layers and versatile alternative styling options; drawn to sharp, Edgy cuts.
+* **Skin:** Light neutral skin with matte clarity; smooth even finish. sharp professional black-framed rectangular glasses
+**Outfit:**
+- **Top:** Athletic **sports bra or crop top** (red metallic spandex with black piping detail and center zipper accent)
+- **Bottom:** high-waisted **wrestling briefs** (matching red with black trim)
+- **Footwear:** fishnet tights (black, full-length); elbow-length **arm sleeves** (red spandex, single arm or matching pair); knee-high **wrestling boots** (black leather with multiple buckle straps and platform sole).
+- **Accessories:** red knee pads (under fishnets), choker or collar (red to match outfit), wrist tape (black or red), hair ties matching gear colors.
+- **Hair/Makeup:** dramatic smoky eye makeup with bold winged liner, contoured cheekbones, bold red or dark lip.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe, Turned slightly to side, gazing off into distance, contemplative expression.
+---
+
+**CHARACTER 3: Hallie Bennett**
+**Appearance:**
+* **Body:** Soft Natural frame; soft flesh with natural give; balanced proportions with soft hourglass tendency—rounded shoulders, moderate bust, defined waist with gentle softness, full hips and thighs; moderate height (5'5"-5'6"); soft athletic build with underlying functional strength, visible in legs and core when engaged but softened by feminine curves; approachable active presence.
+* **Face:** Soft, round-oval face with gentle cheek fullness; slightly almond-shaped dark brown eyes; warm, easy smile with slight upturn at mouth corners; overall approachable, open expression.
+* **Hair:** Shoulder-length wavy hair; sun-kissed light brown with natural blonde highlights; moderate density and natural movement suited to low-maintenance styles.
+* **Skin:** Light-fair with neutral undertones and soft, healthy glow; minimal permanent markings.
+**Outfit:**
+- **Top:** Fitted **#87CEEB top** (technical knit)
+- **Bottom:** high-waist **athletic shorts or leggings** (technical fabric).
+- **Accessories:** Fitness watch or tracker, hair in ponytail.
+- **Hair/Makeup:** Minimal or no makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing on hands, body perfectly vertical, legs locked together, focused balance.
+---

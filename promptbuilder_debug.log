@@ -1,6 +1,1333 @@
-2026-01-11 15:31:04,920 - DEBUG - === Debug Log Started ===
-2026-01-11 15:31:04,921 - INFO - Starting Prompt Builder...
-2026-01-11 15:31:04,924 - INFO - Prompt Builder
-2026-01-11 15:31:04,924 - INFO - Python 3.14.0
-2026-01-11 15:31:04,924 - INFO - Platform: win32
-2026-01-11 15:31:04,924 - DEBUG - === Debug Log Ended ===
+2026-01-11 22:47:04,533 - DEBUG - === Debug Log Started ===
+2026-01-11 22:47:04,533 - INFO - Starting Prompt Builder...
+2026-01-11 22:47:04,601 - INFO - Creating Tkinter root window...
+2026-01-11 22:47:04,736 - INFO - Creating PromptBuilderApp...
+2026-01-11 22:47:04,759 - INFO - Entering mainloop...
+2026-01-11 22:47:05,622 - INFO - Font size updated to 10
+2026-01-11 22:47:06,038 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,040 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,041 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,043 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,045 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,046 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,048 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,049 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,051 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,053 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,054 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,056 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,223 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=276)
+2026-01-11 22:47:06,264 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=488)
+2026-01-11 22:47:06,331 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=6
+2026-01-11 22:47:06,364 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=9
+2026-01-11 22:47:06,399 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=6
+2026-01-11 22:47:06,421 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=6
+2026-01-11 22:47:06,444 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=7
+2026-01-11 22:47:06,468 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=6
+2026-01-11 22:47:06,489 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=9
+2026-01-11 22:47:06,516 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=6
+2026-01-11 22:47:06,538 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=8
+2026-01-11 22:47:06,689 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,701 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,706 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,711 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,716 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,719 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,723 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,728 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,732 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,736 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,740 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,744 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=242)
+2026-01-11 22:47:06,874 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=9
+2026-01-11 22:47:06,907 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=7
+2026-01-11 22:47:06,937 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=7
+2026-01-11 22:47:06,972 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=6
+2026-01-11 22:47:06,972 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=9
+2026-01-11 22:47:06,973 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=6
+2026-01-11 22:47:06,973 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=6
+2026-01-11 22:47:06,973 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=7
+2026-01-11 22:47:06,974 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=6
+2026-01-11 22:47:06,974 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=9
+2026-01-11 22:47:06,976 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=6
+2026-01-11 22:47:06,976 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=8
+2026-01-11 22:47:06,977 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=9
+2026-01-11 22:47:06,977 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=7
+2026-01-11 22:47:06,977 - DEBUG - FlowFrame._reflow(place): avail_width=242 children=7
+2026-01-11 22:47:07,302 - DEBUG - Font resized: width=2560, base=16, adjustment=0, final=16
+2026-01-11 22:47:07,386 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:07,419 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:07,450 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=4
+2026-01-11 22:47:07,475 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:07,502 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:07,534 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:07,564 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:07,593 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:07,620 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:07,762 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,776 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,779 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,782 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,785 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,789 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,792 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,796 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,799 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,802 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,805 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,808 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:07,910 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:47:07,951 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:07,988 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:08,029 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:08,029 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:08,030 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=4
+2026-01-11 22:47:08,030 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:08,030 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:08,031 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:08,031 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:08,031 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:08,032 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:08,032 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:47:08,032 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:08,033 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:08,078 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:08,120 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:08,166 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:08,200 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:08,232 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:08,264 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:08,294 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:08,326 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:08,364 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:08,557 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,577 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,581 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,585 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,588 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,591 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,596 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,599 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,602 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,606 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,609 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,612 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:08,714 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:08,757 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:08,795 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:08,840 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:08,840 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:08,840 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:08,841 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:08,841 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:08,842 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:08,842 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:08,843 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:08,843 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:08,843 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:08,844 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:08,844 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:08,877 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:08,929 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:08,975 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:09,015 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:09,051 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:09,085 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:09,117 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:09,152 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:09,185 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:09,214 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:09,384 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,402 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,405 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,408 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,411 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,414 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,417 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,420 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,423 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,426 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,430 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,433 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:09,531 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:09,577 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:09,622 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:09,623 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:09,623 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:09,623 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:09,623 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:09,624 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:09,624 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:09,624 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:09,625 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:09,625 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:09,625 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:09,626 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:09,675 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=11
+2026-01-11 22:47:09,744 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:09,807 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:09,861 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:09,904 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:09,939 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:09,976 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:10,018 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:10,056 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:10,258 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,279 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,282 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,285 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,288 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,291 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,295 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,299 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,302 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,305 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,308 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,311 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:10,408 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:10,445 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:10,482 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:10,529 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=11
+2026-01-11 22:47:10,529 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:10,530 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:10,530 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:10,530 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:10,530 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:10,531 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:10,531 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:10,531 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:10,532 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:10,532 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:10,532 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:10,563 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:10,616 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:10,668 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:10,711 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:10,751 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:10,784 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:10,819 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:10,849 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:10,884 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:47:10,923 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:10,955 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:10,988 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:11,023 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:11,023 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:11,024 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:11,024 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:11,024 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:11,024 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:11,025 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:11,025 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:11,025 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:47:11,026 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:11,026 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:11,026 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:13,211 - DEBUG - State saved for undo
+2026-01-11 22:47:13,430 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=365)
+2026-01-11 22:47:13,442 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=365)
+2026-01-11 22:47:13,572 - DEBUG - FlowFrame._reflow(place): avail_width=365 children=4
+2026-01-11 22:47:13,613 - DEBUG - FlowFrame._reflow(place): avail_width=365 children=4
+2026-01-11 22:47:19,440 - DEBUG - State saved for undo
+2026-01-11 22:47:19,566 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=365)
+2026-01-11 22:47:19,636 - DEBUG - FlowFrame._reflow(place): avail_width=365 children=4
+2026-01-11 22:47:22,846 - DEBUG - State saved for undo
+2026-01-11 22:47:37,127 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,131 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,135 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,138 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,141 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,145 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,148 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,152 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,155 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,159 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,162 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,165 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,168 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,172 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,175 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,178 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,181 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,185 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,189 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,192 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,195 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,199 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,203 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,206 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,209 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,213 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,216 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,219 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,223 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,226 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,229 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,233 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,237 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,240 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,243 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,246 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,250 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,253 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,257 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,260 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,264 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,267 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,271 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,274 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,277 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,280 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,284 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,288 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,291 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,295 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,298 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,302 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,305 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,308 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,312 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,316 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,320 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,323 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,326 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,330 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:37,844 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:37,887 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:37,964 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=11
+2026-01-11 22:47:38,011 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:38,050 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:38,088 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:38,127 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:38,161 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:38,198 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:38,237 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:38,274 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:38,464 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,485 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,489 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,492 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,496 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,499 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,503 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,507 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,510 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,513 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,517 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,521 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:38,621 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:38,665 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:38,711 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:38,774 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:38,875 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:38,983 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:39,078 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:39,174 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:39,267 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:39,358 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:39,454 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:39,545 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:39,641 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:39,735 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:39,825 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:39,914 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:40,002 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:40,086 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=4
+2026-01-11 22:47:40,164 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:40,245 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:40,328 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:40,410 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:40,491 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:40,568 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:40,646 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:47:40,728 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:40,806 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:40,879 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:40,952 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:41,025 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:41,099 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:41,171 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:41,239 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:41,307 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:41,378 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:41,444 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:41,508 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:41,573 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:41,638 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:41,704 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:41,774 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:41,842 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:41,904 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:41,965 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,035 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:42,095 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:42,156 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:42,212 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:42,264 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:42,318 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:42,319 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:42,319 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=11
+2026-01-11 22:47:42,320 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:42,320 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,320 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:42,321 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:42,321 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:42,321 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:42,322 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:42,322 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,322 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:42,323 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,323 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:42,360 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,399 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,436 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:42,475 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,508 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:42,543 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:42,580 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:42,612 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:42,649 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:47:42,687 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,719 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:42,753 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:42,788 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,788 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,789 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:42,789 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,789 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:42,790 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:42,790 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:42,790 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:42,791 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:47:42,791 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:42,791 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:42,792 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:44,574 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,579 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,582 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,586 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,589 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,593 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,597 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,600 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,603 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,606 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,610 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,613 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,617 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,620 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,624 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,627 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,631 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,634 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,637 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,640 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,645 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,648 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,651 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,654 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,658 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,661 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,664 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,668 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,671 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,676 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,679 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,683 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,686 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,689 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,693 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,696 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,700 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,703 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,707 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,710 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,714 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,717 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,720 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,724 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,728 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,731 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,734 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,738 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,741 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,744 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,748 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,751 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,754 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,758 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,761 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,765 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,768 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,771 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,775 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,778 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,781 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,784 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,788 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,792 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,795 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,798 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,802 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,805 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,809 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,813 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,816 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:44,820 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,235 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,240 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,244 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,248 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,251 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,254 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,258 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,262 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,265 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,269 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,272 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,276 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,383 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:46,413 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:46,449 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:46,476 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:46,502 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:46,528 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:46,553 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:46,583 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:46,606 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:46,751 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,764 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,768 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,771 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,774 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,778 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,781 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,785 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,788 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,793 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,797 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,800 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:46,908 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:46,945 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:46,979 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,021 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:47,021 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:47,022 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:47,022 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:47,022 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,023 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:47,023 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:47,023 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:47,024 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:47,024 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:47,024 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,025 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,032 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:47,067 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:47,100 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=4
+2026-01-11 22:47:47,128 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,160 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:47,193 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:47,225 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:47,258 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,286 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:47,431 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,446 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,450 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,453 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,457 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,460 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,464 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,467 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,470 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,474 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,478 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,481 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:47,582 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:47:47,625 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,666 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,712 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:47,712 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:47,713 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=4
+2026-01-11 22:47:47,713 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,713 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:47,714 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:47,714 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:47,714 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,715 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:47,715 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:47:47,715 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,715 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:47,741 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:47,776 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:47,812 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:47,847 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:47,881 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:47,914 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:47,947 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:47,983 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:48,011 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:48,171 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,188 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,191 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,195 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,198 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,202 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,205 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,209 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,212 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,216 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,219 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,222 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:48,317 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:48,360 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:48,401 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:48,454 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:48,454 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:48,454 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:48,455 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:48,455 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:48,455 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:48,455 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:48,456 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:48,456 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:48,456 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:48,457 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:48,457 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:48,496 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:48,539 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:48,579 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:48,619 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:48,661 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:48,700 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:48,736 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:48,778 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:48,815 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:48,996 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,016 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,019 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,022 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,026 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,029 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,033 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,036 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,039 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,043 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,046 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,049 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,150 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:49,197 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:49,245 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:49,297 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:49,298 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:49,299 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:49,299 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:49,299 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:49,300 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:49,300 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:49,301 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:49,301 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:49,301 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:49,302 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:49,302 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:49,347 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=11
+2026-01-11 22:47:49,397 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:49,440 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:49,482 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:49,524 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:49,561 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:49,602 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:49,643 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:49,684 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:49,881 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,903 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,906 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,909 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,913 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,916 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,919 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,922 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,926 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,930 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:49,934 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:50,023 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:50,063 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:50,101 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:50,154 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=11
+2026-01-11 22:47:50,154 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:50,155 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:50,155 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:50,155 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:50,156 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:50,156 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:50,156 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:50,157 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:50,157 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:50,157 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:50,157 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:51,068 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,072 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,075 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,079 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,083 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,086 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,090 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,093 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,096 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,101 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,104 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,107 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,213 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:51,242 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:51,278 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:51,304 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:51,329 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:51,358 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:51,382 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:51,408 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:51,435 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:51,571 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,582 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,586 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,589 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,593 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,596 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,600 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,603 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,606 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,609 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,613 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,617 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:51,718 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:51,754 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:51,789 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=4
+2026-01-11 22:47:51,837 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:51,837 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:51,837 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:51,838 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:51,838 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:51,838 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:51,839 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:51,839 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:51,839 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:51,840 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:51,840 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:51,840 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=4
+2026-01-11 22:47:51,854 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:51,897 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:51,936 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:51,968 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:51,998 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:47:52,035 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:52,067 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:52,098 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:52,125 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:52,283 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,299 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,303 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,306 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,310 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,314 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,318 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,322 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,325 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,329 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,333 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,337 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:52,443 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:52,482 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:52,521 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:52,571 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:52,572 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:52,572 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:52,572 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:52,573 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:47:52,573 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:52,573 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:52,574 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:52,574 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:52,574 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:52,575 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:52,575 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:52,602 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:52,643 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:52,676 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:52,710 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:52,746 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:52,783 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:52,821 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:52,855 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:52,888 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:53,062 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,080 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,084 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,088 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,092 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,095 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,099 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,103 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,107 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,112 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,116 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,119 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:53,226 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:53,276 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:53,317 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:53,373 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:53,373 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:53,373 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:53,374 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:53,374 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:53,374 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:53,375 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:53,375 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:53,375 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:47:53,376 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:47:53,376 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:47:53,376 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:47:53,973 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:54,031 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:54,283 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:47:54,296 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:54,337 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:47:55,355 - DEBUG - State saved for undo
+2026-01-11 22:50:34,579 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:34,631 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:35,925 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,929 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,933 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,938 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,941 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,945 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,949 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,954 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,957 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,961 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,964 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,969 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,972 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,976 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,980 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,985 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,989 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,993 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:35,997 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,001 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,006 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,009 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,013 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,017 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,020 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,024 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,028 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,031 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,037 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,040 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,044 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,048 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,052 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,056 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,060 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,064 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,069 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,073 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,077 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,080 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,085 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,089 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,093 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,097 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,101 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,105 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,109 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,113 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:36,560 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:36,600 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:37,228 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,233 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,238 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,242 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,245 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,249 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,253 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,257 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,260 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,264 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,269 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,273 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,381 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:37,414 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:37,454 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:37,480 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:37,507 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:37,535 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:37,559 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:37,591 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:37,615 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:37,644 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:37,801 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,813 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,817 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,822 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,826 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,830 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,834 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,838 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,842 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,845 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,849 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,854 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:37,972 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,007 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,063 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:38,063 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:38,064 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:38,064 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:38,064 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,065 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:38,065 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:38,065 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:38,066 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:38,066 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:38,067 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,068 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,076 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:38,112 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:38,149 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=4
+2026-01-11 22:50:38,178 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,212 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:38,247 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:38,281 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:38,315 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,349 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:38,382 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:50:38,550 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,564 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,569 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,573 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,577 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,580 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,584 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,589 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,593 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,596 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,600 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,604 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:38,715 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,754 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,802 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:38,802 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:38,803 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=4
+2026-01-11 22:50:38,803 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,803 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:38,804 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:38,804 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:38,806 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,806 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:38,806 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:50:38,807 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,807 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:38,821 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:38,855 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:38,893 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:38,929 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:38,964 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:38,998 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:39,031 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:39,067 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:39,098 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:39,128 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:39,302 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,318 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,323 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,327 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,331 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,334 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,338 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,342 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,346 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,350 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,354 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,358 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:39,463 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:39,508 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:39,564 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:39,564 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:39,565 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:39,565 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:39,565 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:39,566 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:39,566 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:39,566 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:39,566 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:39,567 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:39,567 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:39,567 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:39,578 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:39,622 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:39,662 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:39,704 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:39,745 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:39,784 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:39,819 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:39,861 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:39,899 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:40,088 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,108 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,112 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,116 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,119 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,123 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,127 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,131 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,134 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,139 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,143 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,146 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:40,256 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:40,306 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:40,357 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:40,414 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:40,414 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:40,414 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:40,415 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:40,415 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:40,415 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:40,416 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:40,416 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:40,416 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:40,416 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:40,417 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:40,417 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:40,429 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=11
+2026-01-11 22:50:40,482 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:40,529 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:40,573 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:40,620 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:40,663 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:40,710 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:40,760 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:40,808 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:40,847 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:41,074 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,096 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,100 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,105 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,109 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,113 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,117 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,121 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,126 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,130 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,134 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,138 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 22:50:41,251 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,293 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:41,351 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=11
+2026-01-11 22:50:41,351 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:41,352 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,352 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:41,352 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:41,353 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:41,353 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:41,353 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:41,354 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,354 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:41,354 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,354 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:41,371 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,415 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,457 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:41,502 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,538 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:41,574 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:41,612 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:41,646 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:41,683 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:50:41,724 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,757 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:41,795 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:41,832 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,833 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,833 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 22:50:41,833 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,833 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:41,834 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:41,834 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 22:50:41,834 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:41,835 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 22:50:41,835 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 22:50:41,835 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 22:50:41,836 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 22:50:50,382 - DEBUG - State saved for undo
+2026-01-11 22:50:50,505 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 22:50:50,615 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 22:50:59,074 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 22:50:59,158 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 22:51:09,608 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 22:51:09,698 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 22:51:30,749 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 22:51:30,840 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:02:11,382 - DEBUG - State saved for undo
+2026-01-11 23:03:58,171 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,177 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,181 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,186 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,191 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,196 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,200 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,206 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,210 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,214 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,218 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,223 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,422 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:03:58,453 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:03:58,490 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:03:58,526 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:03:58,561 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:58,591 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:03:58,619 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:03:58,650 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:03:58,676 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:03:58,828 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,843 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,847 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,851 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,855 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,859 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,863 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,867 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,871 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,876 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,880 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:58,884 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,003 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:03:59,042 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,080 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,144 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:03:59,145 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:03:59,145 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:03:59,146 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:03:59,146 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,147 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:03:59,147 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:03:59,147 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:03:59,148 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:03:59,148 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:03:59,148 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,149 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,176 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:03:59,215 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:03:59,258 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=4
+2026-01-11 23:03:59,300 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,346 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:03:59,397 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:03:59,438 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:03:59,473 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,505 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:03:59,668 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,684 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,688 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,692 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,696 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,700 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,704 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,708 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,712 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,715 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,720 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,724 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:03:59,833 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 23:03:59,880 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,920 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,969 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:03:59,970 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:03:59,971 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=4
+2026-01-11 23:03:59,971 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,972 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:03:59,972 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:03:59,972 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:03:59,973 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,973 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:03:59,973 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 23:03:59,974 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,974 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:03:59,991 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:00,032 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:00,071 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:00,112 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:00,152 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:00,188 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:00,223 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:00,260 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:00,292 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:00,324 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:00,501 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,522 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,526 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,529 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,533 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,537 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,541 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,544 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,548 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,553 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,557 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,561 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:00,667 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:00,716 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:00,775 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:00,775 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:00,775 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:00,776 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:00,776 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:00,776 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:00,777 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:00,777 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:00,777 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:00,777 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:00,778 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:00,778 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:00,796 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:00,849 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:00,891 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:00,936 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:00,977 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:01,019 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:01,053 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:04:01,092 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:01,130 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:01,322 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,345 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,349 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,353 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,356 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,360 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,365 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,369 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,372 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,376 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,380 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,384 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:01,494 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:01,550 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:01,604 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:01,665 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:01,666 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:01,666 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:01,667 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:01,667 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:01,667 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:01,667 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:04:01,668 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:01,668 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:01,668 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:01,669 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:01,669 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:01,687 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=11
+2026-01-11 23:04:01,746 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:01,795 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:01,843 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:01,891 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:01,936 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:01,981 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:04:02,029 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:02,073 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:02,113 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:02,342 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,368 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,372 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,376 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,379 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,384 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,388 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,392 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,395 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,400 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,404 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,407 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=240)
+2026-01-11 23:04:02,514 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:02,562 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:04:02,623 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=11
+2026-01-11 23:04:02,623 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:02,623 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:02,624 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:02,624 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:02,624 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:02,625 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:04:02,625 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:02,625 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:02,626 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:02,626 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:02,626 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:04:02,637 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:02,679 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:02,721 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:04:02,765 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:02,803 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:02,842 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:02,890 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:02,930 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:02,978 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 23:04:03,028 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:03,068 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:03,106 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:03,150 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:03,150 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:03,150 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=9
+2026-01-11 23:04:03,151 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:03,152 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:03,153 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:03,153 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=5
+2026-01-11 23:04:03,153 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:03,154 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=10
+2026-01-11 23:04:03,154 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=6
+2026-01-11 23:04:03,154 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=7
+2026-01-11 23:04:03,155 - DEBUG - FlowFrame._reflow(place): avail_width=240 children=8
+2026-01-11 23:04:45,579 - DEBUG - State saved for undo
+2026-01-11 23:04:45,708 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=365)
+2026-01-11 23:04:45,780 - DEBUG - FlowFrame._reflow(place): avail_width=365 children=4
+2026-01-11 23:06:05,308 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=365)
+2026-01-11 23:06:05,370 - DEBUG - FlowFrame._reflow(place): avail_width=365 children=4
+2026-01-11 23:06:07,918 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=365)
+2026-01-11 23:06:07,973 - DEBUG - FlowFrame._reflow(place): avail_width=365 children=4
+2026-01-11 23:07:50,680 - DEBUG - State saved for undo
+2026-01-11 23:14:01,945 - DEBUG - State saved for undo
+2026-01-11 23:14:01,993 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:14:02,091 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:14:15,184 - DEBUG - State saved for undo
+2026-01-11 23:14:15,296 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:14:15,413 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:16:33,032 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:16:33,135 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:16:36,298 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:16:36,386 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:16:37,555 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:16:37,655 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:16:39,872 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:16:39,968 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:16:43,819 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:16:43,913 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:17:39,815 - DEBUG - State saved for undo
+2026-01-11 23:17:39,930 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:17:40,003 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:17:40,949 - DEBUG - State saved for undo
+2026-01-11 23:17:41,053 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:17:41,155 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:17:48,114 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:17:48,203 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:19:36,447 - DEBUG - State saved for undo
+2026-01-11 23:19:36,565 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:19:36,634 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:19:42,807 - DEBUG - State saved for undo
+2026-01-11 23:19:42,916 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:19:43,026 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:19:45,962 - DEBUG - State saved for undo
+2026-01-11 23:19:46,125 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:19:46,234 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:20:10,132 - DEBUG - State saved for undo
+2026-01-11 23:20:10,316 - DEBUG - FlowFrame._on_configure: width changed -> scheduling reflow (w=363)
+2026-01-11 23:20:10,422 - DEBUG - FlowFrame._reflow(place): avail_width=363 children=1
+2026-01-11 23:24:37,535 - INFO - Mainloop exited normally
+2026-01-11 23:24:37,535 - DEBUG - === Debug Log Ended ===

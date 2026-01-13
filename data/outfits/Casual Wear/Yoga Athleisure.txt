@@ -1,23 +1,46 @@
 tags: [Casual, Sport]
 
 [F]
-- **Top:** cropped **athletic tank or sports bra**, worn with oversized **zip-up hoodie or cardigan** (worn open)
-- **Bottom:** High-waist **yoga leggings** (stretchy technical fabric in solid color or subtle pattern)
-- **Footwear:** **slip-on sneakers**.
-- **Accessories:** Yoga mat bag, water bottle, minimal jewelry.
-- **Hair/Makeup:** Hair in messy bun or ponytail, fresh minimal makeup.
+- **Top:** Cropped athletic tank or sports bra under zip-up hoodie.
+  - **Fit:** Tight top; Oversized hoodie.
+  - **Material:** Stretchy technical fabric; Cotton fleece.
+  - **Pattern:** Solid.
+  - **Neckline:** Scoop/Hooded.
+  - **Sleeve:** Sleeveless (top) under Long (hoodie).
+- **Bottom:** High-waist yoga leggings.
+  - **Fit:** Stretchy compression.
+  - **Material:** Technical fabric.
+  - **Pattern:** Solid or subtle pattern.
+  - **Waist:** High-waist.
+  - **Length:** Ankle-length.
+- **Footwear:** Slip-on sneakers.
+- **Accessories:** Yoga mat bag, water bottle.
 
 [M]
-- **Top:** tank top or fitted t-shirt, worn with oversized **zip-up hoodie** (worn open)
-- **Bottom:** Athletic joggers or shorts (stretchy technical fabric in solid color)
-- **Footwear:** **slip-on sneakers**.
-- **Accessories:** Yoga mat bag, water bottle, minimal jewelry.
-- **Hair/Makeup:** Hair in natural style or pulled back, fresh minimal grooming.
+- **Top:** Tank top or fitted t-shirt under oversized zip-up hoodie.
+  - **Fit:** Fitted top; Oversized hoodie.
+  - **Material:** Cotton.
+  - **Neckline:** Crew/Hooded.
+  - **Sleeve:** Sleeveless/Short under Long.
+- **Bottom:** Athletic joggers or shorts.
+  - **Fit:** Relaxed.
+  - **Material:** Stretchy technical fabric.
+  - **Waist:** Elastic drawstring.
+  - **Length:** Full or Knee.
+- **Footwear:** Slip-on sneakers.
+- **Accessories:** Yoga mat bag, water bottle.
 
 [H]
-- **Hijab:** Sports hijab in soft gray (breathable, lightweight)
-- **Top:** Long-sleeve fitted athletic top with high neck (moisture-wicking) under oversized zip-up hoodie worn open
-- **Bottom:** High-waist full-length yoga leggings (stretchy technical fabric in solid color)
-- **Footwear:** Slip-on sneakers
-- **Accessories:** Yoga mat bag, water bottle, simple gold studs
-- **Makeup:** Fresh minimal makeup
+- **Hijab:** Sports hijab in soft gray.
+- **Top:** Long-sleeve fitted athletic top under oversized zip-up hoodie.
+  - **Fit:** Fitted modest under oversized.
+  - **Material:** Moisture-wicking; Cotton fleece.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist full-length yoga leggings.
+  - **Fit:** Tight technical fit.
+  - **Material:** Stretchy technical fabric.
+  - **Waist:** High-waisted.
+  - **Length:** Full length.
+- **Footwear:** Slip-on sneakers.
+- **Accessories:** Yoga mat bag, water bottle.

@@ -1,0 +1,66 @@
+# METADATA
+Scene: Wooden boat deck, ocean horizon, billowing sails, sea breeze, nautical ropes and equipment.
+Base_Prompt: Chibi Style: "Super Deformed"
+Character: Maya Rose | Outfit: Lumberjack | Pose: None
+Character: Talia Levi | Outfit: Lumberjack | Pose: None
+Interaction: Custom
+Score: 235
+
+Generate an image of: Rendering
+Soft-shaded vector illustration or vinyl toy aesthetic. Bright, pastel, or primary-heavy color palettes. Gradient shading is minimal and smooth, giving surfaces a matte plastic or "squishy" appearance. Thick, rounded line art (or lineless "sticker" style).
+
+Character Accuracy
+Extreme anatomical exaggeration (SD or Super Deformed). Heads are 1:1 or 1:2 ratio with the body. Eyes are massive, taking up 50% of the face, with simplified sparkles. Noses are absent or mere dots. Mouths are simple curves.
+
+Body Types
+"Bean" shaped torsos. Limbs are short, stubby cylinders with no muscle definition. Hands are simple spheres or "mitten" shapes; feet are rounded nubs. The silhouette is fundamentally cute and non-threatening.
+
+Hair & Clothing
+Hair: Simplified into large, chunky shapes with high volume and minimal strand detail. Clothing: Reduced to iconic elements—details like shoelaces or buttons are oversized and simplified for readability.
+
+Details
+Floating iconography (hearts, stars, sweat drops, anger veins) near the head. Backgrounds are simple patterns (polka dots, stripes) or solid soft colors. A thick white outline often surrounds the entire character like a die-cut sticker.
+
+---
+
+**SCENE/SETTING:**
+Wooden boat deck, ocean horizon, billowing sails, sea breeze, nautical ropes and equipment.
+---
+
+**CHARACTER: Maya Rose**
+**Appearance:**
+* **Body:** Soft Natural frame with balanced curves; moderate-to-tall vertical line; natural waist definition; relaxed athletic build.
+* **Face:** Soft oval face with gentle angles; warm expressive eyes; bright genuine smile; approachable features with natural definition.
+* **Hair:** Type 2B-2C waves to loose curls; medium-high density; long layered cut past shoulders; natural movement and body; warm golden-brown to honey tones with dimensional highlights.
+* **Skin:** Warm medium beige with golden undertones; natural healthy glow.
+**Outfit:**
+- **Top:** Red and black buffalo plaid flannel shirt (thick cotton, buttoned or worn open over a white tank)
+- **Bottom:** distressed blue jeans (straight leg, rugged denim)
+- **Footwear:** brown leather work boots.
+- **Accessories:** Leather belt with large buckle, small axe prop (optional), wool beanie.
+- **Hair/Makeup:** Loose natural waves or a messy bun, minimal "outdoorsy" makeup.
+**Pose/Action:**
+Holding vinyl record, examining it fondly, retro nostalgic vibe, music lover energy.
+---
+
+**CHARACTER 2: Talia Levi**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave-lush flesh quality; voluptuous hourglass proportions with pronounced bust (full D-DD), defined waist, and rounded hips; moderate-to-tall vertical (5'7"); soft density with feminine curves, visible décolletage, rounded shoulders, and shapely legs; magnetizing sensual presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-diamond shape; high pronounced cheekbones with sculpted planes; large almond-shaped wide-set eyes in deep amber-brown with naturally seductive heavy-lidded quality and penetrating direct gaze; full shapely lips; defined angular jawline; neutral resting expression is knowing and self-assured with slight sultry smile and unwavering confident eye contact that holds just a beat too long.
+
+* **Hair:** Type 2B-2C waves; very high density; voluminous cascading silhouette; long length past mid-back; natural loose center part; healthy high-sheen finish; commonly worn loose and wild with tousled volume, half-up with face-framing tendrils, or low messy bun showing neck; rich dark chocolate brown with warm caramel highlights.
+
+* **Skin:** Medium-tan with warm golden-olive undertones and luminous sun-kissed finish; beauty mark above upper lip on left side; smooth healthy Mediterranean glow.
+**Outfit:**
+- **Top:** Red and black buffalo plaid flannel shirt (thick cotton, buttoned or worn open over a white tank)
+- **Bottom:** distressed blue jeans (straight leg, rugged denim)
+- **Footwear:** brown leather work boots.
+- **Accessories:** Leather belt with large buckle, small axe prop (optional), wool beanie.
+- **Hair/Makeup:** Loose natural waves or a messy bun, minimal "outdoorsy" makeup.
+**Pose/Action:**
+Mid-jump motion, rope blurred in motion, athletic form, training montage energy.
+---
+
+**Additional Notes:**
+Maya Rose and Talia Levi leaning over a glowing holographic tablet, Maya Rose pointing at data while Talia Levi observes with deep concentration, professional intellectual focus.

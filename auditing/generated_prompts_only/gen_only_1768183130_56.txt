@@ -1,0 +1,76 @@
+# METADATA
+Scene: Indoor swimming facility, multiple lanes, starting blocks, clear blue water, competitive swimming atmosphere.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Astrid Nielsen | Outfit: Cold Weather - Athletic | Pose: None
+Character: Elena Rosales | Outfit: Cold Weather - Athletic | Pose: None
+Character: Fiona O'Sullivan | Outfit: Cold Weather - Athletic | Pose: None
+Score: 263
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Indoor swimming facility, multiple lanes, starting blocks, clear blue water, competitive swimming atmosphere.
+---
+
+**CHARACTER: Astrid Nielsen**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight flesh; narrow balanced rectangle proportions; tall vertical line; refined posture with precise alignment; statuesque and poised.
+* **Face:** Long balanced facial structure; soft oval face; firm planar skin with clear definition; narrow straight nose; light blue deep-set eyes with cool observant gaze; serene neutral resting expression that suggests depth and composure.
+* **Hair:** Type 1 straight hair; medium density; platinum blonde with smooth high-shine finish; naturally straight and fine; takes blunt, precise cuts well.
+* **Skin:** Fair cool-toned skin with porcelain clarity and smooth even texture.
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined leggings (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
+- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with arms crossed confidently, relaxed shoulders, natural stance.
+---
+
+**CHARACTER 2: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined leggings (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
+- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Crouched low, left hand on the scabbard at the hip, right hand gripping the hilt of the katana, eyes narrowed in lethal focus.
+---
+
+**CHARACTER 3: Fiona O'Sullivan**
+**Appearance:**
+* **Body:** Soft Natural plus-size frame; wave-type plush softness; soft pear-hourglass proportions; moderate vertical.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes; expressive hazel-green eyes; warm engaging smile; soft jawline; radiant joyful expression that reflects her generous spirit.
+* **Hair:** Type 2B-2C waves; high density; long layered cut with natural body; side part; soft natural volume with gentle frizz; copper-red to auburn with natural variation.
+* **Skin:** Fair rosy-toned skin with soft glow; smooth complexion. stylish tortoiseshell glasses
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined leggings (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
+- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing in profile, one leg bent with calf flexed, torso twisted toward the camera, hands gripped together to pop the chest and bicep.
+---

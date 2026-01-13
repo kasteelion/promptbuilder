@@ -1,23 +1,45 @@
 tags: [costume, cottagecore, fantasy]
 
 [F]
-- **Top:** Blue pinafore dress over a **white peasant blouse**
-- **Bottom:** white apron
-- **Footwear:** flat leather shoes.
-- **Accessories:** Blue hair ribbon, wicker basket with books.
-- **Hair/Makeup:** Hair in a low ponytail with ribbon, natural fresh-faced makeup.
+- **Top:** Blue pinafore dress over a white peasant blouse.
+  - **Fit:** Relaxed pinafore.
+  - **Material:** Cotton.
+  - **Pattern:** Solid blue; white blouse.
+  - **Neckline:** Scoop neck pinafore.
+  - **Sleeve:** Short billowy sleeves.
+- **Bottom:** Matching blue skirt with white apron.
+  - **Fit:** Flowing.
+  - **Material:** Cotton.
+  - **Waist:** Natural.
+  - **Length:** Mid-length.
+- **Footwear:** Flat leather shoes.
+- **Accessories:** Blue hair ribbon; wicker basket with books.
 
 [M]
-- **Top:** Fitted **red vest** over a **yellow collared shirt** (sleeves rolled up to show biceps)
-- **Bottom:** tight black trousers
-- **Footwear:** tall brown leather boots.
-- **Accessories:** Wide leather belt with large buckle, hunting quiver optional.
-- **Hair/Makeup:** Hair in a low ponytail, clean-shaven or stubble, arrogant smirk, hyper-masculine focus.
+- **Top:** Fitted red vest over a yellow collared shirt.
+  - **Fit:** Fitted; Rolled sleeves.
+  - **Material:** fabric.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long (rolled).
+- **Bottom:** Tight black trousers.
+  - **Fit:** Tight.
+  - **Material:** fabric.
+  - **Waist:** Wide leather belt with large buckle.
+  - **Length:** Full.
+- **Footwear:** Tall brown leather boots.
+- **Accessories:** Hunting quiver (optional); arrogant smirk.
 
 [H]
-- **Hijab:** Blue cotton hijab with neat wrap and white ribbon accent
-- **Top:** Long-sleeve blue pinafore-style tunic over a **white modest peasant blouse** (high neck)
-- **Bottom:** Matching blue full-length skirt or trousers with **white apron**
-- **Footwear:** Flat leather shoes
-- **Accessories:** Blue hair ribbon (on hijab), basket with books
-- **Makeup:** Natural fresh-faced makeup
+- **Hijab:** Blue cotton hijab with white ribbon accent.
+- **Top:** Long-sleeve blue pinafore tunic over white peasant blouse.
+  - **Fit:** Modest layered.
+  - **Material:** Cotton.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching blue full-length skirt with white apron.
+  - **Fit:** Straight.
+  - **Material:** Cotton.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Flat leather shoes.
+- **Accessories:** Blue hair ribbon (on hijab); basket with books.

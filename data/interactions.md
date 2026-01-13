@@ -160,6 +160,7 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 - **Comparing Scores:** {char1} and {char2} standing together looking up at overhead scoring display, pointing at screen, discussing their scores with competitive or friendly expressions.
 - **Dual Lane Competition** (Bowling): {char1} bowling on left lane mid-release, {char2} bowling on adjacent right lane also mid-release, side-by-side competitive energy, synchronized action.
 - **Football Team Huddle (4+)** (Football): {char1}, {char2}, {char3}, and {char4} in a tight huddle on a football field, helmets off, listening intently to {char1} who is calling a play. Intense focus and camaraderie.
+- **Baseball Pitcher-Catcher Meeting (2)** (Baseball): {char1} (pitcher) and {char2} (catcher) meeting on the mound, gloves over mouths to hide their conversation, discussing strategy with intense focus.
 - **Tennis Doubles at Net (2)** (Tennis): Intense action shot at the net during a doubles match. {char1} is in the air, body fully extended for an overhead smash, racket angled perfectly to slam the ball down. {char2} is crouched low beside them in a ready position, racket up, eyes scanning for the return. The net mesh is sharp in the foreground. Sunlight flares through the racket strings. Sweat glistens on their skin, and their muscles are defined and tense. The green court surface provides a vibrant contrast to their white athletic wear.
 - **Basketball 1-on-1 (2)** (Basketball): Gritty, street-style basketball duel on an outdoor court. {char1} is driving hard to the basket, body low, ball protected, shoulder dropping to initiate contact. {char2} is in a defensive stance, sliding their feet, one hand up to contest the shot, face intense with concentration. The chain-link fence in the background casts long, intricate shadows across the concrete court. The sun is setting, creating a dramatic silhouette effect. Worn sneaker treads and the texture of the basketball are visible in high detail.
 - **Soccer Striker vs Goalie (2)** (Soccer): A split-second moment of confrontation in the penalty box. {char1} (striker) is mid-strike, leg swept back, body leaning over the ball for power. {char2} (goalie) is launching into a sprawling dive, arms outstretched, fingers spread wide to make the save. Grass divots and dirt fly up from {char1}'s planting foot. Stadium lights create a halo effect around the players. The focus is razor-sharp on the ball and the players' expressions of sheer determination. Background stadium seating is blurred to emphasize the duel.
@@ -174,10 +175,15 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 - **Relay Baton Pass:** {char1} passing the baton to {char2} mid-sprint, perfectly timed athletic coordination.
 - **Volleyball Huddle (6)** (Volleyball): {char1}, {char2}, {char3}, {char4}, {char5}, and {char6} standing in tight cluster viewed from behind on volleyball court. All facing inward with arms wrapped around each other's backs and waists, creating unified group embrace. Bodies close together, shoulders touching, forming intimate team circle. Heads leaning toward center, some tilted inward in concentration. Arms reach across to hold teammates, hands resting on backs and sides. Stance natural and grounded, weight distributed evenly. Court floor visible beneath—polished gym floor with court lines. Background shows gym setting with walls, bleachers, chairs courtside. View captures the back of the huddle, emphasizing team unity and interconnection. Energy focused and supportive, pre-game or timeout moment of solidarity and strategy.
 - **Watching Teammate Bowl** (Bowling): {char1} bowling (mid-release or follow-through), {char2} watching intently from seating area behind, leaning forward with supportive body language, hands clasped or resting on knees.
+- **Athletic High Five (2)** (Sport): {char1} and {char2} meeting at mid-court or field, jumping for a high-impact high-five, arms reaching high, expressions of joy and triumph.
+- **Side-by-Side Running (2)** (Sport, Run): {char1} and {char2} jogging or sprinting side-by-side on a track or trail, synchronized movement, focused athletic breathing, determined expressions.
+- **Water Break (2)** (Sport): {char1} and {char2} sitting on a bench or standing near a sideline, drinking from water bottles, sweat glistening, catching their breath after intense activity.
+- **Coordinated Defense (2)** (Sport): {char1} and {char2} in a defensive stance together, shoulders nearly touching, eyes scanning the "opponents" ahead, collaborative strategic positioning.
 
 ---
 
 ## Dance & Performance
+
 - **Concert Hall Performance (3+):** (Music, Performance): Wide elevated view from upper gallery perspective looking down at stage. {char1} positioned center stage at grand piano or standing at microphone, {char2} positioned stage left with instrument or at second microphone, {char3} positioned stage right completing the trio formation. Performers appear 40-50 feet away, distant but clearly visible on illuminated stage. Orchestra seating visible in foreground bottom of frame. Gallery balcony railings in near foreground. Performers show professional performance bearing—confident stance, instrument positioning, coordinated stage presence. Composition emphasizes scale and grandeur while capturing intimate collaboration of three performers.
 - **Dance Partners:** (Dance, Social): {char1} and {char2} in partner dance position, hands connected, coordinated movement, artistic collaboration.
 - **Dance Formation:** (Performance): {char1} and {char2} in coordinated dance formation, synchronized poses, performance-ready energy.
@@ -273,3 +279,74 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 
 - **Sentai Team Pose (5):** (Sentai, Heroic): {char1}, {char2}, {char3}, {char4}, and {char5} in a synchronized heroic formation, each striking a unique dynamic pose with hands held in stylized gestures, radiating "Power Rangers" energy.
 - **Back-to-Back Heroics:** (Heroic): {char1} and {char2} standing back-to-back, fists raised or weapons drawn, looking in opposite directions with fierce determination.
+
+---
+
+## Gaming & Digital Culture
+
+- **Esports Duo Match:** (Esports, Gaming, Tech): {char1} and {char2} sitting side-by-side in high-back gaming chairs, intense focus on glowing monitors (off-camera), headsets on, shouting communication to each other.
+- **Victory Celebration (Gaming):** (Esports, Gaming, Happy): {char1} and {char2} jumping up from their chairs in a gaming arena, headsets around necks, high-fiving or hugging in front of a glowing setup.
+
+---
+
+## Skate & Urban Sports
+
+- **Skateboard Trick Advice:** (Skate, urban): {char1} standing on a skateboard, demonstrating a trick, while {char2} watches closely from a sitting position on a concrete ramp, focused learning moment.
+- **Skate Park Session (3+):** (Skate, urban): {char1} dropping into a bowl, {char2} mid-air on a ramp in the background, and {char3} sitting on the edge of a rail, watching and cheering.
+
+---
+
+## Gymnastics & Creative Movement
+
+- **Gymnastics Spotting:** (Gym, Sport): {char1} (coach/teammate) with hands positioned to spot {char2} during a handstand or flip on a mat, providing safety and guidance.
+- **Floor Routine Sync (2):** (Gym, Sport): {char1} and {char2} performing a synchronized floor routine move, arms extended symmetrically, focused and graceful on the blue mat.
+
+---
+
+## Cinematic & High-Tension
+
+- **Dramatic Eye Contact (2):** {char1} and {char2} locked in intense, dramatic eye contact, a palpable tension between them, shallow depth of field, cinematic lighting.
+- **The Handover (2):** {char1} handing a small, glowing data-shard to {char2}, their fingers brushing briefly, a sense of high-stakes cooperation and secrecy.
+- **Mirrored Movement (2):** {char1} and {char2} moving in perfect, mirrored synchronization, as if choreographed or controlled by a single mind, ethereal and uncanny energy.
+- **Back-to-Back Defense (2):** {char1} and {char2} standing back-to-back, weapons drawn or ready for combat, looking in opposite directions with focused, defensive intensity.
+
+---
+
+## Professional & Technical Cooperation
+
+- **Shared Tablet Analysis (2):** {char1} and {char2} leaning over a glowing holographic tablet, {char1} pointing at data while {char2} observes with deep concentration, professional intellectual focus.
+- **Surgical Focus (2):** {char1} performing a delicate technical or medical procedure while {char2} assists, both showing extreme surgical focus and steady hands under bright, sterile lighting.
+- **Prototype Testing (2):** {char1} testing a complex mechanical or electronic prototype while {char2} records data, both engaged in the high-precision work of innovation.
+- **Collaborative Engineering (2):** {char1} and {char2} working together on a large-scale engineering project, surrounded by tools and technical components, coordinated industrial effort.
+
+---
+
+## Fantasy & Adventure
+
+- **Rolling Dice (2):** {char1} throwing a handful of polyhedral dice onto a wooden table with intensity. {char2} watching the result breathlessly. Tension in the air.
+- **Checking the Map (2):** {char1} holding a weathered parchment map open, pointing at a location. {char2} looking over their shoulder, nodding in agreement. Adventure planning.
+- **Spellcasting Duel (2):** {char1} and {char2} locking magical beams in a clash of energy. {char1} glowing with blue light, {char2} with red. Dynamic action pose.
+- **Tavern Toast (2):** {char1} and {char2} raising large wooden tankards in a cheerful toast. Foam spilling over the sides. Warm firelight in the background.
+- **Campfire Watch (2):** {char1} sitting by the fire cleaning a weapon, while {char2} sleeps wrapped in a cloak nearby. Quiet vigilance.
+
+---
+
+## School & Slice of Life
+
+- **Sharing Earbuds (2):** {char1} and {char2} sitting close together, sharing a pair of wired earbuds. One earbud in {char1}'s ear, the other in {char2}'s. Both listening quietly, lost in the music and the moment.
+- **Bento Sharing (2):** {char1} offering a piece of food from their bento box to {char2} with chopsticks. {char2} leaning in to take it, slightly embarrassed or happy. A cute, everyday lunch interaction.
+- **Head Pat (2):** {char1} gently patting {char2} on the head. {char2} looking up with a happy or shy expression. A gesture of affection and comfort.
+- **Walking Home (2):** {char1} and {char2} walking side-by-side carrying school bags. The sun is setting behind them, casting long shadows. They are chatting casually about their day.
+- **Study Session (2):** {char1} and {char2} leaning over a notebook together at a desk. {char1} pointing at a math problem while {char2} looks confused or enlightened. Focused academic collaboration.
+- **Pinky Promise (2):** {char1} and {char2} linking pinky fingers in a close-up shot. A sign of a serious, secret promise between friends or lovers. Focus on the hands.
+
+---
+
+## Romantic & Cinematic Tropes
+
+- **Ai-ai gasa (Sharing an Umbrella) (2):** {char1} and {char2} sharing a single umbrella during a gentle rain, walking close together to stay dry, a sense of quiet intimacy and protection.
+- **Aquarium Gaze (2):** {char1} and {char2} standing before a massive aquarium wall, their silhouettes sharp against the deep blue water and swirling marine life, enchanted and serene atmosphere.
+- **Museum Whisper (2):** {char1} leaning in close to whisper something to {char2} while they both look at a piece of art in a grand gallery, a shared secret in a quiet, public space.
+- **Snowy Park Bench (2):** {char1} and {char2} sitting close together on a park bench during a light snowfall, both wrapped in warm coats and scarves, breath visible in the cold air, a Peaceful romantic Moment.
+- **The Unexpected Catch (2):** {char1} catching {char2} after a stumble, their eyes meeting in a Moment of surprise and budding connection, physical closeness and tension.
+- **Rooftop Confession (2):** {char1} and {char2} standing near a rooftop ledge at night, city lights blurred in the background, a Moment of vulnerability and intense emotional connection.

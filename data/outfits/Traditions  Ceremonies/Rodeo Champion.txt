@@ -1,23 +1,48 @@
 tags: [Cowboy, Sport, Western]
 
 [F]
-- **Top:** Rhinestone-embellished western shirt (((default:turquoise or hot pink) or (signature)) with pearl snaps, fitted silhouette, ornate yoke with crystals)
-- **Bottom:** bedazzled belt (wide leather with massive silver buckle encrusted with rhinestones)
-- **Footwear:** bootcut jeans (dark wash with decorative back pockets); **tall cowboy boots** (with elaborate stitching and metallic accents).
-- **Accessories:** White felt cowboy hat with rhinestone band, statement western jewelry (turquoise and silver), rodeo queen sash, hoop earrings.
-- **Hair/Makeup:** Big voluminous curls or pageant waves, full glam makeup with dramatic lashes and bold lip, confident pageant smile.
+- **Top:** Rhinestone-embellished western shirt.
+  - **Fit:** Fitted silhouette.
+  - **Material:** Cotton with crystal embellishments.
+  - **Pattern:** Ornate yoke with crystals.
+  - **Neckline:** Collared with pearl snaps.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Bootcut jeans.
+  - **Fit:** Tight thigh with flared hem.
+  - **Material:** Dark wash denim.
+  - **Pattern:** Decorative back pockets.
+  - **Waist:** Natural with bedazzled silver belt.
+  - **Length:** Full length.
+- **Footwear:** Tall cowboy boots with metallic accents.
+- **Accessories:** White felt cowboy hat; rodeo queen sash; hoop earrings.
 
 [M]
-- **Top:** Rhinestone-embellished western shirt (((default:black or royal blue) or (signature)) with pearl snaps, fitted silhouette, ornate yoke with embroidery)
-- **Bottom:** statement belt (wide leather with large silver trophy buckle)
-- **Footwear:** bootcut jeans (dark wash, starched); **cowboy boots** (exotic leather, polished).
-- **Accessories:** Cowboy hat (felt or straw, pristine), bolo tie, leather gloves.
-- **Hair/Makeup:** Clean-cut or rugged handsome look, confident competition smile.
+- **Top:** Rhinestone-embellished western shirt.
+  - **Fit:** Fitted.
+  - **Material:** Cotton with embroidery.
+  - **Pattern:** Ornate yoke.
+  - **Neckline:** Collared with pearl snaps.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Bootcut jeans.
+  - **Fit:** Straight bootcut.
+  - **Material:** Starched dark wash denim.
+  - **Waist:** Statement belt with trophy buckle.
+  - **Length:** Full length.
+- **Footwear:** exotic leather cowboy boots.
+- **Accessories:** Felt or straw cowboy hat; bolo tie.
 
 [H]
-- **Hijab:** Satin hijab in turquoise or pink under cowboy hat
-- **Top:** Rhinestone-embellished western tunic (((default:turquoise or hot pink) or (signature)) long sleeves, high neck, fitted waist, longer hem)
-- **Bottom:** Bootcut jeans (dark wash) or **denim maxi skirt**
-- **Footwear:** Tall cowboy boots
-- **Accessories:** White felt cowboy hat, statement western jewelry, rodeo sash
-- **Makeup:** Full glam makeup, confident smile
+- **Hijab:** Satin hijab in turquoise or pink.
+- **Top:** Rhinestone-embellished western tunic.
+  - **Fit:** Fitted modest.
+  - **Material:** Embellished cotton.
+  - **Pattern:** Ornate crystals.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Bootcut jeans or denim maxi skirt.
+  - **Fit:** Relaxed.
+  - **Material:** Denim.
+  - **Waist:** Natural.
+  - **Length:** Full or Floor.
+- **Footwear:** Tall cowboy boots.
+- **Accessories:** White felt cowboy hat; rodeo sash.

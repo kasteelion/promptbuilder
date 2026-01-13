@@ -1,0 +1,79 @@
+# METADATA
+Scene: Lush garden setting, flowering plants, winding pathways, dappled sunlight through leaves.
+Base_Prompt: Low-Poly 3D
+Character: Harald Bjornson | Outfit: Steampunk Aviator | Pose: None
+Character: Amina Benali | Outfit: Lumberjack | Pose: None
+Character: Efe Kouadio | Outfit: Gym | Pose: None
+Interaction: Custom
+Score: 280
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Lush garden setting, flowering plants, winding pathways, dappled sunlight through leaves.
+---
+
+**CHARACTER: Harald Bjornson**
+**Appearance:**
+* **Body:** Flamboyant Natural; massive, heavily muscled frame with broad, powerful shoulders and a deep chest; long limbs with thick wrists and large, calloused hands; tall vertical (6'2"-6'4"); high muscle density with functional power visible in every movement; an imposing, statuesque presence.
+* **Face:** Rugged-angular structure; square face shape with a prominent heavy brow and a stone-like jawline; deep-set piercing blue eyes under thick, expressive eyebrows; straight, strong nose; neutral expression is calm but intense, radiating a sense of grave authority.
+* **Hair:** Type 2B; thick coarse density; rough swept-back silhouette; past shoulders; swept-back; low sheen; single thick warrior braid at the back. Rich golden-blonde or light brown.
+* **Skin:** Fair; warm-neutral undertones; weathered and sun-toughened texture; prominent scar running down the right cheek and another across the knuckles; tanned.
+**Outfit:**
+- **Top:** Leather bomber jacket (brown with shearling collar)
+- **Bottom:** utility vest
+- **Footwear:** cargo pants or **breeches**; **tall boots**.
+- **Accessories:** Aviator goggles, leather cap, scarf, compass.
+- **Hair/Makeup:** Windblown hair, rugged grooming, adventurous look.
+**Pose/Action:**
+wide shot with the character framed within the environment, Sitting cross-legged on ground or floor, relaxed comfortable position.
+---
+
+**CHARACTER 2: Amina Benali**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-soft flesh; balanced proportions with gentle curves, defined waist, moderate bust (C cup), soft rounded hips; moderate height (5'5"-5'6"); soft feminine build with subtle athleticism from maintaining posture during long streams; desk-athlete presence—comfortable in gaming chairs for hours.
+* **Face:** Soft-balanced facial structure; oval-to-heart face shape with gentle angles; smooth clear planes; large expressive almond-shaped eyes, wide-set, dark brown with natural warmth and camera-aware sparkle; defined arched eyebrows (professionally maintained); straight refined nose; full lips with natural cupid's bow; soft jawline; warm engaging expression—the "streaming face" of genuine enthusiasm mixed with performative energy; dimples when smiling fully.
+* **Hair:** Type 2B-2C waves; very high density; long length past shoulders to mid-back; natural volume and body; center or slight side part; healthy high-gloss finish; commonly worn loose with volume (camera-ready), half-up with claw clip (casual streams), or sleek ponytail (competitive mode); rich dark brown to black with subtle caramel balayage highlights framing face.
+* **Skin:** Medium-tan with warm golden-olive undertones (North African coloring); smooth luminous finish; flawless complexion maintained for camera work; natural healthy glow enhanced by ring lights and skincare routine. stylish clear-framed gaming glasses with a slight cat-eye shape
+**Outfit:**
+- **Top:** Red and black buffalo plaid flannel shirt (thick cotton, buttoned or worn open over a white tank)
+- **Bottom:** distressed blue jeans (straight leg, rugged denim)
+- **Footwear:** brown leather work boots.
+- **Accessories:** Leather belt with large buckle, small axe prop (optional), wool beanie.
+- **Hair/Makeup:** Loose natural waves or a messy bun, minimal "outdoorsy" makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Arms stretched overhead, back arched slightly, eyes closed, sensual morning energy.
+---
+
+**CHARACTER 3: Efe Kouadio**
+**Appearance:**
+- **Body:** Soft Natural frame; natural soft flesh; balanced proportions with gentle curves, defined waist, full hips, soft rounded features, moderate shoulders; moderate vertical (5’5”-5’6”); natural curvy build with soft harmonious lines and welcoming presence.
+- **Face:** Soft-balanced facial structure; round-oval face with warm open planes and full cheeks that enhance smile; expressive round-almond eyes with bright engaged quality, wide-set, warm dark brown with natural sparkle; full lips with natural upward curve that creates dimpled smile; smooth forehead; radiant joyful expression that lights up her whole face.
+- **Hair:** Type 4A coils; high density; medium-length natural textured style with defined curl pattern and bouncy voluminous shape; healthy soft finish with natural sheen; black to dark brown.
+- **Skin:** Deep warm brown with rich golden undertones and natural luminous dewy finish.
+**Outfit:**
+- **Top:** Fitted **#FF7F50 top** (technical knit)
+- **Bottom:** high-waist **athletic shorts or leggings** (technical fabric).
+- **Accessories:** Fitness watch or tracker, hair in ponytail.
+- **Hair/Makeup:** Minimal or no makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Mid-dance motion, fluid graceful movement, arms in expressive position.
+---
+
+**Additional Notes:**
+Harald Bjornson chasing after Amina Benali, both in motion with playful or determined energy

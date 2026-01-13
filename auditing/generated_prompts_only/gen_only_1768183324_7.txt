@@ -1,0 +1,79 @@
+# METADATA
+Scene: Glass skybridge between towers, city far below, sleek architecture, sci-fi metropolitan feeling.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Kaia Vaitupu | Outfit: Tech-Athletic Compression | Pose: None
+Character: Leonidas Stratos | Outfit: Gymnastics | Pose: None
+Character: Amira Khalil | Outfit: Surfing | Pose: None
+Interaction: Custom
+Score: 540
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Glass skybridge between towers, city far below, sleek architecture, sci-fi metropolitan feeling.
+---
+
+**CHARACTER: Kaia Vaitupu**
+**Appearance:**
+- **Body:** Statuesque Athletic frame; warm golden-bronze skin with a luminous, hydrated finish; soft-rectangular proportions with strong, graceful posture; tall stature (5'10"-5'11"); refined athletic build with long limbs and elegant muscle definition; "quiet authority" presence—composed and commanding.
+- **Face:** Strong heart-shaped structure; defined cheekbones that catch the light; firm, graceful jawline; large, deep-set dark brown eyes with a steady, intelligent gaze; thick, natural dark eyebrows with a soft arch; straight, elegant nose; full, well-defined mouth with a composed neutral expression; presence conveys deep concentration and intellectual clarity.
+- **Hair:** Type 1A-1B straight; high density and lustrous sheen; waist-length dark ebony hair, often worn in a sharp, high-shine ponytail or loose with a precise center part; matte-satin finish with silver-blue holographic highlights woven through the strands.
+- **Skin:** Deep golden-bronze with warm radiant undertones; flawless, smooth texture; subtle traditional geometric "tatau" patterns on her forearms that pulse with a faint cyan glow; healthy, hydrated "digital office" glow.
+**Outfit:**
+- **Top:** Long-sleeve compression top (high-neck technical nylon-spandex blend in #00FFFF, ultra-fitted to highlight torso and shoulder definition)
+- **Bottom:** Matching high-waist compression leggings (thick elasticated waistband, moisture-wicking matte finish).
+- **Accessories:** Black fitness tracker; wireless earbuds.
+- **Hair/Makeup:** Sleek ponytail; natural dewy skin; minimal makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Low wrestling stance, arms extended ready to engage, knees bent, explosive ready energy.
+---
+
+**CHARACTER 2: Leonidas Stratos**
+**Appearance:**
+* **Body:** Dramatic; elite athletic flesh; "Adonis belt" and deep core definition; broad square shoulders and a narrow, powerful waist; moderate-to-tall vertical (6'0"-6'2"); extremely high muscle density with sharp vascularity; movements are precise, economical, and explosive.
+* **Face:** Severe-classical structure; sharp, chiseled features; high nasal bridge; deep-set, hawk-like amber-brown eyes; prominent cheekbones and a squared, resolute jawline; neutral expression is intense and watchful, radiating a sense of absolute focus.
+* **Hair:** Type 1B-2A; medium density; disciplined short-to-medium silhouette; no defined part; low sheen; tight, disciplined crop or rough swept-back style. Dark chestnut or black.
+* **Skin:** Deep olive; warm golden undertones; smooth firm texture; surgically-precise scars on pectoral and outer thigh; tanned.
+**Outfit:**
+- **Top:** High-neck singlet or unitard (sleek performance lycra with bold geometric patterns in white and black, featuring blue metallic accents), wearing warm-up sweats over leotard
+- **Bottom:** barefoot or stirrup pants in white.
+- **Accessories:** Chalk dust on hands and shoulders.
+- **Hair/Makeup:** Neat cropped hair or secured style, focused athletic expression.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing at ball return area, towel in hand, carefully wiping/polishing bowling ball, focused preparation, pre-bowl ritual.
+---
+
+**CHARACTER 3: Amira Khalil**
+**Appearance:**
+* **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
+* **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
+* **Hair / Covering:** Hair fully covered; hijab as constant identity anchor; smooth controlled drape with clean facial framing.
+* **Skin:** Warm olive-toned skin with soft luminous finish.
+**Outfit:**
+- **Hijab:** Neoprene swim hijab in **white** (secure aerodynamic wrap)
+- **Top:** Long-sleeve neoprene wetsuit or rash guard (fitted, modest high-neck, full-length sleeves, bold color-blocking in **white** and **black**)
+- **Bottom:** Full-length matching swim leggings or wetsuit bottom
+- **Footwear:** Barefoot with sand-dusted skin
+- **Accessories:** Surfboard prop in **blue**, waterproof fitness watch
+- **Makeup:** Wet skin finish, minimal waterproof makeup
+**Pose/Action:**
+full body shot showing the character from head to toe, Streamlined diving position, arms extended forward, body horizontal, entering water, competitive form.
+---
+
+**Additional Notes:**
+Kaia Vaitupu giving Leonidas Stratos a thumbs up gesture, showing approval and encouragement

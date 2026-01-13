@@ -6,7 +6,7 @@ from tkinter import messagebox, ttk
 
 from typing import Callable, Optional
 
-from config import WELCOME_MESSAGE
+from core.config import WELCOME_MESSAGE
 
 
 class DialogManager:

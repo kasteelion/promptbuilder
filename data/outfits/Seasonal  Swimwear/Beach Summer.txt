@@ -1,23 +1,45 @@
 tags: [Casual, Seasonal, Summer]
 
 [F]
-- **Top:** Bikini or one-piece
-- **Bottom:** sheer **cover-up or linen shirt** worn open
-- **Footwear:** flat sandals.
-- **Accessories:** Sunhat, sunglasses optional.
-- **Hair/Makeup:** Minimal waterproof makeup.
+- **Top:** Bikini or one-piece swimsuit.
+  - **Fit:** Fitted; Minimal.
+  - **Material:** Lycra or Spandex.
+  - **Pattern:** Solid or Tropical print.
+  - **Neckline:** Halter, Scoop, or Bandeau.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Sheer cover-up or linen shirt.
+  - **Fit:** Loose; Open.
+  - **Material:** Linen or Chiffon.
+  - **Waist:** Natural.
+  - **Length:** Mid-thigh cover-up.
+- **Footwear:** Flat sandals.
+- **Accessories:** Sunhat; sunglasses.
 
 [M]
-- **Top:** Board shorts or swim trunks
-- **Bottom:** optional **linen shirt** worn open
-- **Footwear:** flip-flops or sandals.
+- **Top:** Bare chest or open linen shirt.
+  - **Fit:** Relaxed.
+  - **Material:** Linen.
+  - **Neckline:** Open collar.
+  - **Sleeve:** Long or Short.
+- **Bottom:** Board shorts or swim trunks.
+  - **Fit:** Standard swim fit.
+  - **Material:** Quick-dry polyester.
+  - **Waist:** Drawstring.
+  - **Length:** Knee-length.
+- **Footwear:** Flip-flops or sandals.
 - **Accessories:** Sunglasses.
-- **Hair/Makeup:** Minimal grooming.
 
 [H]
-- **Hijab:** Swim hijab in navy blue (quick-dry technical fabric)
-- **Top:** Long-sleeve modest swim tunic in navy with white trim (falls to mid-thigh)
-- **Bottom:** Full-coverage swim leggings in navy blue
-- **Footwear:** Flat sandals
-- **Accessories:** Sheer beach cover-up, straw beach bag, UV-protective sunglasses
-- **Makeup:** Minimal waterproof makeup, SPF lip balm
+- **Hijab:** Swim hijab in navy blue (quick-dry technical fabric).
+- **Top:** Long-sleeve modest swim tunic.
+  - **Fit:** Modest loose; Mid-thigh length.
+  - **Material:** Technical swim fabric.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-coverage swim leggings in navy blue.
+  - **Fit:** Fitted; Modest.
+  - **Material:** matching technical fabric.
+  - **Waist:** Elastic.
+  - **Length:** Ankle-length.
+- **Footwear:** Flat sandals.
+- **Accessories:** Sheer beach cover-up; straw beach bag; UV sunglasses.

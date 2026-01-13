@@ -1,0 +1,82 @@
+# METADATA
+Scene: Casual thrift store, crowded racks, mixed lighting, bargain-hunting treasure-trove atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Luna Vex | Outfit: Pop Star - Futuristic Glam | Pose: None
+Character: Freydis Holm | Outfit: Tennis | Pose: None
+Character: Marisol Rivera | Outfit: Yoga Athleisure | Pose: None
+Interaction: Custom
+Score: 500
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Casual thrift store, crowded racks, mixed lighting, bargain-hunting treasure-trove atmosphere.
+---
+
+**CHARACTER: Luna Vex**
+**Appearance:**
+* **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
+* **Face:** Classic heart-shaped silhouette with a broad, smooth forehead and high, soft cheekbones that become prominent when she smiles; delicate, pointed chin creating a sharp taper from the mid-face; soft but clean and well-defined jawline; focal wide-set almond-shaped eyes in captivating light grey-blue; framed by naturally high-arched, manicured dark brown eyebrows sitting well above the orbital bone; signature sharp black winged eyeliner that accentuates the upward curve of her eyes; petite, straight nose bridge with a soft rounded tip and characteristic "scrunch" when laughing; wide, expressive mouth with a prominent philtrum and a broad, radiant smile revealing straight white teeth; deep endearing smile lines (nasolabial folds) and pronounced "crow's feet" signal genuine warmth and joy.
+* **Hair:** Type 2A (wavy); medium density; soft, voluminous layered silhouette; shoulder-length; varying part pattern (side or center); glossy sheen with styled "wet-look" roots; common styling includes loose, face-framing waves. Split-dye neon magenta pink and electric blue/amethyst purple.
+* **Skin:** Fair/Light depth; neutral-cool undertones; smooth, luminous surface finish; natural "crow's feet" laugh lines around the eyes.
+**Outfit:**
+- **Top:** Metallic or holographic bodysuit (form-fitting with geometric cutouts, iridescent blue and silver)
+- **Bottom:** armored shoulder piece (asymmetric, sculptural design on one shoulder)
+- **Footwear:** short pleated skirt (black with metallic blue overlay or trim); **thigh-high stockings** (black opaque or with blue accents); **platform boots** (knee-high, futuristic design with metallic details).
+- **Accessories:** Statement hair piece (large geometric or crystalline design), futuristic jewelry (angular, metallic), LED or light-up elements optional, microphone prop.
+- **Hair/Makeup:** Dramatic avant-garde hairstyle (high fashion updo, sleek ponytail, or bold color - blue, purple, silver), holographic or metallic makeup with shimmer, graphic eyeliner, glossy lips, confident stage presence, pop star energy.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Freydis Holm**
+**Appearance:**
+* **Body:** Flamboyant Natural; powerful athletic flesh with clear muscle definition; broad structured shoulders and long limbs; tall vertical (5'10"-6'0"); high density throughout with visible strength in back, core, and thighs; rugged statuesque presence that commands space.
+* **Face:** Strong-angled structure; sharp square-to-oval shape; high prominent cheekbones; powerful defined jawline; intense blue-gray eyes; moderate spacing; piercing steady gaze; straight, slightly prominent nose; expressive mouth with a firm set; neutral expression is fiercely composed with a hint of predatory awareness.
+* **Hair:** Type 2B-2C; high density; rugged voluminous silhouette; very long (waist-length) with thick, rugged texture; asymmetric part; matte finish; complex asymmetric side braids feeding into a larger central braid or high ponytail. Ash-blonde or strawberry-blonde with sun-faded highlights.
+* **Skin:** Fair; cool-under-tones; weathered matte finish; scattered light freckles across bridge of nose and shoulders; a few faint, well-healed battle scars—one across the left eyebrow and another on the right shoulder.
+**Outfit:**
+- **Top:** Performance tank top for **The Red Badgers** with **racerback design** and **contrast binding**
+- **Bottom:** body in **#C5050C** with **#FFFFFF color-blocked side panels** and **subtle team logo** on chest
+- **Footwear:** athletic skirt with built-in compression shorts in **#C5050C** featuring **#FFFFFF pleated inserts** and **contrast waistband with hidden ball pockets**; **tennis shoes** (#000000, court-appropriate with reinforced toe).
+- **Accessories:** Visor in **#C5050C** with **#FFFFFF logo**, matching wristbands, hair tie.
+- **Hair/Makeup:** Hair in sporty ponytail or braid with flyaways secured, minimal waterproof makeup with tinted lip balm, athletic glow.
+**Pose/Action:**
+wide shot with the character framed within the environment, Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
+---
+
+**CHARACTER 3: Marisol Rivera**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; compact balanced proportions with defined waist, toned limbs, and visible muscle definition; moderate vertical (5'5"-5'6"); athletic build with clean controlled lines, functional strength, and mixed-heritage features—Japanese bone structure with Puerto Rican curves, creating distinctive balanced aesthetics; athletic graceful presence.
+* **Face:** Balanced classical structure with mixed heritage features; oval face with subtle Japanese angularity softened by Puerto Rican warmth; firm clean planes; calm almond-shaped eyes that tilt slightly upward (Japanese influence) with warm expressive quality (Puerto Rican warmth), moderately spaced, dark brown; defined jawline; neutral expression shows calm composure with subtle knowing smile that brightens when engaged; beauty mark near left eye.
+* **Hair:** Type 1B-1C straight with slight natural wave; medium-high density; long sleek cut with healthy satin sheen; dark brown to black; versatile styling options including ponytails and braids.
+* **Skin:** Warm golden-olive skin with bronzed finish and natural radiance.
+**Outfit:**
+- **Top:** cropped **athletic tank or sports bra**, worn with oversized **zip-up hoodie or cardigan** (worn open)
+- **Bottom:** High-waist **yoga leggings** (stretchy technical fabric in solid color or subtle pattern)
+- **Footwear:** **slip-on sneakers**.
+- **Accessories:** Yoga mat bag, water bottle, minimal jewelry.
+- **Hair/Makeup:** Hair in messy bun or ponytail, fresh minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Turned slightly to side, gazing off into distance, contemplative expression.
+---
+
+**Additional Notes:**
+Cinematic lighting, high detail.

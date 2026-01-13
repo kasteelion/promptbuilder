@@ -1,0 +1,78 @@
+# METADATA
+Scene: Casual thrift store, crowded racks, mixed lighting, bargain-hunting treasure-trove atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Aryan Kapoor | Outfit: Hindu | Pose: None
+Character: Natsumi Maki | Outfit: Beach Summer | Pose: None
+Character: Rosa Torres | Outfit: Training | Pose: None
+Score: 355
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Casual thrift store, crowded racks, mixed lighting, bargain-hunting treasure-trove atmosphere.
+---
+
+**CHARACTER: Aryan Kapoor**
+**Appearance:**
+* **Body:** Dramatic Classic frame; moderate muscularity with a lean, tailored silhouette; balanced proportions that look exceptional in suiting; moderate vertical (5'10"-5'11"); posture is military-straight but relaxed; projects a refined, expensive stability.
+* **Face:** Symmetrical, high-contrast structure; strong square jawline covered by a meticulously groomed "designer stubble" to short boxed beard; high cheekbones; piercing amber-brown eyes with thick lashes; straight aristocratic nose; expression is usually a knowing, confident smirk.
+* **Hair:** Type 2A waves; high density; styled in a classic "quiff" or side-part with volume; sides are tapered clean; glossy, healthy finish; jet black with a blueish tint under light.
+* **Skin:** Medium-deep tan with warm golden-olive undertones; hyper-smooth texture suggestive of a high-end skincare routine.
+**Outfit:**
+- **Top:** Silk dhoti (wrapped lower garment in vibrant colors - saffron, red, white, or gold with ornate borders)
+- **Bottom:** bare chest or **silk shawl** draped over shoulders
+- **Footwear:** ornate sandals or barefoot.
+- **Accessories:** Elaborate gold jewelry (necklaces, arm bands, sacred thread), tilak mark on forehead, rudraksha beads.
+- **Hair/Makeup:** Hair in topknot or loose with crown, defined features, sacred markings.
+**Pose/Action:**
+wide shot with the character framed within the environment, Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
+---
+
+**CHARACTER 2: Natsumi Maki**
+**Appearance:**
+* **Body:** Soft Natural Kibbe type; soft-lean flesh quality with slight musculature; balanced proportions with moderate waist definition and gently rounded hips; petite vertical line (5'2"-5'4" range); athletic density with visible core engagement, subtle oblique definition, toned arms with feminine softness, low-moderate body fat distribution; compact, energized presence quality.
+
+* **Face:** Delicate angular structure with soft edges; heart-shaped, tapering to a gently pointed chin; midface slightly compressed with cheekbones positioned high and moderately prominent; large, round-almond shaped eyes with moderate-wide spacing, dark brown to nearly black irises, thick upper lash line with defined fold, significant lid exposure when open; straight, refined nose with softly defined bridge and rounded tip; smooth jawline tapering from cheekbones to chin; direct, engaging gaze with subtle intensity; naturally full lips with pronounced cupid's bow and plumper lower lip, often slightly parted; youthful softness
+
+* **Hair:** Type 2A; Medium density; Platinum ash blonde; **Signature Messy high bun with tendrils**; Shoulder-length base; No part, pulled up; Matte sheen; **Loosely twisted bun on crown with face-framing wisps**;
+
+* **Skin:** Porcelain depth with cool-neutral undertones and soft matte-to-luminous finish; smooth, even texture with minimal visible pores; fair to very light complexion with subtle translucency; uniformly pale throughout face, neck, and body with slight natural warmth in cheeks when animated; delicate, refined quality that catches light softly.
+**Outfit:**
+- **Top:** Bikini or one-piece
+- **Bottom:** sheer **cover-up or linen shirt** worn open
+- **Footwear:** flat sandals.
+- **Accessories:** Sunhat, sunglasses optional.
+- **Hair/Makeup:** Minimal waterproof makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Mid-punch or kick to heavy bag, dynamic motion, powerful extension, training intensity.
+---
+
+**CHARACTER 3: Rosa Torres**
+**Appearance:**
+* **Body:** Soft Gamine; soft wave flesh; compact proportions with short limbs and moderate torso; petite vertical (5'0"-5'2"); soft athletic build with rounded shoulders; gentle arm definition; naturally full thighs and soft midsection; curvy-compact presence.
+* **Face:** Soft-rounded structure; round-oval shape; distinctively soft full cheeks; youthful warmth; short midface with gentle cheekbone prominence; large almond-shaped eyes; close-set spacing; dark brown irises with warm sparkle; soft rounded jawline; open genuine smile with direct friendly gaze.
+* **Hair:** Type 2B-2C; medium density; moderate voluminous waves; mid-back length; no defined part; low sheen; worn loose in off-the-face style. Dark brown or black.
+* **Skin:** Medium-tan; warm golden undertones; slight surface sheen; clear even texture.
+**Outfit:**
+- **Top:** Fitted **sports bra** with minimal detailing
+- **Bottom:** high-waist **athletic shorts**.
+- **Accessories:** Lightweight grappling gloves; **ankle tape** for support.
+- **Hair/Makeup:** Minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---

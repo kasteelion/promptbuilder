@@ -1,23 +1,46 @@
 tags: [formal, Rich, Western]
 
 [F]
-- **Top:** Tailored western blazer (((default:cream or tan) or (signature)) with western yoke detailing, leather trim)
-- **Bottom:** silk western shirt (with bolo tie, subtle sheen)
-- **Footwear:** tailored trousers (high-waist, pressed crease); **luxury cowboy boots** (exotic leather - ostrich or alligator, understated elegance).
-- **Accessories:** Bolo tie with turquoise or silver slide, large statement ring, designer western hat (felt, impeccably maintained), leather briefcase or portfolio.
-- **Hair/Makeup:** Sophisticated styled hair (sleek waves or polished updo), refined makeup with emphasis on power and wealth, confident commanding presence.
+- **Top:** Tailored western blazer over silk western shirt.
+  - **Fit:** Tailored with western yoke.
+  - **Material:** Wool; Silk; Leather trim.
+  - **Pattern:** Subtle sheen.
+  - **Neckline:** Collared with bolo tie.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored trousers with pressed crease.
+  - **Fit:** Straight leg; High-waist.
+  - **Material:** Luxury wool.
+  - **Pattern:** Solid ((default:cream or tan)).
+  - **Waist:** High-waisted.
+  - **Length:** Full length.
+- **Footwear:** Luxury exotic leather cowboy boots.
+- **Accessories:** Bolo tie with turquoise; western hat; briefcase.
 
 [M]
-- **Top:** Tailored western blazer (((default:cream or tan) or (signature)) with western yoke detailing, suede trim)
-- **Bottom:** crisp dress shirt (white or pastel)
-- **Footwear:** tailored trousers (high-waist, western cut); **luxury cowboy boots** (alligator or ostrich).
-- **Accessories:** Bolo tie with turquoise or silver slide, large signet ring, Stetson hat (high quality), leather briefcase.
-- **Hair/Makeup:** Slicked back hair, well-groomed facial hair, confident commanding presence.
+- **Top:** Tailored western blazer over dress shirt.
+  - **Fit:** Structured western.
+  - **Material:** Wool; Suede trim.
+  - **Pattern:** Solid.
+  - **Neckline:** Collared with bolo tie.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored trousers in western cut.
+  - **Fit:** Straight.
+  - **Material:** Luxury wool.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Luxury alligator or ostrich boots.
+- **Accessories:** Bolo tie; signet ring; Stetson hat.
 
 [H]
-- **Hijab:** Cream or tan silk hijab (elegant drape) under western hat
-- **Top:** Tailored western blazer (((default:cream or tan) or (signature)) long line); **silk high-neck blouse** underneath
-- **Bottom:** Tailored wide-leg trousers or **maxi skirt**
-- **Footwear:** Luxury cowboy boots
-- **Accessories:** Bolo tie, statement ring, designer western hat, briefcase
-- **Makeup:** Refined makeup, confident presence
+- **Hijab:** Cream or tan silk hijab under western hat.
+- **Top:** Long-line tailored western blazer over high-neck blouse.
+  - **Fit:** Tailored modest.
+  - **Material:** Wool; Silk.
+  - **Neckline:** High-neck with bolo.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored wide-leg trousers or maxi skirt.
+  - **Fit:** Wide-leg or A-line.
+  - **Material:** Wool.
+  - **Length:** Floor-length.
+- **Footwear:** Luxury cowboy boots.
+- **Accessories:** Bolo tie; designer western hat.

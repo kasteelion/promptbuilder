@@ -1,0 +1,77 @@
+# METADATA
+Scene: Professional baseball field, perfectly manicured grass, dirt infield, white foul lines, outfield fence, bright sunny day.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Amina Benali | Outfit: Gymnastics | Pose: None
+Character: Rosa Torres | Outfit: Gymnastics | Pose: None
+Character: Jin Park | Outfit: Gymnastics | Pose: None
+Interaction: Custom
+Score: 236
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Professional baseball field, perfectly manicured grass, dirt infield, white foul lines, outfield fence, bright sunny day.
+---
+
+**CHARACTER: Amina Benali**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-soft flesh; balanced proportions with gentle curves, defined waist, moderate bust (C cup), soft rounded hips; moderate height (5'5"-5'6"); soft feminine build with subtle athleticism from maintaining posture during long streams; desk-athlete presence—comfortable in gaming chairs for hours.
+* **Face:** Soft-balanced facial structure; oval-to-heart face shape with gentle angles; smooth clear planes; large expressive almond-shaped eyes, wide-set, dark brown with natural warmth and camera-aware sparkle; defined arched eyebrows (professionally maintained); straight refined nose; full lips with natural cupid's bow; soft jawline; warm engaging expression—the "streaming face" of genuine enthusiasm mixed with performative energy; dimples when smiling fully.
+* **Hair:** Type 2B-2C waves; very high density; long length past shoulders to mid-back; natural volume and body; center or slight side part; healthy high-gloss finish; commonly worn loose with volume (camera-ready), half-up with claw clip (casual streams), or sleek ponytail (competitive mode); rich dark brown to black with subtle caramel balayage highlights framing face.
+* **Skin:** Medium-tan with warm golden-olive undertones (North African coloring); smooth luminous finish; flawless complexion maintained for camera work; natural healthy glow enhanced by ring lights and skincare routine. stylish clear-framed gaming glasses with a slight cat-eye shape
+**Outfit:**
+- **Top:** High-neck leotard (sleek performance lycra with bold geometric patterns in white and black, featuring blue metallic foil accents), wearing warm-up sweats over leotard
+- **Bottom:** barefoot or athletic toe-wraps.
+- **Accessories:** Matching hair scrunchie.
+- **Hair/Makeup:** Tight secure bun, focused athletic expression, performance makeup with glitter accents.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Rosa Torres**
+**Appearance:**
+* **Body:** Soft Gamine; soft wave flesh; compact proportions with short limbs and moderate torso; petite vertical (5'0"-5'2"); soft athletic build with rounded shoulders; gentle arm definition; naturally full thighs and soft midsection; curvy-compact presence.
+* **Face:** Soft-rounded structure; round-oval shape; distinctively soft full cheeks; youthful warmth; short midface with gentle cheekbone prominence; large almond-shaped eyes; close-set spacing; dark brown irises with warm sparkle; soft rounded jawline; open genuine smile with direct friendly gaze.
+* **Hair:** Type 2B-2C; medium density; moderate voluminous waves; mid-back length; no defined part; low sheen; worn loose in off-the-face style. Dark brown or black.
+* **Skin:** Medium-tan; warm golden undertones; slight surface sheen; clear even texture.
+**Outfit:**
+- **Top:** High-neck leotard (sleek performance lycra with bold geometric patterns in white and black, featuring blue metallic foil accents)
+- **Bottom:** barefoot or athletic toe-wraps.
+- **Accessories:** Matching hair scrunchie.
+- **Hair/Makeup:** Tight secure bun, focused athletic expression, performance makeup with glitter accents.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Jin Park**
+**Appearance:**
+* **Body:** Dramatic male frame; straight lean flesh; narrow rectangle proportions; moderate-to-tall vertical; poised and understated presence with natural grace.
+* **Face:** Long delicate facial structure; oval face; soft jawline; gentle observant eyes; reserved thoughtful expression that suggests deep introspection.
+* **Hair:** Type 1 straight; medium density; dark brown to black with soft matte finish; naturally fine texture; versatile K-fashion styling options.
+* **Skin:** Light neutral skin with smooth even finish and soft clarity. minimalist thin wire-frame glasses
+**Outfit:**
+- **Top:** High-neck singlet or unitard (sleek performance lycra with bold geometric patterns in white and black, featuring blue metallic accents)
+- **Bottom:** barefoot or stirrup pants in white.
+- **Accessories:** Chalk dust on hands and shoulders.
+- **Hair/Makeup:** Neat cropped hair or secured style, focused athletic expression.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Dark vignette, dramatic MMA scene. Amina Benali and Rosa Torres are grappling on the mat. Rosa Torres is on their back with legs locked around Amina Benali's waist in a closed guard, ankles crossed behind Amina Benali's lower back, thighs squeezing for control. Amina Benali is kneeling inside the guard, torso upright at approximately 45-degree angle, spine straight, hips driving forward for pressure. Their knees are set wide outside Rosa Torres's hips for stable base and balance. Their hands work at Rosa Torres's inner thigh and hip line, fingers hooking and pulling to create separation as they begin a guard-opening sequence. Both fighters face each other directly—no rear positions, no turtle, no behind-the-back angles. Amina Benali leans in to deliver a controlled strike with their right hand while left hand posts on the mat for base, maintaining upright posture and weight distribution. Rosa Torres's hands are active, one controlling Amina Benali's wrist, the other gripping behind the neck or shoulder. Both fighters have intense expressions with furrowed brows, clenched jaws, focused eyes. Pay attention to muscle tension in arms, shoulders, core, and legs showing realistic grappling effort.

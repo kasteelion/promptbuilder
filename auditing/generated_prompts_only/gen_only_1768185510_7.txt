@@ -1,0 +1,73 @@
+# METADATA
+Scene: Spacious sunlit studio, wooden floor splattered with paint, canvasses leaning against walls, large easels, messy worktable with brushes and jars, large industrial windows, creative professional atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Celine Voss | Outfit: Tech-Athletic Compression | Pose: None
+Character: Callum Doherty | Outfit: Tech-Athletic Compression | Pose: None
+Character: Audrey Thorne | Outfit: Tech-Athletic Compression | Pose: None
+Score: 525
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Spacious sunlit studio, wooden floor splattered with paint, canvasses leaning against walls, large easels, messy worktable with brushes and jars, large industrial windows, creative professional atmosphere.
+---
+
+**CHARACTER: Celine Voss**
+**Appearance:**
+* **Body:** Dramatic frame; straight dense flesh; narrow rectangle proportions; tall controlled vertical.
+* **Face:** Angular sculptural structure; square-leaning oval face; sharp jaw; unreadable neutral expression.
+* **Hair:** Type 1 straight; high density; blunt jaw-length bob; precise alignment; matte finish.
+* **Skin:** Cool pale skin with porcelain finish.
+**Outfit:**
+- **Top:** Long-sleeve compression top (high-neck technical nylon-spandex blend in charcoal, ultra-fitted to highlight torso and shoulder definition)
+- **Bottom:** Matching high-waist compression leggings (thick elasticated waistband, moisture-wicking matte finish).
+- **Accessories:** Black fitness tracker; wireless earbuds.
+- **Hair/Makeup:** Sleek ponytail; natural dewy skin; minimal makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with both arms raised and flexed at 90 degrees, fists curled inward, showing maximum arm and shoulder definition, vacuum-waist pose.
+---
+
+**CHARACTER 2: Callum Doherty**
+**Appearance:**
+* **Body:** Natural frame; lean but defined muscularity (mesomorph leaning); moderate vertical (5'10"-5'11"); "wiry strength" developed from physical labor; forearms are notably toned and vascular; broad chest tapering to a narrow waist; moves with a loose, athletic agility.
+* **Face:** Angular and expressive; defined jawline that is often softened by a scruffy 5 o'clock shadow; bright, mischievous eyes in a piercing electric blue (striking contrast to hair); nose has a slight bump (maybe broken once in a rugby match); features are animated and quick to smile.
+* **Hair:** Type 2B waves; high density; vibrant, true copper-red (fox colored); cut in a "textured crop" or "modern mullet" style—shorter on sides, longer and messy on top/back; matte finish; often tousled by running hands through it.
+* **Skin:** Fair/Pale with pink undertones; heavily freckled—a constellation of rust-colored freckles covers his nose, cheeks, shoulders, and arms; prone to sunburn but currently has a "farmer's tan" on the arms.
+**Outfit:**
+- **Top:** Long-sleeve compression shirt (high-neck technical nylon-spandex blend in #228B22, ultra-fitted to highlight muscle definition in the chest, shoulders, and arms)
+- **Bottom:** Matching compression leggings (thick elasticated waistband, moisture-wicking matte finish).
+- **Accessories:** Black fitness tracker; wireless earbuds.
+- **Hair/Makeup:** Short neat hairstyle; natural clean skin; well-groomed.
+**Pose/Action:**
+full body shot showing the character from head to toe, Natural unposed laughter, hand near face, genuine joy, magazine-worthy moment.
+---
+
+**CHARACTER 3: Audrey Thorne**
+**Appearance:**
+* **Body:** Heavy Curvy Hourglass / Spoon Shape; statuesque height at 5'7"; 43.5-37-48 proportions; thick, soft flesh quality; substantial bust carried high, transitioning into a defined but thick waist, which flares dramatically into wide, shelf-like hips and heavy thighs; bottom-heavy silhouette balanced by a full chest; voluptuous density with soft anatomical markers.
+* **Face:** Soft Heart-shaped structure with a "baby face" quality; full, rounded cheeks (apple cheeks) and a soft, non-angular jawline; gentle chin; distinctively pale, porcelain complexion with pink undertones; focal heavy-lidded / slightly hooded eyes with hazel-brown irises and relaxed, downward-sloping upper lids giving a calm, sultry expression; natural, slightly arched brows; small to medium mouth width with full, pillowy lips and a clearly defined cupid's bow.
+* **Hair:** Type 2B (wavy); high density; tousled, voluminous layered silhouette; collarbone-length; deep side part with height at the root; healthy natural sheen; common styling includes a loose, textured blowout. Medium chestnut brown with copper/golden undertones.
+* **Skin:** Fair/Light depth; cool pink undertones with a smooth, matte-satin finish; clear complexion with natural flushing on the cheeks.
+**Outfit:**
+- **Top:** Long-sleeve compression top (high-neck technical nylon-spandex blend in charcoal, ultra-fitted to highlight torso and shoulder definition)
+- **Bottom:** Matching high-waist compression leggings (thick elasticated waistband, moisture-wicking matte finish).
+- **Accessories:** Black fitness tracker; wireless earbuds.
+- **Hair/Makeup:** Sleek ponytail; natural dewy skin; minimal makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Leaning against surface, Casual relaxed stance, arms crossed or one hand in pocket.
+---

@@ -1,0 +1,79 @@
+# METADATA
+Scene: Bowling pro shop, custom balls on display, drilling equipment, bags and accessories, serious bowler specialty store atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Rafael Costa | Outfit: Soccer | Pose: None
+Character: Amina Benali | Outfit: Soccer | Pose: None
+Character: Aiyana Blackfeather | Outfit: Soccer | Pose: None
+Interaction: Custom
+Score: 510
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Bowling pro shop, custom balls on display, drilling equipment, bags and accessories, serious bowler specialty store atmosphere.
+---
+
+**CHARACTER: Rafael Costa**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with slight wave; balanced proportions with gentle breadth; moderate vertical; relaxed athletic build with natural ease.
+* **Face:** Balanced-warm facial structure; oval-to-square face; warm expressive eyes; defined brows; easy smile; open welcoming expression.
+* **Hair:** Type 3A curls; high density; medium-length tousled cut; natural volume; soft matte-satin finish; often pushed back with slight forward fall.
+* **Skin:** Warm tan skin with golden undertones and healthy glow.
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team** in **blue** (contrasting goalkeeper kit), wearing padded goalkeeper gloves
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks.
+- **Accessories:** Shin guards.
+**Pose/Action:**
+wide shot with the character framed within the environment, Low wrestling stance, arms extended ready to engage, knees bent, explosive ready energy.
+---
+
+**CHARACTER 2: Amina Benali**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-soft flesh; balanced proportions with gentle curves, defined waist, moderate bust (C cup), soft rounded hips; moderate height (5'5"-5'6"); soft feminine build with subtle athleticism from maintaining posture during long streams; desk-athlete presence—comfortable in gaming chairs for hours.
+* **Face:** Soft-balanced facial structure; oval-to-heart face shape with gentle angles; smooth clear planes; large expressive almond-shaped eyes, wide-set, dark brown with natural warmth and camera-aware sparkle; defined arched eyebrows (professionally maintained); straight refined nose; full lips with natural cupid's bow; soft jawline; warm engaging expression—the "streaming face" of genuine enthusiasm mixed with performative energy; dimples when smiling fully.
+* **Hair:** Type 2B-2C waves; very high density; long length past shoulders to mid-back; natural volume and body; center or slight side part; healthy high-gloss finish; commonly worn loose with volume (camera-ready), half-up with claw clip (casual streams), or sleek ponytail (competitive mode); rich dark brown to black with subtle caramel balayage highlights framing face.
+* **Skin:** Medium-tan with warm golden-olive undertones (North African coloring); smooth luminous finish; flawless complexion maintained for camera work; natural healthy glow enhanced by ring lights and skincare routine. stylish clear-framed gaming glasses with a slight cat-eye shape
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team**  (fitted)
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks over shin guards.
+- **Accessories:** Shin guards.
+- **Hair/Makeup:** Ponytail or bun, minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Leaning forward with hands together in front of the waist, all muscles in the arms, chest, and shoulders tensed to the limit.
+---
+
+**CHARACTER 3: Aiyana Blackfeather**
+**Appearance:**
+* **Body:** Natural frame; balanced athletic build with natural softness; moderate proportions; moderate vertical (5'5"-5'6"); powerful legs and core strength from dance; dignified powerful presence.
+* **Face:** Balanced-strong facial structure; oval-to-round face; pronounced cheekbones; medium almond-shaped dark eyes with proud gaze; defined epicanthic fold; neutral resting expression shows calm dignity with a slight knowing smile.
+* **Hair:** Type 1B-1C; very high density; very long hair to lower back; high-gloss sheen; pure black with blue-black sheen; versatile styling options including traditional braids and loose styles.
+* **Skin:** Medium tan with warm red-brown undertones and natural healthy finish.
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team**  (fitted)
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks over shin guards.
+- **Accessories:** Shin guards.
+- **Hair/Makeup:** Ponytail or bun, minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Hands on the waist, elbows pushed forward to broaden the back, showcasing extreme V-taper and upper body width.
+---
+
+**Additional Notes:**
+Rafael Costa and Amina Benali approaching each other from opposite sides of the octagon cage, walking toward center for opening bell. Both in fight-ready position—hands taped or gloved, mouthguards in, corner teams behind them giving final instructions. Rafael Costa enters from left side, Amina Benali from right, converging at center. Bodies loose and warm, bouncing slightly on feet, shaking out arms. Facial expressions transitioning from calm focus to fight mode intensity. Referee between them preparing to give final instructions. Cage fence visible in background, arena lights bright overhead. Both sizing each other up during this final approach, reading body language and energy. Optional: corner men wiping down fighters, applying Vaseline, giving pep talks. Moment of truth energy, anticipation at peak before violence begins.

@@ -1,0 +1,87 @@
+# METADATA
+Scene: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Ines Santos | Outfit: Retro Tracksuit | Pose: None
+Character: Leilani Te'o | Outfit: Retro Tracksuit | Pose: None
+Character: Zara Washington | Outfit: Retro Tracksuit | Pose: None
+Interaction: Custom
+Score: 575
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter.
+---
+
+**CHARACTER: Ines Santos**
+**Appearance:**
+* **Body:** Soft Classic frame; balanced proportions with gentle curves; smooth, rounded contours; moderate height and vertical line; refined and graceful presence.
+* **Face:** Oval face shape with high, well-defined cheekbones; smooth, clear complexion with a natural glow; broad and genuine smile showing straight white teeth; warm, radiant expression.
+* **Eyes & Makeup:** Dark brown almond-shaped eyes; focal point is a sharp, precise black winged eyeliner (cat-eye style) flicking upward at the corners; dark, full, well-groomed eyebrows; natural soft rose-pink lip color.
+* **Hair:** Sleek, dark black hair; neat center part; pulled back tightly from the face into a low, polished bun or ponytail; smooth, high-gloss finish.
+* **Skin:** Warm, golden-tan complexion with a radiant, healthy glow; smooth satin texture.
+**Outfit:**
+- **Top:** Striped Camisole (fitted silhouette, spaghetti straps, horizontal red and white pin-stripes, cropped midriff length)
+- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, vintage dolphin hem cut)
+- **Footwear:** Oversized Bomber Jacket (matching red hue, worn slouched off-the-shoulders, voluminous sleeves, fabric draped around elbows).
+- **Accessories:** Simple gold pendant necklace, minimal jewelry.
+- **Hair/Makeup:** Low messy bun with loose face-framing strands; natural, fresh-faced makeup look with subtle lip color.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Leilani Te'o**
+**Appearance:**
+* **Body:** Dramatic Natural; massive, heavily muscled frame with broad powerful shoulders and a deep chest; 45-35-50 proportions; tall height at 6'0"; EXTREME muscle density with visible definition in her "capped" delts, thick biceps, and powerful quads; heavy but athletic presence.
+* **Face:** Rugged-soft structure; square-oval face with a strong, well-defined jawline and high prominent cheekbones; large dark brown eyes with a steady, direct gaze; full expressive mouth; neutral resting expression is calm but intense, radiating a sense of quiet authority.
+* **Hair:** Type 3A–3B curls; high density; long length past her shoulders; naturally thick dark hair often worn half-up to keep it out of her face during training; healthy natural sheen.
+* **Skin:** Deep warm tan with rich golden-brown undertones (Polynesian coloring); smooth surface with visible muscle separation creating deep shadows; elaborate traditional 'tatau' patterns visible on one shoulder and upper arm.
+**Outfit:**
+- **Top:** Striped Camisole (fitted silhouette, spaghetti straps, horizontal red and white pin-stripes, cropped midriff length)
+- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, vintage dolphin hem cut)
+- **Footwear:** Oversized Bomber Jacket (matching red hue, worn slouched off-the-shoulders, voluminous sleeves, fabric draped around elbows).
+- **Accessories:** Simple gold pendant necklace, minimal jewelry.
+- **Hair/Makeup:** Low messy bun with loose face-framing strands; natural, fresh-faced makeup look with subtle lip color.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Zara Washington**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
+* **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
+* **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
+* **Skin:** Deep rich brown skin with luminous depth.
+**Outfit:**
+- **Top:** Striped Camisole (fitted silhouette, spaghetti straps, horizontal red and white pin-stripes, cropped midriff length)
+- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, vintage dolphin hem cut)
+- **Footwear:** Oversized Bomber Jacket (matching red hue, worn slouched off-the-shoulders, voluminous sleeves, fabric draped around elbows).
+- **Accessories:** Simple gold pendant necklace, minimal jewelry.
+- **Hair/Makeup:** Low messy bun with loose face-framing strands; natural, fresh-faced makeup look with subtle lip color.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Ines Santos and Leilani Te'o standing near a rooftop ledge at night, city lights blurred in the background, a Moment of vulnerability and intense emotional connection.

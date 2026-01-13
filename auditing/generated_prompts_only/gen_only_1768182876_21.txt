@@ -1,0 +1,75 @@
+# METADATA
+Scene: Gymnastics training facility, foam pit, balance beams, uneven bars, spring floor, athletic training energy.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Theo Okonkwo | Outfit: Soccer | Pose: None
+Character: Leilani Te'o | Outfit: Soccer | Pose: None
+Character: Aaliyah Chen | Outfit: Soccer | Pose: None
+Score: 313
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Gymnastics training facility, foam pit, balance beams, uneven bars, spring floor, athletic training energy.
+---
+
+**CHARACTER: Theo Okonkwo**
+**Appearance:**
+* **Body:** Natural frame; natural-to-soft flesh; balanced proportions; moderate-to-tall vertical; relaxed athletic build with natural ease.
+* **Face:** Balanced-warm facial structure; square-leaning oval face; warm expressive eyes; full lips; easy genuine smile; open welcoming expression.
+* **Hair:** Type 4C coils; high density; short fade with textured top styled in mini twists; clean lineup; matte finish.
+* **Skin:** Deep rich brown skin with warm undertones and healthy glow.
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team**
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks.
+- **Accessories:** Shin guards.
+**Pose/Action:**
+full body shot showing the character from head to toe, Looking down at phone screen, soft smile, Casual modern moment, candid natural pose.
+---
+
+**CHARACTER 2: Leilani Te'o**
+**Appearance:**
+* **Body:** Dramatic Natural; massive, heavily muscled frame with broad powerful shoulders and a deep chest; 45-35-50 proportions; tall height at 6'0"; EXTREME muscle density with visible definition in her "capped" delts, thick biceps, and powerful quads; heavy but athletic presence.
+* **Face:** Rugged-soft structure; square-oval face with a strong, well-defined jawline and high prominent cheekbones; large dark brown eyes with a steady, direct gaze; full expressive mouth; neutral resting expression is calm but intense, radiating a sense of quiet authority.
+* **Hair:** Type 3A–3B curls; high density; long length past her shoulders; naturally thick dark hair often worn half-up to keep it out of her face during training; healthy natural sheen.
+* **Skin:** Deep warm tan with rich golden-brown undertones (Polynesian coloring); smooth surface with visible muscle separation creating deep shadows; elaborate traditional 'tatau' patterns visible on one shoulder and upper arm.
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team**  (fitted)
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks over shin guards.
+- **Accessories:** Shin guards.
+- **Hair/Makeup:** Ponytail or bun, minimal makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Low wrestling stance, arms extended ready to engage, knees bent, explosive ready energy.
+---
+
+**CHARACTER 3: Aaliyah Chen**
+**Appearance:**
+* **Body:** Natural frame; natural flesh with slight wave softness; balanced athletic build with subtle curve; moderate height and vertical line; grounded and capable presence.
+* **Face:** Balanced-soft facial structure; oval face with gentle angles; warm expressive dark eyes with direct inviting gaze; soft jawline; serene neutral expression that easily breaks into a warm genuine smile.
+* **Hair:** Type 3B–3C curls; high density; natural dark brown curls with healthy volume and sheen; versatile styling options including loose curls and protective styles.
+* **Skin:** Warm golden-brown skin with a natural sun-touched glow and soft satin finish.
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team** in **white** with **black** trim (fitted)
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks over shin guards.
+- **Accessories:** Shin guards.
+- **Hair/Makeup:** Ponytail or bun, minimal makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Diving sideways with arms extended, hands reaching for the ball, Intense focus, athletic desperation.
+---

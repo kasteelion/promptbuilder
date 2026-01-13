@@ -1,23 +1,46 @@
 tags: [costume, fantasy, Pirate]
 
 [F]
-- **Top:** Off-shoulder peasant blouse (black chiffon with flowing bell sleeves)
-- **Bottom:** brown leather corset or underbust bodice (with multiple buckle straps and metal hardware)
-- **Footwear:** layered tulle skirt (black, short length with ruffled tiers); **black thigh-high stockings** (with lace tops); **brown leather boot cuffs** worn over stockings.
-- **Accessories:** Brown leather pirate hat (tricorn style with decorative details), layered chain necklaces, leather choker, coin belt or gold chain belt, leather wrist cuffs, compass or treasure prop.
-- **Hair/Makeup:** Long flowing dark hair in loose waves, dramatic purple-toned eyeshadow, bold lips, gothic-romantic makeup style, mysterious expression.
+- **Top:** Off-shoulder peasant blouse under leather corset.
+  - **Fit:** Flowing sleeves; Structured bodice.
+  - **Material:** Black chiffon; Brown leather.
+  - **Pattern:** Solid with metal hardware.
+  - **Neckline:** Off-shoulder.
+  - **Sleeve:** Flowing bell sleeves.
+- **Bottom:** Layered tulle skirt with ruffles.
+  - **Fit:** Ruffled tiers.
+  - **Material:** Black tulle.
+  - **Pattern:** Layered.
+  - **Waist:** Coin belt or gold chain belt.
+  - **Length:** Short length.
+- **Footwear:** Black thigh-high stockings; brown leather boot cuffs.
+- **Accessories:** Pirate tricorn hat; leather choker; layered chain necklaces; compass.
 
 [M]
-- **Top:** Loose peasant shirt (black or dark grey, unbuttoned at top, billowy sleeves)
-- **Bottom:** weathered leather vest or **long frock coat**
-- **Footwear:** dark breeches or trousers tucked into boots; **tall leather boots**.
-- **Accessories:** Tricorn hat, leather belt with large buckle, cutlass prop, eye patch (optional).
-- **Hair/Makeup:** Long messy hair or bandana, rugged stubble or beard, guy-liner.
+- **Top:** Loose peasant shirt and weathered leather vest.
+  - **Fit:** Billowy sleeves; Relaxed vest.
+  - **Material:** Black/Grey cotton; Leather.
+  - **Neckline:** Unbuttoned top.
+  - **Sleeve:** Long billowy sleeves.
+- **Bottom:** Dark breeches or trousers.
+  - **Fit:** Tucked into boots.
+  - **Material:** fabric.
+  - **Waist:** Leather belt with large buckle.
+  - **Length:** Full length.
+- **Footwear:** Tall leather boots.
+- **Accessories:** Tricorn hat; cutlass prop; (optional) eye patch.
 
 [H]
-- **Hijab:** Black jersey hijab wrapped with a dark textured band or bandana style
-- **Top:** Long-sleeve billowy peasant blouse (black or cream, opaque) with leather corset-style vest
-- **Bottom:** Long layered skirt (black/dark grey) with tattered hem aesthetic or wide-leg trousers
-- **Footwear:** Knee-high boots
-- **Accessories:** Wide belt with large buckle, compass prop, layered necklaces
-- **Makeup:** Smoky eye, dark aesthetic, mysterious expression
+- **Hijab:** Black jersey hijab with dark textured band or bandana.
+- **Top:** Long-sleeve billowy peasant blouse with leather corset-style vest.
+  - **Fit:** Modest billowy.
+  - **Material:** Black/Cream cloth; Leather.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Long layered skirt or wide-leg trousers.
+  - **Fit:** Tattered hem aesthetic.
+  - **Material:** Black/Dark grey fabric.
+  - **Waist:** Wide belt with large buckle.
+  - **Length:** Floor-length.
+- **Footwear:** Knee-high boots.
+- **Accessories:** Compass prop; layered necklaces.

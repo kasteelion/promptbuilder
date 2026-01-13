@@ -1,23 +1,46 @@
 tags: [combat, fantasy, Holy]
 
 [F]
-- **Top:** Blessed chainmail or scale armor (silver or white with holy engravings)
-- **Bottom:** white tabard with holy symbol
-- **Footwear:** armored gauntlets and boots; **flowing half-cape**.
-- **Accessories:** Blessed mace or war hammer, shield with divine symbol, holy water vials, prayer beads worn as bracelet, healing kit.
-- **Hair/Makeup:** Practical hair in braid or secured bun, determined expression, natural makeup, righteous aura.
+- **Top:** Blessed chainmail armor under white tabard.
+  - **Fit:** Structured armored.
+  - **Material:** Silver or white chainmail; Cotton tabard.
+  - **Pattern:** Holy engravings.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves with armored gauntlets.
+- **Bottom:** Matching armored skirt or trousers.
+  - **Fit:** Straight leg or flared skirt over armor.
+  - **Material:** Silver chainmail.
+  - **Waist:** Solid buckle belt.
+  - **Length:** Full length.
+- **Footwear:** Armored boots.
+- **Accessories:** Blessed mace or war hammer; shield; flowing half-cape.
 
 [M]
-- **Top:** Blessed chainmail or scale armor (silver or white with holy engravings)
-- **Bottom:** white tabard with holy symbol
-- **Footwear:** armored gauntlets and boots; **flowing half-cape**.
-- **Accessories:** Blessed mace or war hammer, shield with divine symbol, holy water vials, prayer beads worn as bracelet, healing kit.
-- **Hair/Makeup:** Practical hair (short or tied back), determined expression, righteous aura.
+- **Top:** Blessed chainmail or scale armor under white tabard.
+  - **Fit:** Structured.
+  - **Material:** Steel/Silver armor.
+  - **Pattern:** Holy symbol on tabard.
+  - **Neckline:** High collar.
+  - **Sleeve:** Long sleeves with gauntlets.
+- **Bottom:** Armored trousers or skirt.
+  - **Fit:** Tailored heavy.
+  - **Material:** matching armor.
+  - **Waist:** Heavy belt.
+  - **Length:** Full length.
+- **Footwear:** Armored boots.
+- **Accessories:** Holy weapon; shield; half-cape.
 
 [H]
-- **Hijab:** Chainmail coif or white hijab securely wrapped
-- **Top:** Chainmail or scale armor over padded gambeson (long sleeves)
-- **Bottom:** Armored skirt or trousers
-- **Footwear:** Armored boots
-- **Accessories:** Mace or war hammer, shield, holy water
-- **Makeup:** Determined expression, natural makeup
+- **Hijab:** Chainmail coif or white hijab securely wrapped.
+- **Top:** Chainmail or scale armor over padded gambeson.
+  - **Fit:** Modest armored layer.
+  - **Material:** Silver armor; Padded cloth.
+  - **Neckline:** High-neck modest.
+  - **Sleeve:** Long sleeves with gauntlets.
+- **Bottom:** Armored skirt or trousers.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Armored boots.
+- **Accessories:** Mace or war hammer; shield; holy water.

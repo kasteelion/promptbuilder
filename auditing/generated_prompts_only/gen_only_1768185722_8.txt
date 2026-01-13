@@ -1,0 +1,78 @@
+# METADATA
+Scene: Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Callum Doherty | Outfit: Flag Football | Pose: None
+Character: Sitara Saanvi | Outfit: Sheriff | Pose: None
+Character: Diego Morales | Outfit: Street-Dance Set | Pose: None
+Interaction: Custom
+Score: 335
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
+---
+
+**CHARACTER: Callum Doherty**
+**Appearance:**
+* **Body:** Natural frame; lean but defined muscularity (mesomorph leaning); moderate vertical (5'10"-5'11"); "wiry strength" developed from physical labor; forearms are notably toned and vascular; broad chest tapering to a narrow waist; moves with a loose, athletic agility.
+* **Face:** Angular and expressive; defined jawline that is often softened by a scruffy 5 o'clock shadow; bright, mischievous eyes in a piercing electric blue (striking contrast to hair); nose has a slight bump (maybe broken once in a rugby match); features are animated and quick to smile.
+* **Hair:** Type 2B waves; high density; vibrant, true copper-red (fox colored); cut in a "textured crop" or "modern mullet" style—shorter on sides, longer and messy on top/back; matte finish; often tousled by running hands through it.
+* **Skin:** Fair/Pale with pink undertones; heavily freckled—a constellation of rust-colored freckles covers his nose, cheeks, shoulders, and arms; prone to sunburn but currently has a "farmer's tan" on the arms.
+**Outfit:**
+- **Top:** Flag football jersey for **Standard Team**  (t-shirt cut)
+- **Bottom:** Athletic shorts with flag belt
+- **Footwear:** Cleats
+- **Accessories:** Mouthguard.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Sitara Saanvi**
+**Appearance:**
+* **Body:** Romantic frame; soft lush flesh quality; hourglass proportions with defined waist; moderate height (5'4"); soft rounded density with lush bust and hips, delicate wrists and ankles; alluring captivating presence.
+* **Face:** Soft rounded structure; heart shape; large expressive dark brown almond eyes with dazzled flirtatious quality; softly curved jawline; neutral resting expression is slightly pouting and sensual.
+* **Hair:** Type 2C waves; medium-high density; dark glossy black with high sheen; long voluminous hair that takes styling well; commonly worn in glamorous, vintage-inspired styles.
+* **Skin:** Medium tan with warm golden-olive undertones and luminous smooth surface finish; small delicate beauty mark near lip.
+**Outfit:**
+- **Top:** Khaki uniform shirt (short sleeves with epaulettes, badge over left pocket, multiple pockets with button flaps)
+- **Bottom:** dark brown leather duty belt (with holster, handcuffs, radio)
+- **Footwear:** matching khaki pants (straight leg with pressed crease); **black duty boots** (polished leather, lace-up).
+- **Accessories:** Silver star badge, wide-brimmed campaign hat (Smokey Bear style) in khaki, aviator sunglasses, leather gloves tucked in belt.
+- **Hair/Makeup:** Hair in tight professional bun or low ponytail, minimal makeup, authoritative expression, no-nonsense demeanor.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Diego Morales**
+**Appearance:**
+- **Body:** Natural Athletic frame; natural-toned flesh with sun-touched warmth; inverted rectangle proportions with broad shoulders, slim waist, and defined muscle groups without bulk; moderate height (5'11"-6'0"); relaxed athletic build—lean and flexible from years of surfing; "effortless strength" presence—capable but never posturing.
+- **Face:** Balanced-angular structure; oval face shape; firm jawline that softens when he smiles; expressive almond-shaped eyes, wide-set, warm hazel with golden flecks that catch the light; natural dark eyebrows with a slight arch; straight nose with a subtle bridge; full mouth often quirked into a friendly half-smile; expressive neutral expression that reads as engaged and helpful.
+- **Hair:** Type 2B-2C waves; thick high density; medium length textured cut, shorter on sides with volume on top; loose natural side part; matte-satin finish with sun-bleached highlights at the tips; commonly worn tousled and "salt-water" styled, or loosely pushed back during work.
+- **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
+**Outfit:**
+- **Top:** Technical fleece hoodie (cropped to the waist in vibrant orange, featuring an oversized hood and raw-edge hem)
+- **Bottom:** Technical athletic shorts (black spandex with black side-stripes worn over matching compression leggings).
+- **Accessories:** Chunky blue sneakers; layered silver chain necklaces; oversized silver watch.
+- **Hair/Makeup:** Messy textured hair or dreadlocks; urban "street style" appearance; minimal grooming.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Callum Doherty waving at Sitara Saanvi, friendly greeting from a distance

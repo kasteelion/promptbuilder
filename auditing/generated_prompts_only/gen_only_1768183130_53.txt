@@ -1,0 +1,80 @@
+# METADATA
+Scene: Sound booth interior, microphone setup, acoustic foam walls, dim mood lighting, creative focus atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Fiona O'Sullivan | Outfit: Barbershop Quartet | Pose: None
+Character: Jena Marlowe | Outfit: Barbershop Quartet | Pose: None
+Character: Audrey Thorne | Outfit: Barbershop Quartet | Pose: None
+Interaction: Custom
+Score: 400
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Sound booth interior, microphone setup, acoustic foam walls, dim mood lighting, creative focus atmosphere.
+---
+
+**CHARACTER: Fiona O'Sullivan**
+**Appearance:**
+* **Body:** Soft Natural plus-size frame; wave-type plush softness; soft pear-hourglass proportions; moderate vertical.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes; expressive hazel-green eyes; warm engaging smile; soft jawline; radiant joyful expression that reflects her generous spirit.
+* **Hair:** Type 2B-2C waves; high density; long layered cut with natural body; side part; soft natural volume with gentle frizz; copper-red to auburn with natural variation.
+* **Skin:** Fair rosy-toned skin with soft glow; smooth complexion. stylish tortoiseshell glasses
+**Outfit:**
+- **Top:** Classic **pinstriped vest** over **white button-up shirt**
+- **Bottom:** matching pinstriped trousers
+- **Footwear:** bowtie (red); **boater hat** with matching ribbon.
+- **Accessories:** Arm garters, cane prop.
+- **Hair/Makeup:** Polished vintage styling.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Jena Marlowe**
+**Appearance:**
+* **Body:** Soft Dramatic–Romantic blend; elongated but light vertical; gentle hourglass with soft waist emphasis; overall delicacy rather than dramatic weight.
+* **Face:** Soft oval face with balanced proportions; medium-large bright eyes; refined nose; gentle jawline; warm, approachable expression with an easy smile.
+* **Hair:** Light honey-blonde; Type 2A–2B loose waves; fine-to-medium density; long hair with soft volume; luminous natural-looking highlights; healthy glossy finish.
+* **Skin:** Fair to light neutral-warm tone with a natural satin glow; fresh and luminous in daylight.
+**Outfit:**
+- **Top:** Classic **pinstriped vest** over **white button-up shirt**
+- **Bottom:** matching pinstriped trousers
+- **Footwear:** bowtie (#D8BFD8); **boater hat** with matching ribbon.
+- **Accessories:** Arm garters, cane prop.
+- **Hair/Makeup:** Polished vintage styling.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Audrey Thorne**
+**Appearance:**
+* **Body:** Heavy Curvy Hourglass / Spoon Shape; statuesque height at 5'7"; 43.5-37-48 proportions; thick, soft flesh quality; substantial bust carried high, transitioning into a defined but thick waist, which flares dramatically into wide, shelf-like hips and heavy thighs; bottom-heavy silhouette balanced by a full chest; voluptuous density with soft anatomical markers.
+* **Face:** Soft Heart-shaped structure with a "baby face" quality; full, rounded cheeks (apple cheeks) and a soft, non-angular jawline; gentle chin; distinctively pale, porcelain complexion with pink undertones; focal heavy-lidded / slightly hooded eyes with hazel-brown irises and relaxed, downward-sloping upper lids giving a calm, sultry expression; natural, slightly arched brows; small to medium mouth width with full, pillowy lips and a clearly defined cupid's bow.
+* **Hair:** Type 2B (wavy); high density; tousled, voluminous layered silhouette; collarbone-length; deep side part with height at the root; healthy natural sheen; common styling includes a loose, textured blowout. Medium chestnut brown with copper/golden undertones.
+* **Skin:** Fair/Light depth; cool pink undertones with a smooth, matte-satin finish; clear complexion with natural flushing on the cheeks.
+**Outfit:**
+- **Top:** Classic **pinstriped vest** over **white button-up shirt**
+- **Bottom:** matching pinstriped trousers
+- **Footwear:** bowtie (#DC143C); **boater hat** with matching ribbon.
+- **Accessories:** Arm garters, cane prop.
+- **Hair/Makeup:** Polished vintage styling.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Fiona O'Sullivan and Jena Marlowe performing traditional cultural greeting, specific gesture appropriate to culture, respectful interaction.

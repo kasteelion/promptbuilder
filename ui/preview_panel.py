@@ -257,7 +257,7 @@ class PreviewPanel:
 
         # Show welcome message if prompt is empty or just whitespace
         if not prompt or not prompt.strip():
-            from config import WELCOME_MESSAGE
+            from core.config import WELCOME_MESSAGE
 
             self.preview_text.insert("1.0", WELCOME_MESSAGE)
             self.preview_text.tag_add("section_label", "1.0", "end")

@@ -1,23 +1,45 @@
 tags: []
 
 [F]
-- **Top:** Leotard (black, pink, or color-coordinated)
-- **Bottom:** pink ballet tights
-- **Footwear:** pink ballet slippers (soft leather or satin).
-- **Accessories:** Hair secured in classical bun, minimal jewelry.
-- **Hair/Makeup:** Natural makeup, hair in neat bun with hairnet.
+- **Top:** Performance Leotard.
+  - **Fit:** Skin-tight.
+  - **Material:** Spandex/Lycra.
+  - **Pattern:** Solid (Black/Pink).
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless or Cap.
+- **Bottom:** Pink ballet tights.
+  - **Fit:** Tight.
+  - **Material:** Nylon.
+  - **Waist:** High-waist.
+  - **Length:** Full footed.
+- **Footwear:** Pink ballet slippers (soft leather).
+- **Accessories:** Hair bun, minimal jewelry.
 
 [M]
-- **Top:** Dance belt
-- **Bottom:** white or black tights
-- **Footwear:** fitted tank or t-shirt; **ballet shoes** (soft leather).
-- **Accessories:** Hair secured if longer.
-- **Hair/Makeup:** Natural grooming, hair neat and pulled back.
+- **Top:** Fitted tank or t-shirt.
+  - **Fit:** Fitted.
+  - **Material:** Cotton/Spandex.
+  - **Neckline:** Crew or Scoop.
+  - **Sleeve:** Short or Sleeveless.
+- **Bottom:** Men's tights or leggings.
+  - **Fit:** Skin-tight.
+  - **Material:** Nylon/Spandex.
+  - **Pattern:** Solid (Black/White).
+  - **Waist:** Elastic.
+  - **Length:** Full length.
+- **Footwear:** Ballet shoes (soft leather).
+- **Accessories:** Dance belt (implied).
 
 [H]
-- **Hijab:** Neutral-toned sports hijab in pink or black (secure, neat)
-- **Top:** Long-sleeve modest leotard with high neckline (black, pink, or color-coordinated) with wrap skirt
-- **Bottom:** Pink ballet tights
-- **Footwear:** Pink ballet slippers (soft leather or satin)
-- **Accessories:** Hair secured in classical bun under hijab, minimal jewelry
-- **Makeup:** Natural makeup
+- **Hijab:** Sports hijab in pink or black (secure).
+- **Top:** Long-sleeve modest leotard with wrap skirt.
+  - **Fit:** Fitted functional.
+  - **Material:** Spandex blend.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Pink ballet tights.
+  - **Fit:** Tight.
+  - **Material:** Nylon.
+  - **Length:** Full footed.
+- **Footwear:** Pink ballet slippers.
+- **Accessories:** Skirt overlay.

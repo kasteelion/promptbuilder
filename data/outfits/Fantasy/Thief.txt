@@ -1,23 +1,46 @@
 tags: [fantasy, Stealth]
 
 [F]
-- **Top:** Fitted leather vest or corset (dark brown or black)
-- **Bottom:** tight leather pants
-- **Footwear:** hooded cloak (dark color for stealth); **soft leather boots** (designed for silent movement).
-- **Accessories:** Lockpick tools in belt, throwing daggers, coin purse, small satchel for loot, fingerless gloves.
-- **Hair/Makeup:** Dark hair pulled back in practical ponytail or braid, minimal makeup, smudged kohl for night work, cunning expression.
+- **Top:** Fitted leather vest or corset.
+  - **Fit:** Snug; Mobility focused.
+  - **Material:** Dark brown or Black leather.
+  - **Pattern:** Solid.
+  - **Neckline:** Scoop or V-neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Tight leather pants.
+  - **Fit:** Skin-tight.
+  - **Material:** Leather.
+  - **Pattern:** Solid.
+  - **Waist:** Leather belt with lockpick tools.
+  - **Length:** Ankle-length.
+- **Footwear:** Soft leather boots for silent movement.
+- **Accessories:** Throwing daggers; coin purse; fingerless gloves; dark hooded cloak.
 
 [M]
-- **Top:** Fitted leather vest (dark brown or black)
-- **Bottom:** tight leather pants
-- **Footwear:** hooded cloak (dark color for stealth); **soft leather boots** (designed for silent movement).
-- **Accessories:** Lockpick tools in belt, throwing daggers, coin purse, small satchel for loot, fingerless gloves.
-- **Hair/Makeup:** Dark hair (short or tied back), subtle stubble, smudged kohl for night work, cunning expression.
+- **Top:** Fitted leather vest.
+  - **Fit:** Snug.
+  - **Material:** Leather.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Tight leather pants.
+  - **Fit:** Tight.
+  - **Material:** Leather.
+  - **Waist:** Utility belt.
+  - **Length:** Full.
+- **Footwear:** Soft leather silent boots.
+- **Accessories:** Lockpicks; throwing daggers; coin purse; hooded cloak.
 
 [H]
-- **Hijab:** Dark secure wrap (brown or black) for stealth, no loose ends
-- **Top:** Fitted leather vest over long-sleeve dark tunic
-- **Bottom:** Loose trousers allowing movement, tucked into boots
-- **Footwear:** Soft leather silent boots
-- **Accessories:** Lockpicks, coin purse, dagger, fingerless gloves
-- **Makeup:** Minimal, smudged kohl, cunning expression
+- **Hijab:** Dark secure wrap (brown or black) for stealth.
+- **Top:** Fitted leather vest over long-sleeve dark tunic.
+  - **Fit:** Modest layered.
+  - **Material:** Leather; dark Cotton.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Loose trousers tucked into boots.
+  - **Fit:** Relaxed for movement.
+  - **Material:** fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Soft leather silent boots.
+- **Accessories:** Lockpicks; coin purse; dagger; fingerless gloves.

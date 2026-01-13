@@ -1,0 +1,42 @@
+# METADATA
+Scene: Stately home library, floor-to-ceiling bookshelves, rolling ladder, leather chairs, fireplace, refined atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Julian Blackwood | Outfit: Silk & Feathers | Pose: None
+Score: 220
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Stately home library, floor-to-ceiling bookshelves, rolling ladder, leather chairs, fireplace, refined atmosphere.
+---
+
+**CHARACTER: Julian Blackwood**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; moderate height (5'8"); soft, slightly fleshy build but not overweight; narrow, sloping shoulders; delicate hands with long fingers (piano hands); fluid, languid physicality.
+* **Face:** Soft, oval shape with a "baby face" quality; full, pouty lips; large, liquid eyes in a pale grey-green; heavy, dark brows; permanent dark circles under eyes that enhance the "brooding" look.
+* **Hair:** Type 3A curls; high density; shoulder-length "wolf cut" or shag; messy, falling into eyes; dark chocolate brown, almost black.
+* **Skin:** Very pale/alabaster; cool undertones; translucent quality (veins visible on inner arms); scattering of tattoos on hands and neck.
+**Outfit:**
+- **Top:** Smoking jacket in velvet (burgundy or navy) with quilted lapels
+- **Bottom:** Matching velvet trousers
+- **Footwear:** Leather loafers with embroidery
+- **Accessories:** Silk ascot; prop: cigar or crystal glass
+- **Hair/Makeup:** Slicked back hair; clean shave
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders, Carrying woven basket with flowers or produce, walking casually, cottagecore aesthetic, Peaceful energy.
+---

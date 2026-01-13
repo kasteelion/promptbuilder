@@ -1,22 +1,45 @@
 tags: [Date, formal, Night]
 
 [F]
-- **Top:** Fitted **top or dress** in an elegant fabric
-- **Bottom:** heeled footwear.
-- **Accessories:** Statement jewelry.
-- **Hair/Makeup:** Refined makeup, elegant hairstyle.
+- **Top:** Alluring fitted bodice or silk top.
+  - **Fit:** Fitted.
+  - **Material:** Silk; Velvet; Fine knit.
+  - **Pattern:** Solid or subtle sheen.
+  - **Neckline:** Plunge or Cowl neck.
+  - **Sleeve:** Sleeveless or Long sleeve.
+- **Bottom:** Matching midi skirt or tailored trousers.
+  - **Fit:** Slim-fit.
+  - **Material:** matching fabric.
+  - **Waist:** Natural waist.
+  - **Length:** Midi or Mini.
+- **Footwear:** High heels.
+- **Accessories:** Statement jewelry; evening clutch.
 
 [M]
-- **Top:** Fitted **button-up shirt or polo** in elegant fabric
-- **Bottom:** dress pants or dark jeans
-- **Footwear:** leather shoes.
-- **Accessories:** Watch, simple jewelry.
-- **Hair/Makeup:** Refined grooming, neat hairstyle.
+- **Top:** Fitted button-up shirt or fine gauge polo.
+  - **Fit:** Slim tailored.
+  - **Material:** Fine cotton; Merino wool.
+  - **Neckline:** Button-up or Polo collar.
+  - **Sleeve:** Long sleeves (buttoned).
+- **Bottom:** Dark jeans or dress pants.
+  - **Fit:** Slim or Straight.
+  - **Material:** Denim or Wool blend.
+  - **Waist:** Natural waist with leather belt.
+  - **Length:** Full length.
+- **Footwear:** Leather shoes or clean boots.
+- **Accessories:** Wristwatch; simple chain.
 
 [H]
-- **Hijab:** Satin hijab in deep plum with elegant side draping and pearl pin
-- **Top:** Long-sleeve fitted tunic in navy blue with subtle shimmer (falls to mid-thigh, modest cut)
-- **Bottom:** Wide-leg black palazzo pants in flowing fabric
-- **Footwear:** Black heeled ankle boots
-- **Accessories:** Statement gold geometric earrings, gold cuff bracelet, small structured clutch
-- **Makeup:** Dramatic with bronze-toned eyeshadow and berry lip
+- **Hijab:** Satin hijab in deep plum with side drape.
+- **Top:** Long-sleeve fitted tunic with subtle shimmer.
+  - **Fit:** Modest fitted.
+  - **Material:** Shimmer knit; Satin.
+  - **Neckline:** High-neck modest.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Wide-leg palazzo pants.
+  - **Fit:** Wide leg.
+  - **Material:** Black fabric.
+  - **Waist:** Natural waist.
+  - **Length:** Floor-length.
+- **Footwear:** Elegant heels.
+- **Accessories:** Gold geometric earrings; structured clutch.

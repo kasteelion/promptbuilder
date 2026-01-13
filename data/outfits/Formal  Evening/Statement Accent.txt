@@ -1,22 +1,46 @@
 tags: [Bold, Fashion, formal]
 
 [F]
-- **Top:** Off-shoulder mini dress (black bodycon silhouette, structured fit)
-- **Bottom:** integrated ((default:white) or (signature)) off-shoulder band with **long fabric extensions that tie into an oversized bow at the back** (draped across shoulder blades with long trailing ends).
-- **Accessories:** Delicate gold necklace, rings, strappy heels or ankle-strap sandals (white or nude).
-- **Hair/Makeup:** Loose waves or beachy curls with natural volume, natural glam makeup with defined eyes and nude lip.
+- **Top:** Off-shoulder bodycon bodice with oversized bow.
+  - **Fit:** Structural bodycon.
+  - **Material:** Crepe; Satin (accent).
+  - **Pattern:** Integrated {secondary_color} band with long extensions.
+  - **Neckline:** Off-shoulder.
+  - **Sleeve:** Sleeveless (draped extensions).
+- **Bottom:** Matching bodycon mini dress.
+  - **Fit:** Fitted.
+  - **Material:** Crepe.
+  - **Waist:** Fitted waist.
+  - **Length:** Mini length.
+- **Footwear:** Strappy heels.
+- **Accessories:** Delicate gold necklace; rings; oversized bow at back.
 
 [M]
-- **Top:** Black tailored suit (slim fit, Modern cut)
-- **Bottom:** white dress shirt (crisp)
-- **Footwear:** velvet bow tie or tie (((default:black or deep jewel tone) or (signature))).
-- **Accessories:** Pocket square (white or matching tie), polished dress shoes, cufflinks.
-- **Hair/Makeup:** Polished grooming, slicked back or neatly styled hair.
+- **Top:** Slim-fit suit jacket with velvet bow tie.
+  - **Fit:** Slim Modern cut.
+  - **Material:** Wool blend; Velvet bow tie.
+  - **Neckline:** Collared white dress shirt.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored dress trousers.
+  - **Fit:** Slim modern.
+  - **Material:** Wool blend.
+  - **Waist:** High natural waist.
+  - **Length:** Full length.
+- **Footwear:** Polished shoes.
+- **Accessories:** Cufflinks; {secondary_color} velvet bow tie; matching pocket square.
 
 [H]
-- **Hijab:** White or black silk hijab with elegant drape
-- **Top:** Long-sleeve fitted evening gown (black bodycon silhouette) with integrated ((default:white) or (signature)) shoulder band detail adapted for modesty (white sash or bow detail at back)
-- **Bottom:** Full-length skirt (part of gown)
-- **Footwear:** Strappy heels
-- **Accessories:** Delicate gold necklace, rings
-- **Makeup:** Natural glam makeup with defined eyes and nude lip
+- **Hijab:** White or black silk hijab.
+- **Top:** Long-sleeve fitted evening gown with shoulder band.
+  - **Fit:** Fitted modest.
+  - **Material:** Crepe; Satin.
+  - **Pattern:** Integrated {secondary_color} shoulder band/sash detail.
+  - **Neckline:** High-neck (modest).
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching floor-length skirt.
+  - **Fit:** Straight.
+  - **Material:** Crepe.
+  - **Waist:** Fitted waist.
+  - **Length:** Floor-length.
+- **Footwear:** Strappy heels.
+- **Accessories:** Gold necklace.

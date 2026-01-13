@@ -1,23 +1,51 @@
-tags: [fantasy, Magic, nature]
+modifiers:
+  Forest: in **deep moss-green raw silk**
+  Autumn: in **rust-colored coarse wool**
+  River: in **flowing blue-grey linen**
 
 [F]
-- **Top:** Earth-toned robes or tunic (((default:forest green, brown, moss green) or (signature)) with leaf patterns)
-- **Bottom:** leather vest or bodice (with natural wood buttons)
-- **Footwear:** flowing skirt or pants (layered natural fabrics); **barefoot** or **soft leather sandals**; **flower crown or vine circlet**.
-- **Accessories:** Wooden staff (gnarled with living vines or flowers), herb pouches, animal companion (owl, wolf, or deer), natural jewelry (wood, stone, flowers).
-- **Hair/Makeup:** Natural flowing hair (often with flowers, leaves, or vines woven in), earthy makeup tones, freckles, sun-kissed glow, Peaceful expression.
+- **Top:** Peasant-style tunic under tooled leather bodice {modifier}.
+  - **Fit:** Tunic relaxed; Bodice structured.
+  - **Material:** Hempberry weave; Tooled leather.
+  - **Pattern:** Leaf embossing.
+  - **Neckline:** Scoop tunic; Sweetheart bodice.
+  - **Sleeve:** Billowy long sleeves (tunic).
+- **Bottom:** Asymmetric layered skirt.
+  - **Fit:** Gauzy flowing layers.
+  - **Material:** Cheesecloth and raw linen.
+  - **Pattern:** Tattered organic hem.
+  - **Waist:** Natural.
+  - **Length:** Asymmetric mid to ankle.
+- **Footwear:** Gladiator sandals of braided vine or barefoot.
+- **Accessories:** Gnarled oak staff; flower crown; herb pouch.
 
 [M]
-- **Top:** Earth-toned robes or tunic (((default:forest green, brown, moss green) or (signature)) with leaf patterns)
-- **Bottom:** leather vest (with natural wood buttons)
-- **Footwear:** loose pants (natural fabrics); **barefoot** or **soft leather sandals**; **vine circlet**.
-- **Accessories:** Wooden staff (gnarled with living vines or flowers), herb pouches, animal companion (owl, wolf, or deer), natural jewelry (wood, stone).
-- **Hair/Makeup:** Natural messy hair (often with leaves or vines woven in), earthy tones, freckles, sun-kissed glow, Peaceful expression.
+- **Top:** Oversized hooded mantle over burlap sash.
+  - **Fit:** Voluminous hood; Bare chest or sash.
+  - **Material:** Heavy felted wool; Burlap.
+  - **Pattern:** Solid organic.
+  - **Neckline:** Open front.
+  - **Sleeve:** Long voluminous sleeves.
+- **Bottom:** Drawstring trousers {modifier}.
+  - **Fit:** Relaxed baggy.
+  - **Material:** Homespun cotton.
+  - **Pattern:** Wrapped shins with cord.
+  - **Waist:** Drawstring.
+  - **Length:** Full length.
+- **Footwear:** Barefoot or ankle-high moccasins.
+- **Accessories:** Antler headdress; bird skull; stone talisman.
 
 [H]
-- **Hijab:** ((default:Earth-toned - moss green, brown) or (signature)) hijab adorned with living vines or flowers
-- **Top:** Earth-toned tunic or robes (((default:coordinating with hijab) or (signature))) with leather vest overlay
-- **Bottom:** Flowing skirt or pants in natural fabrics
-- **Footwear:** Soft leather boots or sandals
-- **Accessories:** Wooden staff, herb pouches, animal companion
-- **Makeup:** Earthy tones, freckles, sun-kissed glow
+- **Hijab:** Woven linen hijab with living ivy tendrils.
+- **Top:** Long druidic robes {modifier}.
+  - **Fit:** Relaxed modest.
+  - **Material:** Heavy textured flax.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Wide long sleeves.
+- **Bottom:** Loose skirt in matching fabric.
+  - **Fit:** A-line flowing.
+  - **Material:** Flax/Linen.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Soft leather boots.
+- **Accessories:** Carved wooden staff; seed bag.

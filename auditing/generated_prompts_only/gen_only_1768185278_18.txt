@@ -1,0 +1,76 @@
+# METADATA
+Scene: Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Kendra Mitchell | Outfit: Bowling | Pose: None
+Character: Mei Chen | Outfit: Bowling | Pose: None
+Character: Kaito Sato | Outfit: Bowling | Pose: None
+Score: 600
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+---
+
+**CHARACTER: Kendra Mitchell**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; broad inverted triangle proportions with wide shoulders, long limbs, and subtle waist definition; tall (5'9"); strong defined muscle with visible shoulder caps, toned arms, and powerful legs; commanding physical presence.
+* **Face:** Strong angular structure; oblong-square face; prominent bone structure with high broad cheekbones; almond-shaped wide-set hazel-green eyes; strong defined jawline; neutral resting expression is confident and direct with penetrating gaze; smile is wide, genuine, and slightly asymmetric with infectious energy.
+* **Hair:** Type 3B curls; high density; shoulder-length layered cut; side part; voluminous natural texture; matte-satin finish; commonly worn loose and free or in high messy bun; warm chestnut brown with golden highlights.
+* **Skin:** Medium tan with warm golden undertones and healthy athletic glow; faint freckles across nose and shoulders.
+**Outfit:**
+- **Top:** Fitted **performance polo** for **The Tidal Sharks** in **#00758F with #000000 accents** (moisture-wicking fabric with team logo and name on back), wearing a contrasting #000000 jersey to denote libero position,
+- **Bottom:** BLACK athletic skirt (tailored fit)
+- **Footwear:** bowling shoes (#FFFFFF).
+- **Accessories:** Wrist support optional, team logo on collar.
+- **Hair/Makeup:** Hair in ponytail or secured, neat makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with a skateboard tucked under one arm, relaxed posture, urban background.
+---
+
+**CHARACTER 2: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large features—specifically an extremely full, heavy bust (F-G cup) that is her most prominent physical trait—balanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow.
+**Outfit:**
+- **Top:** Fitted **performance polo** for **The Tidal Sharks** in **#00758F with #000000 accents** (moisture-wicking fabric with team logo and name on back)
+- **Bottom:** BLACK athletic skirt (tailored fit)
+- **Footwear:** bowling shoes (#FFFFFF).
+- **Accessories:** Wrist support optional, team logo on collar.
+- **Hair/Makeup:** Hair in ponytail or secured, neat makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing in profile, one leg bent with calf flexed, torso twisted toward the camera, hands gripped together to pop the chest and bicep.
+---
+
+**CHARACTER 3: Kaito Sato**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; wiry and compact; defined, sinewy muscle (climber/skater build); shorter vertical (5'6"-5'7"); extremely agile and fast-twitch; straight lines with sharp edges; projects nervous, electric energy.
+* **Face:** Angular, diamond-shaped face; sharp, pointed chin; narrow eyes that are often squinting in focus or widening in adrenaline; mischievous grin that shows teeth; features are delicate but sharp.
+* **Hair:** Type 1B straight; medium density; undercut with a long, choppy top; bleached platinum blonde (almost white) with roots showing; often messy or swept forward.
+* **Skin:** Fair with cool undertones; prone to flushing when active; usually has a band-aid or small scrape on the cheek or knuckles.
+**Outfit:**
+- **Top:** Fitted **performance polo** in **#00758F with #000000 accents** (moisture-wicking fabric with team logo and name on back)
+- **Bottom:** BLACK performance pants (tailored fit)
+- **Footwear:** bowling shoes (#FFFFFF).
+- **Accessories:** Wrist support optional, team logo on collar.
+- **Hair/Makeup:** Hair short or secured, neat grooming.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing in profile, one leg bent with calf flexed, torso twisted toward the camera, hands gripped together to pop the chest and bicep.
+---

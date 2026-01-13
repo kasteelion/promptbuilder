@@ -1,0 +1,42 @@
+# METADATA
+Scene: Wooden boat deck, ocean horizon, billowing sails, sea breeze, nautical ropes and equipment.
+Base_Prompt: Low-Poly 3D
+Character: Callum Doherty | Outfit: Investigative Journalist | Pose: None
+Score: 280
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Wooden boat deck, ocean horizon, billowing sails, sea breeze, nautical ropes and equipment.
+---
+
+**CHARACTER: Callum Doherty**
+**Appearance:**
+* **Body:** Natural frame; lean but defined muscularity (mesomorph leaning); moderate vertical (5'10"-5'11"); "wiry strength" developed from physical labor; forearms are notably toned and vascular; broad chest tapering to a narrow waist; moves with a loose, athletic agility.
+* **Face:** Angular and expressive; defined jawline that is often softened by a scruffy 5 o'clock shadow; bright, mischievous eyes in a piercing electric blue (striking contrast to hair); nose has a slight bump (maybe broken once in a rugby match); features are animated and quick to smile.
+* **Hair:** Type 2B waves; high density; vibrant, true copper-red (fox colored); cut in a "textured crop" or "modern mullet" style—shorter on sides, longer and messy on top/back; matte finish; often tousled by running hands through it.
+* **Skin:** Fair/Pale with pink undertones; heavily freckled—a constellation of rust-colored freckles covers his nose, cheeks, shoulders, and arms; prone to sunburn but currently has a "farmer's tan" on the arms.
+**Outfit:**
+- **Top:** White shirt with sleeves rolled up, loosened tie, suspenders.
+- **Bottom:** High-waisted brown trousers.
+- **Footwear:** Worn leather brogues.
+- **Accessories:** Trilby hat with press card, pencil behind ear.
+- **Hair/Makeup:** Messy hair, energetic expression.
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders, Hand near chin or temple, thoughtful expression, contemplative pose.
+---

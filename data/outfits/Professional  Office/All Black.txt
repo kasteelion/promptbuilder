@@ -1,23 +1,45 @@
 tags: [Job, professional, Service]
 
 [F]
-- **Top:** Black button-down shirt (long or short sleeve, crisp)
-- **Bottom:** black dress pants (straight leg)
-- **Footwear:** black waist apron (optional).
-- **Accessories:** Black non-slip shoes, black belt, order pad.
-- **Hair/Makeup:** Neat ponytail or bun, minimal professional makeup.
+- **Top:** Crisp black button-down shirt.
+  - **Fit:** Relaxed or Fitted.
+  - **Material:** Cotton or Poly-blend.
+  - **Pattern:** Solid black.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long or Short sleeve.
+- **Bottom:** Black dress pants.
+  - **Fit:** Straight leg.
+  - **Material:** Durable fabric.
+  - **Waist:** Natural with black belt.
+  - **Length:** Full length.
+- **Footwear:** Black non-slip shoes.
+- **Accessories:** Black waist apron (optional); order pad; pen.
 
 [M]
-- **Top:** Black dress shirt (button-down, collar)
-- **Bottom:** black dress pants (flat front)
-- **Footwear:** black belt.
-- **Accessories:** Black non-slip shoes, black waist apron (optional), pen and pad.
-- **Hair/Makeup:** Neat hair, clean-shaven or groomed.
+- **Top:** Black dress shirt.
+  - **Fit:** Standard fit.
+  - **Material:** Cotton.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long.
+- **Bottom:** Black dress pants.
+  - **Fit:** Flat front.
+  - **Material:** matching.
+  - **Waist:** Black belt.
+  - **Length:** Full.
+- **Footwear:** Black non-slip shoes.
+- **Accessories:** Black waist apron (optional); pen and pad.
 
 [H]
-- **Hijab:** Black jersey or cotton hijab with secure, neat tuck
-- **Top:** Black long-sleeve button-down shirt or tunic (modest fit)
-- **Bottom:** Black straight-leg trousers or maxi skirt
-- **Footwear:** Black non-slip work shoes
-- **Accessories:** Black waist apron (optional), server pad
-- **Makeup:** Minimal, professional
+- **Hijab:** Black jersey or cotton hijab with secure, neat tuck.
+- **Top:** Black long-sleeve button-down shirt or tunic.
+  - **Fit:** Modest loose.
+  - **Material:** Cotton.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Black straight-leg trousers or maxi skirt.
+  - **Fit:** Straight leg.
+  - **Material:** matching fabric.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Black non-slip work shoes.
+- **Accessories:** Black waist apron (optional); server pad.

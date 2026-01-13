@@ -1,0 +1,79 @@
+# METADATA
+Scene: Large concert stage, dramatic colored spotlights, smoke effects, microphone stand, energetic crowd visible.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Rafael Costa | Outfit: Swimming | Pose: None
+Character: Harper Mae Sullivan | Outfit: Swimming | Pose: None
+Character: Diesel Murphy | Outfit: Swimming | Pose: None
+Score: 555
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Large concert stage, dramatic colored spotlights, smoke effects, microphone stand, energetic crowd visible.
+---
+
+**CHARACTER: Rafael Costa**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with slight wave; balanced proportions with gentle breadth; moderate vertical; relaxed athletic build with natural ease.
+* **Face:** Balanced-warm facial structure; oval-to-square face; warm expressive eyes; defined brows; easy smile; open welcoming expression.
+* **Hair:** Type 3A curls; high density; medium-length tousled cut; natural volume; soft matte-satin finish; often pushed back with slight forward fall.
+* **Skin:** Warm tan skin with golden undertones and healthy glow.
+**Outfit:**
+- **Top:** Performance one-piece swimsuit with a **solid black** central body panel for hydrodynamics
+- **Bottom:** contoured side panels in **#8C1515** framed by thin **#D2C295** piping
+- **Footwear:** racerback strap design with open back.
+- **Accessories:** White swim cap with **#8C1515** logo, mirrored racing goggles (#FFFFFF).
+- **Hair/Makeup:** Wet skin texture, waterproof makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Arms stretched overhead, back arched slightly, eyes closed, sensual morning energy.
+---
+
+**CHARACTER 2: Harper Mae Sullivan**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-wave flesh blend; balanced proportions with gentle curves and natural waist definition; moderate vertical; soft athletic build with graceful ease.
+* **Face:** Soft oval-to-heart facial structure; gentle rounded features; warm expressive blue-green eyes with slight upward tilt, moderately spaced; constellation of freckles across nose and cheeks; soft defined jawline; neutral resting expression is warm and inviting with easy dimpled smile and sparkling eyes.
+* **Hair:** Type 2B-2C waves; high density; long sun-lightened layers past shoulders; natural loose part; healthy bounce; warm honey-blonde with natural golden highlights from sun exposure; commonly worn half-up with loose tendrils or in relaxed low ponytail.
+* **Skin:** Fair-to-light warm peachy undertones with natural healthy glow; prominent freckles across nose, cheeks, and shoulders that intensify with sun; soft luminous finish.
+**Outfit:**
+- **Top:** Performance one-piece swimsuit with a **solid black** central body panel for hydrodynamics
+- **Bottom:** contoured side panels in **#8C1515** framed by thin **#D2C295** piping
+- **Footwear:** racerback strap design with open back.
+- **Accessories:** White swim cap with **#8C1515** logo, mirrored racing goggles (#FFFFFF).
+- **Hair/Makeup:** Wet skin texture, waterproof makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing with a skateboard tucked under one arm, relaxed posture, urban background.
+---
+
+**CHARACTER 3: Diesel Murphy**
+**Appearance:**
+* **Body:** Natural frame; straight athletic flesh with functional density; balanced proportions with broadened shoulders from upper body work, minimal waist definition, and straight hip line; moderate-to-tall vertical (5'7"-5'8"); working-class athletic build with developed forearms and shoulders from mechanical work, strong hands, visible core strength, practical muscle without aesthetic focus; distinctly female frame with masculine presentation and movement patterns; grounded capable presence.
+
+* **Face:** Balanced-angular structure; square-to-rectangular face shape with broad forehead and strong defined jawline; minimal midface projection with subtle cheekbones; medium-to-small eyes with moderate-close spacing, hazel-brown color, minimal lid exposure, direct no-nonsense gaze; straight broad nose with flat bridge and squared tip; strong angular jawline with masculine definition; neutral resting expression shows calm confidence with closed-mouth straight line and steady assessing gaze; rare smile is crooked and genuine.
+
+* **Hair:** Type 2A; medium density; very short length (pixie-to-undercut style); no defined part, textured and pushed back; matte finish; commonly worn tousled and practical, sometimes with small amount of pomade for control; dark brown with sun-lightened tips from outdoor work.
+
+* **Skin:** Light-medium tone with neutral-warm undertones and natural matte finish; scattered scars on hands and forearms from mechanical work; permanent grease staining under short fingernails and in hand creases; sun exposure on forearms and face; textured from outdoor work.
+**Outfit:**
+- **Top:** Performance one-piece swimsuit with a **solid black** central body panel for hydrodynamics
+- **Bottom:** contoured side panels in **#8C1515** framed by thin **#D2C295** piping
+- **Footwear:** racerback strap design with open back.
+- **Accessories:** White swim cap with **#8C1515** logo, mirrored racing goggles (#FFFFFF).
+- **Hair/Makeup:** Wet skin texture, waterproof makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Mid-punch or kick to heavy bag, dynamic motion, powerful extension, training intensity.
+---

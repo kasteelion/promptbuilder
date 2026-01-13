@@ -1,0 +1,64 @@
+# METADATA
+Scene: Vibrant casino interior, slot machines, card tables, dramatic lighting, luxurious decor, bustling energy.
+Base_Prompt: Low-Poly 3D
+Character: Elena Rosales | Outfit: Figure Skating | Pose: None
+Character: Zahara El-Amin | Outfit: 1900s Coastal New England | Pose: None
+Interaction: Custom
+Score: 235
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Vibrant casino interior, slot machines, card tables, dramatic lighting, luxurious decor, bustling energy.
+---
+
+**CHARACTER: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Outfit:**
+- **Top:** Lycra performance dress (#002244 with #69BE28 accents, featuring sheer mesh inserts and heavy #A5ACAF crystal/sequin embellishments)
+- **Bottom:** flesh-toned skating tights
+- **Footwear:** silver figure skates.
+- **Accessories:** Crystal hair clips, delicate jewelry.
+- **Hair/Makeup:** Sleek high bun or ponytail, dramatic performance makeup with glitter accents.
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders,
+---
+
+**CHARACTER 2: Zahara El-Amin**
+**Appearance:**
+* **Body:** Dramatic; tall vertical (5'9"); lean and angular frame with long limbs; graceful, measured density; poised and commanding presence.
+* **Face:** Sharp-balanced structure; diamond face shape with high, prominent cheekbones; large, intelligent dark brown eyes; straight, high-bridged nose; well-defined, narrow jawline; neutral expression is focused and contemplative.
+* **Hair:** (Covered) Long dark hair typically styled in a low, secure bun beneath her hijab.
+* **Skin:** Rich mahogany depth with warm, luminous undertones (Sub-Saharan/North African transition); smooth matte finish; clear, even complexion that catches the light on high points of the face. signature thick-rimmed designer glasses in deep amber tortoise-shell
+**Outfit:**
+- **Hijab:** White or cream linen hijab (soft romantic drape) under a **wide-brimmed straw hat**
+- **Top:** Long-sleeve **Edwardian-style blouse** (white linen with lace inserts and high collar)
+- **Bottom:** Matching full-length gathered skirt (cream linen)
+- **Footwear:** Lace-up vintage boots
+- **Accessories:** Parasol prop, delicate locket
+- **Makeup:** Romantic vintage look
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders,
+---
+
+**Additional Notes:**
+Elena Rosales and Zahara El-Amin walking side-by-side carrying school bags. The sun is setting behind them, casting long shadows. They are chatting casually about their day.

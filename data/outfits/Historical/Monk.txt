@@ -1,29 +1,45 @@
 tags: [fantasy, historical, Martial Arts]
 
 [F]
-- **Top:** Simple cloth wraps (chest binding in earth tones)
-- **Bottom:** loose martial arts pants (with tied ankles)
-- **Footwear:** cloth hand and foot wraps; **martial arts belt** (colored by rank).
-- **Accessories:** Staff or bo, prayer beads, meditation scrolls, minimal jewelry, headband.
-- **Hair/Makeup:** Hair in practical tight bun or shaved head, minimal or no makeup, serene focused expression, spiritual aura, visible discipline.
-
----
+- **Top:** Simple cloth wraps.
+  - **Fit:** Tight chest binding.
+  - **Material:** Linen or Cotton in earth tones.
+  - **Pattern:** Solid.
+  - **Neckline:** Wrap neckline.
+  - **Sleeve:** Sleeveless (wrapped).
+- **Bottom:** Loose martial arts pants.
+  - **Fit:** Loose; Tied ankles.
+  - **Material:** Cotton.
+  - **Waist:** Martial arts belt (rank colored).
+  - **Length:** Ankle-length.
+- **Footwear:** Cloth hand and foot wraps.
+- **Accessories:** Staff or bo; prayer beads; meditation scrolls; headband.
 
 [M]
-- **Top:** Simple cloth wraps (optional chest binding in earth tones)
-- **Bottom:** loose martial arts pants (with tied ankles)
-- **Footwear:** cloth hand and foot wraps; **martial arts belt** (colored by rank).
-- **Accessories:** Staff or bo, prayer beads, meditation scrolls, minimal jewelry, headband.
-- **Hair/Makeup:** Shaved head or short hair, serene focused expression, spiritual aura, visible discipline.
-
----
+- **Top:** Simple cloth wraps (optional chest binding).
+  - **Fit:** Wrapped.
+  - **Material:** Linen or Cotton.
+  - **Neckline:** Wrap.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Loose martial arts pants with tied ankles.
+  - **Fit:** Loose.
+  - **Material:** Cotton.
+  - **Waist:** Martial arts belt.
+  - **Length:** Ankle-length.
+- **Footwear:** Cloth hand and foot wraps.
+- **Accessories:** Staff or bo; prayer beads; meditation scrolls.
 
 [H]
-- **Hijab:** Secure sport-style hijab in earth tones
-- **Top:** Loose martial arts tunic (long sleeves)
-- **Bottom:** Loose pants with ankle ties
-- **Footwear:** Cloth shoes or barefoot
-- **Accessories:** Staff, prayer beads, sash
-- **Makeup:** Minimal, serene focused expression
-
----
+- **Hijab:** Secure sport-style hijab in earth tones.
+- **Top:** Loose long-sleeve martial arts tunic.
+  - **Fit:** Modest loose.
+  - **Material:** Cotton.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Loose pants with ankle ties.
+  - **Fit:** Baggy.
+  - **Material:** matching.
+  - **Waist:** Sash or belt.
+  - **Length:** Full length.
+- **Footwear:** Cloth shoes or barefoot.
+- **Accessories:** Staff; prayer beads; sash.

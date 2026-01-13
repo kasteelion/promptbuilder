@@ -1,0 +1,79 @@
+# METADATA
+Scene: Organized personal workspace with ergonomic chair and dual monitors. Soft blue glow from screens balanced by a warm desk lamp. Quiet focus, scent of books and electronics.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Efe Kouadio | Outfit: Tech-Athletic Compression | Pose: None
+Character: Marcus Thompson | Outfit: Steampunk Aviator | Pose: None
+Character: Zara Washington | Outfit: Bowling | Pose: None
+Interaction: Custom
+Score: 405
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Organized personal workspace with ergonomic chair and dual monitors. Soft blue glow from screens balanced by a warm desk lamp. Quiet focus, scent of books and electronics.
+---
+
+**CHARACTER: Efe Kouadio**
+**Appearance:**
+- **Body:** Soft Natural frame; natural soft flesh; balanced proportions with gentle curves, defined waist, full hips, soft rounded features, moderate shoulders; moderate vertical (5’5”-5’6”); natural curvy build with soft harmonious lines and welcoming presence.
+- **Face:** Soft-balanced facial structure; round-oval face with warm open planes and full cheeks that enhance smile; expressive round-almond eyes with bright engaged quality, wide-set, warm dark brown with natural sparkle; full lips with natural upward curve that creates dimpled smile; smooth forehead; radiant joyful expression that lights up her whole face.
+- **Hair:** Type 4A coils; high density; medium-length natural textured style with defined curl pattern and bouncy voluminous shape; healthy soft finish with natural sheen; black to dark brown.
+- **Skin:** Deep warm brown with rich golden undertones and natural luminous dewy finish.
+**Outfit:**
+- **Top:** Long-sleeve compression top (high-neck technical nylon-spandex blend in #FF7F50, ultra-fitted to highlight torso and shoulder definition)
+- **Bottom:** Matching high-waist compression leggings (thick elasticated waistband, moisture-wicking matte finish).
+- **Accessories:** Black fitness tracker; wireless earbuds.
+- **Hair/Makeup:** Sleek ponytail; natural dewy skin; minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Marcus Thompson**
+**Appearance:**
+* **Body:** Natural male frame; straight athletic flesh; inverted rectangle proportions; moderate-to-tall vertical.
+* **Face:** Balanced-strong facial structure; square-leaning oval face; defined jaw; warm eyes; calm open expression.
+* **Hair:** Type 4A coils; medium density; short fade with textured top; clean lineup; matte-satin finish; black.
+* **Skin:** Deep brown skin with neutral undertones.
+**Outfit:**
+- **Top:** Leather bomber jacket (brown with shearling collar)
+- **Bottom:** utility vest
+- **Footwear:** cargo pants or **breeches**; **tall boots**.
+- **Accessories:** Aviator goggles, leather cap, scarf, compass.
+- **Hair/Makeup:** Windblown hair, rugged grooming, adventurous look.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Zara Washington**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
+* **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
+* **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
+* **Skin:** Deep rich brown skin with luminous depth.
+**Outfit:**
+- **Top:** Fitted **performance polo** for **The Gold Coast Kings** in **#552583 with #FDB927 accents** (moisture-wicking fabric with team logo and name on back)
+- **Bottom:** BLACK athletic skirt (tailored fit)
+- **Footwear:** bowling shoes (#FFFFFF).
+- **Accessories:** Wrist support optional, team logo on collar.
+- **Hair/Makeup:** Hair in ponytail or secured, neat makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Efe Kouadio playfully pushing Marcus Thompson, light contact showing friendly interaction

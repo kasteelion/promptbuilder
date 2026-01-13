@@ -1,0 +1,80 @@
+# METADATA
+Scene: Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Malik Farrah | Outfit: Irish Step Dance | Pose: None
+Character: Yuki Tanaka | Outfit: Bowling | Pose: None
+Character: Audrey Thorne | Outfit: Beach Summer | Pose: None
+Interaction: Custom
+Score: 200
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+---
+
+**CHARACTER: Malik Farrah**
+**Appearance:**
+- **Body:** Lean-muscular frame; sun-weathered olive skin with a deep, earthy tan; rectangular proportions with broad shoulders and a powerful, flexible core; average height (5'9"-5'10"); resilient, functional build with high-stamina muscle definition; "weathered strength" presence—durable and alert.
+- **Face:** Strong angular structure; prominent brow ridge; sharp, defined jawline partially obscured by a well-groomed short beard; intense, narrowed dark brown eyes that possess a sharp, far-reaching gaze; thick, dark eyebrows with a heavy set; straight nose with a strong bridge; firm mouth often set in a focused line; expression is keen, observant, and perpetually ready for action.
+- **Hair:** Type 3C-4A tight curls; high density; kept short and practical in a textured buzz cut or short fade; matte finish with occasional dust from the trail; dark ebony hair that looks durable.
+- **Skin:** Deep olive skin with sun-kissed golden-bronze undertones; weathered, rugged texture with fine sand-lines around the eyes; a small, faded scar on his left temple; healthy "outdoor" resilience.
+**Outfit:**
+- **Top:** Dress shirt (black or colored) with **tie**
+- **Bottom:** tailored black trousers or **traditional kilt** (solid color)
+- **Footwear:** fitted waistcoat (often with Celtic embroidery); **Irish dance hard shoes** (black leather).
+- **Accessories:** Celtic brooch, competition number pinned to vest.
+- **Hair/Makeup:** Neat grooming, hair styled away from face.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Yuki Tanaka**
+**Appearance:**
+- **Body:** Romantic frame; wave plush softness; lush hourglass proportions with a defined waist and soft rounded curves; moderate vertical (5'4"-5'5"); soft and inviting presence with a delicate-yet-grounded build; "tranquil strength" presence—quietly durable but appearing fragile.
+- **Face:** Rounded-soft facial structure; heart-shaped face with high-but-soft cheekbones; smooth clear planes; large expressive almond-shaped eyes, deep dark brown, reflecting a gentle and observant nature; soft-tapered eyebrows in a natural arc; refined nose with a soft bridge; full youthful lips held in a shy-but-warm expression that radiates a quiet, intimate confidence.
+- **Hair:** Type 2A waves; high density; long length past shoulders; silky dark obsidian hair with natural volume and a luminous healthy sheen; side-parted with soft-framed layers; takes soft, romantic styling well; commonly worn in loose curls or pinned back with a delicate accessory.
+- **Skin:** Light warm skin with soft golden-cream undertones (Japanese heritage); smooth satin finish with a natural healthy glow; flawless texture maintained by traditional and modern skincare.
+**Outfit:**
+- **Top:** Fitted **performance polo** for **The Monochromes** in **#FFFFFF with #000000 accents** (moisture-wicking fabric with team logo and name on back)
+- **Bottom:** BLACK athletic skirt (tailored fit)
+- **Footwear:** bowling shoes (#222222).
+- **Accessories:** Wrist support optional, team logo on collar.
+- **Hair/Makeup:** Hair in ponytail or secured, neat makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Audrey Thorne**
+**Appearance:**
+* **Body:** Heavy Curvy Hourglass / Spoon Shape; statuesque height at 5'7"; 43.5-37-48 proportions; thick, soft flesh quality; substantial bust carried high, transitioning into a defined but thick waist, which flares dramatically into wide, shelf-like hips and heavy thighs; bottom-heavy silhouette balanced by a full chest; voluptuous density with soft anatomical markers.
+* **Face:** Soft Heart-shaped structure with a "baby face" quality; full, rounded cheeks (apple cheeks) and a soft, non-angular jawline; gentle chin; distinctively pale, porcelain complexion with pink undertones; focal heavy-lidded / slightly hooded eyes with hazel-brown irises and relaxed, downward-sloping upper lids giving a calm, sultry expression; natural, slightly arched brows; small to medium mouth width with full, pillowy lips and a clearly defined cupid's bow.
+* **Hair:** Type 2B (wavy); high density; tousled, voluminous layered silhouette; collarbone-length; deep side part with height at the root; healthy natural sheen; common styling includes a loose, textured blowout. Medium chestnut brown with copper/golden undertones.
+* **Skin:** Fair/Light depth; cool pink undertones with a smooth, matte-satin finish; clear complexion with natural flushing on the cheeks.
+**Outfit:**
+- **Top:** Bikini or one-piece
+- **Bottom:** sheer **cover-up or linen shirt** worn open
+- **Footwear:** flat sandals.
+- **Accessories:** Sunhat, sunglasses optional.
+- **Hair/Makeup:** Minimal waterproof makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Dim, gritty grappling moment. Yuki Tanaka is on their back in half guard, left leg bent with knee up, right leg hooking and trapping Malik Farrah's left thigh, preventing the pass. Malik Farrah is on top with their left leg trapped, right leg posted wide for base. Malik Farrah applies a heavy cross-face with their right forearm pressing across Yuki Tanaka's jaw and neck, driving weight through shoulder into face. Their hips are low and heavy, chest pressure smothering. Knees frame the position with right knee tight to Yuki Tanaka's hip. Their left arm underhooks Yuki Tanaka's right arm to stabilize and prevent escape, hand gripping behind the back or shoulder. Right hand is free, threatening short ground-and-pound strikes to the body or head. The alignment is clean—both fighters face each other from a realistic top half-guard position. Yuki Tanaka's left arm frames against Malik Farrah's neck or shoulder, creating defensive space. Both show muscle definition and tension, particularly in shoulders, arms, and core. Expressions show exertion: gritted teeth, strained faces, sweat visible.

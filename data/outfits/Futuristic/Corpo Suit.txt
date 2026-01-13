@@ -1,0 +1,46 @@
+tags: [Cyberpunk, Formal, Corporate, Luxury, Sci-Fi]
+
+[F]
+- **Top:** Sharp-shouldered blazer.
+  - **Fit:** Sharp-shouldered; Tailored.
+  - **Material:** Iridescent carbon-fiber weave.
+  - **Pattern:** Subtle carbon-fiber weave.
+  - **Neckline:** Peak lapel.
+  - **Sleeve:** Long.
+- **Bottom:** Pencil skirt with digital camouflage.
+  - **Fit:** Slim fit.
+  - **Material:** High-tech fabric.
+  - **Pattern:** Subtle digital camouflage.
+  - **Waist:** Natural.
+  - **Length:** Knee-length.
+- **Footwear:** Chrome-heeled stilettos.
+- **Accessories:** Minimalist silver necklace/bio-monitor; smart-glass tablet.
+
+[M]
+- **Top:** Collarless dress shirt and matte black structured jacket.
+  - **Fit:** Structured; Tailored.
+  - **Material:** Synthetic silk; Matte polymer.
+  - **Neckline:** Collarless.
+  - **Sleeve:** Long.
+- **Bottom:** Tailored trousers.
+  - **Fit:** Razor-sharp creases.
+  - **Material:** matching high-tech wool.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Polished oxfords with neon sole accents.
+- **Accessories:** Corporate lapel pin (RFID key); sleek expensive watch.
+
+[H]
+- **Hijab:** High-end silk hijab in metallic charcoal with architectural drape.
+- **Top:** Structured blazer with mandarin collar.
+  - **Fit:** Asymmetrical hem.
+  - **Material:** high-tech silk-blend.
+  - **Neckline:** Mandarin collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Wide-leg pleated trousers.
+  - **Fit:** Wide-leg.
+  - **Material:** high-tech matching fabric.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Pointed-toe ankle boots with metallic heels.
+- **Accessories:** Smart-ring; discreet earpiece.

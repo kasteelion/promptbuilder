@@ -1,23 +1,47 @@
 tags: [Cultural, formal, traditional]
 
 [F]
-- **Top:** Flowing **silk or chiffon pants** (harem style in jewel tones)
-- **Bottom:** ornate beaded top or fitted vest over **sheer long-sleeve blouse**
-- **Footwear:** pointed slippers.
-- **Accessories:** Jeweled headpiece with chains or coins, gold bangles and arm cuffs, ornate belt, sheer veil.
-- **Hair/Makeup:** Long dark hair in loose waves or braided, dramatic eye makeup with kohl and jewel tones, henna designs on hands.
+- **Top:** Ornate beaded fitted vest over sheer blouse.
+  - **Fit:** Fitted structured vest.
+  - **Material:** Beaded Silk/Chiffon.
+  - **Pattern:** Intricate embroidery.
+  - **Neckline:** High-neck or Jewel.
+  - **Sleeve:** Long sheer sleeves.
+- **Bottom:** Flowing harem pants.
+  - **Fit:** Harem loose.
+  - **Material:** Silk or Chiffon.
+  - **Pattern:** Solid Jewel Tones.
+  - **Waist:** High-waisted.
+  - **Length:** Ankle-length gather.
+- **Footwear:** Pointed slippers.
+- **Accessories:** Jeweled headpiece, gold bangles, arm cuffs, veil.
 
 [M]
-- **Top:** Flowing **thobe or robe** (white or cream silk with gold embroidery)
-- **Bottom:** sirwal pants underneath
-- **Footwear:** ornate vest or jacket; **pointed slippers**.
-- **Accessories:** Keffiyeh or turban with jeweled ornament, gold jewelry, ornate belt, ceremonial dagger.
-- **Hair/Makeup:** Neat beard and mustache, defined features.
+- **Top:** Flowing thobe or robe.
+  - **Fit:** Loose ceremonial.
+  - **Material:** Silk or Cotton.
+  - **Pattern:** Gold embroidery.
+  - **Neckline:** Collarless.
+  - **Sleeve:** Wide long sleeves.
+- **Bottom:** Sirwal pants.
+  - **Fit:** Loose.
+  - **Material:** Cotton.
+  - **Waist:** Drawstring.
+  - **Length:** Ankle-length.
+- **Footwear:** Pointed slippers.
+- **Accessories:** Keffiyeh or turban, ceremonial dagger.
 
 [H]
-- **Hijab:** Luxurious silk or chiffon hijab in jewel tone with ornate draping, jeweled headpiece with chains or coins (attached to hijab)
-- **Top:** Long-sleeve ornate beaded tunic or fitted vest over sheer long-sleeve blouse (high neck, falls to mid-thigh)
-- **Bottom:** Flowing silk or chiffon pants (harem style in matching jewel tone)
-- **Footwear:** Pointed ornate slippers
-- **Accessories:** Gold bangles and arm cuffs, ornate belt, sheer veil optional, henna designs on hands
-- **Makeup:** Dramatic eye makeup with kohl and jewel tones
+- **Hijab:** Luxurious silk hijab in jewel tone with ornate draping.
+- **Top:** Long-sleeve ornate beaded tunic.
+  - **Fit:** Fitted modest tunic.
+  - **Material:** Beaded silk/chiffon.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Flowing harem pants.
+  - **Fit:** Loose Harem.
+  - **Material:** Silk.
+  - **Waist:** Elasticated.
+  - **Length:** Ankle-length.
+- **Footwear:** Pointed ornate slippers.
+- **Accessories:** Gold bangles, arm cuffs, veil.

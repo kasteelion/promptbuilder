@@ -1,23 +1,49 @@
-tags: [combat, fantasy, Holy]
+modifiers:
+  Gold: in **gilded brass armor**
+  Silver: in **polished fluted steel**
+  Black: in **blackened iron plate**
 
 [F]
-- **Top:** Silver or white plate armor bodice (ornate with holy symbols and gold trim)
-- **Bottom:** flowing ((default:white) or (signature)) tabard (emblazoned with holy symbol over armor)
-- **Footwear:** armored leg plates over **white or silver pants**; **white cape** with gold clasp; **silver boots** (knee-high with armor plates).
-- **Accessories:** Holy sword (glowing or blessed), shield with divine insignia, prayer beads or holy symbol necklace.
-- **Hair/Makeup:** Long flowing hair (blonde or light brown) in loose waves or half-up style, radiant natural makeup with soft glow, serene expression.
+- **Top:** Articulated cuirass {modifier} over chainmail.
+  - **Fit:** Tailored plate; Structured.
+  - **Material:** Steel/Brass armor; riveted maille.
+  - **Pattern:** Engraved filigree on pauldrons.
+  - **Neckline:** High collar.
+  - **Sleeve:** Long sleeves with gauntlets.
+- **Bottom:** Heavy brocade tabard emblazoned with sigils.
+  - **Fit:** Floor-length with center split.
+  - **Material:** Brocade; Silk.
+  - **Pattern:** Heraldic sigils.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Greaves and Sabatons {modifier}.
+- **Accessories:** Longsword; heater shield with heraldry; linen cape.
 
 [M]
-- **Top:** Silver or white plate armor breastplate (ornate with holy symbols and gold trim)
-- **Bottom:** flowing ((default:white) or (signature)) tabard (emblazoned with holy symbol over armor)
-- **Footwear:** armored leg plates over **chainmail**; **white cape** with gold clasp; **silver boots** (heavy armor).
-- **Accessories:** Holy sword (glowing or blessed), shield with divine insignia, prayer beads or holy symbol necklace.
-- **Hair/Makeup:** Groomed hair (blonde or light brown), radiant natural appearance, serene expression.
+- **Top:** Heavy plate carrier breastplate {modifier} over maille.
+  - **Fit:** Structured.
+  - **Material:** Steel armor; riveted maille.
+  - **Neckline:** High collar.
+  - **Sleeve:** Long with gauntlets.
+- **Bottom:** Quilted gambeson skirt under armor.
+  - **Fit:** Layered.
+  - **Material:** Quilted cloth.
+  - **Waist:** Natural.
+  - **Length:** Knee-length (skirt).
+- **Footwear:** Full plate leg-harness; steel sabatons.
+- **Accessories:** Greatsword; iron rosary; fur-mantled cloak.
 
 [H]
-- **Hijab:** ((default:White) or (signature)) silk or heavy cotton hijab with gold trim or circlet
-- **Top:** Silver or white plate armor bodice with flowing ((default:white) or (signature)) tabard over long sleeves
-- **Bottom:** Armored leg plates over white trousers
-- **Footwear:** Silver armored boots
-- **Accessories:** Holy sword, shield, prayer beads, white cape
-- **Makeup:** Radiant natural makeup, serene expression
+- **Hijab:** Chainmail coif over silk under-scarf with circlet.
+- **Top:** Long-line scale-mail tunic {modifier} over padding.
+  - **Fit:** modest structured.
+  - **Material:** Scale-mail metal; Padded cloth.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Wide armored tassets over chainmail leggings.
+  - **Fit:** Flared armored.
+  - **Material:** matching metal.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Articulated steel boots.
+- **Accessories:** Tower shield; holy tome; modest cape.

@@ -1,20 +1,46 @@
 tags: [Casual, Edgy]
 
 [F]
-- **Top:** Sleeveless scoop-neck bodysuit (high-density ribbed knit in ((default:cream) or (signature)), form-fitting construction that emphasizes the underbust contour)
-- **Bottom:** High-leg cut silhouette (worn under low-waist denim shorts).
+- **Top:** Sleeveless scoop-neck bodysuit.
+  - **Fit:** Form-fitting construction.
+  - **Material:** High-density ribbed knit.
+  - **Pattern:** Solid ((default:cream) or (signature)).
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Low-waist denim shorts.
+  - **Fit:** High-leg cut.
+  - **Material:** Denim (distressed).
+  - **Waist:** Low-rise.
+  - **Length:** Micro-short.
+- **Footwear:** Sneakers (implied).
 - **Accessories:** Simple gold chain necklace; small hoop earrings.
-- **Hair/Makeup:** Loose natural waves; peachy lip gloss; fresh-faced glow.
 
 [M]
-- **Top:** Sleeveless scoop-neck ribbed tank (high-density ribbed knit in ((default:cream) or (signature)), form-fitting construction that emphasizes chest and abdominal definition)
-- **Bottom:** Worn tucked into low-waist distressed denim shorts.
+- **Top:** Sleeveless scoop-neck ribbed tank.
+  - **Fit:** Form-fitting muscle tank.
+  - **Material:** High-density ribbed knit.
+  - **Pattern:** Solid ((default:cream) or (signature)).
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Distressed denim shorts.
+  - **Fit:** Relaxed.
+  - **Material:** Denim.
+  - **Waist:** Low-waist.
+  - **Length:** Above knee.
+- **Footwear:** Sneakers (implied).
 - **Accessories:** Simple gold chain necklace; small silver watch.
-- **Hair/Makeup:** Tousled natural hair; clean-shaven or neat stubble; fresh-faced look.
 
 [H]
-- **Hijab:** Soft ribbed knit hijab in ((default:cream) or (signature)) with a relaxed wrap
-- **Top:** Long-sleeve ribbed modest tunic (high-density ribbed knit in ((default:cream) or (signature)), form-fitting construction, high neck)
-- **Bottom:** Matching ribbed leggings or worn with modest denim midi-skirt
-- **Accessories:** Simple gold chain necklace; small gold studs
-- **Makeup:** Peachy lip gloss; fresh-faced glow
+- **Hijab:** Soft ribbed knit hijab with relaxed wrap.
+- **Top:** Long-sleeve ribbed modest tunic.
+  - **Fit:** Form-fitting high neck.
+  - **Material:** High-density ribbed knit.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching ribbed leggings or denim midi-skirt.
+  - **Fit:** Fitted leggings or A-line skirt.
+  - **Material:** Ribbed knit or Denim.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Sneakers (implied).
+- **Accessories:** Simple gold chain necklace; small gold studs.

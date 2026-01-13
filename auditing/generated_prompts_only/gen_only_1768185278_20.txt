@@ -1,0 +1,80 @@
+# METADATA
+Scene: Vast, derelict warehouse interior with high corrugated ceilings. Shafts of dusty daylight pierce through broken windows, illuminating patches of a cracked concrete floor. Scent of rust and stale air, distant echo of dripping water.
+Base_Prompt: Chibi Style: "Super Deformed"
+Character: Marisol Rivera | Outfit: Barbarian | Pose: None
+Character: Isla MacLeod | Outfit: Japanese Harajuku Streetwear | Pose: None
+Character: Astrid Nielsen | Outfit: Comfort | Pose: None
+Interaction: Custom
+Score: 135
+
+Generate an image of: Rendering
+Soft-shaded vector illustration or vinyl toy aesthetic. Bright, pastel, or primary-heavy color palettes. Gradient shading is minimal and smooth, giving surfaces a matte plastic or "squishy" appearance. Thick, rounded line art (or lineless "sticker" style).
+
+Character Accuracy
+Extreme anatomical exaggeration (SD or Super Deformed). Heads are 1:1 or 1:2 ratio with the body. Eyes are massive, taking up 50% of the face, with simplified sparkles. Noses are absent or mere dots. Mouths are simple curves.
+
+Body Types
+"Bean" shaped torsos. Limbs are short, stubby cylinders with no muscle definition. Hands are simple spheres or "mitten" shapes; feet are rounded nubs. The silhouette is fundamentally cute and non-threatening.
+
+Hair & Clothing
+Hair: Simplified into large, chunky shapes with high volume and minimal strand detail. Clothing: Reduced to iconic elements—details like shoelaces or buttons are oversized and simplified for readability.
+
+Details
+Floating iconography (hearts, stars, sweat drops, anger veins) near the head. Backgrounds are simple patterns (polka dots, stripes) or solid soft colors. A thick white outline often surrounds the entire character like a die-cut sticker.
+
+---
+
+**SCENE/SETTING:**
+Vast, derelict warehouse interior with high corrugated ceilings. Shafts of dusty daylight pierce through broken windows, illuminating patches of a cracked concrete floor. Scent of rust and stale air, distant echo of dripping water.
+---
+
+**CHARACTER: Marisol Rivera**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; compact balanced proportions with defined waist, toned limbs, and visible muscle definition; moderate vertical (5'5"-5'6"); athletic build with clean controlled lines, functional strength, and mixed-heritage features—Japanese bone structure with Puerto Rican curves, creating distinctive balanced aesthetics; athletic graceful presence.
+* **Face:** Balanced classical structure with mixed heritage features; oval face with subtle Japanese angularity softened by Puerto Rican warmth; firm clean planes; calm almond-shaped eyes that tilt slightly upward (Japanese influence) with warm expressive quality (Puerto Rican warmth), moderately spaced, dark brown; defined jawline; neutral expression shows calm composure with subtle knowing smile that brightens when engaged; beauty mark near left eye.
+* **Hair:** Type 1B-1C straight with slight natural wave; medium-high density; long sleek cut with healthy satin sheen; dark brown to black; versatile styling options including ponytails and braids.
+* **Skin:** Warm golden-olive skin with bronzed finish and natural radiance.
+**Outfit:**
+- **Top:** Leather or fur bikini top (tribal design with bone or tooth decorations)
+- **Bottom:** fur or leather loincloth with **leather straps**
+- **Footwear:** fur boots (calf-high); **arm and leg wraps** (leather or fur).
+- **Accessories:** Large battle axe or two-handed sword, bone jewelry, war paint on face and body, trophy necklace (teeth, claws).
+- **Hair/Makeup:** Wild untamed hair (often with braids or dreadlocks), fierce war paint, tribal markings, Intense warrior expression.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Isla MacLeod**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; delicate balanced proportions; petite vertical; soft gentle presence.
+* **Face:** Soft delicate facial structure; heart-shaped face; gentle features; large dreamy eyes in gray-blue; soft dusting of freckles; serene contemplative expression.
+* **Hair:** Type 2A waves; fine-medium density; shoulder-length layered cut; loose natural part; soft wispy texture; matte-satin finish; auburn with natural red tones.
+* **Skin:** Fair cool-toned skin with soft pink undertones; light freckles across nose and cheeks.
+**Outfit:**
+- **Top:** Oversized **graphic anime or kawaii print hoodie** or **layered long-sleeve tees** (pastel colors with bold prints)
+- **Bottom:** pleated mini skirt (plaid or solid in pink, lavender, or black) or **wide-leg cargo pants** (with chains and patches)
+- **Footwear:** platform sneakers or chunky Mary Janes.
+- **Accessories:** Multiple hair clips (butterfly, star, or heart shapes), layered chain necklaces, mini backpack or crossbody bag with keychains, arm warmers or fingerless gloves, colorful leg warmers over socks.
+- **Hair/Makeup:** Hair in twin tails, space buns, or half-up with colorful streaks (pink, blue, purple), doll-like makeup with aegyo-sal (under-eye brightening), gradient lips, circle lenses, blush on nose and cheeks, optional small stickers near eyes.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Astrid Nielsen**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight flesh; narrow balanced rectangle proportions; tall vertical line; refined posture with precise alignment; statuesque and poised.
+* **Face:** Long balanced facial structure; soft oval face; firm planar skin with clear definition; narrow straight nose; light blue deep-set eyes with cool observant gaze; serene neutral resting expression that suggests depth and composure.
+* **Hair:** Type 1 straight hair; medium density; platinum blonde with smooth high-shine finish; naturally straight and fine; takes blunt, precise cuts well.
+* **Skin:** Fair cool-toned skin with porcelain clarity and smooth even texture.
+**Outfit:**
+- **Top:** Oversized **cozy top** (sweater or hoodie)
+- **Bottom:** comfortable **bottoms** (leggings or joggers)
+- **Footwear:** soft footwear.
+- **Accessories:** Minimal jewelry.
+- **Hair/Makeup:** Minimal makeup, relaxed hairstyle.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Marisol Rivera and Isla MacLeod moving in perfect, mirrored synchronization, as if choreographed or controlled by a single mind, ethereal and uncanny energy.

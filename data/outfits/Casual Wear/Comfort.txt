@@ -1,23 +1,50 @@
-tags: [Casual, Home]
+modifiers:
+  Lazy: in **oversized grey marl**
+  Luxe: in **pure cashmere beige**
+  Sport: in **technical fleece**
 
 [F]
-- **Top:** Oversized **((default:cozy top) or (signature) top)** (sweater or hoodie)
-- **Bottom:** comfortable **bottoms** (leggings or joggers)
-- **Footwear:** soft footwear.
-- **Accessories:** Minimal jewelry.
-- **Hair/Makeup:** Minimal makeup, relaxed hairstyle.
+- **Top:** Boxy waffle-knit thermal henley or bouclé knit hoodie {modifier}.
+  - **Fit:** Boxy drop-shoulders.
+  - **Material:** Waffle-knit thermal or Bouclé knit.
+  - **Pattern:** Textured solid.
+  - **Neckline:** Henley or Hooded.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted plush velour joggers or ribbed biker shorts.
+  - **Fit:** Plush relaxed or Skin-tight.
+  - **Material:** Velour or Ribbed knit.
+  - **Waist:** High-waisted.
+  - **Length:** Ankle or Mid-thigh.
+- **Footwear:** Shearling-lined slides or knit wool socks.
+- **Accessories:** Acetate hair clip; silk scrunchie.
 
 [M]
-- **Top:** Oversized **((default:cozy hoodie or sweatshirt) or (signature) top)**
-- **Bottom:** comfortable **joggers or sweatpants**
-- **Footwear:** soft sneakers or slides.
-- **Accessories:** Minimal jewelry.
-- **Hair/Makeup:** Minimal grooming, relaxed hairstyle.
+- **Top:** Heavyweight loopback cotton crewneck {modifier}.
+  - **Fit:** Heavyweight raglan.
+  - **Material:** Loopback cotton.
+  - **Pattern:** Solid.
+  - **Neckline:** Crewneck.
+  - **Sleeve:** Long raglan sleeves.
+- **Bottom:** Relaxed fleece-lined sweatpants.
+  - **Fit:** Relaxed.
+  - **Material:** Fleece-lined cotton.
+  - **Waist:** Elasticated waistband.
+  - **Length:** Cuffed at ankles.
+- **Footwear:** Padded nylon home slippers or thick rag socks.
+- **Accessories:** Reading glasses.
 
 [H]
-- **Hijab:** Soft jersey hijab in light gray with simple wrap
-- **Top:** Oversized ((default:cream) or (signature)) ribbed knit sweater (long sleeves, falls to hip)
-- **Bottom:** High-waist black joggers with tapered leg (soft cotton blend)
-- **Footwear:** White slip-on sneakers
-- **Accessories:** Small gold studs, simple watch
-- **Makeup:** Minimal (tinted moisturizer, mascara, lip balm)
+- **Hijab:** Instant jersey hijab (slip-on).
+- **Top:** Long-line chenille knit cardigan over cotton tee.
+  - **Fit:** Relaxed modest layer.
+  - **Material:** Chenille knit; Cotton.
+  - **Neckline:** Open front (cardigan) over crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Wide-leg knit lounge trousers.
+  - **Fit:** Wide-leg.
+  - **Material:** Soft knit.
+  - **Pattern:** Oatmeal or grey.
+  - **Waist:** Elastic.
+  - **Length:** Floor-length.
+- **Footwear:** Fuzzy house socks.
+- **Accessories:** Blue light glasses.

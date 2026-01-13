@@ -1,0 +1,82 @@
+# METADATA
+Scene: Upscale rooftop lounge, string lights overhead, city lights below, cocktail tables, sophisticated nightlife vibe.
+Base_Prompt: Low-Poly 3D
+Character: Fiona O'Sullivan | Outfit: Retro Bowling | Pose: None
+Character: Kaia Vaitupu | Outfit: Retro Bowling | Pose: None
+Character: Mela Hart | Outfit: Retro Bowling | Pose: None
+Score: 478
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Upscale rooftop lounge, string lights overhead, city lights below, cocktail tables, sophisticated nightlife vibe.
+---
+
+**CHARACTER: Fiona O'Sullivan**
+**Appearance:**
+* **Body:** Soft Natural plus-size frame; wave-type plush softness; soft pear-hourglass proportions; moderate vertical.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes; expressive hazel-green eyes; warm engaging smile; soft jawline; radiant joyful expression that reflects her generous spirit.
+* **Hair:** Type 2B-2C waves; high density; long layered cut with natural body; side part; soft natural volume with gentle frizz; copper-red to auburn with natural variation.
+* **Skin:** Fair rosy-toned skin with soft glow; smooth complexion.
+**Outfit:**
+- **Top:** Retro button-down **bowling shirt** (two-tone, name embroidered on chest)
+- **Top:** **Polo shirt** tucked in
+- **Bottom:** Cuffed **jeans** or **capris**
+- **Bottom:** **A-line skirt** (knee length)
+- **Footwear:** **Rental bowling shoes** (red and blue/tan leather, distinct look)
+- **Accessories:** Wrist brace, towel tucked in waistband.
+- **Hair/Makeup:** Ponytail or pinned back hair.
+**Pose/Action:**
+wide shot with the character framed within the environment, Adjusting over-ear headphones, eyes closed or looking away, lost in music, Peaceful moment.
+---
+
+**CHARACTER 2: Kaia Vaitupu**
+**Appearance:**
+- **Body:** Statuesque Athletic frame; warm golden-bronze skin with a luminous, hydrated finish; soft-rectangular proportions with strong, graceful posture; tall stature (5'10"-5'11"); refined athletic build with long limbs and elegant muscle definition; "quiet authority" presence—composed and commanding.
+- **Face:** Strong heart-shaped structure; defined cheekbones that catch the light; firm, graceful jawline; large, deep-set dark brown eyes with a steady, intelligent gaze; thick, natural dark eyebrows with a soft arch; straight, elegant nose; full, well-defined mouth with a composed neutral expression; presence conveys deep concentration and intellectual clarity.
+- **Hair:** Type 1A-1B straight; high density and lustrous sheen; waist-length dark ebony hair, often worn in a sharp, high-shine ponytail or loose with a precise center part; matte-satin finish with silver-blue holographic highlights woven through the strands.
+- **Skin:** Deep golden-bronze with warm radiant undertones; flawless, smooth texture; subtle traditional geometric "tatau" patterns on her forearms that pulse with a faint cyan glow; healthy, hydrated "digital office" glow.
+**Outfit:**
+- **Top:** Retro button-down **bowling shirt** (two-tone, name embroidered on chest)
+- **Top:** **Polo shirt** tucked in
+- **Bottom:** Cuffed **jeans** or **capris**
+- **Bottom:** **A-line skirt** (knee length)
+- **Footwear:** **Rental bowling shoes** (red and blue/tan leather, distinct look)
+- **Accessories:** Wrist brace, towel tucked in waistband.
+- **Hair/Makeup:** Ponytail or pinned back hair.
+**Pose/Action:**
+wide shot with the character framed within the environment, Head and shoulders frame, direct eye contact with camera, exaggerated facial expression to match audio, hand possibly near the mouth or chin.
+---
+
+**CHARACTER 3: Mela Hart**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall vertical line; broad shoulders; long limbs; somewhat straight silhouette; moderate bust and hip definition; athletic and springy presence.
+* **Face:** Oval shape; high cheekbones; full lips; prominent expressive eyes; straight nose bridge; defined jawline; bright and buoyant neutral expression.
+* **Hair:** Type 4A (Natural texture) with Type 2B/2C (Wavy/Curly) ends; long, dark brown braids throughout the hair with loose wavy curls at the bottom; high shine; braids are a signature identity feature.
+* **Skin:** Deep brown with warm golden undertones and luminous satin finish.
+**Outfit:**
+- **Top:** Retro button-down **bowling shirt** (two-tone, name embroidered on chest)
+- **Top:** **Polo shirt** tucked in
+- **Bottom:** Cuffed **jeans** or **capris**
+- **Bottom:** **A-line skirt** (knee length)
+- **Footwear:** **Rental bowling shoes** (red and blue/tan leather, distinct look)
+- **Accessories:** Wrist brace, towel tucked in waistband.
+- **Hair/Makeup:** Ponytail or pinned back hair.
+**Pose/Action:**
+wide shot with the character framed within the environment, Arm extended forward after release, hand in graceful follow-through position reaching toward pins, opposite arm out for balance, front knee bent, classic finish pose.
+---

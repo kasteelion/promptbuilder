@@ -1,0 +1,65 @@
+# METADATA
+Scene: Spacious modern kitchen with polished marble countertops and high-end stainless steel appliances. Warm pendant lighting over a central island. Scent of freshly ground coffee and herbs.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Keiko Yamamoto | Outfit: Wrestling | Pose: None
+Character: Camila Vargas | Outfit: Wrestling | Pose: None
+Interaction: Custom
+Score: 563
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Spacious modern kitchen with polished marble countertops and high-end stainless steel appliances. Warm pendant lighting over a central island. Scent of freshly ground coffee and herbs.
+---
+
+**CHARACTER: Keiko Yamamoto**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact athletic proportions; petite vertical line; sharp and energized presence.
+* **Face:** Angular sculpted structure; square-leaning oval face; strong jawline; intense dark brown eyes; restrained confident expression that reflects her focused discipline.
+* **Hair:** Type 1 straight; medium density; dark black with matte texture; choppy layers and versatile alternative styling options; drawn to sharp, Edgy cuts.
+* **Skin:** Light neutral skin with matte clarity; smooth even finish. sharp professional black-framed rectangular glasses
+**Outfit:**
+- **Top:** Fitted **singlet** in **white with black accents** (lycra/spandex performance fabric with team logo)
+- **Bottom:** wrestling shoes (blue, lightweight with ankle support).
+- **Accessories:** Knee pads optional.
+- **Hair/Makeup:** Hair tied back and messy.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Camila Vargas**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; compact resilient flesh quality; petite but broad shoulders, long-torso-short-leg proportion; short (5'0"); tightly-wound sinewy muscle over sharp bone structure with defined calves and forearms; fiery and disciplined presence.
+* **Face:** Angular slightly sharp structure; elongated diamond shape; prominent high arching brows and strong chin; large intensely focused dark hazel eyes; defined narrow jawline; neutral resting expression is serious, contained, and observant.
+* **Hair:** Type 1B; medium density; mid-back length; pure black; very glossy with high sheen; takes precision styling well.
+* **Skin:** Olive with cool undertones and soft matte finish; smooth and disciplined surface.
+**Outfit:**
+- **Top:** Fitted **singlet** in **white with black accents** (lycra/spandex performance fabric with team logo)
+- **Bottom:** wrestling shoes (blue, lightweight with ankle support).
+- **Accessories:** Knee pads optional.
+- **Hair/Makeup:** Hair tied back and messy.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Keiko Yamamoto performing a delicate technical or medical procedure while Camila Vargas assists, both showing extreme surgical focus and steady hands under bright, sterile lighting.

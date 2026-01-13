@@ -1,0 +1,80 @@
+# METADATA
+Scene: Beachside tiki bar, thatched roof, bamboo decor, tropical drinks, sunset colors, island party vibes.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Isla MacLeod | Outfit: Comfort | Pose: None
+Character: Chayton Red-Elk | Outfit: Netrunner | Pose: None
+Character: Jordan Vance | Outfit: Costume - Dark Pirate | Pose: None
+Interaction: Custom
+Score: 188
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Beachside tiki bar, thatched roof, bamboo decor, tropical drinks, sunset colors, island party vibes.
+---
+
+**CHARACTER: Isla MacLeod**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; delicate balanced proportions; petite vertical; soft gentle presence.
+* **Face:** Soft delicate facial structure; heart-shaped face; gentle features; large dreamy eyes in gray-blue; soft dusting of freckles; serene contemplative expression.
+* **Hair:** Type 2A waves; fine-medium density; shoulder-length layered cut; loose natural part; soft wispy texture; matte-satin finish; auburn with natural red tones.
+* **Skin:** Fair cool-toned skin with soft pink undertones; light freckles across nose and cheeks.
+**Outfit:**
+- **Top:** Oversized **cozy top** (sweater or hoodie)
+- **Bottom:** comfortable **bottoms** (leggings or joggers)
+- **Footwear:** soft footwear.
+- **Accessories:** Minimal jewelry.
+- **Hair/Makeup:** Minimal makeup, relaxed hairstyle.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Chayton Red-Elk**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall and broad (6'1"-6'2"); "inverted triangle" torso with broad shoulders tapering to a trim waist; long limbs; moves with a heavy, deliberate grace; solid, functional muscularity without being gym-obsessed.
+* **Face:** Strong, sculptural planes; high, flat cheekbones; strong nose with a prominent bridge; deep-set, dark brown eyes that look *through* you rather than at you; stoic resting face that breaks into a slow, genuine smile.
+* **Hair:** Type 1A straight; very high density; waist-length; usually worn in a single clean braid down the back or a half-up knot; midnight black with a healthy, low sheen.
+* **Skin:** Rich, medium-reddish brown (copper tone); smooth but weathered texture; faint acne scars on temples adding character. minimalist wire-frame glasses for reading
+**Outfit:**
+- **Top:** Oversized distressed hoodie with holographic patches over a tactical vest.
+- **Bottom:** Baggy techwear joggers with reinforced knee pads.
+- **Footwear:** High-top cyber-sneakers with chunky soles.
+- **Accessories:** Neural interface headset, tactical wrist computer, utility belt.
+- **Hair/Makeup:** Messy texture, augmented reality contact lenses.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Jordan Vance**
+**Appearance:**
+* **Body:** Dramatic; extremely tall vertical at 6'4"; narrow but powerfully muscled frame with very long limbs and large, capable hands; lean athletic density with defined abdominal markers and elongated, powerful leg muscles; springy and explosive presence.
+* **Face:** Sharp-balanced structure; long oval face with defined, high cheekbones; large almond-shaped dark brown eyes with long, voluminous lashes and an alert gaze; straight athletic nose; wide expressive mouth with full, defined lips often breaking into a confident, radiant grin; sharply defined jawline.
+* **Hair:** Type 4A–4B coils; high density; typically worn in long, sleek knotless braids that fall to her waist, often adorned with subtle gold beads or team-colored threads to maintain a polished, glamorous silhouette.
+* **Skin:** Deep ebony depth with neutral-cool undertones; smooth almost polished finish; athletic glow with visible muscle definition; long, manicured almond-shaped nails in a signature vibrant color or French tip.
+**Outfit:**
+- **Top:** Off-shoulder peasant blouse (black chiffon with flowing bell sleeves)
+- **Bottom:** brown leather corset or underbust bodice (with multiple buckle straps and metal hardware)
+- **Footwear:** layered tulle skirt (black, short length with ruffled tiers); **black thigh-high stockings** (with lace tops); **brown leather boot cuffs** worn over stockings.
+- **Accessories:** Brown leather pirate hat (tricorn style with decorative details), layered chain necklaces, leather choker, coin belt or gold chain belt, leather wrist cuffs, compass or treasure prop.
+- **Hair/Makeup:** Long flowing dark hair in loose waves, dramatic purple-toned eyeshadow, bold lips, gothic-romantic makeup style, mysterious expression.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Isla MacLeod and Chayton Red-Elk standing shoulder to shoulder, unified stance showing solidarity

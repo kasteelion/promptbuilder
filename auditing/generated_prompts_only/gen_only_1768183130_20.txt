@@ -1,0 +1,81 @@
+# METADATA
+Scene: Organized personal workspace with ergonomic chair and dual monitors. Soft blue glow from screens balanced by a warm desk lamp. Quiet focus, scent of books and electronics.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Celine Voss | Outfit: Volleyball | Pose: None
+Character: Amira Khalil | Outfit: Volleyball | Pose: None
+Character: Maki Cruz | Outfit: Volleyball | Pose: None
+Interaction: Custom
+Score: 525
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Organized personal workspace with ergonomic chair and dual monitors. Soft blue glow from screens balanced by a warm desk lamp. Quiet focus, scent of books and electronics.
+---
+
+**CHARACTER: Celine Voss**
+**Appearance:**
+* **Body:** Dramatic frame; straight dense flesh; narrow rectangle proportions; tall controlled vertical.
+* **Face:** Angular sculptural structure; square-leaning oval face; sharp jaw; unreadable neutral expression.
+* **Hair:** Type 1 straight; high density; blunt jaw-length bob; precise alignment; matte finish.
+* **Skin:** Cool pale skin with porcelain finish.
+**Outfit:**
+- **Top:** Fitted sleeveless performance jersey for **The Neon City Hackers** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes**
+- **Bottom:** body matching jersey base color with **sublimated geometric pattern**
+- **Footwear:** fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** centered on the chest and back; **high-waist compression shorts** matching base color with **wide comfort waistband** and **reinforced flatlock seams**; **low-profile gel-cushioned knee pads**; **professional court shoes** (#FFFF00) featuring **gum rubber soles**.
+- **Accessories:** Sweatbands with embroidered logo, athletic tape on fingers, matching hair ribbon.
+- **Hair/Makeup:** High tight ponytail with extreme volume, sweat-resistant performance makeup including **subtle shimmer on cheekbones** and a natural pink lip balm.
+**Pose/Action:**
+Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
+---
+
+**CHARACTER 2: Amira Khalil**
+**Appearance:**
+* **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
+* **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
+* **Hair / Covering:** Hair fully covered; hijab as constant identity anchor; smooth controlled drape with clean facial framing.
+* **Skin:** Warm olive-toned skin with soft luminous finish.
+**Outfit:**
+- **Hijab:** High-performance sports hijab matching base color featuring a **matte finish** and **aerodynamic secure tuck**
+- **Top:** Long-sleeve fitted performance tunic for **The Neon City Hackers** featuring **asymmetric shoulder panels**; body matching base color with **sublimated geometric pattern**; fabric is a **high-sheen technical spandex**; **bold metallic team number**; tunic falls to mid-thigh with a **scalloped hem** in **#00FFFF** (contrasting libero jersey)
+- **Bottom:** Full-length performance compression leggings matching base color
+- **Footwear:** Professional court shoes (#FFFF00) with **gum rubber soles**
+- **Accessories:** Low-profile gel-cushioned knee pads (worn over leggings), **matching sweatbands** on wrists
+- **Makeup:** Performance makeup including sweat-resistant foundation, **subtle shimmer on cheekbones**, and a natural pink lip balm
+**Pose/Action:**
+Standing with a skateboard tucked under one arm, relaxed posture, urban background.
+---
+
+**CHARACTER 3: Maki Cruz**
+**Appearance:**
+* **Body:** Flamboyant Natural; straight athletic flesh with lean definition; balanced proportions; subtle shoulder width; straight hip line; moderate vertical (5'6"-5'7"); functional athletic build with core strength; developed calves and quadriceps; visible forearm definition; grounded street-athlete presence.
+* **Face:** Balanced-soft structure; rounded square shape; broad forehead; softly defined jawline; midface cheekbone prominence with subtle definition; medium almond-shaped eyes; moderate spacing; dark brown to black irises; monolid or minimal crease structure; direct casual gaze; broad nose bridge with rounded tip; neutral resting expression shows relaxed confidence with a slight asymmetric smirk.
+* **Hair:** Type 1B; high density; straight silhouette with medium length to shoulders; no defined part; pushed back casually; matte to low-sheen finish; commonly worn loose and natural, tucked behind ears, or in a low messy bun. Deep black-brown.
+* **Skin:** Medium tan; warm golden-yellow undertones; natural matte finish; healthy resilience; scattered small scars on elbows and knees.
+**Outfit:**
+- **Top:** Fitted sleeveless performance jersey for **The Neon City Hackers** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes**
+- **Bottom:** body matching jersey base color with **sublimated geometric pattern**
+- **Footwear:** fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** centered on the chest and back; **high-waist compression shorts** matching base color with **wide comfort waistband** and **reinforced flatlock seams**; **low-profile gel-cushioned knee pads**; **professional court shoes** (#FFFF00) featuring **gum rubber soles**.
+- **Accessories:** Sweatbands with embroidered logo, athletic tape on fingers, matching hair ribbon.
+- **Hair/Makeup:** High tight ponytail with extreme volume, sweat-resistant performance makeup including **subtle shimmer on cheekbones** and a natural pink lip balm.
+**Pose/Action:**
+Hand near chin or temple, thoughtful expression, contemplative pose.
+---
+
+**Additional Notes:**
+Celine Voss pulling Amira Khalil by the hand, leading them in a direction with forward momentum

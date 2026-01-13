@@ -1,0 +1,87 @@
+# METADATA
+Scene: A classic school gym with polished wood floors and basketball hoops. Large windows let in bright, diffuse light. The sound of squeaking sneakers hangs in the air.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Kaia Vaitupu | Outfit: Retro Tracksuit | Pose: None
+Character: Amira Khalil | Outfit: Retro Tracksuit | Pose: None
+Character: Harald Bjornson | Outfit: Retro Tracksuit | Pose: None
+Interaction: Custom
+Score: 555
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+A classic school gym with polished wood floors and basketball hoops. Large windows let in bright, diffuse light. The sound of squeaking sneakers hangs in the air.
+---
+
+**CHARACTER: Kaia Vaitupu**
+**Appearance:**
+- **Body:** Statuesque Athletic frame; warm golden-bronze skin with a luminous, hydrated finish; soft-rectangular proportions with strong, graceful posture; tall stature (5'10"-5'11"); refined athletic build with long limbs and elegant muscle definition; "quiet authority" presence—composed and commanding.
+- **Face:** Strong heart-shaped structure; defined cheekbones that catch the light; firm, graceful jawline; large, deep-set dark brown eyes with a steady, intelligent gaze; thick, natural dark eyebrows with a soft arch; straight, elegant nose; full, well-defined mouth with a composed neutral expression; presence conveys deep concentration and intellectual clarity.
+- **Hair:** Type 1A-1B straight; high density and lustrous sheen; waist-length dark ebony hair, often worn in a sharp, high-shine ponytail or loose with a precise center part; matte-satin finish with silver-blue holographic highlights woven through the strands.
+- **Skin:** Deep golden-bronze with warm radiant undertones; flawless, smooth texture; subtle traditional geometric "tatau" patterns on her forearms that pulse with a faint cyan glow; healthy, hydrated "digital office" glow.
+**Outfit:**
+- **Top:** Striped Camisole (fitted silhouette, spaghetti straps, horizontal red and white pin-stripes, cropped midriff length)
+- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, vintage dolphin hem cut)
+- **Footwear:** Oversized Bomber Jacket (matching red hue, worn slouched off-the-shoulders, voluminous sleeves, fabric draped around elbows).
+- **Accessories:** Simple gold pendant necklace, minimal jewelry.
+- **Hair/Makeup:** Low messy bun with loose face-framing strands; natural, fresh-faced makeup look with subtle lip color.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Amira Khalil**
+**Appearance:**
+* **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
+* **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
+* **Hair / Covering:** Hair fully covered; hijab as constant identity anchor; smooth controlled drape with clean facial framing.
+* **Skin:** Warm olive-toned skin with soft luminous finish.
+**Outfit:**
+- **Hijab:** Red or white jersey sports hijab (secure but relaxed wrap)
+- **Top:** Striped Long-Sleeve Tunic (horizontal red and white pin-stripes, modest length, loose fit) under **Oversized Bomber Jacket** (matching red hue, voluminous sleeves)
+- **Bottom:** Athletic Track Pants (matching orange-red fabric, white vertical side stripes, elastic waistband)
+- **Footwear:** Retro sneakers
+- **Accessories:** Simple gold pendant necklace
+- **Makeup:** Natural, fresh-faced makeup look with subtle lip color
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Harald Bjornson**
+**Appearance:**
+* **Body:** Flamboyant Natural; massive, heavily muscled frame with broad, powerful shoulders and a deep chest; long limbs with thick wrists and large, calloused hands; tall vertical (6'2"-6'4"); high muscle density with functional power visible in every movement; an imposing, statuesque presence.
+* **Face:** Rugged-angular structure; square face shape with a prominent heavy brow and a stone-like jawline; deep-set piercing blue eyes under thick, expressive eyebrows; straight, strong nose; neutral expression is calm but intense, radiating a sense of grave authority.
+* **Hair:** Type 2B; thick coarse density; rough swept-back silhouette; past shoulders; swept-back; low sheen; single thick warrior braid at the back. Rich golden-blonde or light brown.
+* **Skin:** Fair; warm-neutral undertones; weathered and sun-toughened texture; prominent scar running down the right cheek and another across the knuckles; tanned.
+**Outfit:**
+- **Top:** Striped Tank Top (fitted silhouette, horizontal red and white pin-stripes)
+- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, retro cut)
+- **Footwear:** Oversized Bomber Jacket (matching red hue, voluminous sleeves).
+- **Accessories:** Simple gold chain necklace, minimal jewelry.
+- **Hair/Makeup:** Messy bun or textured hair; natural fresh-faced look.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Kaia Vaitupu handing a small, glowing data-shard to Amira Khalil, their fingers brushing briefly, a sense of high-stakes cooperation and secrecy.

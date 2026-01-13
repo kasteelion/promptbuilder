@@ -1,0 +1,81 @@
+# METADATA
+Scene: Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Diesel Murphy | Outfit: Country Casual | Pose: None
+Character: Zara Washington | Outfit: Streetwear | Pose: None
+Character: Chiara Lombardi | Outfit: American Football | Pose: None
+Interaction: Custom
+Score: 265
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+---
+
+**CHARACTER: Diesel Murphy**
+**Appearance:**
+* **Body:** Natural frame; straight athletic flesh with functional density; balanced proportions with broadened shoulders from upper body work, minimal waist definition, and straight hip line; moderate-to-tall vertical (5'7"-5'8"); working-class athletic build with developed forearms and shoulders from mechanical work, strong hands, visible core strength, practical muscle without aesthetic focus; distinctly female frame with masculine presentation and movement patterns; grounded capable presence.
+
+* **Face:** Balanced-angular structure; square-to-rectangular face shape with broad forehead and strong defined jawline; minimal midface projection with subtle cheekbones; medium-to-small eyes with moderate-close spacing, hazel-brown color, minimal lid exposure, direct no-nonsense gaze; straight broad nose with flat bridge and squared tip; strong angular jawline with masculine definition; neutral resting expression shows calm confidence with closed-mouth straight line and steady assessing gaze; rare smile is crooked and genuine.
+
+* **Hair:** Type 2A; medium density; very short length (pixie-to-undercut style); no defined part, textured and pushed back; matte finish; commonly worn tousled and practical, sometimes with small amount of pomade for control; dark brown with sun-lightened tips from outdoor work.
+
+* **Skin:** Light-medium tone with neutral-warm undertones and natural matte finish; scattered scars on hands and forearms from mechanical work; permanent grease staining under short fingernails and in hand creases; sun exposure on forearms and face; textured from outdoor work.
+**Outfit:**
+- **Top:** Red and white gingham button-up shirt (long sleeves with tie-front, cropped to show midriff, unbuttoned to show cleavage)
+- **Bottom:** high-waist denim booty shorts (dark wash, fitted, very short) with brown belt and large golden buckle.
+- **Accessories:** White bow hair tie (tied in hair at side or on pigtail), small hoop or stud earrings.
+- **Hair/Makeup:** Long wavy hair (styled in side-swept waves or pigtails), classic red lipstick, winged eyeliner, natural rosy cheeks, pin-up girl glamour, playful flirty expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Natural unposed laughter, hand near face, genuine joy, magazine-worthy moment.
+---
+
+**CHARACTER 2: Zara Washington**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
+* **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
+* **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
+* **Skin:** Deep rich brown skin with luminous depth.
+**Outfit:**
+- **Top:** Oversized **graphic hoodie or sweatshirt** in heavy-gauge loopback cotton; matte finish with high-contrast screen print
+- **Bottom:** multi-pocket **cargo pants** in a durable technical ripstop fabric with adjustable drawstrings at the ankle
+- **Footwear:** chunky multi-textured sneakers with mesh panels and reflective detailing
+- **Accessories:** Distressed baseball cap, nylon crossbody bag with tactical buckles, silver curb chain necklace
+- **Hair/Makeup:** Natural or minimal makeup with a focus on skin texture; effortless "street-ready" bun or ponytail
+**Pose/Action:**
+wide shot with the character framed within the environment, Low wrestling stance, arms extended ready to engage, knees bent, explosive ready energy.
+---
+
+**CHARACTER 3: Chiara Lombardi**
+**Appearance:**
+* **Body:** Soft Classic frame; natural–wave flesh blend; balanced proportions with gentle curve; moderate vertical.
+* **Face:** Balanced sculpted facial structure; oval face; soft cheek fullness; strong brows; expressive eyes; calm knowing expression.
+* **Hair:** Type 2B–2C waves; high density; layered medium-long cut; natural volume; loose part; satin finish.
+* **Skin:** Warm Mediterranean-toned skin with healthy glow.
+**Outfit:**
+- **Top:** Molded shoulder pads (rigid, high-gloss black plastic shells with a distinct, thick outer edge that is clearly separate from the fabric underneath
+- **Bottom:** protective design and Standard Team logo shield reflecting stadium lights sharply)
+- **Footwear:** Sports performance top (crop-style in **white with black accents**, wearing extra-large shoulder pads and a neck roll for neck protection, made of ultra-matte moisture-wicking compression fabric that absorbs light, showing slight compression wrinkles where the rigid edge of the shoulder pad presses against the body); Low-rise athletic shorts (minimal coverage design in black with white accents, team number on hip); Compression arm sleeves (black extending to mid-bicep with white striping); Athletic socks (knee-high black or mixed black with white bands); Professional football cleats (Nike or Adidas style with blue detailing). Accessories: Hockey-style helmet with clear polycarbonate visor and Standard Team branding, black athletic headband worn under helmet, Standard Team-branded gloves with grip palms, knee pads with logo, eye black strips, blue wristbands, athletic tape on fingers. Hair/Makeup: Long hair in high ponytail, braids, or curls secured with headband for mobility, camera-ready makeup with defined eyes and contouring, waterproof and sweat-resistant long-wear formula, natural glam suitable for stadium lighting and broadcast television.
+- in **white with black accents**, wearing extra-large shoulder pads and a neck roll for neck protection
+**Pose/Action:**
+wide shot with the character framed within the environment, Turned slightly to side, gazing off into distance, contemplative expression.
+---
+
+**Additional Notes:**
+Diesel Murphy giving Zara Washington an enthusiastic high five, both smiling with celebratory energy

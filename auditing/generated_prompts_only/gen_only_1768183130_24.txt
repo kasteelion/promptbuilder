@@ -1,0 +1,63 @@
+# METADATA
+Scene: Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Aryan Kapoor | Outfit: Tennis | Pose: None
+Character: Chiara Lombardi | Outfit: Tennis | Pose: None
+Interaction: Custom
+Score: 380
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
+---
+
+**CHARACTER: Aryan Kapoor**
+**Appearance:**
+* **Body:** Dramatic Classic frame; moderate muscularity with a lean, tailored silhouette; balanced proportions that look exceptional in suiting; moderate vertical (5'10"-5'11"); posture is military-straight but relaxed; projects a refined, expensive stability.
+* **Face:** Symmetrical, high-contrast structure; strong square jawline covered by a meticulously groomed "designer stubble" to short boxed beard; high cheekbones; piercing amber-brown eyes with thick lashes; straight aristocratic nose; expression is usually a knowing, confident smirk.
+* **Hair:** Type 2A waves; high density; styled in a classic "quiff" or side-part with volume; sides are tapered clean; glossy, healthy finish; jet black with a blueish tint under light.
+* **Skin:** Medium-deep tan with warm golden-olive undertones; hyper-smooth texture suggestive of a high-end skincare routine.
+**Outfit:**
+- **Top:** Performance polo for **The Midnight Ravens** with **color-blocked panels** and **contrast collar**
+- **Bottom:** body in **#241773** with **#000000 side panels** and **subtle team logo** on chest
+- **Footwear:** athletic shorts in **#241773** with **#000000 side stripe** and **contrast waistband**; **tennis shoes** (#9E7C0C, court-appropriate with reinforced toe).
+- **Accessories:** Headband or wristbands in team colors, sweatbands.
+- **Hair/Makeup:** Hair short or secured, minimal grooming, athletic ready.
+**Pose/Action:**
+Low wrestling stance, arms extended ready to engage, knees bent, explosive ready energy.
+---
+
+**CHARACTER 2: Chiara Lombardi**
+**Appearance:**
+* **Body:** Soft Classic frame; natural–wave flesh blend; balanced proportions with gentle curve; moderate vertical.
+* **Face:** Balanced sculpted facial structure; oval face; soft cheek fullness; strong brows; expressive eyes; calm knowing expression.
+* **Hair:** Type 2B–2C waves; high density; layered medium-long cut; natural volume; loose part; satin finish.
+* **Skin:** Warm Mediterranean-toned skin with healthy glow.
+**Outfit:**
+- **Top:** Performance tank top for **The Midnight Ravens** with **racerback design** and **contrast binding**
+- **Bottom:** body in **#241773** with **#000000 color-blocked side panels** and **subtle team logo** on chest
+- **Footwear:** athletic skirt with built-in compression shorts in **#241773** featuring **#000000 pleated inserts** and **contrast waistband with hidden ball pockets**; **tennis shoes** (#9E7C0C, court-appropriate with reinforced toe).
+- **Accessories:** Visor in **#241773** with **#000000 logo**, matching wristbands, hair tie.
+- **Hair/Makeup:** Hair in sporty ponytail or braid with flyaways secured, minimal waterproof makeup with tinted lip balm, athletic glow.
+**Pose/Action:**
+Defensive position, one arm extended in fist, other protecting face, alert watchful expression.
+---
+
+**Additional Notes:**
+Aryan Kapoor waving at Chiara Lombardi, friendly greeting from a distance

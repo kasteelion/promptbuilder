@@ -6,7 +6,7 @@ from typing import List, Optional
 
 from utils import logger
 
-from config import DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
+from core.config import DEFAULT_FONT_FAMILY, DEFAULT_FONT_SIZE
 from ui.constants import (
     FONT_SIZE_BREAKPOINTS,
     MAX_FONT_SIZE,

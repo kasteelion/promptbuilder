@@ -1,0 +1,42 @@
+# METADATA
+Scene: Carnival games and rides, colorful lights, cotton candy stands, festive exciting atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Jena Marlowe | Outfit: Beach Volleyball | Pose: None
+Score: 165
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Carnival games and rides, colorful lights, cotton candy stands, festive exciting atmosphere.
+---
+
+**CHARACTER: Jena Marlowe**
+**Appearance:**
+* **Body:** Soft Dramatic–Romantic blend; elongated but light vertical; gentle hourglass with soft waist emphasis; overall delicacy rather than dramatic weight.
+* **Face:** Soft oval face with balanced proportions; medium-large bright eyes; refined nose; gentle jawline; warm, approachable expression with an easy smile.
+* **Hair:** Light honey-blonde; Type 2A–2B loose waves; fine-to-medium density; long hair with soft volume; luminous natural-looking highlights; healthy glossy finish.
+* **Skin:** Fair to light neutral-warm tone with a natural satin glow; fresh and luminous in daylight.
+**Outfit:**
+- **Top:** Professional athletic bikini set for **The Coastal Bears**, wearing a contrasting #FFD100 jersey to denote libero position,
+- **Bottom:** racerback top featuring a **sculpted compression fit** and a **sheer mesh center-chest cutout**
+- **Footwear:** bodice in **#2774AE** with **#FFD100 side-binding** and a **metallic foil team logo** on the left; fabric is a premium **honeycomb-textured matte lycra**; matching **high-cut athletic bottoms** with **asymmetric color-blocked panels** in **#FFD100** and **thick double-needle flatlock stitching**; **barefoot** with a **thin layer of sand-dusted skin**.
+- **Accessories:** Mirrored polarized sports sunglasses (#FFFFFF) with a **secure neck strap**, **performance visor** in **#2774AE** featuring **rhinestone-encrusted team initials**, waterproof fitness watch.
+- **Hair/Makeup:** Sleek boxer braids with flyaways secured, **athletic sun-kissed glow** with high-SPF tinted moisturizer, waterproof mascara, and a natural coral lip tint.
+**Pose/Action:**
+Mid-air or high-release shot, arm extended toward hoop, flick of the wrist, focused concentration.
+---

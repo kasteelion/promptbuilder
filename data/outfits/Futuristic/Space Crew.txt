@@ -1,0 +1,47 @@
+tags: [Sci-Fi, Uniform, Space, Clean]
+
+[F]
+- **Top:** Form-fitting flight suit in pristine white.
+  - **Fit:** Form-fitting; Professional.
+  - **Material:** High-durability synth-fabric.
+  - **Pattern:** Color-coded division stripes on shoulders.
+  - **Neckline:** High-collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching flight suit bottoms.
+  - **Fit:** Slim fit.
+  - **Material:** matching fabric.
+  - **Pattern:** Magnetic utility pockets.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Magnetic gravity boots (mag-boots) in grey.
+- **Accessories:** Wrist comms unit; ID badge; small rebreather pack.
+
+[M]
+- **Top:** Standard issue crew jumpsuit in navy blue.
+  - **Fit:** Utilitarian.
+  - **Material:** Heavy-duty canvas.
+  - **Pattern:** Ship insignia patch.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long.
+- **Bottom:** Integrated jumpsuit bottoms.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Velcro tabs at ankles.
+  - **Length:** Full.
+- **Footwear:** Heavy-duty mag-boots.
+- **Accessories:** Utility belt with multi-tool; tablet in pocket.
+
+[H]
+- **Hijab:** Fire-retardant tight-fitting cap/hood combo in uniform color.
+- **Top:** Tunic-style uniform top with rank insignia.
+  - **Fit:** Modest loose.
+  - **Material:** fire-retardant fabric.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Loose-fitting uniform trousers.
+  - **Fit:** Relaxed; Elastic cuffs.
+  - **Material:** matching fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Standard mag-boots.
+- **Accessories:** Hands-free comms headset; datapad.

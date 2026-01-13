@@ -1,0 +1,87 @@
+# METADATA
+Scene: Urban asphalt court, chain-link fence, worn basketball hoop, city skyline in background, graffiti on walls, gritty athletic vibe.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Ines Santos | Outfit: Wrestling | Pose: None
+Character: Roxanna Perez | Outfit: Wrestling | Pose: None
+Character: Isla MacLeod | Outfit: Wrestling | Pose: None
+Interaction: Custom
+Score: 685
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Urban asphalt court, chain-link fence, worn basketball hoop, city skyline in background, graffiti on walls, gritty athletic vibe.
+---
+
+**CHARACTER: Ines Santos**
+**Appearance:**
+* **Body:** Soft Classic frame; balanced proportions with gentle curves; smooth, rounded contours; moderate height and vertical line; refined and graceful presence.
+* **Face:** Oval face shape with high, well-defined cheekbones; smooth, clear complexion with a natural glow; broad and genuine smile showing straight white teeth; warm, radiant expression.
+* **Eyes & Makeup:** Dark brown almond-shaped eyes; focal point is a sharp, precise black winged eyeliner (cat-eye style) flicking upward at the corners; dark, full, well-groomed eyebrows; natural soft rose-pink lip color.
+* **Hair:** Sleek, dark black hair; neat center part; pulled back tightly from the face into a low, polished bun or ponytail; smooth, high-gloss finish.
+* **Skin:** Warm, golden-tan complexion with a radiant, healthy glow; smooth satin texture.
+**Outfit:**
+- **Top:** Fitted **singlet** in **white with black accents** (lycra/spandex performance fabric with team logo)
+- **Bottom:** wrestling shoes (blue, lightweight with ankle support).
+- **Accessories:** Knee pads optional.
+- **Hair/Makeup:** Hair tied back and messy.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Roxanna Perez**
+**Appearance:**
+* **Body:** Theatrical Romantic frame (Kibbe); lush flesh; compact delicate bone structure; double-tapered proportions; short to moderately short vertical line; concentrated physical presence.
+
+* **Face:** Balanced-soft facial structure with subtle sharpness; oval face; moderate midface projection; large almond-shaped eyes; softly defined tapered jawline; full lips; resting expression calm and self-possessed.
+
+* **Hair:** Type 1C–2A straight to slightly wavy; high density; long length; no shrinkage; side part; asymmetrical swept silhouette; glossy surface finish.
+
+* **Skin:** Medium olive skin tone; warm-neutral undertone; smooth satin finish; no prominent markings.
+**Outfit:**
+- **Top:** Fitted **singlet** in **white with black accents** (lycra/spandex performance fabric with team logo)
+- **Bottom:** wrestling shoes (blue, lightweight with ankle support).
+- **Accessories:** Knee pads optional.
+- **Hair/Makeup:** Hair tied back and messy.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Isla MacLeod**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; delicate balanced proportions; petite vertical; soft gentle presence.
+* **Face:** Soft delicate facial structure; heart-shaped face; gentle features; large dreamy eyes in gray-blue; soft dusting of freckles; serene contemplative expression.
+* **Hair:** Type 2A waves; fine-medium density; shoulder-length layered cut; loose natural part; soft wispy texture; matte-satin finish; auburn with natural red tones.
+* **Skin:** Fair cool-toned skin with soft pink undertones; light freckles across nose and cheeks.
+**Outfit:**
+- **Top:** Fitted **singlet** in **white with black accents** (lycra/spandex performance fabric with team logo)
+- **Bottom:** wrestling shoes (blue, lightweight with ankle support).
+- **Accessories:** Knee pads optional.
+- **Hair/Makeup:** Hair tied back and messy.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Ines Santos and Roxanna Perez in matching or complementary poses showing synchronized energy and chemistry. Both mirroring each other's movements—same hand gestures, matching smiles, or coordinated stances creating visual harmony. Poses can be: both making heart hands together, pointing at each other, doing same dance move, or striking identical power poses. Wearing coordinated outfits—matching colors, similar styles, or a "matching" aesthetic. Energy is playful and synchronized, showing deep friendship connection. Expressions joyful and authentic—real smiles, genuine laughter, comfortable together. Body language open and connected—leaning toward each other, physical contact natural. Background aesthetic and intentional. Hashtag-worthy moment that makes viewers say "I want a friendship like this." Composition balanced with both subjects having equal presence. Shows aspirational friendship goals with enviable closeness and fun.

@@ -1,0 +1,77 @@
+# METADATA
+Scene: Vast, derelict warehouse interior with high corrugated ceilings. Shafts of dusty daylight pierce through broken windows, illuminating patches of a cracked concrete floor. Scent of rust and stale air, distant echo of dripping water.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Amira Khalil | Outfit: Evening Out | Pose: None
+Character: Sitara Saanvi | Outfit: Flag Football | Pose: None
+Character: Marisol Rivera | Outfit: Comfort | Pose: None
+Score: 255
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Vast, derelict warehouse interior with high corrugated ceilings. Shafts of dusty daylight pierce through broken windows, illuminating patches of a cracked concrete floor. Scent of rust and stale air, distant echo of dripping water.
+---
+
+**CHARACTER: Amira Khalil**
+**Appearance:**
+* **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
+* **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
+* **Hair / Covering:** Hair fully covered; hijab as constant identity anchor; smooth controlled drape with clean facial framing.
+* **Skin:** Warm olive-toned skin with soft luminous finish.
+**Outfit:**
+- **Hijab:** Satin hijab in deep plum with elegant side draping and pearl pin
+- **Top:** Long-sleeve fitted tunic in navy blue with subtle shimmer (falls to mid-thigh, modest cut)
+- **Bottom:** Wide-leg black palazzo pants in flowing fabric
+- **Footwear:** Black heeled ankle boots
+- **Accessories:** Statement gold geometric earrings, gold cuff bracelet, small structured clutch
+- **Makeup:** Dramatic with bronze-toned eyeshadow and berry lip
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Leaping in the air, arms extended to catch the football, eyes locked on the ball, athletic dynamic pose.
+---
+
+**CHARACTER 2: Sitara Saanvi**
+**Appearance:**
+* **Body:** Romantic frame; soft lush flesh quality; hourglass proportions with defined waist; moderate height (5'4"); soft rounded density with lush bust and hips, delicate wrists and ankles; alluring captivating presence.
+* **Face:** Soft rounded structure; heart shape; large expressive dark brown almond eyes with dazzled flirtatious quality; softly curved jawline; neutral resting expression is slightly pouting and sensual.
+* **Hair:** Type 2C waves; medium-high density; dark glossy black with high sheen; long voluminous hair that takes styling well; commonly worn in glamorous, vintage-inspired styles.
+* **Skin:** Medium tan with warm golden-olive undertones and luminous smooth surface finish; small delicate beauty mark near lip.
+**Outfit:**
+- **Top:** Flag football jersey for **The Neon City Hackers**  (t-shirt cut)
+- **Bottom:** Athletic shorts with flag belt (velcro flags at hips)
+- **Footwear:** Cleats or turf shoes
+- **Accessories:** Mouthguard, wristbands.
+- **Hair/Makeup:** Ponytail.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Knees bent, hands ready at waist level, Intense focus, ready to react to the play.
+---
+
+**CHARACTER 3: Marisol Rivera**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; compact balanced proportions with defined waist, toned limbs, and visible muscle definition; moderate vertical (5'5"-5'6"); athletic build with clean controlled lines, functional strength, and mixed-heritage features—Japanese bone structure with Puerto Rican curves, creating distinctive balanced aesthetics; athletic graceful presence.
+* **Face:** Balanced classical structure with mixed heritage features; oval face with subtle Japanese angularity softened by Puerto Rican warmth; firm clean planes; calm almond-shaped eyes that tilt slightly upward (Japanese influence) with warm expressive quality (Puerto Rican warmth), moderately spaced, dark brown; defined jawline; neutral expression shows calm composure with subtle knowing smile that brightens when engaged; beauty mark near left eye.
+* **Hair:** Type 1B-1C straight with slight natural wave; medium-high density; long sleek cut with healthy satin sheen; dark brown to black; versatile styling options including ponytails and braids.
+* **Skin:** Warm golden-olive skin with bronzed finish and natural radiance.
+**Outfit:**
+- **Top:** Oversized **cozy top** (sweater or hoodie)
+- **Bottom:** comfortable **bottoms** (leggings or joggers)
+- **Footwear:** soft footwear.
+- **Accessories:** Minimal jewelry.
+- **Hair/Makeup:** Minimal makeup, relaxed hairstyle.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Mid-spin motion, dress or skirt flowing outward, playful joyful expression, arms out.
+---

@@ -1,0 +1,67 @@
+# METADATA
+Scene: Grand concert hall interior inspired by Victorian Gothic architecture, tiered orchestra seating facing ornate stage, high vaulted ceiling with intricate decorative plasterwork, warm ambient lighting from chandeliers, rich red velvet seats, a elaborate proscenium arch with gold detailing, excellent acoustics, formal classical music atmosphere.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Kaia Vaitupu | Outfit: 1970s Disco | Pose: None
+Character: Astrid Nielsen | Outfit: 1970s Disco | Pose: None
+Interaction: Custom
+Score: 160
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Grand concert hall interior inspired by Victorian Gothic architecture, tiered orchestra seating facing ornate stage, high vaulted ceiling with intricate decorative plasterwork, warm ambient lighting from chandeliers, rich red velvet seats, a elaborate proscenium arch with gold detailing, excellent acoustics, formal classical music atmosphere.
+---
+
+**CHARACTER: Kaia Vaitupu**
+**Appearance:**
+- **Body:** Statuesque Athletic frame; warm golden-bronze skin with a luminous, hydrated finish; soft-rectangular proportions with strong, graceful posture; tall stature (5'10"-5'11"); refined athletic build with long limbs and elegant muscle definition; "quiet authority" presence—composed and commanding.
+- **Face:** Strong heart-shaped structure; defined cheekbones that catch the light; firm, graceful jawline; large, deep-set dark brown eyes with a steady, intelligent gaze; thick, natural dark eyebrows with a soft arch; straight, elegant nose; full, well-defined mouth with a composed neutral expression; presence conveys deep concentration and intellectual clarity.
+- **Hair:** Type 1A-1B straight; high density and lustrous sheen; waist-length dark ebony hair, often worn in a sharp, high-shine ponytail or loose with a precise center part; matte-satin finish with silver-blue holographic highlights woven through the strands.
+- **Skin:** Deep golden-bronze with warm radiant undertones; flawless, smooth texture; subtle traditional geometric "tatau" patterns on her forearms that pulse with a faint cyan glow; healthy, hydrated "digital office" glow.
+**Outfit:**
+- **Top:** Halter jumpsuit or **wrap dress** (metallic fabric, sequins, or bold geometric prints in gold, silver, turquoise, or hot pink)
+- **Bottom:** wide-leg pants or **flared skirt**
+- **Footwear:** platform heels or boots (chunky, metallic, or patent leather).
+- **Accessories:** Large hoop earrings, layered gold chain necklaces, wide belt (metallic or embellished), headband or silk scarf in hair, oversized sunglasses.
+- **Hair/Makeup:** Feathered layers with volume and wings, afro, or long flowing waves; shimmery eyeshadow (blue, purple, or gold), thick mascara, glossy lips, disco ball glow with highlighter on cheekbones.
+
+---
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders,
+---
+
+**CHARACTER 2: Astrid Nielsen**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight flesh; narrow balanced rectangle proportions; tall vertical line; refined posture with precise alignment; statuesque and poised.
+* **Face:** Long balanced facial structure; soft oval face; firm planar skin with clear definition; narrow straight nose; light blue deep-set eyes with cool observant gaze; serene neutral resting expression that suggests depth and composure.
+* **Hair:** Type 1 straight hair; medium density; platinum blonde with smooth high-shine finish; naturally straight and fine; takes blunt, precise cuts well.
+* **Skin:** Fair cool-toned skin with porcelain clarity and smooth even texture.
+**Outfit:**
+- **Top:** Halter jumpsuit or **wrap dress** (metallic fabric, sequins, or bold geometric prints in gold, silver, turquoise, or hot pink)
+- **Bottom:** wide-leg pants or **flared skirt**
+- **Footwear:** platform heels or boots (chunky, metallic, or patent leather).
+- **Accessories:** Large hoop earrings, layered gold chain necklaces, wide belt (metallic or embellished), headband or silk scarf in hair, oversized sunglasses.
+- **Hair/Makeup:** Feathered layers with volume and wings, afro, or long flowing waves; shimmery eyeshadow (blue, purple, or gold), thick mascara, glossy lips, disco ball glow with highlighter on cheekbones.
+
+---
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders,
+---
+
+**Additional Notes:**
+Kaia Vaitupu and Astrid Nielsen performing traditional cultural greeting, specific gesture appropriate to culture, respectful interaction.

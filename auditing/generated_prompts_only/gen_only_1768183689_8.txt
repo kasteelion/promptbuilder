@@ -1,0 +1,77 @@
+# METADATA
+Scene: Stately home library, floor-to-ceiling bookshelves, rolling ladder, leather chairs, fireplace, refined atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Marcus Thompson | Outfit: Soccer | Pose: None
+Character: Diego Morales | Outfit: Soccer | Pose: None
+Character: Jin Park | Outfit: Soccer | Pose: None
+Interaction: Custom
+Score: 585
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Stately home library, floor-to-ceiling bookshelves, rolling ladder, leather chairs, fireplace, refined atmosphere.
+---
+
+**CHARACTER: Marcus Thompson**
+**Appearance:**
+* **Body:** Natural male frame; straight athletic flesh; inverted rectangle proportions; moderate-to-tall vertical.
+* **Face:** Balanced-strong facial structure; square-leaning oval face; defined jaw; warm eyes; calm open expression.
+* **Hair:** Type 4A coils; medium density; short fade with textured top; clean lineup; matte-satin finish; black.
+* **Skin:** Deep brown skin with neutral undertones.
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team**
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks.
+- **Accessories:** Shin guards.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Diego Morales**
+**Appearance:**
+- **Body:** Natural Athletic frame; natural-toned flesh with sun-touched warmth; inverted rectangle proportions with broad shoulders, slim waist, and defined muscle groups without bulk; moderate height (5'11"-6'0"); relaxed athletic build—lean and flexible from years of surfing; "effortless strength" presence—capable but never posturing.
+- **Face:** Balanced-angular structure; oval face shape; firm jawline that softens when he smiles; expressive almond-shaped eyes, wide-set, warm hazel with golden flecks that catch the light; natural dark eyebrows with a slight arch; straight nose with a subtle bridge; full mouth often quirked into a friendly half-smile; expressive neutral expression that reads as engaged and helpful.
+- **Hair:** Type 2B-2C waves; thick high density; medium length textured cut, shorter on sides with volume on top; loose natural side part; matte-satin finish with sun-bleached highlights at the tips; commonly worn tousled and "salt-water" styled, or loosely pushed back during work.
+- **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team** in **blue** (contrasting goalkeeper kit), wearing padded goalkeeper gloves
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks.
+- **Accessories:** Shin guards.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Jin Park**
+**Appearance:**
+* **Body:** Dramatic male frame; straight lean flesh; narrow rectangle proportions; moderate-to-tall vertical; poised and understated presence with natural grace.
+* **Face:** Long delicate facial structure; oval face; soft jawline; gentle observant eyes; reserved thoughtful expression that suggests deep introspection.
+* **Hair:** Type 1 straight; medium density; dark brown to black with soft matte finish; naturally fine texture; versatile K-fashion styling options.
+* **Skin:** Light neutral skin with smooth even finish and soft clarity. minimalist thin wire-frame glasses
+**Outfit:**
+- **Top:** Soccer jersey for **Standard Team** in **black** with **white** trim
+- **Bottom:** Soccer shorts (mid-thigh)
+- **Footwear:** Soccer cleats, high socks.
+- **Accessories:** Shin guards.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Marcus Thompson fist bumping Diego Morales, knuckles meeting in casual friendly gesture

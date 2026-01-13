@@ -1,23 +1,49 @@
 tags: [Sport, Team, Tennis]
 
 [F]
-- **Top:** Performance tank top for **{team}** with **racerback design** and **contrast binding**
-- **Bottom:** body in **{primary_color}** with **{secondary_color} color-blocked side panels** and **subtle team logo** on chest
-- **Footwear:** athletic skirt with built-in compression shorts in **{primary_color}** featuring **{secondary_color} pleated inserts** and **contrast waistband with hidden ball pockets**; **tennis shoes** ({accent}, court-appropriate with reinforced toe).
-- **Accessories:** Visor in **{primary_color}** with **{secondary_color} logo**, matching wristbands, hair tie.
-- **Hair/Makeup:** Hair in sporty ponytail or braid with flyaways secured, minimal waterproof makeup with tinted lip balm, athletic glow.
+- **Top:** Performance tank top for {team}.
+  - **Fit:** Racerback; Contrast binding.
+  - **Material:** {primary_color} tech-fabric; {secondary_color} side panels.
+  - **Pattern:** Subtle team logo on chest.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Athletic skirt with built-in compression shorts.
+  - **Fit:** Pleated inserts.
+  - **Material:** matching {primary_color} fabric.
+  - **Pattern:** {secondary_color} pleated accents.
+  - **Waist:** Contrast waistband with hidden ball pockets.
+  - **Length:** Mid-thigh.
+- **Footwear:** Tennis shoes ({accent}; reinforced toe).
+- **Accessories:** Visor in {primary_color} with logo; matching wristbands.
 
 [M]
-- **Top:** Performance polo for **{team}** with **color-blocked panels** and **contrast collar**
-- **Bottom:** body in **{primary_color}** with **{secondary_color} side panels** and **subtle team logo** on chest
-- **Footwear:** athletic shorts in **{primary_color}** with **{secondary_color} side stripe** and **contrast waistband**; **tennis shoes** ({accent}, court-appropriate with reinforced toe).
-- **Accessories:** Headband or wristbands in team colors, sweatbands.
-- **Hair/Makeup:** Hair short or secured, minimal grooming, athletic ready.
+- **Top:** Performance polo for {team}.
+  - **Fit:** Standard fit; Color-blocked.
+  - **Material:** {primary_color} tech-fabric; {secondary_color} side panels.
+  - **Pattern:** Contrast collar.
+  - **Neckline:** Collared.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Athletic shorts.
+  - **Fit:** Standard athletic.
+  - **Material:** matching {primary_color}.
+  - **Pattern:** {secondary_color} side stripe.
+  - **Waist:** Contrast waistband.
+  - **Length:** Mid-thigh.
+- **Footwear:** Tennis shoes ({accent}).
+- **Accessories:** Headband or wristbands in team colors.
 
 [H]
-- **Hijab:** Sports hijab in {primary_color} with {secondary_color} trim (breathable technical fabric, secure fit)
-- **Top:** Long-sleeve fitted performance shirt for **{team}** with **contrast binding** and **athletic paneling**; body in **{primary_color}** with **{secondary_color} color-blocked side panels** and **subtle team logo** on chest
-- **Bottom:** High-waist athletic midi skirt with built-in full-length leggings in **{primary_color}** featuring **{secondary_color} pleated inserts** and **contrast waistband with hidden ball pockets**
-- **Footwear:** Tennis shoes ({accent}, court-appropriate with reinforced toe)
-- **Accessories:** Visor in {primary_color} with {secondary_color} logo (worn over hijab) optional, matching wristbands, hair secured
-- **Makeup:** Minimal waterproof makeup with tinted lip balm, athletic glow
+- **Hijab:** Sports hijab in {primary_color} with {secondary_color} trim.
+- **Top:** Long-sleeve fitted performance shirt for {team}.
+  - **Fit:** Contrast binding; Athletic paneling.
+  - **Material:** {primary_color} silk-like tech-fabric; {secondary_color} side panels.
+  - **Pattern:** Subtle team logo.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist athletic midi skirt with built-in leggings.
+  - **Fit:** Straight with pleated inserts.
+  - **Material:** matching.
+  - **Waist:** Contrast waistband with ball pockets.
+  - **Length:** Full length.
+- **Footwear:** Tennis shoes ({accent}).
+- **Accessories:** Visor (optional, over hijab); matching wristbands.

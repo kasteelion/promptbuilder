@@ -1,0 +1,63 @@
+# METADATA
+Scene: Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Mela Hart | Outfit: American Football | Pose: None
+Character: Zahara El-Amin | Outfit: Gymnastics | Pose: None
+Interaction: Custom
+Score: 500
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
+---
+
+**CHARACTER: Mela Hart**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall vertical line; broad shoulders; long limbs; somewhat straight silhouette; moderate bust and hip definition; athletic and springy presence.
+* **Face:** Oval shape; high cheekbones; full lips; prominent expressive eyes; straight nose bridge; defined jawline; bright and buoyant neutral expression.
+* **Hair:** Type 4A (Natural texture) with Type 2B/2C (Wavy/Curly) ends; long, dark brown braids throughout the hair with loose wavy curls at the bottom; high shine; braids are a signature identity feature.
+* **Skin:** Deep brown with warm golden undertones and luminous satin finish.
+**Outfit:**
+- **Top:** Molded shoulder pads (rigid, high-gloss #003366 plastic shells with a distinct, thick outer edge that is clearly separate from the fabric underneath
+- **Bottom:** protective design and The Desert Cats logo shield reflecting stadium lights sharply)
+- **Footwear:** Sports performance top (crop-style in **#CC0033 with #003366 accents**, wearing extra-large shoulder pads and a neck roll for neck protection, made of ultra-matte moisture-wicking compression fabric that absorbs light, showing slight compression wrinkles where the rigid edge of the shoulder pad presses against the body); Low-rise athletic shorts (minimal coverage design in #003366 with #CC0033 accents, team number on hip); Compression arm sleeves (#003366 extending to mid-bicep with #CC0033 striping); Athletic socks (knee-high #003366 or mixed black with #CC0033 bands); Professional football cleats (Nike or Adidas style with #FFFFFF detailing). Accessories: Hockey-style helmet with clear polycarbonate visor and The Desert Cats branding, #003366 athletic headband worn under helmet, The Desert Cats-branded gloves with grip palms, knee pads with logo, eye black strips, #FFFFFF wristbands, athletic tape on fingers. Hair/Makeup: Long hair in high ponytail, braids, or curls secured with headband for mobility, camera-ready makeup with defined eyes and contouring, waterproof and sweat-resistant long-wear formula, natural glam suitable for stadium lighting and broadcast television.
+- in **#CC0033 with #003366 accents**, wearing extra-large shoulder pads and a neck roll for neck protection
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**CHARACTER 2: Zahara El-Amin**
+**Appearance:**
+* **Body:** Dramatic; tall vertical (5'9"); lean and angular frame with long limbs; graceful, measured density; poised and commanding presence.
+* **Face:** Sharp-balanced structure; diamond face shape with high, prominent cheekbones; large, intelligent dark brown eyes; straight, high-bridged nose; well-defined, narrow jawline; neutral expression is focused and contemplative.
+* **Hair:** (Covered) Long dark hair typically styled in a low, secure bun beneath her hijab.
+* **Skin:** Rich mahogany depth with warm, luminous undertones (Sub-Saharan/North African transition); smooth matte finish; clear, even complexion that catches the light on high points of the face. signature thick-rimmed designer glasses in deep amber tortoise-shell
+**Outfit:**
+- **Hijab:** Tight-fitting sports hijab in **#CC0033** (secure aerodynamic fit)
+- **Top:** High-neck long-sleeve leotard (sleek performance lycra with bold geometric patterns in **#CC0033** and **#003366**, featuring **#FFFFFF** metallic foil accents, full coverage)
+- **Bottom:** Full-length matching athletic leggings
+- **Footwear:** Barefoot or athletic toe-wraps
+- **Accessories:** Matching decorative hijab pin
+- **Makeup:** Focused athletic expression, performance makeup
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**Additional Notes:**
+Mela Hart giving Zahara El-Amin a thumbs up gesture, showing approval and encouragement

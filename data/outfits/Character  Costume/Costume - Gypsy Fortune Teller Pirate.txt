@@ -1,29 +1,47 @@
 tags: [Boho, costume, Pirate]
 
 [F]
-- **Top:** Off-shoulder white peasant blouse (billowy sleeves with elastic or tied cuffs)
-- **Bottom:** brown leather bodice vest (laced front with gold grommets, fitted)
-- **Footwear:** multi-layered handkerchief skirt (asymmetric panels in olive green, burgundy red, gold, black with paisley or metallic patterns, various lengths creating dramatic movement); **brown leather belt** (worn at hips); **brown suede or leather boots** (knee-high, slouchy).
-- **Accessories:** Teal or jewel-tone head scarf (wrapped as bandana), large statement necklace (coin or tribal style), multiple bangles and bracelets, large hoop or chandelier earrings, crystal ball prop, coin decorations on belt.
-- **Hair/Makeup:** Long curly or wavy dark hair (flowing loose or partially covered by scarf), dramatic eye makeup with warm tones, bronzed skin, natural lip, mystical exotic expression.
-
----
+- **Top:** Off-shoulder white peasant blouse under leather bodice vest.
+  - **Fit:** Billowy sleeves; Fitted vest.
+  - **Material:** White cloth; Brown leather (vest).
+  - **Pattern:** Solid with gold grommets.
+  - **Neckline:** Off-shoulder.
+  - **Sleeve:** Long billowy sleeves with tied cuffs.
+- **Bottom:** Multi-layered asymmetric handkerchief skirt.
+  - **Fit:** Asymmetric panels for movement.
+  - **Material:** Olive, Burgundy, Gold, Black fabric.
+  - **Pattern:** Paisley or Metallic patterns.
+  - **Waist:** Brown leather belt at hips with coin decorations.
+  - **Length:** Asymmetric berbagai lengths.
+- **Footwear:** Slouchy knee-high brown suede or leather boots.
+- **Accessories:** Jewel-tone bandana head scarf; statement coin necklace; multiple bangles; crystal ball prop.
 
 [M]
-- **Top:** Billowy white shirt (sleeves rolled)
-- **Bottom:** embroidered vest or **leather jerkin**
-- **Footwear:** loose trousers (striped or earth tone, ragged hem); **wide fabric sash** at waist; **brown leather boots**.
-- **Accessories:** Headscarf or bandana, gold hoop earring, layered necklaces, coin belt.
-- **Hair/Makeup:** Long hair or messy style, bronzed skin, mysterious expression.
-
----
+- **Top:** Billowy white shirt and leather jerkin.
+  - **Fit:** Rolled sleeves.
+  - **Material:** White cloth; Leather.
+  - **Neckline:** Collared unbuttoned.
+  - **Sleeve:** Long (rolled).
+- **Bottom:** Loose trousers with wide fabric sash.
+  - **Fit:** Ragged hem.
+  - **Material:** earth tone fabric.
+  - **Pattern:** Solid or Striped.
+  - **Waist:** Wide sash belt.
+  - **Length:** Full.
+- **Footwear:** Brown leather boots.
+- **Accessories:** Headscarf/bandana; gold hoop earring; coin belt.
 
 [H]
-- **Hijab:** Teal or jewel-tone hijab with coin trim or wrapped with a patterned scarf
-- **Top:** Long-sleeve white peasant tunic (modest fit, high neck) with embroidered vest
-- **Bottom:** Multi-layered maxi skirt with handkerchief hem (olive, burgundy, gold)
-- **Footwear:** Brown suede boots
-- **Accessories:** Coin belt, crystal ball prop, statement necklace, bangles
-- **Makeup:** Mystical eye makeup, warm tones
-
----
+- **Hijab:** Jewel-tone hijab with coin trim or patterned scarf wrap.
+- **Top:** Long-sleeve white peasant tunic with embroidered vest.
+  - **Fit:** Modest loose.
+  - **Material:** White cloth; Embroidered fabric.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Multi-layered maxi skirt with handkerchief hem.
+  - **Fit:** Voluminous maxi.
+  - **Material:** Olive, Burgundy, Gold fabric.
+  - **Waist:** Coin belt.
+  - **Length:** Floor-length.
+- **Footwear:** Brown suede boots.
+- **Accessories:** Crystal ball prop; statement necklace; bangles.

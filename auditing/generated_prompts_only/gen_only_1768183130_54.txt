@@ -1,0 +1,80 @@
+# METADATA
+Scene: Opulent bedroom with silk sheets, soft ambient lighting, plush pillows, romantic atmosphere, intimate private space.
+Base_Prompt: Chibi Style: "Super Deformed"
+Character: Jordan Vance | Outfit: Soft Aesthetic | Pose: None
+Character: Enzo Rossi | Outfit: Soft Aesthetic | Pose: None
+Character: Kendra Mitchell | Outfit: Soft Aesthetic | Pose: None
+Interaction: Custom
+Score: 195
+
+Generate an image of: Rendering
+Soft-shaded vector illustration or vinyl toy aesthetic. Bright, pastel, or primary-heavy color palettes. Gradient shading is minimal and smooth, giving surfaces a matte plastic or "squishy" appearance. Thick, rounded line art (or lineless "sticker" style).
+
+Character Accuracy
+Extreme anatomical exaggeration (SD or Super Deformed). Heads are 1:1 or 1:2 ratio with the body. Eyes are massive, taking up 50% of the face, with simplified sparkles. Noses are absent or mere dots. Mouths are simple curves.
+
+Body Types
+"Bean" shaped torsos. Limbs are short, stubby cylinders with no muscle definition. Hands are simple spheres or "mitten" shapes; feet are rounded nubs. The silhouette is fundamentally cute and non-threatening.
+
+Hair & Clothing
+Hair: Simplified into large, chunky shapes with high volume and minimal strand detail. Clothing: Reduced to iconic elements—details like shoelaces or buttons are oversized and simplified for readability.
+
+Details
+Floating iconography (hearts, stars, sweat drops, anger veins) near the head. Backgrounds are simple patterns (polka dots, stripes) or solid soft colors. A thick white outline often surrounds the entire character like a die-cut sticker.
+
+---
+
+**SCENE/SETTING:**
+Opulent bedroom with silk sheets, soft ambient lighting, plush pillows, romantic atmosphere, intimate private space.
+---
+
+**CHARACTER: Jordan Vance**
+**Appearance:**
+* **Body:** Dramatic; extremely tall vertical at 6'4"; narrow but powerfully muscled frame with very long limbs and large, capable hands; lean athletic density with defined abdominal markers and elongated, powerful leg muscles; springy and explosive presence.
+* **Face:** Sharp-balanced structure; long oval face with defined, high cheekbones; large almond-shaped dark brown eyes with long, voluminous lashes and an alert gaze; straight athletic nose; wide expressive mouth with full, defined lips often breaking into a confident, radiant grin; sharply defined jawline.
+* **Hair:** Type 4A–4B coils; high density; typically worn in long, sleek knotless braids that fall to her waist, often adorned with subtle gold beads or team-colored threads to maintain a polished, glamorous silhouette.
+* **Skin:** Deep ebony depth with neutral-cool undertones; smooth almost polished finish; athletic glow with visible muscle definition; long, manicured almond-shaped nails in a signature vibrant color or French tip.
+**Outfit:**
+- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
+- **Bottom:** pleated mini skirt (black, plaid, or pastel)
+- **Footwear:** thigh-high socks with stripes; **platform sneakers or Mary Janes**.
+- **Accessories:** Chain necklaces, hair clips, small crossbody bag.
+- **Hair/Makeup:** Blush on nose and cheeks, winged eyeliner, glossy lips, hair in space buns or half-up with face-framing pieces.
+**Pose/Action:**
+wide shot with the character framed within the environment, Leaning forward with hands together in front of the waist, all muscles in the arms, chest, and shoulders tensed to the limit.
+---
+
+**CHARACTER 2: Enzo Rossi**
+**Appearance:**
+- **Body:** Dramatic Natural male frame; straight muscular flesh with low body fat; inverted triangle proportions with a broad chest, powerful shoulders, and defined arms; moderate-tall vertical (6'1"-6'2"); commanding presence with a solid, grounded build; athletic power without being over-bulked.
+- **Face:** Angular sculpted structure; square-leaning oval face; strong set jawline with a prominent chin; intense deep-set eyes, almond-shaped, dark espresso brown with a focused and assessing gaze; natural thick eyebrows with a slight downward slant at the inner corners; strong straight nose with a subtle Grecian profile; firm-but-expressive mouth held in a restrained confident line; neutral expression is intense and authoritative.
+- **Hair:** Type 2A–2B waves; medium-high density; medium-length layered cut with natural volume; worn tousled and pushed back; no rigid part; soft natural sheen; rich jet black with a healthy finish.
+- **Skin:** Warm olive skin with a smooth matte texture (Mediterranean heritage); even tone with a natural "healthy" radiance; clear planes with no visible imperfections; natural groomed finish.
+**Outfit:**
+- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
+- **Bottom:** relaxed fit chinos or cropped pants (black or pastel)
+- **Footwear:** crew socks; **canvas sneakers or loafers**.
+- **Accessories:** Chain necklaces, small crossbody bag or backpack.
+- **Hair/Makeup:** Soft styled hair with face-framing pieces, minimal grooming.
+**Pose/Action:**
+wide shot with the character framed within the environment, Arching backward with hands and feet on the ground, creating a graceful bridge, impressive flexibility.
+---
+
+**CHARACTER 3: Kendra Mitchell**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; broad inverted triangle proportions with wide shoulders, long limbs, and subtle waist definition; tall (5'9"); strong defined muscle with visible shoulder caps, toned arms, and powerful legs; commanding physical presence.
+* **Face:** Strong angular structure; oblong-square face; prominent bone structure with high broad cheekbones; almond-shaped wide-set hazel-green eyes; strong defined jawline; neutral resting expression is confident and direct with penetrating gaze; smile is wide, genuine, and slightly asymmetric with infectious energy.
+* **Hair:** Type 3B curls; high density; shoulder-length layered cut; side part; voluminous natural texture; matte-satin finish; commonly worn loose and free or in high messy bun; warm chestnut brown with golden highlights.
+* **Skin:** Medium tan with warm golden undertones and healthy athletic glow; faint freckles across nose and shoulders.
+**Outfit:**
+- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
+- **Bottom:** pleated mini skirt (black, plaid, or pastel)
+- **Footwear:** thigh-high socks with stripes; **platform sneakers or Mary Janes**.
+- **Accessories:** Chain necklaces, hair clips, small crossbody bag.
+- **Hair/Makeup:** Blush on nose and cheeks, winged eyeliner, glossy lips, hair in space buns or half-up with face-framing pieces.
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing at a control panel, both hands on interface, leaning forward slightly, concentrated on screens, command center energy.
+---
+
+**Additional Notes:**
+Enzo Rossi leaning back against Jordan Vance's chest while both sitting or standing.

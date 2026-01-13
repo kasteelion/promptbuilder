@@ -1,23 +1,45 @@
 tags: [historical, japanese, Stealth]
 
 [F]
-- **Top:** Black or dark purple shinobi shozoku (fitted jacket and pants)
-- **Bottom:** chest wraps or fitted top underneath
-- **Footwear:** tabi boots (split-toe); **leg wraps and arm guards**; **face mask** (covering lower face).
-- **Accessories:** Katana or ninjato on back, kunai and shuriken, smoke bombs, grappling hook, utility belt.
-- **Hair/Makeup:** Hair in tight bun or ponytail, minimal makeup, focused eyes, disciplined expression.
+- **Top:** Black or dark purple shinobi shozoku jacket.
+  - **Fit:** Fitted; Stealthy.
+  - **Material:** Padded cotton or linen.
+  - **Pattern:** Solid dark.
+  - **Neckline:** High standing collar.
+  - **Sleeve:** Long sleeves with arm guards.
+- **Bottom:** Integrated shozoku pants.
+  - **Fit:** Fitted; Tapered.
+  - **Material:** matching.
+  - **Waist:** Utility belt.
+  - **Length:** Ankle-length with leg wraps.
+- **Footwear:** Tabi boots (split-toe).
+- **Accessories:** Katana or ninjato; kunai and shuriken; face mask; grappling hook.
 
 [M]
-- **Top:** Black or dark purple shinobi shozoku (fitted jacket and pants)
-- **Bottom:** chest wraps or fitted top underneath
-- **Footwear:** tabi boots (split-toe); **leg wraps and arm guards**; **face mask** (covering lower face).
-- **Accessories:** Katana or ninjato on back, kunai and shuriken, smoke bombs, grappling hook, utility belt.
-- **Hair/Makeup:** Hair in tight bun or short crop, focused eyes, disciplined expression.
+- **Top:** Black or dark purple shinobi shozoku jacket.
+  - **Fit:** Fitted; Practical.
+  - **Material:** Cotton/Linen blend.
+  - **Neckline:** Wrap or Collared.
+  - **Sleeve:** Long with arm guards.
+- **Bottom:** Shozoku pants.
+  - **Fit:** Tapered.
+  - **Material:** matching.
+  - **Waist:** Sash or belt.
+  - **Length:** Ankle-length.
+- **Footwear:** Tabi boots (split-toe).
+- **Accessories:** Katana; kunai; smoke bombs; utility belt.
 
 [H]
-- **Hijab:** Black tight wrap integrated with face mask (shinobi shozoku style)
-- **Top:** Fitted jacket over chest wraps/top
-- **Bottom:** Hakama-style pants or fitted trousers with leg wraps
-- **Footwear:** Tabi boots
-- **Accessories:** Katana, shuriken, smoke bombs
-- **Makeup:** Focused eyes, disciplined expression
+- **Hijab:** Black tight wrap integrated with face mask.
+- **Top:** Fitted jacket over chest wraps.
+  - **Fit:** Modest fitted.
+  - **Material:** matching shozoku fabric.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Hakama-style pants or fitted trousers.
+  - **Fit:** Wide or Tapered.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor length with leg wraps.
+- **Footwear:** Tabi boots.
+- **Accessories:** Katana; shuriken; smoke bombs.

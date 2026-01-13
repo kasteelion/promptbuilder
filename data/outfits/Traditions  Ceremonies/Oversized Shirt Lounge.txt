@@ -1,22 +1,48 @@
 tags: [Casual, lounge, sleep]
 
 [F]
-- **Top:** Oversized men's style button-down shirt (((default:white or light blue) or (signature)) crisp cotton, ending mid-thigh, sleeves rolled to elbow)
-- **Bottom:** bare legs
-- **Footwear:** thick cozy socks.
-- **Accessories:** Coffee mug prop, messy bun scrunchie.
-- **Hair/Makeup:** Hair in messy bun or loose, fresh-faced no makeup look, Casual morning vibe.
+- **Top:** Oversized men's style button-down shirt.
+  - **Fit:** Oversized; Crisp.
+  - **Material:** High-quality cotton.
+  - **Pattern:** Solid ((default:white or light blue)).
+  - **Neckline:** Open collar.
+  - **Sleeve:** Long sleeves (rolled to elbow).
+- **Bottom:** Bare legs (No bottom).
+  - **Fit:** N/A.
+  - **Material:** Skin.
+  - **Waist:** Natural.
+  - **Length:** Mid-thigh hem of shirt.
+- **Footwear:** Thick cozy socks.
+- **Accessories:** Coffee mug prop; messy bun scrunchie.
 
 [M]
-- **Top:** Oversized t-shirt (((default:white or gray) or (signature)) soft cotton, worn loose)
-- **Bottom:** flannel lounge pants or **boxers**.
+- **Top:** Oversized t-shirt.
+  - **Fit:** Worn loose.
+  - **Material:** Soft cotton.
+  - **Pattern:** Solid ((default:white or gray)).
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Flannel lounge pants or boxers.
+  - **Fit:** Relaxed.
+  - **Material:** Flannel or Cotton.
+  - **Pattern:** Plaid or Solid.
+  - **Waist:** Elastic.
+  - **Length:** Full or Short.
+- **Footwear:** Barefoot or socks.
 - **Accessories:** Coffee mug prop.
-- **Hair/Makeup:** Messy hair, morning stubble, Casual vibe.
 
 [H]
-- **Hijab:** Messy jersey wrap or instant hijab in neutral tone
-- **Top:** Oversized men's style button-down tunic (((default:white or light blue) or (signature)) crisp cotton, knee-length, long sleeves)
-- **Bottom:** Loose lounge pants or **leggings**
-- **Footwear:** Thick cozy socks
-- **Accessories:** Coffee mug prop
-- **Makeup:** Fresh-faced, Casual morning vibe
+- **Hijab:** Messy jersey wrap or instant hijab in neutral tone.
+- **Top:** Oversized men's style button-down tunic.
+  - **Fit:** Oversized modest.
+  - **Material:** Crisp cotton.
+  - **Pattern:** Solid.
+  - **Neckline:** High-neck collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Loose lounge pants or leggings.
+  - **Fit:** Relaxed.
+  - **Material:** Cotton blend.
+  - **Waist:** Elastic.
+  - **Length:** Full length.
+- **Footwear:** Thick cozy socks.
+- **Accessories:** Coffee mug prop.

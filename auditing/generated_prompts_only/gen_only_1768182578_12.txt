@@ -1,0 +1,63 @@
+# METADATA
+Scene: Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Kaia Vaitupu | Outfit: MMA | Pose: None
+Character: Zara Washington | Outfit: MMA | Pose: None
+Interaction: Custom
+Score: 422
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
+---
+
+**CHARACTER: Kaia Vaitupu**
+**Appearance:**
+- **Body:** Statuesque Athletic frame; warm golden-bronze skin with a luminous, hydrated finish; soft-rectangular proportions with strong, graceful posture; tall stature (5'10"-5'11"); refined athletic build with long limbs and elegant muscle definition; "quiet authority" presence—composed and commanding.
+- **Face:** Strong heart-shaped structure; defined cheekbones that catch the light; firm, graceful jawline; large, deep-set dark brown eyes with a steady, intelligent gaze; thick, natural dark eyebrows with a soft arch; straight, elegant nose; full, well-defined mouth with a composed neutral expression; presence conveys deep concentration and intellectual clarity.
+- **Hair:** Type 1A-1B straight; high density and lustrous sheen; waist-length dark ebony hair, often worn in a sharp, high-shine ponytail or loose with a precise center part; matte-satin finish with silver-blue holographic highlights woven through the strands.
+- **Skin:** Deep golden-bronze with warm radiant undertones; flawless, smooth texture; subtle traditional geometric "tatau" patterns on her forearms that pulse with a faint cyan glow; healthy, hydrated "digital office" glow.
+**Outfit:**
+- **Top:** Elite mixed martial arts kit for **The Bay City Pack**
+- **Bottom:** high-impact athletic sports bra in **#203731** with **#FFB612 contrast binding** and a **sublimated geometric pattern**
+- **Footwear:** matching **short athletic-cut compression shorts** in **#203731** with a **silicone-grip waistband** and **scalloped side-slits**; fabric is a **heavy-duty matte lycra**; **4oz open-palm MMA gloves** in **#FFFFFF** with **reinforced knuckle padding**; **matching #FFB612 ankle sleeves**; **barefoot** with a **ready athletic stance**.
+- **Accessories:** Black mouthguard, athletic tape on fingers.
+- **Hair/Makeup:** Cornrow braids for maximum security, determined game-face, faint sheen of sweat on shoulders and forehead.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Zara Washington**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
+* **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
+* **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
+* **Skin:** Deep rich brown skin with luminous depth.
+**Outfit:**
+- **Top:** Elite mixed martial arts kit for **The Bay City Pack**
+- **Bottom:** high-impact athletic sports bra in **#203731** with **#FFB612 contrast binding** and a **sublimated geometric pattern**
+- **Footwear:** matching **short athletic-cut compression shorts** in **#203731** with a **silicone-grip waistband** and **scalloped side-slits**; fabric is a **heavy-duty matte lycra**; **4oz open-palm MMA gloves** in **#FFFFFF** with **reinforced knuckle padding**; **matching #FFB612 ankle sleeves**; **barefoot** with a **ready athletic stance**.
+- **Accessories:** Black mouthguard, athletic tape on fingers.
+- **Hair/Makeup:** Cornrow braids for maximum security, determined game-face, faint sheen of sweat on shoulders and forehead.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Kaia Vaitupu applying triangle choke on Zara Washington from bottom position. Kaia Vaitupu on their back with Zara Washington trapped between their legs. Kaia Vaitupu's right leg is wrapped over Zara Washington's shoulder and behind their neck, right ankle or calf pressing into Zara Washington's left shoulder/neck. Kaia Vaitupu's left leg crosses over their right ankle/shin, creating the "triangle" lock, squeezing Zara Washington's head and one arm. Kaia Vaitupu's hips are angled and elevated, pulling Zara Washington's head down while pushing their trapped arm across their own throat to complete the choke. Kaia Vaitupu grips behind Zara Washington's head or controls their trapped arm, pulling downward. Zara Washington is bent forward, one arm trapped inside the triangle alongside their head, other arm possibly posting on mat trying to posture up. Zara Washington's face shows oxygen deprivation, redness, possible panic. Kaia Vaitupu shows controlled technique, adjusting angles with precision. Both display full-body effort—legs flexed hard, core engaged, arms fighting for control.

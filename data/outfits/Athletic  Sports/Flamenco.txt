@@ -1,23 +1,46 @@
 tags: []
 
 [F]
-- **Top:** Fitted flamenco dress (knee-length to floor-length with ruffled tiers in red, black, or polka dot)
-- **Bottom:** off-shoulder or sweetheart neckline
-- **Footwear:** flamenco shoes (heeled with nails).
-- **Accessories:** Large decorative comb or flower in hair, statement earrings, shawl optional.
-- **Hair/Makeup:** Hair in dramatic updo or slicked bun with ornament, bold red lip, dramatic eyes, passionate expression.
+- **Top:** Fitted flamenco dress bodice.
+  - **Fit:** Tight bodice.
+  - **Material:** Satin/Polyester.
+  - **Pattern:** Polka dot or Solid.
+  - **Neckline:** Off-shoulder or Sweetheart.
+  - **Sleeve:** Ruffled cap or Long.
+- **Bottom:** Tiered ruffled skirt.
+  - **Fit:** Trumpet/Mermaid.
+  - **Material:** Heavy ruffled fabric.
+  - **Waist:** Dropped waist.
+  - **Length:** Floor-length.
+- **Footwear:** Flamenco shoes (heeled with nails).
+- **Accessories:** Rose in hair, shawl, decorative comb.
 
 [M]
-- **Top:** High-waist black trousers (fitted through thigh, slight flare at ankle)
-- **Bottom:** white dress shirt (crisp cotton, worn with rolled sleeves or vest)
-- **Footwear:** short bolero jacket or vest (black or red with embroidery); **flamenco shoes** (heeled with nails).
-- **Accessories:** Wide red or black sash at waist, optional hat.
-- **Hair/Makeup:** Slicked hair, clean-shaven or neat facial hair, passionate expression.
+- **Top:** Crisp white dress shirt.
+  - **Fit:** Fitted.
+  - **Material:** Cotton.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long (rolled).
+- **Bottom:** High-waist black trousers.
+  - **Fit:** Fitted thigh flared ankle.
+  - **Material:** Gabardine.
+  - **Waist:** High-waist with sash.
+  - **Length:** Full length.
+- **Footwear:** Flamenco shoes.
+- **Accessories:** Bolero vest, Sash.
 
 [H]
-- **Hijab:** Black or red chiffon hijab with dramatic Spanish-inspired draping, large decorative ornament or flower attached
-- **Top:** Long-sleeve fitted flamenco-inspired top (high neck in red, black, or polka dot with modest bodice) full coverage
-- **Bottom:** High-waist flamenco skirt with ruffled tiers (falls to ankles, coordinating color)
-- **Footwear:** Flamenco shoes (heeled with nails)
-- **Accessories:** Large decorative comb or flower on hijab, statement gold earrings, ornate shawl
-- **Makeup:** Bold red lip, dramatic eyes, passionate expression
+- **Hijab:** Black or red chiffon hijab with dramatic draping.
+- **Top:** Long-sleeve fitted flamenco top.
+  - **Fit:** Fitted modest.
+  - **Material:** Satin.
+  - **Pattern:** Ruffles.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist flamenco skirt.
+  - **Fit:** Tiered ruffles.
+  - **Material:** Heavy fabric.
+  - **Waist:** High-waisted.
+  - **Length:** Floor-length.
+- **Footwear:** Flamenco shoes.
+- **Accessories:** Flower on hijab, gold earrings.

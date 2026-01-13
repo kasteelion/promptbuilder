@@ -1,23 +1,45 @@
 tags: [Autumn, Casual, Seasonal]
 
 [F]
-- **Top:** Oversized **knit sweater** (chunky cable-knit)
-- **Bottom:** high-waist jeans or **corduroy pants**
-- **Footwear:** ankle boots.
-- **Accessories:** Knit scarf, simple jewelry.
-- **Hair/Makeup:** Natural warm-toned makeup, relaxed hairstyle.
+- **Top:** Oversized chunky cable-knit sweater.
+  - **Fit:** Oversized; Chunky.
+  - **Material:** Wool or Cotton knit.
+  - **Pattern:** Cable-knit.
+  - **Neckline:** Crew neck or Mock neck.
+  - **Sleeve:** Long sleeves extending past wrists.
+- **Bottom:** High-waist jeans or corduroy pants.
+  - **Fit:** Relaxed or Straight.
+  - **Material:** Denim or Corduroy.
+  - **Waist:** High-waisted.
+  - **Length:** Ankle-length.
+- **Footwear:** Ankle boots.
+- **Accessories:** Knit scarf; simple jewelry.
 
 [M]
-- **Top:** Oversized **knit sweater** (chunky cable-knit or henley)
-- **Bottom:** jeans or **corduroy pants**
-- **Footwear:** boots.
-- **Accessories:** Knit scarf, simple jewelry.
-- **Hair/Makeup:** Natural grooming, relaxed hairstyle.
+- **Top:** Oversized chunky-knit sweater or henley.
+  - **Fit:** Relaxed.
+  - **Material:** Cable-knit wool or heavy cotton.
+  - **Neckline:** Crew neck or Henley button.
+  - **Sleeve:** Long.
+- **Bottom:** Jeans or corduroy pants.
+  - **Fit:** Straight.
+  - **Material:** Denim or Corduroy.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Leather boots.
+- **Accessories:** Knit scarf.
 
 [H]
-- **Hijab:** Wool-blend hijab in deep burgundy with cozy texture
-- **Top:** Oversized chunky knit cardigan in rich brown over long-sleeve fitted turtleneck
-- **Bottom:** High-waist corduroy pants in burnt orange
-- **Footwear:** Brown leather ankle boots with stacked heel
-- **Accessories:** Long gold pendant necklace, knit scarf (worn over coat)
-- **Makeup:** Natural warm-toned makeup
+- **Hijab:** Wool-blend hijab in deep burgundy.
+- **Top:** Oversized chunky knit cardigan over long-sleeve turtleneck.
+  - **Fit:** Modest layered.
+  - **Material:** matching wool and cotton.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist corduroy pants in burnt orange.
+  - **Fit:** Straight.
+  - **Material:** Corduroy.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Brown leather ankle boots with stacked heel.
+- **Accessories:** Long gold pendant necklace; knit scarf (over coat).

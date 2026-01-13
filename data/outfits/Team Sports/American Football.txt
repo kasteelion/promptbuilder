@@ -10,22 +10,47 @@ modifiers:
   Away Receiver: in **{secondary_color} with {primary_color} accents**, wearing sticky receiver gloves and a streamlined helmet visor
 
 [F]
-- **Top:** Molded shoulder pads (rigid, high-gloss {secondary_color} plastic shells with a distinct, thick outer edge that is clearly separate from the fabric underneath
-- **Bottom:** protective design and {team} logo shield reflecting stadium lights sharply)
-- **Footwear:** Sports performance top (crop-style {modifier}, made of ultra-matte moisture-wicking compression fabric that absorbs light, showing slight compression wrinkles where the rigid edge of the shoulder pad presses against the body); Low-rise athletic shorts (minimal coverage design in {secondary_color} with {primary_color} accents, team number on hip); Compression arm sleeves ({secondary_color} extending to mid-bicep with {primary_color} striping); Athletic socks (knee-high {secondary_color} or mixed black with {primary_color} bands); Professional football cleats (Nike or Adidas style with {accent} detailing). Accessories: Hockey-style helmet with clear polycarbonate visor and {team} branding, {secondary_color} athletic headband worn under helmet, {team}-branded gloves with grip palms, knee pads with logo, eye black strips, {accent} wristbands, athletic tape on fingers. Hair/Makeup: Long hair in high ponytail, braids, or curls secured with headband for mobility, camera-ready makeup with defined eyes and contouring, waterproof and sweat-resistant long-wear formula, natural glam suitable for stadium lighting and broadcast television.
-- {modifier}
+- **Top:** Sports performance crop top under molded shoulder pads {modifier}.
+  - **Fit:** Compression fit; Rigid high-gloss plastic shells.
+  - **Material:** Ultra-matte moisture-wicking fabric; {secondary_color} plastic.
+  - **Pattern:** Team logo shield.
+  - **Neckline:** Round neck.
+  - **Sleeve:** Compression arm sleeves to mid-bicep.
+- **Bottom:** Low-rise athletic shorts.
+  - **Fit:** Minimal coverage design; Fitted.
+  - **Material:** {secondary_color} athletic fabric.
+  - **Pattern:** {primary_color} accents; Team number on hip.
+  - **Waist:** Elastic.
+  - **Length:** Short.
+- **Footwear:** Professional football cleats ({accent} detailing).
+- **Accessories:** Hockey-style helmet with clear visor; {secondary_color} headband; grip gloves; knee pads; eye black; {accent} wristbands.
 
 [M]
-- **Top:** Football jersey for **{team}** {modifier} (mesh performance fabric with team number)
-- **Bottom:** padded football pants (knee-length)
-- **Footwear:** football cleats.
-- **Accessories:** Helmet ({primary_color} with {secondary_color} face mask), **shoulder pads** (worn under jersey), mouthguard.
-- **Hair/Makeup:** Minimal grooming.
+- **Top:** Mesh performance football jersey for {team} {modifier}.
+  - **Fit:** Loose fit over shoulder pads.
+  - **Material:** Mesh performance fabric.
+  - **Pattern:** Team number.
+  - **Neckline:** V-neck.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Padded football pants.
+  - **Fit:** Padded.
+  - **Material:** Durable athletic fabric.
+  - **Waist:** Natural.
+  - **Length:** Knee-length.
+- **Footwear:** Football cleats.
+- **Accessories:** Helmet ({primary_color} with {secondary_color} mask); shoulder pads (under jersey); mouthguard.
 
 [H]
-- **Hijab:** Sports hijab (breathable technical fabric, secure tuck)
-- **Top:** football jersey for {team} {modifier} (modest fit) worn over long-sleeve {accent} compression top
-- **Bottom:** padded football pants (knee-length with secure fit); with full-length {accent} leggings underneath
-- **Footwear:** Football cleats ({accent})
-- **Accessories:** Mouthguard, wrist coach band, football helmet
-- **Makeup:** Minimal waterproof makeup
+- **Hijab:** Breathable technical sports hijab with secure tuck.
+- **Top:** Modest football jersey for {team} {modifier}.
+  - **Fit:** Modest loose fit.
+  - **Material:** fabric over long-sleeve {accent} compression top.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves (compression layer).
+- **Bottom:** Padded football pants over full-length leggings.
+  - **Fit:** Padded secure fit.
+  - **Material:** fabric; {accent} leggings.
+  - **Waist:** Natural.
+  - **Length:** Knee-length (pants) / Floor-length (leggings).
+- **Footwear:** Football cleats ({accent}).
+- **Accessories:** Mouthguard; wrist coach band; football helmet.

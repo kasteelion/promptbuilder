@@ -1,19 +1,45 @@
 tags: [intimate, lounge, Sexy]
 
 [F]
-- **Top:** A **((default:intimate apparel set) or (signature) lingerie set)** (bra and brief/boy short combination) in a flattering style.
+- **Top:** Intimate apparel set (bra or camisole).
+  - **Fit:** Fitted; Flattering.
+  - **Material:** Lace, Silk, or Satin ({modifier}).
+  - **Pattern:** Solid or Delicate lace.
+  - **Neckline:** Sweetheart or Plunge.
+  - **Sleeve:** Sleeveless (strappy).
+- **Bottom:** Matching briefs or boy shorts.
+  - **Fit:** Fitted.
+  - **Material:** matching silk/lace.
+  - **Waist:** Natural or Low-rise.
+  - **Length:** Minimal.
+- **Footwear:** Barefoot or delicate slippers.
 - **Accessories:** Minimal jewelry.
-- **Hair/Makeup:** Soft, intimate styling.
 
 [M]
-- **Top:** Fitted boxer briefs or briefs in a ((default:flattering style and color) or (signature) color).
+- **Top:** Bare chest or fitted tank.
+  - **Fit:** Fitted.
+  - **Material:** Cotton/Spandex blend.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Fitted boxer briefs or briefs.
+  - **Fit:** Fitted; flattering.
+  - **Material:** Silk or Cotton blend ({modifier}).
+  - **Waist:** Elastic.
+  - **Length:** Brief cut.
+- **Footwear:** Barefoot.
 - **Accessories:** Minimal jewelry.
-- **Hair/Makeup:** Soft, intimate grooming.
 
 [H]
-- **Hijab:** Soft silk hijab in champagne with intimate draping
-- **Top:** Long-sleeve modest slip dress in ((default:champagne) or (signature)) silk (high neckline, falls to ankles)
-- **Bottom:** N/A
-- **Footwear:** Barefoot or delicate slippers
-- **Accessories:** Delicate gold jewelry
-- **Makeup:** Soft, intimate styling
+- **Hijab:** Soft silk hijab in champagne with intimate draping.
+- **Top:** Long-sleeve modest slip dress.
+  - **Fit:** Modest loose; High coverage.
+  - **Material:** Champagne silk.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** N/A (integrated with slip dress).
+  - **Fit:** Flowing.
+  - **Material:** Silk.
+  - **Waist:** Natural.
+  - **Length:** Ankle-length.
+- **Footwear:** Barefoot or delicate slippers.
+- **Accessories:** Delicate gold jewelry.

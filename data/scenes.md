@@ -6,18 +6,18 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 ## Standard & Studio
 
-- **Photo Studio** (Studio, indoor): Neutral backdrop, professional studio lighting, clean minimalist setup.
-- **White Background** (Studio, Minimal): Plain white background, studio lighting.
+- **Photo Studio** (Studio, indoor): Neutral seamless backdrop, professional three-point studio lighting with softboxes, clean minimalist setup. Subtle hum of cooling fans, scent of fresh paint and ozone.
+- **White Background** (Studio, Minimal): Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
 
 ---
 
 ## Domestic & Home
 
-- **Attic Space** (indoor, Home, vintage, cozy): Converted attic room, sloped ceiling, skylight, cozy intimate space, vintage stored items.
-- **Basement Rec Room** (indoor, Home, Casual): Finished basement, comfortable seating, entertainment setup, mood lighting, relaxed hangout space.
-- **Bedroom** (indoor, Home, cozy, intimate, Block:fantasy, Block:medieval, Block:armor, Block:costume): Cozy bedroom setting, soft morning light, comfortable bedding, warm intimate atmosphere.
-- **Gourmet Kitchen** (Home, indoor, Cooking, Block:fantasy, Block:medieval, Block:armor, Block:costume): Spacious modern kitchen, marble countertops, high-end appliances, island with stools, warm pendant lighting, high-detail culinary setting.
-- **Home Office** (professional, indoor, Office, tech, work, Block:fantasy, Block:medieval, Block:armor, Block:costume): Organized personal workspace, dual monitors, ergonomic chair, bookshelf, organized desk, warm desk lamp, professional daytime setting.
+- **Attic Space** (indoor, Home, vintage, cozy): Converted attic room with sloped timber ceilings and a large skylight. Warm afternoon light filters through dusty air, illuminating vintage stored items and a plush rug. Scent of old paper and cedar.
+- **Basement Rec Room** (indoor, Home, Casual): Finished basement with recessed dimmable lighting and plush comfortable seating. Cool subterranean air, soft echo of a hum from a nearby refrigerator, relaxed hangout atmosphere.
+- **Bedroom** (indoor, Home, cozy, intimate, Block:fantasy, Block:medieval, Block:armor, Block:costume): Cozy bedroom setting with soft diffused morning light through sheer curtains. Texture of crisp linen sheets and a heavy knit throw. Warm, quiet, intimate atmosphere.
+- **Gourmet Kitchen** (Home, indoor, Cooking, Block:fantasy, Block:medieval, Block:armor, Block:costume): Spacious modern kitchen with polished marble countertops and high-end stainless steel appliances. Warm pendant lighting over a central island. Scent of freshly ground coffee and herbs.
+- **Home Office** (professional, indoor, Office, tech, work, Block:fantasy, Block:medieval, Block:armor, Block:costume): Organized personal workspace with ergonomic chair and dual monitors. Soft blue glow from screens balanced by a warm desk lamp. Quiet focus, scent of books and electronics.
 - **Kitchen Counter** (Home, indoor, Casual, Cooking, Block:fantasy, Block:medieval, Block:armor, Block:costume): Casual morning kitchen, sunny window, breakfast on counter, coffee mugs, cozy domestic vibe.
 - **Modern Living Room** (Home, indoor, relaxed, Block:fantasy, Block:medieval, Block:armor, Block:costume): Clean minimalist interior, large sectional sofa, flat-screen TV, indoor plants, soft natural light, cozy domestic atmosphere.
 - **Science Laboratory** (work, indoor, tech, Science, medical, Block:fantasy, Block:medieval, Block:armor, Block:costume, Block:swimwear): Pristine lab environment, stainless steel benches, microscopes, glass beakers, glowing chemical samples, cold professional lighting.
@@ -27,9 +27,9 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 ## Public & Urban
 
-- **Abandoned Warehouse** (urban, gritty, industrial): Vast, empty warehouse interior, high ceilings, broken windows letting in shafts of daylight, dusty concrete floor, derelict industrial atmosphere.
-- **Brick Wall Urban** (urban, Street): Exposed red brick wall background, industrial urban setting, textured surface, natural daylight, gritty city character.
-- **City Street** (urban, outdoor, Block:fantasy, Block:medieval, Block:armor, Block:costume): Urban street scene, Modern buildings, pedestrian area, natural daylight, city atmosphere.
+- **Abandoned Warehouse** (urban, gritty, industrial): Vast, derelict warehouse interior with high corrugated ceilings. Shafts of dusty daylight pierce through broken windows, illuminating patches of a cracked concrete floor. Scent of rust and stale air, distant echo of dripping water.
+- **Brick Wall Urban** (urban, Street): Textured red brick wall background with patches of faded graffiti and weathered mortar. Industrial urban setting with flat natural daylight. Gritty city character.
+- **City Street** (urban, outdoor, Block:fantasy, Block:medieval, Block:armor, Block:costume): Vibrant urban street scene with modern glass buildings and a stone pedestrian area. Bright daylight with sharp reflections. Sound of distant traffic and city bustle, energetic atmosphere.
 - **Construction Site** (urban, industrial, work): Active construction zone, exposed steel beams, safety netting, heavy machinery visible, bright daylight, dynamic unfinished environment.
 - **Fire Escape Alley** (urban, Dark, Alley): Narrow urban alleyway, view up a dark metal fire escape, wet pavement, harsh shadows, gritty late-night atmosphere.
 - **Garden** (nature, outdoor): Lush garden setting, flowering plants, winding pathways, dappled sunlight through leaves.
@@ -41,7 +41,7 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 ## Indoor Social Spaces
 
-- **Coffee Shop** (indoor, social, Cafe, Mood:cozy): Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter.
+- **Coffee Shop** (indoor, social, Cafe, Mood:Cozy, approachable): Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter.
 - **Library** (indoor, Quiet, School, Block:fantasy, Block:medieval, Block:armor, Block:costume): Quiet library setting, tall bookshelves, reading tables, soft natural light from windows, Peaceful ambiance.
 - **Restaurant** (indoor, Dining, Date, Block:fantasy, Block:medieval, Block:armor, Block:costume): Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
 
@@ -98,8 +98,11 @@ Quick scene descriptions for your prompts. Edit or add your own!
 - **Soccer Field** (Sport, outdoor, Soccer): Outdoor grass soccer field, white boundary lines, goal posts, stadium seating in background, open sky.
 - **Tennis Court** (Sport, outdoor, Tennis): Hard court surface, white boundary lines, net stretched across center, baseline visible, competitive atmosphere.
 - **Track Stadium** (Sport, outdoor, Run): Outdoor track and field stadium, red running lanes, white lane lines, bleachers in background, open sky above.
+- **Baseball Diamond** (Sport, Team, Baseball): Professional baseball field, perfectly manicured grass, dirt infield, white foul lines, outfield fence, bright sunny day.
 - **Wrestling Mat Room** (Sport, combat, Gym): Dedicated wrestling practice room, padded mats, minimal decor, bright overhead lights, serious training space.
+- **Skate Park** (urban, Sport, Skater): Concrete skate park, curved ramps and rails, graffiti-covered walls, urban athletic vibe, young energetic atmosphere.
 - **Yoga Studio** (Sport, relaxed, Gym): Serene yoga studio, wooden floors, floor-to-ceiling mirrors, natural light, Peaceful calming space.
+- **Esports Arena** (tech, Gaming, indoor, Neon): High-tech gaming arena, rows of computer stations, glowing RGB lights, large overhead monitors for spectators, intense competitive atmosphere.
 
 ---
 
@@ -151,13 +154,13 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 ## Nature & Outdoors
 
-- **Beach** (nature, outdoor, Summer, Water): Sandy beach at golden hour, gentle waves, soft sunlight, relaxed atmosphere, ocean breeze.
-- **Campfire** (nature, outdoor, Night): Outdoor campfire at night, warm orange glow, surrounding darkness, starry sky above, intimate gathering space.
-- **Desert Landscape** (nature, outdoor, Arid): Expansive desert terrain, rolling sand dunes, harsh midday sun, clear blue sky, minimal vegetation, Intense heat shimmer.
-- **Forest Clearing** (nature, outdoor, fantasy): Deep forest setting, open grassy clearing, tall trees surrounding, dappled sunlight, cool damp air.
-- **Lakeside** (nature, Water, Peaceful): Tranquil lake shore, calm reflective water, distant mountains, golden hour lighting, wooden dock extending into water.
-- **Moonlit Forest** (nature, Night, fantasy): Dark forest under full moon, silvery light filtering through trees, mysterious shadows, cool blue tones.
-- **Mountain Summit** (nature, outdoor, Adventure): Rocky mountain summit, panoramic view of lower peaks, clear blue sky, harsh daylight, high altitude feel.
+- **Beach** (nature, outdoor, Summer, Water): Sandy beach at golden hour with gentle turquoise waves lapping at the shore. Soft, warm sunlight creates a shimmering path on the water. Scent of salt spray, sound of distant gulls, relaxed coastal atmosphere.
+- **Campfire** (nature, outdoor, Night): Crackling outdoor campfire at night, warm flickering orange glow illuminating nearby faces. Surrounding darkness with a vast, starry sky above. Scent of woodsmoke and crisp night air, intimate gathering space.
+- **Desert Landscape** (nature, outdoor, Arid, adventurous): Expansive desert terrain with rolling sand dunes and sparse, hardy vegetation. Harsh, direct midday sun creates high-contrast shadows. Intense heat shimmer on the horizon, absolute silence of the wilderness.
+- **Forest Clearing** (nature, outdoor, fantasy, adventurous): Deep forest clearing with lush green grass and wildflowers. Dappled sunlight filters through a dense canopy of ancient trees. Scent of damp earth and pine, soft rustle of leaves in a light breeze.
+- **Lakeside** (nature, Water, Peaceful): Tranquil lake shore with calm, reflective water mirroring distant snow-capped mountains. Golden hour lighting creates a warm glow. Rhythmic sound of water against a wooden dock, peaceful serenity.
+- **Moonlit Forest** (nature, Night, fantasy): Dark, mysterious forest under a bright full moon. Silvery light filters through the canopy, creating long, deep shadows and glowing highlights on mossy rocks. Cool blue tones and a preternatural stillness.
+- **Mountain Summit** (nature, outdoor, Adventure, adventurous): Rocky mountain summit with a panoramic view of lower peaks and a vast valley. Clear, thin air and harsh, bright daylight. Sound of a whistling wind, sense of isolation and high-altitude chill.
 - **Waterfall** (nature, Water, fantasy): Cascading waterfall, misty spray, surrounding rocks covered in moss, lush greenery, soft diffused light through canopy.
 
 ---
@@ -270,3 +273,35 @@ Quick scene descriptions for your prompts. Edit or add your own!
 - **Music Festival Main Stage** (event, Music, Concert): Large outdoor festival stage, crowd in foreground, colorful lights, summer celebration atmosphere.
 - **Street Fair** (event, urban, Fun): Outdoor fair with vendor booths, hanging decorations, crowds, festive community gathering energy.
 - **Wedding Reception** (event, formal, party): Elegant reception hall, decorated tables, dance floor, romantic celebration atmosphere.
+
+---
+
+## Fantasy & DND
+
+- **Tavern Brawl** (Fantasy, DND, Action, Indoor): A chaotic medieval tavern filled with flying tankards and overturned tables. Firelight flickers from a large hearth. The air is thick with smoke and excitement.
+- **Dragon's Lair** (Fantasy, DND, Danger, Indoor): A massive cavern filled with piles of gold coins and treasure. Smoke drifts from unseen vents. Deep shadows and a sense of impending doom.
+- **Mystic Forest Camp** (Fantasy, DND, Nature, Outdoor, Night): A small clearing in a bioluminescent forest. Strange glowing mushrooms surround a crackling campfire. Tents are pitched nearby.
+- **Dungeon Entrance** (Fantasy, DND, Mystery, Indoor): A dark stone archway leading into the unknown. Cobwebs hang thick in the corners. Torches sputter on the walls, casting long shadows.
+- **Wizard's Tower** (Fantasy, DND, Magic, Indoor): A circular room filled with floating books, bubbling potions, and astrological charts. Starlight shines through a massive telescope.
+
+---
+
+## School & Academy
+
+- **Classroom Window Seat** (School, Anime, Nostalgia, Mood:Peaceful): A classic classroom setting with a view of the sky from a window seat. Sunlight streams in, illuminating dust motes. A notebook and pen sit on the desk.
+- **School Rooftop** (School, Anime, Nostalgia, Outdoor, Mood:Private): A flat concrete rooftop surrounded by a chain-link fence. The blue sky stretches endlessly above. A quiet, private place for lunch or secrets.
+- **School Hallway** (School, Anime, Nostalgia, Indoor): Long polished hallway with rows of lockers. Afternoon light filters through windows, creating rhythmic shadows on the floor. Echoes of distant students.
+- **School Library** (School, Anime, Nostalgia, Quiet, Indoor): Rows of tall bookshelves filled with books. A quiet study nook near a window. The smell of old paper and silence.
+- **Gymnasium - School** (School, Sport, Anime, Indoor): A classic school gym with polished wood floors and basketball hoops. Large windows let in bright, diffuse light. The sound of squeaking sneakers hangs in the air.
+- **Shoe Lockers (Genkan)** (School, Anime, Nostalgia, Entrance): Traditional Japanese school entrance with rows of small shoe lockers. A letter sticks out of one distinctive locker. Warm, welcoming atmosphere.
+
+---
+
+## Cinematic & Atmospheric Tropes
+
+- **Rainy Dark Urban Street** (urban, Night, rain, noir): Slick, mirror-like asphalt reflecting a kaleidoscope of city lights and neon signs. A gentle but persistent rain creates a rhythmic backdrop, with steam rising from nearby vents and the soft glow of streetlamps through the mist. Moody, cinematic atmosphere.
+- **Rooftop Garden at Sunset** (urban, outdoor, Golden Hour, nature): Lush greenery and flowering plants on a modern rooftop overlooking a sprawling city skyline. The sky is a gradient of deep orange and purple, casting a warm, romantic glow over the scene. Peaceful, sophisticated energy.
+- **Snowy City Square** (urban, outdoor, Winter, Festive): A grand city square covered in a fresh, pristine layer of white snow. Festive fairy lights twinkle in the surrounding trees, and old-fashioned street lamps cast a warm amber glow. Quiet, magical winter atmosphere.
+- **Giant Aquarium Hall** (Social, indoor, Water, Mood:Serene): High-vaulted hall dominated by a massive, floor-to-ceiling glass wall into a deep blue ocean world. Swaying kelp and marine life create moving shadows, and the entire space is bathed in a tranquil, shifting blue light from the water.
+- **Midnight Rooftop** (urban, outdoor, Night, Moody): Secluded rooftop overlooking a sea of distant city lights under a clear midnight sky. The pale moonlight creates sharp, cool highlights on architectural details, and the air is still and quiet. Intimate, introspective atmosphere.
+- **Petal-Strewn Walkway** (nature, outdoor, Spring): A path covered in a thick carpet of pink cherry blossom petals, with trees forming a delicate canopy overhead. Soft morning light and a gentle breeze create a dreamlike, romantic anime-style moment.

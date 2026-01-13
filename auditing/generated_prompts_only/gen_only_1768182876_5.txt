@@ -1,0 +1,79 @@
+# METADATA
+Scene: Foggy waterfront warehouse, wooden crates, dim overhead bulbs, noir crime scene atmosphere, mysterious shadows.
+Base_Prompt: Low-Poly 3D
+Character: Zahara El-Amin | Outfit: Celtic | Pose: None
+Character: Elara Soledad | Outfit: 1900s Coastal New England | Pose: None
+Character: Rosa Torres | Outfit: 1970s Disco | Pose: None
+Score: 320
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Foggy waterfront warehouse, wooden crates, dim overhead bulbs, noir crime scene atmosphere, mysterious shadows.
+---
+
+**CHARACTER: Zahara El-Amin**
+**Appearance:**
+* **Body:** Dramatic; tall vertical (5'9"); lean and angular frame with long limbs; graceful, measured density; poised and commanding presence.
+* **Face:** Sharp-balanced structure; diamond face shape with high, prominent cheekbones; large, intelligent dark brown eyes; straight, high-bridged nose; well-defined, narrow jawline; neutral expression is focused and contemplative.
+* **Hair:** (Covered) Long dark hair typically styled in a low, secure bun beneath her hijab.
+* **Skin:** Rich mahogany depth with warm, luminous undertones (Sub-Saharan/North African transition); smooth matte finish; clear, even complexion that catches the light on high points of the face. signature thick-rimmed designer glasses in deep amber tortoise-shell
+**Outfit:**
+- **Hijab:** Natural-toned hijab (forest green, deep blue, or cream) with flowing Celtic-inspired draping, flower crown or circlet over it
+- **Top:** Long-sleeve flowing dress (earthy tones with Celtic knotwork embroidery, modest neckline, flowing fabrics)
+- **Bottom:** Long flowing skirt (coordinating earthy tone with embroidered hem)
+- **Footwear:** Leather boots
+- **Accessories:** Silver or bronze torc (neck ring worn over hijab draping), Celtic knotwork jewelry, wool cloak with brooch
+- **Makeup:** Natural makeup with earthy tones, freckles enhanced
+**Pose/Action:**
+Mid-spin motion, dress or skirt flowing outward, playful joyful expression, arms out.
+---
+
+**CHARACTER 2: Elara Soledad**
+**Appearance:**
+* **Body:** Dramatic Classic frame; lean taut flesh; long limbs with balanced proportions; tall (6'1"); dense sculpted muscle over strong bone structure with visible traps, defined deltoids, and powerful legs; commanding athletic presence.
+* **Face:** Strong angular structure; oval-square shape; strong pronounced cheekbones; almond-shaped wide-set deep mahogany brown eyes; sharply defined jawline; neutral resting expression is stoic and observant with unwavering gaze; smile is rare but genuine and transforms expression into warm intensity.
+* **Hair:** Type 4C coils; very dense; voluminous naturally forming wide halo; waist length; center-parted often pulled back for practicality; low sheen; commonly styled in thick braids or high functional bun; black-brown.
+* **Skin:** Deep warm brown with golden undertones and smooth almost polished surface finish; faint linear scars on upper arms and shoulders.
+**Outfit:**
+- **Top:** Edwardian-style summer dress (white or cream linen with lace inserts and high collar)
+- **Bottom:** wide-brimmed straw hat with ribbon
+- **Footwear:** lace-up boots.
+- **Accessories:** Parasol prop, delicate locket.
+- **Hair/Makeup:** Hair in an elegant pompadour or soft updo, romantic vintage makeup.
+**Pose/Action:**
+Holding a V sign (peace/victory sign) near the face or camera, usually with a cheerful smile or wink, conveying cute, playful energy.
+---
+
+**CHARACTER 3: Rosa Torres**
+**Appearance:**
+* **Body:** Soft Gamine; soft wave flesh; compact proportions with short limbs and moderate torso; petite vertical (5'0"-5'2"); soft athletic build with rounded shoulders; gentle arm definition; naturally full thighs and soft midsection; curvy-compact presence.
+* **Face:** Soft-rounded structure; round-oval shape; distinctively soft full cheeks; youthful warmth; short midface with gentle cheekbone prominence; large almond-shaped eyes; close-set spacing; dark brown irises with warm sparkle; soft rounded jawline; open genuine smile with direct friendly gaze.
+* **Hair:** Type 2B-2C; medium density; moderate voluminous waves; mid-back length; no defined part; low sheen; worn loose in off-the-face style. Dark brown or black.
+* **Skin:** Medium-tan; warm golden undertones; slight surface sheen; clear even texture.
+**Outfit:**
+- **Top:** Halter jumpsuit or **wrap dress** (metallic fabric, sequins, or bold geometric prints in gold, silver, turquoise, or hot pink)
+- **Bottom:** wide-leg pants or **flared skirt**
+- **Footwear:** platform heels or boots (chunky, metallic, or patent leather).
+- **Accessories:** Large hoop earrings, layered gold chain necklaces, wide belt (metallic or embellished), headband or silk scarf in hair, oversized sunglasses.
+- **Hair/Makeup:** Feathered layers with volume and wings, afro, or long flowing waves; shimmery eyeshadow (blue, purple, or gold), thick mascara, glossy lips, disco ball glow with highlighter on cheekbones.
+
+---
+**Pose/Action:**
+Mid-spin motion, dress or skirt flowing outward, playful joyful expression, arms out.
+---

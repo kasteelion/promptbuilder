@@ -1,15 +1,44 @@
 tags: [Basic, Casual]
 
 [F]
-- **Top:** tight white bandeau top, high leg low cut jean shorts
+- **Top:** Tight white bandeau top.
+  - **Fit:** Tight skin-hugging.
+  - **Material:** Ribbed Cotton.
+  - **Pattern:** Solid.
+  - **Neckline:** Bandeau.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** High leg low cut jean shorts.
+  - **Fit:** Tight high-leg cut.
+  - **Material:** Denim.
+  - **Waist:** Low-waist.
+  - **Length:** Micro-short.
+- **Footwear:** White sneakers (implied).
 
 [M]
-- **Top:** tight white tank top, low rise distressed jean shorts
+- **Top:** Tight white tank top.
+  - **Fit:** Fitted muscle tank.
+  - **Material:** Ribbed Cotton.
+  - **Pattern:** Solid.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Low rise distressed jean shorts.
+  - **Fit:** Relaxed.
+  - **Material:** Distressed Denim.
+  - **Waist:** Low-rise.
+  - **Length:** Mid-thigh.
+- **Footwear:** White sneakers (implied).
 
 [H]
-- **Hijab:** Simple chiffon hijab in neutral tone
-- **Top:** Fitted long-sleeve high-neck top in white
-- **Bottom:** High-waist modest jean shorts (longer length, mid-thigh)
-- **Footwear:** White sneakers
-- **Accessories:** Small gold studs
-- **Makeup:** Natural minimal makeup
+- **Hijab:** Simple chiffon hijab in neutral tone.
+- **Top:** Fitted long-sleeve high-neck top.
+  - **Fit:** Fitted modest.
+  - **Material:** White Cotton blend.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist modest jean shorts.
+  - **Fit:** Relaxed mid-thigh.
+  - **Material:** Denim.
+  - **Waist:** High-waist.
+  - **Length:** Mid-thigh.
+- **Footwear:** White sneakers.
+- **Accessories:** Small gold studs.

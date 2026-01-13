@@ -1,23 +1,46 @@
 tags: [combat, fantasy, Magic]
 
 [F]
-- **Top:** Elegant jacket (((default:red) or (signature)) with white trim, Renaissance-inspired with epaulettes)
-- **Bottom:** white ruffled shirt underneath
-- **Footwear:** fitted pants or split skirt (white or cream); **red cape** (knee-length); **tall leather boots** (((default:red or brown) or (signature)) with cuffs).
-- **Accessories:** Rapier at hip, spell focus (wand or small orb), feathered cap, magical jewelry, component pouch.
-- **Hair/Makeup:** Stylish hair (often with distinctive styling or color streak), confident makeup with red accents, balanced expression showing both martial and magical prowess.
+- **Top:** Elegant Renaissance-inspired jacket with epaulettes.
+  - **Fit:** Tailored.
+  - **Material:** Wool or Velvet; white cotton shirt.
+  - **Pattern:** Solid ((default:red)) with white trim.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Fitted pants or split skirt.
+  - **Fit:** Slim-fit pants or A-line skirt.
+  - **Material:** Cotton or Silk.
+  - **Pattern:** Solid ((white or cream)).
+  - **Waist:** Natural with leather belt.
+  - **Length:** Ankle-length.
+- **Footwear:** Tall leather boots with cuffs.
+- **Accessories:** Rapier; wand or orb; feathered cap; knee-length red cape.
 
 [M]
-- **Top:** Elegant jacket (((default:red) or (signature)) with white trim, Renaissance-inspired with epaulettes)
-- **Bottom:** white ruffled shirt underneath
-- **Footwear:** fitted pants (white or cream); **red cape** (knee-length); **tall leather boots** (((default:red or brown) or (signature)) with cuffs).
-- **Accessories:** Rapier at hip, spell focus (wand or small orb), feathered cap, magical jewelry, component pouch.
-- **Hair/Makeup:** Stylish hair (often with distinctive styling or color streak), confident expression showing both martial and magical prowess.
+- **Top:** Elegant red jacket with white trim and epaulettes.
+  - **Fit:** Tailored jacket; ruffled shirt.
+  - **Material:** Velvet/Wool.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long.
+- **Bottom:** Fitted white pants.
+  - **Fit:** Slim.
+  - **Material:** Cotton.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Tall leather boots with cuffs.
+- **Accessories:** Rapier; spell focus; feathered cap; red cape.
 
 [H]
-- **Hijab:** ((default:Red) or (signature)) hijab with white trim, worn under feathered cap
-- **Top:** ((default:Red) or (signature)) Renaissance-style jacket over white ruffled shirt
-- **Bottom:** Fitted white pants or split skirt
-- **Footwear:** Tall red or brown boots
-- **Accessories:** Rapier, wand, cape
-- **Makeup:** Confident with red accents, balanced expression
+- **Hijab:** Red hijab with white trim under feathered cap.
+- **Top:** Renaissance-style jacket over ruffled shirt.
+  - **Fit:** Tailored modest.
+  - **Material:** Wool; Cotton.
+  - **Neckline:** High-neck jacket.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Fitted white pants or split skirt.
+  - **Fit:** Modest slim.
+  - **Material:** Cotton fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Tall red or brown boots.
+- **Accessories:** Rapier; wand; red cape.

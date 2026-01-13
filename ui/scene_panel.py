@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import ttk
 from typing import Callable, Optional
 
-from config import TOOLTIPS
+from core.config import TOOLTIPS
 from utils import create_tooltip
 from .searchable_combobox import SearchableCombobox
 from .widgets import CollapsibleFrame

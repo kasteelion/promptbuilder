@@ -1,23 +1,45 @@
 tags: [Cold, outdoor, Sport]
 
 [F]
-- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
-- **Bottom:** fleece-lined leggings (black or charcoal)
-- **Footwear:** waterproof hiking boots.
-- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
-- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+- **Top:** Sleek insulated thermal jacket.
+  - **Fit:** Contoured; Athletic.
+  - **Material:** Moisture-wicking technical fabric; Insulated.
+  - **Pattern:** Solid technical.
+  - **Neckline:** High-neck zip-up.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Fleece-lined leggings.
+  - **Fit:** Fitted; Thermal.
+  - **Material:** Fleece-lined technical spandex.
+  - **Waist:** Natural.
+  - **Length:** Ankle-length.
+- **Footwear:** Waterproof hiking boots.
+- **Accessories:** Thermal gloves; headband ear-warmers; Sport sunglasses.
 
 [M]
-- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
-- **Bottom:** fleece-lined joggers or technical pants (black or charcoal)
-- **Footwear:** waterproof hiking boots.
-- **Accessories:** Thermal gloves, tech beanie, polarized sports sunglasses.
-- **Hair/Makeup:** Polished grooming, fresh-faced "winter glow".
+- **Top:** Sleek insulated thermal jacket.
+  - **Fit:** Athletic technical.
+  - **Material:** Technical moisture-wicking fabric.
+  - **Neckline:** Funnel neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Fleece-lined joggers or technical pants.
+  - **Fit:** Tapered; Functional.
+  - **Material:** Thermal lined technical fabric.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Waterproof hiking boots.
+- **Accessories:** Thermal gloves; tech beanie; polarized sunglasses.
 
 [H]
-- **Hijab:** Thermal sports hijab in black (moisture-wicking, insulated)
-- **Top:** Sleek insulated thermal jacket over long-sleeve technical base layer
-- **Bottom:** Fleece-lined athletic leggings (charcoal gray)
-- **Footwear:** Waterproof hiking boots
-- **Accessories:** Thermal gloves, headband ear-warmers (worn over hijab), Sport sunglasses
-- **Makeup:** Fresh-faced "winter glow"
+- **Hijab:** Thermal sports hijab in black (moisture-wicking, insulated).
+- **Top:** Sleek insulated thermal jacket over long-sleeve technical base layer.
+  - **Fit:** Modest athletic.
+  - **Material:** technical thermal fabric.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Fleece-lined athletic leggings.
+  - **Fit:** Fitted thermal.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Ankle-length.
+- **Footwear:** Waterproof hiking boots.
+- **Accessories:** Thermal gloves; headband ear-warmers (over hijab).

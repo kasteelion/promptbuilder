@@ -1,22 +1,53 @@
 tags: [Casual, Country, soft]
+modifiers:
+  Milkmaid: featuring a **square neckline** and puffed sleeves
+  Classic: with a **peter pan collar** and button front
+  Prairie: with a **high ruffled neck** and lace detailing
+  Off-Shoulder: with an **elasticated bardot neckline** showing collarbones
 
 [F]
-- **Top:** Flowing **floral midi dress** or **linen blouse** with **high-waist skirt**
-- **Bottom:** flat leather sandals or boots.
+- **Top:** Flowing floral midi dress {modifier}.
+  - **Fit:** Flowing.
+  - **Material:** Linen.
+  - **Pattern:** Ditsy floral.
+  - **Neckline:** Variable {modifier}.
+  - **Sleeve:** Puffed sleeves.
+- **Bottom:** Integrated skirt of dress.
+  - **Fit:** Flared A-line.
+  - **Material:** Linen.
+  - **Pattern:** Floral Print.
+  - **Waist:** Natural.
+  - **Length:** Midi-length.
+- **Footwear:** Lace-up leather boots.
 - **Accessories:** Woven basket, delicate gold jewelry, floral hair clip.
-- **Hair/Makeup:** Soft natural makeup, loose waves or braids.
 
 [M]
-- **Top:** Flowing **linen button-up shirt** (rolled sleeves)
-- **Bottom:** high-waist trousers or shorts with suspenders
+- **Top:** Flowing linen button-up shirt {modifier}.
+  - **Fit:** Relaxed.
+  - **Material:** Linen.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long (rolled).
+- **Bottom:** High-waist trousers or shorts with suspenders.
+  - **Fit:** Straight leg or relaxed shorts.
+  - **Material:** Cotton Twill or Linen.
+  - **Pattern:** Solid Earth Tones.
+  - **Waist:** High-waisted with suspenders.
+  - **Length:** Ankle or Knee.
 - **Footwear:** leather boots or loafers.
 - **Accessories:** Woven basket, simple jewelry, flat cap.
-- **Hair/Makeup:** Natural grooming, tousled hair or neat styling.
 
 [H]
-- **Hijab:** Soft cotton hijab in sage green or floral pattern with pastoral aesthetic
-- **Top:** Long-sleeve modest linen blouse in cream with delicate embroidery
-- **Bottom:** High-waist flowing midi skirt in soft floral print
-- **Footwear:** Flat leather sandals or ankle boots
-- **Accessories:** Woven basket, delicate gold jewelry, pressed flower hair clip (on hijab)
-- **Makeup:** Soft natural makeup, peachy tones
+- **Hijab:** Soft cotton hijab in sage green or floral pattern.
+- **Top:** Long-sleeve modest linen blouse {modifier}.
+  - **Fit:** Relaxed modest.
+  - **Material:** Cream linen with embroidery.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist flowing midi skirt.
+  - **Fit:** Flowing A-line.
+  - **Material:** Soft cotton.
+  - **Pattern:** Floral print.
+  - **Waist:** High-waisted.
+  - **Length:** Midi or Maxi.
+- **Footwear:** Flat leather sandals or ankle boots.
+- **Accessories:** Woven basket, delicate jewelry, flower hijab clip.

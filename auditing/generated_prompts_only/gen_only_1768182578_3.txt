@@ -1,0 +1,77 @@
+# METADATA
+Scene: Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Hallie Bennett | Outfit: Default Character | Pose: None
+Character: Samira Mansour | Outfit: Edgy Chic | Pose: None
+Character: Leilani Te'o | Outfit: Norse | Pose: None
+Interaction: Custom
+Score: 205
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
+---
+
+**CHARACTER: Hallie Bennett**
+**Appearance:**
+* **Body:** Soft Natural frame; soft flesh with natural give; balanced proportions with soft hourglass tendency—rounded shoulders, moderate bust, defined waist with gentle softness, full hips and thighs; moderate height (5'5"-5'6"); soft athletic build with underlying functional strength, visible in legs and core when engaged but softened by feminine curves; approachable active presence.
+* **Face:** Soft, round-oval face with gentle cheek fullness; slightly almond-shaped dark brown eyes; warm, easy smile with slight upturn at mouth corners; overall approachable, open expression.
+* **Hair:** Shoulder-length wavy hair; sun-kissed light brown with natural blonde highlights; moderate density and natural movement suited to low-maintenance styles.
+* **Skin:** Light-fair with neutral undertones and soft, healthy glow; minimal permanent markings.
+**Outfit:**
+- **Top:** tight white bandeau top, high leg low cut jean shorts
+**Pose/Action:**
+Crouched with glove extended, ready to receive the ball, alert expression.
+---
+
+**CHARACTER 2: Samira Mansour**
+**Appearance:**
+* **Body:** Soft Natural; balanced proportions with soft curves; moderate vertical (5'6"); natural athletic density with a defined waist and soft shoulders; poised and culturally connected presence.
+* **Face:** Soft-balanced structure; oval face with high, smooth cheekbones; large expressive dark brown eyes framed by naturally thick, groomed eyebrows; straight refined nose; full lips with a natural cupid's bow; soft jawline; warm engaging expression that feels both wise and welcoming.
+* **Hair:** (Covered) Typically styled in voluminous dark curls beneath her hijab.
+* **Skin:** Rich golden-olive depth (North African coloring); smooth luminous finish; natural healthy glow enhanced by traditional skincare oils.
+**Outfit:**
+- **Hijab:** Black leather-look or jersey hijab
+- **Top:** Fitted red turtleneck (form-fitting knit, high neck)
+- **Bottom:** Black leather maxi skirt or wide-leg leather trousers
+- **Footwear:** Black heeled boots
+- **Accessories:** Black beret (worn over hijab), fingerless black leather gloves
+- **Makeup:** bold red lipstick, black winged eyeliner, subtle red eye shadow
+**Pose/Action:**
+Leaning against motorcycle, one foot crossed over other, arms crossed, bad girl energy.
+---
+
+**CHARACTER 3: Leilani Te'o**
+**Appearance:**
+* **Body:** Dramatic Natural; massive, heavily muscled frame with broad powerful shoulders and a deep chest; 45-35-50 proportions; tall height at 6'0"; EXTREME muscle density with visible definition in her "capped" delts, thick biceps, and powerful quads; heavy but athletic presence.
+* **Face:** Rugged-soft structure; square-oval face with a strong, well-defined jawline and high prominent cheekbones; large dark brown eyes with a steady, direct gaze; full expressive mouth; neutral resting expression is calm but intense, radiating a sense of quiet authority.
+* **Hair:** Type 3A–3B curls; high density; long length past her shoulders; naturally thick dark hair often worn half-up to keep it out of her face during training; healthy natural sheen.
+* **Skin:** Deep warm tan with rich golden-brown undertones (Polynesian coloring); smooth surface with visible muscle separation creating deep shadows; elaborate traditional 'tatau' patterns visible on one shoulder and upper arm.
+**Outfit:**
+- **Top:** Long layered dress (base layer in cream, overdress in deep blue or forest green with embroidered trim)
+- **Bottom:** fur-trimmed cloak
+- **Footwear:** leather boots.
+- **Accessories:** Silver or bronze circlet, Thor's hammer pendant, arm rings, woven belt.
+- **Hair/Makeup:** Long braided hair (single or multiple braids), natural makeup, warrior-goddess aesthetic.
+**Pose/Action:**
+Standing or sitting against graffiti wall, rebellious casual stance, urban attitude.
+---
+
+**Additional Notes:**
+Hallie Bennett playfully pushing Samira Mansour, light contact showing friendly interaction

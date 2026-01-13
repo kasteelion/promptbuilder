@@ -1,0 +1,73 @@
+# METADATA
+Scene: 
+Base_Prompt: Low-Poly 3D
+Character: Maki Cruz | Outfit: 1960s Mod | Pose: None
+Character: Zara Washington | Outfit: Comfortable | Pose: None
+Character: Celine Voss | Outfit: Streetwear | Pose: None
+Score: 330
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**CHARACTER: Maki Cruz**
+**Appearance:**
+* **Body:** Flamboyant Natural; straight athletic flesh with lean definition; balanced proportions; subtle shoulder width; straight hip line; moderate vertical (5'6"-5'7"); functional athletic build with core strength; developed calves and quadriceps; visible forearm definition; grounded street-athlete presence.
+* **Face:** Balanced-soft structure; rounded square shape; broad forehead; softly defined jawline; midface cheekbone prominence with subtle definition; medium almond-shaped eyes; moderate spacing; dark brown to black irises; monolid or minimal crease structure; direct casual gaze; broad nose bridge with rounded tip; neutral resting expression shows relaxed confidence with a slight asymmetric smirk.
+* **Hair:** Type 1B; high density; straight silhouette with medium length to shoulders; no defined part; pushed back casually; matte to low-sheen finish; commonly worn loose and natural, tucked behind ears, or in a low messy bun. Deep black-brown.
+* **Skin:** Medium tan; warm golden-yellow undertones; natural matte finish; healthy resilience; scattered small scars on elbows and knees.
+**Outfit:**
+- **Top:** Shift dress (bold geometric print or color-blocked A-line silhouette, above knee length, sleeveless or short sleeves)
+- **Bottom:** white go-go boots (knee-high, low block heel, patent leather)
+- **Footwear:** matching tights (opaque white or colored).
+- **Accessories:** Large geometric earrings, headband or hair bow, oversized sunglasses (round or cat-eye), small structured handbag.
+- **Hair/Makeup:** Voluminous bouffant or sleek bob with heavy bangs, dramatic graphic eyeliner (heavy black with white in waterline), pale lips, defined lashes (real or drawn on lower lash line), Twiggy-inspired mod makeup, youthful 60s energy.
+**Pose/Action:**
+wide shot with the character framed within the environment, Stretching a limb or jogging in place, preparing for physical activity, focused athletic mindset.
+---
+
+**CHARACTER 2: Zara Washington**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
+* **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
+* **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
+* **Skin:** Deep rich brown skin with luminous depth.
+**Outfit:**
+- **Top:** Soft **pajama set** (matching top and shorts/pants) or **nightgown**
+- **Bottom:** fuzzy slippers or socks.
+- **Accessories:** None or minimal.
+- **Hair/Makeup:** No makeup, hair down or in loose bun.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment, Holding game controller, focused on screen ahead, Casual gaming posture, relaxed competitive energy.
+---
+
+**CHARACTER 3: Celine Voss**
+**Appearance:**
+* **Body:** Dramatic frame; straight dense flesh; narrow rectangle proportions; tall controlled vertical.
+* **Face:** Angular sculptural structure; square-leaning oval face; sharp jaw; unreadable neutral expression.
+* **Hair:** Type 1 straight; high density; blunt jaw-length bob; precise alignment; matte finish.
+* **Skin:** Cool pale skin with porcelain finish.
+**Outfit:**
+- **Top:** Oversized **graphic hoodie or sweatshirt** with **water-resistant coating** and reflective taping; matte finish with high-contrast screen print
+- **Bottom:** multi-pocket **cargo pants** in a durable technical ripstop fabric with adjustable drawstrings at the ankle
+- **Footwear:** chunky multi-textured sneakers with mesh panels and reflective detailing
+- **Accessories:** Distressed baseball cap, nylon crossbody bag with tactical buckles, silver curb chain necklace
+- **Hair/Makeup:** Natural or minimal makeup with a focus on skin texture; effortless "street-ready" bun or ponytail
+**Pose/Action:**
+wide shot with the character framed within the environment, Arching backward with hands and feet on the ground, creating a graceful bridge, impressive flexibility.
+---

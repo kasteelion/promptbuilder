@@ -1,0 +1,80 @@
+# METADATA
+Scene: High-vaulted hall dominated by a massive, floor-to-ceiling glass wall into a deep blue ocean world. Swaying kelp and marine life create moving shadows, and the entire space is bathed in a tranquil, shifting blue light from the water.
+Base_Prompt: Watercolor Impressionistic
+Character: Mela Hart | Outfit: Soft Aesthetic | Pose: None
+Character: Nora Alvarez | Outfit: Soft Aesthetic | Pose: None
+Character: Malik Farrah | Outfit: Soft Aesthetic | Pose: None
+Interaction: Custom
+Score: 525
+
+Generate an image of: Rendering
+Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines.
+
+Character Accuracy
+Facial features are suggested through shadow shapes and color temperature shifts rather than line art. Eyes and expressions are soft and diffused. Likeness is captured through "gestural" paint application rather than photographic precision.
+
+Body Types
+Figures are grounded in gesture drawing techniques. Limbs and torso shapes are defined by broad washes of color. Edges of the body dissolve softly into the background, creating a dreamy, ethereal connection to the environment.
+
+Hair & Clothing
+Hair: Rendered as loose, flowing pools of color with wet edges. Clothing: Fabrics are depicted through variegation in color saturation. Folds are soft gradients where paint creates "blooms." No sharp stitching or texture detailing.
+
+Details
+Splatter droplets, dry-brush scratch marks, and visible pencil under-drawing. The palette is harmonious and desaturated. Backgrounds are abstract washes suggesting environment without explicit detail.
+
+---
+
+**SCENE/SETTING:**
+High-vaulted hall dominated by a massive, floor-to-ceiling glass wall into a deep blue ocean world. Swaying kelp and marine life create moving shadows, and the entire space is bathed in a tranquil, shifting blue light from the water.
+---
+
+**CHARACTER: Mela Hart**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall vertical line; broad shoulders; long limbs; somewhat straight silhouette; moderate bust and hip definition; athletic and springy presence.
+* **Face:** Oval shape; high cheekbones; full lips; prominent expressive eyes; straight nose bridge; defined jawline; bright and buoyant neutral expression.
+* **Hair:** Type 4A (Natural texture) with Type 2B/2C (Wavy/Curly) ends; long, dark brown braids throughout the hair with loose wavy curls at the bottom; high shine; braids are a signature identity feature.
+* **Skin:** Deep brown with warm golden undertones and luminous satin finish.
+**Outfit:**
+- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
+- **Bottom:** pleated mini skirt (black, plaid, or pastel)
+- **Footwear:** thigh-high socks with stripes; **platform sneakers or Mary Janes**.
+- **Accessories:** Chain necklaces, hair clips, small crossbody bag.
+- **Hair/Makeup:** Blush on nose and cheeks, winged eyeliner, glossy lips, hair in space buns or half-up with face-framing pieces.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Nora Alvarez**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with wave softness; soft hourglass-pear proportions with full hips, thighs and bust, soft rounded belly, subtly defined shoulders; petite-to-moderate vertical (5'2"-5'4"); voluptuous short-stack build with concentrated curves and grounded presence.
+* **Face:** Balanced-soft facial structure; round-oval face; deep almond-shaped eyes with steady observant gaze; soft jawline; neutral resting expression is steady and observant with signature warmth showing in subtle corner smile.
+* **Hair:** Type 2B waves; medium density; long controlled cut with natural body; matte finish; dark brown.
+* **Skin:** Warm tan with golden-brown undertones and natural matte-soft finish. thin black rectangular glasses
+**Outfit:**
+- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
+- **Bottom:** pleated mini skirt (black, plaid, or pastel)
+- **Footwear:** thigh-high socks with stripes; **platform sneakers or Mary Janes**.
+- **Accessories:** Chain necklaces, hair clips, small crossbody bag.
+- **Hair/Makeup:** Blush on nose and cheeks, winged eyeliner, glossy lips, hair in space buns or half-up with face-framing pieces.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Malik Farrah**
+**Appearance:**
+- **Body:** Lean-muscular frame; sun-weathered olive skin with a deep, earthy tan; rectangular proportions with broad shoulders and a powerful, flexible core; average height (5'9"-5'10"); resilient, functional build with high-stamina muscle definition; "weathered strength" presence—durable and alert.
+- **Face:** Strong angular structure; prominent brow ridge; sharp, defined jawline partially obscured by a well-groomed short beard; intense, narrowed dark brown eyes that possess a sharp, far-reaching gaze; thick, dark eyebrows with a heavy set; straight nose with a strong bridge; firm mouth often set in a focused line; expression is keen, observant, and perpetually ready for action.
+- **Hair:** Type 3C-4A tight curls; high density; kept short and practical in a textured buzz cut or short fade; matte finish with occasional dust from the trail; dark ebony hair that looks durable.
+- **Skin:** Deep olive skin with sun-kissed golden-bronze undertones; weathered, rugged texture with fine sand-lines around the eyes; a small, faded scar on his left temple; healthy "outdoor" resilience.
+**Outfit:**
+- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
+- **Bottom:** relaxed fit chinos or cropped pants (black or pastel)
+- **Footwear:** crew socks; **canvas sneakers or loafers**.
+- **Accessories:** Chain necklaces, small crossbody bag or backpack.
+- **Hair/Makeup:** Soft styled hair with face-framing pieces, minimal grooming.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Mela Hart serving tea to Nora Alvarez in traditional ceremony, formal ritualistic movements, cultural respect.

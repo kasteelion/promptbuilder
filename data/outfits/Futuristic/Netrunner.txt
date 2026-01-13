@@ -1,0 +1,53 @@
+modifiers:
+  Neon: with **pulsing neon EL-wire**
+  Stealth: in **matte light-absorbing vantablack**
+  Chrome: with **reflective liquid-chrome panels**
+
+tags: [Cyberpunk, Tech, Hack]
+
+[F]
+- **Top:** Cropped bomber jacket over synaptic-interface bodysuit {modifier}.
+  - **Fit:** Cropped jacket; Skin-tight bodysuit.
+  - **Material:** Translucent PVC; Neoprene.
+  - **Pattern:** Embedded circuitry.
+  - **Neckline:** High-neck bodysuit.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted tech-wear cargo trousers.
+  - **Fit:** Relaxed cargo.
+  - **Material:** Ripstop nylon.
+  - **Pattern:** Hanging nylon straps.
+  - **Waist:** Fidlock buckles.
+  - **Length:** Full length.
+- **Footwear:** Chunky platform stomper boots with LED underglow.
+- **Accessories:** Dataport cables (temple); holographic visor; fingerless tactical gloves.
+
+[M]
+- **Top:** Oversized ballistic nylon hoodie and tactical vest rig {modifier}.
+  - **Fit:** Oversized; Layered.
+  - **Material:** Ballistic nylon.
+  - **Pattern:** Holographic patches.
+  - **Neckline:** Hooded.
+  - **Sleeve:** Long.
+- **Bottom:** Tapered anti-static joggers.
+  - **Fit:** Tapered; Reinforced knees.
+  - **Material:** Anti-static tech-fabric.
+  - **Waist:** Zipper vents.
+  - **Length:** Full.
+- **Footwear:** High-top cyber-sneakers with magnetic suspension.
+- **Accessories:** Neural-link headset; wrist-mounted deck; utility belt.
+
+[H]
+- **Hijab:** Performance cooling hijab in matte carbon-fiber weave.
+- **Top:** Asymmetric tech-tunic over compression layer {modifier}.
+  - **Fit:** Modest loose tunic.
+  - **Material:** Carbon-fiber blend; Tech-fabric.
+  - **Pattern:** Geometric venting.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Wide-leg hakama-style tech pants.
+  - **Fit:** Wide-leg; Structured.
+  - **Material:** matching tech-fabric.
+  - **Waist:** Magnetic closures.
+  - **Length:** Floor-length.
+- **Footwear:** Ergonomic split-toe cyber boots (tabi style).
+- **Accessories:** AR smart-glasses; data-gauntlet.

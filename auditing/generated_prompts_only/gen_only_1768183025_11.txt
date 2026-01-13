@@ -1,0 +1,64 @@
+# METADATA
+Scene: Urban rooftop setting, city skyline in background, sunset lighting, Modern outdoor furniture.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Nora Alvarez | Outfit: Retro Bowling | Pose: None
+Character: Kassandra Lykaios | Outfit: American Football | Pose: None
+Interaction: Custom
+Score: 390
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Urban rooftop setting, city skyline in background, sunset lighting, Modern outdoor furniture.
+---
+
+**CHARACTER: Nora Alvarez**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with wave softness; soft hourglass-pear proportions with full hips, thighs and bust, soft rounded belly, subtly defined shoulders; petite-to-moderate vertical (5'2"-5'4"); voluptuous short-stack build with concentrated curves and grounded presence.
+* **Face:** Balanced-soft facial structure; round-oval face; deep almond-shaped eyes with steady observant gaze; soft jawline; neutral resting expression is steady and observant with signature warmth showing in subtle corner smile.
+* **Hair:** Type 2B waves; medium density; long controlled cut with natural body; matte finish; dark brown.
+* **Skin:** Warm tan with golden-brown undertones and natural matte-soft finish.
+**Outfit:**
+- **Top:** Retro button-down **bowling shirt** (two-tone, name embroidered on chest)
+- **Top:** **Polo shirt** tucked in
+- **Bottom:** Cuffed **jeans** or **capris**
+- **Bottom:** **A-line skirt** (knee length)
+- **Footwear:** **Rental bowling shoes** (red and blue/tan leather, distinct look)
+- **Accessories:** Wrist brace, towel tucked in waistband.
+- **Hair/Makeup:** Ponytail or pinned back hair.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Outfit:**
+- **Top:** Molded shoulder pads (rigid, high-gloss #263B94 plastic shells with a distinct, thick outer edge that is clearly separate from the fabric underneath
+- **Bottom:** protective design and The River City Lions logo shield reflecting stadium lights sharply)
+- **Footwear:** Sports performance top (crop-style , made of ultra-matte moisture-wicking compression fabric that absorbs light, showing slight compression wrinkles where the rigid edge of the shoulder pad presses against the body); Low-rise athletic shorts (minimal coverage design in #263B94 with #FE5000 accents, team number on hip); Compression arm sleeves (#263B94 extending to mid-bicep with #FE5000 striping); Athletic socks (knee-high #263B94 or mixed black with #FE5000 bands); Professional football cleats (Nike or Adidas style with #FFFFFF detailing). Accessories: Hockey-style helmet with clear polycarbonate visor and The River City Lions branding, #263B94 athletic headband worn under helmet, The River City Lions-branded gloves with grip palms, knee pads with logo, eye black strips, #FFFFFF wristbands, athletic tape on fingers. Hair/Makeup: Long hair in high ponytail, braids, or curls secured with headband for mobility, camera-ready makeup with defined eyes and contouring, waterproof and sweat-resistant long-wear formula, natural glam suitable for stadium lighting and broadcast television.
+-
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Nora Alvarez giving Kassandra Lykaios an enthusiastic high five, both smiling with celebratory energy

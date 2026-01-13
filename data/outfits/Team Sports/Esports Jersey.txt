@@ -1,23 +1,46 @@
 tags: [Esports, Sport, Team]
 
 [F]
-- **Top:** Pro-style V-neck jersey for **{team}** featuring an **asymmetric diagonal design**
-- **Bottom:** white torso base with contrasting **black** sleeves and side panels
-- **Footwear:** a bold **{primary_color}** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** athletic joggers or leggings.
-- **Accessories:** Gaming headset, wristbands.
-- **Hair/Makeup:** Sleek styling, minimal modern makeup.
+- **Top:** Pro-style V-neck jersey for {team} with asymmetric diagonal design.
+  - **Fit:** Professional athletic.
+  - **Material:** Performance mesh; {primary_color} sash.
+  - **Pattern:** Asymmetric diagonal; sponsor logos.
+  - **Neckline:** V-neck.
+  - **Sleeve:** Short sleeves (black panels).
+- **Bottom:** Black athletic joggers or leggings.
+  - **Fit:** Relaxed joggers or Tight leggings.
+  - **Material:** Polyester blend.
+  - **Waist:** Elastic.
+  - **Length:** Full length.
+- **Footwear:** High-top sneakers.
+- **Accessories:** Gaming headset; wristbands.
 
 [M]
-- **Top:** Pro-style V-neck jersey for **{team}** featuring an **asymmetric diagonal design**
-- **Bottom:** white torso base with contrasting **black** sleeves and side panels
-- **Footwear:** a bold **{primary_color}** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** tactical-style joggers.
-- **Accessories:** Gaming headset, smart watch.
-- **Hair/Makeup:** Clean modern styling.
+- **Top:** Pro-style V-neck jersey for {team} with asymmetric design.
+  - **Fit:** Standard athletic.
+  - **Material:** Mesh.
+  - **Neckline:** V-neck.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Black tactical-style joggers.
+  - **Fit:** Relaxed; Tapered.
+  - **Material:** Durable fabric.
+  - **Waist:** Drawstring.
+  - **Length:** Full.
+- **Footwear:** Professional sneakers.
+- **Accessories:** Gaming headset; smart watch.
 
 [H]
-- **Hijab:** Black jersey hijab (sleek wrap)
-- **Top:** Long-sleeve **pro-style jersey** for **{team}** with modest loose fit{modifier}; **white** torso base with **black** sleeves; bold **{primary_color}** sash stripe cutting diagonally across the chest
-- **Bottom:** Black wide-leg track pants
-- **Footwear:** High-top sneakers
-- **Accessories:** Gaming headset (worn over hijab), wristbands
-- **Makeup:** Minimal, fresh look
+- **Hijab:** Black jersey hijab with sleek wrap.
+- **Top:** Long-sleeve pro-style jersey for {team} {modifier}.
+  - **Fit:** Modest loose fit.
+  - **Material:** Performance mesh.
+  - **Pattern:** White torso base; {primary_color} diagonal sash.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves (black).
+- **Bottom:** Black wide-leg track pants.
+  - **Fit:** Wide-leg.
+  - **Material:** matching fabric.
+  - **Waist:** Elastic.
+  - **Length:** Floor-length.
+- **Footwear:** High-top sneakers.
+- **Accessories:** Gaming headset (over hijab); wristbands.

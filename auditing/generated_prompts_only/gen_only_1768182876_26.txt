@@ -1,0 +1,82 @@
+# METADATA
+Scene: Vast, derelict warehouse interior with high corrugated ceilings. Shafts of dusty daylight pierce through broken windows, illuminating patches of a cracked concrete floor. Scent of rust and stale air, distant echo of dripping water.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Amira Khalil | Outfit: Vintage Tap | Pose: None
+Character: Samira Mansour | Outfit: Graduation | Pose: None
+Character: Hana Park | Outfit: Knight | Pose: None
+Interaction: Custom
+Score: 132
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Vast, derelict warehouse interior with high corrugated ceilings. Shafts of dusty daylight pierce through broken windows, illuminating patches of a cracked concrete floor. Scent of rust and stale air, distant echo of dripping water.
+---
+
+**CHARACTER: Amira Khalil**
+**Appearance:**
+* **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
+* **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
+* **Hair / Covering:** Hair fully covered; hijab as constant identity anchor; smooth controlled drape with clean facial framing.
+* **Skin:** Warm olive-toned skin with soft luminous finish.
+**Outfit:**
+- **Hijab:** Pearl white or champagne turban-style hijab with feather accent or jeweled headband
+- **Top:** Long-sleeve embellished tunic (pearl white or champagne satin with Art Deco beading)
+- **Bottom:** Flowing wide-leg pants or maxi skirt in matching color
+- **Footwear:** T-strap heeled shoes (silver or gold)
+- **Accessories:** Long white gloves (if sleeves are not full length, or over sleeves), Art Deco jewelry
+- **Makeup:** Theatrical 1930s stage makeup, red lips, winged eyeliner
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**CHARACTER 2: Samira Mansour**
+**Appearance:**
+* **Body:** Soft Natural; balanced proportions with soft curves; moderate vertical (5'6"); natural athletic density with a defined waist and soft shoulders; poised and culturally connected presence.
+* **Face:** Soft-balanced structure; oval face with high, smooth cheekbones; large expressive dark brown eyes framed by naturally thick, groomed eyebrows; straight refined nose; full lips with a natural cupid's bow; soft jawline; warm engaging expression that feels both wise and welcoming.
+* **Hair:** (Covered) Typically styled in voluminous dark curls beneath her hijab.
+* **Skin:** Rich golden-olive depth (North African coloring); smooth luminous finish; natural healthy glow enhanced by traditional skincare oils.
+**Outfit:**
+- **Hijab:** Color-coordinated with gown or black (neat wrap) under mortarboard
+- **Top:** Black academic gown (floor-length); **modest dress** or **outfit** underneath
+- **Bottom:** Visible hem of dress or pants
+- **Footwear:** Dress shoes
+- **Accessories:** Mortarboard cap, tassel, diploma
+- **Makeup:** Polished photo-ready makeup
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**CHARACTER 3: Hana Park**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; compact rounded proportions; petite vertical.
+* **Face:** Delicate compact structure; round face; plush cheeks; large expressive eyes; youthful neutral expression.
+* **Hair:** Type 1 straight; fine-to-medium density; blunt shoulder-length cut; off-center part; smooth dewy finish; dark brown to black.
+* **Skin:** Light warm-beige skin with clear finish.
+**Outfit:**
+- **Top:** Polished plate armor bodice (steel or silver with embossed details)
+- **Bottom:** armored pauldrons and gauntlets
+- **Footwear:** chainmail skirt or **armored tassets** (knee-length with leather underneath); **steel greaves and sabatons** (shin and foot protection); **sturdy leather boots**.
+- **Accessories:** Longsword and shield (heraldic design), knight's helm with plume (carried or worn), cape in house colors.
+- **Hair/Makeup:** Hair pulled back in practical bun or braid, minimal makeup, determined expression.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**Additional Notes:**
+Amira Khalil and Samira Mansour leaning over a glowing holographic tablet, Amira Khalil pointing at data while Samira Mansour observes with deep concentration, professional intellectual focus.

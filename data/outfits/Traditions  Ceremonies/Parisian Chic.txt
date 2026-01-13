@@ -1,23 +1,49 @@
 tags: [Casual, Chic, Fashion]
 
 [F]
-- **Top:** Striped Breton top (((default:navy and white) or (signature)) horizontal stripes, three-quarter sleeves, boat neck)
-- **Bottom:** high-waist straight-leg jeans (dark indigo wash, cropped at ankle)
-- **Footwear:** leather ballet flats (black with small bow detail).
-- **Accessories:** Red silk scarf (tied at neck or in hair), structured leather handbag (crossbody or tote), delicate gold jewelry, black sunglasses.
-- **Hair/Makeup:** Effortless undone waves or sleek low bun, minimal makeup with focus on skin, red lip, natural brows, French girl insouciance.
+- **Top:** Striped Breton top.
+  - **Fit:** Relaxed classic.
+  - **Material:** Structured cotton.
+  - **Pattern:** Navy and white horizontal stripes.
+  - **Neckline:** Boat neck.
+  - **Sleeve:** Three-quarter sleeves.
+- **Bottom:** High-waist straight-leg jeans.
+  - **Fit:** Straight leg.
+  - **Material:** Dark indigo wash denim.
+  - **Pattern:** Solid.
+  - **Waist:** High-waisted.
+  - **Length:** Cropped at ankle.
+- **Footwear:** Black leather ballet flats with bow.
+- **Accessories:** Red silk neck scarf; structured handbag; gold jewelry.
 
 [M]
-- **Top:** Breton stripe shirt (((default:navy and white) or (signature)) long sleeve, boat neck)
-- **Bottom:** slim-fit chinos (camel or navy)
-- **Footwear:** leather loafers or **clean white sneakers**.
-- **Accessories:** Navy blazer (optional, thrown over shoulder), sunglasses, leather satchel.
-- **Hair/Makeup:** Natural styled hair, clean-shaven or stubble, effortless sophisticated vibe.
+- **Top:** Breton stripe shirt with optional Navy Blazer.
+  - **Fit:** Tailored.
+  - **Material:** Cotton; Wool (blazer).
+  - **Pattern:** Navy and white stripes.
+  - **Neckline:** Boat neck or Lapel.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Slim-fit chinos.
+  - **Fit:** Slim-fit.
+  - **Material:** Cotton chino.
+  - **Pattern:** Solid Camel or Navy.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Leather loafers or white sneakers.
+- **Accessories:** designer sunglasses; leather satchel.
 
 [H]
-- **Hijab:** Red silk scarf tied loosely or turban style with neck coverage
-- **Top:** Striped Breton tunic (((default:navy and white) or (signature)) long sleeves, boat neck, mid-thigh)
-- **Bottom:** Straight-leg jeans or **black cigarette pants**
-- **Footwear:** Leather ballet flats
-- **Accessories:** Structured handbag, gold jewelry, sunglasses
-- **Makeup:** Minimal chic makeup, red lip
+- **Hijab:** Red silk scarf tied loosely or turban style.
+- **Top:** Striped Breton tunic.
+  - **Fit:** Modest length mid-thigh.
+  - **Material:** Cotton.
+  - **Pattern:** Striped.
+  - **Neckline:** Boat neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Straight-leg jeans or black cigarette pants.
+  - **Fit:** Straight.
+  - **Material:** Denim or Twill.
+  - **Waist:** Natural.
+  - **Length:** Ankle length.
+- **Footwear:** Leather ballet flats.
+- **Accessories:** Structured handbag; gold jewelry.

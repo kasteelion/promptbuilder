@@ -1,0 +1,83 @@
+# METADATA
+Scene: Large concert stage, dramatic colored spotlights, smoke effects, microphone stand, energetic crowd visible.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Elena Rosales | Outfit: Flag Football | Pose: None
+Character: Freydis Holm | Outfit: Flag Football | Pose: None
+Character: Diesel Murphy | Outfit: Flag Football | Pose: None
+Interaction: Custom
+Score: 395
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Large concert stage, dramatic colored spotlights, smoke effects, microphone stand, energetic crowd visible.
+---
+
+**CHARACTER: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Outfit:**
+- **Top:** Flag football jersey for **Standard Team** in **black** with **white** accents (t-shirt cut)
+- **Bottom:** Athletic shorts with flag belt (velcro flags at hips)
+- **Footwear:** Cleats or turf shoes
+- **Accessories:** Mouthguard, wristbands.
+- **Hair/Makeup:** Ponytail.
+**Pose/Action:**
+wide shot with the character framed within the environment, On mat in dominant position, knee on ground, controlled powerful posture, competitive intensity.
+---
+
+**CHARACTER 2: Freydis Holm**
+**Appearance:**
+* **Body:** Flamboyant Natural; powerful athletic flesh with clear muscle definition; broad structured shoulders and long limbs; tall vertical (5'10"-6'0"); high density throughout with visible strength in back, core, and thighs; rugged statuesque presence that commands space.
+* **Face:** Strong-angled structure; sharp square-to-oval shape; high prominent cheekbones; powerful defined jawline; intense blue-gray eyes; moderate spacing; piercing steady gaze; straight, slightly prominent nose; expressive mouth with a firm set; neutral expression is fiercely composed with a hint of predatory awareness.
+* **Hair:** Type 2B-2C; high density; rugged voluminous silhouette; very long (waist-length) with thick, rugged texture; asymmetric part; matte finish; complex asymmetric side braids feeding into a larger central braid or high ponytail. Ash-blonde or strawberry-blonde with sun-faded highlights.
+* **Skin:** Fair; cool-under-tones; weathered matte finish; scattered light freckles across bridge of nose and shoulders; a few faint, well-healed battle scars—one across the left eyebrow and another on the right shoulder.
+**Outfit:**
+- **Top:** Flag football jersey for **Standard Team**  (t-shirt cut)
+- **Bottom:** Athletic shorts with flag belt (velcro flags at hips)
+- **Footwear:** Cleats or turf shoes
+- **Accessories:** Mouthguard, wristbands.
+- **Hair/Makeup:** Ponytail.
+**Pose/Action:**
+wide shot with the character framed within the environment, Mid-dance motion, fluid graceful movement, arms in expressive position.
+---
+
+**CHARACTER 3: Diesel Murphy**
+**Appearance:**
+* **Body:** Natural frame; straight athletic flesh with functional density; balanced proportions with broadened shoulders from upper body work, minimal waist definition, and straight hip line; moderate-to-tall vertical (5'7"-5'8"); working-class athletic build with developed forearms and shoulders from mechanical work, strong hands, visible core strength, practical muscle without aesthetic focus; distinctly female frame with masculine presentation and movement patterns; grounded capable presence.
+
+* **Face:** Balanced-angular structure; square-to-rectangular face shape with broad forehead and strong defined jawline; minimal midface projection with subtle cheekbones; medium-to-small eyes with moderate-close spacing, hazel-brown color, minimal lid exposure, direct no-nonsense gaze; straight broad nose with flat bridge and squared tip; strong angular jawline with masculine definition; neutral resting expression shows calm confidence with closed-mouth straight line and steady assessing gaze; rare smile is crooked and genuine.
+
+* **Hair:** Type 2A; medium density; very short length (pixie-to-undercut style); no defined part, textured and pushed back; matte finish; commonly worn tousled and practical, sometimes with small amount of pomade for control; dark brown with sun-lightened tips from outdoor work.
+
+* **Skin:** Light-medium tone with neutral-warm undertones and natural matte finish; scattered scars on hands and forearms from mechanical work; permanent grease staining under short fingernails and in hand creases; sun exposure on forearms and face; textured from outdoor work.
+**Outfit:**
+- **Top:** Flag football jersey for **Standard Team** in **black** with **white** accents (t-shirt cut)
+- **Bottom:** Athletic shorts with flag belt (velcro flags at hips)
+- **Footwear:** Cleats or turf shoes
+- **Accessories:** Mouthguard, wristbands.
+- **Hair/Makeup:** Ponytail.
+**Pose/Action:**
+wide shot with the character framed within the environment, On mat in dominant position, knee on ground, controlled powerful posture, competitive intensity.
+---
+
+**Additional Notes:**
+Elena Rosales applying triangle choke on Freydis Holm from bottom position. Elena Rosales on their back with Freydis Holm trapped between their legs. Elena Rosales's right leg is wrapped over Freydis Holm's shoulder and behind their neck, right ankle or calf pressing into Freydis Holm's left shoulder/neck. Elena Rosales's left leg crosses over their right ankle/shin, creating the "triangle" lock, squeezing Freydis Holm's head and one arm. Elena Rosales's hips are angled and elevated, pulling Freydis Holm's head down while pushing their trapped arm across their own throat to complete the choke. Elena Rosales grips behind Freydis Holm's head or controls their trapped arm, pulling downward. Freydis Holm is bent forward, one arm trapped inside the triangle alongside their head, other arm possibly posting on mat trying to posture up. Freydis Holm's face shows oxygen deprivation, redness, possible panic. Elena Rosales shows controlled technique, adjusting angles with precision. Both display full-body effort—legs flexed hard, core engaged, arms fighting for control.

@@ -1,0 +1,21 @@
+{
+  "window_geometry": "2560x1349+780+370",
+  "last_theme": "Light",
+  "last_base_prompt": "Standard / Neutral",
+  "font_adjustment": 0,
+  "recent_characters": [],
+  "favorite_characters": [
+    "Natsumi Maki"
+  ],
+  "favorite_outfits": [],
+  "recent_presets": [],
+  "show_welcome": true,
+  "sash_position": null,
+  "auto_theme": false,
+  "ui_scale": "Medium",
+  "window_state": "zoomed",
+  "sash_positions": {
+    "main_sash": 300,
+    "content_sash": 550
+  }
+}

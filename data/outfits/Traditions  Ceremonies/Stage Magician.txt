@@ -1,23 +1,46 @@
 tags: [costume, Magic, Performance]
 
 [F]
-- **Top:** Tailored tuxedo jacket (((default:black with satin lapels) or (signature)), fitted with hidden pockets)
-- **Bottom:** white dress shirt (with wing collar or standard)
-- **Footwear:** bow tie (black satin or ((signature))); **tailored pants** (matching jacket); **oxford shoes** (polished black).
-- **Accessories:** Top hat (collapsible for tricks), white gloves, deck of cards, wand, silk scarves (for pulling from pockets), cape (optional, dramatic black with colored lining).
-- **Hair/Makeup:** Sleek styled hair (updo or styled down), classic stage makeup (defined features, red lip, possibly dramatic eyes), mysterious charismatic expression.
+- **Top:** Tailored tuxedo jacket and dress shirt.
+  - **Fit:** Sharply fitted with hidden pockets.
+  - **Material:** Wool with satin lapels.
+  - **Pattern:** Solid Black.
+  - **Neckline:** Wing collar with bow tie.
+  - **Sleeve:** Long sleeves with cufflinks.
+- **Bottom:** Tailored tuxedo trousers.
+  - **Fit:** Slim-straight.
+  - **Material:** matching wool.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Polished black oxford shoes.
+- **Accessories:** Collapsible top hat; white gloves; wand; cards; black cape.
 
 [M]
-- **Top:** Tailored tuxedo (((default:black) or (signature)) tails coat)
-- **Bottom:** white wing-tip shirt
-- **Footwear:** white bow tie; **black trousers**; **patent shoes**.
-- **Accessories:** Top hat, white gloves, wand, deck of cards, cape (black with red lining).
-- **Hair/Makeup:** Slicked back hair, goatee or clean-shaven, mysterious expression.
+- **Top:** Tailored tuxedo tails coat.
+  - **Fit:** Classic tails fit.
+  - **Material:** Wool.
+  - **Pattern:** Solid.
+  - **Neckline:** White bow tie and wing collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted black trousers.
+  - **Fit:** Straight tailored.
+  - **Material:** matching.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Patent leather shoes.
+- **Accessories:** Top hat; gloves; wand; velvet cape.
 
 [H]
-- **Hijab:** Black satin hijab (sleek wrap) under top hat
-- **Top:** Tuxedo jacket (((default:black) or (signature)) long tails); **white high-neck shirt**; **bow tie**
-- **Bottom:** Black trousers or **full skirt**
-- **Footwear:** Oxford shoes
-- **Accessories:** Top hat, white gloves, wand, cards
-- **Makeup:** Classic stage makeup, mysterious expression
+- **Hijab:** Black satin hijab under top hat.
+- **Top:** Tuxedo jacket with long tails over high-neck shirt.
+  - **Fit:** Sharply tailored modest.
+  - **Material:** Satin/Wool.
+  - **Neckline:** High neck with bow tie.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Black trousers or full skirt.
+  - **Fit:** Relaxed.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Oxford shoes.
+- **Accessories:** Top hat; white gloves; wand.

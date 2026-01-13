@@ -4,20 +4,45 @@ modifiers:
   Away: in **{secondary_color}** with **{primary_color}** trim
 
 [F]
-- **Top:** Basketball jersey for **{team}** {modifier} (sleeveless, wide shoulder cut)
-- **Bottom:** Basketball shorts (loose fit, knee length)
-- **Footwear:** High-top basketball sneakers
-- **Accessories:** Shooting sleeve, headband.
-- **Hair/Makeup:** Ponytail or bun.
+- **Top:** Sleeveless basketball jersey for {team} {modifier}.
+  - **Fit:** Wide shoulder cut; Loose.
+  - **Material:** Mesh performance fabric.
+  - **Pattern:** {modifier} colors.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Basketball shorts.
+  - **Fit:** Loose fit.
+  - **Material:** matching mesh.
+  - **Waist:** Elastic.
+  - **Length:** Knee length.
+- **Footwear:** High-top basketball sneakers.
+- **Accessories:** Shooting sleeve; headband.
 
 [M]
-- **Top:** Basketball jersey for **{team}** {modifier} (sleeveless)
-- **Bottom:** Basketball shorts (loose fit, knee length)
-- **Footwear:** High-top basketball sneakers
-- **Accessories:** Arm sleeve, wristbands.
+- **Top:** Sleeveless basketball jersey for {team} {modifier}.
+  - **Fit:** Standard loose fit.
+  - **Material:** Mesh.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Basketball shorts.
+  - **Fit:** Loose fit.
+  - **Material:** matching.
+  - **Waist:** Elastic.
+  - **Length:** Knee length.
+- **Footwear:** High-top basketball sneakers.
+- **Accessories:** Arm sleeve; wristbands.
 
 [H]
-- **Hijab:** Sport hijab (tucked in)
-- **Top:** Long sleeve compression shirt under basketball jersey for **{team}** {modifier}
-- **Bottom:** Leggings under basketball shorts
-- **Footwear:** High-top basketball sneakers
+- **Hijab:** Sport hijab tucked in.
+- **Top:** Basketball jersey for {team} {modifier} over compression shirt.
+  - **Fit:** Modest layered.
+  - **Material:** Mesh over tech-fabric.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves (compression).
+- **Bottom:** Basketball shorts over leggings.
+  - **Fit:** Loose over tight.
+  - **Material:** matching.
+  - **Waist:** Elastic.
+  - **Length:** Full length.
+- **Footwear:** High-top basketball sneakers.
+- **Accessories:** Wristbands.

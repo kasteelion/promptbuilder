@@ -1,0 +1,45 @@
+tags: [Noir, Vintage, Formal, Criminal]
+
+[F]
+- **Top:** Tailored double-breasted pinstripe wool suit jacket.
+  - **Fit:** Structured shoulders; Tailored.
+  - **Material:** Pinstripe wool.
+  - **Pattern:** Pinstripe.
+  - **Neckline:** Peak lapel.
+  - **Sleeve:** Long.
+- **Bottom:** Matching high-waisted wide-leg trousers.
+  - **Fit:** Wide-leg.
+  - **Material:** matching wool.
+  - **Waist:** High-waisted.
+  - **Length:** Full length.
+- **Footwear:** Two-tone spectator heeled shoes.
+- **Accessories:** Wide-brimmed felt hat; heavy gold rings; silk scarf.
+
+[M]
+- **Top:** Charcoal three-piece pinstripe suit and vest.
+  - **Fit:** Tailored.
+  - **Material:** Wool.
+  - **Neckline:** Collared with tie.
+  - **Sleeve:** Long.
+- **Bottom:** Matching trousers with cuffs.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Polished black wingtip shoes.
+- **Accessories:** Pinky ring; fedora; expensive cigar; pocket watch chain.
+
+[H]
+- **Hijab:** Charcoal grey satin wrap tucked into collar.
+- **Top:** Tailored long trench coat over a suit.
+  - **Fit:** Modest layered.
+  - **Material:** Wool; Gabardine.
+  - **Neckline:** High collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Straight-leg suit trousers.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Oxford shoes.
+- **Accessories:** Leather gloves; briefcase; gold watch.

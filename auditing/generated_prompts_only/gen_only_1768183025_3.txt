@@ -1,0 +1,79 @@
+# METADATA
+Scene: Spacious modern kitchen with polished marble countertops and high-end stainless steel appliances. Warm pendant lighting over a central island. Scent of freshly ground coffee and herbs.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Aryan Kapoor | Outfit: Basketball | Pose: None
+Character: Jordan Vance | Outfit: Basketball | Pose: None
+Character: Amina Benali | Outfit: Basketball | Pose: None
+Interaction: Custom
+Score: 525
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Spacious modern kitchen with polished marble countertops and high-end stainless steel appliances. Warm pendant lighting over a central island. Scent of freshly ground coffee and herbs.
+---
+
+**CHARACTER: Aryan Kapoor**
+**Appearance:**
+* **Body:** Dramatic Classic frame; moderate muscularity with a lean, tailored silhouette; balanced proportions that look exceptional in suiting; moderate vertical (5'10"-5'11"); posture is military-straight but relaxed; projects a refined, expensive stability.
+* **Face:** Symmetrical, high-contrast structure; strong square jawline covered by a meticulously groomed "designer stubble" to short boxed beard; high cheekbones; piercing amber-brown eyes with thick lashes; straight aristocratic nose; expression is usually a knowing, confident smirk.
+* **Hair:** Type 2A waves; high density; styled in a classic "quiff" or side-part with volume; sides are tapered clean; glossy, healthy finish; jet black with a blueish tint under light.
+* **Skin:** Medium-deep tan with warm golden-olive undertones; hyper-smooth texture suggestive of a high-end skincare routine.
+**Outfit:**
+- **Top:** Basketball jersey for **Standard Team**  (sleeveless)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Arm sleeve, wristbands.
+**Pose/Action:**
+full body shot showing the character from head to toe, Mid-stride with soccer ball at feet, focused gaze ahead, athletic movement, dynamic energy.
+---
+
+**CHARACTER 2: Jordan Vance**
+**Appearance:**
+* **Body:** Dramatic; extremely tall vertical at 6'4"; narrow but powerfully muscled frame with very long limbs and large, capable hands; lean athletic density with defined abdominal markers and elongated, powerful leg muscles; springy and explosive presence.
+* **Face:** Sharp-balanced structure; long oval face with defined, high cheekbones; large almond-shaped dark brown eyes with long, voluminous lashes and an alert gaze; straight athletic nose; wide expressive mouth with full, defined lips often breaking into a confident, radiant grin; sharply defined jawline.
+* **Hair:** Type 4A–4B coils; high density; typically worn in long, sleek knotless braids that fall to her waist, often adorned with subtle gold beads or team-colored threads to maintain a polished, glamorous silhouette.
+* **Skin:** Deep ebony depth with neutral-cool undertones; smooth almost polished finish; athletic glow with visible muscle definition; long, manicured almond-shaped nails in a signature vibrant color or French tip.
+**Outfit:**
+- **Top:** Basketball jersey for **Standard Team** in **black** with **white** trim (sleeveless, wide shoulder cut)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Shooting sleeve, headband.
+- **Hair/Makeup:** Ponytail or bun.
+**Pose/Action:**
+full body shot showing the character from head to toe, On mat in dominant position, knee on ground, controlled powerful posture, competitive intensity.
+---
+
+**CHARACTER 3: Amina Benali**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-soft flesh; balanced proportions with gentle curves, defined waist, moderate bust (C cup), soft rounded hips; moderate height (5'5"-5'6"); soft feminine build with subtle athleticism from maintaining posture during long streams; desk-athlete presence—comfortable in gaming chairs for hours.
+* **Face:** Soft-balanced facial structure; oval-to-heart face shape with gentle angles; smooth clear planes; large expressive almond-shaped eyes, wide-set, dark brown with natural warmth and camera-aware sparkle; defined arched eyebrows (professionally maintained); straight refined nose; full lips with natural cupid's bow; soft jawline; warm engaging expression—the "streaming face" of genuine enthusiasm mixed with performative energy; dimples when smiling fully.
+* **Hair:** Type 2B-2C waves; very high density; long length past shoulders to mid-back; natural volume and body; center or slight side part; healthy high-gloss finish; commonly worn loose with volume (camera-ready), half-up with claw clip (casual streams), or sleek ponytail (competitive mode); rich dark brown to black with subtle caramel balayage highlights framing face.
+* **Skin:** Medium-tan with warm golden-olive undertones (North African coloring); smooth luminous finish; flawless complexion maintained for camera work; natural healthy glow enhanced by ring lights and skincare routine. stylish clear-framed gaming glasses with a slight cat-eye shape
+**Outfit:**
+- **Top:** Basketball jersey for **Standard Team**  (sleeveless, wide shoulder cut)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Shooting sleeve, headband.
+- **Hair/Makeup:** Ponytail or bun.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with both arms raised and flexed at 90 degrees, fists curled inward, showing maximum arm and shoulder definition, vacuum-waist pose.
+---
+
+**Additional Notes:**
+Aryan Kapoor, Jordan Vance, and Amina Benali positioned at three points of a triangle, creating geometric composition with balanced spacing

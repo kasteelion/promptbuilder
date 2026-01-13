@@ -1,0 +1,66 @@
+# METADATA
+Scene: Neon-drenched city street, holographic billboards, chrome and glass architecture, purple and pink color scheme, futuristic noir.
+Base_Prompt: Low-Poly 3D
+Character: Avery Blake | Outfit: Sheriff | Pose: None
+Character: Jin Park | Outfit: Private Detective | Pose: None
+Interaction: Custom
+Score: 214
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Neon-drenched city street, holographic billboards, chrome and glass architecture, purple and pink color scheme, futuristic noir.
+---
+
+**CHARACTER: Avery Blake**
+**Appearance:**
+* **Body:** Soft Natural frame; lean-toned flesh quality; athletic hourglass proportions with moderate bust (C cup), defined shoulders with visible arm tone, trim waist with toned abs, shapely hips, and powerful legs; moderate vertical (5'6"); athletic density with controlled strength, sculpted core, and muscular thighs; provocatively confident presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-heart shape; high defined cheekbones with dramatic contouring; large almond-shaped eyes in dark brown/black with heavy smokey eye makeup creating intense smoldering gaze, moderately spaced; straight refined nose; full pouty lips; strong defined jawline; neutral resting expression is sultry and defiant with piercing direct stare and slight knowing smirk that radiates "I dare you."
+
+* **Hair:** Type 1B straight; very high density; ultra-sleek long cut reaching mid-back to waist; center part or dramatic side-swept; jet-black color with raven shine; glass-smooth texture like liquid ink; commonly worn completely straight and flowing, half-up with volume at crown, or high ponytail; always impeccably smooth and glossy.
+
+* **Skin:** Very fair/pale with cool undertones and smooth porcelain-ivory finish;
+**Outfit:**
+- **Top:** Khaki uniform shirt (short sleeves with epaulettes, badge over left pocket, multiple pockets with button flaps)
+- **Bottom:** dark brown leather duty belt (with holster, handcuffs, radio)
+- **Footwear:** matching khaki pants (straight leg with pressed crease); **black duty boots** (polished leather, lace-up).
+- **Accessories:** Silver star badge, wide-brimmed campaign hat (Smokey Bear style) in khaki, aviator sunglasses, leather gloves tucked in belt.
+- **Hair/Makeup:** Hair in tight professional bun or low ponytail, minimal makeup, authoritative expression, no-nonsense demeanor.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Jin Park**
+**Appearance:**
+* **Body:** Dramatic male frame; straight lean flesh; narrow rectangle proportions; moderate-to-tall vertical; poised and understated presence with natural grace.
+* **Face:** Long delicate facial structure; oval face; soft jawline; gentle observant eyes; reserved thoughtful expression that suggests deep introspection.
+* **Hair:** Type 1 straight; medium density; dark brown to black with soft matte finish; naturally fine texture; versatile K-fashion styling options.
+* **Skin:** Light neutral skin with smooth even finish and soft clarity. minimalist thin wire-frame glasses
+**Outfit:**
+- **Top:** White dress shirt (slightly rumpled)
+- **Bottom:** suspenders
+- **Footwear:** dress pants (gray or dark); **shoulder holster** (visible); **trench coat** (beige or tan, worn open); **fedora**.
+- **Accessories:** Revolver in holster, notebook in coat pocket, tie loosened.
+- **Hair/Makeup:** Disheveled hair, five o'clock shadow, tired but alert expression.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Avery Blake and Jin Park leaning over a glowing holographic tablet, Avery Blake pointing at data while Jin Park observes with deep concentration, professional intellectual focus.

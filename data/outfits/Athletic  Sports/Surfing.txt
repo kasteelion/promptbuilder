@@ -1,23 +1,45 @@
 tags: []
 
 [F]
-- **Top:** Long-sleeve neoprene wetsuit or rash guard (fitted, featuring bold color-blocking in {primary_color} and {secondary_color})
-- **Bottom:** matching bikini bottoms or board shorts
-- **Footwear:** barefoot with sand-dusted skin.
-- **Accessories:** Surfboard prop in **{accent}** (held under arm or standing nearby), waterproof fitness watch.
-- **Hair/Makeup:** "Salt-water" textured hair, wet skin finish, minimal waterproof makeup.
+- **Top:** Long-sleeve neoprene wetsuit or rash guard.
+  - **Fit:** Skin-tight wet.
+  - **Material:** Neoprene.
+  - **Pattern:** Color-blocking.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching bikini bottoms or board shorts.
+  - **Fit:** Tight.
+  - **Material:** Neoprene/Lycra.
+  - **Waist:** Low-rise.
+  - **Length:** Brief or Short.
+- **Footwear:** Barefoot.
+- **Accessories:** Surfboard prop, waterproof watch.
 
 [M]
-- **Top:** Long-sleeve neoprene wetsuit or rash guard (fitted, featuring bold color-blocking in {primary_color} and {secondary_color})
-- **Bottom:** matching board shorts
-- **Footwear:** barefoot with sand-dusted skin.
-- **Accessories:** Surfboard prop in **{accent}** (held under arm or standing nearby), waterproof digital watch.
-- **Hair/Makeup:** "Salt-water" textured hair, wet skin finish, natural grooming.
+- **Top:** Long-sleeve neoprene wetsuit or rash guard.
+  - **Fit:** Skin-tight.
+  - **Material:** Neoprene.
+  - **Pattern:** Color-blocking.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching board shorts.
+  - **Fit:** Loose surf fit.
+  - **Material:** Quick-dry polyester.
+  - **Waist:** Drawstring.
+  - **Length:** Knee-length.
+- **Footwear:** Barefoot.
+- **Accessories:** Surfboard prop, waterproof watch.
 
 [H]
-- **Hijab:** Neoprene swim hijab in **{primary_color}** (secure aerodynamic wrap)
-- **Top:** Long-sleeve neoprene wetsuit or rash guard (fitted, modest high-neck, full-length sleeves, bold color-blocking in **{primary_color}** and **{secondary_color}**)
-- **Bottom:** Full-length matching swim leggings or wetsuit bottom
-- **Footwear:** Barefoot with sand-dusted skin
-- **Accessories:** Surfboard prop in **{accent}**, waterproof fitness watch
-- **Makeup:** Wet skin finish, minimal waterproof makeup
+- **Hijab:** Neoprene swim hijab in **{primary_color}**.
+- **Top:** Long-sleeve neoprene wetsuit.
+  - **Fit:** Skin-tight modest.
+  - **Material:** Neoprene.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long full sleeves.
+- **Bottom:** Swim leggings or wetsuit bottom.
+  - **Fit:** Tight.
+  - **Material:** Neoprene.
+  - **Length:** Full length.
+- **Footwear:** Barefoot.
+- **Accessories:** Surfboard prop, watch.

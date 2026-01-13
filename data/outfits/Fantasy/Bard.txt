@@ -1,23 +1,47 @@
 tags: [fantasy, Music, Support]
 
 [F]
-- **Top:** Colorful doublet or vest (jewel tones with decorative buttons and trim)
-- **Bottom:** flowing shirt (billowy sleeves)
-- **Footwear:** fitted pants or layered skirt; **tall boots with folded tops**; **feathered cap or circlet**.
-- **Accessories:** Lute, harp, or other instrument, colorful scarves, jewelry (earrings, rings), coin purse, performance props.
-- **Hair/Makeup:** Styled hair (often with flair - curls, braids, or dramatic cut), theatrical makeup, expressive features, charismatic smile.
+- **Top:** Colorful doublet over billowy shirt.
+  - **Fit:** Fitted doublet; Billowy sleeves.
+  - **Material:** Silk or Velvet; Cotton.
+  - **Pattern:** Jewel tones with decorative trim.
+  - **Neckline:** Square or Pointed collar.
+  - **Sleeve:** Long billowing sleeves.
+- **Bottom:** Fitted pants or layered skirt.
+  - **Fit:** Tapered pants or flared skirt.
+  - **Material:** Fine wool or Silk.
+  - **Pattern:** Solid matching colors.
+  - **Waist:** Natural with ornate belt.
+  - **Length:** Ankle or Knee length.
+- **Footwear:** Tall boots with folded tops.
+- **Accessories:** Lute; harp; feathered cap; scarves; jewelry.
 
 [M]
-- **Top:** Colorful doublet or vest (jewel tones with decorative buttons and trim)
-- **Bottom:** flowing shirt (billowy sleeves)
-- **Footwear:** fitted pants; **tall boots with folded tops**; **feathered cap**.
-- **Accessories:** Lute, harp, or other instrument, colorful scarves, jewelry (earring, rings), coin purse, performance props.
-- **Hair/Makeup:** Styled hair (often with flair), expressive features, charismatic smile.
+- **Top:** Colorful doublet or vest over flowing shirt.
+  - **Fit:** Fitted tailored.
+  - **Material:** Velvet/Silk.
+  - **Pattern:** Decorative botones and trim.
+  - **Neckline:** V-neck or Collared.
+  - **Sleeve:** Long billowy sleeves.
+- **Bottom:** Fitted pants.
+  - **Fit:** Slim cigarette-style.
+  - **Material:** Fine fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Tall boots with folded tops.
+- **Accessories:** Musical instrument; colorful scarves; feathered cap.
 
 [H]
-- **Hijab:** Colorful patterned hijab or scarf with flair
-- **Top:** Colorful doublet or vest over billowy shirt
-- **Bottom:** Fitted pants or layered skirt
-- **Footwear:** Tall boots
-- **Accessories:** Lute or harp, feathered cap (optional), jewelry
-- **Makeup:** Theatrical makeup, expressive smile
+- **Hijab:** Colorful patterned hijab or scarf with flair.
+- **Top:** Colorful doublet or vest over billowy shirt.
+  - **Fit:** Tailored modest.
+  - **Material:** Silk/Velvet.
+  - **Neckline:** High-neck doublet.
+  - **Sleeve:** Long billowy sleeves.
+- **Bottom:** Fitted pants or layered skirt.
+  - **Fit:** Modest flare.
+  - **Material:** High-quality fabric.
+  - **Waist:** Natural.
+  - **Length:** Floor-length or ankle.
+- **Footwear:** Tall boots.
+- **Accessories:** Lute or harp; jewelry; feathered cap (optional).

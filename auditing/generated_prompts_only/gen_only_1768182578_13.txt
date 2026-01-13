@@ -1,0 +1,61 @@
+# METADATA
+Scene: Urban asphalt court, chain-link fence, worn basketball hoop, city skyline in background, graffiti on walls, gritty athletic vibe.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Mela Hart | Outfit: American Football | Pose: None
+Character: Kaia Vaitupu | Outfit: American Football | Pose: None
+Interaction: Custom
+Score: 423
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Urban asphalt court, chain-link fence, worn basketball hoop, city skyline in background, graffiti on walls, gritty athletic vibe.
+---
+
+**CHARACTER: Mela Hart**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall vertical line; broad shoulders; long limbs; somewhat straight silhouette; moderate bust and hip definition; athletic and springy presence.
+* **Face:** Oval shape; high cheekbones; full lips; prominent expressive eyes; straight nose bridge; defined jawline; bright and buoyant neutral expression.
+* **Hair:** Type 4A (Natural texture) with Type 2B/2C (Wavy/Curly) ends; long, dark brown braids throughout the hair with loose wavy curls at the bottom; high shine; braids are a signature identity feature.
+* **Skin:** Deep brown with warm golden undertones and luminous satin finish.
+**Outfit:**
+- **Top:** Molded shoulder pads (rigid, high-gloss #FFD100 plastic shells with a distinct, thick outer edge that is clearly separate from the fabric underneath
+- **Bottom:** protective design and The Coastal Bears logo shield reflecting stadium lights sharply)
+- **Footwear:** Sports performance top (crop-style in **#FFD100 with #2774AE accents**, wearing a quarterback's wrist coach playbook on the left forearm and a clear protective visor attached to the helmet, made of ultra-matte moisture-wicking compression fabric that absorbs light, showing slight compression wrinkles where the rigid edge of the shoulder pad presses against the body); Low-rise athletic shorts (minimal coverage design in #FFD100 with #2774AE accents, team number on hip); Compression arm sleeves (#FFD100 extending to mid-bicep with #2774AE striping); Athletic socks (knee-high #FFD100 or mixed black with #2774AE bands); Professional football cleats (Nike or Adidas style with #FFFFFF detailing). Accessories: Hockey-style helmet with clear polycarbonate visor and The Coastal Bears branding, #FFD100 athletic headband worn under helmet, The Coastal Bears-branded gloves with grip palms, knee pads with logo, eye black strips, #FFFFFF wristbands, athletic tape on fingers. Hair/Makeup: Long hair in high ponytail, braids, or curls secured with headband for mobility, camera-ready makeup with defined eyes and contouring, waterproof and sweat-resistant long-wear formula, natural glam suitable for stadium lighting and broadcast television.
+- in **#FFD100 with #2774AE accents**, wearing a quarterback's wrist coach playbook on the left forearm and a clear protective visor attached to the helmet
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Kaia Vaitupu**
+**Appearance:**
+- **Body:** Statuesque Athletic frame; warm golden-bronze skin with a luminous, hydrated finish; soft-rectangular proportions with strong, graceful posture; tall stature (5'10"-5'11"); refined athletic build with long limbs and elegant muscle definition; "quiet authority" presence—composed and commanding.
+- **Face:** Strong heart-shaped structure; defined cheekbones that catch the light; firm, graceful jawline; large, deep-set dark brown eyes with a steady, intelligent gaze; thick, natural dark eyebrows with a soft arch; straight, elegant nose; full, well-defined mouth with a composed neutral expression; presence conveys deep concentration and intellectual clarity.
+- **Hair:** Type 1A-1B straight; high density and lustrous sheen; waist-length dark ebony hair, often worn in a sharp, high-shine ponytail or loose with a precise center part; matte-satin finish with silver-blue holographic highlights woven through the strands.
+- **Skin:** Deep golden-bronze with warm radiant undertones; flawless, smooth texture; subtle traditional geometric "tatau" patterns on her forearms that pulse with a faint cyan glow; healthy, hydrated "digital office" glow.
+**Outfit:**
+- **Top:** Molded shoulder pads (rigid, high-gloss #FFD100 plastic shells with a distinct, thick outer edge that is clearly separate from the fabric underneath
+- **Bottom:** protective design and The Coastal Bears logo shield reflecting stadium lights sharply)
+- **Footwear:** Sports performance top (crop-style in **#2774AE with #FFD100 accents**, wearing sticky receiver gloves and a streamlined helmet visor, made of ultra-matte moisture-wicking compression fabric that absorbs light, showing slight compression wrinkles where the rigid edge of the shoulder pad presses against the body); Low-rise athletic shorts (minimal coverage design in #FFD100 with #2774AE accents, team number on hip); Compression arm sleeves (#FFD100 extending to mid-bicep with #2774AE striping); Athletic socks (knee-high #FFD100 or mixed black with #2774AE bands); Professional football cleats (Nike or Adidas style with #FFFFFF detailing). Accessories: Hockey-style helmet with clear polycarbonate visor and The Coastal Bears branding, #FFD100 athletic headband worn under helmet, The Coastal Bears-branded gloves with grip palms, knee pads with logo, eye black strips, #FFFFFF wristbands, athletic tape on fingers. Hair/Makeup: Long hair in high ponytail, braids, or curls secured with headband for mobility, camera-ready makeup with defined eyes and contouring, waterproof and sweat-resistant long-wear formula, natural glam suitable for stadium lighting and broadcast television.
+- in **#2774AE with #FFD100 accents**, wearing sticky receiver gloves and a streamlined helmet visor
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Mela Hart and Kaia Vaitupu jogging or sprinting side-by-side on a track or trail, synchronized movement, focused athletic breathing, determined expressions.

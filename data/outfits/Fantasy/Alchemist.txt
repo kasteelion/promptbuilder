@@ -1,23 +1,45 @@
 tags: [fantasy, Potion, Science]
 
 [F]
-- **Top:** Practical leather vest or apron (with many pockets)
-- **Bottom:** loose shirt (with rolled sleeves)
-- **Footwear:** fitted pants tucked into boots; **sturdy work boots**; **protective goggles** (on head or around neck).
-- **Accessories:** Bandolier of potion vials (multiple colors), mortar and pestle, ingredient pouches, bomb pouches, notebook for formulas, leather gloves.
-- **Hair/Makeup:** Hair tied back for safety (bun or ponytail), minimal makeup, possibly stained fingers from work, curious intelligent expression.
+- **Top:** Practical leather vest and apron.
+  - **Fit:** Relaxed with many pockets.
+  - **Material:** Sturdy leather; Heavy cotton.
+  - **Pattern:** Solid.
+  - **Neckline:** Open collar.
+  - **Sleeve:** Long sleeves (rolled to elbow).
+- **Bottom:** Fitted pants tucked into boots.
+  - **Fit:** Fitted.
+  - **Material:** Durable cotton twill.
+  - **Waist:** Buckle belt with pouches.
+  - **Length:** Ankle-length.
+- **Footwear:** Sturdy work boots.
+- **Accessories:** Bandolier of potion vials; mortars and pestle; protective goggles.
 
 [M]
-- **Top:** Practical leather vest or apron (with many pockets)
-- **Bottom:** loose shirt (with rolled sleeves)
-- **Footwear:** fitted pants tucked into boots; **sturdy work boots**; **protective goggles** (on head or around neck).
-- **Accessories:** Bandolier of potion vials (multiple colors), mortar and pestle, ingredient pouches, bomb pouches, notebook for formulas, leather gloves.
-- **Hair/Makeup:** Hair tied back for safety, possibly stained fingers from work, curious intelligent expression.
+- **Top:** Practical leather vest and apron.
+  - **Fit:** Relaxed.
+  - **Material:** Leather; Cotton.
+  - **Neckline:** Open.
+  - **Sleeve:** Long (rolled).
+- **Bottom:** Fitted pants.
+  - **Fit:** Fitted.
+  - **Material:** Sturdy fabric.
+  - **Waist:** Utility belt.
+  - **Length:** Full.
+- **Footwear:** Sturdy work boots.
+- **Accessories:** Potion bandolier; goggles; leather gloves.
 
 [H]
-- **Hijab:** Practical secure hijab (tucked in), protective material
-- **Top:** Leather apron or vest over long-sleeve shirt
-- **Bottom:** Fitted pants with many pockets
-- **Footwear:** Sturdy work boots
-- **Accessories:** Goggles, potions bandolier, gloves
-- **Makeup:** Curious expression, possibly smudge marks
+- **Hijab:** Practical secure hijab (tucked in).
+- **Top:** Leather apron or vest over long-sleeve shirt.
+  - **Fit:** Modest layered.
+  - **Material:** Leather; Cloth.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Fitted pants with many pockets.
+  - **Fit:** Straight leg.
+  - **Material:** Durable cloth.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Sturdy work boots.
+- **Accessories:** Goggles; potions bandolier; gloves.

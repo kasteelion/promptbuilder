@@ -1,0 +1,59 @@
+# METADATA
+Scene: Grassy meadow, wicker picnic basket, checkered blanket, wildflowers, lazy afternoon atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Malik Farrah | Outfit: Investigative Journalist | Pose: None
+Character: Fiona O'Sullivan | Outfit: Investigative Journalist | Pose: None
+Score: 390
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Grassy meadow, wicker picnic basket, checkered blanket, wildflowers, lazy afternoon atmosphere.
+---
+
+**CHARACTER: Malik Farrah**
+**Appearance:**
+- **Body:** Lean-muscular frame; sun-weathered olive skin with a deep, earthy tan; rectangular proportions with broad shoulders and a powerful, flexible core; average height (5'9"-5'10"); resilient, functional build with high-stamina muscle definition; "weathered strength" presence—durable and alert.
+- **Face:** Strong angular structure; prominent brow ridge; sharp, defined jawline partially obscured by a well-groomed short beard; intense, narrowed dark brown eyes that possess a sharp, far-reaching gaze; thick, dark eyebrows with a heavy set; straight nose with a strong bridge; firm mouth often set in a focused line; expression is keen, observant, and perpetually ready for action.
+- **Hair:** Type 3C-4A tight curls; high density; kept short and practical in a textured buzz cut or short fade; matte finish with occasional dust from the trail; dark ebony hair that looks durable.
+- **Skin:** Deep olive skin with sun-kissed golden-bronze undertones; weathered, rugged texture with fine sand-lines around the eyes; a small, faded scar on his left temple; healthy "outdoor" resilience.
+**Outfit:**
+- **Top:** White shirt with sleeves rolled up, loosened tie, suspenders.
+- **Bottom:** High-waisted brown trousers.
+- **Footwear:** Worn leather brogues.
+- **Accessories:** Trilby hat with press card, pencil behind ear.
+- **Hair/Makeup:** Messy hair, energetic expression.
+**Pose/Action:**
+Hands gently adjusting flower crown, soft smile, dreamy romantic expression, natural grace.
+---
+
+**CHARACTER 2: Fiona O'Sullivan**
+**Appearance:**
+* **Body:** Soft Natural plus-size frame; wave-type plush softness; soft pear-hourglass proportions; moderate vertical.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes; expressive hazel-green eyes; warm engaging smile; soft jawline; radiant joyful expression that reflects her generous spirit.
+* **Hair:** Type 2B-2C waves; high density; long layered cut with natural body; side part; soft natural volume with gentle frizz; copper-red to auburn with natural variation.
+* **Skin:** Fair rosy-toned skin with soft glow; smooth complexion. stylish tortoiseshell glasses
+**Outfit:**
+- **Top:** Fitted blouse with a peter pan collar under a knit chronograph sweater.
+- **Bottom:** A-line wool skirt in herringbone pattern.
+- **Footwear:** T-strap heels.
+- **Accessories:** Notepad and pen, vintage camera hanging around neck, press pass in hat band of a cloche hat.
+- **Hair/Makeup:** Short curly bob, fresh-faced makeup.
+**Pose/Action:**
+Standing at foul line after split or gutter ball, hands on hips or hand to forehead, disappointed but lighthearted expression, Sport frustration.
+---

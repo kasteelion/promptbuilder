@@ -1,23 +1,46 @@
 tags: [combat, fantasy, nature]
 
 [F]
-- **Top:** Leather armor (decorated with animal motifs - claws, teeth, fur accents)
-- **Bottom:** tribal-inspired accessories
-- **Footwear:** earth-toned pants or skirt; **leather boots** with good traction.
-- **Accessories:** Staff or spear, animal companion (large beast like bear, big cat, or wolf), bone jewelry, nature-themed decorations, beast-calling horn.
-- **Hair/Makeup:** Wild natural hair with braids and animal-inspired decorations (feathers, beads), tribal face paint, fierce expression, connection with nature.
+- **Top:** Leather armor with animal motifs and fur accents.
+  - **Fit:** Rugged fitted.
+  - **Material:** Distressed leather; Genuine fur.
+  - **Pattern:** Animal motifs (claws, teeth).
+  - **Neckline:** V-neck or Cross-over.
+  - **Sleeve:** Sleeveless or one-sleeved.
+- **Bottom:** Earth-toned pants or skirt with tribal accessories.
+  - **Fit:** Relaxed or A-line.
+  - **Material:** Heavy cotton or buckskin.
+  - **Pattern:** Tribal-inspired.
+  - **Waist:** Natural with bone jewelry.
+  - **Length:** Knee to Ankle.
+- **Footwear:** Leather boots with good traction.
+- **Accessories:** Staff or spear; animal companion; beast-calling horn.
 
 [M]
-- **Top:** Leather armor (decorated with animal motifs - claws, teeth, fur accents)
-- **Bottom:** tribal-inspired accessories
-- **Footwear:** earth-toned pants; **leather boots** with good traction.
-- **Accessories:** Staff or spear, animal companion (large beast like bear, big cat, or wolf), bone jewelry, nature-themed decorations, beast-calling horn.
-- **Hair/Makeup:** Wild natural hair with braids and animal-inspired decorations (feathers, beads), tribal face paint, fierce expression, connection with nature.
+- **Top:** Leather armor with fur and tooth accents.
+  - **Fit:** Rugged.
+  - **Material:** Leather and Fur.
+  - **Neckline:** Open or high-neck leather.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Earth-toned pants.
+  - **Fit:** Straight.
+  - **Material:** Heavy fabric.
+  - **Waist:** Natural with tribal trophies.
+  - **Length:** Tucked into boots.
+- **Footwear:** Leather boots.
+- **Accessories:** Staff or spear; animal companion; horn.
 
 [H]
-- **Hijab:** Tribal-style wrap with feathers, beads, or bone accents
-- **Top:** Leather tunic with fur details (long sleeves)
-- **Bottom:** Durable trousers or skirt with leggings
-- **Footwear:** Leather boots with traction
-- **Accessories:** Spear or staff, animal companion, bone jewelry
-- **Makeup:** Tribal face paint, fierce expression
+- **Hijab:** Tribal-style wrap with feathers and bone accents.
+- **Top:** Leather tunic with fur details.
+  - **Fit:** Modest rugged fit.
+  - **Material:** Leather; Fur; Heavy fabric.
+  - **Neckline:** High modest neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Durable trousers or skirt with leggings.
+  - **Fit:** Straight.
+  - **Material:** Heavy cotton.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Leather boots with traction.
+- **Accessories:** Spear or staff; bone jewelry; animal companion.

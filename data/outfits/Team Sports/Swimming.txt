@@ -1,23 +1,48 @@
 tags: [Sport, Swim, Water]
 
 [F]
-- **Top:** Performance one-piece swimsuit with a **solid black** central body panel for hydrodynamics
-- **Bottom:** contoured side panels in **{primary_color}** framed by thin **{secondary_color}** piping
-- **Footwear:** racerback strap design with open back.
-- **Accessories:** White swim cap with **{primary_color}** logo, mirrored racing goggles ({accent}).
-- **Hair/Makeup:** Wet skin texture, waterproof makeup.
+- **Top:** Performance one-piece swimsuit.
+  - **Fit:** Hydrodynamic; Racerback.
+  - **Material:** Technical swim fabric; Solid black central panel.
+  - **Pattern:** Contoured side panels in {primary_color} with {secondary_color} piping.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Integrated swim bottom.
+  - **Fit:** High-cut.
+  - **Material:** matching fabric.
+  - **Pattern:** Contoured side panels.
+  - **Waist:** Seamless.
+  - **Length:** Minimal coverage.
+- **Footwear:** None (Barefoot).
+- **Accessories:** White swim cap with {primary_color} logo; mirrored racing goggles ({accent}).
 
 [M]
-- **Top:** Performance one-piece swimsuit with a **solid black** central body panel for hydrodynamics
-- **Bottom:** contoured side panels in **{primary_color}** framed by thin **{secondary_color}** piping
-- **Footwear:** racerback strap design with open back.
-- **Accessories:** White swim cap with **{primary_color}** logo, mirrored racing goggles ({accent}).
-- **Hair/Makeup:** Wet skin texture, waterproof makeup.
+- **Top:** Bare chest or Performance swim shirt.
+  - **Fit:** Athletic.
+  - **Material:** Technical swim fabric or Skin.
+  - **Neckline:** Round neck (shirt).
+  - **Sleeve:** Sleeveless or Short.
+- **Bottom:** Performance jammers or swim suit with side panels.
+  - **Fit:** Hydrodynamic; Fitted.
+  - **Material:** Black technical fabric.
+  - **Pattern:** {primary_color} side panels with {secondary_color} piping.
+  - **Waist:** Elastic.
+  - **Length:** Mid-thigh jammers or Briefs.
+- **Footwear:** None (Barefoot).
+- **Accessories:** White swim cap; racing goggles ({accent}).
 
 [H]
-- **Hijab:** Swim hijab in **black** with **{primary_color}** rim (quick-dry technical fabric)
-- **Top:** Long-sleeve modest swim tunic featuring a **solid black** central panel; contoured side panels in **{primary_color}** framed by thin **{secondary_color}** piping; loose fit through the body
-- **Bottom:** Full-length swim leggings in **black**
-- **Footwear:** None
-- **Accessories:** Mirrored racing goggles ({accent})
-- **Makeup:** Waterproof natural makeup
+- **Hijab:** Swim hijab in black with {primary_color} rim.
+- **Top:** Long-sleeve modest swim tunic.
+  - **Fit:** Loose modest.
+  - **Material:** Quick-dry technical fabric; black central panel.
+  - **Pattern:** {primary_color} side panels with {secondary_color} piping.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length swim leggings in black.
+  - **Fit:** Compression fit.
+  - **Material:** matching.
+  - **Waist:** Elastic.
+  - **Length:** Full length.
+- **Footwear:** None.
+- **Accessories:** Mirrored racing goggles ({accent}).

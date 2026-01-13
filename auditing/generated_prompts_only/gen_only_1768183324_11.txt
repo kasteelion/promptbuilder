@@ -1,0 +1,59 @@
+# METADATA
+Scene: Neon-drenched city street, holographic billboards, chrome and glass architecture, purple and pink color scheme, futuristic noir.
+Base_Prompt: Low-Poly 3D
+Character: Elara Soledad | Outfit: 1980s Power Dressing | Pose: None
+Character: Hana Park | Outfit: 1980s Power Dressing | Pose: None
+Score: 360
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Neon-drenched city street, holographic billboards, chrome and glass architecture, purple and pink color scheme, futuristic noir.
+---
+
+**CHARACTER: Elara Soledad**
+**Appearance:**
+* **Body:** Dramatic Classic frame; lean taut flesh; long limbs with balanced proportions; tall (6'1"); dense sculpted muscle over strong bone structure with visible traps, defined deltoids, and powerful legs; commanding athletic presence.
+* **Face:** Strong angular structure; oval-square shape; strong pronounced cheekbones; almond-shaped wide-set deep mahogany brown eyes; sharply defined jawline; neutral resting expression is stoic and observant with unwavering gaze; smile is rare but genuine and transforms expression into warm intensity.
+* **Hair:** Type 4C coils; very dense; voluminous naturally forming wide halo; waist length; center-parted often pulled back for practicality; low sheen; commonly styled in thick braids or high functional bun; black-brown.
+* **Skin:** Deep warm brown with golden undertones and smooth almost polished surface finish; faint linear scars on upper arms and shoulders.
+**Outfit:**
+- **Top:** Structured blazer (bold color - red, royal blue, or fuchsia with exaggerated shoulder pads, double-breasted with large buttons)
+- **Bottom:** high-waist pencil skirt (matching or contrasting, knee-length)
+- **Footwear:** silk blouse (with bow at neck or bold print); **pumps** (pointed toe, high heel).
+- **Accessories:** Chunky gold jewelry (large earrings, multiple bangles, statement necklace), leather briefcase or structured handbag, belt (wide with prominent buckle), power watch.
+- **Hair/Makeup:** Big voluminous hair (permed, teased, or blown out with height), bold makeup (bright eyeshadow - blue, purple, pink, heavy blush, bold lip in red or fuchsia), strong brows, assertive 80s executive presence.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing near a monitor or document, gesturing toward it with one hand while looking at an audience, confident professional delivery.
+---
+
+**CHARACTER 2: Hana Park**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; compact rounded proportions; petite vertical.
+* **Face:** Delicate compact structure; round face; plush cheeks; large expressive eyes; youthful neutral expression.
+* **Hair:** Type 1 straight; fine-to-medium density; blunt shoulder-length cut; off-center part; smooth dewy finish; dark brown to black.
+* **Skin:** Light warm-beige skin with clear finish.
+**Outfit:**
+- **Top:** Structured blazer (bold color - red, royal blue, or fuchsia with exaggerated shoulder pads, double-breasted with large buttons)
+- **Bottom:** high-waist pencil skirt (matching or contrasting, knee-length)
+- **Footwear:** silk blouse (with bow at neck or bold print); **pumps** (pointed toe, high heel).
+- **Accessories:** Chunky gold jewelry (large earrings, multiple bangles, statement necklace), leather briefcase or structured handbag, belt (wide with prominent buckle), power watch.
+- **Hair/Makeup:** Big voluminous hair (permed, teased, or blown out with height), bold makeup (bright eyeshadow - blue, purple, pink, heavy blush, bold lip in red or fuchsia), strong brows, assertive 80s executive presence.
+**Pose/Action:**
+full body shot showing the character from head to toe, Stretching a limb or jogging in place, preparing for physical activity, focused athletic mindset.
+---

@@ -1,0 +1,52 @@
+tags: [Casual, Vintage, 90s, Minimalist, Chic]
+modifiers:
+  Square: featuring a **sharp square neckline** and thick straps
+  Boat: featuring a **high boat neckline** showing shoulders
+  Spaghetti: with **thin spaghetti straps** and a straight neckline
+  Ribbed: in a **fine ribbed texture** with a scoop neck
+
+[F]
+- **Top:** Fitted white tank top {modifier}.
+  - **Fit:** Tight form-fitting.
+  - **Material:** High quality cotton.
+  - **Pattern:** Solid.
+  - **Neckline:** Scoop neck (unless modified).
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Straight-leg blue jeans.
+  - **Fit:** Straight leg.
+  - **Material:** Vintage wash denim.
+  - **Pattern:** Distressed.
+  - **Waist:** Natural waist.
+  - **Length:** Ankle-length.
+- **Footwear:** Black leather loafers or minimalist sandals.
+- **Accessories:** Rectangular sunglasses, baguette bag, silver hoop earrings.
+
+[M]
+- **Top:** Fitted ribbed tank top {modifier}.
+  - **Fit:** Form-fitting.
+  - **Material:** Ribbed cotton.
+  - **Pattern:** Vertical ribbing.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Straight-leg blue jeans.
+  - **Fit:** Straight leg.
+  - **Material:** Vintage wash denim.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** White minimalist sneakers or loafers.
+- **Accessories:** Silver chain necklace, rectangular sunglasses.
+
+[H]
+- **Hijab:** White jersey hijab with clean lines.
+- **Top:** Fitted long-sleeve ribbed top {modifier}.
+  - **Fit:** Fitted modest cut.
+  - **Material:** White cotton.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Straight-leg blue jeans.
+  - **Fit:** Relaxed straight leg.
+  - **Material:** Vintage wash denim.
+  - **Waist:** Natural.
+  - **Length:** Ankle-length.
+- **Footwear:** White sneakers or loafers.
+- **Accessories:** Rectangular sunglasses, baguette bag, silver watch.

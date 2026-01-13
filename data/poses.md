@@ -32,7 +32,7 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Book Stack** (Casual, Reading, School): Surrounded by stacked books, reading one intently, academic cozy atmosphere, intellectual aesthetic.
 - **Coffee Shop** (Casual, Cafe, Drinking): Sitting at table with drink, looking out window or at camera, cozy aesthetic vibes.
 - **Drinking** (Casual, Drinking): Holding cup or glass, bringing it toward mouth or just sipped, Casual relaxed pose.
-- **Gaming Controller** (Casual, Gaming, Sit): Holding game controller, focused on screen ahead, Casual gaming posture, relaxed competitive energy.
+- **Gaming Controller** (Casual, Gaming, Sit, Esports): Holding game controller, focused on screen ahead, Casual gaming posture, relaxed competitive energy.
 - **Headphone Vibe** (Casual, Music): Adjusting over-ear headphones, eyes closed or looking away, lost in music, Peaceful moment.
 - **Painter at Easel (Seated)** (Art, Creative, Sitting): Sitting on a stool in front of a wooden easel, palette in one hand and brush in the other, focused intently on the canvas.
 - **Painter at Easel (Standing)** (Art, Creative, Standing): Standing before an easel, arm extended to make a brushstroke, stepping back slightly to judge the work, creative focus.
@@ -46,13 +46,13 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 
 ## Fashion & Portrait Poses
 
-- **Against Wall** (Fashion, Edgy, Standing): Back or shoulder against wall, one leg bent with foot on wall, sultry confident energy.
+- **Against Wall** (Fashion, Edgy, Standing, Skate): Back or shoulder against wall, one leg bent with foot on wall, sultry confident energy.
 - **Hand Through Hair** (Fashion, Flirty): Running fingers through hair, relaxed sensual gesture, eyes closed or looking away.
 - **Hip Pop** (Fashion, Sassy, Standing): One hip pushed out dramatically, hand on hip, weight on one leg, sassy confident stance.
 - **Jacket Over Shoulder** (Fashion, Cool, Walking): Blazer or jacket slung over one shoulder, walking pose, fashion-forward confidence.
 - **Mirror Selfie** (Fashion, Self, Interior): Posing in front of mirror, phone held up, confident expression, outfit showcase.
 - **Over the Shoulder** (Fashion, Flirty): Looking back over shoulder, playful smile, hair cascading down, confident stance.
-- **VSCO Squat** (Fashion, Trendy, Squat): Crouching low fashion squat, arm resting on knee, camera-ready, trendy photo-ready pose.
+- **VSCO Squat** (Fashion, Trendy, Squat, Skate): Crouching low fashion squat, arm resting on knee, camera-ready, trendy photo-ready pose.
 - **The Angel Wing Stance** (Fashion, Glamour, Modeling): Standing with back arched, arms spread slightly away from the sides, head tilted with a glamorous "Victoria's Secret" smile.
 - **Runway Stride** (Fashion, Walking, Model): Mid-stride walking with one foot directly in front of the other, expression neutral and fierce, hair flowing with motion.
 - **Soft Lingerie Lean** (Fashion, Intimate, Bedroom): Leaning against a soft surface, one hand near the collarbone, eyes half-closed in a dreamy, high-fashion look.
@@ -170,6 +170,10 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Stretching Pre-Fight** (Gym, Stretch): Deep lunge stretch, arms overhead or extended, focused concentration, warming up energy.
 - **Swimming Dive** (Swim, Dive): Streamlined diving position, arms extended forward, body horizontal, entering water, competitive form.
 - **Track Starting Block** (Run, Ready): Crouched in starting position, hands on ground, explosive ready stance, Intense focus.
+- **Handstand** (Gym, Sport, Balance): Standing on hands, body perfectly vertical, legs locked together, focused balance.
+- **Backbend** (Gym, Flexible, Dramatic): Arching backward with hands and feet on the ground, creating a graceful bridge, impressive flexibility.
+- **Holding Skateboard** (Skate, urban, Casual): Standing with a skateboard tucked under one arm, relaxed posture, urban background.
+- **Skater Push** (Skate, Action, Dynamic): One foot on the skateboard, the other pushing off the ground, mid-motion, forward momentum.
 
 ---
 
@@ -227,7 +231,6 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 
 ---
 
-
 ---
 
 ## Aura & Power
@@ -259,8 +262,8 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 
 ## Sci-Fi & Cyberpunk
 
-- **Checking Hologram** (Tech, Sci-Fi, Standing): Standing with one hand extended, fingers spread as if manipulating a floating holographic display, focused expression, futuristic gesture.
-- **Using Command Console** (Tech, Professional, Standing): Standing at a control panel, both hands on interface, leaning forward slightly, concentrated on screens, command center energy.
+- **Checking Hologram** (Tech, Sci-Fi, Standing, Esports): Standing with one hand extended, fingers spread as if manipulating a floating holographic display, focused expression, futuristic gesture.
+- **Using Command Console** (Tech, Professional, Standing, Esports): Standing at a control panel, both hands on interface, leaning forward slightly, concentrated on screens, command center energy.
 - **Gravity Shift** (Dynamic, Sci-Fi, Action): Mid-motion as if floating or adjusting to altered gravity, one leg bent, arms out for balance, hair and clothing defying normal physics.
 - **Neural Link Sync** (Tech, Intimate, Sci-Fi): Hand touching temple or behind ear where neural implant would be, eyes closed or glowing, syncing with technology, cybernetic connection moment.
 - **Cyberpunk Street Lean** (Urban, Cyberpunk, Cool): Leaning against neon-lit wall, one foot up on surface, arms crossed, rain-slicked street vibe, dystopian cool attitude.

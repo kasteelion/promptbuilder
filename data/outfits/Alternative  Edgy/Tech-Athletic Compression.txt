@@ -1,20 +1,46 @@
 tags: [sci-fi, Sport]
 
 [F]
-- **Top:** Long-sleeve compression top (high-neck technical nylon-spandex blend in ((default:charcoal) or (signature)), ultra-fitted to highlight torso and shoulder definition)
-- **Bottom:** Matching high-waist compression leggings (thick elasticated waistband, moisture-wicking matte finish).
+- **Top:** Long-sleeve compression top.
+  - **Fit:** Ultra-fitted second skin.
+  - **Material:** Nylon-spandex blend.
+  - **Pattern:** Solid ((default:charcoal) or (signature)).
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching high-waist compression leggings.
+  - **Fit:** Compression.
+  - **Material:** Moisture-wicking matte fabric.
+  - **Waist:** Thick elasticated waistband.
+  - **Length:** Ankle-length.
+- **Footwear:** Sneakers (Implied).
 - **Accessories:** Black fitness tracker; wireless earbuds.
-- **Hair/Makeup:** Sleek ponytail; natural dewy skin; minimal makeup.
 
 [M]
-- **Top:** Long-sleeve compression shirt (high-neck technical nylon-spandex blend in ((default:charcoal) or (signature)), ultra-fitted to highlight muscle definition in the chest, shoulders, and arms)
-- **Bottom:** Matching compression leggings (thick elasticated waistband, moisture-wicking matte finish).
+- **Top:** Long-sleeve compression shirt.
+  - **Fit:** Ultra-fitted muscle definition.
+  - **Material:** Nylon-spandex blend.
+  - **Pattern:** Solid ((default:charcoal) or (signature)).
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching compression leggings.
+  - **Fit:** Compression.
+  - **Material:** Moisture-wicking fabric.
+  - **Waist:** Elasticated.
+  - **Length:** Full length.
+- **Footwear:** Sneakers (Implied).
 - **Accessories:** Black fitness tracker; wireless earbuds.
-- **Hair/Makeup:** Short neat hairstyle; natural clean skin; well-groomed.
 
 [H]
-- **Hijab:** Technical jersey sports hijab in ((default:charcoal) or (signature)) with a secure aerodynamic wrap
-- **Top:** Long-sleeve compression tunic (high-neck technical nylon-spandex blend in ((default:charcoal) or (signature)), modest length, ultra-fitted to highlight athletic silhouette)
-- **Bottom:** Matching compression leggings (thick elasticated waistband, moisture-wicking matte finish)
-- **Accessories:** Black fitness tracker; wireless earbuds
-- **Makeup:** Natural dewy skin; minimal makeup
+- **Hijab:** Technical jersey sports hijab in ((default:charcoal) or (signature)).
+- **Top:** Long-sleeve compression tunic.
+  - **Fit:** Ultra-fitted modest silhouette.
+  - **Material:** Nylon-spandex blend.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching compression leggings.
+  - **Fit:** Compression.
+  - **Material:** Moisture-wicking matte fabric.
+  - **Waist:** Elasticated.
+  - **Length:** Full length.
+- **Footwear:** Sneakers (Implied).
+- **Accessories:** Black fitness tracker; wireless earbuds.

@@ -1,23 +1,46 @@
 tags: [fantasy, nature, Range]
 
 [F]
-- **Top:** Leather armor vest (brown or forest green with fur trim)
-- **Bottom:** fitted pants (earth tones)
-- **Footwear:** hooded cloak (green or brown for camouflage); **sturdy leather boots** (calf-high).
-- **Accessories:** Longbow and quiver of arrows (worn on back), hunting knife, animal companion (hawk, wolf, or hunting dog), rope and survival gear, leather gloves.
-- **Hair/Makeup:** Practical hair in braid or ponytail, natural sun-kissed makeup, earth tone accents, alert focused expression.
+- **Top:** Leather armor vest with fur trim.
+  - **Fit:** Fitted rugged.
+  - **Material:** Brown/Green leather; Fur.
+  - **Pattern:** Solid earth tones.
+  - **Neckline:** V-neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Fitted pants in earth tones.
+  - **Fit:** Skin-tight.
+  - **Material:** Suede or leather.
+  - **Pattern:** Camouflage tones.
+  - **Waist:** Natural.
+  - **Length:** Tucked into boots.
+- **Footwear:** Sturdy calf-high leather boots.
+- **Accessories:** Longbow and quiver; hooded cloak; hunting knife; hawk companion.
 
 [M]
-- **Top:** Leather armor vest (brown or forest green with fur trim)
-- **Bottom:** fitted pants (earth tones)
-- **Footwear:** hooded cloak (green or brown for camouflage); **sturdy leather boots** (calf-high).
-- **Accessories:** Longbow and quiver of arrows (worn on back), hunting knife, animal companion (hawk, wolf, or hunting dog), rope and survival gear, leather gloves.
-- **Hair/Makeup:** Practical hair (short or tied back), natural sun-kissed look, earth tone accents, alert focused expression.
+- **Top:** Leather armor vest with fur trim.
+  - **Fit:** Rugged.
+  - **Material:** Leather and Fur.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Fitted pants.
+  - **Fit:** Fitted.
+  - **Material:** Cloth.
+  - **Waist:** Natural.
+  - **Length:** Tucked in.
+- **Footwear:** Sturdy leather boots; hooded cloak.
+- **Accessories:** Longbow; quiver; hunting knife; animal companion.
 
 [H]
-- **Hijab:** Green or brown camouflage hijab, secure for movement
-- **Top:** Leather armor vest over earth-toned long-sleeve tunic
-- **Bottom:** Fitted trousers suitable for running
-- **Footwear:** Sturdy calf-high boots
-- **Accessories:** Longbow, quiver, hooded cloak, leather gloves
-- **Makeup:** Natural sun-kissed makeup, focused expression
+- **Hijab:** Green or brown camouflage hijab.
+- **Top:** Leather armor vest over earth-toned tunic.
+  - **Fit:** Modest rugged.
+  - **Material:** Leather; Cloth.
+  - **Neckline:** High modest neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Fitted trousers suitable for movement.
+  - **Fit:** Flexible.
+  - **Material:** Earth-toned cloth.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Sturdy calf-high boots.
+- **Accessories:** Longbow; quiver; hooded cloak; gloves.

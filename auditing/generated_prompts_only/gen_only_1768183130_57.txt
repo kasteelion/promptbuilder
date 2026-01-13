@@ -1,0 +1,65 @@
+# METADATA
+Scene: Small exam room, medical bed with paper cover, equipment on walls, sink, clinical sterile atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Elara Soledad | Outfit: Resort Wear Luxury | Pose: None
+Character: Roxanna Perez | Outfit: Training | Pose: None
+Interaction: Custom
+Score: 369
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Small exam room, medical bed with paper cover, equipment on walls, sink, clinical sterile atmosphere.
+---
+
+**CHARACTER: Elara Soledad**
+**Appearance:**
+* **Body:** Dramatic Classic frame; lean taut flesh; long limbs with balanced proportions; tall (6'1"); dense sculpted muscle over strong bone structure with visible traps, defined deltoids, and powerful legs; commanding athletic presence.
+* **Face:** Strong angular structure; oval-square shape; strong pronounced cheekbones; almond-shaped wide-set deep mahogany brown eyes; sharply defined jawline; neutral resting expression is stoic and observant with unwavering gaze; smile is rare but genuine and transforms expression into warm intensity.
+* **Hair:** Type 4C coils; very dense; voluminous naturally forming wide halo; waist length; center-parted often pulled back for practicality; low sheen; commonly styled in thick braids or high functional bun; black-brown.
+* **Skin:** Deep warm brown with golden undertones and smooth almost polished surface finish; faint linear scars on upper arms and shoulders.
+**Outfit:**
+- **Top:** Flowing linen pants (#8B4513, wide leg, high-waist with tie belt)
+- **Bottom:** matching linen blouse (button-down or sleeveless, slightly oversized)
+- **Footwear:** flat leather sandals (tan or gold, minimal straps).
+- **Accessories:** Oversized sun hat (natural straw), designer sunglasses, statement earrings (gold or turquoise), woven beach tote, layered delicate necklaces.
+- **Hair/Makeup:** Effortless beach waves or low chignon, bronzed sun-kissed makeup (minimal coverage, glowing skin, nude lip), resort vacation luxury, sophisticated relaxation.
+**Pose/Action:**
+full body shot showing the character from head to toe, Hands on the waist, elbows pushed forward to broaden the back, showcasing extreme V-taper and upper body width.
+---
+
+**CHARACTER 2: Roxanna Perez**
+**Appearance:**
+* **Body:** Theatrical Romantic frame (Kibbe); lush flesh; compact delicate bone structure; double-tapered proportions; short to moderately short vertical line; concentrated physical presence.
+
+* **Face:** Balanced-soft facial structure with subtle sharpness; oval face; moderate midface projection; large almond-shaped eyes; softly defined tapered jawline; full lips; resting expression calm and self-possessed.
+
+* **Hair:** Type 1C–2A straight to slightly wavy; high density; long length; no shrinkage; side part; asymmetrical swept silhouette; glossy surface finish.
+
+* **Skin:** Medium olive skin tone; warm-neutral undertone; smooth satin finish; no prominent markings.
+**Outfit:**
+- **Top:** Fitted **sports bra** with minimal detailing
+- **Bottom:** high-waist **athletic shorts**.
+- **Accessories:** Lightweight grappling gloves; **ankle tape** for support.
+- **Hair/Makeup:** Minimal makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with both arms raised and flexed at 90 degrees, fists curled inward, showing maximum arm and shoulder definition, vacuum-waist pose.
+---
+
+**Additional Notes:**
+Elara Soledad and Roxanna Perez in pre-fight weigh-in confrontation, standing forehead-to-head or nearly touching. Arms at sides or held back by officials/coaches, preventing physical contact. Bodies are tense, coiled energy barely contained. Facial expressions showing psychological warfare—stone-faced intensity, trash talk mid-sentence, or aggressive scowls. Neck muscles tensed, veins visible from adrenaline and weight cut strain. Shoulders and traps flexed. Both leaning slightly forward into each other's space, neither backing down. Eye contact is unwavering, predatory. Background shows weigh-in stage setup, scales, promotional banners, or crowd of media. Coaching teams may be visible at edges trying to separate or control their fighters. Raw power on display, mutual respect mixed with aggression.

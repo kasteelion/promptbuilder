@@ -126,3 +126,15 @@
 - vintage-inspired
 - glamorous
 - sophisticated
+- cyan-signature
+- dynamic
+- earthy
+- elegant
+- gold-signature
+- graceful
+- high-performance
+- neon-orange-signature
+- resourceful
+- steady
+- tan
+- tech

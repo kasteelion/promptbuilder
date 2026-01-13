@@ -1,0 +1,81 @@
+# METADATA
+Scene: Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Diego Morales | Outfit: Opera Masquerade | Pose: None
+Character: Zahara El-Amin | Outfit: Parisian High Fashion | Pose: None
+Character: Audrey Thorne | Outfit: Goth | Pose: None
+Interaction: Custom
+Score: 165
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
+---
+
+**CHARACTER: Diego Morales**
+**Appearance:**
+- **Body:** Natural Athletic frame; natural-toned flesh with sun-touched warmth; inverted rectangle proportions with broad shoulders, slim waist, and defined muscle groups without bulk; moderate height (5'11"-6'0"); relaxed athletic build—lean and flexible from years of surfing; "effortless strength" presence—capable but never posturing.
+- **Face:** Balanced-angular structure; oval face shape; firm jawline that softens when he smiles; expressive almond-shaped eyes, wide-set, warm hazel with golden flecks that catch the light; natural dark eyebrows with a slight arch; straight nose with a subtle bridge; full mouth often quirked into a friendly half-smile; expressive neutral expression that reads as engaged and helpful.
+- **Hair:** Type 2B-2C waves; thick high density; medium length textured cut, shorter on sides with volume on top; loose natural side part; matte-satin finish with sun-bleached highlights at the tips; commonly worn tousled and "salt-water" styled, or loosely pushed back during work.
+- **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
+**Outfit:**
+- **Top:** Tailored **black suit** with **white dress shirt** and **black cravat**
+- **Bottom:** flowing **black cape** with red silk lining
+- **Footwear:** iconic **white half-mask** obscuring side of face.
+- **Accessories:** Rose prop, signet ring.
+- **Hair/Makeup:** Slicked back dark hair, Intense shadowed eyes.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Zahara El-Amin**
+**Appearance:**
+* **Body:** Dramatic; tall vertical (5'9"); lean and angular frame with long limbs; graceful, measured density; poised and commanding presence.
+* **Face:** Sharp-balanced structure; diamond face shape with high, prominent cheekbones; large, intelligent dark brown eyes; straight, high-bridged nose; well-defined, narrow jawline; neutral expression is focused and contemplative.
+* **Hair:** (Covered) Long dark hair typically styled in a low, secure bun beneath her hijab.
+* **Skin:** Rich mahogany depth with warm, luminous undertones (Sub-Saharan/North African transition); smooth matte finish; clear, even complexion that catches the light on high points of the face. signature thick-rimmed designer glasses in deep amber tortoise-shell
+**Outfit:**
+- **Hijab:** Black silk or chiffon hijab (sleek wrap) under a **black beret**
+- **Top:** Long-sleeve **white silk blouse** with pussy-bow collar under a structured **black blazer**
+- **Bottom:** Tailored wide-leg trousers or maxi skirt (black)
+- **Footwear:** Pointed-toe pumps or stilettos
+- **Accessories:** Designer sunglasses, quilted leather handbag, gold hoops
+- **Makeup:** Low low-maintenance chic, bold red lip
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Audrey Thorne**
+**Appearance:**
+* **Body:** Heavy Curvy Hourglass / Spoon Shape; statuesque height at 5'7"; 43.5-37-48 proportions; thick, soft flesh quality; substantial bust carried high, transitioning into a defined but thick waist, which flares dramatically into wide, shelf-like hips and heavy thighs; bottom-heavy silhouette balanced by a full chest; voluptuous density with soft anatomical markers.
+* **Face:** Soft Heart-shaped structure with a "baby face" quality; full, rounded cheeks (apple cheeks) and a soft, non-angular jawline; gentle chin; distinctively pale, porcelain complexion with pink undertones; focal heavy-lidded / slightly hooded eyes with hazel-brown irises and relaxed, downward-sloping upper lids giving a calm, sultry expression; natural, slightly arched brows; small to medium mouth width with full, pillowy lips and a clearly defined cupid's bow.
+* **Hair:** Type 2B (wavy); high density; tousled, voluminous layered silhouette; collarbone-length; deep side part with height at the root; healthy natural sheen; common styling includes a loose, textured blowout. Medium chestnut brown with copper/golden undertones.
+* **Skin:** Fair/Light depth; cool pink undertones with a smooth, matte-satin finish; clear complexion with natural flushing on the cheeks.
+**Outfit:**
+- **Top:** Black band tee or mesh top
+- **Bottom:** distressed black jeans or skirt with chains
+- **Footwear:** combat boots or platforms.
+- **Accessories:** Choker, silver rings, studded belt.
+- **Hair/Makeup:** Dark lipstick, dramatic eye makeup, **hair styled to match the dark aesthetic**.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Diego Morales pinning Zahara El-Amin against wall in dramatic kabedon pose with intense romantic tension.

@@ -1,0 +1,80 @@
+# METADATA
+Scene: Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Elias Thorne | Outfit: Retro Bowling | Pose: None
+Character: Oliver St. James | Outfit: Retro Bowling | Pose: None
+Character: Aryan Kapoor | Outfit: Retro Bowling | Pose: None
+Interaction: Custom
+Score: 461
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
+---
+
+**CHARACTER: Elias Thorne**
+**Appearance:**
+* **Body:** Dramatic frame; tall and lean (6'1"-6'2"); maintained simply through discipline (yoga/pilates); narrow shoulders and long lines; moves with a fluid, ageless elegance; clothes hang on him like he is a mannequin.
+* **Face:** Long, narrow, and angular; deep-set, intelligent grey eyes; distinctive aquiline nose; sharp cheekbones; clean-shaven or a very close stubble; expression is usually one of amused detachment or critical observation.
+* **Hair:** Type 1A straight; fine density; precision-cut textured crop, kept neat and short; striking pure silver/white color; matte finish.
+* **Skin:** Fair-cool; smooth texture with distinguished fine lines around eyes and forehead (the "character lines"); pale but healthy. thick-rimmed black architectural glasses
+**Outfit:**
+- **Top:** Retro button-down **bowling shirt** (two-tone, name embroidered on chest)
+- **Top:** **Polo shirt**
+- **Bottom:** Straight-leg **chinos** or **jeans**
+- **Footwear:** **Rental bowling shoes** (red and blue/tan leather)
+- **Accessories:** Wrist brace, rosin bag.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Oliver St. James**
+**Appearance:**
+* **Body:** Soft Natural frame; average height (5'9"-5'10"); "Otter" build—slim but not skinny, with a soft, natural muscularity and a bit of fuzz; rounded shoulders; comfortable and lived-in physicality.
+* **Face:** Oval face with soft features; warm, crinkling blue eyes; nose is slightly button-like; jawline is softened by a scruffy, well-maintained short beard (strawberry blonde/ginger tone).
+* **Hair:** Type 2C curls; medium density; messy "mop top" style that looks better when tousled; light brown/dark blonde; often falling into his eyes.
+* **Skin:** Fair to light; pinkish warm undertones; prone to blushing; smooth complexion.
+**Outfit:**
+- **Top:** Retro button-down **bowling shirt** (two-tone, name embroidered on chest)
+- **Top:** **Polo shirt**
+- **Bottom:** Straight-leg **chinos** or **jeans**
+- **Footwear:** **Rental bowling shoes** (red and blue/tan leather)
+- **Accessories:** Wrist brace, rosin bag.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Aryan Kapoor**
+**Appearance:**
+* **Body:** Dramatic Classic frame; moderate muscularity with a lean, tailored silhouette; balanced proportions that look exceptional in suiting; moderate vertical (5'10"-5'11"); posture is military-straight but relaxed; projects a refined, expensive stability.
+* **Face:** Symmetrical, high-contrast structure; strong square jawline covered by a meticulously groomed "designer stubble" to short boxed beard; high cheekbones; piercing amber-brown eyes with thick lashes; straight aristocratic nose; expression is usually a knowing, confident smirk.
+* **Hair:** Type 2A waves; high density; styled in a classic "quiff" or side-part with volume; sides are tapered clean; glossy, healthy finish; jet black with a blueish tint under light.
+* **Skin:** Medium-deep tan with warm golden-olive undertones; hyper-smooth texture suggestive of a high-end skincare routine.
+**Outfit:**
+- **Top:** Retro button-down **bowling shirt** (two-tone, name embroidered on chest)
+- **Top:** **Polo shirt**
+- **Bottom:** Straight-leg **chinos** or **jeans**
+- **Footwear:** **Rental bowling shoes** (red and blue/tan leather)
+- **Accessories:** Wrist brace, rosin bag.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Elias Thorne throwing a controlled strike at Oliver St. James—right cross, jab, or hook with proper form: hips rotating, shoulder extended, fist aligned, power generated from legs and core. Oliver St. James is defending or blocking with appropriate technique: high guard with forearms up, parrying with hand deflection, or slipping with head movement. Both in proper fighting stances with weight distribution and balance maintained. Feet positioned correctly, knees bent, mobile and grounded. Non-striking hand remains in guard position protecting face. Bodies show realistic motion blur and impact readiness. Expressions focused—Elias Thorne with aggressive intent, Oliver St. James with reactive focus. Both demonstrating proper MMA fundamentals with athletic positioning.

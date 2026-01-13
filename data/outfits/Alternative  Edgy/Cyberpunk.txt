@@ -1,23 +1,44 @@
 tags: [Edgy, sci-fi]
 
 [F]
-- **Top:** Cropped **tech-fabric jacket** with asymmetric cut
-- **Bottom:** high-waist tactical pants with straps
-- **Footwear:** platform boots.
+- **Top:** Cropped tech-fabric jacket with asymmetric cut.
+  - **Fit:** Boxy cropped.
+  - **Material:** Tech-fabric (Nylon/Neoprene).
+  - **Neckline:** High collar asymmetrical.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist tactical pants with straps.
+  - **Fit:** Baggy utility.
+  - **Material:** Cargo canvas.
+  - **Waist:** High-waist.
+  - **Length:** Ankle-length.
+- **Footwear:** Platform boots.
 - **Accessories:** LED accents, tech goggles, geometric jewelry.
-- **Hair/Makeup:** Bold graphic liner, **hair in a futuristic style or with temporary color accents**, futuristic styling.
 
 [M]
-- **Top:** Tech-fabric jacket with asymmetric cut
-- **Bottom:** tactical pants with straps and pockets
-- **Footwear:** combat boots.
+- **Top:** Tech-fabric jacket with asymmetric cut.
+  - **Fit:** Relaxed tactical.
+  - **Material:** Tech-fabric.
+  - **Neckline:** High collar.
+  - **Sleeve:** Long articulated sleeves.
+- **Bottom:** Tactical pants with straps and pockets.
+  - **Fit:** Cargo utility.
+  - **Material:** Heavy canvas.
+  - **Waist:** Utility belt.
+  - **Length:** Ankle-length.
+- **Footwear:** Combat boots.
 - **Accessories:** LED accents, tech goggles, geometric jewelry.
-- **Hair/Makeup:** Bold styling, **hair in a futuristic style or with temporary color accents**, futuristic aesthetic.
 
 [H]
-- **Hijab:** Technical fabric hijab in metallic charcoal with structured futuristic wrap
-- **Top:** Long-sleeve high-neck fitted tunic in black tech-fabric with asymmetric details
-- **Bottom:** High-waist tactical pants with straps and tech details
-- **Footwear:** Platform boots with metallic accents
-- **Accessories:** LED accent jewelry, tech-inspired geometric pieces
-- **Makeup:** Bold graphic liner, futuristic styling
+- **Hijab:** Technical fabric hijab in metallic charcoal with futuristic wrap.
+- **Top:** Long-sleeve high-neck fitted tunic in black tech-fabric.
+  - **Fit:** Fitted tunic.
+  - **Material:** Tech-fabric.
+  - **Neckline:** Asymmetric high neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist tactical pants with straps.
+  - **Fit:** Wide-leg utility.
+  - **Material:** Canvas.
+  - **Waist:** High-waisted.
+  - **Length:** Full length.
+- **Footwear:** Platform boots with metallic accents.
+- **Accessories:** LED accent jewelry, tech-inspired pieces.

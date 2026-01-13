@@ -1,23 +1,45 @@
 tags: [Butler, costume, Maid]
 
 [F]
-- **Top:** Traditional **black dress with white apron** (knee-length)
-- **Bottom:** white lace headpiece
-- **Footwear:** black Mary Jane shoes.
-- **Accessories:** White collar, wrist cuffs.
-- **Hair/Makeup:** Neat, polished styling.
+- **Top:** Traditional black dress with white apron.
+  - **Fit:** Structured; Neat.
+  - **Material:** Cotton or Poly-blend.
+  - **Pattern:** Solid black with white apron.
+  - **Neckline:** White collar.
+  - **Sleeve:** Long or Short sleeve with white cuffs.
+- **Bottom:** Matching black skirt.
+  - **Fit:** Standard.
+  - **Material:** matching.
+  - **Waist:** White apron tie.
+  - **Length:** Knee-length.
+- **Footwear:** Black Mary Jane shoes.
+- **Accessories:** White lace headpiece.
 
 [M]
-- **Top:** Traditional **black butler-style suit** (tailored jacket and trousers)
-- **Bottom:** crisp white dress shirt
-- **Footwear:** black bow tie; **polished black dress shoes**.
-- **Accessories:** White gloves, pocket square.
-- **Hair/Makeup:** Neat, polished styling.
+- **Top:** Traditional black butler-style tailored jacket and white shirt.
+  - **Fit:** Tailored jacket.
+  - **Material:** Wool blend; Cotton.
+  - **Neckline:** Collared shirt with black bow tie.
+  - **Sleeve:** Long.
+- **Bottom:** Matching black trousers.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Polished black dress shoes.
+- **Accessories:** White gloves; pocket square.
 
 [H]
-- **Hijab:** Black or white chiffon hijab with neat professional wrap
-- **Top:** Long-sleeve black modest dress with high white collar
-- **Bottom:** Matching full skirt (knee-length or longer) with white apron
-- **Footwear:** Black Mary Jane shoes
-- **Accessories:** White lace headpiece (on hijab), white wrist cuffs
-- **Makeup:** Neat, polished styling
+- **Hijab:** Black or white chiffon hijab with neat professional wrap.
+- **Top:** Long-sleeve black modest dress with high white collar.
+  - **Fit:** Modest tailored.
+  - **Material:** Black cloth.
+  - **Neckline:** High white collar.
+  - **Sleeve:** Long sleeves with white cuffs.
+- **Bottom:** Matching full skirt with white apron.
+  - **Fit:** Straight or Full.
+  - **Material:** fabric.
+  - **Waist:** White apron tie.
+  - **Length:** Full length.
+- **Footwear:** Black Mary Jane shoes.
+- **Accessories:** White lace headpiece (on hijab); white wrist cuffs.

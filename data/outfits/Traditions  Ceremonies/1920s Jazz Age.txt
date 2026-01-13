@@ -1,23 +1,49 @@
-tags: [Jazz, party, vintage]
+modifiers:
+  Speakeasy: in **jet-black liquid beads** on sheer mesh
+  Gatsby: in **champagne silk chiffon** with crystal fringe
+  ArtDeco: with **geometric velvet burnout** pattern
 
 [F]
-- **Top:** Dropped-waist dress (((default:black, gold, or silver) or (signature)) with heavy beading and fringe, knee-length or slightly above, sleeveless or cap sleeves)
-- **Bottom:** sheer stockings (with seam up back)
-- **Footwear:** T-strap heels (low heel, Mary Jane style).
-- **Accessories:** Long pearl necklace (multiple strands, can be knotted), feathered headband or jeweled headpiece, elbow-length gloves (optional), beaded clutch, cigarette holder.
-- **Hair/Makeup:** Finger waves or Marcel waves (slicked close to head), short bob haircut, dark smoky eyes, thin defined eyebrows, dark lipstick in cupid's bow shape (burgundy or deep red), beauty mark optional, Jazz Age glamour.
+- **Top:** Drop-waist shift dress {modifier}.
+  - **Fit:** Loose drop-waist.
+  - **Material:** Czech glass seed beads on Silk Chiffon.
+  - **Pattern:** Beaded tassels or burnout pattern.
+  - **Neckline:** Deep V-back or Scoop.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Knee-length swishing fringe hem.
+  - **Fit:** Fluid movement.
+  - **Material:** Silk thread fringe.
+  - **Waist:** Dropped.
+  - **Length:** Knee-length.
+- **Footwear:** Satin T-strap character shoes.
+- **Accessories:** Long pearls; jeweled bandeaux; cigarette holder.
 
 [M]
-- **Top:** Three-piece wool suit (((default:pinstripe or tweed) or (signature)) sack coat style)
-- **Bottom:** club collar shirt
-- **Footwear:** patterned tie; **oxford shoes**.
-- **Accessories:** Newsboy cap or fedora, pocket watch chain.
-- **Hair/Makeup:** Slicked hair with side part, clean-shaven or thin mustache, Jazz Age dapper.
+- **Top:** Three-piece tweed sack suit with detachable collar shirt.
+  - **Fit:** High-closure boxy.
+  - **Material:** Wool tweed.
+  - **Pattern:** Pinstripe or Solid.
+  - **Neckline:** Collared (detachable).
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted trousers.
+  - **Fit:** Straight leg.
+  - **Material:** Tweed.
+  - **Waist:** High-waisted with suspender buttons.
+  - **Length:** Slight break.
+- **Footwear:** Two-tone spectator oxfords.
+- **Accessories:** Wool newsboy cap; silver pocket watch.
 
 [H]
-- **Hijab:** Beaded skullcap style or turban hijab with feather accent
-- **Top:** Dropped-waist modest dress (((default:black and gold) or (signature)) long sleeves, knee length or longer with fringe)
-- **Bottom:** Opaque tights or **straight-leg pants** if dress is short
-- **Footwear:** T-strap heels
-- **Accessories:** Long pearl necklace, beaded clutch
-- **Makeup:** Dark smoky eyes, cupid's bow lips
+- **Hijab:** Cloche-style satin turban with jeweled brooch.
+- **Top:** Modest beaded tunic dress {modifier}.
+  - **Fit:** Relaxed modest.
+  - **Material:** Beaded Silk; Mesh lining.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sheer sleeves (lined).
+- **Bottom:** Straight-leg silk underskirt or trousers.
+  - **Fit:** Straight.
+  - **Material:** Silk.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Metallic T-strap heels.
+- **Accessories:** Beaded reticule bag; pearl strands.

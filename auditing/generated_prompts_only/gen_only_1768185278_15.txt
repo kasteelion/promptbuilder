@@ -1,0 +1,80 @@
+# METADATA
+Scene: Vibrant urban street scene with modern glass buildings and a stone pedestrian area. Bright daylight with sharp reflections. Sound of distant traffic and city bustle, energetic atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Kaia Vaitupu | Outfit: Bowling | Pose: None
+Character: Elias Thorne | Outfit: Rain Day Chic | Pose: None
+Character: Keiko Yamamoto | Outfit: Japanese Harajuku Streetwear | Pose: None
+Interaction: Custom
+Score: 340
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Vibrant urban street scene with modern glass buildings and a stone pedestrian area. Bright daylight with sharp reflections. Sound of distant traffic and city bustle, energetic atmosphere.
+---
+
+**CHARACTER: Kaia Vaitupu**
+**Appearance:**
+- **Body:** Statuesque Athletic frame; warm golden-bronze skin with a luminous, hydrated finish; soft-rectangular proportions with strong, graceful posture; tall stature (5'10"-5'11"); refined athletic build with long limbs and elegant muscle definition; "quiet authority" presence—composed and commanding.
+- **Face:** Strong heart-shaped structure; defined cheekbones that catch the light; firm, graceful jawline; large, deep-set dark brown eyes with a steady, intelligent gaze; thick, natural dark eyebrows with a soft arch; straight, elegant nose; full, well-defined mouth with a composed neutral expression; presence conveys deep concentration and intellectual clarity.
+- **Hair:** Type 1A-1B straight; high density and lustrous sheen; waist-length dark ebony hair, often worn in a sharp, high-shine ponytail or loose with a precise center part; matte-satin finish with silver-blue holographic highlights woven through the strands.
+- **Skin:** Deep golden-bronze with warm radiant undertones; flawless, smooth texture; subtle traditional geometric "tatau" patterns on her forearms that pulse with a faint cyan glow; healthy, hydrated "digital office" glow.
+**Outfit:**
+- **Top:** Fitted **performance polo** for **Standard Team** in **white with black accents** (moisture-wicking fabric with team logo and name on back), wearing a contrasting black jersey to denote libero position,
+- **Bottom:** BLACK athletic skirt (tailored fit)
+- **Footwear:** bowling shoes (blue).
+- **Accessories:** Wrist support optional, team logo on collar.
+- **Hair/Makeup:** Hair in ponytail or secured, neat makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Elias Thorne**
+**Appearance:**
+* **Body:** Dramatic frame; tall and lean (6'1"-6'2"); maintained simply through discipline (yoga/pilates); narrow shoulders and long lines; moves with a fluid, ageless elegance; clothes hang on him like he is a mannequin.
+* **Face:** Long, narrow, and angular; deep-set, intelligent grey eyes; distinctive aquiline nose; sharp cheekbones; clean-shaven or a very close stubble; expression is usually one of amused detachment or critical observation.
+* **Hair:** Type 1A straight; fine density; precision-cut textured crop, kept neat and short; striking pure silver/white color; matte finish.
+* **Skin:** Fair-cool; smooth texture with distinguished fine lines around eyes and forehead (the "character lines"); pale but healthy.
+**Outfit:**
+- **Top:** Trench coat (beige or navy classic cut)
+- **Bottom:** sweater and jeans underneath
+- **Footwear:** duck boots or **leather boots**.
+- **Accessories:** Umbrella.
+- **Hair/Makeup:** Natural hair, practical grooming.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Keiko Yamamoto**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact athletic proportions; petite vertical line; sharp and energized presence.
+* **Face:** Angular sculpted structure; square-leaning oval face; strong jawline; intense dark brown eyes; restrained confident expression that reflects her focused discipline.
+* **Hair:** Type 1 straight; medium density; dark black with matte texture; choppy layers and versatile alternative styling options; drawn to sharp, Edgy cuts.
+* **Skin:** Light neutral skin with matte clarity; smooth even finish. sharp professional black-framed rectangular glasses
+**Outfit:**
+- **Top:** Oversized **graphic anime or kawaii print hoodie** or **layered long-sleeve tees** (pastel colors with bold prints)
+- **Bottom:** pleated mini skirt (plaid or solid in pink, lavender, or black) or **wide-leg cargo pants** (with chains and patches)
+- **Footwear:** platform sneakers or chunky Mary Janes.
+- **Accessories:** Multiple hair clips (butterfly, star, or heart shapes), layered chain necklaces, mini backpack or crossbody bag with keychains, arm warmers or fingerless gloves, colorful leg warmers over socks.
+- **Hair/Makeup:** Hair in twin tails, space buns, or half-up with colorful streaks (pink, blue, purple), doll-like makeup with aegyo-sal (under-eye brightening), gradient lips, circle lenses, blush on nose and cheeks, optional small stickers near eyes.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Kaia Vaitupu, Elias Thorne, and Keiko Yamamoto positioned at three points of a triangle, creating geometric composition with balanced spacing

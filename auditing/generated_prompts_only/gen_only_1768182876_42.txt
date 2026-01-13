@@ -1,0 +1,82 @@
+# METADATA
+Scene: Winding stone pathway, flowering hedges, cottage in background, dappled sunlight, romantic countryside.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Kendra Mitchell | Outfit: Basketball | Pose: None
+Character: Maki Cruz | Outfit: Hindu | Pose: None
+Character: Esme Dubois | Outfit: Cold Weather - Functional | Pose: None
+Interaction: Custom
+Score: 307
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Winding stone pathway, flowering hedges, cottage in background, dappled sunlight, romantic countryside.
+---
+
+**CHARACTER: Kendra Mitchell**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; broad inverted triangle proportions with wide shoulders, long limbs, and subtle waist definition; tall (5'9"); strong defined muscle with visible shoulder caps, toned arms, and powerful legs; commanding physical presence.
+* **Face:** Strong angular structure; oblong-square face; prominent bone structure with high broad cheekbones; almond-shaped wide-set hazel-green eyes; strong defined jawline; neutral resting expression is confident and direct with penetrating gaze; smile is wide, genuine, and slightly asymmetric with infectious energy.
+* **Hair:** Type 3B curls; high density; shoulder-length layered cut; side part; voluminous natural texture; matte-satin finish; commonly worn loose and free or in high messy bun; warm chestnut brown with golden highlights.
+* **Skin:** Medium tan with warm golden undertones and healthy athletic glow; faint freckles across nose and shoulders.
+**Outfit:**
+- **Top:** Basketball jersey for **Standard Team** in **white** with **black** trim (sleeveless, wide shoulder cut)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Shooting sleeve, headband.
+- **Hair/Makeup:** Ponytail or bun.
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing with a skateboard tucked under one arm, relaxed posture, urban background.
+---
+
+**CHARACTER 2: Maki Cruz**
+**Appearance:**
+* **Body:** Flamboyant Natural; straight athletic flesh with lean definition; balanced proportions; subtle shoulder width; straight hip line; moderate vertical (5'6"-5'7"); functional athletic build with core strength; developed calves and quadriceps; visible forearm definition; grounded street-athlete presence.
+* **Face:** Balanced-soft structure; rounded square shape; broad forehead; softly defined jawline; midface cheekbone prominence with subtle definition; medium almond-shaped eyes; moderate spacing; dark brown to black irises; monolid or minimal crease structure; direct casual gaze; broad nose bridge with rounded tip; neutral resting expression shows relaxed confidence with a slight asymmetric smirk.
+* **Hair:** Type 1B; high density; straight silhouette with medium length to shoulders; no defined part; pushed back casually; matte to low-sheen finish; commonly worn loose and natural, tucked behind ears, or in a low messy bun. Deep black-brown.
+* **Skin:** Medium tan; warm golden-yellow undertones; natural matte finish; healthy resilience; scattered small scars on elbows and knees.
+**Outfit:**
+- **Top:** Silk sari (vibrant colors - red, gold, royal blue, or emerald with ornate gold embroidery and border)
+- **Bottom:** fitted choli blouse
+- **Footwear:** ornate sandals or barefoot.
+- **Accessories:** Elaborate gold jewelry set (necklace, earrings, bangles, anklets), bindi, nose ring, maang tikka (forehead jewelry), fresh flower garland.
+- **Hair/Makeup:** Hair in elegant braid with flowers, dramatic eye makeup with kohl, natural lip.
+**Pose/Action:**
+wide shot with the character framed within the environment, Mid-laugh expression, head tilted back slightly, joyful energy, relaxed body language.
+---
+
+**CHARACTER 3: Esme Dubois**
+**Appearance:**
+- **Body:** Dramatic Classic frame; straight refined flesh with minimal softness; narrow balanced proportions with long limbs and a graceful neck; tall-moderate vertical (5'8"-5'9"); lean disciplined build—visible muscle tone from years of ballet without bulk; high-poised presence—seems to hover rather than walk.
+- **Face:** Long classical facial structure; oval face shape with refined planar features; high forehead and a delicate-yet-firm jawline; deep-set calm gray-blue eyes, wide-spaced, reflecting a serene and analytical mind; straight defined nose; thin-moderate lips held in a composed line; serene neutral expression that reads as sophisticated and observant.
+- **Hair:** Type 1 straight; high density but fine texture; long length past mid-back; sleek silk-like finish; center-parted; commonly worn in a tight low ballerina bun (polished), or loose and tucked behind the ears (casual refinement); deep cool dark brown.
+- **Skin:** Fair neutral skin with luminous clarity and smooth texture; minimal visible pores or imperfections; translucent quality at the temples; natural healthy glow from a meticulous skincare routine.
+**Outfit:**
+- **Top:** Heavy-duty down parka (thigh-length with faux-fur trimmed hood)
+- **Bottom:** waterproof snow pants
+- **Footwear:** rugged winter boots with deep tread.
+- **Accessories:** Heavy insulated gloves, wool scarf, thermal socks visible at top of boots.
+- **Hair/Makeup:** Practical styling, minimal makeup, focused on warmth.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment, On mat in dominant position, knee on ground, controlled powerful posture, competitive intensity.
+---
+
+**Additional Notes:**
+Kendra Mitchell and Maki Cruz in fighting stance facing each other, approximately 3-4 feet apart. Both with hands up in guard position—lead hand extended at chin height, rear hand protecting jaw. Chins tucked, shoulders raised protecting neck. Weight on balls of feet, knees slightly bent for mobility. Kendra Mitchell in orthodox stance (left foot forward) or southpaw (right foot forward), Maki Cruz mirrors or matches. Intense eye contact, tunnel vision focus on opponent. Body language shows coiled readiness—muscles tensed, ready to explode. Fists properly formed, knuckles aligned. Elbows tucked protecting ribs. Torsos slightly angled to minimize target area. Both showing fight mentality with focused, Intense expressions.

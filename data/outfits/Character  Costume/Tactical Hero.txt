@@ -5,23 +5,45 @@ modifiers:
   Recon: , lightweight gear with communication headset
 
 [F]
-- **Top:** **Tactical body armor** over moisture-wicking combat shirt ((default:Navy or Black) or (signature)){modifier}
-- **Bottom:** Multi-pocket **tactical pants** with holster straps
-- **Footwear:** Professional **combat boots** (flat sole, grip tread).
-- **Accessories:** Utility belt with pouches, drop-leg holster, fingerless gloves, communication earpiece. **NO CAPE.**
-- **Hair/Makeup:** Practical ponytail or braid, grease/dirt/camo paint, determined expression.
+- **Top:** Tactical body armor over moisture-wicking combat shirt.
+  - **Fit:** Structured armor; Compression shirt.
+  - **Material:** Plate armor; Tech-fabric ((default:navy)).
+  - **Pattern:** Solid with tactical webbing.
+  - **Neckline:** High-neck shirt.
+  - **Sleeve:** Long sleeves with fingerless gloves.
+- **Bottom:** Multi-pocket tactical pants with holster straps.
+  - **Fit:** Relaxed but secure.
+  - **Material:** Ripstop cotton.
+  - **Waist:** Utility belt with pouches; drop-leg holster.
+  - **Length:** Full length.
+- **Footwear:** Professional combat boots (flat sole).
+- **Accessories:** Communication earpiece; NO CAPE.
 
 [M]
-- **Top:** **Plate carrier vest** over combat shirt ((default:Olive or Black) or (signature)){modifier}
-- **Bottom:** Reinforced **tactical trousers** with knee pads
-- **Footwear:** Heavy-duty **combat boots**.
-- **Accessories:** Utility belt, chest rig, tactical gloves, watch.
-- **Hair/Makeup:** Short practical cut, stubble (optional).
+- **Top:** Plate carrier vest over combat shirt ((default:olive)).
+  - **Fit:** Tactical muscle-fit.
+  - **Material:** Heavy nylon; Cotton blend.
+  - **Neckline:** High-neck shirt.
+  - **Sleeve:** Long.
+- **Bottom:** Reinforced tactical trousers with knee pads.
+  - **Fit:** Rugged fit.
+  - **Material:** Ripstop.
+  - **Waist:** Utility belt and chest rig.
+  - **Length:** Full.
+- **Footwear:** Heavy-duty combat boots.
+- **Accessories:** Tactical gloves; watch.
 
 [H]
-- **Hijab:** Secure **tactical hijab** (tucked into collar, matte fabric)
-- **Top:** Long-sleeve combat shirt under **tactical vest**{modifier}
-- **Bottom:** Loose-fit **tactical cargo pants**
-- **Footwear:** Combat boots
-- **Accessories:** Utility belt, gloves, protective eyewear.
-- **Makeup:** Minimal/None.
+- **Hijab:** Secure tactical matte hijab tucked into collar.
+- **Top:** Long-sleeve combat shirt under tactical vest.
+  - **Fit:** Modest tactical.
+  - **Material:** fabric.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves with gloves.
+- **Bottom:** Loose-fit tactical cargo pants.
+  - **Fit:** Loose.
+  - **Material:** matching fabric.
+  - **Waist:** Utility belt.
+  - **Length:** Full length.
+- **Footwear:** Rugged combat boots.
+- **Accessories:** Protective eyewear.

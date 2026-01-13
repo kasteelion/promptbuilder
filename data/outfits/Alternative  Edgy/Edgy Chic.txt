@@ -1,23 +1,44 @@
 tags: [Edgy, Fashion, cyberpunk]
 
 [F]
-- **Top:** Fitted **((default:red) or (signature)) turtleneck** (form-fitting knit)
-- **Bottom:** black leather skirt (mini or midi length)
-- **Footwear:** ((default:red) or (signature)) leggings (opaque).
-- **Accessories:** Black beret, fingerless black leather gloves, **black thigh-high leather boots** (high heeled).
-- **Hair/Makeup:** lipstick, black winged eyeliner, ((default:red) or (signature)) eye shadow, hair styled to complement beret (sleek or with face-framing pieces).
+- **Top:** Fitted ribbed turtleneck with modern cut.
+  - **Fit:** Skin-tight bodycon.
+  - **Material:** Ribbed knit.
+  - **Neckline:** High turtle neck.
+  - **Sleeve:** Long fitted sleeves.
+- **Bottom:** Sleek leather skirt.
+  - **Fit:** Form-fitting pencil or mini.
+  - **Material:** Leather.
+  - **Waist:** High-waisted.
+  - **Length:** Mini or Midi.
+- **Footwear:** High-heeled thigh-high leather boots.
+- **Accessories:** Black beret, fingerless leather gloves.
 
 [M]
-- **Top:** Fitted **((default:red) or (signature)) turtleneck** (fine knit)
-- **Bottom:** black leather pants (slim fit)
-- **Footwear:** black boots (Chelsea or combat style).
-- **Accessories:** Black beanie (optional), black leather gloves, silver chain necklace.
-- **Hair/Makeup:** Clean styled hair, defined features.
+- **Top:** Fitted turtleneck or mock neck.
+  - **Fit:** Slim/Skinny.
+  - **Material:** Fine gauge knit.
+  - **Neckline:** Turtleneck.
+  - **Sleeve:** Long fitted sleeves.
+- **Bottom:** Slim-fit leather pants or coated denim.
+  - **Fit:** Skinny.
+  - **Material:** Leather or Coated Denim.
+  - **Waist:** Natural waist.
+  - **Length:** Full length stacked.
+- **Footwear:** Chelsea boots or sleek combat boots.
+- **Accessories:** Silver chain, leather gloves, beanie.
 
 [H]
-- **Hijab:** Black leather-look or jersey hijab
-- **Top:** Fitted ((default:red) or (signature)) turtleneck (form-fitting knit, high neck)
-- **Bottom:** Black leather maxi skirt or wide-leg leather trousers
-- **Footwear:** Black heeled boots
-- **Accessories:** Black beret (worn over hijab), fingerless black leather gloves
-- **Makeup:** bold red lipstick, black winged eyeliner, subtle red eye shadow
+- **Hijab:** Black leather-look or jersey hijab; beret worn over.
+- **Top:** Fitted turtleneck (modest layer).
+  - **Fit:** Fitted top.
+  - **Material:** Knit.
+  - **Neckline:** High turtleneck.
+  - **Sleeve:** Long fitted sleeves.
+- **Bottom:** A-line skirt or wide-leg leather trousers.
+  - **Fit:** Loose A-line.
+  - **Material:** Leather-look fabric.
+  - **Waist:** High waist (tucked).
+  - **Length:** Floor-length.
+- **Footwear:** Pointed-toe boots.
+- **Accessories:** Leather gloves, Beret.

@@ -1,23 +1,48 @@
 tags: [event, Semi-Formal, Spring]
 
 [F]
-- **Top:** Floral midi dress (((default:pastel floral print on light background) or (signature)), flowing fabric like chiffon or cotton, fit-and-flare or wrap style)
-- **Bottom:** nude or pastel heeled sandals (strappy or block heel)
-- **Footwear:** light cardigan (optional, for layering).
-- **Accessories:** Wide-brimmed straw hat with ribbon, delicate gold jewelry, small clutch or woven bag, fresh flower in hair or as boutonniere.
-- **Hair/Makeup:** Soft romantic waves or braided updo, fresh spring makeup (peachy blush, natural pink lip, subtle shimmer), garden party elegance.
+- **Top:** Floral midi dress (Bodice).
+  - **Fit:** Fit-and-flare or wrap.
+  - **Material:** Chiffon or Cotton.
+  - **Pattern:** Pastel floral print.
+  - **Neckline:** V-neck or Sweetheart.
+  - **Sleeve:** Cap sleeves or Sleeveless.
+- **Bottom:** Flowing dress skirt (Integrated).
+  - **Fit:** Flared A-line.
+  - **Material:** Matching fabric.
+  - **Pattern:** Floral.
+  - **Waist:** Natural.
+  - **Length:** Midi-length.
+- **Footwear:** Strappy heeled sandals.
+- **Accessories:** Straw hat with ribbon; delicate jewelry; woven bag; flower in hair.
 
 [M]
-- **Top:** Linen suit (((default:light blue or tan) or (signature)))
-- **Bottom:** floral or pastel dress shirt
-- **Footwear:** loafers.
-- **Accessories:** Straw boater hat (optional), pocket square.
-- **Hair/Makeup:** Neat grooming, fresh spring vibe.
+- **Top:** Linen suit jacket and dress shirt.
+  - **Fit:** Tailored relaxed.
+  - **Material:** Linen; Cotton.
+  - **Pattern:** Solid ((default:light blue or tan)).
+  - **Neckline:** Peak lapel.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored linen suit trousers.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Leather loafers.
+- **Accessories:** Straw boater hat; pocket square.
 
 [H]
-- **Hijab:** Pastel chiffon hijab (flowing drape) with flower crown
-- **Top:** Floral maxi dress (((default:pastel print) or (signature)) long sleeves, modest high neck)
-- **Bottom:** Full skirt (part of dress)
-- **Footwear:** Heeled sandals or flats
-- **Accessories:** Straw hat, woven bag
-- **Makeup:** Soft pinks, fresh spring look
+- **Hijab:** Pastel chiffon hijab with flower crown.
+- **Top:** Floral modest maxi dress.
+  - **Fit:** High-neck modest.
+  - **Material:** Chiffon.
+  - **Pattern:** Pastel print.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full skirt (Integrated).
+  - **Fit:** Voluminous A-line.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Heeled sandals or flats.
+- **Accessories:** Straw hat; woven bag.

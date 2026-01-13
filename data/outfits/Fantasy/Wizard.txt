@@ -1,23 +1,46 @@
 tags: [fantasy, Magic]
 
 [F]
-- **Top:** Long flowing robes (((default:deep blue, purple, or midnight black) or (signature)) with silver or gold arcane symbols and trim)
-- **Bottom:** wide pointed hat (matching robes with star or moon decorations)
-- **Footwear:** leather belt with pouches; **soft leather boots**.
-- **Accessories:** Wooden staff with crystal or orb at top, spellbook, component pouches, mystical amulet.
-- **Hair/Makeup:** Long flowing hair (often silver, white, or dark) in loose waves or half-up with strands, wise expression, possible age marks or timeless beauty, ethereal glow.
+- **Top:** Long flowing robes with arcane symbols and trim.
+  - **Fit:** Voluminous and flowing.
+  - **Material:** Velvet or Silk.
+  - **Pattern:** Star or Moon decorations; Arcane symbols.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Wide long sleeves.
+- **Bottom:** Wide pointed hat matching robes.
+  - **Fit:** Traditional wizard hat.
+  - **Material:** Matching Velvet.
+  - **Pattern:** Star/Moon embroidery.
+  - **Waist:** Leather belt with pouches.
+  - **Length:** Floor-length.
+- **Footwear:** Soft leather boots.
+- **Accessories:** Wooden staff with crystal; spellbook; component pouches; mystical amulet.
 
 [M]
-- **Top:** Long flowing robes (((default:deep blue, purple, or midnight black) or (signature)) with silver or gold arcane symbols and trim)
-- **Bottom:** wide pointed hat (matching robes with star or moon decorations)
-- **Footwear:** leather belt with pouches; **soft leather boots**.
-- **Accessories:** Wooden staff with crystal or orb at top, spellbook, component pouches, mystical amulet.
-- **Hair/Makeup:** Long hair and beard (often silver, white, or dark), wise expression, possible age marks, ethereal glow.
+- **Top:** Long flowing robes with arcane symbols.
+  - **Fit:** Voluminous.
+  - **Material:** fabric.
+  - **Neckline:** High-neck robes.
+  - **Sleeve:** Wide long sleeves.
+- **Bottom:** Wide pointed hat.
+  - **Fit:** Tall wizard style.
+  - **Material:** fabric.
+  - **Waist:** Leather belt with pouches.
+  - **Length:** Floor-length.
+- **Footwear:** Soft leather boots.
+- **Accessories:** Wooden staff/orb; spellbook; pouches; amulet.
 
 [H]
-- **Hijab:** ((default:Deep blue or purple) or (signature)) hijab with star/moon embroidery, worn under pointed hat
-- **Top:** Long flowing robes (((default:coordinating with hijab) or (signature))) with arcane symbols, modest high neck
-- **Bottom:** Matching trousers under robes
-- **Footwear:** Soft leather boots
-- **Accessories:** Staff, spellbook, amulet, belt with pouches
-- **Makeup:** Wise expression, ethereal glow
+- **Hijab:** Hijab with star/moon embroidery under pointed hat.
+- **Top:** Long flowing robes with arcane symbols.
+  - **Fit:** Modest voluminous.
+  - **Material:** Velvet/Silk.
+  - **Neckline:** High-neck modest.
+  - **Sleeve:** Long wide sleeves.
+- **Bottom:** Matching trousers under robes.
+  - **Fit:** Straight.
+  - **Material:** fabric.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Soft leather boots.
+- **Accessories:** Staff; spellbook; amulet; belt with pouches.

@@ -1,23 +1,45 @@
 tags: [Casual, noir, vintage]
 
 [F]
-- **Top:** Cocktail dress (dark color with interesting neckline, tea-length)
-- **Bottom:** seamed stockings
-- **Footwear:** heeled pumps.
-- **Accessories:** Small clutch, cigarette case, martini glass, statement earrings.
-- **Hair/Makeup:** Styled waves, red or plum lipstick, smoky eye makeup.
+- **Top:** Dark cocktail dress.
+  - **Fit:** Tailored; Elegant.
+  - **Material:** Silk or Satin.
+  - **Pattern:** Solid dark.
+  - **Neckline:** Interesting neckline (off-shoulder or scoop).
+  - **Sleeve:** Sleeveless or Cap sleeve.
+- **Bottom:** N/A (tea-length dress).
+  - **Fit:** Flowing.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Tea-length with seamed stockings.
+- **Footwear:** Heeled pumps.
+- **Accessories:** Small clutch; cigarette case; martini glass; statement earrings.
 
 [M]
-- **Top:** Suit (dark color with pocket square)
-- **Bottom:** dress shirt
-- **Footwear:** tie or bow tie; **dress shoes**.
-- **Accessories:** Cigarette case, lighter, whiskey glass, fedora optional.
-- **Hair/Makeup:** Styled hair, clean-shaven or neat mustache.
+- **Top:** Dark suit jacket and dress shirt.
+  - **Fit:** Tailored.
+  - **Material:** Wool blend.
+  - **Neckline:** Tie or bow tie; Pocket square.
+  - **Sleeve:** Long.
+- **Bottom:** Matching dress trousers.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Dress shoes.
+- **Accessories:** Cigarette case; lighter; whiskey glass; fedora.
 
 [H]
-- **Hijab:** Dark-colored silk hijab (plum, burgundy, or charcoal) with elegant draping
-- **Top:** Long-sleeve cocktail tunic (dark color with interesting neckline detail, modest high-neck adaptation, falls to ankles)
-- **Bottom:** Full-length skirt (matching elegant fabric)
-- **Footwear:** Heeled pumps
-- **Accessories:** Small clutch, cigarette case (prop), martini glass (prop), statement earrings
-- **Makeup:** Red or plum lipstick, smoky eye makeup, styled waves visible at hijab edge
+- **Hijab:** Dark-colored silk hijab (plum or charcoal) with elegant draping.
+- **Top:** Long-sleeve dark cocktail tunic.
+  - **Fit:** Modest high-neck.
+  - **Material:** Silk or Satin.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length matching elegant skirt.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Heeled pumps.
+- **Accessories:** Small clutch; cigarette case (prop); martini glass (prop).

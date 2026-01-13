@@ -1,0 +1,65 @@
+# METADATA
+Scene: Sunny park setting, green grass, trees in background, natural daylight, Peaceful environment.
+Base_Prompt: Low-Poly 3D
+Character: Malik Farrah | Outfit: Light Academia | Pose: None
+Character: Lila Reyes | Outfit: Norse | Pose: None
+Interaction: Custom
+Score: 190
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Sunny park setting, green grass, trees in background, natural daylight, Peaceful environment.
+---
+
+**CHARACTER: Malik Farrah**
+**Appearance:**
+- **Body:** Lean-muscular frame; sun-weathered olive skin with a deep, earthy tan; rectangular proportions with broad shoulders and a powerful, flexible core; average height (5'9"-5'10"); resilient, functional build with high-stamina muscle definition; "weathered strength" presence—durable and alert.
+- **Face:** Strong angular structure; prominent brow ridge; sharp, defined jawline partially obscured by a well-groomed short beard; intense, narrowed dark brown eyes that possess a sharp, far-reaching gaze; thick, dark eyebrows with a heavy set; straight nose with a strong bridge; firm mouth often set in a focused line; expression is keen, observant, and perpetually ready for action.
+- **Hair:** Type 3C-4A tight curls; high density; kept short and practical in a textured buzz cut or short fade; matte finish with occasional dust from the trail; dark ebony hair that looks durable.
+- **Skin:** Deep olive skin with sun-kissed golden-bronze undertones; weathered, rugged texture with fine sand-lines around the eyes; a small, faded scar on his left temple; healthy "outdoor" resilience.
+**Outfit:**
+- **Top:** Cable knit sweater (cream or beige)
+- **Bottom:** tailored trousers (tan or gray)
+- **Footwear:** leather oxfords or loafers.
+- **Accessories:** Leather satchel, reading glasses, book prop.
+- **Hair/Makeup:** Neat side part or tousled Ivy League cut, clean-shaven or neat stubble.
+
+---
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**CHARACTER 2: Lila Reyes**
+**Appearance:**
+* **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
+* **Face:** Balanced-soft structure; round-oval face (Filipino features) with gentle angles; full cheeks (genetic, visible even lean); large round-almond eyes, moderately spaced, deep dark brown; small refined nose; soft jawline shows slight definition at low body fat; neutral resting expression is focused and determined with quiet confidence.
+* **Hair:** Type 1B straight; very high density; long length to mid-back; high-gloss sheen; jet black; commonly worn in high ponytail (gym), sleek bun, or loose and straight (casual).
+* **Skin:** Deep tan with warm golden-brown undertones (Filipino coloring—naturally darker than East Asian); smooth healthy finish with natural warmth; slight muscle definition visible but not extreme.
+**Outfit:**
+- **Top:** Long layered dress (base layer in cream, overdress in deep blue or forest green with embroidered trim)
+- **Bottom:** fur-trimmed cloak
+- **Footwear:** leather boots.
+- **Accessories:** Silver or bronze circlet, Thor's hammer pendant, arm rings, woven belt.
+- **Hair/Makeup:** Long braided hair (single or multiple braids), natural makeup, warrior-goddess aesthetic.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**Additional Notes:**
+Malik Farrah standing on a skateboard, demonstrating a trick, while Lila Reyes watches closely from a sitting position on a concrete ramp, focused learning moment.

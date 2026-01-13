@@ -1,29 +1,50 @@
 tags: [Casual, Retro, Sport]
 
 [F]
-- **Top:** Striped Camisole (fitted silhouette, spaghetti straps, horizontal red and white pin-stripes, cropped midriff length)
-- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, vintage dolphin hem cut)
-- **Footwear:** Oversized Bomber Jacket (matching red hue, worn slouched off-the-shoulders, voluminous sleeves, fabric draped around elbows).
+- **Top:** Striped Camisole under Oversized Bomber Jacket.
+  - **Fit:** Fitted camisole; Slouchy jacket.
+  - **Material:** Cotton camisole; Red nylon/satin jacket.
+  - **Pattern:** Red and white pin-stripes.
+  - **Neckline:** Spaghetti straps.
+  - **Sleeve:** Sleeveless (camisole) under Voluminous Sleeves (jacket).
+- **Bottom:** Athletic Track Shorts.
+  - **Fit:** Vintage dolphin hem cut.
+  - **Material:** Orange-red synthetic fabric.
+  - **Pattern:** White vertical side stripes.
+  - **Waist:** Elastic waistband.
+  - **Length:** Short.
+- **Footwear:** White retro sneakers (implied).
 - **Accessories:** Simple gold pendant necklace, minimal jewelry.
-- **Hair/Makeup:** Low messy bun with loose face-framing strands; natural, fresh-faced makeup look with subtle lip color.
-
----
 
 [M]
-- **Top:** Striped Tank Top (fitted silhouette, horizontal red and white pin-stripes)
-- **Bottom:** Athletic Track Shorts (matching orange-red fabric, white vertical side stripes, elastic waistband, retro cut)
-- **Footwear:** Oversized Bomber Jacket (matching red hue, voluminous sleeves).
-- **Accessories:** Simple gold chain necklace, minimal jewelry.
-- **Hair/Makeup:** Messy bun or textured hair; natural fresh-faced look.
-
----
+- **Top:** Striped Tank Top under Oversized Bomber Jacket.
+  - **Fit:** Fitted tank; Voluminous jacket.
+  - **Material:** Striped cotton; Red jacket.
+  - **Pattern:** Horizontal red and white pin-stripes.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless (tank) under Long (jacket).
+- **Bottom:** Athletic Track Shorts.
+  - **Fit:** Retro cut.
+  - **Material:** Orange-red fabric.
+  - **Pattern:** White vertical side stripes.
+  - **Waist:** Elastic waistband.
+  - **Length:** Knee-length or shorter.
+- **Footwear:** Retro sneakers.
+- **Accessories:** Simple gold chain necklace.
 
 [H]
-- **Hijab:** Red or white jersey sports hijab (secure but relaxed wrap)
-- **Top:** Striped Long-Sleeve Tunic (horizontal red and white pin-stripes, modest length, loose fit) under **Oversized Bomber Jacket** (matching red hue, voluminous sleeves)
-- **Bottom:** Athletic Track Pants (matching orange-red fabric, white vertical side stripes, elastic waistband)
-- **Footwear:** Retro sneakers
-- **Accessories:** Simple gold pendant necklace
-- **Makeup:** Natural, fresh-faced makeup look with subtle lip color
-
----
+- **Hijab:** Red or white jersey sports hijab.
+- **Top:** Striped Long-Sleeve Tunic under Oversized Bomber Jacket.
+  - **Fit:** Loose tunic; Voluminous jacket.
+  - **Material:** Cotton; Red jacket.
+  - **Pattern:** Red and white pin-stripes.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Athletic Track Pants.
+  - **Fit:** Relaxed athletic.
+  - **Material:** Orange-red fabric.
+  - **Pattern:** White side stripes.
+  - **Waist:** Elastic waistband.
+  - **Length:** Full length.
+- **Footwear:** Retro sneakers.
+- **Accessories:** Simple gold pendant necklace.

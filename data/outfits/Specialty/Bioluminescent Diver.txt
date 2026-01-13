@@ -1,0 +1,45 @@
+tags: [Diver, Tech, Bioluminescent, Specialty, Scuba]
+
+[F]
+- **Top:** Form-fitting neoprene diving suit.
+  - **Fit:** Skin-tight; High-tech.
+  - **Material:** Black neoprene; Integrated lighting cables.
+  - **Pattern:** Rhythmic amber glow along spine and limbs.
+  - **Neckline:** High-neck scuba collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Integrated neoprene diving leggings.
+  - **Fit:** Form-fitting; Reinforced knee panels.
+  - **Material:** matching neoprene.
+  - **Waist:** Integrated amber-light sensors.
+  - **Length:** Ankle-length.
+- **Footwear:** High-grip rubber diving boots with glowing amber accents.
+- **Accessories:** Amber-lit tactical oxygen tank; black diving gloves with fiber-optic sensors.
+
+[M]
+- **Top:** Heavy-duty technical diving vest over neoprene base.
+  - **Fit:** Bulky; Technical.
+  - **Material:** Neoprene; Amber fiber-optic lighting.
+  - **Neckline:** High collar.
+  - **Sleeve:** Sleeveless (vest).
+- **Bottom:** Articulated neoprene diving trousers.
+  - **Fit:** Articulated; Reinforced seams.
+  - **Material:** Neoprene; Integrated storage pockets.
+  - **Waist:** Natural with amber markers.
+  - **Length:** Full.
+- **Footwear:** Rugged industrial diving boots with amber lighting.
+- **Accessories:** Tactical diving backpack; diving gloves with glowing fingertips.
+
+[H]
+- **Hijab:** Water-resistant technical tech-hood.
+- **Top:** All-weather hooded diving cloak over tech-paneling.
+  - **Fit:** Modest heavy tech-layer.
+  - **Material:** Durable amber visibility material; glowing fiber-optic trim.
+  - **Neckline:** High-neck modesty under hood.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Articulated technical diving trousers.
+  - **Fit:** Loose functional.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Waterproof pressure-adaptive diving boots with exoskeleton.
+- **Accessories:** High-tech diving mask with HUD; rugged fiber-optic gloves.

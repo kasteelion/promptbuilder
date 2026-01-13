@@ -1,23 +1,45 @@
 tags: []
 
 [F]
-- **Top:** Oversized **graphic t-shirt or crop top**
-- **Bottom:** baggy cargo pants or joggers
-- **Footwear:** high-top sneakers.
-- **Accessories:** Snapback cap worn backwards, chain necklace, sweatbands.
-- **Hair/Makeup:** Hair in braids, ponytail, or loose, minimal makeup with bold lip.
+- **Top:** Oversized graphic t-shirt or crop top.
+  - **Fit:** Oversized boxy.
+  - **Material:** Cotton heavy jersey.
+  - **Pattern:** Graphic print.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Baggy cargo pants or joggers.
+  - **Fit:** Baggy.
+  - **Material:** Nylon or Denim.
+  - **Waist:** Low or High.
+  - **Length:** Cuffed at ankle.
+- **Footwear:** High-top sneakers.
+- **Accessories:** Snapback cap, chain necklace, sweatbands.
 
 [M]
-- **Top:** Oversized **graphic t-shirt or tank top**
-- **Bottom:** baggy cargo pants or joggers
-- **Footwear:** high-top sneakers.
-- **Accessories:** Snapback cap worn backwards, chain necklace, sweatbands.
-- **Hair/Makeup:** Hair styled or natural, minimal grooming.
+- **Top:** Oversized graphic t-shirt or tank top.
+  - **Fit:** Oversized street.
+  - **Material:** Cotton.
+  - **Pattern:** Graphic logo.
+  - **Neckline:** Crew.
+  - **Sleeve:** Short or Sleeveless.
+- **Bottom:** Baggy cargo pants or joggers.
+  - **Fit:** Baggy utility.
+  - **Material:** Cargo drill.
+  - **Waist:** Elastic/Belted.
+  - **Length:** Full length pooling.
+- **Footwear:** High-top sneakers.
+- **Accessories:** Snapback cap, chains.
 
 [H]
-- **Hijab:** Jersey sports hijab in black or bright color with secure wrap
-- **Top:** Oversized graphic t-shirt (modest length, falls to mid-thigh) over long-sleeve fitted base layer
-- **Bottom:** Baggy cargo pants or joggers in coordinating color
-- **Footwear:** High-top sneakers
-- **Accessories:** Chain necklace, sweatbands optional
-- **Makeup:** Minimal makeup with bold lip optional
+- **Hijab:** Jersey sports hijab in black or bright color.
+- **Top:** Oversized graphic t-shirt over long-sleeve base.
+  - **Fit:** Oversized modest.
+  - **Material:** Cotton.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Long layered.
+- **Bottom:** Baggy cargo pants or joggers.
+  - **Fit:** Baggy.
+  - **Material:** Nylon/Cotton.
+  - **Length:** Ankle cuff.
+- **Footwear:** High-top sneakers.
+- **Accessories:** Chain necklace.

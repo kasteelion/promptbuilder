@@ -1,0 +1,79 @@
+# METADATA
+Scene: Lush greenery and flowering plants on a modern rooftop overlooking a sprawling city skyline. The sky is a gradient of deep orange and purple, casting a warm, romantic glow over the scene. Peaceful, sophisticated energy.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Mei Chen | Outfit: Hip Hop | Pose: None
+Character: Amira Khalil | Outfit: Cheerleading | Pose: None
+Character: Jax Chen | Outfit: Sheriff | Pose: None
+Interaction: Custom
+Score: 295
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Lush greenery and flowering plants on a modern rooftop overlooking a sprawling city skyline. The sky is a gradient of deep orange and purple, casting a warm, romantic glow over the scene. Peaceful, sophisticated energy.
+---
+
+**CHARACTER: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large features—specifically an extremely full, heavy bust (F-G cup) that is her most prominent physical trait—balanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow.
+**Outfit:**
+- **Top:** Oversized **graphic t-shirt or crop top**
+- **Bottom:** baggy cargo pants or joggers
+- **Footwear:** high-top sneakers.
+- **Accessories:** Snapback cap worn backwards, chain necklace, sweatbands.
+- **Hair/Makeup:** Hair in braids, ponytail, or loose, minimal makeup with bold lip.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Amira Khalil**
+**Appearance:**
+* **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
+* **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
+* **Hair / Covering:** Hair fully covered; hijab as constant identity anchor; smooth controlled drape with clean facial framing.
+* **Skin:** Warm olive-toned skin with soft luminous finish.
+**Outfit:**
+- **Hijab:** Sport hijab in #003262 (tucked)
+- **Top:** Long sleeve bodystocking under cheer shell
+- **Bottom:** Leggings under cheer skirt
+- **Footwear:** Cheer sneakers
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Jax Chen**
+**Appearance:**
+- **Body:** Explosive-Athletic frame; olive-toned skin with a vibrant, high-oxygenated flush; inverted triangle proportions with powerful, broad shoulders and a narrow, muscular waist; tall stature (6'1"-6'2"); high-performance build with dense, defined muscle groups and visible vascularity; "kinetic potential" presence—vibrant and dangerous.
+- **Face:** Sharp, aerodynamic structure; high, defined cheekbones; narrow, powerful jawline; intense, wide-set dark eyes that possess a piercing, high-speed focus; sharp, straight eyebrows with a low, aggressive set; straight, thin nose; firm mouth with a determined set; expression is one of maximum effort and singular focus.
+- **Hair:** Type 1A straight; medium density; kept in a sharp, high-fade with a short, textured top; matte-satin finish with vibrant neon orange tips that seem to vibrate with his movement.
+- **Skin:** Vibrant olive with warm, high-energy undertones; smooth, taut texture with visible "muscle-mapping" micro-textures in the dermis; beads of high-intensity sweat reflecting light; "high-performance" glow.
+**Outfit:**
+- **Top:** Khaki uniform shirt (short sleeves with epaulettes, badge over left pocket, multiple pockets with button flaps)
+- **Bottom:** dark brown leather duty belt (with holster, handcuffs, radio)
+- **Footwear:** matching khaki pants (straight leg with pressed crease); **black duty boots** (polished leather, lace-up).
+- **Accessories:** Silver star badge, wide-brimmed campaign hat, aviator sunglasses.
+- **Hair/Makeup:** Short strict haircut, clean-shaven or mustache, authoritative expression.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Mei Chen standing back-to-back with Amira Khalil, both looking in opposite directions with confident poses

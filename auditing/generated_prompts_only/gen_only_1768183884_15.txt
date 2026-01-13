@@ -1,0 +1,73 @@
+# METADATA
+Scene: Neutral seamless backdrop, professional three-point studio lighting with softboxes, clean minimalist setup. Subtle hum of cooling fans, scent of fresh paint and ozone.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Aaliyah Chen | Outfit: Training | Pose: None
+Character: Chayton Red-Elk | Outfit: Training | Pose: None
+Character: Marley Thompson | Outfit: Training | Pose: None
+Score: 425
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Neutral seamless backdrop, professional three-point studio lighting with softboxes, clean minimalist setup. Subtle hum of cooling fans, scent of fresh paint and ozone.
+---
+
+**CHARACTER: Aaliyah Chen**
+**Appearance:**
+* **Body:** Natural frame; natural flesh with slight wave softness; balanced athletic build with subtle curve; moderate height and vertical line; grounded and capable presence.
+* **Face:** Balanced-soft facial structure; oval face with gentle angles; warm expressive dark eyes with direct inviting gaze; soft jawline; serene neutral expression that easily breaks into a warm genuine smile.
+* **Hair:** Type 3B–3C curls; high density; natural dark brown curls with healthy volume and sheen; versatile styling options including loose curls and protective styles.
+* **Skin:** Warm golden-brown skin with a natural sun-touched glow and soft satin finish.
+**Outfit:**
+- **Top:** Fitted **sports bra** with minimal detailing
+- **Bottom:** high-waist **athletic shorts**.
+- **Accessories:** Lightweight grappling gloves; **ankle tape** for support.
+- **Hair/Makeup:** Minimal makeup.
+**Pose/Action:**
+Subtle lip bite, Intense eye contact, alluring expression, relaxed shoulders.
+---
+
+**CHARACTER 2: Chayton Red-Elk**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall and broad (6'1"-6'2"); "inverted triangle" torso with broad shoulders tapering to a trim waist; long limbs; moves with a heavy, deliberate grace; solid, functional muscularity without being gym-obsessed.
+* **Face:** Strong, sculptural planes; high, flat cheekbones; strong nose with a prominent bridge; deep-set, dark brown eyes that look *through* you rather than at you; stoic resting face that breaks into a slow, genuine smile.
+* **Hair:** Type 1A straight; very high density; waist-length; usually worn in a single clean braid down the back or a half-up knot; midnight black with a healthy, low sheen.
+* **Skin:** Rich, medium-reddish brown (copper tone); smooth but weathered texture; faint acne scars on temples adding character.
+**Outfit:**
+- **Top:** Fitted **compression shirt or tank**
+- **Bottom:** athletic shorts.
+- **Accessories:** Lightweight grappling gloves; **ankle tape** for support.
+- **Hair/Makeup:** Minimal grooming.
+**Pose/Action:**
+Arms raised triumphantly overhead, confident smile, championship energy, standing tall.
+---
+
+**CHARACTER 3: Marley Thompson**
+**Appearance:**
+* **Body:** Romantic frame; wave-lush flesh quality; voluptuous hourglass proportions with full bust (DD-E cup), dramatically defined waist, wide rounded hips, full thighs; moderate height (5'5"-5'6"); soft density with feminine curves throughout, rounded shoulders, shapely legs; magnetizing maternal presence.
+* **Face:** Soft-rounded facial structure; heart-to-round face shape; full cheeks with natural warmth; large expressive dark brown eyes, wide-set, warm inviting gaze; full lips with natural cupid's bow; soft jawline; neutral resting expression is serene and welcoming with gentle smile—radiates nurturing warmth and domestic contentment.
+* **Hair:** Type 4A coils; very high density; medium-long length (past shoulders); high volume and body; commonly worn in protective styles that are polished and feminine—twist-outs with defined curls, elegant bun with decorative pins, braided crown styles, occasionally heat-styled into bouncy curls for special occasions; natural black with warm brown undertones; always well-maintained and styled.
+* **Skin:** Deep warm brown with rich golden undertones; smooth luminous finish; healthy glow from good skincare; natural radiance.
+**Outfit:**
+- **Top:** Fitted **sports bra** with minimal detailing
+- **Bottom:** high-waist **athletic shorts**.
+- **Accessories:** Lightweight grappling gloves; **ankle tape** for support.
+- **Hair/Makeup:** Minimal makeup.
+**Pose/Action:**
+One foot on the skateboard, the other pushing off the ground, mid-motion, forward momentum.
+---

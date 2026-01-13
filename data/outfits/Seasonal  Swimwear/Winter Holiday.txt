@@ -1,23 +1,45 @@
 tags: [formal, Seasonal, Winter]
 
 [F]
-- **Top:** Velvet or satin dress (knee-length or midi in ((default:deep jewel tones - emerald, burgundy, navy) or (signature)))
-- **Bottom:** tights or stockings
-- **Footwear:** heeled boots or pumps.
-- **Accessories:** Statement jewelry, clutch, elegant coat or shawl.
-- **Hair/Makeup:** Festive styling with shimmer, bold lip in berry or red tones, hair in elegant curls or updo.
+- **Top:** Velvet or satin dress.
+  - **Fit:** Fitted bodice; Midi length.
+  - **Material:** Velvet or Satin ({modifier}).
+  - **Pattern:** Solid jewel tone.
+  - **Neckline:** Sweetheart or Scoop.
+  - **Sleeve:** Long or Cap sleeves.
+- **Bottom:** Integrated velvet/satin skirt.
+  - **Fit:** Flared or A-line.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Knee-length or Midi.
+- **Footwear:** Heeled boots or pumps; Tights or stockings.
+- **Accessories:** Statement jewelry; clutch; elegant coat or shawl.
 
 [M]
-- **Top:** Dress shirt (white or festive color) with **suit or blazer** (((default:dark colors - charcoal, navy, burgundy) or (signature)))
-- **Bottom:** dress pants
-- **Footwear:** leather dress shoes.
-- **Accessories:** Watch, tie or bow tie, festive pocket square.
-- **Hair/Makeup:** Polished styling, well-groomed.
+- **Top:** Suit or blazer and dress shirt.
+  - **Fit:** Tailored; Formal.
+  - **Material:** Wool blend ({modifier}); Cotton shirt.
+  - **Neckline:** Collared with tie or bow tie.
+  - **Sleeve:** Long.
+- **Bottom:** matching dress pants.
+  - **Fit:** Tailored.
+  - **Material:** matching wool blend.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Leather dress shoes.
+- **Accessories:** Watch; festive pocket square.
 
 [H]
-- **Hijab:** Luxurious silk or velvet hijab in ((default:deep jewel tone (emerald, burgundy, or navy)) or (signature)) with festive draping and crystal pin
-- **Top:** Long-sleeve velvet or satin tunic dress (knee-length or midi in matching jewel tone, high neckline)
-- **Bottom:** N/A or full-length skirt in matching fabric
-- **Footwear:** Heeled boots or pumps in coordinating color
-- **Accessories:** Statement jewelry, small elegant clutch, elegant shawl
-- **Makeup:** Festive styling with shimmer, bold lip in berry or red tones
+- **Hijab:** Luxurious silk or velvet hijab with festive draping and crystal pin.
+- **Top:** Long-sleeve velvet or satin tunic dress ({modifier}).
+  - **Fit:** Modest fitted.
+  - **Material:** Velvet or Satin.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** matching full-length skirt or trousers.
+  - **Fit:** Flowing.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Heeled boots or pumps in coordinating color.
+- **Accessories:** Statement jewelry; elegant shawl.

@@ -1,23 +1,46 @@
 tags: [Job, medical, professional]
 
 [F]
-- **Top:** Scrub top (v-neck or round neck in ((default:solid color - navy, teal, or burgundy) or (signature)))
-- **Bottom:** scrub pants (drawstring waist, multiple pockets)
-- **Footwear:** comfortable sneakers or clogs (white or matching color).
-- **Accessories:** Stethoscope around neck, ID badge, watch, hair secured away from face.
-- **Hair/Makeup:** Natural minimal makeup, hair in ponytail or bun.
+- **Top:** V-neck or round neck scrub top.
+  - **Fit:** Relaxed; Utility focused.
+  - **Material:** Cotton/Poly blend.
+  - **Pattern:** Solid ((navy, teal, or burgundy)).
+  - **Neckline:** V-neck or Round neck.
+  - **Sleeve:** Short sleeve.
+- **Bottom:** Scrub pants with multiple pockets.
+  - **Fit:** Relaxed; Drawstring waist.
+  - **Material:** matching fabric.
+  - **Waist:** Drawstring.
+  - **Length:** Full length.
+- **Footwear:** Comfortable sneakers or clogs.
+- **Accessories:** Stethoscope; ID badge; watch.
 
 [M]
-- **Top:** Scrub top (v-neck in ((default:solid color - navy, teal, or burgundy) or (signature)))
-- **Bottom:** scrub pants (drawstring waist, multiple pockets)
-- **Footwear:** comfortable sneakers or clogs (white or matching color).
-- **Accessories:** Stethoscope around neck, ID badge, watch.
-- **Hair/Makeup:** Natural minimal grooming, hair neat and short or secured.
+- **Top:** V-neck scrub top.
+  - **Fit:** Standard.
+  - **Material:** matching fabric.
+  - **Pattern:** Solid.
+  - **Neckline:** V-neck.
+  - **Sleeve:** Short.
+- **Bottom:** Scrub pants with pockets.
+  - **Fit:** Relaxed.
+  - **Material:** matching.
+  - **Waist:** Drawstring.
+  - **Length:** Full.
+- **Footwear:** Comfortable sneakers or clogs.
+- **Accessories:** Stethoscope; ID badge; watch.
 
 [H]
-- **Hijab:** Cotton or cotton-blend hijab in ((default:coordinating color (navy, teal, or neutral)) or (signature)) with practical neat wrap
-- **Top:** Long-sleeve modest scrub top (v-neck or round neck in ((default:solid color - navy, teal, or burgundy) or (signature)), falls to hip)
-- **Bottom:** Scrub pants (drawstring waist, multiple pockets, full length)
-- **Footwear:** Comfortable sneakers or clogs (white or matching color)
-- **Accessories:** Stethoscope around neck, ID badge, watch, hair secured
-- **Makeup:** Natural minimal makeup
+- **Hijab:** Cotton-blend hijab in coordinating color with neat wrap.
+- **Top:** Long-sleeve modest scrub top.
+  - **Fit:** Modest; Falls to hip.
+  - **Material:** Cotton/Poly.
+  - **Neckline:** High-neck or V-neck with under-layer.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Scrub pants with multi-pockets.
+  - **Fit:** Loose.
+  - **Material:** matching.
+  - **Waist:** Drawstring.
+  - **Length:** Full length.
+- **Footwear:** Comfortable sneakers or clogs.
+- **Accessories:** Stethoscope; ID badge; watch.

@@ -1,0 +1,76 @@
+# METADATA
+Scene: Organized personal workspace with ergonomic chair and dual monitors. Soft blue glow from screens balanced by a warm desk lamp. Quiet focus, scent of books and electronics.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Lucía Reyes | Outfit: Lumberjack | Pose: None
+Character: Jax Chen | Outfit: Salsa | Pose: None
+Character: Priya Sharma | Outfit: Swimming | Pose: None
+Score: 390
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Organized personal workspace with ergonomic chair and dual monitors. Soft blue glow from screens balanced by a warm desk lamp. Quiet focus, scent of books and electronics.
+---
+
+**CHARACTER: Lucía Reyes**
+**Appearance:**
+* **Body:** Romantic frame; wave plush softness; full hourglass proportions; moderate vertical.
+* **Face:** Rounded facial structure; heart-shaped face; full cheeks; warm expressive eyes; joyful resting expression.
+* **Hair:** Type 2B–2C waves; high density; long layered cut; side part; healthy sheen.
+* **Skin:** Warm golden skin with radiant glow.
+**Outfit:**
+- **Top:** Red and black buffalo plaid flannel shirt (thick cotton, buttoned or worn open over a white tank)
+- **Bottom:** distressed blue jeans (straight leg, rugged denim)
+- **Footwear:** brown leather work boots.
+- **Accessories:** Leather belt with large buckle, small axe prop (optional), wool beanie.
+- **Hair/Makeup:** Loose natural waves or a messy bun, minimal "outdoorsy" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing in profile, one leg bent with calf flexed, torso twisted toward the camera, hands gripped together to pop the chest and bicep.
+---
+
+**CHARACTER 2: Jax Chen**
+**Appearance:**
+- **Body:** Explosive-Athletic frame; olive-toned skin with a vibrant, high-oxygenated flush; inverted triangle proportions with powerful, broad shoulders and a narrow, muscular waist; tall stature (6'1"-6'2"); high-performance build with dense, defined muscle groups and visible vascularity; "kinetic potential" presence—vibrant and dangerous.
+- **Face:** Sharp, aerodynamic structure; high, defined cheekbones; narrow, powerful jawline; intense, wide-set dark eyes that possess a piercing, high-speed focus; sharp, straight eyebrows with a low, aggressive set; straight, thin nose; firm mouth with a determined set; expression is one of maximum effort and singular focus.
+- **Hair:** Type 1A straight; medium density; kept in a sharp, high-fade with a short, textured top; matte-satin finish with vibrant neon orange tips that seem to vibrate with his movement.
+- **Skin:** Vibrant olive with warm, high-energy undertones; smooth, taut texture with visible "muscle-mapping" micro-textures in the dermis; beads of high-intensity sweat reflecting light; "high-performance" glow.
+**Outfit:**
+- **Top:** Latin dance shirt (black or deep jewel tone, deep V-neck or fitted button-down, often with sheer or satin details)
+- **Bottom:** Latin dance trousers (high-waisted, fitted through thigh, flared at hem)
+- **Footwear:** Latin dance shoes (Cuban heel).
+- **Accessories:** Simple belt, minimal jewelry.
+- **Hair/Makeup:** Slicked back hair, Intense focused expression, bronzed skin.
+**Pose/Action:**
+full body shot showing the character from head to toe, Crouched in starting position, hands on ground, explosive ready stance, Intense focus.
+---
+
+**CHARACTER 3: Priya Sharma**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
+* **Face:** Soft oval face with gentle rounded features; warm expressive dark brown eyes; friendly approachable expression; fuller cheeks; soft jawline; warm genuine smile.
+* **Hair:** Type 2B-2C waves; medium-high density; long dark brown hair (almost black at roots) with warm caramel-brown highlights throughout mid-lengths and ends; natural body and volume; beachy waves.
+* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow. small black bindi dot on forehead
+**Outfit:**
+- **Top:** Performance one-piece swimsuit with a **solid black** central body panel for hydrodynamics
+- **Bottom:** contoured side panels in **white** framed by thin **black** piping
+- **Footwear:** racerback strap design with open back.
+- **Accessories:** White swim cap with **white** logo, mirrored racing goggles (blue).
+- **Hair/Makeup:** Wet skin texture, waterproof makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Mid-jump motion, rope blurred in motion, athletic form, training montage energy.
+---

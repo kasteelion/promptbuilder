@@ -1,23 +1,46 @@
 tags: [Cultural, historical, traditional]
 
 [F]
-- **Top:** Long flowing dress (earthy tones - forest green, deep blue, cream with Celtic knotwork embroidery)
-- **Bottom:** wool cloak with brooch
-- **Footwear:** leather boots.
-- **Accessories:** Silver or bronze torc (neck ring), Celtic knotwork jewelry, flower crown or circlet.
-- **Hair/Makeup:** Long loose waves or elaborate braids, natural makeup with earthy tones, freckles enhanced.
+- **Top:** Long flowing dress with Celtic knotwork embroidery.
+  - **Fit:** Flowing; Draped.
+  - **Material:** Linen or Cotton; Wool cloak.
+  - **Pattern:** Celtic knotwork.
+  - **Neckline:** Scoop neck or High-neck.
+  - **Sleeve:** Long flowing sleeves.
+- **Bottom:** Integrated flowing skirt.
+  - **Fit:** Flared.
+  - **Material:** matching earthy tone fabric.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Leather boots.
+- **Accessories:** Silver or bronze torc (neck ring); Celtic knotwork jewelry; wool cloak with brooch.
 
 [M]
-- **Top:** Long tunic (earthy tones - forest green, deep blue, brown with Celtic knotwork embroidery)
-- **Bottom:** wool cloak with large brooch
-- **Footwear:** leather pants or kilt; **leather boots**.
-- **Accessories:** Bronze or silver torc (neck ring), Celtic knotwork jewelry, ceremonial sword.
-- **Hair/Makeup:** Long hair in warrior braids or loose, full beard with braids, natural appearance.
+- **Top:** Long tunic with Celtic knotwork embroidery.
+  - **Fit:** Long; Practical.
+  - **Material:** Linen or Wool.
+  - **Pattern:** Celtic knotwork labels.
+  - **Neckline:** Round neck or Lace-up.
+  - **Sleeve:** Long.
+- **Bottom:** Leather pants or kilt.
+  - **Fit:** Relaxed.
+  - **Material:** Leather or Wool.
+  - **Waist:** Heavy leather belt.
+  - **Length:** Knee-length (kilt) or Full (pants).
+- **Footwear:** Leather boots.
+- **Accessories:** Bronze or silver torc; ceremonial sword; wool cloak.
 
 [H]
-- **Hijab:** Natural-toned hijab (forest green, deep blue, or cream) with flowing Celtic-inspired draping, flower crown or circlet over it
-- **Top:** Long-sleeve flowing dress (earthy tones with Celtic knotwork embroidery, modest neckline, flowing fabrics)
-- **Bottom:** Long flowing skirt (coordinating earthy tone with embroidered hem)
-- **Footwear:** Leather boots
-- **Accessories:** Silver or bronze torc (neck ring worn over hijab draping), Celtic knotwork jewelry, wool cloak with brooch
-- **Makeup:** Natural makeup with earthy tones, freckles enhanced
+- **Hijab:** Natural-toned hijab with flowing Celtic-inspired draping.
+- **Top:** Long-sleeve flowing dress with knotwork embroidery.
+  - **Fit:** Modest loose.
+  - **Material:** Linen or Cotton.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Long flowing skirt.
+  - **Fit:** Voluminous.
+  - **Material:** matching with embroidered hem.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Leather boots.
+- **Accessories:** Silver or bronze torc (over hijab); flower crown or circlet; wool cloak.

@@ -1,0 +1,50 @@
+tags: [High Fashion, Avant-Garde, Structural, Runway]
+modifiers:
+  Matte: in a **matte finish** absorbing all light
+  Glossy: in a **high-gloss patent** finish reflecting studio lights
+  Experimental: constructed from **recycled industrial rubber**
+  Sheer: with panels of **rigid transparent vinyl**
+
+[F]
+- **Top:** Structural neoprene bodice {modifier}.
+  - **Fit:** Oversized architectural; Severe boxy shoulders.
+  - **Material:** Neoprene; {modifier}; Rigid vinyl.
+  - **Pattern:** Solid.
+  - **Neckline:** High standing neck.
+  - **Sleeve:** Elongated sleeves with angular padding.
+- **Bottom:** Asymmetric skirt with voluminous pleats.
+  - **Fit:** Rigid draping; Asymmetric.
+  - **Material:** matching.
+  - **Waist:** Structural Obscured.
+  - **Length:** Knee-length.
+- **Footwear:** Split-toe sculptural boots.
+- **Accessories:** Geometric chrome face jewelry (nose bridge); sleek leather clutch.
+
+[M]
+- **Top:** Oversized structural blazer with severe shoulders.
+  - **Fit:** Boxy; Structured.
+  - **Material:** Heavy wool; Neoprene.
+  - **Neckline:** High lapel or collarless.
+  - **Sleeve:** Elongated sleeves.
+- **Bottom:** Wide-leg trousers with dropped crotch.
+  - **Fit:** Voluminous; Deep double pleats.
+  - **Material:** Charcoal grey fabric.
+  - **Waist:** Low dropped.
+  - **Length:** Ankle-length.
+- **Footwear:** Chunky platform derby shoes.
+- **Accessories:** Silver industrial chain choker; leather harness.
+
+[H]
+- **Hijab:** Tightly wrapped jersey hijab mimicking a hood.
+- **Top:** Architectural neoprene tunic with angular shoulders.
+  - **Fit:** Modest architectural.
+  - **Material:** Neoprene.
+  - **Neckline:** High neck (integrated hood).
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Wide-leg architectural trousers.
+  - **Fit:** Straight voluminous.
+  - **Material:** matching fabric.
+  - **Waist:** Obscured.
+  - **Length:** Floor-length.
+- **Footwear:** Patent leather boots.
+- **Accessories:** Chrome face jewelry over hijab.

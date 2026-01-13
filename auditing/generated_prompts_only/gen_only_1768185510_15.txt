@@ -1,0 +1,82 @@
+# METADATA
+Scene: Carnival games and rides, colorful lights, cotton candy stands, festive exciting atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Sitara Saanvi | Outfit: Eco-Futurism | Pose: None
+Character: Yuki Tanaka | Outfit: African Print Contemporary | Pose: None
+Character: Diego Morales | Outfit: Boxing | Pose: None
+Interaction: Custom
+Score: 390
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Carnival games and rides, colorful lights, cotton candy stands, festive exciting atmosphere.
+---
+
+**CHARACTER: Sitara Saanvi**
+**Appearance:**
+* **Body:** Romantic frame; soft lush flesh quality; hourglass proportions with defined waist; moderate height (5'4"); soft rounded density with lush bust and hips, delicate wrists and ankles; alluring captivating presence.
+* **Face:** Soft rounded structure; heart shape; large expressive dark brown almond eyes with dazzled flirtatious quality; softly curved jawline; neutral resting expression is slightly pouting and sensual.
+* **Hair:** Type 2C waves; medium-high density; dark glossy black with high sheen; long voluminous hair that takes styling well; commonly worn in glamorous, vintage-inspired styles.
+* **Skin:** Medium tan with warm golden-olive undertones and luminous smooth surface finish; small delicate beauty mark near lip.
+**Outfit:**
+- **Top:** Bodysuit made of recycled ocean plastic mesh; iridescent bio-luminescent piping; cutout details
+- **Bottom:** Clear vinyl trench coat worn over the bodysuit; printed with climate data graphs
+- **Footwear:** 3D-printed lattice heels (skeletal structure); biodegradable material
+- **Accessories:** Solar panel collar necklace, recycled glass earrings, moss-filled terrarium bag
+- **Hair/Makeup:** Wet-look hair with green bio-glitter roots; holographic highlighter
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Yuki Tanaka**
+**Appearance:**
+- **Body:** Romantic frame; wave plush softness; lush hourglass proportions with a defined waist and soft rounded curves; moderate vertical (5'4"-5'5"); soft and inviting presence with a delicate-yet-grounded build; "tranquil strength" presence—quietly durable but appearing fragile.
+- **Face:** Rounded-soft facial structure; heart-shaped face with high-but-soft cheekbones; smooth clear planes; large expressive almond-shaped eyes, deep dark brown, reflecting a gentle and observant nature; soft-tapered eyebrows in a natural arc; refined nose with a soft bridge; full youthful lips held in a shy-but-warm expression that radiates a quiet, intimate confidence.
+- **Hair:** Type 2A waves; high density; long length past shoulders; silky dark obsidian hair with natural volume and a luminous healthy sheen; side-parted with soft-framed layers; takes soft, romantic styling well; commonly worn in loose curls or pinned back with a delicate accessory.
+- **Skin:** Light warm skin with soft golden-cream undertones (Japanese heritage); smooth satin finish with a natural healthy glow; flawless texture maintained by traditional and modern skincare.
+**Outfit:**
+- **Top:** Fitted **peplum top or off-shoulder blouse** (vibrant African print - Ankara, Kente, or Dashiki patterns in bold colors like orange, teal, purple, gold)
+- **Bottom:** pencil skirt or wide-leg pants (matching or complementary print, high-waist)
+- **Footwear:** strappy sandals or block heels.
+- **Accessories:** Statement earrings (large hoops or geometric designs), wrapped headscarf or headband in matching fabric, bangles, beaded necklace.
+- **Hair/Makeup:** Natural hair in afro, braids, locs, or twisted updo; bold makeup with warm tones, defined brows, glowing skin with golden undertones.
+
+---
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Diego Morales**
+**Appearance:**
+- **Body:** Natural Athletic frame; natural-toned flesh with sun-touched warmth; inverted rectangle proportions with broad shoulders, slim waist, and defined muscle groups without bulk; moderate height (5'11"-6'0"); relaxed athletic build—lean and flexible from years of surfing; "effortless strength" presence—capable but never posturing.
+- **Face:** Balanced-angular structure; oval face shape; firm jawline that softens when he smiles; expressive almond-shaped eyes, wide-set, warm hazel with golden flecks that catch the light; natural dark eyebrows with a slight arch; straight nose with a subtle bridge; full mouth often quirked into a friendly half-smile; expressive neutral expression that reads as engaged and helpful.
+- **Hair:** Type 2B-2C waves; thick high density; medium length textured cut, shorter on sides with volume on top; loose natural side part; matte-satin finish with sun-bleached highlights at the tips; commonly worn tousled and "salt-water" styled, or loosely pushed back during work.
+- **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
+**Outfit:**
+- **Top:** bare chest or fitted **athletic tank** in **white**
+- **Bottom:** high-waist **satin boxing shorts** in **white** featuring a **wide 4-inch black elastic waistband** with the **Standard Team** name embroidered in **bold block letters**; deep **side-slits** for maximum leg movement; **matching white hand wraps** visible under **12oz pro-style boxing gloves** in **blue** with a **matte finish**.
+- **Footwear:** **high-top boxing shoes** (blue) with thin rubber soles and pivot-point traction.
+- **Accessories:** Clear mouthguard, athletic tape on wrists.
+- **Hair/Makeup:** Hair short or tied back, Intense focused gaze, sheen of sweat on chest and shoulders.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Sitara Saanvi and Yuki Tanaka sharing a single umbrella during a gentle rain, walking close together to stay dry, a sense of quiet intimacy and protection.

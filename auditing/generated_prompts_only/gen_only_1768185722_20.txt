@@ -1,0 +1,82 @@
+# METADATA
+Scene: Narrow urban alleyway, view up a dark metal fire escape, wet pavement, harsh shadows, gritty late-night atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Isla MacLeod | Outfit: Basketball | Pose: None
+Character: Chayton Red-Elk | Outfit: Basketball | Pose: None
+Character: Roxanna Perez | Outfit: Basketball | Pose: None
+Interaction: Custom
+Score: 565
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Narrow urban alleyway, view up a dark metal fire escape, wet pavement, harsh shadows, gritty late-night atmosphere.
+---
+
+**CHARACTER: Isla MacLeod**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; delicate balanced proportions; petite vertical; soft gentle presence.
+* **Face:** Soft delicate facial structure; heart-shaped face; gentle features; large dreamy eyes in gray-blue; soft dusting of freckles; serene contemplative expression.
+* **Hair:** Type 2A waves; fine-medium density; shoulder-length layered cut; loose natural part; soft wispy texture; matte-satin finish; auburn with natural red tones.
+* **Skin:** Fair cool-toned skin with soft pink undertones; light freckles across nose and cheeks.
+**Outfit:**
+- **Top:** Basketball jersey for **Standard Team** in **black** with **white** trim (sleeveless, wide shoulder cut)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Shooting sleeve, headband.
+- **Hair/Makeup:** Ponytail or bun.
+**Pose/Action:**
+wide shot with the character framed within the environment, Streamlined diving position, arms extended forward, body horizontal, entering water, competitive form.
+---
+
+**CHARACTER 2: Chayton Red-Elk**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall and broad (6'1"-6'2"); "inverted triangle" torso with broad shoulders tapering to a trim waist; long limbs; moves with a heavy, deliberate grace; solid, functional muscularity without being gym-obsessed.
+* **Face:** Strong, sculptural planes; high, flat cheekbones; strong nose with a prominent bridge; deep-set, dark brown eyes that look *through* you rather than at you; stoic resting face that breaks into a slow, genuine smile.
+* **Hair:** Type 1A straight; very high density; waist-length; usually worn in a single clean braid down the back or a half-up knot; midnight black with a healthy, low sheen.
+* **Skin:** Rich, medium-reddish brown (copper tone); smooth but weathered texture; faint acne scars on temples adding character. minimalist wire-frame glasses for reading
+**Outfit:**
+- **Top:** Basketball jersey for **Standard Team**  (sleeveless)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Arm sleeve, wristbands.
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing in profile, one leg bent with calf flexed, torso twisted toward the camera, hands gripped together to pop the chest and bicep.
+---
+
+**CHARACTER 3: Roxanna Perez**
+**Appearance:**
+* **Body:** Theatrical Romantic frame (Kibbe); lush flesh; compact delicate bone structure; double-tapered proportions; short to moderately short vertical line; concentrated physical presence.
+
+* **Face:** Balanced-soft facial structure with subtle sharpness; oval face; moderate midface projection; large almond-shaped eyes; softly defined tapered jawline; full lips; resting expression calm and self-possessed.
+
+* **Hair:** Type 1C–2A straight to slightly wavy; high density; long length; no shrinkage; side part; asymmetrical swept silhouette; glossy surface finish.
+
+* **Skin:** Medium olive skin tone; warm-neutral undertone; smooth satin finish; no prominent markings.
+**Outfit:**
+- **Top:** Basketball jersey for **Standard Team** in **white** with **black** trim (sleeveless, wide shoulder cut)
+- **Bottom:** Basketball shorts (loose fit, knee length)
+- **Footwear:** High-top basketball sneakers
+- **Accessories:** Shooting sleeve, headband.
+- **Hair/Makeup:** Ponytail or bun.
+**Pose/Action:**
+wide shot with the character framed within the environment, Hands on the waist, elbows pushed forward to broaden the back, showcasing extreme V-taper and upper body width.
+---
+
+**Additional Notes:**
+Isla MacLeod and Chayton Red-Elk in pre-fight weigh-in confrontation, standing forehead-to-head or nearly touching. Arms at sides or held back by officials/coaches, preventing physical contact. Bodies are tense, coiled energy barely contained. Facial expressions showing psychological warfare—stone-faced intensity, trash talk mid-sentence, or aggressive scowls. Neck muscles tensed, veins visible from adrenaline and weight cut strain. Shoulders and traps flexed. Both leaning slightly forward into each other's space, neither backing down. Eye contact is unwavering, predatory. Background shows weigh-in stage setup, scales, promotional banners, or crowd of media. Coaching teams may be visible at edges trying to separate or control their fighters. Raw power on display, mutual respect mixed with aggression.

@@ -1,0 +1,77 @@
+# METADATA
+Scene: Private karaoke booth, disco ball, plush seating, microphones, colorful LED lighting, party energy.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Kendra Mitchell | Outfit: Cozy Autumn | Pose: None
+Character: Mela Hart | Outfit: Skater Culture | Pose: None
+Character: Julian Blackwood | Outfit: Wrestling | Pose: None
+Score: 410
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Private karaoke booth, disco ball, plush seating, microphones, colorful LED lighting, party energy.
+---
+
+**CHARACTER: Kendra Mitchell**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; broad inverted triangle proportions with wide shoulders, long limbs, and subtle waist definition; tall (5'9"); strong defined muscle with visible shoulder caps, toned arms, and powerful legs; commanding physical presence.
+* **Face:** Strong angular structure; oblong-square face; prominent bone structure with high broad cheekbones; almond-shaped wide-set hazel-green eyes; strong defined jawline; neutral resting expression is confident and direct with penetrating gaze; smile is wide, genuine, and slightly asymmetric with infectious energy.
+* **Hair:** Type 3B curls; high density; shoulder-length layered cut; side part; voluminous natural texture; matte-satin finish; commonly worn loose and free or in high messy bun; warm chestnut brown with golden highlights.
+* **Skin:** Medium tan with warm golden undertones and healthy athletic glow; faint freckles across nose and shoulders.
+**Outfit:**
+- **Top:** Oversized **knit sweater** (chunky cable-knit)
+- **Bottom:** high-waist jeans or **corduroy pants**
+- **Footwear:** ankle boots.
+- **Accessories:** Knit scarf, simple jewelry.
+- **Hair/Makeup:** Natural warm-toned makeup, relaxed hairstyle.
+**Pose/Action:**
+full body shot showing the character from head to toe, Streamlined diving position, arms extended forward, body horizontal, entering water, competitive form.
+---
+
+**CHARACTER 2: Mela Hart**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall vertical line; broad shoulders; long limbs; somewhat straight silhouette; moderate bust and hip definition; athletic and springy presence.
+* **Face:** Oval shape; high cheekbones; full lips; prominent expressive eyes; straight nose bridge; defined jawline; bright and buoyant neutral expression.
+* **Hair:** Type 4A (Natural texture) with Type 2B/2C (Wavy/Curly) ends; long, dark brown braids throughout the hair with loose wavy curls at the bottom; high shine; braids are a signature identity feature.
+* **Skin:** Deep brown with warm golden undertones and luminous satin finish.
+**Outfit:**
+- **Top:** Oversized **graphic t-shirt** (worn loose, vintage wash)
+- **Bottom:** baggy **durable pants** (Dickies style, cuffed at ankle)
+- **Footwear:** canvas skate shoes (Vans or Converse style).
+- **Accessories:** Beanie, chain wallet, skate tool visible in pocket.
+- **Hair/Makeup:** Messy effortless hair, minimal natural makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with arms crossed confidently, relaxed shoulders, natural stance.
+---
+
+**CHARACTER 3: Julian Blackwood**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; moderate height (5'8"); soft, slightly fleshy build but not overweight; narrow, sloping shoulders; delicate hands with long fingers (piano hands); fluid, languid physicality.
+* **Face:** Soft, oval shape with a "baby face" quality; full, pouty lips; large, liquid eyes in a pale grey-green; heavy, dark brows; permanent dark circles under eyes that enhance the "brooding" look.
+* **Hair:** Type 3A curls; high density; shoulder-length "wolf cut" or shag; messy, falling into eyes; dark chocolate brown, almost black.
+* **Skin:** Very pale/alabaster; cool undertones; translucent quality (veins visible on inner arms); scattering of tattoos on hands and neck.
+**Outfit:**
+- **Top:** Fitted **singlet** in **white with black accents** (lycra/spandex performance fabric with team logo)
+- **Bottom:** wrestling shoes (blue, lightweight with ankle support).
+- **Accessories:** Knee pads optional.
+- **Hair/Makeup:** Hair short or tied back and messy.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe, Defensive position, one arm extended in fist, other protecting face, alert watchful expression.
+---

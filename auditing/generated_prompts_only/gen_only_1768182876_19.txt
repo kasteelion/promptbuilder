@@ -1,0 +1,76 @@
+# METADATA
+Scene: 
+Base_Prompt: Chibi Style: "Super Deformed"
+Character: Elara Soledad | Outfit: Cozy Onesie | Pose: None
+Character: Camila Vargas | Outfit: Cozy Onesie | Pose: None
+Character: Nora Alvarez | Outfit: Cozy Onesie | Pose: None
+Interaction: Custom
+Score: 150
+
+Generate an image of: Rendering
+Soft-shaded vector illustration or vinyl toy aesthetic. Bright, pastel, or primary-heavy color palettes. Gradient shading is minimal and smooth, giving surfaces a matte plastic or "squishy" appearance. Thick, rounded line art (or lineless "sticker" style).
+
+Character Accuracy
+Extreme anatomical exaggeration (SD or Super Deformed). Heads are 1:1 or 1:2 ratio with the body. Eyes are massive, taking up 50% of the face, with simplified sparkles. Noses are absent or mere dots. Mouths are simple curves.
+
+Body Types
+"Bean" shaped torsos. Limbs are short, stubby cylinders with no muscle definition. Hands are simple spheres or "mitten" shapes; feet are rounded nubs. The silhouette is fundamentally cute and non-threatening.
+
+Hair & Clothing
+Hair: Simplified into large, chunky shapes with high volume and minimal strand detail. Clothing: Reduced to iconic elements—details like shoelaces or buttons are oversized and simplified for readability.
+
+Details
+Floating iconography (hearts, stars, sweat drops, anger veins) near the head. Backgrounds are simple patterns (polka dots, stripes) or solid soft colors. A thick white outline often surrounds the entire character like a die-cut sticker.
+
+---
+
+**CHARACTER: Elara Soledad**
+**Appearance:**
+* **Body:** Dramatic Classic frame; lean taut flesh; long limbs with balanced proportions; tall (6'1"); dense sculpted muscle over strong bone structure with visible traps, defined deltoids, and powerful legs; commanding athletic presence.
+* **Face:** Strong angular structure; oval-square shape; strong pronounced cheekbones; almond-shaped wide-set deep mahogany brown eyes; sharply defined jawline; neutral resting expression is stoic and observant with unwavering gaze; smile is rare but genuine and transforms expression into warm intensity.
+* **Hair:** Type 4C coils; very dense; voluminous naturally forming wide halo; waist length; center-parted often pulled back for practicality; low sheen; commonly styled in thick braids or high functional bun; black-brown.
+* **Skin:** Deep warm brown with golden undertones and smooth almost polished surface finish; faint linear scars on upper arms and shoulders.
+**Outfit:**
+- **Top:** Full-body fleece onesie (pastel pink or gray with hood, zip-front closure, kangaroo pocket)
+- **Bottom:** matching hood (with animal ears - bunny, bear, or cat)
+- **Footwear:** fuzzy slipper boots built-in or separate.
+- **Accessories:** Hot cocoa mug, oversized stuffed animal.
+- **Hair/Makeup:** Hair loose and casual, no makeup, playful cozy expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Holding game controller, focused on screen ahead, Casual gaming posture, relaxed competitive energy.
+---
+
+**CHARACTER 2: Camila Vargas**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; compact resilient flesh quality; petite but broad shoulders, long-torso-short-leg proportion; short (5'0"); tightly-wound sinewy muscle over sharp bone structure with defined calves and forearms; fiery and disciplined presence.
+* **Face:** Angular slightly sharp structure; elongated diamond shape; prominent high arching brows and strong chin; large intensely focused dark hazel eyes; defined narrow jawline; neutral resting expression is serious, contained, and observant.
+* **Hair:** Type 1B; medium density; mid-back length; pure black; very glossy with high sheen; takes precision styling well.
+* **Skin:** Olive with cool undertones and soft matte finish; smooth and disciplined surface.
+**Outfit:**
+- **Top:** Full-body fleece onesie (pastel pink or gray with hood, zip-front closure, kangaroo pocket)
+- **Bottom:** matching hood (with animal ears - bunny, bear, or cat)
+- **Footwear:** fuzzy slipper boots built-in or separate.
+- **Accessories:** Hot cocoa mug, oversized stuffed animal.
+- **Hair/Makeup:** Hair loose and casual, no makeup, playful cozy expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Defensive position, one arm extended in fist, other protecting face, alert watchful expression.
+---
+
+**CHARACTER 3: Nora Alvarez**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with wave softness; soft hourglass-pear proportions with full hips, thighs and bust, soft rounded belly, subtly defined shoulders; petite-to-moderate vertical (5'2"-5'4"); voluptuous short-stack build with concentrated curves and grounded presence.
+* **Face:** Balanced-soft facial structure; round-oval face; deep almond-shaped eyes with steady observant gaze; soft jawline; neutral resting expression is steady and observant with signature warmth showing in subtle corner smile.
+* **Hair:** Type 2B waves; medium density; long controlled cut with natural body; matte finish; dark brown.
+* **Skin:** Warm tan with golden-brown undertones and natural matte-soft finish. thin black rectangular glasses
+**Outfit:**
+- **Top:** Full-body fleece onesie (pastel pink or gray with hood, zip-front closure, kangaroo pocket)
+- **Bottom:** matching hood (with animal ears - bunny, bear, or cat)
+- **Footwear:** fuzzy slipper boots built-in or separate.
+- **Accessories:** Hot cocoa mug, oversized stuffed animal.
+- **Hair/Makeup:** Hair loose and casual, no makeup, playful cozy expression.
+**Pose/Action:**
+wide shot with the character framed within the environment, Holding cup or glass, bringing it toward mouth or just sipped, Casual relaxed pose.
+---
+
+**Additional Notes:**
+Elara Soledad playfully pushing Camila Vargas, light contact showing friendly interaction

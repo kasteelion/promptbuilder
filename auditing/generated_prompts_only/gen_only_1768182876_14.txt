@@ -1,0 +1,79 @@
+# METADATA
+Scene: Clean clinical hallway, white walls, medical equipment visible, fluorescent lighting, professional healthcare setting.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Chiara Lombardi | Outfit: Rodeo Champion | Pose: None
+Character: Silas Burnside | Outfit: Skater Culture | Pose: None
+Character: Mela Hart | Outfit: Country Casual | Pose: None
+Interaction: Custom
+Score: 302
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Clean clinical hallway, white walls, medical equipment visible, fluorescent lighting, professional healthcare setting.
+---
+
+**CHARACTER: Chiara Lombardi**
+**Appearance:**
+* **Body:** Soft Classic frame; natural–wave flesh blend; balanced proportions with gentle curve; moderate vertical.
+* **Face:** Balanced sculpted facial structure; oval face; soft cheek fullness; strong brows; expressive eyes; calm knowing expression.
+* **Hair:** Type 2B–2C waves; high density; layered medium-long cut; natural volume; loose part; satin finish.
+* **Skin:** Warm Mediterranean-toned skin with healthy glow.
+**Outfit:**
+- **Top:** Rhinestone-embellished western shirt (#808000 with pearl snaps, fitted silhouette, ornate yoke with crystals)
+- **Bottom:** bedazzled belt (wide leather with massive silver buckle encrusted with rhinestones)
+- **Footwear:** bootcut jeans (dark wash with decorative back pockets); **tall cowboy boots** (with elaborate stitching and metallic accents).
+- **Accessories:** White felt cowboy hat with rhinestone band, statement western jewelry (turquoise and silver), rodeo queen sash, hoop earrings.
+- **Hair/Makeup:** Big voluminous curls or pageant waves, full glam makeup with dramatic lashes and bold lip, confident pageant smile.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Silas Burnside**
+**Appearance:**
+* **Body:** Flamboyant Natural; bear-like frame; broad, heavy shoulders and a deep barrel chest; thick functional muscle covered by a healthy layer of "winter insulation"; tall vertical (6'3"-6'5"); massive, calloused hands; moves with a heavy, confident lumber.
+* **Face:** Broad, square structure with weathered, rosy cheeks; warm crinkling eyes that disappear when he smiles; and his signature grooming: thick, bushy sideburns that flare out and connect to a heavy mustache, leaving his strong, square chin completely clean-shaven (the classic "Friendly Mutton Chops").
+* **Hair:** Type 1B-2A; thick, coarse density; short, practical cut often messy from hat wear; salt-and-pepper coloring.
+* **Skin:** Fair-to-medium; cool undertones; perpetually wind-chapped or sun-reddened; rugged texture with deep laugh lines.
+**Outfit:**
+- **Top:** Oversized **graphic t-shirt**
+- **Bottom:** baggy **durable work pants**
+- **Footwear:** canvas skate shoes.
+- **Accessories:** Beanie, chain wallet, earbuds around neck.
+- **Hair/Makeup:** Tousled natural hair, clean-shaven or stubble.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 3: Mela Hart**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; tall vertical line; broad shoulders; long limbs; somewhat straight silhouette; moderate bust and hip definition; athletic and springy presence.
+* **Face:** Oval shape; high cheekbones; full lips; prominent expressive eyes; straight nose bridge; defined jawline; bright and buoyant neutral expression.
+* **Hair:** Type 4A (Natural texture) with Type 2B/2C (Wavy/Curly) ends; long, dark brown braids throughout the hair with loose wavy curls at the bottom; high shine; braids are a signature identity feature.
+* **Skin:** Deep brown with warm golden undertones and luminous satin finish.
+**Outfit:**
+- **Top:** Red and white gingham button-up shirt (long sleeves with tie-front, cropped to show midriff, unbuttoned to show cleavage)
+- **Bottom:** high-waist denim booty shorts (dark wash, fitted, very short) with brown belt and large golden buckle.
+- **Accessories:** White bow hair tie (tied in hair at side or on pigtail), small hoop or stud earrings.
+- **Hair/Makeup:** Long wavy hair (styled in side-swept waves or pigtails), classic red lipstick, winged eyeliner, natural rosy cheeks, pin-up girl glamour, playful flirty expression.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Chiara Lombardi and Silas Burnside backlit by warm sunset glow, positioned to maximize golden hour lighting magic. Warm golden-orange light creates rim lighting effect around edges of bodies and hair, creating angelic halo glow. Both in dreamy relaxed poses—Chiara Lombardi and Silas Burnside standing close, one looking at the other or both gazing toward horizon. Expressions peaceful and contemplative, soft smiles or serene faces. Hair catching light creating luminous effect. Bodies positioned so sunlight filters through creating lens flare effect. Poses natural and romantic—hands gently touching, arms loosely around each other, or standing close in comfortable silence. Clothing light and flowing, catching golden light. Background shows horizon with sun low in sky, creating gradient from golden-orange to deep purple-blue. Soft atmospheric mood emphasizing beauty and fleeting perfect moment. Composition artistic—subjects may be silhouetted or softly lit from side. Overall feeling: magical, romantic, and cinematic. Time of day and lighting quality are the stars of this shot.

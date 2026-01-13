@@ -1,0 +1,59 @@
+# METADATA
+Scene: Trendy minimalist cafe, wooden tables, hanging plants, espresso machine, large windows, patrons with laptops, cozy urban social atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Julian Blackwood | Outfit: Esports Jersey | Pose: None
+Character: Maki Cruz | Outfit: Esports Jersey | Pose: None
+Score: 450
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Trendy minimalist cafe, wooden tables, hanging plants, espresso machine, large windows, patrons with laptops, cozy urban social atmosphere.
+---
+
+**CHARACTER: Julian Blackwood**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; moderate height (5'8"); soft, slightly fleshy build but not overweight; narrow, sloping shoulders; delicate hands with long fingers (piano hands); fluid, languid physicality.
+* **Face:** Soft, oval shape with a "baby face" quality; full, pouty lips; large, liquid eyes in a pale grey-green; heavy, dark brows; permanent dark circles under eyes that enhance the "brooding" look.
+* **Hair:** Type 3A curls; high density; shoulder-length "wolf cut" or shag; messy, falling into eyes; dark chocolate brown, almost black.
+* **Skin:** Very pale/alabaster; cool undertones; translucent quality (veins visible on inner arms); scattering of tattoos on hands and neck.
+**Outfit:**
+- **Top:** Pro-style V-neck jersey for **The Crimson Trees** featuring an **asymmetric diagonal design**
+- **Bottom:** white torso base with contrasting **black** sleeves and side panels
+- **Footwear:** a bold **#8C1515** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** tactical-style joggers.
+- **Accessories:** Gaming headset, smart watch.
+- **Hair/Makeup:** Clean modern styling.
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders, Low wrestling stance, arms extended ready to engage, knees bent, explosive ready energy.
+---
+
+**CHARACTER 2: Maki Cruz**
+**Appearance:**
+* **Body:** Flamboyant Natural; straight athletic flesh with lean definition; balanced proportions; subtle shoulder width; straight hip line; moderate vertical (5'6"-5'7"); functional athletic build with core strength; developed calves and quadriceps; visible forearm definition; grounded street-athlete presence.
+* **Face:** Balanced-soft structure; rounded square shape; broad forehead; softly defined jawline; midface cheekbone prominence with subtle definition; medium almond-shaped eyes; moderate spacing; dark brown to black irises; monolid or minimal crease structure; direct casual gaze; broad nose bridge with rounded tip; neutral resting expression shows relaxed confidence with a slight asymmetric smirk.
+* **Hair:** Type 1B; high density; straight silhouette with medium length to shoulders; no defined part; pushed back casually; matte to low-sheen finish; commonly worn loose and natural, tucked behind ears, or in a low messy bun. Deep black-brown.
+* **Skin:** Medium tan; warm golden-yellow undertones; natural matte finish; healthy resilience; scattered small scars on elbows and knees.
+**Outfit:**
+- **Top:** Pro-style V-neck jersey for **The Crimson Trees** featuring an **asymmetric diagonal design**
+- **Bottom:** white torso base with contrasting **black** sleeves and side panels
+- **Footwear:** a bold **#8C1515** sash stripe cutting diagonally across the chest; sponsor logos on sleeve. **Black** athletic joggers or leggings.
+- **Accessories:** Gaming headset, wristbands.
+- **Hair/Makeup:** Sleek styling, minimal modern makeup.
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders, Standing on hands, body perfectly vertical, legs locked together, focused balance.
+---

@@ -1,23 +1,49 @@
-tags: [Boho, Casual]
+tags: [Boho, Casual, textured]
 
 [F]
-- **Top:** Flowing **maxi dress or skirt** with ethnic prints
-- **Bottom:** loose **peasant blouse**
-- **Footwear:** strappy sandals.
-- **Accessories:** Layered necklaces, bangles, fringe bag, wide-brim hat.
-- **Hair/Makeup:** Natural makeup, loose waves with braided accents.
+- **Top:** Semi-sheer peasant blouse.
+  - **Fit:** Loose gathered.
+  - **Material:** Lightweight viscose; Lace inserts.
+  - **Pattern:** Ethnic block prints.
+  - **Neckline:** Off-shoulder.
+  - **Sleeve:** Billowing long sleeves.
+- **Bottom:** Multi-tiered flowing maxi skirt.
+  - **Fit:** Voluminous A-line.
+  - **Material:** Gathered cotton.
+  - **Pattern:** Intricate ethnic prints.
+  - **Waist:** Elastic drawstring.
+  - **Length:** Floor-length.
+- **Footwear:** Strappy weathered leather sandals with beaded details.
+- **Accessories:** Layered tarnished silver necklaces, wooden bangles, suede fringe bag, floppy hat.
 
 [M]
-- **Top:** Flowing **patterned button-up shirt** (worn open or loose)
-- **Bottom:** relaxed fit pants with ethnic prints
-- **Footwear:** leather sandals.
-- **Accessories:** Layered necklaces, leather bracelets, crossbody bag, wide-brim hat.
-- **Hair/Makeup:** Natural grooming, longer hair in loose waves or man bun.
+- **Top:** Flowing patterned button-up shirt.
+  - **Fit:** Relaxed.
+  - **Material:** Breathable linen.
+  - **Pattern:** Ethnic geometric motifs.
+  - **Neckline:** Collared (worn open).
+  - **Sleeve:** Long sleeves (loose).
+- **Bottom:** Relaxed fit drawstring pants.
+  - **Fit:** Loose straight leg.
+  - **Material:** Cotton-hemp blend.
+  - **Waist:** Drawstring waist.
+  - **Length:** Full length pooling.
+- **Footwear:** Hand-stitched leather sandals.
+- **Accessories:** Layered bead necklaces, braided leather bracelets, canvas crossbody bag.
 
 [H]
-- **Hijab:** Flowing printed chiffon hijab with ethnic patterns and bohemian draping
-- **Top:** Long-sleeve loose peasant blouse with embroidered details (modest neckline)
-- **Bottom:** Flowing maxi skirt with ethnic prints
-- **Footwear:** Strappy leather sandals
-- **Accessories:** Layered delicate gold necklaces, bangles, fringe crossbody bag
-- **Makeup:** Natural makeup, warm earthy tones
+- **Hijab:** Flowing printed chiffon hijab with vibrant ethnic patterns.
+- **Top:** Long-sleeve loose peasant blouse.
+  - **Fit:** Opaque relaxed fit.
+  - **Material:** Viscose.
+  - **Pattern:** Embroidered floral details.
+  - **Neckline:** Tasselled high neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Multi-tiered flowing maxi skirt.
+  - **Fit:** Flowing tiers.
+  - **Material:** Chiffon.
+  - **Pattern:** Ethnic prints.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Strappy tanned leather sandals.
+- **Accessories:** Layered gold filigree necklaces, brass bangles, suede fringe bag.

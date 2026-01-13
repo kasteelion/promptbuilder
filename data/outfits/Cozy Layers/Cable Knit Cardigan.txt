@@ -1,0 +1,51 @@
+tags: [Casual, Academic, Cozy, Soft, Vintage]
+
+modifiers:
+  Chunky: a **heavy chunky-knit cardigan** with wooden buttons
+  Argyle: featuring a **classic diamond argyle pattern**
+  Cream: in **soft cream wool** with cable details
+  Patchwork: with **colorful patchwork knit squares**
+
+[F]
+- **Top:** Oversized cardigan {modifier} over lace camisole.
+  - **Fit:** Oversized; Slouchy.
+  - **Material:** Wool or Cotton knit {modifier}.
+  - **Pattern:** Cable or {modifier}.
+  - **Neckline:** Open front or V-neck with buttons.
+  - **Sleeve:** Long sleeves extending past wrists.
+- **Bottom:** Mom jeans or corduroy mini skirt with tights.
+  - **Fit:** Relaxed (jeans) or Fitted (skirt).
+  - **Material:** Denim or Corduroy.
+  - **Waist:** Natural or High-waisted.
+  - **Length:** Ankle-length (jeans) or Mini (skirt).
+- **Footwear:** Loafers with white socks or ankle boots.
+- **Accessories:** Reading glasses; canvas tote bag.
+
+[M]
+- **Top:** Shawl-collar cardigan {modifier} and white t-shirt.
+  - **Fit:** Relaxed.
+  - **Material:** heavy wool {modifier}.
+  - **Neckline:** Shawl collar.
+  - **Sleeve:** Long.
+- **Bottom:** Relaxed fit chinos or wool trousers.
+  - **Fit:** Relaxed.
+  - **Material:** Chino or Wool.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Suede desert boots.
+- **Accessories:** Tortoiseshell glasses; leather bracelet.
+
+[H]
+- **Hijab:** Cotton modal hijab loose wrap.
+- **Top:** Long-line maxi cardigan {modifier} over high-neck top.
+  - **Fit:** Modest long-line.
+  - **Material:** matching knit.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Straight-leg denim jeans.
+  - **Fit:** Straight.
+  - **Material:** Denim.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** White sneakers or loafers.
+- **Accessories:** Tote bag; dainty rings.

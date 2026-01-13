@@ -1,0 +1,63 @@
+# METADATA
+Scene: Casual lounge area with tables, arcade games visible in background, snack bar, social recreational atmosphere away from lanes.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Fiona O'Sullivan | Outfit: Hindu | Pose: None
+Character: Luna Vex | Outfit: Yoga Athleisure | Pose: None
+Interaction: Custom
+Score: 215
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Casual lounge area with tables, arcade games visible in background, snack bar, social recreational atmosphere away from lanes.
+---
+
+**CHARACTER: Fiona O'Sullivan**
+**Appearance:**
+* **Body:** Soft Natural plus-size frame; wave-type plush softness; soft pear-hourglass proportions; moderate vertical.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes; expressive hazel-green eyes; warm engaging smile; soft jawline; radiant joyful expression that reflects her generous spirit.
+* **Hair:** Type 2B-2C waves; high density; long layered cut with natural body; side part; soft natural volume with gentle frizz; copper-red to auburn with natural variation.
+* **Skin:** Fair rosy-toned skin with soft glow; smooth complexion. stylish tortoiseshell glasses
+**Outfit:**
+- **Top:** Silk sari (vibrant colors - red, gold, royal blue, or emerald with ornate gold embroidery and border)
+- **Bottom:** fitted choli blouse
+- **Footwear:** ornate sandals or barefoot.
+- **Accessories:** Elaborate gold jewelry set (necklace, earrings, bangles, anklets), bindi, nose ring, maang tikka (forehead jewelry), fresh flower garland.
+- **Hair/Makeup:** Hair in elegant braid with flowers, dramatic eye makeup with kohl, natural lip.
+**Pose/Action:**
+Holding cup or glass, bringing it toward mouth or just sipped, Casual relaxed pose.
+---
+
+**CHARACTER 2: Luna Vex**
+**Appearance:**
+* **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
+* **Face:** Classic heart-shaped silhouette with a broad, smooth forehead and high, soft cheekbones that become prominent when she smiles; delicate, pointed chin creating a sharp taper from the mid-face; soft but clean and well-defined jawline; focal wide-set almond-shaped eyes in captivating light grey-blue; framed by naturally high-arched, manicured dark brown eyebrows sitting well above the orbital bone; signature sharp black winged eyeliner that accentuates the upward curve of her eyes; petite, straight nose bridge with a soft rounded tip and characteristic "scrunch" when laughing; wide, expressive mouth with a prominent philtrum and a broad, radiant smile revealing straight white teeth; deep endearing smile lines (nasolabial folds) and pronounced "crow's feet" signal genuine warmth and joy.
+* **Hair:** Type 2A (wavy); medium density; soft, voluminous layered silhouette; shoulder-length; varying part pattern (side or center); glossy sheen with styled "wet-look" roots; common styling includes loose, face-framing waves. Split-dye neon magenta pink and electric blue/amethyst purple.
+* **Skin:** Fair/Light depth; neutral-cool undertones; smooth, luminous surface finish; natural "crow's feet" laugh lines around the eyes.
+**Outfit:**
+- **Top:** cropped **athletic tank or sports bra**, worn with oversized **zip-up hoodie or cardigan** (worn open)
+- **Bottom:** High-waist **yoga leggings** (stretchy technical fabric in solid color or subtle pattern)
+- **Footwear:** **slip-on sneakers**.
+- **Accessories:** Yoga mat bag, water bottle, minimal jewelry.
+- **Hair/Makeup:** Hair in messy bun or ponytail, fresh minimal makeup.
+**Pose/Action:**
+Hunched over keyboard or interface, multiple screens glowing, Intense focus, fingers flying over controls, underground hacker energy.
+---
+
+**Additional Notes:**
+Fiona O'Sullivan and Luna Vex sharing a single umbrella during a gentle rain, walking close together to stay dry, a sense of quiet intimacy and protection.

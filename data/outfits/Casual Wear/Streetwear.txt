@@ -1,23 +1,52 @@
-tags: [Casual, urban]
+tags: [Casual, urban, textured]
+modifiers:
+  Vintage: featuring a **faded vintage wash** and distressed hems
+  Tech: with **water-resistant coating** and reflective taping
+  Tie-Dye: in a **bleach tie-dye pattern**
+  Minimal: in a **solid heavyweight fabric** without logos
 
 [F]
-- **Top:** Oversized **graphic hoodie or sweatshirt**
-- **Bottom:** cargo pants or joggers
-- **Footwear:** chunky sneakers.
-- **Accessories:** Baseball cap or beanie, crossbody bag, chain necklace.
-- **Hair/Makeup:** Natural or minimal makeup, Casual hairstyle.
+- **Top:** Oversized boxy hoodie {modifier}.
+  - **Fit:** Oversized boxy; Drop-shoulder.
+  - **Material:** Heavyweight 450gsm French Terry.
+  - **Pattern:** Variable {modifier}.
+  - **Neckline:** Hooded.
+  - **Sleeve:** Long sleeves with ribbed cuffs.
+- **Bottom:** Wide-leg tactical cargo trousers.
+  - **Fit:** Billowing tactical.
+  - **Material:** Ripstop nylon.
+  - **Pattern:** Solid.
+  - **Waist:** Adjustable velcro clinch.
+  - **Length:** Ankle-length.
+- **Footwear:** Bulky deconstructed platform sneakers.
+- **Accessories:** Crossbody sling bag; silver curb chain.
 
 [M]
-- **Top:** Oversized **graphic hoodie or sweatshirt**
-- **Bottom:** cargo pants or joggers
-- **Footwear:** chunky sneakers.
-- **Accessories:** Baseball cap or beanie, crossbody bag or backpack, chain necklace.
-- **Hair/Makeup:** Natural grooming, Casual hairstyle.
+- **Top:** Relaxed-fit drop-shoulder sweatshirt {modifier}.
+  - **Fit:** Drop-shoulder.
+  - **Material:** Heavy loopback cotton.
+  - **Pattern:** Variable {modifier}.
+  - **Neckline:** high crew-neck with V-insert.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tapered utility joggers.
+  - **Fit:** Tapered panelled construction.
+  - **Material:** Washed cotton twill.
+  - **Waist:** Elasticated.
+  - **Length:** Cuffed at ankles.
+- **Footwear:** High-top retro-futurist basketball sneakers.
+- **Accessories:** Rolled beanie cap; MOLLE backpack.
 
 [H]
-- **Hijab:** Jersey hijab in black with urban style wrap
-- **Top:** Oversized graphic hoodie with modest length (falls to mid-thigh) over long-sleeve fitted base layer
-- **Bottom:** High-waist black cargo pants or joggers
-- **Footwear:** Chunky sneakers
-- **Accessories:** Small gold hoops, crossbody bag, simple chain necklace
-- **Makeup:** Natural or minimal makeup
+- **Hijab:** Premium jersey hijab in matte charcoal.
+- **Top:** Long-line tunic hoodie {modifier}.
+  - **Fit:** Long-line with side splits.
+  - **Material:** Heavyweight fleece-back cotton.
+  - **Neckline:** Hooded.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Straight-leg parachute pants.
+  - **Fit:** Straight leg loose.
+  - **Material:** Matte technical nylon.
+  - **Waist:** Drawstring.
+  - **Length:** Toggle cuffed ankles.
+- **Footwear:** Chunky dad-shoes.
+- **Accessories:** Tech-wear crossbody bag; silver rings.

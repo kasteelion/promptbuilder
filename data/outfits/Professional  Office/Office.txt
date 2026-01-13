@@ -1,23 +1,45 @@
-tags: [formal, Job, professional]
+tags: [formal, Job, professional, textured]
 
 [F]
-- **Top:** Tailored **blazer** (structured fabric)
-- **Bottom:** blouse or button-up shirt
-- **Footwear:** dress pants or pencil skirt (knee-length).
-- **Accessories:** Simple watch, minimal jewelry, professional bag.
-- **Hair/Makeup:** Polished, professional styling.
+- **Top:** Tailored single-breasted blazer over white silk blouse.
+  - **Fit:** Structured; Narrow lapels.
+  - **Material:** Navy fine-gauge wool; Silk-blend blouse.
+  - **Pattern:** Matte finish blazer; subtle sheen blouse.
+  - **Neckline:** Button-up collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted cigarette pants or pencil skirt.
+  - **Fit:** Slim-fit cigarette or Textured pencil.
+  - **Material:** matching wool or textured fabric.
+  - **Waist:** Tonal buttons.
+  - **Length:** Ankle or Knee length.
+- **Footwear:** Pointed-toe pumps in matte leather or suede.
+- **Accessories:** Leather-strap watch; gold stud earrings; structured briefcase.
 
 [M]
-- **Top:** Tailored **blazer** or **sport coat**
-- **Bottom:** dress shirt
-- **Footwear:** dress pants (pressed); **leather dress shoes**.
-- **Accessories:** Watch, leather belt, minimal jewelry, professional bag.
-- **Hair/Makeup:** Polished, professional styling.
+- **Top:** Tailored sport coat in herringbone over Oxford shirt.
+  - **Fit:** Modern professional; Soft shoulders.
+  - **Material:** Blue herringbone wool-blend; Cotton Oxford.
+  - **Neckline:** Pressed collar.
+  - **Sleeve:** Long.
+- **Bottom:** Flat-front dress pants.
+  - **Fit:** Contemporary straight.
+  - **Material:** Charcoal gray wool.
+  - **Waist:** Natural with mahogany leather belt.
+  - **Length:** Full.
+- **Footwear:** Polished mahogany leather dress shoes.
+- **Accessories:** Stainless steel watch; leather laptop bag.
 
 [H]
-- **Hijab:** Structured chiffon hijab in charcoal gray with neat professional wrap
-- **Top:** Tailored long-sleeve blazer in deep sapphire over high-neck cream blouse (both modest length)
-- **Bottom:** Wide-leg black trousers with crisp pleat
-- **Footwear:** Black pointed-toe low heeled pumps
-- **Accessories:** Small gold hoop earrings, simple gold watch, structured leather tote
-- **Makeup:** Professional and polished with neutral tones
+- **Hijab:** Structured chiffon hijab in charcoal gray.
+- **Top:** Long-sleeve blazer over high-neck cream silk blouse.
+  - **Fit:** Modest structured.
+  - **Material:** Sapphire wool-blend; Silk.
+  - **Neckline:** High-neck modest.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Wide-leg wool trousers with front pleat.
+  - **Fit:** Wide-leg.
+  - **Material:** Black wool.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Black pointed-toe low-heeled pumps.
+- **Accessories:** Gold hoop earrings; gold bracelet watch; structured tote.

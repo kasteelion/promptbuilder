@@ -1,0 +1,63 @@
+# METADATA
+Scene: Wooden boat deck, ocean horizon, billowing sails, sea breeze, nautical ropes and equipment.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Kassandra Lykaios | Outfit: Boxing | Pose: None
+Character: Enzo Rossi | Outfit: Boxing | Pose: None
+Interaction: Custom
+Score: 508
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Wooden boat deck, ocean horizon, billowing sails, sea breeze, nautical ropes and equipment.
+---
+
+**CHARACTER: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Outfit:**
+- **Top:** fitted **athletic tank** in **#552583** with **#FDB927 mesh side panels**
+- **Bottom:** high-waist **satin boxing shorts** in **#552583** featuring a **wide 4-inch #FDB927 elastic waistband** with the **The Gold Coast Kings** name embroidered in **bold metallic script** across the center; deep **side-slits** for mobility; **matching #552583 hand wraps** visible under **10oz pro-style boxing gloves** in **#FFFFFF** with a **glossy finish**.
+- **Footwear:** **high-top boxing shoes** (#FFFFFF) with thin soles and reinforced ankles.
+- **Accessories:** Clear mouthguard, athletic tape on wrists.
+- **Hair/Makeup:** Tight Dutch braids pinned close to the head, focused intensity, slight sheen of sweat, minimal waterproof makeup.
+**Pose/Action:**
+medium shot showing the character from the waist up, Standing with arms crossed confidently, relaxed shoulders, natural stance.
+---
+
+**CHARACTER 2: Enzo Rossi**
+**Appearance:**
+- **Body:** Dramatic Natural male frame; straight muscular flesh with low body fat; inverted triangle proportions with a broad chest, powerful shoulders, and defined arms; moderate-tall vertical (6'1"-6'2"); commanding presence with a solid, grounded build; athletic power without being over-bulked.
+- **Face:** Angular sculpted structure; square-leaning oval face; strong set jawline with a prominent chin; intense deep-set eyes, almond-shaped, dark espresso brown with a focused and assessing gaze; natural thick eyebrows with a slight downward slant at the inner corners; strong straight nose with a subtle Grecian profile; firm-but-expressive mouth held in a restrained confident line; neutral expression is intense and authoritative.
+- **Hair:** Type 2A–2B waves; medium-high density; medium-length layered cut with natural volume; worn tousled and pushed back; no rigid part; soft natural sheen; rich jet black with a healthy finish.
+- **Skin:** Warm olive skin with a smooth matte texture (Mediterranean heritage); even tone with a natural "healthy" radiance; clear planes with no visible imperfections; natural groomed finish.
+**Outfit:**
+- **Top:** bare chest or fitted **athletic tank** in **#552583**
+- **Bottom:** high-waist **satin boxing shorts** in **#552583** featuring a **wide 4-inch #FDB927 elastic waistband** with the **The Gold Coast Kings** name embroidered in **bold block letters**; deep **side-slits** for maximum leg movement; **matching #552583 hand wraps** visible under **12oz pro-style boxing gloves** in **#FFFFFF** with a **matte finish**.
+- **Footwear:** **high-top boxing shoes** (#FFFFFF) with thin rubber soles and pivot-point traction.
+- **Accessories:** Clear mouthguard, athletic tape on wrists.
+- **Hair/Makeup:** Hair short or tied back, Intense focused gaze, sheen of sweat on chest and shoulders.
+**Pose/Action:**
+medium shot showing the character from the waist up, Standing naturally, relaxed posture, arms at sides, gentle weight shift to one leg.
+---
+
+**Additional Notes:**
+Dim, gritty grappling moment. Enzo Rossi is on their back in half guard, left leg bent with knee up, right leg hooking and trapping Kassandra Lykaios's left thigh, preventing the pass. Kassandra Lykaios is on top with their left leg trapped, right leg posted wide for base. Kassandra Lykaios applies a heavy cross-face with their right forearm pressing across Enzo Rossi's jaw and neck, driving weight through shoulder into face. Their hips are low and heavy, chest pressure smothering. Knees frame the position with right knee tight to Enzo Rossi's hip. Their left arm underhooks Enzo Rossi's right arm to stabilize and prevent escape, hand gripping behind the back or shoulder. Right hand is free, threatening short ground-and-pound strikes to the body or head. The alignment is clean—both fighters face each other from a realistic top half-guard position. Enzo Rossi's left arm frames against Kassandra Lykaios's neck or shoulder, creating defensive space. Both show muscle definition and tension, particularly in shoulders, arms, and core. Expressions show exertion: gritted teeth, strained faces, sweat visible.

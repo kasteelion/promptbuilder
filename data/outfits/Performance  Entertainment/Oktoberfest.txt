@@ -1,23 +1,46 @@
 tags: [Cultural, Festival, Performance]
 
 [F]
-- **Top:** White peasant blouse (puff sleeves, square or sweetheart neckline, cotton or linen)
-- **Bottom:** fitted bodice/vest (royal blue, burgundy, or traditional colors with lacing or buttons)
-- **Footwear:** full gathered skirt (knee-length with decorative trim or ribbon details, matching bodice); **apron** (white or complementary color tied at waist); **Mary Jane shoes or ankle boots**.
-- **Accessories:** Delicate necklace (choker style), hair ribbon or flowers.
-- **Hair/Makeup:** Hair in braids (single or double), natural rosy makeup, fresh-faced glow.
+- **Top:** White peasant blouse and fitted bodice.
+  - **Fit:** Puff sleeves; Laced bodice.
+  - **Material:** Cotton/Linen blouse; Wool or Velvet bodice.
+  - **Pattern:** Traditional embroidery (optional).
+  - **Neckline:** Square or Sweetheart.
+  - **Sleeve:** Short puff sleeves.
+- **Bottom:** Full gathered skirt and apron.
+  - **Fit:** Voluminous gathered skirt.
+  - **Material:** matching bodice fabric; Cotton apron.
+  - **Waist:** Natural (apron tied).
+  - **Length:** Knee-length.
+- **Footwear:** Mary Jane shoes or ankle boots.
+- **Accessories:** Choker necklace; hair ribbon or flowers.
 
 [M]
-- **Top:** Checkered button-down shirt (red, blue, or green gingham)
-- **Bottom:** leather breeches (Lederhosen) (knee-length or short, embroidered)
-- **Footwear:** H-suspenders with chest piece; **wool socks** (slouched or knee-high); **Haferl shoes** (traditional leather shoes).
-- **Accessories:** Alpine hat (Tyrolean hat) with feather.
-- **Hair/Makeup:** Natural grooming, healthy glow.
+- **Top:** Checkered button-down shirt.
+  - **Fit:** Standard fit.
+  - **Material:** Gingham cotton.
+  - **Pattern:** Red, blue, or green gingham.
+  - **Neckline:** Pointed collar.
+  - **Sleeve:** Long.
+- **Bottom:** Lederhosen (leather breeches).
+  - **Fit:** Knee-length; Embroidered.
+  - **Material:** Leather.
+  - **Waist:** H-suspenders with chest piece.
+  - **Length:** Knee-length.
+- **Footwear:** Haferl shoes with wool socks (slouched).
+- **Accessories:** Alpine hat (Tyrolean) with feather.
 
 [H]
-- **Hijab:** White or color-coordinated cotton hijab with floral accent
-- **Top:** Long-sleeve white blouse under fitted bodice/vest (royal blue, burgundy, or traditional colors)
-- **Bottom:** Full gathered maxi skirt (matching bodice) with apron
-- **Footwear:** Ankle boots or Mary Janes
-- **Accessories:** Delicate necklace, flower pinned to hijab
-- **Makeup:** Natural rosy makeup, fresh-faced glow
+- **Hijab:** White or color-coordinated cotton hijab with floral accent.
+- **Top:** Long-sleeve white blouse under fitted bodice.
+  - **Fit:** Modest layered.
+  - **Material:** matching fabrics.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full gathered maxi skirt with apron.
+  - **Fit:** Modest full length.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Ankle boots or Mary Janes.
+- **Accessories:** Delicate necklace; flower pinned to hijab.

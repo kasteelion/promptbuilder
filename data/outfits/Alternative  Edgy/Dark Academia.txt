@@ -1,23 +1,48 @@
 tags: [Edgy, Scholarly]
 
 [F]
-- **Top:** Button-up shirt (white or cream) under **wool sweater vest or cardigan** (brown, burgundy, or forest green)
-- **Bottom:** pleated midi skirt or high-waist trousers (dark plaid or solid)
-- **Footwear:** oxford shoes or loafers.
+- **Top:** Button-up shirt under wool sweater vest or cardigan.
+  - **Fit:** Tailored layers.
+  - **Material:** Cotton poplin; Wool knit.
+  - **Pattern:** Solid or Argyle.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves (cuffed).
+- **Bottom:** Pleated midi skirt or high-waist trousers.
+  - **Fit:** A-line or Straight leg.
+  - **Material:** Wool blend or Tweed.
+  - **Pattern:** Dark plaid or solid.
+  - **Waist:** High-waisted.
+  - **Length:** Midi or Ankle.
+- **Footwear:** Oxford shoes or loafers.
 - **Accessories:** Vintage watch, small leather satchel, wire-frame glasses.
-- **Hair/Makeup:** Natural makeup, hair in loose waves or neat bun.
 
 [M]
-- **Top:** Button-up shirt (white or cream) under **wool sweater vest or cardigan** (brown, burgundy, or forest green)
-- **Bottom:** dress pants or chinos (dark plaid or solid)
-- **Footwear:** oxford shoes or loafers.
+- **Top:** Button-up shirt under wool sweater vest or cardigan.
+  - **Fit:** Regular tailored.
+  - **Material:** Cotton; Wool.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dress pants or chinos.
+  - **Fit:** Straight leg.
+  - **Material:** Tweed or Chino cloth.
+  - **Pattern:** Plaid or Solid.
+  - **Waist:** Natural waist.
+  - **Length:** Full break.
+- **Footwear:** Oxford shoes or loafers.
 - **Accessories:** Vintage watch, leather satchel, wire-frame glasses.
-- **Hair/Makeup:** Natural grooming, hair in neat style.
 
 [H]
-- **Hijab:** Cotton or wool-blend hijab in burgundy or forest green with neat wrap
-- **Top:** Long-sleeve button-up tunic in white or cream under wool cardigan or sweater vest (brown, burgundy, or forest green, modest length)
-- **Bottom:** High-waist pleated midi skirt or trousers (dark plaid or solid)
-- **Footwear:** Oxford shoes or loafers
-- **Accessories:** Vintage watch, small leather satchel, delicate gold studs
-- **Makeup:** Natural makeup
+- **Hijab:** Cotton or wool-blend hijab in burgundy or forest green.
+- **Top:** Long-sleeve button-up tunic under wool cardigan.
+  - **Fit:** Relaxed modest layer.
+  - **Material:** Cotton; Wool.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist pleated midi skirt or trousers.
+  - **Fit:** Pleated A-line.
+  - **Material:** Wool blend.
+  - **Pattern:** Dark Plaid.
+  - **Waist:** High-waisted.
+  - **Length:** Midi or Full.
+- **Footwear:** Oxford shoes or loafers.
+- **Accessories:** Vintage watch, satchel, delicate gold studs.

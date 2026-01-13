@@ -1,23 +1,45 @@
 tags: [costume, Music, vintage]
 
 [F]
-- **Top:** Classic **pinstriped vest** over **white button-up shirt**
-- **Bottom:** matching pinstriped trousers
-- **Footwear:** bowtie (((default:red) or (signature))); **boater hat** with matching ribbon.
-- **Accessories:** Arm garters, cane prop.
-- **Hair/Makeup:** Polished vintage styling.
+- **Top:** Classic pinstriped vest over white button-up shirt.
+  - **Fit:** Tailored vest; Crisp shirt.
+  - **Material:** Wool blend vest; Cotton shirt.
+  - **Pattern:** Pinstriped vest; Solid shirt.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves (buttoned).
+- **Bottom:** Matching pinstriped trousers.
+  - **Fit:** Straight leg.
+  - **Material:** matching wool blend.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Oxford shoes; bowtie ((default:red)).
+- **Accessories:** Arm garters; cane prop; boater hat with matching ribbon.
 
 [M]
-- **Top:** Classic **pinstriped vest** over **white button-up shirt**
-- **Bottom:** matching pinstriped trousers
-- **Footwear:** bowtie (((default:red) or (signature))); **boater hat** with matching ribbon.
-- **Accessories:** Arm garters, cane prop.
-- **Hair/Makeup:** Neat vintage grooming.
+- **Top:** Classic pinstriped vest over white button-up shirt.
+  - **Fit:** Tailored.
+  - **Material:** Wool blend; Cotton.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long.
+- **Bottom:** Matching pinstriped trousers.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Oxford shoes; bowtie ((default:red)).
+- **Accessories:** Arm garters; cane prop; boater hat with matching ribbon.
 
 [H]
-- **Hijab:** Matching colored hijab (neat wrap) under boater hat
-- **Top:** Long-sleeve white button-up tunic under a **pinstriped vest**
-- **Bottom:** Matching **pinstriped trousers** (full length)
-- **Footwear:** Oxford shoes
-- **Accessories:** Bowtie (((default:red) or (signature))), boater hat with ribbon, arm garters
-- **Makeup:** Polished vintage-inspired makeup
+- **Hijab:** Matching colored hijab with neat wrap under boater hat.
+- **Top:** Long-sleeve white button-up tunic under a pinstriped vest.
+  - **Fit:** Modest layered.
+  - **Material:** Cotton; Wool blend.
+  - **Neckline:** High-neck collared.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching pinstriped trousers.
+  - **Fit:** Straight leg.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Oxford shoes.
+- **Accessories:** Bowtie ((default:red)); boater hat with ribbon; arm garters.

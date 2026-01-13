@@ -1,0 +1,51 @@
+tags: [Formal, Winter, Elegant, Texture, Velvet]
+
+modifiers:
+  Crushed: in **shimmering crushed velvet**
+  Deep: in **rich jewel-toned velvet** (emerald or burgundy)
+  Black: in **midnight black velvet**
+  Embossed: with a **subtle floral embossed texture**
+
+[F]
+- **Top:** Fitted long-sleeve velvet turtleneck {modifier}.
+  - **Fit:** Fitted; Skintight.
+  - **Material:** Velvet.
+  - **Pattern:** Embossed or Solid {modifier}.
+  - **Neckline:** High turtleneck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted wide-leg wool trousers or plaid midi skirt.
+  - **Fit:** wide-leg or flared.
+  - **Material:** Wool or Plaid fabric.
+  - **Waist:** High-waisted with leather belt.
+  - **Length:** Ankle-length or Mid-calf.
+- **Footwear:** Pointed-toe ankle boots.
+- **Accessories:** Gold pendant necklace (over turtleneck); leather belt.
+
+[M]
+- **Top:** Fitted velvet turtleneck sweater {modifier}.
+  - **Fit:** Fitted; Fine gauge.
+  - **Material:** Velvet or Velvet-blend.
+  - **Neckline:** Turtleneck.
+  - **Sleeve:** Long.
+- **Bottom:** Tailored wool dress pants or dark chinos.
+  - **Fit:** Tailored.
+  - **Material:** Wool or Chino.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Chelsea boots.
+- **Accessories:** Long wool coat (layer); silver watch.
+
+[H]
+- **Hijab:** Satin or silk hijab in complementary jewel tone.
+- **Top:** Relaxed-fit long-sleeve velvet turtleneck tunic {modifier}.
+  - **Fit:** Modest relaxed fit.
+  - **Material:** matching velvet.
+  - **Neckline:** High-neck modesty (turtleneck).
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Wide-leg pleated trousers.
+  - **Fit:** Flowing pleated.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Heeled ankle boots.
+- **Accessories:** Long pendant necklace; statement ring.

@@ -1,23 +1,47 @@
 tags: [African, Cultural, formal, Royal]
 
 [F]
-- **Top:** Colorful wrapper skirt (traditional African print or kente cloth)
-- **Bottom:** fitted top or bustier (matching or complementary)
-- **Footwear:** head wrap (gele - elaborately tied).
-- **Accessories:** Bold gold jewelry (chunky necklaces, bangles, earrings), beaded accessories.
-- **Hair/Makeup:** Hair wrapped in gele or natural styles, bold makeup with rich colors, glowing skin.
+- **Top:** Fitted top or bustier.
+  - **Fit:** Fitted; Structured.
+  - **Material:** traditional African print or kente cloth.
+  - **Pattern:** Traditional African/Kente.
+  - **Neckline:** Sweetheart or Square.
+  - **Sleeve:** Sleeveless or Cap sleeve.
+- **Bottom:** Colorful wrapper skirt.
+  - **Fit:** Draped; Traditional wrapper.
+  - **Material:** matching African print/kente cloth.
+  - **Pattern:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Elaborately tied gele head wrap (traditionally part of the silhouette).
+- **Accessories:** Bold gold jewelry (chunky necklaces, bangles); beaded accessories.
 
 [M]
-- **Top:** Ceremonial robe or dashiki (traditional African print or kente cloth in bold colors)
-- **Bottom:** matching pants
-- **Footwear:** embroidered cap or crown.
-- **Accessories:** Bold gold jewelry (neck pieces, bracelets, rings), staff or scepter, beaded accessories.
-- **Hair/Makeup:** Natural hair in traditional style or covered by headwear, neat grooming.
+- **Top:** Ceremonial robe or dashiki.
+  - **Fit:** Loose; Ceremonial.
+  - **Material:** traditional African print or kente cloth.
+  - **Pattern:** Bold bold tribal.
+  - **Neckline:** V-neck or Collared.
+  - **Sleeve:** Long or Short billowing.
+- **Bottom:** Matching pants.
+  - **Fit:** Standard fit.
+  - **Material:** matching fabric.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Embroidered cap or crown.
+- **Accessories:** Bold gold jewelry (neck pieces, bracelets); staff or scepter.
 
 [H]
-- **Hijab:** Elaborately wrapped gele-style hijab (traditional African print or kente cloth in vibrant colors with dramatic sculptural draping)
-- **Top:** Fitted modest top or bustier (traditional African print, high neck or with elegant draping)
-- **Bottom:** Colorful wrapper skirt (traditional African print or kente cloth, floor-length)
-- **Footwear:** Ornate sandals or barefoot with anklets
-- **Accessories:** Bold gold jewelry (chunky necklaces, bangles, statement earrings), beaded accessories
-- **Makeup:** Bold makeup with rich colors, glowing skin
+- **Hijab:** Elaborately wrapped gele-style hijab with dramatic sculptural draping.
+- **Top:** Fitted modest top or bustier.
+  - **Fit:** Modest fitted.
+  - **Material:** traditional African print.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Colorful floor-length wrapper skirt.
+  - **Fit:** Modest wrap.
+  - **Material:** kente cloth.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Ornate sandals or barefoot with anklets.
+- **Accessories:** Bold gold jewelry; beaded accessories.

@@ -1,0 +1,80 @@
+# METADATA
+Scene: Professional sports locker room, benches, team jerseys hanging, pre-game focus or post-game celebration atmosphere.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Jena Marlowe | Outfit: Lumberjack | Pose: None
+Character: Leonidas Stratos | Outfit: Wasteland Scavenger | Pose: None
+Character: Leilani Te'o | Outfit: Cheerleading | Pose: None
+Interaction: Custom
+Score: 205
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Professional sports locker room, benches, team jerseys hanging, pre-game focus or post-game celebration atmosphere.
+---
+
+**CHARACTER: Jena Marlowe**
+**Appearance:**
+* **Body:** Soft Dramatic–Romantic blend; elongated but light vertical; gentle hourglass with soft waist emphasis; overall delicacy rather than dramatic weight.
+* **Face:** Soft oval face with balanced proportions; medium-large bright eyes; refined nose; gentle jawline; warm, approachable expression with an easy smile.
+* **Hair:** Light honey-blonde; Type 2A–2B loose waves; fine-to-medium density; long hair with soft volume; luminous natural-looking highlights; healthy glossy finish.
+* **Skin:** Fair to light neutral-warm tone with a natural satin glow; fresh and luminous in daylight.
+**Outfit:**
+- **Top:** Red and black buffalo plaid flannel shirt (thick cotton, buttoned or worn open over a white tank)
+- **Bottom:** distressed blue jeans (straight leg, rugged denim)
+- **Footwear:** brown leather work boots.
+- **Accessories:** Leather belt with large buckle, small axe prop (optional), wool beanie.
+- **Hair/Makeup:** Loose natural waves or a messy bun, minimal "outdoorsy" makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe, Crouched low, left hand on the scabbard at the hip, right hand gripping the hilt of the katana, eyes narrowed in lethal focus.
+---
+
+**CHARACTER 2: Leonidas Stratos**
+**Appearance:**
+* **Body:** Dramatic; elite athletic flesh; "Adonis belt" and deep core definition; broad square shoulders and a narrow, powerful waist; moderate-to-tall vertical (6'0"-6'2"); extremely high muscle density with sharp vascularity; movements are precise, economical, and explosive.
+* **Face:** Severe-classical structure; sharp, chiseled features; high nasal bridge; deep-set, hawk-like amber-brown eyes; prominent cheekbones and a squared, resolute jawline; neutral expression is intense and watchful, radiating a sense of absolute focus.
+* **Hair:** Type 1B-2A; medium density; disciplined short-to-medium silhouette; no defined part; low sheen; tight, disciplined crop or rough swept-back style. Dark chestnut or black.
+* **Skin:** Deep olive; warm golden undertones; smooth firm texture; surgically-precise scars on pectoral and outer thigh; tanned.
+**Outfit:**
+- **Top:** Faded mechanic's jumpsuit tied at waist, worn over a dirty thermal shirt.
+- **Bottom:** Jumpsuit bottoms with knee patches.
+- **Footwear:** Steel-toed work boots, well-worn and scuffed.
+- **Accessories:** Utility backpack made of canvas, crowbar holster, shemagh scarf.
+- **Hair/Makeup:** Stubble, dirt-stained skin, protective goggles.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with a skateboard tucked under one arm, relaxed posture, urban background.
+---
+
+**CHARACTER 3: Leilani Te'o**
+**Appearance:**
+* **Body:** Dramatic Natural; massive, heavily muscled frame with broad powerful shoulders and a deep chest; 45-35-50 proportions; tall height at 6'0"; EXTREME muscle density with visible definition in her "capped" delts, thick biceps, and powerful quads; heavy but athletic presence.
+* **Face:** Rugged-soft structure; square-oval face with a strong, well-defined jawline and high prominent cheekbones; large dark brown eyes with a steady, direct gaze; full expressive mouth; neutral resting expression is calm but intense, radiating a sense of quiet authority.
+* **Hair:** Type 3A–3B curls; high density; long length past her shoulders; naturally thick dark hair often worn half-up to keep it out of her face during training; healthy natural sheen.
+* **Skin:** Deep warm tan with rich golden-brown undertones (Polynesian coloring); smooth surface with visible muscle separation creating deep shadows; elaborate traditional 'tatau' patterns visible on one shoulder and upper arm.
+**Outfit:**
+- **Top:** Cheer shell / crop top in **#5BC2E7** with **#002244** shell with **The Aero Aces** lettering
+- **Bottom:** Pleated cheer skirt in **#5BC2E7** with **#002244** shell
+- **Footwear:** White cheer sneakers with white socks
+- **Accessories:** Pom-poms (#5BC2E7 and #002244), hair bow.
+- **Hair/Makeup:** High ponytail, heavy stage makeup (glitter, bright lip).
+**Pose/Action:**
+full body shot showing the character from head to toe, Reaching upward with one or both arms, natural stretch, looking up.
+---
+
+**Additional Notes:**
+Jena Marlowe and Leonidas Stratos jogging or sprinting side-by-side on a track or trail, synchronized movement, focused athletic breathing, determined expressions.

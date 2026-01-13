@@ -1,0 +1,63 @@
+# METADATA
+Scene: Grassy meadow, wicker picnic basket, checkered blanket, wildflowers, lazy afternoon atmosphere.
+Base_Prompt: Low-Poly 3D
+Character: Jax Chen | Outfit: MMA | Pose: None
+Character: Audrey Thorne | Outfit: Base | Pose: None
+Interaction: Custom
+Score: 215
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Grassy meadow, wicker picnic basket, checkered blanket, wildflowers, lazy afternoon atmosphere.
+---
+
+**CHARACTER: Jax Chen**
+**Appearance:**
+- **Body:** Explosive-Athletic frame; olive-toned skin with a vibrant, high-oxygenated flush; inverted triangle proportions with powerful, broad shoulders and a narrow, muscular waist; tall stature (6'1"-6'2"); high-performance build with dense, defined muscle groups and visible vascularity; "kinetic potential" presence—vibrant and dangerous.
+- **Face:** Sharp, aerodynamic structure; high, defined cheekbones; narrow, powerful jawline; intense, wide-set dark eyes that possess a piercing, high-speed focus; sharp, straight eyebrows with a low, aggressive set; straight, thin nose; firm mouth with a determined set; expression is one of maximum effort and singular focus.
+- **Hair:** Type 1A straight; medium density; kept in a sharp, high-fade with a short, textured top; matte-satin finish with vibrant neon orange tips that seem to vibrate with his movement.
+- **Skin:** Vibrant olive with warm, high-energy undertones; smooth, taut texture with visible "muscle-mapping" micro-textures in the dermis; beads of high-intensity sweat reflecting light; "high-performance" glow.
+**Outfit:**
+- **Top:** Elite mixed martial arts kit for **The Monochromes**
+- **Bottom:** bare chest or **compression top** in **#FFFFFF** with **#000000 side panels**
+- **Footwear:** board-style MMA shorts in **#FFFFFF** featuring a **reinforced split-seam** and **triple-stitched seams**; lightweight **ripstop fabric** with a **sublimated #000000 logo** on the left leg; **4oz open-palm grappling gloves** in **#222222** with **extra wrist support**; **barefoot** with **athletic tape on toes**.
+- **Accessories:** Black mouthguard, hand wraps under gloves.
+- **Hair/Makeup:** Hair secured or short, fierce competitive expression, light sheen of sweat.
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**CHARACTER 2: Audrey Thorne**
+**Appearance:**
+* **Body:** Heavy Curvy Hourglass / Spoon Shape; statuesque height at 5'7"; 43.5-37-48 proportions; thick, soft flesh quality; substantial bust carried high, transitioning into a defined but thick waist, which flares dramatically into wide, shelf-like hips and heavy thighs; bottom-heavy silhouette balanced by a full chest; voluptuous density with soft anatomical markers.
+* **Face:** Soft Heart-shaped structure with a "baby face" quality; full, rounded cheeks (apple cheeks) and a soft, non-angular jawline; gentle chin; distinctively pale, porcelain complexion with pink undertones; focal heavy-lidded / slightly hooded eyes with hazel-brown irises and relaxed, downward-sloping upper lids giving a calm, sultry expression; natural, slightly arched brows; small to medium mouth width with full, pillowy lips and a clearly defined cupid's bow.
+* **Hair:** Type 2B (wavy); high density; tousled, voluminous layered silhouette; collarbone-length; deep side part with height at the root; healthy natural sheen; common styling includes a loose, textured blowout. Medium chestnut brown with copper/golden undertones.
+* **Skin:** Fair/Light depth; cool pink undertones with a smooth, matte-satin finish; clear complexion with natural flushing on the cheeks.
+**Outfit:**
+- Top: Vibrant red jumpsuit featuring a modest round crew neckline and short, fitted cap sleeves; the bodice is tailored tightly to follow the curve of the torso and bust
+- Bottom: Connected trousers in the same vibrant red fabric; the waist is defined by a self-tie sash knotted in a prominent central bow, flowing into wide, loose palazzo-style legs
+- Footwear: Chunky black leather combat boots (Dr. Martens style) with visible yellow stitching and black laces
+- Accessories: Deep burgundy/oxblood manicure on long, almond-shaped nails; small black stud earrings
+- Hair/Makeup: Hair styled in loose, textured waves with a deep side part for volume; makeup is soft and natural with defined brows, subtle mascara, and a satin rose-pink lip
+**Pose/Action:**
+wide shot with the character framed within the environment,
+---
+
+**Additional Notes:**
+Jax Chen waving at Audrey Thorne, friendly greeting from a distance

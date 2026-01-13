@@ -1,0 +1,51 @@
+tags: [Lingerie, Glamour, Wings, Costume, High Fashion, Runway]
+
+modifiers:
+  Golden: featuring **gold-plated feathers** and champagne silk
+  Ethereal: with **soft pink ostrich feathers** and iridescent crystals
+  Dark: with **glossy black raven feathers** and onyx gemstones
+  Crystal: entirely encrusted in **Swarovski crystals** and transparent details
+
+[F]
+- **Top:** Crystal-encrusted corset bustier.
+  - **Fit:** Structured corset.
+  - **Material:** Crystal mesh; Feathers; Silk {modifier}.
+  - **Pattern:** Intricate beadwork.
+  - **Neckline:** Sweetheart or plunge.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Matching high-cut crystal panties.
+  - **Fit:** High-cut leg.
+  - **Material:** Crystal mesh {modifier}.
+  - **Waist:** Cinched corset waist.
+  - **Length:** Brief/Bodysuit cut.
+- **Footwear:** Strappy stiletto sandals extending up the calf.
+- **Accessories:** Massive feather wings {modifier} (worn on back); diamond choker; body shimmer.
+
+[M]
+- **Top:** Sheer mesh tank top with crystal embellishments.
+  - **Fit:** Relaxed open fit {modifier}.
+  - **Material:** Sheer mesh; Crystal.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Silk pajama trousers or fitted briefs.
+  - **Fit:** Relaxed or Fitted.
+  - **Material:** Silk.
+  - **Waist:** Natural.
+  - **Length:** Ankle-length or Brief.
+- **Footwear:** Velvet slippers.
+- **Accessories:** Large feather wings {modifier}; layered silver necklaces.
+
+[H]
+- **Hijab:** Shimmering silk chiffon hijab; Crystal headband.
+- **Top:** Floor-length silk gown with crystal-encrusted bodice.
+  - **Fit:** Fitted bodice gown {modifier}.
+  - **Material:** Silk chiffon; Crystals; Feather trim.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Integrated flowing silk skirt.
+  - **Fit:** Floor-length.
+  - **Material:** Silk.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Strappy high heels.
+- **Accessories:** Ethereal feather wings {modifier}; diamond choker; radiant highlight.

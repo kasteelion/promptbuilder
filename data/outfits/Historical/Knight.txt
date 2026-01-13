@@ -1,23 +1,45 @@
 tags: [armor, combat, fantasy]
 
 [F]
-- **Top:** Polished plate armor bodice (steel or silver with embossed details)
-- **Bottom:** armored pauldrons and gauntlets
-- **Footwear:** chainmail skirt or **armored tassets** (knee-length with leather underneath); **steel greaves and sabatons** (shin and foot protection); **sturdy leather boots**.
-- **Accessories:** Longsword and shield (heraldic design), knight's helm with plume (carried or worn), cape in ((default:house colors) or (signature)).
-- **Hair/Makeup:** Hair pulled back in practical bun or braid, minimal makeup, determined expression.
+- **Top:** Polished plate armor bodice.
+  - **Fit:** Contoured; Tailored for combat.
+  - **Material:** Steel or Silver; Embossed details.
+  - **Pattern:** Heraldic engravings.
+  - **Neckline:** High-neck gorget.
+  - **Sleeve:** Armored pauldrons and gauntlets.
+- **Bottom:** Armored tassets over chainmail skirt.
+  - **Fit:** Layered protection.
+  - **Material:** Steel; Chainmail; Leather underneath.
+  - **Waist:** Buckled.
+  - **Length:** Knee-length.
+- **Footwear:** Steel greaves and sabatons over leather boots.
+- **Accessories:** Longsword and shield (heraldic); knight's helm with plume; cape ({modifier}).
 
 [M]
-- **Top:** Polished plate armor breastplate (steel or silver with embossed details)
-- **Bottom:** armored pauldrons and gauntlets
-- **Footwear:** chainmail hauberk underneath; **armored tassets**; **steel greaves and sabatons**; **sturdy leather boots**.
-- **Accessories:** Longsword and shield (heraldic design), knight's helm with plume (carried or worn), cape in ((default:house colors) or (signature)).
-- **Hair/Makeup:** Short groomed hair or practical warrior cut, clean-shaven or beard, determined expression.
+- **Top:** Polished plate armor breastplate.
+  - **Fit:** Heavy; Structured.
+  - **Material:** Steel or Silver.
+  - **Neckline:** Gorget.
+  - **Sleeve:** Pauldrons and gauntlets.
+- **Bottom:** Armored tassets over chainmail hauberk.
+  - **Fit:** Heavy layered.
+  - **Material:** Steel; Mail.
+  - **Waist:** Belted.
+  - **Length:** Mid-thigh tassets.
+- **Footwear:** Steel greaves and sabatons.
+- **Accessories:** Longsword and shield; knight's helm; cape ({modifier}).
 
 [H]
-- **Hijab:** Chainmail coif or armored hijab (silver or steel mesh) with secure undercap
-- **Top:** Polished plate armor bodice over long-sleeve gambeson or tunic
-- **Bottom:** Armored skirt (tassets) over full-length trousers or mail leggings
-- **Footwear:** Steel greaves and sabatons
-- **Accessories:** Longsword, shield, cape in ((default:house colors) or (signature))
-- **Makeup:** Determined expression, natural skin
+- **Hijab:** Chainmail coif or armored hijab with secure undercap.
+- **Top:** Polished plate armor bodice over long-sleeve gambeson.
+  - **Fit:** Modest armored.
+  - **Material:** Steel; Padded cotton gambeson.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Armored skirt (tassets) over full-length trousers or mail leggings.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Steel greaves and sabatons.
+- **Accessories:** Longsword; shield; cape ({modifier}).

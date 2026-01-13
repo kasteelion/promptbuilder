@@ -1,21 +1,45 @@
-tags: [Fashion, formal, professional]
+tags: [Fashion, formal, professional, textured, luxury]
 
 [F]
-- **Top:** Compression-fit tailored blazer (structured {primary_color} wool-blend, worn with no shirt underneath to emphasize the plunging neckline and torso silhouette)
-- **Bottom:** Cigarette-style trousers (matching {primary_color} fabric, high-waisted and cropped at the ankle with a sharp front crease).
-- **Accessories:** Slim {secondary_color} leather belt; minimalist {accent} watch; pointed-toe stiletto pumps.
-- **Hair/Makeup:** Sleek low ponytail with a precise center part; bold matte lipstick in ((default:deep red) or (signature)); neutral polished eye makeup.
+- **Top:** Compression-fit tailored blazer with shoulder pads.
+  - **Fit:** Anatomical; Sharp padded shoulders.
+  - **Material:** {primary_color} wool-crepe; Matte grain.
+  - **Pattern:** Plunging neckline (worn solo).
+  - **Neckline:** Plunging lapel.
+  - **Sleeve:** Long sleeves with kissing buttons.
+- **Bottom:** Cigarette-style tailored trousers.
+  - **Fit:** Slim-fit; High-waisted.
+  - **Material:** matching wool-crepe.
+  - **Waist:** Natural with {secondary_color} leather belt.
+  - **Length:** Cropped at ankle.
+- **Footwear:** Pointed-toe stiletto pumps in patent leather.
+- **Accessories:** Minimalist {accent} luxury watch; diamond stud earrings.
 
 [M]
-- **Top:** Compression-fit tailored blazer (structured {primary_color} wool-blend, slim-cut and worn over a bare chest or minimalist tank to emphasize the chest and torso silhouette)
-- **Bottom:** Tailored trousers (matching {primary_color} fabric, slim-fit with a sharp front crease).
-- **Accessories:** Slim {secondary_color} leather belt; minimalist {accent} watch; polished leather loafers.
-- **Hair/Makeup:** Sleek neatly styled hair with a precise part; clean-shaven or well-groomed stubble; neutral polished appearance.
+- **Top:** Compression-fit tailored blazer (worn over bare chest).
+  - **Fit:** Slim cut; Structured shoulders.
+  - **Material:** {primary_color} wool-mohair blend.
+  - **Neckline:** Narrow notched lapels.
+  - **Sleeve:** Long.
+- **Bottom:** Tailored trousers with sharp front crease.
+  - **Fit:** Slim-fit.
+  - **Material:** matching.
+  - **Waist:** Slim {secondary_color} leather belt.
+  - **Length:** Clean break over shoe.
+- **Footwear:** Polished leather loafers with apron toe.
+- **Accessories:** Minimalist {accent} watch.
 
 [H]
-- **Hijab:** Structured silk hijab in **{primary_color}** with a sharp professional wrap.
-- **Top:** Modern tailored blazer (long-sleeve, structured **{primary_color}** wool-blend, modest length falling to mid-thigh) worn over a matching high-neck **{primary_color}** modest tunic.
-- **Bottom:** Tailored trousers (matching **{primary_color}** fabric, high-waisted with a sharp front crease).
-- **Footwear:** Pointed-toe low-heeled pumps or loafers.
-- **Accessories:** Slim **{secondary_color}** leather belt; minimalist **{accent}** watch.
-- **Makeup:** Professional natural makeup; bold matte lipstick in deep red.
+- **Hijab:** Structured silk hijab in {primary_color} with satin sheen.
+- **Top:** Modern tailored long-sleeve blazer over modest silk tunic.
+  - **Fit:** Modest structured; Mid-thigh length.
+  - **Material:** {primary_color} wool-crepe; Silk.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored straight-leg trousers.
+  - **Fit:** Straight leg; High-waisted.
+  - **Material:** matching wool-crepe.
+  - **Waist:** Natural with leather belt.
+  - **Length:** Full length.
+- **Footwear:** Pointed-toe low-heeled pumps in matte leather.
+- **Accessories:** Minimalist {accent} watch.

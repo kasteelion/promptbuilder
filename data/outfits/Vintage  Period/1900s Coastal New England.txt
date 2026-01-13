@@ -1,23 +1,50 @@
-tags: [historical, Nautical, vintage]
+modifiers:
+  Morning: in **crisp white cotton lawn**
+  Afternoon: in **pale cream irish linen**
+  Evening: in **soft embroidered batiste**
+
+tags: [Vintage, 1900s, Coastal, Elegant]
 
 [F]
-- **Top:** Edwardian-style summer dress (white or cream linen with lace inserts and high collar)
-- **Bottom:** wide-brimmed straw hat with ribbon
-- **Footwear:** lace-up boots.
-- **Accessories:** Parasol prop, delicate locket.
-- **Hair/Makeup:** Hair in an elegant pompadour or soft updo, romantic vintage makeup.
+- **Top:** Pigeon-breast (blouson) bodice.
+  - **Fit:** Blouson torso; Fitted waist.
+  - **Material:** {modifier}; Lace inserts.
+  - **Pattern:** Pintuck pleats; Broderie anglaise.
+  - **Neckline:** High lace collar (lace choker effect).
+  - **Sleeve:** Gigot (leg of mutton) or bishop sleeves.
+- **Bottom:** Gored skirt.
+  - **Fit:** Fitted at hips; Flaring at hem.
+  - **Material:** matching {modifier}.
+  - **Waist:** Corseted natural waist.
+  - **Length:** Floor-length.
+- **Footwear:** Two-tone button boots.
+- **Accessories:** Lace parasol; straw boater hat with ribbon; cameo brooch.
 
 [M]
-- **Top:** Victorian-style striped shirt with detached collar and suspenders
-- **Bottom:** matching trousers (cuffed)
-- **Footwear:** brown leather boots.
-- **Accessories:** Newsboy cap or flat cap, simple watch.
-- **Hair/Makeup:** Neatly parted hair with pomade, vintage facial hair (mustache).
+- **Top:** Striped cotton shirt with club collar and sack suit jacket.
+  - **Fit:** Tailored; Relaxed sack jacket.
+  - **Material:** Striped cotton; Wool or Flannel.
+  - **Neckline:** Detachable stiff club collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** White flannel or wool trousers.
+  - **Fit:** High-waisted; Straight.
+  - **Material:** white flannel or heavy wool serge.
+  - **Waist:** High-waisted with suspenders.
+  - **Length:** Ankle-length cuffed.
+- **Footwear:** Leather spectator shoes or boots.
+- **Accessories:** Tweed newsboy cap; silver pocket watch chain; arm garters.
 
 [H]
-- **Hijab:** White or cream linen hijab (soft romantic drape) under a **wide-brimmed straw hat**
-- **Top:** Long-sleeve **Edwardian-style blouse** (white linen with lace inserts and high collar)
-- **Bottom:** Matching full-length gathered skirt (cream linen)
-- **Footwear:** Lace-up vintage boots
-- **Accessories:** Parasol prop, delicate locket
-- **Makeup:** Romantic vintage look
+- **Hijab:** Fine cotton voile wrap hijab in antique white.
+- **Top:** High-neck tunic with rows of insertion lace.
+  - **Fit:** Blouson top; Modest.
+  - **Material:** {modifier}; Cotton voile.
+  - **Neckline:** High lace collar.
+  - **Sleeve:** Long bishop sleeves.
+- **Bottom:** Full A-line skirt.
+  - **Fit:** Flaring.
+  - **Material:** matching heavy linen.
+  - **Waist:** Natural waist (sashed).
+  - **Length:** Floor-length.
+- **Footwear:** Lace-up spectator boots.
+- **Accessories:** Vintage locket; straw hat; gloves.

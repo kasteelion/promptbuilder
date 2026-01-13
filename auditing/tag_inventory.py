@@ -1,7 +1,12 @@
 import os
 import re
+import sys
 import json
 from collections import defaultdict
+
+# Add project root to path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from logic.randomizer import PromptRandomizer
 
 class TagInventory:
     def __init__(self, data_dir):
@@ -10,16 +15,23 @@ class TagInventory:
             "Characters": defaultdict(int),
             "Scenes": defaultdict(int),
             "Base Prompts": defaultdict(int),
-            "Outfits": defaultdict(int)
+            "Outfits": defaultdict(int),
+            "Poses": defaultdict(int),
+            "Interactions": defaultdict(int)
         }
         self.tag_locations = defaultdict(list) # tag -> list of source files/sections
+        self.aliases = getattr(PromptRandomizer, 'TAG_ALIASES', {})
 
     def extract_tags_from_text(self, text, source_name):
         """Extract tags from text lines like 'Tags: (Tag1, Tag2)' or '## Name (Tag1, Tag2)'"""
         tags = []
-        match = re.search(r'\((.*?)\)', text)
-        if match:
-            content = match.group(1)
+        # Find all occurrences of (tags)
+        matches = re.findall(r'\((.*?)\)', text)
+        for content in matches:
+            # Skip simple numeric counts like (2), (3+), (4)
+            if re.match(r'^\d+\+?$', content.strip()):
+                continue
+                
             raw_tags = [t.strip() for t in content.split(',')]
             for t in raw_tags:
                 if t:
@@ -97,6 +109,8 @@ class TagInventory:
         self.crawl_characters()
         self.crawl_markdown_list(os.path.join(self.data_dir, "scenes.md"), "Scenes")
         self.crawl_markdown_list(os.path.join(self.data_dir, "base_prompts.md"), "Base Prompts")
+        self.crawl_markdown_list(os.path.join(self.data_dir, "poses.md"), "Poses")
+        self.crawl_markdown_list(os.path.join(self.data_dir, "interactions.md"), "Interactions")
         self.crawl_outfits()
         return self.analyze()
 
@@ -124,21 +138,57 @@ class TagInventory:
 
         conflicts = {}
         for base, originals in normalized_map.items():
-            # Filter distinct variations excluding just prefix differences if base is same case
-            # Actually we want to catch "Sport" vs "sport" vs "Sports"
-            
-            # Simple conflict: if > 1 distinct string representation matches this base (ignoring prefix for now? No, include them to show consistency)
             if len(originals) > 1:
                 conflicts[base] = originals
             else:
-                 # Check plural vs singular
                  if base.endswith('s') and base[:-1] in normalized_map:
                      conflicts[base] = originals + normalized_map[base[:-1]]
+
+        # Dead Tag Detection
+        source_sets = {s: set(t.lower() for t in tags.keys()) for s, tags in self.tags_by_source.items()}
+        
+        # A tag is "Dead" if it exists in one but not any other (potential typo or missing link)
+        dead_tags = defaultdict(list)
+        missing_bridges = []
+        all_lower_tags = set()
+        for s in source_sets.values():
+            all_lower_tags.update(s)
+
+        # Descriptive Exclusions (UI-focused/descriptive, doesn't need bridges)
+        DESCRIPTIVE_EXCLUSIONS = {
+            "female", "male", "curvy", "petite", "tall", "muscular", "skinny", "thin",
+            "black", "white", "latina", "japanese", "caucasian", "nordic", "romani",
+            "north-african", "mediterranean", "african", "indian", "caucasian",
+            "shorthair", "longhair", "tattoos", "freckled", "glasses", "beard", "stubble",
+            "tan", "pale", "athletic", "strong", "toned"
+        }
+
+        for t in all_lower_tags:
+            present_in = []
+            for s_name, s_tags in source_sets.items():
+                if t in s_tags:
+                    present_in.append(s_name)
+            
+            if len(present_in) == 1:
+                source = present_in[0]
+                # Filter out descriptive tags and short tags
+                if t not in DESCRIPTIVE_EXCLUSIONS and len(t) > 3:
+                    # If it's only in Characters, check if it has an alias
+                    if source == "Characters":
+                        if t not in self.aliases:
+                            # Flag as missing bridge if high frequency
+                            if self.tags_by_source["Characters"].get(t, 0) >= 5:
+                                missing_bridges.append(t)
+                            dead_tags[source].append(t)
+                    else:
+                        dead_tags[source].append(t)
 
         return {
             "conflicts": conflicts,
             "stats": self.tags_by_source,
-            "locations": self.tag_locations
+            "locations": self.tag_locations,
+            "dead_tags": dead_tags,
+            "missing_bridges": missing_bridges
         }
 
     def generate_report(self, analysis, output_path):
@@ -154,6 +204,30 @@ class TagInventory:
                 unique_originals = sorted(list(set(originals)))
                 f.write(f"- **{base}**: {', '.join(unique_originals)}\n")
 
+            f.write("\n## 🚩 Orphaned/Potentially Dead Tags\n")
+            f.write("Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with logic aliases).\n\n")
+            
+            if analysis["missing_bridges"]:
+                f.write("### ⚠️ Missing Content Bridges (High Frequency)\n")
+                f.write("Thematic tags appearing in 5+ characters with no aliases or shared assets:\n")
+                for t in sorted(analysis["missing_bridges"]):
+                    f.write(f"- **{t}** (Count: {analysis['stats']['Characters'][t]})\n")
+                f.write("\n")
+
+            for source, tags in sorted(analysis["dead_tags"].items()):
+                # Only show top 10 per source to avoid clutter
+                f.write(f"### {source} (Top 10)\n")
+                for t in sorted(tags)[:10]:
+                    count = analysis["stats"][source].get(t, 0) # Fallback to 0 if not found
+                    if count == 0: # Try to find original casing
+                        for orig, c in analysis["stats"][source].items():
+                            if orig.lower() == t:
+                                t = orig
+                                count = c
+                                break
+                    f.write(f"- {t} ({count})\n")
+                f.write("\n")
+
             f.write("\n## Tag Frequency by Source\n")
             for source, tags in analysis["stats"].items():
                 f.write(f"\n### {source}\n")
@@ -167,4 +241,4 @@ if __name__ == "__main__":
     data_dir = os.path.join(root_dir, "data")
     inventory = TagInventory(data_dir)
     analysis = inventory.run_audit()
-    inventory.generate_report(analysis, os.path.join(root_dir, "output", "reports", "tag_inventory.md"))
+    inventory.generate_report(analysis, os.path.join(root_dir, "auditing", "reports", "tag_inventory.md"))

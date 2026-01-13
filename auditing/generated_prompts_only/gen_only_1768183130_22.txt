@@ -1,0 +1,59 @@
+# METADATA
+Scene: Outdoor American football field, marked with yard lines, goalposts at each end, stadium lights or bright daylight.
+Base_Prompt: Anime Style: "Dynamic Cel-Shaded"
+Character: Kaito Sato | Outfit: Lumberjack | Pose: None
+Character: Marisol Rivera | Outfit: Wasteland Scavenger | Pose: None
+Score: 125
+
+Generate an image of: Rendering
+High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+
+Character Accuracy
+Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+
+Body Types
+Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+
+Hair & Clothing
+Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+
+Details
+"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+
+---
+
+**SCENE/SETTING:**
+Outdoor American football field, marked with yard lines, goalposts at each end, stadium lights or bright daylight.
+---
+
+**CHARACTER: Kaito Sato**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; wiry and compact; defined, sinewy muscle (climber/skater build); shorter vertical (5'6"-5'7"); extremely agile and fast-twitch; straight lines with sharp edges; projects nervous, electric energy.
+* **Face:** Angular, diamond-shaped face; sharp, pointed chin; narrow eyes that are often squinting in focus or widening in adrenaline; mischievous grin that shows teeth; features are delicate but sharp.
+* **Hair:** Type 1B straight; medium density; undercut with a long, choppy top; bleached platinum blonde (almost white) with roots showing; often messy or swept forward.
+* **Skin:** Fair with cool undertones; prone to flushing when active; usually has a band-aid or small scrape on the cheek or knuckles.
+**Outfit:**
+- **Top:** Red and black buffalo plaid flannel shirt (heavyweight, buttoned or worn open over a white tank)
+- **Bottom:** distressed blue jeans (straight leg, rugged denim)
+- **Footwear:** brown leather work boots.
+- **Accessories:** Leather belt with brass buckle, wood-splitting axe prop (optional), knit beanie.
+- **Hair/Makeup:** Natural tousled hair or short cropped style, light stubble or well-groomed beard.
+**Pose/Action:**
+full body shot showing the character from head to toe, Holding a longsword with both hands above the head at a 45-degree angle, legs in a wide stable stance, ready to strike down.
+---
+
+**CHARACTER 2: Marisol Rivera**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; compact balanced proportions with defined waist, toned limbs, and visible muscle definition; moderate vertical (5'5"-5'6"); athletic build with clean controlled lines, functional strength, and mixed-heritage features—Japanese bone structure with Puerto Rican curves, creating distinctive balanced aesthetics; athletic graceful presence.
+* **Face:** Balanced classical structure with mixed heritage features; oval face with subtle Japanese angularity softened by Puerto Rican warmth; firm clean planes; calm almond-shaped eyes that tilt slightly upward (Japanese influence) with warm expressive quality (Puerto Rican warmth), moderately spaced, dark brown; defined jawline; neutral expression shows calm composure with subtle knowing smile that brightens when engaged; beauty mark near left eye.
+* **Hair:** Type 1B-1C straight with slight natural wave; medium-high density; long sleek cut with healthy satin sheen; dark brown to black; versatile styling options including ponytails and braids.
+* **Skin:** Warm golden-olive skin with bronzed finish and natural radiance.
+**Outfit:**
+- **Top:** Distressed tank top under a patchwork leather vest made from recycled scraps.
+- **Bottom:** Torn cargo pants reinforced with tire rubber and metal plates.
+- **Footwear:** Mismatched heavy boots wrapped in duct tape.
+- **Accessories:** Sand goggles, respirator mask hanging around neck, bandolier of scavenged parts.
+- **Hair/Makeup:** Messy braid with dust, war paint or grease smudges on face.
+**Pose/Action:**
+full body shot showing the character from head to toe, Creating a heart shape with hands or blowing a kiss towards the camera, often used at the end of a clip.
+---

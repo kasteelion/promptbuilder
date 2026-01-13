@@ -1,0 +1,83 @@
+# METADATA
+Scene: Grand royal courtyard, marble floors, ornate fountains, classical columns, regal luxurious setting.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Diesel Murphy | Outfit: Beach Volleyball | Pose: None
+Character: Jamal Rivers | Outfit: Beach Volleyball | Pose: None
+Character: Priya Sharma | Outfit: Beach Volleyball | Pose: None
+Interaction: Custom
+Score: 501
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Grand royal courtyard, marble floors, ornate fountains, classical columns, regal luxurious setting.
+---
+
+**CHARACTER: Diesel Murphy**
+**Appearance:**
+* **Body:** Natural frame; straight athletic flesh with functional density; balanced proportions with broadened shoulders from upper body work, minimal waist definition, and straight hip line; moderate-to-tall vertical (5'7"-5'8"); working-class athletic build with developed forearms and shoulders from mechanical work, strong hands, visible core strength, practical muscle without aesthetic focus; distinctly female frame with masculine presentation and movement patterns; grounded capable presence.
+
+* **Face:** Balanced-angular structure; square-to-rectangular face shape with broad forehead and strong defined jawline; minimal midface projection with subtle cheekbones; medium-to-small eyes with moderate-close spacing, hazel-brown color, minimal lid exposure, direct no-nonsense gaze; straight broad nose with flat bridge and squared tip; strong angular jawline with masculine definition; neutral resting expression shows calm confidence with closed-mouth straight line and steady assessing gaze; rare smile is crooked and genuine.
+
+* **Hair:** Type 2A; medium density; very short length (pixie-to-undercut style); no defined part, textured and pushed back; matte finish; commonly worn tousled and practical, sometimes with small amount of pomade for control; dark brown with sun-lightened tips from outdoor work.
+
+* **Skin:** Light-medium tone with neutral-warm undertones and natural matte finish; scattered scars on hands and forearms from mechanical work; permanent grease staining under short fingernails and in hand creases; sun exposure on forearms and face; textured from outdoor work.
+**Outfit:**
+- **Top:** Professional athletic bikini set for **The Northern Wolves**, wearing a contrasting #B7A57A jersey to denote libero position,
+- **Bottom:** racerback top featuring a **sculpted compression fit** and a **sheer mesh center-chest cutout**
+- **Footwear:** bodice in **#4B2E83** with **#B7A57A side-binding** and a **metallic foil team logo** on the left; fabric is a premium **honeycomb-textured matte lycra**; matching **high-cut athletic bottoms** with **asymmetric color-blocked panels** in **#B7A57A** and **thick double-needle flatlock stitching**; **barefoot** with a **thin layer of sand-dusted skin**.
+- **Accessories:** Mirrored polarized sports sunglasses (#FFFFFF) with a **secure neck strap**, **performance visor** in **#4B2E83** featuring **rhinestone-encrusted team initials**, waterproof fitness watch.
+- **Hair/Makeup:** Sleek boxer braids with flyaways secured, **athletic sun-kissed glow** with high-SPF tinted moisturizer, waterproof mascara, and a natural coral lip tint.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Jamal Rivers**
+**Appearance:**
+* **Body:** Soft Classic frame; natural flesh; balanced proportions with gentle width; moderate vertical; composed presence with natural ease.
+* **Face:** Balanced refined facial structure; oval face; warm intelligent eyes; defined features; calm thoughtful expression.
+* **Hair:** Type 4A-4B coils; medium density; short natural cut with slight taper; well-maintained; matte finish.
+* **Skin:** Deep brown skin with warm undertones and smooth finish. thin wire-frame glasses
+**Outfit:**
+- **Top:** Professional performance board shorts for **The Northern Wolves** featuring **sublimated geometric graphics** in **#4B2E83** on a **#B7A57A base**
+- **Bottom:** high-tech **4-way ripstop stretch fabric** with a **water-repellent matte finish**
+- **Footwear:** mid-thigh athletic cut with **taped side seams** and **scalloped hems** for maximum mobility; **team crest** in **metallic silicone** on the right leg; **barefoot** with **sand-dusted skin**.
+- **Accessories:** Mirrored wraparound sports sunglasses (#FFFFFF) with polarized lenses, **performance visor** in **#4B2E83** with **3D-embroidered team logo**, athletic waterproof watch.
+- **Hair/Makeup:** Sunscreen, minimal grooming, hair short or secured, focused competitive expression.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Priya Sharma**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
+* **Face:** Soft oval face with gentle rounded features; warm expressive dark brown eyes; friendly approachable expression; fuller cheeks; soft jawline; warm genuine smile.
+* **Hair:** Type 2B-2C waves; medium-high density; long dark brown hair (almost black at roots) with warm caramel-brown highlights throughout mid-lengths and ends; natural body and volume; beachy waves.
+* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow. tiny sparkling silver nose stud
+**Outfit:**
+- **Top:** Professional athletic bikini set for **The Northern Wolves**
+- **Bottom:** racerback top featuring a **sculpted compression fit** and a **sheer mesh center-chest cutout**
+- **Footwear:** bodice in **#4B2E83** with **#B7A57A side-binding** and a **metallic foil team logo** on the left; fabric is a premium **honeycomb-textured matte lycra**; matching **high-cut athletic bottoms** with **asymmetric color-blocked panels** in **#B7A57A** and **thick double-needle flatlock stitching**; **barefoot** with a **thin layer of sand-dusted skin**.
+- **Accessories:** Mirrored polarized sports sunglasses (#FFFFFF) with a **secure neck strap**, **performance visor** in **#4B2E83** featuring **rhinestone-encrusted team initials**, waterproof fitness watch.
+- **Hair/Makeup:** Sleek boxer braids with flyaways secured, **athletic sun-kissed glow** with high-SPF tinted moisturizer, waterproof mascara, and a natural coral lip tint.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Diesel Murphy coaching or instructing Jamal Rivers, demonstrative teaching with gestures, Jamal Rivers listening attentively, athletic mentorship.

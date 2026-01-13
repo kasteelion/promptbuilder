@@ -1,0 +1,83 @@
+# METADATA
+Scene: Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Maya Rose | Outfit: Yoga Athleisure | Pose: None
+Character: Talia Levi | Outfit: Yoga Athleisure | Pose: None
+Character: Freydis Holm | Outfit: Yoga Athleisure | Pose: None
+Interaction: Custom
+Score: 575
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Elegant restaurant interior, soft lighting, intimate atmosphere, stylish decor, white tablecloths.
+---
+
+**CHARACTER: Maya Rose**
+**Appearance:**
+* **Body:** Soft Natural frame with balanced curves; moderate-to-tall vertical line; natural waist definition; relaxed athletic build.
+* **Face:** Soft oval face with gentle angles; warm expressive eyes; bright genuine smile; approachable features with natural definition.
+* **Hair:** Type 2B-2C waves to loose curls; medium-high density; long layered cut past shoulders; natural movement and body; warm golden-brown to honey tones with dimensional highlights.
+* **Skin:** Warm medium beige with golden undertones; natural healthy glow.
+**Outfit:**
+- **Top:** cropped **athletic tank or sports bra**, worn with oversized **zip-up hoodie or cardigan** (worn open)
+- **Bottom:** High-waist **yoga leggings** (stretchy technical fabric in solid color or subtle pattern)
+- **Footwear:** **slip-on sneakers**.
+- **Accessories:** Yoga mat bag, water bottle, minimal jewelry.
+- **Hair/Makeup:** Hair in messy bun or ponytail, fresh minimal makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Talia Levi**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave-lush flesh quality; voluptuous hourglass proportions with pronounced bust (full D-DD), defined waist, and rounded hips; moderate-to-tall vertical (5'7"); soft density with feminine curves, visible décolletage, rounded shoulders, and shapely legs; magnetizing sensual presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-diamond shape; high pronounced cheekbones with sculpted planes; large almond-shaped wide-set eyes in deep amber-brown with naturally seductive heavy-lidded quality and penetrating direct gaze; full shapely lips; defined angular jawline; neutral resting expression is knowing and self-assured with slight sultry smile and unwavering confident eye contact that holds just a beat too long.
+
+* **Hair:** Type 2B-2C waves; very high density; voluminous cascading silhouette; long length past mid-back; natural loose center part; healthy high-sheen finish; commonly worn loose and wild with tousled volume, half-up with face-framing tendrils, or low messy bun showing neck; rich dark chocolate brown with warm caramel highlights.
+
+* **Skin:** Medium-tan with warm golden-olive undertones and luminous sun-kissed finish; beauty mark above upper lip on left side; smooth healthy Mediterranean glow.
+**Outfit:**
+- **Top:** cropped **athletic tank or sports bra**, worn with oversized **zip-up hoodie or cardigan** (worn open)
+- **Bottom:** High-waist **yoga leggings** (stretchy technical fabric in solid color or subtle pattern)
+- **Footwear:** **slip-on sneakers**.
+- **Accessories:** Yoga mat bag, water bottle, minimal jewelry.
+- **Hair/Makeup:** Hair in messy bun or ponytail, fresh minimal makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Freydis Holm**
+**Appearance:**
+* **Body:** Flamboyant Natural; powerful athletic flesh with clear muscle definition; broad structured shoulders and long limbs; tall vertical (5'10"-6'0"); high density throughout with visible strength in back, core, and thighs; rugged statuesque presence that commands space.
+* **Face:** Strong-angled structure; sharp square-to-oval shape; high prominent cheekbones; powerful defined jawline; intense blue-gray eyes; moderate spacing; piercing steady gaze; straight, slightly prominent nose; expressive mouth with a firm set; neutral expression is fiercely composed with a hint of predatory awareness.
+* **Hair:** Type 2B-2C; high density; rugged voluminous silhouette; very long (waist-length) with thick, rugged texture; asymmetric part; matte finish; complex asymmetric side braids feeding into a larger central braid or high ponytail. Ash-blonde or strawberry-blonde with sun-faded highlights.
+* **Skin:** Fair; cool-under-tones; weathered matte finish; scattered light freckles across bridge of nose and shoulders; a few faint, well-healed battle scars—one across the left eyebrow and another on the right shoulder.
+**Outfit:**
+- **Top:** cropped **athletic tank or sports bra**, worn with oversized **zip-up hoodie or cardigan** (worn open)
+- **Bottom:** High-waist **yoga leggings** (stretchy technical fabric in solid color or subtle pattern)
+- **Footwear:** **slip-on sneakers**.
+- **Accessories:** Yoga mat bag, water bottle, minimal jewelry.
+- **Hair/Makeup:** Hair in messy bun or ponytail, fresh minimal makeup.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Maya Rose throwing a handful of polyhedral dice onto a wooden table with intensity. Talia Levi watching the result breathlessly. Tension in the air.

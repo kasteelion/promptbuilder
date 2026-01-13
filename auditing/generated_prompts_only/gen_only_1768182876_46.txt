@@ -1,0 +1,80 @@
+# METADATA
+Scene: Indoor basketball court, polished hardwood floor, hoops at each end, boundary lines, gym atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Fiona O'Sullivan | Outfit: Gymnastics | Pose: None
+Character: Amira Khalil | Outfit: Oktoberfest | Pose: None
+Character: Siofra Quinn | Outfit: Modern Nomad | Pose: None
+Interaction: Custom
+Score: 370
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Indoor basketball court, polished hardwood floor, hoops at each end, boundary lines, gym atmosphere.
+---
+
+**CHARACTER: Fiona O'Sullivan**
+**Appearance:**
+* **Body:** Soft Natural plus-size frame; wave-type plush softness; soft pear-hourglass proportions; moderate vertical.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes; expressive hazel-green eyes; warm engaging smile; soft jawline; radiant joyful expression that reflects her generous spirit.
+* **Hair:** Type 2B-2C waves; high density; long layered cut with natural body; side part; soft natural volume with gentle frizz; copper-red to auburn with natural variation.
+* **Skin:** Fair rosy-toned skin with soft glow; smooth complexion. generous constellation of freckles across nose, cheeks, shoulders, and arms
+**Outfit:**
+- **Top:** High-neck leotard (sleek performance lycra with bold geometric patterns in #CC0033 and #003366, featuring #FFFFFF metallic foil accents), wearing warm-up sweats over leotard
+- **Bottom:** barefoot or athletic toe-wraps.
+- **Accessories:** Matching hair scrunchie.
+- **Hair/Makeup:** Tight secure bun, focused athletic expression, performance makeup with glitter accents.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with both arms raised and flexed at 90 degrees, fists curled inward, showing maximum arm and shoulder definition, vacuum-waist pose.
+---
+
+**CHARACTER 2: Amira Khalil**
+**Appearance:**
+* **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
+* **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
+* **Hair / Covering:** Hair fully covered; hijab as constant identity anchor; smooth controlled drape with clean facial framing.
+* **Skin:** Warm olive-toned skin with soft luminous finish.
+**Outfit:**
+- **Hijab:** White or color-coordinated cotton hijab with floral accent
+- **Top:** Long-sleeve white blouse under fitted bodice/vest (royal blue, burgundy, or traditional colors)
+- **Bottom:** Full gathered maxi skirt (matching bodice) with apron
+- **Footwear:** Ankle boots or Mary Janes
+- **Accessories:** Delicate necklace, flower pinned to hijab
+- **Makeup:** Natural rosy makeup, fresh-faced glow
+**Pose/Action:**
+full body shot showing the character from head to toe, Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
+---
+
+**CHARACTER 3: Siofra Quinn**
+**Appearance:**
+* **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
+* **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
+* **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
+* **Skin:** Fair neutral skin with weathered undertone.
+**Outfit:**
+- **Top:** Modular slate-gray tech-jacket made from weather-resistant Gore-Tex fabric with multiple integrated power-packs and magnetic fastening systems.
+- **Bottom:** Tapered, multi-pocket cargo pants in a heavy-duty reinforced nylon with adjustable compression straps and articulated knee joints.
+- **Footwear:** High-tech mid-cut boots with a carbon-fiber reinforced sole, waterproof membrane, and high-visibility reflective detailing.
+- **Accessories:** A heavy-duty tactical utility belt with multiple modular pouches; a sleek, tech-integrated scarf with built-in thermal regulation.
+- **Hair/Makeup:** Sharp, high-density ponytail; matte finish skin; high-contrast eyeliner in a deep charcoal.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with a skateboard tucked under one arm, relaxed posture, urban background.
+---
+
+**Additional Notes:**
+Fiona O'Sullivan leaning in close to whisper something to Amira Khalil while they both look at a piece of art in a grand gallery, a shared secret in a quiet, public space.

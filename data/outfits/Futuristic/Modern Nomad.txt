@@ -1,0 +1,46 @@
+tags: [Modern Nomad, Techwear, Functional, Futuristic]
+
+[F]
+- **Top:** Modular slate-gray tech-jacket.
+  - **Fit:** Modular; Weather-resistant.
+  - **Material:** Gore-Tex; Magnetic fasteners.
+  - **Pattern:** Integrated power-packs.
+  - **Neckline:** High-neck with tech-scarf.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tapered multi-pocket cargo pants.
+  - **Fit:** Tapered; Articulated knees.
+  - **Material:** Heavy-duty reinforced nylon.
+  - **Pattern:** Adjustable compression straps.
+  - **Waist:** Tactical utility belt.
+  - **Length:** Full length.
+- **Footwear:** High-tech mid-cut boots with carbon-fiber sole.
+- **Accessories:** Modular pouches; tech-integrated scarf with thermal regulation.
+
+[M]
+- **Top:** Multi-functional tech-vest over charcoal base layer.
+  - **Fit:** Functional layer.
+  - **Material:** Rip-stop nylon; Solar panels.
+  - **Neckline:** Round neck base layer.
+  - **Sleeve:** Long (base layer).
+- **Bottom:** Articulated cargo trousers.
+  - **Fit:** Articulated.
+  - **Material:** Rip-stop nylon blend.
+  - **Waist:** Integrated gear holsters.
+  - **Length:** Full.
+- **Footwear:** Sturdy all-terrain tech-boots.
+- **Accessories:** Tactical backpack; touch-screen compatible gloves.
+
+[H]
+- **Top:** All-weather hooded tech-cloak.
+  - **Fit:** Oversized; Protective.
+  - **Material:** Translucent Gore-Tex.
+  - **Pattern:** Power-routing cables.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Articulated tech-trousers.
+  - **Fit:** Functional; Rugged.
+  - **Material:** matching fabric.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Waterproof terrain-adaptive tech-boots.
+- **Accessories:** Tech neck gaiter; polarized tech-goggles (neck).

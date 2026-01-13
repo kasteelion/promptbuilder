@@ -1,0 +1,77 @@
+# METADATA
+Scene: Urban rooftop setting, city skyline in background, sunset lighting, Modern outdoor furniture.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Harald Bjornson | Outfit: Track and Field | Pose: None
+Character: Celine Voss | Outfit: Track and Field | Pose: None
+Character: Samira Mansour | Outfit: Track and Field | Pose: None
+Score: 490
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Urban rooftop setting, city skyline in background, sunset lighting, Modern outdoor furniture.
+---
+
+**CHARACTER: Harald Bjornson**
+**Appearance:**
+* **Body:** Flamboyant Natural; massive, heavily muscled frame with broad, powerful shoulders and a deep chest; long limbs with thick wrists and large, calloused hands; tall vertical (6'2"-6'4"); high muscle density with functional power visible in every movement; an imposing, statuesque presence.
+* **Face:** Rugged-angular structure; square face shape with a prominent heavy brow and a stone-like jawline; deep-set piercing blue eyes under thick, expressive eyebrows; straight, strong nose; neutral expression is calm but intense, radiating a sense of grave authority.
+* **Hair:** Type 2B; thick coarse density; rough swept-back silhouette; past shoulders; swept-back; low sheen; single thick warrior braid at the back. Rich golden-blonde or light brown.
+* **Skin:** Fair; warm-neutral undertones; weathered and sun-toughened texture; prominent scar running down the right cheek and another across the knuckles; tanned.
+**Outfit:**
+- **Top:** Fitted performance tank for **The Emerald Ducks** with **racerback design** and **mesh ventilation panels**
+- **Bottom:** body in **#154733** with **#FEE123 diagonal chest stripe** and **team logo**
+- **Footwear:** athletic briefs or shorts in **#154733** with **#FEE123 side binding** and **streamlined cut for aerodynamics**; **track spikes or racing flats** (#FFFFFF, event-specific).
+- **Accessories:** Race number bib pinned at hip, timing chip, compression socks optional.
+- **Hair/Makeup:** Hair short or secured, minimal grooming, race-focused intensity.
+**Pose/Action:**
+full body shot showing the character from head to toe, Mid-dance motion, fluid graceful movement, arms in expressive position.
+---
+
+**CHARACTER 2: Celine Voss**
+**Appearance:**
+* **Body:** Dramatic frame; straight dense flesh; narrow rectangle proportions; tall controlled vertical.
+* **Face:** Angular sculptural structure; square-leaning oval face; sharp jaw; unreadable neutral expression.
+* **Hair:** Type 1 straight; high density; blunt jaw-length bob; precise alignment; matte finish.
+* **Skin:** Cool pale skin with porcelain finish.
+**Outfit:**
+- **Top:** Fitted performance crop top for **The Emerald Ducks** with **racerback straps** and **mesh ventilation panels**
+- **Bottom:** body in **#154733** with **#FEE123 diagonal chest stripe** and **team logo**
+- **Footwear:** high-cut athletic briefs in **#154733** with **#FEE123 side binding** and **streamlined hip cut for mobility**; **track spikes or racing flats** (#FFFFFF, event-specific).
+- **Accessories:** Race number bib pinned at hip, timing chip anklet, hair secured in aerodynamic style.
+- **Hair/Makeup:** Hair in slicked-back ponytail or tight bun, minimal makeup, focused expression.
+**Pose/Action:**
+full body shot showing the character from head to toe, Standing with both arms raised and flexed at 90 degrees, fists curled inward, showing maximum arm and shoulder definition, vacuum-waist pose.
+---
+
+**CHARACTER 3: Samira Mansour**
+**Appearance:**
+* **Body:** Soft Natural; balanced proportions with soft curves; moderate vertical (5'6"); natural athletic density with a defined waist and soft shoulders; poised and culturally connected presence.
+* **Face:** Soft-balanced structure; oval face with high, smooth cheekbones; large expressive dark brown eyes framed by naturally thick, groomed eyebrows; straight refined nose; full lips with a natural cupid's bow; soft jawline; warm engaging expression that feels both wise and welcoming.
+* **Hair:** (Covered) Typically styled in voluminous dark curls beneath her hijab.
+* **Skin:** Rich golden-olive depth (North African coloring); smooth luminous finish; natural healthy glow enhanced by traditional skincare oils.
+**Outfit:**
+- **Hijab:** Sports hijab in #154733 (breathable, secure fit)
+- **Top:** Long-sleeve fitted athletic top for The Emerald Ducks in #154733 with #FEE123 accents (moisture-wicking, high neck)
+- **Bottom:** Full-length athletic leggings in #154733 with #FEE123 accents (lightweight performance fabric)
+- **Footwear:** Track spikes or running shoes (#FFFFFF)
+- **Accessories:** Race number bib, hair secured
+- **Makeup:** Minimal makeup
+**Pose/Action:**
+full body shot showing the character from head to toe, Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
+---

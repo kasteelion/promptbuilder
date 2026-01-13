@@ -1,23 +1,45 @@
 tags: [combat, fantasy, Tribal]
 
 [F]
-- **Top:** Leather or fur bikini top (tribal design with bone or tooth decorations)
-- **Bottom:** fur or leather loincloth with **leather straps**
-- **Footwear:** fur boots (calf-high); **arm and leg wraps** (((default:leather or fur) or (signature))).
-- **Accessories:** Large battle axe or two-handed sword, bone jewelry, war paint on face and body, trophy necklace (teeth, claws).
-- **Hair/Makeup:** Wild untamed hair (often with braids or dreadlocks), fierce war paint, tribal markings, Intense warrior expression.
+- **Top:** Leather or fur bikini top.
+  - **Fit:** Tribal design.
+  - **Material:** Leather or Fur; Bone/tooth decorations.
+  - **Pattern:** Organic tribal.
+  - **Neckline:** Halter or Strappy.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Fur or leather loincloth.
+  - **Fit:** Strapped.
+  - **Material:** Fur or Leather.
+  - **Waist:** Leather straps.
+  - **Length:** Minimal.
+- **Footwear:** Calf-high fur boots.
+- **Accessories:** Large battle axe or two-handed sword; arm and leg wraps; trophy necklace.
 
 [M]
-- **Top:** Bare chest with **leather harness** (tribal design)
-- **Bottom:** fur or leather loincloth or **pants** with **leather straps**
-- **Footwear:** fur boots (calf-high); **arm and leg wraps** (leather or fur).
-- **Accessories:** Large battle axe or two-handed sword, bone jewelry, war paint on face and body, trophy necklace (teeth, claws).
-- **Hair/Makeup:** Wild untamed hair (often with braids or dreadlocks), fierce war paint, tribal markings, Intense warrior expression.
+- **Top:** Bare chest with leather harness.
+  - **Fit:** Rugged; Harness fit.
+  - **Material:** Leather; Bone.
+  - **Neckline:** Harness.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Fur or leather loincloth or pants.
+  - **Fit:** Loose or Strapped.
+  - **Material:** matching fur/leather.
+  - **Waist:** Leather straps.
+  - **Length:** Minimal (loincloth) or Full (pants).
+- **Footwear:** Calf-high fur boots.
+- **Accessories:** Large battle axe; war paint; trophy necklace.
 
 [H]
-- **Hijab:** Rugged wrap style (earth tones) with leather bands or bone accessories
-- **Top:** Leather tunic or vest with fur trim over long-sleeve base layer
-- **Bottom:** Leather trousers with fur leg wraps and loincloth overlay
-- **Footwear:** Fur-lined boots
-- **Accessories:** Battle axe, bone jewelry, war paint
-- **Makeup:** Fierce war paint, Intense expression
+- **Hijab:** Rugged wrap style in earth tones with leather bands.
+- **Top:** Leather tunic or vest with fur trim.
+  - **Fit:** Layered over long-sleeve.
+  - **Material:** Leather; Fur trim.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Leather trousers with fur leg wraps.
+  - **Fit:** Straight with overlays.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Fur-lined boots.
+- **Accessories:** Battle axe; bone jewelry; war paint.

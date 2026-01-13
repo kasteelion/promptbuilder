@@ -1,0 +1,81 @@
+# METADATA
+Scene: Dark basement club, strobing lights, DJ booth, packed dance floor, underground rave energy.
+Base_Prompt: Low-Poly 3D
+Character: Amira Khalil | Outfit: 1980s Power Dressing | Pose: None
+Character: Marley Thompson | Outfit: 1980s Power Dressing | Pose: None
+Character: Sitara Saanvi | Outfit: 1980s Power Dressing | Pose: None
+Interaction: Custom
+Score: 440
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Dark basement club, strobing lights, DJ booth, packed dance floor, underground rave energy.
+---
+
+**CHARACTER: Amira Khalil**
+**Appearance:**
+* **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
+* **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
+* **Hair / Covering:** Hair fully covered; hijab as constant identity anchor; smooth controlled drape with clean facial framing.
+* **Skin:** Warm olive-toned skin with soft luminous finish.
+**Outfit:**
+- **Hijab:** Silk hijab in bold color (tucked in or turban style)
+- **Top:** Oversized blazer (bold color shoulder pads); **high-neck blouse**
+- **Bottom:** Pleated midi skirt or **trousers**
+- **Footwear:** Pumps
+- **Accessories:** Chunky gold jewelry, briefcase
+- **Makeup:** Bright eyeshadow, bold blush, strong brows
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Marley Thompson**
+**Appearance:**
+* **Body:** Romantic frame; wave-lush flesh quality; voluptuous hourglass proportions with full bust (DD-E cup), dramatically defined waist, wide rounded hips, full thighs; moderate height (5'5"-5'6"); soft density with feminine curves throughout, rounded shoulders, shapely legs; magnetizing maternal presence.
+* **Face:** Soft-rounded facial structure; heart-to-round face shape; full cheeks with natural warmth; large expressive dark brown eyes, wide-set, warm inviting gaze; full lips with natural cupid's bow; soft jawline; neutral resting expression is serene and welcoming with gentle smile—radiates nurturing warmth and domestic contentment.
+* **Hair:** Type 4A coils; very high density; medium-long length (past shoulders); high volume and body; commonly worn in protective styles that are polished and feminine—twist-outs with defined curls, elegant bun with decorative pins, braided crown styles, occasionally heat-styled into bouncy curls for special occasions; natural black with warm brown undertones; always well-maintained and styled.
+* **Skin:** Deep warm brown with rich golden undertones; smooth luminous finish; healthy glow from good skincare; natural radiance.
+**Outfit:**
+- **Top:** Structured blazer (bold color - red, royal blue, or fuchsia with exaggerated shoulder pads, double-breasted with large buttons)
+- **Bottom:** high-waist pencil skirt (matching or contrasting, knee-length)
+- **Footwear:** silk blouse (with bow at neck or bold print); **pumps** (pointed toe, high heel).
+- **Accessories:** Chunky gold jewelry (large earrings, multiple bangles, statement necklace), leather briefcase or structured handbag, belt (wide with prominent buckle), power watch.
+- **Hair/Makeup:** Big voluminous hair (permed, teased, or blown out with height), bold makeup (bright eyeshadow - blue, purple, pink, heavy blush, bold lip in red or fuchsia), strong brows, assertive 80s executive presence.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Sitara Saanvi**
+**Appearance:**
+* **Body:** Romantic frame; soft lush flesh quality; hourglass proportions with defined waist; moderate height (5'4"); soft rounded density with lush bust and hips, delicate wrists and ankles; alluring captivating presence.
+* **Face:** Soft rounded structure; heart shape; large expressive dark brown almond eyes with dazzled flirtatious quality; softly curved jawline; neutral resting expression is slightly pouting and sensual.
+* **Hair:** Type 2C waves; medium-high density; dark glossy black with high sheen; long voluminous hair that takes styling well; commonly worn in glamorous, vintage-inspired styles.
+* **Skin:** Medium tan with warm golden-olive undertones and luminous smooth surface finish; small delicate beauty mark near lip.
+**Outfit:**
+- **Top:** Structured blazer (bold color - red, royal blue, or fuchsia with exaggerated shoulder pads, double-breasted with large buttons)
+- **Bottom:** high-waist pencil skirt (matching or contrasting, knee-length)
+- **Footwear:** silk blouse (with bow at neck or bold print); **pumps** (pointed toe, high heel).
+- **Accessories:** Chunky gold jewelry (large earrings, multiple bangles, statement necklace), leather briefcase or structured handbag, belt (wide with prominent buckle), power watch.
+- **Hair/Makeup:** Big voluminous hair (permed, teased, or blown out with height), bold makeup (bright eyeshadow - blue, purple, pink, heavy blush, bold lip in red or fuchsia), strong brows, assertive 80s executive presence.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Amira Khalil giving Marley Thompson an enthusiastic high five, both smiling with celebratory energy

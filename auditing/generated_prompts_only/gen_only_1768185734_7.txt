@@ -1,0 +1,79 @@
+# METADATA
+Scene: Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Leonidas Stratos | Outfit: Solarpunk | Pose: None
+Character: Luna Vex | Outfit: Wasteland Scavenger | Pose: None
+Character: Elena Rosales | Outfit: Tech-Athletic Compression | Pose: None
+Interaction: Custom
+Score: 365
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
+---
+
+**CHARACTER: Leonidas Stratos**
+**Appearance:**
+* **Body:** Dramatic; elite athletic flesh; "Adonis belt" and deep core definition; broad square shoulders and a narrow, powerful waist; moderate-to-tall vertical (6'0"-6'2"); extremely high muscle density with sharp vascularity; movements are precise, economical, and explosive.
+* **Face:** Severe-classical structure; sharp, chiseled features; high nasal bridge; deep-set, hawk-like amber-brown eyes; prominent cheekbones and a squared, resolute jawline; neutral expression is intense and watchful, radiating a sense of absolute focus.
+* **Hair:** Type 1B-2A; medium density; disciplined short-to-medium silhouette; no defined part; low sheen; tight, disciplined crop or rough swept-back style. Dark chestnut or black.
+* **Skin:** Deep olive; warm golden undertones; smooth firm texture; surgically-precise scars on pectoral and outer thigh; tanned.
+**Outfit:**
+- **Top:** Relaxed-fit cream linen tunic with a high collar and subtle solar-cell lapels that catch the light with an iridescent finish.
+- **Bottom:** Tapered trousers in a durable moss-green organic cotton twill with articulated knees and reinforced plant-fiber patches.
+- **Footwear:** Breathable hemp-weave sneakers with a thick, recycled-rubber sole in a soft earth tone.
+- **Accessories:** A hand-carved wooden pendant on a copper chain; a functional utility belt made from woven recycled synthetic fibers.
+- **Hair/Makeup:** Natural, textured hair with a sun-kissed finish; clean, healthy skin with a subtle "outdoor" glow.
+**Pose/Action:**
+wide shot with the character framed within the environment, Arching backward with hands and feet on the ground, creating a graceful bridge, impressive flexibility.
+---
+
+**CHARACTER 2: Luna Vex**
+**Appearance:**
+* **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
+* **Face:** Classic heart-shaped silhouette with a broad, smooth forehead and high, soft cheekbones that become prominent when she smiles; delicate, pointed chin creating a sharp taper from the mid-face; soft but clean and well-defined jawline; focal wide-set almond-shaped eyes in captivating light grey-blue; framed by naturally high-arched, manicured dark brown eyebrows sitting well above the orbital bone; signature sharp black winged eyeliner that accentuates the upward curve of her eyes; petite, straight nose bridge with a soft rounded tip and characteristic "scrunch" when laughing; wide, expressive mouth with a prominent philtrum and a broad, radiant smile revealing straight white teeth; deep endearing smile lines (nasolabial folds) and pronounced "crow's feet" signal genuine warmth and joy.
+* **Hair:** Type 2A (wavy); medium density; soft, voluminous layered silhouette; shoulder-length; varying part pattern (side or center); glossy sheen with styled "wet-look" roots; common styling includes loose, face-framing waves. Split-dye neon magenta pink and electric blue/amethyst purple.
+* **Skin:** Fair/Light depth; neutral-cool undertones; smooth, luminous surface finish; natural "crow's feet" laugh lines around the eyes.
+**Outfit:**
+- **Top:** Distressed tank top under a patchwork leather vest made from recycled scraps.
+- **Bottom:** Torn cargo pants reinforced with tire rubber and metal plates.
+- **Footwear:** Mismatched heavy boots wrapped in duct tape.
+- **Accessories:** Sand goggles, respirator mask hanging around neck, bandolier of scavenged parts.
+- **Hair/Makeup:** Messy braid with dust, war paint or grease smudges on face.
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing with hands on hips, confident posture, looking forward.
+---
+
+**CHARACTER 3: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
+**Outfit:**
+- **Top:** Long-sleeve compression top (high-neck technical nylon-spandex blend in charcoal, ultra-fitted to highlight torso and shoulder definition)
+- **Bottom:** Matching high-waist compression leggings (thick elasticated waistband, moisture-wicking matte finish).
+- **Accessories:** Black fitness tracker; wireless earbuds.
+- **Hair/Makeup:** Sleek ponytail; natural dewy skin; minimal makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Defensive position, one arm extended in fist, other protecting face, alert watchful expression.
+---
+
+**Additional Notes:**
+Leonidas Stratos and Luna Vex linking pinky fingers in a close-up shot. A sign of a serious, secret promise between friends or lovers. Focus on the hands.

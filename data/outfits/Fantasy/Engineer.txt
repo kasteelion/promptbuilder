@@ -1,23 +1,46 @@
 tags: [fantasy, Steampunk, tech]
 
 [F]
-- **Top:** Practical work vest (leather with tool loops)
-- **Bottom:** fitted shirt (with rolled sleeves)
-- **Footwear:** pants with cargo pockets; **sturdy boots** (steel-toed if available); **protective goggles**.
-- **Accessories:** Tool belt (wrenches, hammers, screwdrivers), mechanical devices, gun or crossbow (modified), gadget pouches, blueprint tube, oil-stained gloves.
-- **Hair/Makeup:** Practical short hair or secured in functional style, minimal makeup, possibly grease smudges, inventive expression.
+- **Top:** Practical leather work vest and fitted shirt.
+  - **Fit:** Fitted shirt; Structured vest with tool loops.
+  - **Material:** Leather; Cotton.
+  - **Pattern:** Solid with oil smudges.
+  - **Neckline:** Open collar.
+  - **Sleeve:** Long sleeves (rolled to elbow).
+- **Bottom:** Pants with cargo pockets.
+  - **Fit:** Straight leg.
+  - **Material:** Durable canvas.
+  - **Pattern:** Multi-pocketed.
+  - **Waist:** Tool belt with brass buckles.
+  - **Length:** Tucked into boots.
+- **Footwear:** Sturdy steel-toed boots.
+- **Accessories:** Protective goggles; gadget pouches; blueprint tube; oil-stained gloves.
 
 [M]
-- **Top:** Practical work vest (leather with tool loops)
-- **Bottom:** fitted shirt (with rolled sleeves)
-- **Footwear:** pants with cargo pockets; **sturdy boots** (steel-toed if available); **protective goggles**.
-- **Accessories:** Tool belt (wrenches, hammers, screwdrivers), mechanical devices, gun or crossbow (modified), gadget pouches, blueprint tube, oil-stained gloves.
-- **Hair/Makeup:** Practical short hair or secured style, possibly grease smudges, inventive expression.
+- **Top:** Practical leather work vest over fitted shirt.
+  - **Fit:** Functional.
+  - **Material:** Leather and Cotton.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves (rolled).
+- **Bottom:** Cargo pants.
+  - **Fit:** Straight leg.
+  - **Material:** heavy fabric.
+  - **Waist:** Utility tool belt.
+  - **Length:** Tucked in.
+- **Footwear:** Sturdy boots; goggles.
+- **Accessories:** Wrenches and hammers; mechanical devices; gadget pouches.
 
 [H]
-- **Hijab:** Practical cotton hijab, no loose ends
-- **Top:** Work vest with tool loops over fitted long-sleeve shirt
-- **Bottom:** Cargo pants with pockets
-- **Footwear:** Steel-toed boots
-- **Accessories:** Tool belt, goggles, gadgets, gloves
-- **Makeup:** Inventive expression, grease smudges
+- **Hijab:** Practical cotton hijab, no loose ends.
+- **Top:** Work vest with tool loops over long-sleeve shirt.
+  - **Fit:** Modest functional.
+  - **Material:** Leather; Cotton.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Cargo pants with pockets.
+  - **Fit:** Straight leg.
+  - **Material:** Durable canvas.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Steel-toed boots.
+- **Accessories:** Tool belt; goggles; gadgets; gloves.

@@ -1,23 +1,47 @@
 tags: [combat, fantasy, Magic]
 
 [F]
-- **Top:** Enchanted armor (lighter plate with magical runes glowing along edges)
-- **Bottom:** flowing battle skirt or **armored pants**
-- **Footwear:** armored boots with mystical designs; **enchanted cape** (color-changing or magical effects).
-- **Accessories:** Enchanted sword (glowing blade with runes), magical focus (crystal or amulet), spellbook on belt, combination of armor and arcane jewelry.
-- **Hair/Makeup:** Hair in warrior-mage style (practical but elegant, possibly with magical color), makeup showing both warrior determination and mystical power, dual nature expression.
+- **Top:** Enchanted plate armor with glowing runes.
+  - **Fit:** Lighter plate tailored.
+  - **Material:** Mythril or thin steel.
+  - **Pattern:** Magical runes along edges.
+  - **Neckline:** High collar armor.
+  - **Sleeve:** Long armored sleeves.
+- **Bottom:** Flowing battle skirt or armored pants.
+  - **Fit:** Flared or Straight.
+  - **Material:** Padded fabric or metal plate.
+  - **Pattern:** Mystical designs.
+  - **Waist:** Buckle belt with spellbook.
+  - **Length:** Full length.
+- **Footwear:** Armored boots with mystical designs.
+- **Accessories:** Enchanted sword; crystal focus; enchanted cape.
 
 [M]
-- **Top:** Enchanted armor (lighter plate with magical runes glowing along edges)
-- **Bottom:** armored pants
-- **Footwear:** armored boots with mystical designs; **enchanted cape** (color-changing or magical effects).
-- **Accessories:** Enchanted sword (glowing blade with runes), magical focus (crystal or amulet), spellbook on belt, combination of armor and arcane jewelry.
-- **Hair/Makeup:** Hair in warrior-mage style (practical but elegant), expression showing both warrior determination and mystical power.
+- **Top:** Enchanted armor with glowing runes.
+  - **Fit:** Tailored plate.
+  - **Material:** Enchanted metal.
+  - **Pattern:** Glowing mystical symbols.
+  - **Neckline:** High collar.
+  - **Sleeve:** Long armored sleeves.
+- **Bottom:** Armored pants.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Armored boots; enchanted cape.
+- **Accessories:** Enchanted sword; crystal amulet; spellbook.
 
 [H]
-- **Hijab:** Armored hijab or mystical fabric wrap (shimmering)
-- **Top:** Enchanted plate armor over modest layers
-- **Bottom:** Armored pants or battle skirt
-- **Footwear:** Mystical armored boots
-- **Accessories:** Enchanted sword, spellbook, glowing runes
-- **Makeup:** Powerful expression, hints of magical glow
+- **Hijab:** Armored hijab or mystical fabric wrap.
+- **Top:** Enchanted plate armor over modest layers.
+  - **Fit:** Heavy modest armored.
+  - **Material:** Mythril; Cloth.
+  - **Neckline:** High-neck modest.
+  - **Sleeve:** Long armored sleeves.
+- **Bottom:** Armored pants or battle skirt.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Mystical armored boots.
+- **Accessories:** Enchanted sword; spellbook; glowing runes.

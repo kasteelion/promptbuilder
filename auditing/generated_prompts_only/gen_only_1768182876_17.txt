@@ -1,0 +1,82 @@
+# METADATA
+Scene: Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
+Base_Prompt: Classic Anime: "Clean Cel Animation"
+Character: Callum Doherty | Outfit: Winter Holiday | Pose: None
+Character: Leilani Te'o | Outfit: Oil Tycoon | Pose: None
+Character: Silas Burnside | Outfit: Light Academia | Pose: None
+Interaction: Custom
+Score: 205
+
+Generate an image of: Rendering
+1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+
+Character Accuracy
+Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+
+Body Types
+Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+
+Hair & Clothing
+Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+
+Details
+Hand-painted watercolor style backgrounds (static). Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+
+---
+
+**SCENE/SETTING:**
+Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
+---
+
+**CHARACTER: Callum Doherty**
+**Appearance:**
+* **Body:** Natural frame; lean but defined muscularity (mesomorph leaning); moderate vertical (5'10"-5'11"); "wiry strength" developed from physical labor; forearms are notably toned and vascular; broad chest tapering to a narrow waist; moves with a loose, athletic agility.
+* **Face:** Angular and expressive; defined jawline that is often softened by a scruffy 5 o'clock shadow; bright, mischievous eyes in a piercing electric blue (striking contrast to hair); nose has a slight bump (maybe broken once in a rugby match); features are animated and quick to smile.
+* **Hair:** Type 2B waves; high density; vibrant, true copper-red (fox colored); cut in a "textured crop" or "modern mullet" style—shorter on sides, longer and messy on top/back; matte finish; often tousled by running hands through it.
+* **Skin:** Fair/Pale with pink undertones; heavily freckled—a constellation of rust-colored freckles covers his nose, cheeks, shoulders, and arms; prone to sunburn but currently has a "farmer's tan" on the arms.
+**Outfit:**
+- **Top:** Dress shirt (white or festive color) with **suit or blazer** (dark colors - charcoal, navy, burgundy)
+- **Bottom:** dress pants
+- **Footwear:** leather dress shoes.
+- **Accessories:** Watch, tie or bow tie, festive pocket square.
+- **Hair/Makeup:** Polished styling, well-groomed.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Leilani Te'o**
+**Appearance:**
+* **Body:** Dramatic Natural; massive, heavily muscled frame with broad powerful shoulders and a deep chest; 45-35-50 proportions; tall height at 6'0"; EXTREME muscle density with visible definition in her "capped" delts, thick biceps, and powerful quads; heavy but athletic presence.
+* **Face:** Rugged-soft structure; square-oval face with a strong, well-defined jawline and high prominent cheekbones; large dark brown eyes with a steady, direct gaze; full expressive mouth; neutral resting expression is calm but intense, radiating a sense of quiet authority.
+* **Hair:** Type 3A–3B curls; high density; long length past her shoulders; naturally thick dark hair often worn half-up to keep it out of her face during training; healthy natural sheen.
+* **Skin:** Deep warm tan with rich golden-brown undertones (Polynesian coloring); smooth surface with visible muscle separation creating deep shadows; elaborate traditional 'tatau' patterns visible on one shoulder and upper arm.
+**Outfit:**
+- **Top:** Tailored western blazer (cream or tan with western yoke detailing, leather trim)
+- **Bottom:** silk western shirt (with bolo tie, subtle sheen)
+- **Footwear:** tailored trousers (high-waist, pressed crease); **luxury cowboy boots** (exotic leather - ostrich or alligator, understated elegance).
+- **Accessories:** Bolo tie with turquoise or silver slide, large statement ring, designer western hat (felt, impeccably maintained), leather briefcase or portfolio.
+- **Hair/Makeup:** Sophisticated styled hair (sleek waves or polished updo), refined makeup with emphasis on power and wealth, confident commanding presence.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Silas Burnside**
+**Appearance:**
+* **Body:** Flamboyant Natural; bear-like frame; broad, heavy shoulders and a deep barrel chest; thick functional muscle covered by a healthy layer of "winter insulation"; tall vertical (6'3"-6'5"); massive, calloused hands; moves with a heavy, confident lumber.
+* **Face:** Broad, square structure with weathered, rosy cheeks; warm crinkling eyes that disappear when he smiles; and his signature grooming: thick, bushy sideburns that flare out and connect to a heavy mustache, leaving his strong, square chin completely clean-shaven (the classic "Friendly Mutton Chops").
+* **Hair:** Type 1B-2A; thick, coarse density; short, practical cut often messy from hat wear; salt-and-pepper coloring.
+* **Skin:** Fair-to-medium; cool undertones; perpetually wind-chapped or sun-reddened; rugged texture with deep laugh lines.
+**Outfit:**
+- **Top:** Cable knit sweater (cream or beige)
+- **Bottom:** tailored trousers (tan or gray)
+- **Footwear:** leather oxfords or loafers.
+- **Accessories:** Leather satchel, reading glasses, book prop.
+- **Hair/Makeup:** Neat side part or tousled Ivy League cut, clean-shaven or neat stubble.
+
+---
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Callum Doherty and Leilani Te'o in coordinated stylish outfits striking confident poses. Both in fashion-forward stance showing personality and style. Callum Doherty might stand with hand on hip, leg crossed in front, chin lifted confidently. Leilani Te'o mirrors or complements with own pose—arms crossed, leaning slightly, or dynamic stance. Outfits coordinated by color palette or aesthetic—matching colors, complementary styles, or themed fashion (all black, monochrome, matching prints). Hair styled intentionally, makeup bold and camera-ready. Accessories coordinated—sunglasses, bags, jewelry. Body language exudes confidence—shoulders back, posture straight, expressions serious and smoldering or playfully confident. Eye contact with camera, commanding attention. Background minimal or aesthetic—urban setting, clean wall, architectural elements. Lighting professional-quality or golden hour. Composition treats subjects as fashion models. Energy is aspirational, polished, and influential—content that others want to recreate.

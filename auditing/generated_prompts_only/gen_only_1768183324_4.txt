@@ -1,0 +1,80 @@
+# METADATA
+Scene: Pristine lab environment, stainless steel benches, microscopes, glass beakers, glowing chemical samples, cold professional lighting.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Lucía Reyes | Outfit: Beach Volleyball | Pose: None
+Character: Maya Rose | Outfit: Beach Volleyball | Pose: None
+Character: Rafael Costa | Outfit: Beach Volleyball | Pose: None
+Interaction: Custom
+Score: 540
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Pristine lab environment, stainless steel benches, microscopes, glass beakers, glowing chemical samples, cold professional lighting.
+---
+
+**CHARACTER: Lucía Reyes**
+**Appearance:**
+* **Body:** Romantic frame; wave plush softness; full hourglass proportions; moderate vertical.
+* **Face:** Rounded facial structure; heart-shaped face; full cheeks; warm expressive eyes; joyful resting expression.
+* **Hair:** Type 2B–2C waves; high density; long layered cut; side part; healthy sheen.
+* **Skin:** Warm golden skin with radiant glow.
+**Outfit:**
+- **Top:** Professional athletic bikini set for **The Tidal Sharks**
+- **Bottom:** racerback top featuring a **sculpted compression fit** and a **sheer mesh center-chest cutout**
+- **Footwear:** bodice in **#00758F** with **#000000 side-binding** and a **metallic foil team logo** on the left; fabric is a premium **honeycomb-textured matte lycra**; matching **high-cut athletic bottoms** with **asymmetric color-blocked panels** in **#000000** and **thick double-needle flatlock stitching**; **barefoot** with a **thin layer of sand-dusted skin**.
+- **Accessories:** Mirrored polarized sports sunglasses (#FFFFFF) with a **secure neck strap**, **performance visor** in **#00758F** featuring **rhinestone-encrusted team initials**, waterproof fitness watch.
+- **Hair/Makeup:** Sleek boxer braids with flyaways secured, **athletic sun-kissed glow** with high-SPF tinted moisturizer, waterproof mascara, and a natural coral lip tint.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Maya Rose**
+**Appearance:**
+* **Body:** Soft Natural frame with balanced curves; moderate-to-tall vertical line; natural waist definition; relaxed athletic build.
+* **Face:** Soft oval face with gentle angles; warm expressive eyes; bright genuine smile; approachable features with natural definition.
+* **Hair:** Type 2B-2C waves to loose curls; medium-high density; long layered cut past shoulders; natural movement and body; warm golden-brown to honey tones with dimensional highlights.
+* **Skin:** Warm medium beige with golden undertones; natural healthy glow.
+**Outfit:**
+- **Top:** Professional athletic bikini set for **The Tidal Sharks**
+- **Bottom:** racerback top featuring a **sculpted compression fit** and a **sheer mesh center-chest cutout**
+- **Footwear:** bodice in **#00758F** with **#000000 side-binding** and a **metallic foil team logo** on the left; fabric is a premium **honeycomb-textured matte lycra**; matching **high-cut athletic bottoms** with **asymmetric color-blocked panels** in **#000000** and **thick double-needle flatlock stitching**; **barefoot** with a **thin layer of sand-dusted skin**.
+- **Accessories:** Mirrored polarized sports sunglasses (#FFFFFF) with a **secure neck strap**, **performance visor** in **#00758F** featuring **rhinestone-encrusted team initials**, waterproof fitness watch.
+- **Hair/Makeup:** Sleek boxer braids with flyaways secured, **athletic sun-kissed glow** with high-SPF tinted moisturizer, waterproof mascara, and a natural coral lip tint.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Rafael Costa**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with slight wave; balanced proportions with gentle breadth; moderate vertical; relaxed athletic build with natural ease.
+* **Face:** Balanced-warm facial structure; oval-to-square face; warm expressive eyes; defined brows; easy smile; open welcoming expression.
+* **Hair:** Type 3A curls; high density; medium-length tousled cut; natural volume; soft matte-satin finish; often pushed back with slight forward fall.
+* **Skin:** Warm tan skin with golden undertones and healthy glow.
+**Outfit:**
+- **Top:** Professional performance board shorts for **The Tidal Sharks** featuring **sublimated geometric graphics** in **#00758F** on a **#000000 base**
+- **Bottom:** high-tech **4-way ripstop stretch fabric** with a **water-repellent matte finish**
+- **Footwear:** mid-thigh athletic cut with **taped side seams** and **scalloped hems** for maximum mobility; **team crest** in **metallic silicone** on the right leg; **barefoot** with **sand-dusted skin**.
+- **Accessories:** Mirrored wraparound sports sunglasses (#FFFFFF) with polarized lenses, **performance visor** in **#00758F** with **3D-embroidered team logo**, athletic waterproof watch.
+- **Hair/Makeup:** Sunscreen, minimal grooming, hair short or secured, focused competitive expression.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Lucía Reyes helping Maya Rose stretch, applying gentle pressure, athletic assistance, training partnership focus.

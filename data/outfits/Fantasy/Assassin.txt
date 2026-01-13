@@ -1,23 +1,45 @@
 tags: [combat, fantasy, Stealth]
 
 [F]
-- **Top:** Form-fitting black bodysuit or leather armor (reinforced at vital areas)
-- **Bottom:** armored bracers
-- **Footwear:** tactical belt with hidden weapon holsters; **silent boots** (soft-soled).
-- **Accessories:** Twin daggers or short swords, hidden blade mechanisms, poison vials, mask or hood for identity concealment, smoke bombs.
-- **Hair/Makeup:** Hair secured tightly (bun, braid, or short), face paint or mask, minimal makeup, cold calculating expression.
+- **Top:** Form-fitting bodysuit with reinforced leather armor.
+  - **Fit:** Skin-tight sleek.
+  - **Material:** Matte black leather and Spandex.
+  - **Pattern:** Reinforced vital areas.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves with armored bracers.
+- **Bottom:** Matching tactical leggings or trousers.
+  - **Fit:** Skin-tight.
+  - **Material:** Leather/Technical fabric.
+  - **Waist:** Tactical belt with holsters.
+  - **Length:** Ankle-length.
+- **Footwear:** Silent soft-soled boots.
+- **Accessories:** Twin daggers; hidden blade mechanisms; poison vials; mask/hood.
 
 [M]
-- **Top:** Form-fitting black bodysuit or leather armor (reinforced at vital areas)
-- **Bottom:** armored bracers
-- **Footwear:** tactical belt with hidden weapon holsters; **silent boots** (soft-soled).
-- **Accessories:** Twin daggers or short swords, hidden blade mechanisms, poison vials, mask or hood for identity concealment, smoke bombs.
-- **Hair/Makeup:** Hair secured tightly or short, face paint or mask, cold calculating expression.
+- **Top:** Form-fitting black bodysuit with leather armor.
+  - **Fit:** Tight.
+  - **Material:** Matte leather.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves with armored bracers.
+- **Bottom:** Tactical pants.
+  - **Fit:** Slim-fit.
+  - **Material:** Sturdy cloth/leather.
+  - **Waist:** Tactical belt with holsters.
+  - **Length:** Tucked into boots.
+- **Footwear:** Silent soft-soled boots.
+- **Accessories:** Twin daggers; mask/hood; poison vials.
 
 [H]
-- **Hijab:** Black ninja-style wrap or tight hood covering neck and chest
-- **Top:** Form-fitting black modest bodysuit or tunic with armored bracers
-- **Bottom:** Tactical trousers or leggings with skirt overlay
-- **Footwear:** Silent boots
-- **Accessories:** Twin daggers, poison vials, mask (optional)
-- **Makeup:** Cold calculating expression, minimal makeup
+- **Hijab:** Black ninja-style wrap or tight hood.
+- **Top:** Form-fitting modest bodysuit or tunic with armored bracers.
+  - **Fit:** Tight modest.
+  - **Material:** Matte black fabric/leather.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tactical trousers or leggings with skirt overlay.
+  - **Fit:** Slim-fit.
+  - **Material:** Heavy fabric.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Silent boots.
+- **Accessories:** Twin daggers; poison vials; mask.

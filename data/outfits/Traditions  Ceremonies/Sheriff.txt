@@ -1,23 +1,47 @@
 tags: [Authority, Job, Western]
 
 [F]
-- **Top:** Khaki uniform shirt (short sleeves with epaulettes, badge over left pocket, multiple pockets with button flaps)
-- **Bottom:** dark brown leather duty belt (with holster, handcuffs, radio)
-- **Footwear:** matching khaki pants (straight leg with pressed crease); **black duty boots** (polished leather, lace-up).
-- **Accessories:** Silver star badge, wide-brimmed campaign hat (Smokey Bear style) in khaki, aviator sunglasses, leather gloves tucked in belt.
-- **Hair/Makeup:** Hair in tight professional bun or low ponytail, minimal makeup, authoritative expression, no-nonsense demeanor.
+- **Top:** Khaki uniform shirt.
+  - **Fit:** Tailored professional.
+  - **Material:** Cotton/Poly blend.
+  - **Pattern:** Solid Khaki with Badge.
+  - **Neckline:** Collared with Epaulettes.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Khaki duty trousers.
+  - **Fit:** Straight leg with pressed crease.
+  - **Material:** Industrial cotton twill.
+  - **Waist:** Leather duty belt with holster.
+  - **Length:** Full length.
+- **Footwear:** Polished black duty boots.
+- **Accessories:** Silver star badge; campaign hat; aviators; leather gloves.
 
 [M]
-- **Top:** Khaki uniform shirt (short sleeves with epaulettes, badge over left pocket, multiple pockets with button flaps)
-- **Bottom:** dark brown leather duty belt (with holster, handcuffs, radio)
-- **Footwear:** matching khaki pants (straight leg with pressed crease); **black duty boots** (polished leather, lace-up).
-- **Accessories:** Silver star badge, wide-brimmed campaign hat, aviator sunglasses.
-- **Hair/Makeup:** Short strict haircut, clean-shaven or mustache, authoritative expression.
+- **Top:** Khaki uniform shirt.
+  - **Fit:** Sharp tailored.
+  - **Material:** Industrial fabric.
+  - **Pattern:** Khaki.
+  - **Neckline:** Collared with badge.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Matching khaki pants.
+  - **Fit:** Straight.
+  - **Material:** Twill.
+  - **Waist:** Dark brown leather duty belt.
+  - **Length:** Full length.
+- **Footwear:** Black duty boots.
+- **Accessories:** Silver star badge; campaign hat; aviators.
 
 [H]
-- **Hijab:** Khaki hijab (neat military tuck) under campaign hat
-- **Top:** Khaki uniform tunic (long sleeves with epaulettes, badge, multiple pockets, mid-thigh length)
-- **Bottom:** Matching khaki trousers (straight leg)
-- **Footwear:** Black duty boots
-- **Accessories:** Silver star badge, wide-brimmed campaign hat, aviator sunglasses
-- **Makeup:** Minimal makeup, authoritative expression
+- **Hijab:** Khaki hijab in neat military tuck.
+- **Top:** Khaki uniform tunic.
+  - **Fit:** Modest mid-thigh tunic.
+  - **Material:** Industrial twill.
+  - **Pattern:** Khaki.
+  - **Neckline:** High collar with badge.
+  - **Sleeve:** Long sleeves with epaulettes.
+- **Bottom:** Matching khaki trousers.
+  - **Fit:** Straight leg.
+  - **Material:** Twill.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Black duty boots.
+- **Accessories:** Silver star badge; campaign hat; aviators.

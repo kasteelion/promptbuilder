@@ -3,16 +3,49 @@ modifiers:
   Staff: ", holding a tall wooden staff topped with a large {signature_color} spirit-crystal, its grip bound in weathered leather"
 
 [F]
-- **Top:** Halter-style crossover wrap in white linen. Two wide fabric panels cross at the neck/upper chest, creating an X-shape that wraps around the back of the neck for support. The crossed panels create a large keyhole cutout at center chest before the fabric wraps snugly around the ribcage, ending just below the bust in a cropped silhouette that exposes the midriff. The wrap is secured at the back with ties or tuck. Prominent {signature_color} crystal pendant on leather cord rests at sternum. Wide leather belt with large {signature_color} spirit-crystal set into buckle at center front.
-
-- **Bottom:** Warrior wrap-skirt in white linen falling to knee-length with deep side splits for mobility. Central loincloth panel in matching white linen hangs from belt to mid-thigh, visible through the front opening. Leather leg wraps crisscrossing from ankle to mid-calf.{modifier}
+- **Top:** Halter-style crossover wrap exposing midriff.
+  - **Fit:** Cropped; Snug wrap; X-shape neck.
+  - **Material:** White linen.
+  - **Pattern:** Keyhole cutout.
+  - **Neckline:** Halter crossover.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Warrior wrap-skirt with deep side splits.
+  - **Fit:** Knee-length; Mobility focused.
+  - **Material:** White linen.
+  - **Pattern:** Central loincloth panel.
+  - **Waist:** Wide leather belt with {signature_color} crystal buckle.
+  - **Length:** Knee-length.
+- **Footwear:** Leather leg wraps (ankle to mid-calf).
+- **Accessories:** {signature_color} crystal pendant {modifier}.
 
 [M]
-- **Top:** Shirtless, Brown leather pauldron on shoulder with matching leather vambrace on forearm. Prominent {signature_color} crystal pendant on leather cord at sternum. Wide leather belt with large {signature_color} spirit-crystal buckle at center front.
-
-- **Bottom:** Warrior's kilt in brown and white linen falling to just above knee with central white loincloth panel extending from belt to mid-thigh. Leather leg wraps crisscrossing from ankle to mid-calf.{modifier}
+- **Top:** Shirtless with shoulder pauldron and vambrace.
+  - **Fit:** Bare midriff.
+  - **Material:** Brown leather.
+  - **Pattern:** Solid.
+  - **Neckline:** Open.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Warrior's kilt above knee.
+  - **Fit:** Relaxed kilt.
+  - **Material:** Brown and White linen.
+  - **Pattern:** White loincloth panel.
+  - **Waist:** Wide leather belt with crystal buckle.
+  - **Length:** Mid-thigh.
+- **Footwear:** Crisscrossing leather leg wraps.
+- **Accessories:** Crystal pendant; leather armor pieces {modifier}.
 
 [H]
-- **Top:** Long-sleeve white linen tunic base layer. Brown leather pauldron on shoulder with matching vambrace. White linen hijab wrapped securely for movement. Prominent {signature_color} crystal pendant on leather cord at sternum. Wide leather belt with large {signature_color} spirit-crystal buckle.
-
-- **Bottom:** Warrior wrap-skirt in white linen falling to knee-length with modest side splits, worn over ankle-length brown linen sirwal (loose trousers). Central white loincloth panel hangs from belt to mid-thigh. Leather leg wraps over sirwal from ankle to mid-calf.{modifier}
+- **Hijab:** White linen hijab wrapped securely for movement.
+- **Top:** Long-sleeve white linen tunic with leather pauldron.
+  - **Fit:** Modest layered.
+  - **Material:** Linen; Brown leather armor.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves with vambrace.
+- **Bottom:** Warrior wrap-skirt over ankle-length sirwal.
+  - **Fit:** Modest layered layers.
+  - **Material:** White and Brown linen.
+  - **Pattern:** Loincloth panel overlay.
+  - **Waist:** Wide leather belt with crystal buckle.
+  - **Length:** Floor-length.
+- **Footwear:** Leather leg wraps over sirwal.
+- **Accessories:** Crystal pendant; tall spirit-crystal staff.

@@ -1,23 +1,46 @@
 tags: [fantasy, Magic]
 
 [F]
-- **Top:** Fitted bodice or corset (((default:rich jewel tones - emerald, sapphire, ruby) or (signature)) with magical shimmer)
-- **Bottom:** flowing skirt with high slits (for mobility, layered with sheer overlay)
-- **Footwear:** arm sleeves (detached, sheer with arcane patterns); **heeled boots or strappy sandals**.
-- **Accessories:** Ornate staff or wand, crystal jewelry (necklace, circlet, rings), magical tome or grimoire, glowing amulet.
-- **Hair/Makeup:** Long dramatic hair (often with unnatural colors - silver, violet, crimson) in flowing curls, dramatic makeup with shimmer, mystical eyes, confident powerful expression.
+- **Top:** Fitted bodice or corset with magical shimmer.
+  - **Fit:** Skin-tight; Structured.
+  - **Material:** Silk or Satin with iridescent finish.
+  - **Pattern:** Jewel tones ((emerald, sapphire, ruby)).
+  - **Neckline:** Sweetheart or Scoop.
+  - **Sleeve:** Detached sheer arm sleeves with arcane patterns.
+- **Bottom:** Layered flowing skirt with high slits.
+  - **Fit:** Flared with sheer overlay.
+  - **Material:** Organza and Silk.
+  - **Pattern:** Ethereal shimmer.
+  - **Waist:** Natural with crystal jewelry.
+  - **Length:** Floor-length.
+- **Footwear:** Heeled boots or strappy sandals.
+- **Accessories:** Ornate staff or wand; crystal circlet; magical grimoire; glowing amulet.
 
 [M]
-- **Top:** Fitted tunic or vest (((default:rich jewel tones - emerald, sapphire, ruby) or (signature)) with magical shimmer)
-- **Bottom:** fitted pants
-- **Footwear:** flowing long coat or robe (open front); **heeled boots**.
-- **Accessories:** Ornate staff or wand, crystal jewelry (necklace, rings), magical tome or grimoire, glowing amulet.
-- **Hair/Makeup:** Stylish hair (often with unnatural colors - silver, violet, crimson), sharp features, mystical eyes, confident powerful expression.
+- **Top:** Fitted tunic or vest with magical shimmer.
+  - **Fit:** Tailored.
+  - **Material:** Shimmering fabric.
+  - **Neckline:** V-neck.
+  - **Sleeve:** Long coat or robe (open front).
+- **Bottom:** Fitted pants.
+  - **Fit:** Slim-fit.
+  - **Material:** fabric.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Heeled leather boots.
+- **Accessories:** Ornate staff; wand; grimoire; glowing crystal jewelry.
 
 [H]
-- **Hijab:** Shimmering silk hijab in ((default:jewel tone - emerald, sapphire, ruby) or (signature)) with circlet
-- **Top:** Fitted bodice or corset over sheer long-sleeve overlay or matching top
-- **Bottom:** Flowing full skirt with modest layers
-- **Footwear:** Heeled boots
-- **Accessories:** Staff or wand, crystal jewelry, glowing amulet
-- **Makeup:** Dramatic shimmer makeup, mystical eyes
+- **Hijab:** Shimmering silk hijab in jewel tones with circlet.
+- **Top:** Fitted bodice over modest long-sleeve matching top.
+  - **Fit:** Layered modest.
+  - **Material:** Silk; Satin.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Flowing full skirt with modest layers.
+  - **Fit:** A-line.
+  - **Material:** Modest opaque fabric.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Heeled boots.
+- **Accessories:** Staff or wand; crystal jewelry; glowing amulet.

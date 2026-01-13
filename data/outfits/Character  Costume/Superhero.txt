@@ -1,23 +1,46 @@
 tags: [costume, hero]
 
 [F]
-- **Top:** ((default:White) or (signature)) **bodysuit** (form-fitting spandex with high-cut legs)
-- **Bottom:** distinctive **circular cutout** at center chest
-- **Footwear:** short ((default:white) or (signature)) **cape** (attached at shoulders); ((default:white) or (signature)) **gloves** (wrist-length); ((default:white) or (signature)) **boots** (knee-high with low heel).
-- **Accessories:** Gold belt with circular buckle, optional gold accents on costume edges.
-- **Hair/Makeup:** Strong heroic expression, hair styled for action.
+- **Top:** Form-fitting spandex bodysuit ((default:white)).
+  - **Fit:** Skin-tight; High-cut legs.
+  - **Material:** Spandex.
+  - **Pattern:** Distinctive circular cutout at center chest.
+  - **Neckline:** High-neck with cutout.
+  - **Sleeve:** Wrist-length gloves.
+- **Bottom:** Integrated bodysuit legs.
+  - **Fit:** Skin-tight.
+  - **Material:** Spandex.
+  - **Waist:** Gold belt with circular buckle.
+  - **Length:** Full-length (gloves and boots).
+- **Footwear:** Knee-high boots with low heel.
+- **Accessories:** Short white cape; gold accents on edges.
 
 [M]
-- **Top:** Form-fitting ((default:two-tone geometric) or (signature)) **muscle-suit** (no logo)
-- **Bottom:** full-length **tights**
-- **Footwear:** tactical vest or chest armor; knee-high **armored boots**.
-- **Accessories:** Utility belt, protective gauntlets, optional cape.
-- **Hair/Makeup:** Determined heroic expression, short neat or action-styled hair.
+- **Top:** Form-fitting two-tone geometric muscle-suit (no logo).
+  - **Fit:** Skin-tight muscle-fit.
+  - **Material:** Spandex blend.
+  - **Neckline:** Tactical vest or chest armor.
+  - **Sleeve:** Long.
+- **Bottom:** Full-length tights.
+  - **Fit:** Tight.
+  - **Material:** fabric.
+  - **Waist:** Utility belt.
+  - **Length:** Full.
+- **Footwear:** Knee-high armored boots.
+- **Accessories:** Protective gauntlets; (optional) cape.
 
 [H]
-- **Hijab:** Sports hijab (((default:emerald green, royal blue, or deep purple) or (signature)) - breathable technical fabric, secured for action)
-- **Top:** Form-fitting athletic **bodysuit** (((default:emerald green, royal blue, or deep purple) or (signature)) with metallic accents and geometric patterns); **armored chest plate** or reinforced bodice
-- **Bottom:** Full-length matching athletic leggings or bodysuit bottom
-- **Footwear:** Armored **boots** (knee-high, tactical design)
-- **Accessories:** Utility belt (tactical with pouches), Cape (optional, attached at shoulders), protective gauntlets or arm guards, hero mask (optional, coordinating with hijab)
-- **Makeup:** strong defined brows visible, natural makeup with focus on eyes, determined heroic expression
+- **Hijab:** Technical fabric sports hijab ((default:emerald green)).
+- **Top:** Athletic bodysuit with armored chest plate.
+  - **Fit:** Skin-tight athletic.
+  - **Material:** technical fabric with metallic accents.
+  - **Pattern:** Geometric patterns.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves with gauntlets.
+- **Bottom:** Full-length matching athletic leggings.
+  - **Fit:** Skin-tight.
+  - **Material:** matching.
+  - **Waist:** Utility belt with pouches.
+  - **Length:** Full length.
+- **Footwear:** Knee-high tactical armored boots.
+- **Accessories:** Cape (optional); protectie gauntlets; (optional) hero mask.

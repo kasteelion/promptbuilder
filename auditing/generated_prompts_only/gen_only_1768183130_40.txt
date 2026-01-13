@@ -1,0 +1,59 @@
+# METADATA
+Scene: Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter.
+Base_Prompt: Low-Poly 3D
+Character: Chiara Lombardi | Outfit: Sundress | Pose: None
+Character: Siofra Quinn | Outfit: Lumberjack | Pose: None
+Score: 220
+
+Generate an image of: Rendering
+Flat-shaded retro 3D render engine style (reminiscent of PS1/N64). No smoothing groups; visible polygon triangulation. Lighting is baked-in vertex coloring or simple gouraud shading. vibrant, matte colors with zero surface texture (no noise or grain).
+
+Character Accuracy
+Facial features are reduced to minimum geometry. Eyes are texture-mapped stickers or simple geometric planes. Expressions are exaggerated and iconic to compensate for lack of detail.
+
+Body Types
+Blocky, chunky proportions. Hands are "mitten" style or simple blocks. Limbs are cylinders or cuboids with visible joints. The silhouette is jagged and distinctly digital.
+
+Hair & Clothing
+Hair: Solid "helmet" meshes with sharp spikes or blocky forms. Clothing: Painted directly onto the mesh topology. Folds are represented by sharp triangular color changes rather than geometry.
+
+Details
+Floating geometry items. distinct "aliasing" or jagged pixel edges. Shadows are simple drop-shadow circles. Backgrounds use solid distinct colors or gradients to make the model pop.
+
+---
+
+**SCENE/SETTING:**
+Cozy coffee shop interior, warm ambient lighting, wooden tables, comfortable seating, steaming cups on counter.
+---
+
+**CHARACTER: Chiara Lombardi**
+**Appearance:**
+* **Body:** Soft Classic frame; natural–wave flesh blend; balanced proportions with gentle curve; moderate vertical.
+* **Face:** Balanced sculpted facial structure; oval face; soft cheek fullness; strong brows; expressive eyes; calm knowing expression.
+* **Hair:** Type 2B–2C waves; high density; layered medium-long cut; natural volume; loose part; satin finish.
+* **Skin:** Warm Mediterranean-toned skin with healthy glow.
+**Outfit:**
+- **Top:** **Lightweight floral sundress** (knee-length or midi, thin straps or ruffled sleeves)
+- **Bottom:** flowy skirt of the dress
+- **Footwear:** Strappy **sandals** or espadrilles.
+- **Accessories:** Wide-brim straw hat, woven wicker bag, sunglasses.
+- **Hair/Makeup:** Loose waves, sun-kissed makeup, glowing skin.
+**Pose/Action:**
+wide shot with the character framed within the environment, Pointing a sword or weapon directly at the camera with a cold, unwavering gaze, radiating lethal intent.
+---
+
+**CHARACTER 2: Siofra Quinn**
+**Appearance:**
+* **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
+* **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
+* **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
+* **Skin:** Fair neutral skin with weathered undertone.
+**Outfit:**
+- **Top:** Red and black buffalo plaid flannel shirt (thick cotton, buttoned or worn open over a white tank)
+- **Bottom:** distressed blue jeans (straight leg, rugged denim)
+- **Footwear:** brown leather work boots.
+- **Accessories:** Leather belt with large buckle, small axe prop (optional), wool beanie.
+- **Hair/Makeup:** Loose natural waves or a messy bun, minimal "outdoorsy" makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing on hands, body perfectly vertical, legs locked together, focused balance.
+---

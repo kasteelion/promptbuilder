@@ -1,0 +1,74 @@
+# METADATA
+Scene: Mystical forest, ethereal mist, unusual lighting, fairy-tale atmosphere, magical mysterious energy.
+Base_Prompt: Digital Painting: "Expressive Impasto"
+Character: Lucía Reyes | Outfit: Spirit Priestess Warrior | Pose: None
+Character: Zara Washington | Outfit: Spirit Priestess Warrior | Pose: None
+Character: Keiko Yamamoto | Outfit: Spirit Priestess Warrior | Pose: None
+Interaction: Custom
+Score: 153
+
+Generate an image of: Rendering
+Thick, painterly application simulating oil or acrylics. Visible brush strokes with directional texture. Heavy use of "Chiaroscuro" (dramatic light and dark contrast). Edges range from sharp palette-knife cuts to soft blended strokes.
+
+Character Accuracy
+Likeness is captured through value planes rather than outlines. Features are constructed by blocks of color. Expressions are emotive and moody, emphasizing the "feeling" of the character over precise anatomy.
+
+Body Types
+Figures are sculpted with light and shadow. The solidity of the form is conveyed through the direction of the brushstrokes (e.g., strokes wrapping around the arm). Anatomy is artistic and interpretive.
+
+Hair & Clothing
+Hair: Painted as large masses and shapes, with loose strokes indicating strands. Clothing: Fabric texture is suggested by the roughness of the brushwork. Highlights on cloth are thick dabs of paint.
+
+Details
+Canvas weave texture visible in the background. Color vibration (placing complementary colors next to each other). Atmospheric perspective is achieved through loose, hazy brushwork in the distance.
+
+---
+
+**SCENE/SETTING:**
+Mystical forest, ethereal mist, unusual lighting, fairy-tale atmosphere, magical mysterious energy.
+---
+
+**CHARACTER: Lucía Reyes**
+**Appearance:**
+* **Body:** Romantic frame; wave plush softness; full hourglass proportions; moderate vertical.
+* **Face:** Rounded facial structure; heart-shaped face; full cheeks; warm expressive eyes; joyful resting expression.
+* **Hair:** Type 2B–2C waves; high density; long layered cut; side part; healthy sheen.
+* **Skin:** Warm golden skin with radiant glow.
+**Outfit:**
+- **Top:** Halter-style crossover wrap in white linen. Two wide fabric panels cross at the neck/upper chest, creating an X-shape that wraps around the back of the neck for support. The crossed panels create a large keyhole cutout at center chest before the fabric wraps snugly around the ribcage, ending just below the bust in a cropped silhouette that exposes the midriff. The wrap is secured at the back with ties or tuck. Prominent vibrant color crystal pendant on leather cord rests at sternum. Wide leather belt with large vibrant color spirit-crystal set into buckle at center front.
+
+- **Bottom:** Warrior wrap-skirt in white linen falling to knee-length with deep side splits for mobility. Central loincloth panel in matching white linen hangs from belt to mid-thigh, visible through the front opening. Leather leg wraps crisscrossing from ankle to mid-calf.
+**Pose/Action:**
+full body shot showing the character from head to toe, Traditional Japanese bow, upper body bent forward, hands positioned respectfully, formal posture.
+---
+
+**CHARACTER 2: Zara Washington**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
+* **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
+* **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
+* **Skin:** Deep rich brown skin with luminous depth.
+**Outfit:**
+- **Top:** Halter-style crossover wrap in white linen. Two wide fabric panels cross at the neck/upper chest, creating an X-shape that wraps around the back of the neck for support. The crossed panels create a large keyhole cutout at center chest before the fabric wraps snugly around the ribcage, ending just below the bust in a cropped silhouette that exposes the midriff. The wrap is secured at the back with ties or tuck. Prominent vibrant color crystal pendant on leather cord rests at sternum. Wide leather belt with large vibrant color spirit-crystal set into buckle at center front.
+
+- **Bottom:** Warrior wrap-skirt in white linen falling to knee-length with deep side splits for mobility. Central loincloth panel in matching white linen hangs from belt to mid-thigh, visible through the front opening. Leather leg wraps crisscrossing from ankle to mid-calf.
+**Pose/Action:**
+full body shot showing the character from head to toe, Looking up towards a beam of light from above, arms open wide, expression of pure serenity and overwhelming power.
+---
+
+**CHARACTER 3: Keiko Yamamoto**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact athletic proportions; petite vertical line; sharp and energized presence.
+* **Face:** Angular sculpted structure; square-leaning oval face; strong jawline; intense dark brown eyes; restrained confident expression that reflects her focused discipline.
+* **Hair:** Type 1 straight; medium density; dark black with matte texture; choppy layers and versatile alternative styling options; drawn to sharp, Edgy cuts.
+* **Skin:** Light neutral skin with matte clarity; smooth even finish. sharp professional black-framed rectangular glasses
+**Outfit:**
+- **Top:** Halter-style crossover wrap in white linen. Two wide fabric panels cross at the neck/upper chest, creating an X-shape that wraps around the back of the neck for support. The crossed panels create a large keyhole cutout at center chest before the fabric wraps snugly around the ribcage, ending just below the bust in a cropped silhouette that exposes the midriff. The wrap is secured at the back with ties or tuck. Prominent vibrant color crystal pendant on leather cord rests at sternum. Wide leather belt with large vibrant color spirit-crystal set into buckle at center front.
+
+- **Bottom:** Warrior wrap-skirt in white linen falling to knee-length with deep side splits for mobility. Central loincloth panel in matching white linen hangs from belt to mid-thigh, visible through the front opening. Leather leg wraps crisscrossing from ankle to mid-calf.
+**Pose/Action:**
+full body shot showing the character from head to toe, Showing back, looking over shoulder, hair swept to one side, elegant revealing pose.
+---
+
+**Additional Notes:**
+Cinematic lighting, high detail.

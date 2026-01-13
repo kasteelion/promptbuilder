@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import messagebox
 from typing import Callable, Dict
 
-from config import THEMES
+from core.config import THEMES
 
 
 class MenuManager:

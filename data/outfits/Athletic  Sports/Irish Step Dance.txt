@@ -1,23 +1,46 @@
 tags: []
 
 [F]
-- **Top:** Traditional dress (solid color - emerald green, royal blue, or black with Celtic embroidery and crystals)
-- **Bottom:** fitted bodice with high neck and long sleeves or cap sleeves
-- **Footwear:** full skirt (above knee, pleated or A-line); **Irish dance hard shoes** (black leather with fiberglass heel and toe taps).
-- **Accessories:** Celtic brooch or cape clasp, matching headband or tiara, competition number pinned to dress, white or tan poodle socks.
-- **Hair/Makeup:** Tight ringlet curls (wig or styled), hair pulled back with decorative headband, natural stage makeup with defined eyes and pink lips.
+- **Top:** Traditional dance dress.
+  - **Fit:** Fitted bodice.
+  - **Material:** Stiff velvet or satin.
+  - **Pattern:** Celtic embroidery.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long or Cap sleeves.
+- **Bottom:** Stiff pleated skirt (part of dress).
+  - **Fit:** A-line stiff.
+  - **Material:** Heavy satin.
+  - **Waist:** Natural.
+  - **Length:** Above knee.
+- **Footwear:** Irish dance hard shoes (black leather).
+- **Accessories:** Celtic brooch, tiara, poodle socks.
 
 [M]
-- **Top:** Dress shirt (black or colored) with **tie**
-- **Bottom:** tailored black trousers or **traditional kilt** (solid color)
-- **Footwear:** fitted waistcoat (often with Celtic embroidery); **Irish dance hard shoes** (black leather).
-- **Accessories:** Celtic brooch, competition number pinned to vest.
-- **Hair/Makeup:** Neat grooming, hair styled away from face.
+- **Top:** Dress shirt with tie.
+  - **Fit:** Fitted.
+  - **Material:** Cotton.
+  - **Neckline:** Collared.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored trousers or Kilt.
+  - **Fit:** Tailored.
+  - **Material:** Wool gabardine.
+  - **Pattern:** Solid Black.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Irish dance hard shoes.
+- **Accessories:** Fitted waistcoat, brooch.
 
 [H]
-- **Hijab:** Matching colored hijab (emerald green, royal blue, or black) with Celtic knotwork pin or headband
-- **Top:** Long-sleeve traditional dress (high neck, fitted bodice)
-- **Bottom:** Full skirt (knee length or longer) worn with opaque black leggings for modesty
-- **Footwear:** Irish dance hard shoes
-- **Accessories:** Celtic brooch, competition number
-- **Makeup:** Stage makeup with defined eyes
+- **Hijab:** Matching colored hijab with Celtic knotwork pin.
+- **Top:** Long-sleeve traditional dress.
+  - **Fit:** Fitted modest bodice.
+  - **Material:** Heavy velvet.
+  - **Pattern:** Celtic embroidery.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full skirt with opaque leggings.
+  - **Fit:** A-line stiff.
+  - **Material:** Satin.
+  - **Length:** Knee length or longer.
+- **Footwear:** Irish dance hard shoes.
+- **Accessories:** Celtic brooch.

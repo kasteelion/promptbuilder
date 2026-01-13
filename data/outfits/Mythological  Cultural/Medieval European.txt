@@ -1,29 +1,45 @@
 tags: [Cultural, historical, medieval, Noble]
 
 [F]
-- **Top:** Fitted bodice (velvet or brocade in rich colors - burgundy, royal blue, forest green) with **long flowing sleeves**
-- **Bottom:** full skirt (multiple layers)
-- **Footwear:** pointed shoes.
-- **Accessories:** Crown or circlet, jeweled necklace and rings, decorative belt.
-- **Hair/Makeup:** Hair in elaborate braids or loose curls with jeweled nets, natural rosy makeup, fair complexion.
-
----
+- **Top:** Fitted bodice and long flowing sleeves.
+  - **Fit:** Fitted bodice; Flowing sleeves.
+  - **Material:** Velvet or Brocade in rich colors.
+  - **Pattern:** Solid or Scrollwork.
+  - **Neckline:** Square neck or Scoop neck.
+  - **Sleeve:** Long flowing bell sleeves.
+- **Bottom:** Full layered skirt.
+  - **Fit:** Voluminous.
+  - **Material:** matching velvet/brocade.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Pointed slippers or boots.
+- **Accessories:** Crown or circlet; jeweled necklace and rings; decorative belt.
 
 [M]
-- **Top:** Tunic (velvet or brocade in rich colors - burgundy, royal blue, forest green) with gold embroidery
-- **Bottom:** fitted pants or hose
-- **Footwear:** cape or cloak with fur trim; **leather boots**.
-- **Accessories:** Crown, jeweled rings, ornate sword and belt, ermine-trimmed robes.
-- **Hair/Makeup:** Styled hair (short or shoulder-length), neat beard or clean-shaven, regal bearing.
-
----
+- **Top:** Embroidered tunic and fur-trimmed cloak.
+  - **Fit:** Structured; Regal.
+  - **Material:** Velvet or Brocade; Gold embroidery; Fur trim.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long.
+- **Bottom:** Fitted pants or hose.
+  - **Fit:** Fitted legs.
+  - **Material:** matching wool or silk.
+  - **Waist:** Ornate sword belt.
+  - **Length:** Full.
+- **Footwear:** Leather boots.
+- **Accessories:** Crown; jeweled rings; ornate sword; ermine-trimmed robes.
 
 [H]
-- **Hijab:** Elegant medieval-style veil or wimple in rich color (burgundy, royal blue, forest green) with jeweled circlet or crown over it
-- **Top:** Long-sleeve fitted bodice (velvet or brocade in rich colors with ornate details, high neckline) with flowing sleeves
-- **Bottom:** Full layered skirt (multiple layers in coordinating rich fabrics, floor-length)
-- **Footwear:** Pointed shoes
-- **Accessories:** Crown or circlet over hijab, jeweled necklace and rings, decorative belt
-- **Makeup:** Natural rosy makeup, fair complexion aesthetic
-
----
+- **Hijab:** Elegant medieval-style veil or wimple with jeweled circlet.
+- **Top:** Long-sleeve fitted bodice with flowing sleeves.
+  - **Fit:** Modest fitted.
+  - **Material:** Velvet or Brocade.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long flowing sleeves.
+- **Bottom:** Full layered skirt.
+  - **Fit:** Voluminous.
+  - **Material:** matching coordinating rich fabrics.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Pointed shoes.
+- **Accessories:** Crown or circlet over hijab; jeweled necklace/rings; decorative belt.

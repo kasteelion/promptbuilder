@@ -1,0 +1,59 @@
+# METADATA
+Scene: Infinity pool overlooking ocean, palm trees, lounge chairs, tropical drinks, luxury vacation vibe.
+Base_Prompt: Watercolor Impressionistic
+Character: Rafael Costa | Outfit: Soft Aesthetic | Pose: None
+Character: Marley Thompson | Outfit: Soft Aesthetic | Pose: None
+Score: 400
+
+Generate an image of: Rendering
+Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines.
+
+Character Accuracy
+Facial features are suggested through shadow shapes and color temperature shifts rather than line art. Eyes and expressions are soft and diffused. Likeness is captured through "gestural" paint application rather than photographic precision.
+
+Body Types
+Figures are grounded in gesture drawing techniques. Limbs and torso shapes are defined by broad washes of color. Edges of the body dissolve softly into the background, creating a dreamy, ethereal connection to the environment.
+
+Hair & Clothing
+Hair: Rendered as loose, flowing pools of color with wet edges. Clothing: Fabrics are depicted through variegation in color saturation. Folds are soft gradients where paint creates "blooms." No sharp stitching or texture detailing.
+
+Details
+Splatter droplets, dry-brush scratch marks, and visible pencil under-drawing. The palette is harmonious and desaturated. Backgrounds are abstract washes suggesting environment without explicit detail.
+
+---
+
+**SCENE/SETTING:**
+Infinity pool overlooking ocean, palm trees, lounge chairs, tropical drinks, luxury vacation vibe.
+---
+
+**CHARACTER: Rafael Costa**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with slight wave; balanced proportions with gentle breadth; moderate vertical; relaxed athletic build with natural ease.
+* **Face:** Balanced-warm facial structure; oval-to-square face; warm expressive eyes; defined brows; easy smile; open welcoming expression.
+* **Hair:** Type 3A curls; high density; medium-length tousled cut; natural volume; soft matte-satin finish; often pushed back with slight forward fall.
+* **Skin:** Warm tan skin with golden undertones and healthy glow.
+**Outfit:**
+- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
+- **Bottom:** relaxed fit chinos or cropped pants (black or pastel)
+- **Footwear:** crew socks; **canvas sneakers or loafers**.
+- **Accessories:** Chain necklaces, small crossbody bag or backpack.
+- **Hair/Makeup:** Soft styled hair with face-framing pieces, minimal grooming.
+**Pose/Action:**
+Standing at kitchen counter, holding chef's knife, focused on chopping fresh vegetables on a cutting board, skilled culinary technique.
+---
+
+**CHARACTER 2: Marley Thompson**
+**Appearance:**
+* **Body:** Romantic frame; wave-lush flesh quality; voluptuous hourglass proportions with full bust (DD-E cup), dramatically defined waist, wide rounded hips, full thighs; moderate height (5'5"-5'6"); soft density with feminine curves throughout, rounded shoulders, shapely legs; magnetizing maternal presence.
+* **Face:** Soft-rounded facial structure; heart-to-round face shape; full cheeks with natural warmth; large expressive dark brown eyes, wide-set, warm inviting gaze; full lips with natural cupid's bow; soft jawline; neutral resting expression is serene and welcoming with gentle smile—radiates nurturing warmth and domestic contentment.
+* **Hair:** Type 4A coils; very high density; medium-long length (past shoulders); high volume and body; commonly worn in protective styles that are polished and feminine—twist-outs with defined curls, elegant bun with decorative pins, braided crown styles, occasionally heat-styled into bouncy curls for special occasions; natural black with warm brown undertones; always well-maintained and styled.
+* **Skin:** Deep warm brown with rich golden undertones; smooth luminous finish; healthy glow from good skincare; natural radiance.
+**Outfit:**
+- **Top:** Oversized **pastel striped long-sleeve shirt** or **anime graphic tee**
+- **Bottom:** pleated mini skirt (black, plaid, or pastel)
+- **Footwear:** thigh-high socks with stripes; **platform sneakers or Mary Janes**.
+- **Accessories:** Chain necklaces, hair clips, small crossbody bag.
+- **Hair/Makeup:** Blush on nose and cheeks, winged eyeliner, glossy lips, hair in space buns or half-up with face-framing pieces.
+**Pose/Action:**
+Standing with arms crossed confidently, relaxed shoulders, natural stance.
+---

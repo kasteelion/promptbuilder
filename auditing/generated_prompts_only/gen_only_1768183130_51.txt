@@ -1,0 +1,76 @@
+# METADATA
+Scene: Spacious modern kitchen with polished marble countertops and high-end stainless steel appliances. Warm pendant lighting over a central island. Scent of freshly ground coffee and herbs.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Lucía Reyes | Outfit: Swimming | Pose: None
+Character: Leonidas Stratos | Outfit: Swimming | Pose: None
+Character: Efe Kouadio | Outfit: Swimming | Pose: None
+Score: 555
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Spacious modern kitchen with polished marble countertops and high-end stainless steel appliances. Warm pendant lighting over a central island. Scent of freshly ground coffee and herbs.
+---
+
+**CHARACTER: Lucía Reyes**
+**Appearance:**
+* **Body:** Romantic frame; wave plush softness; full hourglass proportions; moderate vertical.
+* **Face:** Rounded facial structure; heart-shaped face; full cheeks; warm expressive eyes; joyful resting expression.
+* **Hair:** Type 2B–2C waves; high density; long layered cut; side part; healthy sheen.
+* **Skin:** Warm golden skin with radiant glow.
+**Outfit:**
+- **Top:** Performance one-piece swimsuit with a **solid black** central body panel for hydrodynamics
+- **Bottom:** contoured side panels in **white** framed by thin **black** piping
+- **Footwear:** racerback strap design with open back.
+- **Accessories:** White swim cap with **white** logo, mirrored racing goggles (blue).
+- **Hair/Makeup:** Wet skin texture, waterproof makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Defensive position, one arm extended in fist, other protecting face, alert watchful expression.
+---
+
+**CHARACTER 2: Leonidas Stratos**
+**Appearance:**
+* **Body:** Dramatic; elite athletic flesh; "Adonis belt" and deep core definition; broad square shoulders and a narrow, powerful waist; moderate-to-tall vertical (6'0"-6'2"); extremely high muscle density with sharp vascularity; movements are precise, economical, and explosive.
+* **Face:** Severe-classical structure; sharp, chiseled features; high nasal bridge; deep-set, hawk-like amber-brown eyes; prominent cheekbones and a squared, resolute jawline; neutral expression is intense and watchful, radiating a sense of absolute focus.
+* **Hair:** Type 1B-2A; medium density; disciplined short-to-medium silhouette; no defined part; low sheen; tight, disciplined crop or rough swept-back style. Dark chestnut or black.
+* **Skin:** Deep olive; warm golden undertones; smooth firm texture; surgically-precise scars on pectoral and outer thigh; tanned.
+**Outfit:**
+- **Top:** Performance one-piece swimsuit with a **solid black** central body panel for hydrodynamics
+- **Bottom:** contoured side panels in **white** framed by thin **black** piping
+- **Footwear:** racerback strap design with open back.
+- **Accessories:** White swim cap with **white** logo, mirrored racing goggles (blue).
+- **Hair/Makeup:** Wet skin texture, waterproof makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Low wrestling stance, arms extended ready to engage, knees bent, explosive ready energy.
+---
+
+**CHARACTER 3: Efe Kouadio**
+**Appearance:**
+- **Body:** Soft Natural frame; natural soft flesh; balanced proportions with gentle curves, defined waist, full hips, soft rounded features, moderate shoulders; moderate vertical (5’5”-5’6”); natural curvy build with soft harmonious lines and welcoming presence.
+- **Face:** Soft-balanced facial structure; round-oval face with warm open planes and full cheeks that enhance smile; expressive round-almond eyes with bright engaged quality, wide-set, warm dark brown with natural sparkle; full lips with natural upward curve that creates dimpled smile; smooth forehead; radiant joyful expression that lights up her whole face.
+- **Hair:** Type 4A coils; high density; medium-length natural textured style with defined curl pattern and bouncy voluminous shape; healthy soft finish with natural sheen; black to dark brown.
+- **Skin:** Deep warm brown with rich golden undertones and natural luminous dewy finish.
+**Outfit:**
+- **Top:** Performance one-piece swimsuit with a **solid black** central body panel for hydrodynamics
+- **Bottom:** contoured side panels in **white** framed by thin **black** piping
+- **Footwear:** racerback strap design with open back.
+- **Accessories:** White swim cap with **white** logo, mirrored racing goggles (blue).
+- **Hair/Makeup:** Wet skin texture, waterproof makeup.
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing with a skateboard tucked under one arm, relaxed posture, urban background.
+---

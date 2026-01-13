@@ -1,0 +1,77 @@
+# METADATA
+Scene: Large outdoor festival stage, crowd in foreground, colorful lights, summer celebration atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Amira Khalil | Outfit: Valentine's Set | Pose: None
+Character: Kaito Sato | Outfit: MMA | Pose: None
+Character: Siofra Quinn | Outfit: Volleyball | Pose: None
+Score: 580
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Large outdoor festival stage, crowd in foreground, colorful lights, summer celebration atmosphere.
+---
+
+**CHARACTER: Amira Khalil**
+**Appearance:**
+* **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
+* **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
+* **Hair / Covering:** Hair fully covered; hijab as constant identity anchor; smooth controlled drape with clean facial framing.
+* **Skin:** Warm olive-toned skin with soft luminous finish.
+**Outfit:**
+- **Hijab:** Red chiffon hijab; soft drape
+- **Top:** Red velvet long-sleeve wrap top
+- **Bottom:** Red tulle flowing skirt (midi or maxi)
+- **Footwear:** Red ballet flats with ribbon ties
+- **Accessories:** Heart-shaped earrings; heart pendant necklace
+- **Makeup:** Flushed cheeks; pink eyeshadow; romantic look
+**Pose/Action:**
+full body shot showing the character from head to toe, Defensive position, one arm extended in fist, other protecting face, alert watchful expression.
+---
+
+**CHARACTER 2: Kaito Sato**
+**Appearance:**
+* **Body:** Flamboyant Gamine frame; wiry and compact; defined, sinewy muscle (climber/skater build); shorter vertical (5'6"-5'7"); extremely agile and fast-twitch; straight lines with sharp edges; projects nervous, electric energy.
+* **Face:** Angular, diamond-shaped face; sharp, pointed chin; narrow eyes that are often squinting in focus or widening in adrenaline; mischievous grin that shows teeth; features are delicate but sharp.
+* **Hair:** Type 1B straight; medium density; undercut with a long, choppy top; bleached platinum blonde (almost white) with roots showing; often messy or swept forward.
+* **Skin:** Fair with cool undertones; prone to flushing when active; usually has a band-aid or small scrape on the cheek or knuckles.
+**Outfit:**
+- **Top:** Elite mixed martial arts kit for **The Iron Vipers**
+- **Bottom:** bare chest or **compression top** in **#1A1A1A** with **#E31837 side panels**
+- **Footwear:** board-style MMA shorts in **#1A1A1A** featuring a **reinforced split-seam** and **triple-stitched seams**; lightweight **ripstop fabric** with a **sublimated #E31837 logo** on the left leg; **4oz open-palm grappling gloves** in **#FFFFFF** with **extra wrist support**; **barefoot** with **athletic tape on toes**.
+- **Accessories:** Black mouthguard, hand wraps under gloves.
+- **Hair/Makeup:** Hair secured or short, fierce competitive expression, light sheen of sweat.
+**Pose/Action:**
+full body shot showing the character from head to toe, On mat in dominant position, knee on ground, controlled powerful posture, competitive intensity.
+---
+
+**CHARACTER 3: Siofra Quinn**
+**Appearance:**
+* **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
+* **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
+* **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
+* **Skin:** Fair neutral skin with weathered undertone.
+**Outfit:**
+- **Top:** Fitted sleeveless performance jersey for **The Iron Vipers** featuring **asymmetric shoulder panels** and **laser-cut hexagonal ventilation holes**
+- **Bottom:** body matching jersey base color with **sublimated geometric pattern**
+- **Footwear:** fabric is a **high-sheen technical spandex** with a **micro-perforated back panel**; **bold metallic team number** centered on the chest and back; **high-waist compression shorts** matching base color with **wide comfort waistband** and **reinforced flatlock seams**; **low-profile gel-cushioned knee pads**; **professional court shoes** (#FFFFFF) featuring **gum rubber soles**.
+- **Accessories:** Sweatbands with embroidered logo, athletic tape on fingers, matching hair ribbon.
+- **Hair/Makeup:** High tight ponytail with extreme volume, sweat-resistant performance makeup including **subtle shimmer on cheekbones** and a natural pink lip balm.
+**Pose/Action:**
+full body shot showing the character from head to toe, Deep lunge stretch, arms overhead or extended, focused concentration, warming up energy.
+---

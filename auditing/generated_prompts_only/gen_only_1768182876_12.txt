@@ -1,0 +1,59 @@
+# METADATA
+Scene: Narrow urban alleyway, view up a dark metal fire escape, wet pavement, harsh shadows, gritty late-night atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Enzo Rossi | Outfit: Parisian Chic | Pose: None
+Character: Kendra Mitchell | Outfit: Cold Weather - Athletic | Pose: None
+Score: 330
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Narrow urban alleyway, view up a dark metal fire escape, wet pavement, harsh shadows, gritty late-night atmosphere.
+---
+
+**CHARACTER: Enzo Rossi**
+**Appearance:**
+- **Body:** Dramatic Natural male frame; straight muscular flesh with low body fat; inverted triangle proportions with a broad chest, powerful shoulders, and defined arms; moderate-tall vertical (6'1"-6'2"); commanding presence with a solid, grounded build; athletic power without being over-bulked.
+- **Face:** Angular sculpted structure; square-leaning oval face; strong set jawline with a prominent chin; intense deep-set eyes, almond-shaped, dark espresso brown with a focused and assessing gaze; natural thick eyebrows with a slight downward slant at the inner corners; strong straight nose with a subtle Grecian profile; firm-but-expressive mouth held in a restrained confident line; neutral expression is intense and authoritative.
+- **Hair:** Type 2A–2B waves; medium-high density; medium-length layered cut with natural volume; worn tousled and pushed back; no rigid part; soft natural sheen; rich jet black with a healthy finish.
+- **Skin:** Warm olive skin with a smooth matte texture (Mediterranean heritage); even tone with a natural "healthy" radiance; clear planes with no visible imperfections; natural groomed finish.
+**Outfit:**
+- **Top:** Breton stripe shirt (navy and white long sleeve, boat neck)
+- **Bottom:** slim-fit chinos (camel or navy)
+- **Footwear:** leather loafers or **clean white sneakers**.
+- **Accessories:** Navy blazer (optional, thrown over shoulder), sunglasses, leather satchel.
+- **Hair/Makeup:** Natural styled hair, clean-shaven or stubble, effortless sophisticated vibe.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Mid-jump motion, rope blurred in motion, athletic form, training montage energy.
+---
+
+**CHARACTER 2: Kendra Mitchell**
+**Appearance:**
+* **Body:** Flamboyant Natural frame; straight athletic flesh; broad inverted triangle proportions with wide shoulders, long limbs, and subtle waist definition; tall (5'9"); strong defined muscle with visible shoulder caps, toned arms, and powerful legs; commanding physical presence.
+* **Face:** Strong angular structure; oblong-square face; prominent bone structure with high broad cheekbones; almond-shaped wide-set hazel-green eyes; strong defined jawline; neutral resting expression is confident and direct with penetrating gaze; smile is wide, genuine, and slightly asymmetric with infectious energy.
+* **Hair:** Type 3B curls; high density; shoulder-length layered cut; side part; voluminous natural texture; matte-satin finish; commonly worn loose and free or in high messy bun; warm chestnut brown with golden highlights.
+* **Skin:** Medium tan with warm golden undertones and healthy athletic glow; faint freckles across nose and shoulders.
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket (moisture-wicking, technical fabric)
+- **Bottom:** fleece-lined leggings (black or charcoal)
+- **Footwear:** waterproof hiking boots.
+- **Accessories:** Thermal gloves, headband ear-warmers, Sport sunglasses.
+- **Hair/Makeup:** Secure ponytail, fresh-faced "winter glow" makeup.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up, Arching backward with hands and feet on the ground, creating a graceful bridge, impressive flexibility.
+---

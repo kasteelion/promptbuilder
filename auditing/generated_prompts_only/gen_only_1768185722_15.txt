@@ -1,0 +1,63 @@
+# METADATA
+Scene: Cozy bedroom setting with soft diffused morning light through sheer curtains. Texture of crisp linen sheets and a heavy knit throw. Warm, quiet, intimate atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Siofra Quinn | Outfit: Cold Weather - Cozy | Pose: None
+Character: Enzo Rossi | Outfit: Italian Riviera Summer | Pose: None
+Interaction: Custom
+Score: 230
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Cozy bedroom setting with soft diffused morning light through sheer curtains. Texture of crisp linen sheets and a heavy knit throw. Warm, quiet, intimate atmosphere.
+---
+
+**CHARACTER: Siofra Quinn**
+**Appearance:**
+* **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
+* **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
+* **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
+* **Skin:** Fair neutral skin with weathered undertone.
+**Outfit:**
+- **Top:** Oversized chunky-knit cable sweater (cream, soft gray, or forest green)
+- **Bottom:** thick wool-blend leggings or corduroy pants
+- **Footwear:** fur-lined boots.
+- **Accessories:** Large infinity scarf, matching knit mittens and pom-pom beanie.
+- **Hair/Makeup:** Soft loose waves, rosy cheeks and berry-tinted lip.
+**Pose/Action:**
+full body shot showing the character from head to toe, Defensive position, one arm extended in fist, other protecting face, alert watchful expression.
+---
+
+**CHARACTER 2: Enzo Rossi**
+**Appearance:**
+- **Body:** Dramatic Natural male frame; straight muscular flesh with low body fat; inverted triangle proportions with a broad chest, powerful shoulders, and defined arms; moderate-tall vertical (6'1"-6'2"); commanding presence with a solid, grounded build; athletic power without being over-bulked.
+- **Face:** Angular sculpted structure; square-leaning oval face; strong set jawline with a prominent chin; intense deep-set eyes, almond-shaped, dark espresso brown with a focused and assessing gaze; natural thick eyebrows with a slight downward slant at the inner corners; strong straight nose with a subtle Grecian profile; firm-but-expressive mouth held in a restrained confident line; neutral expression is intense and authoritative.
+- **Hair:** Type 2A–2B waves; medium-high density; medium-length layered cut with natural volume; worn tousled and pushed back; no rigid part; soft natural sheen; rich jet black with a healthy finish.
+- **Skin:** Warm olive skin with a smooth matte texture (Mediterranean heritage); even tone with a natural "healthy" radiance; clear planes with no visible imperfections; natural groomed finish.
+**Outfit:**
+- **Top:** Linen button-down shirt (white or pale blue, rolled sleeves, unbuttoned at top)
+- **Bottom:** linen trousers (beige or white, relaxed fit)
+- **Footwear:** leather sandals or **loafers**.
+- **Accessories:** Panama hat, designer sunglasses, leather bracelet.
+- **Hair/Makeup:** Tousled hair, sun-kissed skin, relaxed vacation luxury.
+**Pose/Action:**
+full body shot showing the character from head to toe, Streamlined diving position, arms extended forward, body horizontal, entering water, competitive form.
+---
+
+**Additional Notes:**
+Siofra Quinn gently lifting Enzo Rossi's chin with fingers before or during kiss.

@@ -1,0 +1,83 @@
+# METADATA
+Scene: Small exam room, medical bed with paper cover, equipment on walls, sink, clinical sterile atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Kassandra Lykaios | Outfit: Tennis | Pose: None
+Character: Avery Blake | Outfit: Tennis | Pose: None
+Character: Hana Park | Outfit: Tennis | Pose: None
+Interaction: Custom
+Score: 590
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Small exam room, medical bed with paper cover, equipment on walls, sink, clinical sterile atmosphere.
+---
+
+**CHARACTER: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Outfit:**
+- **Top:** Performance tank top for **The Sovereign Guard** with **racerback design** and **contrast binding**
+- **Bottom:** body in **#4B0082** with **#D4AF37 color-blocked side panels** and **subtle team logo** on chest
+- **Footwear:** athletic skirt with built-in compression shorts in **#4B0082** featuring **#D4AF37 pleated inserts** and **contrast waistband with hidden ball pockets**; **tennis shoes** (#F5F5DC, court-appropriate with reinforced toe).
+- **Accessories:** Visor in **#4B0082** with **#D4AF37 logo**, matching wristbands, hair tie.
+- **Hair/Makeup:** Hair in sporty ponytail or braid with flyaways secured, minimal waterproof makeup with tinted lip balm, athletic glow.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Avery Blake**
+**Appearance:**
+* **Body:** Soft Natural frame; lean-toned flesh quality; athletic hourglass proportions with moderate bust (C cup), defined shoulders with visible arm tone, trim waist with toned abs, shapely hips, and powerful legs; moderate vertical (5'6"); athletic density with controlled strength, sculpted core, and muscular thighs; provocatively confident presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-heart shape; high defined cheekbones with dramatic contouring; large almond-shaped eyes in dark brown/black with heavy smokey eye makeup creating intense smoldering gaze, moderately spaced; straight refined nose; full pouty lips; strong defined jawline; neutral resting expression is sultry and defiant with piercing direct stare and slight knowing smirk that radiates "I dare you."
+
+* **Hair:** Type 1B straight; very high density; ultra-sleek long cut reaching mid-back to waist; center part or dramatic side-swept; jet-black color with raven shine; glass-smooth texture like liquid ink; commonly worn completely straight and flowing, half-up with volume at crown, or high ponytail; always impeccably smooth and glossy.
+
+* **Skin:** Very fair/pale with cool undertones and smooth porcelain-ivory finish;
+**Outfit:**
+- **Top:** Performance tank top for **The Sovereign Guard** with **racerback design** and **contrast binding**
+- **Bottom:** body in **#4B0082** with **#D4AF37 color-blocked side panels** and **subtle team logo** on chest
+- **Footwear:** athletic skirt with built-in compression shorts in **#4B0082** featuring **#D4AF37 pleated inserts** and **contrast waistband with hidden ball pockets**; **tennis shoes** (#F5F5DC, court-appropriate with reinforced toe).
+- **Accessories:** Visor in **#4B0082** with **#D4AF37 logo**, matching wristbands, hair tie.
+- **Hair/Makeup:** Hair in sporty ponytail or braid with flyaways secured, minimal waterproof makeup with tinted lip balm, athletic glow.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 3: Hana Park**
+**Appearance:**
+* **Body:** Soft Gamine frame; wave softness; compact rounded proportions; petite vertical.
+* **Face:** Delicate compact structure; round face; plush cheeks; large expressive eyes; youthful neutral expression.
+* **Hair:** Type 1 straight; fine-to-medium density; blunt shoulder-length cut; off-center part; smooth dewy finish; dark brown to black.
+* **Skin:** Light warm-beige skin with clear finish.
+**Outfit:**
+- **Top:** Performance tank top for **The Sovereign Guard** with **racerback design** and **contrast binding**
+- **Bottom:** body in **#4B0082** with **#D4AF37 color-blocked side panels** and **subtle team logo** on chest
+- **Footwear:** athletic skirt with built-in compression shorts in **#4B0082** featuring **#D4AF37 pleated inserts** and **contrast waistband with hidden ball pockets**; **tennis shoes** (#F5F5DC, court-appropriate with reinforced toe).
+- **Accessories:** Visor in **#4B0082** with **#D4AF37 logo**, matching wristbands, hair tie.
+- **Hair/Makeup:** Hair in sporty ponytail or braid with flyaways secured, minimal waterproof makeup with tinted lip balm, athletic glow.
+**Pose/Action:**
+full body shot showing the character from head to toe,
+---
+
+**Additional Notes:**
+Kassandra Lykaios and Avery Blake sitting on a bench or standing near a sideline, drinking from water bottles, sweat glistening, catching their breath after intense activity.

@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import colorchooser, messagebox, ttk
 from typing import Dict
 
-from config import DEFAULT_THEME
+from core.config import DEFAULT_THEME
 from utils import logger
 
 

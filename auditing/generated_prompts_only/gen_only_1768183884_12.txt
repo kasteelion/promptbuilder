@@ -1,0 +1,63 @@
+# METADATA
+Scene: Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Marcus Thompson | Outfit: Yoga Athleisure | Pose: None
+Character: Astrid Nielsen | Outfit: Yoga Athleisure | Pose: None
+Interaction: Custom
+Score: 435
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Modern shopping mall, polished floors, storefronts, bright lighting, busy commercial atmosphere.
+---
+
+**CHARACTER: Marcus Thompson**
+**Appearance:**
+* **Body:** Natural male frame; straight athletic flesh; inverted rectangle proportions; moderate-to-tall vertical.
+* **Face:** Balanced-strong facial structure; square-leaning oval face; defined jaw; warm eyes; calm open expression.
+* **Hair:** Type 4A coils; medium density; short fade with textured top; clean lineup; matte-satin finish; black.
+* **Skin:** Deep brown skin with neutral undertones.
+**Outfit:**
+- **Top:** tank top or fitted t-shirt, worn with oversized **zip-up hoodie** (worn open)
+- **Bottom:** Athletic joggers or shorts (stretchy technical fabric in solid color)
+- **Footwear:** **slip-on sneakers**.
+- **Accessories:** Yoga mat bag, water bottle, minimal jewelry.
+- **Hair/Makeup:** Hair in natural style or pulled back, fresh minimal grooming.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**CHARACTER 2: Astrid Nielsen**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight flesh; narrow balanced rectangle proportions; tall vertical line; refined posture with precise alignment; statuesque and poised.
+* **Face:** Long balanced facial structure; soft oval face; firm planar skin with clear definition; narrow straight nose; light blue deep-set eyes with cool observant gaze; serene neutral resting expression that suggests depth and composure.
+* **Hair:** Type 1 straight hair; medium density; platinum blonde with smooth high-shine finish; naturally straight and fine; takes blunt, precise cuts well.
+* **Skin:** Fair cool-toned skin with porcelain clarity and smooth even texture.
+**Outfit:**
+- **Top:** cropped **athletic tank or sports bra**, worn with oversized **zip-up hoodie or cardigan** (worn open)
+- **Bottom:** High-waist **yoga leggings** (stretchy technical fabric in solid color or subtle pattern)
+- **Footwear:** **slip-on sneakers**.
+- **Accessories:** Yoga mat bag, water bottle, minimal jewelry.
+- **Hair/Makeup:** Hair in messy bun or ponytail, fresh minimal makeup.
+**Pose/Action:**
+American cowboy shot showing the character from the mid-thigh up,
+---
+
+**Additional Notes:**
+Marcus Thompson giving Astrid Nielsen a thumbs up gesture, showing approval and encouragement

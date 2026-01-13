@@ -1,0 +1,63 @@
+# METADATA
+Scene: Vibrant urban street scene with modern glass buildings and a stone pedestrian area. Bright daylight with sharp reflections. Sound of distant traffic and city bustle, energetic atmosphere.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Aaliyah Chen | Outfit: Flag Football | Pose: None
+Character: Lila Reyes | Outfit: Flag Football | Pose: None
+Interaction: Custom
+Score: 422
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Vibrant urban street scene with modern glass buildings and a stone pedestrian area. Bright daylight with sharp reflections. Sound of distant traffic and city bustle, energetic atmosphere.
+---
+
+**CHARACTER: Aaliyah Chen**
+**Appearance:**
+* **Body:** Natural frame; natural flesh with slight wave softness; balanced athletic build with subtle curve; moderate height and vertical line; grounded and capable presence.
+* **Face:** Balanced-soft facial structure; oval face with gentle angles; warm expressive dark eyes with direct inviting gaze; soft jawline; serene neutral expression that easily breaks into a warm genuine smile.
+* **Hair:** Type 3B–3C curls; high density; natural dark brown curls with healthy volume and sheen; versatile styling options including loose curls and protective styles.
+* **Skin:** Warm golden-brown skin with a natural sun-touched glow and soft satin finish.
+**Outfit:**
+- **Top:** Flag football jersey for **Standard Team** in **white** with **black** accents (t-shirt cut)
+- **Bottom:** Athletic shorts with flag belt (velcro flags at hips)
+- **Footwear:** Cleats or turf shoes
+- **Accessories:** Mouthguard, wristbands.
+- **Hair/Makeup:** Ponytail.
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders,
+---
+
+**CHARACTER 2: Lila Reyes**
+**Appearance:**
+* **Body:** Soft Natural frame; straight athletic flesh; compact balanced proportions with short limbs; petite vertical (5'1"); lean athletic build (~115 lbs competition weight) with visible muscle definition—toned shoulders and arms, defined abs when flexed, developed glutes and quads, athletic density without extreme bulk; fit and strong presence in a small package.
+* **Face:** Balanced-soft structure; round-oval face (Filipino features) with gentle angles; full cheeks (genetic, visible even lean); large round-almond eyes, moderately spaced, deep dark brown; small refined nose; soft jawline shows slight definition at low body fat; neutral resting expression is focused and determined with quiet confidence.
+* **Hair:** Type 1B straight; very high density; long length to mid-back; high-gloss sheen; jet black; commonly worn in high ponytail (gym), sleek bun, or loose and straight (casual).
+* **Skin:** Deep tan with warm golden-brown undertones (Filipino coloring—naturally darker than East Asian); smooth healthy finish with natural warmth; slight muscle definition visible but not extreme.
+**Outfit:**
+- **Top:** Flag football jersey for **Standard Team**  (t-shirt cut)
+- **Bottom:** Athletic shorts with flag belt (velcro flags at hips)
+- **Footwear:** Cleats or turf shoes
+- **Accessories:** Mouthguard, wristbands.
+- **Hair/Makeup:** Ponytail.
+**Pose/Action:**
+high-detail close-up shot focusing on the face and shoulders,
+---
+
+**Additional Notes:**
+Aaliyah Chen and Lila Reyes locked in standing clinch, bodies pressed together in tight space. Both fighting for underhooks and overhooks—arms battling for dominant collar ties or body locks. Heads pressed together, foreheads touching or one head pressed to other's shoulder, preventing strikes. Hips close, each trying to control opponent's posture. Legs positioned in staggered stance for balance and potential knee strikes. Arms show muscle strain and grip tension, hands clasping behind head, neck, or back. Both pushing and pulling, testing weight distribution. Visible exertion in facial expressions—grimacing, heavy breathing. Sweat dripping, muscles flexed throughout upper body and core.

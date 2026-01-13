@@ -1,0 +1,60 @@
+# METADATA
+Scene: Eclectic vintage store, racks of retro clothing, antique decor, nostalgic treasure-hunt vibe.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Jax Chen | Outfit: MMA | Pose: None
+Character: Ines Santos | Outfit: MMA | Pose: None
+Score: 580
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Eclectic vintage store, racks of retro clothing, antique decor, nostalgic treasure-hunt vibe.
+---
+
+**CHARACTER: Jax Chen**
+**Appearance:**
+- **Body:** Explosive-Athletic frame; olive-toned skin with a vibrant, high-oxygenated flush; inverted triangle proportions with powerful, broad shoulders and a narrow, muscular waist; tall stature (6'1"-6'2"); high-performance build with dense, defined muscle groups and visible vascularity; "kinetic potential" presence—vibrant and dangerous.
+- **Face:** Sharp, aerodynamic structure; high, defined cheekbones; narrow, powerful jawline; intense, wide-set dark eyes that possess a piercing, high-speed focus; sharp, straight eyebrows with a low, aggressive set; straight, thin nose; firm mouth with a determined set; expression is one of maximum effort and singular focus.
+- **Hair:** Type 1A straight; medium density; kept in a sharp, high-fade with a short, textured top; matte-satin finish with vibrant neon orange tips that seem to vibrate with his movement.
+- **Skin:** Vibrant olive with warm, high-energy undertones; smooth, taut texture with visible "muscle-mapping" micro-textures in the dermis; beads of high-intensity sweat reflecting light; "high-performance" glow.
+**Outfit:**
+- **Top:** Elite mixed martial arts kit for **Standard Team**
+- **Bottom:** bare chest or **compression top** in **white** with **black side panels**
+- **Footwear:** board-style MMA shorts in **white** featuring a **reinforced split-seam** and **triple-stitched seams**; lightweight **ripstop fabric** with a **sublimated black logo** on the left leg; **4oz open-palm grappling gloves** in **blue** with **extra wrist support**; **barefoot** with **athletic tape on toes**.
+- **Accessories:** Black mouthguard, hand wraps under gloves.
+- **Hair/Makeup:** Hair secured or short, fierce competitive expression, light sheen of sweat.
+**Pose/Action:**
+medium shot showing the character from the waist up, Mid-punch or kick to heavy bag, dynamic motion, powerful extension, training intensity.
+---
+
+**CHARACTER 2: Ines Santos**
+**Appearance:**
+* **Body:** Soft Classic frame; balanced proportions with gentle curves; smooth, rounded contours; moderate height and vertical line; refined and graceful presence.
+* **Face:** Oval face shape with high, well-defined cheekbones; smooth, clear complexion with a natural glow; broad and genuine smile showing straight white teeth; warm, radiant expression.
+* **Eyes & Makeup:** Dark brown almond-shaped eyes; focal point is a sharp, precise black winged eyeliner (cat-eye style) flicking upward at the corners; dark, full, well-groomed eyebrows; natural soft rose-pink lip color.
+* **Hair:** Sleek, dark black hair; neat center part; pulled back tightly from the face into a low, polished bun or ponytail; smooth, high-gloss finish.
+* **Skin:** Warm, golden-tan complexion with a radiant, healthy glow; smooth satin texture.
+**Outfit:**
+- **Top:** Elite mixed martial arts kit for **Standard Team**
+- **Bottom:** high-impact athletic sports bra in **white** with **black contrast binding** and a **sublimated geometric pattern**
+- **Footwear:** matching **short athletic-cut compression shorts** in **white** with a **silicone-grip waistband** and **scalloped side-slits**; fabric is a **heavy-duty matte lycra**; **4oz open-palm MMA gloves** in **blue** with **reinforced knuckle padding**; **matching black ankle sleeves**; **barefoot** with a **ready athletic stance**.
+- **Accessories:** Black mouthguard, athletic tape on fingers.
+- **Hair/Makeup:** Cornrow braids for maximum security, determined game-face, faint sheen of sweat on shoulders and forehead.
+**Pose/Action:**
+medium shot showing the character from the waist up, Leaning forward with hands together in front of the waist, all muscles in the arms, chest, and shoulders tensed to the limit.
+---

@@ -1,0 +1,80 @@
+# METADATA
+Scene: Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+Base_Prompt: Sports Action: "Frozen Velocity"
+Character: Siofra Quinn | Outfit: Baseball | Pose: None
+Character: Kassandra Lykaios | Outfit: Cozy Autumn | Pose: None
+Character: Astrid Nielsen | Outfit: Avant-Garde Architectural | Pose: None
+Interaction: Custom
+Score: 440
+
+Generate an image of: Rendering
+High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
+
+Character Accuracy
+Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
+
+Body Types
+Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
+
+Hair & Clothing
+Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
+
+Details
+Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
+
+---
+
+**SCENE/SETTING:**
+Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+---
+
+**CHARACTER: Siofra Quinn**
+**Appearance:**
+* **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
+* **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
+* **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
+* **Skin:** Fair neutral skin with weathered undertone.
+**Outfit:**
+- **Top:** Button-down baseball jersey for **Standard Team** in **white** with **black** pinstripes, wearing a specialized protective glove on the non-throwing hand (tucked in)
+- **Bottom:** Softball-style pants (knee length, fitted) with belt and high socks
+- **Footwear:** Baseball cleats
+- **Accessories:** Baseball cap with team logo, batting glove (in pocket or wearing), eye black.
+- **Hair/Makeup:** Ponytail cap-hair, practical makeup.
+**Pose/Action:**
+Deep lunge stretch, arms overhead or extended, focused concentration, warming up energy.
+---
+
+**CHARACTER 2: Kassandra Lykaios**
+**Appearance:**
+* **Body:** Soft Dramatic; lean high-performance athletic flesh; long, powerful limbs and broad active shoulders; moderate-to-tall vertical (5'9"-5'11"); defined back and core musculature; statuesque feminine silhouette; exceptionally agile and powerful.
+* **Face:** Striking classical structure; oval shape; high, sharp cheekbones; narrow, straight nose; large, expressive dark eyes with a fiery, intelligent gaze; defined jawline with a slight, confident tilt; neutral expression is fiercely calm with a hint of a challenging smile.
+* **Hair:** Type 2B-2C; high density; long (mid-back) with a thick, wavy silhouette; no defined part; healthy satin sheen; complex practical athletic braid with integrated smaller braids. Deep mahogany or dark brown.
+* **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
+**Outfit:**
+- **Top:** Oversized **knit sweater** (chunky cable-knit)
+- **Bottom:** high-waist jeans or **corduroy pants**
+- **Footwear:** ankle boots.
+- **Accessories:** Knit scarf, simple jewelry.
+- **Hair/Makeup:** Natural warm-toned makeup, relaxed hairstyle.
+**Pose/Action:**
+Crouched in starting position, hands on ground, explosive ready stance, Intense focus.
+---
+
+**CHARACTER 3: Astrid Nielsen**
+**Appearance:**
+* **Body:** Dramatic Classic frame; straight flesh; narrow balanced rectangle proportions; tall vertical line; refined posture with precise alignment; statuesque and poised.
+* **Face:** Long balanced facial structure; soft oval face; firm planar skin with clear definition; narrow straight nose; light blue deep-set eyes with cool observant gaze; serene neutral resting expression that suggests depth and composure.
+* **Hair:** Type 1 straight hair; medium density; platinum blonde with smooth high-shine finish; naturally straight and fine; takes blunt, precise cuts well.
+* **Skin:** Fair cool-toned skin with porcelain clarity and smooth even texture.
+**Outfit:**
+- **Top:** Structural neoprene bodice with exaggerated angular shoulders and a high neck;
+- **Bottom:** Asymmetric skirt with voluminous pleats and rigid architectural draping; knee-length
+- **Footwear:** Sculptural heel boots with a split-toe design; glossy patent leather
+- **Accessories:** Geometric chrome face jewelry (nose bridge or cheekbone accent), no earrings, sleek leather clutch
+- **Hair/Makeup:** Slicked-back wet look hair; bleached brows and graphic black eyeliner
+**Pose/Action:**
+Mid-punch or kick to heavy bag, dynamic motion, powerful extension, training intensity.
+---
+
+**Additional Notes:**
+Siofra Quinn and Kassandra Lykaios jogging or sprinting side-by-side on a track or trail, synchronized movement, focused athletic breathing, determined expressions.
