@@ -172,7 +172,7 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Track Starting Block** (Run, Ready): Crouched in starting position, hands on ground, explosive ready stance, Intense focus.
 - **Handstand** (Gym, Sport, Balance): Standing on hands, body perfectly vertical, legs locked together, focused balance.
 - **Backbend** (Gym, Flexible, Dramatic): Arching backward with hands and feet on the ground, creating a graceful bridge, impressive flexibility.
-- **Holding Skateboard** (Skate, urban, Casual): Standing with a skateboard tucked under one arm, relaxed posture, urban background.
+- **Holding Skateboard** (Skate, Urban, Casual): Standing with a skateboard tucked under one arm, relaxed posture, urban background.
 - **Skater Push** (Skate, Action, Dynamic): One foot on the skateboard, the other pushing off the ground, mid-motion, forward momentum.
 
 ---

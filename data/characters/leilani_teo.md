@@ -1,8 +1,7 @@
 ### Leilani Te'o
 **Photo:** leilani_teo_photo.png
 
-**Tags:**   pacific-islander, athletic, commanding, curvy, female, strong
-
+**Tags:** pacific-islander, Athletic, commanding, curvy, female, strong
 **Summary:** Leilani is a study in monumental power—a massive, heavily muscled frame that commands attention through sheer physical presence. Her Samoan heritage shows in her imposing stature and calm, unshakable confidence. She is a powerhouse athlete who embraces her size with pride, moving with a surprising, fluid grace that belies the explosive strength contained in her sculpted build.
 
 **Gender:** F

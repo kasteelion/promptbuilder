@@ -4,7 +4,7 @@ Different base style prompts for your character images. Select one from the drop
 
 ---
 
-## Cyberpunk Neon (cyberpunk, sci-fi, dark, Mood:Futuristic, Mood:Dark, Mood:Gritty, Block:Classical, Block:Historical, Block:Formal, Block:Cute, Block:Cottagecore)
+## Cyberpunk Neon (cyberpunk, Sci-Fi, dark, Mood:Futuristic, Mood:Dark, Mood:Gritty, Block:Classical, Block:Historical, Block:Formal, Block:Cute, Block:Cottagecore)
 
 Rendering
 Ray-traced digital rendering with high-contrast chiaroscuro. Dominant cyan and magenta rim lighting against deep matte blacks. Heavy volumetric fog, bloom effects on light sources, and chromatic aberration at the edges. Wet-surface reflections and a distinct digital noise overlay.
@@ -16,7 +16,7 @@ Body Types
 Anatomy defined by harsh lighting highlights rather than soft gradients. Musculature or body shape is accentuated by reflective contours. Silhouettes are cut sharp against the background with glowing edge detection.
 
 Hair & Clothing
-Hair: Rendered as synthetic fiber with high specularity (shine). Clothing: Materials appear as latex, matte carbon fiber, or translucent plastic. integrated light strips and glowing tech-wear accents are baked into the texture maps.
+Hair: Rendered with high specularity (shine) and sharp, unnatural highlights. Clothing: Textures are rendered with extreme high-contrast sheen, emphasizing the surface topology. Tech-wear accents glow if present.
 
 Details
 Glitch art artifacts, holographic UI overlays in the foreground, and lens flare streaks. Backgrounds feature out-of-focus bokeh of city lights. The overall atmosphere is oppressive, high-tech, and gritty.
@@ -82,7 +82,7 @@ ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic
 
 ---
 
-## Anime Style: "Dynamic Cel-Shaded" (anime, 2d, vibrant, action, sport, athletic, Mood:Dynamic, Mood:Energetic, Block:Noir, Block:Historical)
+## Anime Style: "Dynamic Cel-Shaded" (anime, 2d, vibrant, action, Sport, Athletic, Mood:Dynamic, Mood:Energetic, Block:Noir, Block:Historical)
 
 Rendering
 High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
@@ -101,7 +101,7 @@ Details
 
 ---
 
-## Digital Painting: "Expressive Impasto" (artistic, painterly, fantasy, Mood:Dramatic, Mood:Artistic, Block:Cyberpunk, Block:Sci-Fi)
+## Digital Painting: "Expressive Impasto" (artistic, painterly, Fantasy, Mood:Dramatic, Mood:Artistic, Block:Cyberpunk, Block:Sci-Fi)
 
 Rendering
 Thick, painterly application simulating oil or acrylics. Visible brush strokes with directional texture. Heavy use of "Chiaroscuro" (dramatic light and dark contrast). Edges range from sharp palette-knife cuts to soft blended strokes.
@@ -139,7 +139,7 @@ Smudge marks, graphite dust, and handwritten artistic notes. The lighting is pur
 
 ---
 
-## Vintage Pin-Up: "Glamorous Airbrush" (vintage, retro, glamour)
+## Vintage Pin-Up: "Glamorous Airbrush" (Vintage, retro, glamour)
 
 Rendering
 1950s commercial illustration style. Smooth, airbrushed gradients with soft vector-like outlines. High-key, flattering studio lighting. Colors are warm, vibrant, and nostalgic (technicolor simulation).
@@ -151,7 +151,7 @@ Body Types
 Curvaceous, hourglass silhouettes. Skin is rendered as flawlessly smooth (porcelain finish) with a slight oily sheen to highlight curves. Poses are theatrical and designed to create pleasing S-curves.
 
 Hair & Clothing
-Hair: Perfectly coiffed, high-volume styles with soft, rolling waves. Clothing: Fits tightly to accentuate form. Fabric patterns are bold and graphic (polka dots, stripes). Cloth is rendered with smooth, plastic-like folds.
+Hair: Stylized volume with smooth, soft rolling wave rendering. Clothing: Rendered with smooth, plastic-like shading on folds. Fabric patterns (if present) are rendered as bold and graphic.
 
 Details
 Vignette fading at the corners. A slight "bloom" effect on highlights. Props are rendered with high gloss. The overall finish feels like a vintage magazine cover or calendar art.
@@ -170,7 +170,7 @@ Body Types
 Hyper-athletic. Muscles are drawn with distinct, sharp lines. Posture is exaggerated for "action readiness" (foreshortening). Hands and feet are often drawn larger to emphasize power.
 
 Hair & Clothing
-Hair: Spiky, jagged, and wind-blown. Clothing: Tattered, moving violently with unseen energy. Accessories (belts, straps) are drawn floating to suggest power aura.
+Hair: Spiky, angular rendering with distinct shading blocks. Clothing: Folds are sharp and dramatic, emphasizing movement and impact curves.
 
 Details
 "Kirby Dots" or energy crackles surrounding the figure. Impact lines. Debris floating in the air. The background is often a radial blur or abstract speed lines.
@@ -189,14 +189,14 @@ Body Types
 Slender, elongated proportions (clamped style). Shoulders are narrow; limbs are long and thin. Posture is elegant, turning inward, or floating.
 
 Hair & Clothing
-Hair: Exceptionally detailed, flowing strands that take up much of the frame. Clothing: Frills, ribbons, and lace are rendered with high detail. Fabric floats weightlessly.
+Hair: Exceptionally detailed, fine line-work for every strand. Clothing: Fabric folds are rendered with delicate, weightless fluidity. Lace and frills (if present) are drawn with high detail.
 
 Details
 Bokeh effects (light orbs). Floral framing. The atmosphere is dreamy and hazy. A "vignette" of white or pink often softens the edges of the image.
 
 ---
 
-## Film Noir: "Shadows and Smoke" (vintage, cinematic, dark, monochrome, Mood:Dark, Mood:Dramatic, Mood:Mysterious, Block:Cute, Block:Bright, Block:Sport, Block:Cheerful)
+## Film Noir: "Shadows and Smoke" (Vintage, cinematic, dark, monochrome, Mood:Dark, Mood:Dramatic, Mood:Mysterious, Block:Cute, Block:Bright, Block:Sport, Block:Cheerful)
 
 Rendering
 Black and white (or extremely desaturated sepia). High-contrast "Low Key" lighting. Deep, crushing blacks and stark white highlights. Film grain and scratch textures simulate aged celluloid.
@@ -234,7 +234,7 @@ Hand-painted watercolor style backgrounds (static). Minimal visual effects—no 
 
 ---
 
-## Artgerm Style: "Luminous Digital Fantasy" (artistic, digital, glamour, fantasy, Mood:Glamorous, Mood:Elegant, Block:Gritty, Block:Combat, Block:Sport)
+## Artgerm Style: "Luminous Digital Fantasy" (artistic, digital, glamour, Fantasy, Mood:Glamorous, Mood:Elegant, Block:Gritty, Block:Combat, Block:Sport)
 
 Rendering
 Hyper-polished digital airbrushing. Skin is rendered to look like porcelain or high-quality silicone. Lighting is dramatic, usually featuring a strong cool rim light on one side and a warm key light on the other.
@@ -246,7 +246,7 @@ Body Types
 Idealized "Comic Book Hero" proportions. Athletic but curvy, with impossible grace. Muscles are defined but smooth. The figure always has a sense of "floating" or weightless elegance.
 
 Hair & Clothing
-Hair: The signature element—rendered as flowing liquid silk with incredible volume and distinct individual strands flowing in the wind. Clothing: Tight-fitting, glossy textures (latex, metal, silk).
+Hair: The signature element—rendered as flowing liquid silk with incredible volume and distinct individual strands. Clothing: High-gloss rendering on all materials, emphasizing tightness and fit through lighting.
 
 Details
 Subtle particle effects (embers, petals). The background is usually a solid color gradient or a simple abstract halo to keep the focus entirely on the character's face and lighting.
@@ -272,7 +272,7 @@ Soft bloom on highlights, subtle lens flare. Backgrounds are high-detail but des
 
 ---
 
-## Western Comic Book (comic, 2d, graphic, action, athletic, Mood:Heroic, Mood:Dynamic, Block:Intimate, Block:Soft, Block:Peaceful)
+## Western Comic Book (comic, 2d, graphic, action, Athletic, Mood:Heroic, Mood:Dynamic, Block:Intimate, Block:Soft, Block:Peaceful)
 
 Rendering
 High-contrast ink illustration. Bold, black "brush-work" for shadows and outlines. Flat or Ben-Day dot coloring (halftone). High-key lighting with dramatic, graphic shadow placement.
@@ -291,7 +291,7 @@ Action sound effects (suggested by composition), heavy border lines, and graphic
 
 ---
 
-## Classic Fantasy Oil (fantasy, traditional, artistic, Block:Modern, Block:Pop, Block:Tech, Block:Sci-Fi, Block:Cyberpunk, Block:Sport, Block:Action)
+## Classic Fantasy Oil (Fantasy, traditional, artistic, Block:Modern, Block:Pop, Block:Tech, Block:Sci-Fi, Block:Cyberpunk, Block:Sport, Block:Action)
 
 Rendering
 Traditional oil on canvas. Warm, amber-toned glazes and visible, "lost-and-found" edges. High chiaroscuro contrast. Lighting feels like torchlight or magic-glow against dark, earthy backgrounds.
@@ -325,7 +325,7 @@ Simplified backgrounds that complement rather than compete with characters. Occa
 
 ---
 
-## Victoria's Secret Magazine: "High-Fashion Glamour" (glamour, realistic, fashion, mood:glamorous, mood:sexy, mood:luxurious, block:gritty, block:combat, block:sport, block:cyberpunk)
+## Victoria's Secret Magazine: "High-Fashion Glamour" (glamour, realistic, fashion, mood:glamorous, mood:sexy, mood:luxurious, block:gritty, Block:Combat, Block:Sport, block:cyberpunk)
 
 Rendering
 Ultra-glamorous high-fashion photography style. High-key studio lighting with a mix of soft-boxes and dramatic ring lights. 8K resolution with a "glossy magazine" finish. Warm, sun-kissed color palette with subtle pink and gold undertones. Shallow depth of field with a soft, expensive-looking bokeh.
@@ -337,14 +337,14 @@ Body Types
 Focus on luminous skin rendering with a soft-focus glow. Skin texture highlights muscle definition and natural curves through high-specularity "body oil" effects. Shadows are soft and warm, emphasizing form through gentle transitions rather than hard lines.
 
 Hair & Clothing
-Hair: Rendered with massive volume, soft waves, and high specularity to simulate a professional blowout. Clothing: Emphasis on the specularity and drape of luxury fabrics like lace, satin, and silk. Materials interact dynamically with the lighting setup to create a sense of premium quality.
+Hair: Rendered with massive volume and high specularity to simulate a professional studio finish. Clothing: Emphasis on the specularity and luxe texture of fabrics. Materials interact dynamically with the lighting setup to create a sense of premium quality.
 
 Details
 Soft bloom on highlights, subtle lens flare, and a faint shimmering particle effect in the air. Backgrounds are rendered as high-end studio environments or sun-drenched luxury locations. The overall finish simulates a prestigious multi-page magazine spread with a clean, commercial aesthetic.
 
 ---
 
-## Sports Action: "Frozen Velocity" (sport, mood:dynamic, mood:athletic, mood:intense, block:formal, block:intimate, block:lounge, block:elegant, block:work, block:professional, block:fantasy, block:historical, block:costume, block:vintage, block:noir, block:nightlife, block:party, block:scholarly, block:edgy, block:office, weight:0.5)
+## Sports Action: "Frozen Velocity" (Sport, mood:dynamic, mood:athletic, mood:intense, block:formal, block:intimate, block:lounge, block:elegant, block:work, block:professional, Block:Fantasy, block:historical, block:costume, block:vintage, block:noir, block:nightlife, block:party, block:scholarly, block:edgy, block:office, weight:0.5)
 
 Rendering
 High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
@@ -382,7 +382,7 @@ Floating iconography (hearts, stars, sweat drops, anger veins) near the head. Ba
 
 ---
 
-## Vintage Film: "Analog Nostalgia" (vintage, photography, realistic)
+## Vintage Film: "Analog Nostalgia" (Vintage, photography, realistic)
 
 Rendering
 Simulates 35mm film stock (Kodak Portra or Fujifilm styling) from the 1990s. Soft, slightly washed-out blacks and warm, yellow-green highlights. Visible film grain (ISO 400-800). Flash photography aesthetic: bright, direct light falloff leaving the background in darkness.
@@ -401,7 +401,7 @@ Light leaks (orange/red burns) on the edges of the frame. A digital orange "Date
 
 ---
 
-## American Romanticism: "The Sublime Landscape" (artistic, traditional, landscape, nature, outdoor)
+## American Romanticism: "The Sublime Landscape" (artistic, traditional, landscape, Nature, Outdoor)
 
 Rendering
 19th-century oil painting style (Hudson River School). Luminism: focus on the effects of light on landscape and atmosphere. Soft, invisible brushstrokes creating a glowing, hazy atmosphere. Dramatic lighting contrasts between storm clouds and "God rays" of sunlight.

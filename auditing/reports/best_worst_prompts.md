@@ -2,96 +2,16 @@
 
 ## 📊 Statistical Summary
 
-- **Total Prompts Analyzed:** 50
-- **Mean Score:** 208.20
-- **Median Score:** 212.5
-- **Mode Score:** 260
-- **Standard Deviation:** 101.75
-- **Score Range:** 20 - 445
+- **Total Prompts Analyzed:** 10
+- **Mean Score:** 435.00
+- **Median Score:** 457.5
+- **Mode Score:** 565
+- **Standard Deviation:** 175.69
+- **Score Range:** 185 - 690
 
 ## 🏆 Top 3 Best Prompts
 
-### 1. gen_only_1768268212_49.txt (Score: 445)
-```text
-Generate an image of: Rendering
-High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
-
-Character Accuracy
-Expressions are candid and intense: grimaces of exertion, focus, and adrenaline. Facial muscles are taut. Skin glistens with realistic sweat (specular highlights) and flushing from physical exertion.
-
-Body Types
-Hyper-athletic and functional. Muscles are compressed and tensed in action. Anatomy is warped slightly by the physics of motion (jiggle physics on impact, compression of limbs). Veins are prominent (vascularity).
-
-Hair & Clothing
-Hair: Wet with sweat, messy, and reacting violently to momentum. Clothing: High-tech athletic fabrics (mesh, spandex) with visible moisture-wicking textures. Fabric ripples and stretches tightly across the body due to wind resistance and movement.
-
-Details
-Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background is a creamy, unrecognizable bokeh of stadium crowds or track lines. Motion blur ghosting on the edges of extremities.
-
----
-
-**SCENE/SETTING:**
-From behind the soccer net, looking out at the field, goalie in position, tension of an incoming attack.
----
-
-**CHARACTER: Leilani Te'o**
-**Appearance:**
-* **Body:** Dramatic Natural; massive, heavily muscled frame with broad powerful shoulders and a deep chest; 45-35-50 proportions; tall height at 6'0"; EXTREME muscle density with visible definition in her "capped" delts, thick biceps, and powerful quads; heavy but athletic presence.
-* **Face:** Rugged-soft structure; square-oval face with a strong, well-defined jawline and high prominent cheekbones; large dark brown eyes with a steady, direct gaze; full expressive mouth; neutral resting expression is calm but intense, radiating a sense of quiet authority.
-* **Hair:** Type 3A–3B curls; high density; long length past her shoulders; naturally thick dark hair often worn half-up to keep it out of her face during training; healthy natural sheen.
-* **Skin:** Deep warm tan with rich golden-brown undertones (Polynesian coloring); smooth surface with visible muscle separation creating deep shadows; elaborate traditional 'tatau' patterns visible on one shoulder and upper arm.
-**Outfit:**
-- **Top:** Rhinestone-embellished western shirt.
-  - **Fit:** Fitted silhouette.
-  - **Material:** Cotton with crystal embellishments.
-  - **Pattern:** Ornate yoke with crystals.
-  - **Neckline:** Collared with pearl snaps.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** Bootcut jeans.
-  - **Fit:** Tight thigh with flared hem.
-  - **Material:** Dark wash denim.
-  - **Pattern:** Decorative back pockets.
-  - **Waist:** Natural with bedazzled silver belt.
-  - **Length:** Full length.
-- **Footwear:** Tall cowboy boots with metallic accents.
-- **Accessories:** White felt cowboy hat; rodeo queen sash; hoop earrings.
-**Pose/Action:**
-wide shot with the character framed within the environment, One foot on the skateboard, the other pushing off the ground, mid-motion, forward momentum.
----
-
-**CHARACTER 2: Talia Levi**
-**Appearance:**
-* **Body:** Soft Dramatic frame; wave-lush flesh quality; voluptuous hourglass proportions with pronounced bust (full D-DD), defined waist, and rounded hips; moderate-to-tall vertical (5'7"); soft density with feminine curves, visible décolletage, rounded shoulders, and shapely legs; magnetizing sensual presence.
-
-* **Face:** Balanced-sultry facial structure; oval-to-diamond shape; high pronounced cheekbones with sculpted planes; large almond-shaped wide-set eyes in deep amber-brown with naturally seductive heavy-lidded quality and penetrating direct gaze; full shapely lips; defined angular jawline; neutral resting expression is knowing and self-assured with slight sultry smile and unwavering confident eye contact that holds just a beat too long.
-
-* **Hair:** Type 2B-2C waves; very high density; voluminous cascading silhouette; long length past mid-back; natural loose center part; healthy high-sheen finish; commonly worn loose and wild with tousled volume, half-up with face-framing tendrils, or low messy bun showing neck; rich dark chocolate brown with warm caramel highlights.
-
-* **Skin:** Medium-tan with warm golden-olive undertones and luminous sun-kissed finish; beauty mark above upper lip on left side; smooth healthy Mediterranean glow.
-**Outfit:**
-- **Top:** Rhinestone-embellished western shirt.
-  - **Fit:** Fitted silhouette.
-  - **Material:** Cotton with crystal embellishments.
-  - **Pattern:** Ornate yoke with crystals.
-  - **Neckline:** Collared with pearl snaps.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** Bootcut jeans.
-  - **Fit:** Tight thigh with flared hem.
-  - **Material:** Dark wash denim.
-  - **Pattern:** Decorative back pockets.
-  - **Waist:** Natural with bedazzled silver belt.
-  - **Length:** Full length.
-- **Footwear:** Tall cowboy boots with metallic accents.
-- **Accessories:** White felt cowboy hat; rodeo queen sash; hoop earrings.
-**Pose/Action:**
-wide shot with the character framed within the environment, Arching backward with hands and feet on the ground, creating a graceful bridge, impressive flexibility.
----
-
-**Additional Notes:**
-A split-second moment of confrontation in the penalty box. Leilani Te'o (striker) is mid-strike, leg swept back, body leaning over the ball for power. Talia Levi (goalie) is launching into a sprawling dive, arms outstretched, fingers spread wide to make the save. Grass divots and dirt fly up from Leilani Te'o's planting foot. Stadium lights create a halo effect around the players. The focus is razor-sharp on the ball and the players' expressions of sheer determination. Background stadium seating is blurred to emphasize the duel.
-```
-
-### 2. gen_only_1768268212_29.txt (Score: 420)
+### 1. gen_only_1768270041_1.txt (Score: 690)
 ```text
 Generate an image of: Rendering
 High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
@@ -111,87 +31,148 @@ Details
 ---
 
 **SCENE/SETTING:**
-Dedicated wrestling practice room, padded mats, minimal decor, bright overhead lights, serious training space.
+Professional eight-sided competition cage, chain-link fence walls with black vinyl coating, thick padded corner posts in contrasting colors, heavy-duty battle-worn canvas floor with team or brand logos, dramatic high-contrast overhead lighting casting sharp shadows, Intense championship fight atmosphere.
 ---
 
-**CHARACTER: Zahara El-Amin**
+**CHARACTER: Astrid Nielsen**
 **Appearance:**
-* **Body:** Dramatic; tall vertical (5'9"); lean and angular frame with long limbs; graceful, measured density; poised and commanding presence.
-* **Face:** Sharp-balanced structure; diamond face shape with high, prominent cheekbones; large, intelligent dark brown eyes; straight, high-bridged nose; well-defined, narrow jawline; neutral expression is focused and contemplative.
-* **Hair:** (Covered) Long dark hair typically styled in a low, secure bun beneath her hijab.
-* **Skin:** Rich mahogany depth with warm, luminous undertones (Sub-Saharan/North African transition); smooth matte finish; clear, even complexion that catches the light on high points of the face. signature thick-rimmed designer glasses in deep amber tortoise-shell
+* **Body:** Dramatic Classic frame; straight flesh; narrow balanced rectangle proportions; tall vertical line; refined posture with precise alignment; statuesque and poised.
+* **Face:** Long balanced facial structure; soft oval face; firm planar skin with clear definition; narrow straight nose; light blue deep-set eyes with cool observant gaze; serene neutral resting expression that suggests depth and composure.
+* **Hair:** Type 1 straight hair; medium density; platinum blonde with smooth high-shine finish; naturally straight and fine; takes blunt, precise cuts well.
+* **Skin:** Fair cool-toned skin with porcelain clarity and smooth even texture.
 **Outfit:**
-- **Hijab:** Tight-fitting sports hijab in **#4B0082**.
-- **Top:** High-neck long-sleeve leotard.
-  - **Fit:** Skin-tight modest.
-  - **Material:** Performance Lycra.
-  - **Neckline:** High-neck.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** Full-length matching athletic leggings.
-  - **Fit:** Tight.
-  - **Material:** Lycra.
-  - **Waist:** High-waist.
-  - **Length:** Full length.
-- **Footwear:** Barefoot or toe-wraps.
-- **Accessories:** Decorative hijab pin.
-**Pose/Action:**
-full body shot showing the character from head to toe, Balanced combat stance, fists up guarding face, focused intense expression, weight on balls of feet.
----
-
-**CHARACTER 2: Kaito Sato**
-**Appearance:**
-* **Body:** Flamboyant Gamine frame; wiry and compact; defined, sinewy muscle (climber/skater build); shorter vertical (5'6"-5'7"); extremely agile and fast-twitch; straight lines with sharp edges; projects nervous, electric energy.
-* **Face:** Angular, diamond-shaped face; sharp, pointed chin; narrow eyes that are often squinting in focus or widening in adrenaline; mischievous grin that shows teeth; features are delicate but sharp.
-* **Hair:** Type 1B straight; medium density; undercut with a long, choppy top; bleached platinum blonde (almost white) with roots showing; often messy or swept forward.
-* **Skin:** Fair with cool undertones; prone to flushing when active; usually has a band-aid or small scrape on the cheek or knuckles.
-**Outfit:**
-- **Top:** Long-sleeve compression shirt.
-  - **Fit:** Ultra-fitted muscle definition.
-  - **Material:** Nylon-spandex blend.
-  - **Pattern:** Solid charcoal.
-  - **Neckline:** High-neck.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** Matching compression leggings.
-  - **Fit:** Compression.
-  - **Material:** Moisture-wicking fabric.
-  - **Waist:** Elasticated.
-  - **Length:** Full length.
-- **Footwear:** Sneakers (Implied).
-- **Accessories:** Black fitness tracker; wireless earbuds.
-**Pose/Action:**
-full body shot showing the character from head to toe, Standing in profile, one leg bent with calf flexed, torso twisted toward the camera, hands gripped together to pop the chest and bicep.
----
-
-**CHARACTER 3: Oliver St. James**
-**Appearance:**
-* **Body:** Soft Natural frame; average height (5'9"-5'10"); "Otter" build—slim but not skinny, with a soft, natural muscularity and a bit of fuzz; rounded shoulders; comfortable and lived-in physicality.
-* **Face:** Oval face with soft features; warm, crinkling blue eyes; nose is slightly button-like; jawline is softened by a scruffy, well-maintained short beard (strawberry blonde/ginger tone).
-* **Hair:** Type 2C curls; medium density; messy "mop top" style that looks better when tousled; light brown/dark blonde; often falling into his eyes.
-* **Skin:** Fair to light; pinkish warm undertones; prone to blushing; smooth complexion. round gold wire-frame glasses
-**Outfit:**
-- **Top:** Shirtless with shoulder pauldron and vambrace.
-  - **Fit:** Bare midriff.
-  - **Material:** Brown leather.
-  - **Pattern:** Solid.
-  - **Neckline:** Open.
+- **Top:** Performance one-piece swimsuit.
+  - **Fit:** Hydrodynamic; Racerback.
+  - **Material:** Technical swim fabric; Solid black central panel.
+  - **Pattern:** Contoured side panels in #FF6600 with #000000 piping.
+  - **Neckline:** Scoop neck.
   - **Sleeve:** Sleeveless.
-- **Bottom:** Warrior's kilt above knee.
-  - **Fit:** Relaxed kilt.
-  - **Material:** Brown and White linen.
-  - **Pattern:** White loincloth panel.
-  - **Waist:** Wide leather belt with crystal buckle.
-  - **Length:** Mid-thigh.
-- **Footwear:** Crisscrossing leather leg wraps.
-- **Accessories:** Crystal pendant; leather armor pieces .
+- **Bottom:** Integrated swim bottom.
+  - **Fit:** High-cut.
+  - **Material:** matching fabric.
+  - **Pattern:** Contoured side panels.
+  - **Waist:** Seamless.
+  - **Length:** Minimal coverage.
+- **Footwear:** None (Barefoot).
+- **Accessories:** White swim cap with #FF6600 logo; mirrored racing goggles (#FFFFFF).
 **Pose/Action:**
-full body shot showing the character from head to toe, Hands held apart in front of the chest, fingers curved as if holding a sphere of light, face illuminated by a glow from between the palms.
+full body shot showing the character from head to toe,
+---
+
+**CHARACTER 2: Efe Kouadio**
+**Appearance:**
+- **Body:** Soft Natural frame; natural soft flesh; balanced proportions with gentle curves, defined waist, full hips, soft rounded features, moderate shoulders; moderate vertical (5’5”-5’6”); natural curvy build with soft harmonious lines and welcoming presence.
+- **Face:** Soft-balanced facial structure; round-oval face with warm open planes and full cheeks that enhance smile; expressive round-almond eyes with bright engaged quality, wide-set, warm dark brown with natural sparkle; full lips with natural upward curve that creates dimpled smile; smooth forehead; radiant joyful expression that lights up her whole face.
+- **Hair:** Type 4A coils; high density; medium-length natural textured style with defined curl pattern and bouncy voluminous shape; healthy soft finish with natural sheen; black to dark brown.
+- **Skin:** Deep warm brown with rich golden undertones and natural luminous dewy finish.
+**Outfit:**
+- **Top:** Black velvet corset top.
+  - **Fit:** Fitted; Boned structure.
+  - **Material:** Velvet.
+  - **Pattern:** Solid black.
+  - **Neckline:** Sweetheart or Scoop.
+  - **Sleeve:** Sleeveless (thick straps).
+- **Bottom:** Tartan plaid pleated mini skirt.
+  - **Fit:** Flared; Raw/fringed hem.
+  - **Material:** Flannel or Wool plaid (yellow/brown tartan).
+  - **Waist:** High-waisted (boned).
+  - **Length:** Mini (mid-thigh).
+- **Footwear:** Chunky black leather lace-up combat boots; sheer black tights.
+- **Accessories:** Black velvet ribbon choker; silver rings.
+**Pose/Action:**
+full body shot showing the character from head to toe,
 ---
 
 **Additional Notes:**
-Zahara El-Amin playfully pushing Kaito Sato, light contact showing friendly interaction
+Astrid Nielsen and Efe Kouadio walking side-by-side carrying school bags. The sun is setting behind them, casting long shadows. They are chatting casually about their day.
 ```
 
-### 3. gen_only_1768268212_18.txt (Score: 410)
+### 2. gen_only_1768270041_3.txt (Score: 585)
+```text
+Generate an image of: Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+---
+
+**SCENE/SETTING:**
+Grand concert hall interior inspired by Victorian Gothic architecture, tiered orchestra seating facing ornate stage, high vaulted ceiling with intricate decorative plasterwork, warm ambient lighting from chandeliers, rich red velvet seats, a elaborate proscenium arch with gold detailing, excellent acoustics, formal classical music atmosphere.
+---
+
+**CHARACTER: Jax Chen**
+**Appearance:**
+- **Body:** Explosive-Athletic frame; olive-toned skin with a vibrant, high-oxygenated flush; inverted triangle proportions with powerful, broad shoulders and a narrow, muscular waist; tall stature (6'1"-6'2"); high-performance build with dense, defined muscle groups and visible vascularity; "kinetic potential" presence—vibrant and dangerous.
+- **Face:** Sharp, aerodynamic structure; high, defined cheekbones; narrow, powerful jawline; intense, wide-set dark eyes that possess a piercing, high-speed focus; sharp, straight eyebrows with a low, aggressive set; straight, thin nose; firm mouth with a determined set; expression is one of maximum effort and singular focus.
+- **Hair:** Type 1A straight; medium density; kept in a sharp, high-fade with a short, textured top; matte-satin finish with vibrant neon orange tips that seem to vibrate with his movement.
+- **Skin:** Vibrant olive with warm, high-energy undertones; smooth, taut texture with visible "muscle-mapping" micro-textures in the dermis; beads of high-intensity sweat reflecting light; "high-performance" glow.
+**Outfit:**
+- **Top:** Tailored sport coat in herringbone over Oxford shirt.
+  - **Fit:** Modern professional; Soft shoulders.
+  - **Material:** Blue herringbone wool-blend; Cotton Oxford.
+  - **Neckline:** Pressed collar.
+  - **Sleeve:** Long.
+- **Bottom:** Flat-front dress pants.
+  - **Fit:** Contemporary straight.
+  - **Material:** Charcoal gray wool.
+  - **Waist:** Natural with mahogany leather belt.
+  - **Length:** Full.
+- **Footwear:** Polished mahogany leather dress shoes.
+- **Accessories:** Stainless steel watch; leather laptop bag.
+**Pose/Action:**
+full body shot showing the character from head to toe, Regal standing position, chin lifted, arms positioned with divine authority, ethereal commanding presence.
+---
+
+**CHARACTER 2: Efe Kouadio**
+**Appearance:**
+- **Body:** Soft Natural frame; natural soft flesh; balanced proportions with gentle curves, defined waist, full hips, soft rounded features, moderate shoulders; moderate vertical (5’5”-5’6”); natural curvy build with soft harmonious lines and welcoming presence.
+- **Face:** Soft-balanced facial structure; round-oval face with warm open planes and full cheeks that enhance smile; expressive round-almond eyes with bright engaged quality, wide-set, warm dark brown with natural sparkle; full lips with natural upward curve that creates dimpled smile; smooth forehead; radiant joyful expression that lights up her whole face.
+- **Hair:** Type 4A coils; high density; medium-length natural textured style with defined curl pattern and bouncy voluminous shape; healthy soft finish with natural sheen; black to dark brown.
+- **Skin:** Deep warm brown with rich golden undertones and natural luminous dewy finish.
+**Outfit:**
+- **Top:** Tailored single-breasted blazer over white silk blouse.
+  - **Fit:** Structured; Narrow lapels.
+  - **Material:** Navy fine-gauge wool; Silk-blend blouse.
+  - **Pattern:** Matte finish blazer; subtle sheen blouse.
+  - **Neckline:** Button-up collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted cigarette pants or pencil skirt.
+  - **Fit:** Slim-fit cigarette or Textured pencil.
+  - **Material:** matching wool or textured fabric.
+  - **Waist:** Tonal buttons.
+  - **Length:** Ankle or Knee length.
+- **Footwear:** Pointed-toe pumps in matte leather or suede.
+- **Accessories:** Leather-strap watch; gold stud earrings; structured briefcase.
+**Pose/Action:**
+full body shot showing the character from head to toe, Wearing flowing silk robe, one shoulder exposed or robe loosely tied, sensual relaxed pose, bedroom setting.
+---
+
+**CHARACTER 3: Diego Morales**
+**Appearance:**
+- **Body:** Natural Athletic frame; natural-toned flesh with sun-touched warmth; inverted rectangle proportions with broad shoulders, slim waist, and defined muscle groups without bulk; moderate height (5'11"-6'0"); relaxed athletic build—lean and flexible from years of surfing; "effortless strength" presence—capable but never posturing.
+- **Face:** Balanced-angular structure; oval face shape; firm jawline that softens when he smiles; expressive almond-shaped eyes, wide-set, warm hazel with golden flecks that catch the light; natural dark eyebrows with a slight arch; straight nose with a subtle bridge; full mouth often quirked into a friendly half-smile; expressive neutral expression that reads as engaged and helpful.
+- **Hair:** Type 2B-2C waves; thick high density; medium length textured cut, shorter on sides with volume on top; loose natural side part; matte-satin finish with sun-bleached highlights at the tips; commonly worn tousled and "salt-water" styled, or loosely pushed back during work.
+- **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
+**Outfit:**
+- **Top:** Tailored sport coat in herringbone over Oxford shirt.
+  - **Fit:** Modern professional; Soft shoulders.
+  - **Material:** Blue herringbone wool-blend; Cotton Oxford.
+  - **Neckline:** Pressed collar.
+  - **Sleeve:** Long.
+- **Bottom:** Flat-front dress pants.
+  - **Fit:** Contemporary straight.
+  - **Material:** Charcoal gray wool.
+  - **Waist:** Natural with mahogany leather belt.
+  - **Length:** Full.
+- **Footwear:** Polished mahogany leather dress shoes.
+- **Accessories:** Stainless steel watch; leather laptop bag.
+**Pose/Action:**
+full body shot showing the character from head to toe, One hand extended forward with palm open, the other hand tracing an arcane sigil in the air, glowing runes appearing around the wrist.
+---
+
+**Additional Notes:**
+Jax Chen and Efe Kouadio working together on a large-scale engineering project, surrounded by tools and technical components, coordinated industrial effort.
+```
+
+### 3. gen_only_1768270041_2.txt (Score: 565)
 ```text
 Generate an image of: Rendering
 High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
@@ -211,122 +192,64 @@ Debris (turf clumps, chalk dust, water spray) suspended in mid-air. Background i
 ---
 
 **SCENE/SETTING:**
-Professional baseball field, perfectly manicured grass, dirt infield, white foul lines, outfield fence, bright sunny day.
+Clean minimalist interior, large sectional sofa, flat-screen TV, indoor plants, soft natural light, cozy domestic atmosphere.
 ---
 
-**CHARACTER: Sitara Saanvi**
+**CHARACTER: Amina Benali**
 **Appearance:**
-* **Body:** Romantic frame; soft lush flesh quality; hourglass proportions with defined waist; moderate height (5'4"); soft rounded density with lush bust and hips, delicate wrists and ankles; alluring captivating presence.
-* **Face:** Soft rounded structure; heart shape; large expressive dark brown almond eyes with dazzled flirtatious quality; softly curved jawline; neutral resting expression is slightly pouting and sensual.
-* **Hair:** Type 2C waves; medium-high density; dark glossy black with high sheen; long voluminous hair that takes styling well; commonly worn in glamorous, vintage-inspired styles.
-* **Skin:** Medium tan with warm golden-olive undertones and luminous smooth surface finish; small delicate beauty mark near lip.
+* **Body:** Soft Natural frame; natural-soft flesh; balanced proportions with gentle curves, defined waist, moderate bust (C cup), soft rounded hips; moderate height (5'5"-5'6"); soft feminine build with subtle athleticism from maintaining posture during long streams; desk-athlete presence—comfortable in gaming chairs for hours.
+* **Face:** Soft-balanced facial structure; oval-to-heart face shape with gentle angles; smooth clear planes; large expressive almond-shaped eyes, wide-set, dark brown with natural warmth and camera-aware sparkle; defined arched eyebrows (professionally maintained); straight refined nose; full lips with natural cupid's bow; soft jawline; warm engaging expression—the "streaming face" of genuine enthusiasm mixed with performative energy; dimples when smiling fully.
+* **Hair:** Type 2B-2C waves; very high density; long length past shoulders to mid-back; natural volume and body; center or slight side part; healthy high-gloss finish; commonly worn loose with volume (camera-ready), half-up with claw clip (casual streams), or sleek ponytail (competitive mode); rich dark brown to black with subtle caramel balayage highlights framing face.
+* **Skin:** Medium-tan with warm golden-olive undertones (North African coloring); smooth luminous finish; flawless complexion maintained for camera work; natural healthy glow enhanced by ring lights and skincare routine. stylish clear-framed gaming glasses with a slight cat-eye shape
 **Outfit:**
-- **Top:** Cropped athletic tank or sports bra under zip-up hoodie.
-  - **Fit:** Tight top; Oversized hoodie.
-  - **Material:** Stretchy technical fabric; Cotton fleece.
+- **Top:** Oversized oatmeal cashmere sweater.
+  - **Fit:** Relaxed slouchy; Bias cut.
+  - **Material:** Cashmere.
   - **Pattern:** Solid.
-  - **Neckline:** Scoop/Hooded.
-  - **Sleeve:** Sleeveless (top) under Long (hoodie).
-- **Bottom:** High-waist yoga leggings.
-  - **Fit:** Stretchy compression.
-  - **Material:** Technical fabric.
-  - **Pattern:** Solid or subtle pattern.
-  - **Waist:** High-waist.
-  - **Length:** Ankle-length.
-- **Footwear:** Slip-on sneakers.
-- **Accessories:** Yoga mat bag, water bottle.
+  - **Neckline:** Deep V-neck.
+  - **Sleeve:** Elongated sleeves.
+- **Bottom:** Fluid champagne silk bias-cut maxi skirt.
+  - **Fit:** Fluid; Bias-cut.
+  - **Material:** Silk.
+  - **Waist:** High-waisted (hidden).
+  - **Length:** Maxi length.
+- **Footwear:** Tan minimalist leather mules.
+- **Accessories:** Logo-less leather tote; small gold hoops.
 **Pose/Action:**
-full body shot showing the character from head to toe,
+full body shot showing the character from head to toe, Standing with arms crossed confidently, relaxed shoulders, natural stance.
 ---
 
-**CHARACTER 2: Jena Marlowe**
+**CHARACTER 2: Lucía Reyes**
 **Appearance:**
-* **Body:** Soft Dramatic–Romantic blend; elongated but light vertical; gentle hourglass with soft waist emphasis; overall delicacy rather than dramatic weight.
-* **Face:** Soft oval face with balanced proportions; medium-large bright eyes; refined nose; gentle jawline; warm, approachable expression with an easy smile.
-* **Hair:** Light honey-blonde; Type 2A–2B loose waves; fine-to-medium density; long hair with soft volume; luminous natural-looking highlights; healthy glossy finish.
-* **Skin:** Fair to light neutral-warm tone with a natural satin glow; fresh and luminous in daylight.
+* **Body:** Romantic frame; wave plush softness; full hourglass proportions; moderate vertical.
+* **Face:** Rounded facial structure; heart-shaped face; full cheeks; warm expressive eyes; joyful resting expression.
+* **Hair:** Type 2B–2C waves; high density; long layered cut; side part; healthy sheen.
+* **Skin:** Warm golden skin with radiant glow.
 **Outfit:**
-- **Top:** Cropped athletic tank or sports bra under zip-up hoodie.
-  - **Fit:** Tight top; Oversized hoodie.
-  - **Material:** Stretchy technical fabric; Cotton fleece.
-  - **Pattern:** Solid.
-  - **Neckline:** Scoop/Hooded.
-  - **Sleeve:** Sleeveless (top) under Long (hoodie).
-- **Bottom:** High-waist yoga leggings.
-  - **Fit:** Stretchy compression.
-  - **Material:** Technical fabric.
-  - **Pattern:** Solid or subtle pattern.
-  - **Waist:** High-waist.
-  - **Length:** Ankle-length.
-- **Footwear:** Slip-on sneakers.
-- **Accessories:** Yoga mat bag, water bottle.
+- **Top:** Performance one-piece swimsuit.
+  - **Fit:** Hydrodynamic; Racerback.
+  - **Material:** Technical swim fabric; Solid black central panel.
+  - **Pattern:** Contoured side panels in #4B2E83 with #B7A57A piping.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Integrated swim bottom.
+  - **Fit:** High-cut.
+  - **Material:** matching fabric.
+  - **Pattern:** Contoured side panels.
+  - **Waist:** Seamless.
+  - **Length:** Minimal coverage.
+- **Footwear:** None (Barefoot).
+- **Accessories:** White swim cap with #4B2E83 logo; mirrored racing goggles (#FFFFFF).
 **Pose/Action:**
-full body shot showing the character from head to toe,
+full body shot showing the character from head to toe, Mid-jump motion, rope blurred in motion, athletic form, training montage energy.
 ---
 
-**Additional Notes:**
-Sitara Saanvi and Jena Marlowe in mirrored poses, matching each other's stance and gestures
-```
-
-
-## 📉 Bottom 3 Worst Prompts
-
-### 1. gen_only_1768268212_2.txt (Score: 20)
-```text
-Generate an image of: Rendering
-"Clear Line" style (reminiscent of Hergé/Tintin or Moebius). Uniform, continuous black outlines of consistent width. No hatching or cross-hatching. Colors are flat, vivid, and unmodulated (no gradients).
-
-Character Accuracy
-Faces are highly simplified and iconic (dots for eyes), while the environment remains realistically proportioned. Expressions are readable and graphic.
-
-Body Types
-Realistic human proportions but rendered with flat graphic shapes. Posture is distinct and theatrical to ensure silhouette readability without shadow support.
-
-Hair & Clothing
-Hair: Defined by a single bounding outline and a flat color fill. Clothing: Realistic fashion rendered with minimal fold lines. Patterns (plaid, stripes) are drawn flat, ignoring the volume of the cloth.
-
-Details
-Backgrounds are hyper-detailed and architectural, contrasting with the simple characters. Everything is in sharp focus (deep depth of field). Shadows are cast as solid black shapes detached from the object.
-
----
-
-**SCENE/SETTING:**
-A classic classroom setting with a view of the sky from a window seat. Sunlight streams in, illuminating dust motes. A notebook and pen sit on the desk.
----
-
-**CHARACTER: Kendra Mitchell**
+**CHARACTER 3: Siofra Quinn**
 **Appearance:**
-* **Body:** Flamboyant Natural frame; straight athletic flesh; broad inverted triangle proportions with wide shoulders, long limbs, and subtle waist definition; tall (5'9"); strong defined muscle with visible shoulder caps, toned arms, and powerful legs; commanding physical presence.
-* **Face:** Strong angular structure; oblong-square face; prominent bone structure with high broad cheekbones; almond-shaped wide-set hazel-green eyes; strong defined jawline; neutral resting expression is confident and direct with penetrating gaze; smile is wide, genuine, and slightly asymmetric with infectious energy.
-* **Hair:** Type 3B curls; high density; shoulder-length layered cut; side part; voluminous natural texture; matte-satin finish; commonly worn loose and free or in high messy bun; warm chestnut brown with golden highlights.
-* **Skin:** Medium tan with warm golden undertones and healthy athletic glow; faint freckles across nose and shoulders.
-**Outfit:**
-- **Top:** Oversized asymmetric shirt under cropped distressed vest.
-  - **Fit:** Asymmetrical; Layered.
-  - **Material:** Distressed knit; Pinstripe wool.
-  - **Pattern:** Mismatched buttons.
-  - **Neckline:** Asymmetric collar.
-  - **Sleeve:** Extra long sleeves (raw hem).
-- **Bottom:** Skirt-over-pants combo.
-  - **Fit:** Layered; Split-hem skirt.
-  - **Material:** Cotton drill; Pinstripe wool.
-  - **Waist:** Mid-rise.
-  - **Length:** Midi/Maxi combo.
-- **Footwear:** Tabi boots.
-- **Accessories:** Safety pin jewelry; silver rings; frayed canvas bag.
-**Pose/Action:**
-Leaning forward with hands together in front of the waist, all muscles in the arms, chest, and shoulders tensed to the limit.
----
-
-**CHARACTER 2: Diesel Murphy**
-**Appearance:**
-* **Body:** Natural frame; straight athletic flesh with functional density; balanced proportions with broadened shoulders from upper body work, minimal waist definition, and straight hip line; moderate-to-tall vertical (5'7"-5'8"); working-class athletic build with developed forearms and shoulders from mechanical work, strong hands, visible core strength, practical muscle without aesthetic focus; distinctly female frame with masculine presentation and movement patterns; grounded capable presence.
-
-* **Face:** Balanced-angular structure; square-to-rectangular face shape with broad forehead and strong defined jawline; minimal midface projection with subtle cheekbones; medium-to-small eyes with moderate-close spacing, hazel-brown color, minimal lid exposure, direct no-nonsense gaze; straight broad nose with flat bridge and squared tip; strong angular jawline with masculine definition; neutral resting expression shows calm confidence with closed-mouth straight line and steady assessing gaze; rare smile is crooked and genuine.
-
-* **Hair:** Type 2A; medium density; very short length (pixie-to-undercut style); no defined part, textured and pushed back; matte finish; commonly worn tousled and practical, sometimes with small amount of pomade for control; dark brown with sun-lightened tips from outdoor work.
-
-* **Skin:** Light-medium tone with neutral-warm undertones and natural matte finish; scattered scars on hands and forearms from mechanical work; permanent grease staining under short fingernails and in hand creases; sun exposure on forearms and face; textured from outdoor work.
+* **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
+* **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
+* **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
+* **Skin:** Fair neutral skin with weathered undertone.
 **Outfit:**
 - **Top:** Structural neoprene bodice .
   - **Fit:** Oversized architectural; Severe boxy shoulders.
@@ -342,179 +265,267 @@ Leaning forward with hands together in front of the waist, all muscles in the ar
 - **Footwear:** Split-toe sculptural boots.
 - **Accessories:** Geometric chrome face jewelry (nose bridge); sleek leather clutch.
 **Pose/Action:**
-Both arms raised overhead in triumph after strike, wide smile, celebratory energy, standing near foul line or approach area.
+full body shot showing the character from head to toe, Standing with both arms raised and flexed at 90 degrees, fists curled inward, showing maximum arm and shoulder definition, vacuum-waist pose.
 ---
 
 **Additional Notes:**
-Kendra Mitchell and Diesel Murphy standing before a massive aquarium wall, their silhouettes sharp against the deep blue water and swirling marine life, enchanted and serene atmosphere.
+Amina Benali interacting with Lucía Reyes, who is simultaneously interacting with Siofra Quinn, creating a connected chain of interaction
 ```
 
-### 2. gen_only_1768268212_46.txt (Score: 20)
+
+## 📉 Bottom 3 Worst Prompts
+
+### 1. gen_only_1768270041_9.txt (Score: 185)
 ```text
 Generate an image of: Rendering
-Clean digital vector illustration with flat cel-shading. Smooth, anti-aliased line art with consistent medium-weight outlines. Minimal shading using one to two tones per area for subtle depth while maintaining a 2D animation aesthetic. Soft gradients only where needed. Even, friendly lighting creating a warm, inviting atmosphere. Bright, cheerful color palette with pastel undertones and well-balanced saturated hues that pop without overwhelming. Colors are vibrant but harmonious, never harsh.
-Character Accuracy
-Large, expressive doe eyes that dominate the face and convey strong emotions (joy, surprise, concern). Eyes feature simple but effective highlights and reflections. Small simplified noses (often just dots or tiny curved lines). Expressive eyebrows that enhance comedic timing and emotional readability. Round, cherubic faces with soft jawlines. Mouths are simple but convey clear emotions. Features are consistently cute and approachable, optimized for relatability and storytelling.
-Body Types
-Chibi-influenced proportions with slightly shortened limbs. Soft, rounded body shapes using gentle curves throughout. Simplified anatomy with minimal angular details. Bodies are "squishy" and non-threatening. Hand shapes are simplified (often mitten-like or stubby fingers). Overall silhouette is compact and endearing. Proportions favor expressiveness over realism.
-Hair & Clothing
-Hair: Large, chunky shapes with simplified strand detail. Soft, flowing forms that move as unified masses. Gentle curves define the hair volume with minimal individual strands. Shading uses one or two tones maximum. Clothing: Clean, simplified designs that read clearly at any size. Folds are minimal and stylized using soft curved lines. Fabric drapes naturally but with simplified physics. Details like buttons or patterns are oversized and graphic for readability.
-Details
-Simplified backgrounds that complement rather than compete with characters. Occasional floating iconography (hearts, sparkles, sweat drops, exclamation marks) for emotional emphasis. Soft drop shadows beneath characters. Clean composition optimized for animation and screen-based viewing. Overall aesthetic balances cuteness with relatability, perfect for YouTube storytime animation and comedic scenarios. Style is distinctly modern digital creator aesthetic—polished yet personal, professional yet approachable.
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
 
 ---
 
 **SCENE/SETTING:**
-A flat concrete rooftop surrounded by a chain-link fence. The blue sky stretches endlessly above. A quiet, private place for lunch or secrets.
+Finished basement with recessed dimmable lighting and plush comfortable seating. Cool subterranean air, soft echo of a hum from a nearby refrigerator, relaxed hangout atmosphere.
 ---
 
-**CHARACTER: Luna Vex**
+**CHARACTER: Marcus Thompson**
 **Appearance:**
-* **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
-* **Face:** Classic heart-shaped silhouette with a broad, smooth forehead and high, soft cheekbones that become prominent when she smiles; delicate, pointed chin creating a sharp taper from the mid-face; soft but clean and well-defined jawline; focal wide-set almond-shaped eyes in captivating light grey-blue; framed by naturally high-arched, manicured dark brown eyebrows sitting well above the orbital bone; signature sharp black winged eyeliner that accentuates the upward curve of her eyes; petite, straight nose bridge with a soft rounded tip and characteristic "scrunch" when laughing; wide, expressive mouth with a prominent philtrum and a broad, radiant smile revealing straight white teeth; deep endearing smile lines (nasolabial folds) and pronounced "crow's feet" signal genuine warmth and joy.
-* **Hair:** Type 2A (wavy); medium density; soft, voluminous layered silhouette; shoulder-length; varying part pattern (side or center); glossy sheen with styled "wet-look" roots; common styling includes loose, face-framing waves. Split-dye neon magenta pink and electric blue/amethyst purple.
-* **Skin:** Fair/Light depth; neutral-cool undertones; smooth, luminous surface finish; natural "crow's feet" laugh lines around the eyes.
+* **Body:** Natural male frame; straight athletic flesh; inverted rectangle proportions; moderate-to-tall vertical.
+* **Face:** Balanced-strong facial structure; square-leaning oval face; defined jaw; warm eyes; calm open expression.
+* **Hair:** Type 4A coils; medium density; short fade with textured top; clean lineup; matte-satin finish; black.
+* **Skin:** Deep brown skin with neutral undertones.
 **Outfit:**
-- **Top:** Fitted long-sleeve velvet turtleneck with a **subtle floral embossed texture**.
-  - **Fit:** Fitted; Skintight.
-  - **Material:** Velvet.
-  - **Pattern:** Embossed or Solid with a **subtle floral embossed texture**.
-  - **Neckline:** High turtleneck.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** High-waisted wide-leg wool trousers or plaid midi skirt.
-  - **Fit:** wide-leg or flared.
-  - **Material:** Wool or Plaid fabric.
-  - **Waist:** High-waisted with leather belt.
-  - **Length:** Ankle-length or Mid-calf.
-- **Footwear:** Pointed-toe ankle boots.
-- **Accessories:** Gold pendant necklace (over turtleneck); leather belt.
-**Pose/Action:**
-full body shot showing the character from head to toe, Standing over a stove, holding a wooden spoon, stirring a large pot with one hand while the other steadying the handle, savory steam rising.
----
-
-**CHARACTER 2: Valentina "Tina" Kovač**
-**Appearance:**
-* **Body:** Dramatic frame; straight thin flesh with minimal softness; narrow angular proportions with long limbs, prominent joints (elbows, wrists, knees), flat planes, minimal bust (A cup), straight hips, long fingers and toes; tall-moderate vertical (5'8"-5'9"); very low body density—visible bone structure, delicate appearance but wiry strength, lean muscle definition without bulk; bird-like presence that seems too delicate yet surprisingly resilient.
-* **Face:** Sharp angular structure; long oval-to-diamond face; high prominent cheekbones creating dramatic shadows; deep-set eyes, almond-shaped, close-set, Intense dark brown to black with penetrating gaze; strong straight nose with high bridge; defined angular jawline; hollow cheeks even at healthy weight; neutral resting expression is intense and assessing with slight suspicious edge—reads as guarded or challenging.
-* **Hair:** Type 2C-3A waves/curls; medium-high density but fine texture; long length past shoulders; no defined part, tousled and wild; matte-to-low sheen finish; deliberately unkempt aesthetic; commonly worn loose and chaotic, half-up with tendrils escaping, or messy bun with pieces falling; deep black-brown with occasional henna-red undertones or temporary colored streaks (artistic expression).
-* **Skin:** Light-olive with warm golden undertones (Roma coloring); smooth but slightly weathered from outdoor living/art-making; paint stains semi-permanent on hands and forearms; small scattered tattoos (DIY stick-and-poke aesthetic); natural bohemian finish.
-**Outfit:**
-- **Top:** Red and black buffalo plaid flannel shirt.
-  - **Fit:** Boxy; Buttoned or Open over white tank.
-  - **Material:** Thick cotton flannel.
-  - **Pattern:** Buffalo plaid (red/black).
-  - **Neckline:** Pointed collar.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** Distressed blue jeans.
-  - **Fit:** straight leg; Rugged.
-  - **Material:** Distressed denim.
-  - **Waist:** Natural with leather belt and large buckle.
-  - **Length:** Full leg.
-- **Footwear:** Brown leather work boots.
-- **Accessories:** Small axe prop (optional); wool beanie.
-**Pose/Action:**
-full body shot showing the character from head to toe, Pulling leather jacket onto shoulders, mid-motion, confident smirk, cool effortless vibe.
----
-
-**Additional Notes:**
-Luna Vex handing a small, glowing data-shard to Valentina "Tina" Kovač, their fingers brushing briefly, a sense of high-stakes cooperation and secrecy.
-```
-
-### 3. gen_only_1768268212_36.txt (Score: 45)
-```text
-Generate an image of: Rendering
-Ray-traced digital rendering with high-contrast chiaroscuro. Dominant cyan and magenta rim lighting against deep matte blacks. Heavy volumetric fog, bloom effects on light sources, and chromatic aberration at the edges. Wet-surface reflections and a distinct digital noise overlay.
-
-Character Accuracy
-Sharp, angular facial geometry with high-contrast shading. Expressions are rendered with dramatic under-lighting or silhouette emphasis. Focus on hard-surface modeling for features, giving skin a synthetic or plasticky sheen.
-
-Body Types
-Anatomy defined by harsh lighting highlights rather than soft gradients. Musculature or body shape is accentuated by reflective contours. Silhouettes are cut sharp against the background with glowing edge detection.
-
-Hair & Clothing
-Hair: Rendered as synthetic fiber with high specularity (shine). Clothing: Materials appear as latex, matte carbon fiber, or translucent plastic. integrated light strips and glowing tech-wear accents are baked into the texture maps.
-
-Details
-Glitch art artifacts, holographic UI overlays in the foreground, and lens flare streaks. Backgrounds feature out-of-focus bokeh of city lights. The overall atmosphere is oppressive, high-tech, and gritty.
-
----
-
-**SCENE/SETTING:**
-Futuristic command center, holographic displays, captain's chair, viewport showing stars, sleek high-tech atmosphere.
----
-
-**CHARACTER: Siofra Quinn**
-**Appearance:**
-* **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
-* **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
-* **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
-* **Skin:** Fair neutral skin with weathered undertone.
-**Outfit:**
-- **Top:** Form-fitting neoprene diving suit.
-  - **Fit:** Skin-tight; High-tech.
-  - **Material:** Black neoprene; Integrated lighting cables.
-  - **Pattern:** Rhythmic amber glow along spine and limbs.
-  - **Neckline:** High-neck scuba collar.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** Integrated neoprene diving leggings.
-  - **Fit:** Form-fitting; Reinforced knee panels.
-  - **Material:** matching neoprene.
-  - **Waist:** Integrated amber-light sensors.
-  - **Length:** Ankle-length.
-- **Footwear:** High-grip rubber diving boots with glowing amber accents.
-- **Accessories:** Amber-lit tactical oxygen tank; black diving gloves with fiber-optic sensors.
-**Pose/Action:**
-wide shot with the character framed within the environment,
----
-
-**CHARACTER 2: Priya Sharma**
-**Appearance:**
-* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
-* **Face:** Soft oval face with gentle rounded features; warm expressive dark brown eyes; friendly approachable expression; fuller cheeks; soft jawline; warm genuine smile.
-* **Hair:** Type 2B-2C waves; medium-high density; long dark brown hair (almost black at roots) with warm caramel-brown highlights throughout mid-lengths and ends; natural body and volume; beachy waves.
-* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow. tiny sparkling silver nose stud
-**Outfit:**
-- **Top:** Form-fitting neoprene diving suit.
-  - **Fit:** Skin-tight; High-tech.
-  - **Material:** Black neoprene; Integrated lighting cables.
-  - **Pattern:** Rhythmic amber glow along spine and limbs.
-  - **Neckline:** High-neck scuba collar.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** Integrated neoprene diving leggings.
-  - **Fit:** Form-fitting; Reinforced knee panels.
-  - **Material:** matching neoprene.
-  - **Waist:** Integrated amber-light sensors.
-  - **Length:** Ankle-length.
-- **Footwear:** High-grip rubber diving boots with glowing amber accents.
-- **Accessories:** Amber-lit tactical oxygen tank; black diving gloves with fiber-optic sensors.
-**Pose/Action:**
-wide shot with the character framed within the environment,
----
-
-**CHARACTER 3: Theo Okonkwo**
-**Appearance:**
-* **Body:** Natural frame; natural-to-soft flesh; balanced proportions; moderate-to-tall vertical; relaxed athletic build with natural ease.
-* **Face:** Balanced-warm facial structure; square-leaning oval face; warm expressive eyes; full lips; easy genuine smile; open welcoming expression.
-* **Hair:** Type 4C coils; high density; short fade with textured top styled in mini twists; clean lineup; matte finish.
-* **Skin:** Deep rich brown skin with warm undertones and healthy glow.
-**Outfit:**
-- **Top:** Heavy-duty technical diving vest over neoprene base.
-  - **Fit:** Bulky; Technical.
-  - **Material:** Neoprene; Amber fiber-optic lighting.
-  - **Neckline:** High collar.
-  - **Sleeve:** Sleeveless (vest).
-- **Bottom:** Articulated neoprene diving trousers.
-  - **Fit:** Articulated; Reinforced seams.
-  - **Material:** Neoprene; Integrated storage pockets.
-  - **Waist:** Natural with amber markers.
+- **Top:** V-neck scrub top.
+  - **Fit:** Standard.
+  - **Material:** matching fabric.
+  - **Pattern:** Solid.
+  - **Neckline:** V-neck.
+  - **Sleeve:** Short.
+- **Bottom:** Scrub pants with pockets.
+  - **Fit:** Relaxed.
+  - **Material:** matching.
+  - **Waist:** Drawstring.
   - **Length:** Full.
-- **Footwear:** Rugged industrial diving boots with amber lighting.
-- **Accessories:** Tactical diving backpack; diving gloves with glowing fingertips.
+- **Footwear:** Comfortable sneakers or clogs.
+- **Accessories:** Stethoscope; ID badge; watch.
 **Pose/Action:**
-wide shot with the character framed within the environment,
+Sitting cross-legged on ground or floor, relaxed comfortable position.
+---
+
+**CHARACTER 2: Nora Alvarez**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with wave softness; soft hourglass-pear proportions with full hips, thighs and bust, soft rounded belly, subtly defined shoulders; petite-to-moderate vertical (5'2"-5'4"); voluptuous short-stack build with concentrated curves and grounded presence.
+* **Face:** Balanced-soft facial structure; round-oval face; deep almond-shaped eyes with steady observant gaze; soft jawline; neutral resting expression is steady and observant with signature warmth showing in subtle corner smile.
+* **Hair:** Type 2B waves; medium density; long controlled cut with natural body; matte finish; dark brown.
+* **Skin:** Warm tan with golden-brown undertones and natural matte-soft finish.
+**Outfit:**
+- **Top:** Sleek insulated thermal jacket.
+  - **Fit:** Contoured; Athletic.
+  - **Material:** Moisture-wicking technical fabric; Insulated.
+  - **Pattern:** Solid technical.
+  - **Neckline:** High-neck zip-up.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Fleece-lined leggings.
+  - **Fit:** Fitted; Thermal.
+  - **Material:** Fleece-lined technical spandex.
+  - **Waist:** Natural.
+  - **Length:** Ankle-length.
+- **Footwear:** Waterproof hiking boots.
+- **Accessories:** Thermal gloves; headband ear-warmers; Sport sunglasses.
+**Pose/Action:**
+Running fingers through hair, relaxed sensual gesture, eyes closed or looking away.
+---
+
+**CHARACTER 3: Talia Levi**
+**Appearance:**
+* **Body:** Soft Dramatic frame; wave-lush flesh quality; voluptuous hourglass proportions with pronounced bust (full D-DD), defined waist, and rounded hips; moderate-to-tall vertical (5'7"); soft density with feminine curves, visible décolletage, rounded shoulders, and shapely legs; magnetizing sensual presence.
+
+* **Face:** Balanced-sultry facial structure; oval-to-diamond shape; high pronounced cheekbones with sculpted planes; large almond-shaped wide-set eyes in deep amber-brown with naturally seductive heavy-lidded quality and penetrating direct gaze; full shapely lips; defined angular jawline; neutral resting expression is knowing and self-assured with slight sultry smile and unwavering confident eye contact that holds just a beat too long.
+
+* **Hair:** Type 2B-2C waves; very high density; voluminous cascading silhouette; long length past mid-back; natural loose center part; healthy high-sheen finish; commonly worn loose and wild with tousled volume, half-up with face-framing tendrils, or low messy bun showing neck; rich dark chocolate brown with warm caramel highlights.
+
+* **Skin:** Medium-tan with warm golden-olive undertones and luminous sun-kissed finish; beauty mark above upper lip on left side; smooth healthy Mediterranean glow.
+**Outfit:**
+- **Top:** Form-fitting spandex bodysuit ((default:white)).
+  - **Fit:** Skin-tight; High-cut legs.
+  - **Material:** Spandex.
+  - **Pattern:** Distinctive circular cutout at center chest.
+  - **Neckline:** High-neck with cutout.
+  - **Sleeve:** Wrist-length gloves.
+- **Bottom:** Integrated bodysuit legs.
+  - **Fit:** Skin-tight.
+  - **Material:** Spandex.
+  - **Waist:** Gold belt with circular buckle.
+  - **Length:** Full-length (gloves and boots).
+- **Footwear:** Knee-high boots with low heel.
+- **Accessories:** Short white cape; gold accents on edges.
+**Pose/Action:**
+Looking back over shoulder, playful smile, hair cascading down, confident stance.
 ---
 
 **Additional Notes:**
-Siofra Quinn and Priya Sharma standing side by side comparing heights, one measuring against the other
+Marcus Thompson testing a complex mechanical or electronic prototype while Nora Alvarez records data, both engaged in the high-precision work of innovation.
+```
+
+### 2. gen_only_1768270041_10.txt (Score: 215)
+```text
+Generate an image of: Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+---
+
+**SCENE/SETTING:**
+Outdoor fair with vendor booths, hanging decorations, crowds, festive community gathering energy.
+---
+
+**CHARACTER: Marley Thompson**
+**Appearance:**
+* **Body:** Romantic frame; wave-lush flesh quality; voluptuous hourglass proportions with full bust (DD-E cup), dramatically defined waist, wide rounded hips, full thighs; moderate height (5'5"-5'6"); soft density with feminine curves throughout, rounded shoulders, shapely legs; magnetizing maternal presence.
+* **Face:** Soft-rounded facial structure; heart-to-round face shape; full cheeks with natural warmth; large expressive dark brown eyes, wide-set, warm inviting gaze; full lips with natural cupid's bow; soft jawline; neutral resting expression is serene and welcoming with gentle smile—radiates nurturing warmth and domestic contentment.
+* **Hair:** Type 4A coils; very high density; medium-long length (past shoulders); high volume and body; commonly worn in protective styles that are polished and feminine—twist-outs with defined curls, elegant bun with decorative pins, braided crown styles, occasionally heat-styled into bouncy curls for special occasions; natural black with warm brown undertones; always well-maintained and styled.
+* **Skin:** Deep warm brown with rich golden undertones; smooth luminous finish; healthy glow from good skincare; natural radiance.
+**Outfit:**
+- **Top:** Heavy elasticated ribbing bandage bodice.
+  - **Fit:** Extreme bodycon compression.
+  - **Material:** Heavy elasticated ribbing.
+  - **Pattern:** Structural "X" with #000000 accent straps.
+  - **Neckline:** Cross-over halter.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Matching bandage midi skirt.
+  - **Fit:** Structural bodycon.
+  - **Material:** matching ribbing.
+  - **Waist:** Sculpted natural waist.
+  - **Length:** Midi length.
+- **Footwear:** Strappy high heels.
+- **Accessories:** Vintage gold clutch; cocktail ring.
+**Pose/Action:**
+wide shot with the character framed within the environment, Perched on desk, counter, or bed edge, legs dangling or crossed, Casual confidence.
+---
+
+**CHARACTER 2: Jamal Rivers**
+**Appearance:**
+* **Body:** Soft Classic frame; natural flesh; balanced proportions with gentle width; moderate vertical; composed presence with natural ease.
+* **Face:** Balanced refined facial structure; oval face; warm intelligent eyes; defined features; calm thoughtful expression.
+* **Hair:** Type 4A-4B coils; medium density; short natural cut with slight taper; well-maintained; matte finish.
+* **Skin:** Deep brown skin with warm undertones and smooth finish. thin wire-frame glasses
+**Outfit:**
+- **Top:** Mesh tank top or sleeveless tee.
+  - **Fit:** Fitted muscle tank.
+  - **Material:** Mesh/Cotton.
+  - **Pattern:** Solid (Black).
+  - **Neckline:** Crew or Scoop.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Black cargo pants or utility kilt.
+  - **Fit:** Utility loose.
+  - **Material:** Heavy cotton twill.
+  - **Pattern:** Solid.
+  - **Waist:** Buckled.
+  - **Length:** Full length or Knee (kilt).
+- **Footwear:** Combat boots.
+- **Accessories:** Leather wrist cuffs, silver rings, body harness.
+**Pose/Action:**
+wide shot with the character framed within the environment, Standing naturally, relaxed posture, arms at sides, gentle weight shift to one leg.
+---
+
+**Additional Notes:**
+Marley Thompson and Jamal Rivers backlit by warm sunset glow, positioned to maximize golden hour lighting magic. Warm golden-orange light creates rim lighting effect around edges of bodies and hair, creating angelic halo glow. Both in dreamy relaxed poses—Marley Thompson and Jamal Rivers standing close, one looking at the other or both gazing toward horizon. Expressions peaceful and contemplative, soft smiles or serene faces. Hair catching light creating luminous effect. Bodies positioned so sunlight filters through creating lens flare effect. Poses natural and romantic—hands gently touching, arms loosely around each other, or standing close in comfortable silence. Clothing light and flowing, catching golden light. Background shows horizon with sun low in sky, creating gradient from golden-orange to deep purple-blue. Soft atmospheric mood emphasizing beauty and fleeting perfect moment. Composition artistic—subjects may be silhouetted or softly lit from side. Overall feeling: magical, romantic, and cinematic. Time of day and lighting quality are the stars of this shot.
+```
+
+### 3. gen_only_1768270041_6.txt (Score: 300)
+```text
+Generate an image of: Rendering
+Black and white (or extremely desaturated sepia). High-contrast "Low Key" lighting. Deep, crushing blacks and stark white highlights. Film grain and scratch textures simulate aged celluloid.
+
+Character Accuracy
+Faces are partially obscured by shadow (half-lighting). Expressions are stoic, suspicious, or melancholy. Lighting is used to sculpt the face, often hiding the eyes or emphasizing the cheekbones.
+
+Body Types
+Silhouettes are paramount—the figure is often defined by rim light against a dark background. Posture is rigid, leaning, or guarded.
+
+Hair & Clothing
+Hair: Sleek, controlled, and glossy (pomade/gel look). Clothing: Heavy fabrics (wool, trench coats) that absorb light. Sharp collars and brims cast distinct, hard shadows across the figure.
+
+Details
+Venetian blind shadow slats cast across the image. Volumetric cigarette smoke or fog. Rain streaks. The composition utilizes "Dutch Angles" (tilted camera) for tension.
+
+---
+
+**SCENE/SETTING:**
+Narrow back alley, flickering neon, exposed wiring, steam rising from vents, gritty underground atmosphere.
+---
+
+**CHARACTER: Sitara Saanvi**
+**Appearance:**
+* **Body:** Romantic frame; soft lush flesh quality; hourglass proportions with defined waist; moderate height (5'4"); soft rounded density with lush bust and hips, delicate wrists and ankles; alluring captivating presence.
+* **Face:** Soft rounded structure; heart shape; large expressive dark brown almond eyes with dazzled flirtatious quality; softly curved jawline; neutral resting expression is slightly pouting and sensual.
+* **Hair:** Type 2C waves; medium-high density; dark glossy black with high sheen; long voluminous hair that takes styling well; commonly worn in glamorous, vintage-inspired styles.
+* **Skin:** Medium tan with warm golden-olive undertones and luminous smooth surface finish; small delicate beauty mark near lip.
+**Outfit:**
+- **Top:** Oversized chunky cable-knit sweater.
+  - **Fit:** Oversized; Chunky.
+  - **Material:** Wool or Cotton knit.
+  - **Pattern:** Cable-knit.
+  - **Neckline:** Crew neck or Mock neck.
+  - **Sleeve:** Long sleeves extending past wrists.
+- **Bottom:** High-waist jeans or corduroy pants.
+  - **Fit:** Relaxed or Straight.
+  - **Material:** Denim or Corduroy.
+  - **Waist:** High-waisted.
+  - **Length:** Ankle-length.
+- **Footwear:** Ankle boots.
+- **Accessories:** Knit scarf; simple jewelry.
+**Pose/Action:**
+Leaning against surface, Casual relaxed stance, arms crossed or one hand in pocket.
+---
+
+**CHARACTER 2: Lucía Reyes**
+**Appearance:**
+* **Body:** Romantic frame; wave plush softness; full hourglass proportions; moderate vertical.
+* **Face:** Rounded facial structure; heart-shaped face; full cheeks; warm expressive eyes; joyful resting expression.
+* **Hair:** Type 2B–2C waves; high density; long layered cut; side part; healthy sheen.
+* **Skin:** Warm golden skin with radiant glow.
+**Outfit:**
+- **Top:** Cropped bomber jacket over synaptic-interface bodysuit with **pulsing neon EL-wire**.
+  - **Fit:** Cropped jacket; Skin-tight bodysuit.
+  - **Material:** Translucent PVC; Neoprene.
+  - **Pattern:** Embedded circuitry.
+  - **Neckline:** High-neck bodysuit.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted tech-wear cargo trousers.
+  - **Fit:** Relaxed cargo.
+  - **Material:** Ripstop nylon.
+  - **Pattern:** Hanging nylon straps.
+  - **Waist:** Fidlock buckles.
+  - **Length:** Full length.
+- **Footwear:** Chunky platform stomper boots with LED underglow.
+- **Accessories:** Dataport cables (temple); holographic visor; fingerless tactical gloves.
+**Pose/Action:**
+Lying in bed, sheets draped artfully, relaxed intimate setting, soft natural look.
+---
+
+**CHARACTER 3: Jena Marlowe**
+**Appearance:**
+* **Body:** Soft Dramatic–Romantic blend; elongated but light vertical; gentle hourglass with soft waist emphasis; overall delicacy rather than dramatic weight.
+* **Face:** Soft oval face with balanced proportions; medium-large bright eyes; refined nose; gentle jawline; warm, approachable expression with an easy smile.
+* **Hair:** Light honey-blonde; Type 2A–2B loose waves; fine-to-medium density; long hair with soft volume; luminous natural-looking highlights; healthy glossy finish.
+* **Skin:** Fair to light neutral-warm tone with a natural satin glow; fresh and luminous in daylight.
+**Outfit:**
+- **Top:** Red/white gingham western shirt.
+  - **Fit:** Tied at the front (flattering midriff-baring fit); Form-fitting.
+  - **Material:** Cotton.
+  - **Pattern:** Gingham check (red/white).
+  - **Neckline:** Deep V-neck; Pointed collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted dark rinse denim hotpants.
+  - **Fit:** Skintight; High-waisted.
+  - **Material:** Denim with white contrast top-stitching.
+  - **Waist:** High-waisted.
+  - **Length:** Minimal (hotpants).
+- **Footwear:** White leather cowboy boots with decorative stitching.
+- **Accessories:** White felt cattleman-crease cowboy hat; white ribbons in hair braids.
+**Pose/Action:**
+Posing in front of mirror, phone held up, confident expression, outfit showcase.
+---
+
+**Additional Notes:**
+Sitara Saanvi and Lucía Reyes lifting a heavy object together, coordinating their strength and effort
 ```
 

@@ -1,0 +1,52 @@
+# Pose Standards
+
+To ensure high-quality, expressive pose generation, all entries in `poses.md` must adhere to the **Elite Pose Standard**. A pose is not just a static position; it is a combination of body language, expression, and energy.
+
+## Schema
+
+```markdown
+- **Pose Name** (Tag1, Tag2, Tag3): [Visual Description]
+```
+
+## detailed Requirements
+
+### 1. Naming
+
+- **Format:** Title Case (e.g., `Arms Crossed`, `Leaning Against Wall`).
+- **Uniqueness:** Must be unique within the file.
+- **Clarity:** The name should reflect the core action or aesthetic (e.g., `Jacket Slung Over Shoulder` is better than `Cool Walk`).
+
+### 2. Tags
+
+- **Format:** Parentheses immediately following the name.
+- **Content:** Comma-separated list.
+- **Required Tags:**
+  - **Category Tag:** At least one tag acting as a high-level category (e.g., `Sitting`, `Standing`, `Dynamic`, `Portrait`).
+  - **Vibe Tag:** At least one tag describing the mood/energy (e.g., `Confident`, `Relaxed`, `Intense`, `Playful`).
+- **Casing:** Tags should be **Title Case** (e.g., `Casual`, not `casual`).
+
+### 3. Visual Description
+
+The description is the most critical part. It must be descriptive enough to guide the AI without over-constraining the outfit or character details.
+
+- **Length:** 1-2 conciseness sentences.
+- **Components:**
+  - **Body Positioning:** How are the limbs arranged? (e.g., "legs crossed at ankles", "arms stretched overhead").
+  - **Weight/balance:** Where is the center of gravity? (e.g., "leaning heavily on left leg", "mid-stride").
+  - **Expression/Head:** (Optional but recommended) Head tilt or expression cues (e.g., "looking back over shoulder", "chin lifted confidently").
+  - **Vibe:** The energy the pose conveys (e.g., "exuding quiet dominion", "bursting with energy").
+
+## Example (Good vs Bad)
+
+**BAD:**
+` - **Sitting** (Basic, Sitting): Sitting down using a chair.`
+_(Too vague, redundant tags, no vibe)._
+
+**GOOD:**
+`- **Executive Perch** (Sitting, Confident, Professional): Perched on the edge of a desk with one leg resting on the floor and the other dangling, arms crossed loosely, projecting casual authority.`
+
+## Quality Rules
+
+1.  **Avoid generic descriptions.** "Standing there" is unacceptable. "Standing with rigid posture" is better.
+2.  **No "Blank" entries.** Every pose must have a description.
+3.  **Tags must be relevant.** Do not tag "Portrait" if it's a full-body jumping shot.

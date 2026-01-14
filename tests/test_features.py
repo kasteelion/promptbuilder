@@ -157,7 +157,7 @@ def test_preset_manager(tmp_path):
 
 def test_config_constants():
     """Config exports expected constants used by the UI."""
-    import config
+    from core import config
 
     assert "base_prompt" in config.TOOLTIPS
     assert isinstance(config.WELCOME_MESSAGE, str)

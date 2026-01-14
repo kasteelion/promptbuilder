@@ -9,12 +9,12 @@
 **Gender:** F
 **Signature Color:** #FFC0CB
 
-**Appearance:**
+- **Appearance:**
 
-- **Body:** Romantic frame; wave plush softness; lush hourglass proportions with a defined waist and soft rounded curves; moderate vertical (5'4"-5'5"); soft and inviting presence with a delicate-yet-grounded build; "tranquil strength" presence—quietly durable but appearing fragile.
-- **Face:** Rounded-soft facial structure; heart-shaped face with high-but-soft cheekbones; smooth clear planes; large expressive almond-shaped eyes, deep dark brown, reflecting a gentle and observant nature; soft-tapered eyebrows in a natural arc; refined nose with a soft bridge; full youthful lips held in a shy-but-warm expression that radiates a quiet, intimate confidence.
-- **Hair:** Type 2A waves; high density; long length past shoulders; silky dark obsidian hair with natural volume and a luminous healthy sheen; side-parted with soft-framed layers; takes soft, romantic styling well; commonly worn in loose curls or pinned back with a delicate accessory.
-- **Skin:** Light warm skin with soft golden-cream undertones (Japanese heritage); smooth satin finish with a natural healthy glow; flawless texture maintained by traditional and modern skincare.
+* **Body:** Romantic frame; wave plush softness; lush hourglass proportions with a defined waist and soft rounded curves; moderate vertical (5'4"-5'5"); soft and inviting presence with a delicate-yet-grounded build; "tranquil strength" presence—quietly durable but appearing fragile.
+* **Face:** Rounded-soft facial structure; heart-shaped face with high-but-soft cheekbones; smooth clear planes; large expressive almond-shaped eyes, deep dark brown, reflecting a gentle and observant nature; soft-tapered eyebrows in a natural arc; refined nose with a soft bridge; full youthful lips held in a shy-but-warm expression that radiates a quiet, intimate confidence.
+* **Hair:** Type 2A waves; high density; long length past shoulders; silky dark obsidian hair with natural volume and a luminous healthy sheen; side-parted with soft-framed layers; takes soft, romantic styling well; commonly worn in loose curls or pinned back with a delicate accessory.
+* **Skin:** Light warm skin with soft golden-cream undertones (Japanese heritage); smooth satin finish with a natural healthy glow; flawless texture maintained by traditional and modern skincare.
 
 **Age Presentation:** early 20s presentation; youthful, gentle, self-assured, tranquil.
 **Vibe / Energy:** tender, warm, romantic; radiates a tranquil and intimate energy; creates a sense of safe, safe, and observant space.

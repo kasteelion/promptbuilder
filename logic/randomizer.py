@@ -207,12 +207,32 @@ class PromptRandomizer:
     }
 
     def _expand_tags(self, tags):
-        """Expand tags with aliases/groups."""
+        """Expand tags with aliases/groups recursively."""
         expanded = set(tags)
+        
+        # Also clean "Mood:" prefixes from raw tags so they match their bare counterparts
+        # e.g. "Mood:Futuristic" in tags should allow matching with "futuristic" in aliases
         for t in tags:
-            t_lower = t.lower()
-            if t_lower in self.TAG_ALIASES:
-                expanded.update(self.TAG_ALIASES[t_lower])
+            t_str = str(t)
+            if t_str.lower().startswith("mood:"):
+                expanded.add(t_str[5:].strip())
+
+        # Iterative expansion to handle chains (e.g. cottagecore -> vintage -> nostalgic)
+        # 3 passes is usually enough for any reasonable taxonomy depth
+        for _ in range(3):
+            current_tags = list(expanded)
+            added_new = False
+            for t in current_tags:
+                t_lower = str(t).lower()
+                if t_lower in self.TAG_ALIASES:
+                    new_tags = self.TAG_ALIASES[t_lower]
+                    for nt in new_tags:
+                        if nt not in expanded:
+                            expanded.add(nt)
+                            added_new = True
+            if not added_new:
+                break
+                
         return expanded
 
     def _check_color_support(self, char_name, outfit_name):

@@ -1,0 +1,24 @@
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+---
+
+**SCENE/SETTING:**
+Neutral seamless backdrop, professional three-point studio lighting with softboxes, clean minimalist setup. Subtle hum of cooling fans, scent of fresh paint and ozone.
+---
+
+**CHARACTER: Simone Relational**
+**Appearance:**
+- **Body:** Geometric curvy silhouette; shoulder width is approximately 1.5x the narrow waist width; hip width is equal to the shoulder width, creating a balanced hourglass; rounded, sloped shoulders with soft transitions; flesh is gracefully curved and soft throughout, with no visible muscular definition or sharpness.
+- **Face:** Softened diamond face shape where the cheekbones are significantly wider than the jawline; the chin is rounded and centered; eyes are almond-shaped with the inner corners exactly level with the outer corners; the distance between the eyes is equal to exactly one eye-width; the nose base width is equal to the distance between the eyes; the mouth width is equal to the distance from the center of the left iris to the center of the right iris.
+- **Hair:** High-density braids falling with heavy vertical drape physics; the hair weight pulls the braids straight down to the waist; scalp features a high-contrast geometric zigzag parting with precision-straight lines; hairline follows a clean, symmetrical arc away from the forehead.
+- **Skin:** Deep sienna-mahogany complexion with even, high-specularity reflections on facial high points (cheeks, forehead); lighting reveals warm reddish/golden depth through subsurface scattering; texture is smooth, matte-to-radiant transition.
+**Outfit:**
+- Top: Magenta cotton poplin bodice; voluminous puffy sleeves with stiff, angular geometric folds; horizontal tension lines across the ruched bust; wide scoop-sweetheart hybrid neckline.
+- Bottom: Matching magenta poplin mini skirt with a crisp A-line flare.
+- Footwear: Elegant black leather wide-strap slide sandals.
+- Accessories: Black plastic rectangular-cat-eye hybrid frames; large thick gold hoop earrings; a stack of gold bangles on the left wrist.
+- Hair/Makeup: Ultra-long micro-braids with heavy vertical drape; 'glass skin' highlights on cheekbones and forehead; neutral glossy lips.
+**Pose/Action:**
+Standing naturally, relaxed posture, arms at sides, gentle weight shift to one leg.
+---

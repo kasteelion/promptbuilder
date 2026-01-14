@@ -9,6 +9,10 @@ def consolidate():
     # (Section Title, Filename)
     report_order = [
         ("Distribution Visualizations", "prompt_distribution_flow.md"),
+        ("Standards Audit: Characters", "character_standards_report.md"),
+        ("Standards Audit: Scenes", "scene_standards_report.md"),
+        ("Standards Audit: Poses", "pose_standards_report.md"),
+        ("Standards Audit: Interactions", "interaction_standards_report.md"),
         ("Style Distribution Census", "style_census.md"),
         ("Vibe Cohesion Analysis", "vibe_cohesion_report.md"),
         ("Prompt Scoring Analysis (Best & Worst)", "best_worst_prompts.md"),

@@ -2,8 +2,7 @@
 
 **Photo:** diego_morales_photo.png
 
-**Tags:** male, approachable, athletic, californian, casual, creative, minimalist, tan
-
+**Tags:** male, approachable, Athletic, californian, casual, creative, minimalist, tan
 **Summary:** Diego carries a relaxed charisma that feels both creative and inviting. His athleticism is softened by warmth and humor, giving him an approachable presence that naturally draws people in without effort. A digital designer by trade and a surfer by habit, he embodies the laid-back intensity of his Southern California roots. His workspace is as clean as his surfing lines, focused on functional beauty and meaningful connections. He's the guy who remembers everyone's name and always knows where the best coffee is.
 
 **Gender:** M
@@ -11,10 +10,10 @@
 
 **Appearance:**
 
-- **Body:** Natural Athletic frame; natural-toned flesh with sun-touched warmth; inverted rectangle proportions with broad shoulders, slim waist, and defined muscle groups without bulk; moderate height (5'11"-6'0"); relaxed athletic build—lean and flexible from years of surfing; "effortless strength" presence—capable but never posturing.
-- **Face:** Balanced-angular structure; oval face shape; firm jawline that softens when he smiles; expressive almond-shaped eyes, wide-set, warm hazel with golden flecks that catch the light; natural dark eyebrows with a slight arch; straight nose with a subtle bridge; full mouth often quirked into a friendly half-smile; expressive neutral expression that reads as engaged and helpful.
-- **Hair:** Type 2B-2C waves; thick high density; medium length textured cut, shorter on sides with volume on top; loose natural side part; matte-satin finish with sun-bleached highlights at the tips; commonly worn tousled and "salt-water" styled, or loosely pushed back during work.
-- **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
+* **Body:** Natural Athletic frame; natural-toned flesh with sun-touched warmth; inverted rectangle proportions with broad shoulders, slim waist, and defined muscle groups without bulk; moderate height (5'11"-6'0"); relaxed athletic build—lean and flexible from years of surfing; "effortless strength" presence—capable but never posturing.
+* **Face:** Balanced-angular structure; oval face shape; firm jawline that softens when he smiles; expressive almond-shaped eyes, wide-set, warm hazel with golden flecks that catch the light; natural dark eyebrows with a slight arch; straight nose with a subtle bridge; full mouth often quirked into a friendly half-smile; expressive neutral expression that reads as engaged and helpful.
+* **Hair:** Type 2B-2C waves; thick high density; medium length textured cut, shorter on sides with volume on top; loose natural side part; matte-satin finish with sun-bleached highlights at the tips; commonly worn tousled and "salt-water" styled, or loosely pushed back during work.
+* **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
 
 **Age Presentation:** late 20s presentation; energetic, grounded, effortlessly cool.
 **Vibe / Energy:** approachable, steady, warm-creative, laid-back charisma, reliable-yet-adventurous.

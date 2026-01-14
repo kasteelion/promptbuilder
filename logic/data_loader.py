@@ -30,20 +30,35 @@ class DataLoader:
         self._file_mtimes = {}
 
     def _find_data_file(self, filename):
-        """Find data file in new or old location.
+        """Find data file in new, subgroup, or old location.
 
-        Checks data/ directory first (new structure), then root (old structure).
+        Checks paths in order:
+        1. data/filename
+        2. data/lists/filename
+        3. data/standards/filename
+        4. root/filename
 
         Args:
-            filename: Name of file to find (e.g., 'outfits.md')
+            filename: Name of file to find (e.g., 'tags.md')
 
         Returns:
             Path object or None if not found
         """
-        # Try new location (data/filename)
-        new_location = self.base_dir / "data" / filename
-        if new_location.exists():
-            return new_location
+        # Try direct location (data/filename)
+        data_dir = self.base_dir / "data"
+        direct_location = data_dir / filename
+        if direct_location.exists():
+            return direct_location
+
+        # Try lists subdirectory
+        list_location = data_dir / "lists" / filename
+        if list_location.exists():
+            return list_location
+
+        # Try standards subdirectory
+        std_location = data_dir / "standards" / filename
+        if std_location.exists():
+            return std_location
 
         # Fall back to old location (root/filename)
         old_location = self.base_dir / filename
@@ -51,7 +66,12 @@ class DataLoader:
             return old_location
 
         # Return new location as default for file creation
-        return new_location
+        # If it's a known list type, default to lists/
+        known_lists = ["tags.md", "themes.md", "modifiers.md", "framing.md", "color_schemes.md"]
+        if filename in known_lists:
+             return data_dir / "lists" / filename
+             
+        return direct_location
 
     def _find_characters_dir(self):
         """Find characters directory in new or old location.

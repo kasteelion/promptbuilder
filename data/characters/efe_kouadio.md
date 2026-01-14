@@ -1,7 +1,6 @@
 ### Efe Kouadio
 **Photo:** efe_kouadio_photo.png
 
-**Photo:** efe_kouadio_photo.png
 
 **Summary:** Efe embodies the warmth and approachable charm of the girl next door with distinctly Nigerian flair. Her natural textured hair and luminous smile create an aura of genuine sweetness and self-assurance. She carries herself with an easy confidence that makes people feel immediately comfortable, radiating the kind of friendly energy that turns strangers into friends. Her style is playful yet put-together, mixing vibrant colors with casual comfort in a way that feels effortlessly cute and authentically her.
 
@@ -12,10 +11,10 @@
 
 **Appearance:**
 
-- **Body:** Soft Natural frame; natural soft flesh; balanced proportions with gentle curves, defined waist, full hips, soft rounded features, moderate shoulders; moderate vertical (5’5”-5’6”); natural curvy build with soft harmonious lines and welcoming presence.
-- **Face:** Soft-balanced facial structure; round-oval face with warm open planes and full cheeks that enhance smile; expressive round-almond eyes with bright engaged quality, wide-set, warm dark brown with natural sparkle; full lips with natural upward curve that creates dimpled smile; smooth forehead; radiant joyful expression that lights up her whole face.
-- **Hair:** Type 4A coils; high density; medium-length natural textured style with defined curl pattern and bouncy voluminous shape; healthy soft finish with natural sheen; black to dark brown.
-- **Skin:** Deep warm brown with rich golden undertones and natural luminous dewy finish.
+* **Body:** Soft Natural frame; natural soft flesh; balanced proportions with gentle curves, defined waist, full hips, soft rounded features, moderate shoulders; moderate vertical (5’5”-5’6”); natural curvy build with soft harmonious lines and welcoming presence.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes and full cheeks that enhance smile; expressive round-almond eyes with bright engaged quality, wide-set, warm dark brown with natural sparkle; full lips with natural upward curve that creates dimpled smile; smooth forehead; radiant joyful expression that lights up her whole face.
+* **Hair:** Type 4A coils; high density; medium-length natural textured style with defined curl pattern and bouncy voluminous shape; healthy soft finish with natural sheen; black to dark brown.
+* **Skin:** Deep warm brown with rich golden undertones and natural luminous dewy finish.
 
 **Age Presentation:** early-to-mid-20s presentation; youthful, sweet, approachable.
 

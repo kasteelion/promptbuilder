@@ -21,6 +21,14 @@ python auditing/run_full_audit.py --count 100
 python auditing/run_full_audit.py --skip-gen
 ```
 
+### 📊 Output Files
+
+The audit system generates various output files:
+
+- **Root directory**: `audit_results.txt`, `audit_check_*.txt` (category-specific checks)
+- **`auditing/generated_prompts_only/`**: Test prompts for analysis
+- **`auditing/reports/`**: Consolidated reports and visualizations
+
 ### 📄 The Comprehensive Report
 
 After running the full audit, open the master report:
@@ -63,23 +71,41 @@ Generates a mermaid.js Sankey diagram showing the flow of the randomizer:
 - This helps visualize if a specific style or character is dominating the generations.
 - Output: `auditing/reports/prompt_distribution_flow.md`
 
-### 4. Tag Inventory (`tag_inventory.py`)
+### 5. Tag Inventory (`tag_inventory.py`)
 
 Aggregates every single tag used across Characters, Scenes, and Outfits.
 
 - **Goal**: Identify synonyms (e.g., "Sci-Fi" vs "Science Fiction") or typos.
 - **Output**: `auditing/reports/tag_inventory.md`
 
-### 5. Connectivity Check (`check_character_connectivity.py`)
+### 6. Tag Audit (`tag_audit.py`)
+
+Analyzes content distribution and identifies gaps:
+
+- Tag frequency across all content types
+- Underrepresented categories
+- Potential expansion opportunities
+
+### 7. Connectivity Check (`check_character_connectivity.py`)
 
 _Advanced check._ Ensures that every character has at least one valid Scene they can appear in based on tag intersections. Characters with `0` connectivity will never appear in valid generations.
 
-### 6. Outfit Precision Audit (`audit_outfit_quality.py`)
+### 8. Outfit Precision Audit (`audit_outfit_quality.py`)
 
 Scans detailed [F] variant descriptions to score "completeness" against the 6 Key Dimensions defined in `OUTFIT_STANDARDS.md`.
 
 - **Dimensions:** Fit, Material, Neckline, Sleeve, Waist, Length.
 - **Goal:** Identify vague prompts (e.g. "A red dress") and flag them for improvement.
+
+### 9. Prompt Generation (`generate_prompts_only.py`)
+
+Generates test prompts without browser automation:
+
+```bash
+python auditing/generate_prompts_only.py --count 50
+```
+
+Useful for testing randomizer changes and analyzing distribution.
 
 ---
 
@@ -87,11 +113,19 @@ Scans detailed [F] variant descriptions to score "completeness" against the 6 Ke
 
 ```text
 auditing/
-├── reports/                  # Generated report files (Gitignored)
-├── run_full_audit.py         # Main entry point
-├── quality_audit.py          # Static logic analyzer
-├── find_best_worst.py        # Generated content scorer
-├── generate_sankey_diagram.py# Visualization generator
-├── tag_inventory.py          # Taxonomy checker
-└── consolidate_reports.py    # Report merger
+├── reports/                       # Generated report files (Gitignored)
+├── generated_prompts_only/        # Test prompts for analysis
+├── run_full_audit.py              # Main entry point
+├── quality_audit.py               # Static logic analyzer
+├── find_best_worst.py             # Generated content scorer
+├── generate_sankey_diagram.py     # Visualization generator (Plotly + Mermaid)
+├── generate_tag_sankey.py         # Tag-focused Sankey diagrams
+├── prompt_distribution_analyzer.py# Pattern extraction from prompts
+├── tag_inventory.py               # Taxonomy checker
+├── tag_audit.py                   # Distribution analysis
+├── check_character_connectivity.py# Character-scene compatibility
+├── audit_outfit_quality.py        # Outfit completeness scoring
+├── generate_prompts_only.py       # Prompt generation without automation
+├── consolidate_reports.py         # Report merger
+└── verify_integrity.py            # Data integrity checks
 ```

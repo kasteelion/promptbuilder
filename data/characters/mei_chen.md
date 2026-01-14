@@ -1,7 +1,6 @@
 ### Mei Chen
 **Photo:** mei_chen_photo.png
 
-**Photo:** [mei_chen_photo.png]
 **Tags:**   chinese-american, approachable, commanding, curvy, edgy, female, playful, plus-size
 **Summary:** Mei blends voluptuous curves with youthful sweetness in an unexpectedly magnetic combination. Her petite stature concentrates her curves into a compact, attention-commanding presence—soft and inviting yet undeniably provocative. She navigates femininity with playful confidence, mixing kawaii aesthetics with body-conscious choices that celebrate her figure. There's a knowing quality to her sweetness, a self-awareness that makes her charm feel deliberate rather than accidental.
 **Gender:** F

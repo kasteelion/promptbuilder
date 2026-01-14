@@ -6,347 +6,331 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 
 ## Basic Interactions
 
-- **Blank:** (Start from scratch)
-- **Conversation:** (Social): {char1} engaged in conversation with {char2}, both looking at each other with friendly expressions
-- **Laughing Together:** (Social, Happy): {char1} and {char2} laughing together, both showing genuine amusement and joy
-- **Sitting Together:** (Social, Relaxed): {char1} sitting next to {char2}, both relaxed in adjacent positions
-- **Standing Together:** (Social): {char1} standing beside {char2}, both upright with comfortable body language
-- **Walking Together:** (Social, Dynamic): {char1} walking alongside {char2}, both moving in the same direction with casual pace
-- **Working Together:** (Work, Task): {char1} and {char2} working together on a task, coordinating their efforts with focused expressions
-- **Talking:** (Social): {char1} and {char2} talking.
-- **Walking:** (Social, Outdoor, Casual): {char1} and {char2} walking together.
-- **Cooking Together:** (Kitchen, Cooking): {char1} and {char2} preparing a meal together in a kitchen, one chopping while the other stirs, cooperative domestic energy.
-- **Basketball One-on-One:** (Basketball): {char1} and {char2} playing basketball, one guarding while the other attempts a dribble or shot, energetic competitive action.
-- **Soccer Kickabout:** (Soccer): {char1} and {char2} kicking a soccer ball back and forth on a field, focused footwork and athletic movement.
-- **Science Collaboration:** (Science, Tech): {char1} and {char2} working together in a lab, leaning over a microscope or discussing data on a screen, professional intellectual focus.
+- **Deep Conversation** (Social, Intimate): {char1} and {char2} deep in conversation, bodies angled toward each other, faces expressive and engaged, oblivious to the world around them.
+- **Laughing Together** (Social, Happy): {char1} and {char2} sharing a genuine laugh, heads tilted back, eyes crinkled with joy, radiating positive energy.
+- **Relaxed Sitting** (Social, Relaxed): {char1} and {char2} sitting comfortably side-by-side, posture loose and at ease, enjoying a quiet moment of companionship.
+- **Standing Side-by-Side** (Social, Casual): {char1} and {char2} standing together, shoulders relaxed, looking forward with a comfortable, familiar presence.
+- **Strolling Together** (Social, Dynamic): {char1} and {char2} walking at a leisurely pace, steps synchronized, chatting casually as they move through the environment.
+- **Focused Teamwork** (Work, Task): {char1} and {char2} leaning over a shared task, brows furrowed in concentration, coordinating their actions with professional synergy.
+- **Casual Chat** (Social, Daily): {char1} and {char2} standing comfortably, exchanging casual remarks with light hand gestures and relaxed smiles.
+- **Walking & Talking** (Social, Outdoor): {char1} and {char2} walking briskly while engaged in an animated discussion, passing through the scenery with purpose.
+- **Kitchen Prep** (Domestic, Cooking): {char1} chopping vegetables with precision while {char2} stirs a pot nearby, moving around each other in a coordinated domestic dance.
+- **One-on-One Hoops** (Basketball, Sport): {char1} dribbling low and guarding the ball while {char2} stays in a defensive crouch, eyes locked on the movement, competitive energy.
+- **Soccer Passing** (Soccer, Sport): {char1} passing the ball to {char2} with a crisp kick, {char2} trapping it smoothly, focused on the flow of the game.
+- **Lab Partners** (Science, Tech): {char1} adjusting a microscope while {char2} takes notes on a clipboard, surrounded by equipment, professional scientific atmosphere.
 
 ---
 
 ## Greetings & Gestures
 
-- **Fist Bump:** {char1} fist bumping {char2}, knuckles meeting in casual friendly gesture
-- **Handshake:** {char1} shaking hands with {char2}, professional greeting gesture with direct eye contact
-- **High Five:** {char1} giving {char2} an enthusiastic high five, both smiling with celebratory energy
-- **Hug:** {char1} embracing {char2} in a warm hug, both showing affection
-- **Pointing At:** {char1} pointing towards {char2}, drawing attention with extended arm gesture
-- **Thumbs Up:** {char1} giving {char2} a thumbs up gesture, showing approval and encouragement
-- **Wave:** {char1} waving at {char2}, friendly greeting from a distance
+- **Casual Fist Bump** (Social, Friendly): {char1} and {char2} bumping fists lightly, a cool and casual acknowledgment of friendship.
+- **Firm Handshake** (Professional, Social): {char1} and {char2} shaking hands firmly, making direct eye contact, conveying respect and professionalism.
+- **Enthusiastic High Five** (Celebratory, Dynamic): {char1} and {char2} slapping hands high in the air, arms fully extended, faces beaming with victory and excitement.
+- **Warm Embrace** (Social, Affectionate): {char1} wrapping arms around {char2} in a tight, genuine hug, {char2} leaning in, showing care and connection.
+- **Direct Pointing** (Social, Directional): {char1} extending an arm to point out a distant object to {char2}, who looks on with interest.
+- **Encouraging Thumbs Up** (Social, Positive): {char1} flashing a confident thumbs-up to {char2}, offering silent support and approval.
+- **Friendly Wave** (Social, Greeting): {char1} raising a hand to wave at {char2}, smiling broadly in a welcoming gesture of recognition.
 
 ---
 
 ## Physical Activities
 
-- **Arm Wrestling:** (Competitive, Strength): {char1} arm wrestling with {char2}, both gripping hands with determined expressions and exerted effort
-- **Dancing Together:** (Dance, Social): {char1} and {char2} dancing together, holding hands in dance position, moving in sync with rhythm
-- **Jogging Together:** (Exercise, Dynamic, Outdoor): {char1} jogging beside {char2}, both maintaining steady pace with athletic form
-- **Playing Catch:** (Exercise, Social): {char1} and {char2} playing catch, one throwing while the other prepares to receive
-- **Playing Game:** (Social, Casual, Game): {char1} and {char2} playing a game together, both focused and engaged in friendly competition
-- **Stretching Together:** (Exercise, Dynamic): {char1} and {char2} doing stretches together, both in exercise positions with focused attention
+- **Intense Arm Wrestle** (Competitive, Strength): {char1} and {char2} gripping hands at a table, biceps bulging and veins visible, locked in a stalemate of strength.
+- **Ballroom Dancing** (Dance, Elegant): {char1} and {char2} moving in a classic ballroom frame, {char1}'s hand on {char2}'s back, steps perfectly timed to the rhythm.
+- **Jogging Partners** (Exercise, Dynamic): {char1} and {char2} running side-by-side with matched strides, breathing rhythmically, focused on their fitness pace.
+- **Playing Catch** (Sport, Casual): {char1} throwing a ball in a smooth arc toward {char2}, who raises a glove or hand to make the catch, relaxed athletic fun.
+- **Board Game Night** (Social, Fun): {char1} and {char2} sitting across a board game, {char1} moving a piece with a smirk while {char2} watches with feigned concern.
+- **Partner Stretching** (Exercise, Wellness): {char1} helping {char2} deepen a stretch, gently pressing on their back, focused on flexibility and trust.
 
 ---
 
 ## Social & Caring
 
-- **Arguing:** (Social, Conflict): {char1} and {char2} in heated discussion, both with animated gestures and intense expressions
-- **Celebrating:** (Social, Happy): {char1} and {char2} celebrating together, both with excited expressions and raised arms
-- **Comforting:** (Social, Caring): {char1} comforting {char2}, offering emotional support with caring body language
-- **Encouraging:** (Social, Caring): {char1} encouraging {char2} with motivational gestures, supportive body language, uplifting energy
-- **Helping Up:** (Social, Helping): {char1} extending hand to help {char2} stand up, showing support and assistance
-- **Hydration Break:** (Athletic, Break): {char1} offering water bottle to {char2}, taking break together, athletic recovery moment
-- **Injury Check:** (Caring, Medical): {char1} checking on {char2}'s injury, concerned expression, gentle examination, caring supportive gesture
-- **Tender Cheek Caress:** (Romantic, Intimate): {char1} gently cupping {char2}'s cheek with one hand, thumb stroking the skin, both sharing an intimate, quiet look of affection.
-- **Photo Together:** (Social, Selfie): {char1} and {char2} posing together for a photo, both looking at camera with cheerful expressions
-- **Sharing Food:** (Social, Domestic): {char1} offering food to {char2}, sharing a meal or snack in friendly gesture
-- **Sharing Secret:** (Social, Intimate): {char1} leaning close to {char2}, whispering a secret while {char2} listens intently with hand cupped to ear
-- **Teaching:** (Instruction, Social): {char1} teaching or explaining something to {char2}, demonstrating with gestures while {char2} observes attentively
+- **Heated Argument** (Conflict, Tense): {char1} and {char2} arguing passionately, hands gesturing wildly, brows furrows, intense emotional standoff.
+- **Victory Celebration** (Happy, Dynamic): {char1} and {char2} jumping and cheering, arms raised in triumph, celebrating a shared win with unbridled joy.
+- **Comforting Touch** (Caring, Emotional): {char1} placing a gentle hand on {char2}'s shoulder, offering a reassuring look while {char2} appears vulnerable.
+- **Motivational Speech** (Supportive, Social): {char1} looking {char2} in the eye, gesturing emphatically to inspire confidence, {char2} looking determined.
+- **Helping Hand** (Supportive, Action): {char1} reaching down to grasp {char2}'s hand and pulling them up from the ground, a gesture of reliable aid.
+- **Water Break** (Sport, Relaxed): {char1} handing a water bottle to a sweating {char2}, both taking a moment to catch their breath and hydrate.
+- **Injury Assessment** (Medical, Caring): {char1} kneeling to inspect {char2}'s injured leg, expression concerned and focused, {char2} wincing slightly.
+- **Tender Cheek Caress** (Romantic, Intimate): {char1} gently cupping {char2}'s cheek with one hand, thumb stroking the skin, sharing a quiet moment of affection.
+- **Selfie Moment** (Social, Fun): {char1} holding the camera high while leaning head-to-head with {char2}, both making fun faces for the perfect shot.
+- **Sharing a Bite** (Domestic, Social): {char1} holding out a fork with food for {char2} to taste, a playful and intimate gesture of sharing.
+- **Whispering Secrets** (Social, Secretive): {char1} cupping a hand to whisper into {char2}'s ear, {char2}'s eyes widening in surprise or amusement.
+- **Teaching Moment** (Instruction, Social): {char1} pointing at a diagram or object, explaining details while {char2} nods in understanding, focused transfer of knowledge.
 
 ---
 
 ## Cooperative Actions
 
-- **Building Together:** (Work, Dynamic, Construction): {char1} and {char2} constructing something, both contributing with tools or materials
-- **Cooking Together:** (Domestic, Kitchen, Cooking): {char1} and {char2} preparing food together, coordinating kitchen tasks with collaborative energy
-- **Lifting Together:** (Work, Dynamic): {char1} and {char2} lifting a heavy object together, coordinating their strength and effort
-- **Planning Together:** (Work, Office, Task): {char1} and {char2} looking at plans or documents together, discussing strategy with thoughtful expressions
+- **Construction Project** (Work, Dynamic): {char1} and {char2} hammering and assembling a structure together, tools in hand, sweating and focused on the build.
+- **Cooking Team** (Domestic, Kitchen): {char1} adding ingredients to a pan while {char2} tastes the sauce, moving seamlessly around the kitchen layout.
+- **Heavy Lifting** (Work, Strength): {char1} and {char2} on either end of a heavy crate, knees bent and backs straight, lifting in unison on a count of three.
+- **Strategic Planning** (Work, Office): {char1} and {char2} leaning over a blueprint table, pointing at specific details and discussing the next move with serious intent.
 
 ---
 
 ## Social Media & Influencer Poses
 
-- **Besties Selfie:** {char1} and {char2} taking selfie together, both leaning heads close at sharp inward angle, cheeks nearly touching or pressed together. {char1} holding phone extended at arm's length, 2-3 feet from faces at slightly elevated angle. Both looking up at camera lens with practiced selfie angles—chins slightly down, eyes wide. Making exaggerated fun faces: duck lips, tongues out, peace signs held up by faces, or big open-mouth excited expressions. Free hands making gestures—peace signs, hearts, pointing. Shoulders tilted into frame, creating tight composition. Natural or playful energy with genuine friendship visible. Casual comfortable clothing. Setting can be anywhere—bedroom, car, outdoor location. Lighting suggests phone flash or natural light. Moment captures spontaneous fun and close bond.
-- **BFF Goals:** {char1} and {char2} in matching or complementary poses showing synchronized energy and chemistry. Both mirroring each other's movements—same hand gestures, matching smiles, or coordinated stances creating visual harmony. Poses can be: both making heart hands together, pointing at each other, doing same dance move, or striking identical power poses. Wearing coordinated outfits—matching colors, similar styles, or a "matching" aesthetic. Energy is playful and synchronized, showing deep friendship connection. Expressions joyful and authentic—real smiles, genuine laughter, comfortable together. Body language open and connected—leaning toward each other, physical contact natural. Background aesthetic and intentional. Hashtag-worthy moment that makes viewers say "I want a friendship like this." Composition balanced with both subjects having equal presence. Shows aspirational friendship goals with enviable closeness and fun.
-- **Brunch Squad:** {char1} and {char2} sitting at table in upscale brunch setting, both holding up beverages in cheers gesture. Arms extended toward camera, drinks at eye level—mimosas, coffee in aesthetic cups, colorful smoothie bowls. Wide bright smiles, eyes focused on camera or each other. Table visible in foreground with Instagram-worthy spread—avocado toast, açai bowls, eggs benedict, fresh fruit artfully arranged. Plates aesthetically styled, food untouched and photo-ready. Both dressed in brunch attire—sundresses, cute tops, fashionable casual wear. Hair styled, makeup fresh. Overhead or natural window lighting creating bright airy atmosphere. Background shows trendy café or restaurant interior—exposed brick, plants, Modern décor. Lifestyle content energy showing aspirational weekend vibes. Body language relaxed and social, celebrating friendship and good food.
-- **Coffee Shop Aesthetic:** {char1} and {char2} sitting across from each other at small café table with coffee cups, both engaged in animated conversation. Leaning forward over table creating intimate discussion space, faces 2-3 feet apart. Hands gesturing expressively in mid-conversation or wrapped around warm coffee mugs. Expressions engaged and attentive—smiling, laughing, or seriously discussing. Table features aesthetic coffee shop staples—ceramic cups with latte art, pastries on small plates, laptop or books adding intellectual vibe. Both dressed in cozy café attire—chunky sweaters, scarves, comfortable layered clothing. Natural window lighting streaming from side creating soft shadows and warm glow. Background shows trendy café interior—exposed brick, hanging plants, wooden tables, chalkboard menus, string lights. Atmosphere cozy, intimate, and intellectual. Composition feels candid and natural, capturing genuine friendship moment over coffee. Steam rising from cups adds atmospheric detail. Overall aesthetic: warm, inviting, and relatable "let's grab coffee" energy.
-- **Festival Friends:** {char1} and {char2} with arms around each other's shoulders or waists in tight friendly embrace. Bodies pressed close together, swaying or dancing in place. Both with carefree joy expressions—eyes closed blissfully or wide open with excitement, mouths open in laughs or singing. Hair loose and flowing, possibly with flower crowns, bandanas, or festival accessories. Clothing boho-chic festival style—crop tops, high-waisted shorts, flowy dresses, fringe, bohemian patterns. Accessories include sunglasses, temporary tattoos, body glitter, layered jewelry. Hands raised in air or holding each other. Music festival vibes with energy and freedom. Background suggests outdoor festival—crowd visible, stage lights, or open field. Dust or confetti in air adding atmosphere. Golden hour or stage lighting creating warm colorful glow. Moment captures peak festival euphoria and friendship connection.
-- **Golden Hour:** {char1} and {char2} backlit by warm sunset glow, positioned to maximize golden hour lighting magic. Warm golden-orange light creates rim lighting effect around edges of bodies and hair, creating angelic halo glow. Both in dreamy relaxed poses—{char1} and {char2} standing close, one looking at the other or both gazing toward horizon. Expressions peaceful and contemplative, soft smiles or serene faces. Hair catching light creating luminous effect. Bodies positioned so sunlight filters through creating lens flare effect. Poses natural and romantic—hands gently touching, arms loosely around each other, or standing close in comfortable silence. Clothing light and flowing, catching golden light. Background shows horizon with sun low in sky, creating gradient from golden-orange to deep purple-blue. Soft atmospheric mood emphasizing beauty and fleeting perfect moment. Composition artistic—subjects may be silhouetted or softly lit from side. Overall feeling: magical, romantic, and cinematic. Time of day and lighting quality are the stars of this shot.
-- **Gym Buddies:** {char1} and {char2} in athletic wear showing off physique or flexing muscles with confidence. Both in strong poses displaying fitness progress—bicep flex with arms bent, showing abs, or athletic stance. Standing side by side or facing each other comparing muscles playfully. Wearing form-fitting athletic wear—sports bras, leggings, tank tops, athletic shorts showing defined physiques. Expressions confident and determined, or playfully competitive. Muscles engaged and defined, showing workout pump. Setting is gym—weights visible, mirrors, equipment in background. Lighting harsh gym fluorescents or dramatic shadowing emphasizing muscle definition. Both may be sweaty with hair pulled back, water bottles visible, creating authentic workout moment. Poses convey fitness motivation energy—"grind," "gains," strength and dedication. Body language shows pride in progress and mutual motivation. Optional: mid-workout action poses, spotting each other, or post-workout victory poses.
-- **Influencer Duo:** {char1} and {char2} in coordinated stylish outfits striking confident poses. Both in fashion-forward stance showing personality and style. {char1} might stand with hand on hip, leg crossed in front, chin lifted confidently. {char2} mirrors or complements with own pose—arms crossed, leaning slightly, or dynamic stance. Outfits coordinated by color palette or aesthetic—matching colors, complementary styles, or themed fashion (all black, monochrome, matching prints). Hair styled intentionally, makeup bold and camera-ready. Accessories coordinated—sunglasses, bags, jewelry. Body language exudes confidence—shoulders back, posture straight, expressions serious and smoldering or playfully confident. Eye contact with camera, commanding attention. Background minimal or aesthetic—urban setting, clean wall, architectural elements. Lighting professional-quality or golden hour. Composition treats subjects as fashion models. Energy is aspirational, polished, and influential—content that others want to recreate.
-- **Sorority Girl Pose:** {char1} and {char2} posing close together for photo, bodies angled slightly toward camera at 30-degree angle. Both with hands on hips in power pose—fingers spread, elbows out creating triangular negative space, or one arm around each other's waist/shoulder. Heads tilted toward each other at 15-20 degree angle, temples nearly touching or 2-3 inches apart. Wide genuine smiles showing teeth, eyes bright and engaged. Chins slightly lowered in flattering angle. Weight on one leg with hip popped, creating S-curve in posture. Hair styled and voluminous. Makeup camera-ready with highlight on cheekbones. Outfits coordinated but not identical—complementary colors or styles. Instagram-ready energy with polished, put-together aesthetic. Body language confident and poised. Background suggests social event, party, or aesthetic location.
-- **Travel Buddies:** {char1} and {char2} posing in front of scenic backdrop or landmark—beach, mountains, iconic tourist spot, exotic location. Both facing camera while gesturing at view behind them—hands forming frame around scenery, pointing toward landmark, or arms spread wide showcasing location. Excited adventurous expressions showing wonder and joy. Travel-appropriate clothing—comfortable athletic wear, sundresses, hiking gear, or vacation outfits. Backpacks or camera gear visible suggesting adventure. Bodies positioned to capture both travelers and scenic background, perhaps with heads together creating close composition in foreground while vista fills background. Bright natural lighting, often golden hour or midday sun. Poses convey adventure vibes—jumping in air, sitting on scenic overlook, or casual relaxed stance. Moment captures travel goals, friendship adventure, and wanderlust. Optional: holding map, taking selfie with selfie stick, or candid mid-laugh at shared travel experience.
-- **Vintage Film Pose:** {char1} and {char2} in retro-style composition mimicking vintage film photography aesthetic. Poses natural and candid, reminiscent of 70s/80s/90s snapshots—sitting on car hood, leaning against wall, walking hand-in-hand frozen mid-stride. Expressions genuine and unpolished—natural smiles, mid-laugh, or contemplative gazes away from camera. Clothing retro-inspired—vintage band tees, mom jeans, oversized jackets, retro prints, or timeless classic pieces. Composition slightly off-center following vintage snapshot aesthetic. Color grading suggests film—slightly faded colors, warm yellows and oranges, muted tones, or cooler blue-green tints depending on film stock aesthetic. Grain texture visible adding authentic film feel. Lighting natural and realistic—no obvious flash or studio setup. Background everyday and timeless—city streets, diners, parks, vintage cars, creating nostalgic atmosphere. Moment feels captured not staged, like found photograph from past era. Overall vibe: nostalgic, genuine, and artistic—paying homage to analog photography aesthetic.
-- **VSCO Pose:** {char1} and {char2} in casual candid-style pose that appears natural and unstaged but is carefully composed. Both laughing naturally with genuine expressions—heads thrown back slightly, eyes crinkled, mouths open in authentic laughter. One touching the other's shoulder or arm in casual friendly gesture, hand relaxed not posed. Bodies angled in conversation stance, not facing camera directly. Posture relaxed—shoulders loose, weight shifted naturally to one leg. Clothing effortlessly stylish—oversized sweaters, vintage tees, mom jeans, aesthetic casualwear. Hair natural and slightly messy in intentional way. Minimal makeup or natural glow. Background soft and aesthetically pleasing—muted colors, natural setting, simple backdrop. Lighting warm and natural, possibly golden hour. Overall vibe is authentic, relatable, and aesthetically pleasing—the "I woke up like this" energy. Composition follows rule of thirds, slightly off-center.
+- **Besties Selfie** (Social Media, Selfie, Fun): {char1} and {char2} taking selfie together, both leaning heads close at sharp inward angle. {char1} holding phone extended. Making exaggerated fun faces: duck lips, tongues out. Natural playful energy.
+- **BFF Goals** (Social Media, Fashion): {char1} and {char2} in matching or complementary poses showing synchronized energy. Both mirroring each other's movements. Wearing coordinated outfits. Energy is playful and synchronized.
+- **Brunch Squad** (Lifestyle, Food, Social): {char1} and {char2} sitting at table in upscale brunch setting, both holding up beverages in cheers gesture. Wide bright smiles. Table visible with Instagram-worthy spread.
+- **Coffee Shop Aesthetic** (Lifestyle, Cozy, Cafe): {char1} and {char2} sitting across from each other at small café table. Leaning forward over table creating intimate discussion space. Hands gesturing expressively. Atmosphere cozy and intellectual.
+- **Festival Friends** (Music, Boho, Fun): {char1} and {char2} with arms around each other's shoulders, swaying or dancing. Carefree joy expressions. Clothing boho-chic festival style. Music festival vibes with energy and freedom.
+- **Golden Hour Glow** (Artistic, Lighting, Outdoor): {char1} and {char2} backlit by warm sunset glow. Both in dreamy relaxed poses. Hair catching light creating luminous effect. Soft atmospheric mood emphasizing beauty.
+- **Gym Buddies** (Fitness, Sporty, Flex): {char1} and {char2} in athletic wear showing off physique or flexing muscles with confidence. Both in strong poses displaying fitness progress. Setting is gym with weights visible.
+- **Influencer Duo** (Fashion, Cool, Urban): {char1} and {char2} in coordinated stylish outfits striking confident poses. Fashion-forward stance showing personality. Body language exudes confidence and swagger.
+- **Sorority Pose** (Social, Group, Polished): {char1} and {char2} posing close together for photo, bodies angled slightly toward camera. Hands on hips in power pose. Wide genuine smiles. Instagram-ready energy with polished aesthetic.
+- **Travel Buddies** (Adventure, Travel, Scenic): {char1} and {char2} posing in front of scenic backdrop, gesturing at view. Excited adventurous expressions showing wonder. Bodies positioned to capture both travelers and scenery.
+- **Vintage Film Style** (Retro, Nostalgic, Candid): {char1} and {char2} in retro-style composition mimicking vintage film photography. Poses natural and candid. Clothing retro-inspired. Color grading suggests film aesthetic.
+- **VSCO Vibes** (Trendy, Casual, Candid): {char1} and {char2} in casual candid-style pose that appears natural but composed. Laughing naturally with genuine expressions. Clothing effortlessly stylish.
 
 ---
 
 ## Romantic & Intimate
 
-- **Bed Hover Kiss:** (Romantic, Intimate, Bedroom): {char1} hovering over {char2} on bed in intimate moment.
-- **Bed Pin:** (Romantic, Intimate, Bedroom): {char1} pinning {char2}'s wrists above their head on bed in dominant intimate position.
-- **Bridal Carry:** (Romantic, Caring): {char1} carrying {char2} in classic bridal style.
-- **Caressing Face:** (Romantic, Intimate): {char1} gently caressing {char2}'s face or cheek with tender deliberate touch.
-- **Chin Lift Kiss:** (Romantic, Intimate): {char1} gently lifting {char2}'s chin with fingers before or during kiss.
-- **Cuddling:** (Social, Relaxed, Intimate): {char1} and {char2} cuddled together in comfortable resting position.
-- **Dancing Dip:** (Romantic, Dance, Happy): {char1} dipping {char2} in classic romantic dance move with dramatic flair.
-- **Dip Kiss:** (Romantic, Dance, Happy): {char1} dipping {char2} backward in dramatic romantic dip while kissing.
-- **Embrace From Behind:** (Romantic, Caring, Intimate): {char1} embracing {char2} from behind in protective, affectionate hold.
-- **Forehead Kiss (Height Difference):** (Romantic, Caring): {char1} leaning down to kiss {char2} on the forehead, emphasizing height difference.
-- **Forehead Touch:** (Romantic, Intimate): {char1} and {char2} with foreheads gently touching, faces tilted slightly toward each other at natural angle.
-- **Gazing Into Eyes:** (Romantic, Intimate, Social): {char1} and {char2} looking deeply into each other's eyes, faces 8-14 inches apart in intimate distance.
-- **Hand Holding:** (Social, Romantic, Caring): {char1} holding hands with {char2}, fingers fully intertwined with alternating pattern, palms pressed together.
-- **Hand on Lower Back:** (Social, Romantic): {char1} standing beside or slightly behind {char2} with hand resting on their lower back in a classic supportive gesture.
-- **Head in Lap:** (Romantic, Relaxed, Intimate): {char2} lying down with head resting in {char1}'s lap in peaceful, vulnerable position.
-- **Kabedon:** (Romantic, Intense, Anime): {char1} pinning {char2} against wall in dramatic kabedon pose with intense romantic tension.
-- **Kiss on Cheek:** (Social, Romantic, Happy): {char1} kissing {char2} on the cheek with soft affectionate pressure.
-- **Kiss on Forehead:** (Social, Romantic, Caring): {char1} leaning down or standing close to kiss {char2}'s forehead with tender gentle pressure.
-- **Leaning Against Chest:** (Social, Relaxed, Intimate): {char2} leaning back against {char1}'s chest while both sitting or standing.
-- **Lift and Carry Kiss:** (Romantic, Happy, Dynamic): {char1} lifting {char2} off the ground in romantic embrace while kissing.
-- **Lying on Top:** (Romantic, Intimate, Bedroom): {char1} lying on top of {char2} on bed in comfortable intimate position.
-- **Lying Together:** (Romantic, Relaxed, Intimate): {char1} and {char2} lying down together in peaceful restful position.
-- **Morning Cuddle:** (Romantic, Relaxed, Bedroom): {char1} and {char2} waking up together in bed in lazy intimate embrace.
-- **Nose to Nose:** (Romantic, Happy, Playful): {char1} and {char2} touching noses playfully in affectionate "Eskimo kiss" gesture.
-- **Piggyback:** (Social, Happy, Playful): {char1} carrying {char2} on their back in playful piggyback ride.
-- **Protective Embrace:** (Romantic, Caring): {char1} embracing {char2} from behind in protective hold.
-- **Romantic Kiss:** (Romantic, Intimate): {char1} and {char2} kissing with lips meeting in passionate or tender embrace.
-- **Slow Dance:** (Social, Romantic, Dance): {char1} and {char2} in classic slow dance embrace, bodies swaying gently in rhythm.
-- **Wine Sharing:** (Romantic, Intimate, Sexy): {char1} offering wine glass to {char2}, both holding the stem, intimate sharing moment, sensual atmosphere.
-- **Bathtub Together:** (Romantic, Intimate, Sexy): {char1} and {char2} in bathtub together, bubbles surrounding, intimate relaxed position, sensual atmosphere.
-- **Silk Sheets Embrace:** (Romantic, Intimate, Sexy, Bedroom): {char1} and {char2} on bed with silk sheets, intimate embrace, soft sensual lighting.
-- **Candlelit Dinner Gaze:** (Romantic, Intimate, Sexy): {char1} and {char2} at candlelit table, leaning close, Intense eye contact, romantic tension.
-- **Massage:** (Romantic, Intimate, Caring): {char1} giving {char2} a massage, hands on shoulders or back, relaxed intimate atmosphere.
-- **Spinning Hug:** (Social, Happy, Dynamic): {char1} spinning {char2} around in joyful embrace.
-- **Spooning on Bed:** (Romantic, Intimate, Bedroom): {char1} and {char2} lying in bed in classic spooning position.
-- **Straddling on Bed:** (Romantic, Intimate, Bedroom): {char2} straddling {char1} while {char1} lies on their back on bed.
-- **Sunset Silhouette:** (Romantic, Lighting, Outdoor): {char1} and {char2} silhouetted against vibrant sunset, backlit by warm golden-orange glow on horizon.
-- **Under Blanket:** (Relaxed, Cozy, Intimate): {char1} and {char2} sharing a blanket, sitting close together wrapped in cozy warmth.
+- **Bed Hover Kiss** (Romantic, Intimate): {char1} hovering over {char2} on the bed, faces inches apart, tension thick in the air before a kiss.
+- **Bed Pin** (Romantic, Dominant): {char1} holding {char2}'s wrists against the mattress, leaning over them with intense focus, assertive and intimate.
+- **Bridal Carry** (Romantic, Strong): {char1} effortlessly lifting {char2} in arms, {char2} holding onto {char1}'s neck, classic romantic troope.
+- **Caressing Face** (Romantic, Tender): {char1} tracing the line of {char2}'s jaw with fingertips, gazing softly into their eyes.
+- **Chin Lift Kiss** (Romantic, Seductive): {char1} tilting {char2}'s chin up with two fingers to bridge the gap for a gentle kiss.
+- **Cuddling** (Romantic, Cozy): {char1} wrapping arms around {char2} from behind or side, nestling close for warmth and comfort.
+- **Dancing Dip** (Romantic, Elegant): {char1} supporting {char2}'s back deeper into a dip, {char2} arcing gracefully, a moment of dance floor drama.
+- **Dip Kiss** (Romantic, Passionate): The classic movie kiss, {char1} dipping {char2} low and planting a passionate kiss while {char2} holds on tight.
+- **Embrace From Behind** (Romantic, Protective): {char1} hugging {char2} from the back, chin resting on shoulder, a gesture of security and closeness.
+- **Forehead Kiss** (Romantic, Caring): {char1} planting a soft, lingering kiss on {char2}'s forehead, a sign of deep affection and protection.
+- **Forehead Touch** (Romantic, Connection): {char1} and {char2} resting foreheads together, eyes closed, breathing in sync in a private world.
+- **Gazing Into Eyes** (Romantic, Focused): {char1} and {char2} locked in a staring contest of affection, losing themselves in each other's gaze.
+- **Hand Holding** (Romantic, Connection): {char1} and {char2} fingers intertwined tightly, walking or sitting with a physical link between them.
+- **Hand on Lower Back** (Romantic, Guiding): {char1} placing a hand on the small of {char2}'s back, guiding them gently through a crowd.
+- **Head in Lap** (Romantic, Relaxed): {char2} resting head on {char1}'s lap, looking up while {char1} strokes their hair absentmindedly.
+- **Kabedon** (Romantic, Anime, Intense): {char1} slamming a hand against the wall next to {char2}'s head, leaning in with overwhelming presence.
+- **Cheek Kiss** (Social, Affectionate): {char1} leaning in to peck {char2} on the cheek while {char2} smiles, a sweet friendly or romantic gesture.
+- **Leaning Against Chest** (Romantic, Safe): {char2} leaning back against {char1}'s solid chest, {char1}'s arms loosely encircling them.
+- **Lift and Carry Kiss** (Romantic, Joyful): {char1} picking {char2} up in a bear hug, {char2}'s legs around {char1}'s waist, kissing broadly.
+- **Lying on Top** (Romantic, Intimate): {char1} lying atop {char2}, weight supported on elbows, creating a canopy of intimacy on the bed.
+- **Lying Together** (Romantic, Peaceful): {char1} and {char2} lying side-by-side, staring at the ceiling or sky, talking quietly.
+- **Morning Cuddle** (Romantic, Sleepy): {char1} and {char2} tangled in sheets, basking in the morning light, reluctant to leave the bed.
+- **Nose to Nose** (Romantic, Playful): {char1} and {char2} rubbing noses affectionately, grinning in a moment of pure silliness and love.
+- **Piggyback Ride** (Romantic, Fun): {char1} carrying {char2} on back, {char2} pointing forward, both laughing in a moment of carefree fun.
+- **Protective Embrace** (Romantic, Shielding): {char1} wrapping {char2} in a coat or arms to shield from wind or world, fierce and tender.
+- **Passionate Kiss** (Romantic, Intense): {char1} and {char2} locked in a deep, world-stopping kiss, hands clutching hair and clothing.
+- **Slow Dance** (Romantic, Swaying): {char1} and {char2} swaying gently to music, bodies pressed close, moving as one unit.
+- **Wine Sharing** (Romantic, Elegant): {char1} holding a wine glass to {char2}'s lips, a sultry and intimate act of sharing.
+- **Bathtub Soak** (Romantic, Intimate): {char1} and {char2} submerged in bubbles, leaning back relaxed, enjoying the warm water and company.
+- **Silk Sheets** (Romantic, Sensual): {char1} and {char2} entangled in luxurious silk sheets, skin against fabric, sensual lighting.
+- **Candlelit Gaze** (Romantic, Atmospheric): {char1} and {char2} looking at each other over flickering candle flames, the light dancing in their eyes.
+- **Giving Massage** (Romantic, Relaxing): {char1} kneading tension from {char2}'s shoulders, {char2} melting under the touch.
+- **Spinning Hug** (Romantic, Joyful): {char1} lifting {char2} and spinning them around, {char2}'s feet off the ground, laughter in the air.
+- **Spooning** (Romantic, Comfort): {char1} curled around {char2}'s back, fitting together perfectly like puzzle pieces.
+- **Straddling** (Romantic, Intimate): {char2} straddling {char1}'s lap, facing them directly, creating a closed loop of intimacy.
+- **Sunset Silhouette** (Romantic, Scenic): {char1} and {char2} outlined against a blazing sunset, a picture-perfect moment of romance.
+- **Cozy Under Quilt** (Romantic, Hygge): {char1} and {char2} sharing a thick quilt, shoulder-to-shoulder, warm and safe from the cold.
 
 ---
 
 ## Combat & Competition
 
-- **Armbar from Guard:** {char1} attempting an armbar submission from their back (from the guard). {char2} is in {char1}'s guard. {char1} has isolated one of {char2}'s arms and thrown their legs high on {char2}'s upper body. {char1}'s left leg is across {char2}'s neck/face, with the heel digging in. {char1}'s right leg is pinching tightly across {char2}'s back or ribs, controlling their posture. Both of {char1}'s legs are squeezing together like scissors to keep {char2} trapped. {char1} has a two-on-one grip on {char2}'s trapped arm, pulling it tight to their own chest. Crucially, {char1} controls the wrist so that {char2}'s thumb is pointing up towards the ceiling. {char1} lifts their hips off the mat, applying pressure to {char2}'s elbow to hyperextend it. {char2}'s arm is straight and being bent backwards at the elbow. {char2} is trying to defend by stacking their weight onto {char1} or by trying to pull their arm free, their face a mask of pain and strain. {char1}'s expression is one of intense focus, using their whole body to apply pressure for the finish.
-- **Cage Walk Entrance:** {char1} and {char2} approaching each other from opposite sides of the octagon cage, walking toward center for opening bell. Both in fight-ready position—hands taped or gloved, mouthguards in, corner teams behind them giving final instructions. {char1} enters from left side, {char2} from right, converging at center. Bodies loose and warm, bouncing slightly on feet, shaking out arms. Facial expressions transitioning from calm focus to fight mode intensity. Referee between them preparing to give final instructions. Cage fence visible in background, arena lights bright overhead. Both sizing each other up during this final approach, reading body language and energy. Optional: corner men wiping down fighters, applying Vaseline, giving pep talks. Moment of truth energy, anticipation at peak before violence begins.
-- **Clinch Battle:** {char1} and {char2} locked in standing clinch, bodies pressed together in tight space. Both fighting for underhooks and overhooks—arms battling for dominant collar ties or body locks. Heads pressed together, foreheads touching or one head pressed to other's shoulder, preventing strikes. Hips close, each trying to control opponent's posture. Legs positioned in staggered stance for balance and potential knee strikes. Arms show muscle strain and grip tension, hands clasping behind head, neck, or back. Both pushing and pulling, testing weight distribution. Visible exertion in facial expressions—grimacing, heavy breathing. Sweat dripping, muscles flexed throughout upper body and core.
-- **Fight Poster Face-Off:** {char1} and {char2} standing face-to-face in dramatic promotional poster composition, positioned at center frame. Both in fighting stance but staged for camera—bodies angled 30-degrees toward each other, shoulders square to viewer. Faces are close, approximately 12-18 inches apart, eyes locked in intense stare-down. Chins slightly lowered, jaws clenched, expressions fierce and determined. Fists raised between them at chest/face height in guard position, knuckles nearly touching. Dramatic lighting from above and sides creating strong shadows and highlights on facial features and muscle definition. Background can be dark, smoky, or gradient. Both fighters mental intensity. Optional: flames, arena lights, or promotional graphics in background. Stance is powerful and symmetrical, weight evenly distributed, projecting equal threat and confidence.
-- **MMA Guard:** Dark vignette, dramatic MMA scene. {char1} and {char2} are grappling on the mat. {char2} is on their back with legs locked around {char1}'s waist in a closed guard, ankles crossed behind {char1}'s lower back, thighs squeezing for control. {char1} is kneeling inside the guard, torso upright at approximately 45-degree angle, spine straight, hips driving forward for pressure. Their knees are set wide outside {char2}'s hips for stable base and balance. Their hands work at {char2}'s inner thigh and hip line, fingers hooking and pulling to create separation as they begin a guard-opening sequence. Both fighters face each other directly—no rear positions, no turtle, no behind-the-back angles. {char1} leans in to deliver a controlled strike with their right hand while left hand posts on the mat for base, maintaining upright posture and weight distribution. {char2}'s hands are active, one controlling {char1}'s wrist, the other gripping behind the neck or shoulder. Both fighters have intense expressions with furrowed brows, clenched jaws, focused eyes. Pay attention to muscle tension in arms, shoulders, core, and legs showing realistic grappling effort.
-- **MMA Mount Position:** {char1} mounted on top of {char2}, knees tight to {char2}'s ribs, creating pincer pressure. {char1}'s hips are heavy and low, sitting on {char2}'s stomach/chest with weight distributed forward. Feet are hooked under {char2}'s legs or posted wide for base. {char1}'s posture is upright, torso at 60-70 degree angle, head and shoulders over {char2}'s face. Arms are positioned for striking—one hand posted on the mat beside {char2}'s head for base, other hand cocked back ready to deliver ground strikes. {char2} is on their back defending, both arms up protecting face and head, elbows tight, forearms creating shield. {char2}'s legs may be flat or knees bent trying to buck. Both in realistic mount position with proper weight distribution. {char1} shows dominant body language with controlled aggression, {char2} shows defensive tension. Visible muscle engagement in core, shoulders, and arms. Both faces show intensity—{char1} with focused predatory expression, {char2} with defensive concentration. They look into each others eyes.
-- **MMA Top Half-Guard:** Dim, gritty grappling moment. {char2} is on their back in half guard, left leg bent with knee up, right leg hooking and trapping {char1}'s left thigh, preventing the pass. {char1} is on top with their left leg trapped, right leg posted wide for base. {char1} applies a heavy cross-face with their right forearm pressing across {char2}'s jaw and neck, driving weight through shoulder into face. Their hips are low and heavy, chest pressure smothering. Knees frame the position with right knee tight to {char2}'s hip. Their left arm underhooks {char2}'s right arm to stabilize and prevent escape, hand gripping behind the back or shoulder. Right hand is free, threatening short ground-and-pound strikes to the body or head. The alignment is clean—both fighters face each other from a realistic top half-guard position. {char2}'s left arm frames against {char1}'s neck or shoulder, creating defensive space. Both show muscle definition and tension, particularly in shoulders, arms, and core. Expressions show exertion: gritted teeth, strained faces, sweat visible.
-- **Rear Naked Choke Defense:** {char1} has back control on {char2}, both bodies vertical or seated. To maintain control, {char1}'s legs are either securely hooked inside {char2}'s thighs with their feet pressing on the inner thighs (known as "hooks"), or locked in a body triangle. {char1}'s right arm snakes under {char2}'s chin attempting the rear naked choke, their right hand gripping their left bicep, and the left hand behind {char2}'s head to complete the figure-four lock. {char2} is desperately defending—both hands gripping {char1}'s choking arm, pulling down to create space and relieve pressure on the neck. {char2}'s chin is tucked hard, trying to prevent the choke from locking under the jaw. Bodies are tightly compressed, {char1} chest pressed against {char2}'s back. Both showing maximum exertion—{char1} squeezing with full body tension, {char2} fighting with survival desperation. Faces show extreme effort, veins visible, muscles fully engaged.
-- **Sparring:** {char1} throwing a controlled strike at {char2}—right cross, jab, or hook with proper form: hips rotating, shoulder extended, fist aligned, power generated from legs and core. {char2} is defending or blocking with appropriate technique: high guard with forearms up, parrying with hand deflection, or slipping with head movement. Both in proper fighting stances with weight distribution and balance maintained. Feet positioned correctly, knees bent, mobile and grounded. Non-striking hand remains in guard position protecting face. Bodies show realistic motion blur and impact readiness. Expressions focused—{char1} with aggressive intent, {char2} with reactive focus. Both demonstrating proper MMA fundamentals with athletic positioning.
-- **Standing Face-Off:** {char1} and {char2} in fighting stance facing each other, approximately 3-4 feet apart. Both with hands up in guard position—lead hand extended at chin height, rear hand protecting jaw. Chins tucked, shoulders raised protecting neck. Weight on balls of feet, knees slightly bent for mobility. {char1} in orthodox stance (left foot forward) or southpaw (right foot forward), {char2} mirrors or matches. Intense eye contact, tunnel vision focus on opponent. Body language shows coiled readiness—muscles tensed, ready to explode. Fists properly formed, knuckles aligned. Elbows tucked protecting ribs. Torsos slightly angled to minimize target area. Both showing fight mentality with focused, Intense expressions.
-- **Triangle Choke Setup:** {char1} applying triangle choke on {char2} from bottom position. {char1} on their back with {char2} trapped between their legs. {char1}'s right leg is wrapped over {char2}'s shoulder and behind their neck, right ankle or calf pressing into {char2}'s left shoulder/neck. {char1}'s left leg crosses over their right ankle/shin, creating the "triangle" lock, squeezing {char2}'s head and one arm. {char1}'s hips are angled and elevated, pulling {char2}'s head down while pushing their trapped arm across their own throat to complete the choke. {char1} grips behind {char2}'s head or controls their trapped arm, pulling downward. {char2} is bent forward, one arm trapped inside the triangle alongside their head, other arm possibly posting on mat trying to posture up. {char2}'s face shows oxygen deprivation, redness, possible panic. {char1} shows controlled technique, adjusting angles with precision. Both display full-body effort—legs flexed hard, core engaged, arms fighting for control.
-- **Weigh-In Staredown:** {char1} and {char2} in pre-fight weigh-in confrontation, standing forehead-to-head or nearly touching. Arms at sides or held back by officials/coaches, preventing physical contact. Bodies are tense, coiled energy barely contained. Facial expressions showing psychological warfare—stone-faced intensity, trash talk mid-sentence, or aggressive scowls. Neck muscles tensed, veins visible from adrenaline and weight cut strain. Shoulders and traps flexed. Both leaning slightly forward into each other's space, neither backing down. Eye contact is unwavering, predatory. Background shows weigh-in stage setup, scales, promotional banners, or crowd of media. Coaching teams may be visible at edges trying to separate or control their fighters. Raw power on display, mutual respect mixed with aggression.
+- **Armbar from Guard** (MMA, Grappling): {char1} attempting armbar from guard on {char2}. {char1} engaging core and isolating the arm, {char2} defending desperately. Technical grappling detail.
+- **Cage Walk** (MMA, Intro): {char1} and {char2} approaching center cage. Bodies loose, eyes locked, transitioning to fight mode intensity. Atmosphere electric.
+- **Clinch Battle** (MMA, Wrestling): {char1} and {char2} locked in standing clinch. Fighting for underhooks and head position. Muscles strained, heavy breathing, grit and sweat.
+- **Fight Poster Face-Off** (Promo, Intense): {char1} and {char2} standard face-to-face for promo. Fists raised, chins down, intense stare-down. Dramatic lighting.
+- **MMA Guard** (MMA, Grappling): {char1} inside {char2}'s closed guard. {char1} posturing up to strike, {char2} controlling posture with legs. Gritty realistic ground game.
+- **MMA Mount** (MMA, Dominant): {char1} mounted on {char2}. {char1} high posture raining down punches, {char2} covering up defending face. Dominant position.
+- **MMA Top Half-Guard** (MMA, Grappling): {char1} on top right in half guard, flattening {char2} with cross-face. {char2} framing to create space. Technical ground control.
+- **Rear Naked Choke Defense** (MMA, Submission): {char1} on {char2}'s back sinking in choke. {char2} fighting hands to breathe. Veins popping, extreme exertion.
+- **Striking Exchange** (MMA, Action): {char1} throwing a cross while {char2} slips and counters. Dynamic motion blur, perfect striking form.
+- **Standing Face-Off** (MMA, Tension): {char1} and {char2} in fighting stances feet apart. Hands up, coiled energy, waiting for the first move.
+- **Triangle Choke** (MMA, Submission): {char1} locking triangle legs around {char2}'s neck/arm. {char2} posturing to stack. Critical submission moment.
+- **Weigh-In Staredown** (MMA, Tension): {char1} and {char2} nose-to-nose at weigh-in. Coaches holding them back. Raw aggression and psychological warfare.
 
 ---
 
 ## Sports & Athletic Activities
 
-- **Ball Selection Together** (Bowling): {char1} and {char2} at ball return area, both examining bowling balls, helping each other choose the right weight, collaborative team moment.
-- **Baseball Dugout (4+)** (Baseball): {char1}, {char2}, and {char3} sitting on the dugout bench, watching the game intensely, while {char4} leans on the railing, cheering on their teammates.
-- **Basketball Team Lineup (5+)** (Basketball): {char1}, {char2}, {char3}, {char4}, and {char5} standing in a line during pre-game introductions, facing the crowd with serious expressions as spotlights shine on them.
-- **Bowling Celebration** (Bowling): {char1} and {char2} celebrating after a strike or spare, high-fiving enthusiastically, both with excited expressions, standing near ball return area or in front of lane.
-- **Bowling High Five** (Bowling): {char1} returning from successful bowl, {char2} standing to greet them with enthusiastic high five, both showing team spirit and celebration.
-- **Bowling Instruction** (Bowling): {char1} demonstrating proper bowling form to {char2}, showing arm swing and release technique, {char2} watching attentively and mirroring the motion, coaching moment.
-- **Coaching:** {char1} coaching or instructing {char2}, demonstrative teaching with gestures, {char2} listening attentively, athletic mentorship.
-- **Comparing Scores:** {char1} and {char2} standing together looking up at overhead scoring display, pointing at screen, discussing their scores with competitive or friendly expressions.
-- **Dual Lane Competition** (Bowling): {char1} bowling on left lane mid-release, {char2} bowling on adjacent right lane also mid-release, side-by-side competitive energy, synchronized action.
-- **Football Team Huddle (4+)** (Football): {char1}, {char2}, {char3}, and {char4} in a tight huddle on a football field, helmets off, listening intently to {char1} who is calling a play. Intense focus and camaraderie.
-- **Baseball Pitcher-Catcher Meeting (2)** (Baseball): {char1} (pitcher) and {char2} (catcher) meeting on the mound, gloves over mouths to hide their conversation, discussing strategy with intense focus.
-- **Tennis Doubles at Net (2)** (Tennis): Intense action shot at the net during a doubles match. {char1} is in the air, body fully extended for an overhead smash, racket angled perfectly to slam the ball down. {char2} is crouched low beside them in a ready position, racket up, eyes scanning for the return. The net mesh is sharp in the foreground. Sunlight flares through the racket strings. Sweat glistens on their skin, and their muscles are defined and tense. The green court surface provides a vibrant contrast to their white athletic wear.
-- **Basketball 1-on-1 (2)** (Basketball): Gritty, street-style basketball duel on an outdoor court. {char1} is driving hard to the basket, body low, ball protected, shoulder dropping to initiate contact. {char2} is in a defensive stance, sliding their feet, one hand up to contest the shot, face intense with concentration. The chain-link fence in the background casts long, intricate shadows across the concrete court. The sun is setting, creating a dramatic silhouette effect. Worn sneaker treads and the texture of the basketball are visible in high detail.
-- **Soccer Striker vs Goalie (2)** (Soccer): A split-second moment of confrontation in the penalty box. {char1} (striker) is mid-strike, leg swept back, body leaning over the ball for power. {char2} (goalie) is launching into a sprawling dive, arms outstretched, fingers spread wide to make the save. Grass divots and dirt fly up from {char1}'s planting foot. Stadium lights create a halo effect around the players. The focus is razor-sharp on the ball and the players' expressions of sheer determination. Background stadium seating is blurred to emphasize the duel.
-- **Flag Football: Receiver vs Corner (2)** (Football): High-stakes confrontation at the line of scrimmage. {char1} (Wide Receiver) is in an explosive three-point stance or coiled standing release, body leaning forward with intense kinetic energy, eyes locked on the field. {char2} (Cornerback) is in a low, disciplined defensive back-pedal stance just inches away, hands ready to jam, mirroring {char1}'s every twitch. Both wear flag belts with hanging flags. The scene is captured from a tight side-view angle, emphasizing the athletic tension and defined arm and leg muscles. Turf pellets kick up from their cleats. Sunlight creates sharp highlights on their technical jerseys and the texture of their receiver gloves.
-- **Contested Football Catch (2)** (Football): High-action athletic highlight captured from a low sideline angle. {char1} (Wide Receiver) has leaped high into the air, body fully extended and arched, hands clamping onto a spiraling football with white-knuckle intensity. {char2} (Defender) is jumping in sync, arm draped over {char1}'s shoulder in a desperate attempt to bat the ball away, their face a mask of intense effort. The spiraling football shows detailed pebbled leather texture and white laces. Technical notes: sharp focus on the ball and the characters' meeting hands, motion blur on their trailing legs to emphasize vertical leap. Stadium floodlights create a dramatic rim light effect on their silhouettes. Bits of grass and turf are suspended in the air beneath them.
-- **Softball Diamond Showdown (3)** (Softball): High-tension action scene on a softball diamond captured from a low third-base line angle (approximately 45 degrees from home plate). Background (Pitcher's Mound): {char1} is mid-delivery in a powerful windmill pitch, her body fully extended in the release phase, right arm blurred at the bottom of the pitching arc, left leg driving forward, right foot dragging a visible trench in the dirt. Position her 43 feet from home plate with appropriate scale diminishment for depth. Foreground (Home Plate): {char2} dominates the right-center of the frame in a loaded batting stance at the plate, knees bent with visible quad tension, hands gripping the bat high and cocked, weight loaded on back leg, eyes tracking the incoming pitch. Her position should be prominent in the frame, showing clear size/scale difference from the distant pitcher. Immediate Foreground (Behind the Plate): {char3} is crouched in full catcher's gear directly behind {char2}, positioned in a low squat with catcher's mitt extended as a target, body angled slightly to the pitcher. She should be the closest element to camera, creating a clear three-layer depth composition: catcher (largest/closest) → batter (mid-scale/mid-distance) → pitcher (smallest/furthest). Technical Notes: Ensure proper depth-of-field with the catcher slightly soft, batter in sharp focus, and pitcher with motion blur. Maintain accurate scale relationships based on distance from camera. Fine dust suspended in the air at all three positions. Golden hour lighting with long shadows extending toward first base. Competitive, high-stakes atmosphere with visible tension in body language at all three positions.
-- **Softball Broadcast View (3)** (Softball): Classic TV broadcast angle captured from behind the pitcher's right shoulder. In the immediate foreground (right side), {char1}'s right shoulder and side of head are visible, slightly out of focus, framing the shot. The camera looks past her towards home plate. In the center mid-ground, {char2} stands in the batter's box, bat cocked, eyes locked on the release point, body tense with anticipation. Directly behind the batter, {char3} is crouched in a deep squat, mitt centered as the target, framed perfectly between the batter and the umpire (implied). The perspective emphasizes the distance to the plate and the duel between pitcher and batter. Sunlight hits the batter's helmet and catcher's mask. The background features the backstop netting and blurred fans.
-- **Basketball Fast Break (3)** (Basketball): High-energy transition play captured from a low-angle sideline perspective. In the immediate foreground, {char1} is sprinting full speed toward the camera, dribbling a basketball with intense focus, body low and aerodynamic, muscles in quads and calves strained. In the midground, {char2} is running parallel, looking back at {char1} while pointing toward the hoop, calling for the pass. Trailing slightly behind them in the background, {char3} is in a defensive pursuit, arm outstretched in a desperate attempt to block the passing lane. Cinematic gym lighting with harsh overhead highlights and deep shadows. The floor is a polished hardwood reflecting the players' movements. Motion blur on the ball and the players' limbs to emphasize speed.
-- **Soccer Penalty Kick (3)** (Soccer): High-stakes championship moment captured from behind the goal net. In the center midground, {char1} has just struck the ball, body tilted back and follow-through leg high in the air, eyes fixed on the target. In the immediate foreground, {char2} (the goalkeeper) is fully extended in a horizontal dive toward the corner of the net, fingertips inches from the speeding ball. In the background, {char3} stands at the edge of the penalty box, hands on knees, watching with bated breath. The goal net in the very foreground creates a grid-like texture over the scene. Stadium floodlights create a dramatic "night game" atmosphere with visible light beams and heavy shadows. Grass blades and dirt kicked up near {char1}'s feet.
-- **Volleyball Net Battle (3)** (Volleyball): Cinematic close-up at the net, captured from a low-angle looking up. On the left side of the net, {char1} is at the apex of a jump, arm cocked back in a powerful spike position, torso twisted for maximum torque. On the right side, {char2} and {char3} have jumped in unison, arms extended high and fingers spread wide in a disciplined double-block, eyes locked on the ball. The net's mesh is sharp and detailed in the center of the frame. Bright gym lighting creates strong rim light on the players' silhouettes. Sweat beads are visible on their skin, and their expressions are a mix of intense focus and physical exertion. Shallow depth-of-field focuses on the hands meeting at the top of the net.
-- **Stretching Partner:** {char1} helping {char2} stretch, applying gentle pressure, athletic assistance, training partnership focus.
-- **Relay Baton Pass:** {char1} passing the baton to {char2} mid-sprint, perfectly timed athletic coordination.
-- **Volleyball Huddle (6)** (Volleyball): {char1}, {char2}, {char3}, {char4}, {char5}, and {char6} standing in tight cluster viewed from behind on volleyball court. All facing inward with arms wrapped around each other's backs and waists, creating unified group embrace. Bodies close together, shoulders touching, forming intimate team circle. Heads leaning toward center, some tilted inward in concentration. Arms reach across to hold teammates, hands resting on backs and sides. Stance natural and grounded, weight distributed evenly. Court floor visible beneath—polished gym floor with court lines. Background shows gym setting with walls, bleachers, chairs courtside. View captures the back of the huddle, emphasizing team unity and interconnection. Energy focused and supportive, pre-game or timeout moment of solidarity and strategy.
-- **Watching Teammate Bowl** (Bowling): {char1} bowling (mid-release or follow-through), {char2} watching intently from seating area behind, leaning forward with supportive body language, hands clasped or resting on knees.
-- **Athletic High Five (2)** (Sport): {char1} and {char2} meeting at mid-court or field, jumping for a high-impact high-five, arms reaching high, expressions of joy and triumph.
-- **Side-by-Side Running (2)** (Sport, Run): {char1} and {char2} jogging or sprinting side-by-side on a track or trail, synchronized movement, focused athletic breathing, determined expressions.
-- **Water Break (2)** (Sport): {char1} and {char2} sitting on a bench or standing near a sideline, drinking from water bottles, sweat glistening, catching their breath after intense activity.
-- **Coordinated Defense (2)** (Sport): {char1} and {char2} in a defensive stance together, shoulders nearly touching, eyes scanning the "opponents" ahead, collaborative strategic positioning.
+- **Bowling Ball Selection** (Bowling, Casual): {char1} and {char2} inspecting racks of balls, testing weights and laughing at colors.
+- **Dugout Watch** (Baseball, Team): {char1}, {char2}, and {char3} sitting on bench watching game, {char4} leaning on railing cheering. Team camaraderie.
+- **Team Lineup** (Sports, Intro): {char1} through {char5} standing in line facing crowd. Spotlights on, serious game faces.
+- **Strike Celebration** (Bowling, Happy): {char1} and {char2} high-fiving jumping after a strike. Neon lights of bowling alley background.
+- **Bowling High Five** (Bowling, Team): {char1} returning to seat, {char2} standing up to give solid five. Supportive team vibes.
+- **Bowling Coaching** (Bowling, Instruction): {char1} showing {char2} how to hold the ball, adjusting their wrist. {char2} focused on learning.
+- **Coach Instruction** (Sports, Leadership): {char1} drawing play on whiteboard, {char2} listening intently nodding. Mentorship moment.
+- **Scoreboard Check** (Sports, Competitive): {char1} and {char2} looking up at digital screen, pointing and debating the stats.
+- **Dual Bowling** (Bowling, Action): {char1} and {char2} releasing balls in adjacent lanes simultaneously. Synchronized sport action.
+- **Football Huddle** (Football, Team): {char1} calling play in center of tight circle with {char2}, {char3}, {char4}. Breath visible in cold air.
+- **Mound Meeting** (Baseball, Strategy): {char1} and {char2} covering mouths with gloves on pitcher's mound. Secret strategy talk.
+- **Tennis Net Play** (Tennis, Action): {char1} leaping for smash at net, {char2} crouching ready to defending. Sun flaring through racket strings.
+- **Street Ball 1v1** (Basketball, Urban): {char1} driving hard to hoop, {char2} sliding feet to block. Concrete court, chain link fence shadows.
+- **Striker vs Goalie** (Soccer, Action): {char1} mid-volley strike, {char2} diving full extension to save. Mud flying, high stakes.
+- **Receiver vs Corner** (Football, Action): {char1} taking off line of scrimmage, {char2} pressing tight coverage. Athletic burst of speed.
+- **Contested Catch** (Football, Aerial): {char1} and {char2} jumping for ball at apex. Hand fighting, bodies colliding in air.
+- **Softball Battery** (Softball, Pitcher/Catcher): {char1} winding up pitch in background, {char2} framing target in foreground. Depth of field focus.
+- **Broadcast View** (Sports, TV): Over-shoulder view of {char1} pitching to {char2} batting, {char3} catching. Classic TV camera angle.
+- **Fast Break** (Basketball, Speed): {char1} sprinting with ball, {char2} trailing calling for pass, {char3} chasing. Motion blur speed.
+- **Penalty Kick** (Soccer, Tension): {char1} striking ball, {char2} diving. Stadium lights bright, crowd blurred in back.
+- **Volleyball Block** (Volleyball, Action): {char1} spiking, {char2} and {char3} jumping together to wall block. Hands above net.
+- **Stretching Assist** (Fitness, Partner): {char1} pushing gently on {char2}'s back to help reach toes. Collaborative fitness.
+- **Relay Handoff** (Track, Speed): {char1} passing baton to {char2} at full sprint. Blind reach, perfect timing.
+- **Team Circle** (Volleyball, Huddle): {char1} and team of 6 in tight circle arms around shoulders. Heads bowed or looking in. Unified team spirit.
+- **Watching Bowl** (Bowling, Support): {char1} throwing ball, {char2} watching from behind leaning forward in suspense.
+- **Mid-Air High Five** (Sports, Celebration): {char1} and {char2} jumping to chest bump or high five in air. Pure athletic joy.
+- **Side-by-Side Run** (Fitness, Cardio): {char1} and {char2} pacing each other on trail run. Sweat glistening, rhythmic gait.
+- **Water Break Talk** (Sports, Rest): {char1} and {char2} sitting on bench with towels. Exhausted but happy, drinking water.
+- **Defensive Stance** (Sports, Ready): {char1} and {char2} low in defensive stance side-by-side. Eyes scanning field, ready to react.
 
 ---
 
 ## Dance & Performance
 
-- **Concert Hall Performance (3+):** (Music, Performance): Wide elevated view from upper gallery perspective looking down at stage. {char1} positioned center stage at grand piano or standing at microphone, {char2} positioned stage left with instrument or at second microphone, {char3} positioned stage right completing the trio formation. Performers appear 40-50 feet away, distant but clearly visible on illuminated stage. Orchestra seating visible in foreground bottom of frame. Gallery balcony railings in near foreground. Performers show professional performance bearing—confident stance, instrument positioning, coordinated stage presence. Composition emphasizes scale and grandeur while capturing intimate collaboration of three performers.
-- **Dance Partners:** (Dance, Social): {char1} and {char2} in partner dance position, hands connected, coordinated movement, artistic collaboration.
-- **Dance Formation:** (Performance): {char1} and {char2} in coordinated dance formation, synchronized poses, performance-ready energy.
-- **Lift (Dance):** (Dance): {char1} lifting {char2} in dance lift, {char2} extended in air with graceful form, strength and trust displayed.
-- **Mirror Dancing:** (Dance): {char1} and {char2} dancing in sync facing each other, mirrored identical movements, rhythmic coordination.
-- **Piano and Vocal Recital:** (Music, Performance, Formal): View from orchestra seating, performers appearing 30-40 feet away on illuminated stage. {char1} seated at grand piano, hands on keys, looking at music and occasionally glancing at {char2}. {char2} standing beside the curved side of the piano with inside hand resting on piano edge, outside hand gesturing. {char2} singing in operatic stance with mouth open, chest lifted, dramatic facial expression. Both in formal concert attire. Orchestra seating visible in foreground. Stage performance captured from audience viewpoint showing professional performance bearing and collaborative musical partnership.
+- **Concert Trio** (Music, Stage): {char1}, {char2}, {char3} performing widely spaced on stage. Lights hitting them, dramatic performance angles.
+- **Ballroom Frame** (Dance, Partner): {char1} and {char2} in hold. Posture upright, elegant lines, flowing movement.
+- **Synchronized Dance** (Dance, Modern): {char1} and {char2} hitting same pose in unison. Sharp dynamic angles.
+- **Dance Lift** (Dance, Acrobatic): {char1} holding {char2} overhead. {char2} arching back. Strength and grace balance.
+- **Mirror Routine** (Dance, Practice): {char1} and {char2} dancing facing each other mirroring moves. Studio setting.
+- **Recital Duet** (Music, Classical): {char1} on piano, {char2} singing standing by. Formal attire, dramatic lighting.
 
 ---
 
 ## Posed Interactions
 
-- **Back to Back:** {char1} standing back-to-back with {char2}, both looking in opposite directions with confident poses
-- **Height Comparison:** {char1} and {char2} standing side by side comparing heights, one measuring against the other
-- **Leaning On:** {char1} casually leaning on {char2}, relaxed pose showing familiarity and comfort
-- **Mirror Pose:** {char1} and {char2} in mirrored poses, matching each other's stance and gestures
-- **Shoulder to Shoulder:** {char1} and {char2} standing shoulder to shoulder, unified stance showing solidarity
+- **Back-to-Back Pose** (Modeling, Cool): {char1} and {char2} standing spines touching, arms crossed, looking at camera with attitude.
+- **Height Check** (Social, Playful): {char1} standing tall, {char2} measuring height against them with hand. Playful size difference.
+- **Casual Lean** (Social, Relaxed): {char1} leaning elbow on {char2}'s shoulder. {char2} rolling eyes or smiling. Comfortable friendship.
+- **Mirror Twin** (Modeling, Artistic): {char1} and {char2} dressed alike striking identical symmetry pose. Avant-garde fashion.
+- **Shoulder Lean** (Social, Support): {char1} and {char2} standing side-by-side, shoulders pressed together. Unspoken solidarity.
 
 ---
 
 ## Fantasy & Sci-Fi
 
-- **Casting a Spell** (Fantasy, Magic): {char1} casting a magical spell on {char2}. {char1}'s hands are glowing with arcane energy, held in a complex gesture. {char2} is either reeling from the impact, shielding themself with a magical barrier, or countering with their own spell.
-- **Sword Duel** (Fantasy, Action, Historical): {char1} and {char2} locked in a dramatic sword duel, blades crossed, sparks flying. Both in dynamic lunging or parrying stances, with intense focus and athletic tension.
-- **Telekinesis Battle** (Sci-Fi, Magic, Fantasy): {char1} and {char2} engaged in a telekinetic battle. They are holding their ground, arms outstretched, with glowing energy connecting them. Debris floats in the air between them, held in place by their mental powers.
-- **Using Hologram Interface** (Sci-Fi, Tech): {char1} manipulating a floating holographic interface with their hands. {char2} is looking on, either observing the data or pointing to a specific element on the glowing screen.
-- **The Adventuring Party (4)** (Fantasy, Adventure): {char1} leading the way with a sword, {char2} and {char3} flanking with staves or bows, and {char4} in the back providing magical support, all moving through a dangerous environment.
-- **Magic Fusion** (Fantasy, Magic): {char1} and {char2} standing close together, hands joined, a massive vortex of combined magical energy swirling around them both.
+- **Spell Casting** (Magic, Fantasy): {char1} hands glowing, sweeping gesture. {char2} bracing or adding to the spell. Arcane circles visible.
+- **Sword Clash** (Fantasy, Combat): {char1} and {char2} blades crossed, sparks flying. Faces close, grimacing with effort.
+- **Telekinetic Duel** (Sci-Fi, Power): {char1} and {char2} hands outstretched. Objects floating chaotic between them. Mental struggle manifest.
+- **Hologram Interface** (Sci-Fi, Tech): {char1} manipulating floating blue screens. {char2} watching data scroll. Cyberpunk lighting.
+- **Dungeon Party** (Fantasy, Adventure): {char1} checking for traps, {char2} guarding rear, {char3} holding torch. Classic dungeoneering.
+- **Magic Fusion** (Fantasy, Ultimate): {char1} and {char2} holding hands, combined energy spiraling up into massive beam.
+- **Dual Spell Cast** (Magic, Cooperative): {char1} and {char2} synchronized casting motion. Different colored magics blending.
+- **Holo-Table Plan** (Sci-Fi, Strategy): {char1} and {char2} looking down at 3D map projection. Planning tactical strike.
+- **Hacking Session** (Cyberpunk, Tech): {char1} and {char2} jacked in, cables connected. Eyes glowing or focused on screens.
+- **Tome Research** (Fantasy, Academic): {char1} and {char2} reading giant ancient book. Dust motes in light beams.
+- **Repair Job** (Sci-Fi, Mechanic): {char1} welding, {char2} holding panel. Sparks flying, grease and grime.
+- **Portal Opening** (Magic, Ritual): {char1} and {char2} channeling into rune circle. Vortex opening in center.
 
 ---
 
-## Cultural & Traditional
+## Combat & Tactical
 
-- **Prayer Together:** {char1} and {char2} in prayer position together, hands joined or individual prayer poses, spiritual connection.
-- **Tea Ceremony:** {char1} serving tea to {char2} in traditional ceremony, formal ritualistic movements, cultural respect.
-- **Traditional Greeting:** {char1} and {char2} performing traditional cultural greeting, specific gesture appropriate to culture, respectful interaction.
-
----
-
-## Dynamic Interactions
-
-- **Chase:** {char1} chasing after {char2}, both in motion with playful or determined energy
-- **Dodging:** {char1} dodging away from {char2}, quick reactive movement with athletic form
-- **Pulling:** {char1} pulling {char2} by the hand, leading them in a direction with forward momentum
-- **Pushing:** {char1} playfully pushing {char2}, light contact showing friendly interaction
+- **Back-to-Back Defense** (Tactical, Action): {char1} and {char2} surrounded, weapons out facing outward. Trust and lethal readiness.
+- **Blade Point** (Action, Tension): {char1} holding sword to {char2}'s throat. {char2} looking up defiant. High stakes drama.
+- **Interrogation Scene** (Thriller, Intense): {char1} slamming hands on table, {char2} sitting calm or scared. Shadowy room.
+- **Ready Nod** (Action, Team): {char1} and {char2} exchanging quick nod before breaching door. Professional operators.
+- **Rescue Carry** (Action, Heroic): {char1} carrying injured {char2} through smoke/fire. {char2} gripping {char1}'s gear.
+- **Breach Stack** (Tactical, SWAT): {char1} hand on {char2}'s shoulder, ready to enter room. Weapons raised, tactical gear.
+- **Mid-Air Toss** (Action, Assist): {char1} throwing magazine/weapon to {char2} mid-fight. Perfect coordination.
 
 ---
 
-## Group Formations (3+)
+## Cultural & Tradition
 
-- **Chain Reaction (3+):** {char1} interacting with {char2}, who is simultaneously interacting with {char3}, creating a connected chain of interaction
-- **Circle Formation (4+):** {char1}, {char2}, {char3}, and {char4} standing in a circle formation, all facing inward toward the center
-- **Group Discussion (4+):** {char1}, {char2}, {char3}, and {char4} engaged in group discussion, all contributing to conversation with varied body language
-- **Group Huddle (4+):** {char1}, {char2}, {char3}, and {char4} in close huddle, heads together discussing strategy or sharing moment
-- **Line Formation (4+):** {char1}, {char2}, {char3}, and {char4} standing in a line side by side, all facing the same direction with coordinated poses
-- **Team Pose (4+):** {char1}, {char2}, {char3}, and {char4} in heroic team pose, standing together with confident expressions and coordinated stances
-- **Triangle Formation (3):** {char1}, {char2}, and {char3} positioned at three points of a triangle, creating geometric composition with balanced spacing
+- **Prayer Moment** (Cultural, Spiritual): {char1} and {char2} kneeling or standing with heads bowed, hands clasped. Quiet reverence.
+- **Tea Ceremony** (Cultural, Ritual): {char1} pouring tea with precise movements, {char2} receiving with bow. Traditional setting.
+- **Formal Bow** (Cultural, Greeting): {char1} and {char2} bowing deeply to each other. Respect and tradition.
 
 ---
 
-## Badass & High-Stakes
+## Dynamic Action
 
-- **Back-to-Back Combat:** (Tactical, Combat): {char1} and {char2} standing back-to-back in a defensive circle, weapons drawn, scanning for threats in opposite directions with tactical precision.
-- **The Duel Conclusion:** (Combat, Intense): {char1} standing over {char2} with a weapon leveled at their throat, {char1} showing cold dominance while {char2} looks up with a mixture of defiance and respect.
-- **Interrogation:** (Intense): {char1} leaning over a seated {char2}, one hand planted on the table or wall, demanding answers with an intimidating, overpowering presence.
-- **Silent Agreement:** (Action): {char1} and {char2} sharing a brief, knowing nod before simultaneously charging into action, perfectly synchronized.
-- **Saving the Day:** (Action, Helping): {char1} pulling {char2} out of danger or carrying them through a chaotic scene, {char1} moving with urgent purpose while {char2} grips them for safety.
-- **Tactical Breach:** (Tactical, Combat): {char1} and {char2} stacked at a doorway or corner, {char1} in a low crouch, {char2} standing behind, both poised to move with lethal coordination.
-- **Weapon Exchange:** (Tactical, Action): {char1} tossing a weapon or tool to {char2} mid-action, both maintaining focus on their surroundings during the transition.
+- **The Chase** (Action, Run): {char1} sprinting after {char2}. {char2} looking back, vaulting obstacle. blurring speed.
+- **Dodge Roll** (Action, Evasion): {char1} rolling under attack, {char2} leaping over. Fluid combat motion.
+- **Leading the Way** (Adventure, Run): {char1} pulling {char2} by hand running through crowd/forest. Urgency and excitement.
+- **Playful Shove** (Social, Fun): {char1} pushing {char2} lightly. {char2} laughing, off balance.
+
+---
+
+## Group Dynamics
+
+- **Chain Reaction** (Group, Fun): {char1} poking {char2}, {char2} bumping {char3}. Domino effect of interaction.
+- **Circle Summit** (Group, Meeting): {char1} and team standing in circle looking down at object/map in center.
+- **Lively Debate** (Group, Social): {char1} arguing point, {char2} laughing, {char3} facepalming. Dynamic group conversation.
+- **Football Huddle** (Group, Sport): {char1} in tight ring of heads with {char2} and team. Intense secret planning.
+- **The Lineup** (Group, Cool): {char1} and team walking towards camera in slow motion V-formation.
+- **Hero Pose** (Group, Epic): {char1} center with team in Avengers-style circle shot. Everyone facing out ready to fight.
+- **Triangle Balance** (Group, Art): {char1}, {char2}, and {char3} positioned in perfect triangular composition.
 
 ---
 
 ## Artistic Collaboration
 
-- **Modeling for Painter:** (Art, Creative): {char1} sitting perfectly still in a poised stance on a decorative chair, while {char2} stands at a wooden easel, brush in hand, glancing between {char1} and the canvas.
-- **Critiquing the Work:** (Art, Creative): {char1} and {char2} standing side-by-side in front of an easel, {char2} pointing at a detail on the canvas while {char1} listens with a thoughtful expression.
+- **The Muse** (Art, Modeling): {char1} posing on chaise, {char2} painting at easel checking perspective. Studio light.
+- **Critique** (Art, Discussion): {char1} and {char2} standing back looking at painting. Chin stroking, thoughtful discussion.
 
 ---
 
----
+## Gaming & Digital
 
-## Sci-Fi & Fantasy Themed
-
-- **Casting Dual Spell:** (Fantasy, Magic): {char1} and {char2} standing side by side, both with hands extended forward, fingers spread as if channeling magical energy together, synchronized casting motion.
-- **Analyzing Hologram:** (Sci-Fi, Tech): {char1} and {char2} examining a floating holographic display together, both gesturing at the projection, discussing data with focused technical expressions.
-- **Hacking Together:** (Cyberpunk, Tech): {char1} and {char2} hunched over a terminal side-by-side, fingers flying over keyboards, screens reflecting on faces, underground hacker collaboration energy.
-- **Spell Book Study:** (Fantasy, Magic): {char1} and {char2} leaning over an ancient tome together, one pointing at text while the other traces arcane symbols, scholarly magical research.
-- **Tech Repair:** (Sci-Fi, Tech): {char1} holding a futuristic device while {char2} works on it with tools, both focused on technical repair, collaborative engineering moment.
-- **Portal Ritual:** (Fantasy, Magic): {char1} and {char2} standing on opposite sides of a glowing magical circle, both channeling energy with raised hands, creating portal together.
+- **Esports Match** (Gaming, Intense): {char1} and {char2} screaming comms, eyes glued to screens. RGB lighting reflecting.
+- **Victory Pop-off** (Gaming, Hype): {char1} and {char2} jumping out of chairs, hugging/high-fiving. Headsets flying.
 
 ---
 
-## Sentai & Team Heroics
+## Skate & Urban
 
-- **Sentai Team Pose (5):** (Sentai, Heroic): {char1}, {char2}, {char3}, {char4}, and {char5} in a synchronized heroic formation, each striking a unique dynamic pose with hands held in stylized gestures, radiating "Power Rangers" energy.
-- **Back-to-Back Heroics:** (Heroic): {char1} and {char2} standing back-to-back, fists raised or weapons drawn, looking in opposite directions with fierce determination.
-
----
-
-## Gaming & Digital Culture
-
-- **Esports Duo Match:** (Esports, Gaming, Tech): {char1} and {char2} sitting side-by-side in high-back gaming chairs, intense focus on glowing monitors (off-camera), headsets on, shouting communication to each other.
-- **Victory Celebration (Gaming):** (Esports, Gaming, Happy): {char1} and {char2} jumping up from their chairs in a gaming arena, headsets around necks, high-fiving or hugging in front of a glowing setup.
+- **Trick Tip** (Skate, Teaching): {char1} pointing at {char2}'s foot placement on board. {char2} trying to balance.
+- **Park Hangout** (Skate, Chill): {char1} skating bowl, {char2} and {char3} sitting on coping watching. Sunny skatepark vibes.
 
 ---
 
-## Skate & Urban Sports
+## Gymnastics
 
-- **Skateboard Trick Advice:** (Skate, urban): {char1} standing on a skateboard, demonstrating a trick, while {char2} watches closely from a sitting position on a concrete ramp, focused learning moment.
-- **Skate Park Session (3+):** (Skate, urban): {char1} dropping into a bowl, {char2} mid-air on a ramp in the background, and {char3} sitting on the edge of a rail, watching and cheering.
-
----
-
-## Gymnastics & Creative Movement
-
-- **Gymnastics Spotting:** (Gym, Sport): {char1} (coach/teammate) with hands positioned to spot {char2} during a handstand or flip on a mat, providing safety and guidance.
-- **Floor Routine Sync (2):** (Gym, Sport): {char1} and {char2} performing a synchronized floor routine move, arms extended symmetrically, focused and graceful on the blue mat.
+- **Spotting Assist** (Gym, Safety): {char1} hands ready to catch {char2} doing flip. Trust and safety.
+- **Sync Floor Routine** (Gym, Performance): {char1} and {char2} jumping in splits simultaneously. Artistic gymnastics.
 
 ---
 
-## Cinematic & High-Tension
+## Cinematic Tropes
 
-- **Dramatic Eye Contact (2):** {char1} and {char2} locked in intense, dramatic eye contact, a palpable tension between them, shallow depth of field, cinematic lighting.
-- **The Handover (2):** {char1} handing a small, glowing data-shard to {char2}, their fingers brushing briefly, a sense of high-stakes cooperation and secrecy.
-- **Mirrored Movement (2):** {char1} and {char2} moving in perfect, mirrored synchronization, as if choreographed or controlled by a single mind, ethereal and uncanny energy.
-- **Back-to-Back Defense (2):** {char1} and {char2} standing back-to-back, weapons drawn or ready for combat, looking in opposite directions with focused, defensive intensity.
-
----
-
-## Professional & Technical Cooperation
-
-- **Shared Tablet Analysis (2):** {char1} and {char2} leaning over a glowing holographic tablet, {char1} pointing at data while {char2} observes with deep concentration, professional intellectual focus.
-- **Surgical Focus (2):** {char1} performing a delicate technical or medical procedure while {char2} assists, both showing extreme surgical focus and steady hands under bright, sterile lighting.
-- **Prototype Testing (2):** {char1} testing a complex mechanical or electronic prototype while {char2} records data, both engaged in the high-precision work of innovation.
-- **Collaborative Engineering (2):** {char1} and {char2} working together on a large-scale engineering project, surrounded by tools and technical components, coordinated industrial effort.
+- **Dramatic Stare** (Cinematic, Tension): {char1} and {char2} inches apart, looking into eyes. Background blurred, time stopped.
+- **The Handoff** (Cinematic, Spy): {char1} slipping flash drive to {char2} while walking past. Subtle, covert.
+- **Mirror Sync** (Cinematic, Surreal): {char1} and {char2} moving exactly same way, uncanny perfection. Dreamlike.
+- **Last Stand** (Cinematic, Action): {char1} and {char2} back-to-back, enemies enclosing. Dirty, tired, defiant.
 
 ---
 
-## Fantasy & Adventure
+## Professional
 
-- **Rolling Dice (2):** {char1} throwing a handful of polyhedral dice onto a wooden table with intensity. {char2} watching the result breathlessly. Tension in the air.
-- **Checking the Map (2):** {char1} holding a weathered parchment map open, pointing at a location. {char2} looking over their shoulder, nodding in agreement. Adventure planning.
-- **Spellcasting Duel (2):** {char1} and {char2} locking magical beams in a clash of energy. {char1} glowing with blue light, {char2} with red. Dynamic action pose.
-- **Tavern Toast (2):** {char1} and {char2} raising large wooden tankards in a cheerful toast. Foam spilling over the sides. Warm firelight in the background.
-- **Campfire Watch (2):** {char1} sitting by the fire cleaning a weapon, while {char2} sleeps wrapped in a cloak nearby. Quiet vigilance.
+- **Tablet Review** (Tech, Work): {char1} and {char2} looking at glowing tablet. {char1} swiping data. Blue light on faces.
+- **Surgery Prep** (Medical, Intense): {char1} and {char2} scrubbing in/gloved up. Eyes visible over masks. Serious focus.
+- **Lab Testing** (Science, Work): {char1} holding vial, {char2} typing data. Clean white lab setting.
+- **Engineering** (Industrial, Work): {char1} and {char2} looking at engine part, pointing at schematics. Grease and tools.
+
+---
+
+## Fantasy Adventure
+
+- **Dice Roll** (Tabletop, Fun): {char1} throwing dice, {char2} watching breath held. Tavern table setting.
+- **Map Check** (Adventure, Travel): {char1} holding map up to sun, {char2} scanning horizon. Hiking gear.
+- **Spell Duel** (Magic, Action): {char1} red beam, {char2} blue beam colliding in center. Energy explosion.
+- **Tavern Cheers** (Fantasy, Social): {char1} and {char2} clinking tankards. Ale sloshing. Warm firelight.
+- **Night Watch** (Adventure, Quiet): {char1} awake staring at fire, {char2} asleep in bedroll. Peaceful vigilance.
 
 ---
 
 ## School & Slice of Life
 
-- **Sharing Earbuds (2):** {char1} and {char2} sitting close together, sharing a pair of wired earbuds. One earbud in {char1}'s ear, the other in {char2}'s. Both listening quietly, lost in the music and the moment.
-- **Bento Sharing (2):** {char1} offering a piece of food from their bento box to {char2} with chopsticks. {char2} leaning in to take it, slightly embarrassed or happy. A cute, everyday lunch interaction.
-- **Head Pat (2):** {char1} gently patting {char2} on the head. {char2} looking up with a happy or shy expression. A gesture of affection and comfort.
-- **Walking Home (2):** {char1} and {char2} walking side-by-side carrying school bags. The sun is setting behind them, casting long shadows. They are chatting casually about their day.
-- **Study Session (2):** {char1} and {char2} leaning over a notebook together at a desk. {char1} pointing at a math problem while {char2} looks confused or enlightened. Focused academic collaboration.
-- **Pinky Promise (2):** {char1} and {char2} linking pinky fingers in a close-up shot. A sign of a serious, secret promise between friends or lovers. Focus on the hands.
+- **Shared Earbuds** (School, Cute): {char1} and {char2} shoulder-to-shoulder, one earbud each. Listening to music, quiet vibe.
+- **Feed Me** (School, Cute): {char1} offering food with chopsticks to {char2}. {char2} blushing/eating.
+- **Head Pat** (Anime, Cute): {char1} patting {char2}'s head. {char2} looking happy/annoyed.
+- **Walk Home** (School, Sunset): {char1} and {char2} walking with bags. Golden hour lighting. Shadows stretching.
+- **Study Hall** (School, Work): {char1} teaching {char2} math. {char2} scratching head confusingly.
+- **Pinky Swear** (Childhood, Promise): {char1} and {char2} linking pinky fingers. Close up on hands. Serious promise.
 
 ---
 
-## Romantic & Cinematic Tropes
+## Romantic Tropes
 
-- **Ai-ai gasa (Sharing an Umbrella) (2):** {char1} and {char2} sharing a single umbrella during a gentle rain, walking close together to stay dry, a sense of quiet intimacy and protection.
-- **Aquarium Gaze (2):** {char1} and {char2} standing before a massive aquarium wall, their silhouettes sharp against the deep blue water and swirling marine life, enchanted and serene atmosphere.
-- **Museum Whisper (2):** {char1} leaning in close to whisper something to {char2} while they both look at a piece of art in a grand gallery, a shared secret in a quiet, public space.
-- **Snowy Park Bench (2):** {char1} and {char2} sitting close together on a park bench during a light snowfall, both wrapped in warm coats and scarves, breath visible in the cold air, a Peaceful romantic Moment.
-- **The Unexpected Catch (2):** {char1} catching {char2} after a stumble, their eyes meeting in a Moment of surprise and budding connection, physical closeness and tension.
-- **Rooftop Confession (2):** {char1} and {char2} standing near a rooftop ledge at night, city lights blurred in the background, a Moment of vulnerability and intense emotional connection.
+- **Sharing Umbrella** (Romantic, Rain): {char1} holding umbrella over {char2}. Both walking close to stay dry. Rain falling around.
+- **Aquarium Date** (Romantic, Blue): {char1} and {char2} silhouettes against giant fish tank. Blue glowing light.
+- **Museum Whisper** (Romantic, Culture): {char1} whispering to {char2} in front of painting. {char2} giggling.
+- **Snowy Bench** (Romantic, Winter): {char1} and {char2} sitting in snow, breath visible. Drinking hot cocoa.
+- **The Catch** (Romantic, Cliché): {char1} catching falling {char2}. Dip pose, surprised eyes meeting.
+- **Rooftop Night** (Romantic, City): {char1} and {char2} overlooking city lights. Wind blowing hair. Emotional moment.

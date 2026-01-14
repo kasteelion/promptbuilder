@@ -11,10 +11,10 @@
 
 **Appearance:**
 
-- **Body:** Dramatic Classic frame; straight refined flesh with minimal softness; narrow balanced proportions with long limbs and a graceful neck; tall-moderate vertical (5'8"-5'9"); lean disciplined build—visible muscle tone from years of ballet without bulk; high-poised presence—seems to hover rather than walk.
-- **Face:** Long classical facial structure; oval face shape with refined planar features; high forehead and a delicate-yet-firm jawline; deep-set calm gray-blue eyes, wide-spaced, reflecting a serene and analytical mind; straight defined nose; thin-moderate lips held in a composed line; serene neutral expression that reads as sophisticated and observant.
-- **Hair:** Type 1 straight; high density but fine texture; long length past mid-back; sleek silk-like finish; center-parted; commonly worn in a tight low ballerina bun (polished), or loose and tucked behind the ears (casual refinement); deep cool dark brown.
-- **Skin:** Fair neutral skin with luminous clarity and smooth texture; minimal visible pores or imperfections; translucent quality at the temples; natural healthy glow from a meticulous skincare routine.
+* **Body:** Dramatic Classic frame; straight refined flesh with minimal softness; narrow balanced proportions with long limbs and a graceful neck; tall-moderate vertical (5'8"-5'9"); lean disciplined build—visible muscle tone from years of ballet without bulk; high-poised presence—seems to hover rather than walk.
+* **Face:** Long classical facial structure; oval face shape with refined planar features; high forehead and a delicate-yet-firm jawline; deep-set calm gray-blue eyes, wide-spaced, reflecting a serene and analytical mind; straight defined nose; thin-moderate lips held in a composed line; serene neutral expression that reads as sophisticated and observant.
+* **Hair:** Type 1 straight; high density but fine texture; long length past mid-back; sleek silk-like finish; center-parted; commonly worn in a tight low ballerina bun (polished), or loose and tucked behind the ears (casual refinement); deep cool dark brown.
+* **Skin:** Fair neutral skin with luminous clarity and smooth texture; minimal visible pores or imperfections; translucent quality at the temples; natural healthy glow from a meticulous skincare routine.
 
 **Age Presentation:** early 30s presentation; poised, cultivated, timelessly refined.
 **Vibe / Energy:** elegant, reserved, intentional, quietly magnetic, disciplined grace.

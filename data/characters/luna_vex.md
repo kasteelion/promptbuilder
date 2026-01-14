@@ -1,21 +1,23 @@
 ### Luna Vex
+
 **Photo:** luna_vex_photo.png
 
-**Tags:**   female, curvy, edgy, petite, playful
+**Tags:** female, curvy, edgy, petite, playful
 
-**Summary:** She radiates a playful sense of mischief, her bold aesthetic serving as a backdrop to a deeply candid and joyful personality. Her presence is characterized by an infectious laugh and an undeniable magnetic energy that commands attention despite her petite stature.
+**Summary:** Luna radiates a genuine and warm-hearted sense of fun, her bold aesthetic serving as a vibrant backdrop to an approachable and joyful personality. Her presence is characterized by a bright, infectious laugh and a natural charisma that feels welcoming and light-spirited.
 
 **Gender:** F
 **Signature Color:** #FF00FF
 
 **Appearance:**
+
 * **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
-* **Face:** Classic heart-shaped silhouette with a broad, smooth forehead and high, soft cheekbones that become prominent when she smiles; delicate, pointed chin creating a sharp taper from the mid-face; soft but clean and well-defined jawline; focal wide-set almond-shaped eyes in captivating light grey-blue; framed by naturally high-arched, manicured dark brown eyebrows sitting well above the orbital bone; signature sharp black winged eyeliner that accentuates the upward curve of her eyes; petite, straight nose bridge with a soft rounded tip and characteristic "scrunch" when laughing; wide, expressive mouth with a prominent philtrum and a broad, radiant smile revealing straight white teeth; deep endearing smile lines (nasolabial folds) and pronounced "crow's feet" signal genuine warmth and joy.
-* **Hair:** Type 2A (wavy); medium density; soft, voluminous layered silhouette; shoulder-length; varying part pattern (side or center); glossy sheen with styled "wet-look" roots; common styling includes loose, face-framing waves. Split-dye neon magenta pink and electric blue/amethyst purple.
-* **Skin:** Fair/Light depth; neutral-cool undertones; smooth, luminous surface finish; natural "crow's feet" laugh lines around the eyes.
+* **Face:** Rounded heart-shaped face with a prominent, smooth forehead and high, rounded cheekbones; gently tapered but soft chin following a natural curve; wide-set, expressive almond-shaped eyes in a warm grey-blue; distinguished by sharp, precise black-winged eyeliner that elongates the outer corners; naturally dark, well-defined brows; petite nose with a soft bridge; wide, radiant smile revealing straight white teeth and creating characteristic "apple" cheeks.
+* **Hair:** High-density wavy texture; split-dye vibrant fuchsia-pink and electric sapphire-blue; styled with a clean center part to create a striking vertical color separation; shoulder-length and voluminous; often worn in playful twin braids or loose, wind-swept waves.
+* **Skin:** Fair, luminous complexion with neutral-cool undertones; natural "lit-from-within" glow; subtle warmth on the cheekbones that emphasizes her lively expressions.
 
 **Age Presentation:** 20–25; youthful, spirited, and modern maturity.
-**Vibe / Energy:** Infectious, Playful, Bold, Edgy.
+**Vibe / Energy:** Infectious, Warm, Welcoming, Charismatic.
 **Bearing:** Dynamic and candid; postural patterns include expressive head tilts, animated facial gestures, and a lean-in approach during conversation.
 
 // Style Notes:
@@ -28,6 +30,7 @@
 **Outfits:**
 
 #### Base
+
 - **Top:** Mauve twist-front cropped jersey tee; highlights midriff and waist.
 
 * **Bottom:** High-waisted white gray and black camo joggers/trousers.

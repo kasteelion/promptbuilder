@@ -1,0 +1,15 @@
+﻿Auditing Characters in C:\Users\parking\Desktop\promptbuilder\data\characters...
+DEBUG: sasha_king.md Appearance snippet repr:
+'Appearance:**\n\n- **Body:** Flamboyant Natural frame; tall and lean vertical (5\'8"-5\'9"); broad rhyth'
+
+Audit Results:
+Filename                       | Status | Score | Issues
+--------------------------------------------------------------------------------
+sasha_king.md                  | FAIL  | 80    | Missing 'Body' bullet, Missing 'Face' bullet, Missing 'Hair' bullet, Missing 'Skin' bullet
+zemen_ayele.md                 | FAIL  | 80    | Missing 'Body' bullet, Missing 'Face' bullet, Missing 'Hair' bullet, Missing 'Skin' bullet
+--------------------------------------------------------------------------------
+
+TOTAL FAILURES: 2
+Failing files: ['sasha_king.md', 'zemen_ayele.md']
+Report saved to: C:\Users\parking\Desktop\promptbuilder\auditing\reports\character_standards_report.md
+

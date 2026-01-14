@@ -1,4 +1,4 @@
-from cli import parse_cli
+from utils.cli import parse_cli
 
 
 def test_parse_cli_defaults(monkeypatch):

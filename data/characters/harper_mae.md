@@ -3,12 +3,13 @@
 
 **Summary:** Harper Mae embodies Southern warmth with an effortless, sun-kissed charm. Her presence feels like a front porch summer afternoon—sweet tea, genuine laughter, and the kind of hospitality that makes everyone feel like family. She radiates approachable beauty, where freckles and natural grace create a girl-next-door magnetism that's impossible to resist.
 
-**Tags:**   female, approachable, freckled, minimalist, southern, sun-kissed
+**Tags:** female, approachable, freckled, minimalist, southern, sun-kissed
 
 **Gender:** F
 **Signature Color:** #FFD700
 
 **Appearance:**
+
 * **Body:** Soft Natural frame; natural-wave flesh blend; balanced proportions with gentle curves and natural waist definition; moderate vertical; soft athletic build with graceful ease.
 * **Face:** Soft oval-to-heart facial structure; gentle rounded features; warm expressive blue-green eyes with slight upward tilt, moderately spaced; constellation of freckles across nose and cheeks; soft defined jawline; neutral resting expression is warm and inviting with easy dimpled smile and sparkling eyes.
 * **Hair:** Type 2B-2C waves; high density; long sun-lightened layers past shoulders; natural loose part; healthy bounce; warm honey-blonde with natural golden highlights from sun exposure; commonly worn half-up with loose tendrils or in relaxed low ponytail.
@@ -24,10 +25,12 @@
 // Jewelry preference: delicate gold, meaningful pieces with Southern charm
 // General vibe: effortlessly pretty, approachable, sweet with authentic Southern hospitality
 
-
 ---
 
+**Outfits:**
+
 #### Base
+
 - **Top:** Soft white eyelet lace peasant blouse with off-shoulder option and flutter sleeves
 - **Bottom:** High-waist light-wash denim shorts with frayed hem and subtle distressing
 - **Footwear:** Cognac brown leather gladiator sandals with braided straps

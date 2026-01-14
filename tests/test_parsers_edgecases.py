@@ -43,7 +43,12 @@ def test_shared_outfits_duplicate_sections_and_empty():
     # 'Common' should exist and include the last 'Casual' override
     assert "Common" in shared
     assert "Casual" in shared["Common"]
-    assert shared["Common"]["Casual"] in ("Duplicate casual desc", "T")
+    val = shared["Common"]["Casual"]
+    # Handle dict or string depending on parser implementation
+    if isinstance(val, dict):
+        assert val.get("description") in ("Duplicate casual desc", "T")
+    else:
+        assert val in ("Duplicate casual desc", "T")
     assert "Other" in shared
 
 

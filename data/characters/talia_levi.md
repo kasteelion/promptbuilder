@@ -1,14 +1,16 @@
 ### Talia Levi
+
 **Photo:** talia_levi_photo.png
 
-**Tags:**   female, commanding, edgy, israeli, mediterranean
+**Tags:** female, commanding, edgy, israeli, mediterranean
 
-**Summary:** Noa commands attention through unapologetic sensuality and magnetic presence. Her confidence is body-forward and deliberate, moving through space with the kind of self-possession that makes people pause mid-conversation. There's nothing performative about her allure—it's simply who she is, worn as naturally as sun-warmed skin.
+**Summary:** Talia commands attention through unapologetic sensuality and magnetic presence. Her confidence is body-forward and deliberate, moving through space with the kind of self-possession that makes people pause mid-conversation. There's nothing performative about her allure—it's simply who she is, worn as naturally as sun-warmed skin.
 
 **Gender:** F
 **Signature Color:** #B8860B
 
 **Appearance:**
+
 * **Body:** Soft Dramatic frame; wave-lush flesh quality; voluptuous hourglass proportions with pronounced bust (full D-DD), defined waist, and rounded hips; moderate-to-tall vertical (5'7"); soft density with feminine curves, visible décolletage, rounded shoulders, and shapely legs; magnetizing sensual presence.
 
 * **Face:** Balanced-sultry facial structure; oval-to-diamond shape; high pronounced cheekbones with sculpted planes; large almond-shaped wide-set eyes in deep amber-brown with naturally seductive heavy-lidded quality and penetrating direct gaze; full shapely lips; defined angular jawline; neutral resting expression is knowing and self-assured with slight sultry smile and unwavering confident eye contact that holds just a beat too long.
@@ -34,7 +36,10 @@
 
 ---
 
+**Outfits:**
+
 #### Base
+
 - **Top:** Plunging V-neck ribbed crop top in off-white (fitted, shows décolletage and midriff)
 - **Bottom:** High-waist medium-wash straight-leg jeans with subtle distressing and curve-hugging fit
 - **Footwear:** Strappy tan leather heeled sandals with ankle wrap

@@ -1,7 +1,6 @@
 ### Harald Bjornson
 **Photo:** harald_bjornson_photo.png
 
-**Photo:** [harald_photo.png]
 **Tags:**   male, bearded, commanding, massive, nordic, rugged
 **Summary:** Harald Bjornson is a mountain of a man, embodying sheer physical power and indomitable will. His presence is heavy and immovable, like a granite cliff. He carries himself with the quiet, terrifying calm of a man who doesn't need to raise his voice to be heard. He is a modern echo of an ancient archetype—rugged, weathered, and undeniably dominant.
 **Gender:** M

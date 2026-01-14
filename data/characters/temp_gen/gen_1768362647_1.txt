@@ -1,0 +1,24 @@
+Rendering
+8K Raw Photography style. simulates a 85mm portrait lens with f/1.8 aperture. Sharp focus on the eyes with gradual fall-off blur. accurate global illumination, ambient occlusion, and ray-traced reflections. No stylization filters; true-to-life color balance.
+
+---
+
+**SCENE/SETTING:**
+Neutral seamless backdrop, professional three-point studio lighting with softboxes, clean minimalist setup. Subtle hum of cooling fans, scent of fresh paint and ozone.
+---
+
+**CHARACTER: Hallie Exp V5**
+**Appearance:**
+- **Body:** Soft Natural frame with high-impact feminine proportions; moderate vertical; characterized by a pronounced and very full D-cup bust volume that serves as a primary focal point of her silhouette; the build is structurally "Soft Natural" with blunt bone structure and a soft flesh overlay, but calibrated for extreme curvaceousness; absolutely no sharp angles, visible sinewy muscle, or vascularity; rounded shoulders and a soft hourglass tendency with a gentle, fleshy waist curve; surface quality is supple and even, projecting a healthy, relaxed, and body-aware vitality.
+- **Face:** Soft, round-oval face with gentle cheek fullness; slightly almond-shaped dark brown eyes; warm, easy smile with slight upturn at mouth corners; overall approachable, open expression.
+- **Hair:** Shoulder-length wavy hair; sun-kissed light brown with natural blonde highlights; moderate density and natural movement suited to low-maintenance styles.
+- **Skin:** Light-fair with neutral undertones and soft, healthy glow; minimal permanent markings.
+**Outfit:**
+- Top: Black sleeveless crop top with cutout detail at chest
+- Bottom: Black fitted leggings or athletic tights
+- Footwear: Black and white athletic shoes
+- Accessories: Black digital watch on left wrist, delicate silver necklace with small pendant, dark red/brown sunglasses resting on top of head
+- Hair/Makeup: Hair styled with soft waves, loose; minimal makeup visible
+**Pose/Action:**
+Standing naturally, relaxed posture, arms at sides, gentle weight shift to one leg.
+---

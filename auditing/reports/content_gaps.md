@@ -1,0 +1,215 @@
+# 📉 Content Gap Analysis
+Identifies themes where we have 'Demand' (Scenes/Prompts) but no 'Supply' (Characters/Outfits).
+
+## 📊 Visualization
+See [Content Balance Chart](content_balance_chart.html) for an interactive view.
+
+## 🚨 Critical Gaps (Missing Content)
+- 🔴 **2d**: 4 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **3d**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **90s**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **abstract**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **action**: 4 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **adventure**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **alley**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **anime**: 6 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **appealing**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **arena**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **arid**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **armor**: 29 Scenes/Prompts, but **0** Characters.
+- 🔴 **art**: 5 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **artistic**: 9 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **backstage**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **baking**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **bar**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **baseball**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **basketball**: 3 Scenes/Prompts, but **0** Characters.
+- 🔴 **bathroom**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **beach**: 3 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **bedroom**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **bowling**: 7 Scenes/Prompts, but **0** Characters.
+- 🔴 **bright**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **busy**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **cafe**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **castle**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **changed**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **cheerful**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **chibi**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **cinematic**: 3 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **circus**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **city**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **classical**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **clean**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **climbing**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **combat**: 6 Scenes/Prompts, but **0** Characters.
+- 🔴 **comic**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **concert**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **cooking**: 2 Scenes/Prompts, but **0** Characters.
+- 🔴 **costume**: 21 Scenes/Prompts, but **0** Characters.
+- 🔴 **cottagecore**: 5 Scenes/Prompts, but **0** Characters.
+- 🔴 **cozy**: 4 Scenes/Prompts, but **0** Characters.
+- 🔴 **craft**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **cute**: 7 Scenes/Prompts, but **0** Characters.
+- 🔴 **cyberpunk**: 9 Scenes/Prompts, but **0** Characters.
+- 🔴 **dance**: 2 Scenes/Prompts, but **0** Characters.
+- 🔴 **danger**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **dark**: 9 Scenes/Prompts, but **0** Characters.
+- 🔴 **date**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **day**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **desert**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **detail**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **digital**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **dining**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **dnd**: 5 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **drama**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **dreamy**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **entertainment**: 5 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **entrance**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **event**: 9 Scenes/Prompts, but **0** Characters.
+- 🔴 **fantasy**: 43 Scenes/Prompts, but **0** Characters.
+- 🔴 **fashion**: 3 Scenes/Prompts, but **0** Characters.
+- 🔴 **festival**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **festive**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **flat**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **food**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **football**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **forest**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **formal**: 3 Scenes/Prompts, but **0** Characters.
+- 🔴 **fun**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **futuristic**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **gambling**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **gaming**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **garden**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **genkan**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **glamour**: 3 Scenes/Prompts, but **0** Characters.
+- 🔴 **glow**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **golden hour**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **gothic**: 2 Scenes/Prompts, but **0** Characters.
+- 🔴 **graphic**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **gritty**: 5 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **gym**: 6 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **heroic**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **high-definition**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **historical**: 10 Scenes/Prompts, but **0** Characters.
+- 🔴 **history**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **home**: 8 Scenes/Prompts, but **0** Characters.
+- 🔴 **horror**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **indoor**: 46 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **industrial**: 3 Scenes/Prompts, but **0** Characters.
+- 🔴 **inn**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **intimate**: 8 Scenes/Prompts, but **0** Characters.
+- 🔴 **landscape**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **lounge**: 4 Scenes/Prompts, but **0** Characters.
+- 🔴 **luxurious**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **magic**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **magical**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **medical**: 4 Scenes/Prompts, but **0** Characters.
+- 🔴 **medieval**: 26 Scenes/Prompts, but **0** Characters.
+- 🔴 **minimal**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **mma**: 2 Scenes/Prompts, but **0** Characters.
+- 🔴 **monochrome**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **moody**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **music**: 7 Scenes/Prompts, but **0** Characters.
+- 🔴 **mysterious**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **mystery**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **nature**: 17 Scenes/Prompts, but **0** Characters.
+- 🔴 **neon**: 4 Scenes/Prompts, but **0** Characters.
+- 🔴 **neutral**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **night**: 8 Scenes/Prompts, but **0** Characters.
+- 🔴 **nightlife**: 8 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **noir**: 11 Scenes/Prompts, but **0** Characters.
+- 🔴 **nostalgia**: 5 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **nostalgic**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **ocean**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **office**: 2 Scenes/Prompts, but **0** Characters.
+- 🔴 **outdoor**: 25 Scenes/Prompts, but **0** Characters.
+- 🔴 **painterly**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **party**: 7 Scenes/Prompts, but **0** Characters.
+- 🔴 **peaceful**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **photography**: 3 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **picnic**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **polished**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **pool**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **pop**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **private**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **professional**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **quiet**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **quirky**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **rain**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **rave**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **raw**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **realistic**: 7 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **relaxed**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **religious**: 2 Scenes/Prompts, but **0** Characters.
+- 🔴 **ren faire**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **research**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **retail**: 7 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **retro**: 2 Scenes/Prompts, but **0** Characters.
+- 🔴 **ruin**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **run**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **rustic**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **scary**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **scholarly**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **school**: 7 Scenes/Prompts, but **0** Characters.
+- 🔴 **sci-fi**: 6 Scenes/Prompts, but **0** Characters.
+- 🔴 **science**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **sensual**: 3 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **serene**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **sexy**: 7 Scenes/Prompts, but **0** Characters.
+- 🔴 **shower**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **skater**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **sketch**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **sleep**: 4 Scenes/Prompts, but **0** Characters.
+- 🔴 **soccer**: 3 Scenes/Prompts, but **0** Characters.
+- 🔴 **social**: 7 Scenes/Prompts, but **0** Characters.
+- 🔴 **spiritual**: 2 Scenes/Prompts, but **0** Characters.
+- 🔴 **sport**: 39 Scenes/Prompts, but **0** Characters.
+- 🔴 **spring**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **street**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **studio**: 3 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **summer**: 2 Scenes/Prompts, but **0** Characters.
+- 🔴 **swim**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **swimwear**: 9 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **tactical**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **team**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **tennis**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **toy**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **transit**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **travel**: 5 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **urban**: 21 Scenes/Prompts, but **0** Characters.
+- 🔴 **vacation**: 4 Scenes/Prompts, but **0** Characters.
+- 🔴 **vehicle**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **vibrant**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **victorian**: 2 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **vintage**: 14 Scenes/Prompts, but **0** Characters.
+- 🔴 **volleyball**: 1 Scenes/Prompts, but **0** Characters.
+- 🔴 **water**: 4 Scenes/Prompts, but **0** Characters.
+- 🔴 **weight:0.5**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **weight:0.8**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **weight:2.0**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **weight:3.0**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **weight:4.0**: 1 Scenes/Prompts defined, but **0** Characters or Outfits support it.
+- 🔴 **winter**: 2 Scenes/Prompts, but **0** Characters.
+- 🔴 **work**: 6 Scenes/Prompts, but **0** Characters.
+
+## ⚠️ Supply/Demand Imbalances
+- 🔸 **adventurous**: 3 Scenes, but **0** Outfits (Sims will be mis-dressed).
+- 🔸 **approachable**: 1 Scenes, but **0** Outfits (Sims will be mis-dressed).
+- 🔸 **athletic**: High demand (3), low outfit supply (2).
+- 🔸 **creative**: 6 Scenes, but **0** Outfits (Sims will be mis-dressed).
+- 🔸 **dramatic**: 2 Scenes, but **0** Outfits (Sims will be mis-dressed).
+- 🔸 **dynamic**: 5 Scenes, but **0** Outfits (Sims will be mis-dressed).
+- 🔸 **energetic**: 1 Scenes, but **0** Outfits (Sims will be mis-dressed).
+- 🔸 **glamorous**: 2 Scenes, but **0** Outfits (Sims will be mis-dressed).
+- 🔸 **intense**: 1 Scenes, but **0** Outfits (Sims will be mis-dressed).
+- 🔸 **luxury**: High demand (15), low outfit supply (9).
+- 🔸 **modern**: 1 Scenes, but **0** Outfits (Sims will be mis-dressed).
+- 🔸 **playful**: 1 Scenes, but **0** Outfits (Sims will be mis-dressed).
+- 🔸 **romantic**: 2 Scenes, but **0** Outfits (Sims will be mis-dressed).
+- 🔸 **soft**: High demand (5), low outfit supply (4).
+- 🔸 **tech**: High demand (12), low outfit supply (5).
+
+## ℹ️ Dominant Themes (Oversaturation)
+Tags appearing in >10% of all assets in their category.
+
+✅ No single theme dominates.

@@ -4,8 +4,7 @@
 **Gender:** M
 **Signature Color:** #000080
 
-**Tags:**   black, approachable, athletic, chic, commanding, male, minimalist
-
+**Tags:** black, approachable, Athletic, chic, commanding, male, minimalist
 **Summary:** Marcus balances strength with approachability, projecting calm confidence and grounded masculinity. His presence feels steady and reliable, marked by authenticity and emotional openness.
 
 **Appearance:**

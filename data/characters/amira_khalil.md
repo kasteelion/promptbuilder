@@ -1,8 +1,10 @@
 ### Amira Khalil
+
 **Photo:** amira_khalil_photo.png
 
 **Summary:** Poised and thoughtful, Amira embodies elegance through restraint. Her movements are deliberate and graceful, her presence calm and assured. She radiates dignity and intelligence, balancing softness with a composed inner strength that commands respect without demanding attention.
-**Tags:**   female, chic, hijabi, middle eastern, minimalist, traditional
+
+**Tags:** female, chic, hijabi, middle eastern, minimalist, traditional
 **Modifier:** H
 **Signature Color:** #B57EDC
 
@@ -14,11 +16,12 @@
 * **Skin:** Warm olive-toned skin with soft luminous finish.
 
 **Age Presentation:** late 20s to early 30s presentation; mature, composed.
+
 **Vibe / Energy:** calm, dignified, inwardly strong.
+
 **Bearing:** upright, deliberate movement; controlled grace.
 
 - **Special note:** Hijab is core feature; all outfit variants include modest hijab-appropriate adaptations
-
 
 // Style notes for outfit creation (not included in prompts):
 // - Typical makeup: modest and polished when worn; neutral-mauve/taupe tones preferred
@@ -26,12 +29,12 @@
 // - Jewelry preference: gold, delicate and refined
 // - General vibe: elegant modesty, thoughtful grace, quiet dignity
 
-
 ---
 
 **Outfits:**
 
 #### Base
+
 - **Hijab:** Chiffon hijab in dusty rose with neat wrap and single decorative pin
 - **Top:** Fitted long-sleeve high-neck tunic in cream (soft structured cotton, falls to mid-thigh)
 - **Bottom:** Wide-leg charcoal gray trousers with subtle drape

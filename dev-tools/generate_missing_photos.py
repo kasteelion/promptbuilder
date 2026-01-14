@@ -29,54 +29,104 @@ from logic.character_parser import CharacterParser
 from automation.ai_studio_client import AIStudioClient
 from utils.validation import sanitize_filename
 
-# Regex patterns for file editing
-_APPEARANCE_HEADER_RE = re.compile(r"(\**Appearance:\**)")
-_PHOTO_FIELD_RE = re.compile(r"\**Photo:\**")
+from core.builder import PromptBuilder
+from core.definitions import PromptConfig, SelectedCharacterConfig
 
-def _format_outfit(outfit_data):
-    """Convert outfit data (dict or string) to a description string."""
-    if isinstance(outfit_data, dict):
-        parts = []
-        for k, v in outfit_data.items():
-            if v and isinstance(v, str):
-                parts.append(f"{k}: {v}")
-        return ", ".join(parts)
-    return str(outfit_data)
-
-async def generate_images_for_missing(characters_missing, output_dir, dry_run=False):
+async def generate_images_for_missing(characters_info, data_assets, output_dir, dry_run=False):
     """
-    Generate images for the identified missing characters.
+    Generate images for the identified missing characters using the main app's PromptBuilder.
     
     Args:
-        characters_missing: List of tuples (char_name, source_file_path, appearance_text, outfit_desc)
+        characters_info: List of dicts with character metadata
+        data_assets: Dict containing all loaded data assets (base_prompts, poses, etc.)
         output_dir: Directory to save images
         dry_run: If True, skip generation and file updates
     """
-    if not characters_missing:
+    if not characters_info:
         print("No characters found missing photos.")
         return
 
-    print(f"Found {len(characters_missing)} characters missing photos.")
+    print(f"Found {len(characters_info)} characters missing photos.")
     
+    # Initialize PromptBuilder
+    builder = PromptBuilder(
+        characters=data_assets['characters'],
+        base_prompts=data_assets['base_prompts'],
+        poses=data_assets['poses'],
+        color_schemes=data_assets['color_schemes'],
+        modifiers=data_assets['modifiers'],
+        framing=data_assets['framing']
+    )
+
     # 1. Prepare Prompts
     prompts = []
-    for name, source_path, appearance, outfit_desc in characters_missing:
-        # Construct a standardized portrait prompt
-        short_app = appearance.split('\n\n')[0] if '\n\n' in appearance else appearance
-        short_app = short_app[:800] # safety limit
+    
+    # Standard settings for profile photos
+    # These must match the KEYS in base_prompts.md and scenes.md exactly
+    BASE_STYLE = 'Photorealistic: "High-Fidelity Candid"'
+    SCENE_NAME = "Photo Studio"
+    POSE_CATEGORY = "Basic Poses"
+    POSE_PRESET = "Standing"
+
+    # Flatten scenes for easier lookup (original is {category: {name: data}})
+    flat_scenes = {}
+    for cat_name, items in data_assets['scenes'].items():
+        for item_name, item_data in items.items():
+            flat_scenes[item_name] = item_data
+
+    # Find the scene text
+    scene_lookup = flat_scenes.get(SCENE_NAME, "")
+    if isinstance(scene_lookup, dict):
+        scene_text = scene_lookup.get("description", str(scene_lookup))
+    else:
+        scene_text = scene_lookup
+
+    for char_data in characters_info:
+        name = char_data['name']
+        char_def = data_assets['characters'].get(name, {})
         
-        prompt_text = (
-            f"Generate an image of: A high-quality photorealistic portrait of {name} against a simple white background. "
-            f"Character description: {short_app}. "
-            f"Outfit: {outfit_desc}. "
-            "Pose: Neutral standing pose, neutral expression, facing forward. "
-            "Lighting: Soft professional studio lighting."
+        # Include all character traits (like Glasses, freckles, etc.)
+        # The user specifically mentioned wanting these "modifiers" used.
+        available_traits = char_def.get("traits", {})
+        selected_traits = list(available_traits.keys())
+        
+        # We manually ensure traits are joined properly if appends happen
+        appearance = char_def.get("appearance", "")
+
+        # Create a PromptConfig for this character's portrait
+        config = PromptConfig(
+            base_prompt=BASE_STYLE,
+            scene=scene_text, # Pass the full text
+            selected_characters=[
+                SelectedCharacterConfig(
+                    name=name,
+                    outfit="Base",
+                    pose_category=POSE_CATEGORY,
+                    pose_preset=POSE_PRESET,
+                    character_traits=selected_traits, # Include character-specific traits
+                    use_signature_color=True 
+                )
+            ]
         )
+
+        # Generate the professional prompt using the main logic
+        prompt_text = builder.generate(config)
         prompts.append(prompt_text)
         
         if dry_run:
             print(f"[Dry Run] Would generate for: {name}")
-            print(f"  Prompt: {prompt_text[:150]}... [truncated]")
+            print(f"  Prompt: {prompt_text[:250]}... [truncated]")
+
+    # Save prompts to file for manual backup
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    prompts_file = os.path.join(script_dir, "missing_photos_prompts.txt")
+    with open(prompts_file, "w", encoding="utf-8") as f:
+        for p in prompts:
+            f.write(p + "\n\n")
+    print(f"Saved {len(prompts)} prompts to {prompts_file}")
+
+    if dry_run:
+        return
 
     # Save prompts to file for manual backup
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -106,7 +156,9 @@ async def generate_images_for_missing(characters_missing, output_dir, dry_run=Fa
     print("\nProcessing results...")
     
     for i, (prompt_text, img_path) in enumerate(results):
-        name, source_path, _, _ = characters_missing[i]
+        char_data = characters_info[i]
+        name = char_data['name']
+        source_path = char_data['source_path']
         
         if not img_path:
             print(f"Failed to generate image for {name}")
@@ -194,66 +246,64 @@ def update_markdown_file(file_path, char_name, relative_image_path):
 def main():
     parser = argparse.ArgumentParser(description="Generate missing character photos.")
     parser.add_argument("--dry-run", action="store_true", help="Scan only, do not generate or edit")
-    parser.add_argument("--count", type=int, default=5, help="Max number of characters to process in this run")
+    parser.add_argument("--force", action="store_true", help="Regenerate photos even if they already exist")
+    parser.add_argument("--count", type=int, default=10, help="Max number of characters to process in this run")
     args = parser.parse_args()
 
-    # 1. Scan for missing photos
+    # 1. Load all data assets
     loader = DataLoader()
     
+    # Load assets using the same methods as the main app
+    data_assets = {
+        'characters': loader.load_characters(),
+        'base_prompts': loader.load_base_prompts(),
+        'scenes': loader.load_presets("scenes.md"),
+        'poses': loader.load_presets("poses.md"),
+        'color_schemes': loader.load_color_schemes(),
+        'modifiers': loader.load_modifiers(),
+        'framing': loader.load_framing(),
+        'interactions': loader.load_interactions()
+    }
+
     # Check data/characters exists
     chars_dir = loader._find_characters_dir()
     if not chars_dir.exists():
         print(f"Characters directory not found at {chars_dir}")
         return
 
-    # Ensure images directory exists (Using root characters dir for consistency)
     images_dir = chars_dir
-    # images_dir.mkdir(exist_ok=True) # Directory already exists if we use chars_dir
-
     missing_queue = []
     
-    # Iterate files
-    for char_file in chars_dir.glob("*.md"):
-        try:
-            content = char_file.read_text(encoding="utf-8")
-            # Parse chars in this file
-            parsed_chars = CharacterParser.parse_characters(content)
-            
-            for name, data in parsed_chars.items():
-                # Check if photo is missing
-                photo_ref = data.get("photo")
-                is_missing = False
-                
-                if not photo_ref:
-                    is_missing = True
-                else:
-                    # Check if file exists
-                    # photo_ref is usually relative to characters dir
-                    photo_path = chars_dir / photo_ref
-                    if not photo_path.exists():
-                        print(f"Character {name} has photo '{photo_ref}' but file not found. Regenerating.")
-                        is_missing = True
-                
-                if is_missing:
-                    appearance = data.get("appearance", "")
-                    
-                    # Extract outfit
-                    outfits = data.get("outfits", {})
-                    outfit_desc = "Casual clothing" # Fallback
-                    
-                    # Priority: Base -> Default -> First
-                    if "Base" in outfits:
-                        outfit_desc = _format_outfit(outfits["Base"])
-                    elif "Default" in outfits:
-                        outfit_desc = _format_outfit(outfits["Default"])
-                    elif outfits:
-                        first_key = list(outfits.keys())[0]
-                        outfit_desc = _format_outfit(outfits[first_key])
-                        
-                    if appearance:
-                        missing_queue.append((name, str(char_file), appearance, outfit_desc))
-        except Exception as e:
-            print(f"Error reading {char_file}: {e}")
+    # Filter for missing photos
+    for name, data in data_assets['characters'].items():
+        photo_ref = data.get("photo")
+        is_missing = False
+        
+        if args.force:
+            is_missing = True
+        elif not photo_ref:
+            is_missing = True
+        else:
+            photo_path = chars_dir / photo_ref
+            if not photo_path.exists():
+                print(f"Character {name} has photo '{photo_ref}' but file not found. Regenerating.")
+                is_missing = True
+        
+        if is_missing:
+            # We need the source path for file updates later
+            # Character data doesn't naturally include source_path, but loader stores it in metadata possibly?
+            # Actually, we can just look it up or rely on the fact that loader.load_characters() 
+            # uses the directory we just found.
+            # For simplicity, let's just find the file again.
+            char_file = chars_dir / f"{name.replace(' ', '_')}.md"
+            if not char_file.exists():
+                # Try with specific case or other patterns if needed, but usually it matches
+                pass
+
+            missing_queue.append({
+                "name": name,
+                "source_path": str(char_file)
+            })
 
     # Limit count
     if len(missing_queue) > args.count:
@@ -262,7 +312,7 @@ def main():
 
     # Run generation
     if missing_queue:
-        asyncio.run(generate_images_for_missing(missing_queue, str(images_dir), args.dry_run))
+        asyncio.run(generate_images_for_missing(missing_queue, data_assets, str(images_dir), args.dry_run))
     else:
         print("All characters have photos! Nothing to do.")
 

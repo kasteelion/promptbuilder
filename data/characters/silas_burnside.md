@@ -1,7 +1,6 @@
 ### Silas Burnside
 **Photo:** silas_burnside_photo.png
 
-**Photo:** silas_burnside_photo.png
 **Tags:**   male, approachable, midwestern, outdoorsy, rugged, strong
 **Summary:** Silas is the quintessential midwestern woodsman—a giant of a man with a laugh that shakes the room and a heart as big as his frame. He carries the scent of pine sawdust and woodsmoke wherever he goes. His presence is warm but solid, grounded in decades of hard labor and simple living. He’s the guy who pulls your truck out of a snowbank in a blizzard and waves off any thanks.
 

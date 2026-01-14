@@ -256,215 +256,211 @@
 ## 🤝 Interaction Template Complexity
 | Interaction | Template Words | Status |
 |---|---|---|
-| Softball Diamond Showdown (3) | 245 | ✅ Detailed |
-| MMA Guard: | 171 | ✅ Detailed |
-| Armbar from Guard: | 163 | ✅ Detailed |
-| MMA Top Half-Guard: | 161 | ✅ Detailed |
-| Golden Hour: | 149 | ✅ Detailed |
-| MMA Mount Position: | 149 | ✅ Detailed |
-| Coffee Shop Aesthetic: | 139 | ✅ Detailed |
-| Triangle Choke Setup: | 137 | ✅ Detailed |
-| Rear Naked Choke Defense: | 135 | ✅ Detailed |
-| Vintage Film Pose: | 131 | ✅ Detailed |
-| Travel Buddies: | 129 | ✅ Detailed |
-| Gym Buddies: | 128 | ✅ Detailed |
-| VSCO Pose: | 124 | ✅ Detailed |
-| Festival Friends: | 122 | ✅ Detailed |
-| Influencer Duo: | 121 | ✅ Detailed |
-| BFF Goals: | 119 | ✅ Detailed |
-| Volleyball Net Battle (3) | 119 | ✅ Detailed |
-| Softball Broadcast View (3) | 118 | ✅ Detailed |
-| Sorority Girl Pose: | 115 | ✅ Detailed |
-| Cage Walk Entrance: | 115 | ✅ Detailed |
-| Brunch Squad: | 114 | ✅ Detailed |
-| Soccer Penalty Kick (3) | 114 | ✅ Detailed |
-| Fight Poster Face-Off: | 113 | ✅ Detailed |
-| Contested Football Catch (2) | 113 | ✅ Detailed |
-| Besties Selfie: | 111 | ✅ Detailed |
-| Volleyball Huddle (6) | 111 | ✅ Detailed |
-| Basketball Fast Break (3) | 109 | ✅ Detailed |
-| Weigh-In Staredown: | 106 | ✅ Detailed |
-| Flag Football: Receiver vs Corner (2) | 99 | ✅ Detailed |
-| Standing Face-Off: | 98 | ✅ Detailed |
-| Sparring: | 97 | ✅ Detailed |
-| Clinch Battle: | 95 | ✅ Detailed |
-| Concert Hall Performance (3+): | 86 | ✅ Detailed |
-| Tennis Doubles at Net (2) | 84 | ✅ Detailed |
-| Piano and Vocal Recital: | 81 | ✅ Detailed |
-| Soccer Striker vs Goalie (2) | 80 | ✅ Detailed |
-| Basketball 1-on-1 (2) | 79 | ✅ Detailed |
-| Casting a Spell | 36 | ✅ Detailed |
-| Telekinesis Battle | 32 | ✅ Detailed |
-| Sharing Earbuds (2): | 29 | ✅ Detailed |
-| Snowy Park Bench (2): | 29 | ✅ Detailed |
-| Museum Whisper (2): | 28 | ✅ Detailed |
-| Football Team Huddle (4+) | 26 | ✅ Detailed |
-| Sentai Team Pose (5): | 26 | ✅ Detailed |
-| Bento Sharing (2): | 26 | ✅ Detailed |
-| Using Hologram Interface | 25 | ✅ Detailed |
-| The Adventuring Party (4) | 25 | ✅ Detailed |
-| Modeling for Painter: | 25 | ✅ Detailed |
-| Sword Duel | 24 | ✅ Detailed |
-| Basketball Team Lineup (5+) | 23 | ✅ Detailed |
-| Bowling Celebration | 23 | ✅ Detailed |
-| Pinky Promise (2): | 23 | ✅ Detailed |
-| Aquarium Gaze (2): | 23 | ✅ Detailed |
-| Watching Teammate Bowl | 22 | ✅ Detailed |
-| Water Break (2) | 22 | ✅ Detailed |
-| The Duel Conclusion: | 22 | ✅ Detailed |
-| Victory Celebration (Gaming): | 22 | ✅ Detailed |
-| Skate Park Session (3+): | 22 | ✅ Detailed |
-| Walking Home (2): | 22 | ✅ Detailed |
-| Study Session (2): | 22 | ✅ Detailed |
-| Ai-ai gasa (Sharing an Umbrella) (2): | 22 | ✅ Detailed |
-| Rooftop Confession (2): | 22 | ✅ Detailed |
-| Baseball Dugout (4+) | 21 | ✅ Detailed |
-| Critiquing the Work: | 21 | ✅ Detailed |
-| Casting Dual Spell: | 21 | ✅ Detailed |
-| Skateboard Trick Advice: | 21 | ✅ Detailed |
-| Surgical Focus (2): | 21 | ✅ Detailed |
-| Bowling Instruction | 20 | ✅ Detailed |
-| Comparing Scores: | 20 | ✅ Detailed |
-| Interrogation: | 20 | ✅ Detailed |
-| Saving the Day: | 20 | ✅ Detailed |
-| Tactical Breach: | 20 | ✅ Detailed |
-| Spell Book Study: | 20 | ✅ Detailed |
-| Esports Duo Match: | 20 | ✅ Detailed |
-| Rolling Dice (2): | 20 | ✅ Detailed |
-| Science Collaboration: | 19 | ✅ Detailed |
-| Tender Cheek Caress: | 19 | ✅ Detailed |
-| Ball Selection Together | 19 | ✅ Detailed |
-| Baseball Pitcher-Catcher Meeting (2) | 19 | ✅ Detailed |
-| Athletic High Five (2) | 19 | ✅ Detailed |
-| Line Formation (4+): | 19 | ✅ Detailed |
-| Portal Ritual: | 19 | ✅ Detailed |
-| Mirrored Movement (2): | 19 | ✅ Detailed |
-| Checking the Map (2): | 19 | ✅ Detailed |
-| Tavern Toast (2): | 19 | ✅ Detailed |
-| Head Pat (2): | 19 | ✅ Detailed |
-| The Unexpected Catch (2): | 19 | ✅ Detailed |
-| Bowling High Five | 18 | ✅ Detailed |
-| Back-to-Back Combat: | 18 | ✅ Detailed |
-| Analyzing Hologram: | 18 | ✅ Detailed |
-| Hacking Together: | 18 | ✅ Detailed |
-| Tech Repair: | 18 | ✅ Detailed |
-| Gymnastics Spotting: | 18 | ✅ Detailed |
-| Dramatic Eye Contact (2): | 18 | ✅ Detailed |
-| The Handover (2): | 18 | ✅ Detailed |
-| Shared Tablet Analysis (2): | 18 | ✅ Detailed |
-| Prototype Testing (2): | 18 | ✅ Detailed |
-| Spellcasting Duel (2): | 18 | ✅ Detailed |
-| Cooking Together: | 17 | ✅ Detailed |
-| Hand on Lower Back: | 17 | ✅ Detailed |
-| Dual Lane Competition | 17 | ✅ Detailed |
-| Side-by-Side Running (2) | 17 | ✅ Detailed |
-| Coordinated Defense (2) | 17 | ✅ Detailed |
-| Magic Fusion | 17 | ✅ Detailed |
-| Floor Routine Sync (2): | 17 | ✅ Detailed |
-| Back-to-Back Defense (2): | 17 | ✅ Detailed |
-| Collaborative Engineering (2): | 17 | ✅ Detailed |
-| Basketball One-on-One: | 16 | ✅ Detailed |
-| Soccer Kickabout: | 16 | ✅ Detailed |
-| Group Discussion (4+): | 16 | ✅ Detailed |
-| Team Pose (4+): | 16 | ✅ Detailed |
-| Triangle Formation (3): | 16 | ✅ Detailed |
-| Weapon Exchange: | 16 | ✅ Detailed |
-| Campfire Watch (2): | 16 | ✅ Detailed |
-| Sharing Secret: | 15 | ✅ Detailed |
-| Chain Reaction (3+): | 15 | ✅ Detailed |
-| Circle Formation (4+): | 15 | ✅ Detailed |
-| Back-to-Back Heroics: | 15 | ✅ Detailed |
-| Forehead Touch: | 14 | ✅ Detailed |
-| Gazing Into Eyes: | 14 | ✅ Detailed |
-| Wine Sharing: | 14 | ✅ Detailed |
-| Lift (Dance): | 14 | ✅ Detailed |
-| Group Huddle (4+): | 14 | ✅ Detailed |
-| Conversation: | 13 | ✅ Detailed |
-| Arm Wrestling: | 13 | ✅ Detailed |
-| Dancing Together: | 13 | ✅ Detailed |
-| Photo Together: | 13 | ✅ Detailed |
-| Hand Holding: | 13 | ✅ Detailed |
-| Kiss on Forehead: | 13 | ✅ Detailed |
-| Prayer Together: | 13 | ✅ Detailed |
-| Silent Agreement: | 13 | ✅ Detailed |
-| Walking Together: | 12 | ✅ Detailed |
-| Working Together: | 12 | ✅ Detailed |
-| Playing Game: | 12 | ✅ Detailed |
-| Sharing Food: | 12 | ✅ Detailed |
-| Teaching: | 12 | ✅ Detailed |
-| Planning Together: | 12 | ✅ Detailed |
-| Bed Pin: | 12 | ✅ Detailed |
-| Head in Lap: | 12 | ✅ Detailed |
-| Sunset Silhouette: | 12 | ✅ Detailed |
-| Coaching: | 12 | ✅ Detailed |
-| Mirror Dancing: | 12 | ✅ Detailed |
-| Back to Back: | 12 | ✅ Detailed |
-| Height Comparison: | 12 | ✅ Detailed |
-| Traditional Greeting: | 12 | ✅ Detailed |
-| Pulling: | 12 | ✅ Detailed |
-| Handshake: | 11 | ✅ Detailed |
-| Playing Catch: | 11 | ✅ Detailed |
-| Stretching Together: | 11 | ✅ Detailed |
-| Arguing: | 11 | ✅ Detailed |
-| Hydration Break: | 11 | ✅ Detailed |
-| Injury Check: | 11 | ✅ Detailed |
-| Lifting Together: | 11 | ✅ Detailed |
-| Kabedon: | 11 | ✅ Detailed |
-| Slow Dance: | 11 | ✅ Detailed |
-| Bathtub Together: | 11 | ✅ Detailed |
-| Silk Sheets Embrace: | 11 | ✅ Detailed |
-| Candlelit Dinner Gaze: | 11 | ✅ Detailed |
-| Massage: | 11 | ✅ Detailed |
-| Under Blanket: | 11 | ✅ Detailed |
-| Dance Partners: | 11 | ✅ Detailed |
-| Tea Ceremony: | 11 | ✅ Detailed |
-| Chase: | 11 | ✅ Detailed |
-| High Five: | 10 | ⚠️ Brief |
-| Jogging Together: | 10 | ⚠️ Brief |
-| Celebrating: | 10 | ⚠️ Brief |
-| Helping Up: | 10 | ⚠️ Brief |
-| Cooking Together: | 10 | ⚠️ Brief |
-| Caressing Face: | 10 | ⚠️ Brief |
-| Chin Lift Kiss: | 10 | ⚠️ Brief |
-| Forehead Kiss (Height Difference): | 10 | ⚠️ Brief |
-| Leaning Against Chest: | 10 | ⚠️ Brief |
-| Lying on Top: | 10 | ⚠️ Brief |
-| Morning Cuddle: | 10 | ⚠️ Brief |
-| Romantic Kiss: | 10 | ⚠️ Brief |
-| Stretching Partner: | 10 | ⚠️ Brief |
-| Leaning On: | 10 | ⚠️ Brief |
-| Mirror Pose: | 10 | ⚠️ Brief |
-| Dodging: | 10 | ⚠️ Brief |
-| Laughing Together: | 9 | ⚠️ Brief |
-| Sitting Together: | 9 | ⚠️ Brief |
-| Standing Together: | 9 | ⚠️ Brief |
-| Fist Bump: | 9 | ⚠️ Brief |
-| Pointing At: | 9 | ⚠️ Brief |
-| Thumbs Up: | 9 | ⚠️ Brief |
-| Comforting: | 9 | ⚠️ Brief |
-| Encouraging: | 9 | ⚠️ Brief |
-| Building Together: | 9 | ⚠️ Brief |
-| Dancing Dip: | 9 | ⚠️ Brief |
-| Lift and Carry Kiss: | 9 | ⚠️ Brief |
-| Nose to Nose: | 9 | ⚠️ Brief |
-| Relay Baton Pass: | 9 | ⚠️ Brief |
-| Dance Formation: | 9 | ⚠️ Brief |
-| Shoulder to Shoulder: | 9 | ⚠️ Brief |
-| Hug: | 8 | ⚠️ Brief |
-| Wave: | 8 | ⚠️ Brief |
-| Dip Kiss: | 8 | ⚠️ Brief |
-| Kiss on Cheek: | 8 | ⚠️ Brief |
-| Lying Together: | 8 | ⚠️ Brief |
-| Piggyback: | 8 | ⚠️ Brief |
-| Spooning on Bed: | 8 | ⚠️ Brief |
-| Straddling on Bed: | 8 | ⚠️ Brief |
-| Pushing: | 8 | ⚠️ Brief |
-| Bed Hover Kiss: | 7 | ⚠️ Brief |
-| Cuddling: | 7 | ⚠️ Brief |
-| Embrace From Behind: | 7 | ⚠️ Brief |
-| Protective Embrace: | 6 | ⚠️ Brief |
-| Bridal Carry: | 5 | ⚠️ Brief |
-| Spinning Hug: | 5 | ⚠️ Brief |
-| Walking: | 3 | ⚠️ Brief |
-| Talking: | 2 | ⚠️ Brief |
-| Blank: | 0 | ⚠️ Brief |
+| Besties Selfie | 26 | ✅ Detailed |
+| Coffee Shop Aesthetic | 25 | ✅ Detailed |
+| Gym Buddies | 25 | ✅ Detailed |
+| Sorority Pose | 25 | ✅ Detailed |
+| Festival Friends | 24 | ✅ Detailed |
+| Brunch Squad | 23 | ✅ Detailed |
+| Travel Buddies | 23 | ✅ Detailed |
+| Playing Catch | 22 | ✅ Detailed |
+| BFF Goals | 22 | ✅ Detailed |
+| Golden Hour Glow | 22 | ✅ Detailed |
+| Heavy Lifting | 21 | ✅ Detailed |
+| Deep Conversation | 19 | ✅ Detailed |
+| One-on-One Hoops | 19 | ✅ Detailed |
+| Vintage Film Style | 19 | ✅ Detailed |
+| Kitchen Prep | 18 | ✅ Detailed |
+| Soccer Passing | 18 | ✅ Detailed |
+| Ballroom Dancing | 18 | ✅ Detailed |
+| Helping Hand | 18 | ✅ Detailed |
+| Water Break | 18 | ✅ Detailed |
+| Strategic Planning | 18 | ✅ Detailed |
+| Influencer Duo | 18 | ✅ Detailed |
+| VSCO Vibes | 18 | ✅ Detailed |
+| Clinch Battle | 18 | ✅ Detailed |
+| Team Circle | 18 | ✅ Detailed |
+| Intense Arm Wrestle | 17 | ✅ Detailed |
+| Board Game Night | 17 | ✅ Detailed |
+| Tender Cheek Caress | 17 | ✅ Detailed |
+| Selfie Moment | 17 | ✅ Detailed |
+| Armbar from Guard | 17 | ✅ Detailed |
+| Strolling Together | 16 | ✅ Detailed |
+| Focused Teamwork | 16 | ✅ Detailed |
+| Enthusiastic High Five | 16 | ✅ Detailed |
+| Direct Pointing | 16 | ✅ Detailed |
+| Sharing a Bite | 16 | ✅ Detailed |
+| Teaching Moment | 16 | ✅ Detailed |
+| Construction Project | 16 | ✅ Detailed |
+| Bed Hover Kiss | 16 | ✅ Detailed |
+| MMA Guard | 16 | ✅ Detailed |
+| MMA Top Half-Guard | 16 | ✅ Detailed |
+| Football Huddle | 16 | ✅ Detailed |
+| Laughing Together | 15 | ✅ Detailed |
+| Relaxed Sitting | 15 | ✅ Detailed |
+| Walking & Talking | 15 | ✅ Detailed |
+| Lab Partners | 15 | ✅ Detailed |
+| Friendly Wave | 15 | ✅ Detailed |
+| Victory Celebration | 15 | ✅ Detailed |
+| Whispering Secrets | 15 | ✅ Detailed |
+| Cooking Team | 15 | ✅ Detailed |
+| Bed Pin | 15 | ✅ Detailed |
+| Chin Lift Kiss | 15 | ✅ Detailed |
+| Dancing Dip | 15 | ✅ Detailed |
+| Dip Kiss | 15 | ✅ Detailed |
+| Forehead Kiss | 15 | ✅ Detailed |
+| Hand on Lower Back | 15 | ✅ Detailed |
+| Kabedon | 15 | ✅ Detailed |
+| Cheek Kiss | 15 | ✅ Detailed |
+| Lying on Top | 15 | ✅ Detailed |
+| Protective Embrace | 15 | ✅ Detailed |
+| Candlelit Gaze | 15 | ✅ Detailed |
+| Cage Walk | 15 | ✅ Detailed |
+| Standing Face-Off | 15 | ✅ Detailed |
+| Warm Embrace | 14 | ✅ Detailed |
+| Partner Stretching | 14 | ✅ Detailed |
+| Comforting Touch | 14 | ✅ Detailed |
+| Embrace From Behind | 14 | ✅ Detailed |
+| Gazing Into Eyes | 14 | ✅ Detailed |
+| Morning Cuddle | 14 | ✅ Detailed |
+| Wine Sharing | 14 | ✅ Detailed |
+| Spinning Hug | 14 | ✅ Detailed |
+| MMA Mount | 14 | ✅ Detailed |
+| Rear Naked Choke Defense | 14 | ✅ Detailed |
+| Dugout Watch | 14 | ✅ Detailed |
+| Tennis Net Play | 14 | ✅ Detailed |
+| Street Ball 1v1 | 14 | ✅ Detailed |
+| Casual Chat | 13 | ✅ Detailed |
+| Jogging Partners | 13 | ✅ Detailed |
+| Caressing Face | 13 | ✅ Detailed |
+| Cuddling | 13 | ✅ Detailed |
+| Forehead Touch | 13 | ✅ Detailed |
+| Hand Holding | 13 | ✅ Detailed |
+| Lift and Carry Kiss | 13 | ✅ Detailed |
+| Nose to Nose | 13 | ✅ Detailed |
+| Piggyback Ride | 13 | ✅ Detailed |
+| Bathtub Soak | 13 | ✅ Detailed |
+| Fight Poster Face-Off | 13 | ✅ Detailed |
+| Striking Exchange | 13 | ✅ Detailed |
+| Weigh-In Staredown | 13 | ✅ Detailed |
+| Softball Battery | 13 | ✅ Detailed |
+| Mid-Air High Five | 13 | ✅ Detailed |
+| Concert Trio | 13 | ✅ Detailed |
+| Spell Casting | 13 | ✅ Detailed |
+| Hero Pose | 13 | ✅ Detailed |
+| Sharing Umbrella | 13 | ✅ Detailed |
+| Standing Side-by-Side | 12 | ✅ Detailed |
+| Firm Handshake | 12 | ✅ Detailed |
+| Injury Assessment | 12 | ✅ Detailed |
+| Head in Lap | 12 | ✅ Detailed |
+| Passionate Kiss | 12 | ✅ Detailed |
+| Slow Dance | 12 | ✅ Detailed |
+| Straddling | 12 | ✅ Detailed |
+| Cozy Under Quilt | 12 | ✅ Detailed |
+| Triangle Choke | 12 | ✅ Detailed |
+| Strike Celebration | 12 | ✅ Detailed |
+| Bowling High Five | 12 | ✅ Detailed |
+| Bowling Coaching | 12 | ✅ Detailed |
+| Receiver vs Corner | 12 | ✅ Detailed |
+| Contested Catch | 12 | ✅ Detailed |
+| Defensive Stance | 12 | ✅ Detailed |
+| Breach Stack | 12 | ✅ Detailed |
+| Casual Fist Bump | 11 | ✅ Detailed |
+| Encouraging Thumbs Up | 11 | ✅ Detailed |
+| Heated Argument | 11 | ✅ Detailed |
+| Motivational Speech | 11 | ✅ Detailed |
+| Bridal Carry | 11 | ✅ Detailed |
+| Leaning Against Chest | 11 | ✅ Detailed |
+| Lying Together | 11 | ✅ Detailed |
+| Silk Sheets | 11 | ✅ Detailed |
+| Sunset Silhouette | 11 | ✅ Detailed |
+| Bowling Ball Selection | 11 | ✅ Detailed |
+| Team Lineup | 11 | ✅ Detailed |
+| Scoreboard Check | 11 | ✅ Detailed |
+| Mound Meeting | 11 | ✅ Detailed |
+| Striker vs Goalie | 11 | ✅ Detailed |
+| Broadcast View | 11 | ✅ Detailed |
+| Fast Break | 11 | ✅ Detailed |
+| Stretching Assist | 11 | ✅ Detailed |
+| Side-by-Side Run | 11 | ✅ Detailed |
+| Water Break Talk | 11 | ✅ Detailed |
+| Back-to-Back Pose | 11 | ✅ Detailed |
+| Height Check | 11 | ✅ Detailed |
+| Casual Lean | 11 | ✅ Detailed |
+| Telekinetic Duel | 11 | ✅ Detailed |
+| Hacking Session | 11 | ✅ Detailed |
+| Blade Point | 11 | ✅ Detailed |
+| Prayer Moment | 11 | ✅ Detailed |
+| Circle Summit | 11 | ✅ Detailed |
+| Football Huddle | 11 | ✅ Detailed |
+| Tablet Review | 11 | ✅ Detailed |
+| Engineering | 11 | ✅ Detailed |
+| Spooning | 10 | ⚠️ Brief |
+| Dual Bowling | 10 | ⚠️ Brief |
+| Penalty Kick | 10 | ⚠️ Brief |
+| Volleyball Block | 10 | ⚠️ Brief |
+| Relay Handoff | 10 | ⚠️ Brief |
+| Sword Clash | 10 | ⚠️ Brief |
+| Magic Fusion | 10 | ⚠️ Brief |
+| Holo-Table Plan | 10 | ⚠️ Brief |
+| Tome Research | 10 | ⚠️ Brief |
+| Back-to-Back Defense | 10 | ⚠️ Brief |
+| Interrogation Scene | 10 | ⚠️ Brief |
+| Tea Ceremony | 10 | ⚠️ Brief |
+| The Muse | 10 | ⚠️ Brief |
+| Critique | 10 | ⚠️ Brief |
+| Esports Match | 10 | ⚠️ Brief |
+| Trick Tip | 10 | ⚠️ Brief |
+| Park Hangout | 10 | ⚠️ Brief |
+| Dramatic Stare | 10 | ⚠️ Brief |
+| Surgery Prep | 10 | ⚠️ Brief |
+| Shared Earbuds | 10 | ⚠️ Brief |
+| Pinky Swear | 10 | ⚠️ Brief |
+| Giving Massage | 9 | ⚠️ Brief |
+| Coach Instruction | 9 | ⚠️ Brief |
+| Watching Bowl | 9 | ⚠️ Brief |
+| Ballroom Frame | 9 | ⚠️ Brief |
+| Synchronized Dance | 9 | ⚠️ Brief |
+| Mirror Routine | 9 | ⚠️ Brief |
+| Recital Duet | 9 | ⚠️ Brief |
+| Mirror Twin | 9 | ⚠️ Brief |
+| Hologram Interface | 9 | ⚠️ Brief |
+| Dungeon Party | 9 | ⚠️ Brief |
+| Portal Opening | 9 | ⚠️ Brief |
+| Ready Nod | 9 | ⚠️ Brief |
+| Formal Bow | 9 | ⚠️ Brief |
+| The Chase | 9 | ⚠️ Brief |
+| Leading the Way | 9 | ⚠️ Brief |
+| The Lineup | 9 | ⚠️ Brief |
+| Spotting Assist | 9 | ⚠️ Brief |
+| The Handoff | 9 | ⚠️ Brief |
+| Map Check | 9 | ⚠️ Brief |
+| Spell Duel | 9 | ⚠️ Brief |
+| Night Watch | 9 | ⚠️ Brief |
+| Walk Home | 9 | ⚠️ Brief |
+| Aquarium Date | 9 | ⚠️ Brief |
+| Snowy Bench | 9 | ⚠️ Brief |
+| Rooftop Night | 9 | ⚠️ Brief |
+| Dance Lift | 8 | ⚠️ Brief |
+| Shoulder Lean | 8 | ⚠️ Brief |
+| Dual Spell Cast | 8 | ⚠️ Brief |
+| Repair Job | 8 | ⚠️ Brief |
+| Dodge Roll | 8 | ⚠️ Brief |
+| Chain Reaction | 8 | ⚠️ Brief |
+| Triangle Balance | 8 | ⚠️ Brief |
+| Victory Pop-off | 8 | ⚠️ Brief |
+| Mirror Sync | 8 | ⚠️ Brief |
+| Lab Testing | 8 | ⚠️ Brief |
+| Dice Roll | 8 | ⚠️ Brief |
+| The Catch | 8 | ⚠️ Brief |
+| Rescue Carry | 7 | ⚠️ Brief |
+| Lively Debate | 7 | ⚠️ Brief |
+| Sync Floor Routine | 7 | ⚠️ Brief |
+| Last Stand | 7 | ⚠️ Brief |
+| Tavern Cheers | 7 | ⚠️ Brief |
+| Feed Me | 7 | ⚠️ Brief |
+| Museum Whisper | 7 | ⚠️ Brief |
+| Mid-Air Toss | 6 | ⚠️ Brief |
+| Playful Shove | 5 | ⚠️ Brief |
+| Head Pat | 5 | ⚠️ Brief |
+| Study Hall | 5 | ⚠️ Brief |

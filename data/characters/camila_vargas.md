@@ -1,8 +1,7 @@
 ### Camila Vargas
 **Photo:** camila_vargas_photo.png
 
-**Tags:**   female, athletic, creative, dramatic, intense, mediterranean, passionate, petite, thin
-
+**Tags:** female, Athletic, creative, dramatic, intense, mediterranean, passionate, petite, thin
 **Summary:** Camila is a creature of passionate intensity, her every motion a whisper or shout of profound emotion. On stage, she transforms, embodying the raw, aching soul of duende, her human quality being a deeply passionate spirit that makes no distinction between life and art.
 
 **Gender:** F
