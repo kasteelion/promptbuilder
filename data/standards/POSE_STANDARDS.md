@@ -23,6 +23,7 @@ To ensure high-quality, expressive pose generation, all entries in `poses.md` mu
 - **Required Tags:**
   - **Category Tag:** At least one tag acting as a high-level category (e.g., `Sitting`, `Standing`, `Dynamic`, `Portrait`).
   - **Vibe Tag:** At least one tag describing the mood/energy (e.g., `Confident`, `Relaxed`, `Intense`, `Playful`).
+  - **Framing Tag:** (New) Describe the intended shot type (e.g., `Full Body`, `Upper Body`, `Close-up`, `Wide Shot`).
 - **Casing:** Tags should be **Title Case** (e.g., `Casual`, not `casual`).
 
 ### 3. Visual Description
@@ -31,22 +32,35 @@ The description is the most critical part. It must be descriptive enough to guid
 
 - **Length:** 1-2 conciseness sentences.
 - **Components:**
-  - **Body Positioning:** How are the limbs arranged? (e.g., "legs crossed at ankles", "arms stretched overhead").
+  - **Body Positioning:** How are the limbs arranged? Be specific: "left hand on hip", "weight on right leg" instead of "hand on hip".
   - **Weight/balance:** Where is the center of gravity? (e.g., "leaning heavily on left leg", "mid-stride").
   - **Expression/Head:** (Optional but recommended) Head tilt or expression cues (e.g., "looking back over shoulder", "chin lifted confidently").
   - **Vibe:** The energy the pose conveys (e.g., "exuding quiet dominion", "bursting with energy").
+
+## Common Tag Vocabulary
+
+To maintain a searchable and clean database, use these standardized tags:
+
+| Category     | Recommended Tags                                                   |
+| :----------- | :----------------------------------------------------------------- |
+| **Position** | `Standing`, `Sitting`, `Squatting`, `Lying`, `Kneeling`, `Jumping` |
+| **Energy**   | `Dynamic`, `Static`, `Action`, `Relaxed`, `Rigid`                  |
+| **Framing**  | `Full Body`, `Upper Body`, `Close-up`, `Wide Shot`, `Portrait`     |
+| **Mood**     | `Confident`, `Shy`, `Intense`, `Playful`, `Moody`, `Professional`  |
 
 ## Example (Good vs Bad)
 
 **BAD:**
 ` - **Sitting** (Basic, Sitting): Sitting down using a chair.`
-_(Too vague, redundant tags, no vibe)._
+_(Too vague, redundant tags, no weight distribution)._
 
 **GOOD:**
-`- **Executive Perch** (Sitting, Confident, Professional): Perched on the edge of a desk with one leg resting on the floor and the other dangling, arms crossed loosely, projecting casual authority.`
+`- **Executive Perch** (Sitting, Confident, Professional, Full Body): Perched on the edge of a desk with the right leg resting on the floor and the left dangling, arms crossed loosely at the chest, projecting casual authority.`
 
 ## Quality Rules
 
-1.  **Avoid generic descriptions.** "Standing there" is unacceptable. "Standing with rigid posture" is better.
+1.  **Avoid generic descriptions.** "Standing there" is unacceptable. "Standing with weight shifted to the right hip" is better.
 2.  **No "Blank" entries.** Every pose must have a description.
 3.  **Tags must be relevant.** Do not tag "Portrait" if it's a full-body jumping shot.
+4.  **Limb Specificity.** Mention at least one specific limb (left/right) to anchor the AI.
+5.  **Explicit Positioning.** If a character is on their back, stomach, side, or in a specific orientation relative to the environment (e.g., "prone", "supine"), it must be explicitly mentioned in the description (e.g., "Lying flat on the back", "Crouched low to the ground").

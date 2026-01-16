@@ -21,6 +21,7 @@ Interactions are complex prompts that define how two or more characters relate t
 - **Required Tags:**
   - **Type Tag:** (e.g., `Social`, `Romantic`, `Conflict`, `Professional`).
   - **Vibe Tag:** (e.g., `Intimate`, `Tense`, `Joyful`).
+  - **Framing Tag:** (e.g., `Full Body`, `Upper Body`, `Close-up`, `Portrait`).
 - **Casing:** **Title Case**.
 
 ### 3. The Template String
@@ -45,7 +46,7 @@ This is the raw prompt text used for generation.
 _(Too simple, low fidelity)._
 
 **GOOD:**
-`- **Emotional Reunion** (Social, Emotional, Hug): {char1} embracing {char2} tightly with eyes closed, {char2} burying their face in {char1}'s shoulder, expressing relief and deep affection.`
+`- **Emotional Reunion** (Social, Emotional, Hug, Full Body): {char1} embracing {char2} tightly with eyes closed, {char2} burying their face in {char1}'s shoulder, expressing relief and deep affection while standing in the middle of a crowded terminal.`
 
 ## Quality Rules
 
@@ -54,3 +55,4 @@ _(Too simple, low fidelity)._
 2.  **No Dialogue:** Do not include spoken words in quotes.
 3.  **Participant Limit:** Most interactions should be designed for 2 characters unless specified otherwise.
 4.  **Vibe consistency:** The description must match the tags.
+5.  **Explicit Positioning:** If a character is on their back, stomach, side, or in a specific orientation relative to the environment or each other (e.g., `{char2} lying on their back on the bed while {char1} leans over them`), it must be explicitly stated.
