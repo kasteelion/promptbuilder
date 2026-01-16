@@ -130,9 +130,7 @@ class CharacterItem(ttk.Frame):
         
         def on_remove_enter(e): 
             try:
-                theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-                accent = theme.get("accent", "#0078d7")
-                self.remove_btn.config(fg=accent)
+                self.remove_btn.config(fg=self.parent.theme_manager.get_current_theme_data().get("error", "red"))
             except: self.remove_btn.config(fg="red")
         def on_remove_leave(e): self.remove_btn.config(fg=muted_fg)
         self.remove_btn.bind("<Enter>", on_remove_enter)
@@ -238,7 +236,8 @@ class CharacterItem(ttk.Frame):
             sig_frame.pack(fill="x", pady=(0, 10))
             
             # Use theme accent/panel colors
-            accent = theme.get("accent", "#0078d7")
+            accent = self.theme_manager.get_accent()
+            panel_bg = self.theme_manager.get_panel_bg()
 
             self.sig_pill_frame = tk.Frame(sig_frame, bg=accent, padx=1, pady=1)
             self.sig_pill_frame.pack(side="left")
@@ -259,12 +258,12 @@ class CharacterItem(ttk.Frame):
             
             def on_s_enter(e):
                 try:
-                    theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                    theme = self.theme_manager.get_current_theme_data()
                     hbg = theme.get("hover_bg", "#333333")
                 except: hbg = "#333333"
                 self.sig_pill_lbl.config(bg=hbg)
             def on_s_leave(e):
-                self.sig_pill_lbl.config(bg=getattr(self.sig_pill_lbl, "_base_bg", "#1e1e1e"))
+                self.sig_pill_lbl.config(bg=getattr(self.sig_pill_lbl, "_base_bg", self.theme_manager.get_panel_bg()))
                 
             self.sig_pill_lbl.bind("<Button-1>", toggle_sig)
             self.sig_pill_lbl.bind("<Enter>", on_s_enter)
@@ -488,8 +487,9 @@ class CharacterItem(ttk.Frame):
             
         ttk.Label(self.char_traits_frame, text="✨ Identity:", style="Bold.TLabel").pack(side="left")
         
-        flow = FlowFrame(self.char_traits_frame)
-        flow.pack(side="left", fill="x", expand=True, padx=10)
+        # Updated to use new Canvas-based FlowFrame
+        self.char_traits_flow = FlowFrame(self.char_traits_frame)
+        self.char_traits_flow.pack(side="left", fill="x", expand=True, padx=10)
         
         current_traits = self.char_data.get("character_traits", [])
         
@@ -498,13 +498,13 @@ class CharacterItem(ttk.Frame):
             # though user might want a way to specify default in MD)
             var = tk.BooleanVar(value=name in current_traits)
             cb = ttk.Checkbutton(
-                flow,
+                self.char_traits_flow.canvas,
                 text=name,
                 variable=var,
                 command=lambda n=name, v=var: self._on_char_trait_toggle(n, v.get())
             )
-            cb.pack(side="left", padx=2)
-            flow._children.append(cb)
+            # Use add_child instead of pack/append
+            self.char_traits_flow.add_child(cb)
 
     def _on_char_trait_toggle(self, name, checked):
         """Handle character-level trait checkbox toggle."""
@@ -549,13 +549,12 @@ class CharacterItem(ttk.Frame):
         for name in sorted(local_mods.keys()):
             var = tk.BooleanVar(value=name in current_traits)
             cb = ttk.Checkbutton(
-                self.mods_flow,
+                self.mods_flow.canvas,
                 text=name,
                 variable=var,
                 command=lambda n=name, v=var: self._on_modifier_toggle(n, v.get())
             )
-            cb.pack(side="left", padx=2)
-            self.mods_flow._children.append(cb)
+            self.mods_flow.add_child(cb)
             
     def _on_modifier_toggle(self, name, checked):
         """Handle trait checkbox toggle."""
@@ -706,7 +705,7 @@ class CharacterItem(ttk.Frame):
             self.sig_pill_lbl.config(text="✓ USE SIGNATURE COLOR" if self.sig_var.get() else "USE SIGNATURE COLOR")
 
         # Update nested comboboxes - Refactor 3
-        for cb in ["outfit_cat_combo", "outfit_combo", "pcat_combo", "preset_combo", "framing_combo"]:
+        for cb in ["outfit_cat_combo", "outfit_combo", "pcat_combo", "preset_combo", "framing_combo", "char_traits_flow", "mods_flow"]:
             if hasattr(self, cb):
                 getattr(self, cb).apply_theme(theme)
 

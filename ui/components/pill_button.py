@@ -57,13 +57,11 @@ class PillButton(tk.Frame):
             hover_bg = theme.get("hover_bg", "#333333")
             self.label.config(bg=hover_bg)
         else:
-            # Fallback
             self.label.config(bg="#333333")
 
     def _on_leave(self, event):
         """Handle mouse leave."""
-        # Restore to base background
-        bg = getattr(self.label, "_base_bg", "#1e1e1e")
+        bg = getattr(self.label, "_base_bg", self.theme_manager.get_panel_bg() if self.theme_manager else "#1e1e1e")
         self.label.config(bg=bg)
 
     def apply_theme(self, theme: dict):

@@ -4,7 +4,6 @@
 import tkinter as tk
 from tkinter import messagebox, ttk
 
-from typing import Callable, Optional
 
 from core.config import WELCOME_MESSAGE
 
@@ -62,8 +61,15 @@ class DialogManager:
         messagebox.showerror(title, message, parent=self.root)
 
     def ask_yes_no(self, title: str, message: str) -> bool:
-        """Show a yes/no confirmation dialog."""
         return messagebox.askyesno(title, message, parent=self.root)
+
+    def _get_theme_data(self):
+        """Helper to get current theme data safely."""
+        try:
+            tm = self.root.theme_manager
+            return tm.themes.get(tm.current_theme, {})
+        except Exception:
+            return {}
 
     def show_shortcuts(self) -> None:
         """Show keyboard shortcuts dialog."""
@@ -110,6 +116,8 @@ class DialogManager:
 
         ttk.Button(main_frame, text="CLOSE", command=dialog.destroy).pack(side="bottom", pady=10)
 
+        ttk.Button(main_frame, text="CLOSE", command=dialog.destroy).pack(side="bottom", pady=10)
+
     def show_about(self) -> None:
         """Show about dialog."""
         dialog = tk.Toplevel(self.root)
@@ -138,6 +146,31 @@ class DialogManager:
         ttk.Label(main_frame, text="© 2025 PromptBuilder Team", style="Muted.TLabel").pack(pady=(20, 0))
         
         ttk.Button(main_frame, text="CLOSE", command=dialog.destroy).pack(side="bottom", pady=10)
+
+    def _add_dialog_pill(self, parent, text, command):
+        """Helper for Pill buttons in dialogs."""
+        theme = self._get_theme_data()
+        accent = theme.get("accent", "#0078d7")
+        pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            
+        frame = tk.Frame(parent, bg=accent, padx=1, pady=1)
+        lbl = tk.Label(
+            frame, text=text, bg=pbg, fg=accent,
+            font=("Lexend", 8, "bold"), padx=12, pady=3, cursor="hand2"
+        )
+        lbl.pack()
+        lbl.bind("<Button-1>", lambda e: command())
+        
+        def on_enter(e):
+            t = self._get_theme_data()
+            lbl.config(bg=t.get("hover_bg", "#333333"))
+        def on_leave(e):
+            t = self._get_theme_data()
+            lbl.config(bg=t.get("panel_bg", t.get("bg", "#1e1e1e")))
+            
+        lbl.bind("<Enter>", on_enter)
+        lbl.bind("<Leave>", on_leave)
+        return frame, lbl
 
     def show_text_import(self, available_chars: list, on_success: callable) -> None:
         """Show natural language text import dialog."""
@@ -304,7 +337,8 @@ class DialogManager:
         ttk.Label(main_frame, text="AVAILABLE TEAM COLOR SCHEMES", style="Title.TLabel").pack(pady=(0, 15))
 
         # Use canvas for scrollable list of schemes
-        canvas = tk.Canvas(main_frame, highlightthickness=0)
+        border_color = self._get_theme_data().get("border", "gray")
+        canvas = tk.Canvas(main_frame, highlightthickness=0, bg=self._get_theme_data().get("panel_bg", "#1e1e1e"))
         scrollbar = ttk.Scrollbar(main_frame, orient="vertical", command=canvas.yview)
         scrollable_frame = ttk.Frame(canvas)
 
@@ -335,7 +369,7 @@ class DialogManager:
                 
                 # Color Swatch
                 try:
-                    border_color = self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}).get("border", "gray")
+                    border_color = self._get_theme_data().get("border", "gray")
                     swatch = tk.Frame(row, width=20, height=20, bg=val, highlightthickness=1, highlightbackground=border_color)
                     swatch.pack(side="left", padx=5)
                 except Exception:
@@ -366,7 +400,8 @@ class DialogManager:
         try:
             tm = self.root.theme_manager
             theme = tm.themes.get(tm.current_theme, {})
-        except: theme = {}
+        except Exception:
+            theme = {}
 
         # Apply basic top-level theme
         if hasattr(self.root, "theme_manager"):
@@ -394,7 +429,7 @@ class DialogManager:
         pill_frame.pack(pady=(0, 15))
         
         chk_lbl = tk.Label(
-            pill_frame, text="DON'T SHOW THIS AGAIN", bg=theme.get("panel_bg", "#1e1e1e"),
+            pill_frame, text="DON'T SHOW THIS AGAIN", bg=theme.get("panel_bg", theme.get("bg", "#1e1e1e")),
             fg=theme.get("accent", "#0078d7"), font=("Lexend", 8, "bold"), padx=10, pady=2, cursor="hand2"
         )
         chk_lbl.pack()
@@ -494,10 +529,10 @@ class DialogManager:
             lbl.bind("<Leave>", lambda e: lbl.config(bg=getattr(lbl, "_base_bg", "#1e1e1e")))
             return frame, lbl
 
-        close_pill, _ = add_dialog_pill(btn_frame, "CLOSE", dialog.destroy)
+        close_pill, _ = self._add_dialog_pill(btn_frame, "CLOSE", dialog.destroy)
         close_pill.pack(side="right", padx=(10, 0))
         
-        copy_pill, _ = add_dialog_pill(btn_frame, "📋 COPY CONTEXT", copy_to_clipboard)
+        copy_pill, _ = self._add_dialog_pill(btn_frame, "📋 COPY CONTEXT", copy_to_clipboard)
         copy_pill.pack(side="right")
 
         def _apply(t):
@@ -518,6 +553,10 @@ class DialogManager:
 
     def show_health_check(self, data_loader=None, theme_manager=None) -> None:
         """Show health check (now part of Dashboard)."""
+        self.show_dashboard(data_loader, theme_manager, initial_tab=4)
+
+    def show_auditing_suite(self, data_loader=None, theme_manager=None) -> None:
+        """Show auditing suite (now part of Dashboard)."""
         self.show_dashboard(data_loader, theme_manager, initial_tab=3)
 
     def open_data_folder(self, data_loader) -> None:
@@ -608,7 +647,7 @@ class DialogManager:
                     except Exception as e:
                         output_text.insert("end", f"Error generating prompt {idx+1}: {e}\n\n", "error")
                 
-                output_text.tag_configure("title", font=("Lexend", 10, "bold"), foreground="#0078d7") # Fallback color
+                output_text.tag_configure("title", font=("Lexend", 10, "bold"), foreground=self._get_theme_data().get("accent", "#0078d7"))
                 output_text.tag_configure("error", foreground="red")
                 
                 nb.select(output_tab)
@@ -658,3 +697,11 @@ class DialogManager:
             
         self._register_dialog(dialog, _apply)
         _apply(self.root.theme_manager.themes.get(self.root.theme_manager.current_theme, {}))
+
+    def show_automation_dialog(self, ctx, theme_manager, prompt: str = None) -> None:
+        """Show the AI Automation dialog."""
+        try:
+            from ui.automation_dialog import show_automation_dialog
+            show_automation_dialog(self.root, ctx, theme_manager, fixed_prompt=prompt)
+        except Exception as e:
+            self.show_error("Error", f"Failed to open AI Automation: {e}")

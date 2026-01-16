@@ -1,13 +1,13 @@
 tags: [intimate, lounge, Sexy]
 
 [F]
-- **Top:** Intimate apparel set (bra or camisole).
+- **Top:** Intimate apparel set (bra) in ((default:black) or (signature)).
   - **Fit:** Fitted; Flattering.
   - **Material:** Lace, Silk, or Satin ({modifier}).
   - **Pattern:** Solid or Delicate lace.
   - **Neckline:** Sweetheart or Plunge.
   - **Sleeve:** Sleeveless (strappy).
-- **Bottom:** Matching briefs or boy shorts.
+- **Bottom:** Matching briefs in ((default:black) or (signature)).
   - **Fit:** Fitted.
   - **Material:** matching silk/lace.
   - **Waist:** Natural or Low-rise.

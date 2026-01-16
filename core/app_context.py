@@ -10,6 +10,7 @@ from .exceptions import DataLoadError
 
 if TYPE_CHECKING:
     from ui.toast import ToastManager
+    from logic.automation_controller import AutomationController
 
 class AppContext:
     """Holds references to global managers and data."""
@@ -35,6 +36,7 @@ class AppContext:
         self.framing: Dict[str, str] = {}
         
         self.randomizer: Optional[PromptRandomizer] = None
+        self.automation_controller: Optional["AutomationController"] = None
 
     def initialize_ui_services(self):
         """Initialize UI services that require the root window."""
@@ -44,6 +46,9 @@ class AppContext:
         self.style = ttk.Style()
         self.theme_manager = ThemeManager(self.root, self.style)
         self.toasts = ToastManager(self.root, self.theme_manager)
+        
+        from logic.automation_controller import AutomationController
+        self.automation_controller = AutomationController(self)
         
         # Attach to root for legacy/helper access
         self.root.toasts = self.toasts

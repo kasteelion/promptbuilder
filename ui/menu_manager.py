@@ -139,6 +139,9 @@ class MenuManager:
             label="🚀 Project Dashboard", command=self.callbacks["show_dashboard"]
         )
         tools_menu.add_command(
+            label="🤖 AI Automation", command=self.callbacks["show_automation_dialog"], accelerator="Alt+A"
+        )
+        tools_menu.add_command(
             label="📦 Asset Manager", command=self.callbacks["show_outfits_summary"]
         )
         tools_menu.add_command(
@@ -146,6 +149,9 @@ class MenuManager:
         )
         tools_menu.add_command(
             label="🏷️ Tag Analysis", command=self.callbacks["show_tag_summary"]
+        )
+        tools_menu.add_command(
+            label="🕵️ Auditing Suite", command=self.callbacks["show_auditing_suite"]
         )
         tools_menu.add_command(
             label="🩺 Health Check", command=self.callbacks["show_health_check"]
@@ -367,6 +373,8 @@ class MenuManager:
             ("<Control-0>", "reset_font"),
             ("<Alt-r>", "randomize_all"),
             ("<Alt-R>", "randomize_all"),
+            ("<Alt-a>", "show_automation_dialog"),
+            ("<Alt-A>", "show_automation_dialog"),
             ("<Control-g>", "toggle_character_gallery"),
             ("<Control-G>", "toggle_character_gallery"),
         ]

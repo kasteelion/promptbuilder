@@ -78,11 +78,15 @@ class CharacterCard(ttk.Frame):
         self.photo_image = None  # Keep reference to prevent GC
         self._expanded = True # Accordion state
         self.is_used = False # State for "Added" indicator
+        self._resize_after_id = None # Tracker for debounced resize
 
         self._build_ui()
         
         if self.theme_manager:
             self.theme_manager.register(self, self._update_theme_overrides)
+            
+        # Bind resize for dynamic layout (Refactor 4)
+        self.bind("<Configure>", self._on_configure)
 
     @classmethod
     def _get_executor(cls):
@@ -147,11 +151,9 @@ class CharacterCard(ttk.Frame):
             self.configure(style="Card.TFrame")
 
             try:
-
                 self.name_label.config(foreground=self.theme_colors.get("fg", "white"))
 
             except Exception:
-
                 pass
 
     def _build_ui(self):
@@ -163,16 +165,16 @@ class CharacterCard(ttk.Frame):
         fg = self.theme_colors.get("fg", "white")
         accent = self.theme_colors.get("accent", "#0078d7")
         border = self.theme_colors.get("border", self.theme_colors.get("bg", "#333333"))
-        muted = "gray" # Default fallback for muted text
+        # Explicit background for the card itself handled via style
 
-        # Main container (Vertical stack)
-        container = ttk.Frame(self, style="TFrame")
-        container.pack(fill="both", expand=True)
+        # Main container (Vertical stack) - allow expansion to fit all children
+        self.container = ttk.Frame(self, style="TFrame")
+        self.container.pack(fill="both", expand=True)
 
         # Photo frame on Top
         photo_size = int(CHARACTER_CARD_SIZE) # Use full increased base size (140px)
         self.photo_canvas = tk.Canvas(
-            container,
+            self.container,
             width=photo_size,
             height=photo_size,
             bg=pbg,
@@ -194,7 +196,7 @@ class CharacterCard(ttk.Frame):
         )
 
         # Name Row (Centered)
-        name_frame = ttk.Frame(container)
+        name_frame = ttk.Frame(self.container)
         name_frame.pack(fill="x")
 
         self.name_label = ttk.Label(
@@ -212,11 +214,15 @@ class CharacterCard(ttk.Frame):
         if not summary:
             appearance = self.character_data.get("appearance", "")
             first_line = appearance.split("\n")[0] if appearance else ""
-            summary = (first_line[:120] + "...") if len(first_line) > 120 else first_line
+            summary = first_line
+        
+        # Limit summary length for card visibility
+        if summary and len(summary) > 300:
+            summary = summary[:297] + "..."
 
         # Description (Centered, Wrapped)
         self.desc_label = ttk.Label(
-            container,
+            self.container,
             text=summary,
             style="Muted.TLabel", # Use themed muted style
             wraplength=240,
@@ -225,14 +231,17 @@ class CharacterCard(ttk.Frame):
         )
         self.desc_label.pack(pady=(4, 8), fill="x")
 
-        # Tags display (Centered)
-        self.tags_container = FlowFrame(container, padding_x=2, padding_y=2)
-        self.tags_container.pack(pady=(0, 10), fill="x")
+        # Tags display (FlowFrame v2)
+        # Pass background immediately to prevent dark flash
+        pbg = self.theme_colors.get("panel_bg", self.theme_colors.get("bg", "#f0f0f0"))
+        self.tags_container = FlowFrame(self.container, padding_x=2, padding_y=2, bg=pbg)
+        self.tags_container.pack(pady=(0, 10), fill="x", padx=2)
+        
         self._build_ui_tags()
 
         # Action Buttons (Pill Style)
-        btn_frame = ttk.Frame(container)
-        btn_frame.pack(fill="x")
+        btn_frame = ttk.Frame(self.container)
+        btn_frame.pack(fill="x", pady=(5, 5))
 
         # Add button: Primary
         self.add_btn = ttk.Button(
@@ -270,7 +279,7 @@ class CharacterCard(ttk.Frame):
                 pass
             
         def on_edit_leave(e): 
-            self.edit_btn.config(bg=getattr(self.edit_btn, "_base_bg", "#1e1e1e"))
+            self.edit_btn.config(bg=getattr(self.edit_btn, "_base_bg", pbg))
         
         self.edit_btn.bind("<Enter>", on_edit_enter)
         self.edit_btn.bind("<Leave>", on_edit_leave)
@@ -306,7 +315,7 @@ class CharacterCard(ttk.Frame):
                 pass
             
         def on_fav_leave(e): 
-            self.fav_label.config(bg=getattr(self.fav_label, "_base_bg", "#1e1e1e"))
+            self.fav_label.config(bg=getattr(self.fav_label, "_base_bg", pbg))
             
         self.fav_label.bind("<Enter>", on_fav_enter)
         self.fav_label.bind("<Leave>", on_fav_leave)
@@ -332,20 +341,18 @@ class CharacterCard(ttk.Frame):
         if hasattr(self, "fav_label"):
             self._update_fav_star()
             
-        # Re-build tags to apply new colors
+        if hasattr(self, "tags_container"):
+             self.tags_container.configure(bg=pbg)
+
+        # Re-build tags to apply new colors (pills themselves)
         self._build_ui_tags()
 
     def _build_ui_tags(self):
-        """Build or refresh the tags section."""
+        """Build or refresh the tags section using FlowFrame."""
         if not hasattr(self, "tags_container"):
             return
             
-        # Clear existing
-        try:
-            self.tags_container.clear()
-        except Exception:
-            for w in self.tags_container.winfo_children():
-                w.destroy()
+        self.tags_container.clear()
             
         raw_tags = self.character_data.get("tags") or []
         if isinstance(raw_tags, str):
@@ -360,33 +367,57 @@ class CharacterCard(ttk.Frame):
         accent = self.theme_colors.get("accent", "#0078d7")
 
         for t in tags:
-            pill = tk.Frame(self.tags_container, bg=accent, padx=1, pady=1)
+            # Create outlined pill: Frame with border + Label inside
+            pill_frame = tk.Frame(
+                self.tags_container.canvas,
+                bg=pbg,
+                highlightbackground=accent,
+                highlightthickness=2,
+                highlightcolor=accent
+            )
+            
             lbl = tk.Label(
-                pill, 
-                text=t, 
-                bg=pbg, 
+                pill_frame,
+                text=t,
+                bg=pbg,
                 fg=accent,
-                font=("Lexend", 8, "bold"),
-                padx=10,
-                pady=4,
-                cursor="hand2"
+                font=("Lexend", 8),
+                padx=8,
+                pady=2
             )
             lbl.pack()
-            lbl._base_bg = pbg
             
-            def on_tag_enter(e, l=lbl):
+            # Store base colors for hover effects
+            pill_frame._base_bg = pbg
+            pill_frame._base_border = accent
+            lbl._base_fg = accent
+            
+            def on_tag_enter(e, frame=pill_frame, label=lbl):
                 try:
-                    hbg = self.theme_manager.themes.get(self.theme_manager.current_theme, {}).get("hover_bg", "#333333")
-                except: hbg = "#333333"
-                l.config(bg=hbg)
-            def on_tag_leave(e, l=lbl):
-                l.config(bg=getattr(l, "_base_bg", pbg))
+                    tm = self.theme_manager
+                    if tm:
+                        theme = tm.themes.get(tm.current_theme, {})
+                        hbg = theme.get("hover_bg", "#333333")
+                        frame.config(bg=hbg)
+                        label.config(bg=hbg)
+                except:
+                    pass
+            
+            def on_tag_leave(e, frame=pill_frame, label=lbl):
+                frame.config(bg=getattr(frame, "_base_bg", pbg))
+                label.config(bg=getattr(frame, "_base_bg", pbg))
+            
+            pill_frame.bind("<Enter>", on_tag_enter)
+            pill_frame.bind("<Leave>", on_tag_leave)
             lbl.bind("<Enter>", on_tag_enter)
             lbl.bind("<Leave>", on_tag_leave)
+            
+            # Click handler
+            pill_frame.bind("<Button-1>", lambda e, v=t: self._handle_tag_click(v))
             lbl.bind("<Button-1>", lambda e, v=t: self._handle_tag_click(v))
-            self.tags_container._children.append(pill)
-        
-        self.tags_container._schedule_reflow()
+            
+            self.tags_container.add_child(pill_frame)
+
 
     def toggle_visibility(self, event=None):
         """Toggle the visibility of the card contents. (Refactor 3)"""
@@ -484,6 +515,34 @@ class CharacterCard(ttk.Frame):
             except Exception:
                 pass
 
+    def _on_configure(self, event):
+        """Handle resize to update wraplength and tags flow with debouncing."""
+        if self._resize_after_id is not None:
+            try:
+                self.after_cancel(self._resize_after_id)
+            except Exception:
+                pass
+            self._resize_after_id = None
+            
+        def _do_update():
+            try:
+                # Update description wraplength to match available width
+                new_w = self.winfo_width()
+                if new_w > 40:
+                    # subtract padding
+                    wrap = new_w - 30 
+                    if wrap < 100: wrap = 100
+                    self.desc_label.config(wraplength=wrap)
+                    if hasattr(self, "name_label"):
+                        self.name_label.config(wraplength=wrap)
+                    
+            except:
+                pass
+            self._resize_after_id = None
+
+        # 50ms debounce to prevent recursion and layout thrashing
+        self._resize_after_id = self.after(50, _do_update)
+
     def _update_fav_star(self):
         """Update favorite star icon based on preference."""
         if self.prefs and hasattr(self, "fav_label"):
@@ -538,6 +597,8 @@ class CharacterCard(ttk.Frame):
             main_frame = ttk.Frame(preview_window, padding=10)
             main_frame.pack(fill="both", expand=True)
 
+            pbg = self.theme_colors.get("panel_bg", self.theme_colors.get("bg", "#1e1e1e"))
+
             # Title
             title = ttk.Label(main_frame, text=self.character_name, style="Title.TLabel")
             title.pack(pady=(0, 10))
@@ -553,7 +614,7 @@ class CharacterCard(ttk.Frame):
                 photo_tk = ImageTk.PhotoImage(img)
 
                 # Canvas for image
-                canvas = tk.Canvas(main_frame, width=img.width, height=img.height, bg="white")
+                canvas = tk.Canvas(main_frame, width=img.width, height=img.height, bg=pbg)
                 canvas.pack(pady=(0, 10))
                 canvas.create_image(img.width // 2, img.height // 2, image=photo_tk)
                 canvas.image = photo_tk  # Keep reference
@@ -943,6 +1004,16 @@ class CharacterGalleryPanel(ttk.Frame):
         self._search_after_id = None # ID for debouncing search
         self._current_filtered_chars = [] # List of currently filtered character names
         
+        # Virtual scrolling variables
+        self._viewport_start_index = 0
+        self._viewport_end_index = 0
+        self._active_cards = {}  # dict: index -> card widget
+        self._window_ids = {}  # dict: index -> canvas window ID
+        self._card_height = 520  # Increased from 450 to prevent button clipping with long summaries
+        self._buffer_cards = 3  # Render 3 extra cards above/below viewport
+        self._all_characters = []  # Full sorted/filtered character list
+        self._scroll_update_id = None  # Debounce ID for scroll updates
+        
         # Load categorized tags map for sorting logic
         try:
             self.categorized_tags_map = self.data_loader.load_categorized_tags()
@@ -1106,13 +1177,8 @@ class CharacterGalleryPanel(ttk.Frame):
         tag_frame.columnconfigure(3, weight=1)
 
         # Get current theme colors for manual overrides if needed
-        try:
-            theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
-            pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
-            accent = theme.get("accent", "#0078d7")
-        except:
-            pbg = "#1e1e1e"
-            accent = "#0078d7"
+        pbg = self.theme_manager.get_panel_bg()
+        accent = self.theme_manager.get_accent()
 
         ttk.Label(tag_frame, text="Cat:", style="Muted.TLabel").grid(row=0, column=0, sticky="w")
         self.tag_category_var = tk.StringVar(value="All")
@@ -1145,6 +1211,10 @@ class CharacterGalleryPanel(ttk.Frame):
         # Use ScrollableCanvas for cards
         self.scrollable_canvas = ScrollableCanvas(self)
         self.scrollable_canvas.pack(fill="both", expand=True, padx=8, pady=8)
+        
+        # Set canvas background to match theme
+        canvas_bg = self.theme_colors.get("panel_bg", self.theme_colors.get("bg", "#1e1e1e"))
+        self.scrollable_canvas.canvas.config(bg=canvas_bg)
 
         # Forward mousewheel events from the selected-tags area to the scrollable canvas
         try:
@@ -1254,6 +1324,147 @@ class CharacterGalleryPanel(ttk.Frame):
             self.search_clear_btn.place_forget()
         self._display_characters()
 
+    def _on_virtual_scroll(self, event):
+        """Force scroll the main canvas when hovering over virtual cards."""
+        # Check if we can scroll
+        if self.scrollable_canvas.canvas.yview() == (0.0, 1.0):
+            return "break"
+
+        # Determine scroll amount (Windows vs Linux)
+        if event.num == 5 or event.delta < 0:
+            direction = 1  # Down
+        elif event.num == 4 or event.delta > 0:
+            direction = -1  # Up
+        else:
+            direction = 0
+
+        if direction:
+            self.scrollable_canvas.canvas.yview_scroll(direction, "units")
+            # Return "break" to stop inner canvas from handling scroll
+            return "break"
+
+    def _calculate_visible_range(self):
+        """Calculate which card indices should be visible in the viewport.
+        
+        Returns:
+            tuple: (start_index, end_index) of visible cards
+        """
+        try:
+            canvas_height = self.scrollable_canvas.canvas.winfo_height()
+            if canvas_height < 10:
+                return 0, min(10, len(self._all_characters))
+            
+            yview = self.scrollable_canvas.canvas.yview()
+            scroll_fraction = yview[0] if yview else 0.0
+            
+            total_height = len(self._all_characters) * self._card_height
+            if total_height == 0:
+                return 0, 0
+            
+            scroll_offset = scroll_fraction * total_height
+            start_index = max(0, int(scroll_offset / self._card_height) - self._buffer_cards)
+            visible_cards = int(canvas_height / self._card_height) + 1
+            end_index = min(len(self._all_characters), 
+                          start_index + visible_cards + (self._buffer_cards * 2))
+            
+            return start_index, end_index
+        except Exception:
+            return 0, min(10, len(self._all_characters))
+
+    def _update_visible_cards(self, event=None):
+        """Update which cards are rendered based on viewport position."""
+        if self._scroll_update_id:
+            self.after_cancel(self._scroll_update_id)
+        
+        def _do_update():
+            try:
+                if not self._all_characters:
+                    return
+                
+                start, end = self._calculate_visible_range()
+                
+                # Destroy cards outside visible range
+                for idx in list(self._active_cards.keys()):
+                    if idx < start or idx >= end:
+                        # Delete canvas window item
+                        if idx in self._window_ids:
+                            self.scrollable_canvas.canvas.delete(self._window_ids[idx])
+                            del self._window_ids[idx]
+                        
+                        # Destroy widget
+                        card = self._active_cards[idx]
+                        card.destroy()
+                        del self._active_cards[idx]
+                
+                # Get canvas width for card sizing
+                canvas_width = self.scrollable_canvas.canvas.winfo_width()
+                if canvas_width < 10:
+                    canvas_width = 300  # Fallback
+                
+                # Create new cards in visible range
+                for idx in range(start, end):
+                    if idx not in self._active_cards and idx < len(self._all_characters):
+                        name, data = self._all_characters[idx]
+                        
+                        # Create card widget (parent is canvas, not container)
+                        card = CharacterCard(
+                            self.scrollable_canvas.canvas,
+                            name,
+                            data,
+                            self.data_loader,
+                            self.prefs,
+                            on_add_callback=self.on_add_callback,
+                            on_tag_click=self._on_tag_selected_from_card,
+                            theme_colors=self.theme_colors,
+                            categorized_tags_map=self.categorized_tags_map,
+                        )
+                        
+                        # Calculate absolute Y position
+                        y_pos = idx * self._card_height
+                        
+                        # Place on canvas with absolute positioning
+                        window_id = self.scrollable_canvas.canvas.create_window(
+                            0,  # X coord
+                            y_pos,  # Y coord (absolute)
+                            window=card,
+                            anchor="nw",
+                            width=canvas_width - 20  # Account for scrollbar
+                        )
+                        
+                        self._active_cards[idx] = card
+                        self._window_ids[idx] = window_id
+                        self.load_queue.append(card)
+                        
+                        # --- CRITICAL FIX: Aggressive Recursive Binding ---
+                        # This ensures photo canvas and tag frames don't eat the scroll
+                        def _recursive_bind(widget):
+                            # Bind Windows MouseWheel
+                            widget.bind("<MouseWheel>", self._on_virtual_scroll)
+                            # Bind Linux Button-4/5
+                            widget.bind("<Button-4>", self._on_virtual_scroll)
+                            widget.bind("<Button-5>", self._on_virtual_scroll)
+                            
+                            # Recurse into children (Labels, Canvases, Buttons)
+                            for child in widget.winfo_children():
+                                _recursive_bind(child)
+
+                        _recursive_bind(card)
+                        # --------------------------------------------------
+                
+                self._viewport_start_index = start
+                self._viewport_end_index = end
+                
+                if self.load_queue and not hasattr(self, '_loading_images'):
+                    self.after(100, self._process_load_queue)
+                    
+            except Exception as e:
+                from utils import logger
+                logger.exception("Error updating visible cards")
+            
+            self._scroll_update_id = None
+        
+        self._scroll_update_id = self.after(50, _do_update)
+
     def _display_characters(self):
         """Display character cards using incremental rendering."""
         # Cancel any pending render job
@@ -1340,13 +1551,52 @@ class CharacterGalleryPanel(ttk.Frame):
             else:
                 self.count_label.config(text=f"{total} character{'s' if total != 1 else ''}")
 
-        # Start incremental rendering
-        # State: (row, col)
-        self._render_cards_batch(char_list, 0, 0, 0)
+        # Store the full character list for virtual scrolling
+        self._all_characters = char_list
+        
+        # Clear active cards and window IDs
+        for idx in list(self._active_cards.keys()):
+            if idx in self._window_ids:
+                self.scrollable_canvas.canvas.delete(self._window_ids[idx])
+                del self._window_ids[idx]
+            self._active_cards[idx].destroy()
+        self._active_cards.clear()
+        self._window_ids.clear()
+        
+        # Calculate total virtual height and set scroll region
+        total_virtual_height = len(self._all_characters) * self._card_height
+        canvas_width = self.scrollable_canvas.canvas.winfo_width()
+        if canvas_width < 10:
+            canvas_width = 300
+        
+        self.scrollable_canvas.canvas.configure(
+            scrollregion=(0, 0, canvas_width, total_virtual_height)
+        )
+        
+        # Bind scroll events for virtual scrolling
+        try:
+            self.scrollable_canvas.canvas.unbind("<Configure>")
+        except:
+            pass
+        
+        self.scrollable_canvas.canvas.bind("<Configure>", self._update_visible_cards)
+        
+        # Wrap the original yview method to trigger card updates
+        original_yview = self.scrollable_canvas.canvas.yview
+        
+        def wrapped_yview(*args):
+            result = original_yview(*args)
+            self._update_visible_cards()
+            return result
+        
+        self.scrollable_canvas.canvas.yview = wrapped_yview
+        
+        # Initial render of visible cards
+        self._update_visible_cards()
 
     def _render_cards_batch(self, char_list, start_index, row, col):
         """Render a batch of character cards."""
-        BATCH_SIZE = 12 # Slightly larger batch for modern CPUs
+        BATCH_SIZE = 200 # Text-First: Load all available text in one large pass
         max_cols = 1    # Reverted to 1 column
         
         end_index = min(start_index + BATCH_SIZE, len(char_list))
@@ -1371,7 +1621,7 @@ class CharacterGalleryPanel(ttk.Frame):
             except Exception:
                 pass
             
-            card.grid(row=row, column=col, padx=4, pady=4, sticky="new")
+            card.grid(row=row, column=col, padx=4, pady=4, sticky="nsew")
             
             # Add to queue for lazy loading
             self.load_queue.append(card)
@@ -1387,17 +1637,20 @@ class CharacterGalleryPanel(ttk.Frame):
 
         # If more items remain, schedule next batch
         if end_index < len(char_list):
+            # Incremental update: Allow scrolling before all cards are done
+            self.after_idle(self.scrollable_canvas.update_scroll_region)
+            
             self._render_job_id = self.after(
                 5, # Smaller delay for faster perceived speed
                 lambda: self._render_cards_batch(char_list, end_index, row, col)
             )
         else:
-            # Done rendering
+            # Done rendering structures
             self._render_job_id = None
             self._finalize_rendering(row, max_cols)
-
-        # Process load queue more aggressively during initial render
-        self._process_load_queue()
+            
+            # Text-First: Only start loading images after ALL card structures are rendered
+            self._process_load_queue()
 
     def _finalize_rendering(self, final_row, max_cols):
         """Finalize rendering: add spacer and update scroll region."""
@@ -1416,8 +1669,12 @@ class CharacterGalleryPanel(ttk.Frame):
             except Exception:
                 pass
 
-            # Update scroll region
+            # Update scroll region immediately
             self.scrollable_canvas.update_scroll_region()
+            
+            # Schedule another update after a delay to account for FlowFrame <Map> events
+            # FlowFrames reflow when they become visible, which happens after grid placement
+            self.after(200, self.scrollable_canvas.update_scroll_region)
         except Exception:
             from utils import logger
             logger.exception("Failed to finalize rendering")

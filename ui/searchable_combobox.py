@@ -92,12 +92,12 @@ class SearchableCombobox(ttk.Frame):
         border = "#333333"
         sel_bg = "#333333"
         
-        if self.theme_manager and self.theme_manager.current_theme in self.theme_manager.themes:
-            theme = self.theme_manager.themes[self.theme_manager.current_theme]
-            panel_bg = theme.get("panel_bg", theme.get("bg", panel_bg))
-            accent = theme.get("accent", accent)
-            border = theme.get("border", panel_bg)
-            sel_bg = theme.get("hover_bg", theme.get("selected_bg", border))
+        if self.theme_manager:
+            theme_data = self.theme_manager.get_current_theme_data()
+            panel_bg = self.theme_manager.get_panel_bg()
+            accent = self.theme_manager.get_accent()
+            border = theme_data.get("border", panel_bg)
+            sel_bg = theme_data.get("hover_bg", theme_data.get("selected_bg", border))
         else:
             try:
                 style = ttk.Style()
@@ -345,12 +345,22 @@ class SearchableCombobox(ttk.Frame):
         fg_color = "#eeeeee" # Lighter default
         border_color = "#333333" # Muted default
         
-        if self.theme_manager and self.theme_manager.current_theme in self.theme_manager.themes:
-            theme = self.theme_manager.themes[self.theme_manager.current_theme]
-            accent_color = theme["accent"]
-            bg_color = theme["text_bg"]
-            fg_color = theme["text_fg"]
-            border_color = theme["border"]
+        if self.theme_manager:
+            theme_data = self.theme_manager.get_current_theme_data()
+            accent_color = self.theme_manager.get_accent()
+            bg_color = theme_data.get("text_bg", self.theme_manager.get_panel_bg())
+            fg_color = theme_data.get("text_fg", self.theme_manager.get_fg())
+            border_color = theme_data.get("border", self.theme_manager.get_panel_bg())
+        else:
+            # Attempt to look up the theme colors via ttk.Style as a fallback
+            try:
+                style = ttk.Style()
+                # Use a known style that likely has the color we want
+                accent_color = style.lookup("Tag.TLabel", "bordercolor") or accent_color
+                bg_color = style.lookup("TEntry", "fieldbackground") or bg_color
+                fg_color = style.lookup("TEntry", "foreground") or fg_color
+                border_color = style.lookup("Card.TFrame", "bordercolor") or border_color
+            except: pass
 
         frame = tk.Frame(self.dropdown, borderwidth=1, relief="solid", bg=border_color)
         frame.pack(fill="both", expand=True)
@@ -363,7 +373,7 @@ class SearchableCombobox(ttk.Frame):
             font=("Lexend", 9), # Refactor 5: Lexend
             activestyle="none",
             selectbackground=accent_color,
-            selectforeground=theme.get("bg", "white"),
+            selectforeground=theme_data.get("bg", "white") if 'theme_data' in locals() else "white",
             background=bg_color,
             foreground=fg_color
         )
@@ -675,11 +685,19 @@ class SearchableCombobox(ttk.Frame):
             self._set_placeholder_mode(True)
 
     def apply_theme(self, theme):
-        """Apply theme to custom widgets. (Refactor 3)"""
-        accent = theme.get("accent", "#0078d7")
-        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
-        border = theme.get("border", panel_bg)
-        sel_bg = theme.get("hover_bg", theme.get("selected_bg", "#333333"))
+        """Apply theme to custom widgets."""
+        if self.theme_manager:
+            panel_bg = self.theme_manager.get_panel_bg()
+            accent = self.theme_manager.get_accent()
+            fg = self.theme_manager.get_fg()
+            border = theme.get("border", panel_bg)
+            sel_bg = theme.get("hover_bg", theme.get("selected_bg", "#333333"))
+        else:
+            accent = theme.get("accent", "#0078d7")
+            panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            fg = theme.get("fg", "white")
+            border = theme.get("border", panel_bg)
+            sel_bg = theme.get("hover_bg", theme.get("selected_bg", "#333333"))
         
         # Update custom buttons
         if hasattr(self, "dropdown_btn"):
@@ -691,7 +709,7 @@ class SearchableCombobox(ttk.Frame):
             self.fav_btn._base_bg = panel_bg
             
         # Update placeholder color if currently active
-        if self._selected_value.get() == self.placeholder:
+        if self._is_placeholder_active:
              pfg = theme.get("placeholder_fg", "#666666")
              self.entry.config(foreground=pfg)
             
@@ -706,7 +724,7 @@ class SearchableCombobox(ttk.Frame):
                             if isinstance(inner, tk.Listbox):
                                 inner.config(
                                     bg=theme.get("text_bg", panel_bg),
-                                    fg=theme.get("text_fg", theme.get("fg", "white")),
+                                    fg=theme.get("text_fg", fg),
                                     selectbackground=accent,
                                     selectforeground=theme.get("bg", "black")
                                 )

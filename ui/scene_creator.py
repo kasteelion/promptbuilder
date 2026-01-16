@@ -63,7 +63,8 @@ class SceneCreatorDialog:
         
         # Update cancel btn manual overrides
         if hasattr(self, "cancel_btn"):
-            self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground="gray")
+            border_color = theme.get("border", theme.get("muted_fg", "gray"))
+            self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground=border_color)
             self.cancel_btn._base_bg = pbg
 
         if hasattr(self, "category_combo"): self.category_combo.apply_theme(theme)
@@ -235,7 +236,7 @@ class SceneCreatorDialog:
                 hbg = theme.get("hover_bg", "#333333")
             except: hbg = "#333333"
             self.cancel_btn.config(bg=hbg)
-        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", "#1e1e1e"))
+        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", pbg))
         self.cancel_btn.bind("<Enter>", on_c_enter)
         self.cancel_btn.bind("<Leave>", on_c_leave)
 

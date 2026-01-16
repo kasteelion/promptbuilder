@@ -1,9 +1,8 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from pathlib import Path
-from typing import Optional, List, Dict, Any, Callable
 
-from ui.widgets import ScrollableCanvas, CollapsibleFrame
+from ui.widgets import ScrollableCanvas
 from utils.backup import create_snapshot
 
 class CharacterExplorer(ttk.Frame):
@@ -48,9 +47,7 @@ class CharacterExplorer(ttk.Frame):
         self.stats_label.pack(side="right")
 
         # Main Content: List | Detail
-        try:
-            pbg = self.tm.themes.get(self.tm.current_theme, {}).get("panel_bg", "#1e1e1e") if self.tm else "#1e1e1e"
-        except: pbg = "#1e1e1e"
+        pbg = self.tm.get_panel_bg() if self.tm else "#1e1e1e"
 
         self.paned = tk.PanedWindow(self, orient="horizontal", bg=pbg, bd=0, sashwidth=6, sashrelief="flat")
         self.paned.pack(fill="both", expand=True)
@@ -129,7 +126,8 @@ class CharacterExplorer(ttk.Frame):
 
     def _on_select(self, event=None):
         selection = self.char_listbox.curselection()
-        if not selection: return
+        if not selection:
+            return
         
         char = self.filtered_chars[selection[0]]
         self.preview_text.config(state="normal")
@@ -257,10 +255,8 @@ class TagAnalyzer(ttk.Frame):
             card = tk.Frame(grid_frame, bg=pbg, padx=10, pady=5)
             card.grid(row=row, column=col, sticky="ew", padx=5, pady=2)
             
-            # Inner labels
-            fg = self.tm.themes.get(self.tm.current_theme, {}).get("fg", "white") if self.tm else "white"
             tk.Label(card, text=tag.upper(), bg=pbg, fg=fg, font=("Lexend", 9)).pack(side="left")
-            tk.Label(card, text=str(count), bg=pbg, fg="gray", font=("Lexend", 9, "bold")).pack(side="right")
+            tk.Label(card, text=str(count), bg=pbg, fg=self.tm.get_muted_fg() if self.tm else "gray", font=("Lexend", 9, "bold")).pack(side="right")
             
         self.scroll.refresh_mousewheel_bindings()
         self.scroll.update_scroll_region()
@@ -271,7 +267,8 @@ class TagAnalyzer(ttk.Frame):
         matrix = {} # {tag: {type: count}}
         
         def process_tags(source_name, tags):
-            if not tags: return
+            if not tags:
+                return
             if isinstance(tags, str):
                 tags = [t.strip().lower() for t in tags.split(",") if t.strip()]
             for t in tags:
@@ -286,28 +283,33 @@ class TagAnalyzer(ttk.Frame):
         try:
             # Characters
             chars = self.data_loader.load_characters()
-            for d in chars.values(): process_tags("Chars", d.get("tags"))
+            for d in chars.values():
+                process_tags("Chars", d.get("tags"))
             
             # Outfits
             outfits = self.data_loader.load_outfits()
             for gd in outfits.values():
                 for cat in gd.values():
-                    for item in cat.values(): process_tags("Outfits", item.get("tags"))
+                    for item in cat.values():
+                        process_tags("Outfits", item.get("tags"))
             
             # Scenes
             scenes = self.data_loader.load_presets("scenes.md")
             for cat in scenes.values():
-                for item in cat.values(): process_tags("Scenes", item.get("tags"))
+                for item in cat.values():
+                    process_tags("Scenes", item.get("tags"))
                 
             # Poses
             poses = self.data_loader.load_presets("poses.md")
             for cat in poses.values():
-                for item in cat.values(): process_tags("Poses", item.get("tags"))
+                for item in cat.values():
+                    process_tags("Poses", item.get("tags"))
                 
             # Interactions
             interactions = self.data_loader.load_interactions()
             for cat in interactions.values():
-                for item in cat.values(): process_tags("Interact", item.get("tags"))
+                for item in cat.values():
+                    process_tags("Interact", item.get("tags"))
                 
         except Exception as e:
             ttk.Label(self.container, text=f"Error building matrix: {e}", foreground="red").pack()
@@ -331,8 +333,9 @@ class TagAnalyzer(ttk.Frame):
         # Data Rows
         sorted_tags = sorted(matrix.items(), key=lambda x: x[1]["total"], reverse=True)
         
-        pbg = self.tm.themes.get(self.tm.current_theme, {}).get("panel_bg", "#1e1e1e") if self.tm else "#1e1e1e"
-        fg = self.tm.themes.get(self.tm.current_theme, {}).get("fg", "white") if self.tm else "white"
+        pbg = self.tm.get_panel_bg() if self.tm else "#1e1e1e"
+        fg = self.tm.get_fg() if self.tm else "white"
+        muted_fg = self.tm.get_muted_fg() if self.tm else "gray"
         
         for t, counts in sorted_tags:
             row = tk.Frame(self.container, bg=pbg, pady=2)
@@ -346,12 +349,13 @@ class TagAnalyzer(ttk.Frame):
             cols = ["total", "Chars", "Outfits", "Scenes", "Poses", "Interact"]
             for i, key in enumerate(cols):
                 val = counts.get(key, "-")
-                lbl = tk.Label(row, text=str(val), bg=pbg, fg="gray" if val == "-" else fg, width=8, anchor="e", font=("Lexend", 9))
+                lbl = tk.Label(row, text=str(val), bg=pbg, fg=muted_fg if val == "-" else fg, width=8, anchor="e", font=("Lexend", 9))
                 lbl.grid(row=0, column=i+1, padx=5)
 
     def _add_tags(self, counts, tags):
         """Helper to safely add tags to counter."""
-        if not tags: return
+        if not tags:
+            return
         if isinstance(tags, str):
             tags = [t.strip().lower() for t in tags.split(",") if t.strip()]
         
@@ -409,7 +413,12 @@ class DashboardDialog:
         self.tag_analyzer = TagAnalyzer(self.nb, self.data_loader, self.tm)
         self.nb.add(self.tag_analyzer, text="🏷️ TAGS")
 
-        # 4. Health Tab
+        # 4. Auditing Tab (Suite)
+        self.auditing_tab = ttk.Frame(self.nb, style="TFrame")
+        self.nb.add(self.auditing_tab, text="🕵️ AUDITING")
+        self._setup_auditing_tab()
+
+        # 5. Health Tab
         self.health_tab = ttk.Frame(self.nb, style="TFrame")
         self.nb.add(self.health_tab, text="⚖️ HEALTH")
         self._setup_health_tab()
@@ -527,15 +536,100 @@ class DashboardDialog:
             issues.append(f"✓ Scanned {len(files)} modular outfit files.")
         
         if not issues:
-            ttk.Label(self.health_list, text="🌟 NO ISSUES FOUND! YOUR PROJECT IS IN GREAT SHAPE.", foreground="#4caf50", font=("Lexend", 10, "bold")).pack(pady=20)
+            success_fg = theme.get("success", "#4caf50") if (theme := self.tm.get_current_theme_data()) else "#4caf50"
+            ttk.Label(self.health_list, text="🌟 NO ISSUES FOUND! YOUR PROJECT IS IN GREAT SHAPE.", foreground=success_fg, font=("Lexend", 10, "bold")).pack(pady=20)
         else:
             for issue in issues:
                 ttk.Label(self.health_list, text=issue, font=("Lexend", 10, "bold")).pack(anchor="w", pady=(10, 0))
                 
         self.health_scroll.update_scroll_region()
 
+    def _setup_auditing_tab(self):
+        """Setup the Auditing Suite tab."""
+        scroll = ScrollableCanvas(self.auditing_tab)
+        scroll.pack(fill="both", expand=True, padx=20, pady=20)
+        container = scroll.get_container()
+
+        ttk.Label(container, text="PROMPT AUDITING SUITE", style="Title.TLabel").pack(anchor="w")
+        ttk.Label(container, text="Run analytical tools to ensure prompt quality and distribution diversity.", style="Muted.TLabel").pack(anchor="w", pady=(0, 20))
+
+        # --- Audit Actions ---
+        actions_frame = ttk.LabelFrame(container, text=" ANALYSIS TOOLS ", padding=15)
+        actions_frame.pack(fill="x", pady=10)
+
+        tools = [
+            ("Run Quality Audit", "Scans data files for missing fields or thin descriptions.", "auditing/analysis/quality_audit.py"),
+            ("Analyze Tag Inventory", "Aggregates all tags to find synonyms or typos.", "auditing/analysis/tag_inventory.py"),
+            ("Check Character Connectivity", "Verifies characters can appear in at least one scene.", "auditing/validators/check_character_connectivity.py"),
+            ("Score Generated Prompts", "Ranks prompts based on stylistic quality heuristics.", "auditing/analysis/find_best_worst.py"),
+            ("Generate Sankey Diagram", "Visualizes the flow of character -> scene -> style.", "auditing/visualizations/generate_sankey_diagram.py"),
+            ("Run Full Audit Suite", "Executes all checks and generates a comprehensive report.", "auditing/run_full_audit.py"),
+        ]
+
+        for label, desc, script in tools:
+            frame = ttk.Frame(actions_frame)
+            frame.pack(fill="x", pady=5)
+            
+            btn = ttk.Button(frame, text=label.upper(), width=30, command=lambda s=script: self._run_audit_script(s))
+            btn.pack(side="left")
+            
+            ttk.Label(frame, text=desc, style="Muted.TLabel", wraplength=500).pack(side="left", padx=15)
+
+        # --- Reports ---
+        reports_frame = ttk.LabelFrame(container, text=" VIEW REPORTS ", padding=15)
+        reports_frame.pack(fill="x", pady=10)
+
+        reports = [
+            ("Comprehensive Audit", "auditing/reports/comprehensive_audit.md"),
+            ("Tag Inventory", "auditing/reports/tag_inventory.md"),
+            ("Prompt Distribution Flow", "auditing/reports/prompt_distribution_flow.md"),
+        ]
+
+        for label, path in reports:
+            frame = ttk.Frame(reports_frame)
+            frame.pack(fill="x", pady=5)
+            
+            btn = ttk.Button(frame, text=f"VIEW {label.upper()}", width=30, command=lambda p=path: self._open_report(p))
+            btn.pack(side="left")
+            
+            ttk.Label(frame, text=path, style="Muted.TLabel").pack(side="left", padx=15)
+
+    def _run_audit_script(self, script_path):
+        """Run an auditing script in the background."""
+        import subprocess
+        import sys
+        
+        full_path = Path(self.data_loader.base_dir) / script_path
+        if not full_path.exists():
+            messagebox.showerror("Error", f"Script not found: {script_path}")
+            return
+
+        # Simple non-blocking execution for now
+        # Ideally we'd use a thread and show progress, but since these scripts
+        # are mostly fast or provide their own CLI output, we'll just start them.
+        try:
+            # We use the same python interpreter
+            subprocess.Popen([sys.executable, str(full_path)], cwd=str(self.data_loader.base_dir))
+            messagebox.showinfo("Auditing", f"Started {script_path}.\nResults will be saved to reports folder.")
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to run script: {e}")
+
+    def _open_report(self, report_path):
+        """Open a report file in the system default viewer."""
+        import os
+        full_path = Path(self.data_loader.base_dir) / report_path
+        if not full_path.exists():
+            messagebox.showerror("Error", f"Report not found: {report_path}\nRun the audit first.")
+            return
+
+        try:
+            os.startfile(str(full_path))
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to open report: {e}")
+
     def _apply_theme(self, theme):
         self.char_explorer.apply_theme(theme)
         self.tag_analyzer.apply_theme(theme)
         self.overview_scroll.apply_theme(theme)
         self.health_scroll.apply_theme(theme)
+        # Update any specific elements in auditing_tab if needed

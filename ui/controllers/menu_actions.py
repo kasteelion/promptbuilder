@@ -144,6 +144,73 @@ class MenuActions:
             theme_manager=self.app.theme_manager
         )
 
+    def show_auditing_suite(self):
+        """Open the Auditing Suite tab in Dashboard."""
+        return self.app.dialog_manager.show_auditing_suite(
+            data_loader=self.app.data_controller.data_loader,
+            theme_manager=self.app.theme_manager
+        )
+
+    def show_automation_dialog(self, prompt: str = None):
+        """Open the AI Automation tool."""
+        return self.app.dialog_manager.show_automation_dialog(
+            self.app.ctx,
+            self.app.theme_manager,
+            prompt=prompt
+        )
+
+    def generate_current_image(self):
+        """Extract prompt from preview and start automation directly."""
+        if not hasattr(self.app, "preview_panel") or not self.app.preview_panel.get_prompt_callback:
+            return
+            
+        prompt = self.app.preview_panel.get_prompt_callback()
+        if not prompt or prompt.startswith("--- VALIDATION ERROR ---"):
+             if hasattr(self.app, "toasts"):
+                 self.app.toasts.notify("Please generate a valid prompt first", "warning")
+             return
+
+        controller = self.app.ctx.automation_controller
+        if not controller:
+            from logic.automation_controller import AutomationController
+            controller = AutomationController(self.app.ctx)
+            self.app.ctx.automation_controller = controller
+
+        if controller._thread and controller._thread.is_alive():
+            if hasattr(self.app, "toasts"):
+                self.app.toasts.notify("An automation task is already running", "warning")
+            return
+
+        def on_progress(current, total, message):
+            self.app.root.after(0, lambda: self.app._update_status(f"🤖 {message}"))
+            
+        def on_complete(results):
+            def _done():
+                self.app._update_status("Generation complete!")
+                if results and "image_path" in results[0]:
+                    path = results[0]["image_path"]
+                    self.app.toasts.notify(f"Image saved: {path}", "success", duration=5000)
+                else:
+                    self.app.toasts.notify("Image generation completed", "success")
+            self.app.root.after(0, _done)
+
+        def on_error(e):
+            def _err():
+                self.app._update_status(f"Error: {str(e)}")
+                self.app.toasts.notify(f"Automation Error: {str(e)}", "error")
+            self.app.root.after(0, _err)
+
+        self.app.toasts.notify("Launching AI Studio...", "info")
+        controller.start_generation(
+            count=1,
+            match_outfits_prob=0.3,
+            prompts_only=False,
+            on_progress=on_progress,
+            on_complete=on_complete,
+            on_error=on_error,
+            fixed_prompt=prompt
+        )
+
     def open_data_folder(self):
         """Open local data folder."""
         return self.app.dialog_manager.open_data_folder(self.app.data_loader)

@@ -146,6 +146,7 @@ Example outfit format:
         self.category_var = tk.StringVar()
         self.category_combo = SearchableCombobox(
             cat_frame, 
+            theme_manager=self.theme_manager,
             textvariable=self.category_var, 
             placeholder="Search or type category..."
         )
@@ -260,7 +261,7 @@ Example outfit format:
                 hbg = theme.get("hover_bg", "#333333")
             except: hbg = "#333333"
             self.cancel_btn.config(bg=hbg)
-        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", "#1e1e1e"))
+        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", pbg))
         self.cancel_btn.bind("<Enter>", on_c_enter)
         self.cancel_btn.bind("<Leave>", on_c_leave)
 
@@ -618,7 +619,7 @@ Main garments with fabric details. *Accessories:* items. *Hair/Makeup:* notes.""
                 hbg = theme.get("hover_bg", "#333333")
             except: hbg = "#333333"
             self.cancel_btn.config(bg=hbg)
-        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", "#1e1e1e"))
+        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", pbg))
         self.cancel_btn.bind("<Enter>", on_c_enter)
         self.cancel_btn.bind("<Leave>", on_c_leave)
 

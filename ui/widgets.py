@@ -24,8 +24,7 @@ class ScrollableCanvas(ttk.Frame):
         self.rowconfigure(0, weight=1)
 
         # Create canvas and scrollbar
-        # Default to dark bg to prevent white flash
-        self.canvas = tk.Canvas(self, highlightthickness=0, borderwidth=0, bg="#1e1e1e")
+        self.canvas = tk.Canvas(self, highlightthickness=0, borderwidth=0)
         self.scrollbar = ttk.Scrollbar(
             self, orient="vertical", command=self.canvas.yview, style="Themed.Vertical.TScrollbar"
         )
@@ -44,7 +43,11 @@ class ScrollableCanvas(ttk.Frame):
         # Bind canvas width to window width for proper wrapping and filling
         def update_window_width(event):
             if self._resize_after_id:
-                self.after_cancel(self._resize_after_id)
+                try:
+                    self.after_cancel(self._resize_after_id)
+                except Exception:
+                    pass
+                self._resize_after_id = None
             
             def _do_resize():
                 try:
@@ -137,6 +140,9 @@ class ScrollableCanvas(ttk.Frame):
         widget.bind("<MouseWheel>", self._on_mousewheel)
         for child in widget.winfo_children():
             self._bind_mousewheel_recursive(child)
+            
+        # Bind custom resize events from children
+        widget.bind("<<FlowFrameResized>>", lambda e: self.update_scroll_region())
 
     def update_scroll_region(self):
         """Update the scroll region with debouncing to handle async layouts efficiently."""
@@ -151,19 +157,22 @@ class ScrollableCanvas(ttk.Frame):
                 # Always force an idle update to ensure geometries are calculated
                 self.container.update_idletasks()
                 
-                # Get the bounding box of all items in the canvas
-                bbox = self.canvas.bbox("all")
+                # For grid-based layouts, bbox("all") doesn't work reliably
+                # because it only includes canvas items, not grid children
+                # Use the container's requested size instead
+                content_width = self.container.winfo_reqwidth()
+                content_height = self.container.winfo_reqheight()
                 
-                if bbox:
-                    # Calculate height from bbox
-                    # Add padding to ensuring the last item isn't cut off
-                    content_width = max(self.container.winfo_reqwidth(), bbox[2])
-                    content_height = bbox[3] + 50 
-                    
-                    self.canvas.config(scrollregion=(0, 0, content_width, content_height))
-                else:
-                    # Fallback to reqheight if bbox empty (shouldn't happen if window is created)
-                    self.canvas.config(scrollregion=(0, 0, self.container.winfo_reqwidth(), self.container.winfo_reqheight() + 50))
+                # Add padding to ensure the last item isn't cut off
+                content_height += 50
+                
+                # Ensure minimum size
+                if content_width < 100:
+                    content_width = self.canvas.winfo_width()
+                if content_height < 100:
+                    content_height = 100
+                
+                self.canvas.config(scrollregion=(0, 0, content_width, content_height))
                 
                 # Check visibility
                 if self._is_scrolling_needed():
@@ -379,148 +388,148 @@ class CollapsibleFrame(ttk.Frame):
         return self._content
 
 
-class FlowFrame(ttk.Frame):
-    """A simple flow/wrap frame that places children left-to-right and wraps naturally.
 
-    Uses placement-based layout to avoid flicker when reflowing.
+class FlowFrame(ttk.Frame):
+    """A robust flow/wrap frame that uses a Canvas to manually position widgets.
+    
+    This avoids tk.Text rendering quirks ("cursed" borders/transparency) and 
+    provides precise control over spacing and height.
     """
 
-    def __init__(self, parent, padding_x=10, padding_y=8, min_chip_width=0, *args, **kwargs):
+    def __init__(self, parent, padding_x=4, padding_y=4, *args, **kwargs):
+        # Extract bg for canvas
+        bg_color = kwargs.pop("bg", kwargs.pop("background", None))
+        
         super().__init__(parent, *args, **kwargs)
-        self._padx = padding_x
-        self._pady = padding_y
-        self._children = []
-        self._reflow_after_id = None
-        self._pending_reflow = False
-        self._min_chip_width = min_chip_width
-        self._last_width = 0
-        self._reflow_retry_count = 0
-        # Bind Configure to reflow when width changes
-        self.bind("<Configure>", self._on_configure)
+        self._padding_x = padding_x
+        self._padding_y = padding_y
+        self._items = [] # List of (widget, window_id) tuples
+        
+        # Internal styling
+        if not bg_color:
+             bg_color = self.cget("style") == "Card.TFrame" and "#1e1e1e" or "#2b2b2b"
+
+        self.canvas = tk.Canvas(
+            self,
+            borderwidth=0,
+            highlightthickness=0,
+            bg=bg_color,
+            height=1 # Will auto-expand
+        )
+        self.canvas.pack(fill="both", expand=True)
+        
+        # Track for theme updates
+        self._bg_color = bg_color
+        
+        # Bind events
+        self.canvas.bind("<Configure>", self._on_configure)
+        # Trigger reflow when widget is mapped (becomes visible) to handle initial layout
+        self.canvas.bind("<Map>", lambda e: self.after(10, lambda: self._reflow()))
 
     def _on_configure(self, event):
-        if hasattr(event, "width") and event.width > 1:
-            if abs(event.width - self._last_width) > 10:
-                self._last_width = event.width
-                if self._reflow_after_id:
-                    try:
-                        self.after_cancel(self._reflow_after_id)
-                    except Exception:
-                        pass
-                logger.debug(
-                    f"FlowFrame._on_configure: width changed -> scheduling reflow (w={event.width})"
-                )
-                self._reflow_after_id = self.after(50, self._reflow)
+        """Reflow on resize."""
+        self._reflow(event.width)
 
-    def _reflow(self):
-        from .constants import FLOW_FRAME_REFLOW_DELAY_MS, WIDGET_REFLOW_RETRY_LIMIT
+    def _reflow(self, width=None):
+        """Manually calculate positions for all children."""
+        if width is None:
+            width = self.canvas.winfo_width()
+        
+        if width < 10: 
+            return # Too small/not visible yet
 
-        try:
-            # PERFORMANCE: Skip reflow if not visible or mapped
-            if not self.winfo_exists() or not self.winfo_viewable():
-                # If not viewable, we might want to schedule one for when it becomes visible
-                # But for now, just skip to save CPU
-                return
-                
-            self.update_idletasks()
-        except Exception:
-            pass
-
-        if not self._children:
-            return
-
-        avail_width = self.winfo_width()
-        if avail_width <= 1:
-            try:
-                parent_w = getattr(self.master, "winfo_width", lambda: 0)()
-                if parent_w and parent_w > 1:
-                    avail_width = parent_w - 8
-            except Exception:
-                parent_w = 0
-
-        if avail_width <= 1:
-            if not hasattr(self, "_reflow_retry_count"):
-                self._reflow_retry_count = 0
-            if self._reflow_retry_count < WIDGET_REFLOW_RETRY_LIMIT:
-                self._reflow_retry_count += 1
-                self.after(FLOW_FRAME_REFLOW_DELAY_MS, self._reflow)
-            return
-
-        self._reflow_retry_count = 0
-        logger.debug(
-            f"FlowFrame._reflow(place): avail_width={avail_width} children={len(self._children)}"
-        )
-
-        x = self._padx
-        y = self._pady
+        x = 0
+        y = 0
         line_height = 0
-
-        for btn in self._children:
-            try:
-                w_req = btn.winfo_reqwidth()
-                h_req = btn.winfo_reqheight()
-            except Exception:
-                w_req = 100
-                h_req = 24
-
-            # enforce a minimum width for visual consistency
-            chip_w = max(w_req, self._min_chip_width)
-            total_w = chip_w + (2 * self._padx)
-            if x + total_w > avail_width and x > self._padx:
-                x = self._padx
-                y += line_height + self._pady
+        
+        # Standard padding
+        pad_x = self._padding_x
+        pad_y = self._padding_y
+        
+        for i, (widget, win_id) in enumerate(self._items):
+            # Force update to get true size if needed? 
+            # Usually strict req_width/height is good enough
+            w = widget.winfo_reqwidth()
+            h = widget.winfo_reqheight()
+            
+            if x + w > width and x > 0:
+                # Wrap
+                x = 0
+                y += line_height + pad_y
                 line_height = 0
+            
+            # Move window
+            self.canvas.coords(win_id, x, y)
+            
+            # Update markers
+            x += w + pad_x
+            line_height = max(line_height, h)
+            
+        # Final height calculation
+        # If no items, height should be minimal (1px)
+        # If items exist, calculate based on last line
+        if len(self._items) == 0:
+            total_height = 1
+        else:
+            total_height = y + line_height
+            if total_height < 1: 
+                total_height = 1
+        
+        # Always update if height changed (including to/from 1)
+        current_height = self.canvas.winfo_height()
+        if current_height != total_height:
+            self.canvas.configure(height=total_height)
+            self.configure(height=total_height) # Propagate to frame
+            self.event_generate("<<FlowFrameResized>>")
 
-            try:
-                btn.place(in_=self, x=x, y=y, width=chip_w, height=h_req)
-            except Exception:
-                try:
-                    btn.place(x=x, y=y)
-                except Exception:
-                    pass
-
-            x += total_w
-            if h_req > line_height:
-                line_height = h_req
-
-        try:
-            total_height = y + line_height + self._pady
-            self.config(height=total_height)
-        except Exception:
-            pass
+    def add_child(self, widget):
+        """Add a widget to the flow."""
+        # Widget MUST be child of canvas or similar, but we assume caller handles parent 
+        # or we just embed it. (Canvas.create_window works with any child of toplevel)
+        
+        # Create window item
+        win_id = self.canvas.create_window(0, 0, window=widget, anchor="nw")
+        
+        self._items.append((widget, win_id))
+        
+        # Reflow immediately (or schedule)
+        self._reflow()
 
     def add_button(self, text, style=None, command=None):
-        btn = ttk.Button(self, text=text, style=style or "TButton", command=command)
-        self._children.append(btn)
-        logger.debug(f"FlowFrame.add_button: added '{text}' children={len(self._children)}")
-        # Coalesce reflows so adding many buttons is fast
-        self._schedule_reflow()
+        """Legacy compatibility method."""
+        # Parent to canvas for correct Z-order
+        btn = ttk.Button(self.canvas, text=text, style=style or "TButton", command=command)
+        self.add_child(btn)
         return btn
 
-    def _schedule_reflow(self, delay=16):
-        if self._pending_reflow:
-            return
-        self._pending_reflow = True
-
-        def _do_reflow():
-            try:
-                self._reflow()
-            finally:
-                self._pending_reflow = False
-
-        try:
-            self.after(delay, _do_reflow)
-        except Exception:
-            try:
-                self.after_idle(_do_reflow)
-            except Exception:
-                _do_reflow()
-
     def clear(self):
-        for child in list(self._children):
+        """Remove all children."""
+        for w, win_id in self._items:
+            w.destroy()
+        self.canvas.delete("all")
+        self._items.clear()
+        self.canvas.configure(height=1)
+
+    def apply_theme(self, theme):
+        """Update background to match theme panel_bg. (Refactor 3)"""
+        panel_bg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+        self._bg_color = panel_bg
+        self.canvas.configure(bg=panel_bg)
+        # Also update child checkbuttons if they are ttk
+        for widget, _ in self._items:
+            # ttk widgets usually handle it via style, but ensure background is consistent
+            pass
+
+    def configure(self, *args, **kwargs):
+        """Pass background config to canvas."""
+        # Clean kwargs for ttk.Frame
+        bg = None
+        if "bg" in kwargs: bg = kwargs.pop("bg")
+        if "background" in kwargs: bg = kwargs.pop("background") 
+            
+        if bg:
             try:
-                child.place_forget()
-                child.destroy()
-            except Exception:
-                pass
-        self._children.clear()
+                self.canvas.configure(bg=bg)
+            except: pass
+            
+        super().configure(*args, **kwargs)

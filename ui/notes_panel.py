@@ -73,6 +73,7 @@ class NotesPanel(CollapsibleFrame):
         self.category_var = tk.StringVar()
         self.cat_combo = SearchableCombobox(
             control,
+            theme_manager=self.theme_manager,
             textvariable=self.category_var,
             on_select=lambda val: self.update_presets(),
             placeholder="Search category...",
@@ -85,6 +86,7 @@ class NotesPanel(CollapsibleFrame):
         self.template_var = tk.StringVar(value="Blank")
         self.template_combo = SearchableCombobox(
             control, 
+            theme_manager=self.theme_manager,
             textvariable=self.template_var,
             on_double_click=lambda val: self._insert_template(),
             placeholder="Search template...",

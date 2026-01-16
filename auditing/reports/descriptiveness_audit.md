@@ -178,6 +178,7 @@
 | High Fashion\Runway Minimalist.txt | 110 | 37 | 36 | 37 | ✅ Detailed |
 | Professional  Office\All Black.txt | 110 | 40 | 27 | 43 | ✅ Detailed |
 | Seasonal  Swimwear\Beach Summer.txt | 110 | 35 | 29 | 46 | ✅ Detailed |
+| Sleepwear  Lounge\Intimate.txt | 110 | 43 | 29 | 38 | ✅ Detailed |
 | Athletic  Sports\Arabian.txt | 109 | 43 | 28 | 38 | ✅ Detailed |
 | Casual Wear\Vintage Denim.txt | 109 | 37 | 31 | 41 | ✅ Detailed |
 | Character  Costume\Catsuit.txt | 109 | 36 | 31 | 42 | ✅ Detailed |
@@ -188,11 +189,11 @@
 | Athletic  Sports\Figure Skating.txt | 107 | 34 | 34 | 39 | ✅ Detailed |
 | Casual Wear\Country Casual.txt | 107 | 32 | 37 | 38 | ✅ Detailed |
 | Film Noir\Police Matron.txt | 107 | 40 | 28 | 39 | ✅ Detailed |
-| Sleepwear  Lounge\Intimate.txt | 107 | 40 | 29 | 38 | ✅ Detailed |
 | Traditions  Ceremonies\Italian Riviera Summer.txt | 107 | 39 | 35 | 33 | ✅ Detailed |
 | Athletic  Sports\Hip Hop.txt | 106 | 39 | 33 | 34 | ✅ Detailed |
 | Alternative  Edgy\Tactical Scout.txt | 105 | 35 | 32 | 38 | ✅ Detailed |
 | Film Noir\Mob Boss.txt | 105 | 37 | 32 | 36 | ✅ Detailed |
+| Formal  Evening\Infinity Maxi Dress.txt | 105 | 82 | 23 | 0 | ⚠️ Needs Detail |
 | Seasonal  Swimwear\Swimwear.txt | 105 | 30 | 34 | 41 | ✅ Detailed |
 | Traditions  Ceremonies\Luxury Silk Robe Set.txt | 105 | 47 | 27 | 31 | ✅ Detailed |
 | Film Noir\Nightclub Singer.txt | 104 | 35 | 28 | 41 | ✅ Detailed |
@@ -224,8 +225,10 @@
 | Athletic  Sports\Surfing.txt | 85 | 30 | 27 | 28 | ✅ Detailed |
 | Casual Wear\Default Character.txt | 84 | 26 | 26 | 32 | ✅ Detailed |
 | Athletic  Sports\Training.txt | 82 | 26 | 26 | 30 | ✅ Detailed |
+| Casual Wear\Urban Butterfly Crop.txt | 75 | 55 | 20 | 0 | ⚠️ Needs Detail |
 | Traditions  Ceremonies\Cozy Onesie.txt | 71 | 28 | 20 | 23 | ⚠️ Needs Detail |
 | Athletic  Sports\Dance Tights.txt | 68 | 23 | 18 | 27 | ⚠️ Needs Detail |
+| Seasonal  Swimwear\Turquoise Bikini.txt | 54 | 40 | 14 | 0 | ⚠️ Needs Detail |
 
 ## 🧘 Pose Category Average Length
 | Category | Avg Words | Item Count |

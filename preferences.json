@@ -1,7 +1,7 @@
 {
-  "window_geometry": "2560x1349+-1560+106",
+  "window_geometry": "2560x1349+-1141+75",
   "last_theme": "Light",
-  "last_base_prompt": "Standard / Neutral",
+  "last_base_prompt": "Photorealistic: \"High-Fidelity Candid\"",
   "font_adjustment": 0,
   "recent_characters": [],
   "favorite_characters": [
@@ -16,13 +16,13 @@
   ],
   "favorite_outfits": [],
   "recent_presets": [],
-  "show_welcome": true,
+  "show_welcome": false,
   "sash_position": null,
   "auto_theme": false,
   "ui_scale": "Medium",
   "window_state": "zoomed",
   "sash_positions": {
-    "main_sash": 300,
-    "content_sash": 550
+    "main_sash": 387,
+    "content_sash": 1016
   }
 }

@@ -83,14 +83,22 @@ class ImageCropperDialog:
         # We want a square view area to represent the crop
         self.view_size = 400
         
+        if self.theme_manager:
+            theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+            pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+            accent = theme.get("accent", "#0078d7")
+        else:
+            pbg = "#1e1e1e"
+            accent = "#0078d7"
+
         # Frame with border to show crop area
         canvas_frame = tk.Frame(
             main_frame, 
             width=self.view_size, 
             height=self.view_size, 
-            bg="black", 
+            bg=pbg, 
             highlightthickness=2, 
-            highlightbackground="#0078d7" # Accent color placeholder
+            highlightbackground=accent
         )
         canvas_frame.pack()
         canvas_frame.pack_propagate(False) # Strict size
@@ -99,7 +107,7 @@ class ImageCropperDialog:
             canvas_frame, 
             width=self.view_size, 
             height=self.view_size, 
-            bg="#333333", 
+            bg=pbg, 
             highlightthickness=0
         )
         self.canvas.pack(fill="both", expand=True)

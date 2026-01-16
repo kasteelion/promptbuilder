@@ -62,7 +62,8 @@ class BaseStyleCreatorDialog:
         
         # Update cancel btn manual overrides
         if hasattr(self, "cancel_btn"):
-            self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground="gray")
+            border_color = theme.get("border", theme.get("muted_fg", "gray"))
+            self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground=border_color)
             self.cancel_btn._base_bg = pbg
 
         # Handle placeholders
@@ -250,7 +251,7 @@ Details
                 hbg = "#333333"
             self.cancel_btn.config(bg=hbg)
         def on_c_leave(e):
-            self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", "#1e1e1e"))
+            self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", pbg))
         self.cancel_btn.bind("<Enter>", on_c_enter)
         self.cancel_btn.bind("<Leave>", on_c_leave)
 
@@ -318,7 +319,7 @@ Holographic displays, circuit patterns, rain-slicked atmosphere."""
             # Insert template content with normal text color
             if content:
                 self.description_text.insert("1.0", content)
-                self.description_text.config(foreground="black")
+                self.description_text.config(foreground=theme.get("text_fg", theme.get("fg", "black")))
 
     def _cancel(self):
         """Cancel and close dialog."""

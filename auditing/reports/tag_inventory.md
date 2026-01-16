@@ -10,9 +10,10 @@ Tags that look similar (Singular/Plural or Capitalization mismatches):
 - **artistic**: Artistic, Mood:Artistic, artistic
 - **athletic**: Athletic, athletic, mood:athletic
 - **casual**: Casual, Mood:Casual, casual
-- **cheerful**: Block:Cheerful, mood:cheerful
+- **cheerful**: Block:Cheerful, cheerful, mood:cheerful
 - **chic**: Chic, chic
 - **cinematic**: Cinematic, cinematic
+- **classic**: Classic, classic
 - **classical**: Block:Classical, Classical
 - **clean**: Clean, clean
 - **cold**: Cold, cold
@@ -34,6 +35,7 @@ Tags that look similar (Singular/Plural or Capitalization mismatches):
 - **energetic**: Mood:Energetic, energetic
 - **fantasy**: Block:Fantasy, Block:fantasy, Fantasy, fantasy
 - **fashion**: Fashion, fashion
+- **flirty**: Flirty, flirty
 - **floral**: Floral, floral
 - **formal**: Block:Formal, Formal, block:formal, formal
 - **futuristic**: Futuristic, Mood:Futuristic
@@ -91,6 +93,7 @@ Tags that look similar (Singular/Plural or Capitalization mismatches):
 - **tech**: Block:Tech, Tech, tech
 - **techwear**: Techwear, techwear
 - **travel**: Travel, travel
+- **trendy**: Trendy, trendy
 - **urban**: Urban, urban
 - **villain**: Villain, villain
 - **vintage**: Vintage, block:vintage, vintage
@@ -122,7 +125,7 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - bearded (2)
 - braids (1)
 - british (1)
-- burgundy-signature (1)
+- bubbly (2)
 
 ### Interactions (Top 10)
 - Acrobatic (1)
@@ -167,38 +170,42 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - Arid (1)
 - Backstage (2)
 - Baking (1)
-- Beach (3)
 - Block:armor (26)
 - Block:medieval (23)
 - Block:sleep (4)
+- Block:swimwear (9)
 
 
 ## Tag Frequency by Source
 
 ### Characters
-- female: 53
-- commanding: 33
+- female: 59
+- commanding: 32
 - chic: 29
-- approachable: 27
+- approachable: 28
 - Athletic: 27
 - minimalist: 24
-- playful: 23
+- playful: 24
 - creative: 21
 - male: 19
+- curvy: 11
 - rugged: 11
 - black: 11
-- curvy: 10
 - edgy: 10
 - intense: 10
 - intellectual: 10
 - strong: 9
 - soft: 9
 - cultural: 8
-- petite: 6
-- latina: 6
+- petite: 8
+- caucasian: 7
+- latina: 7
 - japanese: 5
 - north-african: 4
+- mediterranean: 4
+- casual: 4
 - plus-size: 4
+- adventurous: 4
 - energetic: 4
 - bohemian: 3
 - mixed-heritage: 3
@@ -206,33 +213,35 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - hijabi: 3
 - indian: 3
 - nordic: 3
-- caucasian: 3
 - freckled: 3
-- mediterranean: 3
-- casual: 3
+- effervescent: 3
 - tall: 3
 - sophisticated: 3
 - outdoorsy: 3
 - filipino: 3
 - pacific-islander: 3
-- adventurous: 3
 - american: 3
 - indigenous: 2
 - bearded: 2
 - statuesque: 2
 - dramatic: 2
 - celtic: 2
+- confident: 2
 - red-haired: 2
 - thin: 2
 - controlled: 2
 - vintage-inspired: 2
 - lesbian: 2
+- urban: 2
 - gay: 2
+- cheerful: 2
+- bubbly: 2
 - k-fashion: 2
 - ethereal: 2
 - romantic: 2
 - steady: 2
 - greek: 2
+- vibrant: 2
 - academic: 2
 - content-creator: 1
 - middle eastern: 1
@@ -242,25 +251,42 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - auburn hair: 1
 - casual-chic: 1
 - soft dramatic: 1
-- confident: 1
 - craftsman: 1
 - passionate: 1
 - cold: 1
 - severe: 1
 - long-hair: 1
 - modern: 1
+- studious: 1
+- feminine: 1
+- classic: 1
+- observant: 1
+- composed: 1
+- intelligent: 1
+- coquette: 1
+- flirty: 1
+- cozy: 1
 - californian: 1
 - tan: 1
 - textured-hair: 1
+- curvaceous: 1
+- downtown-chic: 1
+- romantic-boho: 1
 - glamorous: 1
 - high-femme: 1
 - silver-fox: 1
 - italian: 1
 - elegant: 1
 - generous: 1
+- gen-z: 1
+- trendy: 1
 - massive: 1
 - southern: 1
 - sun-kissed: 1
+- grounded: 1
+- spirited: 1
+- lean: 1
+- slender: 1
 - dynamic: 1
 - high-performance: 1
 - neon-orange-signature: 1
@@ -274,7 +300,6 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - sharp: 1
 - dark-asian: 1
 - vietnamese: 1
-- vibrant: 1
 - red-signature: 1
 - resourceful: 1
 - earthy: 1
@@ -293,16 +318,20 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - hipster: 1
 - indie: 1
 - puerto rican: 1
-- urban: 1
 - athletic: 1
 - youthful: 1
 - street-artist: 1
 - midwestern: 1
+- magnetic: 1
 - braids: 1
 - fuchsia-signature: 1
 - tatau: 1
 - traditional-modern-fusion: 1
 - celtic-inspired: 1
+- resort-chic: 1
+- optimistic: 1
+- social: 1
+- vacation-ready: 1
 - geometric: 1
 - israeli: 1
 - rhythmic: 1
@@ -623,7 +652,7 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - clean: 1
 
 ### Outfits
-- Casual: 29
+- Casual: 30
 - Sport: 26
 - fantasy: 25
 - formal: 22
@@ -641,8 +670,9 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - professional: 8
 - lounge: 8
 - traditional: 7
+- Formal: 7
 - outdoor: 6
-- Formal: 6
+- Elegant: 6
 - Magic: 6
 - noir: 6
 - Futuristic: 6
@@ -653,8 +683,8 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - Music: 5
 - Chic: 5
 - Retro: 5
+- Summer: 5
 - Winter: 5
-- Elegant: 5
 - work: 5
 - Luxury: 5
 - event: 5
@@ -667,7 +697,6 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - Sci-Fi: 4
 - japanese: 4
 - Seasonal: 4
-- Summer: 4
 - Sexy: 4
 - cyberpunk: 3
 - Minimalist: 3
@@ -681,6 +710,7 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - Runway: 3
 - Mythology: 3
 - Service: 3
+- Swim: 3
 - Stage: 3
 - Scholarly: 2
 - Dark: 2
@@ -712,7 +742,6 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - Mythological: 2
 - indian: 2
 - Festival: 2
-- Swim: 2
 - Specialty: 2
 - Pop: 2
 - Grunge: 2
@@ -731,6 +760,7 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - Country: 1
 - Basic: 1
 - Sharp: 1
+- Urban: 1
 - Latex: 1
 - cottagecore: 1
 - Butler: 1
@@ -757,6 +787,7 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - party: 1
 - Date: 1
 - Night: 1
+- Resort: 1
 - Bold: 1
 - Evening: 1
 - Gala: 1
@@ -806,6 +837,8 @@ Tags that exist in only ONE source. (Excludes descriptive/UI tags and tags with 
 - medical: 1
 - Military: 1
 - Autumn: 1
+- Beach: 1
+- Tropical: 1
 - intimate: 1
 - Diver: 1
 - Bioluminescent: 1

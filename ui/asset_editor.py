@@ -53,7 +53,7 @@ class AssetEditorDialog:
         
         ttk.Separator(toolbar, orient="vertical").pack(side="left", padx=10, fill="y")
         
-        self.lbl_status = ttk.Label(toolbar, text="Ready", foreground="gray")
+        self.lbl_status = ttk.Label(toolbar, text="Ready", style="Muted.TLabel")
         self.lbl_status.pack(side="left", padx=5)
 
         # 2. Main Pane
@@ -344,13 +344,16 @@ class AssetEditorDialog:
             self.editor_text.tag_add("key", f"1.0 + {match.start(2)} chars", f"1.0 + {match.end(2)} chars")
 
     def _apply_syntax_colors(self):
+        theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {}) if self.theme_manager else {}
+        is_dark = "dark" in getattr(self.theme_manager, "current_theme", "").lower()
+        
         colors = {
-            "header": "#569CD6",
-            "key": "#DCDCAA", 
-            "bullet": "#C586C0",
-            "search_match": "#264F78"
+            "header": "#569CD6" if is_dark else "#0000FF",
+            "key": "#DCDCAA" if is_dark else "#795E26", 
+            "bullet": "#C586C0" if is_dark else "#AF00DB",
+            "search_match": theme.get("accent", "#264F78")
         }
         self.editor_text.tag_config("header", foreground=colors["header"], font=("Consolas", 11, "bold"))
         self.editor_text.tag_config("key", foreground=colors["key"], font=("Consolas", 11, "bold"))
         self.editor_text.tag_config("bullet", foreground=colors["bullet"])
-        self.editor_text.tag_config("search_match", background=colors["search_match"])
+        self.editor_text.tag_config("search_match", background=colors["search_match"], foreground="white" if is_dark else "black")

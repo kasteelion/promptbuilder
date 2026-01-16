@@ -64,6 +64,7 @@ class ScenePanel(CollapsibleFrame):
         self.category_var = tk.StringVar()
         self.cat_combo = SearchableCombobox(
             content, 
+            theme_manager=self.theme_manager,
             textvariable=self.category_var,
             on_select=lambda val: self.update_presets(),
             placeholder="Search category...",
@@ -78,6 +79,7 @@ class ScenePanel(CollapsibleFrame):
         self.preset_var = tk.StringVar()
         self.preset_combo = SearchableCombobox(
             content, 
+            theme_manager=self.theme_manager,
             textvariable=self.preset_var,
             on_select=lambda val: self._apply_preset(),
             placeholder="Search preset...",

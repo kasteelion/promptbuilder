@@ -56,13 +56,17 @@ class ThemeEditorDialog:
         except Exception:
             pass
 
-    def apply_theme(self, theme):
-        """Apply theme to all dialog widgets. (Refactor 3)"""
+        if not theme:
+            theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {}) if self.theme_manager else {}
+            
         tm = self.theme_manager
         tm.apply_listbox_theme(self.listbox, theme)
         
         pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
         accent = theme.get("accent", "#0078d7")
+        
+        # Update dialog background
+        self.dialog.config(bg=theme.get("bg", "#1e1e1e"))
         
         # Update swatch background for empty entries
         for k in self.KEYS:
@@ -166,7 +170,8 @@ class ThemeEditorDialog:
                 if val:
                     self.swatches[k].config(bg=val)
                 else:
-                    self.swatches[k].config(bg=self.dialog.cget("bg"))
+                    theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                    self.swatches[k].config(bg=theme.get("bg", "#1e1e1e"))
             except Exception:
                 # ignore invalid colors
                 pass
@@ -175,10 +180,10 @@ class ThemeEditorDialog:
         # Clear fields for new theme
         self.listbox.selection_clear(0, "end")
         self.name_var.set("")
-        for k in self.KEYS:
             self.entries[k].set("")
             try:
-                self.swatches[k].config(bg=self.dialog.cget("bg"))
+                theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                self.swatches[k].config(bg=theme.get("bg", "#1e1e1e"))
             except Exception:
                 pass
 
@@ -225,7 +230,8 @@ class ThemeEditorDialog:
                 if val:
                     self.swatches[k].config(bg=val)
                 else:
-                    self.swatches[k].config(bg=self.dialog.cget("bg"))
+                    theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
+                    self.swatches[k].config(bg=theme.get("bg", "#1e1e1e"))
             except Exception:
                 pass
 

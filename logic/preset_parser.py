@@ -12,51 +12,81 @@ class PresetParser:
     def parse_presets(content: str):
         """Parse preset categories and items from markdown content."""
         presets = {}
-        current = "Default"
-        presets[current] = {}
+        current_cat = "Default"
+        presets[current_cat] = {}
 
-        for line in content.splitlines():
-            cat = re.match(r"^##\s+(.+)$", line)
-            if cat:
-                current = cat.group(1).strip()
-                presets.setdefault(current, {})
+        lines = content.splitlines()
+        i = 0
+        while i < len(lines):
+            line = lines[i].strip()
+            if not line:
+                i += 1
                 continue
 
-            # Match: - **Name** (Tag1, Tag2): Description
-            # Group 1: Name
-            # Group 2: (Tags) - Optional
-            # Group 3: Description
-            item = re.match(r"^-\s+\*\*([^\*]+)\*\*\s*(\([^)]+\))?\s*:\s*(.+)$", line)
-            
-            # Fallback for old format without colon if needed, or stricter?
-            # Existing regex was: r"^-\s+\*\*([^:]+):\*\*\s*(.+)$"
-            
-            if item:
-                name = item.group(1).strip()
-                tags_str = item.group(2)
-                desc = item.group(3).strip()
+            # Category Header: ## Category
+            cat_match = re.match(r"^##\s+(.+)$", line)
+            if cat_match:
+                current_cat = cat_match.group(1).strip()
+                presets.setdefault(current_cat, {})
+                i += 1
+                continue
+
+            # Detailed Header: ### Name (Tags)
+            detailed_match = re.match(r"^###\s+([^(]+)(?:\(([^)]+)\))?$", line)
+            if detailed_match:
+                name = detailed_match.group(1).strip()
+                tags_str = detailed_match.group(2) or ""
+                tags = [t.strip() for t in tags_str.split(",") if t.strip()]
+                
+                # Consume following lines until next header or horizontal rule
+                desc_lines = []
+                i += 1
+                while i < len(lines):
+                    next_line = lines[i]
+                    if next_line.startswith("##") or next_line.startswith("---"):
+                        break
+                    desc_lines.append(next_line)
+                    i += 1
+                
+                full_desc = "\n".join(desc_lines).strip()
+                presets[current_cat][name] = {
+                    "description": full_desc,
+                    "tags": tags
+                }
+                continue
+
+            # Simple List Item: - **Name** (Tags): Description
+            item_match = re.match(r"^-\s+\*\*([^\*]+)\*\*\s*(\([^)]+\))?\s*:\s*(.+)$", line)
+            if item_match:
+                name = item_match.group(1).strip()
+                tags_str = item_match.group(2)
+                desc = item_match.group(3).strip()
                 
                 tags = []
                 if tags_str:
-                    # Remove parens and split
                     content_inner = tags_str[1:-1]
                     tags = [t.strip() for t in content_inner.split(",") if t.strip()]
 
-                presets.setdefault(current, {})[name] = {
+                presets[current_cat][name] = {
                     "description": desc,
                     "tags": tags
                 }
-            else:
-                # Try fallback for "Name: Description" without tags if strict regex failed
-                # (The previous regex handled Name: Description)
-                simple_item = re.match(r"^-\s+\*\*([^:]+):\*\*\s*(.+)$", line)
-                if simple_item and not item:
-                    name = simple_item.group(1).strip()
-                    desc = simple_item.group(2).strip()
-                    presets.setdefault(current, {})[name] = {
-                        "description": desc,
-                        "tags": []
-                    }
+                i += 1
+                continue
+
+            # Simple List Item Fallback: - **Name:** Description
+            simple_match = re.match(r"^-\s+\*\*([^:]+):\*\*\s*(.+)$", line)
+            if simple_match:
+                name = simple_match.group(1).strip()
+                desc = simple_match.group(2).strip()
+                presets[current_cat][name] = {
+                    "description": desc,
+                    "tags": []
+                }
+                i += 1
+                continue
+
+            i += 1
 
         return presets
 

@@ -383,6 +383,23 @@ class ThemeManager:
             bordercolor=[("active", accent_hover), ("pressed", border)],
         )
 
+        # Accent Button (used for chips)
+        self.style.configure(
+            "Accent.TButton",
+            background=panel_bg,
+            foreground=accent,
+            bordercolor=accent,
+            borderwidth=1,
+            padding=[s(8), s(2)],
+            font=("Lexend", s(8), "bold")
+        )
+        self.style.map(
+            "Accent.TButton",
+            background=[("active", accent), ("pressed", border)],
+            foreground=[("active", text_bg), ("pressed", text_bg)],
+            bordercolor=[("active", accent), ("pressed", border)],
+        )
+
         # Ghost Button
         self.style.configure(
             "Ghost.TButton",
@@ -591,6 +608,30 @@ class ThemeManager:
                 del self.themes[name]
         except Exception:
             logger.exception(f"Failed to remove theme {name}")
+
+    def get_current_theme_data(self):
+        """Safe access to current theme dictionary."""
+        return self.themes.get(self.current_theme, self.themes.get("Dark", {}))
+
+    def get_panel_bg(self):
+        """Get the panel background color for the current theme."""
+        theme = self.get_current_theme_data()
+        return theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
+
+    def get_fg(self):
+        """Get the foreground color for the current theme."""
+        theme = self.get_current_theme_data()
+        return theme.get("fg", "#ffffff")
+
+    def get_muted_fg(self):
+        """Get the muted foreground color for the current theme."""
+        theme = self.get_current_theme_data()
+        return theme.get("muted_fg", theme.get("border", "#999999"))
+
+    def get_accent(self):
+        """Get the accent color for the current theme."""
+        theme = self.get_current_theme_data()
+        return theme.get("accent", "#0078d7")
 
     def apply_text_widget_theme(self, widget, theme):
         """Apply theme colors and font to a tk.Text widget."""

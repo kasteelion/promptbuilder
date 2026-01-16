@@ -1,8 +1,6 @@
-"""Randomizer for generating random prompt configurations."""
-
 import random
-
 from utils.interaction_helpers import fill_template
+from logic.scenarios import ScenarioRegistry, Scenario, Role
 
 class PromptRandomizer:
     """Generates random character, outfit, and pose combinations."""
@@ -64,12 +62,10 @@ class PromptRandomizer:
     # [NEW] Contextual Clash Map: (Scene Tag) -> [Contradictory Interaction/Pose Tags]
     # Penalizes items that imply a completely different physical location.
     CONTEXT_CLASHES = {
-         'studio': ['motorcycle', 'bowling', 'street', 'forest', 'beach', 'mountain', 'snow', 'rain', 'vehicle'],
-         'indoor': ['landscape', 'scenic', 'horizon', 'sky', 'sunlight', 'heavy rain', 'snowfall'],
-         'outdoor': ['classroom', 'kitchen', 'bedroom', 'living room', 'hospital', 'office', 'studio'],
-         'athletic': ['formal', 'elegant', 'ballroom', 'gala', 'gown'],
-         'formal': ['gym', 'stadium', 'wrestling', 'combat', 'sweat', 'messy', 'gymnastics'],
-         'clinical': ['party', 'dance', 'drinking', 'messy', 'dirty', 'gritty']
+         'clinical': ['party', 'dance', 'drinking', 'messy', 'dirty', 'gritty'],
+         'public': ['pajamas', 'sleep', 'bed', 'bathroom', 'undressing', 'naked'],
+         'formal': ['gym', 'stadium', 'wrestling', 'combat', 'sweat', 'messy', 'gymnastics', 'dirty', 'gritty'],
+         'nature': ['office', 'business', 'tech', 'computer', 'server', 'indoor']
     }
 
     def __init__(self, characters, base_prompts, poses, scenes=None, interactions=None, color_schemes=None, modifiers=None, framing=None):
@@ -93,6 +89,7 @@ class PromptRandomizer:
         self.color_schemes = color_schemes or {}
         self.modifiers = modifiers or {}
         self.framing = framing or {}
+        self.scenario_registry = ScenarioRegistry()
 
     def _get_description(self, item_data):
         """Helper to safely extract description from string or new dict format."""
@@ -284,12 +281,13 @@ class PromptRandomizer:
         best_config = None
         best_score = -float('inf')
         
-        MAX_RETRIES = 3
-        MIN_SCORE_FLOOR = 125
+        MAX_RETRIES = 2
+        MIN_SCORE_FLOOR = 150
         
         for attempt in range(MAX_RETRIES + 1):
-            # Respect the passed candidate count, don't force a floor of 20
-            num_to_generate = candidates
+            # With Scenario-First, we need fewer candidates to find a "perfect" match
+            num_to_generate = max(3, candidates // 2) if candidates > 5 else candidates
+            
             for _ in range(num_to_generate):
                 config = self._generate_single_candidate(num_characters, include_scene, include_notes, forced_base_prompt, match_outfits_prob=match_outfits_prob)
                 score = self._score_candidate(config)
@@ -298,12 +296,8 @@ class PromptRandomizer:
                     best_score = score
                     best_config = config
             
-            # If we found a good enough candidate, stop early
             if best_score >= MIN_SCORE_FLOOR:
                 break
-                
-            # Otherwise, loop again (regenerate another batch of candidates)
-            # effectively increasing the pool size until we hit the floor or max retries
         
         if best_config and "metadata" in best_config:
             best_config["metadata"]["score"] = best_score
@@ -327,7 +321,7 @@ class PromptRandomizer:
         metadata = config.get("metadata", {})
         
         # Expand moods for broader matching
-        raw_moods = metadata.get("moods", [])
+        raw_moods = metadata.get("vibe", []) or metadata.get("moods", [])
         active_moods = self._expand_tags([m.lower() for m in raw_moods])
         
         # Re-derive blocked tags from scene context for validation
@@ -391,6 +385,9 @@ class PromptRandomizer:
         outfit_names = set()
         has_outfit_mood_match = False
         
+        # Track unique tags for Thematic Singularity Bonus
+        char_tag_counts = {}
+        
         for char in selected_chars:
             char_name = char.get("name")
             char_def = self.characters.get(char_name, {})
@@ -402,28 +399,30 @@ class PromptRandomizer:
             
             if outfit_data:
                 raw_outfit_tags = self._get_tags(outfit_data)
+                outfit_tags_lower = [t.lower() for t in raw_outfit_tags]
                 
-                # Check for Scene-Outfit Mismatch (New Logic)
-                # If outfit has a tag that is in blocked_tags -> Penalty
+                # Check for Scene-Outfit Mismatch
                 if blocked_tags:
-                    outfit_tags_lower = [t.lower() for t in raw_outfit_tags]
                     if any(bt in outfit_tags_lower for bt in blocked_tags):
                         penalty = 100
                         score -= penalty
                         breakdown["mismatch_penalty"] -= penalty
                         breakdown["warnings"].append(f"Outfit '{outfit_name}' violates scene restrictions")
 
-                # A) Outfit Tags vs Scene Moods (+30 per match)
+                # A) Outfit Tags vs Scene Moods (+30 per match, with diminishing returns)
                 if active_moods:
-                    tags = self._expand_tags([t.lower() for t in raw_outfit_tags])
-                    matches = len(tags.intersection(active_moods))
-                    if matches > 0:
+                    tags = self._expand_tags(outfit_tags_lower)
+                    matches = tags.intersection(active_moods)
+                    if matches:
                         has_outfit_mood_match = True
-                    points = matches * 30
-                    score += points
-                    breakdown["mood_matches"] += points
-            elif not outfit_data and active_moods:
-                breakdown["warnings"].append(f"No outfit data found for {char_name}'s {outfit_name}")
+                        for m in matches:
+                            char_tag_counts[m] = char_tag_counts.get(m, 0) + 1
+                            
+                        # Diminishing returns: 30 for first 3 matches, 10 thereafter
+                        match_count = len(matches)
+                        points = min(match_count, 3) * 30 + max(0, match_count - 3) * 10
+                        score += points
+                        breakdown["mood_matches"] += points
             
             # B) Pose Alignment (+10 per category match)
             pose_cat = char.get("pose_category")
@@ -439,17 +438,34 @@ class PromptRandomizer:
             score += points
             breakdown["tag_matches"] += points
 
-        # [NEW] Coherence Bonus (+50)
-        # If both Style AND Outfits match the Scene Mood, we have a "Golden" prompt.
+        # [NEW] Thematic Singularity Bonus (+100)
+        # If all characters + Style + Scene share the same core tag
         if has_style_match and has_outfit_mood_match:
-            score += 50
-            breakdown["diversity_bonus"] += 50 # Reusing diversity bucket or just adding to score
+            # Check for commonalities across ALL characters
+            if char_tag_counts:
+                for mood, count in char_tag_counts.items():
+                    if count >= len(selected_chars) and mood in expanded_style_tags:
+                         score += 100
+                         breakdown["diversity_bonus"] += 100
+                         breakdown["warnings"].append(f"Thematic Singularity: All elements aligned on '{mood}'")
+                         break
 
-        # 4. Interaction Alignment (+10 per match)
-        interaction_tags = self._expand_tags([t.lower() for t in metadata.get("interaction_tags", [])])
+        # [NEW] Action Cohesion Check
+        cohesion_score, cohesion_msg = self._check_action_cohesion(config)
+        score += cohesion_score
+        if cohesion_score < 0:
+            breakdown["mismatch_penalty"] += cohesion_score
+            breakdown["warnings"].append(cohesion_msg)
+        elif cohesion_score > 0:
+            breakdown["diversity_bonus"] += cohesion_score
+
+        # 4. Interaction Alignment (+10 per match, diminishing returns)
+        interaction_raw_tags = metadata.get("interaction_tags", [])
+        interaction_tags = self._expand_tags([t.lower() for t in interaction_raw_tags])
         if interaction_tags and active_moods:
-            interaction_matches = len(interaction_tags.intersection(active_moods))
-            points = interaction_matches * 10
+            matches = len(interaction_tags.intersection(active_moods))
+            # Diminishing returns: 10, 10, 10, 5, 5...
+            points = min(matches, 3) * 10 + max(0, matches - 3) * 5
             score += points
             breakdown["interaction_matches"] = points
 
@@ -492,263 +508,228 @@ class PromptRandomizer:
         metadata["score_breakdown"] = breakdown
         return score
 
+    def _check_action_cohesion(self, config):
+        """Check if all characters are doing things that make sense together.
+        
+        Returns:
+            tuple: (score_modifier, message)
+        """
+        selected_chars = config.get("selected_characters", [])
+        if len(selected_chars) < 2:
+            return 0, ""
+
+        categories = set()
+        for char in selected_chars:
+            cat = char.get("pose_category", "").lower()
+            if cat:
+                # Group related categories
+                if any(x in cat for x in ["athletic", "sport", "action", "combat", "dynamic"]):
+                    categories.add("athletic")
+                elif any(x in cat for x in ["sleep", "bed", "bedroom", "pajamas", "morning"]):
+                    categories.add("sleep")
+                elif any(x in cat for x in ["art", "creative", "judge", "work", "office"]):
+                    categories.add("productive")
+                elif any(x in cat for x in ["social", "friendly", "casual", "talk"]):
+                    categories.add("social")
+                elif any(x in cat for x in ["sensual", "lingerie", "glamour"]):
+                    categories.add("glamour")
+                else:
+                    categories.add(cat)
+
+        # Discordant Check: Athletic vs Sleep or Productive vs Sleep
+        clashes = [
+            ({"athletic", "sleep"}, -200, "Action Clashes: Athletic vs Sleep"),
+            ({"productive", "sleep"}, -150, "Action Clashes: Productive vs Sleep"),
+            ({"glamour", "athletic"}, -100, "Action Clashes: Glamour vs Athletic"),
+            ({"formal", "sleep"}, -200, "Action Clashes: Formal vs Sleep")
+        ]
+
+        for clash_set, penalty, msg in clashes:
+            if clash_set.issubset(categories):
+                return penalty, msg
+
+        # Cohesion Bonus: Everyone doing the same broad thing
+        if len(categories) == 1:
+            cat = list(categories)[0]
+            # Verify it matches the scene category
+            scene_text = config.get("scene", "").lower()
+            if cat in scene_text or any(t.lower() in scene_text for t in self._expand_tags([cat])):
+                 return 75, f"Cohesion Bonus: All characters in {cat} mode matching scene"
+
+        return 0, ""
+
     def _generate_single_candidate(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, match_outfits_prob=0.3):
-        """Generate a single random prompt configuration using BASE PROMPT FIRST logic."""
+        """Generate a single random prompt configuration using SCENARIO-FIRST logic."""
         
         # =========================================================================
-        # STEP 1: SELECT BASE PROMPT (The "Director")
+        # STEP 1: SELECT SCENARIO (The "Director")
         # =========================================================================
+        scenario = self.scenario_registry.get_random()
         
-        base_prompt = ""
-        context_tags = set()
-        blocked_tags = set()
-        context_moods = set()
-
-        if forced_base_prompt and self.base_prompts and forced_base_prompt in self.base_prompts:
-            base_prompt = forced_base_prompt
-        elif self.base_prompts:
-            # Weighted Random Selection
-            # We parse "weight:N" from tags. Default is 1.0.
-            keys = list(self.base_prompts.keys())
-            weights = []
-            
-            for k in keys:
-                data = self.base_prompts[k]
-                w = 1.0
-                if isinstance(data, dict):
-                    tags = data.get("tags", [])
-                    for t in tags:
-                        t_lower = str(t).lower()
-                        if t_lower.startswith("weight:"):
-                            try:
-                                w = float(t_lower.split(":")[1])
-                            except ValueError:
-                                pass
-                weights.append(w)
-            
-            # Select ONE based on weights
-            if keys:
-                base_prompt = random.choices(keys, weights=weights, k=1)[0]
-
-        if base_prompt and base_prompt in self.base_prompts:
-            bp_data = self.base_prompts[base_prompt]
-            if isinstance(bp_data, dict):
-                tags = bp_data.get("tags", [])
-                _, bp_mood, bp_blocked = self._extract_special_tags(tags)
-                context_moods.update(bp_mood)
-                blocked_tags.update(bp_blocked)
-                context_tags.update(self._expand_tags([t.lower() for t in tags]))
-
         # =========================================================================
-        # STEP 2: SELECT SCENE (Matching Base Prompt)
+        # STEP 2: SELECT SCENE (Constrained by Scenario)
         # =========================================================================
-        
-        scene_text = ""
+        scene_desc = ""
         scene_category = ""
         scene_tags = []
-
+        
         if include_scene:
-            # Filter scenes that match the Context Tags (if any)
-            # AND are not blocked.
-            compatible_scenes = []
-            
-            # If no base prompt tags, all scenes are compatible
-            search_tags = context_tags if context_tags else None
-            
-            if search_tags:
-                for cat, scenes in self.scenes.items():
-                    for name, data in scenes.items():
-                        # Check blocked
-                        # (Scene tags vs Blocked tags)
-                        s_tags_raw = self._get_tags(data)
-                        
-                        # [FIX] Derive tags from Category if explicit tags missing (Crucial for scenes.md)
-                        if not s_tags_raw:
-                            s_tags_raw = [cat.lower()]
-                            
-                        s_tags_expanded = self._expand_tags([t.lower() for t in s_tags_raw])
-                        
-                        if any(b in s_tags_expanded for b in blocked_tags):
-                            continue
-                            
-                        # Check match
-                        # (Scene Tags vs Base Prompt Tags)
-                        # We want AT LEAST ONE overlap to consider it "Thematically Consistent"
-                        # Only if search_tags are present.
-                        if not s_tags_expanded.intersection(search_tags):
-                             continue
-                            
-                        compatible_scenes.append((name, cat, s_tags_raw))
-            
-            # If no compatible scenes found (or no search tags), fallback to ANY valid scene
-            if not compatible_scenes:
-                 for cat, scenes in self.scenes.items():
-                    for name, data in scenes.items():
-                        s_tags_raw = self._get_tags(data)
-                        if not s_tags_raw:
-                             s_tags_raw = [cat.lower()]
-                        
-                        if blocked_tags:
-                             s_tags_expanded = self._expand_tags([t.lower() for t in s_tags_raw])
-                             if any(b in s_tags_expanded for b in blocked_tags):
-                                continue
-                        compatible_scenes.append((name, cat, s_tags_raw))
-            
-            if compatible_scenes:
-                scene_name, scene_category, scene_tags = random.choice(compatible_scenes)
-                # Resolve text
-                s_data = self.scenes[scene_category][scene_name]
-                if isinstance(s_data, dict):
-                    scene_text = s_data.get("description", scene_name)
-                else:
-                    scene_text = s_data
-            
-            # Update Context with Scene Tags (Scene adds specificity to the broad Style)
-            if scene_tags:
-                context_tags.update([t.lower() for t in scene_tags])
-                _, s_moods, s_blocked = self._extract_special_tags(scene_tags)
-                context_moods.update(s_moods)
-                blocked_tags.update(s_blocked)
+            # Filter scenes by scenario categories
+            eligible_categories = scenario.allowed_scene_categories
+            # Select from scenario-allowed categories, or fallback to all if none exist
+            current_scenes = {cat: self.scenes[cat] for cat in eligible_categories if cat in self.scenes}
+            if not current_scenes:
+                current_scenes = self.scenes
                 
-                # Apply Global SCENE_RESTRICTIONS
-                for t in scene_tags:
-                    t_lower = t.lower()
-                    if t_lower in self.SCENE_RESTRICTIONS:
-                         blocked_tags.update(self.SCENE_RESTRICTIONS[t_lower])
-                
-                # Apply Global SCENE_WHITELISTS (Whitelist-First Logic)
-                # If a scene matches a whitelist, we strictly enforce it.
-                active_whitelist = []
-                for t in scene_tags:
-                    t_lower = t.lower()
-                    if t_lower in self.SCENE_WHITELISTS:
-                        active_whitelist.extend(self.SCENE_WHITELISTS[t_lower])
-                
-                if active_whitelist:
-                    # Store for downstream filtering (randomize_character uses this)
-                    # We store it in a way that _filter_items_by_tags can use it as a target
-                    # But also as a filter against the general pool.
-                    context_tags.update([f"whitelist:{w}" for w in active_whitelist])
+            if current_scenes:
+                scene_category = random.choice(list(current_scenes.keys()))
+                presets = current_scenes[scene_category]
+                if presets:
+                    preset_name = random.choice(list(presets.keys()))
+                    data = presets[preset_name]
+                    scene_desc = self._get_description(data)
+                    scene_tags = self._get_tags(data)
 
         # =========================================================================
-        # STEP 3: SETUP CHARACTERS
+        # STEP 3: SELECT STYLE (Contextual)
         # =========================================================================
-        
-        generate_interaction = include_notes
-        generate_poses = True
-        
-        if include_notes and self.interactions and self.poses:
-            roll = random.random()
-            if roll < 0.15:
-                generate_poses = False # Interaction focused
-            elif roll < 0.95:
-                # Interaction is highly likely if 2+ characters
-                pass
-            else:
-                generate_interaction = False # Pose focused
+        # Use default style tags from scenario if available
+        base_prompt_name = scenario.default_style_tags[0] if scenario.default_style_tags and scenario.default_style_tags[0] in self.base_prompts else ""
+        if not base_prompt_name and self.base_prompts:
+             base_prompt_name = random.choice(list(self.base_prompts.keys()))
+             
+        # =========================================================================
+        # STEP 4: SELECT CHARACTERS & ASSIGN ROLES (Decision Tree Logic)
+        # =========================================================================
+        if num_characters is None:
+            # Respect Scenario Min/Max
+            num_characters = random.randint(scenario.min_characters, scenario.max_characters)
             
-        min_chars_needed = 2 if generate_interaction else 1
-        
-        if num_characters is None or num_characters == 0:
-            lower_bound = max(1, min_chars_needed)
-            upper_bound = max(3, lower_bound)
-            num_characters = random.randint(lower_bound, min(5, upper_bound))
-        else:
-            num_characters = max(1, min(num_characters, 5))
-
-        available_chars = list(self.characters.keys())
-        if not available_chars:
-             return {"selected_characters": [], "base_prompt": base_prompt, "scene": scene_text, "notes": ""}
-
-        num_to_select = min(num_characters, len(available_chars))
-        selected_char_names = random.sample(available_chars, num_to_select)
-        
-        prompt_framing = ""
-        framing_chance = 1.0 if not generate_poses else 0.7
-        if self.framing and random.random() < framing_chance: 
-            prompt_framing = self._select_smart_framing(num_to_select, context_tags=context_tags, scene_category=scene_category)
-
-        # =========================================================================
-        # STEP 4: OUTFIT & CHARACTER GENERATION (Strictly Filtered)
-        # =========================================================================
-        
-        # Reduced match_outfits_prob to ensure we don't always get uniform groups
-        use_matching_outfits = num_to_select >= 2 and random.random() < 0.2
-        matching_outfit = None
-
-        if use_matching_outfits:
-            matching_outfit = self._find_matching_outfit(
-                selected_char_names, 
-                context_tags=context_tags, 
-                scene_category=scene_category,
-                blocked_tags=blocked_tags
-            )
-
+        available_char_names = list(self.characters.keys())
+        if not available_char_names:
+            return None
+            
+        # Sample names (ensure we don't exceed availability)
+        char_count = min(num_characters, len(available_char_names))
+        char_names = random.sample(available_char_names, char_count)
         selected_characters = []
-        any_supports_color = False
         
-        for char_name in selected_char_names:
-            char_data = self._randomize_character(
+        # Context for roles
+        context_tags = set(scenario.vibe_tags)
+        context_tags.update(scene_tags)
+
+        # Decision Tree: Assign Mandatory Slots first
+        for i, char_name in enumerate(char_names):
+            # 1. Check if we have a mandatory Role Slot to fill
+            role = None
+            if i < len(scenario.role_slots):
+                slot_name = scenario.role_slots[i]
+                # Find the role matching this slot name in scenario.roles
+                role = next((r for r in scenario.roles if r.name == slot_name), None)
+                
+            # 2. Fallback to random role from scenario if no slot or slot not found
+            if not role:
+                role = random.choice(scenario.roles)
+            
+            # Generate character with role constraints
+            char_data = self._randomize_character_with_role(
                 char_name, 
-                forced_outfit=matching_outfit, 
-                include_pose=generate_poses,
-                scene_category=scene_category, 
-                context_tags=context_tags,
-                blocked_tags=blocked_tags
+                role, 
+                scene_category=scene_category,
+                context_tags=context_tags
             )
-            
-            if self._check_color_support(char_name, char_data.get("outfit", "")):
-                any_supports_color = True
-                
-            if random.random() < 0.25:
-                char_data["use_signature_color"] = True
-            
-            if prompt_framing:
-                char_data["framing_mode"] = prompt_framing
-                
             selected_characters.append(char_data)
 
         # =========================================================================
-        # STEP 5: FINISHING TOUCHES (Colors & Notes)
+        # STEP 5: GENERATE INTERACTION NOTES
         # =========================================================================
-
-        color_scheme = "Default (No Scheme)"
-        if any_supports_color and self.color_schemes and random.random() > 0.3:
-            combined_search_tags = context_tags.union([m.lower() for m in context_moods])
-            color_scheme = self._select_smart_color_scheme(combined_search_tags, scene_category)
-            
-            for char in selected_characters:
-                char["color_scheme"] = color_scheme
-
         notes_text = ""
-        interaction_name = "None"
-        interaction_tags = []
-        if generate_interaction:
-            notes_text, interaction_name, interaction_tags = self._generate_random_notes(
-                selected_characters, 
-                scene_category, 
-                context_tags=context_tags,
-                context_moods=context_moods, # Added this
-                blocked_tags=blocked_tags
-            )
+        notes_name = "None"
         
-        if not notes_text and random.random() < 0.1:
-            notes_text = "Cinematic lighting, high detail."
+        # Force interaction if scenario requires it and we have multiple characters
+        needs_notes = include_notes or scenario.force_interaction
+        
+        if needs_notes and len(selected_characters) > 1:
+             # Find interaction templates that match scenario vibes
+             notes_text, notes_name, _ = self._generate_random_notes(
+                 selected_characters, 
+                 scene_category=scene_category,
+                 context_tags=context_tags,
+                 context_moods=scenario.vibe_tags,
+                 exclusive=scenario.exclusive_notes
+             )
 
-        config = {
+        # =========================================================================
+        # STEP 6: COMPILE CONFIG
+        # =========================================================================
+        return {
+            "base_prompt": base_prompt_name,
+            "scene": scene_desc,
+            "scene_category": scene_category,
             "selected_characters": selected_characters,
-            "base_prompt": base_prompt,
-            "scene": scene_text,
             "notes": notes_text,
-            "color_scheme": color_scheme,
+            "notes_name": notes_name,
+            "scenario_name": scenario.name,
             "metadata": {
-                "moods": list(context_moods),
-                "interaction": interaction_name, # Storing the name here
-                "interaction_tags": interaction_tags,
-                "scene_tags": scene_tags
+                "scenario": scenario.name,
+                "vibe": scenario.vibe_tags
             }
         }
 
+    def _randomize_character_with_role(self, char_name, role, scene_category="", context_tags=None):
+        """Generate character features strictly matching a role."""
+        char_def = self.characters.get(char_name, {})
+        outfits = char_def.get("outfits", {})
+        categorized_outfits = char_def.get("outfits_categorized", {})
+        
+        # Merge role requirement tags into selection context
+        selection_tags = set(context_tags or [])
+        selection_tags.update(role.required_tags)
+        
+        # Decision Tree: Strict Outfit Whitelisting
+        if role.allowed_outfit_categories:
+            for cat in role.allowed_outfit_categories:
+                selection_tags.add(f"whitelist:{cat}")
+            
+        # Decision Tree: Strict Pose Whitelisting
+        if role.allowed_pose_categories:
+            for cat in role.allowed_pose_categories:
+                selection_tags.add(f"pose_whitelist:{cat}")
+            
+        # 1. Select Outfit matching Role
+        outfit_name = self._select_smart_outfit(
+            outfits, 
+            categorized_outfits, 
+            selection_tags, 
+            scene_category, 
+            blocked_tags=role.blocked_tags
+        )
+        
+        # 2. Select Pose matching Role
+        pose_context = selection_tags.union(role.preferred_poses)
+        pose_category = self._select_smart_pose(
+            self.poses, 
+            pose_context, 
+            scene_category, 
+            blocked_tags=role.blocked_tags
+        )
+        
+        pose_presets = self.poses.get(pose_category, {})
+        pose_preset = random.choice(list(pose_presets.keys())) if pose_presets else ""
+
+        # 3. Traits
+        available_traits = char_def.get("traits", {})
+        selected_traits = [random.choice(list(available_traits.keys()))] if available_traits and random.random() < 0.9 else []
+
+        return {
+            "name": char_name,
+            "outfit": outfit_name,
+            "pose_category": pose_category,
+            "pose_preset": pose_preset,
+            "character_traits": selected_traits,
+            "role_name": role.name
+        }
+                    
         return config
 
     def _select_smart_framing(self, num_characters, context_tags=None, scene_category=""):
@@ -953,7 +934,15 @@ class PromptRandomizer:
 
     def _select_smart_outfit(self, all_outfits, categorized_outfits, char_tags, scene_category, blocked_tags=None):
         """Select an outfit that matches character tags or scene context."""
+        
+        # Expand blocked tags to ensure "formal" blocks "tuxedo", etc.
+        expanded_blocks = self._expand_tags(blocked_tags or [])
+        
         if not categorized_outfits:
+            # Filter all_outfits by expanded_blocks
+            valid_all = [name for name, data in all_outfits.items() if not any(t.lower() in expanded_blocks for t in self._get_tags(data))]
+            if valid_all:
+                return random.choice(valid_all)
             return random.choice(list(all_outfits.keys()))
 
         # 1. Identify preferred outfit categories using Tags
@@ -1044,7 +1033,7 @@ class PromptRandomizer:
         if items_to_filter:
             for name, data in items_to_filter.items():
                  item_tags = [t.lower() for t in self._get_tags(data)]
-                 if not any(bt in item_tags for bt in (blocked_tags or [])):
+                 if not any(bt in item_tags for bt in expanded_blocks):
                      valid_outfits.append(name)
             
             # If we filtered everything, try falling back to all available outfits (minus blocked)
@@ -1052,7 +1041,7 @@ class PromptRandomizer:
                 # Emergency fallback: Search GLOBAL list
                 for name, data in all_outfits.items():
                      item_tags = [t.lower() for t in self._get_tags(data)]
-                     if not any(bt in item_tags for bt in blocked_tags):
+                     if not any(bt in item_tags for bt in expanded_blocks):
                          valid_outfits.append(name)
             
             if valid_outfits:
@@ -1073,6 +1062,8 @@ class PromptRandomizer:
         
         Uses a scoring system to weight categories and items that match the context.
         """
+        expanded_blocks = self._expand_tags(blocked_tags or [])
+        
         available_categories = list(all_poses.keys())
         if not available_categories:
             return ""
@@ -1111,6 +1102,22 @@ class PromptRandomizer:
 
             if score > 0:
                 scores[cat_name] = score
+
+        # -- WHITELIST ENFORCEMENT --
+        pose_whitelists = [t.split(":", 1)[1] for t in context_tags if t.startswith("pose_whitelist:")]
+        if pose_whitelists:
+            # STRICT WHITELIST MODE: Only allow categories that match whitelist names
+            whitelisted_scores = {c: s for c, s in scores.items() if any(w.lower() in c.lower() or c.lower() in w.lower() for w in pose_whitelists)}
+            
+            # If none of the scored categories match, try to find ANY category in the whitelist
+            if not whitelisted_scores:
+                for c in available_categories:
+                    if any(w.lower() in c.lower() or c.lower() in w.lower() for w in pose_whitelists):
+                        whitelisted_scores[c] = 10 # Default score
+            
+            scores = whitelisted_scores
+            # If still empty (meaning whitelist names are invalid/not found), we'll fall back to random later, 
+            # but the scores dict will be used to prioritize.
 
         # -- BLOCKING LOGIC --
         if blocked_tags and scores:
@@ -1229,7 +1236,7 @@ class PromptRandomizer:
             return random.choice(final_candidates)
         return None
 
-    def _generate_random_notes(self, selected_characters, scene_category="", context_tags=None, context_moods=None, blocked_tags=None):
+    def _generate_random_notes(self, selected_characters, scene_category="", context_tags=None, context_moods=None, blocked_tags=None, exclusive=False):
         """Generate random interaction template filled with character names.
 
         Args:
@@ -1291,18 +1298,26 @@ class PromptRandomizer:
                             continue
 
                     # TAG FILTERING logic
-                    if tags:
-                        template_tags_lower = {t.lower() for t in tags}
-                        
-                        # SMART FILTERING logic (Loosened: only filter if we have specific context moods)
-                        # If a template has tags but they don't match the scene/prompt moods, we filter it.
-                        # BUT we allow generic (no-tag) templates always.
-                        if context_moods and template_tags_lower:
-                            # Only block if there's ZERO overlap with active moods
-                            if not template_tags_lower.intersection(context_tags_lower):
-                                continue
+                if tags:
+                    template_tags_lower = {t.lower() for t in tags}
+                    
+                    # STRICT SCENARIO MATCHING
+                    # If we have scenario vibes, the interaction MUST share at least one tag.
+                    # This prevents "Hiking" in a "Cyberpunk Heist".
+                    if context_moods:
+                        expanded_vibes = self._expand_tags([v.lower() for v in context_moods])
+                        if not template_tags_lower.intersection(expanded_vibes):
+                            continue
+                else:
+                    # If template has NO tags, only allow it if we are NOT in exclusive mode
+                    if exclusive:
+                        continue
                             
                     eligible_templates.append((desc, name, tags))
+
+        if not eligible_templates and exclusive:
+            # If we found nothing in exclusive mode, return empty instead of picking a random backup
+            return "", "None", []
 
         if eligible_templates:
             # Pick a random template

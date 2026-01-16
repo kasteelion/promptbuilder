@@ -78,7 +78,7 @@ class CharacterCreatorDialog:
         
         # Update cancel btn manual overrides
         if hasattr(self, "cancel_btn"):
-            border_color = theme.get("border", "gray")
+            border_color = theme.get("border", theme.get("muted_fg", "gray"))
             self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground=border_color)
             self.cancel_btn._base_bg = pbg
 
@@ -232,13 +232,12 @@ class CharacterCreatorDialog:
                 self.appearance_text.delete("1.0", "end")
                 self.appearance_text.config(foreground="") # Reset to theme color
 
-        def on_focus_out(event):
             if not self.appearance_text.get("1.0", "end").strip():
                 self.appearance_text.insert("1.0", placeholder)
                 try:
                     tm = self.winfo_toplevel().theme_manager
                     theme = tm.themes.get(tm.current_theme, {})
-                    pfg = theme.get("placeholder_fg", "#666666")
+                    pfg = theme.get("placeholder_fg", theme.get("muted_fg", "#666666"))
                 except: pfg = "#666666"
                 self.appearance_text.config(foreground=pfg)
 
@@ -340,7 +339,7 @@ class CharacterCreatorDialog:
                 hbg = theme.get("hover_bg", "#333333")
             except: hbg = "#333333"
             self.cancel_btn.config(bg=hbg)
-        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", "#1e1e1e"))
+        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", pbg))
         self.cancel_btn.bind("<Enter>", on_c_enter)
         self.cancel_btn.bind("<Leave>", on_c_leave)
 
@@ -372,16 +371,11 @@ class CharacterCreatorDialog:
         self.outfit_text.delete("1.0", "end")
 
         # If blank template, restore placeholders
-        if template_name == "Blank":
-            appearance_placeholder = """Light/medium/dark skin tone with natural features and [hair description].
-- Young/mature [demographics], [age range]
-- [Eye color] eyes with [expression style]
-- [Body type] build with [posture description]
-- Makeup: [preference]
-- Fabrics: [preferences]
-- Accessories: [signature items]"""
+        if template_name == "Blank Template":
+            appearance_placeholder = "Full character description (e.g. hair, eyes, build, clothing)..."
             self.appearance_text.insert("1.0", appearance_placeholder)
-            self.appearance_text.config(foreground="gray")
+            pfg = self.parent.theme_manager.get_muted_fg() if hasattr(self.parent, "theme_manager") else "gray"
+            self.appearance_text.config(foreground=pfg)
 
             outfit_placeholder = """- **Top:** [Description]
 - **Bottom:** [Description]
@@ -389,7 +383,7 @@ class CharacterCreatorDialog:
 - **Accessories:** [Description]
 - **Hair/Makeup:** [Description]"""
             self.outfit_text.insert("1.0", outfit_placeholder)
-            self.outfit_text.config(foreground="gray")
+            self.outfit_text.config(foreground=pfg)
         else:
             # If the template appearance matches the identity-locks structure,
             # toggle into structured mode and populate fields; otherwise use freeform.
@@ -408,11 +402,11 @@ class CharacterCreatorDialog:
                 # Insert template content with normal text color
                 if appearance:
                     self.appearance_text.insert("1.0", appearance)
-                    self.appearance_text.config(foreground="black")
+                    self.appearance_text.config(foreground=theme.get("text_fg", theme.get("fg", "black")))
 
                 if outfit:
                     self.outfit_text.insert("1.0", outfit)
-                    self.outfit_text.config(foreground="black")
+                    self.outfit_text.config(foreground=theme.get("text_fg", theme.get("fg", "black")))
 
         # Focus on name field so user can start typing character name
         self.name_var.set("")

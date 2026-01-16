@@ -304,21 +304,34 @@ class PromptBuilderApp:
         self._update_status("🎲 Randomizing...")
         self._save_state_for_undo()
 
+        # If no characters are selected, pass None so the randomizer can pick 
+        # a valid scenario and character count automatically.
+        current_count = self.characters_tab.get_num_characters()
+        num_to_req = current_count if current_count > 0 else None
+
         config = self.randomizer.randomize(
-            num_characters=self.characters_tab.get_num_characters(),
+            num_characters=num_to_req,
             include_scene=True,
             include_notes=True,
         )
 
+        if not config:
+            self._update_status("❌ Randomization failed")
+            return
+
+        # Store metadata for the summary panel and other components
+        self._current_metadata = config.get("metadata", {})
+
         self.characters_tab.set_selected_characters(config["selected_characters"])
         self.characters_tab.set_base_prompt(config["base_prompt"])
 
-        # Set scene and notes directly
+        # Set scene and notes directly via panels
         self.scene_panel.set_text(config.get("scene", ""))
         self.notes_panel.set_text(config.get("notes", ""))
 
         self.schedule_preview_update()
-        self._update_status("✨ Randomized successfully")
+        self._update_status(f"✨ Randomized successfully ({config.get('scenario_name', 'Default')})")
+
 
     def _center_window(self):
         """Center the window on the screen using current geometry."""
@@ -479,8 +492,6 @@ class PromptBuilderApp:
                 self.root.after(delay, lambda: self.update_preview())
             except Exception:
                 logger.exception("Failed to schedule synchronous preview update")
-
-    # Preview submission is handled by PreviewController now.
 
     def update_preview(self):
         """Update the preview panel with current prompt."""
@@ -737,8 +748,6 @@ class PromptBuilderApp:
 
         self.schedule_preview_update()
 
-
-
     def _import_from_summary_box(self):
         """Parse and apply the text currently in the summary box."""
         raw_text = self.summary_panel.get_text()
@@ -760,79 +769,6 @@ class PromptBuilderApp:
             logger.error(f"Failed to parse summary box: {e}")
             self._update_status("❌ Error parsing summary text")
 
-    def randomize_all(self):
-        """Generate a random prompt and update the UI."""
-        self._update_status("🎲 Randomizing...")
-        self._save_state_for_undo()
-
-        config = self.randomizer.randomize(
-            num_characters=self.characters_tab.get_num_characters(),
-            include_scene=True,
-            include_notes=True,
-        )
-
-        # Store metadata for the summary panel
-        self._current_metadata = config.get("metadata", {})
-
-        self.characters_tab.set_selected_characters(config["selected_characters"])
-        self.characters_tab.set_base_prompt(config["base_prompt"])
-
-        # Set scene and notes directly via panels
-        self.scene_panel.set_text(config.get("scene", ""))
-        self.notes_panel.set_text(config.get("notes", ""))
-
-        self.schedule_preview_update()
-        self._update_status("✨ Randomized successfully")
-
-    def _center_window(self):
-        """Center the window on the screen using current geometry."""
-        # Get current geometry string (e.g., "1000x700")
-        geom = self.root.geometry()
-        # Parse width and height
-        if "x" in geom:
-            dims = geom.split("+")[0]  # Get "1000x700" part
-            width, height = map(int, dims.split("x"))
-            screen_width = self.root.winfo_screenwidth()
-            screen_height = self.root.winfo_screenheight()
-            x = (screen_width - width) // 2
-            y = (screen_height - height) // 2
-            self.root.geometry(f"{width}x{height}+{x}+{y}")
-
-    def _increase_font(self):
-        """Increase font size by user preference."""
-        self.font_manager.increase_font_size()
-
-    def _decrease_font(self):
-        """Decrease font size by user preference."""
-        self.font_manager.decrease_font_size()
-
-    def _reset_font(self):
-        """Reset font size to automatic scaling."""
-        self.font_manager.reset_font_size()
-
-    def _on_closing(self):
-        """Handle window closing - save preferences."""
-        # Use WindowStateController to save geometry, state, and sash positions
-        if hasattr(self, "window_state_controller"):
-            self.window_state_controller.save_geometry_and_state()
-
-        # Save current theme
-        if hasattr(self, "menu_manager") and self.menu_manager:
-            self.prefs.set("last_theme", self.menu_manager.get_theme())
-
-        # Save last base prompt
-        base_prompt = self.characters_tab.get_base_prompt_name()
-        if base_prompt:
-            self.prefs.set("last_base_prompt", base_prompt)
-
-        # Shutdown preview controller if present
-        try:
-            if self.preview_controller:
-                self.preview_controller.shutdown()
-        except Exception:
-            logger.exception("Error shutting down preview controller")
-
-        self.root.destroy()
 
     def _get_current_state(self):
         """Get current application state for undo/redo.
@@ -970,6 +906,7 @@ class PromptBuilderApp:
         cat_combo = SearchableCombobox(
             frame, 
             values=[""] + sorted(list(self.poses.keys())),
+            theme_manager=self.theme_manager,
             textvariable=cat_var,
             on_select=lambda val: update_presets(),
             placeholder="Search category...",
@@ -982,6 +919,7 @@ class PromptBuilderApp:
         preset_combo = SearchableCombobox(
             frame,
             values=[""],
+            theme_manager=self.theme_manager,
             textvariable=preset_var,
             on_select=lambda val: None,
             placeholder="Search preset...",

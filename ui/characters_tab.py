@@ -278,6 +278,7 @@ class CharactersTab:
         self.base_prompt_var = tk.StringVar()
         self.base_combo = SearchableCombobox(
             bp, 
+            theme_manager=self.theme_manager,
             values=sorted(list(self.base_prompts.keys())),
             on_select=lambda val: self.on_change(),
             placeholder="Search style...",
@@ -356,6 +357,7 @@ class CharactersTab:
         self.bulk_cat_var = tk.StringVar()
         self.bulk_cat_combo = SearchableCombobox(
             cat_frame,
+            theme_manager=self.theme_manager,
             textvariable=self.bulk_cat_var,
             on_select=self._on_bulk_cat_select,
             placeholder="Select category...",
@@ -371,6 +373,7 @@ class CharactersTab:
         self.bulk_outfit_var = tk.StringVar()
         self.bulk_outfit_combo = SearchableCombobox(
             name_frame,
+            theme_manager=self.theme_manager,
             values=[],
             textvariable=self.bulk_outfit_var,
             on_select=lambda val: self._update_bulk_preview(),
@@ -385,10 +388,10 @@ class CharactersTab:
             pbg = "#1e1e1e"
             accent = "#0078d7"
             
-            if self.theme_manager and self.theme_manager.current_theme in self.theme_manager.themes:
-                theme = self.theme_manager.themes[self.theme_manager.current_theme]
-                pbg = theme.get("panel_bg", theme.get("bg", "#1e1e1e"))
-                accent = theme.get("accent", "#0078d7")
+            if self.theme_manager:
+                theme_data = self.theme_manager.get_current_theme_data()
+                pbg = self.theme_manager.get_panel_bg()
+                accent = self.theme_manager.get_accent()
                 
             frame = tk.Frame(parent, bg=accent, padx=1, pady=1)
             
@@ -411,15 +414,14 @@ class CharactersTab:
                 
             def on_e(e, l=lbl):
                 try:
-                    tm = self.tab.winfo_toplevel().theme_manager
-                    curr_theme = tm.themes.get(tm.current_theme, {})
-                    hbg = curr_theme.get("hover_bg", "#333333")
+                    theme = self.theme_manager.get_current_theme_data()
+                    hbg = theme.get("hover_bg", "#333333")
                 except Exception:
                     hbg = "#333333"
                 l.config(bg=hbg)
             def on_l(e, l=lbl):
                 l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
-                
+            
             lbl.bind("<Button-1>", toggle)
             lbl.bind("<Enter>", on_e)
             lbl.bind("<Leave>", on_l)
@@ -451,6 +453,7 @@ class CharactersTab:
         
         self.bulk_scheme_combo = SearchableCombobox(
             scheme_row,
+            theme_manager=self.theme_manager,
             values=schemes,
             textvariable=self.bulk_scheme_var,
             on_select=lambda val: self._update_bulk_preview(),
@@ -542,6 +545,7 @@ class CharactersTab:
         self.char_var = tk.StringVar()
         self.char_combo = SearchableCombobox(
             add,
+            theme_manager=self.theme_manager,
             values=sorted(list(self.characters.keys())),
             on_select=lambda val: None, # Don't add on simple select
             on_double_click=lambda val: self._add_character(),

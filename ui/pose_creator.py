@@ -63,7 +63,8 @@ class PoseCreatorDialog:
         
         # Update cancel btn manual overrides
         if hasattr(self, "cancel_btn"):
-            self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground="gray")
+            border_color = theme.get("border", theme.get("muted_fg", "gray"))
+            self.cancel_btn.config(bg=pbg, fg=theme.get("fg", "white"), highlightbackground=border_color)
             self.cancel_btn._base_bg = pbg
 
         if hasattr(self, "category_combo"): self.category_combo.apply_theme(theme)
@@ -157,9 +158,13 @@ class PoseCreatorDialog:
 
         self.category_var = tk.StringVar()
         self.category_combo = SearchableCombobox(
-            cat_frame, 
-            textvariable=self.category_var, 
-            placeholder="Search or type category..."
+            cat_frame,
+            theme_manager=self.theme_manager,
+            textvariable=self.category_var,
+            values=[""] + sorted(list(getattr(self, "poses", {}).keys())), # Assuming self.poses might be set elsewhere or is empty
+            on_select=lambda v: getattr(self, "_update_preset_list", lambda: None)(), # Assuming _update_preset_list might be set elsewhere
+            placeholder="Search category...",
+            width=25
         )
         self.category_combo.pack(side="left", fill="x", expand=True, padx=(0, 10))
 
@@ -251,7 +256,7 @@ Example: Standing confidently with feet shoulder-width apart, arms crossed over 
                 hbg = theme.get("hover_bg", "#333333")
             except: hbg = "#333333"
             self.cancel_btn.config(bg=hbg)
-        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", "#1e1e1e"))
+        def on_c_leave(e): self.cancel_btn.config(bg=getattr(self.cancel_btn, "_base_bg", pbg))
         self.cancel_btn.bind("<Enter>", on_c_enter)
         self.cancel_btn.bind("<Leave>", on_c_leave)
 

@@ -24,6 +24,7 @@ class PreviewPanel:
         clear_callback: Optional[Callable[[], None]] = None,
         toast_callback: Optional[Callable[[str, str, int], None]] = None,
         header_parent: Optional[ttk.Frame] = None,
+        on_automation: Optional[Callable[[], None]] = None,
     ):
         """Initialize preview panel.
 
@@ -42,6 +43,7 @@ class PreviewPanel:
         self.status_callback = status_callback
         self.clear_callback = clear_callback
         self.toast_callback = toast_callback
+        self.on_automation = on_automation
         self.pill_buttons = [] # Track for theme updates
 
         self._build_ui()
@@ -77,7 +79,7 @@ class PreviewPanel:
                 theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
                 pbg = theme.get("panel_bg", theme.get("text_bg", "#1e1e1e"))
                 accent = theme.get("accent", "#0078d7")
-            except:
+            except Exception:
                 pbg = "#1e1e1e"
                 accent = "#0078d7"
             
@@ -91,14 +93,15 @@ class PreviewPanel:
             lbl.pack()
             lbl._base_bg = pbg
             
-            def on_enter(e, l=lbl):
+            def on_enter(e, label_ref=lbl):
                 try:
                     theme = self.theme_manager.themes.get(self.theme_manager.current_theme, {})
                     hbg = theme.get("hover_bg", "#333333")
-                except: hbg = "#333333"
-                l.config(bg=hbg)
-            def on_leave(e, l=lbl):
-                l.config(bg=getattr(l, "_base_bg", "#1e1e1e"))
+                except Exception:
+                    hbg = "#333333"
+                label_ref.config(bg=hbg)
+            def on_leave(e, label_ref=lbl):
+                label_ref.config(bg=getattr(label_ref, "_base_bg", "#1e1e1e"))
                 
             lbl.bind("<Enter>", on_enter)
             lbl.bind("<Leave>", on_leave)
@@ -109,6 +112,8 @@ class PreviewPanel:
         # Header Buttons
         add_pill_btn(controls_frame, "🎲 Randomize", self.on_randomize)
         add_pill_btn(controls_frame, "🔄 Reload", self.on_reload)
+        if self.on_automation:
+            add_pill_btn(controls_frame, "🤖 Auto", self.on_automation)
         self.quick_copy_btn = add_pill_btn(controls_frame, "⚡ Copy", self.copy_prompt)[0]
 
         # --- Text Area ---
@@ -157,7 +162,8 @@ class PreviewPanel:
             
         error = self.validate_callback() if self.validate_callback else None
         if error:
-            if self.toast_callback: self.toast_callback(error, "warning", 3500)
+            if self.toast_callback:
+                self.toast_callback(error, "warning", 3500)
             return
 
         prompt = self.get_prompt_callback()

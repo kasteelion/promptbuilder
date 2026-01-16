@@ -33,8 +33,8 @@ class LayoutManager:
         self._build_menu()
         self._build_toolbar()
         
-        # Main container with specific background
-        self.main_container = tk.Frame(self.root, bg="#1e1e1e")
+        # Main container
+        self.main_container = tk.Frame(self.root)
         self.main_container.pack(fill="both", expand=True)
 
         self._build_status_bar(self.main_container)
@@ -71,6 +71,8 @@ class LayoutManager:
             "show_outfits_summary": self.app.menu_actions.show_outfits_summary,
             "show_color_schemes_summary": self.app.menu_actions.show_color_schemes_summary,
             "show_tag_summary": self.app.menu_actions.show_tag_summary,
+            "show_auditing_suite": self.app.menu_actions.show_auditing_suite,
+            "show_automation_dialog": self.app.menu_actions.show_automation_dialog,
             "show_health_check": self.app.menu_actions.show_health_check,
             "open_data_folder": self.app.menu_actions.open_data_folder,
             "show_welcome": self.app.menu_actions.show_welcome,
@@ -176,9 +178,12 @@ class LayoutManager:
             self.app.gallery_visible = False
             # Dummy gallery for lite mode
             class DummyGallery:
-                def update_used_status(self, *args): pass
-                def _refresh_display(self, *args): pass
-                def load_characters(self, *args): pass
+                def update_used_status(self, *args):
+                    pass
+                def _refresh_display(self, *args):
+                    pass
+                def load_characters(self, *args):
+                    pass
             self.app.character_gallery = DummyGallery()
 
     def _build_right_panel(self, parent_paned):
@@ -290,6 +295,7 @@ class LayoutManager:
             clear_callback=self.app._clear_interface,
             toast_callback=getattr(self.app, "toasts").notify,
             header_parent=preview_header,
+            on_automation=self.app.menu_actions.generate_current_image
         )
 
         # Set preview callbacks
