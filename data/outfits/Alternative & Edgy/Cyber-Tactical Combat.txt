@@ -1,0 +1,44 @@
+tags: [combat_tactical, action, Edgy, Sci-Fi]
+
+[F]
+- **Top:** Mock-neck Compression Jumpsuit.
+  - **Fit:** Form-fitting compression.
+  - **Material:** High-sheen {primary_color} spandex; reinforced nylon panels.
+  - **Neckline:** Mock-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Reinforced Tactical Corsetry (Integrated harness).
+  - **Fit:** Structural boning.
+  - **Material:** Spandex; Metallic hardware.
+  - **Waist:** High-waisted corset.
+  - **Length:** Full length.
+- **Footwear:** Asymmetrical Tech-Overlay boots with laser-cut geometric patterns.
+- **Accessories:** {primary_color} fingerless tactical gloves; detachable high-collared capelet.
+
+[M]
+- **Top:** Mock-neck Compression Suit.
+  - **Fit:** Form-fitting base layer.
+  - **Material:** High-sheen technical spandex.
+  - **Neckline:** Mock-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Reinforced Tactical Harness.
+  - **Fit:** Fitted.
+  - **Material:** Industrial webbing; Spandex.
+  - **Waist:** Natural waist.
+  - **Length:** Full length.
+- **Footwear:** Asymmetrical Tech-Overlay boots; heavy-duty laced combat styles.
+- **Accessories:** {primary_color} fingerless tactical gloves; detachable high-collared entrance coat.
+
+[H]
+- **Hijab:** High-sheen technical jersey hijab in **{primary_color}** with aerodynamic wrap.
+- **Top:** Mock-neck Compression Tunic; Reinforced Tactical Harness.
+  - **Fit:** Form-fitting modest layer.
+  - **Material:** High-sheen technical fabric.
+  - **Neckline:** Mock-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length Compression Leggings with Tech-Overlay.
+  - **Fit:** Leggings.
+  - **Material:** Spandex; Leather overlay.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Heavy-duty lace-up wrestling boots.
+- **Accessories:** Fingerless tactical gloves; detachable high-collared capelet.

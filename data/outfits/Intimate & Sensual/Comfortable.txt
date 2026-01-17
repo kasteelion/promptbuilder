@@ -1,0 +1,45 @@
+tags: [Casual, Lounge, Sleep]
+
+[F]
+- **Top:** Soft pajama top or nightgown.
+  - **Fit:** Relaxed; Loose.
+  - **Material:** Cotton or Modal ({modifier}).
+  - **Pattern:** Solid or Soft print.
+  - **Neckline:** Scoop neck or Henley.
+  - **Sleeve:** Long sleeves or Sleeveless.
+- **Bottom:** Matching pajama pants or shorts.
+  - **Fit:** Relaxed.
+  - **Material:** matching soft fabric.
+  - **Waist:** Elastic or Drawstring.
+  - **Length:** Full (pants) or Short (shorts).
+- **Footwear:** Fuzzy slippers or cozy socks.
+- **Accessories:** minimal or none.
+
+[M]
+- **Top:** cotton t-shirt or tank and pajama pants.
+  - **Fit:** Relaxed.
+  - **Material:** Cotton.
+  - **Neckline:** Crew neck or Scoop.
+  - **Sleeve:** Sleeveless or Short.
+- **Bottom:** Pajama pants or shorts ({modifier}).
+  - **Fit:** Relaxed.
+  - **Material:** Cotton or Flannel.
+  - **Waist:** Elastic.
+  - **Length:** Full or Knee-length.
+- **Footwear:** Slippers or socks.
+- **Accessories:** none.
+
+[H]
+- **Hijab:** Soft cotton jersey sleep hijab in cream or light gray.
+- **Top:** Long-sleeve soft pajama top in modest fabric.
+  - **Fit:** Modest relaxed fit.
+  - **Material:** Cotton jersey.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Comfortable matching pajama pants.
+  - **Fit:** Baggy.
+  - **Material:** matching cotton.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Fuzzy slippers or cozy socks.
+- **Accessories:** minimal or none.

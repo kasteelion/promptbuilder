@@ -1,7 +1,7 @@
 ### Chiara Lombardi
 **Photo:** chiara_lombardi_photo.png
 
-**Tags:**   female, chic, creative, intellectual, mediterranean, minimalist, playful, vintage-inspired
+**Tags:**   Female, Chic, Creative, Intellectual, Mediterranean, Minimalist, Playful, Vintage-Inspired
 
 **Summary:** Cultured and self-possessed, Chiara blends artistic sensibility with timeless sophistication. Her confidence is subtle and knowing, expressed through measured movement, expressive eyes, and an ease that suggests experience and depth.
 
@@ -16,7 +16,7 @@
 * **Skin:** Warm Mediterranean-toned skin with healthy glow.
 
 **Age Presentation:** early 30s presentation; confident, lived-in.
-**Vibe / Energy:** grounded, expressive, self-possessed.
+**Vibe / Energy:** Grounded, Expressive, Self-Possessed.
 **Bearing:** relaxed confidence; open gestures.
 
 // Style notes for outfit creation (not included in prompts):

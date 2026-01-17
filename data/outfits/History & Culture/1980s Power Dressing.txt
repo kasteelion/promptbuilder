@@ -1,0 +1,46 @@
+tags: [Business, Retro, Vintage]
+
+[F]
+- **Top:** Structured double-breasted blazer with exaggerated shoulder pads.
+  - **Fit:** Oversized power-shoulders.
+  - **Material:** High-quality wool or polyester.
+  - **Pattern:** Solid ((default:bold color)).
+  - **Neckline:** Peaked lapel.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist pencil skirt.
+  - **Fit:** Form-fitting pencil.
+  - **Material:** Matching wool.
+  - **Waist:** High-waisted with wide belt.
+  - **Length:** Knee-length.
+- **Footwear:** Pointed-toe silk pumps.
+- **Accessories:** Chunky gold jewelry; briefcase; wide buckle belt.
+
+[M]
+- **Top:** Double-breasted suit jacket with wide shoulders.
+  - **Fit:** Loose oversized power style.
+  - **Material:** Wool pinstripe.
+  - **Pattern:** Pinstripe or Solid.
+  - **Neckline:** Wide lapel.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored suit trousers (Loose fit).
+  - **Fit:** Relaxed pleated.
+  - **Material:** Matching wool.
+  - **Waist:** Natural (for suspenders).
+  - **Length:** Full length.
+- **Footwear:** Leather loafers.
+- **Accessories:** Power tie; Suspenders; Gold watch.
+
+[H]
+- **Hijab:** Silk hijab in bold color (traped or turban).
+- **Top:** Oversized blazer over high-neck blouse.
+  - **Fit:** Oversized structured.
+  - **Material:** Wool blend; Silk.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Pleated midi skirt or trousers.
+  - **Fit:** Straight or Pleated.
+  - **Material:** Trousers fabric.
+  - **Waist:** High-waist.
+  - **Length:** Midi or Full.
+- **Footwear:** Pumps.
+- **Accessories:** Chunky gold jewelry; briefcase.

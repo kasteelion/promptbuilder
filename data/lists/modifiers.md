@@ -6,5 +6,4 @@ This global file is kept for backward compatibility and as a fallback, but all p
 
 ---
 
-## Legacy / Global Fallback
-(None currently active)
+## Legacy / Global Fallback (None Currently Active)

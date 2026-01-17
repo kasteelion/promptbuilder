@@ -1,7 +1,7 @@
 ### Sitara Saanvi
 **Photo:** sitara_saanvi_photo.png
 
-**Tags:**   female, chic, curvy, edgy, indian, playful, vintage-inspired
+**Tags:**   Female, Chic, Curvy, Edgy, Indian, Playful, Vintage-Inspired
 
 **Summary:** Sitara radiates a captivating, effervescent joy, possessing the magnetic charm of classic cinema sirens. Her essence is a playful blend of tradition and high-wattage glamour, exuding a human quality of sweet, accessible stardom that draws all eyes.
 
@@ -16,7 +16,7 @@
 * **Skin:** Medium tan with warm golden-olive undertones and luminous smooth surface finish; small delicate beauty mark near lip.
 
 **Age Presentation:** early to mid-20s presentation; youthful, vivacious, sensual.
-**Vibe / Energy:** charming, sultry, bubbly, classic-Hollywood sirens.
+**Vibe / Energy:** Charming, Sultry, Bubbly, Classic-Hollywood Sirens.
 **Bearing:** graceful and deliberately sensual with soft hip-sway; frequent use of expressive head tilts and engaging upward-tilted gaze.
 
 // Style notes for outfit creation (not included in prompts):

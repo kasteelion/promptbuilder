@@ -1,0 +1,49 @@
+tags: [Boxing, combat_sport]
+modifiers:
+  Headgear: , wearing protective padded boxing headgear in {secondary_color},
+
+[F]
+- **Top:** Fitted athletic tank with mesh side panels.
+  - **Fit:** Compression fit.
+  - **Material:** {primary_color} tech-fabric; {secondary_color} mesh.
+  - **Pattern:** Solid with side panels.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** High-waist satin boxing shorts with side-slits.
+  - **Fit:** Wide 4-inch elastic waistband.
+  - **Material:** {primary_color} satin.
+  - **Pattern:** {team} name embroidered in bold metallic script.
+  - **Waist:** High-waist elastic.
+  - **Length:** Mid-thigh.
+- **Footwear:** High-top boxing shoes ({accent}).
+- **Accessories:** 10oz pro-style boxing gloves ({accent}); matching hand wraps; mouthguard.
+
+[M]
+- **Top:** Bare chest or fitted athletic tank.
+  - **Fit:** Athletic.
+  - **Material:** {primary_color} fabric or Skin.
+  - **Neckline:** N/A or Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** High-waist satin boxing shorts with side-slits.
+  - **Fit:** Wide 4-inch elastic waistband.
+  - **Material:** {primary_color} satin.
+  - **Pattern:** {team} name in bold block letters.
+  - **Waist:** High-waist.
+  - **Length:** Mid-thigh.
+- **Footwear:** High-top boxing shoes ({accent}).
+- **Accessories:** 12oz pro-style boxing gloves ({accent}); matching hand wraps; mouthguard.
+
+[H]
+- **Hijab:** Breathable sports hijab in {primary_color} with matte finish.
+- **Top:** Long-sleeve performance tunic {modifier}.
+  - **Fit:** Mid-thigh length; Scalloped hem.
+  - **Material:** {primary_color} satin-finish technical blend; {secondary_color} mesh side panels.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length performance leggings under satin boxing shorts.
+  - **Fit:** Tight under Loose.
+  - **Material:** {primary_color} fabrics.
+  - **Waist:** Wide 4-inch elastic waistband.
+  - **Length:** Full length.
+- **Footwear:** High-top boxing shoes ({accent}).
+- **Accessories:** 10oz pro-style boxing gloves ({accent}); hand wraps; mouthguard.

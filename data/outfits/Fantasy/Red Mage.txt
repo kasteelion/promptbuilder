@@ -1,4 +1,4 @@
-tags: [combat, fantasy, Magic]
+tags: [weapon_combat, Fantasy, Magic]
 
 [F]
 - **Top:** Elegant Renaissance-inspired jacket with epaulettes.

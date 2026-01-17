@@ -3,7 +3,7 @@
 
 **Summary:** Harper Mae embodies Southern warmth with an effortless, sun-kissed charm. Her presence feels like a front porch summer afternoon—sweet tea, genuine laughter, and the kind of hospitality that makes everyone feel like family. She radiates approachable beauty, where freckles and natural grace create a girl-next-door magnetism that's impossible to resist.
 
-**Tags:** female, approachable, freckled, minimalist, southern, sun-kissed
+**Tags:** Female, Approachable, Freckled, Minimalist, Southern, Sun-Kissed
 
 **Gender:** F
 **Signature Color:** #FFD700
@@ -16,7 +16,7 @@
 * **Skin:** Fair-to-light warm peachy undertones with natural healthy glow; prominent freckles across nose, cheeks, and shoulders that intensify with sun; soft luminous finish.
 
 **Age Presentation:** mid-20s presentation; youthful, warm, naturally confident.
-**Vibe / Energy:** welcoming, genuine, sweetly charismatic, down-to-earth.
+**Vibe / Energy:** Welcoming, Genuine, Sweetly Charismatic, Down-To-Earth.
 **Bearing:** relaxed fluid movement; open friendly posture; natural grace with slight Southern sway; frequent warm gestures and animated storytelling hands.
 
 // Style Notes

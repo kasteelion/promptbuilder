@@ -1,0 +1,61 @@
+﻿Running comprehensive simulation with 2000 iterations...
+  Processed 0...
+  Processed 200...
+  Processed 400...
+  Processed 600...
+  Processed 800...
+  Processed 1000...
+  Processed 1200...
+  Processed 1400...
+  Processed 1600...
+  Processed 1800...
+
+=== Simulation Results ===
+Total Iterations: 2000
+
+--- Target Scenarios ---
+Interaction: Precise: 88 (4.4%)
+Scenario: Solo Intimate: 61 (3.0%)
+Scenario: MMA Combat: 133 (6.7%)
+
+--- Composition Modes ---
+Mode: INT_WO_POSES: 1199 (60.0%)
+Mode: SOLO: 431 (21.6%)
+Mode: GROUP_NO_INT: 368 (18.4%)
+Mode: INT_W_POSES: 2 (0.1%)
+
+--- Top Scenarios ---
+Mountain Expedition: 512 (25.6%)
+Combat Sports Duel: 405 (20.2%)
+Boudoir Session: 218 (10.9%)
+Fantasy Quest: 189 (9.4%)
+Elite Training: 169 (8.5%)
+Red Carpet Gala: 162 (8.1%)
+Neon Noir Heist: 153 (7.6%)
+After Hours Club: 119 (5.9%)
+Barbershop Performance: 60 (3.0%)
+Cozy Morning: 13 (0.7%)
+
+--- Top Characters ---
+Julian Blackwood: 62 (0.8% approx frequency)
+Fiona O'Sullivan: 62 (1.0% approx frequency)
+Ines Santos: 60 (0.8% approx frequency)
+Hana Park: 59 (0.7% approx frequency)
+Nora Alvarez: 58 (1.5% approx frequency)
+Chiara Lombardi: 58 (0.7% approx frequency)
+Freydis Holm: 58 (1.0% approx frequency)
+Maya Rose: 58 (0.6% approx frequency)
+Marcus Thompson: 57 (1.4% approx frequency)
+Sina Tuilagi: 56 (0.6% approx frequency)
+
+--- Top Styles ---
+Victoria's Secret Magazine: "High-Fashion Glamour": 114 (5.7%)
+Artgerm Style: "Luminous Digital Fantasy": 108 (5.4%)
+Anime Style: "Dynamic Cel-Shaded": 99 (5.0%)
+Vintage Pin-Up: "Glamorous Airbrush": 98 (4.9%)
+Digital Painting: "Expressive Impasto": 93 (4.7%)
+Sports Action: "Frozen Velocity": 91 (4.5%)
+Soft Semi-Realistic: "Quiet Confidence": 89 (4.5%)
+Film Noir: "Shadows and Smoke": 88 (4.4%)
+Cinematic 3D Animation: 85 (4.2%)
+Western Comic Book: 84 (4.2%)

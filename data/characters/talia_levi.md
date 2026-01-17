@@ -2,7 +2,7 @@
 
 **Photo:** talia_levi_photo.png
 
-**Tags:** female, commanding, edgy, israeli, mediterranean
+**Tags:** Female, Commanding, Edgy, Israeli, Mediterranean
 
 **Summary:** Talia commands attention through unapologetic sensuality and magnetic presence. Her confidence is body-forward and deliberate, moving through space with the kind of self-possession that makes people pause mid-conversation. There's nothing performative about her allure—it's simply who she is, worn as naturally as sun-warmed skin.
 
@@ -21,7 +21,7 @@
 
 **Age Presentation:** late 20s to early 30s presentation; confident, sexually mature, self-possessed.
 
-**Vibe / Energy:** alluring, provocative, self-assured, magnetic, unapologetically sensual.
+**Vibe / Energy:** Alluring, Provocative, Self-Assured, Magnetic, Unapologetically Sensual.
 
 **Bearing:** deliberate sensual movement with natural hip sway; relaxed confident posture with shoulders back emphasizing silhouette; frequent use of prolonged eye contact, hair-touching gestures, and body-aware positioning; stands with weight on one hip in contrapposto; movements are unhurried and intentional.
 

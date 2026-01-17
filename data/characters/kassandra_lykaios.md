@@ -1,7 +1,7 @@
 ### Kassandra Lykaios
 **Photo:** kassandra_lykaios_photo.png
 
-**Tags:** female, Athletic, commanding, greek, playful, strong
+**Tags:** Female, Athletic, Commanding, Greek, Playful, Strong
 **Summary:** Kassandra Lykaios is a storm of agile strength and focused intensity. She possesses the lethal elegance of a well-balanced blade—capable of both immense power and delicate precision. Her presence is electric, charged with the energy of someone who is always prepared for the next challenge. She moves with an effortless, panther-like grace, her athletic frame a testament to a life of perpetual motion.
 **Gender:** F
 **Signature Color:** #DC143C
@@ -13,7 +13,7 @@
 * **Skin:** Rich olive; warm sun-kissed undertones; healthy satin finish; radiant glow; subtle, thin scars on the left bicep and a small notch on the right earlobe.
 
 **Age Presentation:** late 20s to early 30s; vibrant, powerful, and self-assured.
-**Vibe / Energy:** electric, agile, fiery, disciplined, fiercely independent.
+**Vibe / Energy:** Electric, Agile, Fiery, Disciplined, Fiercely Independent.
 **Bearing:** dynamic and alert; stands with a slight forward lean, always ready to move; graceful but powerful stride; posture is open and commanding.
 
 //Style Notes:

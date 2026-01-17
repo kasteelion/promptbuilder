@@ -1,0 +1,45 @@
+tags: [Fantasy, Historical]
+
+[F]
+- **Top:** Medieval-inspired bodice or corset.
+  - **Fit:** Cinched.
+  - **Material:** Brocade or Leather.
+  - **Pattern:** Floral or organic {modifier}.
+  - **Neckline:** Sweetheart or Scoop.
+  - **Sleeve:** Flowing chemise sleeves.
+- **Bottom:** Voluminous floor-length skirt or breeches.
+  - **Fit:** Voluminous.
+  - **Material:** Linen or Cotton {modifier}.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Sturdy leather boots.
+- **Accessories:** Fantasy jewelry; decorative elements; small pouch.
+
+[M]
+- **Top:** Medieval-inspired tunic or shirt and vest.
+  - **Fit:** Relaxed; Draped.
+  - **Material:** Linen; Cotton; Leather vest.
+  - **Neckline:** V-neck or lace-up.
+  - **Sleeve:** Long billowing sleeves.
+- **Bottom:** Breeches or pants.
+  - **Fit:** Relaxed.
+  - **Material:** matching.
+  - **Waist:** Sword belt.
+  - **Length:** Full.
+- **Footwear:** Leather boots.
+- **Accessories:** Fantasy jewelry; sword belt; decorative elements.
+
+[H]
+- **Hijab:** Medieval-inspired flowing veil in cream.
+- **Top:** Long-sleeve modest medieval dress with laced bodice overlay.
+  - **Fit:** Modest layered.
+  - **Material:** Linen tunic; Brocade bodice.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Long flowing skirt.
+  - **Fit:** Voluminous.
+  - **Material:** matching jewel tone fabric.
+  - **Waist:** Decorative belt.
+  - **Length:** Floor length.
+- **Footwear:** Leather boots.
+- **Accessories:** Fantasy jewelry; decorative belt; small pouch.

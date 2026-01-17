@@ -2,7 +2,7 @@
 
 **Photo:** elena_moretti_photo.png
 
-**Tags:** female, mediterranean, curvaceous, confident, urban, downtown-chic, romantic-boho
+**Tags:** Female, Mediterranean, Curvaceous, Confident, Urban, Downtown-Chic, Romantic-Boho
 
 **Summary:** Elena is a confident, curvaceous urbanite who balances soft, romantic femininity with underlying athletic strength and bold, city-chic styling. With her "Main Character Energy" and effortlessly alluring presence, she navigates the city with a grounded yet playful self-assurance. She oscillates between sleek, body-hugging "Downtown Chic" and flowing "Romantic Boho" aesthetics, always celebrating her silhouette with deliberate, fluid movements.
 
@@ -17,7 +17,7 @@
 * **Skin:** Fair to light-medium depth; cool pink undertones that are prone to natural flushing; smooth, healthy texture with a radiant, hydrated finish.
 
 **Age Presentation:** 21-25; youthful urban maturity.
-**Vibe / Energy:** Main character energy, playful, grounded, effortlessly alluring.
+**Vibe / Energy:** Main Character Energy, Playful, Grounded, Effortlessly Alluring.
 **Bearing:** Relaxed confidence; takes up space comfortably; poses with emphasized curves and deliberate, fluid movements that command attention.
 
 // Style Notes:

@@ -1,7 +1,7 @@
 ### Natsumi Maki
 **Photo:** natsumi_maki_photo.png
 
-**Tags:** female, Athletic, chic, creative, japanese, petite, playful
+**Tags:** Female, Athletic, Chic, Creative, Japanese, Petite, Playful
 **Summary:** Dynamic idol-wrestler with infectious enthusiasm and athletic grace. Natsumi radiates bubbly charisma and kawaii energy, blending fierce performance prowess with approachable sweetness. Her presence is magnetic—equal parts sparkle and strength.
 
 **Gender:** F
@@ -18,7 +18,7 @@
 * **Skin:** Porcelain depth with cool-neutral undertones and soft matte-to-luminous finish; smooth, even texture with minimal visible pores; fair to very light complexion with subtle translucency; uniformly pale throughout face, neck, and body with slight natural warmth in cheeks when animated; delicate, refined quality that catches light softly.
 
 **Age Presentation:** late teens to early twenties presentation; youthful, high-energy.
-**Vibe / Energy:** bubbly, spirited, charismatic, magnetic.
+**Vibe / Energy:** Bubbly, Spirited, Charismatic, Magnetic.
 **Bearing:** expressive body language; light and quick movement; animated gestures that project stage-presence.
 
 ---

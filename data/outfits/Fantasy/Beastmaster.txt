@@ -1,4 +1,4 @@
-tags: [combat, fantasy, nature]
+tags: [weapon_combat, Fantasy, Nature]
 
 [F]
 - **Top:** Leather armor with animal motifs and fur accents.

@@ -2,7 +2,7 @@
 
 **Photo:** diego_morales_photo.png
 
-**Tags:** male, approachable, Athletic, californian, casual, creative, minimalist, tan
+**Tags:** Male, Approachable, Athletic, Californian, Casual, Creative, Minimalist, Tan
 **Summary:** Diego carries a relaxed charisma that feels both creative and inviting. His athleticism is softened by warmth and humor, giving him an approachable presence that naturally draws people in without effort. A digital designer by trade and a surfer by habit, he embodies the laid-back intensity of his Southern California roots. His workspace is as clean as his surfing lines, focused on functional beauty and meaningful connections. He's the guy who remembers everyone's name and always knows where the best coffee is.
 
 **Gender:** M
@@ -16,7 +16,7 @@
 * **Skin:** Warm tan skin with sun-touched golden-bronze undertones (Southern California / Latin heritage); smooth healthy texture; fine sun-smile lines at the corners of his eyes; occasional peeling on shoulders from sun exposure; natural "outdoor" glow.
 
 **Age Presentation:** late 20s presentation; energetic, grounded, effortlessly cool.
-**Vibe / Energy:** approachable, steady, warm-creative, laid-back charisma, reliable-yet-adventurous.
+**Vibe / Energy:** Approachable, Steady, Warm-Creative, Laid-Back Charisma, Reliable-Yet-Adventurous.
 **Bearing:** easy relaxed posture; casual fluid movement—moves like he's navigating a board even on land; comfortable in any space; frequent genuine smiles and open body language; hands often in pockets or gesturing expressively.
 
 // Style Notes:

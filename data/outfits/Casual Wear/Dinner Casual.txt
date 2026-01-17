@@ -1,0 +1,46 @@
+tags: [casual, dinner, elevated, comfortable, stylish]
+
+[F]
+- **Top:** Nice blouse or fitted sweater in {primary_color}.
+  - **Fit:** Fitted or slightly relaxed.
+  - **Material:** Silk, satin, or fine knit.
+  - **Pattern:** Solid or subtle texture.
+  - **Neckline:** V-neck or boat neck.
+  - **Sleeve:** Long or 3/4 sleeves.
+- **Bottom:** Midi skirt or tailored pants in {secondary_color}.
+  - **Fit:** A-line skirt or straight pants.
+  - **Material:** Ponte, wool blend, or structured cotton.
+  - **Waist:** High-rise.
+  - **Length:** Midi or full length.
+- **Footwear:** Heeled boots or dressy flats.
+- **Accessories:** Simple necklace; clutch or small purse.
+
+[M]
+- **Top:** Button-up shirt or polo in {primary_color}.
+  - **Fit:** Fitted.
+  - **Material:** Cotton or linen blend.
+  - **Pattern:** Solid or subtle pattern.
+  - **Neckline:** Collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dress pants or dark chinos.
+  - **Fit:** Straight or slim.
+  - **Material:** Wool blend or cotton twill.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Dress shoes or loafers.
+- **Accessories:** Leather belt; watch.
+
+[H]
+- **Hijab:** Elegant chiffon hijab in coordinating color.
+- **Top:** Modest dressy tunic or blouse.
+  - **Fit:** Modest relaxed fit.
+  - **Material:** Silk or fine knit.
+  - **Neckline:** High crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored wide-leg pants or maxi skirt.
+  - **Fit:** Wide-leg or flowing.
+  - **Material:** Ponte or structured fabric.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** Heeled flats or ankle boots.
+- **Accessories:** Elegant jewelry; clutch.

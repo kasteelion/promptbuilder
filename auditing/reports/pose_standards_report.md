@@ -1,180 +1,222 @@
 # Pose Standards Audit Report
 
 **Date:** poses.md
-**Total Poses:** 173
+**Total Poses:** 215
 
 | Line | Category | Pose Name | Status | Issues |
 |---|---|---|---|---|
-| 9 | Basic Poses | Arms Crossed | PASS | None |
-| 10 | Basic Poses | Hands on Hips | PASS | None |
-| 11 | Basic Poses | Leaning | PASS | None |
-| 12 | Basic Poses | Looking Away | PASS | None |
-| 13 | Basic Poses | Sitting | PASS | None |
-| 14 | Basic Poses | Sitting Cross-Legged | PASS | None |
-| 15 | Basic Poses | Standing | PASS | None |
-| 16 | Basic Poses | Walking | PASS | None |
-| 22 | Expressive & Action Poses | Anime V Sign | PASS | None |
-| 23 | Expressive & Action Poses | Candid Laugh | PASS | None |
-| 24 | Expressive & Action Poses | Laughing | PASS | None |
-| 25 | Expressive & Action Poses | Reaching Up | PASS | None |
-| 26 | Expressive & Action Poses | Thinking | PASS | None |
-| 32 | Everyday Activities | Book Stack | PASS | None |
-| 33 | Everyday Activities | Coffee Shop | PASS | None |
-| 34 | Everyday Activities | Drinking | PASS | None |
-| 35 | Everyday Activities | Gaming Controller | PASS | None |
-| 36 | Everyday Activities | Headphone Vibe | PASS | None |
-| 37 | Everyday Activities | Painter at Easel (Seated) | PASS | None |
-| 38 | Everyday Activities | Painter at Easel (Standing) | PASS | None |
-| 39 | Everyday Activities | Phone Check | PASS | None |
-| 40 | Everyday Activities | Chopping Vegetables | PASS | None |
-| 41 | Everyday Activities | Stirring Pot | PASS | None |
-| 42 | Everyday Activities | Reading | PASS | None |
-| 43 | Everyday Activities | Presenting | PASS | None |
-| 49 | Fashion & Portrait Poses | Against Wall | PASS | None |
-| 50 | Fashion & Portrait Poses | Hand Through Hair | PASS | None |
-| 51 | Fashion & Portrait Poses | Hip Pop | PASS | None |
-| 52 | Fashion & Portrait Poses | Jacket Over Shoulder | PASS | None |
-| 53 | Fashion & Portrait Poses | Mirror Selfie | PASS | None |
-| 54 | Fashion & Portrait Poses | Over the Shoulder | PASS | None |
-| 55 | Fashion & Portrait Poses | VSCO Squat | PASS | None |
-| 56 | Fashion & Portrait Poses | The Angel Wing Stance | PASS | None |
-| 57 | Fashion & Portrait Poses | Runway Stride | PASS | None |
-| 58 | Fashion & Portrait Poses | Soft Lingerie Lean | PASS | None |
-| 64 | Dynamic & Movement Poses | Dancing | PASS | None |
-| 65 | Dynamic & Movement Poses | Dress Twirl | PASS | None |
-| 66 | Dynamic & Movement Poses | Stretching | PASS | None |
-| 67 | Dynamic & Movement Poses | Dribbling | PASS | None |
-| 68 | Dynamic & Movement Poses | Shooting Hoop | PASS | None |
-| 69 | Dynamic & Movement Poses | Warming Up | PASS | None |
-| 70 | Dynamic & Movement Poses | Wind Blown | PASS | None |
-| 76 | Relaxed & Intimate Poses | Bed Pose | PASS | None |
-| 77 | Relaxed & Intimate Poses | Lying Down | PASS | None |
-| 78 | Relaxed & Intimate Poses | Sitting on Edge | PASS | None |
-| 79 | Relaxed & Intimate Poses | Staircase Sit | PASS | None |
-| 80 | Relaxed & Intimate Poses | Window Seat | PASS | None |
-| 86 | Artistic & Dramatic Poses | Back Arch | PASS | None |
-| 87 | Artistic & Dramatic Poses | Back Shot | PASS | None |
-| 88 | Artistic & Dramatic Poses | Biting Lip | PASS | None |
-| 89 | Artistic & Dramatic Poses | Centerfold Classic | PASS | None |
-| 90 | Artistic & Dramatic Poses | Golden Hour | PASS | None |
-| 91 | Artistic & Dramatic Poses | Peek-a-Boo | PASS | None |
-| 92 | Artistic & Dramatic Poses | Wet Hair | PASS | None |
-| 93 | Artistic & Dramatic Poses | Silk Robe | PASS | None |
-| 94 | Artistic & Dramatic Poses | Bathtub Recline | PASS | None |
-| 95 | Artistic & Dramatic Poses | Mirror Gaze | PASS | None |
-| 96 | Artistic & Dramatic Poses | Shoulder Touch | PASS | None |
-| 97 | Artistic & Dramatic Poses | Lying Stretch | PASS | None |
-| 98 | Artistic & Dramatic Poses | Candlelight Portrait | PASS | None |
-| 104 | Social Media & Content Poses | Ahegao Tease | PASS | None |
-| 105 | Social Media & Content Poses | Camera Zoom/Stare | PASS | None |
-| 106 | Social Media & Content Poses | Hand Heart/Kiss | PASS | None |
-| 107 | Social Media & Content Poses | Lip Sync Close-up | PASS | None |
-| 108 | Social Media & Content Poses | Pointing to Text | PASS | None |
-| 109 | Social Media & Content Poses | The Griddy | PASS | None |
-| 110 | Social Media & Content Poses | Transition Magic | PASS | None |
-| 116 | Bowling | Ball Return Wait | PASS | None |
-| 117 | Bowling | Bowling Address Position | PASS | None |
-| 118 | Bowling | Bowling Approach | PASS | None |
-| 119 | Bowling | Bowling Deep Lunge Release | PASS | None |
-| 120 | Bowling | Bowling Follow-Through | PASS | None |
-| 121 | Bowling | Bowling Portrait | PASS | None |
-| 122 | Bowling | Bowling Release (Low Angle) | PASS | None |
-| 123 | Bowling | Bowling Victory Arms Up | PASS | None |
-| 124 | Bowling | Checking Score Monitor | PASS | None |
-| 125 | Bowling | Disappointed Stance | PASS | None |
-| 126 | Bowling | Holding Multiple Balls | PASS | None |
-| 127 | Bowling | Lacing Bowling Shoes | PASS | None |
-| 128 | Bowling | Pin Watching | PASS | None |
-| 129 | Bowling | Polishing Ball | PASS | None |
-| 130 | Bowling | Sitting Lane Seat | PASS | None |
-| 134 | Team Sports | Basketball Dribbling | PASS | None |
-| 135 | Team Sports | Basketball Layup | PASS | None |
-| 136 | Team Sports | Basketball Shot | PASS | None |
-| 137 | Team Sports | Cheerleading Jump | PASS | None |
-| 138 | Team Sports | Cheerleading Liberty | PASS | None |
-| 139 | Team Sports | Flag Football Catch | PASS | None |
-| 140 | Team Sports | Flag Football Quarterback Throw | PASS | None |
-| 141 | Team Sports | Flag Football Ready Stance | PASS | None |
-| 142 | Team Sports | High V Cheer | PASS | None |
-| 143 | Team Sports | Pompom Shake | PASS | None |
-| 144 | Team Sports | Soccer Dribbling | PASS | None |
-| 145 | Team Sports | Soccer Goalkeeper Save | PASS | None |
-| 146 | Team Sports | Soccer Kick | PASS | None |
-| 147 | Team Sports | Softball/Baseball Batting Stance | PASS | None |
-| 148 | Team Sports | Softball/Baseball Catching | PASS | None |
-| 149 | Team Sports | Softball/Baseball Pitching Windup | PASS | None |
-| 150 | Team Sports | Tennis Serve | PASS | None |
-| 151 | Team Sports | Professional Tennis Serve | PASS | None |
-| 152 | Team Sports | Three-Point Shot | PASS | None |
-| 153 | Team Sports | Victory Pose | PASS | None |
-| 154 | Team Sports | Volleyball Dig | PASS | None |
-| 155 | Team Sports | Volleyball Serve | PASS | None |
-| 156 | Team Sports | Volleyball Set | PASS | None |
-| 157 | Team Sports | Volleyball Spike | PASS | None |
-| 161 | Combat Sports | Fighter Stance | PASS | None |
-| 162 | Combat Sports | Grappling Position | PASS | None |
-| 163 | Combat Sports | Ground Control | PASS | None |
-| 164 | Combat Sports | Heavy Bag Strike | PASS | None |
-| 165 | Combat Sports | Sparring Guard | PASS | None |
-| 169 | Gym & Fitness | Jump Rope | PASS | None |
-| 170 | Gym & Fitness | Stretching Pre-Fight | PASS | None |
-| 171 | Gym & Fitness | Swimming Dive | PASS | None |
-| 172 | Gym & Fitness | Track Starting Block | PASS | None |
-| 173 | Gym & Fitness | Handstand | PASS | None |
-| 174 | Gym & Fitness | Backbend | PASS | None |
-| 175 | Gym & Fitness | Holding Skateboard | PASS | None |
-| 176 | Gym & Fitness | Skater Push | PASS | None |
-| 182 | Dance & Performance Poses | Arabesque | PASS | None |
-| 183 | Dance & Performance Poses | Ballet Bow | PASS | None |
-| 184 | Dance & Performance Poses | Barre Stretch | PASS | None |
-| 185 | Dance & Performance Poses | Floor Split | PASS | None |
-| 186 | Dance & Performance Poses | Grand Jeté | PASS | None |
-| 187 | Dance & Performance Poses | Hip Hop Dance Stance | PASS | None |
-| 188 | Dance & Performance Poses | Pirouette | PASS | None |
-| 189 | Dance & Performance Poses | Pointe Position | PASS | None |
-| 195 | Alternative & Edgy Poses | Cigarette Pose | PASS | None |
-| 196 | Alternative & Edgy Poses | Graffiti Wall Pose | PASS | None |
-| 197 | Alternative & Edgy Poses | Leather Jacket Flip | PASS | None |
-| 198 | Alternative & Edgy Poses | Motorcycle Lean | PASS | None |
-| 199 | Alternative & Edgy Poses | Rocker Stance | PASS | None |
-| 200 | Alternative & Edgy Poses | Sitting Backwards Chair | PASS | None |
-| 206 | Soft & Aesthetic Poses | Basket Carry | PASS | None |
-| 207 | Soft & Aesthetic Poses | Flower Crown Adjust | PASS | None |
-| 208 | Soft & Aesthetic Poses | Tea Cup Hold | PASS | None |
-| 209 | Soft & Aesthetic Poses | Vintage Record | PASS | None |
-| 215 | Cultural & Traditional Poses | Goddess Pose | PASS | None |
-| 216 | Cultural & Traditional Poses | Kimono Bow | PASS | None |
-| 217 | Cultural & Traditional Poses | Royal Wave | PASS | None |
-| 218 | Cultural & Traditional Poses | Sari Drape Adjust | PASS | None |
-| 224 | Badass & Tactical | Sword Point | PASS | None |
-| 225 | Badass & Tactical | Hero Landing | PASS | None |
-| 226 | Badass & Tactical | Weapon Maintenance | PASS | None |
-| 227 | Badass & Tactical | Stoic Walk | PASS | None |
-| 228 | Badass & Tactical | Predatory Focus | PASS | None |
-| 229 | Badass & Tactical | Cigar/Match Light | PASS | None |
-| 230 | Badass & Tactical | Coat Flip | PASS | None |
-| 238 | Aura & Power | Energy Charging | PASS | None |
-| 239 | Aura & Power | Floating Levitation | PASS | None |
-| 240 | Aura & Power | Dark Power Surge | PASS | None |
-| 241 | Aura & Power | Divine Ascension | PASS | None |
-| 247 | Fantasy & Combat Stances | High Guard (Knight) | PASS | None |
-| 248 | Fantasy & Combat Stances | Draw-cut Stance (Samurai) | PASS | None |
-| 249 | Fantasy & Combat Stances | Reverse Grip (Assassin) | PASS | None |
-| 250 | Fantasy & Combat Stances | Spellcast Ready (Mage) | PASS | None |
-| 256 | Bodybuilding & Physique | Front Double Bicep | PASS | None |
-| 257 | Bodybuilding & Physique | Lat Spread | PASS | None |
-| 258 | Bodybuilding & Physique | Side Chest | PASS | None |
-| 259 | Bodybuilding & Physique | Most Muscular (Crab) | PASS | None |
-| 265 | Sci-Fi & Cyberpunk | Checking Hologram | PASS | None |
-| 266 | Sci-Fi & Cyberpunk | Using Command Console | PASS | None |
-| 267 | Sci-Fi & Cyberpunk | Gravity Shift | PASS | None |
-| 268 | Sci-Fi & Cyberpunk | Neural Link Sync | PASS | None |
-| 269 | Sci-Fi & Cyberpunk | Cyberpunk Street Lean | PASS | None |
-| 270 | Sci-Fi & Cyberpunk | Hacking Terminal | PASS | None |
-| 271 | Sci-Fi & Cyberpunk | Neon Reflection | PASS | None |
-| 272 | Sci-Fi & Cyberpunk | Weapon Check (Sci-Fi) | PASS | None |
-| 278 | Expressive Emotions | Brave Stand | PASS | None |
-| 279 | Expressive Emotions | Recoil in Fear | PASS | None |
-| 280 | Expressive Emotions | Blushing Embarrassment | PASS | None |
-| 281 | Expressive Emotions | Lovelorn Gaze | PASS | None |
-| 282 | Expressive Emotions | Tearful Relief | PASS | None |
+| 9 | Casual & Daily Life | Arms Crossed | PASS | None |
+| 10 | Casual & Daily Life | Hands on Hips | PASS | None |
+| 11 | Casual & Daily Life | Leaning Against Surface | PASS | None |
+| 12 | Casual & Daily Life | Contemplative Gaze | PASS | None |
+| 13 | Casual & Daily Life | Relaxed Chair Sit | PASS | None |
+| 14 | Casual & Daily Life | Cross-Legged Floor Sit | PASS | None |
+| 15 | Casual & Daily Life | Natural Stance | PASS | None |
+| 16 | Casual & Daily Life | Active Stride | PASS | None |
+| 22 | Action & Motion | Anime V-Sign | PASS | None |
+| 23 | Action & Motion | Candid Laughter | PASS | None |
+| 24 | Action & Motion | Joyful Exultation | PASS | None |
+| 25 | Action & Motion | Overhead Stretch | PASS | None |
+| 26 | Action & Motion | Philosophical Pondering | PASS | None |
+| 32 | Casual & Daily Life | Academic Focus | PASS | None |
+| 33 | Casual & Daily Life | Cafe Contemplation | PASS | None |
+| 34 | Casual & Daily Life | Savoring the Sip | PASS | None |
+| 35 | Casual & Daily Life | Pro Gamer Focus | PASS | None |
+| 36 | Casual & Daily Life | Musical Immersion | PASS | None |
+| 37 | Casual & Daily Life | Seated Artist | PASS | None |
+| 38 | Casual & Daily Life | Standing Maestro | PASS | None |
+| 39 | Casual & Daily Life | Modern Connection | PASS | None |
+| 40 | Casual & Daily Life | Culinary Precision | PASS | None |
+| 41 | Casual & Daily Life | Savory Stir | PASS | None |
+| 42 | Casual & Daily Life | Leisurely Reading | PASS | None |
+| 43 | Casual & Daily Life | Keynote Delivery | PASS | None |
+| 49 | Fashion & Glamour | Sultry Wall Lean | PASS | None |
+| 50 | Fashion & Glamour | Sensual Hair Brush | PASS | None |
+| 51 | Fashion & Glamour | Sassy Hip Pop | PASS | None |
+| 52 | Fashion & Glamour | Fashion-Forward Stroll | PASS | None |
+| 53 | Fashion & Glamour | OOTD Mirror Selfie | PASS | None |
+| 54 | Fashion & Glamour | Playful Glance Back | PASS | None |
+| 55 | Fashion & Glamour | Trendy Street Squat | PASS | None |
+| 56 | Fashion & Glamour | Angelic Glamour Stance | PASS | None |
+| 57 | Fashion & Glamour | Fierce Runway Stride | PASS | None |
+| 58 | Fashion & Glamour | Dreamy Boudoir Lean | PASS | None |
+| 59 | Fashion & Glamour | Overhead Boudoir Recline | PASS | None |
+| 65 | Action & Motion | Graceful Waltz | PASS | None |
+| 66 | Action & Motion | Joyful Dress Twirl | PASS | None |
+| 67 | Action & Motion | Morning Vitality Stretch | PASS | None |
+| 68 | Action & Motion | Athletic Dribble | FAIL | Tag 'sport' should be Title Case |
+| 69 | Action & Motion | High-Release Jump Shot | FAIL | Tag 'sport' should be Title Case |
+| 70 | Action & Motion | Athletic Prep Jog | FAIL | Tag 'sport' should be Title Case |
+| 71 | Action & Motion | Cinematic Wind-Blown | PASS | None |
+| 77 | Intimate & Sensual | Serene Bed Recline | PASS | None |
+| 78 | Intimate & Sensual | Elongated Floor Recline | PASS | None |
+| 79 | Intimate & Sensual | Confident Edge Perch | PASS | None |
+| 80 | Intimate & Sensual | Urban Staircase Sit | PASS | None |
+| 81 | Intimate & Sensual | Contemplative Window Seat | PASS | None |
+| 82 | Intimate & Sensual | Kneeling Bed Lean | PASS | None |
+| 83 | Intimate & Sensual | Off-Shoulder Jacket Embrace | PASS | None |
+| 89 | Arts & Performance | Dramatic Back Arch | PASS | None |
+| 90 | Arts & Performance | Elegant Back Profile | PASS | None |
+| 91 | Arts & Performance | Alluring Lip Bite | PASS | None |
+| 92 | Arts & Performance | Glamour Satin Recline | PASS | None |
+| 93 | Arts & Performance | Golden Hour Serenity | PASS | None |
+| 94 | Arts & Performance | Mysterious Peek-a-Boo | PASS | None |
+| 95 | Arts & Performance | Wet Aesthetics | PASS | None |
+| 96 | Arts & Performance | Silk Robe Drape | PASS | None |
+| 97 | Arts & Performance | Luxurious Bath Recline | PASS | None |
+| 98 | Arts & Performance | Mirror Reflection Gaze | PASS | None |
+| 99 | Arts & Performance | Soft Collarbone Touch | PASS | None |
+| 100 | Arts & Performance | Elongated Bed Stretch | PASS | None |
+| 101 | Arts & Performance | Candlelight Glow | PASS | None |
+| 102 | Arts & Performance | Sultry Bed Recline | PASS | None |
+| 103 | Arts & Performance | Sensual Arch | PASS | None |
+| 104 | Arts & Performance | Boudoir Chair Lounge | PASS | None |
+| 105 | Arts & Performance | Tangled Sheet Peek | PASS | None |
+| 111 | Thematic & Cinematic | Anime Ahegao Tease | PASS | None |
+| 112 | Thematic & Cinematic | Dramatic React Zoom | PASS | None |
+| 113 | Thematic & Cinematic | Hand-Heart Love | PASS | None |
+| 114 | Thematic & Cinematic | TikTok Lip-Sync | PASS | None |
+| 115 | Thematic & Cinematic | Informative Direction | PASS | None |
+| 116 | Thematic & Cinematic | Viral Griddy Dance | PASS | None |
+| 117 | Thematic & Cinematic | Viral Transition Pose | PASS | None |
+| 123 | Athletics & Sports | Ball Return Wait | PASS | None |
+| 124 | Athletics & Sports | Bowling Address Position | PASS | None |
+| 125 | Athletics & Sports | Kinetic Bowling Approach | PASS | None |
+| 126 | Athletics & Sports | Deep Lunge Release | PASS | None |
+| 127 | Athletics & Sports | Graceful Follow-Through | PASS | None |
+| 128 | Athletics & Sports | Confident Bowling Portrait | PASS | None |
+| 129 | Athletics & Sports | Low-Angle Power Release | PASS | None |
+| 130 | Athletics & Sports | Strike Victory Celebration | PASS | None |
+| 131 | Athletics & Sports | Score Monitor Check | PASS | None |
+| 132 | Athletics & Sports | Splitsville Frustration | PASS | None |
+| 133 | Athletics & Sports | Multiple Ball Selection | PASS | None |
+| 134 | Athletics & Sports | Pre-Game Shoe Prep | PASS | None |
+| 135 | Athletics & Sports | Anxious Pin Watch | PASS | None |
+| 136 | Athletics & Sports | Careful Ball Polish | PASS | None |
+| 137 | Athletics & Sports | Lane Seat Relax | PASS | None |
+| 141 | Athletics & Sports | Basketball Dribble Hub | FAIL | Tag 'sport' should be Title Case |
+| 142 | Athletics & Sports | Aerial Layup Finish | FAIL | Tag 'sport' should be Title Case |
+| 143 | Athletics & Sports | Pure Jump Shot | FAIL | Tag 'sport' should be Title Case |
+| 144 | Athletics & Sports | Cheerleading Toe Touch | PASS | None |
+| 145 | Athletics & Sports | Stately Liberty Balance | PASS | None |
+| 146 | Athletics & Sports | Leaping End-Zone Catch | FAIL | Tag 'sport' should be Title Case |
+| 147 | Athletics & Sports | Quarterback Launch Stance | FAIL | Tag 'sport' should be Title Case |
+| 148 | Athletics & Sports | Defensive Ready Stance | FAIL | Tag 'sport' should be Title Case |
+| 149 | Athletics & Sports | Spirited High-V Pose | PASS | None |
+| 150 | Athletics & Sports | Dynamic Pompom Blur | PASS | None |
+| 151 | Athletics & Sports | Soccer Pitch Dribble | FAIL | Tag 'sport' should be Title Case |
+| 152 | Athletics & Sports | Desperate Goalie Dive | FAIL | Tag 'sport' should be Title Case |
+| 153 | Athletics & Sports | Powerful Penalty Kick | FAIL | Tag 'sport' should be Title Case |
+| 154 | Athletics & Sports | Focused Batting Stance | FAIL | Tag 'sport' should be Title Case |
+| 155 | Athletics & Sports | Alert Infield Catch | FAIL | Tag 'sport' should be Title Case |
+| 156 | Athletics & Sports | High-Velocity Windup | FAIL | Tag 'sport' should be Title Case |
+| 157 | Athletics & Sports | Precision Tennis Serve | FAIL | Tag 'sport' should be Title Case |
+| 158 | Athletics & Sports | Kinetic Trophy Serve | FAIL | Tag 'sport' should be Title Case |
+| 159 | Athletics & Sports | Clutch Three-Point Jump | FAIL | Tag 'sport' should be Title Case |
+| 160 | Athletics & Sports | Triumphant Victory Stance | FAIL | Tag 'sport' should be Title Case |
+| 161 | Athletics & Sports | Low-Profile Volleyball Dig | FAIL | Tag 'sport' should be Title Case |
+| 162 | Athletics & Sports | Vertical Volleyball Serve | FAIL | Tag 'sport' should be Title Case |
+| 163 | Athletics & Sports | Tactical Volleyball Set | FAIL | Tag 'sport' should be Title Case |
+| 164 | Athletics & Sports | Aggressive Volleyball Spike | FAIL | Tag 'sport' should be Title Case |
+| 168 | Combat & Tactical | Balanced Fighter Stance | PASS | None |
+| 169 | Combat & Tactical | Low Wrestling Engagement | PASS | None |
+| 170 | Combat & Tactical | Dominant Ground Control | PASS | None |
+| 171 | Combat & Tactical | Powerful Heavy Bag Strike | PASS | None |
+| 172 | Combat & Tactical | Defensive Sparring Guard | PASS | None |
+| 173 | Combat & Tactical | Ground Guard Bottom | PASS | None |
+| 177 | Athletics & Sports | Rhythmic Jump Rope | PASS | None |
+| 178 | Athletics & Sports | Deep Fight-Prep Stretch | PASS | None |
+| 179 | Athletics & Sports | Streamlined Swim Dive | FAIL | Tag 'sport' should be Title Case |
+| 180 | Athletics & Sports | Explosive Track Start | FAIL | Tag 'sport' should be Title Case |
+| 181 | Athletics & Sports | Vertical Handstand Balance | PASS | None |
+| 182 | Athletics & Sports | Graceful Backbend Bridge | PASS | None |
+| 183 | Athletics & Sports | Casual Skateboard Carry | PASS | None |
+| 184 | Athletics & Sports | Momentum Skater Push | PASS | None |
+| 190 | Arts & Performance | Elegant Ballet Arabesque | PASS | None |
+| 191 | Arts & Performance | Graceful Ballet Bow | PASS | None |
+| 192 | Arts & Performance | Precise Barre Stretch | PASS | None |
+| 193 | Arts & Performance | Elite Floor Split | PASS | None |
+| 194 | Arts & Performance | Majestic Grand Jeté | PASS | None |
+| 195 | Arts & Performance | Hip-Hop Swagger Stance | PASS | None |
+| 196 | Arts & Performance | Pirouette Balance | PASS | None |
+| 197 | Arts & Performance | Precise Pointe Position | PASS | None |
+| 203 | Alternative & Edgy | Moody Cigarette Pose | PASS | None |
+| 204 | Alternative & Edgy | Urban Graffiti Lean | PASS | None |
+| 205 | Alternative & Edgy | Cool Leather Flip | PASS | None |
+| 206 | Alternative & Edgy | Biker Motorcycle Lean | PASS | None |
+| 207 | Alternative & Edgy | Rebellious Rocker Stance | PASS | None |
+| 208 | Alternative & Edgy | Challenging Chair Straddle | PASS | None |
+| 214 | Thematic & Cinematic | Cottagecore Basket Stroll | PASS | None |
+| 215 | Thematic & Cinematic | Ethereal Crown Adjustment | PASS | None |
+| 216 | Thematic & Cinematic | Refined Tea Moment | PASS | None |
+| 217 | Thematic & Cinematic | Retro Vinyl Appreciation | PASS | None |
+| 218 | Thematic & Cinematic | Classic Ara Ara Tease | PASS | None |
+| 219 | Thematic & Cinematic | Poised Kneeling Gaze | PASS | None |
+| 225 | History & Culture | Regal Goddess Presence | PASS | None |
+| 226 | History & Culture | Formal Kimono Bow | PASS | None |
+| 227 | History & Culture | Dignified Royal Wave | PASS | None |
+| 228 | History & Culture | Elegant Sari Adjustment | PASS | None |
+| 234 | Combat & Tactical | Lethal Sword Point | PASS | None |
+| 235 | Combat & Tactical | Iconic Hero Landing | PASS | None |
+| 236 | Combat & Tactical | Tactical Weapon Check | PASS | None |
+| 237 | Combat & Tactical | Stoic Combat Stride | PASS | None |
+| 238 | Combat & Tactical | Predatory Stalking Stance | PASS | None |
+| 239 | Combat & Tactical | Shadowed Match Light | PASS | None |
+| 240 | Combat & Tactical | Dramatic Coat Flare | PASS | None |
+| 246 | Combat & Tactical | MMA Cage Lean | PASS | None |
+| 247 | Combat & Tactical | Classic Boxing Guard | PASS | None |
+| 248 | Combat & Tactical | Double-Leg Shoot | PASS | None |
+| 249 | Combat & Tactical | Muay Thai Clinch Guard | PASS | None |
+| 250 | Combat & Tactical | Southpaw Striking Coil | PASS | None |
+| 256 | Fantasy & Sci-Fi | Arcane Energy Charge | PASS | None |
+| 257 | Fantasy & Sci-Fi | Ethereal Levitation | PASS | None |
+| 258 | Fantasy & Sci-Fi | Sinister Power Surge | PASS | None |
+| 259 | Fantasy & Sci-Fi | Radiant Divine Ascension | PASS | None |
+| 265 | Fantasy & Sci-Fi | Knightly High Guard | PASS | None |
+| 266 | Fantasy & Sci-Fi | Lethal Draw-Cut Stance | PASS | None |
+| 267 | Fantasy & Sci-Fi | Assassin's Prowl | PASS | None |
+| 268 | Fantasy & Sci-Fi | Arcane Spellcasting | PASS | None |
+| 274 | Athletics & Sports | Front Double Bicep | PASS | None |
+| 275 | Athletics & Sports | V-Taper Lat Spread | PASS | None |
+| 276 | Athletics & Sports | Classic Side Chest | PASS | None |
+| 277 | Athletics & Sports | Intense Crab Muscular | PASS | None |
+| 283 | Fantasy & Sci-Fi | Holographic Manipulation | PASS | None |
+| 284 | Fantasy & Sci-Fi | Command Console Operation | PASS | None |
+| 285 | Fantasy & Sci-Fi | Zero-G Body Drift | PASS | None |
+| 286 | Fantasy & Sci-Fi | Cybernetic Neural Sync | PASS | None |
+| 287 | Fantasy & Sci-Fi | Dystopian Neon Lean | PASS | None |
+| 288 | Fantasy & Sci-Fi | Elite Underground Hacker | PASS | None |
+| 289 | Fantasy & Sci-Fi | Neon Cinematic Portrait | PASS | None |
+| 290 | Fantasy & Sci-Fi | Mercenary Weapon Calibration | PASS | None |
+| 296 | Fashion & Glamour | Defined Silhouette Arm Squeeze | PASS | None |
+| 297 | Fashion & Glamour | Focused Posture Arch | PASS | None |
+| 298 | Fashion & Glamour | Alluring Overhead Reach | PASS | None |
+| 299 | Fashion & Glamour | Prone Elbow Prop | PASS | None |
+| 300 | Fashion & Glamour | Profile Projection Turn | PASS | None |
+| 301 | Fashion & Glamour | Volume Enhancing Lean | PASS | None |
+| 302 | Fashion & Glamour | Macro Eye Gaze | PASS | None |
+| 303 | Fashion & Glamour | Sculpted Thigh Curve | PASS | None |
+| 304 | Fashion & Glamour | Dynamic S-Curve Stand | PASS | None |
+| 305 | Fashion & Glamour | Elevated Leg Perch | PASS | None |
+| 306 | Fashion & Glamour | Intimate Collarbone Frame | PASS | None |
+| 307 | Fashion & Glamour | Rear-Silhouette Arch | PASS | None |
+| 308 | Fashion & Glamour | Corner Wall Lounge | PASS | None |
+| 314 | Thematic & Cinematic | Nervous Flutter Smile | PASS | None |
+| 315 | Thematic & Cinematic | Superior Smug Smirk | PASS | None |
+| 316 | Thematic & Cinematic | Cheeky Playful Tease | PASS | None |
+| 317 | Thematic & Cinematic | Radiant Genuine Joy | PASS | None |
+| 318 | Thematic & Cinematic | Sultry Lip-Bite Close-up | PASS | None |
+| 319 | Thematic & Cinematic | Melancholy Longing | PASS | None |
+| 320 | Thematic & Cinematic | Shocked Gasped Reaction | PASS | None |
+| 321 | Thematic & Cinematic | Cold Determination | PASS | None |
+| 327 | Thematic & Cinematic | Heroic Brave Stand | PASS | None |
+| 328 | Thematic & Cinematic | Tensed Fear Recoil | PASS | None |
+| 329 | Thematic & Cinematic | Shy Blush Gaze | PASS | None |
+| 330 | Thematic & Cinematic | Romantic Lovelorn Gaze | PASS | None |
+| 331 | Thematic & Cinematic | Exhausted Tearful Relief | PASS | None |
+| 337 | Thematic & Cinematic | Direct Gaze Challenge | PASS | None |
+| 338 | Thematic & Cinematic | Flirty Upward Gaze | PASS | None |
+| 339 | Thematic & Cinematic | POV Hand Reach | PASS | None |
+| 340 | Thematic & Cinematic | Over-Shoulder Connection | PASS | None |
+| 341 | Thematic & Cinematic | Adoring Upward Look | PASS | None |
+| 342 | Thematic & Cinematic | Judgmental Stare | PASS | None |

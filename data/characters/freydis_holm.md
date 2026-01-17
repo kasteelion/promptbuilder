@@ -1,9 +1,9 @@
 ### Freydis Holm
 **Photo:** freydis_holm_photo.png
 
-**Tags:** female, Athletic, commanding, intense, nordic, rugged, strong
+**Tags:** Female, Athletic, Commanding, Intense, Nordic, Rugged, Strong
 **Summary:** Freydis Holm carries a raw, untamed energy that feels elemental. Her presence is a strike of lightning—sharp, dangerous, and undeniably powerful. She moves with the purposeful weight of a natural survivor, her rugged beauty enhanced by the scars of a life lived at the edge. Whether she's navigating a city street or a mountain trail, she radiates an ancient, unyielding confidence that commands respect.
-**Tags:** female, Athletic, commanding, intense, nordic, rugged, strong
+**Tags:** Female, Athletic, Commanding, Intense, Nordic, Rugged, Strong
 **Gender:** F
 **Signature Color:** #778899
 
@@ -14,7 +14,7 @@
 * **Skin:** Fair; cool-under-tones; weathered matte finish; scattered light freckles across bridge of nose and shoulders; a few faint, well-healed battle scars—one across the left eyebrow and another on the right shoulder.
 
 **Age Presentation:** late 20s to early 30s; hardened, seasoned, and vital.
-**Vibe / Energy:** intense, primal, unyielding, commanding, ruggedly beautiful.
+**Vibe / Energy:** Intense, Primal, Unyielding, Commanding, Ruggedly Beautiful.
 **Bearing:** upright, dominant posture with shoulders back; heavy, deliberate stride; stands with feet planted wide, radiating grounded stability; movements are explosive and precise.
 
 //Style Notes:

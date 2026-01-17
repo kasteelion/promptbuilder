@@ -1,7 +1,7 @@
 ### Elias Thorne
 **Photo:** elias_thorne_photo.jpeg
 
-**Tags:**   male, caucasian, chic, commanding, gay, minimalist, silver-fox, sophisticated
+**Tags:**   Male, Caucasian, Chic, Commanding, Gay, Minimalist, Silver-Fox, Sophisticated
 
 **Summary:** Elias is a study in monochromatic luxury and cultivated silence. An older, distinguished gentleman who has seen everything the city has to offer, he commands respect through quiet authority and impeccable taste. He represents the "Silver Fox" archetype—mentorship, experience, and a razor-sharp wit hidden behind architectural eyewear. He is the cool, collected counterweight to the chaos of youth.
 
@@ -18,7 +18,7 @@
 * **Skin:** Fair-cool; smooth texture with distinguished fine lines around eyes and forehead (the "character lines"); pale but healthy.
 
 **Age Presentation:** early 50s
-**Vibe / Energy:** sophisticated, expensive, minimalist, dry-witted, mentor-like, poised.
+**Vibe / Energy:** Sophisticated, Expensive, Minimalist, Dry-Witted, Mentor-Like, Poised.
 **Bearing:** perfectly vertical posture; movements are slow, deliberate, and silent; crosses legs elegantly when sitting; rarely gestures, letting his words do the work.
 
 ---

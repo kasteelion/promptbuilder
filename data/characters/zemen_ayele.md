@@ -2,7 +2,7 @@
 
 **Photo:** zemen_ayele_photo.png
 
-**Tags:** black, ethiopian, cultural, intellectual, creative, academic, commanding, burgundy-signature
+**Tags:** Black, Ethiopian, Cultural, Intellectual, Creative, Academic, Commanding, Burgundy-Signature
 
 **Summary:** Zemen is a dedicated cultural archivist and architectural researcher specializing in Aksumite heritage. She possesses a quiet, formidable intellect and a presence that feels deeply rooted in history. Her work involves bridging the gap between ancient Ethiopian design and modern urban planning. She moves with a steady, unhurried grace, and her style is a sophisticated fusion of traditional Ethiopian habesha textiles and sharp, contemporary academic tailoring.
 
@@ -22,7 +22,7 @@
 * **Skin:** Deep bronze with warm reddish undertones (Habesha/Highland coloring); smooth, matte finish; clear complexion that reflects her meticulous care and "indoor" scholastic life.
 
 **Age Presentation:** late 20s (27-29); mature, professional, and intellectually formidable.
-**Vibe / Energy:** contemplative, poised, intellectually deep, culturally rooted, quiet authority.
+**Vibe / Energy:** Contemplative, Poised, Intellectually Deep, Culturally Rooted, Quiet Authority.
 **Bearing:** perfectly vertical posture; movements are slow and deliberate; expressive but measured hand gestures; stands with a sense of "stillness" that commands respect.
 
 // Style Notes:

@@ -1,4 +1,4 @@
-tags: [Casual, vintage]
+tags: [Casual, Vintage]
 modifiers:
   Bell Bottom: featuring **dramatic bell bottoms** with a high-waisted rise and tight thigh
   Mom Jean: in a **classic tapered mom-jean cut** with a relaxed hip

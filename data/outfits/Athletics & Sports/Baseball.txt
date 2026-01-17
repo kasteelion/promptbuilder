@@ -1,0 +1,52 @@
+tags: [Team, Baseball]
+modifiers:
+  Home: in **{primary_color}** with **{secondary_color}** pinstripes and lettering
+  Away: in **gray** with **{primary_color}** lettering and **{secondary_color}** trim
+  Home Pitcher: in **{primary_color}** with **{secondary_color}** pinstripes, wearing a specialized protective glove on the non-throwing hand
+  Away Pitcher: in **gray** with **{secondary_color}** trim, wearing a specialized protective glove on the non-throwing hand
+  Home Catcher: in **{primary_color}** with **{secondary_color}** pinstripes, wearing full catcher's gear (chest protector, shin guards, face mask)
+  Away Catcher: in **gray** with **{secondary_color}** trim, wearing full catcher's gear (chest protector, shin guards, face mask)
+
+[F]
+- **Top:** Button-down baseball jersey for {team} {modifier}.
+  - **Fit:** Tucked in.
+  - **Material:** Polyester blend.
+  - **Pattern:** {modifier} (pinstripes or solid).
+  - **Neckline:** V-neck with buttons.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Softball-style pants.
+  - **Fit:** Fitted; Athletic.
+  - **Material:** Durable fabric.
+  - **Waist:** Belted.
+  - **Length:** Knee length with high socks.
+- **Footwear:** Baseball cleats.
+- **Accessories:** Baseball cap with team logo; batting glove; eye black.
+
+[M]
+- **Top:** Button-down baseball jersey for {team} {modifier}.
+  - **Fit:** Tucked in.
+  - **Material:** Polyester blend.
+  - **Neckline:** V-neck.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Baseball pants.
+  - **Fit:** Long and loose OR Knee high.
+  - **Material:** fabric.
+  - **Waist:** Belted.
+  - **Length:** Full OR Knee length.
+- **Footwear:** Metal cleats.
+- **Accessories:** Baseball cap with team logo; leather glove.
+
+[H]
+- **Hijab:** Sport hijab tucked into collar under baseball cap.
+- **Top:** Button-down baseball jersey for {team} {modifier}.
+  - **Fit:** Modest layered.
+  - **Material:** fabric over long-sleeve compression shirt.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Loose fit baseball pants.
+  - **Fit:** Loose.
+  - **Material:** fabric.
+  - **Waist:** Belted.
+  - **Length:** Full length.
+- **Footwear:** Cleats.
+- **Accessories:** Leather glove; cap.

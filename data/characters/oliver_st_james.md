@@ -1,7 +1,7 @@
 ### Oliver St. James
 **Photo:** oliver_st_james_photo.jpeg
 
-**Tags:**   male, approachable, british, casual, gay, hipster, indie, soft
+**Tags:**   Male, Approachable, British, Casual, Gay, Hipster, Indie, Soft
 
 **Summary:** Oliver feels like a warm cup of tea on a rainy afternoon—comforting, intelligent, and unpretentious. He embodies the "soft masculinity" of a modern indie intellectual, equally at home in a dusty library or a vinyl record shop. He radiates a golden-retriever-like warmth, drawing people in with an open heart and a slightly nervous, endearing charm.
 
@@ -19,7 +19,7 @@
 * **Skin:** Fair to light; pinkish warm undertones; prone to blushing; smooth complexion.
 
 **Age Presentation:** mid-20s
-**Vibe / Energy:** cozy, intellectual, sweet, sincere, approachable, neurotic-charming.
+**Vibe / Energy:** Cozy, Intellectual, Sweet, Sincere, Approachable, Neurotic-Charming.
 **Bearing:** relaxed, slightly slouchy posture (the "academic slouch"); leans in when listening; hands often tucked into pockets or holding a warm mug; gentle, non-threatening presence.
 
 ---

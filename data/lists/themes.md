@@ -1,24 +1,105 @@
-# Themes (editable)
-
+# Themes (Editable)
 ## Packers Dark
+
 ```yaml
-bg: "#1e1e1e"
-fg: "#d4d4d4"
-preview_bg: "#252526"
-preview_fg: "#e0e0e0"
-text_bg: "#2d2d2d"
-text_fg: "#d4d4d4"
+bg: "#203731"
+fg: "#FFFFFF"
+panel_bg: "#1a2b26"
+preview_bg: "#1a2b26"
+preview_fg: "#f0f0f0"
+text_bg: "#2d4d45"
+text_fg: "#FFFFFF"
 accent: "#FFB612"
-accent_hover: "#e6a10f"
-# Use the Packers green in more places (border, selection, and hover)
-border: "#203731"
-selected_bg: "#203731"
-accent_hover: "#203731"
+accent_hover: "#e6a410"
+border: "#3d5e56"
+selected_bg: "#3d5e56"
 ```
-# Themes (auto-generated)
+
+## Packers Light
+
+```yaml
+bg: "#f5f5f5"
+fg: "#203731"
+panel_bg: "#FFFFFF"
+preview_bg: "#FFFFFF"
+preview_fg: "#203731"
+text_bg: "#FFFFFF"
+text_fg: "#203731"
+accent: "#203731"
+accent_hover: "#2d4d45"
+border: "#FFB612"
+selected_bg: "#fff8e1"
+```
+
+## FC Cincinnati Dark
+
+```yaml
+bg: "#1a1a1a"
+fg: "#FFFFFF"
+panel_bg: "#263B94"
+preview_bg: "#263B94"
+preview_fg: "#FFFFFF"
+text_bg: "#2d2d2d"
+text_fg: "#FFFFFF"
+accent: "#FE5000"
+accent_hover: "#e54800"
+border: "#263B94"
+selected_bg: "#3d3d3d"
+```
+
+## FC Cincinnati Light
+
+```yaml
+bg: "#f0f4f8"
+fg: "#263B94"
+panel_bg: "#FFFFFF"
+preview_bg: "#FFFFFF"
+preview_fg: "#263B94"
+text_bg: "#FFFFFF"
+text_fg: "#263B94"
+accent: "#FE5000"
+accent_hover: "#e54800"
+border: "#263B94"
+selected_bg: "#e1e8f0"
+```
+
+## ONU Dark
+
+```yaml
+bg: "#000000"
+fg: "#FFFFFF"
+panel_bg: "#1a1a1a"
+preview_bg: "#1a1a1a"
+preview_fg: "#FFFFFF"
+text_bg: "#222222"
+text_fg: "#FFFFFF"
+accent: "#FF6600"
+accent_hover: "#e55c00"
+border: "#333333"
+selected_bg: "#333333"
+```
+
+## ONU Light
+
+```yaml
+bg: "#FFFFFF"
+fg: "#000000"
+panel_bg: "#f5f5f5"
+preview_bg: "#f5f5f5"
+preview_fg: "#000000"
+text_bg: "#FFFFFF"
+text_fg: "#000000"
+accent: "#FF6600"
+accent_hover: "#e55c00"
+border: "#CCCCCC"
+selected_bg: "#fff0e6"
+```
+
+# Themes (Auto-Generated)
 # You can edit or add themes below. Each theme is a header and a YAML block.
 
 ## Dark
+
 ```yaml
 bg: "#1e1e1e"
 fg: "#d4d4d4"
@@ -33,6 +114,7 @@ selected_bg: "#2d3e50"
 ```
 
 ## Dracula
+
 ```yaml
 bg: "#282a36"
 fg: "#f8f8f2"
@@ -47,6 +129,7 @@ selected_bg: "#44475a"
 ```
 
 ## Gruvbox Dark
+
 ```yaml
 bg: "#282828"
 fg: "#ebdbb2"
@@ -61,6 +144,7 @@ selected_bg: "#504945"
 ```
 
 ## High Contrast
+
 ```yaml
 bg: "#000000"
 fg: "#ffffff"
@@ -75,6 +159,7 @@ selected_bg: "#333333"
 ```
 
 ## High Contrast Copy
+
 ```yaml
 bg: "#000000"
 fg: "#ffffff"
@@ -89,6 +174,7 @@ selected_bg: "#333333"
 ```
 
 ## Light
+
 ```yaml
 bg: "#f0f0f0"
 fg: "#1a1a1a"
@@ -103,6 +189,7 @@ selected_bg: "#e3f2fd"
 ```
 
 ## Midnight Blue
+
 ```yaml
 bg: "#0b1b2b"
 fg: "#cfe8ff"
@@ -117,6 +204,7 @@ selected_bg: "#0f3a55"
 ```
 
 ## Monokai
+
 ```yaml
 bg: "#272822"
 fg: "#f8f8f2"
@@ -131,6 +219,7 @@ selected_bg: "#49483e"
 ```
 
 ## Nord
+
 ```yaml
 bg: "#2e3440"
 fg: "#d8dee9"
@@ -145,6 +234,7 @@ selected_bg: "#434c5e"
 ```
 
 ## One Dark
+
 ```yaml
 bg: "#282c34"
 fg: "#abb2bf"
@@ -159,6 +249,7 @@ selected_bg: "#3e4451"
 ```
 
 ## Packers
+
 ```yaml
 bg: "#000000"
 fg: "#ffffff"
@@ -173,6 +264,7 @@ selected_bg: "#333333"
 ```
 
 ## Pastel
+
 ```yaml
 bg: "#fffaf0"
 fg: "#3b3a3a"
@@ -187,6 +279,7 @@ selected_bg: "#fff1f2"
 ```
 
 ## Sepia
+
 ```yaml
 bg: "#f4ecd8"
 fg: "#5b4636"
@@ -201,6 +294,7 @@ selected_bg: "#efe6d1"
 ```
 
 ## Solarized Dark
+
 ```yaml
 bg: "#002b36"
 fg: "#839496"
@@ -215,6 +309,7 @@ selected_bg: "#073642"
 ```
 
 ## Solarized Light
+
 ```yaml
 bg: "#fdf6e3"
 fg: "#657b83"
@@ -229,6 +324,7 @@ selected_bg: "#eee8d5"
 ```
 
 ## Tokyo Night
+
 ```yaml
 bg: "#1a1b26"
 fg: "#a9b1d6"

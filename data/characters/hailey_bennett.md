@@ -2,7 +2,7 @@
 
 **Photo:** hailey_bennett_photo.png
 
-**Tags:** female, caucasian, cheerful, gen-z, casual, bubbly, approachable, trendy
+**Tags:** Female, Caucasian, Cheerful, Gen-Z, Casual, Bubbly, Approachable, Trendy
 
 **Summary:** Hailey is an effervescent, trendy Gen Z coffee shop enthusiast with a contagious smile. Bubbly, approachable, and effortlessly styled in casual athleisure, she represents the "Clean Girl" aesthetic—balancing high-energy social interaction with a relaxed, minimalist fashion sense. She's the type of person who knows the best local roasteries and radiates a natural, "lit-from-within" warmth that makes everyone feel like an old friend.
 
@@ -17,7 +17,7 @@
 * **Skin:** Fair with cool pink undertones; "glass skin" finish with a natural, healthy flush; light dusting of faint freckles across the nose bridge and cheeks.
 
 **Age Presentation:** 19-23; youthful, spirited, and modern.
-**Vibe / Energy:** Bubbly, animated, chatty, and genuinely cheerful.
+**Vibe / Energy:** Bubbly, Animated, Chatty, And Genuinely Cheerful.
 **Bearing:** Expressive head tilting; active hand gestures while speaking; leans in engagingly during conversation; moves with a light, bouncy energy.
 
 // Style Notes:

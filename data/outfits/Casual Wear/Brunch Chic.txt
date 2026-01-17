@@ -1,0 +1,46 @@
+tags: [casual, brunch, social, feminine, stylish]
+
+[F]
+- **Top:** Flowy blouse or wrap top in {primary_color}.
+  - **Fit:** Relaxed flowy.
+  - **Material:** Chiffon or soft cotton.
+  - **Pattern:** Solid or floral.
+  - **Neckline:** V-neck or wrap.
+  - **Sleeve:** Short or 3/4 sleeves.
+- **Bottom:** High-waisted midi skirt or culottes in {secondary_color}.
+  - **Fit:** A-line or wide-leg.
+  - **Material:** Cotton or linen blend.
+  - **Waist:** High-waisted.
+  - **Length:** Midi or knee-length.
+- **Footwear:** Strappy sandals or mules.
+- **Accessories:** Sunglasses; tote bag; delicate jewelry.
+
+[M]
+- **Top:** Linen shirt or casual button-up in {primary_color}.
+  - **Fit:** Relaxed.
+  - **Material:** Linen or cotton.
+  - **Pattern:** Solid or subtle stripe.
+  - **Neckline:** Collar.
+  - **Sleeve:** Short or rolled long sleeves.
+- **Bottom:** Chinos or light-wash jeans.
+  - **Fit:** Straight or slim.
+  - **Material:** Cotton twill or denim.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Loafers or boat shoes.
+- **Accessories:** Sunglasses; watch.
+
+[H]
+- **Hijab:** Light chiffon hijab in pastel or neutral.
+- **Top:** Modest flowy tunic in {primary_color}.
+  - **Fit:** Relaxed modest fit.
+  - **Material:** Soft cotton or chiffon.
+  - **Neckline:** High crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Wide-leg pants or palazzo pants.
+  - **Fit:** Wide-leg.
+  - **Material:** Cotton or linen blend.
+  - **Waist:** High-rise elastic.
+  - **Length:** Full length.
+- **Footwear:** Comfortable flats or sandals.
+- **Accessories:** Statement earrings; tote bag.

@@ -1,7 +1,7 @@
 ### Silas Burnside
 **Photo:** silas_burnside_photo.png
 
-**Tags:**   male, approachable, midwestern, outdoorsy, rugged, strong
+**Tags:**   Male, Approachable, Midwestern, Outdoorsy, Rugged, Strong
 **Summary:** Silas is the quintessential midwestern woodsman—a giant of a man with a laugh that shakes the room and a heart as big as his frame. He carries the scent of pine sawdust and woodsmoke wherever he goes. His presence is warm but solid, grounded in decades of hard labor and simple living. He’s the guy who pulls your truck out of a snowbank in a blizzard and waves off any thanks.
 
 **Gender:** M
@@ -14,7 +14,7 @@
 * **Skin:** Fair-to-medium; cool undertones; perpetually wind-chapped or sun-reddened; rugged texture with deep laugh lines.
 
 **Age Presentation:** late 40s to early 50s; seasoned, hearty, and vigorous.
-**Vibe / Energy:** hearty, reliable, rugged, jovial, grounded.
+**Vibe / Energy:** Hearty, Reliable, Rugged, Jovial, Grounded.
 **Bearing:** relaxed and open; stands with a heavy, planted stance; frequently rests hands on hips or hooks thumbs in suspenders; radiates a "gentle giant" energy despite his size.
 
 //Style Notes:

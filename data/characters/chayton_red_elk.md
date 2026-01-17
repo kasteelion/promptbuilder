@@ -1,7 +1,7 @@
 ### Chayton Red-Elk
 **Photo:** chayton_redelk_photo.jpeg
 
-**Tags:**   male, creative, indigenous, intellectual, long-hair, modern, rugged
+**Tags:**   Male, Creative, Indigenous, Intellectual, Long-Hair, Modern, Rugged
 
 **Summary:** Chayton bridges the gap between ancestral tradition and modern minimalism. An architect by trade, he sees structure in nature and nature in structure. He possesses a quiet, grounding gravity—he speaks rarely, but when he does, the room listens. He is the calm in the center of the storm, radiating a deep, earthen reliability.
 
@@ -18,7 +18,7 @@
 * **Skin:** Rich, medium-reddish brown (copper tone); smooth but weathered texture; faint acne scars on temples adding character.
 
 **Age Presentation:** late 20s
-**Vibe / Energy:** grounded, stoic, observant, artistic, trustworthy.
+**Vibe / Energy:** Grounded, Stoic, Observant, Artistic, Trustworthy.
 **Bearing:** stands completely still with weight evenly distributed (tree-like); movements are slow and economical; listens with intense focus.
 
 ---

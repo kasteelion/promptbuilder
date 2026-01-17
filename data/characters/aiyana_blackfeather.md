@@ -1,7 +1,7 @@
 ### Aiyana Blackfeather
 **Photo:** aiyana_blackfeather_photo.png
 
-**Tags:** female, Athletic, chic, commanding, creative, cultural, indigenous, minimalist, traditional
+**Tags:** Female, Athletic, Chic, Commanding, Creative, Cultural, Indigenous, Minimalist, Traditional
 **Summary:** Aiyana moves between worlds with the grace of someone deeply rooted in both. Her powwow dancing carries generations of tradition in every precise footfall, while her contemporary presence speaks to Indigenous identity that refuses to be confined to the past. She embodies cultural continuity—honoring ancestors while claiming space in the present with athletic power and unshakeable dignity.
 
 **Gender:** F
@@ -15,7 +15,7 @@
 * **Skin:** Medium tan with warm red-brown undertones and natural healthy finish.
 
 **Age Presentation:** mid-20s presentation; culturally grounded, athletically confident.
-**Vibe / Energy:** proud, powerful, graceful, culturally rooted.
+**Vibe / Energy:** Proud, Powerful, Graceful, Culturally Rooted.
 **Bearing:** grounded centered posture; powerful deliberate movement with rhythmic precision; dance-trained weight distribution.
 
 // Style Notes:

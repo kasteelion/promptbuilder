@@ -1,0 +1,48 @@
+tags: [Event, Semi-Formal, Spring]
+
+[F]
+- **Top:** Floral midi dress (Bodice).
+  - **Fit:** Fit-and-flare or wrap.
+  - **Material:** Chiffon or Cotton.
+  - **Pattern:** Pastel floral print.
+  - **Neckline:** V-neck or Sweetheart.
+  - **Sleeve:** Cap sleeves or Sleeveless.
+- **Bottom:** Flowing dress skirt (Integrated).
+  - **Fit:** Flared A-line.
+  - **Material:** Matching fabric.
+  - **Pattern:** Floral.
+  - **Waist:** Natural.
+  - **Length:** Midi-length.
+- **Footwear:** Strappy heeled sandals.
+- **Accessories:** Straw hat with ribbon; delicate jewelry; woven bag; flower in hair.
+
+[M]
+- **Top:** Linen suit jacket and dress shirt.
+  - **Fit:** Tailored relaxed.
+  - **Material:** Linen; Cotton.
+  - **Pattern:** Solid ((default:light blue or tan)).
+  - **Neckline:** Peak lapel.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored linen suit trousers.
+  - **Fit:** Straight.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Leather loafers.
+- **Accessories:** Straw boater hat; pocket square.
+
+[H]
+- **Hijab:** Pastel chiffon hijab with flower crown.
+- **Top:** Floral modest maxi dress.
+  - **Fit:** High-neck modest.
+  - **Material:** Chiffon.
+  - **Pattern:** Pastel print.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full skirt (Integrated).
+  - **Fit:** Voluminous A-line.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Heeled sandals or flats.
+- **Accessories:** Straw hat; woven bag.

@@ -1,0 +1,46 @@
+tags: [casual, layered, cozy, versatile, comfortable]
+
+[F]
+- **Top:** Open-front cardigan in {primary_color} over basic tee.
+  - **Fit:** Relaxed open cardigan.
+  - **Material:** Soft knit or cotton blend.
+  - **Pattern:** Solid or cable knit.
+  - **Neckline:** Open front over crew neck tee.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Skinny jeans or leggings in {secondary_color}.
+  - **Fit:** Skinny or fitted.
+  - **Material:** Stretch denim or cotton blend.
+  - **Waist:** Mid to high-rise.
+  - **Length:** Full length.
+- **Footwear:** Ankle boots or flats.
+- **Accessories:** Scarf; tote bag.
+
+[M]
+- **Top:** Button cardigan or zip cardigan over tee.
+  - **Fit:** Regular fit.
+  - **Material:** Cotton or wool blend.
+  - **Pattern:** Solid.
+  - **Neckline:** V-neck cardigan over crew tee.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Chinos or jeans.
+  - **Fit:** Straight or slim.
+  - **Material:** Cotton twill or denim.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Casual shoes or boots.
+- **Accessories:** Watch.
+
+[H]
+- **Hijab:** Jersey hijab in coordinating color.
+- **Top:** Long cardigan over tunic and pants.
+  - **Fit:** Modest long cardigan.
+  - **Material:** Soft knit.
+  - **Neckline:** Open front.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Straight-leg pants.
+  - **Fit:** Straight.
+  - **Material:** Cotton blend.
+  - **Waist:** Elastic or regular.
+  - **Length:** Full length.
+- **Footwear:** Comfortable flats.
+- **Accessories:** Long necklace.

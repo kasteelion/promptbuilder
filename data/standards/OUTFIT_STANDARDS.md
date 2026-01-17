@@ -1,5 +1,4 @@
 # Outfit Definition Standards (Scientific Component Model)
-
 To ensure high-quality, photorealistic generation, we use the **Component-Scientific Standard**. This model breaks an outfit down into its core components (**Top**, **Bottom**, **Footwear**) and strictly defines their physical properties using standardized dimensions.
 
 ## The Component-Scientific Schema
@@ -15,35 +14,29 @@ Every outfit entry in the `[F]`, `[M]`, and `[H]` sections must follow this nest
 ### Required Dimensions by Component
 
 #### 1. Top (The "Frame")
-
 - **Fit:** (e.g., Oversized, Bodycon, Corset, Tailored)
 - **Material:** (e.g., Chunky Knit, Silk Satin, Distressed Denim)
 - **Neckline:** (e.g., Turtleneck, Plunging V, Off-Shoulder)
 - **Sleeve:** (e.g., Sleeveless, Bell Sleeve, Long tapered)
 
 #### 2. Bottom (The "Anchor")
-
 - **Fit:** (e.g., A-Line, Skinny, Wide-Leg, Pencil)
 - **Material:** (e.g., Heavy Wool, Pleated Chiffon, Rigid Denim)
 - **Waist:** (e.g., High-waisted, Low-rise, Paperbag)
 - **Length:** (e.g., Mini, Midi, Floor-length, Ankle-grazer)
 
 ### Advanced Dimensions (For High-Fidelity)
-
 To push photorealism further, consider including these optional keys:
 
 #### 7. Pattern (The "Surface")
-
 - **Definition:** The visual print or color variation.
 - **Examples:** Pinstripe, Polka Dot, Gradient, Tartan Plaid, Floral Print, Solid.
 
 #### 8. Trim & Hardware (The "Finish")
-
 - **Definition:** Edges, fasteners, and embellishments.
 - **Examples:** Lace trim, Gold buttons, Sequin clusters, Raw hem, Zipper details.
 
 #### 3. One-Piece (Dresses/Jumpsuits)
-
 - **Fit:** (Overall silhouette)
 - **Material:** (Primary fabric)
 - **Neckline:** (Neck shape)

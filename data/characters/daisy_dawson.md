@@ -2,7 +2,7 @@
 
 **Photo:** daisy_dawson_photo.png
 
-**Tags:** female, caucasian, playful, curvy, coquette, effervescent, flirty, cozy
+**Tags:** Female, Caucasian, Playful, Curvy, Coquette, Effervescent, Flirty, Cozy
 
 **Summary:** Daisy is a bubbly, effervescent personality who perfectly blends playful "coquette" aesthetics with grounded, casual comfort. She projects a youthful, accessible charm characterized by soft curves and a penchant for warm, cozy textures. A girl-next-door meets social media trendsetter, she radiates a flirty but approachable energy that prioritizes both high-fashion flair and genuine comfort.
 
@@ -17,7 +17,7 @@
 * **Skin:** Fair with cool pink undertones; prone to a natural, healthy flush; smooth texture; distinctive vine/leaf tattoo wrapping around her left forearm and a small shell tattoo on her upper right arm.
 
 **Age Presentation:** 20-24; youthful, spirited, and modern.
-**Vibe / Energy:** Effervescent, Flirty, Cozy, and approachable.
+**Vibe / Energy:** Effervescent, Flirty, Cozy, And Approachable.
 **Bearing:** Relaxed and leaning posture; prioritizes comfort in her movements; expressive hand gestures that accentuate her bubbly personality.
 
 // Style Notes:

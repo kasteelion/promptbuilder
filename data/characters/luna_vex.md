@@ -2,7 +2,7 @@
 
 **Photo:** luna_vex_photo.png
 
-**Tags:** female, curvy, edgy, petite, playful
+**Tags:** Female, Curvy, Edgy, Petite, Playful
 
 **Summary:** Luna radiates a genuine and warm-hearted sense of fun, her bold aesthetic serving as a vibrant backdrop to an approachable and joyful personality. Her presence is characterized by a bright, infectious laugh and a natural charisma that feels welcoming and light-spirited.
 

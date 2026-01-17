@@ -1,7 +1,7 @@
 ### Jordan Vance
 **Photo:** jordan_vance_photo.png
 
-**Tags:** black, Athletic, chic, commanding, female, playful, tall
+**Tags:** Black, Athletic, Chic, Commanding, Female, Playful, Tall
 **Summary:** Jordan is the ultimate expression of "Athletic Glam"—possessing the elite verticality of a pro basketballer mixed with high-fashion confidence. At 6'4", she commands the space around her with a "Bayou Barbie" energy: unapologetically feminine, fiercely competitive, and always "on." She blends the explosive power of an elite athlete with a polished, glamorous aesthetic that makes her presence feel both dynamic and captivating.
 
 **Gender:** F
@@ -14,7 +14,7 @@
 * **Skin:** Deep ebony depth with neutral-cool undertones; smooth almost polished finish; athletic glow with visible muscle definition; long, manicured almond-shaped nails in a signature vibrant color or French tip.
 
 **Age Presentation:** mid-20s; youthful, energetic, and peak-performance mature.
-**Vibe / Energy:** energetic, commanding, glamorous, playful, elite-athlete.
+**Vibe / Energy:** Energetic, Commanding, Glamorous, Playful, Elite-Athlete.
 **Bearing:** excellent upright posture with extreme verticality; moves with a light, bouncy ease; stands with a hand on one hip, projecting high-fashion confidence and readiness.
 
 // Style Notes:

@@ -1,4 +1,4 @@
-tags: [costume, hero, tactical]
+tags: [Costume, Heroic, Tactical]
 modifiers:
   Stealth: , all black matte stealth gear
   Heavy: , full heavy riot armor plates

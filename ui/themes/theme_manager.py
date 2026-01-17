@@ -124,7 +124,7 @@ class ThemeManager:
 
         # Load additional themes from data/themes.md if present
         try:
-            md_path = os.path.join(os.getcwd(), "data", "themes.md")
+            md_path = os.path.join(os.getcwd(), "data", "lists", "themes.md")
             md_themes = _parse_themes_md(md_path)
             # Merge: md themes override builtins
             if md_themes:
@@ -523,7 +523,7 @@ class ThemeManager:
         """
         try:
             if path is None:
-                path = os.path.join(os.getcwd(), "data", "themes.md")
+                path = os.path.join(os.getcwd(), "data", "lists", "themes.md")
             # Only persist themes that are new or different from built-ins
             built_in = THEMES
             to_write = {}
@@ -548,7 +548,7 @@ class ThemeManager:
                 return False
 
             # Read existing md themes and merge (md earlier than prefs)
-            md_path = os.path.join(os.getcwd(), "data", "themes.md")
+            md_path = os.path.join(os.getcwd(), "data", "lists", "themes.md")
             md_themes = _parse_themes_md(md_path) or {}
             merged = dict(md_themes)
             # prefs should override md
@@ -581,7 +581,7 @@ class ThemeManager:
         """
         try:
             if path is None:
-                path = os.path.join(os.getcwd(), "data", "themes.md")
+                path = os.path.join(os.getcwd(), "data", "lists", "themes.md")
             md_themes = _parse_themes_md(path) or {}
             # Merge: md themes override built-ins but preserve other runtime themes
             merged = dict(THEMES)

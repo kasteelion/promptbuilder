@@ -1,0 +1,46 @@
+tags: [casual, cozy, comfortable, modern, relaxed]
+
+[F]
+- **Top:** Oversized pullover hoodie in {primary_color}.
+  - **Fit:** Oversized drop-shoulder.
+  - **Material:** Fleece-lined cotton.
+  - **Pattern:** Solid or minimal logo.
+  - **Neckline:** Hood with drawstring.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted joggers or leggings in {secondary_color}.
+  - **Fit:** Relaxed joggers or fitted leggings.
+  - **Material:** Cotton blend or athletic fabric.
+  - **Waist:** High-waisted elastic.
+  - **Length:** Ankle length.
+- **Footwear:** Chunky sneakers or slides.
+- **Accessories:** Baseball cap; small backpack.
+
+[M]
+- **Top:** Zip-up hoodie or pullover hoodie in {primary_color}.
+  - **Fit:** Regular or slightly oversized.
+  - **Material:** Fleece-lined cotton.
+  - **Pattern:** Solid or brand logo.
+  - **Neckline:** Hood with drawstring.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Joggers or sweatpants in matching or contrasting color.
+  - **Fit:** Tapered joggers.
+  - **Material:** French terry or fleece.
+  - **Waist:** Elastic with drawstring.
+  - **Length:** Ankle length.
+- **Footwear:** Athletic sneakers or slides.
+- **Accessories:** Beanie; smartwatch.
+
+[H]
+- **Hijab:** Sport hijab in {primary_color}.
+- **Top:** Long-line hoodie tunic over leggings.
+  - **Fit:** Modest tunic length.
+  - **Material:** Fleece-lined cotton.
+  - **Neckline:** Hood.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length athletic leggings.
+  - **Fit:** Fitted.
+  - **Material:** Moisture-wicking fabric.
+  - **Waist:** High-rise elastic.
+  - **Length:** Full length.
+- **Footwear:** Athletic sneakers.
+- **Accessories:** Drawstring bag.

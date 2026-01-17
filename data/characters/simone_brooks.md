@@ -2,7 +2,7 @@
 
 **Photo:** simone_brooks_photo.png
 
-**Tags:** black, american, intellectual, magnetic, sophisticated, academic, braids, fuchsia-signature, vibrant, effervescent
+**Tags:** Black, American, Intellectual, Magnetic, Sophisticated, Academic, Braids, Fuchsia-Signature, Vibrant, Effervescent, Urban, Work
 
 **Summary:** Dr. Simone Brooks is a professor of Sociology with a focus on urban systems and digital anthropology. While her intellect is razor-sharp, her public persona is defined by an effervescent, magnetic energy that makes her a recurring guest on national media and game-show circuits. She specializes in "translating" complex social dynamics into enthusiastic, high-stakes storytelling. Her style is "Intellectual Pop"—classic professional foundations updated with vibrant magenta poplin, stacked gold jewelry, and a glowing, soft-glam finish that radiates confidence and warmth.
 
@@ -16,13 +16,13 @@
 
 **Appearance:**
 
-* **Body:** Soft Natural leaning Romantic; soft curvy silhouette with a moderate vertical line; rounded shoulders and fleshy, feminine contours; projects an aura of approachable, healthy vitality.
-* **Face:** Rounded oval face shape with soft planes and high prominent cheekbones; expressive, bright dark eyes framed by cat-eye hybrid glasses; button nose; wide, engaging smile with prominent "apple" cheeks; polished neutral-gloss finish on her lips.
-* **Hair:** Type 4C natural texture; high density; ultra-long, sleek micro-braids falling to waist length; jet black; intricate geometric zigzag parting design at the scalp; pulled back away from the face to showcase her features.
-* **Skin:** Deep sienna-mahogany brown with a luminous, glowing finish; smooth texture without visible blemishes; radiates a healthy, sun-kissed warmth.
+- **Body:** Soft Natural leaning Romantic; soft curvy silhouette with a moderate vertical line; rounded shoulders and fleshy, feminine contours; projects an aura of approachable, healthy vitality.
+- **Face:** Rounded oval face shape with soft planes and high prominent cheekbones; expressive, bright dark eyes framed by cat-eye hybrid glasses; button nose; wide, engaging smile with prominent "apple" cheeks; polished neutral-gloss finish on her lips.
+- **Hair:** Type 4C natural texture; high density; ultra-long, sleek micro-braids falling to waist length; jet black; intricate geometric zigzag parting design at the scalp; pulled back away from the face to showcase her features.
+- **Skin:** Deep sienna-mahogany brown with a luminous, glowing finish; smooth texture without visible blemishes; radiates a healthy, sun-kissed warmth.
 
 **Age Presentation:** late 20s to early 30s (29-32); established yet vibrant and high-spirited.
-**Vibe / Energy:** effervescent, enthusiastic, magnetic, academically brilliant yet pop-culture ready.
+**Vibe / Energy:** Effervescent, Enthusiastic, Magnetic, Academically Brilliant Yet Pop-Culture Ready.
 **Bearing:** animated and high-energy; frequent expressive hand gestures; upright, confident posture; moves with a bouncy, optimistic rhythm.
 
 // Style Notes:

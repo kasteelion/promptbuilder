@@ -1,7 +1,7 @@
 {
-  "window_geometry": "2560x1349+-1141+75",
-  "last_theme": "Light",
-  "last_base_prompt": "Vintage Film: \"Analog Nostalgia\"",
+  "window_geometry": "2560x1349+-1520+52",
+  "last_theme": "ONU Dark",
+  "last_base_prompt": "Soft Semi-Realistic: \"Quiet Confidence\"",
   "font_adjustment": 0,
   "recent_characters": [],
   "favorite_characters": [
@@ -23,6 +23,6 @@
   "window_state": "zoomed",
   "sash_positions": {
     "main_sash": 387,
-    "content_sash": 1016
+    "content_sash": 753
   }
 }

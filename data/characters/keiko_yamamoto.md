@@ -1,7 +1,7 @@
 ### Keiko Yamamoto
 **Photo:** keiko_yamamoto_photo.png
 
-**Tags:** female, Athletic, creative, edgy, intense, japanese, sharp
+**Tags:** Female, Athletic, Creative, Edgy, Intense, Japanese, Sharp
 **Summary:** Sharp and rebellious, Keiko channels creative intensity through deliberate edge. Her athletic build and focused gaze give her an air of controlled defiance—artistic, disciplined, and unapologetically bold.
 
 **Gender:** F
@@ -17,7 +17,7 @@
 * **Skin:** Light neutral skin with matte clarity; smooth even finish.
 
 **Age Presentation:** late 20s presentation; sharp, energized.
-**Vibe / Energy:** alert, driven, competitive, rebellious, artistic.
+**Vibe / Energy:** Alert, Driven, Competitive, Rebellious, Artistic.
 **Bearing:** quick, precise movement; direct eye contact; intentional and poised.
 
 // Style notes for outfit creation (not included in prompts):

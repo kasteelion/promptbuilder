@@ -1,7 +1,7 @@
 ### Jamal Rivers
 **Photo:** jamal_rivers_photo.png
 
-**Tags:**   black, approachable, chic, intellectual, male, minimalist
+**Tags:**   Black, Approachable, Chic, Intellectual, Male, Minimalist
 
 **Summary:** Jamal embodies thoughtful masculinity—his confidence is intellectual rather than physical, expressed through careful speech and considered movement. He carries himself with professorial ease, blending contemporary style with classic refinement. His presence invites conversation and deep thought.
 
@@ -19,7 +19,7 @@
 * **Skin:** Deep brown skin with warm undertones and smooth finish.
 
 **Age Presentation:** early 30s presentation; scholarly, settled, intellectually engaged.
-**Vibe / Energy:** thoughtful, composed, intellectually curious, warm.
+**Vibe / Energy:** Thoughtful, Composed, Intellectually Curious, Warm.
 **Bearing:** upright posture; measured movement; considered gestures.
 
 // Style notes for outfit creation (not included in prompts):

@@ -1,0 +1,50 @@
+tags: [Formal, Evening, Event, Elegant, Luxury]
+modifiers:
+  Square: featuring a **dramatic low square neckline** and structured bodice
+  Queen Anne: with a **Queen Anne neckline** framing the shoulders
+  Plunging: with a **deep plunging V-neckline** reaching the midriff
+  Strapless: with a **sharp architectural strapless neckline**
+
+[F]
+- **Top:** Structured velvet or heavy satin bodice {modifier}.
+  - **Fit:** Structured; Architectural.
+  - **Material:** Velvet; Heavy satin.
+  - **Pattern:** Solid.
+  - **Neckline:** {modifier}.
+  - **Sleeve:** Varied by modifier.
+- **Bottom:** Column skirt with high slit.
+  - **Fit:** Slim column.
+  - **Material:** matching fabric.
+  - **Waist:** Fitted waist.
+  - **Length:** Floor-length with slit.
+- **Footwear:** Embellished strappy heels.
+- **Accessories:** Diamond tennis necklace; rigid clutch; cocktail ring.
+
+[M]
+- **Top:** Velvet tuxedo jacket in deep midnight blue.
+  - **Fit:** Tailored formal.
+  - **Material:** Velvet; Silk.
+  - **Neckline:** Peaked lapels.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored black dinner trousers.
+  - **Fit:** Classic tailored.
+  - **Material:** wool.
+  - **Waist:** High natural waist.
+  - **Length:** Full length.
+- **Footwear:** Patent leather shoes.
+- **Accessories:** Silk bow tie; white pocket square; gold cufflinks.
+
+[H]
+- **Hijab:** Satin turban or sleek wrap with diamond brooch.
+- **Top:** Structured long-sleeve velvet gown {modifier}.
+  - **Fit:** Modest structured.
+  - **Material:** Velvet; Illusion mesh.
+  - **Neckline:** High-neck (modified).
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching column skirt.
+  - **Fit:** Straight modest column.
+  - **Material:** matching.
+  - **Waist:** Fitted waist.
+  - **Length:** Floor-length.
+- **Footwear:** Elegant heels.
+- **Accessories:** Diamond brooch; rigid clutch.

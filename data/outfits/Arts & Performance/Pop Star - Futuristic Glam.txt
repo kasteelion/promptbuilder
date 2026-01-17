@@ -1,0 +1,45 @@
+tags: [Fashion, Performance, Sci-Fi]
+
+[F]
+- **Top:** Metallic or holographic bodysuit.
+  - **Fit:** Form-fitting; Geometric cutouts.
+  - **Material:** Iridescent metallic/holographic blue/silver.
+  - **Pattern:** Asymmetric geometric designs.
+  - **Neckline:** High neck or Sculptural cutout.
+  - **Sleeve:** Armored asymmetric shoulder piece.
+- **Bottom:** Short pleated skirt.
+  - **Fit:** Pleated; Layered.
+  - **Material:** Black with metallic blue overlay.
+  - **Waist:** Natural with tech elements.
+  - **Length:** Mini length.
+- **Footwear:** Platform boots (knee-high futuristic).
+- **Accessories:** Statement hair piece; futuristic angular jewelry; microphone prop.
+
+[M]
+- **Top:** Structured metallic/iridescent jacket.
+  - **Fit:** Structured shoulders; Geometric lapels.
+  - **Material:** Metallic silver/iridescent fabric.
+  - **Neckline:** Geometric lapels.
+  - **Sleeve:** Long.
+- **Bottom:** Coated denim or metallic trousers.
+  - **Fit:** Fitted.
+  - **Material:** Coated denim or metallic fabric.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Futuristic high-top sneakers or boots.
+- **Accessories:** Visor or geometric sunglasses; LED accessories; microphone.
+
+[H]
+- **Hijab:** Iridescent or metallic silver hijab (sleek aerodynamic wrap).
+- **Top:** Long-sleeve structural tunic.
+  - **Fit:** Modest structural; Geometric.
+  - **Material:** Metallic blue/silver.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves with geometric shoulders.
+- **Bottom:** Matching metallic wide-leg pants or skirt.
+  - **Fit:** wide-leg or flared.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Platform silver boots.
+- **Accessories:** Geometric jewelry; microphone prop.

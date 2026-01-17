@@ -1,0 +1,45 @@
+tags: [Fantasy, Historical, Martial Arts]
+
+[F]
+- **Top:** Simple cloth wraps.
+  - **Fit:** Tight chest binding.
+  - **Material:** Linen or Cotton in earth tones.
+  - **Pattern:** Solid.
+  - **Neckline:** Wrap neckline.
+  - **Sleeve:** Sleeveless (wrapped).
+- **Bottom:** Loose martial arts pants.
+  - **Fit:** Loose; Tied ankles.
+  - **Material:** Cotton.
+  - **Waist:** Martial arts belt (rank colored).
+  - **Length:** Ankle-length.
+- **Footwear:** Cloth hand and foot wraps.
+- **Accessories:** Staff or bo; prayer beads; meditation scrolls; headband.
+
+[M]
+- **Top:** Simple cloth wraps (optional chest binding).
+  - **Fit:** Wrapped.
+  - **Material:** Linen or Cotton.
+  - **Neckline:** Wrap.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Loose martial arts pants with tied ankles.
+  - **Fit:** Loose.
+  - **Material:** Cotton.
+  - **Waist:** Martial arts belt.
+  - **Length:** Ankle-length.
+- **Footwear:** Cloth hand and foot wraps.
+- **Accessories:** Staff or bo; prayer beads; meditation scrolls.
+
+[H]
+- **Hijab:** Secure sport-style hijab in earth tones.
+- **Top:** Loose long-sleeve martial arts tunic.
+  - **Fit:** Modest loose.
+  - **Material:** Cotton.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Loose pants with ankle ties.
+  - **Fit:** Baggy.
+  - **Material:** matching.
+  - **Waist:** Sash or belt.
+  - **Length:** Full length.
+- **Footwear:** Cloth shoes or barefoot.
+- **Accessories:** Staff; prayer beads; sash.

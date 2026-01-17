@@ -1,4 +1,4 @@
-tags: [combat, fantasy, Holy]
+tags: [weapon_combat, Fantasy, Holy]
 
 [F]
 - **Top:** Blessed chainmail armor under white tabard.

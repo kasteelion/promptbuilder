@@ -1,0 +1,46 @@
+tags: [casual, cozy, cafe, comfortable, relaxed]
+
+[F]
+- **Top:** Oversized sweater or turtleneck in {primary_color}.
+  - **Fit:** Oversized cozy.
+  - **Material:** Soft knit or cashmere blend.
+  - **Pattern:** Solid or cable knit.
+  - **Neckline:** Crew or turtleneck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Leggings or skinny jeans in {secondary_color}.
+  - **Fit:** Fitted.
+  - **Material:** Stretch cotton or denim.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** UGG boots or ankle boots.
+- **Accessories:** Scarf; large tote; coffee cup.
+
+[M]
+- **Top:** Crewneck sweater or henley in {primary_color}.
+  - **Fit:** Regular or slightly oversized.
+  - **Material:** Cotton or wool blend.
+  - **Pattern:** Solid.
+  - **Neckline:** Crew or henley.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Jeans or joggers.
+  - **Fit:** Straight or tapered.
+  - **Material:** Denim or cotton blend.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Casual boots or sneakers.
+- **Accessories:** Beanie; messenger bag.
+
+[H]
+- **Hijab:** Warm jersey hijab in {primary_color}.
+- **Top:** Long sweater tunic over leggings.
+  - **Fit:** Modest tunic length.
+  - **Material:** Soft knit.
+  - **Neckline:** High crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Leggings or skinny pants.
+  - **Fit:** Fitted.
+  - **Material:** Stretch cotton.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** Comfortable boots.
+- **Accessories:** Large scarf; tote bag.

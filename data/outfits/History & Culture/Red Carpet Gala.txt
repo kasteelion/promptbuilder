@@ -1,0 +1,46 @@
+tags: [Celebrity, Event, Formal]
+
+[F]
+- **Top:** Haute couture gown (Bodice).
+  - **Fit:** Sculptural or form-fitting.
+  - **Material:** Luxe Silk, Velvet, or Embellished Mesh.
+  - **Pattern:** Variable architectural or jeweled.
+  - **Neckline:** Asymmetric, High-neck, or Column.
+  - **Sleeve:** Sleeveless or long dramatic.
+- **Bottom:** Integrated couture skirt with train or high slit.
+  - **Fit:** Mermaid, Ballgown, or Column.
+  - **Material:** Matching luxe fabric.
+  - **Waist:** Natural.
+  - **Length:** Floor-length with train.
+- **Footwear:** Designer embellished stiletto heels.
+- **Accessories:** Statement diamond jewelry; designer clutch; hair jewelry.
+
+[M]
+- **Top:** Bespoke modern-cut tuxedo jacket.
+  - **Fit:** Slim-fit modern.
+  - **Material:** Velvet or textured wool.
+  - **Pattern:** Textured.
+  - **Neckline:** Peak or Shawl lapel with bow tie.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Bespoke dress trousers.
+  - **Fit:** Tailored slim.
+  - **Material:** matching.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Designer patent leather dress shoes.
+- **Accessories:** Luxury watch; cufflinks; pocket square.
+
+[H]
+- **Hijab:** Couture silk or embellished hijab (architectural).
+- **Top:** Haute couture gown with cape details.
+  - **Fit:** Modest sculptural.
+  - **Material:** Silk/Sequin.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full integrated skirt.
+  - **Fit:** A-line or Column.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Designer heels.
+- **Accessories:** Diamond jewelry; designer clutch.

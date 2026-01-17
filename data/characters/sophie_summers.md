@@ -2,7 +2,7 @@
 
 **Photo:** sophie_summers_photo.png
 
-**Tags:** female, caucasian, cheerful, resort-chic, bubbly, optimistic, social, vacation-ready
+**Tags:** Female, Caucasian, Cheerful, Resort-Chic, Bubbly, Optimistic, Social, Vacation-Ready, Casual, Urban
 
 **Summary:** Sophie is a radiant, sun-seeking traveler with a bubbly "girl next door" charm and an affinity for resort life. Optimistic, social, and breezy, she carries herself with an open and inviting energy that feels like a perpetual vacation. Her style is "Resort-Chic"—effortlessly blending flowy, feminine silks and chiffons with functional modern tech, always ready for the next sunset or seaside dinner.
 
@@ -11,13 +11,13 @@
 
 **Appearance:**
 
-* **Body:** Soft Natural frame; moderate vertical line with a slightly muscular, athletic build, particularly evident in her legs; soft flesh over a sturdy, healthy frame; defined but not extremely tapered waist; projects a graceful, sun-drenched vitality.
-* **Face:** Soft oval structure with rounded planes; full, high "apple" cheeks that become prominent when she smiles; warm, inviting hazel eyes with a bright, welcoming gaze; wide, radiant smile with straight white teeth.
-* **Hair:** Type 1B/2A texture (straight with slight body wave); medium density; shoulder-blade length with long, movement-heavy layers; chestnut brown base with natural sun-kissed balayage highlights that frame her face.
-* **Skin:** Warm/Golden undertones with a smooth, healthy texture; tans deeply and easily; radiates a persistent, hydrated "beach glow."
+- **Body:** Soft Natural frame; moderate vertical line with a slightly muscular, athletic build, particularly evident in her legs; soft flesh over a sturdy, healthy frame; defined but not extremely tapered waist; projects a graceful, sun-drenched vitality.
+- **Face:** Soft oval structure with rounded planes; full, high "apple" cheeks that become prominent when she smiles; warm, inviting hazel eyes with a bright, welcoming gaze; wide, radiant smile with straight white teeth.
+- **Hair:** Type 1B/2A texture (straight with slight body wave); medium density; shoulder-blade length with long, movement-heavy layers; chestnut brown base with natural sun-kissed balayage highlights that frame her face.
+- **Skin:** Warm/Golden undertones with a smooth, healthy texture; tans deeply and easily; radiates a persistent, hydrated "beach glow."
 
 **Age Presentation:** 22-26; youthful adult maturity with a spirited energy.
-**Vibe / Energy:** Bubbly, breezy, optimistic, and effortlessly social.
+**Vibe / Energy:** Bubbly, Breezy, Optimistic, And Effortlessly Social.
 **Bearing:** Open and inviting; relaxed, confident posture; frequently captured in dynamic, expressive poses that project warmth and confidence.
 
 // Style Notes:

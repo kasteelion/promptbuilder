@@ -2,7 +2,7 @@
 
 **Photo:** enzo_rossi_photo.png
 
-**Tags:** italian, commanding, intense, male, playful, strong, Athletic
+**Tags:** Italian, Commanding, Intense, Male, Playful, Strong, Athletic
 **Summary:** Bold and magnetic, Enzo projects confidence through intensity and physical presence. His energy is commanding yet controlled, blending classic masculinity with a refined, intentional edge. Born in Milan and raised in the world of high-performance automotive engineering, he approachs every task with the same precision and passion he applies to a vintage Ferrari engine. He's the natural center of any room—not because he demands attention, but because his quiet strength and sharp wit make it impossible to ignore him.
 
 **Gender:** M
@@ -16,7 +16,7 @@
 * **Skin:** Warm olive skin with a smooth matte texture (Mediterranean heritage); even tone with a natural "healthy" radiance; clear planes with no visible imperfections; natural groomed finish.
 
 **Age Presentation:** early to mid-30s presentation; authoritative, composed, sophisticated.
-**Vibe / Energy:** confident, dominant, controlled-intensity, charismatic, grounded.
+**Vibe / Energy:** Confident, Dominant, Controlled-Intensity, Charismatic, Grounded.
 **Bearing:** grounded wide-base stance; deliberate and powerful movement—each step is intentional; maintains direct eye contact; posture is perfect without being stiff; presence feels heavy and significant.
 
 // Style Notes:

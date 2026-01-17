@@ -162,6 +162,7 @@ class CharacterCard(ttk.Frame):
         
         # Theme colors
         pbg = self.theme_colors.get("panel_bg", self.theme_colors.get("text_bg", "#1e1e1e"))
+        tbg = self.theme_colors.get("text_bg", "#1e1e1e") # Explicit text_bg for canvas
         fg = self.theme_colors.get("fg", "white")
         accent = self.theme_colors.get("accent", "#0078d7")
         border = self.theme_colors.get("border", self.theme_colors.get("bg", "#333333"))
@@ -177,7 +178,7 @@ class CharacterCard(ttk.Frame):
             self.container,
             width=photo_size,
             height=photo_size,
-            bg=pbg,
+            bg=tbg, # User requested text_bg specifically for the canvas
             highlightthickness=1,
             highlightbackground=border,
             cursor="hand2",
@@ -327,12 +328,13 @@ class CharacterCard(ttk.Frame):
         """Update manual overrides when theme changes."""
         self.theme_colors = theme
         pbg = theme.get("panel_bg", theme.get("bg", "#f0f0f0"))
+        tbg = theme.get("text_bg", "#1e1e1e") # explicit text bg
         border = theme.get("border", theme.get("bg", "#cccccc"))
         fg = theme.get("fg", "black")
         accent = theme.get("accent", "#0078d7")
 
         if hasattr(self, "photo_canvas"):
-            self.photo_canvas.config(bg=pbg, highlightbackground=border)
+            self.photo_canvas.config(bg=tbg, highlightbackground=border)
             try:
                 self.photo_canvas.itemconfig(self.placeholder_text, fill=fg)
             except Exception:
@@ -1836,8 +1838,7 @@ class CharacterGalleryPanel(ttk.Frame):
                 pass
             
         # Update canvas background
-        bg = self.theme_colors.get("bg", "#121212")
-        self.scrollable_canvas.canvas.configure(bg=bg)
+        self.scrollable_canvas.apply_theme(self.theme_colors)
         
         # Update fav pill
         if hasattr(self, "fav_pill_frame"):

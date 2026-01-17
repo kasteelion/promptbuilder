@@ -1,7 +1,7 @@
 ### Suki Nakamura
 **Photo:** suki_nakamura_photo.png
 
-**Tags:**   female, chic, commanding, creative, ethereal, geometric, japanese, minimalist
+**Tags:**   Female, Chic, Commanding, Creative, Ethereal, Geometric, Japanese, Minimalist
 
 **Summary:** Suki moves through space like a living art installation—deliberate, considered, and quietly captivating. Her minimalist aesthetic and controlled movement create an almost sculptural presence. She balances avant-garde fashion sensibility with approachable warmth, making the experimental feel accessible.
 
@@ -16,7 +16,7 @@
 * **Skin:** Light neutral-cool skin with porcelain clarity.
 
 **Age Presentation:** late 20s presentation; contemporary, artistic, self-assured.
-**Vibe / Energy:** ethereal, intentional, quietly bold, artistic.
+**Vibe / Energy:** Ethereal, Intentional, Quietly Bold, Artistic.
 **Bearing:** precise movement; geometric stillness; controlled grace.
 
 // Style notes for outfit creation (not included in prompts):

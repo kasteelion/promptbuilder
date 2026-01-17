@@ -1,7 +1,7 @@
 ### Priya Sharma
 **Photo:** priya_sharma_photo.jpeg
 **Summary:** A vibrant fusion of focused athleticism and warm, approachable energy. Priya projects a kinetic confidence that is both disciplined and spirited. Her presence balances the intensity of a competitor with the genuine warmth of a friend, embodying a modern, culturally-rich vitality.
-**Tags:** female, approachable, Athletic, chic, indian, playful
+**Tags:** Female, Approachable, Athletic, Chic, Indian, Playful
 **Gender:** F
 **Signature Color:** #50C878
 
@@ -17,7 +17,7 @@
 * **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow.
 
 **Age Presentation:** late 20s presentation; driven, capable.
-**Vibe / Energy:** focused, disciplined, Intense.
+**Vibe / Energy:** Focused, Disciplined, Intense.
 **Bearing:** efficient, energetic, forward-moving bearing when active.
 
 // Style notes for outfit creation (not included in prompts):

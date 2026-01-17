@@ -1,7 +1,7 @@
 ### Siofra Quinn
 **Photo:** siofra_photo.png
 **Summary:** Agile and sharp, Siofra Quinn carries the energy of a disciplined warrior-scholar. Built for speed and precision rather than brute force, she embodies the crossbow fighter's ethos: patient, focused, deadly accurate. Her confidence is tactical and controlled, blending intellectual strategy with combat-ready athleticism. She's the fighter who calculates trajectories and studies weaknesses before striking.
-**Tags:** female, Athletic, celtic-inspired, intellectual, intense, rugged
+**Tags:** Female, Athletic, Celtic-Inspired, Intellectual, Intense, Rugged
 **Gender:** F
 **Signature Color:** #006400
 
@@ -13,7 +13,7 @@
 * **Skin:** Fair neutral skin with weathered undertone.
 
 **Age Presentation:** late 20s presentation; battle-ready, alert.
-**Vibe / Energy:** vigilant, tactically intelligent, disciplined, patient, precision-focused, warrior-calm with scholarly intensity.
+**Vibe / Energy:** Vigilant, Tactically Intelligent, Disciplined, Patient, Precision-Focused, Warrior-Calm With Scholarly Intensity.
 **Bearing:** poised, ready stance; economical movement; calculated stillness and sudden efficient motion when required.
 
 // Style notes for outfit creation (not included in prompts):

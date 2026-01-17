@@ -1,7 +1,7 @@
 ### Aaliyah Chen
 **Photo:** aaliyah_chen_photo.png
 
-**Tags:** female, approachable, Athletic, bohemian, minimalist, mixed-heritage
+**Tags:** Female, Approachable, Athletic, Bohemian, Minimalist, Mixed-Heritage
 **Summary:** A grounded, vibrant performer whose energy feels rooted and alive. Aaliyah carries herself with relaxed athletic confidence, blending warmth, cultural depth, and effortless movement. Her presence feels sunlit and calm, with a quiet strength that reads as both capable and deeply human.
 
 **Gender:** F
@@ -14,7 +14,7 @@
 * **Skin:** Warm golden-brown skin with a natural sun-touched glow and soft satin finish.
 
 **Age Presentation:** mid-20s presentation; vibrant, grounded, mature.
-**Vibe / Energy:** grounded, warm, creative, earthy.
+**Vibe / Energy:** Grounded, Warm, Creative, Earthy.
 **Bearing:** relaxed, fluid movement; poised and centered bearing; natural athletic grace.
 
 // Style notes for outfit creation (not included in prompts):

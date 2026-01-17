@@ -1,7 +1,7 @@
 ### Fiona O'Sullivan
 **Photo:** fiona_osullivan_photo.png
 **Summary:** Fiona radiates warmth and openness, grounding any space she enters with ease. Her confidence is rooted in authenticity rather than polish, making her feel deeply approachable and emotionally generous.
-**Tags:**   celtic, approachable, commanding, creative, female, freckled, generous, plus-size, red-haired, soft
+**Tags:**   Celtic, Approachable, Commanding, Creative, Female, Freckled, Generous, Plus-Size, Red-Haired, Soft
 **Gender:** F
 **Signature Color:** #228B22
 
@@ -17,7 +17,7 @@
 * **Skin:** Fair rosy-toned skin with soft glow; smooth complexion.
 
 **Age Presentation:** mid-30s presentation; warm, settled.
-**Vibe / Energy:** open, generous, comforting.
+**Vibe / Energy:** Open, Generous, Comforting.
 **Bearing:** relaxed presence; gentle grounded movement.
 
 // Style notes for outfit creation (not included in prompts):

@@ -4,7 +4,7 @@
 
 **Summary:** Isla embodies an effortless, metropolitan elegance with a warm, engaging spirit. She carries the poised confidence of a modern creative, blending sharp precision in her style with a radiant, approachable demeanor. Her presence is attentive and polished, yet she retains a natural, sun-kissed vitality that feels both grounded and sophisticated.
 
-**Tags:**   female, approachable, chic, creative, filipino, playful
+**Tags:**   Female, Approachable, Chic, Creative, Filipino, Playful
 
 **Gender:** F
 **Signature Color:** #C19A6B
@@ -19,7 +19,7 @@
 
 **Age Presentation:** mid-20s presentation; sophisticated, professional, yet vibrant.
 
-**Vibe / Energy:** attentive, polished, warm, stylishly precise.
+**Vibe / Energy:** Attentive, Polished, Warm, Stylishly Precise.
 
 **Bearing:** casual yet attentive posture; leans forward slightly with interest; rests chin gently on a curled hand; graceful and composed.
 

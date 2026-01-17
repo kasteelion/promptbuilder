@@ -2,7 +2,7 @@
 
 **Photo:** linh_nguyen_photo.png
 
-**Tags:** vietnamese, american, vibrant, approachable, energetic, petite, playful, red-signature
+**Tags:** Vietnamese, American, Vibrant, Approachable, Energetic, Petite, Playful, Red-Signature
 
 **Summary:** Linh is a natural-born host with a "golden hour" personality that lights up any room. Raised in a bustling multicultural neighborhood in Orange County, she balances a career in digital media with a love for community storytelling. She has an uncanny ability to make absolute strangers feel like old friends within minutes. Her style is a mix of playful femininity and practical urban comfort—vibrant colors, puffed silhouettes, and the ever-reliable clean white sneaker.
 
@@ -22,7 +22,7 @@
 * **Skin:** Warm golden-tan with sun-kissed peach undertones; smooth, luminous texture; flawless "morning-fresh" glow.
 
 **Age Presentation:** mid-20s (24-26); youthful, high-spirited, genuinely warm.
-**Vibe / Energy:** buoyant, charismatic, sweetly assertive, "main stage" energy.
+**Vibe / Energy:** Buoyant, Charismatic, Sweetly Assertive, "main stage" Energy.
 **Bearing:** open and animated; frequent expressive hand gestures; stands with a slight tilt of the head; moves with a bouncy, optimistic rhythm.
 
 // Style Notes:

@@ -1,0 +1,46 @@
+tags: [casual, summer, light, comfortable, warm-weather]
+
+[F]
+- **Top:** Tank top or crop top in {primary_color}.
+  - **Fit:** Fitted or relaxed.
+  - **Material:** Cotton or linen.
+  - **Pattern:** Solid or stripe.
+  - **Neckline:** Scoop or V-neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Denim shorts or linen shorts in {secondary_color}.
+  - **Fit:** Relaxed or fitted.
+  - **Material:** Denim or linen.
+  - **Waist:** High or mid-rise.
+  - **Length:** Mid-thigh or knee-length.
+- **Footwear:** Sandals or espadrilles.
+- **Accessories:** Sunglasses; straw hat; tote bag.
+
+[M]
+- **Top:** Tank top or short-sleeve tee in {primary_color}.
+  - **Fit:** Regular fit.
+  - **Material:** Cotton or linen.
+  - **Pattern:** Solid or graphic.
+  - **Neckline:** Crew or V-neck.
+  - **Sleeve:** Sleeveless or short sleeves.
+- **Bottom:** Shorts or light chinos.
+  - **Fit:** Relaxed or slim.
+  - **Material:** Cotton or linen.
+  - **Waist:** Regular rise.
+  - **Length:** Above knee or knee-length.
+- **Footwear:** Sandals or boat shoes.
+- **Accessories:** Sunglasses; baseball cap.
+
+[H]
+- **Hijab:** Light breathable hijab in summer color.
+- **Top:** Short-sleeve modest tunic.
+  - **Fit:** Modest relaxed fit.
+  - **Material:** Cotton or linen.
+  - **Neckline:** High crew neck.
+  - **Sleeve:** Short or 3/4 sleeves.
+- **Bottom:** Capri pants or ankle-length pants.
+  - **Fit:** Relaxed.
+  - **Material:** Light cotton or linen.
+  - **Waist:** Elastic.
+  - **Length:** Capri or ankle.
+- **Footwear:** Comfortable sandals.
+- **Accessories:** Sunglasses; tote bag.

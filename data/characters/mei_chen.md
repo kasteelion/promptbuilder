@@ -1,7 +1,7 @@
 ### Mei Chen
 **Photo:** mei_chen_photo.png
 
-**Tags:**   chinese-american, approachable, commanding, curvy, edgy, female, playful, plus-size
+**Tags:**   Chinese-American, Approachable, Commanding, Curvy, Edgy, Female, Playful, Plus-Size
 **Summary:** Mei blends voluptuous curves with youthful sweetness in an unexpectedly magnetic combination. Her petite stature concentrates her curves into a compact, attention-commanding presence—soft and inviting yet undeniably provocative. She navigates femininity with playful confidence, mixing kawaii aesthetics with body-conscious choices that celebrate her figure. There's a knowing quality to her sweetness, a self-awareness that makes her charm feel deliberate rather than accidental.
 **Gender:** F
 **Signature Color:** #FF69B4
@@ -13,7 +13,7 @@
 * **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow.
 
 **Age Presentation:** early-to-mid 20s; youthful femininity with sensual awareness.
-**Vibe / Energy:** playful, confidently sweet, cute-provocative, knowingly feminine, inviting.
+**Vibe / Energy:** Playful, Confidently Sweet, Cute-Provocative, Knowingly Feminine, Inviting.
 **Bearing:** animated movement with deliberate feminine emphasis; upright posture that accentuates curves; frequent use of cute gestures mixed with body-aware positioning; stands with slight hip tilt or weight on one leg; movements blend youthful energy with purposeful sensuality.
 
 //Style Notes:

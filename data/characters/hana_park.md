@@ -1,7 +1,7 @@
 ### Hana Park
 **Photo:** hana_park_photo.png
 
-**Tags:**   female, chic, k-fashion, petite, playful
+**Tags:**   Female, Chic, K-Fashion, Petite, Playful
 
 **Summary:** Youthful and charming, Hana blends sweetness with playful edge. Her presence feels light and expressive, full of curiosity and modern trend awareness, without losing sincerity.
 
@@ -16,7 +16,7 @@
 * **Skin:** Light warm-beige skin with clear finish.
 
 **Age Presentation:** early 20s presentation; youthful, lively.
-**Vibe / Energy:** playful, curious, bright.
+**Vibe / Energy:** Playful, Curious, Bright.
 **Bearing:** light movement; animated gestures.
 
 // Style notes for outfit creation (not included in prompts):

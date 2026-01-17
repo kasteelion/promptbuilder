@@ -6,14 +6,14 @@ Quick scene descriptions for your prompts. Edit or add your own!
 
 ## Standard & Studio
 
-- **Photo Studio** (Studio, indoor): Neutral seamless backdrop, professional three-point studio lighting with softboxes, clean minimalist setup. Subtle hum of cooling fans, scent of fresh paint and ozone.
+- **Photo Studio** (Studio, Indoor): Neutral seamless backdrop, professional three-point studio lighting with softboxes, clean minimalist setup. Subtle hum of cooling fans, scent of fresh paint and ozone.
 - **White Background** (Studio, Minimal): Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
 
 ---
 
 ## Domestic & Home
 
-### Attic Space (indoor, Home, vintage, cozy)
+### Attic Space (Indoor, Home, Vintage, Cozy)
 
 **Visual Description:**
 A converted attic room nestled under sloped timber ceilings, centered around a large skylight that frames the sky. The space feels intimate and tucked away, filled with a curated collection of memories and comfortable forgotten furniture.
@@ -24,7 +24,7 @@ A converted attic room nestled under sloped timber ceilings, centered around a l
 - **Atmosphere:** Quiet, nostalgic, solitary, and safe.
 - **Key Elements:** Sloped wooden beams, vintage stored trunks, plush rug, dust motes.
 
-### Basement Rec Room (indoor, Home, Casual)
+### Basement Rec Room (Indoor, Home, Casual)
 
 **Visual Description:**
 A finished basement retreat designed for leisure, featuring wood-paneled walls and deep, comfortable seating. The space feels subterranean and enclosed, separated from the day-to-day bustle of the main house.
@@ -35,7 +35,7 @@ A finished basement retreat designed for leisure, featuring wood-paneled walls a
 - **Atmosphere:** Relaxed, sound-dampened, cool air, casual hangout vibe.
 - **Key Elements:** Plush sectional sofa, large TV screen, soft carpet, faint hum of a mini-fridge.
 
-### Bedroom (indoor, Home, cozy, intimate, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### Bedroom (Indoor, Home, Cozy, Intimate)
 
 **Visual Description:**
 A personal sanctuary featuring a comfortable bed with layered linens. The room is designed for rest, with soft textures and a clutter-free, peaceful aesthetic.
@@ -46,7 +46,7 @@ A personal sanctuary featuring a comfortable bed with layered linens. The room i
 - **Atmosphere:** Warm, quiet, intimate, slow-paced.
 - **Key Elements:** Crisp linen sheets, heavy knit throw, bedside table with personal items, soft shadows.
 
-### Gourmet Kitchen (Home, indoor, Cooking, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### Gourmet Kitchen (Home, Indoor, Cooking)
 
 **Visual Description:**
 A spacious, high-end modern kitchen designed for serious cooking. Polished surfaces reflect the light, and a large central island serves as the focal point for activity.
@@ -57,7 +57,7 @@ A spacious, high-end modern kitchen designed for serious cooking. Polished surfa
 - **Atmosphere:** Clean, aromatic, productive, and inviting.
 - **Key Elements:** Stainless steel appliances, marble countertops, fresh ingredients, steam rising from pots.
 
-### Home Office (professional, indoor, Office, tech, work, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### Home Office (Professional, Indoor, Office, Tech, Work)
 
 **Visual Description:**
 An organized personal workspace optimized for focus. A large desk dominates the room, surrounded by shelves of reference materials and technology.
@@ -68,10 +68,10 @@ An organized personal workspace optimized for focus. A large desk dominates the 
 - **Atmosphere:** Quiet efficiency, intellectual focus, scent of books and electronics.
 - **Key Elements:** Ergonomic chair, dual monitors, bookshelves, organized desk surface.
 
-### Kitchen Counter (Home, indoor, Casual, Cooking, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### Kitchen Counter (Home, Indoor, Casual, Cooking)
 
 **Visual Description:**
-A close-up, intimate view of a morning routine at the kitchen counter. Sunlight hits the surface where breakfast items are casually arranged.
+A intimate view of a morning routine at the kitchen counter. Sunlight hits the surface where breakfast items are casually arranged.
 
 **Sensory/Atmospheric Details:**
 
@@ -79,7 +79,7 @@ A close-up, intimate view of a morning routine at the kitchen counter. Sunlight 
 - **Atmosphere:** Casual, domestic, slow-start-to-the-day.
 - **Key Elements:** Coffee mug, plate of food, granite or wood counter texture, window in background.
 
-### Modern Living Room (Home, indoor, relaxed, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### Modern Living Room (Home, Indoor, Relaxed)
 
 **Visual Description:**
 A clean, contemporary living space defined by minimalist furniture and open flow. Large windows connect the indoors with the outside, making the room feel airy and expansive.
@@ -90,7 +90,7 @@ A clean, contemporary living space defined by minimalist furniture and open flow
 - **Atmosphere:** airy, relaxed, uncluttered, modern domesticity.
 - **Key Elements:** Large sectional sofa, indoor plants, flat-screen TV, coffee table art books.
 
-### Science Laboratory (work, indoor, tech, Science, medical, Block:fantasy, Block:medieval, Block:armor, Block:costume, Block:swimwear)
+### Science Laboratory (Work, Indoor, Tech, Science, Medical)
 
 **Visual Description:**
 A pristine, sterile research environment with surfaces of stainless steel and glass. The space is strictly functional, filled with specialized equipment and data displays.
@@ -98,10 +98,10 @@ A pristine, sterile research environment with surfaces of stainless steel and gl
 **Sensory/Atmospheric Details:**
 
 - **Lighting:** Cold, bright, shadowless fluorescent overheads; glow from screens and samples.
-- **Atmosphere:** Sterile, cold, precise, intellectual, chemical scent.
+- **Atmosphere:** Sterile, cold, intellectual, chemical scent.
 - **Key Elements:** Lab benches, microscopes, glassware, safety equipment, white surfaces.
 
-### Walk-In Closet (indoor, Home, Fashion)
+### Walk-In Closet (Indoor, Home, Fashion)
 
 **Visual Description:**
 A luxurious personal dressing space lined with organized clothing racks and illuminated shelves. Mirrors multiply the space, creating a boutique-like atmosphere within the home.
@@ -116,7 +116,7 @@ A luxurious personal dressing space lined with organized clothing racks and illu
 
 ## Public & Urban
 
-### Abandoned Warehouse (urban, gritty, industrial)
+### Abandoned Warehouse (Urban, Gritty, Industrial)
 
 **Visual Description:**
 A vast, derelict warehouse interior defined by high corrugated ceilings and emptiness. Shafts of dusty daylight pierce through broken windows, illuminating patches of a cracked concrete floor and abandoned machinery.
@@ -127,7 +127,7 @@ A vast, derelict warehouse interior defined by high corrugated ceilings and empt
 - **Atmosphere:** Eerily quiet, smelling of rust and damp decay.
 - **Key Elements:** Broken glass, rusted catwalks, puddles, floating dust.
 
-### Brick Wall Urban (urban, Street)
+### Brick Wall Urban (Urban, Street)
 
 **Visual Description:**
 A textured backdrop of weathered red brick, telling the story of the city through faded graffiti tags and crumbling mortar. The ground is paved with uneven cobblestones or cracked asphalt.
@@ -138,7 +138,7 @@ A textured backdrop of weathered red brick, telling the story of the city throug
 - **Atmosphere:** Gritty, grounded, real-world urban.
 - **Key Elements:** Red brick texture, graffiti remnants, metal piping, weeds in cracks.
 
-### City Street (urban, outdoor, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### City Street (Urban, Outdoor)
 
 **Visual Description:**
 A vibrant metropolitan canyon lined with modern glass buildings and stone facades. The street is alive with the flow of pedestrians and the distant blur of traffic.
@@ -149,7 +149,7 @@ A vibrant metropolitan canyon lined with modern glass buildings and stone facade
 - **Atmosphere:** Energetic, noisy, fast-paced, anonymous.
 - **Key Elements:** Storefronts, street signs, pavement, gathered crowds (blurred).
 
-### Construction Site (urban, industrial, work)
+### Construction Site (Urban, Industrial, Work)
 
 **Visual Description:**
 An active zone of transformation, characterized by exposed steel skeletons and raw earth. Orange safety netting and heavy machinery create a landscape of orange and grey.
@@ -160,7 +160,7 @@ An active zone of transformation, characterized by exposed steel skeletons and r
 - **Atmosphere:** Loud, dusty, industrious, hazardous.
 - **Key Elements:** Steel beams, concrete dust, yellow excavators, safety barriers.
 
-### Fire Escape Alley (urban, Dark, Alley)
+### Fire Escape Alley (Urban, Dark, Alley)
 
 **Visual Description:**
 A narrow urban canyon between brick buildings, dominated by the zig-zag geometry of black iron fire escapes. The ground is perpetually wet, reflecting the limited sky above.
@@ -171,7 +171,7 @@ A narrow urban canyon between brick buildings, dominated by the zig-zag geometry
 - **Atmosphere:** Claustrophobic, secretive, cinematic.
 - **Key Elements:** Iron fire escapes, brick walls, dumpsters, puddles.
 
-### Garden (nature, outdoor)
+### Garden (Nature, Outdoor)
 
 **Visual Description:**
 A manicured sanctuary of flora, featuring winding pathways that disappear behind flowering hedges. Colors are vibrant and varied, set against deep restorative greens.
@@ -182,7 +182,7 @@ A manicured sanctuary of flora, featuring winding pathways that disappear behind
 - **Atmosphere:** Fragrant (floral), peaceful, buzzing with life.
 - **Key Elements:** Blooming flowers, stone path, wooden bench, butterflies.
 
-### Park (nature, outdoor, urban)
+### Park (Nature, Outdoor, Urban)
 
 **Visual Description:**
 A wide-open green lung within the city, featuring manicured grass and mature trees. The skyline is visible but distant, separated by a buffer of nature.
@@ -193,7 +193,7 @@ A wide-open green lung within the city, featuring manicured grass and mature tre
 - **Atmosphere:** Relaxed, public, recreational, fresh air.
 - **Key Elements:** Green lawn, oak trees, park bench, distant buildings.
 
-### Rooftop (urban, outdoor, City)
+### Rooftop (Urban, Outdoor, City)
 
 **Visual Description:**
 An elevated urban platform offering a panoramic view of the dense city skyline. The space is finished with modern decking and glass railings, floating above the noise.
@@ -204,7 +204,7 @@ An elevated urban platform offering a panoramic view of the dense city skyline. 
 - **Atmosphere:** Exclusive, breezy, awe-inspiring, liberated.
 - **Key Elements:** City skyline, glass railing, lounge furniture, open sky.
 
-### Subway Platform (urban, indoor, Transit, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### Subway Platform (Urban, Indoor, Transit)
 
 **Visual Description:**
 A utilitarian underground hall lined with ceramic tiles and waiting for arrival. The perspective draws the eye down the dark tunnel where the tracks disappear.
@@ -219,7 +219,7 @@ A utilitarian underground hall lined with ceramic tiles and waiting for arrival.
 
 ## Indoor Social Spaces
 
-### Coffee Shop (indoor, social, Cafe, Mood:Cozy, approachable)
+### Coffee Shop (Indoor, Social, Cafe, cozy, Approachable)
 
 **Visual Description:**
 A third-wave coffee shop interior designed for lingering. Warm wood tones, exposed brick, and eclectic furniture create a welcoming texture. Steam rises from the espresso machine.
@@ -230,7 +230,7 @@ A third-wave coffee shop interior designed for lingering. Warm wood tones, expos
 - **Atmosphere:** Aromatic (coffee beans), humming with low conversation, creative.
 - **Key Elements:** Wooden tables, espresso bar, chalkboard menu, ceramic mugs.
 
-### Library (indoor, Quiet, School, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### Library (Indoor, Quiet, School)
 
 **Visual Description:**
 A cathedral of knowledge, defined by towering rows of wooden bookshelves packed with colorful spines. Studying tables are scattered in the open spaces, lit by green banker's lamps.
@@ -241,7 +241,7 @@ A cathedral of knowledge, defined by towering rows of wooden bookshelves packed 
 - **Atmosphere:** Hushed, reverent, smelling of old paper and wood polish.
 - **Key Elements:** Bookshelves, rolling ladder, study tables, silence.
 
-### Restaurant (indoor, Dining, Date, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### Restaurant (Indoor, Dining, Date)
 
 **Visual Description:**
 An elegant dining room with white tablecloths and sparkling glassware. The layout suggests intimacy, with booths separated by frosted glass or low partitions.
@@ -256,7 +256,7 @@ An elegant dining room with white tablecloths and sparkling glassware. The layou
 
 ## Shopping & Retail
 
-### Boutique Interior (indoor, Retail, Fashion, luxury, Block:fantasy, Block:medieval, Block:armor, Block:costume, Block:Sport, Block:combat, Block:lounge, Block:sleep)
+### Boutique Interior (Indoor, Retail, Fashion, Luxury)
 
 **Visual Description:**
 A high-end retail space where the clothes are displayed like art. The interior is minimalist, using marble and gold accents to frame the merchandise.
@@ -267,7 +267,7 @@ A high-end retail space where the clothes are displayed like art. The interior i
 - **Atmosphere:** Expensive, quiet, curated, exclusive.
 - **Key Elements:** Mannequins, marble floor, sparsely hung clothing racks, mirrors.
 
-### Mall Corridor (indoor, Retail, Block:fantasy, Block:armor)
+### Mall Corridor (Indoor, Retail)
 
 **Visual Description:**
 A wide, polished promenade flanked by brightly lit storefronts. The ceiling soars high above, often with skylights, while digital kiosks dot the walkway.
@@ -278,7 +278,7 @@ A wide, polished promenade flanked by brightly lit storefronts. The ceiling soar
 - **Atmosphere:** Busy, commercial, echo of footsteps and pop music.
 - **Key Elements:** Storefront glass, polished tile, benches, atrium plants.
 
-### Record Store (indoor, Retail, Music, vintage, Block:fantasy, Block:medieval, Block:armor, Block:costume, Block:Sport, Block:combat, Block:lounge, Block:sleep)
+### Record Store (Indoor, Retail, Music, Vintage)
 
 **Visual Description:**
 A crammed, culture-rich shop filled with wooden bins of vinyl records. Posters cover every inch of the walls, and a turntable sits on the counter.
@@ -289,7 +289,7 @@ A crammed, culture-rich shop filled with wooden bins of vinyl records. Posters c
 - **Atmosphere:** Cool, nostalgic, smelling of vinyl and cardboard, soundtrack playing.
 - **Key Elements:** Vinyl bins, band posters, listening station, turntable.
 
-### Thrift Store (indoor, Retail, vintage, Block:fantasy, Block:armor, Block:swimwear)
+### Thrift Store (Indoor, Retail, Vintage)
 
 **Visual Description:**
 A chaotic treasure trove of second-hand goods. Clothing racks are packed tight, and shelves overflow with bric-a-brac. The space feels lived-in and discoverable.
@@ -300,7 +300,7 @@ A chaotic treasure trove of second-hand goods. Clothing racks are packed tight, 
 - **Atmosphere:** Musty (vintage clothes), cluttered, serendipitous, hunting vibe.
 - **Key Elements:** Jammed clothing racks, mixed hangers, jewelry cabinet, eclectic items.
 
-### Vintage Shop (indoor, Retail, vintage, Block:fantasy, Block:armor, Block:swimwear)
+### Vintage Shop (Indoor, Retail, Vintage)
 
 **Visual Description:**
 A curated version of the past, arranged with artistic intent. Antique furniture displays retro clothing and accessories. The space feels like a time capsule.
@@ -315,17 +315,17 @@ A curated version of the past, arranged with artistic intent. Antique furniture 
 
 ## Transportation
 
-- **Airport Terminal** (travel, modern, Busy, Block:fantasy, Block:medieval, Block:armor, Block:costume, Block:tactical): Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
-- **Boat Deck** (travel, Ocean, outdoor): Wooden boat deck, ocean horizon, billowing sails, sea breeze, nautical ropes and equipment.
-- **Car Interior** (travel, Vehicle, intimate): Inside luxury vehicle, leather seats, dashboard visible, windshield view of road, intimate enclosed space.
-- **Cruise Ship Deck** (travel, luxury, Ocean): Luxury cruise deck, ocean horizon, deck chairs, gentle sea breeze, vacation leisure atmosphere.
-- **Train Station** (travel, urban, vintage): Grand train station hall, high vaulted ceiling, large clock, commuters moving, natural light from skylights.
+- **Airport Terminal** (Travel, Modern, Busy): Modern airport interior, floor-to-ceiling windows, departure boards, bustling travelers, bright artificial lighting.
+- **Boat Deck** (Travel, Ocean, Outdoor): Wooden boat deck, ocean horizon, billowing sails, sea breeze, nautical ropes and equipment.
+- **Car Interior** (Travel, Vehicle, Intimate): Inside luxury vehicle, leather seats, dashboard visible, windshield view of road, intimate enclosed space.
+- **Cruise Ship Deck** (Travel, Luxury, Ocean): Luxury cruise deck, ocean horizon, deck chairs, gentle sea breeze, vacation leisure atmosphere.
+- **Train Station** (Travel, Urban, Vintage): Grand train station hall, high vaulted ceiling, large clock, commuters moving, natural light from skylights.
 
 ---
 
 ## Sports & Athletics
 
-### American Football Field (Sport, Football, outdoor)
+### American Football Field (Football, Outdoor)
 
 **Visual Description:**
 A vast gridiron under the open sky, marked with crisp white yard lines and flanked by towering yellow goalposts. The green turf is manicured to perfection, ready for impact.
@@ -336,7 +336,7 @@ A vast gridiron under the open sky, marked with crisp white yard lines and flank
 - **Atmosphere:** Anticipatory, expansive, smell of cut grass/turf.
 - **Key Elements:** Yard lines, end zones, goalposts, stadium seating.
 
-### Basketball Court (Sport, Basketball, indoor)
+### Basketball Court (Basketball, Indoor)
 
 **Visual Description:**
 A highly polished hardwood floor reflecting the overhead lights. The key is painted in bold team colors, and the hoops stand rigid at either end.
@@ -347,7 +347,7 @@ A highly polished hardwood floor reflecting the overhead lights. The key is pain
 - **Atmosphere:** Echoing squeaks of sneakers, competitive, enclosed.
 - **Key Elements:** Hardwood floor, boundary lines, glass backboards, bleachers.
 
-### Beach Volleyball Court (Sport, Beach, outdoor, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### Beach Volleyball Court (Beach, Volleyball, Outdoor)
 
 **Visual Description:**
 A patch of churned sand clearly defined by a taut net. The ocean stretches out behind it, and the sun beats down on the playing surface.
@@ -358,7 +358,7 @@ A patch of churned sand clearly defined by a taut net. The ocean stretches out b
 - **Atmosphere:** Hot, energetic, salty breeze, summer intensity.
 - **Key Elements:** Net, sand texture, boundary tape, ocean background.
 
-### Bowling Alley Lanes (Sport, Bowling, indoor)
+### Bowling Alley Lanes (Bowling, Indoor)
 
 **Visual Description:**
 A perspective looking down the long, oiled synthetic wood lanes toward the white pins. The return gutters frame the path, leading the eye to the target.
@@ -369,7 +369,7 @@ A perspective looking down the long, oiled synthetic wood lanes toward the white
 - **Atmosphere:** Loud crashes, mechanical whirring, recreational focus.
 - **Key Elements:** Lane arrows, gutters, pins, ball return machine.
 
-### Bowling Alley Seating Area (Sport, Bowling, social)
+### Bowling Alley Seating Area (Bowling, Social)
 
 **Visual Description:**
 The social hub behind the lanes, featuring molded plastic seats and scoring monitors. It's a clutter of house balls, rental shoes, and half-finished sodas.
@@ -380,7 +380,7 @@ The social hub behind the lanes, featuring molded plastic seats and scoring moni
 - **Atmosphere:** Casual, social, noisy, relaxed competition.
 - **Key Elements:** Curved seating, scoring screen, ball return rack, table.
 
-### Boxing Gym (Sport, Gym, indoor)
+### Boxing Gym (Gym, Indoor, Boxing)
 
 **Visual Description:**
 A gritty, old-school training facility that smells of exertion. Speed bags hang in rows, and a central ring dominates the space. The equipment is worn leather and taped handles.
@@ -391,7 +391,7 @@ A gritty, old-school training facility that smells of exertion. Speed bags hang 
 - **Atmosphere:** Intense, humid (sweat), rhythmic thumping sounds.
 - **Key Elements:** Boxing ring, heavy bags, speed bags, mirrored wall.
 
-### Boxing Ring (Sport, action, Arena)
+### Boxing Ring (Arena, Boxing)
 
 **Visual Description:**
 The squared circle, illuminated by a dedicated lighting rig. The canvas is stained and tight, enclosed by thick ropes. The crowd is a blur in the darkness beyond.
@@ -402,7 +402,7 @@ The squared circle, illuminated by a dedicated lighting rig. The canvas is stain
 - **Atmosphere:** Developing drama, high stakes, isolated focus.
 - **Key Elements:** Ropes, turnbuckles, canvas floor, stool in corner.
 
-### Cosmic Bowling (Sport, Bowling, Glow, party)
+### Cosmic Bowling (Bowling, Glow, Party)
 
 **Visual Description:**
 The bowling alley transformed by blacklights. Everything white glows purple, and lasers dance across the lanes.
@@ -424,7 +424,7 @@ A spacious room defined by a wall of mirrors and a wooden barre. The floor is sp
 - **Atmosphere:** Disciplined, artistic, echo of piano music, sweat.
 - **Key Elements:** Floor-to-ceiling mirrors, ballet barre, open floor.
 
-### Gymnastics Center (Sport, Gym)
+### Gymnastics Center (Gymnastics, Gym)
 
 **Visual Description:**
 A colorful jungle of padded equipment. Vaults, beams, and bars are arranged over blue foam mats. The ceiling is high to accommodate flying bodies.
@@ -435,7 +435,7 @@ A colorful jungle of padded equipment. Vaults, beams, and bars are arranged over
 - **Atmosphere:** Chalk dust in the air, energetic, scent of foam.
 - **Key Elements:** Balance beam, uneven bars, foam pit, spring floor.
 
-### Indoor Volleyball Court (Sport, Volleyball, indoor)
+### Indoor Volleyball Court (Volleyball, Indoor)
 
 **Visual Description:**
 Similar to a basketball setup but dominated by the high central net. The floor is marked with complex boundary lines, and knee pads slide on the wood.
@@ -457,7 +457,7 @@ Rows of metal lockers and wooden benches. Uniforms hang ready or lie in heaps. T
 - **Atmosphere:** Private, focused, smelling of liniment and humidity.
 - **Key Elements:** Lockers, benches, hanging jerseys, whiteboard.
 
-### Martial Arts Dojo (Sport, combat, traditional)
+### Martial Arts Dojo (Combat, Traditional, Dojo)
 
 **Visual Description:**
 A place of respect and discipline. The floor is covered in tatami mats or smooth wood. Calligraphy scrolls hang on the walls near the shrine.
@@ -468,7 +468,7 @@ A place of respect and discipline. The floor is covered in tatami mats or smooth
 - **Atmosphere:** Silent discipline, sharp kiai shouts, respectful.
 - **Key Elements:** Tatami mats, shrine/kamiza, weapon rack, mirrors.
 
-### MMA Gym (Sport, MMA, Gym)
+### MMA Gym (MMA, Gym)
 
 **Visual Description:**
 Functional and brutal. A chain-link cage sits in the corner. The rest is rubber matting and heavy bags. It looks industrial and hard-working.
@@ -479,7 +479,7 @@ Functional and brutal. A chain-link cage sits in the corner. The rest is rubber 
 - **Atmosphere:** Aggressive, loud impacts, grinding effort.
 - **Key Elements:** Octagon cage, rubber mats, grappling dummies, heavy bags.
 
-### MMA Octagon (Sport, MMA, Arena)
+### MMA Octagon (MMA, Arena)
 
 **Visual Description:**
 The professional fighting cage. Black vinyl-coated chain link creates a wall of "no escape". The canvas is branded with sponsor logos.
@@ -490,7 +490,7 @@ The professional fighting cage. Black vinyl-coated chain link creates a wall of 
 - **Atmosphere:** Gladiatorial, tense, bloody, high-energy.
 - **Key Elements:** Chain-link fence, padded posts, canvas floor, bright lights.
 
-### Olympic Pool (Sport, Swim, indoor)
+### Olympic Pool (Swim, Indoor)
 
 **Visual Description:**
 A cathedral of water. The pool is a perfect blue rectangle divided by lane lines. Not a ripple disturbs the surface before the race.
@@ -501,7 +501,7 @@ A cathedral of water. The pool is a perfect blue rectangle divided by lane lines
 - **Atmosphere:** Humid, chlorine-scented, echoing splashes.
 - **Key Elements:** Lane lines, starting blocks, tile deck, backstroke flags.
 
-### Rock Climbing Gym (Sport, Gym, Climbing)
+### Rock Climbing Gym (Gym, Climbing)
 
 **Visual Description:**
 A vertical landscape of artificial cliffs. The walls are studded with colorful resin holds, towering over thick safety mats.
@@ -512,7 +512,7 @@ A vertical landscape of artificial cliffs. The walls are studded with colorful r
 - **Atmosphere:** Chalky, problem-solving focus, verticality.
 - **Key Elements:** Textured walls, colorful holds, ropes, carabiners.
 
-### Skate Park (urban, Sport, Skater)
+### Skate Park (Urban, Skater)
 
 **Visual Description:**
 A flowing landscape of concrete curves, bowls, and rails. Graffiti tags mark the grey surface. It is an architectural playground.
@@ -523,7 +523,7 @@ A flowing landscape of concrete curves, bowls, and rails. Graffiti tags mark the
 - **Atmosphere:** Grating sound of wheels, rebellious, energetic.
 - **Key Elements:** Half-pipe, rails, concrete steps, graffiti.
 
-### Yoga Studio (Sport, relaxed, Gym)
+### Yoga Studio (Relaxed, Gym, Yoga)
 
 **Visual Description:**
 A sanctuary of calm. Minimalist decor, possibly bamboo flooring, and plenty of open space for mats. Props are neatly stacked.
@@ -534,7 +534,7 @@ A sanctuary of calm. Minimalist decor, possibly bamboo flooring, and plenty of o
 - **Atmosphere:** serene, silent, incense-scented, slow.
 - **Key Elements:** Yoga mats, blocks, mirrors, plants.
 
-### Esports Arena (tech, Gaming, indoor, Neon)
+### Esports Arena (Tech, Gaming, Indoor, Neon)
 
 **Visual Description:**
 A high-tech coliseum for digital athletes. Rows of high-end PCs glow with RGB lighting. Giant screens broadcast the game to the darkened audience.
@@ -560,7 +560,7 @@ A dark, cavernous room glowing with the chaotic light of a hundred CRT screens. 
 - **Atmosphere:** Energetic, loud, nostalgic, sensory overload.
 - **Key Elements:** Arcade cabinets, joystick controls, neon signage, patterned carpet.
 
-### Art Gallery (cultural, Art, indoor, Block:fantasy, Block:medieval, Block:armor, Block:costume, Block:Sport, Block:combat, Block:lounge, Block:sleep)
+### Art Gallery (Cultural, Art, Indoor)
 
 **Visual Description:**
 A stark white cube designed to make the art the only reality. The floors are polished concrete or pale wood, and the space is intentionally empty to allow breathing room for the works.
@@ -571,7 +571,7 @@ A stark white cube designed to make the art the only reality. The floors are pol
 - **Atmosphere:** Hushed, intellectual, expensive, sterile.
 - **Key Elements:** Framed canvases, sculpture pedestals, gallery bench, white walls.
 
-### Casino Floor (Entertainment, luxury, Gambling)
+### Casino Floor (Entertainment, Luxury, Gambling)
 
 **Visual Description:**
 A labyrinth of flashing lights and stimulating colors designed to disorient. Rows of slot machines create corridors of noise, leading to felt-topped gaming tables.
@@ -582,7 +582,7 @@ A labyrinth of flashing lights and stimulating colors designed to disorient. Row
 - **Atmosphere:** Frenetic, hopeful, desperate, loud chimes and ringing.
 - **Key Elements:** Slot machines, green felt tables, chandeliers, patterned carpet.
 
-### Concert Hall (Entertainment, Music, formal)
+### Concert Hall (Entertainment, Music, Formal)
 
 **Visual Description:**
 A majestic auditorium inspired by Victorian architecture. Tiered velvet seating faces a grand stage framed by an ornate proscenium arch.
@@ -593,7 +593,7 @@ A majestic auditorium inspired by Victorian architecture. Tiered velvet seating 
 - **Atmosphere:** Anticipatory, formal, acoustic perfection, grand.
 - **Key Elements:** Red velvet seats, gold leaf detailing, stage curtains, balconies.
 
-### Concert Stage (Entertainment, Music, party, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### Concert Stage (Entertainment, Music, Party)
 
 **Visual Description:**
 The view from the pit or the stage itself. A blinding array of rig lights cuts through stage fog, illuminating the performer against a wall of sound equipment.
@@ -604,7 +604,7 @@ The view from the pit or the stage itself. A blinding array of rig lights cuts t
 - **Atmosphere:** Adrenaline-fueled, loud, hot, electric.
 - **Key Elements:** Microphone stand, drum kit, stage monitors, lighting rig.
 
-### Museum Hall (cultural, History, indoor, Block:fantasy, Block:medieval, Block:armor, Block:costume, Block:Sport, Block:combat, Block:lounge, Block:sleep)
+### Museum Hall (Cultural, History, Indoor)
 
 **Visual Description:**
 A grand hall of history with echoing high ceilings and marble floors. Glass cases display artifacts, and statues stand guard in the open spaces.
@@ -630,7 +630,7 @@ The chaotic, hidden world behind the velvet curtain. Ropes, sandbags, and costum
 
 ## Nightlife & Bars
 
-### Cabaret Stage (nightlife, vintage, Sexy)
+### Cabaret Stage (Nightlife, Vintage, Sexy)
 
 **Visual Description:**
 An intimate, velvet-draped stage viewed from a candlelit table. The setting is smoky and seductive, reminiscent of 1920s Paris or Berlin.
@@ -641,7 +641,7 @@ An intimate, velvet-draped stage viewed from a candlelit table. The setting is s
 - **Atmosphere:** Seductive, hushed, theatrical, vintage.
 - **Key Elements:** Red velvet curtain, footlights, bistro tables, smoke.
 
-### Dive Bar (nightlife, Bar, gritty)
+### Dive Bar (Nightlife, Bar, Gritty)
 
 **Visual Description:**
 A local watering hole that has seen better days. The wood is scarred, the booths are taped up, and the walls are covered in memorabilia and neon beer signs.
@@ -652,7 +652,7 @@ A local watering hole that has seen better days. The wood is scarred, the booths
 - **Atmosphere:** Sticky floors, stale beer smell, relaxed, authentic.
 - **Key Elements:** Scratched bar top, pool table, jukebox, neon signs.
 
-### Jazz Club (nightlife, Music, vintage)
+### Jazz Club (Nightlife, Music, Vintage)
 
 **Visual Description:**
 A basement venue with low ceilings and excellent acoustics. Patrons sit at small round tables focused on the small stage where the band plays.
@@ -663,7 +663,7 @@ A basement venue with low ceilings and excellent acoustics. Patrons sit at small
 - **Atmosphere:** Cool, sophisticated, rhythmic, blue-smoke vibe.
 - **Key Elements:** Saxophone/instruments, small round tables, brick walls, smoke.
 
-### Karaoke Room (nightlife, party, Neon)
+### Karaoke Room (Nightlife, Party, Neon)
 
 **Visual Description:**
 A private, soundproofed box designed for uninhibited fun. A disco ball spins overhead, and plush sofas line the walls facing a large lyric screen.
@@ -674,7 +674,7 @@ A private, soundproofed box designed for uninhibited fun. A disco ball spins ove
 - **Atmosphere:** Loud, joyful, chaotic, private party.
 - **Key Elements:** Microphones, tambourines, TV screen, remote control, drinks.
 
-### Neon-Lit Street (nightlife, cyberpunk, urban)
+### Neon-Lit Street (Nightlife, Cyberpunk, Urban)
 
 **Visual Description:**
 A district that comes alive at night. Every surface is painted with the reflection of towering neon signs in pinks, blues, and electric greens.
@@ -685,7 +685,7 @@ A district that comes alive at night. Every surface is painted with the reflecti
 - **Atmosphere:** Buzzing, cinematic, restless, futuristic.
 - **Key Elements:** Neon signage, wet pavement, street food stalls, crowds.
 
-### Nightclub Interior (nightlife, party, Dance)
+### Nightclub Interior (Nightlife, Party, Dance)
 
 **Visual Description:**
 A cavernous space throbbing with bass. The main feature is the dance floor, a sea of moving bodies under a complex array of lasers and moving heads.
@@ -696,7 +696,7 @@ A cavernous space throbbing with bass. The main feature is the dance floor, a se
 - **Atmosphere:** Deafening music, sweat, body heat, primal energy.
 - **Key Elements:** DJ booth, dance floor, disco ball, VIP railing.
 
-### Rooftop Bar (nightlife, social, luxury)
+### Rooftop Bar (Nightlife, Social, Luxury)
 
 **Visual Description:**
 An open-air lounge floating above the city. Fire pits and sleek furniture create social clusters, all framed by the sparkling city skyline at night.
@@ -707,7 +707,7 @@ An open-air lounge floating above the city. Fire pits and sleek furniture create
 - **Atmosphere:** Chic, breezy, social, expensive.
 - **Key Elements:** Lounge sofas, cocktails, glass railing, city lights.
 
-### Underground Club (nightlife, Rave, gritty)
+### Underground Club (Nightlife, Rave, Gritty)
 
 **Visual Description:**
 A raw concrete basement repurposed for rave culture. There is no decor, only sound equipment, fog machines, and a mass of dancers.
@@ -722,7 +722,7 @@ A raw concrete basement repurposed for rave culture. There is no decor, only sou
 
 ## Creative & Artistic Spaces
 
-### Art Studio (creative, Art, indoor)
+### Art Studio (Creative, Art, Indoor)
 
 **Visual Description:**
 A chaotic, inspiring workspace splattered with paint. Large canvases lean against the walls, and tables are cluttered with brushes, jars, and rags.
@@ -733,7 +733,7 @@ A chaotic, inspiring workspace splattered with paint. Large canvases lean agains
 - **Atmosphere:** Smell of turpentine and oil paint, creative mess, free.
 - **Key Elements:** Easel, palette, paint tubes, drop cloth, canvas.
 
-### Fashion Atelier (creative, Fashion, luxury)
+### Fashion Atelier (Creative, Fashion, Luxury)
 
 **Visual Description:**
 A clean, white space dedicated to the construction of garments. Dress forms stand guard, draped in muslin or silk. Sketches are pinned to cork boards.
@@ -744,7 +744,7 @@ A clean, white space dedicated to the construction of garments. Dress forms stan
 - **Atmosphere:** Focused, quiet sound of scissors snipping, professional.
 - **Key Elements:** Dress forms, sewing machine, cutting table, fabric bolts.
 
-### Music Recording Studio (creative, Music, tech)
+### Music Recording Studio (Creative, Music, Tech)
 
 **Visual Description:**
 A soundproofed sanctuary of audio. The vocal booth is isolated behind glass, lined with angular acoustic foam. The control room features a massive mixing desk.
@@ -755,7 +755,7 @@ A soundproofed sanctuary of audio. The vocal booth is isolated behind glass, lin
 - **Atmosphere:** Dead silence (soundproof), intimate, high-tech.
 - **Key Elements:** Microphone, pop filter, headphones, acoustic foam.
 
-### Photography Studio (creative, Studio, Art)
+### Photography Studio (Creative, Studio, Art)
 
 **Visual Description:**
 A cavernous space dominated by a white seamless cyclorama curve. C-stands and light modifiers (softboxes, umbrellas) create a forest of equipment around the subject.
@@ -766,7 +766,7 @@ A cavernous space dominated by a white seamless cyclorama curve. C-stands and li
 - **Atmosphere:** Professional, expectant, smell of hot electronics.
 - **Key Elements:** Seamless paper background, C-stands, strobe lights, tethered camera.
 
-### Pottery Workshop (creative, Craft, Rustic)
+### Pottery Workshop (Creative, Craft, Rustic)
 
 **Visual Description:**
 A dusty, earthy room lined with shelves of drying clay. Pottery wheels sit ready for use, and everything is covered in a fine layer of grey dust.
@@ -781,7 +781,7 @@ A dusty, earthy room lined with shelves of drying clay. Pottery wheels sit ready
 
 ## Intimate & Sensual
 
-### Luxury Bedroom (intimate, Sexy, Bedroom, Mood:Sensual)
+### Luxury Bedroom (Intimate, Sexy, Bedroom, mood:Sensual)
 
 **Visual Description:**
 A master suite designed for romance and comfort. The bed is grand, dressed in high-thread-count linens. The decor is soft, plush, and inviting.
@@ -792,7 +792,7 @@ A master suite designed for romance and comfort. The bed is grand, dressed in hi
 - **Atmosphere:** Private, quiet, scent of vanilla or rose, relaxing.
 - **Key Elements:** King bed, silk pillows, heavy curtains, soft rug.
 
-### Candlelit Bath (intimate, Sexy, Bathroom, Mood:romantic)
+### Candlelit Bath (Intimate, Sexy, Bathroom, mood:Romantic)
 
 **Visual Description:**
 A sanctuary for the senses. A deep soaking tub takes center stage, surrounded by flickering candles. Steam softens the edges of the room.
@@ -803,7 +803,7 @@ A sanctuary for the senses. A deep soaking tub takes center stage, surrounded by
 - **Atmosphere:** Steamy, humid, scented oils, silent solitude or romance.
 - **Key Elements:** Porcelain tub, bubbles, candles, rose petals.
 
-### Penthouse Balcony Night (intimate, Sexy, urban, Night, Mood:romantic)
+### Penthouse Balcony Night (Intimate, Sexy, Urban, Night, mood:Romantic)
 
 **Visual Description:**
 A private outdoor perch high above the city. The wind is gentle, and the view creates a breathtaking, sparkling backdrop for intimacy.
@@ -814,7 +814,7 @@ A private outdoor perch high above the city. The wind is gentle, and the view cr
 - **Atmosphere:** Cool breeze, vertigo-inducing height, exclusive, passionate.
 - **Key Elements:** Glass railing, city lights below, lounge seating, wine glass.
 
-### Wine Cellar (intimate, Sexy, luxury, Mood:Dark)
+### Wine Cellar (Intimate, Sexy, Luxury, mood:Dark)
 
 **Visual Description:**
 A subterranean vault of stone and oak. Corridors of wine racks recede into shadows. The air is cool and still.
@@ -825,7 +825,7 @@ A subterranean vault of stone and oak. Corridors of wine racks recede into shado
 - **Atmosphere:** Cool, damp, smelling of oak and cork, timeless.
 - **Key Elements:** Wine barrels, bottle racks, stone arches, tasting table.
 
-### Private Pool Night (intimate, Sexy, outdoor, Night, Mood:Sensual)
+### Private Pool Night (Intimate, Sexy, Outdoor, Night, mood:Sensual)
 
 **Visual Description:**
 A secluded body of water glowing blue in the darkness. Steam rises gently from the heated surface. Privacy hedges or walls block the outside world.
@@ -836,7 +836,7 @@ A secluded body of water glowing blue in the darkness. Steam rises gently from t
 - **Atmosphere:** Humid, quiet sound of water, seductive, private.
 - **Key Elements:** Blue water, steam, lounge chair, darkness beyond.
 
-### Silk Sheets Bedroom (intimate, Sexy, Bedroom, Mood:Sensual)
+### Silk Sheets Bedroom (Intimate, Sexy, Bedroom, mood:Sensual)
 
 **Visual Description:**
 A tight focus on the texture of luxury. The bed is a landscape of flowing satin or silk, catching the light in liquid ripples.
@@ -851,7 +851,7 @@ A tight focus on the texture of luxury. The bed is a landscape of flowing satin 
 
 ## Nature & Outdoors
 
-### Beach (nature, outdoor, Summer, Water)
+### Beach (Nature, Outdoor, Summer, Water)
 
 **Visual Description:**
 Where the land meets the sea. The sand is warm and golden, stretching to the water's edge. Waves curl and break in a mesmerizing rhythm.
@@ -862,7 +862,7 @@ Where the land meets the sea. The sand is warm and golden, stretching to the wat
 - **Atmosphere:** Scent of salt spray, sound of crashing waves, breeze.
 - **Key Elements:** Sand, ocean horizon, white foam, dunes.
 
-### Campfire (nature, outdoor, Night)
+### Campfire (Nature, Outdoor, Night)
 
 **Visual Description:**
 A circle of warmth in the wilderness. The fire is the only source of light, dancing and popping. Beyond the ring of light, the forest is a wall of black.
@@ -873,7 +873,7 @@ A circle of warmth in the wilderness. The fire is the only source of light, danc
 - **Atmosphere:** Smoky, hot near the fire/cold behind, primal, communal.
 - **Key Elements:** Fire pit, logs, sparks rising, darkness surrounding.
 
-### Desert Landscape (nature, outdoor, Arid, adventurous)
+### Desert Landscape (Nature, Outdoor, Arid, Adventurous)
 
 **Visual Description:**
 An ocean of sand dunes rippling to the horizon. The landscape is alien and minimal, sculpted by wind.
@@ -884,7 +884,7 @@ An ocean of sand dunes rippling to the horizon. The landscape is alien and minim
 - **Atmosphere:** Dry, silent, hot, vast, indifferent.
 - **Key Elements:** Sand dunes, ripple patterns, blue sky, heat shimmer.
 
-### Forest Clearing (nature, outdoor, fantasy, adventurous)
+### Forest Clearing (Nature, Outdoor, Fantasy, Adventurous)
 
 **Visual Description:**
 A break in the dense canopy. Grass and wildflowers have taken over the sunlit patch of ground. Ancient trees stand guard at the perimeter.
@@ -895,7 +895,7 @@ A break in the dense canopy. Grass and wildflowers have taken over the sunlit pa
 - **Atmosphere:** Smell of damp earth and pine, bird song, peaceful.
 - **Key Elements:** Tall pines, ferns, sunbeams, fallen log.
 
-### Lakeside (nature, Water, Peaceful)
+### Lakeside (Nature, Water, Peaceful)
 
 **Visual Description:**
 Still water reflecting the sky like a mirror. A wooden dock reaches out into the calm. The shore is lined with reeds or trees.
@@ -906,7 +906,7 @@ Still water reflecting the sky like a mirror. A wooden dock reaches out into the
 - **Atmosphere:** Serene, still, cool air near water, mosquitoes.
 - **Key Elements:** Lake surface, wooden dock, reeds, reflection.
 
-### Moonlit Forest (nature, Night, fantasy)
+### Moonlit Forest (Nature, Night, Fantasy)
 
 **Visual Description:**
 The woods transformed by silver light. Shadows are long and deep blue. The familiar shapes of trees become mysterious silhouettes.
@@ -917,7 +917,7 @@ The woods transformed by silver light. Shadows are long and deep blue. The famil
 - **Atmosphere:** Quiet, mysterious, cool, magical.
 - **Key Elements:** Silvery tree trunks, moon in sky, shadows, mist.
 
-### Mountain Summit (nature, outdoor, Adventure, adventurous)
+### Mountain Summit (Nature, Outdoor, Adventure, Adventurous)
 
 **Visual Description:**
 The top of the world. Jagged rock peaks surround the viewer, usually above the cloud line. The view is infinite.
@@ -928,7 +928,7 @@ The top of the world. Jagged rock peaks surround the viewer, usually above the c
 - **Atmosphere:** Thin cold air, strong wind, vertigo, conquest.
 - **Key Elements:** Rocky crags, snow patches, distant horizon, clouds below.
 
-### Waterfall (nature, Water, fantasy)
+### Waterfall (Nature, Water, Fantasy)
 
 **Visual Description:**
 Energy in motion. Water cascades over a cliff face, crashing into a pool below. Mist hangs in the air, creating rainbows.
@@ -943,7 +943,7 @@ Energy in motion. Water cascades over a cliff face, crashing into a pool below. 
 
 ## Pastoral & Cottagecore
 
-### Country Kitchen (cottagecore, Home, Baking)
+### Country Kitchen (Cottagecore, Home, Baking)
 
 **Visual Description:**
 A rustic heart of the home, featuring thick wooden beams and a large farmhouse sink. Open shelves display ceramic ware, and fresh bread rests on the counter.
@@ -954,7 +954,7 @@ A rustic heart of the home, featuring thick wooden beams and a large farmhouse s
 - **Atmosphere:** Smelling of yeast and flour, safe, homey, slow living.
 - **Key Elements:** Wooden beams, checkered curtains, flour sack, copper pots.
 
-### Flower Field (cottagecore, nature, Summer)
+### Flower Field (Cottagecore, Nature, Summer)
 
 **Visual Description:**
 An endless rolling hill covered in a riot of wildflowers. The grass is tall and swaying. It is the quintessential summer day.
@@ -965,7 +965,7 @@ An endless rolling hill covered in a riot of wildflowers. The grass is tall and 
 - **Atmosphere:** breezy, fragrant, idyllic, peaceful.
 - **Key Elements:** Wildflowers, rolling hills, blue sky, butterflies.
 
-### Garden Path (cottagecore, nature, Garden)
+### Garden Path (Cottagecore, Nature, Garden)
 
 **Visual Description:**
 A secret way through a manicured English garden. A stone path winds between overhanging flowering bushes, leading to a quaint cottage in the distance.
@@ -976,7 +976,7 @@ A secret way through a manicured English garden. A stone path winds between over
 - **Atmosphere:** Fairy-tale like, quiet, smelling of roses.
 - **Key Elements:** Stone path, flowering hedges, cottage roof, gate.
 
-### Meadow Picnic (cottagecore, nature, Picnic)
+### Meadow Picnic (Cottagecore, Nature, Picnic)
 
 **Visual Description:**
 A scene of leisure. A checkered blanket is spread on the grass, laden with a wicker basket and fresh fruit.
@@ -987,7 +987,7 @@ A scene of leisure. A checkered blanket is spread on the grass, laden with a wic
 - **Atmosphere:** Lazy, sweet, relaxed, buzzing with bees.
 - **Key Elements:** Checkered blanket, picnic basket, fruit, book.
 
-### Orchard (cottagecore, nature, Food)
+### Orchard (Cottagecore, Nature, Food)
 
 **Visual Description:**
 Rows of gnarled fruit trees heavy with blossoms or fruit. A wooden ladder leans against a trunk. The grass is speckled with fallen petals.
@@ -1002,7 +1002,7 @@ Rows of gnarled fruit trees heavy with blossoms or fruit. A wooden ladder leans 
 
 ## Historical & Classical
 
-### Ancient Ruins (historical, fantasy, Ruin)
+### Ancient Ruins (Historical, Fantasy, Ruin)
 
 **Visual Description:**
 The skeletal remains of a once-great structure. Marble columns stand broken among encroaching vines. Nature is reclaiming the stone.
@@ -1013,7 +1013,7 @@ The skeletal remains of a once-great structure. Marble columns stand broken amon
 - **Atmosphere:** Melancholic, grand, silent, smelling of dust.
 - **Key Elements:** Broken columns, vines, rubble, expansive view.
 
-### Castle Courtyard (historical, Castle, fantasy)
+### Castle Courtyard (Historical, Castle, Fantasy)
 
 **Visual Description:**
 The fortified heart of a medieval stronghold. High stone walls surround a cobblestone square. Banners snap in the wind.
@@ -1024,7 +1024,7 @@ The fortified heart of a medieval stronghold. High stone walls surround a cobble
 - **Atmosphere:** Secure, martial, echoing hoofbeats, cold stone.
 - **Key Elements:** Stone walls, cobblestones, portcullis, torches.
 
-### Cathedral Interior (historical, Religious, Gothic)
+### Cathedral Interior (Historical, Religious, Gothic)
 
 **Visual Description:**
 Architecture designed to humble. Soaring stone arches draw the eye up to stained glass windows. Dust motes dance in the colored light.
@@ -1035,7 +1035,7 @@ Architecture designed to humble. Soaring stone arches draw the eye up to stained
 - **Atmosphere:** Reverent, echoing, smelling of incense and old stone.
 - **Key Elements:** Stained glass, stone pillars, pews, altar.
 
-### Gothic Castle (historical, Castle, Dark, Gothic)
+### Gothic Castle (Historical, Castle, Dark, Gothic)
 
 **Visual Description:**
 A shadowy hall of power. Dark stone, heavy tapestries, and suits of armor create an imposing environment.
@@ -1046,7 +1046,7 @@ A shadowy hall of power. Dark stone, heavy tapestries, and suits of armor create
 - **Atmosphere:** Oppressive, ancient, cold, drafty.
 - **Key Elements:** Suits of armor, tapestries, stone fireplace, chandeliers.
 
-### Japanese Tea House (historical, Cultural, japanese)
+### Japanese Tea House (Historical, Cultural, Japanese)
 
 **Visual Description:**
 A study in minimalism and nature. Tatami mats cover the floor, and shoji screens slide open to reveal a garden.
@@ -1057,7 +1057,7 @@ A study in minimalism and nature. Tatami mats cover the floor, and shoji screens
 - **Atmosphere:** Zen, silent, smelling of matcha and straw mats.
 - **Key Elements:** Tatami mats, low table, hanging scroll, bonsai.
 
-### Manor Library (historical, luxury, indoor)
+### Manor Library (Historical, Luxury, Indoor)
 
 **Visual Description:**
 A gentleman's retreat. Floor-to-ceiling mahogany bookshelves are accessed by a rolling ladder. Leather wingback chairs sit by a fire.
@@ -1068,7 +1068,7 @@ A gentleman's retreat. Floor-to-ceiling mahogany bookshelves are accessed by a r
 - **Atmosphere:** Intellectual, wealthy, smell of leather and smoke.
 - **Key Elements:** Bookshelves, fireplace, leather chair, globe.
 
-### Victorian Mansion (historical, Victorian, luxury)
+### Victorian Mansion (Historical, Victorian, Luxury)
 
 **Visual Description:**
 A parlor dripping with ornamentation. Patterned wallpaper, velvet furniture, and clutter display wealth and taste.
@@ -1079,7 +1079,7 @@ A parlor dripping with ornamentation. Patterned wallpaper, velvet furniture, and
 - **Atmosphere:** Stuffy, formal, detailed, quiet.
 - **Key Elements:** Velvet fainting couch, patterned wallpaper, china cabinet.
 
-### Victorian Manor Hall (historical, Victorian, luxury)
+### Victorian Manor Hall (Historical, Victorian, Luxury)
 
 **Visual Description:**
 A grand entrance intended to impress. A sweeping staircase dominates the space, lit by a crystal chandelier.
@@ -1088,13 +1088,13 @@ A grand entrance intended to impress. A sweeping staircase dominates the space, 
 
 - **Lighting:** Bright, sparkling fixture light; grand.
 - **Atmosphere:** Echoing, impressive, welcoming yet formal.
-- **Key Elements:** Grand staircase, marble floor, chandelier, portraits.
+- **Key Elements:** Grand staircase, marble floor, chandeliers.
 
 ---
 
 ## Cultural & Exotic
 
-### Desert Oasis (Cultural, Desert, fantasy)
+### Desert Oasis (Cultural, Desert, Fantasy)
 
 **Visual Description:**
 A miracle of water in the wasteland. Palm trees cluster around a clear pool, reflecting the dunes. Tents may be set up nearby.
@@ -1105,7 +1105,7 @@ A miracle of water in the wasteland. Palm trees cluster around a clear pool, ref
 - **Atmosphere:** Relieving, cool near water, exotic, quiet.
 - **Key Elements:** Palm trees, water pool, sand dunes, tents.
 
-### Indian Palace Hall (Cultural, luxury, historical)
+### Indian Palace Hall (Cultural, Luxury, Historical)
 
 **Visual Description:**
 A riot of color and intricate geometry. Scalloped arches and carved sandstone create a breathtaking architectural rhythm.
@@ -1116,7 +1116,7 @@ A riot of color and intricate geometry. Scalloped arches and carved sandstone cr
 - **Atmosphere:** Regal, airy, perfumed, intricate.
 - **Key Elements:** Arches, patterned tiles, silk cushions, open air.
 
-### Palace Courtyard (Cultural, luxury)
+### Palace Courtyard (Cultural, Luxury)
 
 **Visual Description:**
 A formal outdoor space of power. Fountains spray in the center of geometric gardens, surrounded by colonnades.
@@ -1146,14 +1146,14 @@ Nature controlled and perfected. Raked gravel surrounds carefully placed rocks. 
 **Sensory/Atmospheric Details:**
 
 - **Lighting:** Flat, soft overcast light; devoid of harsh shadows.
-- **Atmosphere:** Meditative, silent, still, precise.
+- **Atmosphere:** Meditative, silent, still.
 - **Key Elements:** Raked sand, rocks, moss, bamboo fence.
 
 ---
 
 ## Fantasy & Period
 
-### Enchanted Forest (fantasy, Magical, Forest)
+### Enchanted Forest (Fantasy, Magical, Forest)
 
 **Visual Description:**
 A woodland that defies biology. Plants glow with internal light, and the trees are twisted into impossible shapes.
@@ -1164,7 +1164,7 @@ A woodland that defies biology. Plants glow with internal light, and the trees a
 - **Atmosphere:** Dreamlike, dangerous, beautiful, silent.
 - **Key Elements:** Glowing mushrooms, twisted trees, fireflies, mist.
 
-### Medieval Tavern (fantasy, historical, Inn)
+### Medieval Tavern (Fantasy, Historical, Inn)
 
 **Visual Description:**
 The rowdy meeting place of adventurers. Rough-hewn wooden tables are stained with ale. A hearth roars in the corner.
@@ -1175,7 +1175,7 @@ The rowdy meeting place of adventurers. Rough-hewn wooden tables are stained wit
 - **Atmosphere:** Noisy, boisterous, smelling of roast meat and ale.
 - **Key Elements:** Wooden tables, tankards, fireplace, barrels.
 
-### Renaissance Fair Grounds (fantasy, Ren Faire, event)
+### Renaissance Fair Grounds (Fantasy, Ren Faire, Event)
 
 **Visual Description:**
 A festive tent city. Striped pavilions and banners create a maze of color. Ground is beaten earth or grass.
@@ -1190,7 +1190,7 @@ A festive tent city. Striped pavilions and banners create a maze of color. Groun
 
 ## Cyberpunk & Futuristic
 
-### Cyber Cafe (cyberpunk, tech, social, Block:fantasy, Block:medieval, Block:armor, Block:swimwear)
+### Cyber Cafe (Cyberpunk, Tech, Social)
 
 **Visual Description:**
 A low-life, high-tech hangout. Users jack into terminals in neon-lit booths. Wires hang from the ceiling like vines.
@@ -1201,7 +1201,7 @@ A low-life, high-tech hangout. Users jack into terminals in neon-lit booths. Wir
 - **Atmosphere:** Smoky (vape), hum of cooling fans, illicit, quiet.
 - **Key Elements:** Terminals, cables, neon signs, ramen bowls.
 
-### Data Stream (cyberpunk, Abstract, tech)
+### Data Stream (Cyberpunk, Abstract, Tech)
 
 **Visual Description:**
 Inside the machine. An abstract representation of cyberspace, with streams of code and geometric shapes floating in a void.
@@ -1212,7 +1212,7 @@ Inside the machine. An abstract representation of cyberspace, with streams of co
 - **Atmosphere:** Weightless, infinite, cold, digital.
 - **Key Elements:** Binary code, geometric grids, glowing lines.
 
-### Futuristic Skybridge (cyberpunk, sci-fi, City)
+### Futuristic Skybridge (Cyberpunk, Sci-Fi, City)
 
 **Visual Description:**
 A glass tube suspended between mega-towers. The city is a dizzying drop below. Flying vehicles zip past.
@@ -1223,7 +1223,7 @@ A glass tube suspended between mega-towers. The city is a dizzying drop below. F
 - **Atmosphere:** Vertigo, sterile, transient, breathtaking.
 - **Key Elements:** Glass floor/walls, city below, flying cars, support struts.
 
-### Hacker Den (cyberpunk, Dark, tech)
+### Hacker Den (Cyberpunk, Dark, Tech)
 
 **Visual Description:**
 A cluttered apartment repurposed for cyber-warfare. Hardware is stacked to the ceiling. Screens cover every wall.
@@ -1234,7 +1234,7 @@ A cluttered apartment repurposed for cyber-warfare. Hardware is stacked to the c
 - **Atmosphere:** Paranoic, messy, hot (electronics), claustrophobic.
 - **Key Elements:** Multiple monitors, pizza boxes, tangled wires, server stacks.
 
-### Neon Alley (cyberpunk, noir, urban)
+### Neon Alley (Cyberpunk, Noir, Urban)
 
 **Visual Description:**
 The classic cyberpunk trope. A rain-slicked alley crowded with holographic ads and steam vents.
@@ -1245,7 +1245,7 @@ The classic cyberpunk trope. A rain-slicked alley crowded with holographic ads a
 - **Atmosphere:** Gritty, dangerous, cinematic, rain-soaked.
 - **Key Elements:** Neon signs, puddles, pipes, trash.
 
-### Synthwave Street (cyberpunk, Retro, Neon)
+### Synthwave Street (Cyberpunk, Retro, Neon)
 
 **Visual Description:**
 A stylistic, retro-future grid. Palm trees constitute vector lines. The sun is a gradient circle on the horizon.
@@ -1260,7 +1260,7 @@ A stylistic, retro-future grid. Palm trees constitute vector lines. The sun is a
 
 ## Medical & Professional
 
-### Hospital Corridor (medical, Clean, Scary, Block:fantasy, Block:medieval, Block:armor, Block:swimwear)
+### Hospital Corridor (Medical, Clean, Scary)
 
 **Visual Description:**
 An endless hallway of polished linoleum. Doors line the walls, and the ceiling is a rhythm of fluorescent panels.
@@ -1271,7 +1271,7 @@ An endless hallway of polished linoleum. Doors line the walls, and the ceiling i
 - **Atmosphere:** Antiseptic smell, quiet beeping, anxious, sterile.
 - **Key Elements:** Gurney, nursing station, linoleum floor, hand sanitizer.
 
-### Medical Exam Room (medical, indoor, Block:fantasy, Block:medieval, Block:armor, Block:swimwear)
+### Medical Exam Room (Medical, Indoor)
 
 **Visual Description:**
 A small, windowless box for diagnosis. The exam table is covered in crinkly paper. Charts line the walls.
@@ -1282,7 +1282,7 @@ A small, windowless box for diagnosis. The exam table is covered in crinkly pape
 - **Atmosphere:** Clinical, private, nervous, smelling of alcohol.
 - **Key Elements:** Exam table, sink, wall charts, rolling stool.
 
-### Operating Room (medical, Intense, Block:fantasy, Block:medieval, Block:armor, Block:swimwear)
+### Operating Room (Medical, Intense)
 
 **Visual Description:**
 The theater of surgery. Stainless steel equipment surrounds the central table. Massive lights loom overhead like eyes.
@@ -1293,7 +1293,7 @@ The theater of surgery. Stainless steel equipment surrounds the central table. M
 - **Atmosphere:** Cold (temperature), tense, focused, life-or-death.
 - **Key Elements:** Surgical table, lights, anesthesia machine, vitals monitor.
 
-### Server Room (tech, sci-fi, work, Block:fantasy, Block:medieval, Block:armor, Block:swimwear)
+### Server Room (Tech, Sci-Fi, Work)
 
 **Visual Description:**
 The brain of the facility. Rows of black server racks stretch into the distance, blinking in unison.
@@ -1308,7 +1308,7 @@ The brain of the facility. Rows of black server racks stretch into the distance,
 
 ## Film Noir
 
-### City Street - Night Noir (noir, vintage, Dark)
+### City Street - Night Noir (Noir, Vintage, Dark)
 
 **Visual Description:**
 A black-and-white world of shadows. Rain slicks the pavement, reflecting the glow of a lone streetlamp. Fog curls around the corners of brick buildings.
@@ -1319,7 +1319,7 @@ A black-and-white world of shadows. Rain slicks the pavement, reflecting the glo
 - **Atmosphere:** Melancholy, dangerous, wet, silent except for distant sirens.
 - **Key Elements:** Wet pavement, streetlamp, fog, brick textures.
 
-### Dockside Warehouse (noir, Dark, industrial)
+### Dockside Warehouse (Noir, Dark, Industrial)
 
 **Visual Description:**
 The edge of the city where the water meets industry. A dilapidated warehouse looms in the mist. Crates are stacked haphazardly.
@@ -1330,7 +1330,7 @@ The edge of the city where the water meets industry. A dilapidated warehouse loo
 - **Atmosphere:** Cold, salty, foreboding, criminal.
 - **Key Elements:** Wooden crates, water's edge, fog, chains.
 
-### Hotel Room - Noir (noir, vintage, indoor)
+### Hotel Room - Noir (Noir, Vintage, Indoor)
 
 **Visual Description:**
 A cheap room for a person on the run. The neon sign outside flashes red, casting stripes through the venetian blinds across the rumpled bed.
@@ -1341,7 +1341,7 @@ A cheap room for a person on the run. The neon sign outside flashes red, casting
 - **Atmosphere:** Desperate, lonely, cheap cigarette smoke, oppressive.
 - **Key Elements:** Iron bed, venetian blinds, neon sign window, bottle.
 
-### Jazz Club - Noir (noir, vintage, Music)
+### Jazz Club - Noir (Noir, Vintage, Music)
 
 **Visual Description:**
 A smoky basement dive. A trumpeter plays on a small stage. The audience is just silhouettes in the darkness.
@@ -1352,7 +1352,7 @@ A smoky basement dive. A trumpeter plays on a small stage. The audience is just 
 - **Atmosphere:** Smoky, smooth jazz, hushed, underground.
 - **Key Elements:** Stage, microphone, smoke, tables, silhouettes.
 
-### Luxury Penthouse - Noir (noir, luxury, vintage)
+### Luxury Penthouse - Noir (Noir, Luxury, Vintage)
 
 **Visual Description:**
 The lair of the femme fatale or the kingpin. Art Deco furniture gleams in the low light. A wall of windows overlooks the city.
@@ -1363,7 +1363,7 @@ The lair of the femme fatale or the kingpin. Art Deco furniture gleams in the lo
 - **Atmosphere:** Tense, expensive, cold, cynical.
 - **Key Elements:** Art Deco furniture, city view, drink cart, velvet.
 
-### Nightclub Backstage - Noir (noir, vintage, Backstage)
+### Nightclub Backstage - Noir (Noir, Vintage, Backstage)
 
 **Visual Description:**
 A dressing room cluttered with costumes and secrets. A vanity mirror with bulb lights frames the subject.
@@ -1374,7 +1374,7 @@ A dressing room cluttered with costumes and secrets. A vanity mirror with bulb l
 - **Atmosphere:** Powder and perfume, claustrophobic, anxious.
 - **Key Elements:** Vanity mirror, costumes, makeup, dressing screen.
 
-### Police Station - 1940s (noir, vintage, work)
+### Police Station - 1940s (Noir, Vintage, Work)
 
 **Visual Description:**
 A busy precinct filled with smoke and the clack of typewriters. Wooden desks are piled high with files.
@@ -1385,7 +1385,7 @@ A busy precinct filled with smoke and the clack of typewriters. Wooden desks are
 - **Atmosphere:** Noisy, cynical, bureaucratic, smoke-filled.
 - **Key Elements:** Wooden desks, filing cabinets, fans, rotary phones.
 
-### Rain-Slicked Alley (noir, Dark, urban)
+### Rain-Slicked Alley (Noir, Dark, Urban)
 
 **Visual Description:**
 A dead end. Fire escapes zigzag up the brick walls. Rain falls steadily, washing the trash in the gutter.
@@ -1396,7 +1396,7 @@ A dead end. Fire escapes zigzag up the brick walls. Rain falls steadily, washing
 - **Atmosphere:** Hopeless, wet, cold, trapped.
 - **Key Elements:** Fire escape, brick walls, rain, trash cans.
 
-### Smoky Detective Office (noir, vintage, Office)
+### Smoky Detective Office (Noir, Vintage, Office)
 
 **Visual Description:**
 The iconic PI office. A glass door with a silhouette. A desk with a bottle of whiskey and a fan.
@@ -1411,7 +1411,7 @@ The iconic PI office. A glass door with a silhouette. A desk with a bottle of wh
 
 ## Vacation & Resort
 
-### Beach Cabana (Vacation, Beach, luxury)
+### Beach Cabana (Vacation, Beach, Luxury)
 
 **Visual Description:**
 A private shaded retreat on white sand. Billowing sheer curtains frame the turquoise ocean view.
@@ -1422,7 +1422,7 @@ A private shaded retreat on white sand. Billowing sheer curtains frame the turqu
 - **Atmosphere:** Breezy, lazy, expensive, tropical.
 - **Key Elements:** Daybed, curtains, sand, ocean view.
 
-### Mountain Resort (Vacation, Winter, cozy, Block:swimwear)
+### Mountain Resort (Vacation, Winter, Cozy)
 
 **Visual Description:**
 A grand timber lodge nestled in snow. Smoke curls from the chimney. The deck looks out over ski slopes.
@@ -1433,7 +1433,7 @@ A grand timber lodge nestled in snow. Smoke curls from the chimney. The deck loo
 - **Atmosphere:** Crisp cold air, warm wood smell, aprés-ski.
 - **Key Elements:** Timber logs, snow, deck, pine trees.
 
-### Tiki Bar (Vacation, party, Beach)
+### Tiki Bar (Vacation, Party, Beach)
 
 **Visual Description:**
 A bamboo hut on the beach. Colorful drinks with umbrellas sit on the bar. Torches burn in the twilight.
@@ -1444,7 +1444,7 @@ A bamboo hut on the beach. Colorful drinks with umbrellas sit on the bar. Torche
 - **Atmosphere:** Islan party, relaxed, scent of coconut and rum.
 - **Key Elements:** Thatch roof, bamboo, cocktails, sunset.
 
-### Tropical Resort Pool (Vacation, Pool, luxury)
+### Tropical Resort Pool (Vacation, Pool, Luxury)
 
 **Visual Description:**
 An infinity edge merging with the sea. Palm trees reflect in the still water.
@@ -1459,7 +1459,7 @@ An infinity edge merging with the sea. Palm trees reflect in the still water.
 
 ## Sci-Fi & Tech
 
-### Spaceship Bridge (sci-fi, tech, indoor, Mood:Futuristic)
+### Spaceship Bridge (Sci-Fi, Tech, Indoor, mood:Futuristic)
 
 **Visual Description:**
 The command center of a starship. A panoramic viewport shows the starfield. Consoles glow with data.
@@ -1470,7 +1470,7 @@ The command center of a starship. A panoramic viewport shows the starfield. Cons
 - **Atmosphere:** Sterile, high-tech, quiet hum of engines.
 - **Key Elements:** Viewport, captain's chair, hologram consoles.
 
-### Cyberpunk Neon Street (cyberpunk, urban, Night, Mood:Dark)
+### Cyberpunk Neon Street (Cyberpunk, Urban, Night, mood:Dark)
 
 **Visual Description:**
 A futuristic slum or city center. Towers loom above, covered in neon. Rain reflects the lights.
@@ -1481,7 +1481,7 @@ A futuristic slum or city center. Towers loom above, covered in neon. Rain refle
 - **Atmosphere:** Overwhelming, wet, loud, dystopian.
 - **Key Elements:** Neon signs, crowds, rain, skyscrapers.
 
-### High-Tech Lab (tech, Research, indoor, sci-fi, Block:fantasy, Block:medieval, Block:armor, Block:costume)
+### High-Tech Lab (Tech, Research, Indoor, Sci-Fi)
 
 **Visual Description:**
 A spotless white room for advanced science. Robotic arms work behind glass. Floating holograms display DNA or schematics.
@@ -1492,7 +1492,7 @@ A spotless white room for advanced science. Robotic arms work behind glass. Floa
 - **Atmosphere:** Silent, sterile, ozone smell, futuristic.
 - **Key Elements:** Glass walls, robots, holograms, white surfaces.
 
-### Luxury Space Hotel (sci-fi, luxury, indoor, Mood:elegant)
+### Luxury Space Hotel (Sci-Fi, Luxury, Indoor, mood:Elegant)
 
 **Visual Description:**
 Zero-gravity opulence. A lounge with a massive window looking down on Earth. Furniture is sleek and floating.
@@ -1503,7 +1503,7 @@ Zero-gravity opulence. A lounge with a massive window looking down on Earth. Fur
 - **Atmosphere:** Weightless elegance, quiet, breathtaking.
 - **Key Elements:** Earth view, curved furniture, drinks, stars.
 
-### Cyberpunk Alley (cyberpunk, urban, Dark, Alley)
+### Cyberpunk Alley (Cyberpunk, Urban, Dark, Alley)
 
 **Visual Description:**
 The underside of the future city. Pipes leak steam. Trash is piled high. A flickering neon sign illuminates the grime.
@@ -1514,7 +1514,7 @@ The underside of the future city. Pipes leak steam. Trash is piled high. A flick
 - **Atmosphere:** Dank, gritty, dangerous, industrial hum.
 - **Key Elements:** Pipes, steam, trash, wet ground.
 
-### Space Station Corridor (sci-fi, tech, indoor)
+### Space Station Corridor (Sci-Fi, Tech, Indoor)
 
 **Visual Description:**
 A hexagonal tunnel of metal panels. Airlocks line the walls. It creates a sense of claustrophobia and utility.
@@ -1529,7 +1529,7 @@ A hexagonal tunnel of metal panels. Airlocks line the walls. It creates a sense 
 
 ## Events & Gatherings
 
-### Backstage Green Room (event, Backstage)
+### Backstage Green Room (Event, Backstage)
 
 **Visual Description:**
 A waiting room for talent. Sofas are worn, mirrors are bright. A fruit platter sits untouched on a table.
@@ -1540,7 +1540,7 @@ A waiting room for talent. Sofas are worn, mirrors are bright. A fruit platter s
 - **Atmosphere:** Nervous energy, stale air, waiting.
 - **Key Elements:** Sofas, mirror, snacks, TV monitor.
 
-### Carnival Midway (event, Fun, Circus)
+### Carnival Midway (Event, Fun, Circus)
 
 **Visual Description:**
 A riot of lights and motion. The Ferris wheel turns in the background. Booths offer games of chance.
@@ -1551,7 +1551,7 @@ A riot of lights and motion. The Ferris wheel turns in the background. Booths of
 - **Atmosphere:** Loud calliope music, sugary smell (cotton candy), chaotic.
 - **Key Elements:** Ferris wheel, game booths, striped tents, lights.
 
-### Farmers Market (event, Day, outdoor)
+### Farmers Market (Event, Day, Outdoor)
 
 **Visual Description:**
 A celebration of harvest. Tents shade crates of colorful produce. People mill about with tote bags.
@@ -1562,7 +1562,7 @@ A celebration of harvest. Tents shade crates of colorful produce. People mill ab
 - **Atmosphere:** Fresh, community-focused, earthy smells.
 - **Key Elements:** Produce crates, white tents, flowers, crowds.
 
-### Festival Grounds (event, Festival, outdoor)
+### Festival Grounds (Event, Festival, Outdoor)
 
 **Visual Description:**
 A sea of people in a field. Flags wave in the wind. A stage is visible in the far distance.
@@ -1573,7 +1573,7 @@ A sea of people in a field. Flags wave in the wind. A stage is visible in the fa
 - **Atmosphere:** Loud music, hot, energetic, communal.
 - **Key Elements:** Crowds, flags, distant stage, grass/dirt.
 
-### House Party (event, party, indoor)
+### House Party (Event, Party, Indoor)
 
 **Visual Description:**
 A living room packed with people. Red plastic cups are everywhere. The lights are dim or colored.
@@ -1584,7 +1584,7 @@ A living room packed with people. Red plastic cups are everywhere. The lights ar
 - **Atmosphere:** Loud bass, crowded, hot, social.
 - **Key Elements:** Red cups, sofa, crowds, makeshift bar.
 
-### Music Festival Main Stage (event, Music, Concert)
+### Music Festival Main Stage (Event, Music, Concert)
 
 **Visual Description:**
 The view from the crowd. A massive structure of truss and sound systems towers overhead. Lasers cut the smoke.
@@ -1595,7 +1595,7 @@ The view from the crowd. A massive structure of truss and sound systems towers o
 - **Atmosphere:** Deafenly loud, collective euphoria, bass vibration.
 - **Key Elements:** Stage truss, speakers, crowd hands, lights.
 
-### Street Fair (event, urban, Fun)
+### Street Fair (Event, Urban, Fun)
 
 **Visual Description:**
 A city block closed to cars. Vendor stalls line the street. Bunting hangs between lamp posts.
@@ -1606,7 +1606,7 @@ A city block closed to cars. Vendor stalls line the street. Bunting hangs betwee
 - **Atmosphere:** Smelling of fried food, noisy, festive.
 - **Key Elements:** Vendor stalls, bunting, asphalt, crowds.
 
-### Wedding Reception (event, formal, party)
+### Wedding Reception (Event, Formal, Party)
 
 **Visual Description:**
 A banquet hall transformed by flowers and fabric. Round tables gleam with silverware. A dance floor waits in the center.
@@ -1680,7 +1680,7 @@ A room of arcane study. Floating books, glowing orbs, and star charts cover the 
 
 ## School & Academy
 
-### Classroom Window Seat (School, Anime, Nostalgia, Mood:Peaceful)
+### Classroom Window Seat (School, Anime, Nostalgia, peaceful)
 
 **Visual Description:**
 The protagonist's seat. A wooden desk by the window. Outside, clouds drift by. The room is empty or quiet.
@@ -1691,7 +1691,7 @@ The protagonist's seat. A wooden desk by the window. Outside, clouds drift by. T
 - **Atmosphere:** Nostalgic, sleepy, peaceful, "after school".
 - **Key Elements:** Desk, window, clouds, notebook.
 
-### School Rooftop (School, Anime, Nostalgia, Outdoor, Mood:Private)
+### School Rooftop (School, Anime, Nostalgia, Outdoor, private)
 
 **Visual Description:**
 A flat concrete expanse fenced by chain-link. Ventilation units hum. The sky is vast above.
@@ -1750,7 +1750,7 @@ The transition space. Rows of small wooden boxes (getabako). A love letter might
 
 ## Cinematic & Atmospheric Tropes
 
-### Rainy Dark Urban Street (urban, Night, rain, noir)
+### Rainy Dark Urban Street (Urban, Night, Rain, Noir)
 
 **Visual Description:**
 A scene of urban melancholy. Rain pours down, turning the street into a mirror for neon lights. Umbrellas pass by.
@@ -1761,7 +1761,7 @@ A scene of urban melancholy. Rain pours down, turning the street into a mirror f
 - **Atmosphere:** Wet, cold, rhythmic rain sound, moody.
 - **Key Elements:** Rain, wet pavement, streetlights, reflections.
 
-### Rooftop Garden at Sunset (urban, outdoor, Golden Hour, nature)
+### Rooftop Garden at Sunset (Urban, Outdoor, Golden Hour, Nature)
 
 **Visual Description:**
 An oasis in the sky. Potted plants surround a bench. The sun is setting behind the city skyline, painting everything gold.
@@ -1772,7 +1772,7 @@ An oasis in the sky. Potted plants surround a bench. The sun is setting behind t
 - **Atmosphere:** Romantic, peaceful, breezy, ending of the day.
 - **Key Elements:** Plants, bench, sunset, city silhouette.
 
-### Snowy City Square (urban, outdoor, Winter, Festive)
+### Snowy City Square (Urban, Outdoor, Winter, Festive)
 
 **Visual Description:**
 A winter wonderland in the metropolis. Snow covers the statues and benches. Fairy lights twinkle in the trees.
@@ -1783,7 +1783,7 @@ A winter wonderland in the metropolis. Snow covers the statues and benches. Fair
 - **Atmosphere:** Quiet (muffled by snow), cold, magical, festive.
 - **Key Elements:** Snow, fairy lights, street lamps, breath vapor.
 
-### Giant Aquarium Hall (Social, indoor, Water, Mood:Serene)
+### Giant Aquarium Hall (Social, Indoor, Water, serene)
 
 **Visual Description:**
 A tunnel of blue. Viewers are surrounded by water and swimming fish. The light ripples on the floor.
@@ -1794,7 +1794,7 @@ A tunnel of blue. Viewers are surrounded by water and swimming fish. The light r
 - **Atmosphere:** Underwater silence, awestruck, peaceful.
 - **Key Elements:** Glass tunnel/wall, fish, blue water, silhouettes.
 
-### Midnight Rooftop (urban, outdoor, Night, Moody)
+### Midnight Rooftop (Urban, Outdoor, Night, Moody)
 
 **Visual Description:**
 Solitude above the millions. The city is a carpet of lights below. The moon is the only companion.
@@ -1805,7 +1805,7 @@ Solitude above the millions. The city is a carpet of lights below. The moon is t
 - **Atmosphere:** Windy, silent, introspective, vast.
 - **Key Elements:** Parapet edge, city grid lights, moon, shadows.
 
-### Petal-Strewn Walkway (nature, outdoor, Spring)
+### Petal-Strewn Walkway (Nature, Outdoor, Spring)
 
 **Visual Description:**
 The peak of spring. Cherry blossom (sakura) trees form a pink tunnel. The ground is covered in falling petals.
@@ -1815,3 +1815,47 @@ The peak of spring. Cherry blossom (sakura) trees form a pink tunnel. The ground
 - **Lighting:** Soft, pink-tinted diffusion; gentle.
 - **Atmosphere:** Fragrant, fleeting beauty, romantic, soft breeze.
 - **Key Elements:** Cherry trees, pink petals, pathway, breeze.
+
+---
+
+## Tactical & Military
+
+### Armory (Tactical, Military, Indoor)
+
+**Visual Description:**
+A secure room lined with weapon racks and equipment cages. The walls are reinforced concrete, and the lighting is strict and industrial.
+**Sensory/Atmospheric Details:**
+
+- **Lighting:** Harsh, flickering fluorescent strips; cold and sterile.
+- **Atmosphere:** Smell of gun oil and cold metal, silent, dangerous potential.
+- **Key Elements:** Weapon racks, ammo crates, workbench, cages.
+
+### Bunker (Tactical, Military, Indoor)
+
+**Visual Description:**
+A subterranean fortification designed to survive the apocalypse. Thick blast doors separate the damp concrete interior from the outside world.
+**Sensory/Atmospheric Details:**
+
+- **Lighting:** Dim emergency red lighting or hanging industrial bulbs.
+- **Atmosphere:** Claustrophobic, stale air, vibrating low hum of generators.
+- **Key Elements:** Blast door, concrete walls, air filtration pipes, bunk beds.
+
+### Forward Operating Base (Tactical, Military, Outdoor, FOB)
+
+**Visual Description:**
+A temporary military outpost in a hostile environment. Hesco barriers and razor wire surround a dusty compound of tents and comms arrays.
+**Sensory/Atmospheric Details:**
+
+- **Lighting:** Blinding sun and harsh shadows, or stark perimeter floodlights at night.
+- **Atmosphere:** Tense, dusty, smell of diesel and sand, purposeful.
+- **Key Elements:** Hesco barriers, razor wire, green canvas tents, radio tower.
+
+### Situation Room (Tactical, Military, Tech, Indoor)
+
+**Visual Description:**
+The nerve center of an operation. Maps cover the walls, and screens display live feeds. The center table is covered in dossiers and tactical plans.
+**Sensory/Atmospheric Details:**
+
+- **Lighting:** Dim room with glowing blue light from screens and maps.
+- **Atmosphere:** Urgent, hushed voices, high stakes, smell of coffee and stale air.
+- **Key Elements:** Central map table, wall screens, secure phones, darkness.

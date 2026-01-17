@@ -1,0 +1,46 @@
+tags: [professional, business, casual, office, polished]
+
+[F]
+- **Top:** Tailored blazer over blouse in {primary_color}.
+  - **Fit:** Fitted blazer.
+  - **Material:** Wool blend or ponte.
+  - **Pattern:** Solid.
+  - **Neckline:** Notch lapel over blouse.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dress pants or pencil skirt in {secondary_color}.
+  - **Fit:** Straight pants or fitted skirt.
+  - **Material:** Wool blend or structured cotton.
+  - **Waist:** Mid to high-rise.
+  - **Length:** Full length or knee-length.
+- **Footwear:** Pumps or loafers.
+- **Accessories:** Structured tote; simple jewelry.
+
+[M]
+- **Top:** Blazer over dress shirt in {primary_color}.
+  - **Fit:** Tailored blazer.
+  - **Material:** Wool blend.
+  - **Pattern:** Solid or subtle texture.
+  - **Neckline:** Notch lapel.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dress pants or chinos.
+  - **Fit:** Straight or slim.
+  - **Material:** Wool blend or cotton twill.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Dress shoes or loafers.
+- **Accessories:** Leather belt; watch; briefcase.
+
+[H]
+- **Hijab:** Silk or chiffon hijab in professional color.
+- **Top:** Modest blazer over tunic.
+  - **Fit:** Modest tailored fit.
+  - **Material:** Wool blend.
+  - **Neckline:** Notch lapel.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored wide-leg pants or maxi skirt.
+  - **Fit:** Wide-leg or flowing.
+  - **Material:** Wool blend or structured fabric.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** Closed-toe flats or low heels.
+- **Accessories:** Professional tote; elegant watch.

@@ -1,7 +1,7 @@
 ### Leilani Te'o
 **Photo:** leilani_teo_photo.png
 
-**Tags:** pacific-islander, Athletic, commanding, curvy, female, strong
+**Tags:** Pacific-Islander, Athletic, Commanding, Curvy, Female, Strong
 **Summary:** Leilani is a study in monumental power—a massive, heavily muscled frame that commands attention through sheer physical presence. Her Samoan heritage shows in her imposing stature and calm, unshakable confidence. She is a powerhouse athlete who embraces her size with pride, moving with a surprising, fluid grace that belies the explosive strength contained in her sculpted build.
 
 **Gender:** F
@@ -14,7 +14,7 @@
 * **Skin:** Deep warm tan with rich golden-brown undertones (Polynesian coloring); smooth surface with visible muscle separation creating deep shadows; elaborate traditional 'tatau' patterns visible on one shoulder and upper arm.
 
 **Age Presentation:** early 30s; mature, powerful, and physically seasoned.
-**Vibe / Energy:** commanding, steady, disciplined, strong, proud.
+**Vibe / Energy:** Commanding, Steady, Disciplined, Strong, Proud.
 **Bearing:** deliberate and purposeful movement; stands with a broad, grounded stance; projects an aura of immense physical weight and stability.
 
 // Style Notes:

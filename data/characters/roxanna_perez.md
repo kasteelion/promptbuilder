@@ -1,7 +1,7 @@
 ### Roxanna Perez
 **Photo:** roxanna_photo.png
 **Summary:** Roxanna Perez thrives on momentum and theatrical confidence. Her Puerto Rican heritage infuses her presence with vibrant energy and fierce pride. She moves with the compact power of someone who's trained their body into a weapon, blending athletic credibility with bold, spotlight-ready charisma.
-**Tags:** female, Athletic, commanding, creative, edgy, intense, latina, playful, puerto rican
+**Tags:** Female, Athletic, Commanding, Creative, Edgy, Intense, Latina, Playful, Puerto Rican
 **Gender:** F
 **Signature Color:** #800080
 
@@ -18,7 +18,7 @@
 
 **Age Presentation:** early to mid-20s presentation; youthful with professional maturity.
 
-**Vibe / Energy:** intense, confident, Edgy, commanding.
+**Vibe / Energy:** Intense, Confident, Edgy, Commanding.
 
 **Bearing:** upright, strong posture; controlled yet expressive movement; frequent contrapposto stance; dominant, poised presence.
 

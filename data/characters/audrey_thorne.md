@@ -1,7 +1,7 @@
 ### Audrey Thorne
 **Photo:** audrey_thorne_photo.png
 
-**Tags:**   caucasian, auburn hair, casual-chic, chic, curvy, female, playful, soft dramatic, statuesque
+**Tags:**   Caucasian, Auburn Hair, Casual-Chic, Chic, Curvy, Female, Playful, Soft Dramatic, Statuesque
 
 **Summary:** Audrey radiates a grounded yet vibrant confidence, embodied by her bold choice of color and relaxed posture. Her presence is commanding without being aggressive, blending softness with structural strength in a way that feels both authentic and poised.
 
@@ -15,7 +15,7 @@
 * **Skin:** Fair/Light depth; cool pink undertones with a smooth, matte-satin finish; clear complexion with natural flushing on the cheeks.
 
 **Age Presentation:** Mid-20s; fresh-faced but poised.
-**Vibe / Energy:** Bold, Earthy, Captivating, Self-assured.
+**Vibe / Energy:** Bold, Earthy, Captivating, Self-Assured.
 **Bearing:** Deliberate and grounded movement; upright posture that maintains dignity even when seated low; hands rest purposefully rather than fidgeting.
 
 // Style Notes:

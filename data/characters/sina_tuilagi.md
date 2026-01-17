@@ -2,7 +2,7 @@
 
 **Photo:** sina_tuilagi_photo.jpeg
 
-**Tags:** female, Athletic, chic, commanding, cultural, pacific-islander, strong, tatau, traditional-modern-fusion
+**Tags:** Female, Athletic, Chic, Commanding, Cultural, Pacific-Islander, Strong, Tatau, Traditional-Modern-Fusion
 
 **Summary:** Sina embodies the warmth and strength of her Pacific Islander heritage, carrying herself with a grounded, ancestral pride. Her presence is a fusion of traditional resilience and contemporary confidence, radiating a welcoming yet commanding energy.
 
@@ -21,7 +21,7 @@
 
 **Age Presentation:** mid-to-late 20s presentation; culturally grounded, confidently contemporary, proud of heritage.
 
-**Vibe / Energy:** warm, strong, proud, culturally rooted, contemporary confidence.
+**Vibe / Energy:** Warm, Strong, Proud, Culturally Rooted, Contemporary Confidence.
 
 **Bearing:** grounded powerful posture with broad stable stance; confident unhurried movement; natural authority in physical presence; relaxed shoulders with engaged core; gestures are expansive and welcoming; strong connection to both traditional values and contemporary identity.
 

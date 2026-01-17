@@ -1,0 +1,45 @@
+tags: [Bowling, Team]
+
+[F]
+- **Top:** Fitted performance polo for {team} {modifier}.
+  - **Fit:** Tailored; Moisture-wicking.
+  - **Material:** Tech-fabric; {primary_color} with {secondary_color} accents.
+  - **Pattern:** Team logo on chest; Name on back.
+  - **Neckline:** Collared polo.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Black athletic skirt.
+  - **Fit:** Tailored fit.
+  - **Material:** Polyester blend.
+  - **Waist:** Natural.
+  - **Length:** Mid-length.
+- **Footwear:** Bowling shoes ({accent}).
+- **Accessories:** Wrist support (optional); team logo on collar.
+
+[M]
+- **Top:** Fitted performance polo in {primary_color} with {secondary_color} accents.
+  - **Fit:** Standard fit; Moisture-wicking.
+  - **Material:** Tech-fabric.
+  - **Neckline:** Collared.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Black performance pants.
+  - **Fit:** Tailored fit.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Full.
+- **Footwear:** Bowling shoes ({accent}).
+- **Accessories:** Wrist support (optional); team logo on collar.
+
+[H]
+- **Hijab:** Sports hijab in {primary_color}.
+- **Top:** Fitted performance polo or athletic top for {team} {modifier}.
+  - **Fit:** Modest high neck.
+  - **Material:** {primary_color} with {secondary_color} accents.
+  - **Neckline:** High-neck modest.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Black athletic midi skirt with built-in full-length leggings.
+  - **Fit:** Straight.
+  - **Material:** fabric.
+  - **Waist:** Elastic.
+  - **Length:** Full length.
+- **Footwear:** Bowling shoes ({accent}).
+- **Accessories:** Wrist support (optional); simple gold studs.

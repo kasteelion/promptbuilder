@@ -1,71 +1,101 @@
 import os
 import datetime
+import re
+from pathlib import Path
+
+# Add project root to path
+PROJECT_ROOT = Path(__file__).parent.parent
+REPORT_DIR = PROJECT_ROOT / "auditing" / "reports"
+
+def get_report_content(filename):
+    path = REPORT_DIR / filename
+    if path.exists():
+        return path.read_text(encoding="utf-8")
+    return None
+
+def extract_dashboard_metrics():
+    """Extract metrics from static_integrity and hub_connectivity for the master dashboard."""
+    metrics = {
+        "Total Assets": "N/A",
+        "Failure Rate": "N/A",
+        "Integrity Errors": "0",
+        "Media Errors": "0",
+        "Established Hubs": "0",
+        "Weak Hubs": "0",
+        "Characters with 0 Hubs": "0"
+    }
+    
+    # 1. Static Integrity
+    static_content = get_report_content("static_integrity.md")
+    if static_content:
+        m = re.search(r"- \*\*Total Assets Audited\*\*: (\d+)", static_content)
+        if m: metrics["Total Assets"] = m.group(1)
+        m = re.search(r"- \*\*Failure Rate\*\*: ([\d\.]+%?)", static_content)
+        if m: metrics["Failure Rate"] = m.group(1)
+        m = re.search(r"- \*\*Integrity Errors\*\*: (\d+)", static_content)
+        if m: metrics["Integrity Errors"] = m.group(1)
+        m = re.search(r"- \*\*Media Errors\*\*: (\d+)", static_content)
+        if m: metrics["Media Errors"] = m.group(1)
+        
+    # 2. Hub Connectivity
+    hub_content = get_report_content("hub_connectivity.md")
+    if hub_content:
+        # Count rows in Established Hubs table
+        est_hubs = re.findall(r"\| \*\*([^*]+)\*\* \|", hub_content)
+        metrics["Established Hubs"] = str(len(est_hubs))
+        # Count rows in Weak Hubs table
+        weak_hubs = re.findall(r"\| ([^|]+) \| ([^|]*Style|Scene|Outfit|Interaction[^|]*) \|", hub_content)
+        metrics["Weak Hubs"] = str(len(weak_hubs))
+        # Count characters with 0 Hubs
+        zero_reach = re.findall(r"\| [^|]+ \| 0 \| ❌ NONE \|", hub_content)
+        metrics["Characters with 0 Hubs"] = str(len(zero_reach))
+        
+    return metrics
 
 def consolidate():
-    report_dir = "auditing/reports"
-    output_file = os.path.join(report_dir, "comprehensive_audit.md")
+    output_file = REPORT_DIR / "comprehensive_audit.md"
     
     # Order of reports in the consolidated file
-    # (Section Title, Filename)
     report_order = [
-        ("Distribution Visualizations", "prompt_distribution_flow.md"),
-        ("Standards Audit: Characters", "character_standards_report.md"),
-        ("Standards Audit: Scenes", "scene_standards_report.md"),
-        ("Standards Audit: Poses", "pose_standards_report.md"),
-        ("Standards Audit: Interactions", "interaction_standards_report.md"),
-        ("Style Distribution Census", "style_census.md"),
+        ("Static Integrity Audit", "static_integrity.md"),
+        ("Hub & Spoke Connectivity", "hub_connectivity.md"),
         ("Vibe Cohesion Analysis", "vibe_cohesion_report.md"),
         ("Prompt Scoring Analysis (Best & Worst)", "best_worst_prompts.md"),
-        ("Quality & Integrity Audit", "quality_audit.md"),
-        ("Asset Descriptiveness", "descriptiveness_audit.md"),
-        ("Tag System Inventory", "tag_inventory.md"),
+        ("Distribution Visualizations", "prompt_distribution_flow.md"),
         ("Tag Flow", "tag_distribution_flow.md")
     ]
     
-    # Force Unix newlines for maximum compatibility with Mermaid parsers
-    with open(output_file, 'w', encoding='utf-8', newline='\n') as outfile:
-        # Title and Date
-        outfile.write(f"# PromptBuilder Comprehensive Audit Report\n")
-        outfile.write(f"**Generated:** {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
-        outfile.write("This document combines all individual audit modules into a single overview of system health, content quality, and generation logic performance.\n\n")
-        outfile.write("---\n\n")
+    metrics = extract_dashboard_metrics()
+    
+    with open(output_file, 'w', encoding='utf-8', newline='\n') as f:
+        f.write("# 🕵️ PromptBuilder Comprehensive Audit\n")
+        f.write(f"**Generated:** {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
         
-        with open("auditing/reports/consolidation_debug.log", "w", encoding="utf-8", newline='\n') as debug_log:
-            for title, filename in report_order:
-                filepath = os.path.join(report_dir, filename)
+        f.write("## 🛂 System Health Dashboard\n")
+        f.write("| Metric | Value | Status |\n")
+        f.write("|---|---|---|\n")
+        
+        # Color coding status
+        assets_val = metrics["Total Assets"]
+        fail_val = metrics["Failure Rate"].strip('%')
+        fail_status = "🔴 ACTION REQUIRED" if float(fail_val or 0) > 10 else "🟡 CAUTION" if float(fail_val or 0) > 5 else "🟢 HEALTHY"
+        
+        f.write(f"| **Content Quality** | {metrics['Failure Rate']} Failure Rate | {fail_status} |\n")
+        f.write(f"| **Data Integrity** | {metrics['Integrity Errors']} Logic / {metrics['Media Errors']} Media | {'🔴 ERROR' if int(metrics['Integrity Errors'])+int(metrics['Media Errors']) > 0 else '🟢 OK'} |\n")
+        f.write(f"| **Thematic Reach** | {metrics['Established Hubs']} Strong Hubs / {metrics['Weak Hubs']} Potential | {'🟢 GOOD' if int(metrics['Established Hubs']) > 10 else '🟡 LOW DIVERSITY'} |\n")
+        f.write(f"| **Char Accessibility** | {metrics['Characters with 0 Hubs']} Isolated Characters | {'🔴 RE-TAG NEEDED' if int(metrics['Characters with 0 Hubs']) > 0 else '🟢 OK'} |\n")
+        
+        f.write("\n---\n\n")
+        
+        for title, filename in report_order:
+            content = get_report_content(filename)
+            if content:
+                # Remove top-level header from source file to avoid redundancy
+                content = re.sub(r"^# .*?\n", "", content, flags=re.MULTILINE)
                 
-                if os.path.exists(filepath):
-                    outfile.write(f"<div style='page-break-before: always;'></div>\n\n")
-                    outfile.write(f"# 📑 {title}\n\n")
-                    debug_log.write(f"--- Consolidating {filename} ---\n")
-                    
-                    try:
-                        # Use newline='' to preserve original newlines from the report files as much as possible
-                        with open(filepath, 'r', encoding='utf-8', newline='') as infile:
-                            in_code_block = False
-                            for line in infile:
-                                # Standardize to Unix \n for the output
-                                clean_line = line.rstrip('\r\n')
-                                stripped = clean_line.strip()
-                                
-                                if stripped.startswith('```'):
-                                    in_code_block = not in_code_block
-                                
-                                if not in_code_block and stripped.startswith('#'):
-                                    final_line = '#' + clean_line
-                                else:
-                                    final_line = clean_line
-                                
-                                outfile.write(final_line + '\n')
-                                debug_log.write(f"WRITE: [{final_line}]\n")
-                                
-                    except Exception as e:
-                        outfile.write(f"\n> *Error reading report file: {e}*\n")
-                        debug_log.write(f"ERROR: {e}\n")
-                    
-                    outfile.write("\n\n---\n\n")
-                else:
-                    debug_log.write(f"SKIP: {filename} (Not found)\n")
+                f.write(f"## 📑 {title}\n\n")
+                f.write(content)
+                f.write("\n\n---\n\n")
 
     print(f"✅ Comprehensive report generated: {output_file}")
 

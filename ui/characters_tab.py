@@ -115,7 +115,10 @@ class CharactersTab:
             widget.apply_theme(theme)
 
         # Update canvas
-        if hasattr(self, "chars_canvas"):
+        if hasattr(self, "scrollable_canvas") and hasattr(self.scrollable_canvas, "apply_theme"):
+            self.scrollable_canvas.apply_theme(theme)
+        elif hasattr(self, "chars_canvas"):
+            # Fallback if scrollable_canvas object not available but canvas is
             self.theme_manager.apply_canvas_theme(self.chars_canvas, theme)
 
         # Refresh character items

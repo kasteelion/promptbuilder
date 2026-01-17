@@ -1,0 +1,31 @@
+tags: [Cute, Lounge, Sleep]
+
+[F]
+- **One-Piece:** Full-body fleece onesie with hood.
+  - **Fit:** Oversized baggy.
+  - **Material:** Fleece.
+  - **Pattern:** Solid ((default:pastel pink or gray)).
+  - **Neckline:** Hooded zip-front.
+  - **Sleeve:** Long sleeves.
+- **Footwear:** Built-in slipper feet or fuzzy boots.
+- **Accessories:** Hot cocoa mug; stuffed animal.
+
+[M]
+- **One-Piece:** Full-body fleece onesie with hood.
+  - **Fit:** Relaxed.
+  - **Material:** Fleece.
+  - **Pattern:** Solid or Plaid.
+  - **Neckline:** Hooded.
+  - **Sleeve:** Long sleeves.
+- **Footwear:** Built-in or fuzzy slippers.
+- **Accessories:** Hot cocoa mug.
+
+[H]
+- **Hijab:** Jersey hijab worn under hood.
+- **One-Piece:** Full-body fleece onesie (hood up).
+  - **Fit:** Loose modest.
+  - **Material:** Fleece.
+  - **Neckline:** High zip-neck.
+  - **Sleeve:** Long sleeves.
+- **Footwear:** Fuzzy slipper boots.
+- **Accessories:** Hot cocoa mug.

@@ -1,7 +1,7 @@
 ### Leonidas Stratos
 **Photo:** leonidas_stratos_photo.png
 
-**Tags:** male, Athletic, commanding, greek, intense
+**Tags:** Male, Athletic, Commanding, Greek, Intense
 **Summary:** Leonidas Stratos is the embodiment of uncompromising discipline and raw, kinetic power. His presence is sharp and focused, like a spear tip poised for impact. Every line of his body speaks of a life forged in the furnace of relentless training. He radiates a hard, quiet confidence—the kind that doesn't need to shout to be heard.
 **Gender:** M
 **Signature Color:** #CD5C5C
@@ -13,7 +13,7 @@
 * **Skin:** Deep olive; warm golden undertones; smooth firm texture; surgically-precise scars on pectoral and outer thigh; tanned.
 
 **Age Presentation:** mid-to-late 30s; at the peak of physical and mental maturity.
-**Vibe / Energy:** disciplined, Intense, elite, protective.
+**Vibe / Energy:** Disciplined, Intense, Elite, Protective.
 **Bearing:** perfect military posture; predatory grace; stands with hands clasped behind back or arms crossed, radiating a quiet but overwhelming authority.
 
 //Style Notes:

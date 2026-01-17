@@ -1,4 +1,4 @@
-tags: [costume, hero]
+tags: [Costume, Heroic]
 
 [F]
 - **Top:** Form-fitting spandex bodysuit ((default:white)).

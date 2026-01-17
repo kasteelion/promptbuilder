@@ -176,3 +176,6 @@
 - studious
 - trendy
 - vacation-ready
+- sci-fi
+- sport
+- work

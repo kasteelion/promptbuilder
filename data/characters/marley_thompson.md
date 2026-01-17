@@ -1,7 +1,7 @@
 ### Marley Thompson
 **Photo:** marley_thompson_photo.png
 
-**Tags:**   female, approachable, controversial, cultural-fusion, curvy, jamaican, traditional
+**Tags:**   Female, Approachable, Controversial, Cultural-Fusion, Curvy, Jamaican, Traditional
 
 **Summary:** Marley embodies a controversial blend: traditional homemaking values wrapped in Caribbean warmth and undeniable sensuality. She's chosen the "trad-wife" path intentionally, finding empowerment in domestic excellence and feminine presentation. Her Jamaican heritage infuses everything—the rhythm of her movement, the warmth of her hospitality, the pride in her cooking. She's feminine, soft, and unapologetically devoted to home and family, moving through domestic spaces with the confidence of someone who knows exactly what she wants and refuses to apologize for it.
 
@@ -15,7 +15,7 @@
 * **Skin:** Deep warm brown with rich golden undertones; smooth luminous finish; healthy glow from good skincare; natural radiance.
 
 **Age Presentation:** late 20s to early 30s presentation; mature femininity, settled domestic confidence.
-**Vibe / Energy:** nurturing, warm, traditionally feminine, contentedly domestic, sensual-maternal blend.
+**Vibe / Energy:** Nurturing, Warm, Traditionally Feminine, Contentedly Domestic, Sensual-Maternal Blend.
 **Bearing:** graceful unhurried movement; upright posture emphasizing curves; frequent gentle touching gestures (smoothing clothing, arranging space); stands with slight hip tilt; movements are fluid and deliberately feminine; carries herself with domestic authority.
 
 // Style Notes:

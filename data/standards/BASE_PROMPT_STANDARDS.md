@@ -5,8 +5,7 @@ Base Prompts define the "Lens" and "Medium" through which the request is interpr
 ## The Prompt Schema
 
 ```markdown
-## Style Name (Tag1, Tag2, Mood:MoodName)
-
+## Style Name (Tag1, Tag2, mood:Moodname)
 **Medium/Format:**
 [The artistic medium: Photography, Digital Art, Oil Painting, vector illustration.]
 
@@ -29,8 +28,7 @@ Base Prompts define the "Lens" and "Medium" through which the request is interpr
 ## Example Entry
 
 ```markdown
-## Analog Film (Photography, Realistic, Mood:Nostalgic, Block:Sci-Fi)
-
+## Analog Film (Photography, Realistic, mood:Nostalgic, block:Sci-Fi)
 **Medium/Format:**
 35mm Film Photography.
 

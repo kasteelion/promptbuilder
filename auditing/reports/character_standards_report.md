@@ -6,7 +6,7 @@
 |---|---|---|---|
 | aaliyah_chen.md | PASS | 100 | None |
 | aiyana_blackfeather.md | PASS | 100 | None |
-| amina_benali.md | PASS | 100 | None |
+| amina_benali.md | FAIL | 80 | Missing 'Body' bullet, Missing 'Face' bullet, Missing 'Hair' bullet, Missing 'Skin' bullet |
 | amira_khalil.md | PASS | 100 | None |
 | aryan_kapoor.md | PASS | 100 | None |
 | astrid_nielsen.md | PASS | 100 | None |
@@ -20,7 +20,7 @@
 | clara_thorne.md | PASS | 100 | None |
 | daisy_dawson.md | PASS | 100 | None |
 | Diego_Morales.md | PASS | 100 | None |
-| diesel_murphy.md | PASS | 100 | None |
+| diesel_murphy.md | FAIL | 80 | Missing 'Body' bullet, Missing 'Face' bullet, Missing 'Hair' bullet, Missing 'Skin' bullet |
 | efe_kouadio.md | PASS | 100 | None |
 | elara_soledad.md | PASS | 100 | None |
 | elena_moretti.md | PASS | 100 | None |
@@ -58,7 +58,7 @@
 | maki_cruz.md | PASS | 100 | None |
 | Malik_Farrah.md | PASS | 100 | None |
 | marcus_thompson.md | PASS | 100 | None |
-| marisol_rivera.md | PASS | 100 | None |
+| marisol_rivera.md | FAIL | 80 | Missing 'Body' bullet, Missing 'Face' bullet, Missing 'Hair' bullet, Missing 'Skin' bullet |
 | marley_thompson.md | PASS | 100 | None |
 | maya_rose.md | PASS | 100 | None |
 | mei_chen.md | PASS | 100 | None |
@@ -88,4 +88,4 @@
 | zemen_ayele.md | PASS | 100 | None |
 
 
-**Summary:** 82/82 Passed (100.0%)
+**Summary:** 79/82 Passed (96.3%)

@@ -40,7 +40,6 @@ This is the raw prompt text used for generation.
   - **Action:** What are they doing? (e.g., "walking", "dancing", "fighting").
 
 ## Example (Good vs Bad)
-
 **BAD:**
 `- **Hugging** (Social): {char1} and {char2} hug.`
 _(Too simple, low fidelity)._

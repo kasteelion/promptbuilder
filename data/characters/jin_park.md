@@ -1,6 +1,6 @@
 ### Jin Park
 **Photo:** jin_park_photo.png
-**Tags:**   male, chic, k-fashion, minimalist, soft
+**Tags:**   Male, Chic, K-Fashion, Minimalist, Soft
 
 **Summary:** Jin’s presence is understated and thoughtful, defined by quiet confidence and emotional sensitivity. He feels observant rather than performative, with a modern elegance rooted in restraint.
 
@@ -18,7 +18,7 @@
 * **Skin:** Light neutral skin with smooth even finish and soft clarity.
 
 **Age Presentation:** late 20s presentation; introspective, calm, contemporary.
-**Vibe / Energy:** quiet, observant, restrained; radiates a modern elegance rooted in emotional sensitivity and clarity.
+**Vibe / Energy:** Quiet, Observant, restrained; Radiates A Modern Elegance Rooted In Emotional Sensitivity And Clarity.
 **Bearing:** contained posture; minimal gestures; moves with a light, measured ease that feels observant rather than performative.
 
 // Style notes for outfit creation (not included in prompts):

@@ -1,7 +1,7 @@
 ### Zara Washington
 **Photo:** zara_washington_photo.png
 
-**Tags:**   black, approachable, commanding, cultural, curvy, female, funky, playful
+**Tags:**   Black, Approachable, Commanding, Cultural, Curvy, Female, Funky, Playful
 
 **Summary:** Zara radiates unapologetic presence and embodied confidence. Her power is expressive and grounded, combining cultural pride, sensuality, and bold personal style.
 
@@ -16,7 +16,7 @@
 * **Skin:** Deep rich brown skin with luminous depth.
 
 **Age Presentation:** mid-30s presentation; assured, radiant.
-**Vibe / Energy:** confident, warm, commanding.
+**Vibe / Energy:** Confident, Warm, Commanding.
 **Bearing:** confident bearing with natural ease and presence; grounded stance; fluid powerful movement.
 
 // Style notes for outfit creation (not included in prompts):

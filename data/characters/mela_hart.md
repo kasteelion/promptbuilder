@@ -1,7 +1,7 @@
 ### Mela Hart
 **Photo:** mela_hart_photo.png
 **Summary:** Bright and buoyant, Mela brings playful athleticism and youthful joy into every movement. Her presence feels lively and affectionate, grounded in warmth and expressive energy.
-**Tags:** black, approachable, Athletic, female, playful
+**Tags:** Black, Approachable, Athletic, Female, Playful
 **Gender:** F
 **Signature Color:** #FFD700
 
@@ -13,7 +13,7 @@
 * **Skin:** Deep brown with warm golden undertones and luminous satin finish.
 
 **Age Presentation:** mid-20s presentation; energetic, playful.
-**Vibe / Energy:** lively, athletic, approachable, joyful.
+**Vibe / Energy:** Lively, Athletic, Approachable, Joyful.
 **Bearing:** springy movement; confident ease; radiant and affectionate presence.
 
 // Style notes for outfit creation (not included in prompts):

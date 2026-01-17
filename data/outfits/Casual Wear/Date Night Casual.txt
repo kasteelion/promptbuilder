@@ -1,0 +1,46 @@
+tags: [casual, date, stylish, modern, elevated]
+
+[F]
+- **Top:** Silk blouse or nice knit top in {primary_color}.
+  - **Fit:** Fitted or slightly relaxed.
+  - **Material:** Silk, satin, or fine knit.
+  - **Pattern:** Solid or subtle print.
+  - **Neckline:** V-neck or scoop.
+  - **Sleeve:** Long or 3/4 sleeves.
+- **Bottom:** Dark skinny jeans or tailored pants.
+  - **Fit:** Skinny or slim.
+  - **Material:** Premium denim or ponte.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** Heeled ankle boots or pumps.
+- **Accessories:** Statement earrings; clutch or small purse.
+
+[M]
+- **Top:** Button-up shirt or polo in {primary_color}.
+  - **Fit:** Fitted or slim.
+  - **Material:** Cotton or linen blend.
+  - **Pattern:** Solid or subtle stripe.
+  - **Neckline:** Collar.
+  - **Sleeve:** Long sleeves (can be rolled).
+- **Bottom:** Dark jeans or chinos.
+  - **Fit:** Slim or straight.
+  - **Material:** Premium denim or cotton twill.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Dress shoes or clean sneakers.
+- **Accessories:** Leather belt; watch.
+
+[H]
+- **Hijab:** Chiffon or satin hijab in elegant color.
+- **Top:** Modest blouse or tunic in {primary_color}.
+  - **Fit:** Modest relaxed fit.
+  - **Material:** Silk or fine knit.
+  - **Neckline:** High crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored pants or dark jeans.
+  - **Fit:** Straight or wide-leg.
+  - **Material:** Ponte or premium denim.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** Heeled flats or ankle boots.
+- **Accessories:** Elegant earrings; clutch.

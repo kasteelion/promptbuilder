@@ -1,0 +1,52 @@
+tags: [Team, Volleyball]
+modifiers:
+  Home: in **{primary_color}** with **{secondary_color}** wraparound piping
+  Away: in **{secondary_color}** with **{primary_color}** wraparound piping
+  Home Libero: in **{secondary_color}** (contrasting libero jersey)
+  Away Libero: in **{primary_color}** (contrasting libero jersey)
+
+[F]
+- **Top:** Fitted sleeveless performance jersey for {team} {modifier}.
+  - **Fit:** Asymmetric shoulder panels; Laser-cut ventilation.
+  - **Material:** High-sheen technical spandex; Micro-perforated back.
+  - **Pattern:** Sublimated geometric pattern; Metallic team number.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** High-waist compression shorts.
+  - **Fit:** Wide comfort waistband.
+  - **Material:** matching technical spandex.
+  - **Waist:** Seamless comfort waistband.
+  - **Length:** Short.
+- **Footwear:** Professional court shoes ({accent}; gum rubber soles).
+- **Accessories:** Gel-cushioned knee pads; sweatbands; athletic tape on fingers.
+
+[M]
+- **Top:** Fitted sleeveless performance jersey for {team} {modifier}.
+  - **Fit:** Raglan-style shoulder panels.
+  - **Material:** Honeycomb-weave technical mesh.
+  - **Pattern:** Metallic team number with block-shadow.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Lightweight athletic shorts.
+  - **Fit:** Laser-cut side vents.
+  - **Material:** matching fabric.
+  - **Waist:** Internal drawstring.
+  - **Length:** Mid-thigh.
+- **Footwear:** Professional volleyball shoes ({accent}).
+- **Accessories:** Gel knee pads; sweatbands; athletic tape on fingers.
+
+[H]
+- **Hijab:** High-performance sports hijab matching base color with matte finish.
+- **Top:** Long-sleeve fitted performance tunic for {team} {modifier}.
+  - **Fit:** Asymmetric shoulder panels; Scalloped hem.
+  - **Material:** High-sheen technical spandex.
+  - **Pattern:** Sublimated geometric pattern; Metallic team number.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length performance compression leggings.
+  - **Fit:** Compression.
+  - **Material:** matching.
+  - **Waist:** Elastic.
+  - **Length:** Full length.
+- **Footwear:** Professional court shoes ({accent}).
+- **Accessories:** Gel-cushioned knee pads (over leggings).

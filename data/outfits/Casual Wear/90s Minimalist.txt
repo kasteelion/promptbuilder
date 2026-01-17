@@ -1,4 +1,4 @@
-tags: [Casual, Vintage, 90s, Minimalist, Chic]
+tags: [Casual, Vintage, 1990s, Minimalist, Chic]
 modifiers:
   Square: featuring a **sharp square neckline** and thick straps
   Boat: featuring a **high boat neckline** showing shoulders

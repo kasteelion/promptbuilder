@@ -1,0 +1,47 @@
+tags: [Authority, Work, Western]
+
+[F]
+- **Top:** Khaki uniform shirt.
+  - **Fit:** Tailored professional.
+  - **Material:** Cotton/Poly blend.
+  - **Pattern:** Solid Khaki with Badge.
+  - **Neckline:** Collared with Epaulettes.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Khaki duty trousers.
+  - **Fit:** Straight leg with pressed crease.
+  - **Material:** Industrial cotton twill.
+  - **Waist:** Leather duty belt with holster.
+  - **Length:** Full length.
+- **Footwear:** Polished black duty boots.
+- **Accessories:** Silver star badge; campaign hat; aviators; leather gloves.
+
+[M]
+- **Top:** Khaki uniform shirt.
+  - **Fit:** Sharp tailored.
+  - **Material:** Industrial fabric.
+  - **Pattern:** Khaki.
+  - **Neckline:** Collared with badge.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Matching khaki pants.
+  - **Fit:** Straight.
+  - **Material:** Twill.
+  - **Waist:** Dark brown leather duty belt.
+  - **Length:** Full length.
+- **Footwear:** Black duty boots.
+- **Accessories:** Silver star badge; campaign hat; aviators.
+
+[H]
+- **Hijab:** Khaki hijab in neat military tuck.
+- **Top:** Khaki uniform tunic.
+  - **Fit:** Modest mid-thigh tunic.
+  - **Material:** Industrial twill.
+  - **Pattern:** Khaki.
+  - **Neckline:** High collar with badge.
+  - **Sleeve:** Long sleeves with epaulettes.
+- **Bottom:** Matching khaki trousers.
+  - **Fit:** Straight leg.
+  - **Material:** Twill.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Black duty boots.
+- **Accessories:** Silver star badge; campaign hat; aviators.

@@ -1,0 +1,51 @@
+tags: [Gymnastics]
+modifiers:
+  Artistic: , hands coated in white chalk, wearing leather wrist grips
+  Rhythmic: , holding a shimmer ribbon wand, outfit adorned with sequins
+  Competition: , wearing a competition number pinned to back
+  Training: , wearing warm-up sweats over leotard
+
+[F]
+- **Top:** Low-back High-neck Leotard.
+  - **Fit:** Skin-tight aerodynamic.
+  - **Material:** Performance Lycra/Foil.
+  - **Pattern:** Geometric {primary_color} and {secondary_color}.
+  - **Neckline:** High-neck.
+  - **Sleeve:** 3/4 or Long Sleeve.
+- **Bottom:** Bare legs (Leotard cut).
+  - **Fit:** High-cut leg.
+  - **Material:** Lycra.
+  - **Waist:** Natural.
+  - **Length:** Leotard brief.
+- **Footwear:** Barefoot or athletic toe-wraps.
+- **Accessories:** Matching hair scrunchie.
+
+[M]
+- **Top:** High-neck singlet or unitard.
+  - **Fit:** Skin-tight.
+  - **Material:** Performance Lycra.
+  - **Pattern:** Geometric details.
+  - **Neckline:** Scoop/High-neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Stirrup pants or shorts.
+  - **Fit:** Tight.
+  - **Material:** Lycra.
+  - **Waist:** Elastic.
+  - **Length:** Full with stirrup.
+- **Footwear:** Barefoot.
+- **Accessories:** Chalk dust.
+
+[H]
+- **Hijab:** Tight-fitting sports hijab in **{primary_color}**.
+- **Top:** High-neck long-sleeve leotard.
+  - **Fit:** Skin-tight modest.
+  - **Material:** Performance Lycra.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length matching athletic leggings.
+  - **Fit:** Tight.
+  - **Material:** Lycra.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Barefoot or toe-wraps.
+- **Accessories:** Decorative hijab pin.

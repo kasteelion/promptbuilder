@@ -4,44 +4,113 @@ from logic.scenarios import ScenarioRegistry, Scenario, Role
 
 class PromptRandomizer:
     """Generates random character, outfit, and pose combinations."""
+    
+    # DEFINING STONG HUB TAGS (Verified via Connectivity Audit)
+    HUB_TAGS = [
+        "Casual", "Urban", "Noir", "Sport", "Fantasy", "Sci-Fi", "Retro", 
+        "Intimate", "Social", "Work", "Action", "Cyberpunk", "Vintage",
+        "Basketball", "Football", "MMA", "Volleyball", "School", "Home", "Magic"
+    ]
+    
+    # --- Composition Modes ---
+    MODE_SOLO = "SOLO"                      # 1 Character, Pose focused
+    MODE_INT_W_POSES = "INT_W_POSES"        # Interaction sets Poses (e.g. Fight)
+    MODE_INT_WO_POSES = "INT_WO_POSES"      # Interaction sets Vibe, Poses Random
+    MODE_GROUP_NO_INT = "GROUP_NO_INT"      # Group shot, Independent Poses
+
+    # Centralized Tag Groups for cleaner restriction logic
+    TAG_GROUPS = {
+        "EXPOSED_SKIN": {"swimwear", "bikini", "lingerie", "crop top", "shorts", "sleeveless", "undressing", "naked"},
+        "ARMOR_WEAPON": {"armor", "weapon", "shield", "sword", "combat", "tactical", "gun", "rifle"},
+        "SLEEPWEAR": {"pajamas", "bed", "sleep", "loungewear", "robe"},
+        "FORMAL": {"formal", "evening", "gala", "suit", "tuxedo", "gown", "dress", "business"},
+        "WINTER": {"winter", "snow", "ski", "heavy coat", "scarf", "coat", "jacket", "hoodie"},
+        "OFFICE": {"office", "business", "suit", "blazer", "desk", "computer"},
+        "SPORT": {"sport", "gym", "athletic", "workout", "active", "leotard", "running", "jump"},
+        "FANTASY": {"fantasy", "medieval", "magic", "mystical", "costume", "robe"},
+        "SCIFI": {"sci-fi", "cyberpunk", "tech", "futuristic", "modern"},
+        "CASUAL": {"casual", "jeans", "shorts", "t-shirt"},
+        "FOOTWEAR": {"shoes", "boots", "heels", "sandals"},
+        # --- Genre Clusters ---
+        "GENRE_FANTASY": {"fantasy", "medieval", "magic", "mystical", "castle", "knight", "sword", "shield", "robe", "dnd", "spell", "arcane", "mythology", "dragon", "lair", "dungeon", "temple", "quest"},
+        "GENRE_MODERN": {"modern", "tech", "computer", "phone", "laptop", "car", "city", "office", "urban", "neon", "cyberpunk", "gym", "basketball", "bowling", "baseball", "volleyball", "activewear", "sneakers", "jersey", "football", "soccer", "tennis", "track", "relay", "baton", "stadium", "court", "field", "athletic", "sport", "mma", "boxing", "wrestling"},
+        
+        # --- Per-Sport Clusters ---
+        "SPORT_BOWLING": {"bowling", "bowl", "alley", "lane", "pins", "strike", "spare", "gutter"},
+        "SPORT_BASKETBALL": {"basketball", "hoop", "court", "dribble", "layup", "dunk", "rebound"},
+        "SPORT_BASEBALL": {"baseball", "bat", "diamond", "pitcher", "catcher", "dugout", "mound", "softball"},
+        "SPORT_VOLLEYBALL": {"volleyball", "net", "spike", "serve", "dig", "set", "block"},
+        "SPORT_FOOTBALL": {"football", "gridiron", "touchdown", "quarterback", "tackle", "field goal", "end zone"},
+        "SPORT_SOCCER": {"soccer", "football", "goal", "kick", "penalty", "striker", "goalkeeper"},
+        "SPORT_TENNIS": {"tennis", "racket", "serve", "volley", "ace", "deuce", "match point"},
+        "SPORT_TRACK": {"track", "relay", "baton", "sprint", "hurdle", "marathon", "lane", "finish line"},
+        "SPORT_MMA": {"mma", "octagon", "cage", "grappling", "submission", "takedown", "ground game", "mount", "guard"},
+        "SPORT_BOXING": {"boxing", "ring", "punch", "jab", "hook", "uppercut", "knockout", "round"},
+        "SPORT_WRESTLING": {"wrestling", "mat", "pin", "takedown", "suplex", "grapple"},
+        
+        # Unified Sport Group (for broad blocking)
+        "GENRE_SPORT": {"sport", "athletic", "gym", "stadium", "court", "field", "track", "basketball", "bowling", "baseball", "volleyball", "football", "soccer", "tennis", "mma", "boxing", "wrestling", "relay", "baton", "jersey", "activewear", "sneakers"},
+    }
 
     # Define hard strict blocks to prevent "Outfit Salad"
-    # Key: Tag found in Scene
-    # Value: List of tags to BLOCK in Outfits/Poses
+    # Key: Tag found in Scene -> Value: Set of tags to BLOCK
     SCENE_RESTRICTIONS = {
-        "office": ["swimwear", "bikini", "lingerie", "armor", "fantasy", "medieval", "costume", "pajamas", "bed", "sleep"],
-        "library": ["swimwear", "bikini", "lingerie", "armor", "fantasy", "medieval", "costume", "sport", "gym", "leotard", "weapon", "action", "combat"],
-        "quiet": ["sport", "gym", "combat", "action", "loud", "party"],
-        "work": ["swimwear", "bikini", "lingerie", "armor", "fantasy", "medieval", "costume", "bed", "sleep"],
-        "school": ["swimwear", "bikini", "lingerie", "armor", "fantasy", "weapon", "bed", "sleep"],
-        "hospital": ["swimwear", "bikini", "lingerie", "armor", "fantasy", "medieval", "formal", "evening", "party"],
-        "medical": ["swimwear", "bikini", "lingerie", "armor", "fantasy", "medieval", "formal", "evening", "party"],
-        "gym": ["formal", "business", "evening", "gala", "suit", "armor", "jeans", "dress", "bed", "sofa", "couch"],
-        "sport": ["formal", "business", "evening", "gala", "suit", "armor", "jeans", "dress", "heels", "bed", "sofa"],
-        "beach": ["suit", "business", "formal", "winter", "coat", "jacket", "hoodie", "snow", "computer", "desk"],
-        "pool": ["suit", "business", "formal", "winter", "coat", "jacket", "hoodie", "snow", "jeans", "computer", "desk"],
-        "winter": ["swimwear", "bikini", "lingerie", "sleeveless", "shorts", "crop top"],
-        "snow": ["swimwear", "bikini", "lingerie", "sleeveless", "shorts", "crop top", "sandals", "heels"],
-        "indoor": ["winter", "snow", "ski", "heavy coat"], 
-        "formal": ["swimwear", "bikini", "lingerie", "casual", "sport", "gym", "pajamas"],
-        "gala": ["swimwear", "bikini", "lingerie", "casual", "sport", "gym", "pajamas", "jeans"],
-        "bed": ["armor", "weapon", "shoes", "boots", "jacket", "coat", "hat", "standing", "run", "jump"],
-        "sleep": ["armor", "weapon", "shoes", "boots", "jacket", "coat", "hat", "jeans", "formal", "standing"],
-        "gallery": ["swimwear", "bikini", "lingerie", "armor", "costume", "sport", "combat", "bed", "sleep", "running"],
-        "museum": ["swimwear", "bikini", "lingerie", "armor", "costume", "sport", "combat", "bed", "sleep", "running"],
+        "office": TAG_GROUPS["EXPOSED_SKIN"] | TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["SLEEPWEAR"] | TAG_GROUPS["FANTASY"],
+        "library": TAG_GROUPS["EXPOSED_SKIN"] | TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["SPORT"] | TAG_GROUPS["FANTASY"],
+        "quiet": TAG_GROUPS["SPORT"] | {"loud", "party", "combat", "action"},
+        "work": TAG_GROUPS["EXPOSED_SKIN"] | TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["SLEEPWEAR"] | TAG_GROUPS["FANTASY"],
+        "school": TAG_GROUPS["EXPOSED_SKIN"] | {"armor", "fantasy", "weapon", "bed", "sleep"},
+        "hospital": TAG_GROUPS["EXPOSED_SKIN"] | TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["FANTASY"] | TAG_GROUPS["FORMAL"] | {"party"},
+        "medical": TAG_GROUPS["EXPOSED_SKIN"] | TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["FANTASY"] | TAG_GROUPS["FORMAL"] | {"party"},
+        "fitness": TAG_GROUPS["FORMAL"] | {"armor", "jeans", "dress", "bed", "sofa", "couch", "cold", "outdoor", "cheer", "combat", "winter"},
+        "yoga": TAG_GROUPS["FORMAL"] | {"armor", "jeans", "dress", "bed", "sofa", "couch", "cold", "outdoor", "cheer", "combat", "winter"},
+        "sport": TAG_GROUPS["FORMAL"] | {"armor", "jeans", "dress", "heels", "bed", "sofa"},
+        "beach": TAG_GROUPS["FORMAL"] | TAG_GROUPS["WINTER"] | TAG_GROUPS["OFFICE"],
+        "pool": TAG_GROUPS["FORMAL"] | TAG_GROUPS["WINTER"] | {"jeans", "computer", "desk"},
+        "winter": TAG_GROUPS["EXPOSED_SKIN"],
+        "snow": TAG_GROUPS["EXPOSED_SKIN"] | {"sandals", "heels"},
+        "indoor": {"winter", "snow", "ski", "heavy coat"}, 
+        "formal": TAG_GROUPS["EXPOSED_SKIN"] | {"casual", "sport", "gym", "pajamas"},
+        "gala": TAG_GROUPS["EXPOSED_SKIN"] | {"casual", "sport", "gym", "pajamas", "jeans"},
+        "bed": TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["FOOTWEAR"] | TAG_GROUPS["WINTER"] | {"hat", "standing", "run", "jump"},
+        "sleep": TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["FOOTWEAR"] | TAG_GROUPS["WINTER"] | {"hat", "jeans", "formal", "standing"},
+        "gallery": TAG_GROUPS["EXPOSED_SKIN"] | {"armor", "costume", "sport", "combat", "bed", "sleep", "running"},
+        "museum": TAG_GROUPS["EXPOSED_SKIN"] | {"armor", "costume", "sport", "combat", "bed", "sleep", "running"},
+        
         # Thematic Blocks
-        "fantasy": ["sci-fi", "cyberpunk", "tech", "modern", "office", "business", "gun", "rifle", "computer"],
-        "nature": ["office", "business", "sci-fi", "cyberpunk", "tech", "computer"],
-        "sci-fi": ["fantasy", "medieval", "armor", "sword", "shield", "robe"],
-        "cyberpunk": ["fantasy", "medieval", "armor", "sword", "shield", "robe", "nature"],
-        "waterfall": ["sci-fi", "cyberpunk", "tech", "office", "suit", "computer"],
-        "forest": ["sci-fi", "cyberpunk", "tech", "office", "suit", "computer"],
+        "fantasy": TAG_GROUPS["SCIFI"] | {"office", "business", "gun", "rifle", "computer"},
+        "nature": TAG_GROUPS["OFFICE"] | TAG_GROUPS["SCIFI"],
+        "sci-fi": TAG_GROUPS["FANTASY"] | {"sword", "shield"},
+        "cyberpunk": TAG_GROUPS["FANTASY"] | {"nature"},
+        "waterfall": TAG_GROUPS["SCIFI"] | TAG_GROUPS["OFFICE"],
+        "forest": TAG_GROUPS["SCIFI"] | TAG_GROUPS["OFFICE"],
+        
+        # Absolute Blacklists (The "Firewall")
+        "bowling": TAG_GROUPS["GENRE_FANTASY"] | {"armor", "weapon", "sword", "shield", "magic", "healer", "mythology"},
+        "gym": TAG_GROUPS["GENRE_FANTASY"] | {"formal", "business", "jeans", "armor", "weapon"},
+        "stadium": TAG_GROUPS["GENRE_FANTASY"] | {"armor", "weapon", "magic"},
+        "castle": TAG_GROUPS["GENRE_MODERN"] | {"tech", "modern", "computer", "phone", "neon"},
+        "dungeon": TAG_GROUPS["GENRE_MODERN"] | {"tech", "modern", "computer", "phone"},
+        "temple": TAG_GROUPS["GENRE_MODERN"] | {"tech", "modern", "neon"},
+        
+        # Fantasy Scene Sport Blocks
+        "dragon": TAG_GROUPS["GENRE_SPORT"] | TAG_GROUPS["GENRE_MODERN"],
+        "lair": TAG_GROUPS["GENRE_SPORT"] | TAG_GROUPS["GENRE_MODERN"],
+        "cave": TAG_GROUPS["GENRE_SPORT"] | {"basketball", "bowling", "baseball", "volleyball", "football", "soccer", "tennis", "track", "relay", "baton", "jersey", "stadium"},
+        "quest": TAG_GROUPS["GENRE_SPORT"] | TAG_GROUPS["GENRE_MODERN"],
+        
+        # Per-Sport Venue Restrictions (only allow sport in its proper venue)
+        "alley": TAG_GROUPS["SPORT_BASKETBALL"] | TAG_GROUPS["SPORT_BASEBALL"] | TAG_GROUPS["SPORT_VOLLEYBALL"] | TAG_GROUPS["SPORT_FOOTBALL"] | TAG_GROUPS["SPORT_SOCCER"] | TAG_GROUPS["SPORT_TENNIS"] | TAG_GROUPS["SPORT_TRACK"] | TAG_GROUPS["SPORT_MMA"] | TAG_GROUPS["SPORT_BOXING"] | TAG_GROUPS["SPORT_WRESTLING"],
+        "octagon": TAG_GROUPS["SPORT_BOWLING"] | TAG_GROUPS["SPORT_BASKETBALL"] | TAG_GROUPS["SPORT_BASEBALL"] | TAG_GROUPS["SPORT_VOLLEYBALL"] | TAG_GROUPS["SPORT_FOOTBALL"] | TAG_GROUPS["SPORT_SOCCER"] | TAG_GROUPS["SPORT_TENNIS"] | TAG_GROUPS["SPORT_TRACK"],
+        "cage": TAG_GROUPS["SPORT_BOWLING"] | TAG_GROUPS["SPORT_BASKETBALL"] | TAG_GROUPS["SPORT_BASEBALL"] | TAG_GROUPS["SPORT_VOLLEYBALL"] | TAG_GROUPS["SPORT_FOOTBALL"] | TAG_GROUPS["SPORT_SOCCER"] | TAG_GROUPS["SPORT_TENNIS"] | TAG_GROUPS["SPORT_TRACK"],
+        "diamond": TAG_GROUPS["SPORT_BOWLING"] | TAG_GROUPS["SPORT_BASKETBALL"] | TAG_GROUPS["SPORT_VOLLEYBALL"] | TAG_GROUPS["SPORT_FOOTBALL"] | TAG_GROUPS["SPORT_SOCCER"] | TAG_GROUPS["SPORT_TENNIS"] | TAG_GROUPS["SPORT_TRACK"] | TAG_GROUPS["SPORT_MMA"] | TAG_GROUPS["SPORT_BOXING"] | TAG_GROUPS["SPORT_WRESTLING"],
+        "mound": TAG_GROUPS["SPORT_BOWLING"] | TAG_GROUPS["SPORT_BASKETBALL"] | TAG_GROUPS["SPORT_VOLLEYBALL"] | TAG_GROUPS["SPORT_FOOTBALL"] | TAG_GROUPS["SPORT_SOCCER"] | TAG_GROUPS["SPORT_TENNIS"] | TAG_GROUPS["SPORT_TRACK"] | TAG_GROUPS["SPORT_MMA"] | TAG_GROUPS["SPORT_BOXING"] | TAG_GROUPS["SPORT_WRESTLING"],
     }
 
     # POSITIVE constraints. If a scene matches a key, ONLY allow items with these tags.
     # If no items match, logic falls back to the SCENE_RESTRICTIONS blacklist.
     SCENE_WHITELISTS = {
-        "gym": ["sport", "athletic", "gym", "active", "workout", "fitness", "yoga"],
+        "fitness": ["sport", "athletic", "fitness", "active", "workout", "yoga"],
         "sport": ["sport", "athletic", "gym", "active", "workout", "fitness", "yoga", "jersey", "uniform"],
         "medical": ["medical", "scrubs", "coat", "uniform", "doctor", "nurse", "white", "lab"],
         "hospital": ["medical", "scrubs", "coat", "uniform", "doctor", "nurse", "white"],
@@ -56,7 +125,23 @@ class PromptRandomizer:
         "urban": ["streetwear", "casual", "skater", "edgy", "denim", "skate", "city", "urban", "graffiti"],
         "domestic": ["casual", "loungewear", "pajamas", "cozy", "knit", "sweater", "shorts", "t-shirt"],
         "vintage": ["vintage", "retro", "1950", "1970", "pinup", "disco", "server", "denim", "classic"],
-        "academic": ["academia", "preppy", "glasses", "blazer", "skirt", "tights", "vest", "shirt"]
+        "academic": ["academia", "preppy", "glasses", "blazer", "skirt", "tights", "vest", "shirt"],
+        
+        # Explicit Sport Isolation
+        "boxing": ["boxing", "combat_sport", "active", "training"],
+        "mma": ["mma", "combat_sport", "fighting"],
+        "basketball": ["basketball", "jersey", "active", "cheer"],
+        "baseball": ["baseball", "jersey", "active"],
+        "softball": ["softball", "baseball", "active"],
+        "football": ["football", "jersey", "active", "cheer"],
+        "soccer": ["soccer", "jersey", "active"],
+        "tennis": ["tennis", "active"],
+        "volleyball": ["volleyball", "active"],
+        "bowling": ["bowling", "retro", "casual"],
+        "track": ["track", "running", "active"],
+        "gym": ["gym", "fitness", "sport", "workout", "active", "training"],
+        "gymnastics": ["gymnastics", "leotard", "activewear", "shorts", "leggings"],
+        "swim": ["swim", "swimwear", "pool", "water", "speedo", "bikini"],
     }
 
     # [NEW] Contextual Clash Map: (Scene Tag) -> [Contradictory Interaction/Pose Tags]
@@ -65,7 +150,12 @@ class PromptRandomizer:
          'clinical': ['party', 'dance', 'drinking', 'messy', 'dirty', 'gritty'],
          'public': ['pajamas', 'sleep', 'bed', 'bathroom', 'undressing', 'naked'],
          'formal': ['gym', 'stadium', 'wrestling', 'combat', 'sweat', 'messy', 'gymnastics', 'dirty', 'gritty'],
-         'nature': ['office', 'business', 'tech', 'computer', 'server', 'indoor']
+         'nature': ['office', 'business', 'tech', 'computer', 'server', 'indoor'],
+         # Genre Hard-Blocks
+         'modern': ['sword', 'shield', 'medieval', 'knight', 'magic', 'arcane', 'mythology'],
+         'fantasy': ['computer', 'phone', 'neon', 'tech', 'modern', 'laptop', 'car', 'business', 'office'],
+         'bowling': ['sword', 'shield', 'armor', 'magic', 'martial arts', 'fighting', 'struggle', 'duel', 'mythology'],
+         'gym': ['formal', 'evening', 'gown', 'armor', 'wizard', 'magical'],
     }
 
     def __init__(self, characters, base_prompts, poses, scenes=None, interactions=None, color_schemes=None, modifiers=None, framing=None):
@@ -90,6 +180,45 @@ class PromptRandomizer:
         self.modifiers = modifiers or {}
         self.framing = framing or {}
         self.scenario_registry = ScenarioRegistry()
+        
+        # Pre-compute tags (Phase 1 Optimization)
+        self._precompute_tags()
+
+    def _precompute_tags(self):
+        """Bake expanded tags into internal structures for O(1) lookups."""
+        
+        # 1. Characters & Outfits
+        for char_name, char_data in self.characters.items():
+            # Char Tags
+            raw_tags = set(char_data.get("tags", []))
+            char_data["_expanded_tags"] = self._expand_tags(raw_tags)
+            
+            # Outfit Tags
+            outfits = char_data.get("outfits", {})
+            for outfit_name, outfit_val in outfits.items():
+                # Handle both string and dict formats
+                if isinstance(outfit_val, dict):
+                    raw_o_tags = set(outfit_val.get("tags", []))
+                    outfit_val["_expanded_tags"] = self._expand_tags(raw_o_tags)
+                else:
+                    # Upgrade string to dict in-place for caching?
+                    # Safer to just not cache string-only outfits or wrap them.
+                    # For now, we'll leave string outfits uncached as they have no tags anyway.
+                    pass
+
+        # 2. Poses (Categories -> Presets)
+        for cat, presets in self.poses.items():
+             for p_name, p_data in presets.items():
+                 if isinstance(p_data, dict):
+                     raw_p_tags = set(p_data.get("tags", []))
+                     p_data["_expanded_tags"] = self._expand_tags(raw_p_tags)
+
+        # 3. Scenes (Category -> Presets)
+        for cat, presets in self.scenes.items():
+             for s_name, s_data in presets.items():
+                 if isinstance(s_data, dict):
+                     raw_s_tags = set(s_data.get("tags", []))
+                     s_data["_expanded_tags"] = self._expand_tags(raw_s_tags)
 
     def _get_description(self, item_data):
         """Helper to safely extract description from string or new dict format."""
@@ -133,9 +262,6 @@ class PromptRandomizer:
 
     # Define tag aliases/groups to expand thematic matching
     TAG_ALIASES = {
-        "athletic": ["sport", "sports", "active", "training", "gym"],
-        "sport": ["sports", "athletic", "active"],
-        "sports": ["sport", "athletic", "active"],
         "creative": ["art", "artistic"],
         "art": ["creative", "artistic"],
         "vintage": ["retro", "nostalgic", "old-school"],
@@ -146,13 +272,13 @@ class PromptRandomizer:
         "glamour": ["luxury", "fashion", "elegant", "style"],
         "western": ["rugged", "outdoorsy", "casual", "edgy"],
         "cottagecore": ["soft", "nature", "vintage", "calm"],
-        "combat": ["action", "dynamic", "intense"],
-        "action": ["combat", "dynamic", "intense"],
+        "combat": ["intense"], # Removed action, dynamic to prevent sport leak
+        "action": ["motion", "energetic"], # Pure motion hub
         "fantasy": ["magic", "mythology"],
-        "intense": ["dramatic", "dynamic"],
-        "dramatic": ["intense", "theatrical"],
+        "intense": ["dramatic"], # Removed dynamic
+        "dramatic": ["theatrical"], # Removed intense
         "anime": ["japanese", "2d"],
-        "rugged": ["outdoor", "nature", "western", "action", "gritty"],
+        "rugged": ["outdoor", "nature", "western", "gritty"], # Removed action
         "commanding": ["urban", "office", "luxury", "formal", "work"],
         "chic": ["fashion", "luxury", "urban", "modern", "city"],
         "minimalist": ["modern", "studio", "clean", "simple", "indoor"],
@@ -163,12 +289,12 @@ class PromptRandomizer:
         "traditional": ["cultural", "history", "classic", "temple"],
         "adventurous": ["adventure", "outdoorsy", "nature", "active"],
         "passionate": ["intense", "dramatic", "dynamic"],
-        "energetic": ["active", "playful", "dynamic", "sport"],
+        "energetic": ["active", "playful", "dynamic"],
         "bohemian": ["boho", "creative", "alternative", "artistic"],
         "boho": ["bohemian", "creative", "alternative", "artistic"],
         # Content bridges
-        "skate": ["skater", "urban", "sport"],
-        "skater": ["skate", "urban", "sport"],
+        "skate": ["skater", "urban"],
+        "skater": ["skate", "urban"],
         "esports": ["gaming", "tech", "competition"],
         "gaming": ["esports", "tech", "competition"],
         # Cultural Bridges
@@ -187,20 +313,62 @@ class PromptRandomizer:
         "casual": ["realistic", "everyday", "life"],
         "detailed": ["high definition", "realistic"],
         "portrait": ["photography", "realistic"],
-        # Universal Realism (Make Photorealistic the default baseline)
-        "female": ["realistic", "high definition", "photography"],
-        "male": ["realistic", "high definition", "photography"],
-        "urban": ["realistic", "photography", "modern"],
-        "nature": ["realistic", "photography"],
+        
+        # [NEW] Combat Sports Bridges (Strict)
+        "mma": ["fighting", "athletic", "grappling"], # Removed 'combat' and 'sport'
+        "boxing": ["fighting", "athletic"], # Removed 'combat' and 'sport'
+        "wrestling": ["fighting", "grappling", "athletic"], # Removed 'combat' and 'sport'
+        "martial arts": ["fighting", "traditional", "athletic"], # Removed 'combat' and 'sport'
+        "grappling": ["wrestling"], # Removed 'combat' and 'sport'
+        
+        # [NEW] Intimate & Sensual Bridges
+        "intimate": ["sensual", "boudoir", "romantic", "sultry", "alluring", "bedroom"],
+        "sensual": ["intimate", "glamour", "alluring"],
+        "glamour": ["fashion", "beauty", "sensual"],
+        "boudoir": ["intimate", "bedroom", "lingerie", "sensual"],
+        "sultry": ["sensual", "intimate", "intense"],
+        "alluring": ["sensual", "flirty", "intimate"],
+        "romantic": ["intimate", "affectionate"],
+        
+        # [NEW] Missing Fantasy/Historical Bridges (from Audit)
+        "druid": ["fantasy", "nature", "magic", "forest"],
+        "alchemist": ["fantasy", "magic", "science"],
+        "healer": ["fantasy", "magic", "medical", "peaceful"],
+        "priestess": ["fantasy", "magic", "traditional", "spiritual"],
+        "warrior": ["fantasy", "combat", "armor", "action", "strong"],
+        "medieval": ["fantasy", "historical", "armor", "traditional"],
+        
+        # [NEW] Missing Era/Style Bridges
+        "1890s": ["historical", "vintage", "retro", "victorian"],
+        "1900s": ["historical", "vintage", "retro", "edwardian"],
+        "1920s": ["historical", "vintage", "retro", "noir", "luxury"],
+        "1950s": ["historical", "vintage", "retro", "classic"],
+        "1970s": ["historical", "vintage", "retro", "boho"],
+        "1980s": ["historical", "vintage", "retro", "neon", "pop"],
+        "1990s": ["historical", "vintage", "retro", "grunge"],
+        "victorian": ["historical", "vintage", "retro", "elegant", "formal"],
+        "noir": ["vintage", "dark", "cinematic", "mystery"],
+        "steampunk": ["fantasy", "retro", "sci-fi", "tech", "industrial"],
+        
+        # [NEW] Missing Fashion Bridges
+        "k-fashion": ["fashion", "chic", "urban", "modern", "trendy"],
+        "techwear": ["tech", "futuristic", "tactical", "urban", "edgy"],
+        "streetwear": ["urban", "casual", "modern", "edgy", "fashion"],
+        
+        # Universal Realism (Make Photorealistic the default baseline BUT allow style variance)
+        # Universal Realism (CLEANED: Allows stylized content for all)
+        "female": [], 
+        "male": [], 
+        "urban": ["modern"], 
+        "nature": [], 
         "action": ["dynamic", "motion", "energetic"],
         "calm": ["peaceful", "quiet", "serene", "static"],
-        "interior": ["realistic", "photography"],
+        "interior": [], 
         "realistic": ["high definition", "photography", "mood:realistic"],
-        "formal": ["elegant", "evening", "realistic"],
-        "business": ["formal", "professional", "office", "realistic"],
-        "streetwear": ["urban", "modern", "casual", "realistic"],
-        "candid": ["realistic", "photography"],
-        "cinematic": ["realistic", "photography"],
+        "formal": ["elegant", "evening"], 
+        "business": ["formal", "professional", "office"], 
+        "candid": ["photography"], 
+        "cinematic": ["dramatic", "lighting"], 
     }
 
     def _expand_tags(self, tags):
@@ -320,137 +488,154 @@ class PromptRandomizer:
         
         metadata = config.get("metadata", {})
         
+        # 1. Setup Context & Constraints
         # Expand moods for broader matching
         raw_moods = metadata.get("vibe", []) or metadata.get("moods", [])
         active_moods = self._expand_tags([m.lower() for m in raw_moods])
-        
-        # Re-derive blocked tags from scene context for validation
+
+        # Re-derive blocked tags from scene context
         scene_tags = metadata.get("scene_tags", [])
         blocked_tags = set()
-        
         if scene_tags:
-            # Apply Global SCENE_RESTRICTIONS
             for t in scene_tags:
                 t_lower = t.lower()
                 if t_lower in self.SCENE_RESTRICTIONS:
                      blocked_tags.update(self.SCENE_RESTRICTIONS[t_lower])
-            
-            # Check Scene Category (from text or metadata if available, heuristic from scene text?)
-            # Ideally passed in metadata, but we can rely on tags usually.
-            # scene_text = config.get("scene", "").lower()
-            # for key in self.SCENE_RESTRICTIONS:
-            #    if key in scene_text: # Simple text check
-            #        blocked_tags.update(self.SCENE_RESTRICTIONS[key])
 
         if not active_moods:
             breakdown["warnings"].append("No active moods/context found for thematic scoring.")
 
-        # 1. Base Structure (+5 each) - Always awarded for being a valid config
+        # 2. Base Score (+10)
         if config.get("scene"): score += 5
         if config.get("notes"): score += 5
-            
-        # 2. Art Style Alignment (+25 per matching expanded mood)
-        base_prompt_name = config.get("base_prompt")
-        has_style_match = False
 
+        # 3. Calculate Component Scores
+        style_score, style_tags = self._score_style_alignment(
+            config.get("base_prompt"), active_moods, blocked_tags, breakdown
+        )
+        score += style_score
+
+        char_score = self._score_character_alignment(
+            config, active_moods, blocked_tags, style_tags, breakdown
+        )
+        score += char_score
+
+        interaction_score, interaction_tags = self._score_interaction_and_diversity(
+            config, active_moods, breakdown
+        )
+        score += interaction_score
+
+        penalty_score = self._calculate_penalties(
+            config, scene_tags, interaction_tags, breakdown
+        )
+        score += penalty_score
+
+        metadata["score_breakdown"] = breakdown
+        return score
+
+    def _score_style_alignment(self, base_prompt_name, active_moods, blocked_tags, breakdown):
+        """Calculate score for Art Style alignment."""
+        score = 0
+        expanded_style_tags = set()
+        
         if base_prompt_name:
             base_style_data = self.base_prompts.get(base_prompt_name, {})
             style_tags = self._get_tags(base_style_data)
             expanded_style_tags = self._expand_tags([t.lower() for t in style_tags])
             
-            # Aesthetic Bias: Removed to prevent over-dominance. 
-            # Style weights are already handled in base_prompts.md.
-
             if active_moods:
                 style_matches = len(expanded_style_tags.intersection(active_moods))
-                if style_matches > 0:
-                    has_style_match = True
                 points = style_matches * 25
                 score += points
                 breakdown["style_matches"] = points
             
-            # Style-Scene Mismatch Penalty (-100 if style blocks scene theme)
-            # AND Check if Style itself is blocked by Scene (-100)
-            
-            # Check 1: Style is blocked by Scene
-            # (e.g. Scene="Medieval", Blocked="Sci-Fi", Style="Cyberpunk")
+            # Mismatch Check
             if any(t.lower() in blocked_tags for t in style_tags):
                 penalty = 100
                 score -= penalty
                 breakdown["mismatch_penalty"] -= penalty
                 breakdown["warnings"].append(f"Style '{base_prompt_name}' is blocked by scene restrictions")
+                
+        return score, expanded_style_tags
 
-        # 3. Dynamic Thematic Character Alignment
+    def _score_character_alignment(self, config, active_moods, blocked_tags, expanded_style_tags, breakdown):
+        """Calculate score for Character/Outfit/Pose alignment."""
+        score = 0
         selected_chars = config.get("selected_characters", [])
-        outfit_names = set()
-        has_outfit_mood_match = False
         
-        # Track unique tags for Thematic Singularity Bonus
         char_tag_counts = {}
+        has_outfit_mood_match = False
         
         for char in selected_chars:
             char_name = char.get("name")
             char_def = self.characters.get(char_name, {})
             outfit_name = char.get("outfit")
-            outfit_names.add(outfit_name)
             
+            # Helper to get outfit tags
             outfits_dict = char_def.get("outfits", {})
-            outfit_data = outfits_dict.get(outfit_name)
+            outfit_data = outfits_dict.get(outfit_name, {})
             
-            if outfit_data:
-                raw_outfit_tags = self._get_tags(outfit_data)
-                outfit_tags_lower = [t.lower() for t in raw_outfit_tags]
-                
-                # Check for Scene-Outfit Mismatch
-                if blocked_tags:
-                    if any(bt in outfit_tags_lower for bt in blocked_tags):
-                        penalty = 100
-                        score -= penalty
-                        breakdown["mismatch_penalty"] -= penalty
-                        breakdown["warnings"].append(f"Outfit '{outfit_name}' violates scene restrictions")
+            # Use pre-computed if available
+            raw_outfit_tags = outfit_data.get("_expanded_tags") 
+            if raw_outfit_tags is None:
+                 raw_outfit_tags = self._expand_tags(self._get_tags(outfit_data))
 
-                # A) Outfit Tags vs Scene Moods (+30 per match, with diminishing returns)
-                if active_moods:
-                    tags = self._expand_tags(outfit_tags_lower)
-                    matches = tags.intersection(active_moods)
-                    if matches:
-                        has_outfit_mood_match = True
-                        for m in matches:
-                            char_tag_counts[m] = char_tag_counts.get(m, 0) + 1
-                            
-                        # Diminishing returns: 30 for first 3 matches, 10 thereafter
-                        match_count = len(matches)
-                        points = min(match_count, 3) * 30 + max(0, match_count - 3) * 10
-                        score += points
-                        breakdown["mood_matches"] += points
-            
-            # B) Pose Alignment (+10 per category match)
+            # Check Conflicts
+            if not raw_outfit_tags.isdisjoint(blocked_tags):
+                penalty = 100
+                score -= penalty
+                breakdown["mismatch_penalty"] -= penalty
+                breakdown["warnings"].append(f"Outfit '{outfit_name}' violates scene restrictions")
+
+            # A) Outfit Mood Match
+            if active_moods:
+                matches = raw_outfit_tags.intersection(active_moods)
+                if matches:
+                    has_outfit_mood_match = True
+                    for m in matches:
+                        char_tag_counts[m] = char_tag_counts.get(m, 0) + 1
+                    
+                    # Diminishing returns: 30 for first 3, 10 thereafter
+                    count = len(matches)
+                    points = min(count, 3) * 30 + max(0, count - 3) * 10
+                    score += points
+                    breakdown["mood_matches"] += points
+
+            # B) Pose Alignment
             pose_cat = char.get("pose_category")
             if pose_cat and active_moods:
                 if any(m in pose_cat.lower() for m in active_moods):
                     score += 10
                     breakdown["tag_matches"] += 10
-                    
-            # C) Character Trait Alignment (+5 per match)
-            char_tags = self._expand_tags([t.lower() for t in char_def.get("tags", [])])
+
+            # C) Character Trait Alignment
+            char_tags = char_def.get("_expanded_tags") or self._expand_tags([t.lower() for t in char_def.get("tags", [])])
             char_matches = len(char_tags.intersection(active_moods))
             points = char_matches * 5
             score += points
             breakdown["tag_matches"] += points
 
-        # [NEW] Thematic Singularity Bonus (+100)
-        # If all characters + Style + Scene share the same core tag
-        if has_style_match and has_outfit_mood_match:
-            # Check for commonalities across ALL characters
-            if char_tag_counts:
-                for mood, count in char_tag_counts.items():
-                    if count >= len(selected_chars) and mood in expanded_style_tags:
-                         score += 100
-                         breakdown["diversity_bonus"] += 100
-                         breakdown["warnings"].append(f"Thematic Singularity: All elements aligned on '{mood}'")
-                         break
+        # Thematic Singularity Bonus (+100)
+        # If Style + Outfit + All Characters share a common tag
+        if expanded_style_tags and has_outfit_mood_match and char_tag_counts:
+             for mood, count in char_tag_counts.items():
+                 # Must be present in ALL characters and the Art Style
+                 if count >= len(selected_chars) and mood in expanded_style_tags:
+                     score += 100
+                     breakdown["diversity_bonus"] += 100
+                     breakdown["warnings"].append(f"Thematic Singularity: All elements aligned on '{mood}'")
+                     break
+                     
+        return score
 
-        # [NEW] Action Cohesion Check
+    def _score_interaction_and_diversity(self, config, active_moods, breakdown):
+        """Calculate interaction and diversity scores."""
+        score = 0
+        metadata = config.get("metadata", {})
+        selected_chars = config.get("selected_characters", [])
+        composition_mode = metadata.get("composition_mode", "Unknown")
+        
+        # 1. Action Cohesion
         cohesion_score, cohesion_msg = self._check_action_cohesion(config)
         score += cohesion_score
         if cohesion_score < 0:
@@ -459,53 +644,110 @@ class PromptRandomizer:
         elif cohesion_score > 0:
             breakdown["diversity_bonus"] += cohesion_score
 
-        # 4. Interaction Alignment (+10 per match, diminishing returns)
+        # 2. Composition Mode Compliance (NEW)
+        interaction_present = metadata.get("interaction", "None") != "None"
+        num_chars = len(selected_chars)
+        
+        if composition_mode == self.MODE_SOLO:
+            if num_chars == 1:
+                score += 30
+                breakdown["structure_bonus"] = 30
+            else:
+                score -= 50 # Solo mode failed
+                
+        elif composition_mode in (self.MODE_INT_W_POSES, self.MODE_INT_WO_POSES):
+            if interaction_present and num_chars >= 2:
+                bonus = 50 if composition_mode == self.MODE_INT_W_POSES else 30
+                score += bonus
+                breakdown["interaction_bonus"] = bonus
+            else:
+                score -= 100
+                breakdown["warnings"].append("Broken Interaction: Mode set but interaction failed")
+                
+        elif composition_mode == self.MODE_GROUP_NO_INT:
+            if num_chars > 1:
+                score += 10
+                breakdown["structure_bonus"] = 10
+
+        # 3. Interaction Alignment (Context Check)
         interaction_raw_tags = metadata.get("interaction_tags", [])
         interaction_tags = self._expand_tags([t.lower() for t in interaction_raw_tags])
+        
         if interaction_tags and active_moods:
             matches = len(interaction_tags.intersection(active_moods))
-            # Diminishing returns: 10, 10, 10, 5, 5...
             points = min(matches, 3) * 10 + max(0, matches - 3) * 5
             score += points
             breakdown["interaction_matches"] = points
 
-        # 5. Group Diversity / Variety (+5 per unique outfit)
+        # 4. Diversity (Unique Outfits) - Only for Groups
         if len(selected_chars) > 1:
-            points = len(outfit_names) * 5
+            unique_outfits = {c.get("outfit") for c in selected_chars}
+            points = len(unique_outfits) * 5
             score += points
             breakdown["diversity_bonus"] += points
             
-        # 6. Repetitiveness Penalty (-5 per repeated word > 4 chars)
+        return score, interaction_tags
+
+    def _calculate_penalties(self, config, scene_tags, interaction_tags, breakdown):
+        """Calculate text repetitiveness and contextual clash penalties."""
+        score = 0
+        
+        # 1. Repetitiveness
         text_content = f"{config.get('scene', '')} {config.get('notes', '')}".lower()
         clean_text = text_content.replace(',', ' ').replace('.', ' ').replace('!', ' ').replace('?', ' ')
         words = [w for w in clean_text.split() if len(w) > 4]
         seen_words = set()
-        penalty = 0
+        rep_penalty = 0
         for w in words:
             if w in seen_words:
-                penalty += 5
+                rep_penalty += 5
             seen_words.add(w)
-        
-        # [NEW] 7. Contextual Clash Penalty (-150 per clash)
-        # Prevents "Motorcycles in a Photo Studio" or "Bowling Alley in a Forest"
+            
+        score -= rep_penalty
+        breakdown["repetitive_penalty"] = -rep_penalty
+
+        # 2. Contextual Clashes
         clash_penalty = 0
         if scene_tags:
-            combined_content_tags = interaction_tags.union(metadata.get("pose_tags", []))
+            combined_content_tags = interaction_tags.union(config.get("metadata", {}).get("pose_tags", []))
+            
+            # Add character outfit tags to the check
+            for char in config.get("selected_characters", []):
+                char_tags = set(config.get("metadata", {}).get("character_tags", {}).get(char["name"], []))
+                combined_content_tags.update(char_tags)
+
+            # expanded_content_tags = self._expand_tags(combined_content_tags)
+            
             for st in scene_tags:
                 st_lower = st.lower()
+                
+                # --- STRICT GENRE BLOCKING (The "Death Penalty") ---
+                # If scene is Modern and content features Fantasy (or vice versa)
+                is_fantasy_scene = any(t in st_lower for t in self.TAG_GROUPS["GENRE_FANTASY"])
+                is_modern_scene = any(t in st_lower for t in self.TAG_GROUPS["GENRE_MODERN"])
+                
+                if is_fantasy_scene:
+                    if any(t in ct.lower() for ct in combined_content_tags for t in self.TAG_GROUPS["GENRE_MODERN"]):
+                        clash_penalty += 1000
+                        breakdown["mismatch_penalty"] -= 1000
+                        breakdown["warnings"].append(f"GENRE CLASH: Fantasy Scene vs Modern Content")
+
+                if is_modern_scene:
+                    if any(t in ct.lower() for ct in combined_content_tags for t in self.TAG_GROUPS["GENRE_FANTASY"]):
+                        clash_penalty += 1000
+                        breakdown["mismatch_penalty"] -= 1000
+                        breakdown["warnings"].append(f"GENRE CLASH: Modern Scene vs Fantasy Content")
+
+                # --- PRE-DEFINED CLASHES ---
                 if st_lower in self.CONTEXT_CLASHES:
                     clashes = self.CONTEXT_CLASHES[st_lower]
                     for ct in combined_content_tags:
                         if any(c in ct.lower() for c in clashes):
-                            clash_penalty += 150
-                            breakdown["mismatch_penalty"] -= 150
+                            clash_penalty += 200
+                            breakdown["mismatch_penalty"] -= 200
                             breakdown["warnings"].append(f"Context Clash: '{st}' scene vs '{ct}' content")
-
-        score -= penalty
+                            
         score -= clash_penalty
-        breakdown["repetitive_penalty"] = -penalty
-            
-        metadata["score_breakdown"] = breakdown
         return score
 
     def _check_action_cohesion(self, config):
@@ -560,51 +802,151 @@ class PromptRandomizer:
 
     def _generate_single_candidate(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, match_outfits_prob=0.3):
         """Generate a single random prompt configuration using SCENARIO-FIRST logic."""
-        
         # =========================================================================
-        # STEP 1: SELECT SCENARIO (The "Director")
+        # STEP 0: SELECT HUB & SCENARIO (THE PARTNERSHIP)
         # =========================================================================
+        # Pick the scenario first (since it's the authority), then pick a compatible Hub.
+        # This ensures the Hub is a thematic guide, not a logic bypass.
         scenario = self.scenario_registry.get_random()
         
+        # Identify valid Hubs for this scenario
+        scenario_vibes = [v.lower() for v in getattr(scenario, 'vibe_tags', [])]
+        scenario_blocked = [b.lower() for b in getattr(scenario, 'blocked_global_tags', [])]
+        
+        possible_hubs = [h for h in self.HUB_TAGS if h.lower() not in scenario_blocked]
+        preferred_hubs = [h for h in possible_hubs if h.lower() in scenario_vibes]
+        
+        if preferred_hubs:
+            hub_tag = random.choice(preferred_hubs)
+        elif possible_hubs:
+            hub_tag = random.choice(possible_hubs)
+        else:
+            hub_tag = random.choice(self.HUB_TAGS) # Emergency fallback
+
         # =========================================================================
-        # STEP 2: SELECT SCENE (Constrained by Scenario)
+        # STEP 2: SELECT SCENE (Driven by Hub)
         # =========================================================================
         scene_desc = ""
         scene_category = ""
         scene_tags = []
         
         if include_scene:
-            # Filter scenes by scenario categories
+            # 1. Identify Candidate Scenes (Global Scan or Category Limit?)
+            # Strategy: Search ALL scenes for the Hub Tag.
+            # Efficiency: Pre-calculated index would be better, but iteration is fast enough for <1000 items.
+            
+            hub_scenes = []
+            
+            valid_scenes = []
+            
+            # Identify Scenario Requirements
+            req_scene_tags = set(t.lower() for t in getattr(scenario, 'required_scene_tags', []))
+            blocked_global = set(t.lower() for t in getattr(scenario, 'blocked_global_tags', []))
+            
             eligible_categories = scenario.allowed_scene_categories
-            # Select from scenario-allowed categories, or fallback to all if none exist
-            current_scenes = {cat: self.scenes[cat] for cat in eligible_categories if cat in self.scenes}
-            if not current_scenes:
-                current_scenes = self.scenes
+            target_scene_cats = eligible_categories if eligible_categories else self.scenes.keys()
+            
+            for cat_name in target_scene_cats:
+                if cat_name in self.scenes:
+                    for p_name, p_data in self.scenes[cat_name].items():
+                        tags = self._get_tags(p_data)
+                        tags_lower = set(t.lower() for t in tags)
+                        
+                        # A) Must NOT contain blocked global tags
+                        if not tags_lower.isdisjoint(blocked_global):
+                            continue
+                            
+                        # B) Must satisfy Scenario requirements (Hard Filter)
+                        if req_scene_tags and not req_scene_tags.issubset(tags_lower):
+                            continue
+                            
+                        valid_scenes.append((cat_name, p_name, p_data, tags_lower))
+            
+            # HUB PREFERENCE
+            hub_scenes = [s for s in valid_scenes if hub_tag.lower() in s[3]]
+            
+            if hub_scenes:
+                s_cat, s_name, s_data, _ = random.choice(hub_scenes)
+            elif valid_scenes:
+                s_cat, s_name, s_data, _ = random.choice(valid_scenes)
+            else:
+                # Emergency Fallback (Total Failure)
+                valid_cats = [c for c in self.scenes.keys() if self.scenes[c]]
+                if valid_cats:
+                    s_cat = random.choice(valid_cats)
+                    s_name = random.choice(list(self.scenes[s_cat].keys()))
+                    s_data = self.scenes[s_cat][s_name]
+                else:
+                    # Absolute disaster recovery
+                    return None
+
+            scene_category = s_cat
+            scene_desc = self._get_description(s_data)
+            scene_tags = self._get_tags(s_data)
                 
-            if current_scenes:
-                scene_category = random.choice(list(current_scenes.keys()))
-                presets = current_scenes[scene_category]
-                if presets:
-                    preset_name = random.choice(list(presets.keys()))
-                    data = presets[preset_name]
-                    scene_desc = self._get_description(data)
-                    scene_tags = self._get_tags(data)
+            # [STRICT OVERRIDE] Ensure Hub Tag is in scene_tags for downstream logic
+            if hub_tag.lower() not in [t.lower() for t in scene_tags] and scene_desc:
+                 scene_tags.append(hub_tag) # Treat it as present for context
 
         # =========================================================================
-        # STEP 3: SELECT STYLE (Contextual)
+        # STEP 3: DETERMINE COMPOSITION MODE (Explicit Logic)
         # =========================================================================
-        # Use default style tags from scenario if available
-        base_prompt_name = scenario.default_style_tags[0] if scenario.default_style_tags and scenario.default_style_tags[0] in self.base_prompts else ""
-        if not base_prompt_name and self.base_prompts:
-             base_prompt_name = random.choice(list(self.base_prompts.keys()))
-             
-        # =========================================================================
-        # STEP 4: SELECT CHARACTERS & ASSIGN ROLES (Decision Tree Logic)
-        # =========================================================================
+        # 1. Determine Character Count first (needed for Mode decision if not constrained)
         if num_characters is None:
-            # Respect Scenario Min/Max
-            num_characters = random.randint(scenario.min_characters, scenario.max_characters)
+             # Default random range from scenario
+             num_characters = random.randint(scenario.min_characters, scenario.max_characters)
+        
+        # 2. Decide Mode (Now with Hub-Tag)
+        composition_mode, selected_interaction = self._determine_composition_mode(
+            scenario, 
+            num_characters, 
+            include_notes=include_notes,
+            hub_tag=hub_tag
+        )
+        
+        # 3. Refine Character Count based on Mode/Interaction
+        if composition_mode in (self.MODE_INT_W_POSES, self.MODE_INT_WO_POSES) and selected_interaction:
+             # STRICT SCALING: If an interaction is selected, the character count MUST match it.
+             # This filters down (or up) to exactly the number of participants defined in the template.
+             target_c = selected_interaction.get("min_chars", 2)
+             
+             if num_characters != target_c:
+                 # Override requested count with interaction requirements
+                 num_characters = target_c
+                 
+             # Re-verify availability
+             max_avail = len(self.characters.keys())
+             if num_characters > max_avail:
+                 num_characters = max_avail
+
+        # =========================================================================
+        # STEP 4: SELECT STYLE (Contextual - Driven by Hub)
+        # =========================================================================
+        # Broaden Styles has ensured Hubs cover Styles.
+        compatible_styles = []
+        for s_name, s_data in self.base_prompts.items():
+            # Parse tags from header? (Actually self.base_prompts is dict of name->data)
+            # We assume data_loader parsed tags into s_data['tags'] or similar?
+            # Data loader for base prompts currently stores raw text. 
+            # WAIT: self.base_prompts in `data_loader.py` is simple dict name -> content.
+            # The tags are in the KEY (Header). e.g. "Cyberpunk (Tag, Tag)"
+            # So s_name contains the tags.
             
+            if "(" in s_name and ")" in s_name:
+                tag_part = s_name[s_name.rfind("(")+1 : s_name.rfind(")")]
+                tags = [t.strip().lower() for t in tag_part.split(",")]
+                if hub_tag.lower() in tags:
+                    compatible_styles.append(s_name)
+                    
+        if compatible_styles:
+            base_prompt_name = random.choice(compatible_styles)
+        else:
+            # Fallback to Scenario Default or Random
+            base_prompt_name = scenario.default_style_tags[0] if scenario.default_style_tags and scenario.default_style_tags[0] in self.base_prompts else ""
+            if not base_prompt_name and self.base_prompts:
+                 base_prompt_name = random.choice(list(self.base_prompts.keys()))
+        # STEP 5: SELECT CHARACTERS & ASSIGN ROLES (Decision Tree Logic)
+        # =========================================================================
         available_char_names = list(self.characters.keys())
         if not available_char_names:
             return None
@@ -618,46 +960,72 @@ class PromptRandomizer:
         context_tags = set(scenario.vibe_tags)
         context_tags.update(scene_tags)
 
-        # Decision Tree: Assign Mandatory Slots first
         for i, char_name in enumerate(char_names):
-            # 1. Check if we have a mandatory Role Slot to fill
+            # 1. Role Assignment
             role = None
             if i < len(scenario.role_slots):
                 slot_name = scenario.role_slots[i]
-                # Find the role matching this slot name in scenario.roles
                 role = next((r for r in scenario.roles if r.name == slot_name), None)
-                
-            # 2. Fallback to random role from scenario if no slot or slot not found
             if not role:
                 role = random.choice(scenario.roles)
             
-            # Generate character with role constraints
+            # 2. Pose Selection Strategy based on MODE
+            # We pass specific constraints to the character randomizer if needed
+            # Currently `_randomize_character_with_role` handles pose selection internally.
+            # We might need to override it or post-process it if MODE_INT_W_POSES
+            
             char_data = self._randomize_character_with_role(
                 char_name, 
                 role, 
                 scene_category=scene_category,
-                context_tags=context_tags
+                context_tags=context_tags,
+                hub_tag=hub_tag # Pass Hub Tag for outfit filtering
             )
+            
+            # --- APPLY MODE SPECIFIC POSE LOGIC ---
+
+            # --- APPLY MODE SPECIFIC POSE LOGIC ---
+            # [STRICT SEPARATION] If any Interaction is present, suppress individual character poses 
+            # to prevent technical clashes in the generated prompt.
+            if composition_mode in (self.MODE_INT_W_POSES, self.MODE_INT_WO_POSES):
+                 char_data["pose_preset"] = ""
+                 char_data["pose_category"] = ""
+                 
+                 if composition_mode == self.MODE_INT_W_POSES:
+                      # MODE_INT_W_POSES uses specific poses for each character as required by the interaction
+                      req_poses = selected_interaction.get("required_poses", [])
+                      if req_poses and i < len(req_poses):
+                          char_data["action_note"] = req_poses[i]
+                      elif req_poses:
+                          char_data["action_note"] = random.choice(req_poses)
+                      else:
+                          char_data["action_note"] = ""
+                 else:
+                      # MODE_INT_WO_POSES is purely text-based (Interactions without Poses)
+                      char_data["action_note"] = ""
+
             selected_characters.append(char_data)
 
         # =========================================================================
-        # STEP 5: GENERATE INTERACTION NOTES
+        # STEP 6: FINALIZE INTERACTION NOTES
         # =========================================================================
         notes_text = ""
         notes_name = "None"
         
-        # Force interaction if scenario requires it and we have multiple characters
-        needs_notes = include_notes or scenario.force_interaction
-        
-        if needs_notes and len(selected_characters) > 1:
-             # Find interaction templates that match scenario vibes
-             notes_text, notes_name, _ = self._generate_random_notes(
-                 selected_characters, 
-                 scene_category=scene_category,
-                 context_tags=context_tags,
-                 context_moods=scenario.vibe_tags,
-                 exclusive=scenario.exclusive_notes
-             )
+        if composition_mode in (self.MODE_INT_W_POSES, self.MODE_INT_WO_POSES) and selected_interaction:
+             notes_name = selected_interaction["name"]
+             t_text = selected_interaction["text"]
+             c_names = [c["name"] for c in selected_characters]
+             notes_text = fill_template(t_text, c_names)
+             
+        elif composition_mode == self.MODE_GROUP_NO_INT and len(selected_characters) > 1:
+             # Generic Fallback if we ended up here (e.g. intended interaction failed)
+             # Or just simple group shot instructions
+             # For now, leave empty or minor alignment hint?
+             pass 
+             
+        # Use fallback if we failed to generate notes but "needs_notes" was strict?
+        # The mode determination handled the "Strict" check, so if we are here, we are good.
 
         # =========================================================================
         # STEP 6: COMPILE CONFIG
@@ -672,11 +1040,16 @@ class PromptRandomizer:
             "scenario_name": scenario.name,
             "metadata": {
                 "scenario": scenario.name,
-                "vibe": scenario.vibe_tags
+                "vibe": scenario.vibe_tags,
+                "interaction": notes_name,
+                "interaction_tags": set(self._get_tags(selected_interaction)) if selected_interaction else set(),
+                "min_chars": selected_interaction.get("min_chars", 0) if selected_interaction else 0,
+                "composition_mode": composition_mode,
+                "hub_tag": hub_tag
             }
         }
 
-    def _randomize_character_with_role(self, char_name, role, scene_category="", context_tags=None):
+    def _randomize_character_with_role(self, char_name, role, scene_category="", context_tags=None, hub_tag=None):
         """Generate character features strictly matching a role."""
         char_def = self.characters.get(char_name, {})
         outfits = char_def.get("outfits", {})
@@ -686,6 +1059,41 @@ class PromptRandomizer:
         selection_tags = set(context_tags or [])
         selection_tags.update(role.required_tags)
         
+        # --- HUB-DRIVEN WHITELISTING ---
+        if hub_tag:
+             selection_tags.add(f"whitelist:{hub_tag}")
+        
+        # --- SCENE-BASED GENRE ENFORCEMENT ---
+        # Inject scene-based whitelists and blocks into the role selection flow
+        local_blocked = set(role.blocked_tags or [])
+        
+        # 1. Primary Category (Legacy/Broad)
+        if scene_category:
+            scene_cat_lower = scene_category.lower()
+            if scene_cat_lower in self.SCENE_WHITELISTS:
+                for tag in self.SCENE_WHITELISTS[scene_cat_lower]:
+                    selection_tags.add(f"whitelist:{tag}")
+            
+            if scene_cat_lower in self.SCENE_RESTRICTIONS:
+                local_blocked.update(self.SCENE_RESTRICTIONS[scene_cat_lower])
+
+        # 2. Context Tag Specifics (Precise)
+        # Check if any active scene tags trigger a specific whitelist/blocklist
+        # e.g. "volleyball" tag triggers the "volleyball" whitelist
+        if context_tags:
+            # Extract explicit blocks from scene tags (e.g. block:MMA)
+            _, _, scene_blocks = self._extract_special_tags(context_tags)
+            local_blocked.update(scene_blocks)
+            
+            for tag in context_tags:
+                t_lower = tag.lower()
+                if t_lower in self.SCENE_WHITELISTS:
+                     for w_tag in self.SCENE_WHITELISTS[t_lower]:
+                         selection_tags.add(f"whitelist:{w_tag}")
+                
+                if t_lower in self.SCENE_RESTRICTIONS:
+                     local_blocked.update(self.SCENE_RESTRICTIONS[t_lower])
+
         # Decision Tree: Strict Outfit Whitelisting
         if role.allowed_outfit_categories:
             for cat in role.allowed_outfit_categories:
@@ -702,7 +1110,7 @@ class PromptRandomizer:
             categorized_outfits, 
             selection_tags, 
             scene_category, 
-            blocked_tags=role.blocked_tags
+            blocked_tags=local_blocked
         )
         
         # 2. Select Pose matching Role
@@ -711,7 +1119,7 @@ class PromptRandomizer:
             self.poses, 
             pose_context, 
             scene_category, 
-            blocked_tags=role.blocked_tags
+            blocked_tags=local_blocked
         )
         
         pose_presets = self.poses.get(pose_category, {})
@@ -721,16 +1129,30 @@ class PromptRandomizer:
         available_traits = char_def.get("traits", {})
         selected_traits = [random.choice(list(available_traits.keys()))] if available_traits and random.random() < 0.9 else []
 
+        # 4. Color Scheme (especially important for sports)
+        outfit_tags = self._get_tags(outfits.get(outfit_name, {}))
+        color_scheme = self._select_smart_color_scheme(outfit_tags, scene_category)
+        
+        # 5. Outfit Modifiers/Traits
+        outfit_traits = []
+        if isinstance(outfits.get(outfit_name), dict):
+            outfit_data = outfits[outfit_name]
+            if "modifiers" in outfit_data and outfit_data["modifiers"]:
+                available_modifiers = list(outfit_data["modifiers"].keys())
+                # 30% chance to apply a modifier
+                if available_modifiers and random.random() < 0.3:
+                    outfit_traits = [random.choice(available_modifiers)]
+
         return {
             "name": char_name,
             "outfit": outfit_name,
             "pose_category": pose_category,
             "pose_preset": pose_preset,
             "character_traits": selected_traits,
+            "color_scheme": color_scheme,
+            "outfit_traits": outfit_traits,
             "role_name": role.name
         }
-                    
-        return config
 
     def _select_smart_framing(self, num_characters, context_tags=None, scene_category=""):
         """Select a framing type appropriate for the number of characters and context."""
@@ -933,224 +1355,193 @@ class PromptRandomizer:
         }
 
     def _select_smart_outfit(self, all_outfits, categorized_outfits, char_tags, scene_category, blocked_tags=None):
-        """Select an outfit that matches character tags or scene context."""
+        """Select an outfit using weighted constraints (Filter -> Select)."""
+        # [FIX] Properly parse blocked tags to remove 'block:' prefix
+        raw_blocked = blocked_tags or []
+        parsed_blocked = set()
+        for b in raw_blocked:
+             if b.lower().startswith("block:"):
+                 parsed_blocked.add(b.split(":", 1)[1].lower())
+             else:
+                 parsed_blocked.add(b.lower())
+                 
+        blocked = self._expand_tags(list(parsed_blocked))
         
-        # Expand blocked tags to ensure "formal" blocks "tuxedo", etc.
-        expanded_blocks = self._expand_tags(blocked_tags or [])
-        
-        if not categorized_outfits:
-            # Filter all_outfits by expanded_blocks
-            valid_all = [name for name, data in all_outfits.items() if not any(t.lower() in expanded_blocks for t in self._get_tags(data))]
-            if valid_all:
-                return random.choice(valid_all)
-            return random.choice(list(all_outfits.keys()))
-
-        # 1. Identify preferred outfit categories using Tags
-        preferred_categories = set()
-        
-        # Collect context tags (Character Tags + Scene Name)
         context_tags = set(t.lower() for t in char_tags)
         if scene_category:
             context_tags.add(scene_category.lower())
 
-        # Check which outfit categories match our context tags
-        for cat_name, items in categorized_outfits.items():
+        # Extract strict whitelists (e.g., "whitelist:Activewear")
+        whitelists = {t.split(":", 1)[1].lower() for t in context_tags if t.startswith("whitelist:")}
+        
+        candidates = [] # List of (name, weight)
+
+        # Helper to get tags efficiently
+        def get_item_tags(item_data):
+            if isinstance(item_data, dict):
+                # Use pre-computed tags if available (Phase 1)
+                return item_data.get("_expanded_tags") or self._expand_tags(item_data.get("tags", []))
+            return set()
+
+        # Iterate through categories to handle category-level logic
+        source_categories = categorized_outfits if categorized_outfits else {"Uncategorized": all_outfits}
+
+        for cat_name, items in source_categories.items():
             cat_lower = cat_name.lower()
             
-            # 1. Category name match
-            for t in context_tags:
-                if t in cat_lower or cat_lower in t:
-                    preferred_categories.add(cat_name)
-                    break
-                    
-            # 2. Item tag match (deep check)
-            # If any outfit in this category has a matching tag, the category is a candidate
-            if cat_name not in preferred_categories:
-                matched_items = self._filter_items_by_tags(items, context_tags)
-                if matched_items:
-                    preferred_categories.add(cat_name)
+            # 1. Whitelist Check
+            if whitelists:
+                # If whitelist active, category MUST match one of the whitelists
+                # OR contain items that match? Strict interpretation: Category Name Match.
+                if not any(wl in cat_lower for wl in whitelists):
+                    continue
 
-        # 2. Whitelist enforcement
-        active_whitelists = [t.split(":", 1)[1] for t in context_tags if t.startswith("whitelist:")]
-        
-        # Find matching available categories
-        available_categories = list(categorized_outfits.keys())
-        matching_categories = list(preferred_categories)
-        
-        if active_whitelists:
-            # STRICT WHITELIST MODE: Only allow categories that contain whitelisted tags
-            strict_candidates = []
-            for cat_name, items in categorized_outfits.items():
-                if self._filter_items_by_tags(items, active_whitelists, threshold=1):
-                    strict_candidates.append(cat_name)
+            # 2. Category Blocking
+            # (e.g. Block "Swimwear" category in "Office")
+            # We check if the category name itself implies a blocked tag
+            # This is a heuristic: "Swimwear" category matches "swimwear" tag.
+            if any(b in cat_lower for b in blocked):
+                continue
             
-            if strict_candidates:
-                available_categories = strict_candidates
-                matching_categories = [c for c in matching_categories if c in strict_candidates]
-                # If no overlap, prioritize a random strict candidate
-                if not matching_categories:
-                    matching_categories = strict_candidates
+            # Category Boost Score
+            cat_boost = 1.0
+            if any(t in cat_lower for t in context_tags):
+                cat_boost = 5.0
 
-        # -- CONTEXT-AWARE BLOCKING (Logic Update) --
-        # Block specific categories based on scene
-        blocked_categories = set()
-        
-        scene_lower = scene_category.lower()
-        if any(x in scene_lower for x in ["gym", "sports", "training", "workout"]):
-            blocked_categories.update(["Formal", "Business", "Evening", "Gala", "Elegant"])
-        elif any(x in scene_lower for x in ["office", "street", "winter", "city", "urban"]):
-            blocked_categories.update(["Swimwear", "Bikini", "Lingerie"])
-        
-        # Filter available and matching categories
-        available_categories = [c for c in available_categories if c not in blocked_categories]
-        matching_categories = [c for c in matching_categories if c not in blocked_categories]
-        
-        # If we blocked everything, revert to available (safety net)
-        if not available_categories:
-             available_categories = list(categorized_outfits.keys())
+            for name, data in items.items():
+                item_tags = get_item_tags(data)
+                
+                # --- HARD CONSTRAINTS ---
+                if not item_tags.isdisjoint(blocked):
+                    continue
+                
+                # --- SCORING ---
+                base_score = 10.0 * cat_boost
+                
+                # Tag Overlap Bonus
+                matches = len(item_tags.intersection(context_tags))
+                token_bonus = matches * 15.0
+                
+                final_score = base_score + token_bonus
+                candidates.append((name, final_score))
 
-        # 3. Selection
-        target_category = ""
-        # Boosted smart chance 
-        if matching_categories and random.random() < 0.95:
-            target_category = random.choice(matching_categories)
-        else:
-            # Fallback: Just pick any category (weighted slightly away from 'Common' if possible?)
-            target_category = random.choice(available_categories)
-
-        # Pick outfit from category
-        outfits_in_cat = categorized_outfits.get(target_category, {})
-        
-        # Apply Whitelist Filter to items within the category
-        items_to_filter = outfits_in_cat
-        if active_whitelists:
-            whitelisted_item_names = self._filter_items_by_tags(outfits_in_cat, active_whitelists, threshold=1)
-            if whitelisted_item_names:
-                items_to_filter = {name: outfits_in_cat[name] for name in whitelisted_item_names}
-
-        # Filter for blocked tags locally
-        valid_outfits = []
-        if items_to_filter:
-            for name, data in items_to_filter.items():
-                 item_tags = [t.lower() for t in self._get_tags(data)]
-                 if not any(bt in item_tags for bt in expanded_blocks):
-                     valid_outfits.append(name)
+        # Parsing Fallback: If no candidates found (too restrictive?), try relaxing constraints
+        # Parsing Fallback: If no candidates found...
+        if not candidates and whitelists:
+             # RETRY PHASE 2: Item-Level Whitelist (Ignore Category Structure)
+             # Maybe the "Sports" outfit is miscategorized in "Casual"?
+             for cat_name, items in source_categories.items():
+                 cat_lower = cat_name.lower()
+                 if any(b in cat_lower for b in blocked): continue
+                 
+                 for name, data in items.items():
+                     item_tags = get_item_tags(data)
+                     if not item_tags.isdisjoint(blocked): continue
+                     
+                     # Check if Item Tags match any Whitelist term
+                     if not item_tags.isdisjoint(whitelists):
+                         # Found a match via tags!
+                         final_score = 5.0 # Lower scope
+                         candidates.append((name, final_score))
             
-            # If we filtered everything, try falling back to all available outfits (minus blocked)
-            if not valid_outfits:
-                # Emergency fallback: Search GLOBAL list
-                for name, data in all_outfits.items():
-                     item_tags = [t.lower() for t in self._get_tags(data)]
-                     if not any(bt in item_tags for bt in expanded_blocks):
-                         valid_outfits.append(name)
-            
-            if valid_outfits:
-                return random.choice(valid_outfits)
-            
-            # If STILL no valid outfits (everything blocked?), return basic fallback
-            # Ideally this shouldn't happen unless "Block:Clothing" exists
-            # Just return something random and hope for the best
-            return random.choice(list(outfits_in_cat.keys()))
+             if candidates:
+                  # Found items via direct tag match, use them!
+                  population, weights = zip(*candidates)
+                  return random.choices(population, weights=weights, k=1)[0]
 
-        if outfits_in_cat:
-            return random.choice(list(outfits_in_cat.keys()))
-        
-        return random.choice(list(all_outfits.keys()))
+             # RETRY PHASE 3: Drop Whitelist (Total Failure)
+             # IMPORTANT: Strip "whitelist:" tags from context to prevent infinite recursion
+             clean_tags = [t for t in char_tags if not t.lower().startswith("whitelist:")]
+             return self._select_smart_outfit(all_outfits, categorized_outfits, clean_tags, scene_category, blocked_tags=blocked_tags)
+
+        if not candidates:
+             # Last resort: Any unblocked outfit from 'all_outfits'
+             fallback_opts = []
+             for name, data in all_outfits.items():
+                 item_tags = get_item_tags(data)
+                 if item_tags.isdisjoint(blocked):
+                     fallback_opts.append(name)
+             if fallback_opts:
+                 return random.choice(fallback_opts)
+             # If literally everything is blocked, return random (User can see the clash)
+             return random.choice(list(all_outfits.keys()))
+
+        # Weighted Selection
+        population, weights = zip(*candidates)
+        return random.choices(population, weights=weights, k=1)[0]
 
     def _select_smart_pose(self, all_poses, char_tags, scene_category, personality_text="", theme_tags=None, blocked_tags=None):
-        """Select a pose category that matches character or scene.
+        """Select a pose category using weighted constraints."""
+        blocked = self._expand_tags(blocked_tags or [])
         
-        Uses a scoring system to weight categories and items that match the context.
-        """
-        expanded_blocks = self._expand_tags(blocked_tags or [])
-        
-        available_categories = list(all_poses.keys())
-        if not available_categories:
-            return ""
-
         context_tags = set(t.lower() for t in char_tags)
         if scene_category:
             context_tags.add(scene_category.lower())
             
-        # Scoring map to store weights for each category
-        scores = {}
+        whitelists = {t.split(":", 1)[1].lower() for t in context_tags if t.startswith("pose_whitelist:")}
         
+        candidates = []
+
         for cat_name, items in all_poses.items():
             cat_lower = cat_name.lower()
-            score = 0
+
+            # 1. Whitelist Check
+            if whitelists:
+                # Category MUST match one of the whitelists
+                if not any(wl in cat_lower for wl in whitelists):
+                    continue
+
+            # 2. Block Check (Category Level)
+            if any(b in cat_lower for b in blocked):
+                continue
+
+            # Base Score
+            score = 10.0
+
+            # Category Name Match
+            if any(t in cat_lower for t in context_tags):
+                score += 20.0
             
-            # 1. Category Name match (Strong match)
-            for t in context_tags:
-                if t in cat_lower:
-                    score += 5
-            
-            # 2. Deep tag match (Check items within category)
-            # This accounts for tags like (Standing, Confident) in poses
-            matched_items = self._filter_items_by_tags(items, context_tags)
-            if matched_items:
-                score += len(matched_items) * 2
-                
-            # 3. Theme tag match (VERY Strong - used for forced themes like 'Sport' or 'Medieval')
+            # Theme Tag Forced Match
             if theme_tags:
                 theme_tags_lower = {t.lower() for t in theme_tags}
                 if any(t in cat_lower for t in theme_tags_lower):
-                    score += 15
-                
-                theme_matched_items = self._filter_items_by_tags(items, theme_tags_lower)
-                if theme_matched_items:
-                    score += len(theme_matched_items) * 5
+                    score += 50.0
 
-            if score > 0:
-                scores[cat_name] = score
-
-        # -- WHITELIST ENFORCEMENT --
-        pose_whitelists = [t.split(":", 1)[1] for t in context_tags if t.startswith("pose_whitelist:")]
-        if pose_whitelists:
-            # STRICT WHITELIST MODE: Only allow categories that match whitelist names
-            whitelisted_scores = {c: s for c, s in scores.items() if any(w.lower() in c.lower() or c.lower() in w.lower() for w in pose_whitelists)}
+            # Deep Item Check (Bonus if category contains highly relevant poses)
+            # Use a sample or check ratio to keep it fast
+            relevant_items = 0
             
-            # If none of the scored categories match, try to find ANY category in the whitelist
-            if not whitelisted_scores:
-                for c in available_categories:
-                    if any(w.lower() in c.lower() or c.lower() in w.lower() for w in pose_whitelists):
-                        whitelisted_scores[c] = 10 # Default score
+            # Helper to get tags efficiently (Same as outfit selector)
+            def get_pose_tags(p_data):
+                if isinstance(p_data, dict):
+                     return p_data.get("_expanded_tags") or self._expand_tags(p_data.get("tags", []))
+                return set()
+
+            for p_name, p_data in items.items():
+                 p_tags = get_pose_tags(p_data)
+                 if not p_tags.isdisjoint(blocked):
+                     continue # Item is blocked, don't count it
+                 
+                 if not p_tags.isdisjoint(context_tags):
+                     relevant_items += 1
             
-            scores = whitelisted_scores
-            # If still empty (meaning whitelist names are invalid/not found), we'll fall back to random later, 
-            # but the scores dict will be used to prioritize.
-
-        # -- BLOCKING LOGIC --
-        if blocked_tags and scores:
-            for cat_name in list(scores.keys()):
-                 cat_val_str = str(all_poses.get(cat_name, "")).lower()
-                 if any(bt in cat_name.lower() or bt in cat_val_str for bt in blocked_tags):
-                     del scores[cat_name]
-
-        # Final Selection logic
-        if not scores:
-            # Fallback to random safe category
-            if blocked_tags:
-                safe_categories = [
-                    c for c in available_categories 
-                    if not any(bt in c.lower() for bt in blocked_tags)
-                ]
-                if safe_categories:
-                    return random.choice(safe_categories)
-            return random.choice(available_categories)
-
-        # Build a weighted list for selection
-        # We cap the score to prevent extreme dominance but allow clear preference
-        choices = []
-        for cat, s in scores.items():
-            # Use a non-linear weight (s * s or just s)
-            weight = min(s, 50) 
-            choices.extend([cat] * weight)
+            score += (relevant_items * 2.0)
             
-        # Boosted smart chance (95% to pick a weighted choice)
-        if choices and random.random() < 0.95:
-            return random.choice(choices)
-        
-        return random.choice(available_categories)
+            candidates.append((cat_name, score))
+
+        if not candidates:
+            # Fallback: Return random (safe) from all available
+            safe_categories = [
+                c for c in all_poses.keys() 
+                if not any(bt in c.lower() for bt in blocked)
+            ]
+            if safe_categories:
+                return random.choice(safe_categories)
+            return random.choice(list(all_poses.keys()))
+
+        population, weights = zip(*candidates)
+        return random.choices(population, weights=weights, k=1)[0]
 
     def _find_matching_outfit(self, char_names, context_tags=None, scene_category="", blocked_tags=None):
         """Find a common outfit name that exists for all characters.
@@ -1256,12 +1647,13 @@ class PromptRandomizer:
                 "Dynamic composition and movement",
                 "Focus on facial expression and emotion",
             ]
-            return random.choice(notes_options), "Ambient Notes", []
+            return {"name": "Ambient Notes", "text": random.choice(notes_options), "min_chars": 1, "tags": []}, "Ambient Notes", []
 
         num_chars = len(selected_characters)
         
         # Collect all eligible templates across all categories
         eligible_templates = []
+        fallback_templates = []
         
         context_tags_lower = {t.lower() for t in context_tags} if context_tags else set()
 
@@ -1298,26 +1690,35 @@ class PromptRandomizer:
                             continue
 
                     # TAG FILTERING logic
-                if tags:
-                    template_tags_lower = {t.lower() for t in tags}
+                    is_strict_match = False
                     
-                    # STRICT SCENARIO MATCHING
-                    # If we have scenario vibes, the interaction MUST share at least one tag.
-                    # This prevents "Hiking" in a "Cyberpunk Heist".
-                    if context_moods:
-                        expanded_vibes = self._expand_tags([v.lower() for v in context_moods])
-                        if not template_tags_lower.intersection(expanded_vibes):
-                            continue
-                else:
-                    # If template has NO tags, only allow it if we are NOT in exclusive mode
-                    if exclusive:
-                        continue
-                            
-                    eligible_templates.append((desc, name, tags))
+                    if tags:
+                        template_tags_lower = {t.lower() for t in tags}
+                        
+                        # STRICT SCENARIO MATCHING
+                        # If we have scenario vibes, the interaction MUST share at least one tag.
+                        if context_moods:
+                            expanded_vibes = self._expand_tags([v.lower() for v in context_moods])
+                            if template_tags_lower.intersection(expanded_vibes):
+                                is_strict_match = True
+                        else:
+                            is_strict_match = True
+                    else:
+                        # No tags -> matched unless strict logic requires tags (which it doesn't usually)
+                        is_strict_match = True
 
-        if not eligible_templates and exclusive:
-            # If we found nothing in exclusive mode, return empty instead of picking a random backup
-            return "", "None", []
+                    if is_strict_match:
+                        eligible_templates.append((desc, name, tags))
+                    elif not exclusive:
+                        # Allow as fallback
+                        fallback_templates.append((desc, name, tags))
+
+        if not eligible_templates:
+            if exclusive:
+                # If we found nothing in exclusive mode, return empty instead of picking a random backup
+                return "", "None", []
+            # Use fallback
+            eligible_templates = fallback_templates
 
         if eligible_templates:
             # Pick a random template
@@ -1327,7 +1728,229 @@ class PromptRandomizer:
             char_names = [char["name"] for char in selected_characters]
             return fill_template(template_text, char_names), template_name, template_tags
             
-        return "", "None", []
+        # If no eligible templates found (due to strict exclusive mode or blocking)
+        # Return a safe, generic fallback instead of None
+        fallback_options = [
+            "Cinematic composition with focus on character expression",
+            "Atmospheric lighting emphasizing the relationship dynamics",
+            "Detailed capture of the moment and setting",
+            "High contrast dramatic framing",
+            "Natural and candid interaction capture"
+        ]
+        return random.choice(fallback_options), "Generic (Fallback)", ["neutral"]
+
+    def _select_interaction_template(self, scene_category="", context_tags=None, context_moods=None, blocked_tags=None, exclusive=False, hub_tag=None):
+        """Select an interaction template BEFORE character selection.
+        
+        Args:
+            scene_category: Category of the scene
+            context_tags: Set of context tags
+            context_moods: List of mood tags from scenario
+            blocked_tags: Set of tags to block
+            exclusive: Whether to strictly enforce context matching
+            
+        Returns:
+            dict: {
+                "name": str,
+                "text": str,
+                "tags": list,
+                "min_chars": int,
+                "required_poses": list (optional)
+            } or None
+        """
+        if not self.interactions:
+            return None
+
+        # Collect eligible templates
+        eligible_templates = []
+        fallback_templates = []
+        
+        # Pre-process context
+        context_tags_lower = {t.lower() for t in context_tags} if context_tags else set()
+        expanded_vibes = set()
+        if context_moods:
+            expanded_vibes = self._expand_tags([v.lower() for v in context_moods])
+
+        for category, templates in self.interactions.items():
+            for name, data in templates.items():
+                # Normalize data format
+                tags = []
+                desc = ""
+                min_chars = 2 # Default to 2 for interactions
+                
+                if isinstance(data, dict):
+                    desc = data.get("description", "")
+                    min_chars = data.get("min_chars", 1)
+                    tags = data.get("tags", [])
+                else:
+                    desc = data
+                    # Legacy string format assumes min 2 for interactions usually, 
+                    # but let's be safe and say 1 if unknown, though interactions implying plural need 2.
+                    # For now, safe default.
+                    min_chars = 1
+                
+                # Minimum characters logic: 
+                # Ideally, interactions are for >1 person. 
+                # If an interaction specifies min_chars=1, it is safe for 1 person (like "Walking").
+                
+                # --- FILTERING LOGIC ---
+            
+                # 1. Blocking (Strict Blacklist)
+                # Check for hard scene restrictions
+                if scene_category.lower() in self.SCENE_RESTRICTIONS:
+                    restricted_tags = self.SCENE_RESTRICTIONS[scene_category.lower()]
+                    if tags:
+                        template_tags_lower = {t.lower() for t in tags}
+                        if template_tags_lower.intersection(restricted_tags):
+                            continue
+                
+                # Global tag blocks
+                if blocked_tags:
+                    blocked_lower = {b.lower() for b in blocked_tags}
+                    raw_blocked = {b.split(":", 1)[1].lower() for b in blocked_lower if b.startswith("block:")}
+                    if tags:
+                        template_tags_lower = {t.lower() for t in tags}
+                        if template_tags_lower.intersection(raw_blocked):
+                            continue
+                    simple_blocks = {b for b in blocked_lower if ":" not in b}
+                    desc_lower = desc.lower()
+                    if any(block_word in desc_lower for block_word in simple_blocks):
+                        continue
+
+                # 2. Hard Whitelisting (Strict Whitelist)
+                # If a scene has a whitelist (e.g. gym, bowling), MUST match at least one tag.
+                if scene_category.lower() in self.SCENE_WHITELISTS:
+                    whitelist = set(self.SCENE_WHITELISTS[scene_category.lower()])
+                    if tags:
+                        template_tags_lower = {t.lower() for t in tags}
+                        if not template_tags_lower.intersection(whitelist):
+                            continue # Strict filter: no match, no selection
+                    else:
+                        # Untagged items are only allowed if the whitelist is not "exclusive"
+                        # But for strict consistency, we skip untagged items in whitelisted scenes.
+                        continue
+
+                # 3. Context / Vibe / Hub Matching
+                is_strict_match = False
+                if tags:
+                    template_tags_lower = {t.lower() for t in tags}
+                    
+                    # Hub Match (Primary thematic guide)
+                    if hub_tag and hub_tag.lower() in template_tags_lower:
+                        is_strict_match = True
+                    
+                    # Scenario Vibe Match (Partnership guide)
+                    elif context_moods and template_tags_lower.intersection(expanded_vibes):
+                        is_strict_match = True
+                        
+                    elif not hub_tag and not context_moods:
+                        is_strict_match = True
+                else:
+                    # Untagged templates are generic matches
+                    is_strict_match = True
+
+                # Determine actual placeholder count from text
+                placeholders = []
+                import re
+                p_matches = re.findall(r"\{char(\d+)\}", desc)
+                if p_matches:
+                    placeholders = [int(m) for m in p_matches]
+                    min_chars = max(placeholders) if placeholders else 1
+                else:
+                    # Fallback if no placeholders found (legacy or special format)
+                    min_chars = min_chars
+
+                template_obj = {
+                    "name": name,
+                    "text": desc,
+                    "tags": tags,
+                    "min_chars": min_chars,
+                    "required_poses": data.get("required_poses", []) if isinstance(data, dict) else []
+                }
+
+                if is_strict_match:
+                    eligible_templates.append(template_obj)
+                elif not exclusive:
+                    fallback_templates.append(template_obj)
+
+        selected = None
+        if eligible_templates:
+            selected = random.choice(eligible_templates)
+        elif fallback_templates and not exclusive:
+            selected = random.choice(fallback_templates)
+            
+        return selected
+
+    def _determine_composition_mode(self, scenario, num_characters, include_notes=False, hub_tag=None):
+        """Determine the composition strategy based on constraints.
+        
+        Args:
+           scenario: Selected Scenario object
+           num_characters: Intended number of characters (if known/fixed)
+           include_notes: Boolean flag for interaction intention
+           
+        Returns:
+           tuple: (CompositionMode, interaction_template_or_None)
+        """
+        # 1. SOLO MODE
+        if num_characters == 1:
+            return self.MODE_SOLO, None
+            
+        # 2. Check Intention
+        needs_interaction = include_notes or scenario.force_interaction
+        
+        # [USER REQUEST] Balance Adjustment: 20% chance to skip global interaction 
+        # even if requested, to allow more individual-pose group variety.
+        if needs_interaction and not scenario.force_interaction:
+            if random.random() < 0.2:
+                return self.MODE_GROUP_NO_INT, None
+
+        if not needs_interaction:
+            # If we are a group but don't need interaction, default to Group Poses
+            return self.MODE_GROUP_NO_INT, None
+
+        # 3. Attempt to Select Interaction
+        # We need context tags for selection, which usually come from Scene/Scenario.
+        # Ideally this is called with context, but for now we'll use Scenario's default context.
+        context_tags = set(scenario.vibe_tags) 
+        
+        selected_interaction = self._select_interaction_template(
+            scene_category="", # Generic selection for now
+            context_tags=context_tags,
+            context_moods=scenario.vibe_tags,
+            exclusive=scenario.exclusive_notes,
+            hub_tag=hub_tag
+        )
+        
+        if not selected_interaction:
+            if scenario.exclusive_notes:
+                # If we MUST have an interaction but found none, what do we do?
+                # For safety, fallback to Group No Int (or generic fallback later)
+                return self.MODE_GROUP_NO_INT, None
+            else:
+                return self.MODE_GROUP_NO_INT, None
+        
+        # 4. Determine Interaction Type (Poses vs No Poses)
+        # Check if interaction has pose constraints
+        # Since our current data might not support 'required_poses', we assume NO POSES unless specified.
+        # Future: if selected_interaction.get("required_poses"): return MODE_INT_W_POSES
+        
+        # For now, if we have an interaction, we treat it as WITH POSES if the text implies it,
+        # otherwise usually characters do their own thing. 
+        # Actually, let's stick to the plan:
+        # If 'required_poses' is present -> INT_W_POSES
+        # Else -> INT_INT_WO_POSES
+        
+        # [USER REQUEST] Balance Adjustment: Precise Interactions (with required_poses)
+        # should be relatively rare (30% activation). 
+        # Otherwise, fallback to MODE_INT_WO_POSES which allows individual character poses.
+        if selected_interaction.get("required_poses"):
+             if random.random() < 0.3:
+                 return self.MODE_INT_W_POSES, selected_interaction
+             else:
+                 return self.MODE_INT_WO_POSES, selected_interaction
+             
+        return self.MODE_INT_WO_POSES, selected_interaction
 
     def _select_smart_base_prompt(self, base_prompts, char_tags, scene_category):
         """Select a base prompt that matches character tags or scene context.

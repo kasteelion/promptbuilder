@@ -1,7 +1,7 @@
 ### Theo Okonkwo
 **Photo:** theo_okonkwo_photo.png
 
-**Tags:**   black, approachable, chic, creative, cultural, male, playful, rhythmic
+**Tags:**   Black, Approachable, Chic, Creative, Cultural, Male, Playful, Rhythmic
 
 **Summary:** Theo radiates infectious creative energy and cultural confidence. His style blends British streetwear with African textile traditions, creating something entirely his own. He moves with easy rhythm, his warmth and humor making him a natural connector who brings people together effortlessly.
 
@@ -16,7 +16,7 @@
 * **Skin:** Deep rich brown skin with warm undertones and healthy glow.
 
 **Age Presentation:** late 20s presentation; vibrant, culturally engaged, creative.
-**Vibe / Energy:** warm, expressive, creative, culturally connected.
+**Vibe / Energy:** Warm, Expressive, Creative, Culturally Connected.
 **Bearing:** rhythmic movement; open gestures; natural ease.
 
 // Style notes for outfit creation (not included in prompts):

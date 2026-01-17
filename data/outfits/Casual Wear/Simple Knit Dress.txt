@@ -1,0 +1,46 @@
+tags: [casual, feminine, versatile, comfortable, modern]
+
+[F]
+- **Top:** Simple pullover knit dress in {primary_color}.
+  - **Fit:** Relaxed A-line or bodycon.
+  - **Material:** Soft knit jersey.
+  - **Pattern:** Solid or subtle texture.
+  - **Neckline:** Crew or V-neck.
+  - **Sleeve:** Long sleeves or 3/4 sleeves.
+- **Bottom:** Integrated dress.
+  - **Fit:** Flows from waist.
+  - **Material:** Matching knit.
+  - **Waist:** Natural or empire.
+  - **Length:** Knee-length or midi.
+- **Footwear:** Ankle boots or ballet flats.
+- **Accessories:** Belt (optional); simple earrings.
+
+[M]
+- **Top:** Knit polo or henley in {primary_color}.
+  - **Fit:** Regular fit.
+  - **Material:** Cotton knit.
+  - **Pattern:** Solid.
+  - **Neckline:** Polo collar or henley.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Chinos or dark jeans.
+  - **Fit:** Straight leg.
+  - **Material:** Cotton twill or denim.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Loafers or casual boots.
+- **Accessories:** Leather belt.
+
+[H]
+- **Hijab:** Jersey hijab in coordinating color.
+- **Top:** Long-sleeve knit dress with modest length.
+  - **Fit:** Relaxed modest fit.
+  - **Material:** Soft knit.
+  - **Neckline:** High crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Integrated dress over leggings.
+  - **Fit:** Modest length.
+  - **Material:** Matching knit.
+  - **Waist:** Natural.
+  - **Length:** Ankle-length.
+- **Footwear:** Flat ankle boots.
+- **Accessories:** Long pendant necklace.

@@ -1,0 +1,46 @@
+tags: [casual, rugged, comfortable, layered, outdoor]
+
+[F]
+- **Top:** Plaid flannel shirt in {primary_color} (worn open or buttoned).
+  - **Fit:** Relaxed boyfriend fit.
+  - **Material:** Cotton flannel.
+  - **Pattern:** Plaid or check.
+  - **Neckline:** Collar.
+  - **Sleeve:** Long sleeves (can be rolled).
+- **Bottom:** Skinny or straight-leg jeans in dark wash.
+  - **Fit:** Skinny or straight.
+  - **Material:** Denim.
+  - **Waist:** Mid-rise.
+  - **Length:** Full length.
+- **Footwear:** Combat boots or sneakers.
+- **Accessories:** Beanie; crossbody bag.
+
+[M]
+- **Top:** Flannel button-up shirt in {primary_color}.
+  - **Fit:** Regular or relaxed.
+  - **Material:** Cotton flannel.
+  - **Pattern:** Plaid or check.
+  - **Neckline:** Collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Straight or slim jeans.
+  - **Fit:** Straight or slim.
+  - **Material:** Denim.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Work boots or sneakers.
+- **Accessories:** Leather belt; watch.
+
+[H]
+- **Hijab:** Cotton hijab in neutral tone.
+- **Top:** Long flannel tunic over leggings.
+  - **Fit:** Modest tunic length.
+  - **Material:** Cotton flannel.
+  - **Neckline:** High collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Skinny jeans or leggings.
+  - **Fit:** Skinny.
+  - **Material:** Stretch denim or cotton.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** Ankle boots.
+- **Accessories:** Simple earrings.

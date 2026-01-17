@@ -1,7 +1,7 @@
 ### Celine Voss
 **Photo:** celine_voss_photo.png
 **Summary:** Selene’s power lies in stillness. She commands space through restraint, geometry, and deliberate minimalism, projecting authority without excess.
-**Tags:**   female, chic, cold, commanding, controlled, minimalist, severe
+**Tags:**   Female, Chic, Cold, Commanding, Controlled, Minimalist, Severe
 **Gender:** F
 **Signature Color:** #36454F
 
@@ -13,7 +13,7 @@
 * **Skin:** Cool pale skin with porcelain finish.
 
 **Age Presentation:** mid-30s presentation; severe, controlled.
-**Vibe / Energy:** cold, restrained, formidable.
+**Vibe / Energy:** Cold, Restrained, Formidable.
 **Bearing:** stillness; deliberate minimal motion.
 
 // Style notes for outfit creation (not included in prompts):

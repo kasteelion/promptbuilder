@@ -1,0 +1,46 @@
+tags: [Event, Formal]
+
+[F]
+- **Top:** Black academic gown.
+  - **Fit:** Floor-length; Open front.
+  - **Material:** Polyester.
+  - **Pattern:** Solid Black.
+  - **Neckline:** Open.
+  - **Sleeve:** Bell sleeves.
+- **Bottom:** Formal dress or outfit underneath.
+  - **Fit:** Variable Under-layer.
+  - **Material:** Dress fabric.
+  - **Waist:** Natural.
+  - **Length:** Midi-length.
+- **Footwear:** Formal dress shoes or heels.
+- **Accessories:** Mortarboard cap with tassel; diploma holder; honor cords.
+
+[M]
+- **Top:** Black academic gown.
+  - **Fit:** Floor-length; Open front.
+  - **Material:** Polyester.
+  - **Pattern:** Solid.
+  - **Neckline:** Open.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dress pants (underneath).
+  - **Fit:** Tailored.
+  - **Material:** Wool or Poly.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Dress shirt and tie; leather dress shoes.
+- **Accessories:** Mortarboard cap; tassel; diploma.
+
+[H]
+- **Hijab:** Color-coordinated or black (neat wrap).
+- **Top:** Black academic gown.
+  - **Fit:** Floor-length modest.
+  - **Material:** Polyester.
+  - **Neckline:** High-neck modest under-layer.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Visible hem of modest dress or pants.
+  - **Fit:** Relaxed.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Dress shoes.
+- **Accessories:** Mortarboard cap; diploma.

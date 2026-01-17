@@ -2,16 +2,15 @@ import subprocess
 import argparse
 import sys
 import os
+from pathlib import Path
 
 def run_command(command, description):
     print(f"\n[{description}]")
     print(f"> {command}")
     try:
         # Run command from project root
+        project_root = Path(__file__).parent.parent
         # Using sys.executable ensures we use the same python interpreter
-        full_command = f'"{sys.executable}" {command}' if command.startswith("auditing") or command.startswith("automation") else command
-        
-        # Actually, command is "python ...", so replacing "python" with sys.executable is safer
         if command.startswith("python "):
             full_command = f'"{sys.executable}" {command[7:]}'
         else:
@@ -20,7 +19,7 @@ def run_command(command, description):
         result = subprocess.run(
             full_command, 
             shell=True, 
-            cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__))), # Project root
+            cwd=str(project_root),
         )
         if result.returncode != 0:
             print(f"Error running {description}. Exit code: {result.returncode}")
@@ -36,87 +35,61 @@ def main():
     parser.add_argument("--skip-gen", action="store_true", help="Skip prompt generation (analyzes existing files)")
     args = parser.parse_args()
 
-    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    print(f"Starting Full Audit... (Root: {project_root})")
+    project_root = Path(__file__).parent.parent
+    print(f"Starting Consolidated Audit Suite... (Root: {project_root})")
 
-    # 1. Tag Inventory
-    if not run_command(f"python auditing/analysis/tag_inventory.py", "Step 1: Tag Inventory Audit"):
-        return
-
-    # 2. Standards Validation (New Consolidated Steps)
-    print("\n[Step 2] Validating Asset Standards...")
-    
-    if not run_command(f"python auditing/validators/check_character_standards.py", "Step 2.1: Character Standards"):
-        pass # Don't error out entire suite, just report
-        
-    if not run_command(f"python auditing/validators/check_scene_standards.py", "Step 2.2: Scene Standards"):
+    # 1. Static Integrity (Asset Standards & Quality)
+    if not run_command("python auditing/analysis/static_integrity.py", "Step 1: Static Integrity & Standards"):
         pass
 
-    if not run_command(f"python auditing/validators/check_pose_standards.py", "Step 2.3: Pose Standards"):
+    # 2. Hub & Spoke Connectivity
+    if not run_command("python auditing/analysis/hub_analysis.py", "Step 2: Hub & Spoke Connectivity"):
         pass
 
-    if not run_command(f"python auditing/validators/check_interaction_standards.py", "Step 2.4: Interaction Standards"):
-        pass
-
-    # 3. Quality & Integrity Audit (Included Descriptiveness)
-    if not run_command(f"python auditing/analysis/quality_audit.py", "Step 3: Quality & Descriptiveness Audit"):
-        return
-
-    # 3.5 Outfit Precision Audit
-    if not run_command(f"python auditing/analysis/audit_outfit_quality.py", "Step 3.5: Outfit Precision ('Scientific') Audit"):
-        return
-
-    # 4. Prompt Generation (Optional)
+    # 3. Prompt Generation (Optional)
     if not args.skip_gen:
         # Clear old prompts first
-        prompts_dir = os.path.join(project_root, "output", "prompts")
-        if os.path.exists(prompts_dir):
+        prompts_dir = project_root / "output" / "prompts"
+        if prompts_dir.exists():
             print(f"\n[Cleaning Output Directory] {prompts_dir}")
             try:
-                for f in os.listdir(prompts_dir):
-                    if f.endswith(".txt"):
-                        os.remove(os.path.join(prompts_dir, f))
+                for f in prompts_dir.glob("*.txt"):
+                    f.unlink()
             except Exception as e:
                 print(f"Warning: Could not clear some prompt files: {e}")
         
         cmd = f"python automation/automate_generation.py --prompts-only --count {args.count}"
-        if not run_command(cmd, f"Step 4: Generate {args.count} Test Prompts"):
+        if not run_command(cmd, f"Step 3: Generate {args.count} Test Prompts"):
             return
     else:
-        print("\n[Step 4] Skipping Prompt Generation (using existing files)...")
+        print("\n[Step 3] Skipping Prompt Generation (using existing files)...")
 
-    # 5. Sankey Diagram
-    if not run_command(f"python auditing/visualizations/generate_sankey_diagram.py", "Step 5: Generate Distribution Visualization (Sankey)"):
-        return
+    # 4. Analysis & Visualizations
+    if not run_command("python auditing/visualizations/generate_sankey_diagram.py", "Step 4.1: Prompt Distribution (Sankey)"):
+        pass
 
-    # 5.5 Vibe Cohesion Report
-    if not run_command(f"python auditing/analysis/vibe_cohesion_report.py", "Step 5.5: Analyze Vibe Cohesion"):
-        return
+    if not run_command("python auditing/analysis/vibe_cohesion_report.py", "Step 4.2: Vibe Cohesion"):
+        pass
 
-    # 5.6 Tag Distribution Flow
-    if not run_command(f"python auditing/visualizations/generate_tag_sankey.py", "Step 5.6: Generate Tag Distribution Flow"):
-        return
+    if not run_command("python auditing/visualizations/generate_tag_sankey.py", "Step 4.3: Tag Distribution Flow"):
+        pass
     
-    # 6. Best/Worst Analysis
-    if not run_command(f"python auditing/analysis/find_best_worst.py", "Step 6: Analyze Best & Worst Prompts"):
-        return
+    if not run_command("python auditing/analysis/find_best_worst.py", "Step 4.4: Best & Worst Scorers"):
+        pass
 
-    # 7. Consolidate Reports
-    if not run_command(f"python auditing/consolidate_reports.py", "Step 7: Generate Comprehensive Report"):
+    # 5. Master Consolidation
+    if not run_command("python auditing/consolidate_reports.py", "Step 5: Generate System Health Dashboard"):
         return
     
     print("\n" + "="*50)
-    print("AUDIT COMPLETE")
+    print("CONSOLIDATED AUDIT COMPLETE")
     print("="*50)
-    print(f"📄 COMPREHENSIVE REPORT: auditing/reports/comprehensive_audit.md")
+    print(f"📄 MASTER REPORT: auditing/reports/comprehensive_audit.md")
     print("-" * 50)
-    print(f"1. Tag Inventory:       auditing/reports/tag_inventory.md")
-    # print(f"2. Connectivity Report: auditing/reports/connectivity_report.txt")
-    print(f"3. Quality Audit:       auditing/reports/quality_audit.md")
-    print(f"4. Descriptiveness:     auditing/reports/descriptiveness_audit.md")
-    print(f"5. Distribution Flow:   auditing/reports/prompt_distribution_flow.md")
-    print(f"6. Tag Flow:            auditing/reports/tag_distribution_flow.md")
-    print(f"7. Best/Worst Prompts:  auditing/reports/best_worst_prompts.md")
+    print(f"1. Static Integrity:    auditing/reports/static_integrity.md")
+    print(f"2. Hub Connectivity:   auditing/reports/hub_connectivity.md")
+    print(f"3. Scoring Analysis:   auditing/reports/best_worst_prompts.md")
+    print(f"4. Distribution Flow:   auditing/reports/prompt_distribution_flow.md")
     print("="*50)
 
 if __name__ == "__main__":

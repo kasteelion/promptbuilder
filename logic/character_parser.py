@@ -73,9 +73,30 @@ class CharacterParser:
                     )
 
                     items = {}
+                    o_tags = []
                     lines = o_body.splitlines()
                     line_idx = 0
                     item_found = False
+                    
+                    # Look for meta-data line (e.g. **Tags:**)
+                    while line_idx < len(lines):
+                        line = lines[line_idx].strip()
+                        if not line:
+                            line_idx += 1
+                            continue
+                            
+                        # Extract tags if present
+                        tags_m = re.match(r"\*\*Tags:\*\*\s*(.+)", line)
+                        if tags_m:
+                            o_tags = [t.strip() for t in re.split(r",|;", tags_m.group(1)) if t.strip()]
+                            line_idx += 1
+                            continue
+                        
+                        # Once we hit a list item, break to main parser
+                        if re.match(r"^\s*[-*]\s+", line):
+                            break
+                        line_idx += 1
+
                     while line_idx < len(lines):
                         line = lines[line_idx]
                         m_marker = re.match(r"^\s*[-*]\s+(.*)$", line)
@@ -133,6 +154,8 @@ class CharacterParser:
                             line_idx += 1
 
                     if item_found:
+                        # NEW: Inject tags into the outfit dictionary
+                        items["tags"] = o_tags
                         outfits[o_name] = items
                     else:
                         outfits[o_name] = o_body.strip()

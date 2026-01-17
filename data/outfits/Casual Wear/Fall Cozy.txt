@@ -1,0 +1,46 @@
+tags: [casual, fall, cozy, layered, autumn]
+
+[F]
+- **Top:** Chunky knit sweater in {primary_color}.
+  - **Fit:** Oversized cozy.
+  - **Material:** Wool or acrylic blend.
+  - **Pattern:** Cable knit or solid.
+  - **Neckline:** Crew or turtleneck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Skinny jeans or leggings in {secondary_color}.
+  - **Fit:** Skinny or fitted.
+  - **Material:** Denim or stretch cotton.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** Ankle boots or knee-high boots.
+- **Accessories:** Infinity scarf; beanie; tote bag.
+
+[M]
+- **Top:** Crewneck sweater or quarter-zip in {primary_color}.
+  - **Fit:** Regular or slightly oversized.
+  - **Material:** Wool or cotton blend.
+  - **Pattern:** Solid or subtle texture.
+  - **Neckline:** Crew or quarter-zip.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Jeans or corduroy pants.
+  - **Fit:** Straight or slim.
+  - **Material:** Denim or corduroy.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Boots or casual shoes.
+- **Accessories:** Scarf; beanie; messenger bag.
+
+[H]
+- **Hijab:** Warm jersey or wool hijab in fall color.
+- **Top:** Long sweater tunic over pants.
+  - **Fit:** Modest tunic length.
+  - **Material:** Wool or cotton blend.
+  - **Neckline:** High crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Straight pants or jeans.
+  - **Fit:** Straight.
+  - **Material:** Denim or cotton.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** Ankle boots.
+- **Accessories:** Large scarf; tote bag.

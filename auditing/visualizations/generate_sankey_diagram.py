@@ -14,11 +14,13 @@ def parse_prompt_metadata(file_path):
     """Parse metadata from a generated prompt file."""
     metadata = {
         'scene': None,
+        'scene_category': None,
         'base_prompt': None,
         'characters': [],
         'outfits': [],
         'poses': [],
         'interaction': None,
+        'composition_mode': "Unknown",
         'score': 0
     }
     
@@ -34,13 +36,16 @@ def parse_prompt_metadata(file_path):
                 in_metadata = True
                 continue
             
-            if not in_metadata or not line:
-                if in_metadata and not line:
-                    break  # End of metadata section
+            if not in_metadata:
+                continue
+            
+            if not line:
                 continue
             
             if line.startswith("Scene:"):
                 metadata['scene'] = line.split(":", 1)[1].strip()
+            elif line.startswith("Scene_Category:"):
+                metadata['scene_category'] = line.split(":", 1)[1].strip()
             elif line.startswith("Base_Prompt:"):
                 metadata['base_prompt'] = line.split(":", 1)[1].strip()
             elif line.startswith("Character:"):
@@ -55,6 +60,8 @@ def parse_prompt_metadata(file_path):
                 metadata['poses'].append(pose)
             elif line.startswith("Interaction:"):
                 metadata['interaction'] = line.split(":", 1)[1].strip()
+            elif line.startswith("Composition_Mode:"):
+                metadata['composition_mode'] = line.split(":", 1)[1].strip()
             elif line.startswith("Score:"):
                 try:
                     metadata['score'] = int(line.split(":", 1)[1].strip())
@@ -66,8 +73,8 @@ def parse_prompt_metadata(file_path):
     
     return metadata
 
-def create_sankey_diagram(style_to_scene, scene_to_outfit, outfit_to_interaction, output_path):
-    """Create Sankey diagram: Style → Scene → Outfit → Interaction."""
+def create_sankey_diagram(style_to_scene, scene_to_outfit, outfit_to_mode, mode_to_interaction, output_path):
+    """Create Sankey diagram: Style → Scene → Outfit → Mode → Interaction."""
     
     # Build Sankey data
     labels = []
@@ -99,14 +106,22 @@ def create_sankey_diagram(style_to_scene, scene_to_outfit, outfit_to_interaction
         targets.append(target_idx)
         values.append(count)
 
-    # 3. Outfit -> Interaction
-    for (outfit, interaction), count in sorted(outfit_to_interaction.items(), key=lambda x: x[1], reverse=True)[:100]:
+    # 3. Outfit -> Mode
+    for (outfit, mode), count in sorted(outfit_to_mode.items(), key=lambda x: x[1], reverse=True)[:100]:
         source_idx = get_or_create_label(f"Outfit: {outfit}")
+        target_idx = get_or_create_label(f"Mode: {mode}")
+        sources.append(source_idx)
+        targets.append(target_idx)
+        values.append(count)
+
+    # 4. Mode -> Interaction
+    for (mode, interaction), count in sorted(mode_to_interaction.items(), key=lambda x: x[1], reverse=True)[:100]:
+        source_idx = get_or_create_label(f"Mode: {mode}")
         target_idx = get_or_create_label(f"Vibe: {interaction}")
         sources.append(source_idx)
         targets.append(target_idx)
         values.append(count)
-    
+
     # Sort logically for cleaner vertical layout (Dominant flows top)
     # We want "Style" and "Scene: Athletic" to appear high up
     def get_node_color(l):
@@ -116,19 +131,22 @@ def create_sankey_diagram(style_to_scene, scene_to_outfit, outfit_to_interaction
         if "scene:" in l_lower: return COLOR_PURPLE
         if "vibe:" in l_lower: return COLOR_PINK
         if "outfit:" in l_lower: return COLOR_BLUE
+        if "mode:" in l_lower: return "#FFD700" # Gold
         return "#CCCCCC"
 
     # Assign X-coordinates to force layer separation
-    # Layer 1 (Styles): x=0.0, Layer 2 (Scenes): x=0.33, Layer 3 (Outfits): x=0.66, Layer 4 (Interactions): x=1.0
+    # Layer 1 (Styles): x=0.0, Layer 2 (Scenes): x=0.25, Layer 3 (Outfits): x=0.5, Layer 4 (Modes): x=0.75, Layer 5 (Interactions): x=1.0
     node_x = []
     node_y = []
     for label in labels:
         if label.startswith("Style:"):
             node_x.append(0.0)
         elif label.startswith("Scene:"):
-            node_x.append(0.33)
+            node_x.append(0.25)
         elif label.startswith("Outfit:"):
-            node_x.append(0.66)
+            node_x.append(0.5)
+        elif label.startswith("Mode:"):
+            node_x.append(0.75)
         elif label.startswith("Vibe:"):
             node_x.append(1.0)
         else:
@@ -175,8 +193,8 @@ def create_sankey_diagram(style_to_scene, scene_to_outfit, outfit_to_interaction
     fig.write_html(html_path)
     print(f"🌐 Interactive HTML saved to: {html_path}")
 
-def create_mermaid_diagram(style_to_scene, scene_to_outfit, outfit_to_interaction, output_path):
-    """Generate Mermaid diagram: Style → Scene → Outfit → Interaction."""
+def create_mermaid_diagram(style_to_scene, scene_to_outfit, outfit_to_mode, mode_to_interaction, output_path):
+    """Generate Mermaid diagram: Style → Scene → Outfit → Mode → Interaction."""
     
     import json
     with open(output_path, 'w', encoding='utf-8', newline='\n') as f:
@@ -197,9 +215,13 @@ def create_mermaid_diagram(style_to_scene, scene_to_outfit, outfit_to_interactio
         for (scene, outfit), count in sorted(scene_to_outfit.items(), key=lambda x: x[1], reverse=True)[:100]:
             f.write(f"{clean_label('2. ' + scene)},{clean_label('3. ' + outfit)},{count}\n")
 
-        # 3. Outfit -> Interaction (add layer prefixes)
-        for (outfit, interaction), count in sorted(outfit_to_interaction.items(), key=lambda x: x[1], reverse=True)[:100]:
-            f.write(f"{clean_label('3. ' + outfit)},{clean_label('4. ' + interaction)},{count}\n")
+        # 3. Outfit -> Mode (New)
+        for (outfit, mode), count in sorted(outfit_to_mode.items(), key=lambda x: x[1], reverse=True)[:100]:
+            f.write(f"{clean_label('3. ' + outfit)},{clean_label('4. ' + mode)},{count}\n")
+
+        # 4. Mode -> Interaction (add layer prefixes)
+        for (mode, interaction), count in sorted(mode_to_interaction.items(), key=lambda x: x[1], reverse=True)[:100]:
+            f.write(f"{clean_label('4. ' + mode)},{clean_label('5. ' + interaction)},{count}\n")
             
         f.write("```\n")
         
@@ -286,20 +308,25 @@ if __name__ == "__main__":
             if any(kw in n for kw in keywords): return cat
         return f"{default} ({layer_suffix})" if layer_suffix else default
 
-    # Data structures for aggregated flow: Style -> Scene -> Outfit -> Interaction
+def generate_visualizations(prompts_dir, output_dir):
+    """Main function to generate all visualizations."""
+    
     style_to_scene_cat = defaultdict(int)
     scene_cat_to_outfit = defaultdict(int)
-    outfit_to_interaction = defaultdict(int)
+    outfit_to_mode = defaultdict(int)
+    mode_to_interaction = defaultdict(int)
     style_frequency = defaultdict(int)
     
-    # Parse data
+    files = [f for f in os.listdir(prompts_dir) if f.endswith(".txt")]
+    print(f"Analyzing {len(files)} prompt files...")
+    
     file_count = 0
-    for filename in os.listdir(directory):
+    for filename in files:
         if not filename.endswith('.txt'):
             continue
         
         file_count += 1
-        file_path = os.path.join(directory, filename)
+        file_path = os.path.join(prompts_dir, filename)
         metadata = parse_prompt_metadata(file_path)
         
         if metadata['scene'] and metadata['base_prompt']:
@@ -308,78 +335,70 @@ if __name__ == "__main__":
             style = raw_style.replace("  ", " / ").strip()
             
             scene = metadata['scene']
-            scene_cat = get_category(scene, SCENE_CATEGORIES, "Other", "Scene")
+            if metadata.get('scene_category'):
+                 scene_cat = metadata['scene_category']
+                 scene_cat = f"{scene_cat} (Scene)" if "Scene" not in scene_cat else scene_cat
+            else:
+                 scene_cat = get_category(scene, SCENE_CATEGORIES, "Other", "Scene")
             
             # Count for census
             style_frequency[style] += 1
             
-            interaction = metadata['interaction'] or "None"
-            interaction_vibe = get_category(interaction, INTERACTION_CATEGORIES, "Other", "Interaction")
+            # --- Aggregating Outfits Logic (New for Mode Flow) ---
+            # To avoid exploding the graph, we categorize outfits broadly for the flow.
+            # We take the most common outfit category in the prompt or "Mixed".
+            outfit_cats_in_prompt = []
+            for outfit in metadata['outfits']:
+                cat = get_category(outfit, OUTFIT_CATEGORIES, "Other", "Outfit")
+                outfit_cats_in_prompt.append(cat)
+            
+            if not outfit_cats_in_prompt:
+                primary_outfit_cat = "None (Outfit)"
+            elif len(set(outfit_cats_in_prompt)) == 1:
+                primary_outfit_cat = outfit_cats_in_prompt[0]
+            else:
+                primary_outfit_cat = "Mixed/Group (Outfit)"
+
+            
+            # Interaction
+            interaction = metadata['interaction']
+            mode = metadata['composition_mode']
+            
+            # Fallback for Mode if missing (Audit old files)
+            if not mode or mode == "Unknown":
+                num_chars = len(metadata['characters'])
+                if num_chars == 1: mode = "SOLO"
+                elif not interaction or interaction == "None": mode = "GROUP_NO_INT"
+                else: mode = "INT_WO_POSES"
+
+            # Interaction Vibe
+            if not interaction or interaction == "None":
+                 interaction_vibe = "None (Missing)"
+            else:
+                 interaction_vibe = get_category(interaction, INTERACTION_CATEGORIES, "Other", "Interaction")
             
             # 1. Style -> Scene Category
             style_to_scene_cat[(style, scene_cat)] += 1
             
-            for i, char_name in enumerate(metadata['characters']):
-                if i < len(metadata['outfits']):
-                    outfit = metadata['outfits'][i]
-                    outfit_cat = get_category(outfit, OUTFIT_CATEGORIES, "Other", "Outfit")
-                    
-                    if outfit and outfit != "None":
-                         # 2. Scene Category -> Outfit Category
-                         scene_cat_to_outfit[(scene_cat, outfit_cat)] += 1
-                         
-                         # 3. Outfit Category -> Interaction Vibe
-                         # Outfit is SOURCE (no suffix), Interaction is TARGET
-                         outfit_to_interaction[(outfit_cat, interaction_vibe)] += 1
+            # 2. Scene Category -> Primary Outfit Category
+            scene_cat_to_outfit[(scene_cat, primary_outfit_cat)] += 1
+            
+            # 3. Outfit -> Mode
+            outfit_to_mode[(primary_outfit_cat, mode)] += 1
+            
+            # 4. Mode -> Interaction
+            mode_to_interaction[(mode, interaction_vibe)] += 1
 
     print(f"Processed {file_count} prompt files.")
     
-    # DEBUG: Print all unique nodes to identify circular references
-    all_sources = set()
-    all_targets = set()
-    
-    for (src, dst), count in style_to_scene_cat.items():
-        all_sources.add(src)
-        all_targets.add(dst)
-    
-    for (src, dst), count in scene_cat_to_outfit.items():
-        all_sources.add(src)
-        all_targets.add(dst)
-        
-    for (src, dst), count in outfit_to_interaction.items():
-        all_sources.add(src)
-        all_targets.add(dst)
-    
-    print("\n=== DEBUG: Sankey Node Analysis ===")
-    print(f"Total unique source nodes: {len(all_sources)}")
-    print(f"Total unique target nodes: {len(all_targets)}")
-    
-    # Find nodes that appear as both source AND target (potential circular refs)
-    both = all_sources.intersection(all_targets)
-    print(f"\nNodes appearing as BOTH source and target ({len(both)}):")
-    for node in sorted(both):
-        print(f"  - {node}")
-    
-    # Check for exact duplicates
-    print("\n=== Checking for duplicate node names ===")
-    all_nodes = list(all_sources.union(all_targets))
-    duplicates = [node for node in set(all_nodes) if all_nodes.count(node) > 1]
-    if duplicates:
-        print(f"WARNING: Found {len(duplicates)} duplicate nodes!")
-        for dup in duplicates:
-            print(f"  - {dup}")
-    else:
-        print("✓ No duplicate node names found")
-    
-    print("=" * 50 + "\n")
-
-    # No longer tracking outfit->character flow, removed this section
-
     # Generate Image/HTML
-    create_sankey_diagram(style_to_scene_cat, scene_cat_to_outfit, outfit_to_interaction, output_image)
+    sankey_path = os.path.join(output_dir, "prompt_distribution_flow.html")
+    create_sankey_diagram(style_to_scene_cat, scene_cat_to_outfit, outfit_to_mode, mode_to_interaction, sankey_path)
     
     # Generate Mermaid
-    create_mermaid_diagram(style_to_scene_cat, scene_cat_to_outfit, outfit_to_interaction, output_mermaid)
+    mermaid_path = os.path.join(output_dir, "prompt_distribution_flow.md")
+    create_mermaid_diagram(style_to_scene_cat, scene_cat_to_outfit, outfit_to_mode, mode_to_interaction, mermaid_path)
 
     # Generate Census
-    create_style_census(style_frequency, output_census)
+    census_path = os.path.join(output_dir, "style_census.md")
+    create_style_census(style_frequency, census_path)

@@ -1,0 +1,46 @@
+tags: [professional, office, polished, feminine, business]
+
+[F]
+- **Top:** Silk blouse or shell top in {primary_color}.
+  - **Fit:** Fitted or slightly relaxed.
+  - **Material:** Silk, satin, or fine knit.
+  - **Pattern:** Solid.
+  - **Neckline:** Bow neck or V-neck.
+  - **Sleeve:** Long or 3/4 sleeves.
+- **Bottom:** Pencil skirt or tailored pants in {secondary_color}.
+  - **Fit:** Fitted pencil or straight pants.
+  - **Material:** Wool blend or ponte.
+  - **Waist:** High-rise.
+  - **Length:** Knee-length or full length.
+- **Footwear:** Classic pumps or heeled ankle boots.
+- **Accessories:** Pearl earrings; structured handbag.
+
+[M]
+- **Top:** Dress shirt with tie or polo in {primary_color}.
+  - **Fit:** Fitted.
+  - **Material:** Cotton or linen blend.
+  - **Pattern:** Solid or subtle stripe.
+  - **Neckline:** Collar with tie.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dress pants.
+  - **Fit:** Straight or slim.
+  - **Material:** Wool blend.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Oxford shoes or dress loafers.
+- **Accessories:** Leather belt; tie; watch.
+
+[H]
+- **Hijab:** Professional silk hijab in coordinating color.
+- **Top:** Modest blouse or tunic in {primary_color}.
+  - **Fit:** Modest professional fit.
+  - **Material:** Silk or fine knit.
+  - **Neckline:** High crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored pencil skirt or wide-leg pants.
+  - **Fit:** Fitted skirt or wide-leg pants.
+  - **Material:** Wool blend or ponte.
+  - **Waist:** High-rise.
+  - **Length:** Ankle-length.
+- **Footwear:** Closed-toe heeled flats.
+- **Accessories:** Professional jewelry; structured bag.

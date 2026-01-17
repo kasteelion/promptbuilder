@@ -105,8 +105,12 @@ class ScrollableCanvas(ttk.Frame):
 
     def apply_theme(self, theme):
         """Update canvas background with theme colors. (Refactor 3)"""
-        bg = theme.get("bg", "#121212")
+        # User requested "flat look", so canvas background should match panel_bg 
+        # to blend with the cards (no gaps visible).
+        bg = theme.get("panel_bg", theme.get("bg", "#121212"))
         self.canvas.config(bg=bg)
+        self.configure(style="Panel.TFrame") # Ensure the frame itself is themed
+        self.container.config(style="Panel.TFrame") # Ensure container uses panel bg explicit style
 
     def _on_mousewheel(self, event):
         """Handle mousewheel scrolling with smooth pixel-based movement."""

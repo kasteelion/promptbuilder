@@ -1,4 +1,4 @@
-tags: [Casual, Country, soft]
+tags: [Casual, Country, Soft]
 modifiers:
   Milkmaid: featuring a **square neckline** and puffed sleeves
   Classic: with a **peter pan collar** and button front

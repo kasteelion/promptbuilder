@@ -1,7 +1,7 @@
 ### Samira Mansour
 **Photo:** samira_mansour_photo.png
 
-**Tags:**   north-african, approachable, chic, cultural, female, hijabi
+**Tags:**   North-African, Approachable, Chic, Cultural, Female, Hijabi
 
 **Summary:** Samira radiates a polished, sophisticated warmth that reflects her Moroccan heritage and modern creative life. She moves with a gentle poise, blending traditional values with a high-fashion sensibility. Her presence is inviting and culturally rooted, defined by a sharp intellect and a penchant for intricate, colorful textiles.
 
@@ -15,7 +15,7 @@
 * **Skin:** Rich golden-olive depth (North African coloring); smooth luminous finish; natural healthy glow enhanced by traditional skincare oils.
 
 **Age Presentation:** late 20s; mature, self-possessed, and sophisticated.
-**Vibe / Energy:** approachable, Chic, cultural, warm, intelligent.
+**Vibe / Energy:** Approachable, Chic, Cultural, Warm, Intelligent.
 **Bearing:** graceful and deliberate movement; excellent upright posture; expressive hand gestures often highlighting traditional jewelry.
 
 // Style Notes:

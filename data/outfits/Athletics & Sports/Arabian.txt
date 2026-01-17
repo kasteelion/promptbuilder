@@ -1,0 +1,47 @@
+tags: [Cultural, Formal, Traditional]
+
+[F]
+- **Top:** Ornate beaded fitted vest over sheer blouse.
+  - **Fit:** Fitted structured vest.
+  - **Material:** Beaded Silk/Chiffon.
+  - **Pattern:** Intricate embroidery.
+  - **Neckline:** High-neck or Jewel.
+  - **Sleeve:** Long sheer sleeves.
+- **Bottom:** Flowing harem pants.
+  - **Fit:** Harem loose.
+  - **Material:** Silk or Chiffon.
+  - **Pattern:** Solid Jewel Tones.
+  - **Waist:** High-waisted.
+  - **Length:** Ankle-length gather.
+- **Footwear:** Pointed slippers.
+- **Accessories:** Jeweled headpiece, gold bangles, arm cuffs, veil.
+
+[M]
+- **Top:** Flowing thobe or robe.
+  - **Fit:** Loose ceremonial.
+  - **Material:** Silk or Cotton.
+  - **Pattern:** Gold embroidery.
+  - **Neckline:** Collarless.
+  - **Sleeve:** Wide long sleeves.
+- **Bottom:** Sirwal pants.
+  - **Fit:** Loose.
+  - **Material:** Cotton.
+  - **Waist:** Drawstring.
+  - **Length:** Ankle-length.
+- **Footwear:** Pointed slippers.
+- **Accessories:** Keffiyeh or turban, ceremonial dagger.
+
+[H]
+- **Hijab:** Luxurious silk hijab in jewel tone with ornate draping.
+- **Top:** Long-sleeve ornate beaded tunic.
+  - **Fit:** Fitted modest tunic.
+  - **Material:** Beaded silk/chiffon.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Flowing harem pants.
+  - **Fit:** Loose Harem.
+  - **Material:** Silk.
+  - **Waist:** Elasticated.
+  - **Length:** Ankle-length.
+- **Footwear:** Pointed ornate slippers.
+- **Accessories:** Gold bangles, arm cuffs, veil.

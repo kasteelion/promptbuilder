@@ -1,7 +1,7 @@
 ### Rafael Costa
 **Photo:** rafael_costa_photo.png
 
-**Tags:**   latina, approachable, creative, male, playful
+**Tags:**   Latina, Approachable, Creative, Male, Playful
 
 **Summary:** Rafael carries creative energy that feels both grounded and effervescent. His presence blends artistic sensitivity with warm approachability, moving through space with the easy confidence of someone comfortable in their own skin. There's a theatrical quality to his gestures that never feels performative—just naturally expressive.
 
@@ -16,7 +16,7 @@
 * **Skin:** Warm tan skin with golden undertones and healthy glow.
 
 **Age Presentation:** late 20s presentation; confident, spirited, creatively engaged.
-**Vibe / Energy:** warm, expressive, creatively charged, welcoming.
+**Vibe / Energy:** Warm, Expressive, Creatively Charged, Welcoming.
 **Bearing:** fluid movement; open gestures; natural theatrical quality.
 
 // Style notes for outfit creation (not included in prompts):

@@ -1,0 +1,45 @@
+tags: [Sport, Fitness]
+
+[F]
+- **Top:** Fitted athletic top.
+  - **Fit:** Tight compression.
+  - **Material:** Technical knit/Spandex.
+  - **Pattern:** Solid ((default:athletic top) or (signature)).
+  - **Neckline:** Crossover or Scoop.
+  - **Sleeve:** Sleeveless or Cap.
+- **Bottom:** High-waist athletic shorts or leggings.
+  - **Fit:** Compression.
+  - **Material:** Technical fabric.
+  - **Waist:** High-waist.
+  - **Length:** Short or Full.
+- **Footwear:** Sneakers.
+- **Accessories:** Fitness watch.
+
+[M]
+- **Top:** Fitted athletic tank or t-shirt.
+  - **Fit:** Athletic fit.
+  - **Material:** Technical moisture-wicking.
+  - **Neckline:** Crew.
+  - **Sleeve:** Short or Sleeveless.
+- **Bottom:** Athletic shorts or joggers.
+  - **Fit:** Relaxed.
+  - **Material:** Mesh or Sweatshirt fleece.
+  - **Waist:** Drawstring.
+  - **Length:** Knee or Ankle.
+- **Footwear:** Sneakers.
+- **Accessories:** Fitness watch.
+
+[H]
+- **Hijab:** Sports hijab in charcoal gray.
+- **Top:** Long-sleeve fitted athletic top.
+  - **Fit:** Fitted modest.
+  - **Material:** Technical knit.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist athletic leggings.
+  - **Fit:** Compression.
+  - **Material:** Technical fabric.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Athletic sneakers.
+- **Accessories:** Fitness watch.

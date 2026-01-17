@@ -16,7 +16,6 @@ To ensure consistent, high-fidelity character generation, all character files mu
 - **Signature Color:** Hex code (e.g., `#FF4500`).
 
 ### 2. Appearance Section (The "Physical Truth")
-
 This section MUST be broken down into four distinct bullet points:
 
 - **Body:** Kibbe body type, flesh quality, vertical line, and specific build details (muscle definition, proportions).
@@ -31,7 +30,6 @@ This section MUST be broken down into four distinct bullet points:
 - **Bearing:** How they move or stand (posture, gait).
 
 ### 4. Style Notes (Comment Block)
-
 Use `//` comments to define style rules that guide outfit selection but aren't prompt text.
 
 - Makeup preferences.
@@ -49,7 +47,7 @@ Must include at least one **#### Base** outfit following the `OUTFIT_STANDARDS.m
 
 **Photo:** name.png
 **Summary:** A sharp, agile warrior-scholar.
-**Tags:** female, athletic, intellectual
+**Tags:** Female, Athletic, Intellectual
 **Gender:** F
 **Signature Color:** #006400
 
@@ -61,7 +59,7 @@ Must include at least one **#### Base** outfit following the `OUTFIT_STANDARDS.m
 - **Skin:** Fair neutral; weathered undertone.
 
 **Age Presentation:** 20s.
-**Vibe / Energy:** Vigilant, precise.
+**Vibe / Energy:** Vigilant, Precise.
 **Bearing:** Poised, economical movement.
 
 // Style Notes

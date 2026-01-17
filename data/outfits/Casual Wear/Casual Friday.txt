@@ -1,0 +1,46 @@
+tags: [professional, casual, friday, relaxed, office]
+
+[F]
+- **Top:** Nice knit top or casual blouse in {primary_color}.
+  - **Fit:** Relaxed.
+  - **Material:** Soft knit or cotton.
+  - **Pattern:** Solid or subtle texture.
+  - **Neckline:** Crew or V-neck.
+  - **Sleeve:** Long or 3/4 sleeves.
+- **Bottom:** Dark jeans or casual pants in {secondary_color}.
+  - **Fit:** Straight or skinny.
+  - **Material:** Premium denim or cotton blend.
+  - **Waist:** Mid to high-rise.
+  - **Length:** Full length.
+- **Footwear:** Ankle boots or loafers.
+- **Accessories:** Simple jewelry; tote bag.
+
+[M]
+- **Top:** Casual button-up or polo in {primary_color}.
+  - **Fit:** Regular fit.
+  - **Material:** Cotton or linen blend.
+  - **Pattern:** Solid or subtle pattern.
+  - **Neckline:** Collar.
+  - **Sleeve:** Long sleeves (can be rolled).
+- **Bottom:** Dark jeans or chinos.
+  - **Fit:** Straight or slim.
+  - **Material:** Premium denim or cotton twill.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Casual dress shoes or clean sneakers.
+- **Accessories:** Leather belt; watch.
+
+[H]
+- **Hijab:** Cotton or jersey hijab in professional color.
+- **Top:** Modest casual tunic or blouse.
+  - **Fit:** Modest relaxed fit.
+  - **Material:** Cotton or soft knit.
+  - **Neckline:** High crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dark jeans or casual pants.
+  - **Fit:** Straight or relaxed.
+  - **Material:** Premium denim or cotton.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** Comfortable flats or ankle boots.
+- **Accessories:** Simple jewelry; tote bag.

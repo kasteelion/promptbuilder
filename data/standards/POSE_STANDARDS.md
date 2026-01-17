@@ -49,7 +49,6 @@ To maintain a searchable and clean database, use these standardized tags:
 | **Mood**     | `Confident`, `Shy`, `Intense`, `Playful`, `Moody`, `Professional`  |
 
 ## Example (Good vs Bad)
-
 **BAD:**
 ` - **Sitting** (Basic, Sitting): Sitting down using a chair.`
 _(Too vague, redundant tags, no weight distribution)._

@@ -1,0 +1,45 @@
+tags: [Dinner, Elegant, Formal, Luxury]
+
+[F]
+- **Top:** Fitted evening gown bodice.
+  - **Fit:** Fitted; Structured.
+  - **Material:** Velvet; Silk chiffon; Satin.
+  - **Pattern:** Solid ((deep jewel tone - emerald, sapphire)).
+  - **Neckline:** Elegant boat neck or off-shoulder.
+  - **Sleeve:** Cap sleeves or strapless.
+- **Bottom:** Full ballgown or column skirt.
+  - **Fit:** Full or Slim column.
+  - **Material:** matching fabric.
+  - **Waist:** High natural waist.
+  - **Length:** Floor-length.
+- **Footwear:** High heels.
+- **Accessories:** Fine diamond or pearl jewelry; evening clutch.
+
+[M]
+- **Top:** Classic black tuxedo jacket with satin lapels.
+  - **Fit:** Tailored.
+  - **Material:** Wool barathea; Satin lapels.
+  - **Neckline:** Wing collar dress shirt.
+  - **Sleeve:** Long sleeves (French cuff).
+- **Bottom:** Tailored tuxedo trousers.
+  - **Fit:** Slim or Classic fit.
+  - **Material:** matching wool.
+  - **Waist:** High-waisted with cummerbund.
+  - **Length:** Full length with break.
+- **Footwear:** Black patent leather shoes.
+- **Accessories:** Black bow tie; cufflinks; studs.
+
+[H]
+- **Hijab:** Satin hijab in matching tone with elegant drape.
+- **Top:** Long-sleeve evening gown with high neck.
+  - **Fit:** Tailored modest.
+  - **Material:** Satin; Silk.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching floor-length skirt.
+  - **Fit:** A-line or Straight.
+  - **Material:** matching fabric.
+  - **Waist:** Natural waist.
+  - **Length:** Floor-length.
+- **Footwear:** Elegant heels.
+- **Accessories:** Embellished clutch; fine jewelry.

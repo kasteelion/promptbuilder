@@ -1,7 +1,7 @@
 ### Kendra Mitchell
 **Photo:** kendra_mitchell_photo.png
 
-**Tags:** female, adventurous, Athletic, commanding, minimalist, outdoorsy, tall
+**Tags:** Female, Adventurous, Athletic, Commanding, Minimalist, Outdoorsy, Tall
 **Summary:** Kendra commands attention effortlessly—her tall, athletic frame and bold energy fill any room she enters. She moves with the confident swagger of someone who's always been comfortable taking up space, blending natural strength with magnetic charisma. Her presence is both grounding and electrifying, like a force of nature that refuses to be ignored.
 
 **Gender:** F
@@ -15,7 +15,7 @@
 * **Skin:** Medium tan with warm golden undertones and healthy athletic glow; faint freckles across nose and shoulders.
 
 **Age Presentation:** early 30s presentation; confident, physically powerful, self-assured.
-**Vibe / Energy:** bold, magnetic, grounded, commanding.
+**Vibe / Energy:** Bold, Magnetic, Grounded, Commanding.
 **Bearing:** long confident strides; open expansive gestures; grounded athletic stance; natural swagger.
 
 ---

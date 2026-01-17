@@ -1,0 +1,46 @@
+tags: [Costume, Magic, Performance]
+
+[F]
+- **Top:** Tailored tuxedo jacket and dress shirt.
+  - **Fit:** Sharply fitted with hidden pockets.
+  - **Material:** Wool with satin lapels.
+  - **Pattern:** Solid Black.
+  - **Neckline:** Wing collar with bow tie.
+  - **Sleeve:** Long sleeves with cufflinks.
+- **Bottom:** Tailored tuxedo trousers.
+  - **Fit:** Slim-straight.
+  - **Material:** matching wool.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Polished black oxford shoes.
+- **Accessories:** Collapsible top hat; white gloves; wand; cards; black cape.
+
+[M]
+- **Top:** Tailored tuxedo tails coat.
+  - **Fit:** Classic tails fit.
+  - **Material:** Wool.
+  - **Pattern:** Solid.
+  - **Neckline:** White bow tie and wing collar.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted black trousers.
+  - **Fit:** Straight tailored.
+  - **Material:** matching.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Patent leather shoes.
+- **Accessories:** Top hat; gloves; wand; velvet cape.
+
+[H]
+- **Hijab:** Black satin hijab under top hat.
+- **Top:** Tuxedo jacket with long tails over high-neck shirt.
+  - **Fit:** Sharply tailored modest.
+  - **Material:** Satin/Wool.
+  - **Neckline:** High neck with bow tie.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Black trousers or full skirt.
+  - **Fit:** Relaxed.
+  - **Material:** matching.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Oxford shoes.
+- **Accessories:** Top hat; white gloves; wand.

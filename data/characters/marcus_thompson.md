@@ -4,7 +4,7 @@
 **Gender:** M
 **Signature Color:** #000080
 
-**Tags:** black, approachable, Athletic, chic, commanding, male, minimalist
+**Tags:** Black, Approachable, Athletic, Chic, Commanding, Male, Minimalist
 **Summary:** Marcus balances strength with approachability, projecting calm confidence and grounded masculinity. His presence feels steady and reliable, marked by authenticity and emotional openness.
 
 **Appearance:**
@@ -14,7 +14,7 @@
 * **Skin:** Deep brown skin with neutral undertones.
 
 **Age Presentation:** early 30s presentation; steady, reliable.
-**Vibe / Energy:** calm strength, grounded.
+**Vibe / Energy:** Calm Strength, Grounded.
 **Bearing:** stable posture; economical movement.
 
 // Style notes for outfit creation (not included in prompts):

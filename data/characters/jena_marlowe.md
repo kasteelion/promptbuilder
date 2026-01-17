@@ -2,7 +2,7 @@
 **Photo:** jena_marlowe_photo.png
 **Summary:** Jena embodies effortless Instagram-ready femininity—the girl whose "just rolled out of bed" look took thirty minutes and appears in everyone's explore page. She radiates soft, approachable beauty with that particular influencer polish: always camera-ready, never trying too hard, perpetually bathed in golden hour light. Think iced matcha lattes, cloud-soft sweaters, and the kind of pretty that feels aspirational but achievable.
 
-**Tags:**   female, approachable, chic, minimalist, soft
+**Tags:**   Female, Approachable, Chic, Minimalist, Soft
 **Gender:** F
 **Signature Color:** #D8BFD8
 
@@ -13,7 +13,7 @@
 * **Skin:** Fair to light neutral-warm tone with a natural satin glow; fresh and luminous in daylight.
 
 **Age Presentation:** mid-to-late 20s presentation; youthful, polished, and open.
-**Vibe / Energy:** warm, romantic, quietly confident; inviting rather than dramatic.
+**Vibe / Energy:** Warm, Romantic, Quietly confident; Inviting Rather Than Dramatic.
 **Bearing:** relaxed, graceful posture; light, fluid movement with a soft feminine presence.
 
 // Style notes for outfit creation (not included in prompts):

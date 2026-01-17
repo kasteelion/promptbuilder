@@ -155,10 +155,21 @@ class PresetParser:
                         max_placeholder = max(int(p) for p in placeholders)
                         min_chars = max(min_chars, max_placeholder)
                     
+                    # Extract required poses from tags if present (poses:Pose1;Pose2)
+                    required_poses = []
+                    new_tags = []
+                    for t in tags:
+                        if t.lower().startswith("poses:"):
+                             pose_list = t[6:].split(";")
+                             required_poses = [p.strip() for p in pose_list if p.strip()]
+                        else:
+                             new_tags.append(t)
+                    
                     interactions[current][name] = {
                         "description": re.sub(r"^\([^)]+\)\s*", "", desc),
                         "min_chars": min_chars,
-                        "tags": tags
+                        "tags": new_tags,
+                        "required_poses": required_poses
                     }
 
         interactions = {k: v for k, v in interactions.items() if v}

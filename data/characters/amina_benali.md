@@ -2,7 +2,7 @@
 
 **Photo:** amina_benali_photo.png
 
-**Tags:** female, approachable, chic, commanding, content-creator, north-african
+**Tags:** Female, Approachable, Chic, Commanding, Content-Creator, North-African
 
 **Summary:** Amina commands her streaming space with the perfect balance of girl-next-door accessibility and polished content creator aesthetic. Her Moroccan-Canadian background shows in warm hospitality mixed with tech-savvy professionalism. She's built an empire on being relatable yet aspirational—the gaming girlfriend energy that translates to millions of followers. Behind the camera-ready smile lies sharp business instincts and competitive FPS skills that earn respect in male-dominated lobbies.
 
@@ -21,7 +21,7 @@
 - **Skin:** Medium-tan with warm golden-olive undertones (North African coloring); smooth luminous finish; flawless complexion maintained for camera work; natural healthy glow enhanced by ring lights and skincare routine.
 
 **Age Presentation:** mid-20s presentation; professionally youthful, camera-ready, strategically relatable.
-**Vibe / Energy:** engaging, strategic, warm-professional, camera-aware confidence, girl-next-door meets successful entrepreneur.
+**Vibe / Energy:** Engaging, Strategic, Warm-Professional, Camera-Aware Confidence, Girl-Next-Door Meets Successful Entrepreneur.
 **Bearing:** excellent upright posture (camera-trained); animated hand gestures during explanation; frequent eye contact with camera creating parasocial intimacy; switches between high-energy enthusiasm and focused competitive calm; ergonomic awareness from gaming setup.
 
 // Style Notes:

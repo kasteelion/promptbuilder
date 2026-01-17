@@ -1,0 +1,46 @@
+tags: [combat_tactical, action, Edgy, Outdoor]
+
+[F]
+- **Top:** Ribbed moisture-wicking henley.
+  - **Fit:** Tightly fitted.
+  - **Material:** Tech-ribbed fabric.
+  - **Pattern:** Solid (Olive Green).
+  - **Neckline:** Henley (3-button).
+  - **Sleeve:** Long sleeves with patches.
+- **Bottom:** High-waist tactical leggings.
+  - **Fit:** Compression leggings.
+  - **Material:** Technical compression fabric.
+  - **Waist:** High-waisted.
+  - **Length:** Ankle-length.
+- **Footwear:** Rugged mid-calf leather boots.
+- **Accessories:** Utility belt, digital fitness watch.
+
+[M]
+- **Top:** Ribbed moisture-wicking henley.
+  - **Fit:** Tightly fitted muscle fit.
+  - **Material:** Tech-ribbed fabric.
+  - **Pattern:** Solid (Olive Green).
+  - **Neckline:** Henley.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tactical compression pants.
+  - **Fit:** Compression.
+  - **Material:** Technical fabric.
+  - **Waist:** Elasticated/Belted.
+  - **Length:** Full length.
+- **Footwear:** Rugged combat boots.
+- **Accessories:** Utility belt, digital fitness watch.
+
+[H]
+- **Hijab:** Practical tactical hijab in **((default:olive green) or (signature))**.
+- **Top:** Ribbed moisture-wicking tunic (modest fit).
+  - **Fit:** Modest fitted.
+  - **Material:** Tech-ribbed fabric.
+  - **Neckline:** High neck/Henley.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tactical leggings.
+  - **Fit:** Compression.
+  - **Material:** Technical fabric.
+  - **Waist:** High-waisted.
+  - **Length:** Full length.
+- **Footwear:** Rugged mid-calf leather boots.
+- **Accessories:** Utility belt, digital fitness watch.

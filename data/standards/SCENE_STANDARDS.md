@@ -7,8 +7,7 @@ To ensure immersive and consistent environments, all Scene files (e.g., within `
 Every scene entry must follow this structure:
 
 ```markdown
-## Scene Name (Tag1, Tag2, Mood:MoodName, Block:BlockName)
-
+## Scene Name (Tag1, Tag2, mood:Moodname, block:Blockname)
 **Visual Description:**
 [Deep visual description focusing on lighting, architecture, materials, and atmosphere. ~2-3 sentences.]
 
@@ -28,8 +27,7 @@ Every scene entry must follow this structure:
 ## Example Entry
 
 ```markdown
-## Cyberpunk Alley (Urban, Outdoor, Mood:Gritty, Mood:Dark, Block:Historical)
-
+## Cyberpunk Alley (Urban, Outdoor, mood:Gritty, mood:Dark, block:Historical)
 **Visual Description:**
 A narrow, rain-slicked alleyway wedged between towering megastructures. Holographic ads flicker senselessly in puddles, reflecting neon pink and electric blue light off wet pavement and steam pipes.
 

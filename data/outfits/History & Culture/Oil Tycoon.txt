@@ -1,0 +1,46 @@
+tags: [Formal, Rich, Western]
+
+[F]
+- **Top:** Tailored western blazer over silk western shirt.
+  - **Fit:** Tailored with western yoke.
+  - **Material:** Wool; Silk; Leather trim.
+  - **Pattern:** Subtle sheen.
+  - **Neckline:** Collared with bolo tie.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored trousers with pressed crease.
+  - **Fit:** Straight leg; High-waist.
+  - **Material:** Luxury wool.
+  - **Pattern:** Solid ((default:cream or tan)).
+  - **Waist:** High-waisted.
+  - **Length:** Full length.
+- **Footwear:** Luxury exotic leather cowboy boots.
+- **Accessories:** Bolo tie with turquoise; western hat; briefcase.
+
+[M]
+- **Top:** Tailored western blazer over dress shirt.
+  - **Fit:** Structured western.
+  - **Material:** Wool; Suede trim.
+  - **Pattern:** Solid.
+  - **Neckline:** Collared with bolo tie.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored trousers in western cut.
+  - **Fit:** Straight.
+  - **Material:** Luxury wool.
+  - **Waist:** High-waist.
+  - **Length:** Full length.
+- **Footwear:** Luxury alligator or ostrich boots.
+- **Accessories:** Bolo tie; signet ring; Stetson hat.
+
+[H]
+- **Hijab:** Cream or tan silk hijab under western hat.
+- **Top:** Long-line tailored western blazer over high-neck blouse.
+  - **Fit:** Tailored modest.
+  - **Material:** Wool; Silk.
+  - **Neckline:** High-neck with bolo.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored wide-leg trousers or maxi skirt.
+  - **Fit:** Wide-leg or A-line.
+  - **Material:** Wool.
+  - **Length:** Floor-length.
+- **Footwear:** Luxury cowboy boots.
+- **Accessories:** Bolo tie; designer western hat.

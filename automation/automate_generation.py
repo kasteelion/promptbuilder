@@ -114,6 +114,10 @@ def run_local_generation(count=10, match_outfits_prob=0.3):
             s_name = s_val.get("name", str(s_val)) if isinstance(s_val, dict) else str(s_val)
             meta_block += f"Scene: {s_name}\n"
             
+            # Add Scene Category if available for better auditing
+            if "scene_category" in config:
+                meta_block += f"Scene_Category: {config['scene_category']}\n"
+            
         # Base Prompt
         if "base_prompt" in config:
             bp_val = config["base_prompt"]
@@ -135,9 +139,13 @@ def run_local_generation(count=10, match_outfits_prob=0.3):
             if "interaction" in score_meta:
                  i_name = score_meta["interaction"]
                  meta_block += f"Interaction: {i_name}\n"
-            else:
-                 # Fallback: Use first few words of notes? or Skip.
-                 pass
+            
+        # Composition Mode (Always write if available)
+        score_meta = config.get("metadata", {})
+        if "composition_mode" in score_meta:
+             c_mode = score_meta["composition_mode"]
+             meta_block += f"Composition_Mode: {c_mode}\n"
+
 
         # Characters
         for char in config.get("selected_characters", []): # Key is 'selected_characters'

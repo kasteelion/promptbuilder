@@ -1,7 +1,7 @@
 ### Malik Farrah
 **Photo:** malik_farrah_photo.png
 
-**Tags:** male, north-african, rugged, adventurous, steady, resourceful, earthy, gold-signature
+**Tags:** Male, North-African, Rugged, Adventurous, Steady, Resourceful, Earthy, Gold-Signature
 
 **Summary:** Malik is a Desert Voyager, a man whose character has been etched by the sand and wind of the Sahara. He possesses a rugged, durable presence, his movements economical and efficient. He is a master of navigation and survival, his knowledge of the desert deep and intuitive. His attire is a blend of traditional textiles and functional gear, designed to protect him from the elements while allowing for maximum mobility. He speaks little, but his steady gaze conveys a wealth of experience and a calm, unshakeable resolve.
 
@@ -20,7 +20,7 @@
 
 **Age Presentation:** mid-30s presentation; experienced, grounded, resilient.
 
-**Vibe / Energy:** adventurous, steady, resourceful, quiet intensity, desert-hardened.
+**Vibe / Energy:** Adventurous, Steady, Resourceful, Quiet Intensity, Desert-Hardened.
 
 **Bearing:** alert, grounded posture; economical movement—every step is calculated and purposeful; calm and focused in high-pressure situations; hands often checking gear or shielding eyes from the sun.
 

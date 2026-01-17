@@ -1,0 +1,46 @@
+tags: [casual, modern, everyday, comfortable, basic]
+
+[F]
+- **Top:** Classic fitted graphic tee or plain crew neck in {primary_color}.
+  - **Fit:** Fitted or relaxed.
+  - **Material:** Soft cotton jersey.
+  - **Pattern:** Graphic print or solid.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Mid-rise skinny jeans or boyfriend jeans in {secondary_color}.
+  - **Fit:** Skinny or relaxed boyfriend.
+  - **Material:** Stretch denim.
+  - **Waist:** Mid-rise.
+  - **Length:** Ankle length.
+- **Footwear:** White sneakers or ankle boots.
+- **Accessories:** Crossbody bag; simple necklace.
+
+[M]
+- **Top:** Plain crew neck tee or henley in {primary_color}.
+  - **Fit:** Regular fit.
+  - **Material:** Cotton jersey.
+  - **Pattern:** Solid or subtle stripe.
+  - **Neckline:** Crew or henley.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Straight-leg jeans or slim-fit jeans in dark wash.
+  - **Fit:** Straight or slim.
+  - **Material:** Denim.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Sneakers or casual boots.
+- **Accessories:** Leather belt; watch.
+
+[H]
+- **Hijab:** Jersey instant hijab in {primary_color}.
+- **Top:** Long-sleeve tunic tee over skinny jeans.
+  - **Fit:** Modest tunic length.
+  - **Material:** Cotton blend.
+  - **Neckline:** High crew neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Skinny jeans in dark wash.
+  - **Fit:** Skinny.
+  - **Material:** Stretch denim.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** Slip-on sneakers.
+- **Accessories:** Small backpack.

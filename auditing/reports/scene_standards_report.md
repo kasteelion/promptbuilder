@@ -159,6 +159,10 @@
 | Giant Aquarium Hall | PASS | None |
 | Midnight Rooftop | PASS | None |
 | Petal-Strewn Walkway | PASS | None |
+| Armory | PASS | None |
+| Bunker | PASS | None |
+| Forward Operating Base | PASS | None |
+| Situation Room | PASS | None |
 
 
-**Summary:** 155/155 Passed (100.0%)
+**Summary:** 159/159 Passed (100.0%)

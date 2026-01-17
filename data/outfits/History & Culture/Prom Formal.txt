@@ -1,0 +1,47 @@
+tags: [Event, Formal, Youth]
+
+[F]
+- **Top:** Floor-length formal gown (Bodice).
+  - **Fit:** Fitted bodice.
+  - **Material:** Satin, Silk, or Lace.
+  - **Pattern:** Sequins or Beading.
+  - **Neckline:** Sweetheart, Halter, or Off-shoulder.
+  - **Sleeve:** Sleeveless or Ruffled straps.
+- **Bottom:** Full formal silhouette skirt (Integrated).
+  - **Fit:** A-line, Mermaid, or Ballgown.
+  - **Material:** Matching luxe fabric.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Strappy heeled sandals.
+- **Accessories:** Statement earrings; corsage; clutch purse.
+
+[M]
+- **Top:** Classic tuxedo jacket and dress shirt.
+  - **Fit:** Tailored.
+  - **Material:** Wool with satin lapels; Pleated cotton shirt.
+  - **Pattern:** Solid ((default:black or midnight blue)).
+  - **Neckline:** Lapel with bow tie.
+  - **Sleeve:** Long sleeves with cufflinks.
+- **Bottom:** Tuxedo trousers.
+  - **Fit:** Slim-straight.
+  - **Material:** Matching wool.
+  - **Waist:** Natural with vest or cummerbund.
+  - **Length:** Full length.
+- **Footwear:** Patent leather dress shoes.
+- **Accessories:** Boutonniere; cufflinks; watch.
+
+[H]
+- **Hijab:** Satin or chiffon hijab matching gown color.
+- **Top:** Floor-length modest formal gown.
+  - **Fit:** Fitted modest silhouette.
+  - **Material:** Luxe satin.
+  - **Pattern:** Sequins or Beading.
+  - **Neckline:** High neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full skirt (Integrated).
+  - **Fit:** Voluminous A-line.
+  - **Material:** Matching satin.
+  - **Waist:** Natural.
+  - **Length:** Floor-length.
+- **Footwear:** Heeled sandals.
+- **Accessories:** Statement earrings; corsage; clutch.

@@ -1,4 +1,4 @@
-tags: [combat, fantasy]
+tags: [weapon_combat, Fantasy]
 
 [F]
 - **Top:** Fitted armor-inspired bodice with metal accents.

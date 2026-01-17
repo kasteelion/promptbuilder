@@ -5,7 +5,7 @@
 |---|---|---|---|---|---|
 | aaliyah_chen.md | 100 | 186 | ✅ | ✅ | 🌟 Elite |
 | aiyana_blackfeather.md | 100 | 220 | ✅ | ✅ | 🌟 Elite |
-| amina_benali.md | 100 | 334 | ✅ | ✅ | 🌟 Elite |
+| amina_benali.md | 100 | 321 | ✅ | ✅ | 🌟 Elite |
 | amira_khalil.md | 100 | 158 | ✅ | ✅ | 🌟 Elite |
 | aryan_kapoor.md | 100 | 144 | ✅ | ❌ `aryan_kapoor_photo.jpeg` | 🌟 Elite |
 | astrid_nielsen.md | 100 | 219 | ✅ | ✅ | 🌟 Elite |

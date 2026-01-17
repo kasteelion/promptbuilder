@@ -1,7 +1,7 @@
 ### Camila Vargas
 **Photo:** camila_vargas_photo.png
 
-**Tags:** female, Athletic, creative, dramatic, intense, mediterranean, passionate, petite, thin
+**Tags:** Female, Athletic, Creative, Dramatic, Intense, Mediterranean, Passionate, Petite, Thin
 **Summary:** Camila is a creature of passionate intensity, her every motion a whisper or shout of profound emotion. On stage, she transforms, embodying the raw, aching soul of duende, her human quality being a deeply passionate spirit that makes no distinction between life and art.
 
 **Gender:** F
@@ -15,7 +15,7 @@
 * **Skin:** Olive with cool undertones and soft matte finish; smooth and disciplined surface.
 
 **Age Presentation:** late 30s presentation; experienced, vibrant, fiercely expressive.
-**Vibe / Energy:** passionate, disciplined, Intense, fiery, spirit of duende.
+**Vibe / Energy:** Passionate, Disciplined, Intense, Fiery, Spirit Of Duende.
 **Bearing:** quick, sharp, and precise dancer's movements; stands with perfect slightly aggressive posture; frequent use of expressive hand and wrist articulation; smile is sudden and mischievous.
 
 // Style notes for outfit creation (not included in prompts):

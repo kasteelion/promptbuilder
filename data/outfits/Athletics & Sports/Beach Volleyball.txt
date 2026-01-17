@@ -1,0 +1,46 @@
+tags: [Team, Volleyball]
+
+[F]
+- **Top:** Professional athletic bikini racerback top for {team} {modifier}.
+  - **Fit:** Sculpted compression; Sheer mesh center-chest cutout.
+  - **Material:** Honeycomb-textured matte lycra; {primary_color} with {secondary_color} binding.
+  - **Pattern:** Metallic foil team logo.
+  - **Neckline:** Racerback.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** High-cut athletic bottoms.
+  - **Fit:** High-cut; Compression.
+  - **Material:** matching matte lycra.
+  - **Pattern:** Asymmetric color-blocked panels in {secondary_color}.
+  - **Waist:** Elastic.
+  - **Length:** Minimal.
+- **Footwear:** Barefoot with sand-dusted skin.
+- **Accessories:** Mirrored polarized sports sunglasses ({accent}); performance visor in {primary_color}; waterproof fitness watch.
+
+[M]
+- **Top:** Bare chest (for beach volleyball context).
+  - **Fit:** Athletic build.
+  - **Material:** Skin (sand-dusted).
+- **Bottom:** Professional performance board shorts for {team}.
+  - **Fit:** Mid-thigh athletic cut; Scalloped hems.
+  - **Material:** 4-way ripstop stretch fabric; {secondary_color} base.
+  - **Pattern:** Sublimated geometric graphics in {primary_color}; Metallic silicone team crest.
+  - **Waist:** Fixed waist with drawcord.
+  - **Length:** Mid-thigh.
+- **Footwear:** Barefoot with sand-dusted skin.
+- **Accessories:** Mirrored wraparound sports sunglasses ({accent}); performance visor in {primary_color} with 3D-embroidered logo.
+
+[H]
+- **Hijab:** High-performance sports swim hijab in {primary_color}.
+- **Top:** Long-sleeve professional swim tunic for {team} {modifier}.
+  - **Fit:** Contoured athletic silhouette; Scalloped side vents.
+  - **Material:** Honeycomb-textured technical swim fabric; {primary_color} with {secondary_color} sleeves.
+  - **Pattern:** Metallic foil team logo; Asymmetric color-blocked panels.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length performance swim leggings in {primary_color}.
+  - **Fit:** Compression.
+  - **Material:** matching fabric.
+  - **Waist:** Elastic.
+  - **Length:** Full length.
+- **Footwear:** Barefoot with sand-dusted skin or black neoprene sand socks.
+- **Accessories:** Mirrored polarized sports sunglasses ({accent}); performance visor in {primary_color} (over hijab).

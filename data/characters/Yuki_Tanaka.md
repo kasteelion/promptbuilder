@@ -2,7 +2,7 @@
 
 **Photo:** yuki_tanaka_photo.png
 
-**Tags:** female, approachable, chic, japanese, soft, romantic
+**Tags:** Female, Approachable, Chic, Japanese, Soft, Romantic
 
 **Summary:** Yuki carries the quiet poise of someone rooted in tradition but living fully in the present. Her confidence isn't loud; it's a soft, unshakable warmth that makes her presence feel like a sanctuary. She blends a gentle, romantic spirit with a modern self-assurance, moving with a delicate grace that reveals an intimate emotional openness. A floral designer and tea ceremony practitioner, she brings a sense of wabi-sabi to everything she touches—finding beauty in imperfection and strength in softness.
 
@@ -17,7 +17,7 @@
 * **Skin:** Light warm skin with soft golden-cream undertones (Japanese heritage); smooth satin finish with a natural healthy glow; flawless texture maintained by traditional and modern skincare.
 
 **Age Presentation:** early 20s presentation; youthful, gentle, self-assured, tranquil.
-**Vibe / Energy:** tender, warm, romantic; radiates a tranquil and intimate energy; creates a sense of safe, safe, and observant space.
+**Vibe / Energy:** Tender, Warm, romantic; Radiates A Tranquil And Intimate energy; Creates A Sense Of Safe, Safe, And Observant Space.
 **Bearing:** soft posture with natural ease—never rigid; contained but fluid movement; carries herself with a delicate, purposeful grace; eyes often slightly lowered but warm when making contact; hands often folded gently or held close to her center.
 
 // Style Notes:

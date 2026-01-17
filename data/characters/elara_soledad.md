@@ -1,7 +1,7 @@
 ### Elara Soledad
 **Photo:** elara_soledad_photo.png
 
-**Tags:** black, approachable, Athletic, commanding, female, minimalist, rugged, strong, tall
+**Tags:** Black, Approachable, Athletic, Commanding, Female, Minimalist, Rugged, Strong, Tall
 **Summary:** Elara commands space without effort—a woman built like a classical warrior with the presence to match. Her tall, sculpted frame and unwavering gaze speak to disciplined strength, while rare genuine smiles reveal the fierce protectiveness beneath her stoic exterior. She moves through the world like someone who has trained for battle but hopes for peace.
 
 **Gender:** F
@@ -15,7 +15,7 @@
 * **Skin:** Deep warm brown with golden undertones and smooth almost polished surface finish; faint linear scars on upper arms and shoulders.
 
 **Age Presentation:** late 20s to early 30s presentation; mature, physically disciplined, self-possessed.
-**Vibe / Energy:** fierce, grounded, protective, magnetic, warrior-calm.
+**Vibe / Energy:** Fierce, Grounded, Protective, Magnetic, Warrior-Calm.
 **Bearing:** fluid and powerful movement; every motion deliberate and economical; stands with broad confident stance; gestures are large and declarative but infrequent; natural athletic grace.
 
 ---

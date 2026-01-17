@@ -1,7 +1,7 @@
 ### Aryan Kapoor
 **Photo:** aryan_kapoor_photo.jpeg
 
-**Tags:**   male, bearded, chic, commanding, corporate, indian, luxury
+**Tags:**   Male, Bearded, Chic, Commanding, Corporate, Indian, Luxury
 
 **Summary:** Aryan is the embodiment of modern "old money" aesthetics blended with Bollywood charisma. He carries the air of a man who closes seven-figure deals before breakfast, yet retains a disarming, roguish warmth. His presence is polished to a mirror shine, exuding power through impeccable grooming and tailored precision rather than brute force.
 
@@ -15,7 +15,7 @@
 * **Skin:** Medium-deep tan with warm golden-olive undertones; hyper-smooth texture suggestive of a high-end skincare routine.
 
 **Age Presentation:** early 30s
-**Vibe / Energy:** charismatic, wealthy, sharp, confident, polished.
+**Vibe / Energy:** Charismatic, Wealthy, Sharp, Confident, Polished.
 **Bearing:** walks with a measured, expansive stride; hands often clasping lapels or checking a watch; takes up space with entitlement but not aggression.
 
 ---

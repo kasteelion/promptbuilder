@@ -1,7 +1,7 @@
 ### Maya Rose
 **Photo:** maya_rose_photo.png
 **Summary:** Maya radiates natural warmth and approachability—easy confidence, genuine joy, and emotional openness. Her charm lies in her relaxed authenticity and inviting presence, creating an immediate sense of comfort and ease.
-**Tags:**   female, approachable, chic, commanding, minimalist, playful
+**Tags:**   Female, Approachable, Chic, Commanding, Minimalist, Playful
 **Gender:** F
 **Signature Color:** #DEB887
 
@@ -13,7 +13,7 @@
 * **Skin:** Warm medium beige with golden undertones; natural healthy glow.
 
 **Age Presentation:** mid-20s presentation; confident, warm, naturally polished.
-**Vibe / Energy:** open, genuinely warm, Casually confident, naturally radiant.
+**Vibe / Energy:** Open, Genuinely Warm, Casually Confident, Naturally Radiant.
 **Bearing:** relaxed confident posture; natural ease; warm engaging presence.
 
 // Style notes for outfit creation (not included in prompts):

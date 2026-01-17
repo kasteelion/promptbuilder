@@ -1,7 +1,7 @@
 ### Elena Rosales
 **Photo:** elena_rosales_photo.jpeg
 
-**Tags:**   female, chic, commanding, curvy, glamorous, high-femme, latina, lesbian
+**Tags:**   Female, Chic, Commanding, Curvy, Glamorous, High-Femme, Latina, Lesbian
 
 **Summary:** Elena is the epitome of "High Femme" power—she wields femininity like a precision weapon. While Diesel Murphy commands respect with grease and grit, Elena commands it with six-inch stilettos and a gaze that could cut glass. She moves through the art world with a shark-like confidence, unapologetically glamorous and deeply knowledgeable, embodying the strength found in softness and deliberate aesthetic perfection.
 
@@ -15,7 +15,7 @@
 * **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume.
 
 **Age Presentation:** late 20s
-**Vibe / Energy:** magnetic, glamorous, intentional, intellectually sharp, unapologetically feminine.
+**Vibe / Energy:** Magnetic, Glamorous, Intentional, Intellectually Sharp, Unapologetically Feminine.
 **Bearing:** walks with a rhythmic, hip-swaying precision (the "catwalk strut"); posture is impeccably upright; gestures are graceful, using manicured hands to emphasize points.
 
 ---

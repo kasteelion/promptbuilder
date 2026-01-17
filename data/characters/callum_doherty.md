@@ -1,7 +1,7 @@
 ### Callum Doherty
 **Photo:** callum_doherty_photo.jpeg
 
-**Tags:**   male, celtic, confident, craftsman, freckled, playful, red-haired, rugged
+**Tags:**   Male, Celtic, Confident, Craftsman, Freckled, Playful, Red-Haired, Rugged
 
 **Summary:** Callum is a burst of fiery charisma and infectious laughter. He embodies the energy of a modern craftsman—someone who works with his hands but cleans up nicely for a night out at the pub. He carries himself with a "cheeky rogue" confidence, the kind of guy who can charm his way out of trouble as easily as he got into it. He’s vibrant, tactile, and unapologetically alive.
 
@@ -15,7 +15,7 @@
 * **Skin:** Fair/Pale with pink undertones; heavily freckled—a constellation of rust-colored freckles covers his nose, cheeks, shoulders, and arms; prone to sunburn but currently has a "farmer's tan" on the arms.
 
 **Age Presentation:** mid-to-late 20s
-**Vibe / Energy:** energetic, cheeky, hardworking, rugged, social, magnetic.
+**Vibe / Energy:** Energetic, Cheeky, Hardworking, Rugged, Social, Magnetic.
 **Bearing:** relaxed and open posture; leads with his chest; frequent tactile gestures (clapping backs, handshakes); sits with legs wide or straddling a chair; high-energy presence.
 
 ---

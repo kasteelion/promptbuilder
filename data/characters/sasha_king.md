@@ -2,7 +2,7 @@
 
 **Photo:** sasha_king_photo.png
 
-**Tags:** black, american, urban, athletic, energetic, creative, youthful, street-artist
+**Tags:** Black, American, Urban, Athletic, Energetic, Creative, Youthful, Street-Artist
 
 **Summary:** Sasha is a whirlwind of kinetic energy and urban creativity. A competitive street skater by day and a muralist by night, she views the city architecture as her canvas and her playground. She carries an infectious "main character" energy without the ego—she's the first to hype up a stranger's fit and the last to leave a session. Her style is a high-contrast blend of functional skate gear and bold, expressive patterns that reflect her vivid artistic vision.
 
@@ -22,7 +22,7 @@
 * **Skin:** Deep rich cocoa brown with warm mahogany undertones; smooth resilient texture with a healthy athletic sheen; "high-energy" glow.
 
 **Age Presentation:** early 20s (21-23); vibrant, peak-energy, unapologetically youthful.
-**Vibe / Energy:** electric, high-performance, joyful, street-smart, creatively bold.
+**Vibe / Energy:** Electric, High-Performance, Joyful, Street-Smart, Creatively Bold.
 **Bearing:** aggressive and ready-to-move; stands with a wide, grounded stance; moves with a light, bouncy ease; frequently uses broad, expressive hand gestures.
 
 // Style Notes:

@@ -1,0 +1,46 @@
+tags: [Team, Track]
+
+[F]
+- **Top:** Fitted performance crop top for {team}.
+  - **Fit:** Racerback; Mesh ventilation.
+  - **Material:** {primary_color} tech-fabric.
+  - **Pattern:** {secondary_color} diagonal chest stripe; Team logo.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** High-cut athletic briefs.
+  - **Fit:** High-cut; Streamlined hip cut.
+  - **Material:** {primary_color} spandex; {secondary_color} binding.
+  - **Waist:** Elastic.
+  - **Length:** Minimal.
+- **Footwear:** Track spikes or racing flats ({accent}).
+- **Accessories:** Race number bib; timing chip anklet.
+
+[M]
+- **Top:** Fitted performance tank for {team}.
+  - **Fit:** Racerback; Mesh ventilation.
+  - **Material:** {primary_color} tech-fabric.
+  - **Pattern:** {secondary_color} diagonal stripe; Team logo.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Athletic briefs or shorts.
+  - **Fit:** Streamlined cut.
+  - **Material:** matching {primary_color}.
+  - **Waist:** Elastic.
+  - **Length:** Minimal.
+- **Footwear:** Track spikes or racing flats ({accent}).
+- **Accessories:** Race number bib; timing chip.
+
+[H]
+- **Hijab:** Sports hijab in {primary_color}.
+- **Top:** Long-sleeve fitted athletic top for {team}.
+  - **Fit:** Moisture-wicking; High neck.
+  - **Material:** {primary_color} tech-fabric; {secondary_color} accents.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Full-length athletic leggings.
+  - **Fit:** Lightweight compression.
+  - **Material:** matching {primary_color}.
+  - **Waist:** Elastic.
+  - **Length:** Full length.
+- **Footwear:** Track spikes or running shoes ({accent}).
+- **Accessories:** Race number bib.

@@ -1,4 +1,4 @@
-tags: [combat, fantasy, Range]
+tags: [weapon_combat, Fantasy, Range]
 
 [F]
 - **Top:** Fitted leather jerkin with asymmetric chest guard.

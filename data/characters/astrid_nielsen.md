@@ -1,6 +1,6 @@
 ### Astrid Nielsen
 **Photo:** astrid_nielsen_photo.png
-**Tags:**   female, chic, cool-toned, minimalist, nordic, statuesque
+**Tags:**   Female, Chic, Cool-Toned, Minimalist, Nordic, Statuesque
 
 **Summary:** Cool, serene, and impeccably controlled, Astrid feels like still water—quietly powerful beneath the surface. Her minimalist presence emphasizes clarity and balance, projecting confidence through simplicity and precision rather than overt expression.
 **Gender:** F
@@ -13,7 +13,7 @@
 * **Skin:** Fair cool-toned skin with porcelain clarity and smooth even texture.
 
 **Age Presentation:** early 30s presentation; polished, assured, mature.
-**Vibe / Energy:** composed, restrained, elegant; radiates the quiet power of still water; minimalist and precise.
+**Vibe / Energy:** Composed, Restrained, elegant; Radiates The Quiet Power Of Still water; Minimalist And Precise.
 **Bearing:** controlled, minimal movement; statuesque stillness with deliberate grace; upright posture with relaxed but focused shoulders.
 
 // Style notes for outfit creation (not included in prompts):

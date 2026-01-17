@@ -1,7 +1,7 @@
 ### Maki Cruz
 **Photo:** maki_cruz_photo.png
 
-**Tags:** female, Athletic, commanding, edgy, filipino, intellectual, minimalist, rugged
+**Tags:** Female, Athletic, Commanding, Edgy, Filipino, Intellectual, Minimalist, Rugged
 **Summary:** Maki embodies street skate culture with technical precision and effortless style. Her Filipino heritage shows in her grounded confidence and community-oriented approach to skating. She moves with the controlled looseness of someone who's bailed a thousand times and gotten back up—baggy clothes hiding elite-level board control and spatial awareness.
 **Gender:** F
 **Signature Color:** #2F4F4F
@@ -13,7 +13,7 @@
 * **Skin:** Medium tan; warm golden-yellow undertones; natural matte finish; healthy resilience; scattered small scars on elbows and knees.
 
 **Age Presentation:** early to mid-20s; casual, street-confident, grounded.
-**Vibe / Energy:** laid-back, focused, technically skilled, understated confidence.
+**Vibe / Energy:** Laid-Back, Focused, Technically Skilled, Understated Confidence.
 **Bearing:** relaxed athletic posture; low center of gravity; economical movement; weight favors balls of feet; casual hand-in-pocket stance.
 
 //Style Notes:

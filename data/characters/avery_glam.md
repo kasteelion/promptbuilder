@@ -2,7 +2,7 @@
 
 **Photo:** avery_blake_photo.png
 
-**Tags:** female, Athletic, commanding, creative, dramatic, edgy
+**Tags:** Female, Athletic, Commanding, Creative, Dramatic, Edgy
 
 **Summary:** Avery embodies dangerous glamour—a rock goddess who traded the stage for the ring without losing an ounce of attitude. Her presence is dark, dramatic, and unapologetically provocative: jet-black hair cascading like a curtain, smokey eyes that could stop traffic, and an edge sharp enough to draw blood. She moves with calculated sensuality and fierce confidence, equal parts seductress and warrior.
 
@@ -21,7 +21,7 @@
 
 **Age Presentation:** mid-to-late 20s presentation; maturely provocative, stage-ready, dangerously confident.
 
-**Vibe / Energy:** edgy, provocative, rebellious, darkly glamorous, fiercely confident.
+**Vibe / Energy:** Edgy, Provocative, Rebellious, Darkly Glamorous, Fiercely Confident.
 
 **Bearing:** sensual movement, Edgy
 

@@ -2,7 +2,7 @@
 
 **Photo:** esme_dubois_photo.png
 
-**Tags:** female, chic, creative, minimalist, elegant
+**Tags:** Female, Chic, Creative, Minimalist, Elegant
 
 **Summary:** Esme moves with quiet precision and ballet-trained grace. Her presence is refined and fluid, marked by discipline, elegance, and a serene confidence that feels effortless rather than performative. A curator of a private gallery, her eye for detail is unmatched, extending from her work to her carefully curated personal life. She speaks softly but with absolute clarity, and her stillness is just as powerful as her movement. She embodies the "quiet luxury" aesthetic—unassuming quality and timeless sophistication.
 
@@ -17,7 +17,7 @@
 * **Skin:** Fair neutral skin with luminous clarity and smooth texture; minimal visible pores or imperfections; translucent quality at the temples; natural healthy glow from a meticulous skincare routine.
 
 **Age Presentation:** early 30s presentation; poised, cultivated, timelessly refined.
-**Vibe / Energy:** elegant, reserved, intentional, quietly magnetic, disciplined grace.
+**Vibe / Energy:** Elegant, Reserved, Intentional, Quietly Magnetic, Disciplined Grace.
 **Bearing:** minimal and precise movement—no wasted motion; perfect upright posture with shoulders down and back; hands often folded elegantly or used in spare, graceful gestures; maintains a polite and focused distance.
 
 // Style Notes:

@@ -1,7 +1,7 @@
 ### Hallie Bennett
 **Photo:** hallie_bennett_photo.png
 
-**Tags:** female, approachable, Athletic, casual, minimalist, outdoorsy, soft
+**Tags:** Female, Approachable, Athletic, Casual, Minimalist, Outdoorsy, Soft
 **Summary:** Sophie embodies accessible athleticism—the friend who invites you on a hike, not a marathon. Her soft rounded build carries natural strength without intimidation, creating the kind of presence that makes fitness feel approachable rather than exclusive. She's the bridge between "gym girl" and "regular girl," comfortable in athletic wear but never performatively so.
 
 **Gender:** F
@@ -16,7 +16,7 @@
 
 **Age Presentation:** early to mid-20s presentation; young adult maturity.
 
-**Vibe / Energy:** gentle, approachable, nature-loving, relaxed, Casually active, encouraging, accessible fitness advocate.
+**Vibe / Energy:** Gentle, Approachable, Nature-Loving, Relaxed, Casually Active, Encouraging, Accessible Fitness Advocate.
 
 **Bearing:** relaxed movement with open posture and casual arm positions.
 

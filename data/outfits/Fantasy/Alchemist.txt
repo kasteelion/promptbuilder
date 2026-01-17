@@ -1,4 +1,4 @@
-tags: [fantasy, Potion, Science]
+tags: [Fantasy, Potion, Science]
 
 [F]
 - **Top:** Practical leather vest and apron.

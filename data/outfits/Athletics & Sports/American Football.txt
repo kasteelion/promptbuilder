@@ -1,0 +1,56 @@
+tags: [Football, Team]
+modifiers:
+  Home: in **{primary_color} with {secondary_color} accents**
+  Away: in **{secondary_color} with {primary_color} accents**
+  Home Quarterback: in **{primary_color} with {secondary_color} accents**, wearing a quarterback's wrist coach playbook on the left forearm and a clear protective visor attached to the helmet
+  Away Quarterback: in **{secondary_color} with {primary_color} accents**, wearing a quarterback's wrist coach playbook on the left forearm and a clear protective visor attached to the helmet
+  Home Lineman: in **{primary_color} with {secondary_color} accents**, wearing extra-large shoulder pads and a neck roll for neck protection
+  Away Lineman: in **{secondary_color} with {primary_color} accents**, wearing extra-large shoulder pads and a neck roll for neck protection
+  Home Receiver: in **{primary_color} with {secondary_color} accents**, wearing sticky receiver gloves and a streamlined helmet visor
+  Away Receiver: in **{secondary_color} with {primary_color} accents**, wearing sticky receiver gloves and a streamlined helmet visor
+
+[F]
+- **Top:** Sports performance crop top under molded shoulder pads {modifier}.
+  - **Fit:** Compression fit; Rigid high-gloss plastic shells.
+  - **Material:** Ultra-matte moisture-wicking fabric; {secondary_color} plastic.
+  - **Pattern:** Team logo shield.
+  - **Neckline:** Round neck.
+  - **Sleeve:** Compression arm sleeves to mid-bicep.
+- **Bottom:** Low-rise athletic shorts.
+  - **Fit:** Minimal coverage design; Fitted.
+  - **Material:** {secondary_color} athletic fabric.
+  - **Pattern:** {primary_color} accents; Team number on hip.
+  - **Waist:** Elastic.
+  - **Length:** Short.
+- **Footwear:** Professional football cleats ({accent} detailing).
+- **Accessories:** Hockey-style helmet with clear visor; {secondary_color} headband; grip gloves; knee pads; eye black; {accent} wristbands.
+
+[M]
+- **Top:** Mesh performance football jersey for {team} {modifier}.
+  - **Fit:** Loose fit over shoulder pads.
+  - **Material:** Mesh performance fabric.
+  - **Pattern:** Team number.
+  - **Neckline:** V-neck.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Padded football pants.
+  - **Fit:** Padded.
+  - **Material:** Durable athletic fabric.
+  - **Waist:** Natural.
+  - **Length:** Knee-length.
+- **Footwear:** Football cleats.
+- **Accessories:** Helmet ({primary_color} with {secondary_color} mask); shoulder pads (under jersey); mouthguard.
+
+[H]
+- **Hijab:** Breathable technical sports hijab with secure tuck.
+- **Top:** Modest football jersey for {team} {modifier}.
+  - **Fit:** Modest loose fit.
+  - **Material:** fabric over long-sleeve {accent} compression top.
+  - **Neckline:** High-neck modesty.
+  - **Sleeve:** Long sleeves (compression layer).
+- **Bottom:** Padded football pants over full-length leggings.
+  - **Fit:** Padded secure fit.
+  - **Material:** fabric; {accent} leggings.
+  - **Waist:** Natural.
+  - **Length:** Knee-length (pants) / Floor-length (leggings).
+- **Footwear:** Football cleats ({accent}).
+- **Accessories:** Mouthguard; wrist coach band; football helmet.

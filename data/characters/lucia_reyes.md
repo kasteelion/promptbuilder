@@ -1,7 +1,7 @@
 ### Lucía Reyes
 **Photo:** lucía_reyes_photo.png
 
-**Tags:**   female, approachable, commanding, curvy, latina, playful, soft
+**Tags:**   Female, Approachable, Commanding, Curvy, Latina, Playful, Soft
 
 **Summary:** Radiant and confident, Lucía carries joy as power. Her warmth is immediate and magnetic, paired with self-assured sensuality that feels celebratory rather than performative.
 
@@ -16,7 +16,7 @@
 * **Skin:** Warm golden skin with radiant glow.
 
 **Age Presentation:** late 20s presentation; vibrant, warm.
-**Vibe / Energy:** affectionate, expressive, lively.
+**Vibe / Energy:** Affectionate, Expressive, Lively.
 **Bearing:** open posture; expressive movement.
 
 // Style notes for outfit creation (not included in prompts):
