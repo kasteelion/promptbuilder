@@ -18,37 +18,21 @@ class PromptRandomizer:
     MODE_INT_WO_POSES = "INT_WO_POSES"      # Interaction sets Vibe, Poses Random
     MODE_GROUP_NO_INT = "GROUP_NO_INT"      # Group shot, Independent Poses
 
-    # Centralized Tag Groups for cleaner restriction logic
+    # Centralized Tag Groups for constraint logic
+    # REDUCED: From 20+ groups to 8 core groups (removed redundant and sport-specific)
     TAG_GROUPS = {
+        # Essential constraint groups (kept)
         "EXPOSED_SKIN": {"swimwear", "bikini", "lingerie", "crop top", "shorts", "sleeveless", "undressing", "naked"},
         "ARMOR_WEAPON": {"armor", "weapon", "shield", "sword", "combat", "tactical", "gun", "rifle"},
-        "SLEEPWEAR": {"pajamas", "bed", "sleep", "loungewear", "robe"},
         "FORMAL": {"formal", "evening", "gala", "suit", "tuxedo", "gown", "dress", "business"},
         "WINTER": {"winter", "snow", "ski", "heavy coat", "scarf", "coat", "jacket", "hoodie"},
-        "OFFICE": {"office", "business", "suit", "blazer", "desk", "computer"},
-        "SPORT": {"sport", "gym", "athletic", "workout", "active", "leotard", "running", "jump"},
-        "FANTASY": {"fantasy", "medieval", "magic", "mystical", "costume", "robe"},
-        "SCIFI": {"sci-fi", "cyberpunk", "tech", "futuristic", "modern"},
-        "CASUAL": {"casual", "jeans", "shorts", "t-shirt"},
         "FOOTWEAR": {"shoes", "boots", "heels", "sandals"},
-        # --- Genre Clusters ---
+        
+        # Genre firewalls (critical for preventing clashes)
         "GENRE_FANTASY": {"fantasy", "medieval", "magic", "mystical", "castle", "knight", "sword", "shield", "robe", "dnd", "spell", "arcane", "mythology", "dragon", "lair", "dungeon", "temple", "quest"},
-        "GENRE_MODERN": {"modern", "tech", "computer", "phone", "laptop", "car", "city", "office", "urban", "neon", "cyberpunk", "gym", "basketball", "bowling", "baseball", "volleyball", "activewear", "sneakers", "jersey", "football", "soccer", "tennis", "track", "relay", "baton", "stadium", "court", "field", "athletic", "sport", "mma", "boxing", "wrestling"},
+        "GENRE_MODERN": {"modern", "tech", "computer", "phone", "laptop", "car", "city", "office", "urban", "neon", "cyberpunk"},
         
-        # --- Per-Sport Clusters ---
-        "SPORT_BOWLING": {"bowling", "bowl", "alley", "lane", "pins", "strike", "spare", "gutter"},
-        "SPORT_BASKETBALL": {"basketball", "hoop", "court", "dribble", "layup", "dunk", "rebound"},
-        "SPORT_BASEBALL": {"baseball", "bat", "diamond", "pitcher", "catcher", "dugout", "mound", "softball"},
-        "SPORT_VOLLEYBALL": {"volleyball", "net", "spike", "serve", "dig", "set", "block"},
-        "SPORT_FOOTBALL": {"football", "gridiron", "touchdown", "quarterback", "tackle", "field goal", "end zone"},
-        "SPORT_SOCCER": {"soccer", "football", "goal", "kick", "penalty", "striker", "goalkeeper"},
-        "SPORT_TENNIS": {"tennis", "racket", "serve", "volley", "ace", "deuce", "match point"},
-        "SPORT_TRACK": {"track", "relay", "baton", "sprint", "hurdle", "marathon", "lane", "finish line"},
-        "SPORT_MMA": {"mma", "octagon", "cage", "grappling", "submission", "takedown", "ground game", "mount", "guard"},
-        "SPORT_BOXING": {"boxing", "ring", "punch", "jab", "hook", "uppercut", "knockout", "round"},
-        "SPORT_WRESTLING": {"wrestling", "mat", "pin", "takedown", "suplex", "grapple"},
-        
-        # Unified Sport Group (for broad blocking)
+        # Sport group (consolidated - no longer need per-sport groups)
         "GENRE_SPORT": {"sport", "athletic", "gym", "stadium", "court", "field", "track", "basketball", "bowling", "baseball", "volleyball", "football", "soccer", "tennis", "mma", "boxing", "wrestling", "relay", "baton", "jersey", "activewear", "sneakers"},
     }
 
