@@ -1199,12 +1199,16 @@ class PromptRandomizer:
         # 1. Primary Category (Legacy/Broad)
         if scene_category:
             scene_cat_lower = scene_category.lower()
-            if scene_cat_lower in self.SCENE_WHITELISTS:
-                for tag in self.SCENE_WHITELISTS[scene_cat_lower]:
-                    selection_tags.add(f"whitelist:{tag}")
+            if scene_cat_lower in self.SCENE_CONSTRAINTS:
+                constraints = self.SCENE_CONSTRAINTS[scene_cat_lower]
+                if "allowed" in constraints:
+                    for tag in constraints["allowed"]:
+                        selection_tags.add(f"whitelist:{tag}")
             
-            if scene_cat_lower in self.SCENE_RESTRICTIONS:
-                local_blocked.update(self.SCENE_RESTRICTIONS[scene_cat_lower])
+            if scene_cat_lower in self.SCENE_CONSTRAINTS:
+                constraints = self.SCENE_CONSTRAINTS[scene_cat_lower]
+                if "blocked" in constraints:
+                    local_blocked.update(constraints["blocked"])
 
         # 2. Context Tag Specifics (Precise)
         # Check if any active scene tags trigger a specific whitelist/blocklist
@@ -1216,12 +1220,16 @@ class PromptRandomizer:
             
             for tag in context_tags:
                 t_lower = tag.lower()
-                if t_lower in self.SCENE_WHITELISTS:
-                     for w_tag in self.SCENE_WHITELISTS[t_lower]:
-                         selection_tags.add(f"whitelist:{w_tag}")
+                if t_lower in self.SCENE_CONSTRAINTS:
+                    constraints_inner = self.SCENE_CONSTRAINTS[t_lower]
+                    if "allowed" in constraints_inner:
+                        for w_tag in constraints_inner["allowed"]:
+                            selection_tags.add(f"whitelist:{w_tag}")
                 
-                if t_lower in self.SCENE_RESTRICTIONS:
-                     local_blocked.update(self.SCENE_RESTRICTIONS[t_lower])
+                if t_lower in self.SCENE_CONSTRAINTS:
+                    constraints = self.SCENE_CONSTRAINTS[t_lower]
+                    if "blocked" in constraints:
+                        local_blocked.update(constraints["blocked"])
 
         # Decision Tree: Strict Outfit Whitelisting
         if role.allowed_outfit_categories:
@@ -1925,10 +1933,14 @@ class PromptRandomizer:
                 # --- FILTERING LOGIC ---
             
                 # 1. Blocking (Strict Blacklist)
-                # Check for hard scene restrictions
-                if scene_category.lower() in self.SCENE_RESTRICTIONS:
-                    restricted_tags = self.SCENE_RESTRICTIONS[scene_category.lower()]
-                    if tags:
+                # Check for hard scene constraints
+                if scene_category.lower() in self.SCENE_CONSTRAINTS:
+                    constraints = self.SCENE_CONSTRAINTS[scene_category.lower()]
+                    restricted_tags = constraints.get("blocked", set())
+                else:
+                    restricted_tags = set()
+                    
+                if tags:
                         template_tags_lower = {t.lower() for t in tags}
                         if template_tags_lower.intersection(restricted_tags):
                             continue
@@ -1948,12 +1960,14 @@ class PromptRandomizer:
 
                 # 2. Hard Whitelisting (Strict Whitelist)
                 # If a scene has a whitelist (e.g. gym, bowling), MUST match at least one tag.
-                if scene_category.lower() in self.SCENE_WHITELISTS:
-                    whitelist = set(self.SCENE_WHITELISTS[scene_category.lower()])
-                    if tags:
-                        template_tags_lower = {t.lower() for t in tags}
-                        if not template_tags_lower.intersection(whitelist):
-                            continue # Strict filter: no match, no selection
+                if scene_category.lower() in self.SCENE_CONSTRAINTS:
+                    constraints = self.SCENE_CONSTRAINTS[scene_category.lower()]
+                    if "allowed" in constraints:
+                        whitelist = set(constraints["allowed"])
+                        if tags:
+                            template_tags_lower = {t.lower() for t in tags}
+                            if not template_tags_lower.intersection(whitelist):
+                                continue # Strict filter: no match, no selection
                     else:
                         # Untagged items are only allowed if the whitelist is not "exclusive"
                         # But for strict consistency, we skip untagged items in whitelisted scenes.
