@@ -293,296 +293,33 @@ class ScenarioRegistry:
         ))
 
         # =====================================================================
-        # RIGID SPORT-SPECIFIC BRANCHES
+        # ATHLETIC COMPETITION (Consolidated Sports)
         # =====================================================================
+        # Replaces: Football, Basketball, Baseball, Softball, Tennis, Volleyball,
+        # Bowling, Track, MMA, Boxing, Soccer, Gymnastics, Swimming (13 scenarios)
         
-        # 11. FOOTBALL
         self.register(Scenario(
-            name="Football Game",
-            vibe_tags=["athletic", "football", "competitive", "intense", "team"],
+            name="Athletic Competition",
+            vibe_tags=["athletic", "competitive", "sport", "dynamic", "active"],
             allowed_scene_categories=["Sports & Athletics"],
-            required_scene_tags=["football", "stadium", "field"], # Strict Scene Filter
-            blocked_global_tags=["fantasy", "medieval", "magic", "formal", "elegant", "vintage", "historical", "esports", "sci-fi", "survival", "post-apocalyptic", "combat_sport", "mma", "boxing", "basketball", "baseball", "softball", "tennis", "soccer", "volleyball", "bowling", "track", "gymnastics", "swimming"],
-            min_characters=2,
-            max_characters=4,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Player",
-                    required_tags=["football"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage", "elegant"],
-                    allowed_outfit_categories=["Athletic & Sports"],
-                    allowed_pose_categories=["Action & Motion", "Athletics & Sports"]
-                )
+            blocked_global_tags=[
+                "fantasy", "medieval", "magic", "formal", "elegant", 
+                "vintage", "historical", "esports", "sci-fi", "cyberpunk",
+                "survival", "post-apocalyptic"
             ],
-            default_style_tags=["Sports Action", "High Detail", "Dynamic"],
-            weight=0.3
-        ))
-        
-        # 12. MMA/COMBAT SPORTS
-        self.register(Scenario(
-            name="MMA Combat",
-            vibe_tags=["combat_sport", "mma", "fighting", "athletic", "intense", "aggressive"],
-            allowed_scene_categories=["Sports & Athletics"],
-            required_scene_tags=["mma", "boxing", "gym", "cage"], # Strict Scene Filter
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "vintage", "cute", "soft", "esports", "sci-fi", "survival", "post-apocalyptic", "football", "basketball", "baseball", "softball", "tennis", "soccer", "volleyball", "bowling", "track", "gymnastics", "swimming"],
-            min_characters=2,
-            max_characters=2,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Fighter",
-                    required_tags=["mma", "fighting"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage", "elegant"],
-                    allowed_outfit_categories=["Athletic & Sports"],
-                    allowed_pose_categories=["Combat & Tactical", "Action & Motion"]
-                )
-            ],
-            default_style_tags=["Sports Action", "Gritty", "High Detail"],
-            weight=0.3
-        ))
-
-        # 13. BASKETBALL
-        self.register(Scenario(
-            name="Basketball Game",
-            vibe_tags=["basketball", "athletic", "competitive", "dynamic", "team"],
-            allowed_scene_categories=["Sports & Athletics"],
-            required_scene_tags=["basketball", "court"], # Strict Scene Filter
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "vintage", "historical", "esports", "sci-fi", "survival", "post-apocalyptic", "combat_sport", "mma", "boxing", "football", "baseball", "softball", "tennis", "soccer", "volleyball", "bowling", "track", "gymnastics", "swimming"],
-            min_characters=2,
-            max_characters=3,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Player",
-                    required_tags=["basketball"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage"],
-                    allowed_outfit_categories=["Athletic & Sports"],
-                    allowed_pose_categories=["Action & Motion", "Athletics & Sports"]
-                )
-            ],
-            default_style_tags=["Sports Action", "High Detail"],
-            weight=0.3
-        ))
-        
-        # 14. BASEBALL
-        self.register(Scenario(
-            name="Baseball Game",
-            vibe_tags=["baseball", "athletic", "competitive", "team", "outdoor"],
-            allowed_scene_categories=["Sports & Athletics"],
-            required_scene_tags=["baseball", "field", "park"], # Strict Scene Filter
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "vintage", "historical", "esports", "sci-fi", "survival", "post-apocalyptic", "combat_sport", "mma", "boxing", "football", "basketball", "softball", "tennis", "soccer", "volleyball", "bowling", "track", "gymnastics", "swimming"],
-            min_characters=2,
-            max_characters=3,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Player",
-                    required_tags=["baseball"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage"],
-                    allowed_outfit_categories=["Athletic & Sports"],
-                    allowed_pose_categories=["Action & Motion", "Athletics & Sports"]
-                )
-            ],
-            default_style_tags=["Sports Action", "High Detail"],
-            weight=0.3
-        ))
-        
-        # 15. BOWLING
-        self.register(Scenario(
-            name="Bowling Night",
-            vibe_tags=["bowling", "casual", "social", "fun", "competitive"],
-            allowed_scene_categories=["Sports & Athletics"],
-            required_scene_tags=["bowling", "alley"], # Strict Scene Filter
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "combat", "tactical", "esports", "sci-fi", "survival", "post-apocalyptic", "combat_sport", "mma", "boxing", "football", "basketball", "baseball", "softball", "tennis", "soccer", "volleyball", "track", "gymnastics", "swimming"],
-            min_characters=2,
-            max_characters=3,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Bowler",
-                    required_tags=["bowling"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "combat"],
-                    allowed_outfit_categories=["Casual & Everyday", "Athletic & Sports"],
-                    allowed_pose_categories=["Action & Motion", "Athletics & Sports"]
-                )
-            ],
-            default_style_tags=["Realistic", "Casual"],
-            weight=0.3
-        ))
-        
-        # 16. TRACK & FIELD
-        self.register(Scenario(
-            name="Track Meet",
-            vibe_tags=["track", "running", "sprint", "athletic", "competitive", "speed"],
-            allowed_scene_categories=["Sports & Athletics"],
-            required_scene_tags=["track", "stadium", "field"], # Strict Scene Filter
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "vintage", "historical", "esports", "sci-fi", "survival", "post-apocalyptic", "combat_sport", "mma", "boxing", "football", "basketball", "baseball", "softball", "tennis", "soccer", "volleyball", "bowling", "gymnastics", "swimming"],
-            min_characters=2,
-            max_characters=4,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Runner",
-                    required_tags=["track", "running"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage"],
-                    allowed_outfit_categories=["Athletic & Sports"],
-                    allowed_pose_categories=["Action & Motion", "Athletics & Sports"]
-                )
-            ],
-            default_style_tags=["Sports Action", "High Detail", "Dynamic"],
-            weight=0.3
-        ))
-
-        # 17. TENNIS MATCH
-        self.register(Scenario(
-            name="Tennis Match",
-            vibe_tags=["tennis", "athletic", "competitive", "court"],
-            allowed_scene_categories=["Sports & Athletics"],
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "vintage", "historical", "esports", "sci-fi", "survival", "post-apocalyptic", "combat_sport", "mma", "boxing", "football", "basketball", "baseball", "softball", "soccer", "volleyball", "bowling", "track", "gymnastics", "swimming"],
-            min_characters=2,
-            max_characters=2,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Player",
-                    required_tags=["tennis"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage"],
-                    allowed_outfit_categories=["Athletic & Sports"],
-                    allowed_pose_categories=["Action & Motion", "Athletics & Sports"]
-                )
-            ],
-            default_style_tags=["Sports Action", "High Detail", "Outdoor"],
-            weight=0.3
-        ))
-
-        # 18. BOXING MATCH
-        self.register(Scenario(
-            name="Boxing Match",
-            vibe_tags=["boxing", "combat_sport", "fighting", "athletic", "intense", "ring"],
-            allowed_scene_categories=["Sports & Athletics"],
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "vintage", "historical", "esports", "sci-fi", "survival", "post-apocalyptic", "football", "basketball", "baseball", "softball", "tennis", "soccer", "volleyball", "bowling", "track", "gymnastics", "swimming"],
-            min_characters=2,
-            max_characters=2,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Boxer",
-                    required_tags=["boxing"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage"],
-                    allowed_outfit_categories=["Athletic & Sports"],
-                    allowed_pose_categories=["Combat & Tactical", "Action & Motion"]
-                )
-            ],
-            default_style_tags=["Sports Action", "Gritty", "High Detail"],
-            weight=0.3
-        ))
-
-        # 19. SOCCER GAME
-        self.register(Scenario(
-            name="Soccer Match",
-            vibe_tags=["soccer", "athletic", "competitive", "field"],
-            allowed_scene_categories=["Sports & Athletics"],
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "vintage", "historical", "esports", "sci-fi", "survival", "post-apocalyptic", "combat_sport", "mma", "boxing", "football", "basketball", "baseball", "softball", "tennis", "volleyball", "bowling", "track", "gymnastics", "swimming"],
-            min_characters=2,
-            max_characters=4,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Player",
-                    required_tags=["soccer"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage"],
-                    allowed_outfit_categories=["Athletic & Sports"],
-                    allowed_pose_categories=["Action & Motion", "Athletics & Sports"]
-                )
-            ],
-            default_style_tags=["Sports Action", "High Detail", "Dynamic"]
-        ))
-
-        # 20. VOLLEYBALL GAME
-        self.register(Scenario(
-            name="Volleyball Match",
-            vibe_tags=["volleyball", "athletic", "competitive", "court", "beach"],
-            allowed_scene_categories=["Sports & Athletics", "Nature & Outdoors"], # Beach Volleyball
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "vintage", "historical", "esports", "sci-fi", "survival", "post-apocalyptic", "combat_sport", "mma", "boxing", "football", "basketball", "baseball", "softball", "tennis", "soccer", "bowling", "track", "gymnastics", "swimming"],
-            min_characters=2,
-            max_characters=4,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Player",
-                    required_tags=["volleyball"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage"],
-                    allowed_outfit_categories=["Athletic & Sports"],
-                    allowed_pose_categories=["Action & Motion", "Athletics & Sports"]
-                )
-            ],
-            default_style_tags=["Sports Action", "High Detail", "Dynamic"]
-        ))
-        
-        # 21. SOFTBALL GAME
-        self.register(Scenario(
-            name="Softball Game",
-            vibe_tags=["softball", "baseball", "athletic", "competitive", "outdoor"],
-            allowed_scene_categories=["Sports & Athletics"],
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "vintage", "historical", "esports", "sci-fi", "survival", "post-apocalyptic", "combat_sport", "mma", "boxing", "football", "basketball", "tennis", "soccer", "volleyball", "bowling", "track", "gymnastics", "swimming"],
-            min_characters=2,
-            max_characters=3,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Player",
-                    required_tags=["softball"], # Specific tag
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage"],
-                    allowed_outfit_categories=["Athletic & Sports"],
-                    allowed_pose_categories=["Action & Motion", "Athletics & Sports"]
-                )
-            ],
-            default_style_tags=["Sports Action", "High Detail"]
-        ))
-        
-        # 22. GYMNASTICS
-        self.register(Scenario(
-            name="Gymnastics Training",
-            vibe_tags=["gymnastics", "athletic", "flexible", "balance", "indoor"],
-            allowed_scene_categories=["Sports & Athletics"],
-            # STRICT BLOCKING: No combat/wrestling allowed
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "vintage", "historical", "esports", "sci-fi", "survival", "post-apocalyptic", "combat_sport", "wrestling", "fighting", "boxing", "mma", "football", "basketball", "baseball", "softball", "tennis", "soccer", "volleyball", "bowling", "track", "swimming"],
             min_characters=1,
             max_characters=4,
-            force_interaction=False, # Solo practice is common
+            force_interaction=False,  # Sport-dependent (team vs individual)
             roles=[
                 Role(
-                    name="Gymnast",
-                    required_tags=["gymnastics"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage", "combat"],
+                    name="Athlete",
+                    required_tags=["athletic"],
+                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage", "elegant"],
                     allowed_outfit_categories=["Athletic & Sports"],
                     allowed_pose_categories=["Action & Motion", "Athletics & Sports"]
                 )
             ],
-            default_style_tags=["Sports Action", "Dynamic", "Graceful"],
-            weight=0.3
-        ))
-        
-        # 23. SWIMMING (Fixes Pool Leak)
-        self.register(Scenario(
-            name="Swimming Race",
-            vibe_tags=["swim", "pool", "water", "athletic", "competitive", "indoor"],
-            allowed_scene_categories=["Sports & Athletics"],
-            blocked_global_tags=["fantasy", "medieval", "formal", "elegant", "vintage", "historical", "esports", "sci-fi", "survival", "combat_sport", "wrestling", "western", "cowboy", "streetwear", "mma", "boxing", "football", "basketball", "baseball", "softball", "tennis", "soccer", "volleyball", "bowling", "track", "gymnastics"],
-            min_characters=2,
-            max_characters=4,
-            force_interaction=True,
-            roles=[
-                Role(
-                    name="Swimmer",
-                    required_tags=["swim"],
-                    blocked_tags=["formal", "business", "fantasy", "armor", "vintage", "combat"],
-                    allowed_outfit_categories=["Athletic & Sports", "Swimwear"],
-                    allowed_pose_categories=["Action & Motion", "Athletics & Sports"]
-                )
-            ],
-            default_style_tags=["Sports Action", "High Detail", "Wet Skin"],
-            weight=0.3
+            default_style_tags=["Sports Action", "High Detail", "Dynamic"],
+            weight=0.5  # Combined weight for all sports (was 0.3 × 13 = 3.9)
         ))
 

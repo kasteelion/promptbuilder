@@ -52,110 +52,250 @@ class PromptRandomizer:
         "GENRE_SPORT": {"sport", "athletic", "gym", "stadium", "court", "field", "track", "basketball", "bowling", "baseball", "volleyball", "football", "soccer", "tennis", "mma", "boxing", "wrestling", "relay", "baton", "jersey", "activewear", "sneakers"},
     }
 
-    # Define hard strict blocks to prevent "Outfit Salad"
-    # Key: Tag found in Scene -> Value: Set of tags to BLOCK
-    SCENE_RESTRICTIONS = {
-        "office": TAG_GROUPS["EXPOSED_SKIN"] | TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["SLEEPWEAR"] | TAG_GROUPS["FANTASY"],
-        "library": TAG_GROUPS["EXPOSED_SKIN"] | TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["SPORT"] | TAG_GROUPS["FANTASY"],
-        "quiet": TAG_GROUPS["SPORT"] | {"loud", "party", "combat", "action"},
-        "work": TAG_GROUPS["EXPOSED_SKIN"] | TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["SLEEPWEAR"] | TAG_GROUPS["FANTASY"],
-        "school": TAG_GROUPS["EXPOSED_SKIN"] | {"armor", "fantasy", "weapon", "bed", "sleep"},
-        "hospital": TAG_GROUPS["EXPOSED_SKIN"] | TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["FANTASY"] | TAG_GROUPS["FORMAL"] | {"party"},
-        "medical": TAG_GROUPS["EXPOSED_SKIN"] | TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["FANTASY"] | TAG_GROUPS["FORMAL"] | {"party"},
-        "fitness": TAG_GROUPS["FORMAL"] | {"armor", "jeans", "dress", "bed", "sofa", "couch", "cold", "outdoor", "cheer", "combat", "winter"},
-        "yoga": TAG_GROUPS["FORMAL"] | {"armor", "jeans", "dress", "bed", "sofa", "couch", "cold", "outdoor", "cheer", "combat", "winter"},
-        "sport": TAG_GROUPS["FORMAL"] | {"armor", "jeans", "dress", "heels", "bed", "sofa"},
-        "beach": TAG_GROUPS["FORMAL"] | TAG_GROUPS["WINTER"] | TAG_GROUPS["OFFICE"],
-        "pool": TAG_GROUPS["FORMAL"] | TAG_GROUPS["WINTER"] | {"jeans", "computer", "desk"},
-        "winter": TAG_GROUPS["EXPOSED_SKIN"],
-        "snow": TAG_GROUPS["EXPOSED_SKIN"] | {"sandals", "heels"},
-        "indoor": {"winter", "snow", "ski", "heavy coat"}, 
-        "formal": TAG_GROUPS["EXPOSED_SKIN"] | {"casual", "sport", "gym", "pajamas"},
-        "gala": TAG_GROUPS["EXPOSED_SKIN"] | {"casual", "sport", "gym", "pajamas", "jeans"},
-        "bed": TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["FOOTWEAR"] | TAG_GROUPS["WINTER"] | {"hat", "standing", "run", "jump"},
-        "sleep": TAG_GROUPS["ARMOR_WEAPON"] | TAG_GROUPS["FOOTWEAR"] | TAG_GROUPS["WINTER"] | {"hat", "jeans", "formal", "standing"},
-        "gallery": TAG_GROUPS["EXPOSED_SKIN"] | {"armor", "costume", "sport", "combat", "bed", "sleep", "running"},
-        "museum": TAG_GROUPS["EXPOSED_SKIN"] | {"armor", "costume", "sport", "combat", "bed", "sleep", "running"},
+    # =========================================================================
+    # UNIFIED SCENE CONSTRAINTS
+    # =========================================================================
+    # Replaces: SCENE_RESTRICTIONS, SCENE_WHITELISTS, CONTEXT_CLASHES
+    # Format: "scene_tag": {"allowed": [...], "blocked": [...]}
+    # - If "allowed" is present, ONLY those tags are permitted (whitelist)
+    # - If "blocked" is present, those tags are forbidden (blacklist)
+    # - Both can coexist (allowed takes precedence)
+    
+    SCENE_CONSTRAINTS = {
+        # Work/Professional Environments
+        "office": {
+            "allowed": ["business", "formal", "office", "work", "suit", "smart casual", "blazer", "shirt", "pencil skirt"],
+            "blocked": ["swimwear", "bikini", "lingerie", "armor", "weapon", "pajamas", "fantasy", "medieval"]
+        },
+        "library": {
+            "allowed": ["casual", "business", "academic", "preppy", "formal"],
+            "blocked": ["swimwear", "armor", "weapon", "sport", "athletic", "fantasy"]
+        },
+        "work": {
+            "blocked": ["swimwear", "armor", "weapon", "pajamas", "fantasy", "sleep"]
+        },
+        "school": {
+            "blocked": ["swimwear", "armor", "fantasy", "weapon", "bed", "sleep", "lingerie"]
+        },
+        "hospital": {
+            "allowed": ["medical", "scrubs", "coat", "uniform", "doctor", "nurse", "white", "lab"],
+            "blocked": ["swimwear", "armor", "weapon", "fantasy", "formal", "party"]
+        },
+        "medical": {
+            "allowed": ["medical", "scrubs", "coat", "uniform", "doctor", "nurse", "white", "lab"],
+            "blocked": ["swimwear", "armor", "weapon", "fantasy", "formal", "party"]
+        },
         
-        # Thematic Blocks
-        "fantasy": TAG_GROUPS["SCIFI"] | {"office", "business", "gun", "rifle", "computer"},
-        "nature": TAG_GROUPS["OFFICE"] | TAG_GROUPS["SCIFI"],
-        "sci-fi": TAG_GROUPS["FANTASY"] | {"sword", "shield"},
-        "cyberpunk": TAG_GROUPS["FANTASY"] | {"nature"},
-        "waterfall": TAG_GROUPS["SCIFI"] | TAG_GROUPS["OFFICE"],
-        "forest": TAG_GROUPS["SCIFI"] | TAG_GROUPS["OFFICE"],
+        # Fitness/Athletic Environments
+        "fitness": {
+            "allowed": ["sport", "athletic", "fitness", "active", "workout", "yoga"],
+            "blocked": ["formal", "armor", "jeans", "dress", "bed", "winter"]
+        },
+        "yoga": {
+            "allowed": ["sport", "athletic", "fitness", "yoga", "active"],
+            "blocked": ["formal", "armor", "jeans", "dress", "bed", "winter"]
+        },
+        "sport": {
+            "allowed": ["sport", "athletic", "gym", "active", "workout", "fitness", "yoga", "jersey", "uniform"],
+            "blocked": ["formal", "armor", "jeans", "dress", "heels", "bed"]
+        },
+        "gym": {
+            "allowed": ["gym", "fitness", "sport", "workout", "active", "training"],
+            "blocked": ["fantasy", "formal", "business", "jeans", "armor", "weapon", "medieval"]
+        },
         
-        # Absolute Blacklists (The "Firewall")
-        "bowling": TAG_GROUPS["GENRE_FANTASY"] | {"armor", "weapon", "sword", "shield", "magic", "healer", "mythology"},
-        "gym": TAG_GROUPS["GENRE_FANTASY"] | {"formal", "business", "jeans", "armor", "weapon"},
-        "stadium": TAG_GROUPS["GENRE_FANTASY"] | {"armor", "weapon", "magic"},
-        "castle": TAG_GROUPS["GENRE_MODERN"] | {"tech", "modern", "computer", "phone", "neon"},
-        "dungeon": TAG_GROUPS["GENRE_MODERN"] | {"tech", "modern", "computer", "phone"},
-        "temple": TAG_GROUPS["GENRE_MODERN"] | {"tech", "modern", "neon"},
+        # Leisure/Social Environments
+        "beach": {
+            "allowed": ["swimwear", "bikini", "swim", "beach", "summer", "casual", "boho", "shorts", "dress", "linen"],
+            "blocked": ["formal", "winter", "office", "armor", "coat", "jacket"]
+        },
+        "pool": {
+            "allowed": ["swimwear", "bikini", "swim", "pool", "summer"],
+            "blocked": ["formal", "winter", "jeans", "computer", "desk", "armor"]
+        },
+        "winter": {
+            "blocked": ["swimwear", "bikini", "shorts", "crop top", "sleeveless"]
+        },
+        "snow": {
+            "blocked": ["swimwear", "bikini", "sandals", "heels", "shorts"]
+        },
+        "indoor": {
+            "blocked": ["winter", "snow", "ski", "heavy coat"]
+        },
         
-        # Fantasy Scene Sport Blocks
-        "dragon": TAG_GROUPS["GENRE_SPORT"] | TAG_GROUPS["GENRE_MODERN"],
-        "lair": TAG_GROUPS["GENRE_SPORT"] | TAG_GROUPS["GENRE_MODERN"],
-        "cave": TAG_GROUPS["GENRE_SPORT"] | {"basketball", "bowling", "baseball", "volleyball", "football", "soccer", "tennis", "track", "relay", "baton", "jersey", "stadium"},
-        "quest": TAG_GROUPS["GENRE_SPORT"] | TAG_GROUPS["GENRE_MODERN"],
+        # Formal/Elegant Environments
+        "formal": {
+            "allowed": ["formal", "evening", "gala", "dress", "suit", "tuxedo", "gown", "elegant", "luxury", "high fashion"],
+            "blocked": ["swimwear", "casual", "sport", "gym", "pajamas", "jeans", "athletic"]
+        },
+        "gala": {
+            "allowed": ["formal", "evening", "gala", "dress", "suit", "tuxedo", "gown", "elegant", "luxury"],
+            "blocked": ["swimwear", "casual", "sport", "gym", "pajamas", "jeans"]
+        },
+        "wedding": {
+            "allowed": ["formal", "wedding", "white", "dress", "suit", "gown", "elegant"],
+            "blocked": ["casual", "sport", "armor", "fantasy"]
+        },
         
-        # Per-Sport Venue Restrictions (only allow sport in its proper venue)
-        "alley": TAG_GROUPS["SPORT_BASKETBALL"] | TAG_GROUPS["SPORT_BASEBALL"] | TAG_GROUPS["SPORT_VOLLEYBALL"] | TAG_GROUPS["SPORT_FOOTBALL"] | TAG_GROUPS["SPORT_SOCCER"] | TAG_GROUPS["SPORT_TENNIS"] | TAG_GROUPS["SPORT_TRACK"] | TAG_GROUPS["SPORT_MMA"] | TAG_GROUPS["SPORT_BOXING"] | TAG_GROUPS["SPORT_WRESTLING"],
-        "octagon": TAG_GROUPS["SPORT_BOWLING"] | TAG_GROUPS["SPORT_BASKETBALL"] | TAG_GROUPS["SPORT_BASEBALL"] | TAG_GROUPS["SPORT_VOLLEYBALL"] | TAG_GROUPS["SPORT_FOOTBALL"] | TAG_GROUPS["SPORT_SOCCER"] | TAG_GROUPS["SPORT_TENNIS"] | TAG_GROUPS["SPORT_TRACK"],
-        "cage": TAG_GROUPS["SPORT_BOWLING"] | TAG_GROUPS["SPORT_BASKETBALL"] | TAG_GROUPS["SPORT_BASEBALL"] | TAG_GROUPS["SPORT_VOLLEYBALL"] | TAG_GROUPS["SPORT_FOOTBALL"] | TAG_GROUPS["SPORT_SOCCER"] | TAG_GROUPS["SPORT_TENNIS"] | TAG_GROUPS["SPORT_TRACK"],
-        "diamond": TAG_GROUPS["SPORT_BOWLING"] | TAG_GROUPS["SPORT_BASKETBALL"] | TAG_GROUPS["SPORT_VOLLEYBALL"] | TAG_GROUPS["SPORT_FOOTBALL"] | TAG_GROUPS["SPORT_SOCCER"] | TAG_GROUPS["SPORT_TENNIS"] | TAG_GROUPS["SPORT_TRACK"] | TAG_GROUPS["SPORT_MMA"] | TAG_GROUPS["SPORT_BOXING"] | TAG_GROUPS["SPORT_WRESTLING"],
-        "mound": TAG_GROUPS["SPORT_BOWLING"] | TAG_GROUPS["SPORT_BASKETBALL"] | TAG_GROUPS["SPORT_VOLLEYBALL"] | TAG_GROUPS["SPORT_FOOTBALL"] | TAG_GROUPS["SPORT_SOCCER"] | TAG_GROUPS["SPORT_TENNIS"] | TAG_GROUPS["SPORT_TRACK"] | TAG_GROUPS["SPORT_MMA"] | TAG_GROUPS["SPORT_BOXING"] | TAG_GROUPS["SPORT_WRESTLING"],
-    }
-
-    # POSITIVE constraints. If a scene matches a key, ONLY allow items with these tags.
-    # If no items match, logic falls back to the SCENE_RESTRICTIONS blacklist.
-    SCENE_WHITELISTS = {
-        "fitness": ["sport", "athletic", "fitness", "active", "workout", "yoga"],
-        "sport": ["sport", "athletic", "gym", "active", "workout", "fitness", "yoga", "jersey", "uniform"],
-        "medical": ["medical", "scrubs", "coat", "uniform", "doctor", "nurse", "white", "lab"],
-        "hospital": ["medical", "scrubs", "coat", "uniform", "doctor", "nurse", "white"],
-        "fantasy": ["fantasy", "medieval", "armor", "robe", "dress", "gala", "rustic", "traditional", "leather", "fur"],
-        "sci-fi": ["sci-fi", "tech", "cyberpunk", "futuristic", "modern", "tactical", "armor", "suit", "latex", "metallic"],
-        "cyberpunk": ["cyberpunk", "sci-fi", "tech", "neon", "urban", "street", "leather", "tactical", "edgy"],
-        "pool": ["swimwear", "bikini", "swim", "pool", "summer"],
-        "beach": ["swimwear", "bikini", "swim", "beach", "summer", "casual", "boho", "shorts", "dress", "linen"],
-        "office": ["business", "formal", "office", "work", "suit", "smart casual", "blazer", "shirt", "pencil skirt"],
-        "formal": ["formal", "evening", "gala", "dress", "suit", "tuxedo", "gown", "elegant", "luxury", "high fashion", "avant-garde", "runway"],
-        "wedding": ["formal", "wedding", "white", "dress", "suit", "gown", "elegant"],
-        "urban": ["streetwear", "casual", "skater", "edgy", "denim", "skate", "city", "urban", "graffiti"],
-        "domestic": ["casual", "loungewear", "pajamas", "cozy", "knit", "sweater", "shorts", "t-shirt"],
-        "vintage": ["vintage", "retro", "1950", "1970", "pinup", "disco", "server", "denim", "classic"],
-        "academic": ["academia", "preppy", "glasses", "blazer", "skirt", "tights", "vest", "shirt"],
+        # Domestic/Private Environments
+        "bed": {
+            "allowed": ["pajamas", "sleep", "loungewear", "intimate", "lingerie"],
+            "blocked": ["armor", "weapon", "footwear", "winter", "hat", "standing", "run", "jump", "shoes", "boots"]
+        },
+        "sleep": {
+            "allowed": ["pajamas", "sleep", "loungewear", "intimate"],
+            "blocked": ["armor", "weapon", "footwear", "winter", "hat", "jeans", "formal", "standing"]
+        },
+        "domestic": {
+            "allowed": ["casual", "loungewear", "pajamas", "cozy", "knit", "sweater", "shorts", "t-shirt"],
+            "blocked": ["armor", "weapon", "formal", "sport"]
+        },
         
-        # Explicit Sport Isolation
-        "boxing": ["boxing", "combat_sport", "active", "training"],
-        "mma": ["mma", "combat_sport", "fighting"],
-        "basketball": ["basketball", "jersey", "active", "cheer"],
-        "baseball": ["baseball", "jersey", "active"],
-        "softball": ["softball", "baseball", "active"],
-        "football": ["football", "jersey", "active", "cheer"],
-        "soccer": ["soccer", "jersey", "active"],
-        "tennis": ["tennis", "active"],
-        "volleyball": ["volleyball", "active"],
-        "bowling": ["bowling", "retro", "casual"],
-        "track": ["track", "running", "active"],
-        "gym": ["gym", "fitness", "sport", "workout", "active", "training"],
-        "gymnastics": ["gymnastics", "leotard", "activewear", "shorts", "leggings"],
-        "swim": ["swim", "swimwear", "pool", "water", "speedo", "bikini"],
-    }
-
-    # [NEW] Contextual Clash Map: (Scene Tag) -> [Contradictory Interaction/Pose Tags]
-    # Penalizes items that imply a completely different physical location.
-    CONTEXT_CLASHES = {
-         'clinical': ['party', 'dance', 'drinking', 'messy', 'dirty', 'gritty'],
-         'public': ['pajamas', 'sleep', 'bed', 'bathroom', 'undressing', 'naked'],
-         'formal': ['gym', 'stadium', 'wrestling', 'combat', 'sweat', 'messy', 'gymnastics', 'dirty', 'gritty'],
-         'nature': ['office', 'business', 'tech', 'computer', 'server', 'indoor'],
-         # Genre Hard-Blocks
-         'modern': ['sword', 'shield', 'medieval', 'knight', 'magic', 'arcane', 'mythology'],
-         'fantasy': ['computer', 'phone', 'neon', 'tech', 'modern', 'laptop', 'car', 'business', 'office'],
-         'bowling': ['sword', 'shield', 'armor', 'magic', 'martial arts', 'fighting', 'struggle', 'duel', 'mythology'],
-         'gym': ['formal', 'evening', 'gown', 'armor', 'wizard', 'magical'],
+        # Cultural/Public Spaces
+        "museum": {
+            "allowed": ["casual", "business", "formal", "smart casual"],
+            "blocked": ["swimwear", "armor", "costume", "sport", "combat", "bed", "sleep", "running", "pajamas"]
+        },
+        "gallery": {
+            "allowed": ["casual", "business", "formal", "artistic", "smart casual"],
+            "blocked": ["swimwear", "armor", "costume", "sport", "combat", "bed", "sleep", "running"]
+        },
+        "quiet": {
+            "blocked": ["sport", "loud", "party", "combat", "action", "athletic"]
+        },
+        
+        # Outdoor/Nature Environments
+        "nature": {
+            "allowed": ["casual", "outdoor", "hiking", "adventure", "rugged", "fantasy"],
+            "blocked": ["office", "business", "formal", "tech", "computer", "modern", "neon"]
+        },
+        "forest": {
+            "allowed": ["casual", "outdoor", "fantasy", "rugged", "adventure", "medieval"],
+            "blocked": ["office", "tech", "modern", "computer", "neon"]
+        },
+        "waterfall": {
+            "blocked": ["office", "tech", "computer", "modern", "neon"]
+        },
+        
+        # Genre-Specific (STRICT FIREWALLS)
+        "fantasy": {
+            "allowed": ["fantasy", "medieval", "armor", "robe", "dress", "gala", "rustic", "traditional", "leather", "fur"],
+            "blocked": ["modern", "tech", "office", "business", "gun", "rifle", "computer", "phone", "neon", "cyberpunk"]
+        },
+        "sci-fi": {
+            "allowed": ["sci-fi", "tech", "cyberpunk", "futuristic", "modern", "tactical", "armor", "suit", "latex", "metallic"],
+            "blocked": ["fantasy", "medieval", "sword", "shield", "magic"]
+        },
+        "cyberpunk": {
+            "allowed": ["cyberpunk", "sci-fi", "tech", "neon", "urban", "street", "leather", "tactical", "edgy"],
+            "blocked": ["fantasy", "medieval", "nature", "rustic"]
+        },
+        "castle": {
+            "allowed": ["fantasy", "medieval", "historical", "armor", "traditional", "robe"],
+            "blocked": ["modern", "tech", "computer", "phone", "neon", "sport", "athletic", "gym"]
+        },
+        "dungeon": {
+            "allowed": ["fantasy", "medieval", "armor", "dark", "tactical"],
+            "blocked": ["modern", "tech", "computer", "phone", "sport"]
+        },
+        "temple": {
+            "allowed": ["fantasy", "historical", "traditional", "cultural", "robe"],
+            "blocked": ["modern", "tech", "neon", "sport"]
+        },
+        "dragon": {
+            "allowed": ["fantasy", "medieval", "armor", "magic"],
+            "blocked": ["modern", "sport", "athletic", "tech"]
+        },
+        "lair": {
+            "allowed": ["fantasy", "medieval", "dark", "tactical"],
+            "blocked": ["modern", "sport", "athletic"]
+        },
+        "cave": {
+            "blocked": ["sport", "athletic", "basketball", "bowling", "baseball", "volleyball", "football", "soccer", "tennis", "track", "stadium"]
+        },
+        "quest": {
+            "allowed": ["fantasy", "medieval", "adventure", "armor"],
+            "blocked": ["modern", "sport", "athletic"]
+        },
+        
+        # Sport Venue Isolation (Prevent cross-sport contamination)
+        "bowling": {
+            "allowed": ["bowling", "retro", "casual"],
+            "blocked": ["fantasy", "armor", "weapon", "sword", "shield", "magic", "medieval", "mythology"]
+        },
+        "stadium": {
+            "allowed": ["sport", "athletic", "jersey", "active"],
+            "blocked": ["fantasy", "armor", "weapon", "magic", "medieval"]
+        },
+        "alley": {
+            "allowed": ["bowling", "casual", "retro"],
+            "blocked": ["basketball", "baseball", "volleyball", "football", "soccer", "tennis", "track", "mma", "boxing", "wrestling"]
+        },
+        "octagon": {
+            "allowed": ["mma", "fighting", "combat_sport"],
+            "blocked": ["bowling", "basketball", "baseball", "volleyball", "football", "soccer", "tennis", "track"]
+        },
+        "cage": {
+            "allowed": ["mma", "fighting", "combat_sport"],
+            "blocked": ["bowling", "basketball", "baseball", "volleyball", "football", "soccer", "tennis", "track"]
+        },
+        "diamond": {
+            "allowed": ["baseball", "softball"],
+            "blocked": ["bowling", "basketball", "volleyball", "football", "soccer", "tennis", "track", "mma", "boxing", "wrestling"]
+        },
+        "mound": {
+            "allowed": ["baseball", "softball"],
+            "blocked": ["bowling", "basketball", "volleyball", "football", "soccer", "tennis", "track", "mma", "boxing", "wrestling"]
+        },
+        
+        # Thematic/Stylistic
+        "urban": {
+            "allowed": ["streetwear", "casual", "skater", "edgy", "denim", "skate", "city", "urban", "graffiti"],
+        },
+        "vintage": {
+            "allowed": ["vintage", "retro", "1950", "1970", "pinup", "disco", "server", "denim", "classic"],
+        },
+        "academic": {
+            "allowed": ["academia", "preppy", "glasses", "blazer", "skirt", "tights", "vest", "shirt"],
+        },
+        
+        # Sport-Specific (from old whitelists)
+        "boxing": {
+            "allowed": ["boxing", "combat_sport", "active", "training"],
+        },
+        "mma": {
+            "allowed": ["mma", "combat_sport", "fighting"],
+        },
+        "basketball": {
+            "allowed": ["basketball", "jersey", "active", "cheer"],
+        },
+        "baseball": {
+            "allowed": ["baseball", "jersey", "active"],
+        },
+        "softball": {
+            "allowed": ["softball", "baseball", "active"],
+        },
+        "football": {
+            "allowed": ["football", "jersey", "active", "cheer"],
+        },
+        "soccer": {
+            "allowed": ["soccer", "jersey", "active"],
+        },
+        "tennis": {
+            "allowed": ["tennis", "active"],
+        },
+        "volleyball": {
+            "allowed": ["volleyball", "active"],
+        },
+        "track": {
+            "allowed": ["track", "running", "active"],
+        },
+        "gymnastics": {
+            "allowed": ["gymnastics", "leotard", "activewear", "shorts", "leggings"],
+        },
+        "swim": {
+            "allowed": ["swim", "swimwear", "pool", "water", "speedo", "bikini"],
+        },
     }
 
     def __init__(self, characters, base_prompts, poses, scenes=None, interactions=None, color_schemes=None, modifiers=None, framing=None):
@@ -493,14 +633,28 @@ class PromptRandomizer:
         raw_moods = metadata.get("vibe", []) or metadata.get("moods", [])
         active_moods = self._expand_tags([m.lower() for m in raw_moods])
 
-        # Re-derive blocked tags from scene context
+        # Re-derive blocked/allowed tags from scene context using NEW unified system
         scene_tags = metadata.get("scene_tags", [])
         blocked_tags = set()
+        allowed_tags = None  # None means no whitelist (everything allowed except blocked)
+        
         if scene_tags:
             for t in scene_tags:
                 t_lower = t.lower()
-                if t_lower in self.SCENE_RESTRICTIONS:
-                     blocked_tags.update(self.SCENE_RESTRICTIONS[t_lower])
+                if t_lower in self.SCENE_CONSTRAINTS:
+                    constraints = self.SCENE_CONSTRAINTS[t_lower]
+                    
+                    # Apply blocked tags
+                    if "blocked" in constraints:
+                        blocked_tags.update(constraints["blocked"])
+                    
+                    # Apply allowed tags (whitelist)
+                    if "allowed" in constraints:
+                        if allowed_tags is None:
+                            allowed_tags = set(constraints["allowed"])
+                        else:
+                            # Intersection: must satisfy ALL whitelists
+                            allowed_tags.intersection_update(constraints["allowed"])
 
         if not active_moods:
             breakdown["warnings"].append("No active moods/context found for thematic scoring.")
@@ -737,16 +891,7 @@ class PromptRandomizer:
                         clash_penalty += 1000
                         breakdown["mismatch_penalty"] -= 1000
                         breakdown["warnings"].append(f"GENRE CLASH: Modern Scene vs Fantasy Content")
-
-                # --- PRE-DEFINED CLASHES ---
-                if st_lower in self.CONTEXT_CLASHES:
-                    clashes = self.CONTEXT_CLASHES[st_lower]
-                    for ct in combined_content_tags:
-                        if any(c in ct.lower() for c in clashes):
-                            clash_penalty += 200
-                            breakdown["mismatch_penalty"] -= 200
-                            breakdown["warnings"].append(f"Context Clash: '{st}' scene vs '{ct}' content")
-                            
+                        
         score -= clash_penalty
         return score
 
