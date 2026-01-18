@@ -597,16 +597,29 @@ class PromptRandomizer:
         return best_config
 
     def _score_candidate(self, config):
-        """Score a generated configuration based on heuristics for high-quality variety."""
+        """
+        Score a generated configuration based on simplified heuristics.
+        
+        SIMPLIFIED SCORING (5 rules):
+        1. Mood Match (+30/match) - Core thematic alignment
+        2. Style Alignment (+25/match) - Art style coherence  
+        3. Genre Clash (-1000) - Critical firewall
+        4. Mismatch Penalty (-100) - Constraint violations
+        5. Diversity Bonus (+10/unique) - Group variety
+        
+        Args:
+            config: A dictionary representing the generated prompt configuration.
+        
+        Returns:
+            score (float): The calculated score for the configuration.
+        """
         score = 0
         breakdown = {
             "mood_matches": 0,
             "style_matches": 0,
-            "interaction_matches": 0,
-            "tag_matches": 0,
             "diversity_bonus": 0,
-            "repetitive_penalty": 0,
             "mismatch_penalty": 0,
+            "genre_clash": 0,
             "warnings": []
         }
         
@@ -642,242 +655,116 @@ class PromptRandomizer:
 
         if not active_moods:
             breakdown["warnings"].append("No active moods/context found for thematic scoring.")
-
-        # 2. Base Score (+10)
-        if config.get("scene"): score += 5
-        if config.get("notes"): score += 5
-
-        # 3. Calculate Component Scores
-        style_score, style_tags = self._score_style_alignment(
-            config.get("base_prompt"), active_moods, blocked_tags, breakdown
-        )
-        score += style_score
-
-        char_score = self._score_character_alignment(
-            config, active_moods, blocked_tags, style_tags, breakdown
-        )
-        score += char_score
-
-        interaction_score, interaction_tags = self._score_interaction_and_diversity(
-            config, active_moods, breakdown
-        )
-        score += interaction_score
-
-        penalty_score = self._calculate_penalties(
-            config, scene_tags, interaction_tags, breakdown
-        )
-        score += penalty_score
-
-        metadata["score_breakdown"] = breakdown
-        return score
-
-    def _score_style_alignment(self, base_prompt_name, active_moods, blocked_tags, breakdown):
-        """Calculate score for Art Style alignment."""
-        score = 0
-        expanded_style_tags = set()
         
-        if base_prompt_name:
-            base_style_data = self.base_prompts.get(base_prompt_name, {})
-            style_tags = self._get_tags(base_style_data)
-            expanded_style_tags = self._expand_tags([t.lower() for t in style_tags])
+        # Store for penalty checks
+        config["metadata"]["blocked_tags"] = blocked_tags
+        config["metadata"]["allowed_tags"] = allowed_tags
+        config["metadata"]["active_moods"] = active_moods
+        
+        # 2. Style Alignment (+25/match)
+        base_prompt = config.get("base_prompt")
+        if base_prompt and active_moods:
+            style_data = self.base_prompts.get(base_prompt, {})
+            style_tags = self._get_tags(style_data)
+            expanded_style = self._expand_tags([t.lower() for t in style_tags])
             
-            if active_moods:
-                style_matches = len(expanded_style_tags.intersection(active_moods))
-                points = style_matches * 25
-                score += points
-                breakdown["style_matches"] = points
-            
-            # Mismatch Check
-            if any(t.lower() in blocked_tags for t in style_tags):
-                penalty = 100
-                score -= penalty
-                breakdown["mismatch_penalty"] -= penalty
-                breakdown["warnings"].append(f"Style '{base_prompt_name}' is blocked by scene restrictions")
-                
-        return score, expanded_style_tags
-
-    def _score_character_alignment(self, config, active_moods, blocked_tags, expanded_style_tags, breakdown):
-        """Calculate score for Character/Outfit/Pose alignment."""
-        score = 0
-        selected_chars = config.get("selected_characters", [])
+            matches = len(expanded_style.intersection(active_moods))
+            points = matches * 25
+            score += points
+            breakdown["style_matches"] = points
         
-        char_tag_counts = {}
-        has_outfit_mood_match = False
-        
-        for char in selected_chars:
+        # 3. Mood Matches (+30/match) - Character outfits
+        for char in config.get("selected_characters", []):
             char_name = char.get("name")
-            char_def = self.characters.get(char_name, {})
             outfit_name = char.get("outfit")
             
-            # Helper to get outfit tags
-            outfits_dict = char_def.get("outfits", {})
-            outfit_data = outfits_dict.get(outfit_name, {})
+            # Get outfit tags (use cached if available)
+            char_def = self.characters.get(char_name, {})
+            outfit_data = char_def.get("outfits", {}).get(outfit_name, {})
             
-            # Use pre-computed if available
-            raw_outfit_tags = outfit_data.get("_expanded_tags") 
-            if raw_outfit_tags is None:
-                 raw_outfit_tags = self._expand_tags(self._get_tags(outfit_data))
-
-            # Check Conflicts
-            if not raw_outfit_tags.isdisjoint(blocked_tags):
-                penalty = 100
-                score -= penalty
-                breakdown["mismatch_penalty"] -= penalty
-                breakdown["warnings"].append(f"Outfit '{outfit_name}' violates scene restrictions")
-
-            # A) Outfit Mood Match
-            if active_moods:
-                matches = raw_outfit_tags.intersection(active_moods)
-                if matches:
-                    has_outfit_mood_match = True
-                    for m in matches:
-                        char_tag_counts[m] = char_tag_counts.get(m, 0) + 1
-                    
-                    # Diminishing returns: 30 for first 3, 10 thereafter
-                    count = len(matches)
-                    points = min(count, 3) * 30 + max(0, count - 3) * 10
-                    score += points
-                    breakdown["mood_matches"] += points
-
-            # B) Pose Alignment
-            pose_cat = char.get("pose_category")
-            if pose_cat and active_moods:
-                if any(m in pose_cat.lower() for m in active_moods):
-                    score += 10
-                    breakdown["tag_matches"] += 10
-
-            # C) Character Trait Alignment
-            char_tags = char_def.get("_expanded_tags") or self._expand_tags([t.lower() for t in char_def.get("tags", [])])
-            char_matches = len(char_tags.intersection(active_moods))
-            points = char_matches * 5
-            score += points
-            breakdown["tag_matches"] += points
-
-        # Thematic Singularity Bonus (+100)
-        # If Style + Outfit + All Characters share a common tag
-        if expanded_style_tags and has_outfit_mood_match and char_tag_counts:
-             for mood, count in char_tag_counts.items():
-                 # Must be present in ALL characters and the Art Style
-                 if count >= len(selected_chars) and mood in expanded_style_tags:
-                     score += 100
-                     breakdown["diversity_bonus"] += 100
-                     breakdown["warnings"].append(f"Thematic Singularity: All elements aligned on '{mood}'")
-                     break
-                     
-        return score
-
-    def _score_interaction_and_diversity(self, config, active_moods, breakdown):
-        """Calculate interaction and diversity scores."""
-        score = 0
-        metadata = config.get("metadata", {})
-        selected_chars = config.get("selected_characters", [])
-        composition_mode = metadata.get("composition_mode", "Unknown")
-        
-        # 1. Action Cohesion
-        cohesion_score, cohesion_msg = self._check_action_cohesion(config)
-        score += cohesion_score
-        if cohesion_score < 0:
-            breakdown["mismatch_penalty"] += cohesion_score
-            breakdown["warnings"].append(cohesion_msg)
-        elif cohesion_score > 0:
-            breakdown["diversity_bonus"] += cohesion_score
-
-        # 2. Composition Mode Compliance (NEW)
-        interaction_present = metadata.get("interaction", "None") != "None"
-        num_chars = len(selected_chars)
-        
-        if composition_mode == self.MODE_SOLO:
-            if num_chars == 1:
-                score += 30
-                breakdown["structure_bonus"] = 30
+            if isinstance(outfit_data, dict):
+                # Use cached expanded tags if available
+                outfit_tags = outfit_data.get("_expanded_tags")
+                if not outfit_tags:
+                    outfit_tags = self._expand_tags(self._get_tags(outfit_data))
             else:
-                score -= 50 # Solo mode failed
-                
-        elif composition_mode in (self.MODE_INT_W_POSES, self.MODE_INT_WO_POSES):
-            if interaction_present and num_chars >= 2:
-                bonus = 50 if composition_mode == self.MODE_INT_W_POSES else 30
-                score += bonus
-                breakdown["interaction_bonus"] = bonus
-            else:
-                score -= 100
-                breakdown["warnings"].append("Broken Interaction: Mode set but interaction failed")
-                
-        elif composition_mode == self.MODE_GROUP_NO_INT:
-            if num_chars > 1:
-                score += 10
-                breakdown["structure_bonus"] = 10
-
-        # 3. Interaction Alignment (Context Check)
-        interaction_raw_tags = metadata.get("interaction_tags", [])
-        interaction_tags = self._expand_tags([t.lower() for t in interaction_raw_tags])
+                outfit_tags = set()
+            
+            if active_moods and outfit_tags:
+                matches = outfit_tags.intersection(active_moods)
+                count = len(matches)
+                # Diminishing returns: first 3 matches worth 30 each, rest worth 10
+                points = min(count, 3) * 30 + max(0, count - 3) * 10
+                score += points
+                breakdown["mood_matches"] += points
         
-        if interaction_tags and active_moods:
-            matches = len(interaction_tags.intersection(active_moods))
-            points = min(matches, 3) * 10 + max(0, matches - 3) * 5
+        # 4. Diversity Bonus (+10/unique outfit)
+        chars = config.get("selected_characters", [])
+        if len(chars) > 1:
+            unique_outfits = {c.get("outfit") for c in chars}
+            points = len(unique_outfits) * 10
             score += points
-            breakdown["interaction_matches"] = points
-
-        # 4. Diversity (Unique Outfits) - Only for Groups
-        if len(selected_chars) > 1:
-            unique_outfits = {c.get("outfit") for c in selected_chars}
-            points = len(unique_outfits) * 5
-            score += points
-            breakdown["diversity_bonus"] += points
-            
-        return score, interaction_tags
-
-    def _calculate_penalties(self, config, scene_tags, interaction_tags, breakdown):
-        """Calculate text repetitiveness and contextual clash penalties."""
-        score = 0
+            breakdown["diversity_bonus"] = points
         
-        # 1. Repetitiveness
-        text_content = f"{config.get('scene', '')} {config.get('notes', '')}".lower()
-        clean_text = text_content.replace(',', ' ').replace('.', ' ').replace('!', ' ').replace('?', ' ')
-        words = [w for w in clean_text.split() if len(w) > 4]
-        seen_words = set()
-        rep_penalty = 0
-        for w in words:
-            if w in seen_words:
-                rep_penalty += 5
-            seen_words.add(w)
+        # 5. Mismatch Penalty (-100) - Constraint violations
+        for char in chars:
+            outfit_name = char.get("outfit")
+            char_def = self.characters.get(char.get("name"), {})
+            outfit_data = char_def.get("outfits", {}).get(outfit_name, {})
             
-        score -= rep_penalty
-        breakdown["repetitive_penalty"] = -rep_penalty
-
-        # 2. Contextual Clashes
-        clash_penalty = 0
-        if scene_tags:
-            combined_content_tags = interaction_tags.union(config.get("metadata", {}).get("pose_tags", []))
-            
-            # Add character outfit tags to the check
-            for char in config.get("selected_characters", []):
-                char_tags = set(config.get("metadata", {}).get("character_tags", {}).get(char["name"], []))
-                combined_content_tags.update(char_tags)
-
-            # expanded_content_tags = self._expand_tags(combined_content_tags)
-            
-            for st in scene_tags:
-                st_lower = st.lower()
+            if isinstance(outfit_data, dict):
+                outfit_tags = outfit_data.get("_expanded_tags")
+                if not outfit_tags:
+                    outfit_tags = self._expand_tags(self._get_tags(outfit_data))
                 
-                # --- STRICT GENRE BLOCKING (The "Death Penalty") ---
-                # If scene is Modern and content features Fantasy (or vice versa)
-                is_fantasy_scene = any(t in st_lower for t in self.TAG_GROUPS["GENRE_FANTASY"])
-                is_modern_scene = any(t in st_lower for t in self.TAG_GROUPS["GENRE_MODERN"])
+                # Check blocked tags
+                if blocked_tags and not outfit_tags.isdisjoint(blocked_tags):
+                    penalty = 100
+                    score -= penalty
+                    breakdown["mismatch_penalty"] -= penalty
+                    violations = outfit_tags.intersection(blocked_tags)
+                    breakdown["warnings"].append(f"Outfit '{outfit_name}' violates restrictions: {violations}")
+                
+                # Check whitelist (if present)
+                if allowed_tags and not outfit_tags.intersection(allowed_tags):
+                    penalty = 100
+                    score -= penalty
+                    breakdown["mismatch_penalty"] -= penalty
+                    breakdown["warnings"].append(f"Outfit '{outfit_name}' not in scene whitelist")
+        
+        # 6. Genre Clash (-1000) - Fantasy vs Modern firewall
+        is_fantasy_scene = any(t.lower() in self.TAG_GROUPS["GENRE_FANTASY"] for t in scene_tags)
+        is_modern_scene = any(t.lower() in self.TAG_GROUPS["GENRE_MODERN"] for t in scene_tags)
+        
+        for char in chars:
+            outfit_name = char.get("outfit")
+            char_def = self.characters.get(char.get("name"), {})
+            outfit_data = char_def.get("outfits", {}).get(outfit_name, {})
+            
+            if isinstance(outfit_data, dict):
+                outfit_tags = outfit_data.get("_expanded_tags")
+                if not outfit_tags:
+                    outfit_tags = self._expand_tags(self._get_tags(outfit_data))
                 
                 if is_fantasy_scene:
-                    if any(t in ct.lower() for ct in combined_content_tags for t in self.TAG_GROUPS["GENRE_MODERN"]):
-                        clash_penalty += 1000
-                        breakdown["mismatch_penalty"] -= 1000
-                        breakdown["warnings"].append(f"GENRE CLASH: Fantasy Scene vs Modern Content")
-
+                    if any(t in outfit_tags for t in self.TAG_GROUPS["GENRE_MODERN"]):
+                        penalty = 1000
+                        score -= penalty
+                        breakdown["genre_clash"] -= penalty
+                        breakdown["warnings"].append(f"GENRE CLASH: Fantasy scene with modern outfit '{outfit_name}'")
+                
                 if is_modern_scene:
-                    if any(t in ct.lower() for ct in combined_content_tags for t in self.TAG_GROUPS["GENRE_FANTASY"]):
-                        clash_penalty += 1000
-                        breakdown["mismatch_penalty"] -= 1000
-                        breakdown["warnings"].append(f"GENRE CLASH: Modern Scene vs Fantasy Content")
-                        
-        score -= clash_penalty
+                    if any(t in outfit_tags for t in self.TAG_GROUPS["GENRE_FANTASY"]):
+                        penalty = 1000
+                        score -= penalty
+                        breakdown["genre_clash"] -= penalty
+                        breakdown["warnings"].append(f"GENRE CLASH: Modern scene with fantasy outfit '{outfit_name}'")
+        
+        # Store breakdown in metadata
+        metadata["score_breakdown"] = breakdown
+        
         return score
+
 
     def _check_action_cohesion(self, config):
         """Check if all characters are doing things that make sense together.
