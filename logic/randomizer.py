@@ -665,8 +665,11 @@ class PromptRandomizer:
         base_prompt = config.get("base_prompt")
         if base_prompt and active_moods:
             style_data = self.base_prompts.get(base_prompt, {})
-            style_tags = self._get_tags(style_data)
-            expanded_style = self._expand_tags([t.lower() for t in style_tags])
+            # Use cached expanded tags if available
+            expanded_style = style_data.get("_expanded_tags")
+            if not expanded_style:
+                style_tags = self._get_tags(style_data)
+                expanded_style = self._expand_tags([t.lower() for t in style_tags])
             
             matches = len(expanded_style.intersection(active_moods))
             points = matches * 25

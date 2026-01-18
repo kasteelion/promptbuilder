@@ -4,21 +4,21 @@
 
 **Tags:** Female, Latina, Adventurous, Effervescent, Grounded, Spirited, Petite, Lean, Slender, Casual, Sport
 
-**Summary:** Inara is a radiant and agile adventurer who thrives in both high-altitude treks and coastal leisure. Effervescent, grounded, and spirited, she carries herself with the relaxed confidence of someone perfectly in tune with their physical capabilities. Her "Petite Gamine" presence is kinetically charged, blending a slender, compact silhouette with an infectious, playful energy and a soft, natural aesthetic.
+**Summary:** Inara is a radiant and agile adventurer who thrives in both high-altitude treks and coastal leisure. Effervescent, grounded, and spirited, she carries herself with the disciplined confidence of a trained dancer perfectly in tune with their physical capabilities. Her "Athletic Gamine" presence is kinetically charged, blending a compact, deceptively strong silhouette with genuine warmth and performance-ready poise.
 
 **Gender:** F
 **Signature Color:** #00CED1
 
 **Appearance:**
 
-- **Body:** Petite Gamine frame; very short vertical line with a narrow, slender, and diminutive silhouette; absolutely no visible muscle definition, abs, or striations; smooth, soft, and natural surface quality across her flat midriff and slender limbs; narrow waist; compact stature (5'0"-5'1") that projects a light, agile, and sprightly energy.
-- **Face:** Soft, rounded diamond-shaped face with high, cheerful cheekbones; wide, radiant smile that deeply crinkles her expressive almond-shaped dark eyes; petite straight nose; joyful and spirited "real-girl" warmth.
-- **Hair:** Long, voluminous deep espresso brown waves (Type 2A/2B); reaching mid-back; consistently worn loose and wind-swept or with practical accessories like a straw hat.
-- **Skin:** Warm medium-olive skin with a rich, consistent bronze tan; healthy "sun-kissed" glow with visible tan lines confirming an active outdoor lifestyle.
+- **Body:** Athletic Gamine / Soft Natural blend; compact, petite frame (5'0"–5'3") that is deceptively strong; short vertical line with grounded center of gravity emphasizing stability and agility; distinct dancer's strength with powerful, developed quadriceps and calves; taut, engaged core; high-tension, firm flesh quality built for explosive movement (jumping/hiking) rather than softness; narrow waist; smooth skin over dense, athletic musculature.
+- **Face:** Diamond to Soft Oval shape with gently tapered chin and high, energetic cheekbones that lift the face; dark, expressive almond eyes that disappear into "happy crescents" when she smiles; straight, refined nose; default expression is a radiant, "full-face" Duchenne smile (involving both mouth and eyes) that projects genuine, unpretentious warmth.
+- **Hair:** Type 2A/2B waves with significant density and weight; thick, glossy, and healthy; long (mid-back length); deep espresso/soft black; worn loosely wind-swept for travel/casual settings, but capable of being slicked back cleanly for performance (indicating versatility); natural dark brown/black appearing uniform and rich.
+- **Skin:** Warm Medium Olive undertone; "sun-loved" finish with rich, bronzed glow and visible tan lines; skin type that deepens easily in the sun; clear and glowing, reflecting a healthy, active lifestyle.
 
-**Age Presentation:** 20-24; youthful maturity.
-**Vibe / Energy:** Effervescent, Grounded, Spirited, And Kinetically Charged.
-**Bearing:** Relaxed but focused posture; moves with confidence and agility; takes up space with physical ease and comfort in her own capabilities.
+**Age Presentation:** 21-25; balances the "cute" energy of late youth with the disciplined maturity of a trained athlete.
+**Vibe / Energy:** Disciplined Sunshine; a unique mix of "Girl Next Door" approachability and "Performance Ready" focus; equally happy rolling in the grass or executing a perfect pirouette.
+**Bearing:** Poised and Kinetic; holds neck long and shoulders down (classic dance training) even in casual photos; takes up space not through size, but through an aura of capability—looks ready to move, leap, or climb at a moment's notice.
 
 // Style Notes:
 // - Signature Silhouette: High-waisted bottoms paired with cropped tops to accentuate her slender core and narrow waist.
