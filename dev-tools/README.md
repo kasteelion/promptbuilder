@@ -67,7 +67,7 @@ python dev-tools/generators/generate_vibe_summaries.py
 
 ---
 
-### Validators (`validators/`)
+### Validators & Analyzers (`validators/` & Core)
 
 Data quality and integrity checking tools.
 
@@ -75,11 +75,13 @@ Data quality and integrity checking tools.
 
 - Before committing changes to version control
 - After running migrations
-- When troubleshooting randomizer issues
+- When troubleshooting randomizer issues or tuning quality thresholds
 
 **Tools:**
 
 - `validate_color_schemes.py` - Ensure color scheme definitions are valid hex codes
+- `analyze_randomizer_performance.py` - (Core) Bulk analysis of score distributions and retry rates
+- `generate_human_review_samples.py` - (Core) Generate targeted samples for qualitative review
 
 **Recommended workflow:**
 
@@ -87,6 +89,9 @@ Data quality and integrity checking tools.
 # Pre-commit validation
 python dev-tools/validators/validate_color_schemes.py
 python auditing/quality_audit.py
+
+# Quality floor verification
+python dev-tools/analyze_randomizer_performance.py --count 500 --threshold 250
 ```
 
 ---
@@ -218,7 +223,9 @@ dev-tools/
 ├── add_character_photo.py
 ├── add_gender_tags.py
 ├── analyze_outfit_overlap.py
+├── analyze_randomizer_performance.py # NEW: Performance metrics
 ├── cleanup_outfit_bolding.py
+├── generate_human_review_samples.py   # NEW: Qualitative review
 ├── scan_photos.py
 └── README.md
 ```

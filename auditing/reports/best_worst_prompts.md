@@ -3,30 +3,30 @@
 ## 📊 Statistical Summary
 
 - **Total Prompts Analyzed:** 50
-- **Mean Score:** 346.00
-- **Median Score:** 312.5
-- **Mode Score:** 200
-- **Standard Deviation:** 161.56
-- **Score Range:** 150 - 835
+- **Mean Score:** 331.20
+- **Median Score:** 327.5
+- **Mode Score:** 340
+- **Standard Deviation:** 137.55
+- **Score Range:** 20 - 680
 
 ## 🏆 Top 3 Best Prompts
 
-### 1. gen_only_1768688436_14.txt (Score: 835)
+### 1. gen_only_1768704957_25.txt (Score: 680)
 ```text
 Generate an image of: Rendering
-1990s TV animation aesthetic. Flat colors with very simple two-tone shading (highlight and shadow). Line work is standard uniform width. Colors are slightly muted or "faded" to simulate analog broadcast.
+Soft, pastel-heavy cel-shading. Lines are thin, sepia or colored (not black), and delicate. Lighting is "overexposed" with soft gradients. Texture overlays of bubbles, flowers, or sparkles are common.
 
 Character Accuracy
-Standardized facial proportions. Eyes are large but not excessive. Features are balanced and friendly. Expressions are readable standard archetypes.
+Huge, shimmering eyes with distinct eyelashes and complex iris reflections. Noses and mouths are tiny or non-existent. Expressions are emotionally vulnerable, gentle, or joyful.
 
 Body Types
-Average, relatable anatomy. Not overly muscular or overly slender. Poses are static or "keyframe" style.
+Slender, elongated proportions (clamped style). Shoulders are narrow; limbs are long and thin. Posture is elegant, turning inward, or floating.
 
 Hair & Clothing
-Hair: Solid blocks of color with simple white zigzag highlights. Clothing: everyday casual or uniform. Folds are minimal and functional.
+Hair: Exceptionally detailed, fine line-work for every strand. Clothing: Fabric folds are rendered with delicate, weightless fluidity. Lace and frills (if present) are drawn with high detail.
 
 Details
-Hand-painted watercolor style backgrounds . Minimal visual effects—no bloom or complex lighting. The image looks like a screen capture from a CRT television.
+Bokeh effects (light orbs). Floral framing. The atmosphere is dreamy and hazy. A "vignette" of white or pink often softens the edges of the image.
 
 ---
 
@@ -41,139 +41,164 @@ A district that comes alive at night. Every surface is painted with the reflecti
 - **Key Elements:** Neon signage, wet pavement, street food stalls, crowds.
 ---
 
-**CHARACTER: Lucía Reyes**
+**CHARACTER: Clara Thorne**
 **Appearance:**
-* **Body:** Romantic frame; wave plush softness; full hourglass proportions; moderate vertical.
-* **Face:** Rounded facial structure; heart-shaped face; full cheeks; warm expressive eyes; joyful resting expression.
-* **Hair:** Type 2B–2C waves; high density; long layered cut; side part; healthy sheen.
-* **Skin:** Warm golden skin with radiant glow.
+- **Body:** Petite Soft Classic frame; slim but with a delicate softness and narrow silhouette; short vertical line with compact, balanced proportions; stands at 5'2"; light, graceful presence that feels diminutive and thoughtful.
+- **Face:** Softly rounded heart-shaped face with a youthful, radiant glow; bright, expressive blue-grey eyes that crinkle endearingly at the corners when she smiles; petite, cute "button" nose; soft, natural pink lips; wide, gentle forehead and high, rounded "apple" cheeks that emphasize her approachable, "real-girl" warmth.
+- **Hair:** Long, silky golden honey blonde; high density with a Type 1B/2A texture (straight with slight body); styled in long layers with a deep side part; natural, healthy sheen without artificial highlights.
+- **Skin:** Fair neutral-cool complexion; smooth porcelain texture; prone to a natural rosy flush on the cheeks during social interaction.
 **Outfit:**
-- **Top:** Oversized boxy hoodie featuring a **faded vintage wash** and distressed hems.
-  - **Fit:** Oversized boxy; Drop-shoulder.
-  - **Material:** Heavyweight 450gsm French Terry.
-  - **Pattern:** Variable featuring a **faded vintage wash** and distressed hems.
-  - **Neckline:** Hooded.
-  - **Sleeve:** Long sleeves with ribbed cuffs.
-- **Bottom:** Wide-leg tactical cargo trousers.
-  - **Fit:** Billowing tactical.
-  - **Material:** Ripstop nylon.
-  - **Pattern:** Solid.
-  - **Waist:** Adjustable velcro clinch.
-  - **Length:** Ankle-length.
-- **Footwear:** Bulky deconstructed platform sneakers.
-- **Accessories:** Crossbody sling bag; silver curb chain.
-- _expanded_tags: {'high definition', 'Casual', 'realistic', 'photography', 'Textured', 'everyday', 'mood:realistic', 'urban', 'Urban', 'contemporary', 'life', 'modern'}
+- **Top:** Halter Crop Top.
+  - **Fit:** Fitted silhouette.
+  - **Material:** Ribbed knit cotton.
+  - **Pattern:** Solid ((default:white)).
+  - **Neckline:** Tie-neck closure.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Vintage Blue Jeans .
+  - **Fit:** Variable .
+  - **Material:** Heavyweight denim.
+  - **Pattern:** Contrast stitching.
+  - **Waist:** High-waisted.
+  - **Length:** Ankle-length or pooling.
+- **Footwear:** Platform clogs or canvas sneakers.
+- **Accessories:** Paisley bandana, silver hoop earrings.
+- _expanded_tags: {'photography', 'high definition', 'mood:realistic', 'retro', 'old-school', 'nostalgic', 'realistic', 'Vintage', 'Casual', 'vintage', 'everyday', 'life'}
+**Pose/Action:**
+Kneeling on a plush white bed with knees together and torso leaning forward comfortably, hands resting in the lap with fingers loosely interlaced, reflecting a bright and approachable bedroom energy.
 ---
 
-**CHARACTER 2: Elena Moretti**
+**CHARACTER 2: Marley Thompson**
 **Appearance:**
-* **Body:** Soft Natural frame; fleshy and soft curves layered over a strong, muscular foundation; defined waist with a striking hourglass ratio; strong, athletic shoulders and thighs that project power and grace.
-* **Face:** Softened planes with full, inviting cheeks; almond-shaped warm brown eyes set under well-defined brows; straight nose with a soft, rounded tip; full and defined lips; resting expression is playful yet self-assured.
-* **Hair:** Type 2A/2B texture (loose waves); dark espresso brown to black with high density and volume; reaching mid-back in length; cut with heavy fringe bangs and dramatic face-framing layers.
-* **Skin:** Fair to light-medium depth; cool pink undertones that are prone to natural flushing; smooth, healthy texture with a radiant, hydrated finish.
+* **Body:** Romantic frame; wave-lush flesh quality; voluptuous hourglass proportions with full bust (DD-E cup), dramatically defined waist, wide rounded hips, full thighs; moderate height (5'5"-5'6"); soft density with feminine curves throughout, rounded shoulders, shapely legs; magnetizing maternal presence.
+* **Face:** Soft-rounded facial structure; heart-to-round face shape; full cheeks with natural warmth; large expressive dark brown eyes, wide-set, warm inviting gaze; full lips with natural cupid's bow; soft jawline; neutral resting expression is serene and welcoming with gentle smile—radiates nurturing warmth and domestic contentment.
+* **Hair:** Type 4A coils; very high density; medium-long length (past shoulders); high volume and body; commonly worn in protective styles that are polished and feminine—twist-outs with defined curls, elegant bun with decorative pins, braided crown styles, occasionally heat-styled into bouncy curls for special occasions; natural black with warm brown undertones; always well-maintained and styled.
+* **Skin:** Deep warm brown with rich golden undertones; smooth luminous finish; healthy glow from good skincare; natural radiance.
 **Outfit:**
-- **Top:** Flowing floral midi dress .
-  - **Fit:** Flowing.
-  - **Material:** Linen.
-  - **Pattern:** Ditsy floral.
-  - **Neckline:** Variable .
-  - **Sleeve:** Puffed sleeves.
-- **Bottom:** Integrated skirt of dress.
-  - **Fit:** Flared A-line.
-  - **Material:** Linen.
-  - **Pattern:** Floral Print.
-  - **Waist:** Natural.
-  - **Length:** Midi-length.
-- **Footwear:** Lace-up leather boots.
-- **Accessories:** Woven basket, delicate gold jewelry, floral hair clip.
-- _expanded_tags: {'serene', 'high definition', 'Casual', 'peaceful', 'realistic', 'photography', 'static', 'everyday', 'quiet', 'gentle', 'mood:realistic', 'Country', 'life', 'pastel', 'calm', 'Soft'}
+- **Top:** Oversized pullover hoodie in #001F3F.
+  - **Fit:** Oversized drop-shoulder.
+  - **Material:** Fleece-lined cotton.
+  - **Pattern:** Solid or minimal logo.
+  - **Neckline:** Hood with drawstring.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted joggers or leggings in #0074D9.
+  - **Fit:** Relaxed joggers or fitted leggings.
+  - **Material:** Cotton blend or athletic fabric.
+  - **Waist:** High-waisted elastic.
+  - **Length:** Ankle length.
+- **Footwear:** Chunky sneakers or slides.
+- **Accessories:** Baseball cap; small backpack.
+- _expanded_tags: {'photography', 'contemporary', 'high definition', 'casual', 'urban', 'modern', 'cozy', 'mood:realistic', 'relaxed', 'realistic', 'everyday', 'comfortable', 'life'}
+**Pose/Action:**
+Sitting on a surface with a scholarly posture, leaning forward with the left hand supporting the chin while the right hand turns a page, lost in deep research.
 ---
 
-**Additional Notes:**
-Lucía Reyes driving hard toward the hoop while Elena Moretti slides their feet in a low defensive block, set against a concrete court with long chain-link fence shadows.
+**CHARACTER 3: Siofra Quinn**
+**Appearance:**
+* **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
+* **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
+* **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
+* **Skin:** Fair neutral skin with weathered undertone.
+**Outfit:**
+- **Top:** Simple pullover knit dress in #4B2E83.
+  - **Fit:** Relaxed A-line or bodycon.
+  - **Material:** Soft knit jersey.
+  - **Pattern:** Solid or subtle texture.
+  - **Neckline:** Crew or V-neck.
+  - **Sleeve:** Long sleeves or 3/4 sleeves.
+- **Bottom:** Integrated dress.
+  - **Fit:** Flows from waist.
+  - **Material:** Matching knit.
+  - **Waist:** Natural or empire.
+  - **Length:** Knee-length or midi.
+- **Footwear:** Ankle boots or ballet flats.
+- **Accessories:** Belt (optional); simple earrings.
+- _expanded_tags: {'photography', 'contemporary', 'high definition', 'casual', 'urban', 'modern', 'mood:realistic', 'versatile', 'realistic', 'feminine', 'everyday', 'comfortable', 'life'}
+**Pose/Action:**
+Standing with weight shifted to the right hip, arms crossed firmly at the chest, shoulders back, projecting a calm and self-assured presence.
+---
 ```
 
-### 2. gen_only_1768688436_5.txt (Score: 780)
+### 2. gen_only_1768704957_39.txt (Score: 675)
 ```text
 Generate an image of: Rendering
-High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
+1950s commercial illustration style. Smooth, airbrushed gradients with soft vector-like outlines. High-key, flattering studio lighting. Colors are warm, vibrant, and nostalgic (technicolor simulation).
 
 Character Accuracy
-Stylized facial proportions: large eyes, simplified noses/mouths. Chin and jawlines are sharp and angular. Expressions are clearly readable and slightly exaggerated for emotional clarity.
+Faces are idealized with "doll-like" perfection. Rosy cheeks, perfect symmetry, and sparkling eyes. Expressions are consistently inviting, playful, or confident.
 
 Body Types
-Idealized anime anatomy. Elongated limbs and exaggerated posture. Anatomy is simplified into aesthetically pleasing shapes rather than biological realism.
+Curvaceous, hourglass silhouettes. Skin is rendered as flawlessly smooth (porcelain finish) with a slight oily sheen to highlight curves. Poses are theatrical and designed to create pleasing S-curves.
 
 Hair & Clothing
-Hair: Gravity-defying clumps with distinct "shiny" highlight bands. Clothing: Folds are sharp, triangular, and dramatic. Fabric behaves dynamically to emphasize motion lines.
+Hair: Stylized volume with smooth, soft rolling wave rendering. Clothing: Rendered with smooth, plastic-like shading on folds. Fabric patterns (if present) are rendered as bold and graphic.
 
 Details
-"Screen tone" dots for shading texture. Speed lines or radial focus lines in the background. Lens flare is stylized (starbursts). Pop-art color palettes.
+Vignette fading at the corners. A slight "bloom" effect on highlights. Props are rendered with high gloss. The overall finish feels like a vintage magazine cover or calendar art.
 
 ---
 
 **SCENE/SETTING:**
 **Visual Description:**
-A third-wave coffee shop interior designed for lingering. Warm wood tones, exposed brick, and eclectic furniture create a welcoming texture. Steam rises from the espresso machine.
+A personal sanctuary featuring a comfortable bed with layered linens. The room is designed for rest, with soft textures and a clutter-free, peaceful aesthetic.
 
 **Sensory/Atmospheric Details:**
 
-- **Lighting:** Warm ambient hanging bulbs; soft window light.
-- **Atmosphere:** Aromatic (coffee beans), humming with low conversation, creative.
-- **Key Elements:** Wooden tables, espresso bar, chalkboard menu, ceramic mugs.
+- **Lighting:** Soft, diffused morning light filtering through sheer curtains.
+- **Atmosphere:** Warm, quiet, intimate, slow-paced.
+- **Key Elements:** Crisp linen sheets, heavy knit throw, bedside table with personal items, soft shadows.
 ---
 
-**CHARACTER: Zemen Ayele**
+**CHARACTER: Maki Cruz**
 **Appearance:**
-* **Body:** Soft Classic frame; elegant and poised density; moderate-to-tall vertical (5'7"-5'8"); narrow shoulders; balanced proportions with a dignified, upright posture; projects a sense of calm, intellectual authority.
-* **Face:** Balanced-refined facial structure; long oval face; high-bridged aquiline nose; high, defined cheekbones; large, observant dark amber-brown eyes with a focused, analytical gaze; full lips with a natural terracotta tint; expression is usually one of contemplative silence or intense focus.
-* **Hair:** Type 3C texture; high density; natural dark brown ringlet curls with a high-gloss sheen; typically worn loose and voluminous, framing her face and falling to her collarbones; natural center part; healthy and well-maintained.
-* **Skin:** Deep bronze with warm reddish undertones (Habesha/Highland coloring); smooth, matte finish; clear complexion that reflects her meticulous care and "indoor" scholastic life. leather-bound research journal with intricate embossed patterns
+* **Body:** Flamboyant Natural; straight athletic flesh with lean definition; balanced proportions; subtle shoulder width; straight hip line; moderate vertical (5'6"-5'7"); functional athletic build with core strength; developed calves and quadriceps; visible forearm definition; grounded street-athlete presence.
+* **Face:** Balanced-soft structure; rounded square shape; broad forehead; softly defined jawline; midface cheekbone prominence with subtle definition; medium almond-shaped eyes; moderate spacing; dark brown to black irises; monolid or minimal crease structure; direct casual gaze; broad nose bridge with rounded tip; neutral resting expression shows relaxed confidence with a slight asymmetric smirk.
+* **Hair:** Type 1B; high density; straight silhouette with medium length to shoulders; no defined part; pushed back casually; matte to low-sheen finish; commonly worn loose and natural, tucked behind ears, or in a low messy bun. Deep black-brown.
+* **Skin:** Medium tan; warm golden-yellow undertones; natural matte finish; healthy resilience; scattered small scars on elbows and knees.
 **Outfit:**
-- **Top:** Striped Camisole under Oversized Bomber Jacket.
-  - **Fit:** Fitted camisole; Slouchy jacket.
-  - **Material:** Cotton camisole; Red nylon/satin jacket.
-  - **Pattern:** Red and white pin-stripes.
-  - **Neckline:** Spaghetti straps.
-  - **Sleeve:** Sleeveless (camisole) under Voluminous Sleeves (jacket).
-- **Bottom:** Athletic Track Shorts.
-  - **Fit:** Vintage dolphin hem cut.
-  - **Material:** Orange-red synthetic fabric.
-  - **Pattern:** White vertical side stripes.
-  - **Waist:** Elastic waistband.
-  - **Length:** Short.
-- **Footwear:** White retro sneakers (implied).
-- **Accessories:** Simple gold pendant necklace, minimal jewelry.
-- _expanded_tags: {'old-school', 'Sport', 'retro', 'everyday', 'training', 'vintage', 'Casual', 'realistic', 'nostalgic', 'sport', 'fitness', 'life', 'high definition', 'active', 'athletic', 'Retro', 'sports', 'photography', 'mood:realistic'}
----
-
-**CHARACTER 2: Audrey Thorne**
-**Appearance:**
-* **Body:** Heavy Curvy Hourglass / Spoon Shape; statuesque height at 5'7"; 43.5-37-48 proportions; thick, soft flesh quality; substantial bust carried high, transitioning into a defined but thick waist, which flares dramatically into wide, shelf-like hips and heavy thighs; bottom-heavy silhouette balanced by a full chest; voluptuous density with soft anatomical markers.
-* **Face:** Soft Heart-shaped structure with a "baby face" quality; full, rounded cheeks (apple cheeks) and a soft, non-angular jawline; gentle chin; distinctively pale, porcelain complexion with pink undertones; focal heavy-lidded / slightly hooded eyes with hazel-brown irises and relaxed, downward-sloping upper lids giving a calm, sultry expression; natural, slightly arched brows; small to medium mouth width with full, pillowy lips and a clearly defined cupid's bow.
-* **Hair:** Type 2B (wavy); high density; tousled, voluminous layered silhouette; collarbone-length; deep side part with height at the root; healthy natural sheen; common styling includes a loose, textured blowout. Medium chestnut brown with copper/golden undertones.
-* **Skin:** Fair/Light depth; cool pink undertones with a smooth, matte-satin finish; clear complexion with natural flushing on the cheeks.
-**Outfit:**
-- **Top:** Tight white bandeau top.
-  - **Fit:** Tight skin-hugging.
-  - **Material:** Ribbed Cotton.
-  - **Pattern:** Solid.
-  - **Neckline:** Bandeau.
+- **Top:** Crystal-encrusted corset bustier.
+  - **Fit:** Structured corset.
+  - **Material:** Crystal mesh; Feathers; Silk .
+  - **Pattern:** Intricate beadwork.
+  - **Neckline:** Sweetheart or plunge.
   - **Sleeve:** Sleeveless.
-- **Bottom:** High leg low cut jean shorts.
-  - **Fit:** Tight high-leg cut.
-  - **Material:** Denim.
-  - **Waist:** Low-waist.
-  - **Length:** Micro-short.
-- **Footwear:** White sneakers (implied).
-- _expanded_tags: {'high definition', 'Casual', 'realistic', 'photography', 'everyday', 'mood:realistic', 'life', 'Basic'}
+- **Bottom:** Matching high-cut crystal panties.
+  - **Fit:** High-cut leg.
+  - **Material:** Crystal mesh .
+  - **Waist:** Cinched corset waist.
+  - **Length:** Brief/Bodysuit cut.
+- **Footwear:** Strappy stiletto sandals extending up the calf.
+- **Accessories:** Massive feather wings  (worn on back); diamond choker; body shimmer.
+- _expanded_tags: {'glamour', 'sensual', 'intimate', 'Glamour', 'Runway', 'Wings', 'romantic', 'Lingerie', 'boudoir', 'alluring', 'Costume', 'High Fashion', 'beauty', 'sultry', 'fashion', 'flirty', 'bedroom'}
+**Pose/Action:**
+Sitting on concrete stairs with the left knee drawn up to the chest and the right leg extended down a step, left arm resting on the knee, gazing off into the urban landscape.
 ---
 
-**Additional Notes:**
-Zemen Ayele and Audrey Thorne pacing each other on a trail run, sweat glistening on their skin and rhythmic gaits matched in a moment of shared athletic discipline.
+**CHARACTER 2: Oliver St. James**
+**Appearance:**
+* **Body:** Soft Natural frame; average height (5'9"-5'10"); "Otter" build—slim but not skinny, with a soft, natural muscularity and a bit of fuzz; rounded shoulders; comfortable and lived-in physicality.
+* **Face:** Oval face with soft features; warm, crinkling blue eyes; nose is slightly button-like; jawline is softened by a scruffy, well-maintained short beard (strawberry blonde/ginger tone).
+* **Hair:** Type 2C curls; medium density; messy "mop top" style that looks better when tousled; light brown/dark blonde; often falling into his eyes.
+* **Skin:** Fair to light; pinkish warm undertones; prone to blushing; smooth complexion. scattered freckles across the nose and arms
+**Outfit:**
+- **Top:** Bare chest or fitted tank.
+  - **Fit:** Fitted.
+  - **Material:** Cotton/Spandex blend.
+  - **Neckline:** Scoop neck.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Fitted boxer briefs or briefs.
+  - **Fit:** Fitted; flattering.
+  - **Material:** Silk or Cotton blend ().
+  - **Waist:** Elastic.
+  - **Length:** Brief cut.
+- **Footwear:** Barefoot.
+- **Accessories:** Minimal jewelry.
+- _expanded_tags: {'affectionate', 'romantic', 'glamour', 'sensual', 'Lounge', 'boudoir', 'alluring', 'intimate', 'Intimate', 'intense', 'Sexy', 'beauty', 'sultry', 'lingerie', 'dramatic', 'fashion', 'flirty', 'bedroom'}
+**Pose/Action:**
+Lying on the side propped up on one elbow, other hand resting on the hip, legs stretched out with the knee slightly bent, projecting a relaxed and graceful silhouette.
+---
 ```
 
-### 3. gen_only_1768688436_34.txt (Score: 660)
+### 3. gen_only_1768704957_26.txt (Score: 605)
 ```text
 Generate an image of: Rendering
 Ultra-glamorous high-fashion photography style. High-key studio lighting with a mix of soft-boxes and dramatic ring lights. 8K resolution with a "glossy magazine" finish. Warm, sun-kissed color palette with subtle pink and gold undertones. Shallow depth of field with a soft, expensive-looking bokeh.
@@ -194,247 +219,277 @@ Soft bloom on highlights, subtle lens flare, and a faint shimmering particle eff
 
 **SCENE/SETTING:**
 **Visual Description:**
-A finished basement retreat designed for leisure, featuring wood-paneled walls and deep, comfortable seating. The space feels subterranean and enclosed, separated from the day-to-day bustle of the main house.
+A cathedral of knowledge, defined by towering rows of wooden bookshelves packed with colorful spines. Studying tables are scattered in the open spaces, lit by green banker's lamps.
 
 **Sensory/Atmospheric Details:**
 
-- **Lighting:** Recessed dimmable pot-lights creating pools of warm illumination; lack of natural light.
-- **Atmosphere:** Relaxed, sound-dampened, cool air, casual hangout vibe.
-- **Key Elements:** Plush sectional sofa, large TV screen, soft carpet, faint hum of a mini-fridge.
+- **Lighting:** Quiet, diffused natural light from high windows; dust motes dancing.
+- **Atmosphere:** Hushed, reverent, smelling of old paper and wood polish.
+- **Key Elements:** Bookshelves, rolling ladder, study tables, silence.
 ---
 
-**CHARACTER: Priya Sharma**
+**CHARACTER: Diesel Murphy**
+**Appearance:**
+- **Body:** Natural frame; straight athletic flesh with functional density; balanced proportions with broadened shoulders from upper body work, minimal waist definition, and straight hip line; moderate-to-tall vertical (5'7"-5'8"); working-class athletic build with developed forearms and shoulders from mechanical work, strong hands, visible core strength, practical muscle without aesthetic focus; distinctly female frame with masculine presentation and movement patterns; grounded capable presence.
+
+- **Face:** Balanced-angular structure; square-to-rectangular face shape with broad forehead and strong defined jawline; minimal midface projection with subtle cheekbones; medium-to-small eyes with moderate-close spacing, hazel-brown color, minimal lid exposure, direct no-nonsense gaze; straight broad nose with flat bridge and squared tip; strong angular jawline with masculine definition; neutral resting expression shows calm confidence with closed-mouth straight line and steady assessing gaze; rare smile is crooked and genuine.
+
+- **Hair:** Type 2A; medium density; very short length (pixie-to-undercut style); no defined part, textured and pushed back; matte finish; commonly worn tousled and practical, sometimes with small amount of pomade for control; dark brown with sun-lightened tips from outdoor work.
+
+- **Skin:** Light-medium tone with neutral-warm undertones and natural matte finish; scattered scars on hands and forearms from mechanical work; permanent grease staining under short fingernails and in hand creases; sun exposure on forearms and face; textured from outdoor work.
+**Outfit:**
+- **Top:** Sharp-shouldered blazer.
+  - **Fit:** Sharp-shouldered; Tailored.
+  - **Material:** Iridescent carbon-fiber weave.
+  - **Pattern:** Subtle carbon-fiber weave.
+  - **Neckline:** Peak lapel.
+  - **Sleeve:** Long.
+- **Bottom:** Pencil skirt with digital camouflage.
+  - **Fit:** Slim fit.
+  - **Material:** High-tech fabric.
+  - **Pattern:** Subtle digital camouflage.
+  - **Waist:** Natural.
+  - **Length:** Knee-length.
+- **Footwear:** Chrome-heeled stilettos.
+- **Accessories:** Minimalist silver necklace/bio-monitor; smart-glass tablet.
+- _expanded_tags: {'glamour', 'sensual', 'Cyberpunk', 'intimate', 'Formal', 'elegant', 'Luxury', 'evening', 'expensive', 'Sci-Fi', 'rich', 'alluring', 'beauty', 'Corporate', 'fashion'}
+---
+
+**CHARACTER 2: Priya Sharma**
 **Appearance:**
 * **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
 * **Face:** Soft oval face with gentle rounded features; warm expressive dark brown eyes; friendly approachable expression; fuller cheeks; soft jawline; warm genuine smile.
 * **Hair:** Type 2B-2C waves; medium-high density; long dark brown hair (almost black at roots) with warm caramel-brown highlights throughout mid-lengths and ends; natural body and volume; beachy waves.
-* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow. small black bindi dot on forehead
+* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow. tiny sparkling silver nose stud
 **Outfit:**
-- **Top:** Oversized graphic t-shirt.
-  - **Fit:** Oversized loose.
-  - **Material:** Heavy cotton jersey.
-  - **Pattern:** Vintage graphic.
-  - **Neckline:** Crew neck.
-  - **Sleeve:** Short sleeves (drop shoulder).
-- **Bottom:** Baggy durable pants (Dickies style).
-  - **Fit:** Baggy straight leg.
-  - **Material:** Canvas or Twill.
-  - **Waist:** Low-waist.
-  - **Length:** Cuffed at ankle.
-- **Footwear:** Canvas skate shoes (Vans or Converse).
-- **Accessories:** Beanie, chain wallet, skate tool.
-- _expanded_tags: {'Skate', 'everyday', 'training', 'Casual', 'realistic', 'sport', 'fitness', 'life', 'high definition', 'skater', 'urban', 'active', 'athletic', 'skate', 'sports', 'photography', 'mood:realistic', 'Urban', 'contemporary', 'modern'}
----
-
-**CHARACTER 2: Audrey Thorne**
-**Appearance:**
-* **Body:** Heavy Curvy Hourglass / Spoon Shape; statuesque height at 5'7"; 43.5-37-48 proportions; thick, soft flesh quality; substantial bust carried high, transitioning into a defined but thick waist, which flares dramatically into wide, shelf-like hips and heavy thighs; bottom-heavy silhouette balanced by a full chest; voluptuous density with soft anatomical markers.
-* **Face:** Soft Heart-shaped structure with a "baby face" quality; full, rounded cheeks (apple cheeks) and a soft, non-angular jawline; gentle chin; distinctively pale, porcelain complexion with pink undertones; focal heavy-lidded / slightly hooded eyes with hazel-brown irises and relaxed, downward-sloping upper lids giving a calm, sultry expression; natural, slightly arched brows; small to medium mouth width with full, pillowy lips and a clearly defined cupid's bow.
-* **Hair:** Type 2B (wavy); high density; tousled, voluminous layered silhouette; collarbone-length; deep side part with height at the root; healthy natural sheen; common styling includes a loose, textured blowout. Medium chestnut brown with copper/golden undertones.
-* **Skin:** Fair/Light depth; cool pink undertones with a smooth, matte-satin finish; clear complexion with natural flushing on the cheeks.
-**Outfit:**
-- **Top:** Black sleeveless crop top featuring small yellow/gold butterfly motifs on the chest.
-  - **Fit:** Fitted crop.
-  - **Material:** Ribbed cotton.
-  - **Pattern:** Butterfly motifs.
-  - **Neckline:** Round neck.
-  - **Sleeve:** Sleeveless.
-- **Bottom:** High-waisted denim shorts with a raw, frayed hem.
-  - **Fit:** High-waisted.
-  - **Material:** Distressed denim.
-  - **Waist:** High-rise.
-  - **Length:** Mini.
-- **Footwear:** White lifestyle trainers with light blue accents.
-- **Accessories:** Wide-brim straw hat with a black band; brown leather fanny pack/crossbody bag; aviator sunglasses.
-- _expanded_tags: {'high definition', 'Casual', 'realistic', 'photography', 'Summer', 'everyday', 'mood:realistic', 'urban', 'Urban', 'contemporary', 'life', 'modern'}
+- **Top:** Sharp-shouldered blazer.
+  - **Fit:** Sharp-shouldered; Tailored.
+  - **Material:** Iridescent carbon-fiber weave.
+  - **Pattern:** Subtle carbon-fiber weave.
+  - **Neckline:** Peak lapel.
+  - **Sleeve:** Long.
+- **Bottom:** Pencil skirt with digital camouflage.
+  - **Fit:** Slim fit.
+  - **Material:** High-tech fabric.
+  - **Pattern:** Subtle digital camouflage.
+  - **Waist:** Natural.
+  - **Length:** Knee-length.
+- **Footwear:** Chrome-heeled stilettos.
+- **Accessories:** Minimalist silver necklace/bio-monitor; smart-glass tablet.
+- _expanded_tags: {'glamour', 'sensual', 'Cyberpunk', 'intimate', 'Formal', 'elegant', 'Luxury', 'evening', 'expensive', 'Sci-Fi', 'rich', 'alluring', 'beauty', 'Corporate', 'fashion'}
 ---
 
 **Additional Notes:**
-Priya Sharma handing a chilled water bottle to a sweating Audrey Thorne, both taking a moment to catch their breath and hydrate, shoulders slumped in shared exhaustion.
+Diesel Murphy effortlessly lifting Priya Sharma into a bridal carry with powerful arms, Priya Sharma holding tightly onto Diesel Murphy's neck and looking into their eyes with a soft and adoring smile.
 ```
 
 
 ## 📉 Bottom 3 Worst Prompts
 
-### 1. gen_only_1768688436_19.txt (Score: 150)
+### 1. gen_only_1768704957_44.txt (Score: 20)
 ```text
 Generate an image of: Rendering
-Soft-shaded vector illustration or vinyl toy aesthetic. Bright, pastel, or primary-heavy color palettes. Gradient shading is minimal and smooth, giving surfaces a matte plastic or "squishy" appearance. Thick, rounded line art (or lineless "sticker" style).
+Ray-traced digital rendering with high-contrast `chiaroscuro`. Dominant cyan and magenta rim lighting against deep matte blacks. Heavy volumetric fog, bloom effects on light sources, and chromatic aberration at the edges. Wet-surface reflections and a distinct digital noise overlay. Style by **Josan Gonzalez** and **Syd Mead**.
 
 Character Accuracy
-Extreme anatomical exaggeration (SD or Super Deformed). Heads are 1:1 or 1:2 ratio with the body. Eyes are massive, taking up 50% of the face, with simplified sparkles. Noses are absent or mere dots. Mouths are simple curves.
+Sharp, angular facial geometry with high-contrast shading. Expressions are rendered with dramatic under-lighting or silhouette emphasis. Focus on hard-surface modeling for features, giving skin a synthetic or plasticky sheen.
 
 Body Types
-"Bean" shaped torsos. Limbs are short, stubby cylinders with no muscle definition. Hands are simple spheres or "mitten" shapes; feet are rounded nubs. The silhouette is fundamentally cute and non-threatening.
+Anatomy defined by harsh lighting highlights rather than soft gradients. Musculature or body shape is accentuated by reflective contours. Silhouettes are cut sharp against the background with glowing edge detection.
 
 Hair & Clothing
-Hair: Simplified into large, chunky shapes with high volume and minimal strand detail. Clothing: Reduced to iconic elements—details like shoelaces or buttons are oversized and simplified for readability.
+Hair: Rendered with high specularity (shine) and sharp, unnatural highlights, often with neon/LED strands. Clothing: Textures are rendered with extreme high-contrast sheen, emphasizing the surface topology. Tech-wear accents glow if present.
 
 Details
-Floating iconography (hearts, stars, sweat drops, anger veins) near the head. Backgrounds are simple patterns (polka dots, stripes) or solid soft colors. A thick white outline often surrounds the entire character like a die-cut sticker.
+Glitch art artifacts, holographic UI overlays in the foreground, and lens flare streaks. Backgrounds feature out-of-focus bokeh of city lights. The overall atmosphere is oppressive, high-tech, and gritty.
 
 ---
 
 **SCENE/SETTING:**
-**Visual Description:**
-A raw concrete basement repurposed for rave culture. There is no decor, only sound equipment, fog machines, and a mass of dancers.
-
-**Sensory/Atmospheric Details:**
-
-- **Lighting:** Minimal, harsh strobes; almost pitch black otherwise.
-- **Atmosphere:** Intense, humid, bass-heavy, trance-like.
-- **Key Elements:** Concrete walls, massive speakers, fog, sweat.
+Infinite white cyclorama wall, bright even studio lighting with high-key exposure. Pristine and clinical atmosphere.
 ---
 
-**CHARACTER: Amina Benali**
+**CHARACTER: Aiyana Blackfeather**
 **Appearance:**
-- **Body:** Soft Natural frame; natural-soft flesh; balanced proportions with gentle curves, defined waist, moderate bust (C cup), soft rounded hips; moderate height (5'5"-5'6"); soft feminine build with subtle athleticism
-- **Face:** Soft-balanced facial structure; oval-to-heart face shape with gentle angles; smooth clear planes; large expressive almond-shaped eyes, wide-set, dark brown with natural warmth and camera-aware sparkle; defined arched eyebrows (professionally maintained); straight refined nose; full lips with natural cupid's bow; soft jawline; warm engaging expression—the "streaming face" of genuine enthusiasm mixed with performative energy; dimples when smiling fully.
-- **Hair:** Type 2B-2C waves; very high density; long length past shoulders to mid-back; natural volume and body; center or slight side part; healthy high-gloss finish; commonly worn loose with volume (camera-ready), half-up with claw clip (casual streams), or sleek ponytail (competitive mode); rich dark brown to black with subtle caramel balayage highlights framing face.
-- **Skin:** Medium-tan with warm golden-olive undertones (North African coloring); smooth luminous finish; flawless complexion maintained for camera work; natural healthy glow enhanced by ring lights and skincare routine. stylish clear-framed gaming glasses with a slight cat-eye shape
+* **Body:** Natural frame; balanced athletic build with natural softness; moderate proportions; moderate vertical (5'5"-5'6"); powerful legs and core strength from dance; dignified powerful presence.
+* **Face:** Balanced-strong facial structure; oval-to-round face; pronounced cheekbones; medium almond-shaped dark eyes with proud gaze; defined epicanthic fold; neutral resting expression shows calm dignity with a slight knowing smile.
+* **Hair:** Type 1B-1C; very high density; very long hair to lower back; high-gloss sheen; pure black with blue-black sheen; versatile styling options including traditional braids and loose styles.
+* **Skin:** Medium tan with warm red-brown undertones and natural healthy finish.
 **Outfit:**
-- **Top:** Pigeon-breast (blouson) bodice.
-  - **Fit:** Blouson torso; Fitted waist.
-  - **Material:** ; Lace inserts.
-  - **Pattern:** Pintuck pleats; Broderie anglaise.
-  - **Neckline:** High lace collar (lace choker effect).
-  - **Sleeve:** Gigot (leg of mutton) or bishop sleeves.
-- **Bottom:** Gored skirt.
-  - **Fit:** Fitted at hips; Flaring at hem.
-  - **Material:** matching .
-  - **Waist:** Corseted natural waist.
-  - **Length:** Floor-length.
-- **Footwear:** Two-tone button boots.
-- **Accessories:** Lace parasol; straw boater hat with ribbon; cameo brooch.
-- _expanded_tags: {'Vintage', 'old-school', 'retro', 'nostalgic', 'Elegant', 'historical', 'vintage', 'edwardian', '1900s', 'Coastal'}
-**Pose/Action:**
-Sitting at a table with a reflective posture, gazing out of a window with a serene and cozy expression.
----
-```
-
-### 2. gen_only_1768688436_41.txt (Score: 150)
-```text
-Generate an image of: Character Accuracy
-Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
-
-Body Types
-Biologically accurate weight distribution. Muscles and fat interact realistically with clothing and gravity. Skin acts like real tissue, compressing and stretching at joints.
-
-Hair & Clothing
-Hair: Every individual strand is rendered. Scalp visibility is realistic. Clothing: Micro-details like pilling on fabric, stitching thread count, and realistic material weight (leather stiffness vs. silk flow).
-
-Details
-ISO noise in shadow areas. Chromatic aberration only at extreme edges. Realistic interaction with props (fingerprints on glasses, dust on shoulders). Lighting interacts complexly with materials (subsurface scattering on ears/fingers).
-
+- **One-Piece:** Full-body fleece onesie with hood.
+  - **Fit:** Oversized baggy.
+  - **Material:** Fleece.
+  - **Pattern:** Solid ((default:pastel pink or gray)).
+  - **Neckline:** Hooded zip-front.
+  - **Sleeve:** Long sleeves.
+- **Footwear:** Built-in slipper feet or fuzzy boots.
+- **Accessories:** Hot cocoa mug; stuffed animal.
+- _expanded_tags: {'Sleep', 'Cute', 'Lounge'}
 ---
 
-**SCENE/SETTING:**
-**Visual Description:**
-A raw concrete basement repurposed for rave culture. There is no decor, only sound equipment, fog machines, and a mass of dancers.
-
-**Sensory/Atmospheric Details:**
-
-- **Lighting:** Minimal, harsh strobes; almost pitch black otherwise.
-- **Atmosphere:** Intense, humid, bass-heavy, trance-like.
-- **Key Elements:** Concrete walls, massive speakers, fog, sweat.
----
-
-**CHARACTER: Valentina "Tina" Kovač**
+**CHARACTER 2: Lucía Reyes**
 **Appearance:**
-- **Body:** Dramatic frame; straight thin flesh with minimal softness; narrow angular proportions with long limbs, prominent joints (elbows, wrists, knees), flat planes, minimal bust (A cup), straight hips, long fingers and toes; tall-moderate vertical (5'8"-5'9"); very low body density—visible bone structure, delicate appearance but wiry strength, lean muscle definition without bulk; bird-like presence that seems too delicate yet surprisingly resilient.
-- **Face:** Sharp angular structure; long oval-to-diamond face; high prominent cheekbones creating dramatic shadows; deep-set eyes, almond-shaped, close-set, Intense dark brown to black with penetrating gaze; strong straight nose with high bridge; defined angular jawline; hollow cheeks even at healthy weight; neutral resting expression is intense and assessing with slight suspicious edge—reads as guarded or challenging.
-- **Hair:** Type 2C-3A waves/curls; medium-high density but fine texture; long length past shoulders; no defined part, tousled and wild; matte-to-low sheen finish; deliberately unkempt aesthetic; commonly worn loose and chaotic, half-up with tendrils escaping, or messy bun with pieces falling; deep black-brown with occasional henna-red undertones or temporary colored streaks (artistic expression).
-- **Skin:** Light-olive with warm golden undertones (Roma coloring); smooth but slightly weathered from outdoor living/art-making; paint stains semi-permanent on hands and forearms; small scattered tattoos (DIY stick-and-poke aesthetic); natural bohemian finish.
+* **Body:** Romantic frame; wave plush softness; full hourglass proportions; moderate vertical.
+* **Face:** Rounded facial structure; heart-shaped face; full cheeks; warm expressive eyes; joyful resting expression.
+* **Hair:** Type 2B–2C waves; high density; long layered cut; side part; healthy sheen.
+* **Skin:** Warm golden skin with radiant glow.
 **Outfit:**
-- **Top:** Vibrant crimson damask walking dress bodice.
-  - **Fit:** 1890s fitted bodice; Corseted silhouette.
-  - **Material:** Red damask silk; Velvet ribbon detailing.
-  - **Pattern:** Tone-on-tone floral weave.
-  - **Neckline:** High standing collar with ruffled edge.
-  - **Sleeve:** Long fitted sleeves with shoulder cap puff.
-- **Bottom:** Matching A-line skirt.
-  - **Fit:** A-line; No bustle (practical for movement).
-  - **Material:** matching damask silk.
-  - **Waist:** Fitted natural waist.
-  - **Length:** Floor-length.
-- **Footwear:** Lace-up leather boots.
-- **Accessories:** Antique brass locket; lace-up boots.
-- _expanded_tags: {'Vintage', 'old-school', 'victorian', 'retro', 'nostalgic', 'historical', 'formal', 'vintage', 'Detective', 'elegant', '1890s', 'evening', 'Formal'}
-**Pose/Action:**
-Standing in a majestic position with the chin lifted high and arms spread wide in a gesture of divine authority, radiating an ethereal and commanding presence.
----
-```
-
-### 3. gen_only_1768688436_39.txt (Score: 160)
-```text
-Generate an image of: Rendering
-Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines. Inspired by **Agnes Cecile** and **David Mack**.
-
-Character Accuracy
-Facial features are suggested through shadow shapes and color temperature shifts rather than line art. Eyes and expressions are soft and diffused. Likeness is captured through "gestural" paint application rather than photographic precision.
-
-Body Types
-Figures are grounded in gesture drawing techniques. Limbs and torso shapes are defined by broad washes of color. Edges of the body dissolve softly into the background, creating a dreamy, ethereal connection to the environment.
-
-Hair & Clothing
-Hair: Rendered as loose, flowing pools of color with wet edges. Clothing: Fabrics are depicted through variegation in color saturation. Folds are soft gradients where paint creates "blooms." No sharp stitching or texture detailing.
-
-Details
-Splatter droplets, dry-brush scratch marks, and visible pencil under-drawing. The palette is harmonious and desaturated. Backgrounds are abstract washes suggesting environment without explicit detail.
-
----
-
-**SCENE/SETTING:**
-Neutral seamless backdrop, professional three-point studio lighting with softboxes, clean minimalist setup. Subtle hum of cooling fans, scent of fresh paint and ozone.
----
-
-**CHARACTER: Aryan Kapoor**
-**Appearance:**
-* **Body:** Dramatic Classic frame; moderate muscularity with a lean, tailored silhouette; balanced proportions that look exceptional in suiting; moderate vertical (5'10"-5'11"); posture is military-straight but relaxed; projects a refined, expensive stability.
-* **Face:** Symmetrical, high-contrast structure; strong square jawline covered by a meticulously groomed "designer stubble" to short boxed beard; high cheekbones; piercing amber-brown eyes with thick lashes; straight aristocratic nose; expression is usually a knowing, confident smirk.
-* **Hair:** Type 2A waves; high density; styled in a classic "quiff" or side-part with volume; sides are tapered clean; glossy, healthy finish; jet black with a blueish tint under light.
-* **Skin:** Medium-deep tan with warm golden-olive undertones; hyper-smooth texture suggestive of a high-end skincare routine.
-**Outfit:**
-- **Top:** Leather or brocade vest over white dress shirt.
-  - **Fit:** Tailored.
-  - **Material:** Leather/Brocade; Cotton.
-  - **Neckline:** Cravat or bow tie.
-  - **Sleeve:** Long.
-- **Bottom:** High-waist trousers.
-  - **Fit:** Straight.
-  - **Material:** Wool or Tweed.
-  - **Pattern:** Striped or solid.
-  - **Waist:** High-waisted.
-  - **Length:** Full.
-- **Footwear:** Lace-up boots.
-- **Accessories:** Goggles; pocket watch with chain; gears/brass accessories; top hat.
-- _expanded_tags: {'Historical', 'Sci-Fi'}
----
-
-**CHARACTER 2: Hailey Bennett**
-**Appearance:**
-* **Body:** Soft Natural frame; moderate vertical line with a slightly petite essence; soft flesh over a frame with gentle width; relaxed but engaged posture.
-* **Face:** Soft heart-shaped structure; rounded cheeks; wide, expressive blue-grey eyes with a bright engaging gaze; uniform white teeth and a symmetrical, wide smile that reaches her eyes.
-* **Hair:** Type 2A/2B waves; high density and volume; "butterfly cut" featuring heavy layering and curtain bangs; dimensional honey blonde with heavy platinum face-framing "money piece" highlights.
-* **Skin:** Fair with cool pink undertones; "glass skin" finish with a natural, healthy flush; light dusting of faint freckles across the nose bridge and cheeks.
-**Outfit:**
-- **Top:** Halter-neck jumpsuit in **shimmering Qiana nylon** with bold floral print.
-  - **Fit:** Fitted torso.
-  - **Material:** in **shimmering Qiana nylon** with bold floral print (Lamé/Nylon/Polyester).
-  - **Pattern:** Shimmering or Bold Floral.
-  - **Neckline:** Plunging halter V-neck with sash tie.
-  - **Sleeve:** Sleeveless (open back).
-- **Bottom:** Integrated bell-bottom legs.
-  - **Fit:** Extreme flare from the knee down.
-  - **Material:** matching in **shimmering Qiana nylon** with bold floral print.
-  - **Waist:** Natural waist (belted/sash).
-  - **Length:** Floor-length (concealing platforms).
-- **Footwear:** Cork-wedge platform shoes.
-- **Accessories:** Oversized amber sunglasses; disco-ball earrings; feather boa.
-- _expanded_tags: {'old-school', 'glamour', 'beauty', 'retro', 'alluring', 'vintage', 'artistic', 'fashion', 'alternative', 'nostalgic', 'boudoir', 'bedroom', 'Disco', 'intimate', 'romantic', 'Vintage', 'art', 'sensual', 'boho', '1970s', 'creative', 'sultry', 'bohemian', 'historical', 'flirty', 'Glamour'}
+- **Top:** Sleek form-fitting bodysuit with cat-ear hood.
+  - **Fit:** Skin-tight.
+  - **Material:** High-shine latex or Spandex ((default:black)).
+  - **Pattern:** Solid.
+  - **Neckline:** High-neck cowl.
+  - **Sleeve:** Full-length with clawed gloves.
+- **Bottom:** Integrated matching leggings.
+  - **Fit:** Skin-tight.
+  - **Material:** matching latex/spandex.
+  - **Waist:** Natural.
+  - **Length:** Full length.
+- **Footwear:** Knee-high stiletto boots.
+- **Accessories:** Utility belt; stylized whip prop.
+- _expanded_tags: {'Edgy', 'cool', 'Costume', 'Latex', 'dark', 'alternative'}
 ---
 
 **Additional Notes:**
-Aryan Kapoor and Hailey Bennett jumping into perfect splits simultaneously on a padded floor, captured in a moment of stunning artistic gymnastics and high-energy synchronization.
+Aiyana Blackfeather and Lucía Reyes jumping into perfect splits simultaneously on a padded floor, captured in a moment of stunning artistic gymnastics and high-energy synchronization.
+```
+
+### 2. gen_only_1768704957_10.txt (Score: 145)
+```text
+Generate an image of: Rendering
+Aggressive cel-shading with heavy black shadows. High contrast "Impact" lighting. Line art is thick, varied, and jagged. Color palette is intense, using primary colors and harsh lighting effects.
+
+Character Accuracy
+Features are sharp and determined. Eyes are smaller and more angular than standard anime. Expressions focus on intensity: gritted teeth, shouting, or intense focus. Facial structure is blockier and more masculine/androgynous.
+
+Body Types
+Hyper-athletic. Muscles are drawn with distinct, sharp lines. Posture is exaggerated for "action readiness" (foreshortening). Hands and feet are often drawn larger to emphasize power.
+
+Hair & Clothing
+Hair: Spiky, angular rendering with distinct shading blocks. Clothing: Folds are sharp and dramatic, emphasizing movement and impact curves.
+
+Details
+"Kirby Dots" or energy crackles surrounding the figure. Impact lines. Debris floating in the air. The background is often a radial blur or abstract speed lines.
+
+---
+
+**SCENE/SETTING:**
+**Visual Description:**
+A intimate view of a morning routine at the kitchen counter. Sunlight hits the surface where breakfast items are casually arranged.
+
+**Sensory/Atmospheric Details:**
+
+- **Lighting:** Bright, direct morning sun casting long shadows from objects.
+- **Atmosphere:** Casual, domestic, slow-start-to-the-day.
+- **Key Elements:** Coffee mug, plate of food, granite or wood counter texture, window in background.
+---
+
+**CHARACTER: Zahara El-Amin**
+**Appearance:**
+* **Body:** Dramatic; tall vertical (5'9"); lean and angular frame with long limbs; graceful, measured density; poised and commanding presence.
+* **Face:** Sharp-balanced structure; diamond face shape with high, prominent cheekbones; large, intelligent dark brown eyes; straight, high-bridged nose; well-defined, narrow jawline; neutral expression is focused and contemplative.
+* **Hair:** (Covered) Long dark hair typically styled in a low, secure bun beneath her hijab.
+* **Skin:** Rich mahogany depth with warm, luminous undertones (Sub-Saharan/North African transition); smooth matte finish; clear, even complexion that catches the light on high points of the face.
+**Outfit:**
+- **Hijab:** Red or white jersey sports hijab.
+- **Top:** Striped Long-Sleeve Tunic under Oversized Bomber Jacket.
+  - **Fit:** Loose tunic; Voluminous jacket.
+  - **Material:** Cotton; Red jacket.
+  - **Pattern:** Red and white pin-stripes.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Athletic Track Pants.
+  - **Fit:** Relaxed athletic.
+  - **Material:** Orange-red fabric.
+  - **Pattern:** White side stripes.
+  - **Waist:** Elastic waistband.
+  - **Length:** Full length.
+- **Footwear:** Retro sneakers.
+- **Accessories:** Simple gold pendant necklace.
+- _expanded_tags: {'photography', 'high definition', 'mood:realistic', 'retro', 'Sport', 'old-school', 'nostalgic', 'realistic', 'Casual', 'vintage', 'everyday', 'life', 'Retro'}
+**Pose/Action:**
+Standing at a kitchen counter with the left hand steadying a bundle of herbs, the right hand expertly wielding a chef's knife over a wooden cutting board, focused on the craft.
+---
+```
+
+### 3. gen_only_1768704957_23.txt (Score: 150)
+```text
+Generate an image of: Rendering
+Thick, painterly application simulating oil or acrylics. Visible brush strokes with directional texture. Heavy use of "Chiaroscuro" (dramatic light and dark contrast). Edges range from sharp palette-knife cuts to soft blended strokes.
+
+Character Accuracy
+Likeness is captured through value planes rather than outlines. Features are constructed by blocks of color. Expressions are emotive and moody, emphasizing the "feeling" of the character over precise anatomy.
+
+Body Types
+Figures are sculpted with light and shadow. The solidity of the form is conveyed through the direction of the brushstrokes (e.g., strokes wrapping around the arm). Anatomy is artistic and interpretive.
+
+Hair & Clothing
+Hair: Painted as large masses and shapes, with loose strokes indicating strands. Clothing: Fabric texture is suggested by the roughness of the brushwork. Highlights on cloth are thick dabs of paint.
+
+Details
+Canvas weave texture visible in the background. Color vibration (placing complementary colors next to each other). Atmospheric perspective is achieved through loose, hazy brushwork in the distance.
+
+---
+
+**SCENE/SETTING:**
+**Visual Description:**
+A intimate view of a morning routine at the kitchen counter. Sunlight hits the surface where breakfast items are casually arranged.
+
+**Sensory/Atmospheric Details:**
+
+- **Lighting:** Bright, direct morning sun casting long shadows from objects.
+- **Atmosphere:** Casual, domestic, slow-start-to-the-day.
+- **Key Elements:** Coffee mug, plate of food, granite or wood counter texture, window in background.
+---
+
+**CHARACTER: Harper Mae Sullivan**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-wave flesh blend; balanced proportions with gentle curves and natural waist definition; moderate vertical; soft athletic build with graceful ease.
+* **Face:** Soft oval-to-heart facial structure; gentle rounded features; warm expressive blue-green eyes with slight upward tilt, moderately spaced; constellation of freckles across nose and cheeks; soft defined jawline; neutral resting expression is warm and inviting with easy dimpled smile and sparkling eyes.
+* **Hair:** Type 2B-2C waves; high density; long sun-lightened layers past shoulders; natural loose part; healthy bounce; warm honey-blonde with natural golden highlights from sun exposure; commonly worn half-up with loose tendrils or in relaxed low ponytail.
+* **Skin:** Fair-to-light warm peachy undertones with natural healthy glow; prominent freckles across nose, cheeks, and shoulders that intensify with sun; soft luminous finish.
+**Outfit:**
+- **Top:** Tie-front western shirt in **embroidered western snap-shirt**.
+  - **Fit:** Cropped tie-front.
+  - **Material:** Pearl-snap cotton.
+  - **Pattern:** Variable in **embroidered western snap-shirt**.
+  - **Neckline:** Collared.
+  - **Sleeve:** Short (rolled).
+- **Bottom:** High-waisted cut-off denim hotpants.
+  - **Fit:** Tight distressed.
+  - **Material:** Denim.
+  - **Pattern:** Raw hem.
+  - **Waist:** High-waisted.
+  - **Length:** Short (micro).
+- **Footwear:** Distressed cowboy boots.
+- **Accessories:** Tooled leather belt, bandana.
+- _expanded_tags: set()
+---
+
+**CHARACTER 2: Linh Nguyen**
+**Appearance:**
+* **Body:** Gamely Natural frame; petite and energetic density; moderate vertical (5'2"-5'3"); youthful, balanced proportions with a soft athletic ease; moves with a quick, light-footed grace.
+* **Face:** Friendly-refined facial structure; heart-shaped face with soft youthful roundness and high "apple" cheeks; warm dark brown eyes with a subtle upward tilt and a constant sparkle; petite straight nose; bright dimpled smile that reaches her eyes; neutral resting expression is attentive and inviting.
+* **Hair:** Type 1A-1B straight; high density; long length falling to mid-back; styled with a distinctive high half-up bun at the crown; deep obsidian base with sun-kissed honey-blonde money pieces framing her face and highlights through the lower layers; silky and disciplined finish.
+* **Skin:** Warm golden-tan with sun-kissed peach undertones; smooth, luminous texture; flawless "morning-fresh" glow. a red-and-white beaded "friendship" bracelet on her right wrist; stack of red and white bracelets
+**Outfit:**
+- **Top:** Tailored blazer over blouse in #2774AE.
+  - **Fit:** Fitted blazer.
+  - **Material:** Wool blend or ponte.
+  - **Pattern:** Solid.
+  - **Neckline:** Notch lapel over blouse.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dress pants or pencil skirt in #FFD100.
+  - **Fit:** Straight pants or fitted skirt.
+  - **Material:** Wool blend or structured cotton.
+  - **Waist:** Mid to high-rise.
+  - **Length:** Full length or knee-length.
+- **Footwear:** Pumps or loafers.
+- **Accessories:** Structured tote; simple jewelry.
+- _expanded_tags: {'photography', 'high definition', 'elegant', 'polished', 'casual', 'evening', 'business', 'office', 'mood:realistic', 'professional', 'formal', 'realistic', 'everyday', 'life'}
+---
+
+**Additional Notes:**
+Harper Mae Sullivan and Linh Nguyen standing together with a comfortable and familiar presence, weight shifted casually, both looking forward with a relaxed and confident aura.
 ```
 

@@ -15,7 +15,7 @@ Built with a **local-first, zero-dependency** philosophy, all content—characte
 - **🎨 Visual Gallery:** Browse your character library with large previews and instant selection.
 - **🏷️ Smart Tag Filtering:** Find characters instantly by filtering tags (e.g., `female`, `fantasy`, `sci-fi`) with real-time search.
 - **👗 Modular Wardrobe:** Apply unified outfit presets (defined in `.txt` files) to _any_ character. Mix and match with context-aware "Modifiers" (e.g., _Soccer_ outfit → _Goalie_ variant).
-- **🎲 Coherence Engine:** Randomize styles, outfits, and poses while maintaining thematic consistency through cascading context and strict theme filtering.
+- **🎲 Coherence Engine:** Randomize styles, outfits, and poses while maintaining thematic consistency through cascading context and a **strict Score 250 quality floor** (re-rolls until "Elite" standard is met).
 - **🎨 Signature Colors:** Characters have signature colors that dynamically apply to compatible outfits using `(signature)` tokens.
 - **⚡ Bulk Actions:** Apply outfits, color schemes, or signature colors to multiple characters at once.
 - **📥 Natural Language Import:** Paste raw text descriptions or LLM-generated configs to auto-populate prompts.

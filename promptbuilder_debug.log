@@ -1,11 +1,34 @@
-2026-01-17 21:12:16,184 - DEBUG - === Debug Log Started ===
-2026-01-17 21:12:16,184 - INFO - Starting Prompt Builder...
-2026-01-17 21:12:16,357 - INFO - Creating Tkinter root window...
-2026-01-17 21:12:16,804 - INFO - Creating PromptBuilderApp...
-2026-01-17 21:12:17,022 - INFO - Entering mainloop...
-2026-01-17 21:12:18,068 - INFO - Font size updated to 10
-2026-01-17 21:12:18,786 - DEBUG - Font resized: width=2560, base=16, adjustment=0, final=16
-2026-01-17 21:21:07,977 - DEBUG - Font resized: width=1000, base=11, adjustment=0, final=11
-2026-01-17 21:21:08,762 - DEBUG - Font resized: width=1768, base=15, adjustment=0, final=15
-2026-01-17 21:21:09,724 - INFO - Mainloop exited normally
-2026-01-17 21:21:09,724 - DEBUG - === Debug Log Ended ===
+2026-01-17 21:57:35,874 - DEBUG - === Debug Log Started ===
+2026-01-17 21:57:35,874 - INFO - Starting Prompt Builder...
+2026-01-17 21:57:35,945 - INFO - Creating Tkinter root window...
+2026-01-17 21:57:36,083 - INFO - Creating PromptBuilderApp...
+2026-01-17 21:57:36,213 - INFO - Entering mainloop...
+2026-01-17 21:57:37,247 - INFO - Font size updated to 10
+2026-01-17 21:57:37,927 - DEBUG - Font resized: width=2560, base=16, adjustment=0, final=16
+2026-01-17 21:57:58,011 - DEBUG - State saved for undo
+2026-01-17 21:58:05,294 - DEBUG - State saved for undo
+2026-01-17 21:58:12,020 - DEBUG - State saved for undo
+2026-01-17 21:58:15,020 - DEBUG - State saved for undo
+2026-01-17 21:59:40,486 - DEBUG - State saved for undo
+2026-01-17 21:59:46,223 - DEBUG - State saved for undo
+2026-01-17 21:59:47,416 - DEBUG - State saved for undo
+2026-01-17 21:59:48,332 - DEBUG - State saved for undo
+2026-01-17 22:01:40,057 - DEBUG - State saved for undo
+2026-01-17 22:01:43,059 - DEBUG - State saved for undo
+2026-01-17 22:01:44,023 - DEBUG - State saved for undo
+2026-01-17 22:06:08,992 - DEBUG - State saved for undo
+2026-01-17 22:06:09,871 - DEBUG - State saved for undo
+2026-01-17 22:06:10,469 - DEBUG - State saved for undo
+2026-01-17 22:06:11,265 - DEBUG - State saved for undo
+2026-01-17 22:06:11,717 - DEBUG - State saved for undo
+2026-01-17 22:06:12,194 - DEBUG - State saved for undo
+2026-01-17 22:06:12,635 - DEBUG - State saved for undo
+2026-01-17 22:06:13,112 - DEBUG - State saved for undo
+2026-01-17 22:06:13,948 - DEBUG - State saved for undo
+2026-01-17 22:06:14,689 - DEBUG - State saved for undo
+2026-01-17 22:06:15,425 - DEBUG - State saved for undo
+2026-01-17 22:06:16,230 - DEBUG - State saved for undo
+2026-01-17 22:06:19,626 - DEBUG - State saved for undo
+2026-01-17 22:06:28,912 - DEBUG - State saved for undo
+2026-01-17 22:06:30,599 - DEBUG - State saved for undo
+2026-01-17 22:06:31,837 - DEBUG - State saved for undo

@@ -574,7 +574,7 @@ class PromptRandomizer:
         best_score = -float('inf')
         
         MAX_RETRIES = 2
-        MIN_SCORE_FLOOR = 150
+        MIN_SCORE_FLOOR = 250  # Final threshold for high thematic quality
         
         for attempt in range(MAX_RETRIES + 1):
             # With Scenario-First, we need fewer candidates to find a "perfect" match

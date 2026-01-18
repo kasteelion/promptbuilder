@@ -1,8 +1,8 @@
 # Consolidated Static Integrity Audit
 
 ## 📊 System Health Dashboard
-- **Total Assets Audited**: 906
-- **Failure Rate**: 2.4%
+- **Total Assets Audited**: 969
+- **Failure Rate**: 2.3%
 - **Integrity Errors**: 0
 - **Media Errors**: 13
 
@@ -44,10 +44,10 @@
 ### Poses (215/215 Passed)
 ✅ All items meet the standard.
 
-### Interactions (223/223 Passed)
+### Interactions (271/271 Passed)
 ✅ All items meet the standard.
 
-### Outfits (218/227 Passed)
+### Outfits (233/242 Passed)
 | Asset Name | Issues |
 |---|---|
 | Casual Wear\Comfort.txt | Missing 'tags' field |
