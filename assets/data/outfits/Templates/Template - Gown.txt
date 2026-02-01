@@ -1,0 +1,28 @@
+- **Top:** {Color} {Neckline} {Material} bodice {Pattern} with {Sleeves} sleeves
+  - **Neckline:** {Neckline}
+  - **Material:** {Material}
+  - **Fit:** {Fit}
+  - **Pattern:** {Pattern}
+  - **Sleeves:** {Sleeves}
+  - **Color:** {Color}
+- **Bottom:** {Color} {Fit} floor-length skirt with {Detail}
+  - **Type:** {Type}
+  - **Fit:** {Fit}
+  - **Material:** {Material}
+  - **Detail:** {Detail}
+  - **Pattern:** {Pattern}
+  - **Length:** {Length}
+  - **Color:** {Color}
+- **Outerwear:** {Color} {Material} {Type} (Optional)
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Pattern:** {Pattern}
+  - **Color:** {Color}
+- **Footwear:** {Color} {Material} {Style}
+  - **Style:** {Style}
+  - **Material:** {Material}
+  - **Color:** {Color}
+- **Accessories:** {Type} and {Jewelry}
+  - **Type:** {Type}
+  - **Jewelry:** {Jewelry}
+  - **Style:** {Style}

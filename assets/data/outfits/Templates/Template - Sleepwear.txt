@@ -1,0 +1,18 @@
+- **Top:** {Color} {Fit} {Material} {Type}
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Fit:** {Fit}
+  - **Color:** {Color}
+- **Bottom:** {Color} {Material} {Pattern} {Type}
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Pattern:** {Pattern}
+  - **Color:** {Color}
+- **One-Piece:** {Color} {Material} {Type}
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Color:** {Color}
+- **Footwear:** {Color} {Material} {Style}
+  - **Style:** {Style}
+  - **Material:** {Material}
+  - **Color:** {Color}

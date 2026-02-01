@@ -1,0 +1,16 @@
+- **One-Piece:** {Color} {Pattern} {Material} {Type}
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Pattern:** {Pattern}
+  - **Color:** {Color}
+- **Top:** {Color} {Fit} {Type} (For Two-Piece)
+  - **Type:** {Type}
+  - **Fit:** {Fit}
+  - **Color:** {Color}
+- **Bottom:** {Color} {Fit} {Type} (For Two-Piece)
+  - **Type:** {Type}
+  - **Fit:** {Fit}
+  - **Color:** {Color}
+- **Accessories:** {Style} {Type}
+  - **Type:** {Type}
+  - **Style:** {Style}

@@ -1,0 +1,26 @@
+- **Top:** Tailored {Color} {Material} blazer with {Neckline} lapels
+  - **Type:** Blazer
+  - **Material:** {Material}
+  - **Fit:** {Fit}
+  - **Neckline:** {Neckline}
+  - **Pattern:** {Pattern}
+  - **Color:** {Color}
+- **Bottom:** Matching {Color} {Fit} {Material} {Type}
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Fit:** {Fit}
+  - **Pattern:** {Pattern}
+  - **Color:** {Color}
+- **Outerwear:** {Color} {Material} waistcoat (Optional)
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Pattern:** {Pattern}
+  - **Color:** {Color}
+- **Footwear:** {Color} {Material} {Style}
+  - **Style:** {Style}
+  - **Material:** {Material}
+  - **Color:** {Color}
+- **Accessories:** {Type} and {Jewelry}
+  - **Type:** {Type}
+  - **Jewelry:** {Jewelry}
+  - **Style:** {Style}

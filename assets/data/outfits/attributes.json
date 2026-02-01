@@ -1,0 +1,224 @@
+{
+    "Common": {
+        "Color": ["Black", "White", "Red", "Blue", "Green", "Yellow", "Purple", "Pink", "Orange", "Grey", "Navy", "Teal", "Burgundy", "Gold", "Silver", "Beige", "Brown", "Cream", "Charcoal"],
+        "Top": {
+            "Material": ["Cotton", "Silk", "Satin", "Lace", "Chiffon", "Velvet", "Leather", "Denim", "Linen", "Wool"],
+            "Fit": ["Tight", "Loose", "Oversized", "Fitted", "Cropped", "Flowy"],
+            "Neckline": ["Crew Neck", "V-Neck", "Scoop Neck", "High Neck", "Off-Shoulder", "Collared"],
+            "Sleeves": ["Short sleeves", "Long sleeves", "Sleeveless", "Cap sleeves", "3/4 sleeves"],
+            "Pattern": ["Solid", "Striped", "Polka Dot", "Floral", "Plaid", "Geometric"]
+        },
+        "Bottom": {
+            "Type": ["Jeans", "Trousers", "Skirt", "Shorts", "Leggings"],
+            "Fit": ["Skinny", "Straight", "Wide-Leg", "Bootcut", "A-Line", "Pencil", "Mini", "Midi", "Maxi"],
+            "Material": ["Denim", "Cotton", "Leather", "Wool", "Linen", "Polyester"],
+            "Pattern": ["Solid", "Plaid", "Striped", "Floral"]
+        },
+        "Footwear": {
+            "Style": ["Heels", "Boots", "Sneakers", "Flats", "Sandals", "Loafers"],
+            "Material": ["Leather", "Suede", "Canvas", "Velvet", "Faux Leather"]
+        },
+        "Outerwear": {
+            "Type": ["Jacket", "Coat", "Blazer", "Cardigan", "Trench Coat"],
+            "Material": ["Leather", "Denim", "Wool", "Faux Fur", "Cotton"],
+            "Fit": ["Oversized", "Fitted", "Cropped", "Long"]
+        },
+        "Accessories": {
+            "Type": ["Necklace", "Earrings", "Choker", "Scarf", "Belt", "Gloves", "Hat", "Sunglasses", "Bag"],
+            "Jewelry": ["Necklace", "Earrings", "Pendant", "Bracelet", "Ring"],
+            "Style": ["Minimalist", "Statement", "Vintage", "Gold", "Silver", "Boho"]
+        }
+    },
+    "Gown": {
+        "Top": {
+            "Neckline": ["Off-Shoulder", "Sweetheart", "Plunging", "Cowl Neck", "High Neck", "Illusion", "Queen Anne", "Strapless", "V-Neck"],
+            "Material": ["Silk", "Satin", "Lace", "Chiffon", "Velvet", "Organza", "Tulle", "Embroidered", "Sequin"],
+            "Fit": ["Corset-style", "Fitted", "Structured", "Draped"],
+            "Pattern": ["Solid", "Floral", "Embroidered", "Beaded", "Sequin-embellished"]
+        },
+        "Bottom": {
+            "Type": ["Skirt"],
+            "Fit": ["A-Line", "Mermaid", "Ballgown", "Sheath", "Empire", "Trumpet", "Flowy"],
+            "Material": ["Silk", "Satin", "Tulle", "Chiffon", "Crêpe", "Taffeta", "Velvet"],
+            "Length": ["Floor-length", "Sweep-train", "Tea-length", "High-low"],
+            "Pattern": ["Solid", "Ombre", "Embroidered", "Ruffled"]
+        },
+        "Outerwear": {
+            "Type": ["Shawl", "Bolero", "Faux Fur Stole", "Cape", "Opera Coat"],
+            "Material": ["Faux Fur", "Silk", "Velvet", "Lace"],
+            "Pattern": ["Solid", "Embroidered"]
+        },
+        "Footwear": {
+            "Style": ["Heels", "Stilettos", "Pumps", "Strappy Sandals", "Peep-toe"],
+            "Material": ["Satin", "Leather", "Velvet", "Crystal-embellished"]
+        },
+        "Accessories": {
+             "Type": ["Clutch", "Evening Bag", "Shawl", "Opera Gloves"],
+             "Jewelry": ["Diamond Necklace", "Pearl Earrings", "Chandelier Earrings", "Statement Necklace", "Tennis Bracelet"],
+             "Style": ["Diamond", "Pearl", "Crystal", "Elegant", "Gold", "Platinum"]
+        }
+    },
+    "Casual": {
+        "Top": {
+            "Neckline": ["Crew Neck", "V-Neck", "Scoop Neck", "Halter", "Collared", "Henley", "Graphic Tee"],
+            "Material": ["Cotton", "Jersey", "Linen", "Denim", "Flannel", "Knit", "Ribbed", "Waffle"],
+            "Fit": ["Relaxed", "Oversized", "Boxy", "Cropped", "Tucked-in"],
+            "Pattern": ["Solid", "Striped", "Graphic Print", "Tie-dye", "Plaid", "Color-block"]
+        },
+        "Bottom": {
+            "Type": ["Jeans", "Shorts", "Leggings", "Joggers", "Skirt", "Cargo Pants"],
+            "Material": ["Denim", "Cotton", "Fleece", "Corduroy", "Linen"],
+            "Fit": ["Boyfriend", "Mom", "Skinny", "Baggy", "Straight-leg", "Bootcut"],
+            "Pattern": ["Solid", "Distressed", "Camo", "Acid-wash", "Plaid"]
+        },
+        "Footwear": {
+            "Style": ["Sneakers", "Canvas Shoes", "Sandals", "Slides", "Ankle Boots", "Slip-ons"],
+            "Material": ["Canvas", "Leather", "Mesh", "Suede"]
+        },
+        "Outerwear": {
+             "Type": ["Denim Jacket", "Bomber", "Hoodie", "Windbreaker", "Flannel Shirt"],
+             "Material": ["Denim", "Nylon", "Cotton", "Fleece"],
+             "Pattern": ["Solid", "Plaid", "Color-block", "Camo"]
+        },
+        "Accessories": {
+            "Type": ["Baseball Cap", "Beanie", "Backpack", "Tote Bag", "Sunglasses", "Choker"],
+            "Jewelry": ["Stud Earrings", "Layered Necklace", "Hoop Earrings", "Anklet"],
+            "Style": ["Minimalist", "Boho", "Streetwear", "Funky", "Silver"]
+        }
+    },
+    "Suit": {
+        "Top": {
+            "Neckline": ["Collared", "Notched Lapel", "Peak Lapel", "Shawl Lapel"],
+            "Material": ["Wool", "Tweed", "Linen", "Cotton Blend", "Crepe"],
+            "Fit": ["Tailored", "Slim-fit", "Double-breasted", "Single-breasted"],
+            "Pattern": ["Solid", "Pinstripe", "Checkered", "Houndstooth", "Plaid"]
+        },
+        "Bottom": {
+            "Type": ["Trousers", "Slacks", "Pencil Skirt"],
+            "Fit": ["Straight-leg", "Slim", "Tailored", "Pleated", "Cuffed"],
+            "Material": ["Wool", "Tweed", "Linen", "Suiting Fabric"],
+            "Pattern": ["Solid", "Pinstripe", "Checkered", "Houndstooth"]
+        },
+        "Outerwear": {
+            "Type": ["Blazer", "Suit Jacket", "Waistcoat"],
+            "Material": ["Wool", "Tweed", "Linen", "Silk Lining"],
+            "Pattern": ["Solid", "Pinstripe", "Checkered", "Houndstooth"]
+        },
+        "Footwear": {
+            "Style": ["Loafers", "Oxfords", "Brogues", "Pumps", "Ankle Boots"],
+            "Material": ["Leather", "Suede", "Patent Leather"]
+        },
+        "Accessories": {
+            "Type": ["Pocket Square", "Tie", "Cufflinks", "Belt", "Briefcase"],
+            "Jewelry": ["Watch", "Cufflinks", "Tie Clip", "Ring"],
+            "Style": ["Classic", "Modern", "Minimalist", "Silver", "Gold"]
+        }
+    },
+    "Athletic": {
+        "Top": {
+            "Type": ["Sports Bra", "Tank Top", "Jersey", "Compression Shirt", "Cropped Tee", "Hoodie"],
+            "Material": ["Spandex", "Lycra", "Mesh", "Moisture-wicking fabric", "Nylon"],
+            "Fit": ["Compression", "Fitted", "Relaxed", "Racerback"]
+        },
+        "Bottom": {
+             "Type": ["Running Shorts", "Yoga Pants", "Track Pants", "Biker Shorts", "Leggings", "Joggers"],
+             "Material": ["Spandex", "Lycra", "Mesh", "Sweatshirt Fleece"],
+             "Fit": ["Compression", "Loose", "Tapered"]
+        },
+        "Footwear": {
+             "Style": ["Running Shoes", "Cleats", "Cross-trainers", "Sneakers", "High-tops"],
+             "Material": ["Mesh", "Synthetic", "Rubber"]
+        },
+        "Outerwear": {
+             "Type": ["Windbreaker", "Track Jacket", "Zip-up Hoodie", "Puffer Vest"],
+             "Material": ["Nylon", "Polyester", "Fleece"]
+        },
+        "Accessories": {
+             "Type": ["Headband", "Wristbands", "Gym Bag", "Water Bottle", "Smart Watch"],
+             "Style": ["Sporty", "Neon", "Reflective"]
+        }
+    },
+    "Sleepwear": {
+         "Top": {
+              "Type": ["Camisole", "Oversized T-Shirt", "Button-down PJ Top", "Tank"],
+              "Material": ["Cotton", "Silk", "Satin", "Flannel", "Jersey"],
+              "Fit": ["Loose", "Relaxed", "Oversized"]
+         },
+         "Bottom": {
+              "Type": ["Pajama Pants", "Boxer Shorts", "Silk Shorts", "Lounge Pants"],
+              "Material": ["Flannel", "Cotton", "Silk", "Fleece"],
+              "Pattern": ["Plaid", "Striped", "Solid", "Polka Dot"]
+         },
+         "One-Piece": {
+              "Type": ["Robe", "Onesie", "Nightgown", "Slip Dress", "Romper"],
+              "Material": ["Silk", "Satin", "Cotton", "Fleece", "Lace Trim"]
+         },
+         "Footwear": {
+              "Style": ["Slippers", "Fuzzy Socks", "Slides"],
+              "Material": ["Faux Fur", "Wool", "Fleece"]
+         }
+    },
+    "Uniform": {
+         "Top": {
+              "Type": ["Scrub Top", "Uniform Shirt", "Blazer", "Tunic", "Tactical Shirt"],
+              "Material": ["Cotton Blend", "Polyester", "Ripstop"],
+              "Fit": ["Standard", "Boxy", "Tailored"]
+         },
+         "Bottom": {
+              "Type": ["Scrub Pants", "Uniform Trousers", "Pleated Skirt", "Tactical Pants", "Overalls"],
+              "Material": ["Cotton Blend", "Polyester", "Denim", "Ripstop"]
+         },
+         "Outerwear": {
+              "Type": ["Lab Coat", "Apron", "School Blazer", "Tactical Vest", "Utility Jacket"],
+              "Material": ["Cotton", "Synthetic", "Canvas"]
+         },
+         "Accessories": {
+              "Type": ["Name Tag", "Lanyard", "Tool Belt", "Cap", "Stethoscope", "Badge"],
+              "Style": ["Professional", "Tactical", "Utility"]
+         }
+    },
+    "Swimwear": {
+         "One-Piece": {
+              "Type": ["One-piece Swimsuit", "Monokini", "Wetsuit", "Rash Guard"],
+              "Material": ["Nylon", "Spandex", "Neoprene"],
+              "Pattern": ["Solid", "Floral", "Tropical", "Color-block"]
+         },
+         "Top": {
+              "Type": ["Bikini Top", "Rash Guard Top", "Tankini"],
+              "Fit": ["Triangle", "Bandeau", "Halter", "Underwire"]
+         },
+         "Bottom": {
+              "Type": ["Bikini Bottom", "Board Shorts", "Swim Trunks", "Swim Skirt"],
+              "Fit": ["High-waisted", "Cheeky", "Full-coverage", "Tie-side"]
+         },
+         "Accessories": {
+              "Type": ["Sarong", "Sun Hat", "Goggles", "Cover-up", "Sunglasses"],
+              "Style": ["Beach", "Tropical", "Sporty"]
+         }
+    },
+    "Alternative": {
+         "Top": {
+              "Type": ["Corset", "Fishnet Top", "Band Tee", "Torn Shirt", "Crop Top"],
+              "Material": ["Leather", "Latex", "Mesh", "Distressed Cotton"],
+              "Fit": ["Tight", "Cropped", "Loose"]
+         },
+         "Bottom": {
+              "Type": ["Mini Skirt", "Leather Pants", "Cargo Pants", "Plaid Skirt"],
+              "Material": ["Leather", "Vinyl", "Plaid", "Denim"],
+              "Detail": ["Chains", "Zippers", "Studs", "Ripped"]
+         },
+         "Footwear": {
+              "Style": ["Combat Boots", "Platform Boots", "Creepers", "High-tops"],
+              "Material": ["Leather", "Patent Leather", "Canvas"],
+              "Detail": ["Buckles", "Spikes", "Laces"]
+         },
+         "Outerwear": {
+              "Type": ["Leather Jacket", "Trench Coat", "Studded Vest", "Flannel"],
+              "Detail": ["Spikes", "Patches", "Pins"]
+         },
+         "Accessories": {
+              "Type": ["Choker", "Chains", "Spiked Bracelet", "Fishnets", "Harness"],
+              "Style": ["Goth", "Punk", "Grunge", "Cyber", "Emo"]
+         }
+    }
+}

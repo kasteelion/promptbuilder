@@ -19,6 +19,7 @@ Built with a **local-first, zero-dependency** philosophy, all content—characte
 - **🎨 Signature Colors:** Characters have signature colors that dynamically apply to compatible outfits using `(signature)` tokens.
 - **⚡ Bulk Actions:** Apply outfits, color schemes, or signature colors to multiple characters at once.
 - **📥 Natural Language Import:** Paste raw text descriptions or LLM-generated configs to auto-populate prompts.
+- **🔄 Asset Refresh:** Hot-reload character data and settings instantly with a single click, perfect for tweaking markdown files on the fly.
 - **📊 Visual Explorers:** Browse tag distribution statistics and outfit library with category filtering.
 - **🤖 LLM Export:** Export condensed catalog for AI knowledge injection and automated prompt generation.
 - **🕵️ Auditing Suite:** Built-in tools to score prompt quality, visualize distribution (Sankey diagrams), and verify data integrity.
@@ -85,20 +86,21 @@ Detailed guides can be found in the `docs/` directory:
 ## 📂 Project Structure
 
 ```text
-├── core/           # Prompt assembly & rendering logic
-├── data/           # User content (71 characters, ~250 outfits, scenes, poses)
-├── docs/           # Documentation guides
-├── launchers/      # One-click startup scripts & setup wizard
-├── logic/          # Business logic & data management (parsers, randomizer)
-├── ui/             # Tkinter GUI components & controllers
-├── utils/          # Logging, config, preferences, & templates
-├── auditing/       # Quality assurance & distribution analysis tools
-├── automation/     # Browser automation for image generation (Playwright)
-├── dev-tools/      # Migration & content generation utilities
-├── tests/          # Unit and integration tests
-├── .config/        # User preferences & browser profiles
-├── main.py         # Entry point
-└── pyproject.toml  # Project metadata & configuration
+├── src/
+│   ├── core/           # Prompt assembly & rendering logic
+│   ├── logic/          # Business logic & data management
+│   ├── ui/             # Flet GUI components & controllers
+│   └── utils/          # Logging & config
+├── assets/
+│   └── data/           # User content (characters, outfits, scenes)
+├── docs/               # Documentation guides
+├── scripts/            # Utility scripts
+├── auditing/           # Quality assurance tools
+├── automation/         # Browser automation
+├── tests/              # Unit and integration tests
+├── logs/               # Application logs
+├── main.py             # Entry point
+└── pyproject.toml      # Project metadata
 ```
 
 ## 🤝 Contributing

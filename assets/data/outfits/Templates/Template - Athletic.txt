@@ -1,0 +1,21 @@
+- **Top:** {Color} {Fit} {Material} {Type}
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Fit:** {Fit}
+  - **Color:** {Color}
+- **Bottom:** {Color} {Fit} {Material} {Type}
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Fit:** {Fit}
+  - **Color:** {Color}
+- **Footwear:** {Color} {Material} {Style}
+  - **Style:** {Style}
+  - **Material:** {Material}
+  - **Color:** {Color}
+- **Outerwear:** {Color} {Material} {Type}
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Color:** {Color}
+- **Accessories:** {Style} {Type}
+  - **Type:** {Type}
+  - **Style:** {Style}

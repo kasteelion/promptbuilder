@@ -2,7 +2,14 @@
 
 ## [Unreleased]
 
+### Refactored
+
+- **Directory Structure:** Standardized codebase by moving core logic to `src/`, user data to `assets/data/`, and scripts to `scripts/`.
+- **Cleanup:** Removed dead code in `archive/` and unified `sys.path` handling in `main.py`.
+
 ### Added
+
+- **Asset Refresh:** Added a "Refresh Assets" button to the toolbar to hot-reload character data and settings without restarting the application.
 - **Smart Randomization Coherence:** Implemented "Cascading Context" logic where tags from the selected Base Style (e.g., "Sports Action") strictly enforce thematic consistency in subsequent selections (Poses, Outfits).
 - **Strict Theme Filtering:** The randomizer now prioritizes exact tag matches over generic ones, significantly improving the logical consistency of generated prompts (e.g., ensuring "Sports" styles only select "Sports" poses).
 - **Export for LLM:** New utility to export a condensed catalog of characters, outfits, and poses along with system instructions. Designed for "knowledge injection" into LLMs to generate valid prompt configurations.
@@ -13,33 +20,38 @@
 - **Auto-Tag Sync:** The application now automatically scans character files on startup (and reload) and adds any new, unknown tags to `tags.md`. This supports the workflow of manually adding character files.
 - **Signature Colors:** Implemented a new system allowing characters to have a defined signature color (hex code). Outfits can now dynamically switch between a default color and the character's signature color using the `((default:Color) or (signature))` syntax.
 - **UI Explorers:** Added two new visual summary tools accessible via the Help menu:
-    - **Tag Distribution Explorer:** Visualizes tag usage statistics across the character database.
-    - **Outfit Library Explorer:** Browse all available outfits, filter by category, and see which outfits support team colors or signature colors.
+  - **Tag Distribution Explorer:** Visualizes tag usage statistics across the character database.
+  - **Outfit Library Explorer:** Browse all available outfits, filter by category, and see which outfits support team colors or signature colors.
 - **Bulk Edit:** Added "Use Signature Color" checkbox to the Bulk Edit panel in the Characters tab.
 - **New Outfits:** Significantly expanded the outfit library with new categories:
-    - **Athletic:** LFL Performance Uniform, Tech-Athletic Compression, Street-Dance Set.
-    - **Alternative:** High-Gloss Tech-Suit, Tactical Scout.
-    - **Professional:** Modern Power Suit.
-    - **Formal:** Sculpted Bandage Set.
-    - **International:** Japanese Harajuku, African Print Contemporary.
-    - **Fantasy Classes:** Knight, Paladin, Barbarian, Samurai, Wizard, Sorcerer, Necromancer, Druid, Thief, Assassin, Ninja, Priest, Hunter, Beastmaster, Red Mage, Monk, Bard, Alchemist, Engineer.
-    - **Performance:** Vintage Tap, Oktoberfest.
-    - **Historical:** Renaissance Noble.
-    - **Period:** 1970s Disco.
+  - **Athletic:** LFL Performance Uniform, Tech-Athletic Compression, Street-Dance Set.
+  - **Alternative:** High-Gloss Tech-Suit, Tactical Scout.
+  - **Professional:** Modern Power Suit.
+  - **Formal:** Sculpted Bandage Set.
+  - **International:** Japanese Harajuku, African Print Contemporary.
+  - **Fantasy Classes:** Knight, Paladin, Barbarian, Samurai, Wizard, Sorcerer, Necromancer, Druid, Thief, Assassin, Ninja, Priest, Hunter, Beastmaster, Red Mage, Monk, Bard, Alchemist, Engineer.
+  - **Performance:** Vintage Tap, Oktoberfest.
+  - **Historical:** Renaissance Noble.
+  - **Period:** 1970s Disco.
 
 ### Changed
+
 - **Performance Optimizations:**
-    - **Lazy Loading:** UI tabs (like Edit Data) are now initialized on-demand to reduce initial startup time.
-    - **Async Image Engine:** Character gallery now uses a shared `ThreadPoolExecutor` for background image loading, preventing UI lag and reducing system resource usage.
-    - **Optimized Rendering:** Improved scroll region updates and batched rendering for smoother gallery navigation.
+  - **Lazy Loading:** UI tabs (like Edit Data) are now initialized on-demand to reduce initial startup time.
+  - **Async Image Engine:** Character gallery now uses a shared `ThreadPoolExecutor` for background image loading, preventing UI lag and reducing system resource usage.
+  - **Optimized Rendering:** Improved scroll region updates and batched rendering for smoother gallery navigation.
 - **Character Data:** Updated all character profiles to include `**Signature Color:**` definitions and refined tag categorization. Added new character: **Ayame Shiratori**.
 - **Outfit Data:** Updated existing outfits (Cyberpunk, Goth, etc.) to utilize the new Signature Color syntax.
 - **Documentation:**
-    - Added "Signature Colors" section to `docs/character-flexibility.md`.
-    - Created `docs/data-formats.md` detailing file syntax and conventions for characters, outfits, and global assets.
+  - Added "Signature Colors" section to `docs/character-flexibility.md`.
+  - Created `docs/data-formats.md` detailing file syntax and conventions for characters, outfits, and global assets.
 - **Architecture:** Updated `docs/architecture.md` to include the new `OutfitSummary` component.
 
 ### Fixed
+
+- **Images Path:** Fixed an issue where generated images were saving to `src/output` instead of the project root `output/`.
+- **Themes Loading:** Resolves `themes.md` correctly from `assets/data/lists/`.
+- **Legacy Cleanup:** Removed unused legacy code and consolidated scripts into `scripts/`.
 - **UI:** Resolved persistent hover highlighting issues on pill buttons and chips.
 - **Theme Compliance:** Fixed hardcoded colors (#333333, #666666) across all UI components.
 - **Typography:** Unified application font to "Lexend" (replacing Segoe UI/Consolas).
@@ -51,15 +63,17 @@
 - **Base Prompts:** Refined tags for "Sports Action" style to remove ambiguous terms, preventing unrelated pose selection.
 
 ### Refactored
+
 - **MainWindow Decomposition:** Broken down the monolithic `MainWindow` into reusable functional components: `ScenePanel`, `NotesPanel`, and `SummaryPanel`.
 - **Declarative Theming:** Implemented a central Theme Registry in `ThemeManager`. Widgets now subscribe to theme updates, eliminating manual update loops and improving responsiveness to theme changes.
 - **Logic Extraction (Controllers):** Extracted business logic from UI classes into dedicated controllers:
-    - `PromptController`: Handles prompt generation, summary assembly, and validation.
-    - `CharacterController`: Manages character lifecycle operations (add, duplicate, remove) and file updates.
-    - `DataController`: Orchestrates data loading, syncing, and lifecycle management.
+  - `PromptController`: Handles prompt generation, summary assembly, and validation.
+  - `CharacterController`: Manages character lifecycle operations (add, duplicate, remove) and file updates.
+  - `DataController`: Orchestrates data loading, syncing, and lifecycle management.
 - **Dependency Injection:** Improved modularity by passing managers and controllers explicitly via constructors, reducing tight coupling to the root window.
 
 ### Internal
+
 - **Utils:** Added `utils/outfit_summary.py` for generating consolidated outfit data.
 - **Docs:** Updated `data/tags.md` with clearer categorization.
 
@@ -76,4 +90,3 @@
 - refactor: centralize startup in `runner.py` and simplify `main.py` to a runner shim
 - cleanup: move legacy ad-hoc migration scripts to `scripts/archived/` to reduce repo clutter
 - logging: revert default logger level to INFO and add debug logging via `--debug` / `debug_log.py`
-

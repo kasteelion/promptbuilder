@@ -1,0 +1,230 @@
+import flet as ft
+from ui.components.icon_button import SafeIconButton
+from core.flet_theme_manager import ThemeManager
+
+class SidebarSection(ft.Container):
+    def __init__(self, app):
+        super().__init__()
+        self.app = app
+        self.width = 350
+        self.padding = ThemeManager.styles["padding"]
+        self.border = ft.Border.all(1, ThemeManager.colors["outline"])
+        self.border_radius = ft.BorderRadius.all(ThemeManager.styles["radius"])
+        self.bgcolor = ThemeManager.colors["surface"]
+        
+        # UI controls
+        self.base_prompt_dd = ft.Dropdown(label="Art Style", options=[], text_size=12, height=45, content_padding=10)
+        self.base_prompt_dd.on_select = self.handle_base_prompt_change
+        
+        self.scene_cat_dd = ft.Dropdown(label="Scene Category", width=150, text_size=12, height=45, content_padding=10)
+        self.scene_cat_dd.on_select = self.handle_scene_cat_change
+        
+        self.scene_preset_dd = ft.Dropdown(label="Scene Preset", width=150, text_size=12, height=45, content_padding=10)
+        self.scene_preset_dd.on_select = self.handle_scene_preset_change
+        
+        self.scene_field = ft.TextField(label="Scene", multiline=True, min_lines=3, max_lines=5, text_size=12)
+        self.scene_field.on_change = self.handle_text_change
+        
+        self.interaction_cat_dd = ft.Dropdown(label="Interaction Category", width=150, text_size=12, height=45, content_padding=10)
+        self.interaction_cat_dd.on_select = self.handle_interaction_cat_change
+        
+        self.interaction_preset_dd = ft.Dropdown(label="Interaction Preset", width=150, text_size=12, height=45, content_padding=10)
+        self.interaction_preset_dd.on_select = self.handle_interaction_preset_change
+        
+        self.notes_field = ft.TextField(label="Interactions/Notes", multiline=True, min_lines=3, max_lines=5, text_size=12)
+        self.notes_field.on_change = self.handle_text_change
+        
+        self.summary_text = ft.Markdown(
+            "No characters selected.", 
+            extension_set=ft.MarkdownExtensionSet.GITHUB_FLAVORED,
+            on_tap_link=lambda e: self.app.page.launch_url(e.data)
+        )
+        
+        self.content = ft.Column([
+            ft.Row([
+                ft.Text("CONTEXT & SUMMARY", weight="bold", size=16, color=ThemeManager.colors["text_primary"]),
+                ft.Row([
+                    SafeIconButton(ft.Icons.CASINO, tooltip="Global Randomize", on_click=self.app.handle_randomize),
+                    SafeIconButton("settings", tooltip="Dashboard", on_click=lambda _: self.app.show_dashboard())
+                ], spacing=0)
+            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
+            self.base_prompt_dd,
+            ft.Row([self.scene_cat_dd, self.scene_preset_dd]),
+            self.scene_field,
+            ft.Row([self.interaction_cat_dd, self.interaction_preset_dd]),
+            self.notes_field,
+            ft.Divider(color=ThemeManager.colors["outline"]),
+            ft.Text("Live Summary", weight="bold", size=14, color=ThemeManager.colors["text_primary"]),
+            ft.Container(
+                content=self.summary_text, 
+                padding=10, 
+                bgcolor=ThemeManager.colors["panel_bg"], 
+                border_radius=ft.BorderRadius.all(5)
+            )
+        ], scroll=ft.ScrollMode.AUTO, expand=True, spacing=15)
+
+    def populate_data(self):
+        ctx = self.app.state.ctx
+        
+        # Art Style
+        self.base_prompt_dd.options = [ft.dropdown.Option(k) for k in sorted(ctx.base_prompts.keys())]
+        self.base_prompt_dd.value = self.app.state.state.get("base_prompt", "Detailed")
+        
+        # Scene Categories
+        self.scene_cat_dd.options = [ft.dropdown.Option(k) for k in sorted(ctx.scenes.keys())]
+        self.scene_cat_dd.value = self.app.state.state.get("scene_category")
+        
+        # Scene Presets
+        if self.scene_cat_dd.value:
+            presets = ctx.scenes.get(self.scene_cat_dd.value, {})
+            self.scene_preset_dd.options = [ft.dropdown.Option(k) for k in sorted(presets.keys())]
+            self.scene_preset_dd.value = self.app.state.state.get("scene_preset")
+        else:
+            self.scene_preset_dd.options = []
+            self.scene_preset_dd.value = None
+        
+        # Interaction Categories
+        self.interaction_cat_dd.options = [ft.dropdown.Option(k) for k in sorted(ctx.interactions.keys())]
+        self.interaction_cat_dd.value = self.app.state.state.get("interaction_category")
+        
+        # Interaction Presets
+        if self.interaction_cat_dd.value:
+            presets = ctx.interactions.get(self.interaction_cat_dd.value, {})
+            self.interaction_preset_dd.options = [ft.dropdown.Option(k) for k in sorted(presets.keys())]
+            self.interaction_preset_dd.value = self.app.state.state.get("interaction_preset")
+        else:
+            self.interaction_preset_dd.options = []
+            self.interaction_preset_dd.value = None
+
+        # Sync Fields
+        self.scene_field.value = self.app.state.state.get("scene", "")
+        self.notes_field.value = self.app.state.state.get("notes", "")
+
+    def handle_base_prompt_change(self, e):
+        self.app.state.state["base_prompt"] = e.control.value
+        self.app.update_preview()
+
+    def handle_scene_cat_change(self, e):
+        cat = e.control.value
+        print(f"DEBUG_SIDEBAR: Scene Cat -> {cat}")
+        presets = self.app.state.ctx.scenes.get(cat, {})
+        keys = sorted(presets.keys())
+        
+        self.scene_preset_dd.options = [ft.dropdown.Option(k) for k in keys]
+        
+        if keys:
+            first_preset = keys[0]
+            print(f"DEBUG_SIDEBAR: Auto-select Preset -> {first_preset}")
+            self.scene_preset_dd.value = first_preset
+            self._apply_scene_preset(cat, first_preset)
+        else:
+            print("DEBUG_SIDEBAR: No presets found.")
+            self.scene_preset_dd.value = None
+            self.scene_field.value = ""
+            self.app.state.state["scene"] = ""
+            self.app.update_preview()
+            self.scene_field.update()
+            
+        self.scene_preset_dd.update()
+        self.update()
+
+    def handle_scene_preset_change(self, e):
+        cat = self.scene_cat_dd.value
+        preset = e.control.value
+        print(f"DEBUG_SIDEBAR: Scene Preset -> {preset}")
+        if cat and preset:
+            self._apply_scene_preset(cat, preset)
+
+    def _apply_scene_preset(self, cat, preset):
+        self.app.state.state["scene_category"] = cat
+        self.app.state.state["scene_preset"] = preset
+        
+        # Use InteractionLogic to resolve text
+        description = self.app.interaction_logic.process_scene_selection(cat, preset)
+        self.scene_field.value = description
+        self.scene_field.update()
+        
+        self.app.state.state["scene"] = description
+        self.app.update_preview() # Triggers page update
+
+    def handle_interaction_cat_change(self, e):
+        cat = e.control.value
+        print(f"DEBUG_SIDEBAR: Intr Cat -> {cat}")
+        presets = self.app.state.ctx.interactions.get(cat, {})
+        keys = sorted(presets.keys())
+        
+        self.interaction_preset_dd.options = [ft.dropdown.Option(k) for k in keys]
+        
+        if keys:
+            first = keys[0]
+            print(f"DEBUG_SIDEBAR: Auto-select Intr -> {first}")
+            self.interaction_preset_dd.value = first
+            self._apply_interaction_preset(cat, first)
+        else:
+            self.interaction_preset_dd.value = None
+            self.notes_field.value = ""
+            self.app.state.state["notes"] = ""
+            self.app.update_preview()
+            self.notes_field.update()
+            
+        self.interaction_preset_dd.update()
+        self.update()
+
+    def handle_interaction_preset_change(self, e):
+        cat = self.interaction_cat_dd.value
+        preset = e.control.value
+        if cat and preset:
+            self._apply_interaction_preset(cat, preset)
+
+    def _apply_interaction_preset(self, cat, preset):
+        self.app.state.state["interaction_category"] = cat
+        self.app.state.state["interaction_preset"] = preset
+        
+        # Use InteractionLogic
+        data = self.app.interaction_logic.process_interaction_selection(cat, preset)
+        desc = data.get("description", "")
+        
+        # Resolve placeholders via logic
+        selected_chars = self.app.state.state["selected_characters"]
+        resolved_desc = self.app.interaction_logic.resolve_interaction(desc, selected_chars)
+        
+        # Sync Poses via logic
+        self.app.interaction_logic.sync_poses_from_interaction(data, selected_chars)
+        
+        # Refresh Roster UI since sync_poses might have changed char state
+        self.app.refresh_roster()
+            
+        self.notes_field.value = resolved_desc
+        self.app.state.state["notes"] = resolved_desc
+        self.notes_field.update()
+        self.app.update_preview()
+
+    def handle_text_change(self, e):
+        if e.control == self.scene_field:
+            self.app.state.state["scene"] = self.scene_field.value
+        elif e.control == self.notes_field:
+            self.app.state.state["notes"] = self.notes_field.value
+        self.app.update_preview()
+
+    def update_summary(self, summary: str):
+        self.summary_text.value = summary
+        self.summary_text.update()
+
+    def refresh_theme(self):
+        self.border = ft.Border.all(1, ThemeManager.colors["outline"])
+        self.padding = ThemeManager.styles["padding"]
+        self.bgcolor = ThemeManager.colors["surface"]
+        
+        # Content[0] is Header Row -> Text is index 0
+        self.content.controls[0].controls[0].color = ThemeManager.colors["text_primary"]
+        
+        # Content[6] is Divider
+        self.content.controls[6].color = ThemeManager.colors["outline"]
+        
+        # Content[7] is "Live Summary" text
+        self.content.controls[7].color = ThemeManager.colors["text_primary"]
+        
+        # Content[8] is Summary Container
+        self.content.controls[8].bgcolor = ThemeManager.colors["panel_bg"]
+        
+        self.update()

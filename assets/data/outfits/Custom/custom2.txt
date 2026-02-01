@@ -1,0 +1,78 @@
+[F]
+ - **Top:** Plunging Lace bodice Embroidered with Cap Sleeve sleeves
+  - **Neckline:** Plunging.
+  - **Material:** Lace.
+  - **Fit:** Corset-style.
+  - **Pattern:** Embroidered.
+  - **Sleeves:** Cap Sleeve.
+  - **Color:** (signature)
+- **Bottom:** Mermaid floor-length skirt with Slit
+  - **Type:** Skirt.
+  - **Fit:** Mermaid.
+  - **Material:** Chiffon.
+  - **Detail:** Slit.
+  - **Pattern:** Embroidered.
+  - **Length:** Tea-length.
+- **Outerwear:** {Material} {Type} (Optional)
+  - **Type:** {Type}.
+  - **Material:** {Material}.
+  - **Pattern:** {Pattern}.
+- **Footwear:** Crystal-embellished {Style}
+  - **Style:** {Style}.
+  - **Material:** Crystal-embellished.
+- **Accessories:** Opera Gloves and Diamond Necklace
+  - **Type:** Opera Gloves.
+  - **Jewelry:** Diamond Necklace.
+  - **Style:** Diamond.
+
+[M]
+(in signature colors) - **Top:** Plunging Lace bodice Embroidered with Cap Sleeve sleeves
+  - **Neckline:** Plunging.
+  - **Material:** Lace.
+  - **Fit:** Corset-style.
+  - **Pattern:** Embroidered.
+  - **Sleeves:** Cap Sleeve.
+- **Bottom:** Mermaid floor-length skirt with Slit
+  - **Type:** Skirt.
+  - **Fit:** Mermaid.
+  - **Material:** Chiffon.
+  - **Detail:** Slit.
+  - **Pattern:** Embroidered.
+  - **Length:** Tea-length.
+- **Outerwear:** {Material} {Type} (Optional)
+  - **Type:** {Type}.
+  - **Material:** {Material}.
+  - **Pattern:** {Pattern}.
+- **Footwear:** Crystal-embellished {Style}
+  - **Style:** {Style}.
+  - **Material:** Crystal-embellished.
+- **Accessories:** Opera Gloves and Diamond Necklace
+  - **Type:** Opera Gloves.
+  - **Jewelry:** Diamond Necklace.
+  - **Style:** Diamond.
+
+[H]
+(in signature colors) - **Top:** Plunging Lace bodice Embroidered with Cap Sleeve sleeves
+  - **Neckline:** Plunging.
+  - **Material:** Lace.
+  - **Fit:** Corset-style.
+  - **Pattern:** Embroidered.
+  - **Sleeves:** Cap Sleeve.
+- **Bottom:** Mermaid floor-length skirt with Slit
+  - **Type:** Skirt.
+  - **Fit:** Mermaid.
+  - **Material:** Chiffon.
+  - **Detail:** Slit.
+  - **Pattern:** Embroidered.
+  - **Length:** Tea-length.
+- **Outerwear:** {Material} {Type} (Optional)
+  - **Type:** {Type}.
+  - **Material:** {Material}.
+  - **Pattern:** {Pattern}.
+- **Footwear:** Crystal-embellished {Style}
+  - **Style:** {Style}.
+  - **Material:** Crystal-embellished.
+- **Accessories:** Opera Gloves and Diamond Necklace
+  - **Type:** Opera Gloves.
+  - **Jewelry:** Diamond Necklace.
+  - **Style:** Diamond.

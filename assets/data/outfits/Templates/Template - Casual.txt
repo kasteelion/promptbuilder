@@ -1,0 +1,23 @@
+- **Top:** {Fit} {Color} {Material} top with {Neckline}
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Fit:** {Fit}
+  - **Neckline:** {Neckline}
+  - **Pattern:** {Pattern}
+- **Bottom:** {Fit} {Material} {Type}
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Fit:** {Fit}
+  - **Pattern:** {Pattern}
+- **Outerwear:** {Fit} {Material} {Type}
+  - **Type:** {Type}
+  - **Material:** {Material}
+  - **Fit:** {Fit}
+  - **Pattern:** {Pattern}
+- **Footwear:** {Material} {Style}
+  - **Style:** {Style}
+  - **Material:** {Material}
+- **Accessories:** {Style} {Type}
+  - **Type:** {Type}
+  - **Jewelry:** {Jewelry}
+  - **Style:** {Style}

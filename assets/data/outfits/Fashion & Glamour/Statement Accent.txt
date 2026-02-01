@@ -1,0 +1,54 @@
+tags: [Bold, Fashion, Formal]
+
+[F]
+- **Dress:** Off-shoulder bodycon mini dress with statement bow at back.
+  - **Fit:** Fitted bodycon silhouette throughout.
+  - **Material:** Structured crepe or scuba fabric in black.
+  - **Neckline:** Straight-across off-shoulder, bare shoulders exposed.
+  - **Sleeve:** Short off-shoulder cap sleeves that sit on upper arms, created by ((default:white) or (signature)) fabric band.
+  - **Bow placement:** Large ((default:white) or (signature)) satin bow positioned at center back where off-shoulder band meets.
+  - **Ribbon detail:** Two long satin ribbons extend from back bow, draping down the back and sides of dress, flowing past hemline.
+  - **Off-shoulder band:** ((default:white) or (signature)) fabric wraps around shoulders creating the off-shoulder effect and connects to bow at back.
+  - **Waist:** Fitted, no belt or embellishment.
+  - **Length:** Mid-thigh mini length.
+  - **Construction:** Black dress body with white off-shoulder detail and bow system.
+
+**Footwear:** Strappy white heels with ankle straps.
+
+**Accessories:** Delicate layered gold necklaces; minimal rings.
+
+**Key details:** 
+- Bow is at CENTER BACK, not front
+- White fabric creates the off-shoulder sleeves and connects to back bow
+- Ribbons trail down from back bow
+- Main dress is black, off-shoulder detail and bow/ribbons are white
+
+[M]
+- **Top:** Slim-fit suit jacket with velvet bow tie.
+  - **Fit:** Slim Modern cut.
+  - **Material:** Wool blend; Velvet bow tie.
+  - **Neckline:** Collared white dress shirt.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Tailored dress trousers.
+  - **Fit:** Slim modern.
+  - **Material:** Wool blend.
+  - **Waist:** High natural waist.
+  - **Length:** Full length.
+- **Footwear:** Polished shoes.
+- **Accessories:** Cufflinks; ((default:white) or (signature)) velvet bow tie; matching pocket square.
+
+[H]
+- **Hijab:** black silk hijab.
+- **Top:** Long-sleeve fitted evening gown with shoulder band.
+  - **Fit:** Fitted modest.
+  - **Material:** Crepe; Satin.
+  - **Pattern:** Integrated ((default:white) or (signature)) shoulder band/sash detail.
+  - **Neckline:** High-neck (modest).
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching floor-length skirt.
+  - **Fit:** Straight.
+  - **Material:** Crepe.
+  - **Waist:** Fitted waist.
+  - **Length:** Floor-length.
+- **Footwear:** Strappy heels.
+- **Accessories:** Gold necklace.

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\parking\Desktop\promptbuilder\tests\verify_roster_ui.py", line 61, in main
+    page.window_close()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'Page' object has no attribute 'window_close'

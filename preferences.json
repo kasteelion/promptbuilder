@@ -1,7 +1,7 @@
 {
-  "window_geometry": "1768x901+-1332+-16",
+  "window_geometry": "2560x1349+-1225+71",
   "last_theme": "ONU Dark",
-  "last_base_prompt": "Soft Semi-Realistic: \"Quiet Confidence\"",
+  "last_base_prompt": "Photorealistic: \"High-Fidelity Candid\"",
   "font_adjustment": 0,
   "recent_characters": [],
   "favorite_characters": [
@@ -22,7 +22,8 @@
   "ui_scale": "Medium",
   "window_state": "zoomed",
   "sash_positions": {
-    "main_sash": 387,
+    "main_sash": 300,
     "content_sash": 753
-  }
+  },
+  "gallery_visible": true
 }

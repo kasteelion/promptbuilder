@@ -3,7 +3,9 @@
 
 # === RUNTIME REQUIREMENTS ===
 # This application uses ONLY Python standard library modules.
-# No PyPI packages are required to run the application.
+# No PyPI packages are required to run the desktop application.
+# For WebUI, the following package is required:
+# gradio>=4.0.0
 
 # Required standard library modules (included with Python):
 # - tkinter (GUI framework)
