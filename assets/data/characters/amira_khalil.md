@@ -4,16 +4,16 @@
 
 **Summary:** Poised and thoughtful, Amira embodies elegance through restraint. Her movements are deliberate and graceful, her presence calm and assured. She radiates dignity and intelligence, balancing softness with a composed inner strength that commands respect without demanding attention.
 
-**Tags:** Female, Chic, Hijabi, Middle Eastern, Minimalist, Traditional
+**Tags:** Female, Chic, Hijabi, Middle Eastern, Minimalist, Traditional, Vintage, Retro
 **Modifier:** H
 **Signature Color:** #B57EDC
 
 **Appearance:**
 
-* **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
-* **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
-* **Hair / Covering:** Hair fully covered; hijab as constant identity anchor; smooth controlled drape with clean facial framing.
-* **Skin:** Warm olive-toned skin with soft luminous finish.
+- **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
+- **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
+- **Hair / Covering:** Hair fully covered; hijab as constant core identity feature; smooth controlled drape with clean facial framing.
+- **Skin:** Warm olive-toned skin with soft luminous finish.
 
 **Age Presentation:** late 20s to early 30s presentation; mature, composed.
 

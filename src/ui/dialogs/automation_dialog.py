@@ -29,6 +29,29 @@ class AutomationDialog(ft.AlertDialog):
             self.char_checks.append(chk)
             char_list_col.controls.append(chk)
 
+        # Scenario Selection
+        self.scenario_dd = ft.Dropdown(
+            label="Scenario (Theme)",
+            options=[ft.dropdown.Option("Auto / Random")] + [ft.dropdown.Option(s.name) for s in self.app.state.ctx.randomizer.scenario_registry.get_all()],
+            value="Auto / Random",
+            text_size=12, height=45, content_padding=10
+        )
+
+        # Advanced Settings
+        self.candidates_slider = ft.Slider(min=1, max=10, divisions=9, value=3, label="{value} Candidates")
+        self.cohesion_slider = ft.Slider(min=0.0, max=1.0, divisions=10, value=0.3, label="{value} Cohesion")
+
+        self.advanced_expander = ft.ExpansionTile(
+            title=ft.Text("Advanced Settings", size=12),
+            controls=[
+                ft.Text("Quality / Candidates (Slower but better matches)", size=10),
+                self.candidates_slider,
+                ft.Text("Outfit Cohesion (Higher = More matching outfits)", size=10),
+                self.cohesion_slider
+            ],
+            tile_padding=0
+        )
+
         # Layout
         self.content = ft.Container(
             width=500,
@@ -40,6 +63,7 @@ class AutomationDialog(ft.AlertDialog):
                 ft.Row([
                     ft.Text("Characters per Image:"), self.num_chars_dd
                 ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
+                self.scenario_dd,
                 ft.Divider(),
                 ft.Row([self.scene_switch, self.notes_switch]),
                 self.prompts_only_switch,
@@ -52,20 +76,35 @@ class AutomationDialog(ft.AlertDialog):
                     border_radius=5,
                     padding=5
                 ),
+                self.advanced_expander,
                 ft.Divider(color="transparent"),
                 self.progress_bar,
                 self.status_text
             ], spacing=10, tight=True)
         )
         
+        self.stop_btn = ft.FilledButton("Stop", on_click=self.handle_stop, icon=ft.Icons.STOP, visible=False,
+                                          style=ft.ButtonStyle(bgcolor="red"))
+        
         self.actions = [
             ft.TextButton("Cancel", on_click=self.handle_close),
+            self.stop_btn,
             ft.FilledButton("Start Generation", on_click=self.handle_start, icon=ft.Icons.AUTO_FIX_HIGH)
         ]
         self.actions_alignment = ft.MainAxisAlignment.END
 
     def handle_close(self, e):
+        # Stop any running generation first
+        if self.app.state.ctx.automation_controller:
+            self.app.state.ctx.automation_controller.stop()
         self.app.close_dialog(self)
+
+    def handle_stop(self, e):
+        if self.app.state.ctx.automation_controller:
+            self.app.state.ctx.automation_controller.stop()
+        self.stop_btn.visible = False
+        self.status_text.value = "Stopping..."
+        self.update()
 
     def handle_start(self, e):
         if not self.app.state.ctx.automation_controller:
@@ -77,11 +116,18 @@ class AutomationDialog(ft.AlertDialog):
         num_chars = int(self.num_chars_dd.value) if self.num_chars_dd.value != "Auto" else None
         forced = [chk.label for chk in self.char_checks if chk.value]
         
+        scenario_val = self.scenario_dd.value
+        forced_scenario = scenario_val if scenario_val != "Auto / Random" else None
+        
+        candidates = int(self.candidates_slider.value)
+        cohesion = float(self.cohesion_slider.value)
+        
         # Reset UI
         self.progress_bar.visible = True
         self.progress_bar.value = None # Indeterminate start
         self.status_text.value = "Starting..."
-        self.actions[1].disabled = True
+        self.actions[-1].disabled = True  # Start button
+        self.stop_btn.visible = True
         self.update()
 
         # Callbacks
@@ -96,7 +142,8 @@ class AutomationDialog(ft.AlertDialog):
         def on_complete(results):
             self.progress_bar.visible = False
             self.status_text.value = "Complete!"
-            self.actions[1].disabled = False
+            self.actions[-1].disabled = False  # Start button
+            self.stop_btn.visible = False
             self.update()
             
             msg = f"Generated {len(results)} items."
@@ -114,14 +161,15 @@ class AutomationDialog(ft.AlertDialog):
         def on_error(err):
             self.progress_bar.visible = False
             self.status_text.value = f"Error: {err}"
-            self.actions[1].disabled = False
+            self.actions[-1].disabled = False  # Start button
+            self.stop_btn.visible = False
             self.update()
             self.app.show_toast(f"Error: {err}", color="red")
 
         # Start
         self.app.state.ctx.automation_controller.start_generation(
             count=count,
-            match_outfits_prob=0.3, # Hardcoded for now or add slider
+            match_outfits_prob=cohesion, 
             prompts_only=self.prompts_only_switch.value,
             on_progress=on_progress,
             on_complete=on_complete,
@@ -129,5 +177,7 @@ class AutomationDialog(ft.AlertDialog):
             num_characters=num_chars,
             include_scene=self.scene_switch.value,
             include_notes=self.notes_switch.value,
-            forced_characters=forced if forced else None
+            candidates=candidates,
+            forced_characters=forced if forced else None,
+            forced_scenario=forced_scenario
         )

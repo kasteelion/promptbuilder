@@ -12,9 +12,9 @@ _MODIFIER_RE = re.compile(r"\*\*Modifier:\*\*\s*(.+?)(?:\n\s*\*\*|$)")
 _SUMMARY_RE = re.compile(r"\*\*Summary:\*\*\s*(.+?)(?:\n\s*\*\*|$)", re.DOTALL)
 _TAGS_RE = re.compile(r"\*\*Tags:\*\*\s*(.+?)(?:\n\s*\*\*|$)", re.DOTALL)
 _SIGNATURE_COLOR_RE = re.compile(r"\*\*Signature Color:\*\*\s*(.+?)(?:\n\s*\*\*|$)")
-_AGE_PRESENTATION_RE = re.compile(r"\*\*Age Presentation:\*\*\s*(.+?)(?:\n\s*\*\*|$)")
-_VIBE_RE = re.compile(r"\*\*Vibe\s*/\s*Energy:\*\*\s*(.+?)(?:\n\s*\*\*|$)")
-_BEARING_RE = re.compile(r"\*\*Bearing:\*\*\s*(.+?)(?:\n\s*\*\*|$)")
+_AGE_PRESENTATION_RE = re.compile(r"\*\*Age Presentation:\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*//|\n\s*---|\n\s*\n|$)")
+_VIBE_RE = re.compile(r"\*\*Vibe\s*/\s*Energy:\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*//|\n\s*---|\n\s*\n|$)")
+_BEARING_RE = re.compile(r"\*\*Bearing:\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*//|\n\s*---|\n\s*\n|$)")
 _TRAITS_RE = re.compile(r"\*\*Traits:\*\*\s*(.*?)(?=\n\s*\*\*Outfits:|\n\s*\*\*(?:Tags|Gender|Signature Color|Age Presentation|Vibe|Bearing|Summary|Appearance):|\n\s*-{3,}|$)", re.DOTALL | re.IGNORECASE)
 _IDENTITY_LOCKS_HEADER_RE = re.compile(
     r"^Appearance\s*\(Identity Locks\):\s*$", re.IGNORECASE | re.MULTILINE

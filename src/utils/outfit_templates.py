@@ -2,46 +2,57 @@
 
 TEMPLATES = {
     "Blank": {"description": "Start from scratch", "content": ""},
-    "Standard Format": {
-        "description": "Standard markdown bullet format",
-        "content": """- **Top:** [Description]
-- **Bottom:** [Description]
-- **Footwear:** [Description]
-- **Accessories:** [Description]
-- **Hair/Makeup:** [Description]""",
+    "Urban Minimalist": {
+        "description": "Clean, modern street style",
+        "content": """- **Top:** Boxy-fit heavyweight cotton t-shirt in charcoal
+- **Bottom:** Tapered black cargo trousers with utility details
+- **Footwear:** Chunky white technical sneakers
+- **Accessories:** Silver chain necklace, black beanie
+- **Hair/Makeup:** Messy bun; no makeup""",
     },
-    "Casual Daywear": {
-        "description": "Simple casual look",
-        "content": """- **Top:** Comfortable fitted cotton t-shirt in [color]
-- **Bottom:** Well-fitted blue denim jeans
-- **Footwear:** Clean white minimalist sneakers
-- **Accessories:** Simple leather watch, small stud earrings
-- **Hair/Makeup:** Natural loose hair; minimal fresh makeup""",
+    "Executive Chic": {
+        "description": "Modern high-powered business attire",
+        "content": """- **Top:** Silk blouse with pussy-bow detail in ivory
+- **Bottom:** High-waisted wide-leg wool trousers in navy
+- **Footwear:** Pointed-toe patent leather stiletto pumps
+- **Outerwear:** Structured oversized blazer matching trousers
+- **Accessories:** Gold minimalist watch, leather structured tote
+- **Hair/Makeup:** Sleek low ponytail; bold red lip""",
     },
-    "Professional Business": {
-        "description": "Formal business attire",
-        "content": """- **Top:** Tailored blazer over a crisp button-down shirt
-- **Bottom:** Pressed dress trousers or pencil skirt
-- **Footwear:** Polished leather dress shoes or mid-height heels
-- **Accessories:** Classic watch, professional leather bag
-- **Hair/Makeup:** Neatly styled hair; natural professional makeup""",
+    "Athleisure Luxe": {
+        "description": "Premium workout-to-street look",
+        "content": """- **Top:** Ribbed seamless crop top in sage green
+- **Bottom:** High-waisted compression leggings in matching set
+- **Footwear:** Designer retro-style running shoes
+- **Outerwear:** Cropped puffer jacket in cream
+- **Accessories:** Wireless headphones, canvas tote bag
+- **Hair/Makeup:** Slicked back braid; fresh dewy skin""",
     },
-    "Athletic Training": {
-        "description": "Sporty performance gear",
-        "content": """- **Top:** Moisture-wicking performance tank or compression shirt
-- **Bottom:** High-waisted athletic leggings or shorts
-- **Footwear:** Technical running or cross-training shoes
-- **Accessories:** Fitness tracker, water bottle nearby
-- **Hair/Makeup:** Secure high ponytail; no makeup""",
+    "Red Carpet Gala": {
+        "description": "Show-stopping formal evening wear",
+        "content": """- **Top:** Strapless corset bodice with crystal embellishments
+- **Bottom:** Floor-length velvet mermaid skirt with high slit
+- **Footwear:** Strappy metallic heels
+- **Accessories:** Diamond drop earrings, silk opera gloves
+- **Hair/Makeup:** Old Hollywood waves; smokey eye""",
     },
-    "Evening Elegant": {
-        "description": "Sophisticated formal look",
-        "content": """- **Top:** Elegant silk blouse or tailored evening jacket
-- **Bottom:** Flowing midi skirt or tailored trousers
-- **Footwear:** Strappy heeled sandals or polished loafers
-- **Accessories:** Statement necklace or cufflinks, small clutch
-- **Hair/Makeup:** Polished updo or sleek waves; refined evening makeup""",
+    "Cyberpunk Runner": {
+        "description": "Futuristic tech-wear aesthetic",
+        "content": """- **Top:** Asymmetric mesh paneled bodysuit
+- **Bottom:** Tech-wear joggers with reflective straps
+- **Footwear:** Heavy combat boots with neon accents
+- **Outerwear:** Transparent vinyl cropped jacket
+- **Accessories:** Visor glasses, tactical harness
+- **Hair/Makeup:** Dyed streaks in hair; geometric liner""",
     },
+    "K-Pop Sage": {
+        "description": "High-energy performance outfit",
+        "content": """- **Top:** Cropped metallic halter top with chain details
+- **Bottom:** Pleated mini skirt with safety pin accents
+- **Footwear:** Knee-high platform combat boots
+- **Accessories:** Leather harness, fingerless gloves, choker
+- **Hair/Makeup:** High pigtails; glitter eye makeup""",
+    }
 }
 
 

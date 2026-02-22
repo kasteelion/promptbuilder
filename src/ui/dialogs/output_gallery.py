@@ -2,6 +2,7 @@ import flet as ft
 import os
 from core.flet_theme_manager import ThemeManager
 
+
 class OutputGalleryDialog(ft.AlertDialog):
     def __init__(self, app):
         super().__init__()
@@ -27,12 +28,14 @@ class OutputGalleryDialog(ft.AlertDialog):
         self.main_content = ft.Container(
             content=self.grid, 
             expand=True,
-            width=900, height=600 # Explicit size for desktop feel
+            width=900, height=600
         )
         
         self.content = self.main_content
         self.actions = [
-            ft.TextButton("Close", on_click=self.handle_close)
+            ft.TextButton("Open Folder", on_click=self.handle_open_folder, icon=ft.Icons.FOLDER_OPEN),
+            ft.TextButton("Refresh", on_click=self.handle_refresh, icon=ft.Icons.REFRESH),
+            ft.TextButton("Close", on_click=self.handle_close),
         ]
         self.actions_alignment = ft.MainAxisAlignment.END
         
@@ -58,7 +61,7 @@ class OutputGalleryDialog(ft.AlertDialog):
                 try:
                     with open(txt_path, 'r', encoding='utf-8') as tf:
                         prompt_text = tf.read().strip()
-                except:
+                except Exception:
                     pass
             
             self.images.append({
@@ -68,9 +71,12 @@ class OutputGalleryDialog(ft.AlertDialog):
             })
             
         # Build Grid
-        self.grid.controls = [
-            self.create_thumbnail(img) for img in self.images
-        ]
+        if self.images:
+            self.grid.controls = [
+                self.create_thumbnail(img) for img in self.images
+            ]
+        else:
+            self.grid.controls = [ft.Text("No images found. Run Automation to generate some!", italic=True, color="grey")]
         
     def create_thumbnail(self, img_data):
         return ft.Container(
@@ -81,7 +87,7 @@ class OutputGalleryDialog(ft.AlertDialog):
             ),
             data=img_data,
             on_click=self.handle_image_click,
-            border=ft.Border.all(2, "transparent"), # Placeholder for selection
+            border=ft.Border.all(2, "transparent"),
             border_radius=10,
             tooltip=img_data["name"],
             ink=True
@@ -92,7 +98,7 @@ class OutputGalleryDialog(ft.AlertDialog):
         self.show_detail_view(img_data)
 
     def show_detail_view(self, img_data):
-        # Create Detail Layout
+        self.selected_img = img_data
         
         # Image Panel
         img_panel = ft.Container(
@@ -123,16 +129,24 @@ class OutputGalleryDialog(ft.AlertDialog):
                     border=ft.Border.all(1, ThemeManager.colors["outline"])
                 ),
                 ft.Row([
-                    ft.ElevatedButton(
+                    ft.FilledButton(
                         "Back to Grid",
                         icon=ft.Icons.GRID_VIEW,
                         on_click=self.handle_back_to_grid
                     ),
-                    ft.IconButton(
-                        ft.Icons.COPY,
-                        tooltip="Copy Prompt",
-                        on_click=lambda _: self.app.page.set_clipboard(img_data["prompt"])
-                    )
+                    ft.Row([
+                        ft.IconButton(
+                            ft.Icons.COPY,
+                            tooltip="Copy Prompt",
+                            on_click=lambda _: self.app.page.set_clipboard(img_data["prompt"])
+                        ),
+                        ft.IconButton(
+                            ft.Icons.DELETE_OUTLINE,
+                            tooltip="Delete Image",
+                            icon_color="red",
+                            on_click=lambda _: self.handle_delete(img_data)
+                        )
+                    ], spacing=0)
                 ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
             ], spacing=10, expand=True),
             expand=1,
@@ -150,6 +164,37 @@ class OutputGalleryDialog(ft.AlertDialog):
     def handle_back_to_grid(self, e):
         self.content = self.main_content
         self.update()
+
+    def handle_refresh(self, e):
+        self.load_images()
+        self.content = self.main_content
+        self.update()
+
+    def handle_open_folder(self, e):
+        if os.path.exists(self.directory):
+            os.startfile(self.directory)
+        else:
+            self.app.show_toast("Output directory not found.", color="orange")
+
+    def handle_delete(self, img_data):
+        try:
+            # Delete image file
+            if os.path.exists(img_data["path"]):
+                os.remove(img_data["path"])
+            
+            # Delete associated prompt file
+            txt_path = img_data["path"].rsplit('.', 1)[0] + ".txt"
+            if os.path.exists(txt_path):
+                os.remove(txt_path)
+            
+            self.app.show_toast(f"Deleted {img_data['name']}")
+            
+            # Refresh and go back to grid
+            self.load_images()
+            self.content = self.main_content
+            self.update()
+        except Exception as err:
+            self.app.show_toast(f"Delete failed: {err}", color="red")
 
     def handle_close(self, e):
         self.app.close_dialog(self)

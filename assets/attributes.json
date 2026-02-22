@@ -1,0 +1,165 @@
+{
+    "Common": {
+        "Top": {
+            "Neckline": ["Crew Neck", "Scoop Neck", "Square Neck", "High Neck", "V-Neck", "Boat Neck", "Off-Shoulder"],
+            "Sleeves": ["Sleeveless", "Short Sleeve", "Long Sleeve", "3/4 Sleeve", "Cap Sleeve", "Bell Sleeve", "Bishop Sleeve"],
+            "Material": ["Cotton", "Silk", "Satin", "Lace", "Velvet", "Leather", "Denim", "Linen", "Wool", "Sheer", "Chiffon", "Georgette"],
+            "Fit": ["Fitted", "Loose", "Oversized", "Cropped", "Flowy", "Structured", "Tailored", "Boxy"]
+        },
+        "Bottom": {
+            "Type": ["Skirt", "Trousers", "Jeans", "Shorts", "Leggings", "Culottes"],
+            "Length": ["Mini", "Midi", "Maxi", "Floor-length", "Ankle-length", "Knee-length"],
+            "Fit": ["Skinny", "Straight-leg", "Wide-leg", "A-Line", "Relaxed", "High-waisted", "Pleated", "Flared"],
+            "Material": ["Denim", "Leather", "Cotton", "Silk", "Satin", "Wool", "Linen", "Corduroy", "Tweed"],
+            "Detail": ["Slit", "Belted", "Pocketed", "Ripped", "Embroidered"]
+        },
+        "Footwear": {
+            "Style": ["Heels", "Boots", "Sneakers", "Flats", "Sandals", "Loafers", "Mules", "Platform Boots"],
+            "Material": ["Leather", "Suede", "Canvas", "Velvet", "Faux Leather", "Patent Leather"]
+        },
+        "Outerwear": {
+            "Type": ["Jacket", "Coat", "Blazer", "Cardigan", "Trench Coat", "Bomber", "Parka"],
+            "Material": ["Leather", "Denim", "Wool", "Faux Fur", "Cotton", "Cashmere", "Shearling"],
+            "Fit": ["Oversized", "Fitted", "Cropped", "Long", "Draped"]
+        },
+        "Accessories": {
+            "Type": ["Necklace", "Earrings", "Choker", "Scarf", "Belt", "Gloves", "Hat", "Sunglasses", "Bag", "Watch"],
+            "Jewelry": ["Necklace", "Earrings", "Pendant", "Bracelet", "Ring", "Brooch"],
+            "Style": ["Minimalist", "Statement", "Vintage", "Gold", "Silver", "Boho", "Industrial", "Dainty"]
+        }
+    },
+    "Luxury Evening": {
+        "Top": {
+            "Neckline": ["Off-Shoulder", "Sweetheart", "Plunging", "Cowl Neck", "High Neck", "Illusion", "Queen Anne", "Strapless", "Asymmetric"],
+            "Material": ["Silk Charmeuse", "Duchess Satin", "French Lace", "Silk Chiffon", "Velvet", "Organza", "Tulle", "Hand-Embroidered", "Sequin"],
+            "Fit": ["Corset-style", "Fitted", "Structured", "Draped", "Bias-cut"],
+            "Pattern": ["Solid", "Floral Appliqué", "Crystal Encrusted", "Beaded", "Sequin-embellished", "Metallic"]
+        },
+        "Bottom": {
+            "Type": ["Gown Skirt", "Evening Trousers", "Midi Skirt"],
+            "Fit": ["A-Line", "Mermaid", "Ballgown", "Sheath", "Empire", "Trumpet", "Flowy", "Column"],
+            "Material": ["Silk", "Satin", "Tulle", "Chiffon", "Crêpe", "Taffeta", "Velvet", "Brocade"],
+            "Length": ["Floor-length", "Sweep-train", "Cathedral-train", "Tea-length", "High-low"],
+            "Pattern": ["Solid", "Ombre", "Embroidered", "Ruffled", "Pleated"]
+        },
+        "Outerwear": {
+            "Type": ["Shawl", "Bolero", "Faux Fur Stole", "Cape", "Opera Coat", "Structured Blazer"],
+            "Material": ["Faux Fur", "Silk", "Velvet", "Lace", "Feathered"],
+            "Pattern": ["Solid", "Embroidered", "Beaded"]
+        },
+        "Footwear": {
+            "Style": ["Stiletto Heels", "Strappy Sandals", "Pumps", "Peep-toe", "Crystal Heels"],
+            "Material": ["Satin", "Leather", "Velvet", "Crystal-embellished", "Metallic Leather"]
+        },
+        "Accessories": {
+             "Type": ["Clutch", "Evening Bag", "Minaudière", "Opera Gloves", "Tiara"],
+             "Jewelry": ["Diamond Necklace", "Pearl Earrings", "Chandelier Earrings", "Statement Collar", "Tennis Bracelet", "Cocktail Ring"],
+             "Style": ["Diamond", "Pearl", "Crystal", "Elegant", "Gold", "Platinum", "Art Deco"]
+        }
+    },
+    "Streetwear": {
+        "Top": {
+            "Neckline": ["Crew Neck", "Hooded", "Mock Neck", "Zip-up"],
+            "Material": ["Heavyweight Cotton", "Did", "Tech Fleece", "Nylon", "Mesh"],
+            "Fit": ["Oversized", "Boxy", "Cropped", "Layered"],
+            "Pattern": ["Graphic Print", "Tie-dye", "Logo mania", "Camouflage", "Color-block", "Acid Wash"]
+        },
+        "Bottom": {
+            "Type": ["Cargo Pants", "Joggers", "Parachute Pants", "Biker Shorts", "Distressed Jeans"],
+            "Material": ["Denim", "Nylon", "Sweatshirt Fleece", "Ripstop", "Tech fabric"],
+            "Fit": ["Baggy", "Stacked", "Relaxed", "Tapered"],
+            "Detail": ["Utility Pockets", "Drawstrings", "Buckles", "Zippers"]
+        },
+        "Footwear": {
+            "Style": ["Chunky Sneakers", "High-tops", "Combat Boots", "Slides", "Platform Sneakers"],
+            "Material": ["Leather", "Mesh", "Canvas", "Reflective"]
+        },
+        "Outerwear": {
+             "Type": ["Bomber Jacket", "Puffer Jacket", "Windbreaker", "Varsity Jacket", "Denim Jacket", "Track Jacket"],
+             "Material": ["Nylon", "Gore-Tex", "Denim", "Fleece", "Leather"],
+             "Pattern": ["Color-block", "Monogram", "Solid", "Reflective"]
+        },
+        "Accessories": {
+            "Type": ["Beanie", "Bucket Hat", "Chest Rig", "Crossbody Bag", "Chunky Chain", "Sunglasses"],
+            "Jewelry": ["Silver Chain", "Studs", "Grillz"],
+            "Style": ["Industrial", "Cyber", "Retro", "Skater"]
+        }
+    },
+    "Cyberpunk / Sci-Fi": {
+        "Top": {
+            "Neckline": ["High Collar", "Asymmetric", "Cowled", "Halter"],
+            "Material": ["Latex", "PVC", "Mesh", "Techwear Fabric", "Neoprene", "Holographic"],
+            "Fit": ["Skin-tight", "Structured", "Fragmented", "Layered"],
+            "Pattern": ["Geometric", "Neon Accents", "Circuitry Print", "Transparent panels"]
+        },
+        "Bottom": {
+            "Type": ["Tech Pants", "Leggings", "Mini Skirt", "Utility Shorts"],
+            "Material": ["Synthetic", "Vinyl", "Leather", "Ripstop"],
+            "Fit": ["Strapped", "Form-fitting", "Utility", "Articulated Knees"],
+            "Detail": ["Holsters", "LED strips", "Buckles", "Straps"]
+        },
+        "Footwear": {
+            "Style": ["Platform Boots", "Combat Boots", "High-tech Sneakers", "Thigh-high Boots"],
+            "Material": ["Patent Leather", "Metallic", "Rubber", "Synthetics"]
+        },
+        "Outerwear": {
+             "Type": ["Cropped Jacket", "Trench Coat", "Vest", "Bolero"],
+             "Material": ["Transparent Vinyl", "Leather", "Technical Fabric"],
+             "Pattern": ["Glowing edges", "Matte Black", "Iridescent"]
+        },
+        "Accessories": {
+            "Type": ["Visor", "Goggles", "Choker", "Harness", "Datapad", "Cybernetics"],
+            "Style": ["Neon", "Chrome", "Industrial", "Futuristic"]
+        }
+    },
+    "K-Pop Stage": {
+         "Top": {
+            "Neckline": ["Choker Neck", "One-shoulder", "Halter", "Sweetheart"],
+            "Material": ["Sequins", "Leather", "Mesh", "Satin", "Glitter"],
+            "Fit": ["Cropped", "Fitted", "Constructed", "Layered"],
+            "Pattern": ["Plaid", "Crystal", "Leopard", "Metallic"]
+        },
+        "Bottom": {
+            "Type": ["Mini Skirt", "Shorts", "Cargo Pants", "Safety Shorts"],
+            "Material": ["Denim", "Leather", "Pleated fabric", "Vinyl"],
+            "Fit": ["High-waisted", "Micro", "Pleated", "Baggy"],
+            "Detail": ["Chains", "Belts", "Garters", "Suspenders"]
+        },
+        "Footwear": {
+            "Style": ["Combat Boots", "Knee-high Boots", "Platform Sneakers", "Ankle Boots"],
+            "Material": ["Patent", "Leather", "Suede"]
+        },
+        "Accessories": {
+            "Type": ["Harness", "Garter", "Gloves", "Beret", "Choker", "Body Chain"],
+            "Jewelry": ["Statement Earrings", "Layered Necklaces", "Rings"],
+            "Style": ["Edgy", "Glam", "Punk", "Schoolgirl"]
+        }
+    },
+    "Professional Business": {
+        "Top": {
+            "Neckline": ["Collared", "Boat Neck", "V-Neck", "Cowl Neck"],
+            "Material": ["Silk", "Cotton Poplin", "Chiffon", "Georgette"],
+            "Fit": ["Tailored", "Blouse", "Relaxed", "Tucked-in"],
+            "Pattern": ["Solid", "Pinstripe", "Polka Dot", "Subtle Print"]
+        },
+        "Bottom": {
+            "Type": ["Pencil Skirt", "Trousers", "Slacks", "Culottes"],
+            "Fit": ["Straight-leg", "Wide-leg", "High-waisted", "Tailored"],
+            "Material": ["Wool", "Crepe", "Linen Blend", "Suiting"],
+            "Pattern": ["Solid", "Pinstripe", "Plaid", "Check"]
+        },
+        "Outerwear": {
+            "Type": ["Blazer", "Trench Coat", "Wool Coat"],
+            "Material": ["Wool", "Tweed", "Bouclé"],
+            "Fit": ["Structured", "Oversized", "Belted"]
+        },
+        "Footwear": {
+            "Style": ["Pumps", "Pointed Flats", "Loafers", "Ankle Boots"],
+            "Material": ["Leather", "Suede", "Patent"]
+        },
+        "Accessories": {
+            "Type": ["Tote Bag", "Structured Satchel", "Watch", "Scarf"],
+            "Style": ["Minimalist", "Classic", "Gold", "Silver"]
+        }
+    }
+}

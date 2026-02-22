@@ -1,0 +1,215 @@
+{
+    "office": {
+        "allowed": ["business", "formal", "office", "work", "suit", "smart casual", "blazer", "shirt", "pencil skirt"],
+        "blocked": ["swimwear", "bikini", "lingerie", "armor", "weapon", "pajamas", "fantasy", "medieval"]
+    },
+    "library": {
+        "allowed": ["casual", "business", "academic", "preppy", "formal"],
+        "blocked": ["swimwear", "armor", "weapon", "sport", "athletic", "fantasy"]
+    },
+    "work": {
+        "blocked": ["swimwear", "armor", "weapon", "pajamas", "fantasy", "sleep"]
+    },
+    "school": {
+        "blocked": ["swimwear", "armor", "fantasy", "weapon", "bed", "sleep", "lingerie"]
+    },
+    "hospital": {
+        "allowed": ["medical", "scrubs", "coat", "uniform", "doctor", "nurse", "white", "lab"],
+        "blocked": ["swimwear", "armor", "weapon", "fantasy", "formal", "party"]
+    },
+    "medical": {
+        "allowed": ["medical", "scrubs", "coat", "uniform", "doctor", "nurse", "white", "lab"],
+        "blocked": ["swimwear", "armor", "weapon", "fantasy", "formal", "party"]
+    },
+    "fitness": {
+        "allowed": ["sport", "athletic", "fitness", "active", "workout", "yoga"],
+        "blocked": ["formal", "armor", "jeans", "dress", "bed", "winter"]
+    },
+    "yoga": {
+        "allowed": ["sport", "athletic", "fitness", "yoga", "active"],
+        "blocked": ["formal", "armor", "jeans", "dress", "bed", "winter"]
+    },
+    "sport": {
+        "allowed": ["sport", "athletic", "gym", "active", "workout", "fitness", "yoga", "jersey", "uniform"],
+        "blocked": ["formal", "armor", "jeans", "dress", "heels", "bed"]
+    },
+    "gym": {
+        "allowed": ["gym", "fitness", "sport", "workout", "active", "training"],
+        "blocked": ["fantasy", "formal", "business", "jeans", "armor", "weapon", "medieval"]
+    },
+    "beach": {
+        "allowed": ["swimwear", "bikini", "swim", "beach", "summer", "casual", "boho", "shorts", "dress", "linen"],
+        "blocked": ["formal", "winter", "office", "armor", "coat", "jacket"]
+    },
+    "pool": {
+        "allowed": ["swimwear", "bikini", "swim", "pool", "summer"],
+        "blocked": ["formal", "winter", "jeans", "computer", "desk", "armor"]
+    },
+    "winter": {
+        "blocked": ["swimwear", "bikini", "shorts", "crop top", "sleeveless"]
+    },
+    "snow": {
+        "blocked": ["swimwear", "bikini", "sandals", "heels", "shorts"]
+    },
+    "indoor": {
+        "blocked": ["winter", "snow", "ski", "heavy coat"]
+    },
+    "formal": {
+        "allowed": ["formal", "evening", "gala", "dress", "suit", "tuxedo", "gown", "elegant", "luxury", "high fashion"],
+        "blocked": ["swimwear", "casual", "sport", "gym", "pajamas", "jeans", "athletic"]
+    },
+    "gala": {
+        "allowed": ["formal", "evening", "gala", "dress", "suit", "tuxedo", "gown", "elegant", "luxury"],
+        "blocked": ["swimwear", "casual", "sport", "gym", "pajamas", "jeans"]
+    },
+    "wedding": {
+        "allowed": ["formal", "wedding", "white", "dress", "suit", "gown", "elegant"],
+        "blocked": ["casual", "sport", "armor", "fantasy"]
+    },
+    "bed": {
+        "allowed": ["pajamas", "sleep", "loungewear", "intimate", "lingerie"],
+        "blocked": ["armor", "weapon", "footwear", "winter", "hat", "standing", "run", "jump", "shoes", "boots"]
+    },
+    "sleep": {
+        "allowed": ["pajamas", "sleep", "loungewear", "intimate"],
+        "blocked": ["armor", "weapon", "footwear", "winter", "hat", "jeans", "formal", "standing"]
+    },
+    "domestic": {
+        "allowed": ["casual", "loungewear", "pajamas", "cozy", "knit", "sweater", "shorts", "t-shirt"],
+        "blocked": ["armor", "weapon", "formal", "sport"]
+    },
+    "museum": {
+        "allowed": ["casual", "business", "formal", "smart casual"],
+        "blocked": ["swimwear", "armor", "costume", "sport", "combat", "bed", "sleep", "running", "pajamas"]
+    },
+    "gallery": {
+        "allowed": ["casual", "business", "formal", "artistic", "smart casual"],
+        "blocked": ["swimwear", "armor", "costume", "sport", "combat", "bed", "sleep", "running"]
+    },
+    "quiet": {
+        "blocked": ["sport", "loud", "party", "combat", "action", "athletic"]
+    },
+    "nature": {
+        "allowed": ["casual", "outdoor", "hiking", "adventure", "rugged", "fantasy"],
+        "blocked": ["office", "business", "formal", "tech", "computer", "modern", "neon", "sport", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling", "gym"]
+    },
+    "forest": {
+        "allowed": ["casual", "outdoor", "fantasy", "rugged", "adventure", "medieval"],
+        "blocked": ["office", "tech", "modern", "computer", "neon", "sport", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling", "gym"]
+    },
+    "waterfall": {
+        "blocked": ["office", "tech", "computer", "modern", "neon", "sport", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling", "gym"]
+    },
+    "fantasy": {
+        "allowed": ["fantasy", "medieval", "armor", "robe", "dress", "gala", "rustic", "traditional", "leather", "fur"],
+        "blocked": ["modern", "tech", "office", "business", "gun", "rifle", "computer", "phone", "neon", "cyberpunk", "sport", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling", "gym"]
+    },
+    "sci-fi": {
+        "allowed": ["sci-fi", "tech", "cyberpunk", "futuristic", "modern", "tactical", "armor", "suit", "latex", "metallic"],
+        "blocked": ["fantasy", "medieval", "sword", "shield", "magic", "sport", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling"]
+    },
+    "cyberpunk": {
+        "allowed": ["cyberpunk", "sci-fi", "tech", "neon", "urban", "street", "leather", "tactical", "edgy"],
+        "blocked": ["fantasy", "medieval", "nature", "rustic", "sport", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling"]
+    },
+    "castle": {
+        "allowed": ["fantasy", "medieval", "historical", "armor", "traditional", "robe"],
+        "blocked": ["modern", "tech", "computer", "phone", "neon", "sport", "athletic", "gym", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling"]
+    },
+    "dungeon": {
+        "allowed": ["fantasy", "medieval", "armor", "dark", "tactical"],
+        "blocked": ["modern", "tech", "computer", "phone", "sport", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling", "gym"]
+    },
+    "temple": {
+        "allowed": ["fantasy", "historical", "traditional", "cultural", "robe"],
+        "blocked": ["modern", "tech", "neon", "sport", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling", "gym"]
+    },
+    "dragon": {
+        "allowed": ["fantasy", "medieval", "armor", "magic"],
+        "blocked": ["modern", "sport", "athletic", "tech", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling", "gym"]
+    },
+    "lair": {
+        "allowed": ["fantasy", "medieval", "dark", "tactical"],
+        "blocked": ["modern", "sport", "athletic", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling", "gym"]
+    },
+    "cave": {
+        "blocked": ["sport", "athletic", "basketball", "bowling", "baseball", "volleyball", "football", "soccer", "tennis", "track", "stadium", "gym", "mma", "boxing", "wrestling"]
+    },
+    "quest": {
+        "allowed": ["fantasy", "medieval", "adventure", "armor"],
+        "blocked": ["modern", "sport", "athletic", "basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling", "gym"]
+    },
+    "bowling": {
+        "allowed": ["bowling", "retro", "casual"],
+        "blocked": ["fantasy", "armor", "weapon", "sword", "shield", "magic", "medieval", "mythology"]
+    },
+    "stadium": {
+        "allowed": ["sport", "athletic", "jersey", "active"],
+        "blocked": ["fantasy", "armor", "weapon", "magic", "medieval"]
+    },
+    "alley": {
+        "allowed": ["bowling", "casual", "retro"],
+        "blocked": ["basketball", "baseball", "volleyball", "football", "soccer", "tennis", "track", "mma", "boxing", "wrestling"]
+    },
+    "octagon": {
+        "allowed": ["mma", "fighting", "combat_sport"],
+        "blocked": ["bowling", "basketball", "baseball", "volleyball", "football", "soccer", "tennis", "track"]
+    },
+    "cage": {
+        "allowed": ["mma", "fighting", "combat_sport"],
+        "blocked": ["bowling", "basketball", "baseball", "volleyball", "football", "soccer", "tennis", "track"]
+    },
+    "diamond": {
+        "allowed": ["baseball", "softball"],
+        "blocked": ["bowling", "basketball", "volleyball", "football", "soccer", "tennis", "track", "mma", "boxing", "wrestling"]
+    },
+    "mound": {
+        "allowed": ["baseball", "softball"],
+        "blocked": ["bowling", "basketball", "volleyball", "football", "soccer", "tennis", "track", "mma", "boxing", "wrestling"]
+    },
+    "urban": {
+        "allowed": ["streetwear", "casual", "skater", "edgy", "denim", "skate", "city", "urban", "graffiti"]
+    },
+    "vintage": {
+        "allowed": ["vintage", "retro", "1950", "1970", "pinup", "disco", "server", "denim", "classic"]
+    },
+    "academic": {
+        "allowed": ["academia", "preppy", "glasses", "blazer", "skirt", "tights", "vest", "shirt"]
+    },
+    "boxing": {
+        "allowed": ["boxing", "combat_sport", "active", "training"]
+    },
+    "mma": {
+        "allowed": ["mma", "combat_sport", "fighting"]
+    },
+    "basketball": {
+        "allowed": ["basketball", "jersey", "active", "cheer"]
+    },
+    "baseball": {
+        "allowed": ["baseball", "jersey", "active"]
+    },
+    "softball": {
+        "allowed": ["softball", "baseball", "active"]
+    },
+    "football": {
+        "allowed": ["football", "jersey", "active", "cheer"]
+    },
+    "soccer": {
+        "allowed": ["soccer", "jersey", "active"]
+    },
+    "tennis": {
+        "allowed": ["tennis", "active"]
+    },
+    "volleyball": {
+        "allowed": ["volleyball", "active"]
+    },
+    "track": {
+        "allowed": ["track", "running", "active"]
+    },
+    "gymnastics": {
+        "allowed": ["gymnastics", "leotard", "activewear", "shorts", "leggings"]
+    },
+    "swim": {
+        "allowed": ["swim", "swimwear", "pool", "water", "speedo", "bikini"]
+    }
+}

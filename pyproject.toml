@@ -5,14 +5,14 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "promptbuilder"
 version = "2.0.0"
-description = "A desktop application for building AI image generation prompts with zero external dependencies"
+description = "A desktop application for building AI image generation prompts, powered by Flet"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
     {name = "Prompt Builder Contributors"}
 ]
-keywords = ["ai", "prompt", "image-generation", "gui", "tkinter"]
+keywords = ["ai", "prompt", "image-generation", "gui", "flet"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: End Users/Desktop",
@@ -27,7 +27,7 @@ classifiers = [
 ]
 
 # No external dependencies - uses only Python standard library
-dependencies = []
+dependencies = ["flet"]
 
 [project.optional-dependencies]
 dev = [
@@ -43,8 +43,7 @@ Homepage = "https://github.com/yourusername/promptbuilder"
 Repository = "https://github.com/yourusername/promptbuilder"
 Issues = "https://github.com/yourusername/promptbuilder/issues"
 
-[project.scripts]
-promptbuilder = "main:main"
+
 
 [tool.black]
 line-length = 100

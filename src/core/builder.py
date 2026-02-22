@@ -1,7 +1,7 @@
 import re
 import random
 from typing import Any, Dict, List
-import re
+
 
 from utils.color_scheme import substitute_colors, substitute_signature_color
 from utils.text_utils import normalize_blank_lines
@@ -241,7 +241,7 @@ class PromptBuilder:
             for char in chars:
                 name = char["name"]
                 outfit = char.get("outfit", "Base")
-                print(f"DEBUG_GEN: Summary - Char: {name}, Outfit: {outfit}")
+
                 pose = char.get("pose_preset") or "Default"
                 if char.get("action_note"):
                     pose = "Custom Action"

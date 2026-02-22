@@ -2,7 +2,7 @@
 
 **Photo:** sophie_summers_photo.png
 
-**Tags:** Female, Caucasian, Cheerful, Resort-Chic, Bubbly, Optimistic, Social, Vacation-Ready, Casual, Urban
+**Tags:** Female, Caucasian, Cheerful, Resort-Chic, Bubbly, Optimistic, Social, Vacation-Ready, Casual, Urban, Sport, Action, Sci-Fi
 
 **Summary:** Sophie is a radiant, sun-seeking traveler with a bubbly "girl next door" charm and an affinity for resort life. Optimistic, social, and breezy, she carries herself with an open and inviting energy that feels like a perpetual vacation. Her style is "Resort-Chic"—effortlessly blending flowy, feminine silks and chiffons with functional modern tech, always ready for the next sunset or seaside dinner.
 

@@ -25,3 +25,6 @@ tags: [Formal, Resort, Elegant]
   - **Material:** Cotton-linen blend.
 - **Footwear:** Leather loafers.
 - **Accessories:** Brown leather belt; minimalist watch.
+
+[H]
+- **Note:** This variant is a derived adaptation of the primary style. Please refer to the standard FEMALE or MALE variants for the core aesthetic details and specific item breakdowns.

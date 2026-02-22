@@ -1,7 +1,7 @@
 ### Aiyana Blackfeather
 **Photo:** aiyana_blackfeather_photo.png
 
-**Tags:** Female, Athletic, Chic, Commanding, Creative, Cultural, Indigenous, Minimalist, Traditional
+**Tags:** Female, Athletic, Chic, Commanding, Creative, Cultural, Indigenous, Minimalist, Traditional, Casual, Sci-Fi, Sport, Noir, Urban
 **Summary:** Aiyana moves between worlds with the grace of someone deeply rooted in both. Her powwow dancing carries generations of tradition in every precise footfall, while her contemporary presence speaks to Indigenous identity that refuses to be confined to the past. She embodies cultural continuity—honoring ancestors while claiming space in the present with athletic power and unshakeable dignity.
 
 **Gender:** F

@@ -1,11 +1,13 @@
 import flet as ft
 from ui.components.icon_button import SafeIconButton
 from core.flet_theme_manager import ThemeManager
+from utils.debouncer import Debouncer
 
 class SidebarSection(ft.Container):
     def __init__(self, app):
         super().__init__()
         self.app = app
+        self.debouncer = Debouncer(300) # 300ms Update Delay
         self.width = 350
         self.padding = ThemeManager.styles["padding"]
         self.border = ft.Border.all(1, ThemeManager.colors["outline"])
@@ -106,7 +108,7 @@ class SidebarSection(ft.Container):
 
     def handle_scene_cat_change(self, e):
         cat = e.control.value
-        print(f"DEBUG_SIDEBAR: Scene Cat -> {cat}")
+
         presets = self.app.state.ctx.scenes.get(cat, {})
         keys = sorted(presets.keys())
         
@@ -114,11 +116,11 @@ class SidebarSection(ft.Container):
         
         if keys:
             first_preset = keys[0]
-            print(f"DEBUG_SIDEBAR: Auto-select Preset -> {first_preset}")
+
             self.scene_preset_dd.value = first_preset
             self._apply_scene_preset(cat, first_preset)
         else:
-            print("DEBUG_SIDEBAR: No presets found.")
+
             self.scene_preset_dd.value = None
             self.scene_field.value = ""
             self.app.state.state["scene"] = ""
@@ -131,7 +133,7 @@ class SidebarSection(ft.Container):
     def handle_scene_preset_change(self, e):
         cat = self.scene_cat_dd.value
         preset = e.control.value
-        print(f"DEBUG_SIDEBAR: Scene Preset -> {preset}")
+
         if cat and preset:
             self._apply_scene_preset(cat, preset)
 
@@ -149,7 +151,7 @@ class SidebarSection(ft.Container):
 
     def handle_interaction_cat_change(self, e):
         cat = e.control.value
-        print(f"DEBUG_SIDEBAR: Intr Cat -> {cat}")
+
         presets = self.app.state.ctx.interactions.get(cat, {})
         keys = sorted(presets.keys())
         
@@ -157,7 +159,7 @@ class SidebarSection(ft.Container):
         
         if keys:
             first = keys[0]
-            print(f"DEBUG_SIDEBAR: Auto-select Intr -> {first}")
+
             self.interaction_preset_dd.value = first
             self._apply_interaction_preset(cat, first)
         else:
@@ -200,10 +202,20 @@ class SidebarSection(ft.Container):
         self.app.update_preview()
 
     def handle_text_change(self, e):
-        if e.control == self.scene_field:
-            self.app.state.state["scene"] = self.scene_field.value
-        elif e.control == self.notes_field:
-            self.app.state.state["notes"] = self.notes_field.value
+        """Debounced text update."""
+        if self.debouncer:
+             self.debouncer.debounce(self._process_text_change, e.control, e.control.value)
+        else:
+             self._process_text_change(e.control, e.control.value)
+
+    def _process_text_change(self, control, value):
+        """Execute the actual update after delay."""
+        if control == self.scene_field:
+            self.app.state.state["scene"] = value
+        elif control == self.notes_field:
+            self.app.state.state["notes"] = value
+        
+        # Update preview (generates prompt)
         self.app.update_preview()
 
     def update_summary(self, summary: str):

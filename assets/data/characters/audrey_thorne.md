@@ -1,7 +1,7 @@
 ### Audrey Thorne
 **Photo:** audrey_thorne_photo.png
 
-**Tags:**   Caucasian, Auburn Hair, Casual-Chic, Chic, Curvy, Female, Playful, Soft Dramatic, Statuesque
+**Tags:** Caucasian, Auburn Hair, Casual-Chic, Chic, Curvy, Female, Playful, Soft Dramatic, Statuesque, Urban, Action, Casual
 
 **Summary:** Audrey radiates a grounded yet vibrant confidence, embodied by her bold choice of color and relaxed posture. Her presence is commanding without being aggressive, blending softness with structural strength in a way that feels both authentic and poised.
 

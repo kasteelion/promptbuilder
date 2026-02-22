@@ -6,7 +6,9 @@ from collections import defaultdict
 from pathlib import Path
 
 # Add project root to path
+# Add project root to path
 sys.path.append(os.getcwd())
+sys.path.append(os.path.join(os.getcwd(), "src"))
 
 from logic.data_loader import DataLoader
 

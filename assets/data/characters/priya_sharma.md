@@ -1,7 +1,7 @@
 ### Priya Sharma
-**Photo:** priya_sharma_photo.jpeg
+**Photo:** priya_sharma_photo.png
 **Summary:** A vibrant fusion of focused athleticism and warm, approachable energy. Priya projects a kinetic confidence that is both disciplined and spirited. Her presence balances the intensity of a competitor with the genuine warmth of a friend, embodying a modern, culturally-rich vitality.
-**Tags:** Female, Approachable, Athletic, Chic, Indian, Playful
+**Tags:** Female, Approachable, Athletic, Chic, Indian, Playful, Sport, Noir, Social, Urban
 **Gender:** F
 **Signature Color:** #50C878
 

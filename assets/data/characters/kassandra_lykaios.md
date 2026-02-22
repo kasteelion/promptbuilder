@@ -1,7 +1,7 @@
 ### Kassandra Lykaios
 **Photo:** kassandra_lykaios_photo.png
 
-**Tags:** Female, Athletic, Commanding, Greek, Playful, Strong
+**Tags:** Female, Athletic, Commanding, Greek, Playful, Strong, Fantasy, Sport, Action, Noir, Urban
 **Summary:** Kassandra Lykaios is a storm of agile strength and focused intensity. She possesses the lethal elegance of a well-balanced blade—capable of both immense power and delicate precision. Her presence is electric, charged with the energy of someone who is always prepared for the next challenge. She moves with an effortless, panther-like grace, her athletic frame a testament to a life of perpetual motion.
 **Gender:** F
 **Signature Color:** #DC143C

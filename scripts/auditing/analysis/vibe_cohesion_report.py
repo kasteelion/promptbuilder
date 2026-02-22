@@ -108,7 +108,7 @@ if __name__ == "__main__":
     output_dir = os.path.join(audit_root, "auditing", "reports") # Wait, if script_dir is analysis, dirname is auditing, dirname is root. 
     # Let's use relative path explicitly or explicit project structure
     
-    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
     output_dir = os.path.join(project_root, "auditing", "reports")
     
     os.makedirs(output_dir, exist_ok=True)

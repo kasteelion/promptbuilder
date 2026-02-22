@@ -9,7 +9,7 @@ def run_command(command, description):
     print(f"> {command}")
     try:
         # Run command from project root
-        project_root = Path(__file__).parent.parent
+        project_root = Path(__file__).parent.parent.parent
         # Using sys.executable ensures we use the same python interpreter
         if command.startswith("python "):
             full_command = f'"{sys.executable}" {command[7:]}'
@@ -35,15 +35,15 @@ def main():
     parser.add_argument("--skip-gen", action="store_true", help="Skip prompt generation (analyzes existing files)")
     args = parser.parse_args()
 
-    project_root = Path(__file__).parent.parent
+    project_root = Path(__file__).parent.parent.parent
     print(f"Starting Consolidated Audit Suite... (Root: {project_root})")
 
     # 1. Static Integrity (Asset Standards & Quality)
-    if not run_command("python auditing/analysis/static_integrity.py", "Step 1: Static Integrity & Standards"):
+    if not run_command("python scripts/auditing/analysis/static_integrity.py", "Step 1: Static Integrity & Standards"):
         pass
 
     # 2. Hub & Spoke Connectivity
-    if not run_command("python auditing/analysis/hub_analysis.py", "Step 2: Hub & Spoke Connectivity"):
+    if not run_command("python scripts/auditing/analysis/hub_analysis.py", "Step 2: Hub & Spoke Connectivity"):
         pass
 
     # 3. Prompt Generation (Optional)
@@ -58,27 +58,27 @@ def main():
             except Exception as e:
                 print(f"Warning: Could not clear some prompt files: {e}")
         
-        cmd = f"python automation/automate_generation.py --prompts-only --count {args.count}"
+        cmd = f"python scripts/automation/automate_generation.py --prompts-only --count {args.count}"
         if not run_command(cmd, f"Step 3: Generate {args.count} Test Prompts"):
             return
     else:
         print("\n[Step 3] Skipping Prompt Generation (using existing files)...")
 
     # 4. Analysis & Visualizations
-    if not run_command("python auditing/visualizations/generate_sankey_diagram.py", "Step 4.1: Prompt Distribution (Sankey)"):
+    if not run_command("python scripts/auditing/visualizations/generate_sankey_diagram.py", "Step 4.1: Prompt Distribution (Sankey)"):
         pass
 
-    if not run_command("python auditing/analysis/vibe_cohesion_report.py", "Step 4.2: Vibe Cohesion"):
+    if not run_command("python scripts/auditing/analysis/vibe_cohesion_report.py", "Step 4.2: Vibe Cohesion"):
         pass
 
-    if not run_command("python auditing/visualizations/generate_tag_sankey.py", "Step 4.3: Tag Distribution Flow"):
+    if not run_command("python scripts/auditing/visualizations/generate_tag_sankey.py", "Step 4.3: Tag Distribution Flow"):
         pass
     
-    if not run_command("python auditing/analysis/find_best_worst.py", "Step 4.4: Best & Worst Scorers"):
+    if not run_command("python scripts/auditing/analysis/find_best_worst.py", "Step 4.4: Best & Worst Scorers"):
         pass
 
     # 5. Master Consolidation
-    if not run_command("python auditing/consolidate_reports.py", "Step 5: Generate System Health Dashboard"):
+    if not run_command("python scripts/auditing/consolidate_reports.py", "Step 5: Generate System Health Dashboard"):
         return
     
     print("\n" + "="*50)

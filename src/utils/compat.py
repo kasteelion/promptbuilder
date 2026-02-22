@@ -36,23 +36,6 @@ def get_version_string() -> str:
     return f"Python {major}.{minor}.{micro}"
 
 
-def check_tkinter_available() -> bool:
-    """Check if tkinter is available.
-
-    Returns:
-        True if tkinter can be imported, False otherwise
-    """
-    # Use importlib to check for the presence of the tkinter module without
-    # importing it directly (avoids side-effects and linter warnings).
-    try:
-        import importlib.util
-
-        return importlib.util.find_spec("tkinter") is not None
-    except Exception:
-        from utils import logger
-
-        logger.exception("Auto-captured exception")
-        return False
 
 
 def print_version_error():
@@ -77,22 +60,6 @@ def print_version_error():
     print("=" * 70)
 
 
-def print_tkinter_error():
-    """Print detailed error message for missing tkinter."""
-    print("=" * 70)
-    print("ERROR: tkinter Not Available")
-    print("=" * 70)
-    print("tkinter is required but not installed.")
-    print()
-    print("Installation instructions:")
-    print("  Ubuntu/Debian:  sudo apt-get install python3-tk")
-    print("  Fedora/RHEL:    sudo dnf install python3-tkinter")
-    print("  Arch Linux:     sudo pacman -S tk")
-    print("  macOS/Windows:  tkinter should be included with Python")
-    print()
-    print("If you installed Python from python.org, tkinter should be included.")
-    print("If using a system Python, you may need to install it separately.")
-    print("=" * 70)
 
 
 def check_requirements() -> bool:
@@ -105,10 +72,6 @@ def check_requirements() -> bool:
     """
     if not is_version_compatible():
         print_version_error()
-        return False
-
-    if not check_tkinter_available():
-        print_tkinter_error()
         return False
 
     return True
@@ -126,10 +89,9 @@ def get_compatibility_report() -> dict:
         "python_version": f"{major}.{minor}.{micro}",
         "version_tuple": (major, minor, micro),
         "is_compatible": is_version_compatible(),
-        "tkinter_available": check_tkinter_available(),
         "platform": sys.platform,
-        "min_required_version": "3.8.0",
-        "recommended_version": "3.11+",
+        "min_required_version": "3.10.0",
+        "recommended_version": "3.12+",
     }
 
 
@@ -151,12 +113,6 @@ def print_compatibility_report():
     else:
         print("✗ Python version is TOO OLD")
         print(f"  Please upgrade to Python {report['min_required_version']} or higher")
-
-    if report["tkinter_available"]:
-        print("✓ tkinter is available")
-    else:
-        print("✗ tkinter is NOT available")
-        print("  Please install python3-tk package for your system")
 
     print("=" * 60)
 

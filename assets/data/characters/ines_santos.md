@@ -4,7 +4,7 @@
 
 **Summary:** Isla embodies an effortless, metropolitan elegance with a warm, engaging spirit. She carries the poised confidence of a modern creative, blending sharp precision in her style with a radiant, approachable demeanor. Her presence is attentive and polished, yet she retains a natural, sun-kissed vitality that feels both grounded and sophisticated.
 
-**Tags:**   Female, Approachable, Chic, Creative, Filipino, Playful
+**Tags:** Female, Approachable, Chic, Creative, Filipino, Playful, Vintage, Retro, Casual, Noir, Urban, Work
 
 **Gender:** F
 **Signature Color:** #C19A6B

@@ -2,7 +2,7 @@
 
 **Photo:** valentina_tina_kovač_photo.png
 
-**Tags:** Eastern-European, Adventurous, Angular, Bohemian, Creative, Edgy, Female, Intense, Romani, Thin, Urban, Casual
+**Tags:** Eastern-European, Adventurous, Angular, Bohemian, Creative, Edgy, Female, Intense, Romani, Thin, Urban, Casual, Vintage, Retro, Sci-Fi, Sport, Action, Noir
 
 **Summary:** Tina moves through the world like smoke—elusive, ethereal, impossible to pin down. Her Romani heritage shows in her restless energy and natural theatricality, while her ectomorphic build gives her an almost otherworldly quality. She's all angles and intensity, burning through life with creative fire that seems to consume her slight frame. Street art is her language, and the city is her canvas. There's a wildness to her that civilized spaces can't quite contain.
 

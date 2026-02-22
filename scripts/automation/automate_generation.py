@@ -5,7 +5,8 @@ import asyncio
 
 # Ensure we can import from the root directory
 # (Going up one level from 'automation2 directory)
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.join(project_root, "src"))
 
 from logic.data_loader import DataLoader
 from logic.randomizer import PromptRandomizer
@@ -24,9 +25,13 @@ def generate_prompts(count=10, match_outfits_prob=0.3):
     modifiers = loader.load_modifiers()
     interactions = loader.load_interactions()
     framing = loader.load_framing()
+    tag_rules = loader.load_tag_rules()
+    scene_constraints = loader.load_scene_constraints()
+    
+    print(f"Stats: {len(chars)} chars, {len(poses)} poses, {len(scenes)} scenes, {len(tag_rules.get('hub_tags',[]))} hubs.")
     
     builder = PromptBuilder(chars, base_prompts, poses, schemes, modifiers, framing)
-    randomizer = PromptRandomizer(chars, base_prompts, poses, scenes, interactions, schemes, modifiers, framing)
+    randomizer = PromptRandomizer(chars, base_prompts, poses, scenes, interactions, schemes, modifiers, framing, scene_constraints, tag_rules)
     
     prompts_with_scores = []
     for i in range(count):
@@ -53,9 +58,9 @@ async def run_automation(count=10, match_outfits_prob=0.3):
     
     # Setup paths
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    parent_dir = os.path.dirname(script_dir)
-    output_dir = os.path.join(parent_dir, "output", "images", "generated_images")
-    user_data_dir = os.path.join(parent_dir, ".config", "chrome_profile")
+    project_root = os.path.dirname(os.path.dirname(script_dir))
+    output_dir = os.path.join(project_root, "output", "images", "generated_images")
+    user_data_dir = os.path.join(project_root, ".config", "chrome_profile")
     
     print(f"Images will be saved to: {output_dir}")
     
@@ -145,8 +150,8 @@ def run_local_generation(count=10, match_outfits_prob=0.3):
     prompts_with_scores = generate_prompts(count, match_outfits_prob)
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    parent_dir = os.path.dirname(script_dir)
-    output_dir = os.path.join(parent_dir, "output", "prompts")
+    project_root = os.path.dirname(os.path.dirname(script_dir))
+    output_dir = os.path.join(project_root, "output", "prompts")
     
     os.makedirs(output_dir, exist_ok=True)
     print(f"Prompts will be saved to: {output_dir}")

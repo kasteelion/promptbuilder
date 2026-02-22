@@ -139,8 +139,8 @@ class PresetParser:
                     tags = []
                     
                     if tags_str:
-                        # Remove parens and split
-                        content_inner = tags_str[1:-1]
+                        # Tags are already captured without parens by group 2
+                        content_inner = tags_str
                         tags = [t.strip() for t in content_inner.split(",") if t.strip()]
                     
                     # Extract min characters from name if present (e.g., "Interaction (2+)")

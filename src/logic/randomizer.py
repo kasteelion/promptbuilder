@@ -4,285 +4,14 @@ from logic.scenarios import ScenarioRegistry, Scenario, Role
 
 class PromptRandomizer:
     """Generates random character, outfit, and pose combinations."""
-    
-    # DEFINING STONG HUB TAGS (Verified via Connectivity Audit)
-    HUB_TAGS = [
-        "Casual", "Urban", "Noir", "Sport", "Fantasy", "Sci-Fi", "Retro", 
-        "Intimate", "Social", "Work", "Action", "Cyberpunk", "Vintage",
-        "Basketball", "Football", "MMA", "Volleyball", "School", "Home", "Magic"
-    ]
-    
-    # --- Composition Modes ---
-    MODE_SOLO = "SOLO"                      # 1 Character, Pose focused
-    MODE_INT_W_POSES = "INT_W_POSES"        # Interaction sets Poses (e.g. Fight)
-    MODE_INT_WO_POSES = "INT_WO_POSES"      # Interaction sets Vibe, Poses Random
-    MODE_GROUP_NO_INT = "GROUP_NO_INT"      # Group shot, Independent Poses
 
-    # Centralized Tag Groups for constraint logic
-    # REDUCED: From 20+ groups to 8 core groups (removed redundant and sport-specific)
-    TAG_GROUPS = {
-        # Essential constraint groups (kept)
-        "EXPOSED_SKIN": {"swimwear", "bikini", "lingerie", "crop top", "shorts", "sleeveless", "undressing", "naked"},
-        "ARMOR_WEAPON": {"armor", "weapon", "shield", "sword", "combat", "tactical", "gun", "rifle"},
-        "FORMAL": {"formal", "evening", "gala", "suit", "tuxedo", "gown", "dress", "business"},
-        "WINTER": {"winter", "snow", "ski", "heavy coat", "scarf", "coat", "jacket", "hoodie"},
-        "FOOTWEAR": {"shoes", "boots", "heels", "sandals"},
-        
-        # Genre firewalls (critical for preventing clashes)
-        "GENRE_FANTASY": {"fantasy", "medieval", "magic", "mystical", "castle", "knight", "sword", "shield", "robe", "dnd", "spell", "arcane", "mythology", "dragon", "lair", "dungeon", "temple", "quest"},
-        "GENRE_MODERN": {"modern", "tech", "computer", "phone", "laptop", "car", "city", "office", "urban", "neon", "cyberpunk"},
-        
-        # Sport group (consolidated - no longer need per-sport groups)
-        "GENRE_SPORT": {"sport", "athletic", "gym", "stadium", "court", "field", "track", "basketball", "bowling", "baseball", "volleyball", "football", "soccer", "tennis", "mma", "boxing", "wrestling", "relay", "baton", "jersey", "activewear", "sneakers"},
-    }
-
-    # =========================================================================
-    # UNIFIED SCENE CONSTRAINTS
-    # =========================================================================
-    # Replaces: SCENE_RESTRICTIONS, SCENE_WHITELISTS, CONTEXT_CLASHES
-    # Format: "scene_tag": {"allowed": [...], "blocked": [...]}
-    # - If "allowed" is present, ONLY those tags are permitted (whitelist)
-    # - If "blocked" is present, those tags are forbidden (blacklist)
-    # - Both can coexist (allowed takes precedence)
+    # Composition Modes
+    MODE_SOLO = "solo"
+    MODE_GROUP_NO_INT = "group_no_interaction"
+    MODE_INT_W_POSES = "interaction_with_poses"
+    MODE_INT_WO_POSES = "interaction_without_poses"
     
-    SCENE_CONSTRAINTS = {
-        # Work/Professional Environments
-        "office": {
-            "allowed": ["business", "formal", "office", "work", "suit", "smart casual", "blazer", "shirt", "pencil skirt"],
-            "blocked": ["swimwear", "bikini", "lingerie", "armor", "weapon", "pajamas", "fantasy", "medieval"]
-        },
-        "library": {
-            "allowed": ["casual", "business", "academic", "preppy", "formal"],
-            "blocked": ["swimwear", "armor", "weapon", "sport", "athletic", "fantasy"]
-        },
-        "work": {
-            "blocked": ["swimwear", "armor", "weapon", "pajamas", "fantasy", "sleep"]
-        },
-        "school": {
-            "blocked": ["swimwear", "armor", "fantasy", "weapon", "bed", "sleep", "lingerie"]
-        },
-        "hospital": {
-            "allowed": ["medical", "scrubs", "coat", "uniform", "doctor", "nurse", "white", "lab"],
-            "blocked": ["swimwear", "armor", "weapon", "fantasy", "formal", "party"]
-        },
-        "medical": {
-            "allowed": ["medical", "scrubs", "coat", "uniform", "doctor", "nurse", "white", "lab"],
-            "blocked": ["swimwear", "armor", "weapon", "fantasy", "formal", "party"]
-        },
-        
-        # Fitness/Athletic Environments
-        "fitness": {
-            "allowed": ["sport", "athletic", "fitness", "active", "workout", "yoga"],
-            "blocked": ["formal", "armor", "jeans", "dress", "bed", "winter"]
-        },
-        "yoga": {
-            "allowed": ["sport", "athletic", "fitness", "yoga", "active"],
-            "blocked": ["formal", "armor", "jeans", "dress", "bed", "winter"]
-        },
-        "sport": {
-            "allowed": ["sport", "athletic", "gym", "active", "workout", "fitness", "yoga", "jersey", "uniform"],
-            "blocked": ["formal", "armor", "jeans", "dress", "heels", "bed"]
-        },
-        "gym": {
-            "allowed": ["gym", "fitness", "sport", "workout", "active", "training"],
-            "blocked": ["fantasy", "formal", "business", "jeans", "armor", "weapon", "medieval"]
-        },
-        
-        # Leisure/Social Environments
-        "beach": {
-            "allowed": ["swimwear", "bikini", "swim", "beach", "summer", "casual", "boho", "shorts", "dress", "linen"],
-            "blocked": ["formal", "winter", "office", "armor", "coat", "jacket"]
-        },
-        "pool": {
-            "allowed": ["swimwear", "bikini", "swim", "pool", "summer"],
-            "blocked": ["formal", "winter", "jeans", "computer", "desk", "armor"]
-        },
-        "winter": {
-            "blocked": ["swimwear", "bikini", "shorts", "crop top", "sleeveless"]
-        },
-        "snow": {
-            "blocked": ["swimwear", "bikini", "sandals", "heels", "shorts"]
-        },
-        "indoor": {
-            "blocked": ["winter", "snow", "ski", "heavy coat"]
-        },
-        
-        # Formal/Elegant Environments
-        "formal": {
-            "allowed": ["formal", "evening", "gala", "dress", "suit", "tuxedo", "gown", "elegant", "luxury", "high fashion"],
-            "blocked": ["swimwear", "casual", "sport", "gym", "pajamas", "jeans", "athletic"]
-        },
-        "gala": {
-            "allowed": ["formal", "evening", "gala", "dress", "suit", "tuxedo", "gown", "elegant", "luxury"],
-            "blocked": ["swimwear", "casual", "sport", "gym", "pajamas", "jeans"]
-        },
-        "wedding": {
-            "allowed": ["formal", "wedding", "white", "dress", "suit", "gown", "elegant"],
-            "blocked": ["casual", "sport", "armor", "fantasy"]
-        },
-        
-        # Domestic/Private Environments
-        "bed": {
-            "allowed": ["pajamas", "sleep", "loungewear", "intimate", "lingerie"],
-            "blocked": ["armor", "weapon", "footwear", "winter", "hat", "standing", "run", "jump", "shoes", "boots"]
-        },
-        "sleep": {
-            "allowed": ["pajamas", "sleep", "loungewear", "intimate"],
-            "blocked": ["armor", "weapon", "footwear", "winter", "hat", "jeans", "formal", "standing"]
-        },
-        "domestic": {
-            "allowed": ["casual", "loungewear", "pajamas", "cozy", "knit", "sweater", "shorts", "t-shirt"],
-            "blocked": ["armor", "weapon", "formal", "sport"]
-        },
-        
-        # Cultural/Public Spaces
-        "museum": {
-            "allowed": ["casual", "business", "formal", "smart casual"],
-            "blocked": ["swimwear", "armor", "costume", "sport", "combat", "bed", "sleep", "running", "pajamas"]
-        },
-        "gallery": {
-            "allowed": ["casual", "business", "formal", "artistic", "smart casual"],
-            "blocked": ["swimwear", "armor", "costume", "sport", "combat", "bed", "sleep", "running"]
-        },
-        "quiet": {
-            "blocked": ["sport", "loud", "party", "combat", "action", "athletic"]
-        },
-        
-        # Outdoor/Nature Environments
-        "nature": {
-            "allowed": ["casual", "outdoor", "hiking", "adventure", "rugged", "fantasy"],
-            "blocked": ["office", "business", "formal", "tech", "computer", "modern", "neon"]
-        },
-        "forest": {
-            "allowed": ["casual", "outdoor", "fantasy", "rugged", "adventure", "medieval"],
-            "blocked": ["office", "tech", "modern", "computer", "neon"]
-        },
-        "waterfall": {
-            "blocked": ["office", "tech", "computer", "modern", "neon"]
-        },
-        
-        # Genre-Specific (STRICT FIREWALLS)
-        "fantasy": {
-            "allowed": ["fantasy", "medieval", "armor", "robe", "dress", "gala", "rustic", "traditional", "leather", "fur"],
-            "blocked": ["modern", "tech", "office", "business", "gun", "rifle", "computer", "phone", "neon", "cyberpunk"]
-        },
-        "sci-fi": {
-            "allowed": ["sci-fi", "tech", "cyberpunk", "futuristic", "modern", "tactical", "armor", "suit", "latex", "metallic"],
-            "blocked": ["fantasy", "medieval", "sword", "shield", "magic"]
-        },
-        "cyberpunk": {
-            "allowed": ["cyberpunk", "sci-fi", "tech", "neon", "urban", "street", "leather", "tactical", "edgy"],
-            "blocked": ["fantasy", "medieval", "nature", "rustic"]
-        },
-        "castle": {
-            "allowed": ["fantasy", "medieval", "historical", "armor", "traditional", "robe"],
-            "blocked": ["modern", "tech", "computer", "phone", "neon", "sport", "athletic", "gym"]
-        },
-        "dungeon": {
-            "allowed": ["fantasy", "medieval", "armor", "dark", "tactical"],
-            "blocked": ["modern", "tech", "computer", "phone", "sport"]
-        },
-        "temple": {
-            "allowed": ["fantasy", "historical", "traditional", "cultural", "robe"],
-            "blocked": ["modern", "tech", "neon", "sport"]
-        },
-        "dragon": {
-            "allowed": ["fantasy", "medieval", "armor", "magic"],
-            "blocked": ["modern", "sport", "athletic", "tech"]
-        },
-        "lair": {
-            "allowed": ["fantasy", "medieval", "dark", "tactical"],
-            "blocked": ["modern", "sport", "athletic"]
-        },
-        "cave": {
-            "blocked": ["sport", "athletic", "basketball", "bowling", "baseball", "volleyball", "football", "soccer", "tennis", "track", "stadium"]
-        },
-        "quest": {
-            "allowed": ["fantasy", "medieval", "adventure", "armor"],
-            "blocked": ["modern", "sport", "athletic"]
-        },
-        
-        # Sport Venue Isolation (Prevent cross-sport contamination)
-        "bowling": {
-            "allowed": ["bowling", "retro", "casual"],
-            "blocked": ["fantasy", "armor", "weapon", "sword", "shield", "magic", "medieval", "mythology"]
-        },
-        "stadium": {
-            "allowed": ["sport", "athletic", "jersey", "active"],
-            "blocked": ["fantasy", "armor", "weapon", "magic", "medieval"]
-        },
-        "alley": {
-            "allowed": ["bowling", "casual", "retro"],
-            "blocked": ["basketball", "baseball", "volleyball", "football", "soccer", "tennis", "track", "mma", "boxing", "wrestling"]
-        },
-        "octagon": {
-            "allowed": ["mma", "fighting", "combat_sport"],
-            "blocked": ["bowling", "basketball", "baseball", "volleyball", "football", "soccer", "tennis", "track"]
-        },
-        "cage": {
-            "allowed": ["mma", "fighting", "combat_sport"],
-            "blocked": ["bowling", "basketball", "baseball", "volleyball", "football", "soccer", "tennis", "track"]
-        },
-        "diamond": {
-            "allowed": ["baseball", "softball"],
-            "blocked": ["bowling", "basketball", "volleyball", "football", "soccer", "tennis", "track", "mma", "boxing", "wrestling"]
-        },
-        "mound": {
-            "allowed": ["baseball", "softball"],
-            "blocked": ["bowling", "basketball", "volleyball", "football", "soccer", "tennis", "track", "mma", "boxing", "wrestling"]
-        },
-        
-        # Thematic/Stylistic
-        "urban": {
-            "allowed": ["streetwear", "casual", "skater", "edgy", "denim", "skate", "city", "urban", "graffiti"],
-        },
-        "vintage": {
-            "allowed": ["vintage", "retro", "1950", "1970", "pinup", "disco", "server", "denim", "classic"],
-        },
-        "academic": {
-            "allowed": ["academia", "preppy", "glasses", "blazer", "skirt", "tights", "vest", "shirt"],
-        },
-        
-        # Sport-Specific (from old whitelists)
-        "boxing": {
-            "allowed": ["boxing", "combat_sport", "active", "training"],
-        },
-        "mma": {
-            "allowed": ["mma", "combat_sport", "fighting"],
-        },
-        "basketball": {
-            "allowed": ["basketball", "jersey", "active", "cheer"],
-        },
-        "baseball": {
-            "allowed": ["baseball", "jersey", "active"],
-        },
-        "softball": {
-            "allowed": ["softball", "baseball", "active"],
-        },
-        "football": {
-            "allowed": ["football", "jersey", "active", "cheer"],
-        },
-        "soccer": {
-            "allowed": ["soccer", "jersey", "active"],
-        },
-        "tennis": {
-            "allowed": ["tennis", "active"],
-        },
-        "volleyball": {
-            "allowed": ["volleyball", "active"],
-        },
-        "track": {
-            "allowed": ["track", "running", "active"],
-        },
-        "gymnastics": {
-            "allowed": ["gymnastics", "leotard", "activewear", "shorts", "leggings"],
-        },
-        "swim": {
-            "allowed": ["swim", "swimwear", "pool", "water", "speedo", "bikini"],
-        },
-    }
-
-    def __init__(self, characters, base_prompts, poses, scenes=None, interactions=None, color_schemes=None, modifiers=None, framing=None):
+    def __init__(self, characters, base_prompts, poses, scenes=None, interactions=None, color_schemes=None, modifiers=None, framing=None, scene_constraints=None, tag_rules=None):
         """Initialize randomizer with data.
 
         Args:
@@ -294,6 +23,8 @@ class PromptRandomizer:
             color_schemes: Color schemes dict
             modifiers: Outfit modifiers dict
             framing: Framing modifiers dict
+            scene_constraints: Dict of scene constraints (allowed/blocked tags)
+            tag_rules: Dict containing tag_aliases, tag_groups, and hub_tags
         """
         self.characters = characters
         self.base_prompts = base_prompts
@@ -304,6 +35,13 @@ class PromptRandomizer:
         self.modifiers = modifiers or {}
         self.framing = framing or {}
         self.scenario_registry = ScenarioRegistry()
+        
+        # [NEW] Load injected configs
+        self.scene_constraints = scene_constraints or {}
+        tag_rules = tag_rules or {}
+        self.tag_aliases = tag_rules.get("tag_aliases", {})
+        self.tag_groups = tag_rules.get("tag_groups", {})
+        self.hub_tags = tag_rules.get("hub_tags", [])
         
         # Pre-compute tags (Phase 1 Optimization)
         self._precompute_tags()
@@ -384,117 +122,6 @@ class PromptRandomizer:
                 
         return matching_names
 
-    # Define tag aliases/groups to expand thematic matching
-    TAG_ALIASES = {
-        "creative": ["art", "artistic"],
-        "art": ["creative", "artistic"],
-        "vintage": ["retro", "nostalgic", "old-school"],
-        "retro": ["vintage", "nostalgic"],
-        "soft": ["gentle", "calm", "pastel"],
-        "edgy": ["alternative", "dark", "cool"],
-        "luxury": ["rich", "expensive", "elegant", "fashion", "glamour"],
-        "glamour": ["luxury", "fashion", "elegant", "style"],
-        "western": ["rugged", "outdoorsy", "casual", "edgy"],
-        "cottagecore": ["soft", "nature", "vintage", "calm"],
-        "combat": ["intense"], # Removed action, dynamic to prevent sport leak
-        "action": ["motion", "energetic"], # Pure motion hub
-        "fantasy": ["magic", "mythology"],
-        "intense": ["dramatic"], # Removed dynamic
-        "dramatic": ["theatrical"], # Removed intense
-        "anime": ["japanese", "2d"],
-        "rugged": ["outdoor", "nature", "western", "gritty"], # Removed action
-        "commanding": ["urban", "office", "luxury", "formal", "work"],
-        "chic": ["fashion", "luxury", "urban", "modern", "city"],
-        "minimalist": ["modern", "studio", "clean", "simple", "indoor"],
-        "approachable": ["casual", "home", "cozy", "warm", "social"],
-        "playful": ["fun", "colorful", "casual", "active", "outdoor"],
-        "intellectual": ["library", "office", "quiet", "indoor", "school"],
-        "outdoorsy": ["nature", "hiking", "adventure", "park", "forest"],
-        "traditional": ["cultural", "history", "classic", "temple"],
-        "adventurous": ["adventure", "outdoorsy", "nature", "active"],
-        "passionate": ["intense", "dramatic", "dynamic"],
-        "energetic": ["active", "playful", "dynamic"],
-        "bohemian": ["boho", "creative", "alternative", "artistic"],
-        "boho": ["bohemian", "creative", "alternative", "artistic"],
-        # Content bridges
-        "skate": ["skater", "urban"],
-        "skater": ["skate", "urban"],
-        "esports": ["gaming", "tech", "competition"],
-        "gaming": ["esports", "tech", "competition"],
-        # Cultural Bridges
-        "eastern-european": ["cultural", "traditional"],
-        "latina": ["cultural", "traditional"],
-        "romani": ["cultural", "traditional"],
-        "japanese": ["cultural", "traditional", "anime", "manga"],
-        "north-african": ["cultural", "traditional"],
-        "nordic": ["cultural", "traditional"],
-        "mediterranean": ["cultural", "traditional"],
-        "african": ["cultural", "traditional"],
-        "indian": ["cultural", "traditional"],
-        # Bridges for under-represented styles
-        "japanese": ["anime", "manga"],
-        "modern": ["realistic", "contemporary", "urban"],
-        "casual": ["realistic", "everyday", "life"],
-        "detailed": ["high definition", "realistic"],
-        "portrait": ["photography", "realistic"],
-        
-        # [NEW] Combat Sports Bridges (Strict)
-        "mma": ["fighting", "athletic", "grappling"], # Removed 'combat' and 'sport'
-        "boxing": ["fighting", "athletic"], # Removed 'combat' and 'sport'
-        "wrestling": ["fighting", "grappling", "athletic"], # Removed 'combat' and 'sport'
-        "martial arts": ["fighting", "traditional", "athletic"], # Removed 'combat' and 'sport'
-        "grappling": ["wrestling"], # Removed 'combat' and 'sport'
-        
-        # [NEW] Intimate & Sensual Bridges
-        "intimate": ["sensual", "boudoir", "romantic", "sultry", "alluring", "bedroom"],
-        "sensual": ["intimate", "glamour", "alluring"],
-        "glamour": ["fashion", "beauty", "sensual"],
-        "boudoir": ["intimate", "bedroom", "lingerie", "sensual"],
-        "sultry": ["sensual", "intimate", "intense"],
-        "alluring": ["sensual", "flirty", "intimate"],
-        "romantic": ["intimate", "affectionate"],
-        
-        # [NEW] Missing Fantasy/Historical Bridges (from Audit)
-        "druid": ["fantasy", "nature", "magic", "forest"],
-        "alchemist": ["fantasy", "magic", "science"],
-        "healer": ["fantasy", "magic", "medical", "peaceful"],
-        "priestess": ["fantasy", "magic", "traditional", "spiritual"],
-        "warrior": ["fantasy", "combat", "armor", "action", "strong"],
-        "medieval": ["fantasy", "historical", "armor", "traditional"],
-        
-        # [NEW] Missing Era/Style Bridges
-        "1890s": ["historical", "vintage", "retro", "victorian"],
-        "1900s": ["historical", "vintage", "retro", "edwardian"],
-        "1920s": ["historical", "vintage", "retro", "noir", "luxury"],
-        "1950s": ["historical", "vintage", "retro", "classic"],
-        "1970s": ["historical", "vintage", "retro", "boho"],
-        "1980s": ["historical", "vintage", "retro", "neon", "pop"],
-        "1990s": ["historical", "vintage", "retro", "grunge"],
-        "victorian": ["historical", "vintage", "retro", "elegant", "formal"],
-        "noir": ["vintage", "dark", "cinematic", "mystery"],
-        "steampunk": ["fantasy", "retro", "sci-fi", "tech", "industrial"],
-        
-        # [NEW] Missing Fashion Bridges
-        "k-fashion": ["fashion", "chic", "urban", "modern", "trendy"],
-        "techwear": ["tech", "futuristic", "tactical", "urban", "edgy"],
-        "streetwear": ["urban", "casual", "modern", "edgy", "fashion"],
-        
-        # Universal Realism (Make Photorealistic the default baseline BUT allow style variance)
-        # Universal Realism (CLEANED: Allows stylized content for all)
-        "female": [], 
-        "male": [], 
-        "urban": ["modern"], 
-        "nature": [], 
-        "action": ["dynamic", "motion", "energetic"],
-        "calm": ["peaceful", "quiet", "serene", "static"],
-        "interior": [], 
-        "realistic": ["high definition", "photography", "mood:realistic"],
-        "formal": ["elegant", "evening"], 
-        "business": ["formal", "professional", "office"], 
-        "candid": ["photography"], 
-        "cinematic": ["dramatic", "lighting"], 
-    }
-
     def _expand_tags(self, tags):
         """Expand tags with aliases/groups recursively."""
         expanded = set(tags)
@@ -513,8 +140,8 @@ class PromptRandomizer:
             added_new = False
             for t in current_tags:
                 t_lower = str(t).lower()
-                if t_lower in self.TAG_ALIASES:
-                    new_tags = self.TAG_ALIASES[t_lower]
+                if t_lower in self.tag_aliases:
+                    new_tags = self.tag_aliases[t_lower]
                     for nt in new_tags:
                         if nt not in expanded:
                             expanded.add(nt)
@@ -568,7 +195,7 @@ class PromptRandomizer:
                 
         return normal, mood, blocked
 
-    def randomize(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, candidates=3, match_outfits_prob=0.3, forced_characters=None):
+    def randomize(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, candidates=3, match_outfits_prob=0.3, forced_characters=None, forced_scenario=None):
         """Generate multiple candidates and return the highest scoring one."""
         best_config = None
         best_score = -float('inf')
@@ -581,7 +208,7 @@ class PromptRandomizer:
             num_to_generate = max(3, candidates // 2) if candidates > 5 else candidates
             
             for _ in range(num_to_generate):
-                config = self._generate_single_candidate(num_characters, include_scene, include_notes, forced_base_prompt, match_outfits_prob=match_outfits_prob, forced_characters=forced_characters)
+                config = self._generate_single_candidate(num_characters, include_scene, include_notes, forced_base_prompt, match_outfits_prob=match_outfits_prob, forced_characters=forced_characters, forced_scenario=forced_scenario)
 
                 score = self._score_candidate(config)
                 
@@ -639,8 +266,8 @@ class PromptRandomizer:
         if scene_tags:
             for t in scene_tags:
                 t_lower = t.lower()
-                if t_lower in self.SCENE_CONSTRAINTS:
-                    constraints = self.SCENE_CONSTRAINTS[t_lower]
+                if t_lower in self.scene_constraints:
+                    constraints = self.scene_constraints[t_lower]
                     
                     # Apply blocked tags
                     if "blocked" in constraints:
@@ -737,8 +364,8 @@ class PromptRandomizer:
                     breakdown["warnings"].append(f"Outfit '{outfit_name}' not in scene whitelist")
         
         # 6. Genre Clash (-1000) - Fantasy vs Modern firewall
-        is_fantasy_scene = any(t.lower() in self.TAG_GROUPS["GENRE_FANTASY"] for t in scene_tags)
-        is_modern_scene = any(t.lower() in self.TAG_GROUPS["GENRE_MODERN"] for t in scene_tags)
+        is_fantasy_scene = any(t.lower() in self.tag_groups["GENRE_FANTASY"] for t in scene_tags)
+        is_modern_scene = any(t.lower() in self.tag_groups["GENRE_MODERN"] for t in scene_tags)
         
         for char in chars:
             outfit_name = char.get("outfit")
@@ -751,14 +378,14 @@ class PromptRandomizer:
                     outfit_tags = self._expand_tags(self._get_tags(outfit_data))
                 
                 if is_fantasy_scene:
-                    if any(t in outfit_tags for t in self.TAG_GROUPS["GENRE_MODERN"]):
+                    if any(t in outfit_tags for t in self.tag_groups["GENRE_MODERN"]):
                         penalty = 1000
                         score -= penalty
                         breakdown["genre_clash"] -= penalty
                         breakdown["warnings"].append(f"GENRE CLASH: Fantasy scene with modern outfit '{outfit_name}'")
                 
                 if is_modern_scene:
-                    if any(t in outfit_tags for t in self.TAG_GROUPS["GENRE_FANTASY"]):
+                    if any(t in outfit_tags for t in self.tag_groups["GENRE_FANTASY"]):
                         penalty = 1000
                         score -= penalty
                         breakdown["genre_clash"] -= penalty
@@ -820,20 +447,26 @@ class PromptRandomizer:
 
         return 0, ""
 
-    def _generate_single_candidate(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, match_outfits_prob=0.3, forced_characters=None):
+    def _generate_single_candidate(self, num_characters=None, include_scene=False, include_notes=False, forced_base_prompt=None, match_outfits_prob=0.3, forced_characters=None, forced_scenario=None):
         """Generate a single random prompt configuration using SCENARIO-FIRST logic."""
         # =========================================================================
         # STEP 0: SELECT HUB & SCENARIO (THE PARTNERSHIP)
         # =========================================================================
         # Pick the scenario first (since it's the authority), then pick a compatible Hub.
         # This ensures the Hub is a thematic guide, not a logic bypass.
-        scenario = self.scenario_registry.get_random()
+        if forced_scenario:
+            scenario = self.scenario_registry.scenarios.get(forced_scenario)
+            if not scenario:
+                print(f"WARNING: Forced scenario '{forced_scenario}' not found. Falling back to random.")
+                scenario = self.scenario_registry.get_random()
+        else:
+            scenario = self.scenario_registry.get_random()
         
         # Identify valid Hubs for this scenario
         scenario_vibes = [v.lower() for v in getattr(scenario, 'vibe_tags', [])]
         scenario_blocked = [b.lower() for b in getattr(scenario, 'blocked_global_tags', [])]
         
-        possible_hubs = [h for h in self.HUB_TAGS if h.lower() not in scenario_blocked]
+        possible_hubs = [h for h in self.hub_tags if h.lower() not in scenario_blocked]
         preferred_hubs = [h for h in possible_hubs if h.lower() in scenario_vibes]
         
         if preferred_hubs:
@@ -841,7 +474,7 @@ class PromptRandomizer:
         elif possible_hubs:
             hub_tag = random.choice(possible_hubs)
         else:
-            hub_tag = random.choice(self.HUB_TAGS) # Emergency fallback
+            hub_tag = random.choice(self.hub_tags) # Emergency fallback
 
         # =========================================================================
         # STEP 2: SELECT SCENE (Driven by Hub)
@@ -1111,14 +744,14 @@ class PromptRandomizer:
         # 1. Primary Category (Legacy/Broad)
         if scene_category:
             scene_cat_lower = scene_category.lower()
-            if scene_cat_lower in self.SCENE_CONSTRAINTS:
-                constraints = self.SCENE_CONSTRAINTS[scene_cat_lower]
+            if scene_cat_lower in self.scene_constraints:
+                constraints = self.scene_constraints[scene_cat_lower]
                 if "allowed" in constraints:
                     for tag in constraints["allowed"]:
                         selection_tags.add(f"whitelist:{tag}")
             
-            if scene_cat_lower in self.SCENE_CONSTRAINTS:
-                constraints = self.SCENE_CONSTRAINTS[scene_cat_lower]
+            if scene_cat_lower in self.scene_constraints:
+                constraints = self.scene_constraints[scene_cat_lower]
                 if "blocked" in constraints:
                     local_blocked.update(constraints["blocked"])
 
@@ -1132,14 +765,14 @@ class PromptRandomizer:
             
             for tag in context_tags:
                 t_lower = tag.lower()
-                if t_lower in self.SCENE_CONSTRAINTS:
-                    constraints_inner = self.SCENE_CONSTRAINTS[t_lower]
+                if t_lower in self.scene_constraints:
+                    constraints_inner = self.scene_constraints[t_lower]
                     if "allowed" in constraints_inner:
                         for w_tag in constraints_inner["allowed"]:
                             selection_tags.add(f"whitelist:{w_tag}")
                 
-                if t_lower in self.SCENE_CONSTRAINTS:
-                    constraints = self.SCENE_CONSTRAINTS[t_lower]
+                if t_lower in self.scene_constraints:
+                    constraints = self.scene_constraints[t_lower]
                     if "blocked" in constraints:
                         local_blocked.update(constraints["blocked"])
 
@@ -1846,8 +1479,8 @@ class PromptRandomizer:
             
                 # 1. Blocking (Strict Blacklist)
                 # Check for hard scene constraints
-                if scene_category.lower() in self.SCENE_CONSTRAINTS:
-                    constraints = self.SCENE_CONSTRAINTS[scene_category.lower()]
+                if scene_category.lower() in self.scene_constraints:
+                    constraints = self.scene_constraints[scene_category.lower()]
                     restricted_tags = constraints.get("blocked", set())
                 else:
                     restricted_tags = set()
@@ -1872,8 +1505,8 @@ class PromptRandomizer:
 
                 # 2. Hard Whitelisting (Strict Whitelist)
                 # If a scene has a whitelist (e.g. gym, bowling), MUST match at least one tag.
-                if scene_category.lower() in self.SCENE_CONSTRAINTS:
-                    constraints = self.SCENE_CONSTRAINTS[scene_category.lower()]
+                if scene_category.lower() in self.scene_constraints:
+                    constraints = self.scene_constraints[scene_category.lower()]
                     if "allowed" in constraints:
                         whitelist = set(constraints["allowed"])
                         if tags:
@@ -1926,7 +1559,48 @@ class PromptRandomizer:
                 if is_strict_match:
                     eligible_templates.append(template_obj)
                 elif not exclusive:
-                    fallback_templates.append(template_obj)
+                    # [THEMATIC PROTECTION]
+                    # Only allow fallback if it DOES NOT contain a "Strong Genre Tag" that is missing from context.
+                    # This prevents "Sport" interactions appearing in "Fantasy" scenes just because they weren't explicitly blocked.
+                    
+                    strong_genre_tags = {
+                        "sport", "basketball", "baseball", "football", "soccer", "volleyball", 
+                        "tennis", "mma", "boxing", "wrestling", "gym", "athlete", 
+                        "fantasy", "medieval", "magic", "dragon", "wizard",
+                        "sci-fi", "cyberpunk", "futuristic", "robot", "tech",
+                        "noir", "detective", "vintage", "retro", "western"
+                    }
+                    
+                    template_tags_lower = {t.lower() for t in tags}
+                    has_strong_clash = False
+                    
+                    # If template has a strong tag, it MUST be allowed by context (hub, mood, or whitelist)
+                    # We check if any of the template's strong tags are NOT in the current context/hub.
+                    
+                    # 1. Gather all allowed context tags (Hub + Moods)
+                    allowed_concepts = set()
+                    if hub_tag: allowed_concepts.add(hub_tag.lower())
+                    if context_moods: allowed_concepts.update(self._expand_tags([m.lower() for m in context_moods]))
+                    
+                    # 2. Check overlap
+                    # If interaction has a strong tag, and that tag is NOT in allowed_concepts, it's a clash.
+                    for t in template_tags_lower:
+                        if t in strong_genre_tags:
+                            # Is this strong tag allowed?
+                            # We use expanded matching (e.g. if context is "Combat", "MMA" might be allowed? 
+                            # But here we are just checking if the tag itself is present in the allowed set)
+                            # Let's be strict: if the tag isn't explicitly in the allowed context, reject it.
+                            if t not in allowed_concepts:
+                                # Special Case: "Sport" covers specific sports
+                                if t in ["basketball", "baseball", "football", "soccer", "volleyball", "tennis", "mma", "boxing", "wrestling", "gym"]:
+                                    if "sport" in allowed_concepts or "athletic" in allowed_concepts:
+                                        continue
+                                
+                                has_strong_clash = True
+                                break
+                    
+                    if not has_strong_clash:
+                        fallback_templates.append(template_obj)
 
         selected = None
         if eligible_templates:

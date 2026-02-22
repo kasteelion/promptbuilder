@@ -23,11 +23,55 @@ class DataLoader:
             try:
                 self.base_dir = Path(sys.argv[0]).resolve().parent
             except (IndexError, AttributeError):
+                pass
+            
+            # Fallback to CWD if all else fails
+            if not hasattr(self, 'base_dir'):
                 self.base_dir = Path.cwd()
 
         # Cache for parsed data
         self._cache = {}
         self._file_mtimes = {}
+
+    def load_json_config(self, filename: str, default: dict = None) -> dict:
+        """Load a JSON configuration file from assets/config/."""
+        import json
+        
+        config_dir = self.base_dir / "assets" / "config"
+        config_file = config_dir / filename
+        
+        if not config_file.exists():
+            return default or {}
+            
+        try:
+            # Mtime check for caching
+            mtime = config_file.stat().st_mtime
+            cache_key = f"json_{filename}"
+            if cache_key in self._cache and self._file_mtimes.get(cache_key) == mtime:
+                return self._cache[cache_key]
+                
+            text = config_file.read_text(encoding="utf-8")
+            data = json.loads(text)
+            
+            self._cache[cache_key] = data
+            self._file_mtimes[cache_key] = mtime
+            return data
+        except Exception as e:
+            from utils import logger
+            logger.error(f"Failed to load JSON config {filename}: {e}")
+            return default or {}
+
+    def load_scene_constraints(self) -> dict:
+        """Load scene constraints from JSON."""
+        return self.load_json_config("scene_constraints.json", {})
+
+    def load_tag_rules(self) -> dict:
+        """Load tag rules (aliases, groups, hub tags) from JSON."""
+        return self.load_json_config("tag_rules.json", {
+            "hub_tags": [],
+            "tag_groups": {},
+            "tag_aliases": {}
+        })
 
     def _find_data_file(self, filename):
         """Find data file in new, subgroup, or old location.
@@ -469,6 +513,7 @@ A simple and comfortable casual outfit.
     def load_base_prompts(self):
         """Load and parse base_prompts.md file. Creates file if not found."""
         f = self._find_data_file("base_prompts.md")
+        cache_key = "base_prompts"
         default_prompt = {
             "Default": "Soft semi-realistic illustration with clear, natural lighting. Fresh muted florals, calm tonal balance."
         }
@@ -481,14 +526,25 @@ Soft semi-realistic illustration with clear, natural lighting. Fresh muted flora
             f.write_text(default_content, encoding="utf-8")
             return default_prompt
 
+        # Mtime caching
+        try:
+            mtime = f.stat().st_mtime
+            if cache_key in self._cache and self._file_mtimes.get(cache_key) == mtime:
+                return self._cache[cache_key]
+            self._file_mtimes[cache_key] = mtime
+        except OSError:
+            pass
+
         text = f.read_text(encoding="utf-8")
         prompts = MarkdownParser.parse_base_prompts(text)
-        return prompts if prompts else default_prompt
+        result = prompts if prompts else default_prompt
+        self._cache[cache_key] = result
+        return result
 
     def load_presets(self, filename: str):
         """Load and parse preset files (scenes.md, poses.md, etc.). Creates file if not found."""
         f = self._find_data_file(filename)
-        print(f"DEBUG_LOAD: Loading presets from {filename} ({f})")
+        cache_key = f"presets_{filename}"
 
         defaults_content = {
             "scenes.md": """## Default
@@ -517,18 +573,26 @@ Soft semi-realistic illustration with clear, natural lighting. Fresh muted flora
         }
 
         if not f.exists():
-            print(f"DEBUG_LOAD: {filename} not found, using defaults.")
             if filename in defaults_content:
                 f.write_text(defaults_content[filename], encoding="utf-8")
                 return defaults_data.get(filename, {"Default": {}})
             else:
                 return {"Default": {}}
 
+        # Mtime caching
+        try:
+            mtime = f.stat().st_mtime
+            if cache_key in self._cache and self._file_mtimes.get(cache_key) == mtime:
+                return self._cache[cache_key]
+            self._file_mtimes[cache_key] = mtime
+        except OSError:
+            pass
+
         text = f.read_text(encoding="utf-8")
-        print(f"DEBUG_LOAD: Read {len(text)} bytes from {filename}")
         parsed = MarkdownParser.parse_presets(text)
-        print(f"DEBUG_LOAD: Parsed {len(parsed)} categories from {filename}")
-        return parsed if parsed else defaults_data.get(filename, {"Default": {}})
+        result = parsed if parsed else defaults_data.get(filename, {"Default": {}})
+        self._cache[cache_key] = result
+        return result
 
     def load_interactions(self):
         """Load and parse interactions.md file. Creates file if not found.
@@ -568,14 +632,25 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
                 return default_interactions
 
         try:
-            print(f"DEBUG_LOAD: Attempting to load interactions.md")
             text = f.read_text(encoding="utf-8")
-            print(f"DEBUG_LOAD: Read {len(text)} bytes from interactions.md")
+
+            # Mtime caching
+            cache_key = "interactions"
+            try:
+                mtime = f.stat().st_mtime
+                if cache_key in self._cache and self._file_mtimes.get(cache_key) == mtime:
+                    return self._cache[cache_key]
+                self._file_mtimes[cache_key] = mtime
+            except OSError:
+                pass
+
             interactions = MarkdownParser.parse_interactions(text)
-            print(f"DEBUG_LOAD: Parsed {len(interactions)} categories from interactions.md")
-            return interactions if interactions else default_interactions
+            result = interactions if interactions else default_interactions
+            self._cache[cache_key] = result
+            return result
         except Exception as e:
-            print(f"DEBUG_LOAD: Error loading interactions: {e}")
+            from utils import logger
+            logger.error(f"Error loading interactions: {e}")
             return default_interactions
 
     def get_editable_files(self):

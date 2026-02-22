@@ -41,7 +41,7 @@ class GallerySection(ft.Container):
             ft.Container(content=self.gallery_row, height=180, bgcolor=ft.Colors.TRANSPARENT)
         ])
 
-    def refresh(self, search_term=""):
+    def refresh(self, search_term="", update_ui=True):
         from ui.components.character_card import create_character_card
         
         selected_names = {char["name"] for char in self.app.state.state["selected_characters"]}
@@ -69,19 +69,22 @@ class GallerySection(ft.Container):
                 
         self.gallery_row.controls = new_controls
         self.count_label.value = f"({visible_count})"
-        self.update()
+        if update_ui:
+            self.update()
 
     def handle_search(self, e):
         self.refresh(e.control.value)
 
     def handle_character_click(self, name):
-        self.app.state.add_character(name)
+        self.app.add_character(name)
         self.refresh(self.search_field.value)
         self.app.refresh_roster()
         self.app.update_preview()
 
     def refresh_theme(self):
         self.bgcolor = ThemeManager.colors["surface"]
-        # Update text if needed, requires ref
-        # For minimal impact, we just update container bg
+        # Update header text
+        header_row = self.content.controls[0]
+        header_row.controls[0].controls[0].color = ThemeManager.colors["text_secondary"]  # "CHARACTER GALLERY"
+        self.count_label.color = ThemeManager.colors["text_secondary"]
         self.update()

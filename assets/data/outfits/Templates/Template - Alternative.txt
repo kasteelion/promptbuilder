@@ -1,3 +1,4 @@
+Tags: Templates, Everyday
 - **Top:** {Color} {Fit} {Material} {Type}
   - **Type:** {Type}
   - **Material:** {Material}
@@ -20,3 +21,12 @@
 - **Accessories:** {Style} {Type}
   - **Type:** {Type}
   - **Style:** {Style}
+
+[F]
+- **Note:** This variant is a derived adaptation of the primary style. Please refer to the standard FEMALE or MALE variants for the core aesthetic details and specific item breakdowns.
+
+[M]
+- **Note:** This variant is a derived adaptation of the primary style. Please refer to the standard FEMALE or MALE variants for the core aesthetic details and specific item breakdowns.
+
+[H]
+- **Note:** This variant is a derived adaptation of the primary style. Please refer to the standard FEMALE or MALE variants for the core aesthetic details and specific item breakdowns.

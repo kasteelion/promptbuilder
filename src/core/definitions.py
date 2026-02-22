@@ -21,6 +21,9 @@ class CharacterData(TypedDict, total=False):
     modifier: Optional[str]
     signature_color: Optional[str]
     traits: Dict[str, str]
+    age_presentation: Optional[str]
+    vibe: Optional[str]
+    bearing: Optional[str]
 
 class SelectedCharacterConfig(TypedDict, total=False):
     """Configuration for a single selected character in the prompt."""

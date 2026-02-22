@@ -1,9 +1,9 @@
 ### Freydis Holm
 **Photo:** freydis_holm_photo.png
 
-**Tags:** Female, Athletic, Commanding, Intense, Nordic, Rugged, Strong
+**Tags:** Female, Athletic, Commanding, Intense, Nordic, Rugged, Strong, Fantasy, Casual, Sci-Fi, Sport, Action, Urban
 **Summary:** Freydis Holm carries a raw, untamed energy that feels elemental. Her presence is a strike of lightning—sharp, dangerous, and undeniably powerful. She moves with the purposeful weight of a natural survivor, her rugged beauty enhanced by the scars of a life lived at the edge. Whether she's navigating a city street or a mountain trail, she radiates an ancient, unyielding confidence that commands respect.
-**Tags:** Female, Athletic, Commanding, Intense, Nordic, Rugged, Strong
+**Tags:** Female, Athletic, Commanding, Intense, Nordic, Rugged, Strong, Fantasy, Casual, Sci-Fi, Sport, Action, Urban
 **Gender:** F
 **Signature Color:** #778899
 

@@ -2,7 +2,7 @@
 
 **Photo:** kaia_vaitupu_photo.png
 
-**Tags:** Female, Pacific-Islander, Tech, Intellectual, Steady, Graceful, Sophisticated, Cyan-Signature, Sci-Fi, Work
+**Tags:** Female, Pacific-Islander, Tech, Intellectual, Steady, Graceful, Sophisticated, Cyan-Signature, Sci-Fi, Work, Sport, Fantasy, Noir
 
 **Summary:** Kaia is a Digital Archivist whose presence is as precise and fluid as the holographic data streams she manages. She possesses a quiet, focused intensity, her movements deliberate and graceful. Her heritage is reflected in subtle patterns integrated into her futuristic attire, bridging the gap between ancient tradition and cutting-edge technology. She is the guardian of digital history, navigating complex information landscapes with an intuitive ease that borders on the rhythmic.
 

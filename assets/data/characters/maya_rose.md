@@ -1,7 +1,7 @@
 ### Maya Rose
 **Photo:** maya_rose_photo.png
 **Summary:** Maya radiates natural warmth and approachability—easy confidence, genuine joy, and emotional openness. Her charm lies in her relaxed authenticity and inviting presence, creating an immediate sense of comfort and ease.
-**Tags:**   Female, Approachable, Chic, Commanding, Minimalist, Playful
+**Tags:** Female, Approachable, Chic, Commanding, Minimalist, Playful, Sport, Home, Casual
 **Gender:** F
 **Signature Color:** #DEB887
 

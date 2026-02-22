@@ -1,3 +1,4 @@
+Tags: Casual Wear, Everyday
 modifiers:
   Picnic: in **classic gingham check** with eyelet trim
   Garden: in **botanical-print cotton voile**

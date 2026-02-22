@@ -1,11 +1,14 @@
 # Human Review Samples
 
 ## ELITE (600+)
+
 ### Sample 1
+
 **Score: 640**
+
 - **Style:** Standard / Neutral
 - **Scene:** **Visual Description:**
-A finished basement retreat designed for leisure, featuring wood-paneled walls and deep, comfortable seating. The space feels subterranean and enclosed, separated from the day-to-day bustle of the main house.
+  A finished basement retreat designed for leisure, featuring wood-paneled walls and deep, comfortable seating. The space feels subterranean and enclosed, separated from the day-to-day bustle of the main house.
 
 **Sensory/Atmospheric Details:**
 
@@ -15,6 +18,7 @@ A finished basement retreat designed for leisure, featuring wood-paneled walls a
 - **Characters:** Siofra Quinn, Theo Okonkwo, Harper Mae Sullivan
 
 **Full Prompt:**
+
 ```
 Character Accuracy
 Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
@@ -117,10 +121,12 @@ Captured mid-stride with the right leg forward, arms swinging naturally in motio
 ```
 
 ### Sample 2
+
 **Score: 675**
+
 - **Style:** Vinyl Toy / Chibi: "Soft-Shaded Vector"
 - **Scene:** **Visual Description:**
-A intimate view of a morning routine at the kitchen counter. Sunlight hits the surface where breakfast items are casually arranged.
+  A intimate view of a morning routine at the kitchen counter. Sunlight hits the surface where breakfast items are casually arranged.
 
 **Sensory/Atmospheric Details:**
 
@@ -130,6 +136,7 @@ A intimate view of a morning routine at the kitchen counter. Sunlight hits the s
 - **Characters:** Lucía Reyes, Marcus Thompson, Fiona O'Sullivan
 
 **Full Prompt:**
+
 ```
 Rendering
 Soft-shaded vector illustration or vinyl toy aesthetic. Bright, pastel, or primary-heavy color palettes. Gradient shading is minimal and smooth, giving surfaces a matte plastic or "squishy" appearance. Thick, rounded line art (or lineless "sticker" style).
@@ -235,14 +242,17 @@ Looking down at a glowing smartphone held in both hands, a soft and genuine smil
 ---
 ```
 
-
 ---
+
 ## HIGH (450-600)
+
 ### Sample 1
+
 **Score: 455**
+
 - **Style:** Standard / Neutral
 - **Scene:** **Visual Description:**
-A cluttered apartment repurposed for cyber-warfare. Hardware is stacked to the ceiling. Screens cover every wall.
+  A cluttered apartment repurposed for cyber-warfare. Hardware is stacked to the ceiling. Screens cover every wall.
 
 **Sensory/Atmospheric Details:**
 
@@ -252,6 +262,7 @@ A cluttered apartment repurposed for cyber-warfare. Hardware is stacked to the c
 - **Characters:** Sina Tuilagi, Hana Park
 
 **Full Prompt:**
+
 ```
 Character Accuracy
 Anatomically perfect. Skin texture includes pores, vellus hair, uneven pigmentation, and micro-wrinkles. Eyes reflect the environment realistically (corneal reflection). Asymmetry in the face is preserved for realism.
@@ -333,10 +344,12 @@ Sina Tuilagi adjusting a gleaming microscope while Hana Park takes diligent note
 ```
 
 ### Sample 2
+
 **Score: 565**
+
 - **Style:** Vintage Film: "Analog Nostalgia"
 - **Scene:** **Visual Description:**
-A finished basement retreat designed for leisure, featuring wood-paneled walls and deep, comfortable seating. The space feels subterranean and enclosed, separated from the day-to-day bustle of the main house.
+  A finished basement retreat designed for leisure, featuring wood-paneled walls and deep, comfortable seating. The space feels subterranean and enclosed, separated from the day-to-day bustle of the main house.
 
 **Sensory/Atmospheric Details:**
 
@@ -346,6 +359,7 @@ A finished basement retreat designed for leisure, featuring wood-paneled walls a
 - **Characters:** Sina Tuilagi, Lila Reyes, Samira Mansour
 
 **Full Prompt:**
+
 ```
 Rendering
 Simulates 35mm film stock (Kodak Portra or Fujifilm styling) from the 1990s. Soft, slightly washed-out blacks and warm, yellow-green highlights. Visible film grain (ISO 400-800). Flash photography aesthetic: bright, direct light falloff leaving the background in darkness.
@@ -456,14 +470,17 @@ Sitting forward with chin resting on hands, looking over the top of sunglasses (
 ---
 ```
 
-
 ---
+
 ## MID (300-450)
+
 ### Sample 1
+
 **Score: 355**
+
 - **Style:** Vintage Pin-Up: "Glamorous Airbrush"
 - **Scene:** **Visual Description:**
-A cathedral of knowledge, defined by towering rows of wooden bookshelves packed with colorful spines. Studying tables are scattered in the open spaces, lit by green banker's lamps.
+  A cathedral of knowledge, defined by towering rows of wooden bookshelves packed with colorful spines. Studying tables are scattered in the open spaces, lit by green banker's lamps.
 
 **Sensory/Atmospheric Details:**
 
@@ -473,6 +490,7 @@ A cathedral of knowledge, defined by towering rows of wooden bookshelves packed 
 - **Characters:** Linh Nguyen, Fiona O'Sullivan
 
 **Full Prompt:**
+
 ```
 Rendering
 1950s commercial illustration style. Smooth, airbrushed gradients with soft vector-like outlines. High-key, flattering studio lighting. Colors are warm, vibrant, and nostalgic (technicolor simulation).
@@ -554,10 +572,12 @@ Linh Nguyen carrying Fiona O'Sullivan on their back with a strong and steady gri
 ```
 
 ### Sample 2
+
 **Score: 340**
+
 - **Style:** Classic Fantasy Oil
 - **Scene:** **Visual Description:**
-A room of arcane study. Floating books, glowing orbs, and star charts cover the walls. A telescope points out a window.
+  A room of arcane study. Floating books, glowing orbs, and star charts cover the walls. A telescope points out a window.
 
 **Sensory/Atmospheric Details:**
 
@@ -567,6 +587,7 @@ A room of arcane study. Floating books, glowing orbs, and star charts cover the 
 - **Characters:** Jordan Vance, Simone Brooks
 
 **Full Prompt:**
+
 ```
 Rendering
 Traditional oil on canvas. Warm, amber-toned glazes and visible, "lost-and-found" edges. High chiaroscuro contrast. Lighting feels like torchlight or magic-glow against dark, earthy backgrounds.
@@ -648,14 +669,17 @@ A room of arcane study. Floating books, glowing orbs, and star charts cover the 
 Jordan Vance and Simone Brooks backlit by the warm, golden glow of a setting sun, both in dreamy and relaxed poses with hair catching the light to create a luminous and atmospheric mood.
 ```
 
-
 ---
+
 ## LOW (150-300)
+
 ### Sample 1
+
 **Score: 250**
+
 - **Style:** Sports Action: "Frozen Velocity"
 - **Scene:** **Visual Description:**
-An elegant dining room with white tablecloths and sparkling glassware. The layout suggests intimacy, with booths separated by frosted glass or low partitions.
+  An elegant dining room with white tablecloths and sparkling glassware. The layout suggests intimacy, with booths separated by frosted glass or low partitions.
 
 **Sensory/Atmospheric Details:**
 
@@ -665,6 +689,7 @@ An elegant dining room with white tablecloths and sparkling glassware. The layou
 - **Characters:** Amira Khalil, Camila Vargas, Chiara Lombardi
 
 **Full Prompt:**
+
 ```
 Rendering
 High-speed sports photography aesthetic. Simulates a telephoto lens (200mm-400mm) with a wide aperture (f/2.8) and a rapid shutter speed (1/2000s) to freeze motion or slow-shutter panning to create directional blur streaks. High contrast "Stadium" lighting with sharp, harsh shadows or bright, overcast outdoor diffusion.
@@ -698,7 +723,7 @@ An elegant dining room with white tablecloths and sparkling glassware. The layou
 **Appearance:**
 * **Body:** Soft Classic frame; wave-type softness; balanced hourglass proportions; moderate-to-tall vertical line; composed feminine presence.
 * **Face:** Balanced classical facial structure; oval-to-heart face; soft plush cheeks; large expressive eyes; refined nose bridge; serene neutral resting expression.
-* **Hair / Covering:** Hair fully covered; hijab as constant identity anchor; smooth controlled drape with clean facial framing.
+* **Hair / Covering:** Hair fully covered; hijab as constant core identity feature; smooth controlled drape with clean facial framing.
 * **Skin:** Warm olive-toned skin with soft luminous finish.
 **Outfit:**
 - **Hijab:** Black tight wrap integrated with face mask.
@@ -771,10 +796,12 @@ Gracefully using the right hand to adjust the flowing fabric of a sari over the 
 ```
 
 ### Sample 2
+
 **Score: 150**
+
 - **Style:** Emirichu Animation Style
 - **Scene:** **Visual Description:**
-The classic cyberpunk trope. A rain-slicked alley crowded with holographic ads and steam vents.
+  The classic cyberpunk trope. A rain-slicked alley crowded with holographic ads and steam vents.
 
 **Sensory/Atmospheric Details:**
 
@@ -784,6 +811,7 @@ The classic cyberpunk trope. A rain-slicked alley crowded with holographic ads a
 - **Characters:** Callum Doherty, Aryan Kapoor
 
 **Full Prompt:**
+
 ```
 Rendering
 Clean digital vector illustration with flat cel-shading. Smooth, anti-aliased line art with consistent medium-weight outlines. Minimal shading using one to two tones per area for subtle depth while maintaining a 2D animation aesthetic. Soft gradients only where needed. Even, friendly lighting creating a warm, inviting atmosphere. Bright, cheerful color palette with pastel undertones and well-balanced saturated hues that pop without overwhelming. Colors are vibrant but harmonious, never harsh.
@@ -860,14 +888,17 @@ The classic cyberpunk trope. A rain-slicked alley crowded with holographic ads a
 Callum Doherty and Aryan Kapoor overlooking a vast expanse of city lights from a high rooftop, wind blowing through their hair in a moment of shared and heart-stoppingly emotional romantic connection.
 ```
 
-
 ---
+
 ## CLASH (<150)
+
 ### Sample 1
+
 **Score: 40**
+
 - **Style:** Watercolor Impressionistic
 - **Scene:** **Visual Description:**
-Rows of books creating private aisles. A study carrel sits by a window. It is a place of silence.
+  Rows of books creating private aisles. A study carrel sits by a window. It is a place of silence.
 
 **Sensory/Atmospheric Details:**
 
@@ -877,6 +908,7 @@ Rows of books creating private aisles. A study carrel sits by a window. It is a 
 - **Characters:** Chiara Lombardi, Sophie Summers, Malik Farrah, Callum Doherty
 
 **Full Prompt:**
+
 ```
 Rendering
 Wet-on-wet traditional watercolor simulation. Pigment pooling, paper grain texture, and natural capillary bleeding edges. High-key lighting with white paper negative space used for highlights. Colors are transparent and layered, lacking harsh black outlines. Inspired by **Agnes Cecile** and **David Mack**.
@@ -1006,10 +1038,12 @@ Chiara Lombardi, Sophie Summers, Malik Farrah, and Callum Doherty standing in a 
 ```
 
 ### Sample 2
+
 **Score: 0**
+
 - **Style:** Anime Style: "Dynamic Cel-Shaded"
 - **Scene:** **Visual Description:**
-A basement venue with low ceilings and excellent acoustics. Patrons sit at small round tables focused on the small stage where the band plays.
+  A basement venue with low ceilings and excellent acoustics. Patrons sit at small round tables focused on the small stage where the band plays.
 
 **Sensory/Atmospheric Details:**
 
@@ -1019,6 +1053,7 @@ A basement venue with low ceilings and excellent acoustics. Patrons sit at small
 - **Characters:** Ines Santos
 
 **Full Prompt:**
+
 ```
 Rendering
 High-resolution vector-style illustration. Sharp, non-aliased distinct line art. Coloring uses "hard shading" (clear separation between light and dark) with minimal gradients. Colors are highly saturated and distinct.
@@ -1074,6 +1109,5 @@ A basement venue with low ceilings and excellent acoustics. Patrons sit at small
 Right hand raised in a graceful and controlled "royal wave" gesture, wrist moving with elegant precision, head held high with a dignified and regal expression.
 ---
 ```
-
 
 ---

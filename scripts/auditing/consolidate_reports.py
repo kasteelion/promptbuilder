@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 
 # Add project root to path
-PROJECT_ROOT = Path(__file__).parent.parent
+PROJECT_ROOT = Path(__file__).parent.parent.parent
 REPORT_DIR = PROJECT_ROOT / "auditing" / "reports"
 
 def get_report_content(filename):
@@ -12,6 +12,18 @@ def get_report_content(filename):
     if path.exists():
         return path.read_text(encoding="utf-8")
     return None
+
+def safe_float(v):
+    try:
+        return float(str(v).strip('%'))
+    except (ValueError, TypeError):
+        return 0.0
+
+def safe_int(v):
+    try:
+        return int(str(v).replace(',', ''))
+    except (ValueError, TypeError):
+        return 0
 
 def extract_dashboard_metrics():
     """Extract metrics from static_integrity and hub_connectivity for the master dashboard."""
@@ -76,14 +88,20 @@ def consolidate():
         f.write("|---|---|---|\n")
         
         # Color coding status
-        assets_val = metrics["Total Assets"]
-        fail_val = metrics["Failure Rate"].strip('%')
-        fail_status = "🔴 ACTION REQUIRED" if float(fail_val or 0) > 10 else "🟡 CAUTION" if float(fail_val or 0) > 5 else "🟢 HEALTHY"
+        fail_val = metrics["Failure Rate"]
+        f_val = safe_float(fail_val)
+        fail_status = "🔴 ACTION REQUIRED" if f_val > 10 else "🟡 CAUTION" if f_val > 5 else "🟢 HEALTHY"
         
         f.write(f"| **Content Quality** | {metrics['Failure Rate']} Failure Rate | {fail_status} |\n")
-        f.write(f"| **Data Integrity** | {metrics['Integrity Errors']} Logic / {metrics['Media Errors']} Media | {'🔴 ERROR' if int(metrics['Integrity Errors'])+int(metrics['Media Errors']) > 0 else '🟢 OK'} |\n")
-        f.write(f"| **Thematic Reach** | {metrics['Established Hubs']} Strong Hubs / {metrics['Weak Hubs']} Potential | {'🟢 GOOD' if int(metrics['Established Hubs']) > 10 else '🟡 LOW DIVERSITY'} |\n")
-        f.write(f"| **Char Accessibility** | {metrics['Characters with 0 Hubs']} Isolated Characters | {'🔴 RE-TAG NEEDED' if int(metrics['Characters with 0 Hubs']) > 0 else '🟢 OK'} |\n")
+        
+        err_count = safe_int(metrics['Integrity Errors']) + safe_int(metrics['Media Errors'])
+        f.write(f"| **Data Integrity** | {metrics['Integrity Errors']} Logic / {metrics['Media Errors']} Media | {'🔴 ERROR' if err_count > 0 else '🟢 OK'} |\n")
+        
+        strong_hubs = safe_int(metrics['Established Hubs'])
+        f.write(f"| **Thematic Reach** | {metrics['Established Hubs']} Strong Hubs / {metrics['Weak Hubs']} Potential | {'🟢 GOOD' if strong_hubs > 10 else '🟡 LOW DIVERSITY'} |\n")
+        
+        isolated = safe_int(metrics['Characters with 0 Hubs'])
+        f.write(f"| **Char Accessibility** | {metrics['Characters with 0 Hubs']} Isolated Characters | {'🔴 RE-TAG NEEDED' if isolated > 0 else '🟢 OK'} |\n")
         
         f.write("\n---\n\n")
         

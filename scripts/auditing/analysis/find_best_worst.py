@@ -3,7 +3,7 @@ import glob
 import statistics
 
 def find_best_worst():
-    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
     prompts_dir = os.path.join(project_root, "output", "prompts")
     
     if not os.path.exists(prompts_dir):

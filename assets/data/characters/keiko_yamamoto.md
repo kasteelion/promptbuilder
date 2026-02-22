@@ -1,7 +1,7 @@
 ### Keiko Yamamoto
 **Photo:** keiko_yamamoto_photo.png
 
-**Tags:** Female, Athletic, Creative, Edgy, Intense, Japanese, Sharp
+**Tags:** Female, Athletic, Creative, Edgy, Intense, Japanese, Sharp, Casual, Sport, Action, Noir, Urban, Work
 **Summary:** Sharp and rebellious, Keiko channels creative intensity through deliberate edge. Her athletic build and focused gaze give her an air of controlled defiance—artistic, disciplined, and unapologetically bold.
 
 **Gender:** F

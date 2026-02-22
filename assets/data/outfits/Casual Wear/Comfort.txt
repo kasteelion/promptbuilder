@@ -1,3 +1,4 @@
+Tags: Casual Wear, Everyday
 modifiers:
   Lazy: in **oversized grey marl**
   Luxe: in **pure cashmere beige**

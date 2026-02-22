@@ -2,7 +2,7 @@
 
 **Photo:** talia_levi_photo.png
 
-**Tags:** Female, Commanding, Edgy, Israeli, Mediterranean
+**Tags:** Female, Commanding, Edgy, Israeli, Mediterranean, Noir, Intimate, Casual, Sci-Fi
 
 **Summary:** Talia commands attention through unapologetic sensuality and magnetic presence. Her confidence is body-forward and deliberate, moving through space with the kind of self-possession that makes people pause mid-conversation. There's nothing performative about her allure—it's simply who she is, worn as naturally as sun-warmed skin.
 

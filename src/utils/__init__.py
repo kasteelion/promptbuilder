@@ -20,7 +20,7 @@ from .scene_templates import get_template_names as get_scene_template_names
 from .style_templates import get_template as get_style_template
 from .style_templates import get_template_description as get_style_template_description
 from .style_templates import get_template_names as get_style_template_names
-from .tooltip import create_tooltip
+
 from .undo_manager import UndoManager
 from .validation import (
     sanitize_filename,
@@ -33,7 +33,6 @@ from .validation import (
 __all__ = [
     "UndoManager",
     "PreferencesManager",
-    "create_tooltip",
     "PresetManager",
     "logger",
     "setup_logger",

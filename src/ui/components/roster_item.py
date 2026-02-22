@@ -39,7 +39,7 @@ class RosterItem(ft.Container):
         )
         
         self._refs["summary"] = ft.Text(
-            self.app.state.get_character_summary(self.idx),
+            self.app.character_logic.get_character_summary(self.idx),
             size=11, color=ThemeManager.colors["text_secondary"],
             visible=not self.char_data.get("_expanded", True),
             no_wrap=True, overflow=ft.TextOverflow.ELLIPSIS
@@ -159,11 +159,12 @@ class RosterItem(ft.Container):
         
         footer = ft.Row([
             ft.Row([
-                 ft.IconButton(ft.Icons.ARROW_UPWARD, icon_size=18, on_click=lambda _: self.app.state.move_character(self.idx, -1) or self.app.refresh_roster(), tooltip="Move Up"),
-                 ft.IconButton(ft.Icons.ARROW_DOWNWARD, icon_size=18, on_click=lambda _: self.app.state.move_character(self.idx, 1) or self.app.refresh_roster(), tooltip="Move Down"),
+                 ft.IconButton(ft.Icons.ARROW_UPWARD, icon_size=18, on_click=lambda _: self.app.character_logic.move_character(self.idx, -1) or self.app.refresh_roster(), tooltip="Move Up"),
+                 ft.IconButton(ft.Icons.ARROW_DOWNWARD, icon_size=18, on_click=lambda _: self.app.character_logic.move_character(self.idx, 1) or self.app.refresh_roster(), tooltip="Move Down"),
             ]),
             ft.Row([
                 self._refs["sig_checkbox"],
+                ft.IconButton(ft.Icons.CHECKROOM, icon_color=ThemeManager.colors["accent"], on_click=lambda _: self.app.open_outfit_builder(character_index=self.idx), tooltip="Edit Outfit"),
                 ft.IconButton(ft.Icons.CASINO, icon_color="amber", on_click=lambda _: self.app.handle_solo_randomize(self.idx), tooltip="Randomize This Character")
             ])
         ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
@@ -259,13 +260,13 @@ class RosterItem(ft.Container):
 
     def handle_outfit_cat_change(self, e):
         new_cat = e.control.value
-        print(f"DEBUG_ROSTER: Cat Change -> {new_cat}")
+
         self.char_data["outfit_category"] = new_cat
         # Default to first outfit
         char_info = self.app.state.ctx.characters.get(self.char_data["name"], {})
         outfits = sorted(char_info.get("outfits_categorized", {}).get(new_cat, {}).keys())
         self.char_data["outfit"] = outfits[0] if outfits else "Base"
-        print(f"DEBUG_ROSTER: New Outfit Default -> {self.char_data['outfit']}")
+
         self.char_data["outfit_traits"] = []
         
         self.surgical_update()
@@ -273,7 +274,7 @@ class RosterItem(ft.Container):
 
     def handle_outfit_preset_change(self, e):
         val = e.control.value
-        print(f"DEBUG_ROSTER: Outfit Change -> {val}")
+
         self.char_data["outfit"] = val
         self.char_data["outfit_traits"] = []
         self.surgical_update() # To rebuild modifiers
@@ -281,7 +282,7 @@ class RosterItem(ft.Container):
 
     def handle_pose_cat_change(self, e):
         val = e.control.value
-        print(f"DEBUG_ROSTER: Pose Cat -> {val}")
+
         self.char_data["pose_category"] = val
         
         # Pick default preset
@@ -293,7 +294,7 @@ class RosterItem(ft.Container):
 
     def handle_pose_preset_change(self, e):
         val = e.control.value
-        print(f"DEBUG_ROSTER: Pose Preset -> {val}")
+
         self.char_data["pose_preset"] = val
         if self.on_update_callback: self.on_update_callback()
 
@@ -316,8 +317,6 @@ class RosterItem(ft.Container):
         self.surgical_update() # Rebuild chips
         if self.on_update_callback: self.on_update_callback()
 
-    # --- Surgical Update ---
-
     def _supports_color_scheme(self):
         """Check if current outfit supports color substitution."""
         char_info = self.app.state.ctx.characters.get(self.char_data["name"], {})
@@ -339,7 +338,7 @@ class RosterItem(ft.Container):
 
     def handle_color_scheme_change(self, e):
         val = e.control.value
-        print(f"DEBUG_ROSTER: Scheme Change -> {val}")
+
         self.char_data["color_scheme"] = val
         if self.on_update_callback: self.on_update_callback()
 
@@ -354,7 +353,7 @@ class RosterItem(ft.Container):
         self._refs["toggle_icon"].name = ft.Icons.KEYBOARD_ARROW_DOWN if expanded else ft.Icons.KEYBOARD_ARROW_RIGHT
         
         self._refs["summary"].visible = not expanded
-        self._refs["summary"].value = self.app.state.get_character_summary(self.idx)
+        self._refs["summary"].value = self.app.character_logic.get_character_summary(self.idx)
         
         self._refs["detail_container"].visible = expanded
         

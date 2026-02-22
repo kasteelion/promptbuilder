@@ -1,5 +1,43 @@
 # Changelog
 
+## [0.9.0] – 2026-02-21
+
+### Added
+
+- **Automation Dialog:** Stop button to halt background generation mid-run.
+- **Output Gallery:** Refresh, Open Folder, and Delete buttons for better file management.
+- **Console Theme Support:** Console section now responds to theme switching via `ThemeManager`.
+- **Gallery Theme Support:** Gallery section now updates header text and count label on theme change.
+- **Outfit Builder Dialog:** New dialog for assembling outfits from templates with variable interpolation.
+- **Asset Editor Dialog:** New dialog for editing character assets directly within the app.
+- **Import Text Dialog:** New dialog for importing prompt configurations from raw text.
+- **Debouncer Utility:** 300ms debounce for sidebar text fields to reduce unnecessary updates.
+- **Character Logic Module:** Extracted character lifecycle logic into dedicated `CharacterLogic` class.
+
+### Fixed
+
+- **Critical: Bearing parser bug** — `bearing` field was present in all 82 character files but never extracted by the parser. Root cause: regex lookahead `(?:\n\s*\*\*|$)` couldn't match `//` comments or `---` dividers that follow the field. Fixed all three Tier-3 field regexes (`_BEARING_RE`, `_VIBE_RE`, `_AGE_PRESENTATION_RE`).
+- **TypedDict sync** — Added missing `age_presentation`, `vibe`, and `bearing` fields to `CharacterData` in `definitions.py`.
+- **Missing type imports** — Added `List`, `Dict`, `Any` imports to `interaction_logic.py`.
+- **Duplicate config** — Removed duplicate `DEFAULT_THEME = "Dark"` assignment in `config.py`.
+- **Stale welcome message** — Updated `WELCOME_MESSAGE` to reference Flet features instead of removed Tkinter shortcuts (Ctrl+Z/Y, Alt+R, right-click).
+- **Toolbar layout** — Changed `MainAxisAlignment.START` to `SPACE_BETWEEN` so action buttons spread across the toolbar.
+- **Automation performance** — Controller now reuses app's cached `builder` and `randomizer` instead of re-reading 12 files from disk per generation.
+- **Deprecated widgets** — Replaced `ft.ElevatedButton` with `ft.FilledButton` across dialogs.
+
+### Removed
+
+- **Debug prints** — Removed 8 active `DEBUG_ROSTER`, `DEBUG_CLICK` prints from UI components.
+- **Duplicate comment** — Removed duplicate `# --- Surgical Update ---` block in `roster_item.py`.
+
+### Changed
+
+- **Character data** — Updated 82 character files with refined descriptions, tags, and outfit definitions.
+- **Standards** — Updated `CHARACTER_STANDARDS.md`, `OUTFIT_STANDARDS.md`, `POSE_STANDARDS.md`, `SCENE_STANDARDS.md`.
+- **Outfits** — Updated 38 shared outfit template files across Athletics, Casual, Fantasy, and other categories.
+
+---
+
 ## [Unreleased]
 
 ### Refactored

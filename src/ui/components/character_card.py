@@ -112,7 +112,6 @@ def create_character_card(char_name: str, char_data: dict, on_click_callback, is
     ]) if selection_badge else content_col
     
     def on_click_wrapper(e):
-        print(f"DEBUG_CLICK: Card clicked for {char_name}")
         on_click_callback(char_name)
 
     return ft.Container(

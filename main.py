@@ -9,11 +9,12 @@ from typing import Dict, Any, List
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
-from core.app_context import AppContext
+
 from core.builder import PromptBuilder
 from utils import logger
 from core.flet_theme_manager import ThemeManager
 from logic.interaction_logic import InteractionLogic
+from logic.character_logic import CharacterLogic
 
 # Modular UI Sections
 from ui.sections.toolbar import ToolbarSection
@@ -36,6 +37,7 @@ class FletPromptBuilder:
         # Initialize Logic
         self.state = AppState(page)
         self.interaction_logic = InteractionLogic(self.state)
+        self.character_logic = CharacterLogic(self.state.ctx, self.state.state)
         
         # Initialize Theme
         ThemeManager.apply_theme(self.page, "Dark")
@@ -43,15 +45,7 @@ class FletPromptBuilder:
         self.build_ui()
         self.load_initial_data()
 
-    def build_ui(self):
-        # Instantiate Modular Sections
-        self.toolbar = ToolbarSection(self)
-        self.gallery = GallerySection(self)
-        self.roster = RosterSection(self)
-        self.sidebar = SidebarSection(self)
-        self.console = ConsoleSection(self)
-        self.dashboard = DashboardSection(self)
-        
+
     def build_ui(self):
         # Instantiate Modular Sections
         self.toolbar = ToolbarSection(self)
@@ -77,17 +71,22 @@ class FletPromptBuilder:
         # Overlay
         self.page.overlay.append(self.dashboard)
         
-        # self.page.on_click = lambda e: print(f"DEBUG_EVENT: PAGE_CLICK at ({e.page_x}, {e.page_y})")
+
 
     def load_initial_data(self):
         def _task():
-            self.state.load_data()
-            self.sidebar.populate_data()
-            self.gallery.refresh()
-            self.refresh_roster()
-            self.update_preview()
-            self.page.update()
-            
+            try:
+                self.state.load_data()
+                # Update UI components without triggering redundant page updates
+                self.sidebar.populate_data()
+                self.gallery.refresh(update_ui=False)
+                self.roster.refresh(update_ui=False)
+                
+                # Finalize with a single update
+                self.update_preview() 
+                # self.page.update() is handled in update_preview
+            except Exception as e:
+                logger.error(f"Error loading initial data: {e}")
             
         threading.Thread(target=_task, daemon=True).start()
 
@@ -95,38 +94,18 @@ class FletPromptBuilder:
         """Reload all data from assets directory."""
         self.state.refresh_data()
         self.sidebar.populate_data()
-        self.gallery.refresh()
-        self.refresh_roster()
+        self.gallery.refresh(update_ui=False)
+        self.roster.refresh(update_ui=False)
         self.update_preview()
-        self.page.update()
         self.show_toast("Assets Refreshed!", color="green")
 
     # --- Actions ---
-    
-    def handle_copy(self, e=None):
-        prompt = self.state.get_prompt()
-        if prompt:
-            try:
-                # Try standard method
-                self.page.set_clipboard(prompt)
-            except AttributeError:
-                # Fallback for some versions
-                try:
-                    self.page.clipboard = prompt
-                    self.page.update()
-                except Exception:
-                    self.show_toast("Clipboard not supported.", color="red")
-                    return
-            
-            self.show_toast("Prompt copied to clipboard!", color="green")
-        else:
-            self.show_toast("No prompt to copy!", color="orange")
 
     # --- Proxy Methods for Modular Sections ---
     
     def add_character(self, name):
         """Toggle character in roster."""
-        self.state.add_character(name)
+        self.character_logic.toggle_character(name)
         self.refresh_roster()
         self.gallery.refresh() # Update selection status in gallery
         self.update_preview()
@@ -198,7 +177,6 @@ class FletPromptBuilder:
             self.sidebar.populate_data()
             self.refresh_roster()
             self.update_preview()
-            self.page.update()
 
     def clear_all_characters(self):
         self.state.state["selected_characters"] = []
@@ -233,7 +211,7 @@ class FletPromptBuilder:
         if hasattr(self, 'gallery'): self.gallery.refresh_theme()
         if hasattr(self, 'roster'): self.roster.refresh_theme()
         if hasattr(self, 'sidebar'): self.sidebar.refresh_theme()
-        # Console usually inherits via basic props, or could add refresh if needed
+        if hasattr(self, 'console'): self.console.refresh_theme()
         
         self.show_toast(f"Theme set to: {theme_name}") 
         self.page.update()
@@ -245,7 +223,7 @@ class FletPromptBuilder:
         self.set_theme(new_theme)
 
     def open_automation_dialog(self, e=None):
-        print(f"DEBUG: Opening Automation Dialog. Flet Version: {getattr(ft, 'version', 'unknown')}")
+
         try:
             from ui.dialogs.automation_dialog import AutomationDialog
             dlg = AutomationDialog(self)
@@ -253,27 +231,64 @@ class FletPromptBuilder:
             # Try new Flet API (0.21+)
             if hasattr(self.page, "open"):
                 self.page.open(dlg)
-                print("DEBUG: Used page.open(dlg)")
+
             else:
                 # Fallback: Use Overlay (often more reliable than page.dialog in some versions)
                 self.page.overlay.append(dlg)
                 dlg.open = True
                 self.page.update()
-                print("DEBUG: Used page.overlay.append(dlg) + open=True")
+
                 
         except Exception as err:
-            print(f"ERROR: Failed to open dialog: {err}")
+            logger.error(f"Failed to open dialog: {err}")
             self.show_toast(f"Error opening automation: {err}", color="red")
 
     # Stub implementations
+    def open_import_from_text(self, e=None):
+        try:
+            from ui.dialogs.import_text_dialog import ImportTextDialog
+            dlg = ImportTextDialog(self)
+            self._open_dialog(dlg)
+        except Exception as err:
+            self.show_toast(f"Error opening Import Dialog: {err}", color="red")
+
+    def open_asset_editor(self, e=None):
+        try:
+
+            from ui.dialogs.asset_editor_dialog import AssetEditorDialog
+            dlg = AssetEditorDialog(self)
+            self._open_dialog(dlg)
+        except Exception as err:
+            import traceback
+            traceback.print_exc()
+            self.show_toast(f"Error opening Asset Editor: {err}", color="red")
+
+    def open_outfit_builder(self, e=None, character_index=None):
+        try:
+
+            from ui.dialogs.outfit_builder_dialog import OutfitBuilderDialog
+            # character_index=None means global browse mode
+            dlg = OutfitBuilderDialog(self, character_index=character_index)
+            self._open_dialog(dlg)
+        except Exception as err:
+            import traceback
+            traceback.print_exc()
+            self.show_toast(f"Error opening Outfit Builder: {err}", color="red")
+
+    def _open_dialog(self, dlg):
+        if hasattr(self.page, "open"):
+            self.page.open(dlg)
+        else:
+            self.page.overlay.append(dlg)
+            dlg.open = True
+            self.page.update()
+
     def open_llm_export(self, e=None): self.show_toast("LLM Export: Coming Soon!")
-    def open_import_from_text(self, e=None): self.show_toast("Import: Coming Soon!")
     def open_llm_content_guide(self, e=None): self.show_toast("Content Guide: Coming Soon!")
-    def open_asset_editor(self, e=None): self.show_toast("Asset Editor: Coming Soon!")
     def open_settings(self, e=None): self.show_toast("Settings: Use Sidebar for configuration.")
     
     def open_output_gallery(self, e=None):
-        print("DEBUG: Opening Premium Output Gallery")
+
         try:
             from ui.dialogs.output_gallery import OutputGalleryDialog
             dlg = OutputGalleryDialog(self)
@@ -285,7 +300,7 @@ class FletPromptBuilder:
                 dlg.open = True
                 self.page.update()
         except Exception as err:
-            print(f"ERROR: Failed to open gallery: {err}")
+            logger.error(f"Failed to open gallery: {err}")
             # Fallback to file explorer if something breaks
             self.show_toast(f"Gallery Error, opening folder instead...", color="orange")
             output_dir = os.path.join(os.getcwd(), "output", "images", "generated_images")
@@ -345,7 +360,7 @@ class FletPromptBuilder:
                     self.show_toast("Prompt copied to clipboard!", color="green")
                     return
                 except Exception:
-                    print("DEBUG: set_clipboard failed")
+                    pass
 
             # Method 2: Windows native 'clip' command
             import subprocess
@@ -354,7 +369,7 @@ class FletPromptBuilder:
                 self.show_toast("Prompt copied (Windows Native)!", color="green")
                 return
             except Exception as err:
-                 print(f"DEBUG: Windows clip failed: {err}")
+                pass
 
             self.show_toast("Clipboard copy failed. Check console.", color="red")
         else:
@@ -409,6 +424,8 @@ class FletPromptBuilder:
 
 def main(page: ft.Page):
     FletPromptBuilder(page)
+
+
 
 
 

@@ -2,7 +2,7 @@
 
 **Photo:** diego_morales_photo.png
 
-**Tags:** Male, Approachable, Athletic, Californian, Casual, Creative, Minimalist, Tan
+**Tags:** Male, Approachable, Athletic, Californian, Casual, Creative, Minimalist, Tan, Vintage, Retro, Sci-Fi, Sport, Noir, Work
 **Summary:** Diego carries a relaxed charisma that feels both creative and inviting. His athleticism is softened by warmth and humor, giving him an approachable presence that naturally draws people in without effort. A digital designer by trade and a surfer by habit, he embodies the laid-back intensity of his Southern California roots. His workspace is as clean as his surfing lines, focused on functional beauty and meaningful connections. He's the guy who remembers everyone's name and always knows where the best coffee is.
 
 **Gender:** M

@@ -1,7 +1,7 @@
 ### Suki Nakamura
 **Photo:** suki_nakamura_photo.png
 
-**Tags:**   Female, Chic, Commanding, Creative, Ethereal, Geometric, Japanese, Minimalist
+**Tags:** Female, Chic, Commanding, Creative, Ethereal, Geometric, Japanese, Minimalist, Vintage, Retro, Sci-Fi, Noir, Urban
 
 **Summary:** Suki moves through space like a living art installation—deliberate, considered, and quietly captivating. Her minimalist aesthetic and controlled movement create an almost sculptural presence. She balances avant-garde fashion sensibility with approachable warmth, making the experimental feel accessible.
 

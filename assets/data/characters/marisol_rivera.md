@@ -2,7 +2,7 @@
 
 **Photo:** marisol_rivera_photo.png
 **Summary:** Marisol blends athletic precision with island warmth, embodying her Japanese-Puerto Rican heritage in every controlled movement. Her signature coral aesthetic and beach-inspired style reflect a life lived between Pacific discipline and Caribbean rhythm. She moves with the composed grace of Japanese martial arts tradition softened by Puerto Rican expressiveness, creating a unique fusion of cultures that's entirely her own.
-**Tags:** Female, Athletic, Bandana, Beach-Aesthetic, Chic, Controlled, Coral-Signature, Cultural, Fusion, Minimalist, Mixed-Heritage
+**Tags:** Female, Athletic, Bandana, Beach-Aesthetic, Chic, Controlled, Coral-Signature, Cultural, Fusion, Minimalist, Mixed-Heritage, Sport, Noir, Work
 **Gender:** F
 **Signature Color:** #FF7F50
 

@@ -1,7 +1,7 @@
 ### Maki Cruz
 **Photo:** maki_cruz_photo.png
 
-**Tags:** Female, Athletic, Commanding, Edgy, Filipino, Intellectual, Minimalist, Rugged
+**Tags:** Female, Athletic, Commanding, Edgy, Filipino, Intellectual, Minimalist, Rugged, Casual, Sci-Fi, Sport, Noir, Urban
 **Summary:** Maki embodies street skate culture with technical precision and effortless style. Her Filipino heritage shows in her grounded confidence and community-oriented approach to skating. She moves with the controlled looseness of someone who's bailed a thousand times and gotten back up—baggy clothes hiding elite-level board control and spatial awareness.
 **Gender:** F
 **Signature Color:** #2F4F4F

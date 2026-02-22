@@ -1,4 +1,5 @@
 import random
+from typing import Dict, Any, List
 from utils.color_scheme import parse_color_schemes, substitute_colors
 
 class InteractionLogic:

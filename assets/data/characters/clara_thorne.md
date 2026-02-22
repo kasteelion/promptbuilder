@@ -2,7 +2,7 @@
 
 **Photo:** clara_thorne_photo.png
 
-**Tags:** Female, Caucasian, Studious, Feminine, Classic, Observant, Composed, Intelligent, Petite, Casual, Work
+**Tags:** Female, Caucasian, Studious, Feminine, Classic, Observant, Composed, Intelligent, Petite, Casual, Work, Vintage, Retro, Social, Urban
 
 **Summary:** Clara is a poised, intelligent young woman who seamlessly blends academic focus with classic feminine charm. She projects an air of thoughtful observation and timeless style, embodying a "Petite Soft Classic" aesthetic. With her inquisitive gaze and composed bearing, she represents a modern intellectual who values both rigor and a refined, ladylike presentation.
 

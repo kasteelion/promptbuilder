@@ -2,7 +2,7 @@
 
 Encapsulates the logic for generating prompts and/or images using
 the AI Studio automation client while providing progress updates
-compatible with a Tkinter UI.
+compatible with the Flet UI.
 """
 
 import asyncio
@@ -12,15 +12,14 @@ import queue
 from typing import List, Callable, Dict, Any
 
 from utils.ai_client import AIStudioClient
-from logic.data_loader import DataLoader
-from logic.randomizer import PromptRandomizer
-from core.builder import PromptBuilder
+
 
 class AutomationController:
     """Manages background automation tasks."""
 
-    def __init__(self, ctx):
+    def __init__(self, ctx, app_state=None):
         self.ctx = ctx
+        self.app_state = app_state  # AppState has .builder
         self.stop_requested = False
         self._thread = None
         self._loop = None
@@ -39,14 +38,15 @@ class AutomationController:
         include_scene: bool = True,
         include_notes: bool = True,
         candidates: int = 3,
-        forced_characters: List[str] = None
+        forced_characters: List[str] = None,
+        forced_scenario: str = None
     ):
         """Start the generation process in a background thread."""
         self.stop_requested = False
         self._thread = threading.Thread(
             target=self._run_thread,
             args=(count, match_outfits_prob, prompts_only, on_progress, on_complete, on_error, 
-                  fixed_prompt, num_characters, include_scene, include_notes, candidates, forced_characters),
+                  fixed_prompt, num_characters, include_scene, include_notes, candidates, forced_characters, forced_scenario),
             daemon=True
         )
         self._thread.start()
@@ -56,7 +56,7 @@ class AutomationController:
         self.stop_requested = True
 
     def _run_thread(self, count, match_outfits_prob, prompts_only, on_progress, on_complete, on_error, 
-                    fixed_prompt, num_characters, include_scene, include_notes, candidates, forced_characters):
+                    fixed_prompt, num_characters, include_scene, include_notes, candidates, forced_characters, forced_scenario):
         """Worker thread entry point."""
         try:
             self._loop = asyncio.new_event_loop()
@@ -64,11 +64,9 @@ class AutomationController:
             
             results = self._loop.run_until_complete(
                 self._generate_task(count, match_outfits_prob, prompts_only, on_progress, 
-                                    fixed_prompt, num_characters, include_scene, include_notes, candidates, forced_characters)
+                                    fixed_prompt, num_characters, include_scene, include_notes, candidates, forced_characters, forced_scenario)
             )
             
-            # Use after() or queue to call on_complete back on main thread if needed,
-            # but for now we'll assume the caller handles thread safety.
             if not self.stop_requested:
                 on_complete(results)
                 
@@ -89,7 +87,8 @@ class AutomationController:
         include_scene: bool = True,
         include_notes: bool = True,
         candidates: int = 3,
-        forced_characters: List[str] = None
+        forced_characters: List[str] = None,
+        forced_scenario: str = None
     ) -> List[Dict[str, Any]]:
         """Internal task that handles the logic."""
         prompts_with_meta = []
@@ -100,19 +99,14 @@ class AutomationController:
                 "score": 100
             })
         else:
-            on_progress(0, count, "Loading data and randomizing prompts...")
-            loader = DataLoader()
-            chars = loader.load_characters()
-            base_prompts = loader.load_base_prompts()
-            poses = loader.load_presets("poses.md")
-            scenes = loader.load_presets("scenes.md")
-            schemes = loader.load_color_schemes()
-            modifiers = loader.load_modifiers()
-            interactions = loader.load_interactions()
-            framing = loader.load_framing()
-            
-            builder = PromptBuilder(chars, base_prompts, poses, schemes, modifiers, framing)
-            randomizer = PromptRandomizer(chars, base_prompts, poses, scenes, interactions, schemes, modifiers, framing)
+            on_progress(0, count, "Randomizing prompts...")
+
+            # Reuse already-loaded data from the application context
+            builder = self.app_state.builder if self.app_state else None
+            randomizer = self.ctx.randomizer
+
+            if not builder or not randomizer:
+                raise RuntimeError("Builder or Randomizer not initialized. Load data first.")
             
             for i in range(count):
                 if self.stop_requested:
@@ -125,7 +119,8 @@ class AutomationController:
                     include_notes=include_notes,
                     match_outfits_prob=match_outfits_prob,
                     candidates=candidates,
-                    forced_characters=forced_characters
+                    forced_characters=forced_characters,
+                    forced_scenario=forced_scenario
                 )
                 prompt_text = builder.generate(config)
                 prompts_with_meta.append({
@@ -135,20 +130,13 @@ class AutomationController:
                 })
 
         if self.stop_requested or prompts_only:
-            # If prompts-only, we should still save them if requested, 
-            # but let's see how integrate with ai_studio_client.
-            # Actually, automate_generation.py has save_local_generation logic.
-            # Let's keep it simple here and just return objects.
             return prompts_with_meta
 
         # 2. Browser Automation (Slow)
-        # We need a progress wrapper to pass to AIStudioClient
         def client_progress_shim(current, total, message):
             if not self.stop_requested:
                 on_progress(current, total, message)
 
-        # Setup paths (similar to automate_generation.py)
-        # We use parent dir logic (src/logic -> src -> root)
         base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         output_dir = os.path.join(base_dir, "output", "images", "generated_images")
         user_data_dir = os.path.join(base_dir, ".config", "chrome_profile")
@@ -161,7 +149,6 @@ class AutomationController:
         
         batch_prompts = [f"Generate an image of: {p['prompt']}" for p in prompts_with_meta]
         
-        # This will run in the background thread's loop
         results = await client.generate_images(batch_prompts, progress_callback=client_progress_shim)
         
         # Merge results

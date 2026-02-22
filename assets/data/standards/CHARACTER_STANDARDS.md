@@ -1,76 +1,89 @@
-# Character Definition Standards
+# Character Definition Standards: The "Tier-based Identity" Model
 
-To ensure consistent, high-fidelity character generation, all character files must adhere to the **Elite Character Standard**. This models the character not just as a visual description, but as a structured entity with physical, stylistic, and personality dimensions.
+To ensure consistent, high-fidelity character generation while honoring the **Attention Budget**, all character assets must adhere to these standards.
 
-## File Structure
+## 1. The Core Goal: Modularity
 
-### 1. Header Metadata
+The primary purpose of these standards is to create **Portable Characters**. A character should be defined such that they remain recognizable as the same person whether they are in a "Cyberpunk City" or a "Victorian Ballroom."
 
-- **Photo:** `filename.png` (Must exist in `assets/`)
-- **Summary:** A concise 2-3 sentence "elevator pitch" of the character.
-- **Tags:** Comma-separated list. MUST include:
-  - Gender tag (`female`, `male`, `non-binary`)
-  - Ethnicity/Background tag (e.g., `latina`, `japanese`, `celtic`)
-  - Vibe tags (e.g., `athletic`, `intellectual`, `gritty`)
-- **Gender:** Single letter code (`F`, `M`, `N`).
-- **Signature Color:** Hex code (e.g., `#FF4500`).
+- **Identity Persistence:** Core features like hair color, facial features (scars, glasses), and body type must be consistent.
+- **Context Neutrality:** Avoid descriptors that "tie" the character to a specific setting (e.g., don't describe a character as "looking like a gamer" in their core physical description).
 
-### 2. Appearance Section (The "Physical Truth")
-This section MUST be broken down into four distinct bullet points:
+## 2. The Tier-Based Structure
 
-- **Body:** Kibbe body type, flesh quality, vertical line, and specific build details (muscle definition, proportions).
-- **Face:** Facial structure (shape, planes), eye shape/color, nose/mouth details, and resting expression.
-- **Hair:** Type (1A-4C), density, cut/style, texture/finish, and color.
-- **Skin:** Undertone (warm/cool/olive), texture/finish, and unique details (freckles, scars).
+To ensure modularity and high-fidelity, use the following tier-based organization:
 
-### 3. Personality & Vibe
+### Section 1: Metadata & Traits
 
-- **Age Presentation:** e.g., "Early 20s", "Ageless".
-- **Vibe / Energy:** Keywords describing their presence.
-- **Bearing:** How they move or stand (posture, gait).
+- **Metadata:** Photo, Summary, Tags, Gender, Signature Color.
+- **Traits (The "Toggle" List):** Removable items or accessories that can be toggled on/off (e.g., glasses, piercings, signature hats). If it's permanent, it doesn't belong here.
 
-### 4. Style Notes (Comment Block)
-Use `//` comments to define style rules that guide outfit selection but aren't prompt text.
+### Section 2: Appearance (The Anatomical Core)
 
-- Makeup preferences.
-- Fabric/Material preferences.
-- Cultural markers.
+This section defines the permanent physical truth. Use exactly four bullet points:
 
-### 5. Outfits Section
+- **Body:** Proportions, build (e.g., "Average Hourglass; Soft").
+- **Face:** Structure, eyes, and permanent marks (e.g., "Oval face; tiny mole near lips").
+- **Hair:** Texture, density, and base color.
+- **Skin:** Tone, undertone, and permanent texture (e.g., "Freckled; Luminous").
 
-Must include at least one **#### Base** outfit following the `OUTFIT_STANDARDS.md` schema (Top/Bottom/Footwear/Accessories).
+### Section 3: Vibe & Presence
 
-## Example Entry
+- **Age Presentation:** e.g., "Mid-20s".
+- **Vibe / Energy:** Strategic keywords.
+- **Bearing:** Movement and posture.
+
+### Section 4: Style Notes & Outfits
+
+- **// Style Notes:** Guidance for outfit selection.
+- **Outfits:** Modular blocks following the `OUTFIT_STANDARDS.md`.
+
+## 3. The Winning Standard: The Tokenized Archetype
+
+Based on visual testing, the **Tokenized Archetype** provides the highest precision with the lowest token cost. It combines structural data (Frame/Shape/Flesh) with core identity features.
+
+| Category | Taxonomy / Lexicon                        | Requirement                                     |
+| :------- | :---------------------------------------- | :---------------------------------------------- |
+| **Body** | [Frame] [Shape]; [Flesh]                  | `Average Hourglass; Soft rounded flesh`         |
+| **Face** | [Shape]; [Eye Shape] [Color]; [Nose/Lips] | `Oval; Large almond dark brown eyes; Full lips` |
+| **Hair** | [Type #] [Texture]; [Volume]; [Color]     | `Type 2B Waves; High volume; Dark brown`        |
+| **Skin** | [Tone]; [Undertone]; [Finish]             | `Medium-tan; Warm Golden-Olive; Luminous`       |
+
+## 4. Drafting Rules: The "Sketch Artist" Method
+
+1.  **No Prose:** Eliminate "She has," "With a," or "Looks like."
+2.  **Precision Tokens:** Use specific technical terms (Kibbe Frame, 1A-4C Texture).
+3.  **Core Feature Focus:** Use the **Traits** block for persistent identity markers (scars, tattoos, distinct jewelry).
+
+## Example: Amina Benali (Gold Standard Entry)
 
 ```markdown
-### Name Definition
+### Amina Benali
 
-**Photo:** name.png
-**Summary:** A sharp, agile warrior-scholar.
-**Tags:** Female, Athletic, Intellectual
+**Photo:** amina_benali_photo.png
+**Summary:** A sharp, agile Moroccan-Canadian strategist.
+**Tags:** Female, Moroccan, Athletic, Intellectual
 **Gender:** F
-**Signature Color:** #006400
+**Signature Color:** #C3B1E1
+
+**Traits:**
+
+- **Glasses:** Clear-framed cat-eye glasses.
 
 **Appearance:**
 
-- **Body:** Dramatic Gamine; lean sinewy muscle; compact torso.
-- **Face:** Angular structure; diamond shape; intense focused eyes.
-- **Hair:** Type 2A waves; copper-red; versatile practical braids.
-- **Skin:** Fair neutral; weathered undertone.
+- **Body:** Average Hourglass frame; Soft rounded flesh; 1:7 Proportions.
+- **Face:** Oval-to-heart; Large almond dark brown eyes; Straight refined nose; Tiny freckle near left corner of lips.
+- **Hair:** Type 2B-2C waves; Natural volume; Dark brown; Caramel balayage.
+- **Skin:** Medium-tan; Warm Golden-Olive; Luminous finish.
 
-**Age Presentation:** 20s.
-**Vibe / Energy:** Vigilant, Precise.
-**Bearing:** Poised, economical movement.
+**Age Presentation:** Mid-20s.
+**Vibe / Energy:** Engaging, Strategic, Camera-Aware Confidence.
+**Bearing:** Excellent upright posture; animated hand gestures.
 
-// Style Notes
-// - Minimal makeup
-// - Functional layers
-
----
-
-**Outfits:**
-
-#### Base
-
-- **Top:** ...
+// Style Notes:
+// - Prefers cozy-cute aesthetics and pastel tones like lavender and sage.
 ```
+
+> [!TIP]
+> Think of each bullet as a **layer** in a sketch. The artist (or AI) needs the structure (Kibbe/Face Shape) before the decoration (Balayage/Glow).

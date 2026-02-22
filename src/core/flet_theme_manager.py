@@ -30,12 +30,11 @@ class ThemeManager:
     @classmethod
     def get_themes(cls):
         if cls._themes is None:
-            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            # base_dir is "src/core/..", we need to go up to root
-            root_dir = os.path.dirname(os.path.dirname(os.path.dirname(base_dir))) 
-            # Actually base_dir is file.parent (src/core). 
-            # root is src/core -> src -> root.
-            root_dir = os.path.dirname(os.path.dirname(base_dir))
+            # Current file: src/core/flet_theme_manager.py
+            # Resolve project root: .../src/core -> .../src -> .../promptbuilder
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            src_dir = os.path.dirname(current_dir)
+            root_dir = os.path.dirname(src_dir)
             
             themes_path = os.path.join(root_dir, "assets", "data", "lists", "themes.md")
             if not os.path.exists(themes_path):

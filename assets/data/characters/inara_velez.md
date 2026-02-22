@@ -2,7 +2,7 @@
 
 **Photo:** inara_velez_photo.png
 
-**Tags:** Female, Latina, Adventurous, Effervescent, Grounded, Spirited, Petite, Lean, Slender, Casual, Sport
+**Tags:** Female, Latina, Adventurous, Effervescent, Grounded, Spirited, Petite, Lean, Slender, Casual, Sport, Vintage, Retro, Noir, Sci-Fi
 
 **Summary:** Inara is a radiant and agile adventurer who thrives in both high-altitude treks and coastal leisure. Effervescent, grounded, and spirited, she carries herself with the disciplined confidence of a trained dancer perfectly in tune with their physical capabilities. Her "Athletic Gamine" presence is kinetically charged, blending a compact, deceptively strong silhouette with genuine warmth and performance-ready poise.
 

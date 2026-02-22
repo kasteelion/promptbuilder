@@ -1,39 +1,38 @@
-# Scene Definition Standards
+# Scene Standards: The "Big 3" Environmental Markers
 
-To ensure immersive and consistent environments, all Scene files (e.g., within `scenes.md`) must adhere to the **Atmospheric Scene Standard**.
+Immersive environments are rendered best when the AI is given 3-4 vivid, contrasting markers rather than an exhaustive list of architectural details.
 
-## The Scene Schema
+## 1. The "Big 3" Framework
 
-Every scene entry must follow this structure:
+Every scene must define:
 
-```markdown
-## Scene Name (Tag1, Tag2, mood:Moodname, block:Blockname)
-**Visual Description:**
-[Deep visual description focusing on lighting, architecture, materials, and atmosphere. ~2-3 sentences.]
+1. **Lighting Quality:** Not just "bright", but "Volumetric shafts of golden sunlight" or "Harsh fluorescent flickering."
+2. **Atmospheric Texture:** The "grit" of the scene (e.g., "Thick hanging smoke", "Sterile chrome surfaces", "Rain-slicked pavement").
+3. **The Key Prop:** One essential item that defines the space (e.g., "A sprawling mahogany desk", "Overflowing neon trash bins").
 
-**Sensory/Atmospheric Details:**
+## 2. Tagging & Blocking
 
-- **Lighting:** Specific light sources (neon, golden hour, candlelight) and quality (harsh, diffuse, volumetric).
-- **Atmosphere:** The "feeling" of the space (crowded, sterile, cozy,abandoned).
-- **Key Elements:** 2-3 essential props or features that anchor the scene.
-```
+- **Environment:** `Indoor`, `Outdoor`, `Liminal`.
+- **Style Blocker:** Use `block:[Genre]` to prevent style-clash (e.g., `block:Fantasy` for a Server Room).
+- **Mood:** Use `mood:[Adjective]` for high-level emotional guiding.
 
-## Tagging Rules
-
-1.  **Environment Tag:** Must have at least one of `Indoor`, `Outdoor`, `Urban`, `Nature`.
-2.  **Mood Tag:** Optional but recommended. Must use `Mood:` prefix (e.g., `Mood:Cozy`).
-3.  **Block Tag:** Use `Block:Name` to prevent specific styles from using this scene (e.g., `Block:Fantasy` for a Modern Office).
-
-## Example Entry
+## 3. Example Entry
 
 ```markdown
-## Cyberpunk Alley (Urban, Outdoor, mood:Gritty, mood:Dark, block:Historical)
+## Neon Rain Alley (Outdoor, Urban, mood:Gritty, block:Medieval)
+
 **Visual Description:**
-A narrow, rain-slicked alleyway wedged between towering megastructures. Holographic ads flicker senselessly in puddles, reflecting neon pink and electric blue light off wet pavement and steam pipes.
+A narrow, rain-slicked alleyway between towering concrete megastructures. The air is thick with steam and the hum of holographic advertisements.
 
-**Sensory/Atmospheric Details:**
+**The Big 3 Markers:**
 
-- **Lighting:** Low-key, dominated by neon signage and bioluminescent street gore.
-- **Atmosphere:** Claustrophobic, dangerous, wet, and high-tech.
-- **Key Elements:** Overflowing dumpsters, exposed cabling, steaming vents.
+- **Lighting:** Low-key, dominated by neon cycling between electric blue and magenta.
+- **Atmosphere:** Claustrophobic, wet, and high-tech-low-life.
+- **Key Prop:** A single flickering streetlamp casting long, distorted shadows across heavy industrial cables.
 ```
+
+## 4. Quality Rules
+
+1. **Sensory focus:** Prioritize what the "camera" sees first.
+2. **Context Neutrality:** Ensure the scene can host multiple characters without feeling "pre-populated."
+3. **Word Efficiency:** Keep descriptions under 50 words to save **Attention Budget** for the subject.

@@ -4,7 +4,7 @@ from collections import defaultdict
 import re
 
 def audit_outfit_quality():
-    outfit_dir = "data/outfits"
+    outfit_dir = "assets/data/outfits"
     total_outfits = 0
     flagged_files = [] 
     
@@ -94,7 +94,9 @@ def audit_outfit_quality():
             flagged_files.append((filename, failures))
 
     # REPORTING
-    PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    # Add project root to path
+    PROJECT_ROOT = Path(__file__).parent.parent.parent.parent # Adjusted to match original depth
+    sys.path.append(str(PROJECT_ROOT))
     REPORT_FILE = os.path.join(PROJECT_ROOT, "auditing", "reports", "outfit_quality_report.md")
     
     os.makedirs(os.path.dirname(REPORT_FILE), exist_ok=True)

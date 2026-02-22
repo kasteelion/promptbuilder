@@ -15,8 +15,8 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 - **Casual Social Chat** (Social, Casual, Standing): {char1} and {char2} standing comfortably in a casual exchange, using light hand gestures and relaxed smiles, projecting an easygoing and friendly connection.
 - **Purposeful City Stride** (Social, Outdoor, Walking): {char1} and {char2} walking briskly while engaged in an animated discussion, passing through the scenery with a shared and purposeful energy.
 - **Coordinated Kitchen Dance** (Domestic, Cooking, Standing): {char1} chopping vegetables with focused precision while {char2} stirs a steaming pot nearby, both moving around the kitchen in a fluid and coordinated domestic dance.
-- **Defensive Hoops Dual** (Basketball): {char1} dribbling low and guarding the ball with intense focus while {char2} stays in a low defensive crouch, eyes locked on every movement in a high-stakes competitive moment.
-- **Rhythmic Soccer Passing** (Soccer): {char1} passing a soccer ball to {char2} with a crisp and controlled kick, {char2} trapping it smoothly with the right foot, capturing a rhythmic and focused moment of play.
+- **Defensive Hoops Dual** (Basketball, Sport): {char1} dribbling low and guarding the ball with intense focus while {char2} stays in a low defensive crouch, eyes locked on every movement in a high-stakes competitive moment.
+- **Rhythmic Soccer Passing** (Soccer, Sport): {char1} passing a soccer ball to {char2} with a crisp and controlled kick, {char2} trapping it smoothly with the right foot, capturing a rhythmic and focused moment of play.
 - **Collaborative Research** (Science, Tech, Sitting): {char1} adjusting a gleaming microscope while {char2} takes diligent notes on a clipboard, surrounded by professional equipment and an atmosphere of scientific discovery.
 - **The Triple Huddle** (Social, Group, Standing): {char1}, {char2}, and {char3} leaning into a tight circle with heads together, whispering and sharing a secretive moment of group camaraderie.
 - **Lively Group Game Night** (Social, Fun, Sitting): {char1}, {char2}, and {char3} gathered around a table with a board game, {char4} standing behind them laughing and holding a drink, capturing a vibrant night of shared fun.
@@ -47,7 +47,7 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 
 - **Grip-Locked Arm Wrestle** (Competitive, Strength, Sitting, poses:Sitting;Sitting): {char1} and {char2} gripping hands firmly at a table, biceps bulging and veins visible through tense skin, eyes locked in a focused stalemate of raw strength.
 - **Poised Ballroom Frame** (Dance, Elegant, Standing): {char1} and {char2} moving in a classic ballroom frame, {char1}'s left hand holding {char2}'s right, steps perfectly timed to the rhythm as they glide across the floor.
-- **Synchronized Trail Jog** (Exercise, Dynamic, Walking): {char1} and {char2} running side-by-side with perfectly matched strides, breathing rhythmically and focused on the path ahead, radiating athletic vitality.
+- **Synchronized Trail Jog** (Exercise, Sport, Dynamic, Walking): {char1} and {char2} running side-by-side with perfectly matched strides, breathing rhythmically and focused on the path ahead, radiating athletic vitality.
 - **Casual Field Catch** (Baseball, Casual, Standing): {char1} throwing a ball in a smooth overhead arc toward {char2}, who raises a leather glove to make the catch, weight shifted forward in a relaxed athletic stance.
 - **Smirking Board Game Duel** (Social, Fun, Sitting): {char1} and {char2} sitting across from each other at a board game, {char1} moving a piece with a confident smirk while {char2} watches with Narrows eyes and feigned concern.
 - **Guided Partner Stretch** (Exercise, Wellness, Sitting, poses:Leaning Forward;Kneeling Behind): {char1} helping {char2} deepen a floor stretch by gently pressing on their upper back, both focused on breathing and flexibility in a moment of quiet trust.
@@ -85,14 +85,14 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 - **Besties Selfie Angle** (Social Media, Selfie, Fun): {char1} and {char2} taking a selfie together with heads leaning close at a sharp inward angle, {char1} holding the phone fully extended while both make exaggerated fun faces, radiating natural and playful energy.
 - **Synchronized BFF Goals** (Social Media, Fashion, Standing): {char1} and {char2} striking matching or complementary high-fashion poses, mirroring each other's body language with synchronized energy and wearing coordinated stylish outfits.
 - **Upscale Brunch Cheers** (Lifestyle, Food, Social, Sitting): {char1} and {char2} sitting at a sun-drenched table in an upscale brunch setting, both holding up colorful beverages in a "cheers" gesture with wide and radiant smiles.
-- **Café Intimacy Aesthetic** (Lifestyle, Cozy, Cafe, Sitting): {char1} and {char2} sitting across from each other at a small, cluttered café table, leaning forward into each other's space for an intimate discussion with expressive hand gestures.
+- **Café Intimacy Aesthetic** (Lifestyle, Cozy, Cafe, Vintage, Sitting): {char1} and {char2} sitting across from each other at a small, cluttered café table, leaning forward into each other's space for an intimate discussion with expressive hand gestures.
 - **Carefree Festival Sway** (Music, Boho, Fun, Standing): {char1} and {char2} with arms thrown around each other's shoulders, swaying and dancing to distant music with carefree and joyful expressions, wearing boho-chic festival attire.
 - **Golden Hour Glow Duo** (Artistic, Lighting, Outdoor, Sitting): {char1} and {char2} backlit by the warm, golden glow of a setting sun, both in dreamy and relaxed poses with hair catching the light to create a luminous and atmospheric mood.
 - **Fitness Motivation Flex** (Fitness, Sporty, Flex, Standing): {char1} and {char2} in sleek athletic wear tensing their muscles with confidence, standing in strong and disciplined poses that showcase their fitness progress in a well-equipped gym.
 - **Urban Swagger Duo** (Fashion, Cool, Urban, Standing): {char1} and {char2} in coordinated and stylish urban outfits, striking confident and fashion-forward poses with body language that exudes cool swagger and personality.
 - **Polished Sorority Pose** (Social, Group, Polished, Standing): {char1} and {char2} posing close together for a professional photo, bodies angled slightly toward the camera with hands on hips in a power pose and wide, genuine smiles.
 - **Scenic Adventure Buddies** (Adventure, Travel, Scenic, Standing): {char1} and {char2} posing before a breathtaking scenic backdrop, gesturing enthusiastically at the view with excited and adventurous expressions of wonder.
-- **Nostalgic Film Candid** (Retro, Nostalgic, Candid, Sitting): {char1} and {char2} in a retro-style composition that mimics vintage film photography, capturing a natural and unposed moment with an atmospheric and nostalgic aesthetic.
+- **Nostalgic Film Candid** (Retro, Vintage, Nostalgic, Candid, Sitting): {char1} and {char2} in a retro-style composition that mimics vintage film photography, capturing a natural and unposed moment with an atmospheric and nostalgic aesthetic.
 - **Effortless VSCO Vibes** (Trendy, Casual, Candid, Standing): {char1} and {char2} in a casual and candid-style pose that appears effortlessly natural, laughing genuine and looking away from the camera in a stylishly composed moment.
 
 ---
@@ -361,10 +361,9 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 - **Surprised Catch Dip** (Romantic, Standing): {char1} catching a falling {char2} in a dramatic dip pose, their eyes meeting in a moment of sudden and heart-stopping surprise, weight perfectly balanced.
 - **Rooftop City Lights** (Romantic, Urban, Standing): {char1} and {char2} overlooking a vast expanse of city lights from a high rooftop, wind blowing through their hair in a moment of shared and heart-stoppingly emotional romantic connection.
 
-
 ---
 
-## Additional Casual  Social
+## Additional Casual Social
 
 - **Shared Headphones** (Social, Music, Sitting): {char1} and {char2} sitting close together sharing a single pair of headphones, both nodding to the same beat with eyes closed in a moment of musical connection.
 - **Window Shopping Stroll** (Social, Urban, Walking): {char1} pointing at a store display while {char2} laughs and shakes their head, both enjoying a leisurely walk through the shopping district.
@@ -379,7 +378,7 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 
 ---
 
-## Additional Romantic  Intimate
+## Additional Romantic Intimate
 
 - **Slow Dance in Kitchen** (Romantic, Dancing, Standing): {char1} and {char2} swaying together in a small kitchen, no music playing, just the sound of their breathing and soft laughter.
 - **Breakfast in Bed** (Romantic, Domestic, Sitting): {char1} carrying a tray of breakfast to {char2} who sits up in bed with a sleepy smile, morning light streaming through the window.
@@ -394,7 +393,7 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 
 ---
 
-## Additional Professional  Work
+## Additional Professional Work
 
 - **Boardroom Presentation** (Professional, Work, Standing): {char1} presenting charts on a screen while {char2} takes notes at a conference table, both in sharp business attire.
 - **Coffee Break Chat** (Professional, Social, Standing): {char1} and {char2} standing by an office coffee machine, holding mugs and discussing work in a brief moment of respite.
@@ -409,7 +408,7 @@ Multi-character interaction templates with placeholder support. Use {char1}, {ch
 
 ---
 
-## Additional Fantasy  Adventure
+## Additional Fantasy Adventure
 
 - **Map Planning Session** (Fantasy, Strategy, Sitting): {char1} and {char2} hunched over an ancient map by candlelight, tracing routes and marking locations for their next quest.
 - **Spell Practice** (Fantasy, Magic, Standing): {char1} demonstrating a spell gesture while {char2} watches carefully and attempts to mimic the movements, magical energy flickering.

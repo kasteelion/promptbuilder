@@ -82,9 +82,8 @@ class RosterSection(ft.Container):
             for cat in char.get("outfits_categorized", {}).keys()
         )))
         self.bulk_cat_dd.options = [ft.dropdown.Option(c) for c in cats]
-        self.update()
 
-    def refresh(self):
+    def refresh(self, update_ui=True):
         """Rebuild the active roster UI using RosterItem components."""
         # print("DEBUG_EVENT: Roster - Performing Full Refresh") # Reduced noise
         self.populate_data()
@@ -101,7 +100,8 @@ class RosterSection(ft.Container):
             items.append(item)
             
         self.roster_list.controls = items
-        self.update()
+        if update_ui:
+            self.update()
 
     def update_character_ui(self, idx):
         """Surgical update alias for compatibility."""

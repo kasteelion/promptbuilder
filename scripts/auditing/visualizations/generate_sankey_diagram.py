@@ -250,7 +250,7 @@ if __name__ == "__main__":
     # dirname(dirname) = auditing
     # dirname(dirname(dirname)) = project_root
     
-    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
     default_dir = os.path.join(project_root, "output", "prompts")
     
     directory = sys.argv[1] if len(sys.argv) > 1 else default_dir

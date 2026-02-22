@@ -40,6 +40,7 @@ class ToolbarSection(ft.Container):
                     ft.PopupMenuItem(content=ft.Row([ft.Icon(ft.Icons.FILE_UPLOAD), ft.Text("Import from Text")], spacing=10), on_click=self.app.open_import_from_text),
                     ft.PopupMenuItem(content=ft.Row([ft.Icon(ft.Icons.PSYCHOLOGY), ft.Text("Export for LLM")], spacing=10), on_click=self.app.open_llm_export),
                     ft.PopupMenuItem(content=ft.Row([ft.Icon(ft.Icons.LIBRARY_BOOKS), ft.Text("Content Guide")], spacing=10), on_click=self.app.open_llm_content_guide),
+                    ft.PopupMenuItem(content=ft.Row([ft.Icon(ft.Icons.CHECKROOM), ft.Text("Outfit Builder")], spacing=10), on_click=self.app.open_outfit_builder),
                     ft.PopupMenuItem(content=ft.Row([ft.Icon(ft.Icons.EDIT_ATTRIBUTES), ft.Text("Asset Editor")], spacing=10), on_click=self.app.open_asset_editor),
                     ft.PopupMenuItem(),
                     ft.PopupMenuItem(content=ft.Row([ft.Icon(ft.Icons.DELETE_SWEEP), ft.Text("Clear All Characters")], spacing=10), on_click=lambda _: self.app.clear_all_characters()),
@@ -58,7 +59,7 @@ class ToolbarSection(ft.Container):
                 SafeIconButton(ft.Icons.REFRESH, icon_color="white", tooltip="Refresh Assets", on_click=self.app.refresh_assets),
                 SafeIconButton(ft.Icons.SETTINGS, icon_color="white", tooltip="Settings", on_click=self.app.open_settings),
             ], spacing=0)
-        ], alignment=ft.MainAxisAlignment.START)
+        ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
 
     def refresh_theme(self):
         self.gradient.colors = [ThemeManager.colors["accent"], ThemeManager.colors["accent_hover"] or ThemeManager.colors["accent"]]

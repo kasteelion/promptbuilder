@@ -5,8 +5,9 @@ from collections import defaultdict
 from pathlib import Path
 
 # Add project root to path
-PROJECT_ROOT = Path(__file__).parent.parent.parent
+PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
 sys.path.append(str(PROJECT_ROOT))
+sys.path.append(str(PROJECT_ROOT / "src"))
 
 from logic.data_loader import DataLoader
 from logic.randomizer import PromptRandomizer

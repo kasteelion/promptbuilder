@@ -1,3 +1,4 @@
+Tags: Casual Wear, Everyday
 modifiers:
   Rodeo: in **embroidered western snap-shirt**
   Farm: in **faded buffalo-check flannel**

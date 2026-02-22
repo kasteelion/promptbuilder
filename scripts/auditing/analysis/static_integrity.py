@@ -278,6 +278,10 @@ class StaticIntegrityAuditor:
         self.generate_report()
 
 if __name__ == "__main__":
-    data_dir = PROJECT_ROOT / "data"
+    # Add project root to path
+    PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
+    sys.path.append(str(PROJECT_ROOT))
+
+    data_dir = PROJECT_ROOT / "assets" / "data"
     auditor = StaticIntegrityAuditor(data_dir)
     auditor.run_all()

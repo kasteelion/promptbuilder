@@ -1,7 +1,7 @@
 ### Aaliyah Chen
 **Photo:** aaliyah_chen_photo.png
 
-**Tags:** Female, Approachable, Athletic, Bohemian, Minimalist, Mixed-Heritage
+**Tags:** Female, Approachable, Athletic, Bohemian, Minimalist, Mixed-Heritage, Sport, Noir, Casual
 **Summary:** A grounded, vibrant performer whose energy feels rooted and alive. Aaliyah carries herself with relaxed athletic confidence, blending warmth, cultural depth, and effortless movement. Her presence feels sunlit and calm, with a quiet strength that reads as both capable and deeply human.
 
 **Gender:** F

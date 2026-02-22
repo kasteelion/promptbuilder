@@ -9,9 +9,6 @@ Note: UI-specific constants have been moved to ui/constants.py
 # MAIN_EDITABLE_FILES has been deprecated in favor of dynamic discovery in DataLoader.
 
 
-# Default theme
-DEFAULT_THEME = "Dark"
-
 # Fonts
 DEFAULT_FONT_FAMILY = "Lexend" # Prioritize custom font
 DEFAULT_FONT_SIZE = 10
@@ -88,7 +85,7 @@ WELCOME_MESSAGE = """Welcome to Prompt Builder! 🎨
 
 Get started by:
 1. Select a Base Prompt (art style)
-2. Add Characters using the dropdown
+2. Add Characters from the roster
 3. Customize their Outfits and Poses
 4. Add a Scene description
 5. Add any Notes for extra details
@@ -96,10 +93,9 @@ Get started by:
 Your prompt will appear here as you build it.
 
 💡 Tips:
-• Use Ctrl+Z/Y for undo/redo
-• Press Alt+R to randomize everything
-• Right-click characters for quick actions
-• Star ★ your favorite items for quick access
+• Press the dice icon to randomize everything
+• Use Automation Studio for batch generation
+• Open the Gallery to browse generated images
 
 Need help? Hover over any element for tooltips!
 """

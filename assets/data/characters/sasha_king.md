@@ -2,7 +2,7 @@
 
 **Photo:** sasha_king_photo.png
 
-**Tags:** Black, American, Urban, Athletic, Energetic, Creative, Youthful, Street-Artist
+**Tags:** Black, American, Urban, Athletic, Energetic, Creative, Youthful, Street-Artist, Sport, Noir, Casual, Sci-Fi
 
 **Summary:** Sasha is a whirlwind of kinetic energy and urban creativity. A competitive street skater by day and a muralist by night, she views the city architecture as her canvas and her playground. She carries an infectious "main character" energy without the ego—she's the first to hype up a stranger's fit and the last to leave a session. Her style is a high-contrast blend of functional skate gear and bold, expressive patterns that reflect her vivid artistic vision.
 
