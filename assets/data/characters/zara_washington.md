@@ -1,19 +1,26 @@
 ### Zara Washington
+
 **Photo:** zara_washington_photo.png
 
-**Tags:** Black, Approachable, Commanding, Cultural, Curvy, Female, Funky, Playful, Noir, Casual
+**Tags:** Black, Approachable, Commanding, Cultural, Curvy, Female, Funky, Playful, noir, Casual, formal
 
 **Summary:** Zara radiates unapologetic presence and embodied confidence. Her power is expressive and grounded, combining cultural pride, sensuality, and bold personal style.
 
 **Gender:** F
 **Signature Color:** #9932CC
 
+**Traits:**
+
+- Gold Hoops: large expressive gold hoop earrings
+- Cultural Bracelet: chunky beaded wrap bracelet with bold pattern
+- Statement Necklace: layered gold necklaces with geometric pendants
+
 **Appearance:**
 
-* **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
-* **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
-* **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
-* **Skin:** Deep rich brown skin with luminous depth.
+- **Body:** Soft Dramatic frame; wave plush flesh; voluptuous hourglass proportions; moderate-to-tall presence.
+- **Face:** Rounded-strong facial structure; oval face; full cheeks; soulful eyes; confident relaxed expression.
+- **Hair:** Type 4B–4C coils; high density; natural afro with dense coily texture and healthy sheen; versatile styling options.
+- **Skin:** Deep rich brown skin with luminous depth.
 
 **Age Presentation:** mid-30s presentation; assured, radiant.
 **Vibe / Energy:** Confident, Warm, Commanding.
@@ -25,11 +32,12 @@
 // - Jewelry preference: gold, bold and meaningful when worn—statement pieces often with cultural significance
 // - General vibe: powerful, warm, grounded with natural magnetism
 
-
 ---
 
 **Outfits:**
+
 #### Base
+
 - **Top:** Fitted burnt orange ribbed crop top with scooped neckline and bold textured or graphic detail (funky pattern or print)
 - **Bottom:** High-waist dark wash jeans with curve-hugging fit and slight flare
 - **Footwear:** Platform wedge sandals in tan or bold patterned boots for flair

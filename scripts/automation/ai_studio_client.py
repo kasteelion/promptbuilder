@@ -67,102 +67,146 @@ class AIStudioClient:
             print("Login detected! Proceeding...")
     
     async def _extract_image_from_dom(self, page: Page, base_filename: str) -> Optional[str]:
-        """
-        Extract generated image from DOM (handles data: and blob: URIs).
-        
-        Args:
-            page: Playwright page object
-            base_filename: Base filename for saving
-            
-        Returns:
-            Path to saved image file, or None if extraction failed
-        """
+        """Extract generated image from DOM with retry and better targeting."""
         print("Extracting image data from DOM...")
         
-        try:
-            # Wait for image to finalize
-            print("Waiting 3 seconds for image to finalize...")
-            await page.wait_for_timeout(3000)
-            
-            # Find all visible images
-            all_imgs = await page.locator("img").all()
-            potential_targets = []
-            
-            for img in all_imgs:
-                try:
-                    if await img.is_visible():
-                        box = await img.bounding_box()
-                        # Filter out small images (icons, etc.)
-                        if box and box['width'] > 100 and box['height'] > 100:
-                            potential_targets.append(img)
-                except:
-                    pass
-            
-            if not potential_targets:
-                print("Could not locate any large visible image.")
-                return None
-            
-            # Use the last (most recent) image
-            target_image = potential_targets[-1]
-            print(f"Selected last image candidate ({len(potential_targets)} found).")
-            
-            src = await target_image.get_attribute("src")
-            image_data = None
-            
-            # Handle data: URI
-            if src.startswith("data:image"):
-                print("Found Data URI image.")
-                head, data = src.split(",", 1)
-                image_data = base64.b64decode(data)
-            
-            # Handle blob: URI
-            elif src.startswith("blob:"):
-                print("Found Blob URI image. Fetching content...")
-                image_data_b64 = await page.evaluate(r"""async (blobUrl) => {
-                    const response = await fetch(blobUrl);
-                    const blob = await response.blob();
-                    return new Promise((resolve, reject) => {
-                        const reader = new FileReader();
-                        reader.onloadend = () => resolve(reader.result);
-                        reader.onerror = reject;
-                        reader.readAsDataURL(blob);
-                    });
-                }""", src)
-                head, data = image_data_b64.split(",", 1)
-                image_data = base64.b64decode(data)
-            
-            else:
-                print(f"Unknown src type: {src[:30]}...")
-                return None
-            
-            if image_data:
-                filepath = os.path.join(self.output_dir, f"{base_filename}.png")
-                with open(filepath, "wb") as f:
-                    f.write(image_data)
-                print(f"Saved extracted image to {filepath}")
-                return filepath
-            else:
-                print("Failed to process image data.")
-                return None
+        # Max attempts to find and extract the image
+        MAX_ATTEMPTS = 5
+        for attempt in range(MAX_ATTEMPTS):
+            try:
+                # Wait for potential image elements to appear/stabilize
+                await page.wait_for_timeout(2000)
                 
-        except Exception as e:
-            print(f"Extraction failed: {e}")
-            return None
+                # Find all images in the conversation area
+                all_imgs = await page.locator("img").all()
+                potential_targets = []
+                
+                for img in all_imgs:
+                    try:
+                        if await img.is_visible():
+                            box = await img.bounding_box()
+                            # Filter out small images (icons, profile pics, etc.)
+                            if box and box['width'] > 200 and box['height'] > 200:
+                                src = await img.get_attribute("src")
+                                if src and (src.startswith("data:") or src.startswith("blob:") or "googleusercontent" in src):
+                                    potential_targets.append(img)
+                    except:
+                        continue
+                
+                if not potential_targets:
+                    print(f"Attempt {attempt+1}: No large visible images found yet.")
+                    if attempt < MAX_ATTEMPTS - 1:
+                        await self._scroll_to_load_image(page)
+                        continue
+                    return None
+                
+                # Use the last (most recent) image
+                target_image = potential_targets[-1]
+                src = await target_image.get_attribute("src")
+                image_data = None
+                
+                # Handle data: URI
+                if src.startswith("data:image"):
+                    head, data = src.split(",", 1)
+                    image_data = base64.b64decode(data)
+                
+                # Handle blob: URI
+                elif src.startswith("blob:"):
+                    image_data_b64 = await page.evaluate(r"""async (blobUrl) => {
+                        const response = await fetch(blobUrl);
+                        const blob = await response.blob();
+                        return new Promise((resolve, reject) => {
+                            const reader = new FileReader();
+                            reader.onloadend = () => resolve(reader.result);
+                            reader.onerror = reject;
+                            reader.readAsDataURL(blob);
+                        });
+                    }""", src)
+                    if "," in image_data_b64:
+                        head, data = image_data_b64.split(",", 1)
+                        image_data = base64.b64decode(data)
+                
+                # Handle standard URLs
+                elif "http" in src:
+                    image_data_b64 = await page.evaluate(r"""async (url) => {
+                        const response = await fetch(url);
+                        const blob = await response.blob();
+                        return new Promise((resolve, reject) => {
+                            const reader = new FileReader();
+                            reader.onloadend = () => resolve(reader.result);
+                            reader.onerror = reject;
+                            reader.readAsDataURL(blob);
+                        });
+                    }""", src)
+                    if "," in image_data_b64:
+                        head, data = image_data_b64.split(",", 1)
+                        image_data = base64.b64decode(data)
+
+                if image_data:
+                    filepath = os.path.join(self.output_dir, f"{base_filename}.png")
+                    with open(filepath, "wb") as f:
+                        f.write(image_data)
+                    print(f"Saved extracted image to {filepath}")
+                    return filepath
+                    
+            except Exception as e:
+                print(f"Extraction attempt {attempt+1} failed: {e}")
+                
+        return None
     
     async def _submit_prompt(self, page: Page, prompt: str):
-        """Submit a prompt to AI Studio."""
+        """Submit a prompt to AI Studio with better focus and event triggering."""
         print("Entering prompt...")
+        await page.click(self.prompt_selector)
         await page.evaluate(
-            '(text) => { const el = document.querySelector(\'textarea[aria-label="Enter a prompt"]\'); el.value = text; el.dispatchEvent(new Event("input", {bubbles:true})); }',
+            '(text) => { '
+            '  const el = document.querySelector(\'textarea[aria-label="Enter a prompt"]\'); '
+            '  el.value = text; '
+            '  el.dispatchEvent(new Event("input", {bubbles:true})); '
+            '  el.dispatchEvent(new Event("change", {bubbles:true})); '
+            '  el.dispatchEvent(new KeyboardEvent("keydown", {bubbles:true, key: "Enter"})); '
+            '}',
             prompt
         )
         
+        await page.wait_for_timeout(500)
         print("Submitting...")
-        run_button = page.locator('button[aria-label="Run"]')
-        if await run_button.count() > 0:
+        run_button = page.locator('button[aria-label*="Run"], button[aria-label*="Send"], .run-button, .send-button').first
+        
+        if await run_button.count() > 0 and await run_button.is_visible():
             await run_button.click()
         else:
             await page.keyboard.press("Control+Enter")
+
+    async def _wait_for_generation(self, page: Page, timeout_ms: int = 45000):
+        """Wait for generation to complete by watching the UI state."""
+        print(f"Waiting for generation (max {timeout_ms/1000}s)...")
+        start_time = time.time()
+        
+        while (time.time() - start_time) * 1000 < timeout_ms:
+            # Check for "Stop" button
+            stop_btn = page.locator('button[aria-label*="Stop"]').first
+            if await stop_btn.count() > 0 and await stop_btn.is_visible():
+                await page.wait_for_timeout(1000)
+                continue
+                
+            # Check for "Run" button becoming enabled
+            run_btn = page.locator('button[aria-label*="Run"]').first
+            if await run_btn.count() > 0:
+                is_disabled = await run_btn.get_attribute("disabled")
+                if is_disabled is not None:
+                    await page.wait_for_timeout(1000)
+                    continue
+            
+            # Check for error messages or safety blocks
+            if await page.locator("text='Safety'").count() > 0 or await page.locator("text='blocked'").count() > 0:
+                print("Detected potential safety block or error.")
+                break
+
+            await page.wait_for_timeout(2000)
+            break
+            
+        print(f"Generation finished or timed out after {int(time.time() - start_time)}s")
     
     async def _scroll_to_load_image(self, page: Page):
         """Scroll to bottom to ensure lazy-loaded images appear."""
@@ -244,9 +288,8 @@ class AIStudioClient:
                 # Submit prompt
                 await self._submit_prompt(page, prompt)
                 
-                # Wait for generation
-                print("Waiting for generation...")
-                await page.wait_for_timeout(10000)
+                # Wait for generation (Dynamic wait)
+                await self._wait_for_generation(page)
                 
                 # Scroll to load image
                 await self._scroll_to_load_image(page)

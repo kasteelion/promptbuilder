@@ -23,7 +23,8 @@ class AutomationDialog(ft.AlertDialog):
         self.char_checks = []
         char_list_col = ft.Column(spacing=0, scroll=ft.ScrollMode.AUTO, height=150)
         
-        sorted_chars = sorted(self.app.state.ctx.characters.keys())
+        # Use metadata to show ALL characters
+        sorted_chars = sorted(self.app.state.ctx.characters_metadata.keys())
         for name in sorted_chars:
             chk = ft.Checkbox(label=name, value=False)
             self.char_checks.append(chk)
@@ -147,7 +148,26 @@ class AutomationDialog(ft.AlertDialog):
             self.update()
             
             msg = f"Generated {len(results)} items."
-            if not self.prompts_only_switch.value and results:
+            
+            if self.prompts_only_switch.value and results:
+                # Save prompts to file
+                import os
+                import time
+                base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+                out_dir = os.path.join(base_dir, "output", "prompts")
+                os.makedirs(out_dir, exist_ok=True)
+                
+                filename = f"automated_prompts_{int(time.time())}.txt"
+                filepath = os.path.join(out_dir, filename)
+                
+                with open(filepath, "w", encoding="utf-8") as f:
+                    for i, res in enumerate(results):
+                        f.write(f"--- PROMPT {i+1} ---\n")
+                        f.write(res.get("prompt", ""))
+                        f.write("\n\n")
+                
+                msg += f" Saved to output/prompts/{filename}"
+            elif not self.prompts_only_switch.value and results:
                 last_path = results[-1].get("image_path")
                 if last_path:
                     msg += f" Saved to gallery."

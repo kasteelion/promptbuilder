@@ -1,4 +1,5 @@
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Union
+from core.models import SelectedCharacterConfig, CharacterDetails, CharacterMetadata
 
 class CharacterLogic:
     def __init__(self, ctx, state: Dict[str, Any]):
@@ -9,7 +10,7 @@ class CharacterLogic:
         """Toggle character by name. Picks valid defaults based on character data.
         Returns True if added, False if removed.
         """
-        existing_idx = next((i for i, c in enumerate(self.state["selected_characters"]) if c["name"] == name), -1)
+        existing_idx = next((i for i, c in enumerate(self.state["selected_characters"]) if (c.name if hasattr(c, "name") else c["name"]) == name), -1)
         if existing_idx > -1:
             self.state["selected_characters"].pop(existing_idx)
             return False
@@ -18,10 +19,12 @@ class CharacterLogic:
             return True
 
     def _add_character_internal(self, name: str):
-        char_info = self.ctx.characters.get(name, {})
-        
+        char_info = self.ctx.characters.get(name)
+        if not char_info:
+            return
+
         # Smart defaults: prioritize 'Personal' category and 'Base' outfit
-        outfit_cats = char_info.get("outfits_categorized", {})
+        outfit_cats = char_info.outfits_categorized
         cat = "Personal" if "Personal" in outfit_cats else (sorted(outfit_cats.keys())[0] if outfit_cats else "Casual Wear")
         
         outfits = outfit_cats.get(cat, {})
@@ -40,25 +43,42 @@ class CharacterLogic:
         # Prioritize "Default" preset if available
         p_preset = next((p for p in p_presets if p in ["Default", "Standard", "Idle"]), p_presets[0] if p_presets else "Default")
         
-        char_data = {
-            "name": name,
-            "outfit": outfit,
-            "outfit_category": cat,
-            "pose_category": p_cat,
-            "pose_preset": p_preset,
-            "framing_mode": "Portrait",
-            "color_scheme": "The Standard",
-            "use_signature_color": False,
-            "character_traits": [],
-            "outfit_traits": [],
-            "action_note": "",
-            "_expanded": True
-        }
+        char_data = SelectedCharacterConfig(
+            name=name,
+            outfit=outfit,
+            outfit_category=cat,
+            pose_category=p_cat,
+            pose_preset=p_preset,
+            framing_mode="Portrait",
+            color_scheme="The Standard",
+            use_signature_color=False,
+            character_traits=[],
+            outfit_traits=[],
+            action_note=""
+        )
         self.state["selected_characters"].append(char_data)
 
     def update_character(self, index: int, updates: Dict[str, Any]):
         if 0 <= index < len(self.state["selected_characters"]):
-            self.state["selected_characters"][index].update(updates)
+            char = self.state["selected_characters"][index]
+            if hasattr(char, "model_dump"):
+                 # Update Pydantic model
+                 old_expanded = getattr(char, "_expanded", True)
+                 data = char.model_dump()
+                 data.update(updates)
+                 new_char = SelectedCharacterConfig(**data)
+                 new_char._expanded = old_expanded
+                 self.state["selected_characters"][index] = new_char
+            elif hasattr(char, "dict"):
+                 # Pydantic 1.x fallback
+                 old_expanded = getattr(char, "_expanded", True)
+                 data = char.dict()
+                 data.update(updates)
+                 new_char = SelectedCharacterConfig(**data)
+                 new_char._expanded = old_expanded
+                 self.state["selected_characters"][index] = new_char
+            else:
+                 char.update(updates)
 
     def move_character(self, index: int, direction: int):
         """Move character up or down in the list."""
@@ -72,8 +92,14 @@ class CharacterLogic:
         if not (0 <= index < len(self.state["selected_characters"])):
             return "UNKNOWN"
         char = self.state["selected_characters"][index]
-        outfit = char.get("outfit", "Base")
-        pose = char.get("action_note") or char.get("pose_preset", "Default")
+        
+        # Attribute access for models, dict access for legacy
+        outfit = char.outfit if hasattr(char, "outfit") else char.get("outfit", "Base")
+        pose = char.action_note if hasattr(char, "action_note") else char.get("action_note")
+        
+        if not pose:
+            pose = char.pose_preset if hasattr(char, "pose_preset") else char.get("pose_preset", "Default")
+            
         if len(outfit) > 15: outfit = outfit[:12] + "..."
         if len(pose) > 15: pose = pose[:12] + "..."
         return f"{outfit} | {pose}".upper()

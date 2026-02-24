@@ -1,7 +1,7 @@
 ### Kaito Sato
 **Photo:** kaito_sato_photo.png
 
-**Tags:** Male, Athletic, Edgy, Energetic, Japanese, Street-Style, Techwear, Urban, Action, Casual, Sport
+**Tags:** Male, Athletic, Edgy, Energetic, Japanese, Street-Style, Techwear, urban, action, Casual, Sport
 **Summary:** Kaito is a kinetic burst of energy, a fixture of the Tokyo underground scene who treats the city architecture as his playground. He blends high-concept techwear with skater grit, looking like a cyberpunk character stepped into reality. His intensity is focused and electric, hiding a deep technical intelligence behind a rebellious exterior.
 
 **Gender:** M

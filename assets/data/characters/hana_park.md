@@ -1,7 +1,7 @@
 ### Hana Park
 **Photo:** hana_park_photo.png
 
-**Tags:** Female, Chic, K-Fashion, Petite, Playful, Urban, Noir, Social, Casual
+**Tags:** Female, Chic, K-Fashion, Petite, Playful, urban, noir, social, Casual
 
 **Summary:** Youthful and charming, Hana blends sweetness with playful edge. Her presence feels light and expressive, full of curiosity and modern trend awareness, without losing sincerity.
 

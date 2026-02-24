@@ -1,4 +1,4 @@
-tags: [combat_tactical, action, Edgy, Sci-Fi]
+tags: [combat_tactical, action, Edgy, sci-fi]
 
 [F]
 - **Top:** Mock-neck Compression Jumpsuit.

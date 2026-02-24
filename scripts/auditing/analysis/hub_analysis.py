@@ -131,12 +131,45 @@ class HubConnectivityAuditor:
                 pass # logic for specific asset check could go here
         return []
 
+    def generate_accessibility_matrix(self, hubs, reach):
+        report_path = PROJECT_ROOT / "auditing" / "reports" / "character_hub_matrix.md"
+        print(f"Generating accessibility matrix: {report_path}")
+        
+        hub_tags = sorted([t for t, h in hubs.items() if h['is_hub']])
+        char_names = sorted(self.data['Characters'].keys())
+        
+        with open(report_path, "w", encoding="utf-8") as f:
+            f.write("# 🗺️ Character-Hub Accessibility Matrix\n\n")
+            f.write("Identifies thematic coverage for every character. `🟢` indicates full traversal path (Tags -> Hub -> Content).\n\n")
+            
+            # Limit hubs if there are too many for a markdown table (e.g. > 15)
+            display_hubs = hub_tags[:15]
+            
+            # Table Header
+            header = "| Character | " + " | ".join(display_hubs) + " |"
+            f.write(header + "\n")
+            f.write("|" + "---|" * (len(display_hubs) + 1) + "\n")
+            
+            for char_name in char_names:
+                r = reach.get(char_name, {})
+                accessible = set(r.get("Hubs", []))
+                
+                row = f"| {char_name} | "
+                for ht in display_hubs:
+                    icon = "🟢" if ht in accessible else "🔴"
+                    row += f"{icon} | "
+                f.write(row + "\n")
+            
+            if len(hub_tags) > 15:
+                f.write(f"\n*Note: Showing only first 15 hubs to maintain table readability. Total established hubs: {len(hub_tags)}*")
+
     def generate_report(self, hubs, reach):
         report_path = PROJECT_ROOT / "auditing" / "reports" / "hub_connectivity.md"
         print(f"Generating hub report: {report_path}")
         
         with open(report_path, "w", encoding="utf-8") as f:
             f.write("# Hub & Spoke Connectivity Audit\n\n")
+            f.write("Detailed character-hub mapping can be found in [Character-Hub Matrix](character_hub_matrix.md).\n\n")
             
             # 1. Master Hubs
             f.write("## 🏛️ Established Hubs\n")
@@ -181,6 +214,7 @@ class HubConnectivityAuditor:
         self.index_tags()
         hubs = self.analyze_hub_health()
         reach = self.analyze_character_reach(hubs)
+        self.generate_accessibility_matrix(hubs, reach)
         self.generate_report(hubs, reach)
 
 if __name__ == "__main__":

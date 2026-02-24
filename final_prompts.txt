@@ -1,0 +1,370 @@
+﻿Starting Post-Refactor Smoke Test...
+Loading data...
+Loaded 82 characters.
+Loaded 14 base prompts.
+Testing generation for Aaliyah Chen...
+
+Generated Prompt Sample:
+--------------------
+**Medium/Format:**
+High-End Digital Photography (85mm Portrait Lens simulation).
+
+**Technical Specifications:**
+f/1.8 aperture for shallow depth of field. Sharp focus on eyes with smooth fall-off. Global illumination, accurate ray-traced reflections, and true-to-life skin texture (pores, vellus hair, subsurface scattering). 8K resolution.
+
+**Stylistic Rules:**
+Neutral, balanced color grading. No stylization filters. Lighting is soft, diffused studio quality (soft-box or window light). Compositio...
+--------------------
+\n--- GENERATING AUDIT PROMPTS ---\n
+\n--- ROLL 1 ---
+Scenario: None | Score: 280
+PROMPT:\n**Medium/Format:**
+Pencil/Graphite on Paper.
+
+**Technical Specifications:**
+Monochromatic greyscale. Visible pencil strokes, hatching, and cross-hatching for shading. Paper texture background.
+
+**Stylistic Rules:**
+Lines vary in frantic energy and opacity. Construction lines and smudge marks may remain visible. Focus is on the "essence" of the subject, with edges fading into the paper.
+
+**Negative Prompt:**
+Color, paint, 3D, smooth, digital, plastic, photo.
+
+---
+
+**CHARACTER: Simone Brooks**
+**Appearance:**
+- **Body:** Soft Natural leaning Romantic; soft curvy silhouette with a moderate vertical line; rounded shoulders and fleshy, feminine contours; projects an aura of approachable, healthy vitality.
+- **Face:** Rounded oval face shape with soft planes and high prominent cheekbones; expressive, bright dark eyes framed by cat-eye hybrid glasses; button nose; wide, engaging smile with prominent "apple" cheeks; polished neutral-gloss finish on her lips.
+- **Hair:** Type 4C natural texture; high density; ultra-long, sleek micro-braids falling to waist length; jet black; intricate geometric zigzag parting design at the scalp; pulled back away from the face to showcase her features.
+- **Skin:** Deep sienna-mahogany brown with a luminous, glowing finish; smooth texture without visible blemishes; radiates a healthy, sun-kissed warmth. layered delicate yellow gold chains, one featuring a fine star/cross pendant; large thick gold hoops; a stack of thin polished gold bangles on her left wrist and a single thin bracelet on her right. Age Presentation: late 20s to early 30s (29-32); established yet vibrant and high-spirited.; Vibe: Effervescent, Enthusiastic, Magnetic, Academically Brilliant Yet Pop-Culture Ready.; Bearing: animated and high-energy; frequent expressive hand gestures; upright, confident posture; moves with a bouncy, optimistic rhythm..
+**Outfit:**
+- **Top:** White lace corset bustier.
+  - **Fit:** Fitted corset.
+  - **Material:** White lace; Satin; Intricate beadwork.
+  - **Pattern:** Floral lace.
+  - **Neckline:** Sweetheart.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Matching white lace thong and garter belt.
+  - **Fit:** Fitted; Minimal.
+  - **Material:** White lace.
+  - **Waist:** Cinched waist (garter belt).
+  - **Length:** Brief cut.
+- **Footwear:** White satin bridal heels with ankle strap; sheer white stockings.
+- **Accessories:** Short tulle veil; garter belt (blue ribbon detail); pearl necklace.
+- _expanded_tags: {'Wedding', 'Lingerie', 'Bridal', 'expensive', 'glamour', 'rich', 'White', 'fashion', 'style', 'luxury', 'Glamour', 'elegant'}
+**Pose/Action:**
+Sitting on concrete stairs with the left knee drawn up to the chest and the right leg extended down a step, left arm resting on the knee, gazing off into the urban landscape.
+---
+
+**CHARACTER 2: Leonidas Stratos**
+**Appearance:**
+* **Body:** Dramatic; elite athletic flesh; "Adonis belt" and deep core definition; broad square shoulders and a narrow, powerful waist; moderate-to-tall vertical (6'0"-6'2"); extremely high muscle density with sharp vascularity; movements are precise, economical, and explosive.
+* **Face:** Severe-classical structure; sharp, chiseled features; high nasal bridge; deep-set, hawk-like amber-brown eyes; prominent cheekbones and a squared, resolute jawline; neutral expression is intense and watchful, radiating a sense of absolute focus.
+* **Hair:** Type 1B-2A; medium density; disciplined short-to-medium silhouette; no defined part; low sheen; tight, disciplined crop or rough swept-back style. Dark chestnut or black.
+* **Skin:** Deep olive; warm golden undertones; smooth firm texture; surgically-precise scars on pectoral and outer thigh; tanned. Age Presentation: mid-to-late 30s; at the peak of physical and mental maturity.; Vibe: Disciplined, Intense, Elite, Protective.; Bearing: perfect military posture; predatory grace; stands with hands clasped behind back or arms crossed, radiating a quiet but overwhelming authority..
+**Outfit:**
+- **Top:** Red silk boxers with heart print.
+  - **Fit:** Relaxed boxer fit.
+  - **Material:** Silk.
+  - **Pattern:** Heart print.
+  - **Neckline:** Waist-only.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Integrated matching silk section.
+  - **Fit:** Relaxed.
+  - **Material:** Silk.
+  - **Waist:** Elastic waist.
+  - **Length:** Short.
+- **Footwear:** Red socks (optional).
+- **Accessories:** Heart-shaped sunglasses; prop: box of chocolates.
+- _expanded_tags: {'Lingerie', 'expensive', 'Festive', 'Red', 'glamour', 'rich', 'fashion', 'style', 'luxury', 'Pink', 'Glamour', 'elegant'}
+**Pose/Action:**
+Perched on the edge of a mahogany desk with the right leg dangling and the left foot resting on a chair, arms crossed loosely at the chest, radiating casual confidence.
+---
+\n--- ROLL 2 ---
+Scenario: None | Score: 580
+PROMPT:\n**Medium/Format:**
+Traditional Oil on Canvas or Heavy Acrylic Impasto.
+
+**Technical Specifications:**
+Visible brushstrokes, directional texture, and "lost-and-found" edges. High Chiaroscuro (contrast between light and dark). Warm, amber-toned glazes.
+
+**Stylistic Rules:**
+Forms are sculpted with light and shadow rather than line art. Colors are rich, earthy, and blended. Anatomy is slightly interpretive/artistic rather than photorealistic.
+
+**Negative Prompt:**
+Vector, digital sheen, sharp outlines, bright neon colors, anime, cel-shading, photography.
+
+---
+
+**CHARACTER: Aryan Kapoor**
+**Appearance:**
+* **Body:** Dramatic Classic frame; moderate muscularity with a lean, tailored silhouette; balanced proportions that look exceptional in suiting; moderate vertical (5'10"-5'11"); posture is military-straight but relaxed; projects a refined, expensive stability.
+* **Face:** Symmetrical, high-contrast structure; strong square jawline covered by a meticulously groomed "designer stubble" to short boxed beard; high cheekbones; piercing amber-brown eyes with thick lashes; straight aristocratic nose; expression is usually a knowing, confident smirk.
+* **Hair:** Type 2A waves; high density; styled in a classic "quiff" or side-part with volume; sides are tapered clean; glossy, healthy finish; jet black with a blueish tint under light.
+* **Skin:** Medium-deep tan with warm golden-olive undertones; hyper-smooth texture suggestive of a high-end skincare routine. Age Presentation: early 30s; Vibe: Charismatic, Wealthy, Sharp, Confident, Polished.; Bearing: walks with a measured, expansive stride; hands often clasping lapels or checking a watch; takes up space with entitlement but not aggression..
+**Outfit:**
+- **Top:** Black silk open shirt with lace trim.
+  - **Fit:** Relaxed lounge fit.
+  - **Material:** Silk; Lace.
+  - **Neckline:** Open collar.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Black silk boxer briefs.
+  - **Fit:** Fitted.
+  - **Material:** Silk.
+  - **Waist:** Elastic waist.
+  - **Length:** Brief cut.
+- **Footwear:** Barefoot or leather slides.
+- **Accessories:** Gold chain necklace; signet ring.
+- _expanded_tags: {'dramatic', 'rich', 'fashion', 'intense', 'Lace', 'affectionate', 'flirty', 'boudoir', 'sultry', 'lingerie', 'alluring', 'Glamour', 'romantic', 'expensive', 'theatrical', 'intimate', 'Lingerie', 'bedroom', 'glamour', 'sensual', 'style', 'luxury', 'elegant'}
+**Pose/Action:**
+Standing with the right hip pushed out dramatically to the side and the torso tilted slightly in the opposite direction, creating a sharp S-curve silhouette, with the right hand resting firmly on the hip.
+---
+
+**CHARACTER 2: Efe Kouadio**
+**Appearance:**
+* **Body:** Soft Natural frame; natural soft flesh; balanced proportions with gentle curves, defined waist, full hips, soft rounded features, moderate shoulders; moderate vertical (5Æ5ö-5Æ6ö); natural curvy build with soft harmonious lines and welcoming presence.
+* **Face:** Soft-balanced facial structure; round-oval face with warm open planes and full cheeks that enhance smile; expressive round-almond eyes with bright engaged quality, wide-set, warm dark brown with natural sparkle; full lips with natural upward curve that creates dimpled smile; smooth forehead; radiant joyful expression that lights up her whole face.
+* **Hair:** Type 4A coils; high density; medium-length natural textured style with defined curl pattern and bouncy voluminous shape; healthy soft finish with natural sheen; black to dark brown.
+* **Skin:** Deep warm brown with rich golden undertones and natural luminous dewy finish. Age Presentation: early-to-mid-20s presentation; youthful, sweet, approachable.; Vibe: Bubbly, Warm, Welcoming, Girl-Next-Door Charm, Sweet Confidence.; Bearing: relaxed casual posture; animated expressive movement; open friendly body language..
+**Outfit:**
+- **Top:** Black floral lace bodysuit.
+  - **Fit:** Skin-tight bodycon.
+  - **Material:** Floral lace; Sheer mesh panels.
+  - **Pattern:** Floral lace pattern.
+  - **Neckline:** Plunging V-neck.
+  - **Sleeve:** Long sleeves or sleeveless.
+- **Bottom:** Integrated high-cut leg section.
+  - **Fit:** High-cut bodycon.
+  - **Material:** matching lace/mesh.
+  - **Waist:** Defined natural waist.
+  - **Length:** Bodysuit cut.
+- **Footwear:** Black stiletto pumps; Silk robe falling off shoulders.
+- **Accessories:** Delicate gold body chain; pearl drop earrings.
+- _expanded_tags: {'dramatic', 'rich', 'fashion', 'intense', 'Lace', 'affectionate', 'flirty', 'boudoir', 'sultry', 'lingerie', 'alluring', 'Glamour', 'romantic', 'expensive', 'theatrical', 'intimate', 'Lingerie', 'bedroom', 'glamour', 'sensual', 'style', 'luxury', 'elegant'}
+**Pose/Action:**
+Sitting on concrete stairs with the left knee drawn up to the chest and the right leg extended down a step, left arm resting on the knee, gazing off into the urban landscape.
+---
+\n--- ROLL 3 ---
+Scenario: None | Score: 285
+PROMPT:\n**Medium/Format:**
+Black and White Film Photography.
+
+**Technical Specifications:**
+High-contrast "Low Key" lighting. Deep blacks and stark white highlights. Film grain and scratch textures. "Dutch Angle" compositions allowed.
+
+**Stylistic Rules:**
+Faces often partially obscured by shadow (Venetian blind effects, rim lighting). No color. Atmosphere implies smoke, rain, or fog.
+
+**Negative Prompt:**
+Color, bright, sunny, flat lighting, happy, cartoon, anime, painting.
+
+---
+
+**CHARACTER: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large featuresùspecifically an extremely full, heavy bust (F-G cup) that is her most prominent physical traitùbalanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow. Age Presentation: early-to-mid 20s; youthful femininity with sensual awareness.; Vibe: Playful, Confidently Sweet, Cute-Provocative, Knowingly Feminine, Inviting.; Bearing: animated movement with deliberate feminine emphasis; upright posture that accentuates curves; frequent use of cute gestures mixed with body-aware positioning; stands with slight hip tilt or weight on one leg; movements blend youthful energy with purposeful sensuality..
+**Outfit:**
+- **Top:** Halter-neck jumpsuit in **liquid gold lamΘ**.
+  - **Fit:** Fitted torso.
+  - **Material:** in **liquid gold lamΘ** (LamΘ/Nylon/Polyester).
+  - **Pattern:** Shimmering or Bold Floral.
+  - **Neckline:** Plunging halter V-neck with sash tie.
+  - **Sleeve:** Sleeveless (open back).
+- **Bottom:** Integrated bell-bottom legs.
+  - **Fit:** Extreme flare from the knee down.
+  - **Material:** matching in **liquid gold lamΘ**.
+  - **Waist:** Natural waist (belted/sash).
+  - **Length:** Floor-length (concealing platforms).
+- **Footwear:** Cork-wedge platform shoes.
+- **Accessories:** Oversized amber sunglasses; disco-ball earrings; feather boa.
+- _expanded_tags: {'creative', '1970s', 'historical', 'artistic', 'rich', 'fashion', 'alternative', 'Disco', 'vintage', 'Glamour', 'nostalgic', 'expensive', 'bohemian', 'boho', 'retro', 'old-school', 'glamour', 'style', 'luxury', 'art', 'elegant'}
+**Pose/Action:**
+Lying flat on the back on a soft bed with both arms stretched high overhead, torso slightly arched and legs elongated, exhaling a sense of morning vitality and sensual release.
+---
+
+**CHARACTER 2: Jena Marlowe**
+**Appearance:**
+* **Body:** Soft DramaticûRomantic blend; elongated but light vertical; gentle hourglass with soft waist emphasis; overall delicacy rather than dramatic weight.
+* **Face:** Soft oval face with balanced proportions; medium-large bright eyes; refined nose; gentle jawline; warm, approachable expression with an easy smile.
+* **Hair:** Light honey-blonde; Type 2Aû2B loose waves; fine-to-medium density; long hair with soft volume; luminous natural-looking highlights; healthy glossy finish.
+* **Skin:** Fair to light neutral-warm tone with a natural satin glow; fresh and luminous in daylight. Age Presentation: mid-to-late 20s presentation; youthful, polished, and open.; Vibe: Warm, Romantic, Quietly confident; Inviting Rather Than Dramatic.; Bearing: relaxed, graceful posture; light, fluid movement with a soft feminine presence..
+**Outfit:**
+- **Top:** Leather or brocade corset/vest over white blouse.
+  - **Fit:** Fitted; Cinched.
+  - **Material:** Brown leather or Brocade; Cotton blouse.
+  - **Pattern:** Ruffles or Brass accents.
+  - **Neckline:** High collar with ruffles.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waist skirt or pants.
+  - **Fit:** Structured.
+  - **Material:** Wool or Leather.
+  - **Pattern:** pinstripe or solid.
+  - **Waist:** High-waisted.
+  - **Length:** Floor-length skirt or full-length pants.
+- **Footwear:** Lace-up boots.
+- **Accessories:** Goggles (head/neck); pocket watch; gears and brass jewelry; mini top hat.
+- _expanded_tags: {'historical', 'sci-fi'}
+**Pose/Action:**
+Lying flat on the back on satin sheets propped up on both elbows, looking directly at the camera with a soft and inviting expression, legs stretched out elegantly.
+---
+\n--- ROLL 4 ---
+Scenario: None | Score: 435
+PROMPT:\n**Medium/Format:**
+Black and White Film Photography.
+
+**Technical Specifications:**
+High-contrast "Low Key" lighting. Deep blacks and stark white highlights. Film grain and scratch textures. "Dutch Angle" compositions allowed.
+
+**Stylistic Rules:**
+Faces often partially obscured by shadow (Venetian blind effects, rim lighting). No color. Atmosphere implies smoke, rain, or fog.
+
+**Negative Prompt:**
+Color, bright, sunny, flat lighting, happy, cartoon, anime, painting.
+
+---
+
+**CHARACTER: Malik Farrah**
+**Appearance:**
+* **Body:** Lean-muscular frame; sun-weathered olive skin with a deep, earthy tan; rectangular proportions with broad shoulders and a powerful, flexible core; average height (5'9"-5'10"); resilient, functional build with high-stamina muscle definition; "weathered strength" presenceùdurable and alert.
+
+* **Face:** Strong angular structure; prominent brow ridge; sharp, defined jawline partially obscured by a well-groomed short beard; intense, narrowed dark brown eyes that possess a sharp, far-reaching gaze; thick, dark eyebrows with a heavy set; straight nose with a strong bridge; firm mouth often set in a focused line; expression is keen, observant, and perpetually ready for action.
+
+* **Hair:** Type 3C-4A tight curls; high density; kept short and practical in a textured buzz cut or short fade; matte finish with occasional dust from the trail; dark ebony hair that looks durable.
+
+* **Skin:** Deep olive skin with sun-kissed golden-bronze undertones; weathered, rugged texture with fine sand-lines around the eyes; a small, faded scar on his left temple; healthy "outdoor" resilience. Age Presentation: mid-30s presentation; experienced, grounded, resilient.; Vibe: Adventurous, Steady, Resourceful, Quiet Intensity, Desert-Hardened.; Bearing: alert, grounded posture; economical movementùevery step is calculated and purposeful; calm and focused in high-pressure situations; hands often checking gear or shielding eyes from the sun..
+**Outfit:**
+- **Top:** Dark tattered robes with high collar.
+  - **Fit:** Loose.
+  - **Material:** fabric.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long.
+- **Bottom:** Black trousers.
+  - **Fit:** Straight.
+  - **Material:** fabric.
+  - **Waist:** Natural with bone clasp.
+  - **Length:** Full.
+- **Footwear:** Knee-high black leather boots.
+- **Accessories:** Staff; bone jewelry; dark tome; hooded cloak.
+- _expanded_tags: {'fantasy', 'magic', 'mythology', 'Dark', 'Magic'}
+---
+
+**CHARACTER 2: Sitara Saanvi**
+**Appearance:**
+* **Body:** Romantic frame; soft lush flesh quality; hourglass proportions with defined waist; moderate height (5'4"); soft rounded density with lush bust and hips, delicate wrists and ankles; alluring captivating presence.
+* **Face:** Soft rounded structure; heart shape; large expressive dark brown almond eyes with dazzled flirtatious quality; softly curved jawline; neutral resting expression is slightly pouting and sensual.
+* **Hair:** Type 2C waves; medium-high density; dark glossy black with high sheen; long voluminous hair that takes styling well; commonly worn in glamorous, vintage-inspired styles.
+* **Skin:** Medium tan with warm golden-olive undertones and luminous smooth surface finish; small delicate beauty mark near lip. Age Presentation: early to mid-20s presentation; youthful, vivacious, sensual.; Vibe: Charming, Sultry, Bubbly, Classic-Hollywood Sirens.; Bearing: graceful and deliberately sensual with soft hip-sway; frequent use of expressive head tilts and engaging upward-tilted gaze..
+**Outfit:**
+- **Top:** Enchanted plate armor with glowing runes.
+  - **Fit:** Lighter plate tailored.
+  - **Material:** Mythril or thin steel.
+  - **Pattern:** Magical runes along edges.
+  - **Neckline:** High collar armor.
+  - **Sleeve:** Long armored sleeves.
+- **Bottom:** Flowing battle skirt or armored pants.
+  - **Fit:** Flared or Straight.
+  - **Material:** Padded fabric or metal plate.
+  - **Pattern:** Mystical designs.
+  - **Waist:** Buckle belt with spellbook.
+  - **Length:** Full length.
+- **Footwear:** Armored boots with mystical designs.
+- **Accessories:** Enchanted sword; crystal focus; enchanted cape.
+- _expanded_tags: {'weapon_combat', 'fantasy', 'magic', 'mythology', 'Magic'}
+---
+
+**CHARACTER 3: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large featuresùspecifically an extremely full, heavy bust (F-G cup) that is her most prominent physical traitùbalanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow. Age Presentation: early-to-mid 20s; youthful femininity with sensual awareness.; Vibe: Playful, Confidently Sweet, Cute-Provocative, Knowingly Feminine, Inviting.; Bearing: animated movement with deliberate feminine emphasis; upright posture that accentuates curves; frequent use of cute gestures mixed with body-aware positioning; stands with slight hip tilt or weight on one leg; movements blend youthful energy with purposeful sensuality..
+**Outfit:**
+- **Top:** Polished plate armor bodice.
+  - **Fit:** Contoured; Tailored for combat.
+  - **Material:** Steel or Silver; Embossed details.
+  - **Pattern:** Heraldic engravings.
+  - **Neckline:** High-neck gorget.
+  - **Sleeve:** Armored pauldrons and gauntlets.
+- **Bottom:** Armored tassets over chainmail skirt.
+  - **Fit:** Layered protection.
+  - **Material:** Steel; Chainmail; Leather underneath.
+  - **Waist:** Buckled.
+  - **Length:** Knee-length.
+- **Footwear:** Steel greaves and sabatons over leather boots.
+- **Accessories:** Longsword and shield (heraldic); knight's helm with plume; cape ().
+- _expanded_tags: {'weapon_combat', 'fantasy', 'magic', 'mythology', 'armor'}
+---
+
+**Additional Notes:**
+Malik Farrah leading the charge with Sitara Saanvi and Mei Chen flanking slightly behind in a powerful V-formation, weapons held ready and capes billowing in the wind.
+\n--- ROLL 5 ---
+Scenario: None | Score: 480
+PROMPT:\n**Medium/Format:**
+2D Vector Illustration.
+
+**Technical Specifications:**
+Thick, consistent line art (or lineless). Flat colors with minimal shading (soft gradients only). Pastel or bright, cheerful color palette.
+
+**Stylistic Rules:**
+Shapes are rounded, simplified, and "squishy." Anatomy is stylized (larger heads, simplified hands). Minimal texture.
+
+**Negative Prompt:**
+Sharp angles, grit, realism, photography, complex shading, dark, scary.
+
+---
+
+**CHARACTER: Aryan Kapoor**
+**Appearance:**
+* **Body:** Dramatic Classic frame; moderate muscularity with a lean, tailored silhouette; balanced proportions that look exceptional in suiting; moderate vertical (5'10"-5'11"); posture is military-straight but relaxed; projects a refined, expensive stability.
+* **Face:** Symmetrical, high-contrast structure; strong square jawline covered by a meticulously groomed "designer stubble" to short boxed beard; high cheekbones; piercing amber-brown eyes with thick lashes; straight aristocratic nose; expression is usually a knowing, confident smirk.
+* **Hair:** Type 2A waves; high density; styled in a classic "quiff" or side-part with volume; sides are tapered clean; glossy, healthy finish; jet black with a blueish tint under light.
+* **Skin:** Medium-deep tan with warm golden-olive undertones; hyper-smooth texture suggestive of a high-end skincare routine. Age Presentation: early 30s; Vibe: Charismatic, Wealthy, Sharp, Confident, Polished.; Bearing: walks with a measured, expansive stride; hands often clasping lapels or checking a watch; takes up space with entitlement but not aggression..
+**Outfit:**
+- **Top:** Blazer over dress shirt in white.
+  - **Fit:** Tailored blazer.
+  - **Material:** Wool blend.
+  - **Pattern:** Solid or subtle texture.
+  - **Neckline:** Notch lapel.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Dress pants or chinos.
+  - **Fit:** Straight or slim.
+  - **Material:** Wool blend or cotton twill.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Dress shoes or loafers.
+- **Accessories:** Leather belt; watch; briefcase.
+- _expanded_tags: {'polished', 'photography', 'everyday', 'life', 'casual', 'formal', 'office', 'high definition', 'realistic', 'professional', 'evening', 'business', 'mood:realistic', 'elegant'}
+**Pose/Action:**
+Standing in a dramatic mid-action pose with the right arm extended toward the lens, weight on the front foot, ready for a seamless "magic" transition effect.
+---
+
+**CHARACTER 2: Harald Bjornson**
+**Appearance:**
+* **Body:** Flamboyant Natural; massive, heavily muscled frame with broad, powerful shoulders and a deep chest; long limbs with thick wrists and large, calloused hands; tall vertical (6'2"-6'4"); high muscle density with functional power visible in every movement; an imposing, statuesque presence.
+* **Face:** Rugged-angular structure; square face shape with a prominent heavy brow and a stone-like jawline; deep-set piercing blue eyes under thick, expressive eyebrows; straight, strong nose; neutral expression is calm but intense, radiating a sense of grave authority.
+* **Hair:** Type 2B; thick coarse density; rough swept-back silhouette; past shoulders; swept-back; low sheen; single thick warrior braid at the back. Rich golden-blonde or light brown.
+* **Skin:** Fair; warm-neutral undertones; weathered and sun-toughened texture; prominent scar running down the right cheek and another across the knuckles; tanned. Age Presentation: early-to-mid 30s; mature, powerful, and seasoned.; Vibe: Dominant, Steady, Ancient, Rugged, Authoritative.; Bearing: slow, deliberate movements; stands with perfect, military-like posture; projects an aura of immense weight and stability; hand-on-belt or arms-crossed stance..
+**Outfit:**
+- **Top:** Button cardigan or zip cardigan over tee.
+  - **Fit:** Regular fit.
+  - **Material:** Cotton or wool blend.
+  - **Pattern:** Solid.
+  - **Neckline:** V-neck cardigan over crew tee.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Chinos or jeans.
+  - **Fit:** Straight or slim.
+  - **Material:** Cotton twill or denim.
+  - **Waist:** Regular rise.
+  - **Length:** Full length.
+- **Footwear:** Casual shoes or boots.
+- **Accessories:** Watch.
+- _expanded_tags: {'photography', 'everyday', 'layered', 'versatile', 'life', 'cozy', 'casual', 'high definition', 'realistic', 'comfortable', 'mood:realistic'}
+**Pose/Action:**
+Lying on the side propped up on one elbow, other hand resting on the hip, legs stretched out with the knee slightly bent, projecting a relaxed and graceful silhouette.
+---
+
+Smoke Test PASSED!

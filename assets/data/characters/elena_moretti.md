@@ -2,7 +2,7 @@
 
 **Photo:** elena_moretti_photo.png
 
-**Tags:** Female, Mediterranean, Curvaceous, Confident, Urban, Downtown-Chic, Romantic-Boho, Sport, Noir, Casual, Sci-Fi
+**Tags:** Female, Mediterranean, Curvaceous, Confident, urban, Downtown-Chic, Romantic-Boho, Sport, noir, Casual, sci-fi
 
 **Summary:** Elena is a confident, curvaceous urbanite who balances soft, romantic femininity with underlying athletic strength and bold, city-chic styling. With her "Main Character Energy" and effortlessly alluring presence, she navigates the city with a grounded yet playful self-assurance. She oscillates between sleek, body-hugging "Downtown Chic" and flowing "Romantic Boho" aesthetics, always celebrating her silhouette with deliberate, fluid movements.
 

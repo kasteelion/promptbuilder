@@ -1,7 +1,7 @@
 ### Rosa Torres
 
 **Photo:** rosa_torres_photo.png
-**Tags:** Female, Approachable, Commanding, Latina, Playful, Strong, Sport, Action, Noir, Casual
+**Tags:** Female, Approachable, Commanding, Latina, Playful, Strong, Sport, action, noir, Casual
 **Summary:** Rosa presents with a distinctive compact softness that balances strength and approachability. Her rounded features and warm smile create an immediately friendly presence, while her athletic foundation hints at hidden strength beneath soft curves. She embodies accessible femininity—girl-next-door charm with an athletic edge that never overwhelms her gentle warmth.
 **Gender:** F
 **Signature Color:** #C71585

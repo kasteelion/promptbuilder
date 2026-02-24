@@ -1,4 +1,4 @@
-tags: [Formal, Winter, Elegant, Texture, Velvet]
+tags: [formal, Winter, elegant, Texture, Velvet]
 
 modifiers:
   Crushed: in **shimmering crushed velvet**

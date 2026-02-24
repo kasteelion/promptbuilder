@@ -1,4 +1,4 @@
-tags: [Formal, Evening, Event, Elegant, Luxury]
+tags: [formal, Evening, event, elegant, luxury]
 modifiers:
   Square: featuring a **dramatic low square neckline** and structured bodice
   Queen Anne: with a **Queen Anne neckline** framing the shoulders

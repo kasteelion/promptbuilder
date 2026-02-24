@@ -2,7 +2,7 @@
 
 **Photo:** enzo_rossi_photo.png
 
-**Tags:** Italian, Commanding, Intense, Male, Playful, Strong, Athletic, Vintage, Retro, Casual, Sport, Noir, Urban, Social
+**Tags:** Italian, Commanding, Intense, Male, Playful, Strong, Athletic, vintage, Retro, Casual, Sport, noir, urban, social
 **Summary:** Bold and magnetic, Enzo projects confidence through intensity and physical presence. His energy is commanding yet controlled, blending classic masculinity with a refined, intentional edge. Born in Milan and raised in the world of high-performance automotive engineering, he approachs every task with the same precision and passion he applies to a vintage Ferrari engine. He's the natural center of any room—not because he demands attention, but because his quiet strength and sharp wit make it impossible to ignore him.
 
 **Gender:** M

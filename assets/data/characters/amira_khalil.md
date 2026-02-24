@@ -4,7 +4,7 @@
 
 **Summary:** Poised and thoughtful, Amira embodies elegance through restraint. Her movements are deliberate and graceful, her presence calm and assured. She radiates dignity and intelligence, balancing softness with a composed inner strength that commands respect without demanding attention.
 
-**Tags:** Female, Chic, Hijabi, Middle Eastern, Minimalist, Traditional, Vintage, Retro
+**Tags:** Female, Chic, Hijabi, Middle Eastern, Minimalist, traditional, vintage, Retro
 **Modifier:** H
 **Signature Color:** #B57EDC
 

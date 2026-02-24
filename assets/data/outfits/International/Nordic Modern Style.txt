@@ -1,0 +1,51 @@
+tags: [International, Nordic, Minimalist]
+modifiers: {}
+
+[F]
+- **Top:** Oversized heavy-weight cotton tee in optic white.
+  - **Fit:** Structured oversized boxy fit with dropped shoulders.
+  - **Details:** Clean finished seams, reinforced crew neckline.
+- **Bottom:** Tailored wide-leg trousers in warm charcoal wool blend.
+  - **Fit:** High-waisted with deep front pleats and relaxed leg.
+  - **Details:** Minimalist hidden closure, clean side-entry pockets.
+- **Footwear:** Sleek chunky-sole leather boots in matte black.
+  - **Details:** Minimalist design, high-quality leather finish.
+- **Accessories:** 
+  - Minimalist silver watch with leather strap
+  - Single sculptural silver earring
+  - Heavy-knit wool scarf in oatmeal (optional layer)
+- **Hair/Makeup:** 
+  - Clean center part with hair tucked behind ears
+  - Natural matte skin, clear brow gel, nude-peach lip balm
+
+[M]
+- **Top:** Oversized heavy-weight cotton tee in optic white.
+  - **Fit:** Structured oversized boxy fit with dropped shoulders.
+  - **Details:** Clean finished seams, reinforced crew neckline.
+- **Bottom:** Tailored relaxed-leg trousers in warm charcoal wool blend.
+  - **Fit:** Mid-waist with clean lines and relaxed leg.
+  - **Details:** Minimalist hidden closure, clean side-entry pockets.
+- **Footwear:** Sleek chunky-sole leather boots in matte black.
+  - **Details:** Minimalist design, high-quality leather finish.
+- **Accessories:** 
+  - Minimalist silver watch with leather strap
+  - Heavy-knit wool scarf in oatmeal (optional layer)
+- **Hair/Makeup:** 
+  - Clean short cut or slicked-back style
+  - Natural matte skin, clear brow gel
+
+[H]
+- **Hijab:** Slate gray silk hijab with soft drape.
+- **Top:** Oversized heavy-weight cotton tunic in optic white.
+  - **Fit:** Structured oversized modest fit with dropped shoulders.
+  - **Details:** Clean finished seams, reinforced crew neckline.
+- **Bottom:** Tailored wide-leg trousers in warm charcoal wool blend.
+  - **Fit:** High-waisted with clean lines and wide leg.
+  - **Details:** Minimalist hidden closure, clean side-entry pockets.
+- **Footwear:** Sleek chunky-sole leather boots in matte black.
+  - **Details:** Minimalist design, high-quality leather finish.
+- **Accessories:** 
+  - Minimalist silver watch with leather strap
+  - Heavy-knit wool scarf in oatmeal (optional layer)
+- **Hair/Makeup:** 
+  - Natural matte skin, clear brow gel, nude-peach lip balm

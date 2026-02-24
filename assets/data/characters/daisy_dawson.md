@@ -2,7 +2,7 @@
 
 **Photo:** daisy_dawson_photo.png
 
-**Tags:** Female, Caucasian, Playful, Curvy, Coquette, Effervescent, Flirty, Cozy, Vintage, Retro, Home, Casual, Action, Urban, Social
+**Tags:** Female, Caucasian, Playful, Curvy, Coquette, Effervescent, Flirty, cozy, vintage, Retro, Home, Casual, action, urban, social
 
 **Summary:** Daisy is a bubbly, effervescent personality who perfectly blends playful "coquette" aesthetics with grounded, casual comfort. She projects a youthful, accessible charm characterized by soft curves and a penchant for warm, cozy textures. A girl-next-door meets social media trendsetter, she radiates a flirty but approachable energy that prioritizes both high-fashion flair and genuine comfort.
 

@@ -2,7 +2,7 @@
 
 **Photo:** diesel_murphy_photo.png
 
-**Tags:** Female, Commanding, Lesbian, Rugged, Vintage, Retro, Intimate, Casual, Sci-Fi, Sport, Noir, Work
+**Tags:** Female, Commanding, Lesbian, Rugged, vintage, Retro, intimate, Casual, sci-fi, Sport, noir, work
 
 **Summary:** Diesel lives with wrench in hand and grease under her nails. Her butch presentation is authentic feminine masculinity—she's unmistakably a woman who simply expresses herself through masculine aesthetics and body language. In male-dominated garage spaces, she commands respect through skill and quiet confidence rather than trying to be "one of the guys." Vintage cars are her language of love and precision, and she speaks it fluently with calloused hands and an encyclopedic knowledge of carburetors.
 

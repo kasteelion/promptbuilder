@@ -70,7 +70,11 @@ def consolidate():
     # Order of reports in the consolidated file
     report_order = [
         ("Static Integrity Audit", "static_integrity.md"),
+        ("Content Quality & Enrichment", "content_quality.md"),
+        ("Color Palette Diversity", "color_diversity.md"),
+        ("Semantic Redundancy Analysis", "redundancy_report.md"),
         ("Hub & Spoke Connectivity", "hub_connectivity.md"),
+        ("Character-Hub Accessibility Matrix", "character_hub_matrix.md"),
         ("Vibe Cohesion Analysis", "vibe_cohesion_report.md"),
         ("Prompt Scoring Analysis (Best & Worst)", "best_worst_prompts.md"),
         ("Distribution Visualizations", "prompt_distribution_flow.md"),

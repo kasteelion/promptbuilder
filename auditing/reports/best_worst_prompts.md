@@ -3,394 +3,15 @@
 ## 📊 Statistical Summary
 
 - **Total Prompts Analyzed:** 50
-- **Mean Score:** 251.70
-- **Median Score:** 230.0
+- **Mean Score:** 268.50
+- **Median Score:** 220.0
 - **Mode Score:** 220
-- **Standard Deviation:** 112.14
-- **Score Range:** 30 - 555
+- **Standard Deviation:** 148.59
+- **Score Range:** 40 - 695
 
 ## 🏆 Top 3 Best Prompts
 
-### 1. gen_only_1770475912_2.txt (Score: 555)
-```text
-Generate an image of: **Medium/Format:**
-High-polish Digital Airbrushing / Concept Art.
-
-**Technical Specifications:**
-Smooth, porcelain-like skin rendering with high subsurface scattering. Volumetric lighting features distinct cool rim lights and warm key lights. Textures (metal, fabric) are rendered with high gloss and perfection.
-
-**Stylistic Rules:**
-Idealized beauty standards. Flowing, liquid-like hair rendering. Colors are vibrant and deep. The background is usually atmospheric or abstract to focus on the subject.
-
-**Negative Prompt:**
-Sketch, messy lines, flat color, matte, dull, noisy, grain, rough texture.
-
----
-
-**SCENE/SETTING:**
-**Visual Description:**
-A personal sanctuary featuring a comfortable bed with layered linens. The room is designed for rest, with soft textures and a clutter-free, peaceful aesthetic.
-
-**Sensory/Atmospheric Details:**
-
-- **Lighting:** Soft, diffused morning light filtering through sheer curtains.
-- **Atmosphere:** Warm, quiet, intimate, slow-paced.
-- **Key Elements:** Crisp linen sheets, heavy knit throw, bedside table with personal items, soft shadows.
----
-
-**CHARACTER: Oliver St. James**
-**Appearance:**
-* **Body:** Soft Natural frame; average height (5'9"-5'10"); "Otter" build—slim but not skinny, with a soft, natural muscularity and a bit of fuzz; rounded shoulders; comfortable and lived-in physicality.
-* **Face:** Oval face with soft features; warm, crinkling blue eyes; nose is slightly button-like; jawline is softened by a scruffy, well-maintained short beard (strawberry blonde/ginger tone).
-* **Hair:** Type 2C curls; medium density; messy "mop top" style that looks better when tousled; light brown/dark blonde; often falling into his eyes.
-* **Skin:** Fair to light; pinkish warm undertones; prone to blushing; smooth complexion. scattered freckles across the nose and arms. Age: mid-20s; Vibe: Cozy, Intellectual, Sweet, Sincere, Approachable, Neurotic-Charming..
-**Outfit:**
-- **Top:** Bare chest or fitted tank.
-  - **Fit:** Fitted.
-  - **Material:** Cotton/Spandex blend.
-  - **Neckline:** Scoop neck.
-  - **Sleeve:** Sleeveless.
-- **Bottom:** Fitted boxer briefs or briefs.
-  - **Fit:** Fitted; flattering.
-  - **Material:** Silk or Cotton blend ().
-  - **Waist:** Elastic.
-  - **Length:** Brief cut.
-- **Footwear:** Barefoot.
-- **Accessories:** Minimal jewelry.
-- _expanded_tags: {'intimate', 'fashion', 'romantic', 'luxury', 'sensual', 'glamour', 'flirty', 'elegant', 'alluring', 'bedroom', 'style', 'intense', 'sultry', 'dramatic', 'boudoir', 'affectionate', 'lingerie', 'Intimate', 'Sexy', 'Lounge'}
----
-
-**CHARACTER 2: Yuki Tanaka**
-**Appearance:**
-* **Body:** Romantic frame; wave plush softness; lush hourglass proportions with a defined waist and soft rounded curves; moderate vertical (5'4"-5'5"); soft and inviting presence with a delicate-yet-grounded build; "tranquil strength" presence—quietly durable but appearing fragile.
-* **Face:** Rounded-soft facial structure; heart-shaped face with high-but-soft cheekbones; smooth clear planes; large expressive almond-shaped eyes, deep dark brown, reflecting a gentle and observant nature; soft-tapered eyebrows in a natural arc; refined nose with a soft bridge; full youthful lips held in a shy-but-warm expression that radiates a quiet, intimate confidence.
-* **Hair:** Type 2A waves; high density; long length past shoulders; silky dark obsidian hair with natural volume and a luminous healthy sheen; side-parted with soft-framed layers; takes soft, romantic styling well; commonly worn in loose curls or pinned back with a delicate accessory.
-* **Skin:** Light warm skin with soft golden-cream undertones (Japanese heritage); smooth satin finish with a natural healthy glow; flawless texture maintained by traditional and modern skincare. Age: early 20s presentation; youthful, gentle, self-assured, tranquil.; Vibe: Tender, Warm, romantic; Radiates A Tranquil And Intimate energy; Creates A Sense Of Safe, Safe, And Observant Space..
-**Outfit:**
-- **Top:** Crystal-encrusted corset bustier.
-  - **Fit:** Structured corset.
-  - **Material:** Crystal mesh; Feathers; Silk featuring **gold-plated feathers** and champagne silk.
-  - **Pattern:** Intricate beadwork.
-  - **Neckline:** Sweetheart or plunge.
-  - **Sleeve:** Sleeveless.
-- **Bottom:** Matching high-cut crystal panties.
-  - **Fit:** High-cut leg.
-  - **Material:** Crystal mesh featuring **gold-plated feathers** and champagne silk.
-  - **Waist:** Cinched corset waist.
-  - **Length:** Brief/Bodysuit cut.
-- **Footwear:** Strappy stiletto sandals extending up the calf.
-- **Accessories:** Massive feather wings featuring **gold-plated feathers** and champagne silk (worn on back); diamond choker; body shimmer.
-- _expanded_tags: {'Costume', 'Lingerie', 'Wings', 'fashion', 'luxury', 'glamour', 'elegant', 'High Fashion', 'style', 'rich', 'Glamour', 'expensive', 'Runway'}
----
-
-**Additional Notes:**
-Oliver St. James and Yuki Tanaka walking barefoot along the waters edge at sunset, hands clasped and waves lapping at their feet.
-```
-
-### 2. gen_only_1770475912_15.txt (Score: 490)
-```text
-Generate an image of: Medium/Format: High-Quality Anime Illustration (Kyoto Animation / Frieren Style).
-Technical Specifications: Line Art: Delicate, variable-width brown/charcoal lines. NOT thick black outlines. Shading: Cel-Shading for character features (distinct shadow shapes), but using a soft, harmonious color palette. Skin: Flat, matte anime coloring. NO gradient airbrushing or "luminous" texture.
-Stylistic Rules: Anatomy: Character must have Adult Proportions (1:7 ratio), not Chibi. Face: Anime Geometry. Pointed chin (V-shape), minimized nose (dot), but large, detailed eyes. Background: Painterly watercolor style (soft focus), creating a separation from the crisp character art.
-Negative Prompt: Western cartoon, disney, webtoon, thick outlines, realistic skin, airbrush, 3D render, round jawline, swollen face, chibi, child.
-
----
-
-**SCENE/SETTING:**
-**Visual Description:**
-A district that comes alive at night. Every surface is painted with the reflection of towering neon signs in pinks, blues, and electric greens.
-
-**Sensory/Atmospheric Details:**
-
-- **Lighting:** Saturated, colorful, artificial; high contrast.
-- **Atmosphere:** Buzzing, cinematic, restless, futuristic.
-- **Key Elements:** Neon signage, wet pavement, street food stalls, crowds.
----
-
-**CHARACTER: Yuki Tanaka**
-**Appearance:**
-* **Body:** Romantic frame; wave plush softness; lush hourglass proportions with a defined waist and soft rounded curves; moderate vertical (5'4"-5'5"); soft and inviting presence with a delicate-yet-grounded build; "tranquil strength" presence—quietly durable but appearing fragile.
-* **Face:** Rounded-soft facial structure; heart-shaped face with high-but-soft cheekbones; smooth clear planes; large expressive almond-shaped eyes, deep dark brown, reflecting a gentle and observant nature; soft-tapered eyebrows in a natural arc; refined nose with a soft bridge; full youthful lips held in a shy-but-warm expression that radiates a quiet, intimate confidence.
-* **Hair:** Type 2A waves; high density; long length past shoulders; silky dark obsidian hair with natural volume and a luminous healthy sheen; side-parted with soft-framed layers; takes soft, romantic styling well; commonly worn in loose curls or pinned back with a delicate accessory.
-* **Skin:** Light warm skin with soft golden-cream undertones (Japanese heritage); smooth satin finish with a natural healthy glow; flawless texture maintained by traditional and modern skincare. Age: early 20s presentation; youthful, gentle, self-assured, tranquil.; Vibe: Tender, Warm, romantic; Radiates A Tranquil And Intimate energy; Creates A Sense Of Safe, Safe, And Observant Space..
-**Outfit:**
-- **Top:** Nice knit top or casual blouse in #AA0000.
-  - **Fit:** Relaxed.
-  - **Material:** Soft knit or cotton.
-  - **Pattern:** Solid or subtle texture.
-  - **Neckline:** Crew or V-neck.
-  - **Sleeve:** Long or 3/4 sleeves.
-- **Bottom:** Dark jeans or casual pants in #B3995D.
-  - **Fit:** Straight or skinny.
-  - **Material:** Premium denim or cotton blend.
-  - **Waist:** Mid to high-rise.
-  - **Length:** Full length.
-- **Footwear:** Ankle boots or loafers.
-- **Accessories:** Simple jewelry; tote bag.
-- _expanded_tags: {'photography', 'everyday', 'office', 'relaxed', 'casual', 'professional', 'mood:realistic', 'life', 'realistic', 'friday', 'high definition'}
-**Pose/Action:**
-Reclining on a plush sofa with an open book resting on the lap, right hand poised to turn a page, legs stretched out comfortably, exuding a quiet and Peaceful aura.
----
-
-**CHARACTER 2: Linh Nguyen**
-**Appearance:**
-* **Body:** Gamely Natural frame; petite and energetic density; moderate vertical (5'2"-5'3"); youthful, balanced proportions with a soft athletic ease; moves with a quick, light-footed grace.
-* **Face:** Friendly-refined facial structure; heart-shaped face with soft youthful roundness and high "apple" cheeks; warm dark brown eyes with a subtle upward tilt and a constant sparkle; petite straight nose; bright dimpled smile that reaches her eyes; neutral resting expression is attentive and inviting.
-* **Hair:** Type 1A-1B straight; high density; long length falling to mid-back; styled with a distinctive high half-up bun at the crown; deep obsidian base with sun-kissed honey-blonde money pieces framing her face and highlights through the lower layers; silky and disciplined finish.
-* **Skin:** Warm golden-tan with sun-kissed peach undertones; smooth, luminous texture; flawless "morning-fresh" glow. small gold heart-shaped pendant on a dainty chain. Age: mid-20s (24-26); youthful, high-spirited, genuinely warm.; Vibe: Buoyant, Charismatic, Sweetly Assertive, "main stage" Energy..
-**Outfit:**
-- **Top:** Open-front cardigan in #4B0082 over basic tee.
-  - **Fit:** Relaxed open cardigan.
-  - **Material:** Soft knit or cotton blend.
-  - **Pattern:** Solid or cable knit.
-  - **Neckline:** Open front over crew neck tee.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** Skinny jeans or leggings in #D4AF37.
-  - **Fit:** Skinny or fitted.
-  - **Material:** Stretch denim or cotton blend.
-  - **Waist:** Mid to high-rise.
-  - **Length:** Full length.
-- **Footwear:** Ankle boots or flats.
-- **Accessories:** Scarf; tote bag.
-- _expanded_tags: {'comfortable', 'photography', 'everyday', 'casual', 'mood:realistic', 'versatile', 'life', 'realistic', 'cozy', 'layered', 'high definition'}
-**Pose/Action:**
-Standing at a kitchen counter with the left hand steadying a bundle of herbs, the right hand expertly wielding a chef's knife over a wooden cutting board, focused on the craft.
----
-```
-
-### 3. gen_only_1770475912_31.txt (Score: 450)
-```text
-Generate an image of: **Medium/Format:**
-2D Vector Illustration.
-
-**Technical Specifications:**
-Thick, consistent line art (or lineless). Flat colors with minimal shading (soft gradients only). Pastel or bright, cheerful color palette.
-
-**Stylistic Rules:**
-Shapes are rounded, simplified, and "squishy." Anatomy is stylized (larger heads, simplified hands). Minimal texture.
-
-**Negative Prompt:**
-Sharp angles, grit, realism, photography, complex shading, dark, scary.
-
----
-
-**SCENE/SETTING:**
-**Visual Description:**
-A personal sanctuary featuring a comfortable bed with layered linens. The room is designed for rest, with soft textures and a clutter-free, peaceful aesthetic.
-
-**Sensory/Atmospheric Details:**
-
-- **Lighting:** Soft, diffused morning light filtering through sheer curtains.
-- **Atmosphere:** Warm, quiet, intimate, slow-paced.
-- **Key Elements:** Crisp linen sheets, heavy knit throw, bedside table with personal items, soft shadows.
----
-
-**CHARACTER: Mela Hart**
-**Appearance:**
-* **Body:** Flamboyant Natural frame; tall vertical line; broad shoulders; long limbs; somewhat straight silhouette; moderate bust and hip definition; athletic and springy presence.
-* **Face:** Oval shape; high cheekbones; full lips; prominent expressive eyes; straight nose bridge; defined jawline; bright and buoyant neutral expression.
-* **Hair:** Type 4A (Natural texture) with Type 2B/2C (Wavy/Curly) ends; long, dark brown braids throughout the hair with loose wavy curls at the bottom; high shine; braids are a signature identity feature.
-* **Skin:** Deep brown with warm golden undertones and luminous satin finish. Age: mid-20s presentation; energetic, playful.; Vibe: Lively, Athletic, Approachable, Joyful..
-**Outfit:**
-- **Top:** Black floral lace bodysuit.
-  - **Fit:** Skin-tight bodycon.
-  - **Material:** Floral lace; Sheer mesh panels.
-  - **Pattern:** Floral lace pattern.
-  - **Neckline:** Plunging V-neck.
-  - **Sleeve:** Long sleeves or sleeveless.
-- **Bottom:** Integrated high-cut leg section.
-  - **Fit:** High-cut bodycon.
-  - **Material:** matching lace/mesh.
-  - **Waist:** Defined natural waist.
-  - **Length:** Bodysuit cut.
-- **Footwear:** Black stiletto pumps; Silk robe falling off shoulders.
-- **Accessories:** Delicate gold body chain; pearl drop earrings.
-- _expanded_tags: {'intimate', 'Lingerie', 'boudoir', 'dramatic', 'fashion', 'romantic', 'luxury', 'sensual', 'glamour', 'affectionate', 'Lace', 'flirty', 'alluring', 'elegant', 'bedroom', 'style', 'intense', 'sultry', 'lingerie', 'Intimate', 'rich', 'Elegant', 'Glamour', 'expensive'}
-**Pose/Action:**
-Sitting on concrete stairs with the left knee drawn up to the chest and the right leg extended down a step, left arm resting on the knee, gazing off into the urban landscape.
----
-```
-
-
-## 📉 Bottom 3 Worst Prompts
-
-### 1. gen_only_1770475912_11.txt (Score: 30)
-```text
-Generate an image of: **Medium/Format:**
-Pencil/Graphite on Paper.
-
-**Technical Specifications:**
-Monochromatic greyscale. Visible pencil strokes, hatching, and cross-hatching for shading. Paper texture background.
-
-**Stylistic Rules:**
-Lines vary in frantic energy and opacity. Construction lines and smudge marks may remain visible. Focus is on the "essence" of the subject, with edges fading into the paper.
-
-**Negative Prompt:**
-Color, paint, 3D, smooth, digital, plastic, photo.
-
----
-
-**SCENE/SETTING:**
-**Visual Description:**
-A circle of warmth in the wilderness. The fire is the only source of light, dancing and popping. Beyond the ring of light, the forest is a wall of black.
-
-**Sensory/Atmospheric Details:**
-
-- **Lighting:** Dynamic flickering orange firelight; deep dancing shadows.
-- **Atmosphere:** Smoky, hot near the fire/cold behind, primal, communal.
-- **Key Elements:** Fire pit, logs, sparks rising, darkness surrounding.
----
-
-**CHARACTER: Daisy Dawson**
-**Appearance:**
-* **Body:** Soft Natural frame; soft fleshiness over a moderate frame; curved waist-to-hip ratio with slightly blunt, feminine shoulders; build is fleshy and gracefully curved rather than muscularly defined.
-* **Face:** Soft, rounded planes with full, "heart-shaped" cheeks; bright blue eyes framed by heavy lashes; upturned "button" nose featuring a small, subtle nostril piercing; open and inviting resting expression.
-* **Hair:** Long Strawberry Blonde / Copper waves; high density Type 2B texture; often styled with playful volume or accessories like oversized ribbons and bows.
-* **Skin:** Fair with cool pink undertones; prone to a natural, healthy flush; smooth texture; distinctive vine/leaf tattoo wrapping around her left forearm and a small shell tattoo on her upper right arm. Age: 20-24; youthful, spirited, and modern.; Vibe: Effervescent, Flirty, Cozy, And Approachable..
-**Outfit:**
-- **Top:** Long flowing robes with arcane symbols and trim.
-  - **Fit:** Voluminous and flowing.
-  - **Material:** Velvet or Silk.
-  - **Pattern:** Star or Moon decorations; Arcane symbols.
-  - **Neckline:** High-neck.
-  - **Sleeve:** Wide long sleeves.
-- **Bottom:** Wide pointed hat matching robes.
-  - **Fit:** Traditional wizard hat.
-  - **Material:** Matching Velvet.
-  - **Pattern:** Star/Moon embroidery.
-  - **Waist:** Leather belt with pouches.
-  - **Length:** Floor-length.
-- **Footwear:** Soft leather boots.
-- **Accessories:** Wooden staff with crystal; spellbook; component pouches; mystical amulet.
-- _expanded_tags: {'Fantasy', 'mythology', 'Magic', 'magic'}
----
-
-**CHARACTER 2: Marcus Thompson**
-**Appearance:**
-* **Body:** Natural male frame; straight athletic flesh; inverted rectangle proportions; moderate-to-tall vertical.
-* **Face:** Balanced-strong facial structure; square-leaning oval face; defined jaw; warm eyes; calm open expression.
-* **Hair:** Type 4A coils; medium density; short fade with textured top; clean lineup; matte-satin finish; black.
-* **Skin:** Deep brown skin with neutral undertones. Age: early 30s presentation; steady, reliable.; Vibe: Calm Strength, Grounded..
-**Outfit:**
-- **Top:** Fitted leather vest.
-  - **Fit:** Snug.
-  - **Material:** Leather.
-  - **Neckline:** High-neck.
-  - **Sleeve:** Sleeveless.
-- **Bottom:** Tight leather pants.
-  - **Fit:** Tight.
-  - **Material:** Leather.
-  - **Waist:** Utility belt.
-  - **Length:** Full.
-- **Footwear:** Soft leather silent boots.
-- **Accessories:** Lockpicks; throwing daggers; coin purse; hooded cloak.
-- _expanded_tags: {'Fantasy', 'mythology', 'magic', 'Stealth'}
----
-
-**CHARACTER 3: Hailey Bennett**
-**Appearance:**
-* **Body:** Soft Natural frame; moderate vertical line with a slightly petite essence; soft flesh over a frame with gentle width; relaxed but engaged posture.
-* **Face:** Soft heart-shaped structure; rounded cheeks; wide, expressive blue-grey eyes with a bright engaging gaze; uniform white teeth and a symmetrical, wide smile that reaches her eyes.
-* **Hair:** Type 2A/2B waves; high density and volume; "butterfly cut" featuring heavy layering and curtain bangs; dimensional honey blonde with heavy platinum face-framing "money piece" highlights.
-* **Skin:** Fair with cool pink undertones; "glass skin" finish with a natural, healthy flush; light dusting of faint freckles across the nose bridge and cheeks. Age: 19-23; youthful, spirited, and modern.; Vibe: Bubbly, Animated, Chatty, And Genuinely Cheerful..
-**Outfit:**
-- **Top:** Dark tattered robes with high collar.
-  - **Fit:** Loose and flowing.
-  - **Material:** Silk or Linen.
-  - **Pattern:** Tattered edges; bone decorations.
-  - **Neckline:** High-neck.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** Matching dark trousers or long skirt.
-  - **Fit:** Flowing.
-  - **Material:** fabric.
-  - **Waist:** Buckle belt with skull motifs.
-  - **Length:** Floor-length.
-- **Footwear:** Knee-high black leather boots.
-- **Accessories:** Staff topped with skull/dark crystal; bone jewelry; dark spell tome; hooded cloak.
-- _expanded_tags: {'Dark', 'Fantasy', 'mythology', 'magic', 'Magic'}
----
-
-**Additional Notes:**
-Daisy Dawson sprinting with the ball while Marcus Thompson trails and calls for a pass, Hailey Bennett in hot pursuit, captured with motion blur to emphasize athletic speed.
-```
-
-### 2. gen_only_1770475912_4.txt (Score: 70)
-```text
-Generate an image of: **Medium/Format:**
-Digital Rendering with Ray-Tracing.
-
-**Technical Specifications:**
-High-contrast lighting with dominant cyan, magenta, and neon green hues. Chromatic aberration, bloom, and lens flares. Wet surface reflections.
-
-**Stylistic Rules:**
-Subjects are lit by artificial light sources. Shadows are deep and crushed. Skin may have a synthetic or slightly plasticky sheen due to the harsh lighting.
-
-**Negative Prompt:**
-Natural light, sunlight, pastoral, soft, vintage, watercolor, beige, earth tones.
-
----
-
-**SCENE/SETTING:**
-**Visual Description:**
-A glass tube suspended between mega-towers. The city is a dizzying drop below. Flying vehicles zip past.
-
-**Sensory/Atmospheric Details:**
-
-- **Lighting:** Cool city glow from below; internal safety lights.
-- **Atmosphere:** Vertigo, sterile, transient, breathtaking.
-- **Key Elements:** Glass floor/walls, city below, flying cars, support struts.
----
-
-**CHARACTER: Valentina "Tina" Kovač**
-**Appearance:**
-- **Body:** Dramatic frame; straight thin flesh with minimal softness; narrow angular proportions with long limbs, prominent joints (elbows, wrists, knees), flat planes, minimal bust (A cup), straight hips, long fingers and toes; tall-moderate vertical (5'8"-5'9"); very low body density—visible bone structure, delicate appearance but wiry strength, lean muscle definition without bulk; bird-like presence that seems too delicate yet surprisingly resilient.
-- **Face:** Sharp angular structure; long oval-to-diamond face; high prominent cheekbones creating dramatic shadows; deep-set eyes, almond-shaped, close-set, Intense dark brown to black with penetrating gaze; strong straight nose with high bridge; defined angular jawline; hollow cheeks even at healthy weight; neutral resting expression is intense and assessing with slight suspicious edge—reads as guarded or challenging.
-- **Hair:** Type 2C-3A waves/curls; medium-high density but fine texture; long length past shoulders; no defined part, tousled and wild; matte-to-low sheen finish; deliberately unkempt aesthetic; commonly worn loose and chaotic, half-up with tendrils escaping, or messy bun with pieces falling; deep black-brown with occasional henna-red undertones or temporary colored streaks (artistic expression).
-- **Skin:** Light-olive with warm golden undertones (Roma coloring); smooth but slightly weathered from outdoor living/art-making; paint stains semi-permanent on hands and forearms; small scattered tattoos (DIY stick-and-poke aesthetic); natural bohemian finish. Age: mid-20s presentation; artistic, restless, slightly feral energy.; Vibe: Intense, Restless, Wild, Artistic, Guarded-Yet-Magnetic, Burning-Too-Bright Quality..
-**Outfit:**
-- **Top:** Cropped tech-fabric jacket with asymmetric cut.
-  - **Fit:** Boxy cropped.
-  - **Material:** Tech-fabric (Nylon/Neoprene).
-  - **Neckline:** High collar asymmetrical.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** High-waist tactical pants with straps.
-  - **Fit:** Baggy utility.
-  - **Material:** Cargo canvas.
-  - **Waist:** High-waist.
-  - **Length:** Ankle-length.
-- **Footwear:** Platform boots.
-- **Accessories:** LED accents, tech goggles, geometric jewelry.
-- _expanded_tags: {'cool', 'dark', 'Edgy', 'alternative', 'Sci-Fi'}
----
-
-**CHARACTER 2: Callum Doherty**
-**Appearance:**
-* **Body:** Natural frame; lean but defined muscularity (mesomorph leaning); moderate vertical (5'10"-5'11"); "wiry strength" developed from physical labor; forearms are notably toned and vascular; broad chest tapering to a narrow waist; moves with a loose, athletic agility.
-* **Face:** Angular and expressive; defined jawline that is often softened by a scruffy 5 o'clock shadow; bright, mischievous eyes in a piercing electric blue (striking contrast to hair); nose has a slight bump (maybe broken once in a rugby match); features are animated and quick to smile.
-* **Hair:** Type 2B waves; high density; vibrant, true copper-red (fox colored); cut in a "textured crop" or "modern mullet" style—shorter on sides, longer and messy on top/back; matte finish; often tousled by running hands through it.
-* **Skin:** Fair/Pale with pink undertones; heavily freckled—a constellation of rust-colored freckles covers his nose, cheeks, shoulders, and arms; prone to sunburn but currently has a "farmer's tan" on the arms. Age: mid-to-late 20s; Vibe: Energetic, Cheeky, Hardworking, Rugged, Social, Magnetic..
-**Outfit:**
-- **Top:** Fisherman's sweater or Aran knit.
-  - **Fit:** Relaxed classic.
-  - **Material:** Heavy wool.
-  - **Pattern:** Cable knit.
-  - **Neckline:** Crew neck.
-  - **Sleeve:** Long sleeves.
-- **Bottom:** Tailored wool trousers or chinos.
-  - **Fit:** Tailored straight leg.
-  - **Material:** Wool; Cotton chino.
-  - **Waist:** Natural.
-  - **Length:** Full length.
-- **Footwear:** Leather oxfords or loafers.
-- **Accessories:** Leather messenger bag, hardcover book prop, tortoise-shell glasses.
-- _expanded_tags: {'Casual', 'mood:realistic', 'photography', 'life', 'everyday', 'Scholarly', 'realistic', 'high definition'}
----
-
-**Additional Notes:**
-Valentina "Tina" Kovač driving hard toward the hoop while Callum Doherty slides their feet in a low defensive block, set against a concrete court with long chain-link fence shadows.
-```
-
-### 3. gen_only_1770475912_40.txt (Score: 75)
+### 1. gen_only_1771799634_3.txt (Score: 695)
 ```text
 Generate an image of: **Medium/Format:**
 Sports Action Photography (Telephoto Lens).
@@ -408,38 +29,490 @@ Static, blurry subject, posed, calm, soft lighting, portrait.
 
 **SCENE/SETTING:**
 **Visual Description:**
-Rows of metal lockers and wooden benches. Uniforms hang ready or lie in heaps. The space is a transition zone between the world and the game.
+A sanctuary for the senses. A deep soaking tub takes center stage, surrounded by flickering candles. Steam softens the edges of the room.
 
 **Sensory/Atmospheric Details:**
 
-- **Lighting:** Harsh fluorescent strips; slightly green or humming.
-- **Atmosphere:** Private, focused, smelling of liniment and humidity.
-- **Key Elements:** Lockers, benches, hanging jerseys, whiteboard.
+- **Lighting:** entirely by candlelight; dancing warm shadows and reflections on water.
+- **Atmosphere:** Steamy, humid, scented oils, silent solitude or romance.
+- **Key Elements:** Porcelain tub, bubbles, candles, rose petals.
 ---
 
-**CHARACTER: Priya Sharma**
+**CHARACTER: Luna Vex**
 **Appearance:**
-* **Body:** Flamboyant Gamine frame; straight athletic flesh; compact powerful proportions; petite vertical.
-* **Face:** Soft oval face with gentle rounded features; warm expressive dark brown eyes; friendly approachable expression; fuller cheeks; soft jawline; warm genuine smile.
-* **Hair:** Type 2B-2C waves; medium-high density; long dark brown hair (almost black at roots) with warm caramel-brown highlights throughout mid-lengths and ends; natural body and volume; beachy waves.
-* **Skin:** Deep warm brown skin with rich golden undertones; natural healthy glow. tiny sparkling silver nose stud. Age: late 20s presentation; driven, capable.; Vibe: Focused, Disciplined, Intense..
+* **Body:** Soft Gamine; firm yet smooth flesh quality; 35-25-35 balanced hourglass proportions; petite height at 5’2”; athletic density with a defined waist and toned anatomical markers; compact and magnetic presence.
+* **Face:** Rounded heart-shaped face with a prominent, smooth forehead and high, rounded cheekbones; gently tapered but soft chin following a natural curve; wide-set, expressive almond-shaped eyes in a warm grey-blue; distinguished by sharp, precise black-winged eyeliner that elongates the outer corners; naturally dark, well-defined brows; petite nose with a soft bridge; wide, radiant smile revealing straight white teeth and creating characteristic "apple" cheeks.
+* **Hair:** High-density wavy texture; split-dye vibrant fuchsia-pink and electric sapphire-blue; styled with a clean center part to create a striking vertical color separation; shoulder-length and voluminous; often worn in playful twin braids or loose, wind-swept waves.
+* **Skin:** Fair, luminous complexion with neutral-cool undertones; natural "lit-from-within" glow; subtle warmth on the cheekbones that emphasizes her lively expressions. Age Presentation: 20–25; youthful, spirited, and modern maturity.; Vibe: Infectious, Warm, Welcoming, Charismatic.; Bearing: Dynamic and candid; postural patterns include expressive head tilts, animated facial gestures, and a lean-in approach during conversation..
 **Outfit:**
-- **Top:** Low-back High-neck Leotard.
-  - **Fit:** Skin-tight aerodynamic.
-  - **Material:** Performance Lycra/Foil.
-  - **Pattern:** Geometric white and black.
-  - **Neckline:** High-neck.
-  - **Sleeve:** 3/4 or Long Sleeve.
-- **Bottom:** Bare legs (Leotard cut).
-  - **Fit:** High-cut leg.
-  - **Material:** Lycra.
-  - **Waist:** Natural.
-  - **Length:** Leotard brief.
-- **Footwear:** Barefoot or athletic toe-wraps.
-- **Accessories:** Matching hair scrunchie.
-- _expanded_tags: {'Gymnastics'}
+- **Top:** {Color} Augmented Tech-wear Tunic
+  - **Type:** Tech-wear Tunic
+  - **Material:** Matte Synthetic with neon fiber-optic tracing
+  - **Fit:** Relaxed-urban
+  - **Color:** Neon Cyan
+- **Bottom:** {Color} Hardshell Tactical Skirt
+  - **Type:** Tactical Skirt
+  - **Material:** Layered Polycarbonate
+  - **Color:** Matte Black
+- **Outerwear:** {Color} Modular Gear Vest
+  - **Type:** Gear Vest
+  - **Material:** Ballistic Mesh
+  - **Color:** Charcoal
+- **Accessories:** {Style} Augmented Reality Visor and Cyber-deck
+  - **Type:** AR Visor and Cyber-deck
+  - **Style:** Glitch-aesthetic
+- _expanded_tags: {'cyberpunk', 'dramatic', 'combat', 'intense', 'tactical', 'theatrical'}
+---
+
+**CHARACTER 2: Elena Moretti**
+**Appearance:**
+* **Body:** Soft Natural frame; fleshy and soft curves layered over a strong, muscular foundation; defined waist with a striking hourglass ratio; strong, athletic shoulders and thighs that project power and grace.
+* **Face:** Softened planes with full, inviting cheeks; almond-shaped warm brown eyes set under well-defined brows; straight nose with a soft, rounded tip; full and defined lips; resting expression is playful yet self-assured.
+* **Hair:** Type 2A/2B texture (loose waves); dark espresso brown to black with high density and volume; reaching mid-back in length; cut with heavy fringe bangs and dramatic face-framing layers.
+* **Skin:** Fair to light-medium depth; cool pink undertones that are prone to natural flushing; smooth, healthy texture with a radiant, hydrated finish. Age Presentation: 21-25; youthful urban maturity.; Vibe: Main Character Energy, Playful, Grounded, Effortlessly Alluring.; Bearing: Relaxed confidence; takes up space comfortably; poses with emphasized curves and deliberate, fluid movements that command attention..
+**Outfit:**
+- **Top:** {Color} Body-mapping Combat Shirt
+  - **Type:** Body-mapping Combat Shirt
+  - **Material:** Ripstop Nylon and Jersey mix
+  - **Fit:** Compression-fit
+  - **Color:** Tactical Black
+- **Bottom:** {Color} Tactical Cargo Pants
+  - **Type:** Tactical Cargo Pants
+  - **Material:** Cordura Reinforced Ripstop
+  - **Color:** Tactical Black
+- **Outerwear:** {Color} Lightweight Plate Carrier
+  - **Type:** Lightweight Plate Carrier
+  - **Material:** Laser-cut Laminate
+  - **Color:** Stealth Gray
+- **Accessories:** {Style} Tactical Gloves and Comms Headset
+  - **Type:** Tactical Gloves and Comms Headset
+  - **Style:** Rugged Professional
+- _expanded_tags: {'dramatic', 'combat', 'intense', 'Stealth', 'tactical', 'theatrical'}
+---
+
+**Additional Notes:**
+Luna Vex and Elena Moretti standing back-to-back with weapons raised, surrounded by enemies and appearing dirty, tired, but absolutely defiant in a moment of cinematic heroic triumph.
+```
+
+### 2. gen_only_1771799634_48.txt (Score: 695)
+```text
+Generate an image of: **Medium/Format:**
+Sports Action Photography (Telephoto Lens).
+
+**Technical Specifications:**
+High shutter speed (1/1000s+) to freeze motion. Sharp focus on the athlete/subject, motion-blurred background. High contrast, punchy colors.
+
+**Stylistic Rules:**
+Dynamic angles, low camera position. Sweat and muscle definition emphasized. Facial expressions of intense focus or exertion.
+
+**Negative Prompt:**
+Static, blurry subject, posed, calm, soft lighting, portrait.
+
+---
+
+**SCENE/SETTING:**
+**Visual Description:**
+A sacred space of worship. Stone idols or statues loom in the semi-darkness, illuminated by oil lamps.
+
+**Sensory/Atmospheric Details:**
+
+- **Lighting:** Dim, warm, flickering; mysterious.
+- **Atmosphere:** Smoky (incense), chanting (implied), heavy, spiritual.
+- **Key Elements:** Statues, pillars, offerings, hanging bells.
+---
+
+**CHARACTER: Lucía Reyes**
+**Appearance:**
+* **Body:** Romantic frame; wave plush softness; full hourglass proportions; moderate vertical.
+* **Face:** Rounded facial structure; heart-shaped face; full cheeks; warm expressive eyes; joyful resting expression.
+* **Hair:** Type 2B–2C waves; high density; long layered cut; side part; healthy sheen.
+* **Skin:** Warm golden skin with radiant glow. Age Presentation: late 20s presentation; vibrant, warm.; Vibe: Affectionate, Expressive, Lively.; Bearing: open posture; expressive movement..
+**Outfit:**
+- **Top:** {Color} Reinforced Urban Combat Tee
+  - **Type:** Reinforced Combat Tee
+  - **Material:** Breathable Mesh with Kevlar-reinforced shoulders
+  - **Fit:** Athletic-fit
+  - **Color:** Wolf Gray
+- **Bottom:** {Color} Urban Tactical Slacks
+  - **Type:** Tactical Slacks
+  - **Material:** Flexible Stretch-cordura
+  - **Color:** Wolf Gray
+- **Outerwear:** {Color} Concealable Balistic Vest
+  - **Type:** Ballistic Vest
+  - **Material:** Ultra-light Dyneema
+  - **Color:** Dark Slate
+- **Accessories:** {Style} Tactical Watch and Low-profile Earbuds
+  - **Type:** Tactical Watch and Earbuds
+  - **Style:** Low-vis Professional
+- _expanded_tags: {'dramatic', 'combat', 'intense', 'urban', 'tactical', 'theatrical'}
+---
+
+**CHARACTER 2: Ines Santos**
+**Appearance:**
+* **Body:** Soft Classic frame; balanced proportions with gentle curves; smooth, rounded contours; moderate height and vertical line; refined and graceful presence.
+* **Face:** Oval face shape with high, well-defined cheekbones; smooth, clear complexion with a natural glow; broad and genuine smile showing straight white teeth; warm, radiant expression.
+* **Eyes & Makeup:** Dark brown almond-shaped eyes; focal point is a sharp, precise black winged eyeliner (cat-eye style) flicking upward at the corners; dark, full, well-groomed eyebrows; natural soft rose-pink lip color.
+* **Hair:** Sleek, dark black hair; neat center part; pulled back tightly from the face into a low, polished bun or ponytail; smooth, high-gloss finish.
+* **Skin:** Warm, golden-tan complexion with a radiant, healthy glow; smooth satin texture. Age Presentation: mid-20s presentation; sophisticated, professional, yet vibrant.; Vibe: Attentive, Polished, Warm, Stylishly Precise.; Bearing: casual yet attentive posture; leans forward slightly with interest; rests chin gently on a curled hand; graceful and composed..
+**Outfit:**
+- **Top:** {Color} Body-mapping Combat Shirt
+  - **Type:** Body-mapping Combat Shirt
+  - **Material:** Ripstop Nylon and Jersey mix
+  - **Fit:** Compression-fit
+  - **Color:** Tactical Black
+- **Bottom:** {Color} Tactical Cargo Pants
+  - **Type:** Tactical Cargo Pants
+  - **Material:** Cordura Reinforced Ripstop
+  - **Color:** Tactical Black
+- **Outerwear:** {Color} Lightweight Plate Carrier
+  - **Type:** Lightweight Plate Carrier
+  - **Material:** Laser-cut Laminate
+  - **Color:** Stealth Gray
+- **Accessories:** {Style} Tactical Gloves and Comms Headset
+  - **Type:** Tactical Gloves and Comms Headset
+  - **Style:** Rugged Professional
+- _expanded_tags: {'dramatic', 'combat', 'intense', 'Stealth', 'tactical', 'theatrical'}
+---
+
+**Additional Notes:**
+Lucía Reyes and Ines Santos slapping hands high in the air with arms fully extended, faces beaming with victory and infectious excitement.
+```
+
+### 3. gen_only_1771799634_21.txt (Score: 540)
+```text
+Generate an image of: **Medium/Format:**
+1990s Analog Cel Animation.
+
+**Technical Specifications:**
+Soft, slightly blurred line work to simulate CRT bleed. Muted or pastel color palette. Simple two-tone shading (base color + one shadow layer).
+
+**Stylistic Rules:**
+Standardized, balanced facial proportions. "Screen tone" noise or slight chromatic aberration at edges. No modern digital effects (bloom, lens flare, complex gradients).
+
+**Negative Prompt:**
+HD, 4K, vector, sharp, vibrant, 3D, realistic shading, digital painting.
+
+---
+
+**SCENE/SETTING:**
+**Visual Description:**
+A dressing room cluttered with apparel and secrets. A vanity mirror with bulb lights frames the subject.
+
+**Sensory/Atmospheric Details:**
+
+- **Lighting:** Harsh vanity bulbs; shadows in the corners.
+- **Atmosphere:** Powder and perfume, claustrophobic, anxious.
+- **Key Elements:** Vanity mirror, apparel racks, makeup, dressing screen.
+---
+
+**CHARACTER: Samira Mansour**
+**Appearance:**
+* **Body:** Soft Natural; balanced proportions with soft curves; moderate vertical (5'6"); natural athletic density with a defined waist and soft shoulders; poised and culturally connected presence.
+* **Face:** Soft-balanced structure; oval face with high, smooth cheekbones; large expressive dark brown eyes framed by naturally thick, groomed eyebrows; straight refined nose; full lips with a natural cupid's bow; soft jawline; warm engaging expression that feels both wise and welcoming.
+* **Hair:** (Covered) Typically styled in voluminous dark curls beneath her hijab.
+* **Skin:** Rich golden-olive depth (North African coloring); smooth luminous finish; natural healthy glow enhanced by traditional skincare oils. Age Presentation: late 20s; mature, self-possessed, and sophisticated.; Vibe: Approachable, Chic, Cultural, Warm, Intelligent.; Bearing: graceful and deliberate movement; excellent upright posture; expressive hand gestures often highlighting traditional jewelry..
+**Outfit:**
+- **Hijab:** Black lace-trimmed jersey hijab (loose wrap).
+- **Top:** Black satin long-sleeve robe with lace cuffs.
+  - **Fit:** Relaxed wrapper; Tied loosely at waist.
+  - **Material:** Satin; Lace.
+  - **Neckline:** High V-neck modesty.
+  - **Sleeve:** Long sleeves.
+- **Bottom:** Matching black satin wide-leg lounge pants.
+  - **Fit:** Wide-leg.
+  - **Material:** Satin.
+  - **Waist:** Natural (drawstring).
+  - **Length:** Floor-length.
+- **Footwear:** Feathery mule slippers.
+- **Accessories:** Pearl drop earrings; gold rings.
+- _expanded_tags: {'elegant', 'intimate', 'theatrical', 'boudoir', 'sultry', 'style', 'dramatic', 'Glamour', 'expensive', 'intense', 'affectionate', 'fashion', 'glamour', 'alluring', 'Lace', 'bedroom', 'romantic', 'sensual', 'flirty', 'luxury', 'Lingerie', 'lingerie', 'rich'}
 **Pose/Action:**
-Standing with both hands firmly on the waist and elbows pushed forward to broaden the lats, showcasing extreme V-taper width and upper body density.
+Sitting on concrete stairs with the left knee drawn up to the chest and the right leg extended down a step, left arm resting on the knee, gazing off into the urban landscape.
+---
+
+**CHARACTER 2: Sina Tuilagi**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with wave softness; balanced proportions with moderate shoulders, defined waist, and rounded hips; moderate vertical (5'6"-5'7"); athletic-natural build with functional strength, soft curves over muscle, powerful legs, strong core, and grounded Pacific Islander physicality; traditional tatau (pe'a-inspired geometric patterns) visible on left thigh and right shoulder/upper arm; commanding warm presence combining ancestral strength with contemporary confidence.
+
+* **Face:** Balanced-soft facial structure with strong underlying bones; round-oval face shape with full cheeks and gentle breadth; moderate-to-wide midface with prominent cheekbones creating natural definition; large almond-shaped eyes with moderate spacing, deep brown to black irises, warm direct gaze; broad nose with rounded bridge and full tip; strong rounded jawline; neutral resting expression shows calm pride with slight natural smile and warm welcoming eye contact; expressions are openly warm and culturally confident.
+
+* **Hair:** Type 3A; very high density; long length past shoulders; no defined part, naturally voluminous; low-to-moderate sheen with healthy texture; commonly worn loose and full with natural curl pattern, half-up with decorative clip, or in low bun with face-framing waves; deep black-brown with warm undertones and natural dimension.
+
+* **Skin:** Deep tan with warm golden-brown undertones and natural luminous finish; bronze-to-brown complexion with sun-kissed richness; smooth healthy texture with island resilience; tatau (traditional Samoan tattoos) visible with cultural geometric patterns in black ink. Age Presentation: mid-to-late 20s presentation; culturally grounded, confidently contemporary, proud of heritage.; Vibe: Warm, Strong, Proud, Culturally Rooted, Contemporary Confidence.; Bearing: grounded powerful posture with broad stable stance; confident unhurried movement; natural authority in physical presence; relaxed shoulders with engaged core; gestures are expansive and welcoming; strong connection to both traditional values and contemporary identity..
+**Outfit:**
+- **Top:** Intimate apparel set (bra) in black.
+  - **Fit:** Fitted; Flattering.
+  - **Material:** Lace, Silk, or Satin ().
+  - **Pattern:** Solid or Delicate lace.
+  - **Neckline:** Sweetheart or Plunge.
+  - **Sleeve:** Sleeveless (strappy).
+- **Bottom:** Matching briefs in black.
+  - **Fit:** Fitted.
+  - **Material:** matching silk/lace.
+  - **Waist:** Natural or Low-rise.
+  - **Length:** Minimal.
+- **Footwear:** Barefoot or delicate slippers.
+- **Accessories:** Minimal jewelry.
+- _expanded_tags: {'elegant', 'intimate', 'theatrical', 'boudoir', 'sultry', 'style', 'dramatic', 'lounge', 'expensive', 'intense', 'affectionate', 'fashion', 'glamour', 'alluring', 'bedroom', 'romantic', 'sensual', 'flirty', 'luxury', 'Sexy', 'lingerie', 'rich'}
+**Pose/Action:**
+Lying on the side propped up on one elbow, other hand resting on the hip, legs stretched out with the knee slightly bent, projecting a relaxed and graceful silhouette.
+---
+```
+
+
+## 📉 Bottom 3 Worst Prompts
+
+### 1. gen_only_1771799634_20.txt (Score: 40)
+```text
+Generate an image of: Medium/Format: High-Quality Anime Illustration (Kyoto Animation / Frieren Style).
+Technical Specifications: Line Art: Delicate, variable-width brown/charcoal lines. NOT thick black outlines. Shading: Cel-Shading for character features (distinct shadow shapes), but using a soft, harmonious color palette. Skin: Flat, matte anime coloring. NO gradient airbrushing or "luminous" texture.
+Stylistic Rules: Anatomy: Character must have Adult Proportions (1:7 ratio), not Chibi. Face: Anime Geometry. Pointed chin (V-shape), minimized nose (dot), but large, detailed eyes. Background: Painterly watercolor style (soft focus), creating a separation from the crisp character art.
+Negative Prompt: Western cartoon, disney, webtoon, thick outlines, realistic skin, airbrush, 3D render, round jawline, swollen face, chibi, child.
+
+---
+
+**SCENE/SETTING:**
+**Visual Description:**
+A grand entrance intended to impress. A sweeping staircase dominates the space, lit by a crystal chandelier.
+
+**Sensory/Atmospheric Details:**
+
+- **Lighting:** Bright, sparkling fixture light; grand.
+- **Atmosphere:** Echoing, impressive, welcoming yet formal.
+- **Key Elements:** Grand staircase, marble floor, chandeliers.
+---
+
+**CHARACTER: Harald Bjornson**
+**Appearance:**
+* **Body:** Flamboyant Natural; massive, heavily muscled frame with broad, powerful shoulders and a deep chest; long limbs with thick wrists and large, calloused hands; tall vertical (6'2"-6'4"); high muscle density with functional power visible in every movement; an imposing, statuesque presence.
+* **Face:** Rugged-angular structure; square face shape with a prominent heavy brow and a stone-like jawline; deep-set piercing blue eyes under thick, expressive eyebrows; straight, strong nose; neutral expression is calm but intense, radiating a sense of grave authority.
+* **Hair:** Type 2B; thick coarse density; rough swept-back silhouette; past shoulders; swept-back; low sheen; single thick warrior braid at the back. Rich golden-blonde or light brown.
+* **Skin:** Fair; warm-neutral undertones; weathered and sun-toughened texture; prominent scar running down the right cheek and another across the knuckles; tanned. Age Presentation: early-to-mid 30s; mature, powerful, and seasoned.; Vibe: Dominant, Steady, Ancient, Rugged, Authoritative.; Bearing: slow, deliberate movements; stands with perfect, military-like posture; projects an aura of immense weight and stability; hand-on-belt or arms-crossed stance..
+**Outfit:**
+- **Top:** Three-piece tweed sack suit with detachable collar shirt.
+  - **Fit:** High-closure boxy.
+  - **Material:** Wool tweed.
+  - **Pattern:** Pinstripe or Solid.
+  - **Neckline:** Collared (detachable).
+  - **Sleeve:** Long sleeves.
+- **Bottom:** High-waisted trousers.
+  - **Fit:** Straight leg.
+  - **Material:** Tweed.
+  - **Waist:** High-waisted with suspender buttons.
+  - **Length:** Slight break.
+- **Footwear:** Two-tone spectator oxfords.
+- **Accessories:** Wool newsboy cap; silver pocket watch.
+- _expanded_tags: set()
+---
+
+**CHARACTER 2: Rafael Costa**
+**Appearance:**
+* **Body:** Soft Natural frame; natural flesh with slight wave; balanced proportions with gentle breadth; moderate vertical; relaxed athletic build with natural ease.
+* **Face:** Balanced-warm facial structure; oval-to-square face; warm expressive eyes; defined brows; easy smile; open welcoming expression.
+* **Hair:** Type 3A curls; high density; medium-length tousled cut; natural volume; soft matte-satin finish; often pushed back with slight forward fall.
+* **Skin:** Warm tan skin with golden undertones and healthy glow. Age Presentation: late 20s presentation; confident, spirited, creatively engaged.; Vibe: Warm, Expressive, Creatively Charged, Welcoming.; Bearing: fluid movement; open gestures; natural theatrical quality..
+**Outfit:**
+- **Top:** Simple cloth wraps (optional chest binding).
+  - **Fit:** Wrapped.
+  - **Material:** Linen or Cotton.
+  - **Neckline:** Wrap.
+  - **Sleeve:** Sleeveless.
+- **Bottom:** Loose martial arts pants with tied ankles.
+  - **Fit:** Loose.
+  - **Material:** Cotton.
+  - **Waist:** Martial arts belt.
+  - **Length:** Ankle-length.
+- **Footwear:** Cloth hand and foot wraps.
+- **Accessories:** Staff or bo; prayer beads; meditation scrolls.
+- _expanded_tags: {'athletic', 'traditional', 'Martial Arts', 'magic', 'historical', 'fighting', 'history', 'fantasy', 'temple', 'classic', 'mythology', 'cultural'}
+---
+
+**CHARACTER 3: Zemen Ayele**
+**Appearance:**
+* **Body:** Soft Classic frame; elegant and poised density; moderate-to-tall vertical (5'7"-5'8"); narrow shoulders; balanced proportions with a dignified, upright posture; projects a sense of calm, intellectual authority.
+* **Face:** Balanced-refined facial structure; long oval face; high-bridged aquiline nose; high, defined cheekbones; large, observant dark amber-brown eyes with a focused, analytical gaze; full lips with a natural terracotta tint; expression is usually one of contemplative silence or intense focus.
+* **Hair:** Type 3C texture; high density; natural dark brown ringlet curls with a high-gloss sheen; typically worn loose and voluminous, framing her face and falling to her collarbones; natural center part; healthy and well-maintained.
+* **Skin:** Deep bronze with warm reddish undertones (Habesha/Highland coloring); smooth, matte finish; clear complexion that reflects her meticulous care and "indoor" scholastic life. small gold traditional Coptic cross pendant on a thin gold chain. Age Presentation: late 20s (27-29); mature, professional, and intellectually formidable.; Vibe: Contemplative, Poised, Intellectually Deep, Culturally Rooted, Quiet Authority.; Bearing: perfectly vertical posture; movements are slow and deliberate; expressive but measured hand gestures; stands with a sense of "stillness" that commands respect..
+**Outfit:**
+- **Top:** Off-shoulder white peasant blouse under leather bodice vest.
+  - **Fit:** Billowy sleeves; Fitted vest.
+  - **Material:** White cloth; Brown leather (vest).
+  - **Pattern:** Solid with gold grommets.
+  - **Neckline:** Off-shoulder.
+  - **Sleeve:** Long billowy sleeves with tied cuffs.
+- **Bottom:** Multi-layered asymmetric handkerchief skirt.
+  - **Fit:** Asymmetric panels for movement.
+  - **Material:** Olive, Burgundy, Gold, Black fabric.
+  - **Pattern:** Paisley or Metallic patterns.
+  - **Waist:** Brown leather belt at hips with coin decorations.
+  - **Length:** Asymmetric berbagai lengths.
+- **Footwear:** Slouchy knee-high brown suede or leather boots.
+- **Accessories:** Jewel-tone bandana head scarf; statement coin necklace; multiple bangles; crystal ball prop.
+- _expanded_tags: {'boho', 'alternative', 'Boho', 'Pirate', 'bohemian', 'creative', 'artistic', 'art', 'costume'}
+---
+
+**CHARACTER 4: Malik Farrah**
+**Appearance:**
+* **Body:** Lean-muscular frame; sun-weathered olive skin with a deep, earthy tan; rectangular proportions with broad shoulders and a powerful, flexible core; average height (5'9"-5'10"); resilient, functional build with high-stamina muscle definition; "weathered strength" presence—durable and alert.
+
+* **Face:** Strong angular structure; prominent brow ridge; sharp, defined jawline partially obscured by a well-groomed short beard; intense, narrowed dark brown eyes that possess a sharp, far-reaching gaze; thick, dark eyebrows with a heavy set; straight nose with a strong bridge; firm mouth often set in a focused line; expression is keen, observant, and perpetually ready for action.
+
+* **Hair:** Type 3C-4A tight curls; high density; kept short and practical in a textured buzz cut or short fade; matte finish with occasional dust from the trail; dark ebony hair that looks durable.
+
+* **Skin:** Deep olive skin with sun-kissed golden-bronze undertones; weathered, rugged texture with fine sand-lines around the eyes; a small, faded scar on his left temple; healthy "outdoor" resilience. Age Presentation: mid-30s presentation; experienced, grounded, resilient.; Vibe: Adventurous, Steady, Resourceful, Quiet Intensity, Desert-Hardened.; Bearing: alert, grounded posture; economical movement—every step is calculated and purposeful; calm and focused in high-pressure situations; hands often checking gear or shielding eyes from the sun..
+**Outfit:**
+- **Top:** Oversized graphic jacket over mesh tank.
+  - **Fit:** Oversized jacket with straps; Tight mesh tank.
+  - **Material:** Nylon/Polyester; Mesh.
+  - **Pattern:** Graphic prints; Straps and buckles.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Long sleeves (jacket).
+- **Bottom:** Cargo pants with chains and zippers.
+  - **Fit:** Baggy heavy-pocketed.
+  - **Material:** Durable cotton or nylon.
+  - **Pattern:** Multi-zipper detail.
+  - **Waist:** Buckle belt.
+  - **Length:** Full length.
+- **Footwear:** Chunky high-top sneakers.
+- **Accessories:** Layered silver necklaces; bucket hat.
+- _expanded_tags: {'Performance', 'Fashion', 'pop'}
+---
+
+**Additional Notes:**
+Harald Bjornson, Rafael Costa, Zemen Ayele, and Malik Farrah standing in a classic staggered quartet formation, boater hats tilted at jaunty angles, mouths open in synchronized harmony while gesturing with canes in a rhythmic performance.
+```
+
+### 2. gen_only_1771799634_40.txt (Score: 80)
+```text
+Generate an image of: **Medium/Format:**
+Inked Illustration with Digital Coloring.
+
+**Technical Specifications:**
+Heavy black spot-blacks and varying line weights. Halftone patterns (Ben-Day dots) used for shading gradients. High-key lighting for dramatic shadow placement.
+
+**Stylistic Rules:**
+Bold, graphic composition. Anatomy is defined by heavy contour lines and shadow blocks. Colors are flat and distinct within the ink boundaries.
+
+**Negative Prompt:**
+Soft shading, painterly, blurry, photography, 3D, watercolor, pastel.
+
+---
+
+**SCENE/SETTING:**
+**Visual Description:**
+A colorful jungle of padded equipment. Vaults, beams, and bars are arranged over blue foam mats. The ceiling is high to accommodate flying bodies.
+
+**Sensory/Atmospheric Details:**
+
+- **Lighting:** Bright warehouse lighting; even and safe.
+- **Atmosphere:** Chalk dust in the air, energetic, scent of foam.
+- **Key Elements:** Balance beam, uneven bars, foam pit, spring floor.
+---
+
+**CHARACTER: Leonidas Stratos**
+**Appearance:**
+* **Body:** Dramatic; elite athletic flesh; "Adonis belt" and deep core definition; broad square shoulders and a narrow, powerful waist; moderate-to-tall vertical (6'0"-6'2"); extremely high muscle density with sharp vascularity; movements are precise, economical, and explosive.
+* **Face:** Severe-classical structure; sharp, chiseled features; high nasal bridge; deep-set, hawk-like amber-brown eyes; prominent cheekbones and a squared, resolute jawline; neutral expression is intense and watchful, radiating a sense of absolute focus.
+* **Hair:** Type 1B-2A; medium density; disciplined short-to-medium silhouette; no defined part; low sheen; tight, disciplined crop or rough swept-back style. Dark chestnut or black.
+* **Skin:** Deep olive; warm golden undertones; smooth firm texture; surgically-precise scars on pectoral and outer thigh; tanned. Age Presentation: mid-to-late 30s; at the peak of physical and mental maturity.; Vibe: Disciplined, Intense, Elite, Protective.; Bearing: perfect military posture; predatory grace; stands with hands clasped behind back or arms crossed, radiating a quiet but overwhelming authority..
+**Outfit:**
+- **Top:** {Color} Body-mapping Combat Shirt
+  - **Type:** Body-mapping Combat Shirt
+  - **Material:** Ripstop Nylon and Jersey mix
+  - **Fit:** Compression-fit
+  - **Color:** Tactical Black
+- **Bottom:** {Color} Tactical Cargo Pants
+  - **Type:** Tactical Cargo Pants
+  - **Material:** Cordura Reinforced Ripstop
+  - **Color:** Tactical Black
+- **Outerwear:** {Color} Lightweight Plate Carrier
+  - **Type:** Lightweight Plate Carrier
+  - **Material:** Laser-cut Laminate
+  - **Color:** Stealth Gray
+- **Accessories:** {Style} Tactical Gloves and Comms Headset
+  - **Type:** Tactical Gloves and Comms Headset
+  - **Style:** Rugged Professional
+- _expanded_tags: {'dramatic', 'combat', 'intense', 'Stealth', 'tactical', 'theatrical'}
+---
+
+**CHARACTER 2: Yuki Tanaka**
+**Appearance:**
+* **Body:** Romantic frame; wave plush softness; lush hourglass proportions with a defined waist and soft rounded curves; moderate vertical (5'4"-5'5"); soft and inviting presence with a delicate-yet-grounded build; "tranquil strength" presence—quietly durable but appearing fragile.
+* **Face:** Rounded-soft facial structure; heart-shaped face with high-but-soft cheekbones; smooth clear planes; large expressive almond-shaped eyes, deep dark brown, reflecting a gentle and observant nature; soft-tapered eyebrows in a natural arc; refined nose with a soft bridge; full youthful lips held in a shy-but-warm expression that radiates a quiet, intimate confidence.
+* **Hair:** Type 2A waves; high density; long length past shoulders; silky dark obsidian hair with natural volume and a luminous healthy sheen; side-parted with soft-framed layers; takes soft, romantic styling well; commonly worn in loose curls or pinned back with a delicate accessory.
+* **Skin:** Light warm skin with soft golden-cream undertones (Japanese heritage); smooth satin finish with a natural healthy glow; flawless texture maintained by traditional and modern skincare. Age Presentation: early 20s presentation; youthful, gentle, self-assured, tranquil.; Vibe: Tender, Warm, romantic; Radiates A Tranquil And Intimate energy; Creates A Sense Of Safe, Safe, And Observant Space.; Bearing: soft posture with natural ease—never rigid; contained but fluid movement; carries herself with a delicate, purposeful grace; eyes often slightly lowered but warm when making contact; hands often folded gently or held close to her center..
+**Outfit:**
+- **Top:** Tie-front western shirt .
+  - **Fit:** Cropped tie-front.
+  - **Material:** Pearl-snap cotton.
+  - **Pattern:** Variable .
+  - **Neckline:** Collared.
+  - **Sleeve:** Short (rolled).
+- **Bottom:** High-waisted cut-off denim hotpants.
+  - **Fit:** Tight distressed.
+  - **Material:** Denim.
+  - **Pattern:** Raw hem.
+  - **Waist:** High-waisted.
+  - **Length:** Short (micro).
+- **Footwear:** Distressed cowboy boots.
+- **Accessories:** Tooled leather belt, bandana.
+- _expanded_tags: set()
+---
+
+**Additional Notes:**
+Leonidas Stratos and Yuki Tanaka with heavy blades crossed and sparks flying at the point of contact, both leaning into the struggle with gritted teeth and visible muscle strain in a high-stakes duel.
+```
+
+### 3. gen_only_1771799634_2.txt (Score: 90)
+```text
+Generate an image of: **Medium/Format:**
+Inked Illustration with Digital Coloring.
+
+**Technical Specifications:**
+Heavy black spot-blacks and varying line weights. Halftone patterns (Ben-Day dots) used for shading gradients. High-key lighting for dramatic shadow placement.
+
+**Stylistic Rules:**
+Bold, graphic composition. Anatomy is defined by heavy contour lines and shadow blocks. Colors are flat and distinct within the ink boundaries.
+
+**Negative Prompt:**
+Soft shading, painterly, blurry, photography, 3D, watercolor, pastel.
+
+---
+
+**SCENE/SETTING:**
+**Visual Description:**
+A study in minimalism and nature. Tatami mats cover the floor, and shoji screens slide open to reveal a garden.
+
+**Sensory/Atmospheric Details:**
+
+- **Lighting:** Soft, diffused natural light; paper lanterns.
+- **Atmosphere:** Zen, silent, smelling of matcha and straw mats.
+- **Key Elements:** Tatami mats, low table, hanging scroll, bonsai.
+---
+
+**CHARACTER: Nora Alvarez**
+**Appearance:**
+- **Body:** Soft Natural frame; natural flesh with wave softness; soft hourglass-pear proportions with full hips, thighs and bust, soft rounded belly, subtly defined shoulders; petite-to-moderate vertical (5'2"-5'4"); voluptuous short-stack build with concentrated curves and grounded presence.
+- **Face:** Balanced-soft facial structure; round-oval face; deep almond-shaped eyes with steady observant gaze; soft jawline; neutral resting expression is steady and observant with signature warmth showing in subtle corner smile.
+- **Hair:** Type 2B waves; medium density; long controlled cut with natural body; matte finish; dark brown.
+- **Skin:** Warm tan with golden-brown undertones and natural matte-soft finish. thin black rectangular glasses. Age Presentation: mid-20s presentation; introspective, settled, observant.; Vibe: Thoughtful, Calm, Inward, Deliberate.; Bearing: generally calm and deliberate in movement and bearing; gentle posture; observant stillness..
+**Outfit:**
+- **Top:** Ornate dō (chest armor).
+  - **Fit:** Form-fitting lacquered plates.
+  - **Material:** Lacquered plates in red, black, or gold.
+  - **Pattern:** family crest (mon).
+  - **Neckline:** High-neck gorget.
+  - **Sleeve:** Sode (shoulder guards) and kote (armored sleeves).
+- **Bottom:** Kusazuri (armored skirt) over hakama pants.
+  - **Fit:** Overlapping plates.
+  - **Material:** matching lacquered steel.
+  - **Waist:** Silk sash with family mon.
+  - **Length:** Mid-thigh armor; Full length pants.
+- **Footwear:** Traditional tabi and waraji or armored boots.
+- **Accessories:** Katana and wakizashi (daisho pair); kabuto helmet with ornamental crest.
+- _expanded_tags: {'manga', 'traditional', 'historical', 'japanese', '2d', 'history', 'Japanese', 'temple', 'anime', 'weapon_combat', 'classic', 'cultural'}
+**Pose/Action:**
+Sitting sideways on a plush velvet chair with legs draped over the armrest, head tilted back and looking over the shoulder with an alluring and confident expression.
 ---
 ```
 

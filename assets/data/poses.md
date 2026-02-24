@@ -4,7 +4,7 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 
 ---
 
-## Casual & Daily Life
+## Casual & Domestic
 
 - **Arms Crossed** (Standing, Confident): Standing with weight shifted to the right hip, arms crossed firmly at the chest, shoulders back, projecting a calm and self-assured presence.
 - **Hands on Hips** (Standing, Confident): Standing with hands firmly on hips, elbows flared slightly, weight balanced evenly on both legs, chin lifted with a bold and commanding gaze.
@@ -13,22 +13,6 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Relaxed Chair Sit** (Sitting, Relaxed): Sitting comfortably in a chair with legs crossed at the knee, right hand resting on the armrest, left hand in the lap, leaning back with a peaceful and content aura.
 - **Cross-Legged Floor Sit** (Sitting, Relaxed, Floor): Sitting cross-legged on the floor, back straight and hands resting gently on the knees, head held high with a serene and grounded expression.
 - **Natural Stance** (Standing, Casual): Standing naturally with the left hand resting on the thigh, right arm hanging loosely at the side, weight shifted slightly to the left leg, projecting an approachable and easygoing personality.
-- **Active Stride** (Walking, Dynamic): Captured mid-stride with the right leg forward, arms swinging naturally in motion, eyes focused ahead, radiating purposeful movement and lively energy.
-
----
-
-## Action & Motion
-
-- **Anime V-Sign** (Japan, Cute, Playful): Holding a sharp V-sign (peace gesture) with the right hand near the right eye, accompanied by a playful wink and a wide, cheerful smile, radiating high-energy idol vibes.
-- **Candid Laughter** (Candid, Happy): Captured in a natural burst of laughter, with the left hand partially covering the mouth and the head tilted back, eyes crinkling with genuine, unbridled joy.
-- **Joyful Exultation** (Expressive, Happy, Standing): Standing with the head tilted back and arms spread wide in a gesture of triumph, weight shifted to the rear leg, projecting infectious and overwhelming happiness.
-- **Overhead Stretch** (Stretch, Relaxed, Standing): Reaching both arms high overhead with fingers interlaced, back arched slightly and weight on the balls of the feet, exhaling a sense of morning vitality and physical release.
-- **Philosophical Pondering** (Thinking, Quiet, Sitting): Sitting with the right elbow resting on the knee and the chin cradled in the palm, index finger extended along the temple, eyes narrowed in deep, contemplative focus.
-
----
-
-## Casual & Daily Life
-
 - **Academic Focus** (Reading, School, Sitting): Sitting on a surface with a scholarly posture, leaning forward with the left hand supporting the chin while the right hand turns a page, lost in deep research.
 - **Cafe Contemplation** (Cafe, Drinking, Sitting): Sitting at a table with a reflective posture, gazing out of a window with a serene and cozy expression.
 - **Savoring the Sip** (Drinking, Relaxed, Standing): Holding a delicate glass to the lips with the right hand, eyes closed in appreciation of the flavor, weight shifted to the left leg, capturing a refined and relaxed moment.
@@ -41,6 +25,20 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Savory Stir** (Cooking, Domestic, Standing): Standing over a steaming pot on the stove, right hand slowly stirring with a wooden spoon while the left hand holds the pot's handle, a gentle cloud of steam framing the face.
 - **Leisurely Reading** (Reading, Relaxed, Sitting): Reclining on a plush sofa with an open book resting on the lap, right hand poised to turn a page, legs stretched out comfortably, exuding a quiet and Peaceful aura.
 - **Keynote Delivery** (Professional, Work, Standing): Standing confidently before a large display, right arm extended to gesture toward a specific data point, left hand holding a clicker, commanding the room with professional authority.
+
+---
+
+## Action & Motion
+
+- **Active Stride** (Walking, Dynamic): Captured mid-stride with the right leg forward, arms swinging naturally in motion, eyes focused ahead, radiating purposeful movement and lively energy.
+- **Anime V-Sign** (Japan, Cute, Playful): Holding a sharp V-sign (peace gesture) with the right hand near the right eye, accompanied by a playful wink and a wide, cheerful smile, radiating high-energy idol vibes.
+- **Candid Laughter** (Candid, Happy): Captured in a natural burst of laughter, with the left hand partially covering the mouth and the head tilted back, eyes crinkled with genuine, unbridled joy.
+- **Joyful Exultation** (Expressive, Happy, Standing): Standing with the head tilted back and arms spread wide in a gesture of triumph, weight shifted to the rear leg, projecting infectious and overwhelming happiness.
+- **Overhead Stretch** (Stretch, Relaxed, Standing): Reaching both arms high overhead with fingers interlaced, back arched slightly and weight on the balls of the feet, exhaling a sense of morning vitality and physical release.
+- **Philosophical Pondering** (Thinking, Quiet, Sitting): Sitting with the right elbow resting on the knee and the chin cradled in the palm, index finger extended along the temple, eyes narrowed in deep, contemplative focus.
+- **Graceful Waltz** (Dynamic, Dance, Standing): Captured mid-twirl with arms held in a wide and expressive arc, left leg extended back in a fluid motion, head tilted with a serene and focused expression.
+- **Joyful Motion Twirl** (Dynamic, Fun, Standing): Mid-spin with the lower garment fabric flowing outward in a perfect circle, both arms extended to the sides, head tilted back with a radiant and joyful smile.
+- **Morning Vitality Stretch** (Dynamic, Morning, Standing): Reaching both arms high overhead with fingers interlaced, back arched gently and weight on the balls of the feet, eyes closed in a moment of pure physical release.
 
 ---
 
@@ -57,18 +55,19 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Fierce Runway Stride** (Fashion, Walking, Model): Captured mid-stride with one foot placed directly in front of the other, arms swinging with deliberate grace, expression neutral and fierce, hair flowing behind like a cape.
 - **Dreamy Boudoir Lean** (Fashion, Intimate, Bedroom): Leaning back against a plush upholstered headboard, right hand gently touching the collarbone, eyes dreamy and half-closed, capturing a high-fashion intimate moment.
 - **Overhead Boudoir Recline** (Fashion, Boudoir, Lying): Lying supine on a textured surface, angled diagonally with the head positioned toward the bottom right. Both arms are raised above the head with elbows bent and hands resting loosely near the hair, face turned upward with a soft, inviting smile.
-
----
-
-## Action & Motion
-
-- **Graceful Waltz** (Dynamic, Dance, Standing): Captured mid-twirl with arms held in a wide and expressive arc, left leg extended back in a fluid motion, head tilted with a serene and focused expression.
-- **Joyful Dress Twirl** (Dynamic, Fun, Standing): Mid-spin with the skirt or dress flowing outward in a perfect circle, both arms extended to the sides, head tilted back with a radiant and joyful smile.
-- **Morning Vitality Stretch** (Dynamic, Morning, Standing): Reaching both arms high overhead with fingers interlaced, back arched gently and weight on the balls of the feet, eyes closed in a moment of pure physical release.
-- **Athletic Dribble** (Sport, Basketball, Dynamic): Low athletic crouch with the right hand dribbling a basketball, left arm out for balance, eyes focused ahead with Intense competitive concentration.
-- **High-Release Jump Shot** (Sport, Basketball, Dynamic): Mid-air in a vertical leap, right arm extended high for a release, wrist flicked toward the hoop, eyes locked on the target with unwavering focus.
-- **Athletic Prep Jog** (Sport, Running): Captured mid-jog with the left knee lifted high, arms swinging in a rhythmic motion, focused and determined expression, preparing for maximum effort.
-- **Cinematic Wind-Blown** (Dynamic, Dramatic, Standing): Standing against a strong breeze with hair and clothing billowing dramatically, right hand reaching up to brush a stray lock from the face, eyes gazing into the distance with a contemplative look.
+- **Defined Silhouette Arm Squeeze** (Fashion, Standing): Standing with the upper arms pressed firmly against the sides of the torso to naturally frame the silhouette, hands resting at the waist, radiating a sense of focused technical modeling.
+- **Focused Posture Arch** (Fashion, Elegant, Standing): Standing with perfect posture, rolling the shoulders back and slightly arching the lower back to thrust the chest forward, eyes looking forward with a confident and poised expression.
+- **Alluring Overhead Reach** (Intimate, Artistic, Standing): Standing with both hands placed behind the head and elbows drawn back, elongating the torso and lifting the shoulders, eyes looking directly at the camera with a confident and alluring gaze.
+- **Prone Elbow Prop** (Relaxed, Intimate, Lying): Lying prone on a soft surface and using both elbows to prop up the hands resting chin-in-palm, using gravity and positioning to create a balanced and inviting silhouette.
+- **Profile Projection Turn** (Fashion, Artistic, Standing): Standing at a 45-degree angle away from the camera while turning the head back toward the lens, weight on the rear leg, emphasizing the profile silhouette with high-fashion technical precision.
+- **Volume Enhancing Lean** (Intimate, Flirty, Standing): Leaning slightly toward the camera from a high-angle perspective, arms resting on a low surface, eyes looking up with a playful and soft expression that captures a sense of closeness.
+- **Macro Eye Gaze** (Intense): Framing the eyes with the index fingers resting gently near the temples, pupils dilated with Intense and captivating focus, capturing the micro-details of the iris and lashes.
+- **Sculpted Thigh Curve** (Fashion, Sitting): Sitting on the edge of a velvet chair with one leg crossed high over the other, weight shifted to emphasize the natural curve of the thighs, right hand resting flat on the upper thigh for a poised silhouette.
+- **Dynamic S-Curve Stand** (Fashion, Modeling, Standing): Standing with the right hip pushed out dramatically to the side and the torso tilted slightly in the opposite direction, creating a sharp S-curve silhouette, with the right hand resting firmly on the hip.
+- **Elevated Leg Perch** (Fashion, Urban, Sitting): Perched on a high stool with the right foot resting on a rung to lift the thigh, left leg extended downward, hands resting loosely on the lap, emphasizing a long and athletic lower-body silhouette.
+- **Intimate Collarbone Frame** (Soft, Standing): Interlacing the fingers of both hands just below the throat to frame the collarbone and shoulders, head tilted back slightly with a soft and dreamy gaze.
+- **Rear-Silhouette Arch** (Back, Fashion, Standing): Standing with the back turned toward the camera, hands raised to pull the hair up and away from the neck, arching the lower back slightly while shifting weight to the right leg to emphasize the rear curvature and profile silhouette.
+- **Corner Wall Lounge** (Image Based, Sitting, Leaning): Leaning back into a white corner with the torso relaxed and head tilted, left leg extended straight while the right leg is bent at the knee upon the floor with the foot flat, hands resting gently between the legs in a glamorous and high-fashion lounge pose.
 
 ---
 
@@ -103,23 +102,22 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Sensual Arch** (Intimate, Sensual, Lying): Lying on the back with the back slightly arched and hands buried in the hair, eyes closed in a moment of soft and blissful sensation, radiating a warm and intimate aura.
 - **Boudoir Chair Lounge** (Intimate, Glamour, Sitting): Sitting sideways on a plush velvet chair with legs draped over the armrest, head tilted back and looking over the shoulder with an alluring and confident expression.
 - **Tangled Sheet Peek** (Intimate, Soft, Lying): Wrapped loosely in a heavy duvet or sheet with only the shoulders and face visible, smiling softly and looking toward the viewer with a private and domestic morning vibe.
-
----
-
-## Thematic & Cinematic
-
-- **Anime Ahegao Tease** (Social Media, Anime, Expression): A playful and exaggerated anime-inspired expression with eyes rolled back slightly and tongue extended, capturing a moment of silly and blissful abandon.
-- **Dramatic React Zoom** (Social Media, Intense, Standing): Holding Intense eye contact with a slightly surprised and dramatic facial expression, as if reacting to a sudden camera zoom-in.
-- **Hand-Heart Love** (Social Media, Cute, Standing): Creating a perfect heart shape with both hands held in front of the chest, accompanied by a bright smile and a playful wink toward the camera.
-- **TikTok Lip-Sync** (Social Media, Tech, Standing): Framed in an upper-body shot with direct eye contact, right hand held near the chin as if emphasizing lyrics, exaggerated facial expressions matching a rhythmic beat.
-- **Informative Direction** (Social Media, Professional, Standing): Looking up and to the left with a confident smile, right index finger pointing toward an empty space where text might appear, engaged and directive pose.
-- **Viral Griddy Dance** (Social Media, Dynamic, Dance): Captured mid-motion in the signature Griddy dance, with arms swinging rhythmically and heels lifted off the ground, radiating playful and awkward celebratory energy.
-- **Viral Transition Pose** (Social Media, Action, Dynamic): Standing in a dramatic mid-action pose with the right arm extended toward the lens, weight on the front foot, ready for a seamless "magic" transition effect.
+- **Elegant Ballet Arabesque** (Dance, Ballet, Elegant): Standing firmly on a locked right leg with the left leg extended straight behind in a graceful line, arms flowing in a balanced arc, head held high with a serene expression.
+- **Graceful Ballet Bow** (Dance, Ballet): Captured in a deep curtsy bow with the right leg crossed behind and both arms gracefully extended to the sides, head tilted down in a gesture of grateful performance closure.
+- **Precise Barre Stretch** (Dance, Ballet, Stretch): Right leg extended horizontally on a wooden barre with the torso leaning forward in a deep stretch, hands gently resting on the barre, projecting focused and disciplined practice energy.
+- **Elite Floor Split** (Dance, Flexible): Seated on the ground in a perfect 180-degree split, torso upright and hands resting lightly on the thighs, head held high with an expression of effortless flexibility.
+- **Majestic Grand Jeté** (Dance, Ballet, Jumping): Captured at the peak of a high leap with legs in a perfect mid-air split, arms extended dramatically to the sides, body suspended in a moment of powerful and graceful flight.
+- **Hip-Hop Swagger Stance** (Dance, Hip Hop, Dynamic): Standing in a low athletic crouch with the right arm extended forward and the left hand on the hip, radiating attitude and street-style swagger with a confident smirk.
+- **Pirouette Balance** (Dance, Ballet, Dynamic): Mid-spin on the right foot with the left leg tucked in a passé position, arms held in a perfect circle in front, capturing a moment of flawless balance and rotation.
+- **Precise Pointe Position** (Dance, Ballet, Balance): Standing perfectly on the tips of the toes in pointe shoes, right leg extended to the side, arms in a graceful overhead arc, projecting Intense core strength and poise.
 
 ---
 
 ## Athletics & Sports
 
+- **Athletic Dribble** (Sport, Basketball, Dynamic): Low athletic crouch with the right hand dribbling a basketball, left arm out for balance, eyes focused ahead with Intense competitive concentration.
+- **High-Release Jump Shot** (Sport, Basketball, Dynamic): Mid-air in a vertical leap, right arm extended high for a release, wrist flicked toward the hoop, eyes locked on the target with unwavering focus.
+- **Athletic Prep Jog** (Sport, Running): Captured mid-jog with the left knee lifted high, arms swinging in a rhythmic motion, focused and determined expression, preparing for maximum effort.
 - **Ball Return Wait** (Bowling, Standing): Standing casually at the ball return carousel with the right hand resting flat on the mechanism, watching the incoming balls with a relaxed but ready staggered stance, projecting calm between-frames energy.
 - **Bowling Address Position** (Bowling, Ready, Standing): Standing at the foul line with the bowling ball held at chest height in both hands, elbows tucked into the sides and shoulders square, eyes focused down the lane in deep pre-approach concentration.
 - **Kinetic Bowling Approach** (Bowling, Dynamic): Captured mid-approach with the bowling ball swinging back behind the hip in a powerful and fluid arc, the left arm extended horizontally for balance, weight shifted forward as the stride continues.
@@ -135,9 +133,6 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Anxious Pin Watch** (Bowling, Waiting, Standing): Standing just past the foul line with the right arm still extended from the release, fingers splayed and eyes locked on the pins in high-stakes anticipation of the results.
 - **Careful Ball Polish** (Bowling, Prep, Standing): Standing at the ball return area, carefully wiping a glossy bowling ball with a white microfiber towel, right hand polishing the surface in circular motions with professional dedication.
 - **Lane Seat Relax** (Bowling, Relaxed, Sitting): Sitting in a molded plastic lane chair with legs stretched out comfortably and crossed at the ankles, one hand resting on the thigh, relaxing in a casual and comfortable pose.
-
-## Athletics & Sports
-
 - **Basketball Dribble Hub** (Sport, Basketball): Low athletic stance with the right hand dribbling a ball, left forearm extended for protection to frame the silhouette, eyes Narrowed in Intense focus.
 - **Aerial Layup Finish** (Sport, Basketball, Jumping): Captured at the peak of a leap toward the hoop, right arm extended high for a layup with a flick of the wrist, body in controlled mid-air motion, eyes locked on the rim.
 - **Pure Jump Shot** (Sport, Basketball): Standing with arms extended overhead in perfect shooting form, right elbow tucked in and wrist flicked forward, weight on the balls of the feet with a slight jump-off, eyes locked on the distant hoop.
@@ -162,6 +157,28 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Vertical Volleyball Serve** (Sport, Volleyball, Jumping): Leaping high with the right arm extended overhead to strike the ball at full extension, powerful athletic form with an upward gaze of Intense focus.
 - **Tactical Volleyball Set** (Sport, Volleyball): Standing with hands held high above the forehead, fingers spread and prepared to guide the ball upward with soft touch, focused concentration on the court layout.
 - **Aggressive Volleyball Spike** (Sport, Volleyball, Jumping): Mid-air in a powerful jump, body arched and right arm cocked back high ready to strike the ball over the net, face set in Intense focused aggression.
+- **Rhythmic Jump Rope** (Gym, Cardio): Captured at the peak of a jump with the rope blurred in a perfect arc below the feet, weight on the balls of the feet and wrists flicking in rhythmic motion, projecting Intense training energy.
+- **Deep Fight-Prep Stretch** (Gym, Stretch, Standing): Crouched in a deep side lunge with the left leg extended straight and right knee bent at 90 degrees, arms reaching toward the floor and palms flat, eyes Narrowed in focused concentration.
+- **Streamlined Swim Dive** (Sport, Swim, Jumping): Captured mid-air in a perfectly streamlined horizontal dive, arms locked and extended forward over the ears with hands overlapped, toes pointed, body poised to enter the water with competitive grace.
+- **Explosive Track Start** (Sport, Running, Ready): Crouched in starting blocks with both hands pressing firmly against the track, weight shifted forward onto the fingertips and eyes locked on the lane ahead, radiating explosive ready energy.
+- **Vertical Handstand Balance** (Gym, Balance): Balanced perfectly on both hands with the body in a rigid vertical line, fingers splayed for grip and core Tensed, legs locked together with toes pointed toward the ceiling.
+- **Graceful Backbend Bridge** (Gym, Flexible): Arching backward with palms and feet flat on the ground to form a graceful bridge, elbows locked and head tilted back to look at the floor, showcasing impressive flexibility.
+- **Casual Skateboard Carry** (Skate, Urban, Casual): Standing casually with a skateboard tucked under the right arm, left hand in the pocket of a hoodie, weight on the left leg, projecting cool urban attitude.
+- **Momentum Skater Push** (Skate, Dynamic): One foot on the skateboard and the other pushing forcefully off the ground, arms out for balance as body leans into the forward momentum.
+- **Front Double Bicep** (Bodybuilding, Flex, Standing): Standing with both arms raised and flexed at 90 degrees, fists curled inward to show maximum bicep peaks and shoulder definition, waist vacuumed with weight balanced on the balls of the feet.
+- **V-Taper Lat Spread** (Bodybuilding, Flex, Standing): Standing with both hands firmly on the waist and elbows pushed forward to broaden the lats, showcasing extreme V-taper width and upper body density.
+- **Classic Side Chest** (Bodybuilding, Flex, Standing): Standing in profile with the right leg bent and calf flexed, torso twisted toward the lens, hands gripped together to pop the chest and right bicep with immense power.
+- **Intense Crab Muscular** (Bodybuilding, Flex, Standing): Leaning forward with hands clasped together in front of the waist, all muscles in the arms, chest, and trap area tensed to the absolute limit for maximum vascularity.
+
+---
+
+## Work & Industrial
+
+- **Keynote Delivery** (Professional, Work, Standing): Standing confidently before a large display, right arm extended to gesture toward a specific data point, left hand holding a clicker, commanding the room with professional authority.
+- **Diligent Research** (Academic, Work, Sitting): Sitting at a desk with a scholarly posture, leaning forward with the left hand supporting the chin while the right hand turns a page of a thick manual.
+- **Corporate Strategy** (Work, Professional, Standing): Standing with both hands resting on the edge of a conference table, leaning forward with a serious and focused expression during a high-stakes briefing.
+
+---
 
 ## Combat & Tactical
 
@@ -171,66 +188,6 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Powerful Heavy Bag Strike** (Combat, Dynamic): Mid-punch with the right arm fully extended against a heavy bag, hips rotated sharply into the strike and the left heel lifted off the mat, radiating training intensity and dynamic momentum.
 - **Defensive Sparring Guard** (Combat, Guard, Standing): Standing in a defensive guard with the left arm extended in a stiff jab position to measure distance and the right hand guarding the jaw, alert and watchful expression reflecting tactical awareness.
 - **Ground Guard Bottom** (Combat, Ground, Lying): Lying flat on the back with the legs raised and knees bent to form a technical "closed guard", hands held in a high defensive guard near the face, projecting a ready defensive stance.
-
-## Athletics & Sports
-
-- **Rhythmic Jump Rope** (Gym, Cardio): Captured at the peak of a jump with the rope blurred in a perfect arc below the feet, weight on the balls of the feet and wrists flicking in rhythmic motion, projecting Intense training energy.
-- **Deep Fight-Prep Stretch** (Gym, Stretch, Standing): Crouched in a deep side lunge with the left leg extended straight and right knee bent at 90 degrees, arms reaching toward the floor and palms flat, eyes Narrowed in focused concentration.
-- **Streamlined Swim Dive** (Sport, Swim, Jumping): Captured mid-air in a perfectly streamlined horizontal dive, arms locked and extended forward over the ears with hands overlapped, toes pointed, body poised to enter the water with competitive grace.
-- **Explosive Track Start** (Sport, Running, Ready): Crouched in starting blocks with both hands pressing firmly against the track, weight shifted forward onto the fingertips and eyes locked on the lane ahead, radiating explosive ready energy.
-- **Vertical Handstand Balance** (Gym, Balance): Balanced perfectly on both hands with the body in a rigid vertical line, fingers splayed for grip and core Tensed, legs locked together with toes pointed toward the ceiling.
-- **Graceful Backbend Bridge** (Gym, Flexible): Arching backward with palms and feet flat on the ground to form a graceful bridge, elbows locked and head tilted back to look at the floor, showcasing impressive flexibility.
-- **Casual Skateboard Carry** (Skate, Urban, Casual): Standing casually with a skateboard tucked under the right arm, left hand in the pocket of a hoodie, weight on the left leg, projecting cool urban attitude.
-- **Momentum Skater Push** (Skate, Dynamic): One foot on the skateboard and the other pushing forcefully off the ground, arms out for balance as body leans into the forward momentum.
-
----
-
-## Arts & Performance
-
-- **Elegant Ballet Arabesque** (Dance, Ballet, Elegant): Standing firmly on a locked right leg with the left leg extended straight behind in a graceful line, arms flowing in a balanced arc, head held high with a serene expression.
-- **Graceful Ballet Bow** (Dance, Ballet): Captured in a deep curtsy bow with the right leg crossed behind and both arms gracefully extended to the sides, head tilted down in a gesture of grateful performance closure.
-- **Precise Barre Stretch** (Dance, Ballet, Stretch): Right leg extended horizontally on a wooden barre with the torso leaning forward in a deep stretch, hands gently resting on the barre, projecting focused and disciplined practice energy.
-- **Elite Floor Split** (Dance, Flexible): Seated on the ground in a perfect 180-degree split, torso upright and hands resting lightly on the thighs, head held high with an expression of effortless flexibility.
-- **Majestic Grand Jeté** (Dance, Ballet, Jumping): Captured at the peak of a high leap with legs in a perfect mid-air split, arms extended dramatically to the sides, body suspended in a moment of powerful and graceful flight.
-- **Hip-Hop Swagger Stance** (Dance, Hip Hop, Dynamic): Standing in a low athletic crouch with the right arm extended forward and the left hand on the hip, radiating attitude and street-style swagger with a confident smirk.
-- **Pirouette Balance** (Dance, Ballet, Dynamic): Mid-spin on the right foot with the left leg tucked in a passé position, arms held in a perfect circle in front, capturing a moment of flawless balance and rotation.
-- **Precise Pointe Position** (Dance, Ballet, Balance): Standing perfectly on the tips of the toes in pointe shoes, right leg extended to the side, arms in a graceful overhead arc, projecting Intense core strength and poise.
-
----
-
-## Alternative & Edgy
-
-- **Moody Cigarette Pose** (Edgy, Smoking, Standing): Holding an unlit cigarette elegantly between the index and middle fingers of the right hand, exhaling slowly with head tilted back, eyes half-closed in a moody contemplative expression.
-- **Urban Graffiti Lean** (Edgy, Urban, Standing): Leaning with one shoulder against a textured surface, other foot up with knee bent, hands tucked loosely into pockets, projecting rebellious casual attitude.
-- **Cool Leather Flip** (Edgy, Fashion, Action): Captured mid-motion flipping a black leather jacket onto the shoulders, right hand gripping the collar, a confident smirk and weight shifted forward for an effortless vibe.
-- **Biker Motorcycle Lean** (Edgy, Combat, Standing): Leaning back against the seat of a heavy motorcycle with the left leg crossed over the right at the ankle, arms crossed firmly over the chest, radiating dangerous bad-girl energy.
-- **Rebellious Rocker Stance** (Edgy, Music, Standing): Standing in a wide and confident stance with the head tilted back, right hand raised in a sharp "rock on" gesture, left hand on the hip, radiating untamed rebellious energy.
-- **Challenging Chair Straddle** (Edgy, Attitude, Sitting): Straddling a wooden chair backwards with arms crossed over the backrest, resting the chin on the forearms, maintaining direct and challenging eye contact with the viewer.
-
----
-
-## Thematic & Cinematic
-
-- **Cottagecore Basket Stroll** (Soft, Cute, Walking): Walking gracefully while carrying a woven wicker basket filled with wildflowers in the crook of the right arm, head tilted with a serene and Peaceful smile.
-- **Ethereal Crown Adjustment** (Soft, Fantasy, Standing): Both hands raised gently to the head to adjust a delicate flower crown, eyes closed with a dreamy and romantic expression, radiating natural grace.
-- **Refined Tea Moment** (Soft, Cozy, Sitting): Delicately holding a porcelain teacup with both hands and bringing it toward the lips, eyes looking softly over the rim, capturing a refined and cozy moment.
-- **Retro Vinyl Appreciation** (Soft, Music, Standing): Holding a vintage vinyl record in both hands and examining the sleeve with a fond and nostalgic expression, head tilted slightly, radiating retro music-lover energy.
-- **Classic Ara Ara Tease** (Soft, Anime, Expression, Standing): Head tilted slightly with a soft and knowing smile, right hand resting gently against the cheek while gazing warmly at the viewer with an aura of motherly affection and gentle teasing.
-- **Poised Kneeling Gaze** (Elegant, Sitting): Kneeling on both knees with the torso angled slightly toward the camera, right hand raised with index and middle fingers grazing the chin, left hand resting flat on the thigh, radiating a poised and thoughtful presence.
-
----
-
-## History & Culture
-
-- **Regal Goddess Presence** (Cultural, Divine, Standing): Standing in a majestic position with the chin lifted high and arms spread wide in a gesture of divine authority, radiating an ethereal and commanding presence.
-- **Formal Kimono Bow** (Japan, Formal, Standing): Captured in a traditional and respectful Japanese bow with the upper body bent forward at the waist, hands placed flat on the thighs, projecting disciplined formal posture.
-- **Dignified Royal Wave** (Royal, Formal, Standing): Right hand raised in a graceful and controlled "royal wave" gesture, wrist moving with elegant precision, head held high with a dignified and regal expression.
-- **Elegant Sari Adjustment** (India, Elegant, Standing): Gracefully using the right hand to adjust the flowing fabric of a sari over the left shoulder, weight shifted to the right hip for a poised and traditional stance.
-
----
-
-## Combat & Tactical
-
 - **Lethal Sword Point** (Combat, Fantasy): Standing in a wide combat stance and pointing a longsword directly at the lens with the right arm fully extended, eyes cold and unwavering, radiating lethal intent.
 - **Iconic Hero Landing** (Action, Superhero, Dynamic): Captured in a low crouch on the right knee with the left hand pressed firmly to the ground for balance, head lifting to reveal a fierce and determined expression.
 - **Tactical Weapon Check** (Combat, Professional, Standing): Focused intently on cleaning the barrel of a sidearm with a white cloth in the left hand, right hand steadying the frame, projecting a dangerous and professional calm.
@@ -238,11 +195,6 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Predatory Stalking Stance** (Combat, Intense, Standing): Leaning forward in a low stalk, right hand reaching out as if to seize an opponent, eyes Narrowed in calculated and Intense aggression.
 - **Shadowed Match Light** (Edgy, Intense): Lighting a match with a steady right hand, face partially shadowed by the flickering flame, eyes focused on the light with cool and dangerous indifference.
 - **Dramatic Coat Flare** (Fashion, Action, Dynamic): Captured mid-motion flipping a long trench coat onto the shoulders with a sharp movement of both arms, a confident smirk and weight shifted forward for action.
-
----
-
-## Combat & Tactical
-
 - **MMA Cage Lean** (Combat, MMA, Standing): Leaning back against a padded boundary with arms spread wide along the top edge, feet planted firmly, radiating an aura of dominance.
 - **Classic Boxing Guard** (Combat, Boxing, Standing): Standing with knees slightly bent and hands held high in a tight defensive guard, fists protectively screening the chin and jaw, eyes locked on the opponent with intense tactical focus.
 - **Double-Leg Shoot** (Combat, Wrestling, Dynamic): Captured in a low, explosive lunging motion for a takedown, head pressed forward and arms extended to wrap around the backs of an opponent's knees, one knee grazing the mat in a high-kinetic grapple entry.
@@ -251,17 +203,12 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 
 ---
 
-## Fantasy & Sci-Fi
+## Fantasy & RPG
 
 - **Arcane Energy Charge** (Magic, Power, Standing): Standing with hands held six inches apart in front of the chest, fingers curved around a sphere of glowing energy, face illuminated by a brilliant light from the palms.
 - **Ethereal Levitation** (Magic, Fantasy, Dynamic): Suspended six inches off the ground with toes pointed downward, arms spread wide to the sides, hair and clothing drifting upward as if in a zero-gravity void.
 - **Sinister Power Surge** (Dark, Villain, Standing): Standing with the head bowed and the left hand clutching the forehead, the right arm extended with fingers curled into claws, radiating a shadowy and Intense aura.
 - **Radiant Divine Ascension** (Divine, Serene, Standing): Standing with the head tilted back toward a beam of celestial light, arms spread wide in a gesture of open surrender, expression of pure serenity and overwhelming power.
-
----
-
-## Fantasy & Sci-Fi
-
 - **Knightly High Guard** (Fantasy, Combat, Standing): Holding a longsword with both hands high above the head at a 45-degree angle, feet planted in a wide and stable stance, weight shifted back and ready to strike.
 - **Lethal Draw-Cut Stance** (Japan, Combat, Squatting): Crouched low with the left hand gripping a lacquered scabbard at the hip, right hand poised on the katana hilt, eyes Narrowed in a moment of lethal and silent focus.
 - **Assassin's Prowl** (Combat, Thief, Dynamic): Moving in a low prowl with a dagger held in a reverse grip in the right hand, left hand touching the ground for balance, face shadowed and radiating silent danger.
@@ -269,16 +216,7 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 
 ---
 
-## Athletics & Sports
-
-- **Front Double Bicep** (Bodybuilding, Flex, Standing): Standing with both arms raised and flexed at 90 degrees, fists curled inward to show maximum bicep peaks and shoulder definition, waist vacuumed with weight balanced on the balls of the feet.
-- **V-Taper Lat Spread** (Bodybuilding, Flex, Standing): Standing with both hands firmly on the waist and elbows pushed forward to broaden the lats, showcasing extreme V-taper width and upper body density.
-- **Classic Side Chest** (Bodybuilding, Flex, Standing): Standing in profile with the right leg bent and calf flexed, torso twisted toward the lens, hands gripped together to pop the chest and right bicep with immense power.
-- **Intense Crab Muscular** (Bodybuilding, Flex, Standing): Leaning forward with hands clasped together in front of the waist, all muscles in the arms, chest, and trap area tensed to the absolute limit for maximum vascularity.
-
----
-
-## Fantasy & Sci-Fi
+## Cyberpunk & Sci-Fi
 
 - **Holographic Manipulation** (Sci-Fi, Tech, Standing): Standing with the right hand extended and fingers spread as if manipulating a complex floating hologram, eyes reflecting the digital glow in a moment of technical focus.
 - **Command Console Operation** (Sci-Fi, Tech, Standing): Standing at a futuristic control panel with both hands on a digital interface, leaning forward slightly with weight on the front foot, concentrated on multiple glowing screens.
@@ -291,26 +229,42 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 
 ---
 
-## Fashion & Glamour
+## Alt & Gothic
 
-- **Defined Silhouette Arm Squeeze** (Fashion, Standing): Standing with the upper arms pressed firmly against the sides of the torso to naturally frame the silhouette, hands resting at the waist, radiating a sense of focused technical modeling.
-- **Focused Posture Arch** (Fashion, Elegant, Standing): Standing with perfect posture, rolling the shoulders back and slightly arching the lower back to thrust the chest forward, eyes looking forward with a confident and poised expression.
-- **Alluring Overhead Reach** (Intimate, Artistic, Standing): Standing with both hands placed behind the head and elbows drawn back, elongating the torso and lifting the shoulders, eyes looking directly at the camera with a confident and alluring gaze.
-- **Prone Elbow Prop** (Relaxed, Intimate, Lying): Lying prone on a soft surface and using both elbows to prop up the hands resting chin-in-palm, using gravity and positioning to create a balanced and inviting silhouette.
-- **Profile Projection Turn** (Fashion, Artistic, Standing): Standing at a 45-degree angle away from the camera while turning the head back toward the lens, weight on the rear leg, emphasizing the profile silhouette with high-fashion technical precision.
-- **Volume Enhancing Lean** (Intimate, Flirty, Standing): Leaning slightly toward the camera from a high-angle perspective, arms resting on a low surface, eyes looking up with a playful and soft expression that captures a sense of closeness.
-- **Macro Eye Gaze** (Intense): Framing the eyes with the index fingers resting gently near the temples, pupils dilated with Intense and captivating focus, capturing the micro-details of the iris and lashes.
-- **Sculpted Thigh Curve** (Fashion, Sitting): Sitting on the edge of a velvet chair with one leg crossed high over the other, weight shifted to emphasize the natural curve of the thighs, right hand resting flat on the upper thigh for a poised silhouette.
-- **Dynamic S-Curve Stand** (Fashion, Modeling, Standing): Standing with the right hip pushed out dramatically to the side and the torso tilted slightly in the opposite direction, creating a sharp S-curve silhouette, with the right hand resting firmly on the hip.
-- **Elevated Leg Perch** (Fashion, Urban, Sitting): Perched on a high stool with the right foot resting on a rung to lift the thigh, left leg extended downward, hands resting loosely on the lap, emphasizing a long and athletic lower-body silhouette.
-- **Intimate Collarbone Frame** (Soft, Standing): Interlacing the fingers of both hands just below the throat to frame the collarbone and shoulders, head tilted back slightly with a soft and dreamy gaze.
-- **Rear-Silhouette Arch** (Back, Fashion, Standing): Standing with the back turned toward the camera, hands raised to pull the hair up and away from the neck, arching the lower back slightly while shifting weight to the right leg to emphasize the rear curvature and profile silhouette.
-- **Corner Wall Lounge** (Image Based, Sitting, Leaning): Leaning back into a white corner with the torso relaxed and head tilted, left leg extended straight while the right leg is bent at the knee upon the floor with the foot flat, hands resting gently between the legs in a glamorous and high-fashion lounge pose.
+- **Moody Cigarette Pose** (Edgy, Smoking, Standing): Holding an unlit cigarette elegantly between the index and middle fingers of the right hand, exhaling slowly with head tilted back, eyes half-closed in a moody contemplative expression.
+- **Urban Graffiti Lean** (Edgy, Urban, Standing): Leaning with one shoulder against a textured surface, other foot up with knee bent, hands tucked loosely into pockets, projecting rebellious casual attitude.
+- **Cool Leather Flip** (Edgy, Fashion, Action): Captured mid-motion flipping a black leather jacket onto the shoulders, right hand gripping the collar, a confident smirk and weight shifted forward for an effortless vibe.
+- **Biker Motorcycle Lean** (Edgy, Combat, Standing): Leaning back against the seat of a heavy motorcycle with the left leg crossed over the right at the ankle, arms crossed firmly over the chest, radiating dangerous bad-girl energy.
+- **Rebellious Rocker Stance** (Edgy, Music, Standing): Standing in a wide and confident stance with the head tilted back, right hand raised in a sharp "rock on" gesture, left hand on the hip, radiating untamed rebellious energy.
+- **Challenging Chair Straddle** (Edgy, Attitude, Sitting): Straddling a wooden chair backwards with arms crossed over the backrest, resting the chin on the forearms, maintaining direct and challenging eye contact with the viewer.
+
+---
+
+## History & Culture
+
+- **Regal Goddess Presence** (Cultural, Divine, Standing): Standing in a majestic position with the chin lifted high and arms spread wide in a gesture of divine authority, radiating an ethereal and commanding presence.
+- **Formal Kimono Bow** (Japan, Formal, Standing): Captured in a traditional and respectful Japanese bow with the upper body bent forward at the waist, hands placed flat on the thighs, projecting disciplined formal posture.
+- **Dignified Royal Wave** (Royal, Formal, Standing): Right hand raised in a graceful and controlled "royal wave" gesture, wrist moving with elegant precision, head held high with a dignified and regal expression.
+- **Elegant Sari Adjustment** (India, Elegant, Standing): Gracefully using the right hand to adjust the flowing fabric of a sari over the left shoulder, weight shifted to the right hip for a poised and traditional stance.
 
 ---
 
 ## Thematic & Cinematic
 
+- **Cinematic Wind-Blown** (Dynamic, Dramatic, Standing): Standing against a strong breeze with hair and clothing billowing dramatically, right hand reaching up to brush a stray lock from the face, eyes gazing into the distance with a contemplative look.
+- **Anime Ahegao Tease** (Social Media, Anime, Expression): A playful and exaggerated anime-inspired expression with eyes rolled back slightly and tongue extended, capturing a moment of silly and blissful abandon.
+- **Dramatic React Zoom** (Social Media, Intense, Standing): Holding Intense eye contact with a slightly surprised and dramatic facial expression, as if reacting to a sudden camera zoom-in.
+- **Hand-Heart Love** (Social Media, Cute, Standing): Creating a perfect heart shape with both hands held in front of the chest, accompanied by a bright smile and a playful wink toward the camera.
+- **TikTok Lip-Sync** (Social Media, Tech, Standing): Framed in an upper-body shot with direct eye contact, right hand held near the chin as if emphasizing lyrics, exaggerated facial expressions matching a rhythmic beat.
+- **Informative Direction** (Social Media, Professional, Standing): Looking up and to the left with a confident smile, right index finger pointing toward an empty space where text might appear, engaged and directive pose.
+- **Viral Griddy Dance** (Social Media, Dynamic, Dance): Captured mid-motion in the signature Griddy dance, with arms swinging rhythmically and feet lifted off the ground, radiating playful and awkward celebratory energy.
+- **Viral Transition Pose** (Social Media, Action, Dynamic): Standing in a dramatic mid-action pose with the right arm extended toward the lens, weight on the front foot, ready for a seamless "magic" transition effect.
+- **Cottagecore Basket Stroll** (Soft, Cute, Walking): Walking gracefully while carrying a woven wicker basket filled with wildflowers in the crook of the right arm, head tilted with a serene and Peaceful smile.
+- **Ethereal Crown Adjustment** (Soft, Fantasy, Standing): Both hands raised gently to the head to adjust a delicate flower crown, eyes closed with a dreamy and romantic expression, radiating natural grace.
+- **Refined Tea Moment** (Soft, Cozy, Sitting): Delicately holding a porcelain teacup with both hands and bringing it toward the lips, eyes looking softly over the rim, capturing a refined and cozy moment.
+- **Retro Vinyl Appreciation** (Soft, Music, Standing): Holding a vintage vinyl record in both hands and examining the sleeve with a fond and nostalgic expression, head tilted slightly, radiating retro music-lover energy.
+- **Classic Ara Ara Tease** (Soft, Anime, Expression, Standing): Head tilted slightly with a soft and knowing smile, right hand resting gently against the cheek while gazing warmly at the viewer with an aura of motherly affection and gentle teasing.
+- **Poised Kneeling Gaze** (Elegant, Sitting): Kneeling on both knees with the torso angled slightly toward the camera, right hand raised with index and middle fingers grazing the chin, left hand resting flat on the thigh, radiating a poised and thoughtful presence.
 - **Nervous Flutter Smile** (Expression, Shy): Tightly cropped close-up portrait focusing on the lower face and eyes, a tight and slightly hesitant smile with compressed lips and Narrowed eyes, one hand reaching up to touch the back of the neck in a gesture of soft, social anxiety.
 - **Superior Smug Smirk** (Expression, Smug, Elegant): A sharp macro shot with a slight low-angle tilt to emphasize an air of superiority, a more condescending and aristocratic version of the "ara ara" tease, with one corner of the mouth lifted in a sharp smirk and eyes looking down with cool indifference.
 - **Cheeky Playful Tease** (Expression, Playful, Anime): Softly-lit close-up with a shallow depth of field to pop the facial features against a blurred background, a mischievous smile with the tongue poking out slightly and eyes crinkling in a playful wink.
@@ -319,26 +273,14 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Melancholy Longing** (Expression, Sad): A moody and cinematographic close-up with a tight center-crop to isolate the emotion, downcast eyes with a slight tremor in the lower lip, head tilted down and hair partially obscuring the face.
 - **Shocked Gasped Reaction** (Expression, Surprise, Intense): High-definition macro close-up capturing the raw tension of the expression, eyes wide with shock and mouth slightly agape, pupils dilated as if reacting to a sudden discovery.
 - **Cold Determination** (Expression, Brave, Action): Cinematic close-up with dramatic side-lighting and a tight focal point on the eyes, a clinched jaw and Narrowed, focused eyes reflecting unwavering resolve, chin lifted slightly.
-
----
-
-## Thematic & Cinematic
-
 - **Heroic Brave Stand** (Emotion, Brave, Standing): Standing tall with chest out and chin lifted high, hands clenched into fists at the sides, weight balanced evenly on both feet to project unwavering courage.
 - **Tensed Fear Recoil** (Emotion, Fear): Cowering slightly with both arms raised protectively in front of the chest, eyes wide with terror and weight shifted back as if retreating from a sudden threat.
 - **Shy Blush Gaze** (Emotion, Shy, Standing): Head tilted down with the right hand grazing the back of the neck, cheeks flushed and eyes looking away shyly, capturing a moment of innocent and soft embarrassment.
 - **Romantic Lovelorn Gaze** (Emotion, Love, Sitting): Looking at an off-camera figure with soft and dreamy eyes, a gentle and warm smile playing on the lips, body relaxed and leaning forward slightly.
 - **Exhausted Tearful Relief** (Emotion, Relief, Standing): Eyes closed with head tilted back slightly, a faint and Peaceful smile breaking through a look of profound relief, capturing a moment of intense emotional release.
-
----
-
-## Thematic & Cinematic
-
 - **Direct Gaze Challenge** (Fourth Wall, Confident): Face filling the frame, nose almost touching the lens. Unwavering, intense eye contact that breaks the fourth wall, challenging the viewer with a confident stare.
 - **Flirty Upward Gaze** (Fourth Wall, Flirty, Extreme High Angle): Camera positioned just above eye level, very close distance. Looking up through the eyelashes with a soft, playful smile, creating an intimate POV of being admired. Focus sharply on the irises.
 - **POV Hand Reach** (Fourth Wall, Intimate, Extreme POV): Reaching one hand out to touch the camera lens, covering part of the frame with a blurred hand in the foreground. Focus locked on the eyes which are looking lovingly at the viewer.
 - **Over-Shoulder Connection** (Fourth Wall, Candid): Captured turning the head completely back to lock eyes with the viewer from a close distance. A knowing smile playing on the lips, inviting the viewer to follow.
 - **Adoring Upward Look** (Fourth Wall, Romantic, Extreme High Angle): Extremely shallow depth of field. Looking sharply upward at the "viewer" with wide, sparkling eyes full of adoration, placing the viewer in a dominant perspective.
 - **Judgmental Stare** (Fourth Wall, Sassy): Sitting forward with chin resting on hands, looking over the top of sunglasses (or lowered eyelids) directly into the camera lens with a playful, assessing, and slightly haughty expression.
-
-

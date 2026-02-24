@@ -3,7 +3,7 @@ modifiers:
   Stealth: in **matte light-absorbing vantablack**
   Chrome: with **reflective liquid-chrome panels**
 
-tags: [Cyberpunk, Tech, Hack]
+tags: [cyberpunk, tech, Hack]
 
 [F]
 - **Top:** Cropped bomber jacket over synaptic-interface bodysuit {modifier}.

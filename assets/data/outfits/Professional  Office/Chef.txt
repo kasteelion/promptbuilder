@@ -1,4 +1,4 @@
-tags: [Work, Professional, Cooking]
+tags: [work, professional, Cooking]
 
 [F]
 - **Top:** Double-breasted chef's jacket.

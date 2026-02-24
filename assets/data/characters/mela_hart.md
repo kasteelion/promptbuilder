@@ -1,7 +1,7 @@
 ### Mela Hart
 **Photo:** mela_hart_photo.png
 **Summary:** Bright and buoyant, Mela brings playful athleticism and youthful joy into every movement. Her presence feels lively and affectionate, grounded in warmth and expressive energy.
-**Tags:** Black, Approachable, Athletic, Female, Playful, Sport, Noir, Casual
+**Tags:** Black, Approachable, Athletic, Female, Playful, Sport, noir, Casual
 **Gender:** F
 **Signature Color:** #FFD700
 

@@ -36,11 +36,26 @@
 - **Standards** — Updated `CHARACTER_STANDARDS.md`, `OUTFIT_STANDARDS.md`, `POSE_STANDARDS.md`, `SCENE_STANDARDS.md`.
 - **Outfits** — Updated 38 shared outfit template files across Athletics, Casual, Fantasy, and other categories.
 
----
-
 ## [Unreleased]
 
-### Refactored
+### Added
+
+- **Refactored Logging:** Added verbose debug logging for randomizer auditing tools.
+
+### Changed
+
+- **Randomizer Simplification (Phase 1-3):** Streamlined the generation algorithm by introducing scoring simplifications, pose selection coherence, and extensive caching mechanisms. This results in ~50% faster scoring and eliminates redundant logic.
+- **Tag Normalization:** Standardized all character tag casing to lowercase for better system predictability and easier matching during generation. Over 80 character files updated with detailed traits and unified tags.
+
+### Fixed
+
+- **Audit Reports:** Fixed various warnings related to tag casing and redundancy metrics.
+
+---
+
+## [0.9.0] – 2026-02-21
+
+### Added
 
 - **Directory Structure:** Standardized codebase by moving core logic to `src/`, user data to `assets/data/`, and scripts to `scripts/`.
 - **Cleanup:** Removed dead code in `archive/` and unified `sys.path` handling in `main.py`.

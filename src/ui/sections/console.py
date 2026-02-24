@@ -18,11 +18,11 @@ class ConsoleSection(ft.Column):
                 ft.Text("FINAL AI PROMPT", weight="bold", size=18, color=ThemeManager.colors["text_primary"]),
                 ft.Row([
                     ft.FilledButton(
-                        content="Copy Prompt", icon=ft.Icons.COPY, on_click=lambda e: self.app.handle_copy(e), 
+                        "Copy Prompt", icon=ft.Icons.COPY, on_click=lambda e: self.app.handle_copy(e), 
                         style=ft.ButtonStyle(color=ThemeManager.colors["text_primary"], bgcolor="white10")
                     ),
                     ft.FilledButton(
-                        content="Generate Image", icon=ft.Icons.AUTO_AWESOME, on_click=lambda _: self.app.handle_generate(), 
+                        "Generate Image", icon=ft.Icons.AUTO_AWESOME, on_click=lambda _: self.app.handle_generate(), 
                         style=ft.ButtonStyle(color=ThemeManager.colors["text_primary"], bgcolor=ThemeManager.colors["accent"])
                     ),
                 ], spacing=10)
@@ -50,9 +50,10 @@ class ConsoleSection(ft.Column):
         self.output_field.value = text
         self.output_field.update()
 
-    def refresh_theme(self):
+    def refresh_theme(self, update_ui=True):
         self.output_field.border_color = ThemeManager.colors["accent"]
         self.output_field.bgcolor = ThemeManager.colors["surface"]
         self.console_header.gradient.colors = [ThemeManager.colors["panel_bg"], ThemeManager.colors["active_item"]]
         self.controls[1].border = ft.Border.all(1, ThemeManager.colors["outline"])
-        self.update()
+        if update_ui:
+            self.update()

@@ -1,4 +1,4 @@
-tags: [Costume, Fantasy, Pirate]
+tags: [costume, fantasy, Pirate]
 
 [F]
 - **Top:** Off-shoulder peasant blouse under leather corset.

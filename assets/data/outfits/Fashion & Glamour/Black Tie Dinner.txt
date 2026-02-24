@@ -1,4 +1,4 @@
-tags: [Dinner, Elegant, Formal, Luxury]
+tags: [Dinner, elegant, formal, luxury]
 
 [F]
 - **Top:** Fitted evening gown bodice.

@@ -1,4 +1,4 @@
-tags: [Lounge, Relaxed, Spa]
+tags: [lounge, relaxed, Spa]
 
 [F]
 - **Top:** Plush terry cloth robe over tank top.

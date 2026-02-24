@@ -29,48 +29,72 @@ class RosterSection(ft.Container):
         # --- Main Layout ---
         self.roster_list = ft.Column(expand=True, spacing=10, scroll=ft.ScrollMode.AUTO)
         
+        # Bulk Editor Panel (hidden when empty)
+        self.bulk_panel = ft.Container(
+            content=ft.Column([
+                ft.Row([
+                    ft.Icon(ft.Icons.FLASH_ON, size=16, color="amber"),
+                    ft.Text("BULK EDITOR", size=12, weight="bold", color="amber"),
+                ], spacing=5),
+                ft.Row([
+                    self.bulk_cat_dd,
+                    self.bulk_outfit_dd,
+                ], spacing=10),
+                ft.Row([
+                    self.bulk_sig_toggle,
+                    ft.FilledButton(
+                        "APPLY TO ALL", 
+                        icon=ft.Icons.DONE_ALL, 
+                        on_click=self.handle_bulk_apply,
+                        style=ft.ButtonStyle(
+                            shape=ft.RoundedRectangleBorder(radius=5),
+                            bgcolor=ThemeManager.colors["accent"]
+                        )
+                    )
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
+            ], spacing=8),
+            padding=10,
+            bgcolor=ThemeManager.colors["panel_bg"],
+            border_radius=8,
+            border=ft.Border.all(1, ThemeManager.colors["outline"]),
+            visible=False  # Hidden by default
+        )
+        
+        # Clear All button (hidden when empty)
+        self.clear_btn = ft.TextButton(
+            "Clear All", on_click=self.handle_clear_all, icon=ft.Icons.DELETE_SWEEP, 
+            style=ft.ButtonStyle(color=ThemeManager.colors["error"]),
+            visible=False
+        )
+        
+        # Empty State (shown when no characters selected)
+        self.empty_state = ft.Container(
+            content=ft.Column([
+                ft.Icon(ft.Icons.GROUP_ADD_OUTLINED, size=48, color=ft.Colors.with_opacity(0.3, ft.Colors.WHITE)),
+                ft.Text("Select characters from the gallery above", 
+                         size=14, color=ft.Colors.with_opacity(0.4, ft.Colors.WHITE), 
+                         text_align=ft.TextAlign.CENTER),
+                ft.Text("Click any portrait to add them to your roster", 
+                         size=11, color=ft.Colors.with_opacity(0.25, ft.Colors.WHITE),
+                         text_align=ft.TextAlign.CENTER),
+            ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=8),
+            alignment=ft.Alignment(0, 0),
+            expand=True,
+        )
+        
         self.content = ft.Column([
             # Top Bar: Header + Actions
             ft.Row([
                 ft.Text("ACTIVE ROSTER", weight="bold", size=14, color=ThemeManager.colors["text_secondary"]),
-                ft.TextButton("Clear All", on_click=self.handle_clear_all, icon=ft.Icons.DELETE_SWEEP, 
-                              style=ft.ButtonStyle(color=ThemeManager.colors["error"]))
+                self.clear_btn
             ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
             
-            # Bulk Editor Panel
-            ft.Container(
-                content=ft.Column([
-                    ft.Row([
-                        ft.Icon(ft.Icons.FLASH_ON, size=16, color="amber"),
-                        ft.Text("BULK EDITOR", size=12, weight="bold", color="amber"),
-                    ], spacing=5),
-                    ft.Row([
-                        self.bulk_cat_dd,
-                        self.bulk_outfit_dd,
-                    ], spacing=10),
-                    ft.Row([
-                        self.bulk_sig_toggle,
-                        ft.FilledButton(
-                            "APPLY TO ALL", 
-                            icon=ft.Icons.DONE_ALL, 
-                            on_click=self.handle_bulk_apply,
-                            style=ft.ButtonStyle(
-                                shape=ft.RoundedRectangleBorder(radius=5),
-                                bgcolor=ThemeManager.colors["accent"]
-                            )
-                        )
-                    ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
-                ], spacing=8),
-                padding=10,
-                bgcolor=ThemeManager.colors["panel_bg"],
-                border_radius=8,
-                border=ft.Border.all(1, ThemeManager.colors["outline"])
-            ),
-            
+            self.bulk_panel,
             ft.Divider(height=1, color=ThemeManager.colors["outline"]),
             
-            # The List
-            self.roster_list
+            # The List OR Empty State
+            self.roster_list,
+            self.empty_state,
         ], spacing=10)
 
     def populate_data(self):
@@ -79,18 +103,17 @@ class RosterSection(ft.Container):
         cats = sorted(list(set(
             cat 
             for char in ctx.characters.values() 
-            for cat in char.get("outfits_categorized", {}).keys()
+            if hasattr(char, "outfits_categorized")
+            for cat in char.outfits_categorized.keys()
         )))
         self.bulk_cat_dd.options = [ft.dropdown.Option(c) for c in cats]
 
     def refresh(self, update_ui=True):
         """Rebuild the active roster UI using RosterItem components."""
-        # print("DEBUG_EVENT: Roster - Performing Full Refresh") # Reduced noise
         self.populate_data()
         
         items = []
         for idx, char in enumerate(self.app.state.state["selected_characters"]):
-            # Pass callback to update preview when item changes
             item = RosterItem(
                 self.app, 
                 idx, 
@@ -100,6 +123,14 @@ class RosterSection(ft.Container):
             items.append(item)
             
         self.roster_list.controls = items
+        
+        # Toggle empty state vs populated state
+        has_chars = len(items) > 0
+        self.empty_state.visible = not has_chars
+        self.roster_list.visible = has_chars
+        self.bulk_panel.visible = has_chars
+        self.clear_btn.visible = has_chars
+        
         if update_ui:
             self.update()
 
@@ -119,8 +150,8 @@ class RosterSection(ft.Container):
         ctx = self.app.state.ctx
         outfits = set()
         for char in ctx.characters.values():
-            if cat in char.get("outfits_categorized", {}):
-                outfits.update(char["outfits_categorized"][cat].keys())
+            if hasattr(char, "outfits_categorized") and cat in char.outfits_categorized:
+                outfits.update(char.outfits_categorized[cat].keys())
         
         self.bulk_outfit_dd.options = [ft.dropdown.Option(o) for o in sorted(list(outfits))]
         self.bulk_outfit_dd.disabled = False
@@ -132,16 +163,17 @@ class RosterSection(ft.Container):
         outfit = self.bulk_outfit_dd.value
         use_sig = self.bulk_sig_toggle.value
         
-        if not self.app.state.state["selected_characters"]: return
+        selected_chars = self.app.state.state["selected_characters"]
+        if not selected_chars: return
         
         count = 0
-        for char in self.app.state.state["selected_characters"]:
+        for char in selected_chars:
             if cat and outfit:
-                char["outfit_category"] = cat
-                char["outfit"] = outfit
-                char["outfit_traits"] = []
+                char.outfit_category = cat
+                char.outfit = outfit
+                char.outfit_traits = []
             
-            char["use_signature_color"] = use_sig
+            char.use_signature_color = use_sig
             count += 1
             
         self.app.show_toast(f"Updated {count} characters!")
@@ -151,17 +183,10 @@ class RosterSection(ft.Container):
     def handle_clear_all(self, e):
         self.app.clear_all_characters()
 
-    def refresh_theme(self):
-        # Refresh container styles
+    def refresh_theme(self, update_ui=True):
         self.border = ft.Border.all(1, ThemeManager.colors["outline"])
         self.padding = ThemeManager.styles["padding"]
-        # Refresh bulk panel (index 1 of content)
-        # We need a reference or we reconstruct. 
-        # For now, simplistic rebuild might be safer but refresh_roster calls populate_data and reconstructs list
-        # We just need to update the static parts
-        bulk_panel = self.content.controls[1]
-        bulk_panel.bgcolor = ThemeManager.colors["panel_bg"]
-        bulk_panel.border = ft.Border.all(1, ThemeManager.colors["outline"])
-        self.content.controls[2].color = ThemeManager.colors["outline"] # Divider
-        self.content.controls[0].controls[0].color = ThemeManager.colors["text_secondary"] # Header
-        self.update()
+        self.bulk_panel.bgcolor = ThemeManager.colors["panel_bg"]
+        self.bulk_panel.border = ft.Border.all(1, ThemeManager.colors["outline"])
+        if update_ui:
+            self.update()

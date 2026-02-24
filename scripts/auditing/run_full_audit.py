@@ -42,6 +42,14 @@ def main():
     if not run_command("python scripts/auditing/analysis/static_integrity.py", "Step 1: Static Integrity & Standards"):
         pass
 
+    # 1.1 Content Quality & Color Palette
+    if not run_command("python scripts/auditing/assess_content_quality.py", "Step 1.1: Content Quality & Colors"):
+        pass
+
+    # 1.2 Semantic Redundancy
+    if not run_command("python scripts/auditing/analysis/detect_redundancy.py", "Step 1.2: Semantic Redundancy"):
+        pass
+
     # 2. Hub & Spoke Connectivity
     if not run_command("python scripts/auditing/analysis/hub_analysis.py", "Step 2: Hub & Spoke Connectivity"):
         pass

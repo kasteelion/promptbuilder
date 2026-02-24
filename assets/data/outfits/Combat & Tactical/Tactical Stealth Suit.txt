@@ -1,0 +1,56 @@
+tags: [combat, tactical, Stealth]
+modifiers: {}
+
+[F]
+- **Top:** {Color} Body-mapping Combat Shirt
+  - **Type:** Body-mapping Combat Shirt
+  - **Material:** Ripstop Nylon and Jersey mix
+  - **Fit:** Compression-fit
+  - **Color:** ((default:Tactical Black) or (signature))
+- **Bottom:** {Color} Tactical Cargo Pants
+  - **Type:** Tactical Cargo Pants
+  - **Material:** Cordura Reinforced Ripstop
+  - **Color:** ((default:Tactical Black) or (signature))
+- **Outerwear:** {Color} Lightweight Plate Carrier
+  - **Type:** Lightweight Plate Carrier
+  - **Material:** Laser-cut Laminate
+  - **Color:** ((default:Stealth Gray) or (signature))
+- **Accessories:** {Style} Tactical Gloves and Comms Headset
+  - **Type:** Tactical Gloves and Comms Headset
+  - **Style:** Rugged Professional
+
+[M]
+- **Top:** {Color} Body-mapping Combat Shirt
+  - **Type:** Body-mapping Combat Shirt
+  - **Material:** Ripstop Nylon and Jersey mix
+  - **Fit:** Compression-fit
+  - **Color:** ((default:Tactical Black) or (signature))
+- **Bottom:** {Color} Tactical Cargo Pants
+  - **Type:** Tactical Cargo Pants
+  - **Material:** Cordura Reinforced Ripstop
+  - **Color:** ((default:Tactical Black) or (signature))
+- **Outerwear:** {Color} Lightweight Plate Carrier
+  - **Type:** Lightweight Plate Carrier
+  - **Material:** Laser-cut Laminate
+  - **Color:** ((default:Stealth Gray) or (signature))
+- **Accessories:** {Style} Tactical Gloves and Comms Headset
+  - **Type:** Tactical Gloves and Comms Headset
+  - **Style:** Rugged Professional
+
+[H]
+- **Top:** {Color} Body-mapping Combat Shirt
+  - **Type:** Body-mapping Combat Shirt
+  - **Material:** Ripstop Nylon and Jersey mix
+  - **Fit:** Modest Compression-fit
+  - **Color:** ((default:Tactical Black) or (signature))
+- **Bottom:** {Color} Tactical Cargo Pants
+  - **Type:** Tactical Cargo Pants
+  - **Material:** Cordura Reinforced Ripstop
+  - **Color:** ((default:Tactical Black) or (signature))
+- **Outerwear:** {Color} Lightweight Plate Carrier
+  - **Type:** Lightweight Plate Carrier
+  - **Material:** Laser-cut Laminate
+  - **Color:** ((default:Stealth Gray) or (signature))
+- **Accessories:** {Style} Tactical Gloves and Comms Headset
+  - **Type:** Tactical Gloves and Comms Headset
+  - **Style:** Rugged Professional

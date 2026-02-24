@@ -1,4 +1,4 @@
-tags: [Event, Formal, Youth]
+tags: [event, formal, Youth]
 
 [F]
 - **Top:** Floor-length formal gown (Bodice).

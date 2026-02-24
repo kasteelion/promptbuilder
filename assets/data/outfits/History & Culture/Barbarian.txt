@@ -1,4 +1,4 @@
-tags: [weapon_combat, Fantasy, Tribal]
+tags: [weapon_combat, fantasy, Tribal]
 
 [F]
 - **Top:** Leather or fur bikini top.

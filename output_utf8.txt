@@ -1,0 +1,23 @@
+﻿Starting Post-Refactor Smoke Test...
+Loading data...
+Loaded 82 characters.
+Loaded 14 base prompts.
+Testing generation for Aaliyah Chen...
+
+Generated Prompt Sample:
+--------------------
+**Medium/Format:**
+High-End Digital Photography (85mm Portrait Lens simulation).
+
+**Technical Specifications:**
+f/1.8 aperture for shallow depth of field. Sharp focus on eyes with smooth fall-off. Global illumination, accurate ray-traced reflections, and true-to-life skin texture (pores, vellus hair, subsurface scattering). 8K resolution.
+
+**Stylistic Rules:**
+Neutral, balanced color grading. No stylization filters. Lighting is soft, diffused studio quality (soft-box or window light). Compositio...
+--------------------
+
+Testing Randomizer...
+Randomization Success: Scenario 'Period Piece'
+Score: 155
+
+Smoke Test PASSED!

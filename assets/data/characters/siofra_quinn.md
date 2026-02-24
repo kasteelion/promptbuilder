@@ -1,16 +1,23 @@
 ### Siofra Quinn
+
 **Photo:** siofra_quinn_photo.png
 **Summary:** Agile and sharp, Siofra Quinn carries the energy of a disciplined warrior-scholar. Built for speed and precision rather than brute force, she embodies the crossbow fighter's ethos: patient, focused, deadly accurate. Her confidence is tactical and controlled, blending intellectual strategy with combat-ready athleticism. She's the fighter who calculates trajectories and studies weaknesses before striking.
-**Tags:** Female, Athletic, Celtic-Inspired, Intellectual, Intense, Rugged, Fantasy, Casual, Sport, Action, Noir, Work
+**Tags:** Female, Athletic, Celtic-Inspired, Intellectual, Intense, Rugged, fantasy, Casual, Sport, action, noir, work, Ginger
 **Gender:** F
 **Signature Color:** #006400
 
+**Traits:**
+
+- Bracer: leather forearm bracer (worn on dominant arm)
+- Field Journal: small leather-bound tactical field journal
+- Arrow Pendant: delicate silver arrow pendant necklace
+
 **Appearance:**
 
-* **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
-* **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
-* **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
-* **Skin:** Fair neutral skin with weathered undertone.
+- **Body:** Dramatic Gamine frame; straight athletic flesh with lean definition; narrow agile proportions with long limbs and compact torso; moderate-tall vertical (5'7"-5'8"); lean sinewy muscle built for speed, agility, and upper body precision—visible shoulder definition, strong forearms, powerful back muscles from draw weight; warrior-scholar presence combining lethal capability with thoughtful discipline.
+- **Face:** Angular compact structure; diamond-leaning oval face; intense eyes; focused warrior expression.
+- **Hair:** Type 2A waves; high density; long hair with copper-red tones; versatile styling options, often favoring practical braids that keep hair secure.
+- **Skin:** Fair neutral skin with weathered undertone.
 
 **Age Presentation:** late 20s presentation; battle-ready, alert.
 **Vibe / Energy:** Vigilant, Tactically Intelligent, Disciplined, Patient, Precision-Focused, Warrior-Calm With Scholarly Intensity.
@@ -27,12 +34,12 @@
 // - Signature elements: leather bracers (even off-duty), practical boots, strategic pockets; callused fingertips from bowstring, excellent posture, economical movement patterns
 // - Scholar touches: often carries field journal, studies trajectories and angles, tactical mind visible in how she assesses spaces
 
-
 ---
 
 **Outfits:**
 
 #### Base
+
 - **Top:** Fitted slate-gray athletic tank with high neckline (allows shoulder movement)
 - **Bottom:** Dark olive cargo pants with reinforced knees and secure pockets
 - **Footwear:** Brown leather tactical boots with ankle support

@@ -1,7 +1,7 @@
 ### Roxanna Perez
 **Photo:** roxanna_perez_photo.png
 **Summary:** Roxanna Perez thrives on momentum and theatrical confidence. Her Puerto Rican heritage infuses her presence with vibrant energy and fierce pride. She moves with the compact power of someone who's trained their body into a weapon, blending athletic credibility with bold, spotlight-ready charisma.
-**Tags:** Female, Athletic, Commanding, Creative, Edgy, Intense, Latina, Playful, Puerto Rican, Sport, Noir, Work, Casual
+**Tags:** Female, Athletic, Commanding, creative, Edgy, Intense, Latina, Playful, Puerto Rican, Sport, noir, work, Casual
 **Gender:** F
 **Signature Color:** #800080
 

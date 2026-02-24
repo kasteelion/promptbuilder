@@ -1,4 +1,4 @@
-tags: [Fashion, Performance, Sci-Fi]
+tags: [Fashion, Performance, sci-fi]
 
 [F]
 - **Top:** Metallic or holographic bodysuit.

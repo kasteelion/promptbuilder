@@ -72,8 +72,9 @@ def generate_llm_export_text(ctx: Any) -> str:
     lines.append("## AVAILABLE CHARACTERS")
     lines.append("Format: Name [Signature Color] [Tags]")
     for name, data in sorted(ctx.characters.items()):
-        sig = data.get("signature_color", "None")
-        tags = ", ".join(data.get("tags", []))
+        sig = getattr(data, "signature_color", data.get("signature_color") if isinstance(data, dict) else None) or "None"
+        tags_list = getattr(data, "tags", data.get("tags", []) if isinstance(data, dict) else [])
+        tags = ", ".join(tags_list)
         lines.append(f"- {name} [{sig}] [{tags}]")
     lines.append("")
 

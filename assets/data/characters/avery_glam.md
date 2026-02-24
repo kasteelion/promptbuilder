@@ -2,7 +2,7 @@
 
 **Photo:** avery_blake_photo.png
 
-**Tags:** Female, Athletic, Commanding, Creative, Dramatic, Edgy, Sport, Fantasy, Noir, Intimate
+**Tags:** Female, Athletic, Commanding, creative, Dramatic, Edgy, Sport, fantasy, noir, intimate
 
 **Summary:** Avery embodies dangerous glamour—a rock goddess who traded the stage for the ring without losing an ounce of attitude. Her presence is dark, dramatic, and unapologetically provocative: jet-black hair cascading like a curtain, smokey eyes that could stop traffic, and an edge sharp enough to draw blood. She moves with calculated sensuality and fierce confidence, equal parts seductress and warrior.
 

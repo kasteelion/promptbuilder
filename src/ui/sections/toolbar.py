@@ -61,6 +61,7 @@ class ToolbarSection(ft.Container):
             ], spacing=0)
         ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
 
-    def refresh_theme(self):
+    def refresh_theme(self, update_ui=True):
         self.gradient.colors = [ThemeManager.colors["accent"], ThemeManager.colors["accent_hover"] or ThemeManager.colors["accent"]]
-        self.update()
+        if update_ui:
+            self.update()

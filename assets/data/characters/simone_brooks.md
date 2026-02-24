@@ -2,7 +2,7 @@
 
 **Photo:** simone_brooks_photo.png
 
-**Tags:** Black, American, Intellectual, Magnetic, Sophisticated, Academic, Braids, Fuchsia-Signature, Vibrant, Effervescent, Urban, Work, Vintage, Retro, Sci-Fi, Noir, Social
+**Tags:** Black, American, Intellectual, Magnetic, Sophisticated, Academic, Braids, Fuchsia-Signature, Vibrant, Effervescent, urban, work, vintage, Retro, sci-fi, noir, social
 
 **Summary:** Dr. Simone Brooks is a professor of Sociology with a focus on urban systems and digital anthropology. While her intellect is razor-sharp, her public persona is defined by an effervescent, magnetic energy that makes her a recurring guest on national media and game-show circuits. She specializes in "translating" complex social dynamics into enthusiastic, high-stakes storytelling. Her style is "Intellectual Pop"—classic professional foundations updated with vibrant magenta poplin, stacked gold jewelry, and a glowing, soft-glam finish that radiates confidence and warmth.
 

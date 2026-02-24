@@ -1,7 +1,7 @@
 ### Elena Rosales
 **Photo:** elena_rosales_photo.png
 
-**Tags:** Female, Chic, Commanding, Curvy, Glamorous, High-Femme, Latina, Lesbian, Vintage, Retro, Noir, Social
+**Tags:** Female, Chic, Commanding, Curvy, Glamorous, High-Femme, Latina, Lesbian, vintage, Retro, noir, social
 
 **Summary:** Elena is the epitome of "High Femme" power—she wields femininity like a precision weapon. While Diesel Murphy commands respect with grease and grit, Elena commands it with six-inch stilettos and a gaze that could cut glass. She moves through the art world with a shark-like confidence, unapologetically glamorous and deeply knowledgeable, embodying the strength found in softness and deliberate aesthetic perfection.
 

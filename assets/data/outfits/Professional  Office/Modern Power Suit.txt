@@ -1,4 +1,4 @@
-tags: [Fashion, Formal, Professional, Textured, Luxury]
+tags: [Fashion, formal, professional, Textured, luxury]
 
 [F]
 - **Top:** Compression-fit tailored blazer with shoulder pads.

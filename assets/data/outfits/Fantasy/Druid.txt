@@ -1,4 +1,4 @@
-Tags: Fantasy, Everyday
+Tags: fantasy, Everyday
 modifiers:
   Forest: in **deep moss-green raw silk**
   Autumn: in **rust-colored coarse wool**

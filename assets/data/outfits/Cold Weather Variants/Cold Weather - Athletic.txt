@@ -1,4 +1,4 @@
-tags: [Cold, Outdoor, Sport]
+tags: [Cold, outdoor, Sport]
 
 [F]
 - **Top:** Sleek insulated thermal jacket.

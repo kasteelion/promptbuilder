@@ -1,7 +1,9 @@
 import os
 import sys
 import json
+import re
 from pathlib import Path
+from collections import Counter
 
 # Add src to path
 project_root = Path(__file__).resolve().parent.parent.parent
@@ -19,8 +21,10 @@ def assess_characters(loader):
     chars = loader.load_characters()
     results = []
     
-    for name, data in chars.items():
-        # DATA TYPE CHECK
+    for name, char_obj in chars.items():
+        # Handle Pydantic model vs dict
+        data = char_obj.dict() if hasattr(char_obj, "dict") else char_obj
+        
         if not isinstance(data, dict):
             results.append({
                 "name": name,
@@ -35,26 +39,14 @@ def assess_characters(loader):
         issues = []
         
         # Richness (Description Length)
-        # Check appearance fields
-        appearance = data.get("appearance", {})
-        if isinstance(appearance, str):
-             # Handle case where appearance is just a string
-             body = appearance
-             face = ""
-             hair = ""
-             skin = ""
-        elif isinstance(appearance, dict):
-             body = appearance.get("body", "")
-             face = appearance.get("face", "")
-             hair = appearance.get("hair", "")
-             skin = appearance.get("skin", "")
-        else:
-             body = ""
-             face = ""
-             hair = ""
-             skin = ""
+        appearance = data.get("appearance", "")
+        total_words = 0
         
-        total_words = word_count(body) + word_count(face) + word_count(hair) + word_count(skin)
+        if isinstance(appearance, str):
+            total_words = word_count(appearance)
+        elif isinstance(appearance, dict):
+            for v in appearance.values():
+                total_words += word_count(str(v))
         
         if total_words < 20:
             issues.append("Very short description (< 20 words)")
@@ -63,15 +55,12 @@ def assess_characters(loader):
             score += 10
             
         # Completeness (Metadata)
-        if not data.get("age"):
+        if not data.get("age_presentation") and not data.get("age"):
             issues.append("Missing Age")
             score -= 5
         if not data.get("vibe"):
             issues.append("Missing Vibe")
             score -= 5
-        if not data.get("nationality"):
-             # Optional but good
-             pass
              
         # Outfits
         outfits = data.get("outfits", {})
@@ -96,39 +85,66 @@ def assess_outfits(loader):
     chars = loader.load_characters()
     results = []
     
-    for char_name, char_data in chars.items():
+    for char_name, char_obj in chars.items():
+        char_data = char_obj.dict() if hasattr(char_obj, "dict") else char_obj
         if not isinstance(char_data, dict):
             continue
 
         outfits = char_data.get("outfits", {})
         for outfit_name, outfit_data in outfits.items():
+            # If it's a string, it's still "valid" as a simple format, but lower score
+            is_simple = isinstance(outfit_data, str)
+            
             score = 0
             issues = []
             
-            # Richness
-            # Check components
-            top = outfit_data.get("top", {})
-            bottom = outfit_data.get("bottom", {})
-            footwear = outfit_data.get("footwear", "")
+            if is_simple:
+                score += 5 # Base for having a description
+                score += word_count(outfit_data) // 5
+                if len(outfit_data) < 20:
+                    issues.append("Low detail")
+                
+                results.append({
+                    "name": f"{char_name} - {outfit_name}",
+                    "type": "Outfit",
+                    "score": 50 + score,
+                    "details": f"Simple format: {word_count(outfit_data)} words",
+                    "issues": issues
+                })
+                continue
+
+            if not isinstance(outfit_data, dict):
+                results.append({
+                    "name": f"{char_name} - {outfit_name}",
+                    "type": "Outfit",
+                    "score": 0,
+                    "details": f"Invalid data type: {type(outfit_data)}",
+                    "issues": ["Invalid format"]
+                })
+                continue
+                
+            # Component Analysis
+            # normalize keys to lowercase for check
+            norm_data = {k.lower(): v for k, v in outfit_data.items()}
             
-            # Simple check: do we have details?
-            if isinstance(top, dict):
-                if top.get("material"): score += 5
-                if top.get("fit"): score += 5
-            elif top:
-                score += 2 # String only
-                
-            if isinstance(bottom, dict):
-                 if bottom.get("material"): score += 5
-            elif bottom:
-                score += 2
-                
-            # Description text (if any)
-            desc = outfit_data.get("description", "")
-            if desc:
-                score += word_count(desc)
-                
-            if score < 10:
+            top = norm_data.get("top")
+            bottom = norm_data.get("bottom")
+            one_piece = norm_data.get("one_piece") or norm_data.get("dress")
+            
+            if top: score += 10
+            if bottom or one_piece: score += 10
+            
+            # Check for detail richness within components
+            for key in ["top", "bottom", "accessories", "hair/makeup", "footwear"]:
+                val = norm_data.get(key)
+                if val:
+                    if isinstance(val, dict):
+                         if val.get("material") or val.get("fabric"): score += 5
+                         if val.get("fit") or val.get("cut"): score += 5
+                    elif isinstance(val, str) and len(val) > 20:
+                        score += 5
+            
+            if score < 15:
                 issues.append("Low detail")
                 
             results.append({
@@ -196,6 +212,62 @@ def assess_interactions(loader):
             })
             
     return results
+
+def extract_colors(text):
+    """Extract HEX colors from text."""
+    if not isinstance(text, str):
+        return []
+    hex_pattern = r'#([A-Fa-f0-9]{6})'
+    return re.findall(hex_pattern, text.upper())
+
+def analyze_color_diversity(loader):
+    """Analyze the distribution of HEX colors in outfits."""
+    print("Analyzing Color Diversity...")
+    chars = loader.load_characters()
+    color_counts = Counter()
+    
+    for char_name, char_data in chars.items():
+        outfits = char_data.get("outfits", {})
+        for outfit_name, outfit_data in outfits.items():
+            if isinstance(outfit_data, dict):
+                # Recursively check for colors in nested dicts
+                def scan_dict(d):
+                    for k, v in d.items():
+                        if isinstance(v, dict):
+                            scan_dict(v)
+                        elif isinstance(v, str):
+                            color_counts.update(extract_colors(v))
+                        elif isinstance(v, list):
+                            for item in v:
+                                if isinstance(item, str):
+                                    color_counts.update(extract_colors(item))
+                scan_dict(outfit_data)
+    return color_counts
+
+def generate_color_report(color_counts):
+    """Generate a markdown report for color diversity."""
+    report_path = project_root / "auditing" / "reports" / "color_diversity.md"
+    print(f"Generating color report: {report_path}")
+    
+    with open(report_path, "w", encoding="utf-8") as f:
+        f.write("# 🎨 Color Diversity Report\n\n")
+        f.write("Distribution of HEX colors across the outfit library.\n\n")
+        
+        if not color_counts:
+            f.write("⚠️ No HEX colors detected in outfits. Ensure colors are specified as `#RRGGBB`.\n")
+            return
+            
+        f.write("| Color Swatch | HEX Code | Count | Frequency |\n")
+        f.write("|---|---|---|---|\n")
+        
+        total = sum(color_counts.values())
+        for color, count in color_counts.most_common(50):
+            percent = (count / total) * 100
+            # Note: Markdown doesn't support background colors easily, so we just use text and counts
+            f.write(f"| `#{color}` | `#{color}` | {count} | {percent:.1f}% |\n")
+            
+        if len(color_counts) > 50:
+            f.write(f"\n*...and {len(color_counts) - 50} more unique colors.*")
 
 def generate_report(results):
     report_path = project_root / "auditing" / "reports" / "content_quality.md"
@@ -293,6 +365,12 @@ if __name__ == "__main__":
                 print(f"CRASH in assess_interactions: {e}")
                 import traceback
                 traceback.print_exc()
+
+            try:
+                colors = analyze_color_diversity(loader)
+                generate_color_report(colors)
+            except Exception as e:
+                print(f"CRASH in analyze_color_diversity: {e}")
 
             try:
                 generate_report(all_results)

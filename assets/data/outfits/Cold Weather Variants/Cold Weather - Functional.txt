@@ -1,4 +1,4 @@
-tags: [Cold, Outdoor, Winter]
+tags: [Cold, outdoor, Winter]
 
 [F]
 - **Top:** Heavy-duty down parka.

@@ -2,7 +2,7 @@
 
 **Photo:** sina_tuilagi_photo.png
 
-**Tags:** Female, Athletic, Chic, Commanding, Cultural, Pacific-Islander, Strong, Tatau, Traditional-Modern-Fusion, Urban, Casual, Sport
+**Tags:** Female, Athletic, Chic, Commanding, Cultural, Pacific-Islander, Strong, Tatau, Traditional-Modern-Fusion, urban, Casual, Sport
 
 **Summary:** Sina embodies the warmth and strength of her Pacific Islander heritage, carrying herself with a grounded, ancestral pride. Her presence is a fusion of traditional resilience and contemporary confidence, radiating a welcoming yet commanding energy.
 

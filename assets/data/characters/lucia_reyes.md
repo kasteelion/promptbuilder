@@ -1,7 +1,7 @@
 ### Lucía Reyes
 **Photo:** lucía_reyes_photo.png
 
-**Tags:** Female, Approachable, Commanding, Curvy, Latina, Playful, Soft, Noir, Casual
+**Tags:** Female, Approachable, Commanding, Curvy, Latina, Playful, soft, noir, Casual
 
 **Summary:** Radiant and confident, Lucía carries joy as power. Her warmth is immediate and magnetic, paired with self-assured sensuality that feels celebratory rather than performative.
 

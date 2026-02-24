@@ -2,7 +2,7 @@
 
 **Photo:** linh_nguyen_photo.png
 
-**Tags:** Vietnamese, American, Vibrant, Approachable, Energetic, Petite, Playful, Red-Signature, Intimate, Casual, Sci-Fi, Sport, Noir, Urban, Social, Work
+**Tags:** Vietnamese, American, Vibrant, Approachable, Energetic, Petite, Playful, Red-Signature, intimate, Casual, sci-fi, Sport, noir, urban, social, work
 
 **Summary:** Linh is a natural-born host with a "golden hour" personality that lights up any room. Raised in a bustling multicultural neighborhood in Orange County, she balances a career in digital media with a love for community storytelling. She has an uncanny ability to make absolute strangers feel like old friends within minutes. Her style is a mix of playful femininity and practical urban comfort—vibrant colors, puffed silhouettes, and the ever-reliable clean white sneaker.
 

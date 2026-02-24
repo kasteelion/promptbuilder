@@ -1,4 +1,5 @@
 import random
+from core.models import CharacterDetails, SelectedCharacterConfig
 from utils.interaction_helpers import fill_template
 from logic.scenarios import ScenarioRegistry, Scenario, Role
 
@@ -11,7 +12,7 @@ class PromptRandomizer:
     MODE_INT_W_POSES = "interaction_with_poses"
     MODE_INT_WO_POSES = "interaction_without_poses"
     
-    def __init__(self, characters, base_prompts, poses, scenes=None, interactions=None, color_schemes=None, modifiers=None, framing=None, scene_constraints=None, tag_rules=None):
+    def __init__(self, characters, base_prompts, poses, scenes=None, interactions=None, color_schemes=None, modifiers=None, framing=None, scene_constraints=None, tag_rules=None, scoring_config=None):
         """Initialize randomizer with data.
 
         Args:
@@ -43,30 +44,75 @@ class PromptRandomizer:
         self.tag_groups = tag_rules.get("tag_groups", {})
         self.hub_tags = tag_rules.get("hub_tags", [])
         
+        # [NEW] Scoring Heuristics
+        self.scoring = scoring_config or {
+            "weights": {"mood_match": 30, "style_alignment": 25, "diversity_bonus": 10},
+            "penalties": {"mismatch": -100, "genre_clash": -1000},
+            "thresholds": {"min_score_floor": 250, "mood_diminishing_returns_cutoff": 3, "mood_excess_value": 10}
+        }
+        
+        # [NEW] Pre-compute Tag Transitive Closure
+        self._tag_expansion_cache = {}
+        self._compute_tag_transitive_closure()
+        
         # Pre-compute tags (Phase 1 Optimization)
         self._precompute_tags()
+        
+        # [NEW] Index Scenes for Hub-driven selection
+        self._scene_tag_index = {}
+        self._index_scenes()
+
+    def _compute_tag_transitive_closure(self):
+        """Pre-calculate the full expansion of every tag in tag_aliases."""
+        # Start with direct aliases
+        closure = {k.lower(): set(v) for k, v in self.tag_aliases.items()}
+        
+        # Add Mood: tags to closure
+        for k in list(closure.keys()):
+            if k.startswith("mood:"):
+                mood_name = k[5:].strip()
+                if mood_name:
+                    closure[k].add(mood_name)
+
+        # Iterate until no more changes
+        changed = True
+        while changed:
+            changed = False
+            for tag, expanded in closure.items():
+                new_tags = set(expanded)
+                for t in expanded:
+                    t_lower = str(t).lower()
+                    if t_lower in closure:
+                        for target in closure[t_lower]:
+                            if target not in new_tags:
+                                new_tags.add(target)
+                                changed = True
+                closure[tag] = new_tags
+        
+        # Lowercase everything for consistency
+        self._tag_expansion_cache = {k: {str(t).lower() for t in v} for k, v in closure.items()}
+
+    def _index_scenes(self):
+        """Index scenes by their tags for O(1) hub-based lookups."""
+        self._scene_tag_index = {}
+        if not self.scenes:
+            return
+            
+        for cat_name, presets in self.scenes.items():
+            for s_name, s_data in presets.items():
+                tags = self._get_tags(s_data)
+                for t in tags:
+                    t_lower = t.lower()
+                    if t_lower not in self._scene_tag_index:
+                        self._scene_tag_index[t_lower] = []
+                    self._scene_tag_index[t_lower].append((cat_name, s_name, s_data))
 
     def _precompute_tags(self):
         """Bake expanded tags into internal structures for O(1) lookups."""
         
         # 1. Characters & Outfits
         for char_name, char_data in self.characters.items():
-            # Char Tags
-            raw_tags = set(char_data.get("tags", []))
-            char_data["_expanded_tags"] = self._expand_tags(raw_tags)
-            
-            # Outfit Tags
-            outfits = char_data.get("outfits", {})
-            for outfit_name, outfit_val in outfits.items():
-                # Handle both string and dict formats
-                if isinstance(outfit_val, dict):
-                    raw_o_tags = set(outfit_val.get("tags", []))
-                    outfit_val["_expanded_tags"] = self._expand_tags(raw_o_tags)
-                else:
-                    # Upgrade string to dict in-place for caching?
-                    # Safer to just not cache string-only outfits or wrap them.
-                    # For now, we'll leave string outfits uncached as they have no tags anyway.
-                    pass
+            self._precompute_character_tags(char_name, char_data)
 
         # 2. Poses (Categories -> Presets)
         for cat, presets in self.poses.items():
@@ -81,6 +127,29 @@ class PromptRandomizer:
                  if isinstance(s_data, dict):
                      raw_s_tags = set(s_data.get("tags", []))
                      s_data["_expanded_tags"] = self._expand_tags(raw_s_tags)
+
+    def _precompute_character_tags(self, char_name, char_data):
+        """Expand tags for a single character and their outfits."""
+        # Char Tags
+        if hasattr(char_data, "tags"):
+            raw_tags = set(char_data.tags)
+        else:
+            raw_tags = set(char_data.get("tags", []))
+        
+        expanded_char_tags = self._expand_tags(raw_tags)
+        if hasattr(char_data, "dict"):
+             setattr(char_data, "_expanded_tags", expanded_char_tags)
+        else:
+             char_data["_expanded_tags"] = expanded_char_tags
+        
+        # Outfit Tags
+        outfits = char_data.outfits if hasattr(char_data, "outfits") else char_data.get("outfits", {})
+        for outfit_name, outfit_val in outfits.items():
+            if isinstance(outfit_val, dict):
+                raw_o_tags = set(outfit_val.get("tags", []))
+                outfit_val["_expanded_tags"] = self._expand_tags(raw_o_tags)
+            elif hasattr(outfit_val, "tags"):
+                setattr(outfit_val, "_expanded_tags", self._expand_tags(set(outfit_val.tags)))
 
     def _get_description(self, item_data):
         """Helper to safely extract description from string or new dict format."""
@@ -123,38 +192,34 @@ class PromptRandomizer:
         return matching_names
 
     def _expand_tags(self, tags):
-        """Expand tags with aliases/groups recursively."""
-        expanded = set(tags)
+        """Expand tags with aliases/groups using pre-computed closure."""
+        expanded = set()
         
-        # Also clean "Mood:" prefixes from raw tags so they match their bare counterparts
-        # e.g. "Mood:Futuristic" in tags should allow matching with "futuristic" in aliases
         for t in tags:
             t_str = str(t)
-            if t_str.lower().startswith("mood:"):
-                expanded.add(t_str[5:].strip())
+            t_lower = t_str.lower()
+            
+            # Clean "Mood:" prefixes and add to expansion
+            if t_lower.startswith("mood:"):
+                mood_name = t_str[5:].strip()
+                expanded.add(mood_name.lower())
+                t_lower = mood_name.lower()
+            else:
+                expanded.add(t_lower)
 
-        # Iterative expansion to handle chains (e.g. cottagecore -> vintage -> nostalgic)
-        # 3 passes is usually enough for any reasonable taxonomy depth
-        for _ in range(3):
-            current_tags = list(expanded)
-            added_new = False
-            for t in current_tags:
-                t_lower = str(t).lower()
-                if t_lower in self.tag_aliases:
-                    new_tags = self.tag_aliases[t_lower]
-                    for nt in new_tags:
-                        if nt not in expanded:
-                            expanded.add(nt)
-                            added_new = True
-            if not added_new:
-                break
+            # Add pre-computed expansions
+            if t_lower in self._tag_expansion_cache:
+                expanded.update(self._tag_expansion_cache[t_lower])
                 
         return expanded
 
     def _check_color_support(self, char_name, outfit_name):
         """Check if an outfit supports color substitution or signature colors."""
-        char_def = self.characters.get(char_name, {})
-        outfit_data = char_def.get("outfits", {}).get(outfit_name, "")
+        char_def = self.characters.get(char_name)
+        if not char_def: return False
+        
+        outfits = char_def.outfits if hasattr(char_def, "outfits") else char_def.get("outfits", {})
+        outfit_data = outfits.get(outfit_name, "")
         
         # Convert outfit data to a checkable string
         outfit_str = ""
@@ -201,7 +266,7 @@ class PromptRandomizer:
         best_score = -float('inf')
         
         MAX_RETRIES = 2
-        MIN_SCORE_FLOOR = 250  # Final threshold for high thematic quality
+        min_floor = self.scoring["thresholds"]["min_score_floor"]
         
         for attempt in range(MAX_RETRIES + 1):
             # With Scenario-First, we need fewer candidates to find a "perfect" match
@@ -216,7 +281,7 @@ class PromptRandomizer:
                     best_score = score
                     best_config = config
             
-            if best_score >= MIN_SCORE_FLOOR:
+            if best_score >= min_floor:
                 break
         
         if best_config and "metadata" in best_config:
@@ -285,6 +350,8 @@ class PromptRandomizer:
             breakdown["warnings"].append("No active moods/context found for thematic scoring.")
         
         # Store for penalty checks
+        if "metadata" not in config:
+            config["metadata"] = {}
         config["metadata"]["blocked_tags"] = blocked_tags
         config["metadata"]["allowed_tags"] = allowed_tags
         config["metadata"]["active_moods"] = active_moods
@@ -306,12 +373,15 @@ class PromptRandomizer:
         
         # 3. Mood Matches (+30/match) - Character outfits
         for char in config.get("selected_characters", []):
-            char_name = char.get("name")
-            outfit_name = char.get("outfit")
+            # Handle SelectedCharacterConfig vs dict
+            char_name = char.name if hasattr(char, "name") else char.get("name")
+            outfit_name = char.outfit if hasattr(char, "outfit") else char.get("outfit")
             
             # Get outfit tags (use cached if available)
             char_def = self.characters.get(char_name, {})
-            outfit_data = char_def.get("outfits", {}).get(outfit_name, {})
+            # Handle CharacterDetails vs dict
+            char_outfits = char_def.outfits if hasattr(char_def, "outfits") else char_def.get("outfits", {})
+            outfit_data = char_outfits.get(outfit_name, {})
             
             if isinstance(outfit_data, dict):
                 # Use cached expanded tags if available
@@ -324,24 +394,31 @@ class PromptRandomizer:
             if active_moods and outfit_tags:
                 matches = outfit_tags.intersection(active_moods)
                 count = len(matches)
-                # Diminishing returns: first 3 matches worth 30 each, rest worth 10
-                points = min(count, 3) * 30 + max(0, count - 3) * 10
+                # Diminishing returns: first X matches worth full weight, rest worth excess value
+                cutoff = self.scoring["thresholds"]["mood_diminishing_returns_cutoff"]
+                full_weight = self.scoring["weights"]["mood_match"]
+                excess_weight = self.scoring["thresholds"]["mood_excess_value"]
+                
+                points = min(count, cutoff) * full_weight + max(0, count - cutoff) * excess_weight
                 score += points
                 breakdown["mood_matches"] += points
         
         # 4. Diversity Bonus (+10/unique outfit)
         chars = config.get("selected_characters", [])
         if len(chars) > 1:
-            unique_outfits = {c.get("outfit") for c in chars}
+            unique_outfits = {char.outfit if hasattr(char, "outfit") else char.get("outfit") for char in chars}
             points = len(unique_outfits) * 10
             score += points
             breakdown["diversity_bonus"] = points
         
         # 5. Mismatch Penalty (-100) - Constraint violations
         for char in chars:
-            outfit_name = char.get("outfit")
-            char_def = self.characters.get(char.get("name"), {})
-            outfit_data = char_def.get("outfits", {}).get(outfit_name, {})
+            char_name = char.name if hasattr(char, "name") else char.get("name")
+            outfit_name = char.outfit if hasattr(char, "outfit") else char.get("outfit")
+            
+            char_def = self.characters.get(char_name, {})
+            char_outfits = char_def.outfits if hasattr(char_def, "outfits") else char_def.get("outfits", {})
+            outfit_data = char_outfits.get(outfit_name, {})
             
             if isinstance(outfit_data, dict):
                 outfit_tags = outfit_data.get("_expanded_tags")
@@ -350,7 +427,7 @@ class PromptRandomizer:
                 
                 # Check blocked tags
                 if blocked_tags and not outfit_tags.isdisjoint(blocked_tags):
-                    penalty = 100
+                    penalty = abs(self.scoring["penalties"]["mismatch"])
                     score -= penalty
                     breakdown["mismatch_penalty"] -= penalty
                     violations = outfit_tags.intersection(blocked_tags)
@@ -358,35 +435,44 @@ class PromptRandomizer:
                 
                 # Check whitelist (if present)
                 if allowed_tags and not outfit_tags.intersection(allowed_tags):
-                    penalty = 100
+                    penalty = abs(self.scoring["penalties"]["mismatch"])
                     score -= penalty
                     breakdown["mismatch_penalty"] -= penalty
                     breakdown["warnings"].append(f"Outfit '{outfit_name}' not in scene whitelist")
         
         # 6. Genre Clash (-1000) - Fantasy vs Modern firewall
-        is_fantasy_scene = any(t.lower() in self.tag_groups["GENRE_FANTASY"] for t in scene_tags)
-        is_modern_scene = any(t.lower() in self.tag_groups["GENRE_MODERN"] for t in scene_tags)
+        fantasy_tags = self.tag_groups.get("GENRE_FANTASY", [])
+        modern_tags = self.tag_groups.get("GENRE_MODERN", [])
+        
+        # Expand scene tags for robust genre detection
+        expanded_scene_tags = self._expand_tags(scene_tags)
+        
+        is_fantasy_scene = any(t.lower() in fantasy_tags for t in expanded_scene_tags) if fantasy_tags else False
+        is_modern_scene = any(t.lower() in modern_tags for t in expanded_scene_tags) if modern_tags else False
         
         for char in chars:
-            outfit_name = char.get("outfit")
-            char_def = self.characters.get(char.get("name"), {})
-            outfit_data = char_def.get("outfits", {}).get(outfit_name, {})
+            char_name = char.name if hasattr(char, "name") else char.get("name")
+            outfit_name = char.outfit if hasattr(char, "outfit") else char.get("outfit")
+            
+            char_def = self.characters.get(char_name, {})
+            char_outfits = char_def.outfits if hasattr(char_def, "outfits") else char_def.get("outfits", {})
+            outfit_data = char_outfits.get(outfit_name, {})
             
             if isinstance(outfit_data, dict):
                 outfit_tags = outfit_data.get("_expanded_tags")
                 if not outfit_tags:
                     outfit_tags = self._expand_tags(self._get_tags(outfit_data))
                 
-                if is_fantasy_scene:
-                    if any(t in outfit_tags for t in self.tag_groups["GENRE_MODERN"]):
-                        penalty = 1000
+                if is_fantasy_scene and modern_tags:
+                    if any(t in outfit_tags for t in modern_tags):
+                        penalty = abs(self.scoring["penalties"]["genre_clash"])
                         score -= penalty
                         breakdown["genre_clash"] -= penalty
                         breakdown["warnings"].append(f"GENRE CLASH: Fantasy scene with modern outfit '{outfit_name}'")
                 
-                if is_modern_scene:
-                    if any(t in outfit_tags for t in self.tag_groups["GENRE_FANTASY"]):
-                        penalty = 1000
+                if is_modern_scene and fantasy_tags:
+                    if any(t in outfit_tags for t in fantasy_tags):
+                        penalty = abs(self.scoring["penalties"]["genre_clash"])
                         score -= penalty
                         breakdown["genre_clash"] -= penalty
                         breakdown["warnings"].append(f"GENRE CLASH: Modern scene with fantasy outfit '{outfit_name}'")
@@ -409,7 +495,8 @@ class PromptRandomizer:
 
         categories = set()
         for char in selected_chars:
-            cat = char.get("pose_category", "").lower()
+            cat = char.pose_category if hasattr(char, "pose_category") else char.get("pose_category", "")
+            cat = cat.lower() if cat else ""
             if cat:
                 # Group related categories
                 if any(x in cat for x in ["athletic", "sport", "action", "combat", "dynamic"]):
@@ -484,11 +571,8 @@ class PromptRandomizer:
         scene_tags = []
         
         if include_scene:
-            # 1. Identify Candidate Scenes (Global Scan or Category Limit?)
-            # Strategy: Search ALL scenes for the Hub Tag.
-            # Efficiency: Pre-calculated index would be better, but iteration is fast enough for <1000 items.
-            
-            hub_scenes = []
+            # 1. Identify Candidate Scenes
+            # Strategy: Use pre-computed index for Hub Tag, then filter by scenario requirements.
             
             valid_scenes = []
             
@@ -497,41 +581,59 @@ class PromptRandomizer:
             blocked_global = set(t.lower() for t in getattr(scenario, 'blocked_global_tags', []))
             
             eligible_categories = scenario.allowed_scene_categories
-            target_scene_cats = eligible_categories if eligible_categories else self.scenes.keys()
+            target_scene_cats = set(eligible_categories) if eligible_categories else None
             
-            for cat_name in target_scene_cats:
-                if cat_name in self.scenes:
-                    for p_name, p_data in self.scenes[cat_name].items():
-                        tags = self._get_tags(p_data)
-                        tags_lower = set(t.lower() for t in tags)
-                        
-                        # A) Must NOT contain blocked global tags
-                        if not tags_lower.isdisjoint(blocked_global):
-                            continue
-                            
-                        # B) Must satisfy Scenario requirements (Hard Filter)
-                        if req_scene_tags and not req_scene_tags.issubset(tags_lower):
-                            continue
-                            
-                        valid_scenes.append((cat_name, p_name, p_data, tags_lower))
+            # HUB PREFERENCE - Use index for speed
+            hub_candidates = self._scene_tag_index.get(hub_tag.lower(), [])
+            hub_scenes = []
             
-            # HUB PREFERENCE
-            hub_scenes = [s for s in valid_scenes if hub_tag.lower() in s[3]]
+            for cat_name, p_name, p_data in hub_candidates:
+                # Filter by Category
+                if target_scene_cats and cat_name not in target_scene_cats:
+                    continue
+                    
+                tags = self._get_tags(p_data)
+                tags_lower = set(t.lower() for t in tags)
+                
+                # A) Must NOT contain blocked global tags
+                if not tags_lower.isdisjoint(blocked_global):
+                    continue
+                    
+                # B) Must satisfy Scenario requirements (Hard Filter)
+                if req_scene_tags and not req_scene_tags.issubset(tags_lower):
+                    continue
+                    
+                hub_scenes.append((cat_name, p_name, p_data, tags_lower))
             
             if hub_scenes:
                 s_cat, s_name, s_data, _ = random.choice(hub_scenes)
-            elif valid_scenes:
-                s_cat, s_name, s_data, _ = random.choice(valid_scenes)
             else:
-                # Emergency Fallback (Total Failure)
-                valid_cats = [c for c in self.scenes.keys() if self.scenes[c]]
-                if valid_cats:
-                    s_cat = random.choice(valid_cats)
-                    s_name = random.choice(list(self.scenes[s_cat].keys()))
-                    s_data = self.scenes[s_cat][s_name]
+                # Fallback: Scan categories (only if Hub match failed)
+                target_cats = eligible_categories if eligible_categories else self.scenes.keys()
+                for cat_name in target_cats:
+                    if cat_name in self.scenes:
+                        for p_name, p_data in self.scenes[cat_name].items():
+                            tags = self._get_tags(p_data)
+                            tags_lower = set(t.lower() for t in tags)
+                            
+                            if not tags_lower.isdisjoint(blocked_global):
+                                continue
+                            if req_scene_tags and not req_scene_tags.issubset(tags_lower):
+                                continue
+                            
+                            valid_scenes.append((cat_name, p_name, p_data, tags_lower))
+                
+                if valid_scenes:
+                    s_cat, s_name, s_data, _ = random.choice(valid_scenes)
                 else:
-                    # Absolute disaster recovery
-                    return None
+                    # Emergency Fallback
+                    valid_cats = [c for c in self.scenes.keys() if self.scenes[c]]
+                    if valid_cats:
+                        s_cat = random.choice(valid_cats)
+                        s_name = random.choice(list(self.scenes[s_cat].keys()))
+                        s_data = self.scenes[s_cat][s_name]
+                    else:
+                        return None
 
             scene_category = s_cat
             scene_desc = self._get_description(s_data)
@@ -658,25 +760,24 @@ class PromptRandomizer:
             
             # --- APPLY MODE SPECIFIC POSE LOGIC ---
 
-            # --- APPLY MODE SPECIFIC POSE LOGIC ---
             # [STRICT SEPARATION] If any Interaction is present, suppress individual character poses 
             # to prevent technical clashes in the generated prompt.
             if composition_mode in (self.MODE_INT_W_POSES, self.MODE_INT_WO_POSES):
-                 char_data["pose_preset"] = ""
-                 char_data["pose_category"] = ""
+                 char_data.pose_preset = ""
+                 char_data.pose_category = ""
                  
                  if composition_mode == self.MODE_INT_W_POSES:
                       # MODE_INT_W_POSES uses specific poses for each character as required by the interaction
                       req_poses = selected_interaction.get("required_poses", [])
                       if req_poses and i < len(req_poses):
-                          char_data["action_note"] = req_poses[i]
+                          char_data.action_note = req_poses[i]
                       elif req_poses:
-                          char_data["action_note"] = random.choice(req_poses)
+                          char_data.action_note = random.choice(req_poses)
                       else:
-                          char_data["action_note"] = ""
+                          char_data.action_note = ""
                  else:
                       # MODE_INT_WO_POSES is purely text-based (Interactions without Poses)
-                      char_data["action_note"] = ""
+                      char_data.action_note = ""
 
             selected_characters.append(char_data)
 
@@ -689,7 +790,7 @@ class PromptRandomizer:
         if composition_mode in (self.MODE_INT_W_POSES, self.MODE_INT_WO_POSES) and selected_interaction:
              notes_name = selected_interaction["name"]
              t_text = selected_interaction["text"]
-             c_names = [c["name"] for c in selected_characters]
+             c_names = [c.name for c in selected_characters]
              notes_text = fill_template(t_text, c_names)
              
         elif composition_mode == self.MODE_GROUP_NO_INT and len(selected_characters) > 1:
@@ -726,8 +827,9 @@ class PromptRandomizer:
     def _randomize_character_with_role(self, char_name, role, scene_category="", context_tags=None, hub_tag=None):
         """Generate character features strictly matching a role."""
         char_def = self.characters.get(char_name, {})
-        outfits = char_def.get("outfits", {})
-        categorized_outfits = char_def.get("outfits_categorized", {})
+        # Handle CharacterDetails vs dict
+        outfits = char_def.outfits if hasattr(char_def, "outfits") else char_def.get("outfits", {})
+        categorized_outfits = char_def.outfits_categorized if hasattr(char_def, "outfits_categorized") else char_def.get("outfits_categorized", {})
         
         # Merge role requirement tags into selection context
         selection_tags = set(context_tags or [])
@@ -808,7 +910,8 @@ class PromptRandomizer:
         pose_preset = random.choice(list(pose_presets.keys())) if pose_presets else ""
 
         # 3. Traits
-        available_traits = char_def.get("traits", {})
+        # Handle CharacterDetails vs dict
+        available_traits = char_def.traits if hasattr(char_def, "traits") else char_def.get("traits", {})
         selected_traits = [random.choice(list(available_traits.keys()))] if available_traits and random.random() < 0.9 else []
 
         # 4. Color Scheme (especially important for sports)
@@ -817,24 +920,26 @@ class PromptRandomizer:
         
         # 5. Outfit Modifiers/Traits
         outfit_traits = []
-        if isinstance(outfits.get(outfit_name), dict):
-            outfit_data = outfits[outfit_name]
+        outfit_obj = outfits.get(outfit_name)
+        if isinstance(outfit_obj, dict):
+            outfit_data = outfit_obj
             if "modifiers" in outfit_data and outfit_data["modifiers"]:
                 available_modifiers = list(outfit_data["modifiers"].keys())
                 # 30% chance to apply a modifier
                 if available_modifiers and random.random() < 0.3:
                     outfit_traits = [random.choice(available_modifiers)]
 
-        return {
-            "name": char_name,
-            "outfit": outfit_name,
-            "pose_category": pose_category,
-            "pose_preset": pose_preset,
-            "character_traits": selected_traits,
-            "color_scheme": color_scheme,
-            "outfit_traits": outfit_traits,
-            "role_name": role.name
-        }
+        return SelectedCharacterConfig(
+            name=char_name,
+            outfit=outfit_name,
+            pose_category=pose_category,
+            pose_preset=pose_preset,
+            character_traits=selected_traits,
+            color_scheme=color_scheme,
+            outfit_traits=outfit_traits,
+            action_note="",
+            _expanded=True
+        )
 
     def _select_smart_framing(self, num_characters, context_tags=None, scene_category=""):
         """Select a framing type appropriate for the number of characters and context."""
@@ -1024,17 +1129,18 @@ class PromptRandomizer:
             # Pick one random trait
             selected_character_traits.append(random.choice(list(available_traits.keys())))
 
-        return {
-            "name": char_name,
-            "outfit": outfit_name,
-            "outfit_traits": outfit_traits,
-            "character_traits": selected_character_traits,
-            "custom_modifiers": local_modifiers, # Pass localized modifier definitions to builder
-            "pose_category": pose_category,
-            "pose_preset": pose_preset,
-            "framing_mode": "", 
-            "action_note": "",
-        }
+        return SelectedCharacterConfig(
+            name=char_name,
+            outfit=outfit_name,
+            outfit_traits=outfit_traits,
+            character_traits=selected_character_traits,
+            custom_modifiers=local_modifiers,
+            pose_category=pose_category,
+            pose_preset=pose_preset,
+            framing_mode="Portrait", 
+            action_note="",
+            _expanded=True
+        )
 
     def _select_smart_outfit(self, all_outfits, categorized_outfits, char_tags, scene_category, blocked_tags=None):
         """Select an outfit using weighted constraints (Filter -> Select)."""
@@ -1244,8 +1350,8 @@ class PromptRandomizer:
         outfit_sets = []
         for char_name in char_names:
             char_def = self.characters.get(char_name, {})
-            outfits = set(char_def.get("outfits", {}).keys())
-            outfit_sets.append(outfits)
+            char_outfits = char_def.outfits if hasattr(char_def, "outfits") else char_def.get("outfits", {})
+            outfit_sets.append(set(char_outfits.keys()))
 
         # Find intersection of all outfit sets
         common_outfits = outfit_sets[0]
@@ -1263,7 +1369,7 @@ class PromptRandomizer:
             final_candidates = []
             
             first_char = self.characters.get(char_names[0], {})
-            first_char_outfits = first_char.get("outfits", {})
+            first_char_outfits = first_char.outfits if hasattr(first_char, "outfits") else first_char.get("outfits", {})
             
             for outfit_name in candidates:
                 # Check for blocking
@@ -1407,7 +1513,7 @@ class PromptRandomizer:
             template_text, template_name, template_tags = random.choice(eligible_templates)
 
             # Fill template with character names
-            char_names = [char["name"] for char in selected_characters]
+            char_names = [char.name if hasattr(char, "name") else char.get("name") for char in selected_characters]
             return fill_template(template_text, char_names), template_name, template_tags
             
         # If no eligible templates found (due to strict exclusive mode or blocking)
@@ -1563,13 +1669,21 @@ class PromptRandomizer:
                     # Only allow fallback if it DOES NOT contain a "Strong Genre Tag" that is missing from context.
                     # This prevents "Sport" interactions appearing in "Fantasy" scenes just because they weren't explicitly blocked.
                     
-                    strong_genre_tags = {
-                        "sport", "basketball", "baseball", "football", "soccer", "volleyball", 
-                        "tennis", "mma", "boxing", "wrestling", "gym", "athlete", 
-                        "fantasy", "medieval", "magic", "dragon", "wizard",
-                        "sci-fi", "cyberpunk", "futuristic", "robot", "tech",
-                        "noir", "detective", "vintage", "retro", "western"
-                    }
+                    # Construct strong genre tags from loaded tag groups
+                    strong_genre_tags = set()
+                    for group_name, tags in self.tag_groups.items():
+                        if group_name.startswith("GENRE_"):
+                            strong_genre_tags.update([t.lower() for t in tags])
+                    
+                    if not strong_genre_tags:
+                        # Fallback if config is missing
+                        strong_genre_tags = {
+                            "sport", "basketball", "baseball", "football", "soccer", "volleyball", 
+                            "tennis", "mma", "boxing", "wrestling", "gym", "athlete", 
+                            "fantasy", "medieval", "magic", "dragon", "wizard",
+                            "sci-fi", "cyberpunk", "futuristic", "robot", "tech",
+                            "noir", "detective", "vintage", "retro", "western"
+                        }
                     
                     template_tags_lower = {t.lower() for t in tags}
                     has_strong_clash = False

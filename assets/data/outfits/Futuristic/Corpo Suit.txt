@@ -1,4 +1,4 @@
-tags: [Cyberpunk, Formal, Corporate, Luxury, Sci-Fi]
+tags: [cyberpunk, formal, Corporate, luxury, sci-fi]
 
 [F]
 - **Top:** Sharp-shouldered blazer.

@@ -1,0 +1,51 @@
+tags: [International, South Asian, Streetwear]
+modifiers: {}
+
+[F]
+- **Top:** Oversized silk-blend kurta in deep amethyst, styled as a streetwear tunic.
+  - **Fit:** Relaxed and longline with high side slits.
+  - **Details:** Subtle tonal embroidery on the collar, modern metal buttons.
+- **Bottom:** Slim-fit tech joggers in matte black.
+  - **Fit:** Tapered with elasticized cuffs.
+  - **Details:** Multiple utility pockets, water-resistant fabric.
+- **Footwear:** High-top designer sneakers with gold accents.
+  - **Details:** Bold modern silhouette, premium leather.
+- **Accessories:** 
+  - Stacked silver rings
+  - Single heavy silver chain necklace
+  - Embroidered baseball cap with traditional motif
+- **Hair/Makeup:** 
+  - Natural texture; groomed brows, subtle skin-tint, neutral lip balm
+
+[M]
+- **Top:** Oversized silk-blend kurta in deep amethyst, styled as a streetwear tunic.
+  - **Fit:** Relaxed and longline with high side slits.
+  - **Details:** Subtle tonal embroidery on the collar, modern metal buttons.
+- **Bottom:** Slim-fit tech joggers in matte black.
+  - **Fit:** Tapered with elasticized cuffs.
+  - **Details:** Multiple utility pockets, water-resistant fabric.
+- **Footwear:** High-top designer sneakers with gold accents.
+  - **Details:** Bold modern silhouette, premium leather.
+- **Accessories:** 
+  - Stacked silver rings
+  - Single heavy silver chain necklace
+  - Embroidered baseball cap with traditional motif
+- **Hair/Makeup:** 
+  - Natural texture with clean fades or edges; groomed brows
+
+[H]
+- **Hijab:** Amethyst silk hijab styled in a modern urban wrap.
+- **Top:** Oversized silk-blend kurta in deep amethyst, styled as a streetwear tunic.
+  - **Fit:** Relaxed and longline with high side slits.
+  - **Details:** Subtle tonal embroidery on the collar, modern metal buttons.
+- **Bottom:** Slim-fit tech joggers in matte black.
+  - **Fit:** Tapered with elasticized cuffs.
+  - **Details:** Multiple utility pockets, water-resistant fabric.
+- **Footwear:** High-top designer sneakers with gold accents.
+  - **Details:** Bold modern silhouette, premium leather.
+- **Accessories:** 
+  - Stacked silver rings
+  - Single heavy silver chain necklace
+  - Embroidered baseball cap with traditional motif (optional)
+- **Hair/Makeup:** 
+  - Groomed brows, subtle skin-tint, neutral lip balm

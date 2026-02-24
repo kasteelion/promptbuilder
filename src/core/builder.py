@@ -1,6 +1,7 @@
 import re
 import random
-from typing import Any, Dict, List
+import copy
+from typing import Any, Dict, List, Optional
 
 
 from utils.color_scheme import substitute_colors, substitute_signature_color
@@ -8,6 +9,16 @@ from utils.text_utils import normalize_blank_lines
 
 from .renderers import CharacterRenderer, NotesRenderer, OutfitRenderer, PoseRenderer, SceneRenderer
 from .definitions import PromptConfig, SelectedCharacterConfig
+
+# Pre-compiled regex for performance
+RE_MODIFIER = re.compile(r"\{modifier\}")
+
+
+from .renderers import CharacterRenderer, NotesRenderer, OutfitRenderer, PoseRenderer, SceneRenderer, ColorSchemeRenderer
+from .models import PromptConfig, SelectedCharacterConfig, CharacterDetails
+
+# Pre-compiled regex for performance
+RE_MODIFIER = re.compile(r"\{modifier\}")
 
 
 class PromptBuilder:
@@ -25,13 +36,14 @@ class PromptBuilder:
         """Initialize the prompt builder.
 
         Args:
-            characters: Dictionary of character data
+            characters: Dictionary of character data (will be converted to CharacterDetails)
             base_prompts: Dictionary of base art style prompts
             poses: Dictionary of pose categories and presets
             color_schemes: Dictionary of color schemes
             modifiers: Dictionary of outfit modifiers
             framing: Dictionary of framing modifiers
         """
+        # Store reference to the shared character dictionary to ensure lazy loading updates are visible
         self.characters = characters
         self.base_prompts = base_prompts
         self.poses = poses
@@ -39,253 +51,162 @@ class PromptBuilder:
         self.modifiers = modifiers or {}
         self.framing = framing or {}
 
-    def generate(self, config: PromptConfig) -> str:
+    def generate(self, config: Union[Dict[str, Any], PromptConfig]) -> str:
         """Generate a formatted prompt from configuration.
 
         Args:
-            config: Configuration dictionary with selected characters, scene, notes, etc.
+            config: Configuration (dictionary or PromptConfig model).
 
         Returns:
             Formatted prompt string
         """
+        # Ensure config is a PromptConfig model
+        if isinstance(config, dict):
+            config = PromptConfig(**config)
+
         parts: List[str] = []
+        
+        # Reset ephemeral generation state
+        self._active_team_scheme = None
 
-        base_data = self.base_prompts.get(config.get("base_prompt"), "")
-        if isinstance(base_data, dict):
-            base = base_data.get("description", "")
-        else:
-            base = base_data
-
+        # 1. Base Prompt
+        base_data = self.base_prompts.get(config.base_prompt, "")
+        base = base_data.get("description", "") if isinstance(base_data, dict) else base_data
         if base:
             parts.append(base)
         parts.append("---")
 
-        scene = config.get("scene", "").strip()
+        # 2. Scene
+        scene = config.scene.strip()
         if scene:
             parts.append(SceneRenderer.render(scene))
 
-        for idx, char in enumerate(config.get("selected_characters", [])):
-            data = self.characters.get(char["name"], {})
-            outfit = data.get("outfits", {}).get(char.get("outfit", ""), "")
-            pose_raw = char.get("action_note") or self.poses.get(char.get("pose_category"), {}).get(
-                char.get("pose_preset"), ""
-            )
-            
-            # Handle both string and structured dict formats
-            if isinstance(pose_raw, dict):
-                pose = pose_raw.get("description", "")
-            else:
-                pose = pose_raw
-            
-            # Apply framing modifier if selected
-            framing_name = char.get("framing_mode")
-            framing_text = self.framing.get(framing_name, "")
-            if framing_text:
-                pose = f"{framing_text} {pose}"
-            
-            # Apply outfit modifiers/traits if selected
-            traits = char.get("outfit_traits", [])
-            if not traits and char.get("outfit_modifier"):
-                traits = [char.get("outfit_modifier")]
-            
-            # Local modifiers defined within the outfit file itself
-            local_modifiers = {}
-            if isinstance(outfit, dict) and "modifiers" in outfit:
-                local_modifiers = outfit.get("modifiers", {})
-            
-            # Global/legacy custom modifiers from character data
-            custom_modifiers = char.get("custom_modifiers", {})
-            
-            modifier_parts = []
-            for t in traits:
-                # Priority: 1. Local (Outfit-specific), 2. Custom (Char-specific), 3. Global
-                if t in local_modifiers:
-                    modifier_parts.append(local_modifiers[t])
-                elif t in custom_modifiers:
-                    modifier_parts.append(custom_modifiers[t])
-                elif t in self.modifiers:
-                    modifier_parts.append(self.modifiers[t])
-            
-            modifier_text = "".join(modifier_parts).strip()
-            
-            scheme_name = char.get("color_scheme")
-            scheme = self.color_schemes.get(
-                scheme_name, self.color_schemes.get("The Standard", {})
-            )
+        # 3. Characters
+        char_names = [c.name for c in config.selected_characters]
+        
+        # Pre-resolve team scheme if needed for multi-character consistency
+        self._resolve_active_team_scheme(config)
 
-            # Auto-Detection for Team colors if outfit requires it and no specific scheme set
-            # Check for {team} in outfit string (simple check before complex parsing)
-            # We check if outfit is string or dict values contain {team}
-            requires_team = False
-            if isinstance(outfit, str):
-                requires_team = "{team}" in outfit
-            elif isinstance(outfit, dict):
-                # check values
-                for v in outfit.values():
+        for idx, char_config in enumerate(config.selected_characters):
+            char_data = self.characters.get(char_config.name)
+            if not char_data:
+                continue
+            
+            # Ensure char_data is a Pydantic model
+            if isinstance(char_data, dict):
+                char_data = CharacterDetails(**char_data)
+                # Cache the conversion back in the source dict if possible, 
+                # but for generate it's safer to just use it.
+
+            parts.append(CharacterRenderer.render(
+                idx, 
+                char_config, 
+                char_data,
+                self.modifiers,
+                self.poses,
+                self.framing,
+                self.color_schemes,
+                self._active_team_scheme
+            ))
+
+        # 4. Notes
+        if config.notes:
+            parts.append(NotesRenderer.render(config.notes, char_names))
+
+        out = "\n\n".join([p for p in parts if p])
+        return normalize_blank_lines(out)
+
+    def _resolve_active_team_scheme(self, config: PromptConfig):
+        """Pick a consistent team scheme if any character requires it."""
+        requires_team = False
+        for char_config in config.selected_characters:
+            char_data = self.characters.get(char_config.name)
+            if not char_data: continue
+            
+            outfit_data = char_data.outfits.get(char_config.outfit, "")
+            
+            # Check for {team} placeholder
+            if isinstance(outfit_data, str) and "{team}" in outfit_data:
+                requires_team = True
+            elif isinstance(outfit_data, dict):
+                for v in outfit_data.values():
                     if isinstance(v, str) and "{team}" in v:
                         requires_team = True
                         break
             
-            if requires_team and (not scheme_name or scheme_name == "The Standard"):
-                # Pick a random team scheme
-                # Filter schemes that have 'team' key
-                team_schemes = [s for s in self.color_schemes.values() if "team" in s]
-                if team_schemes:
-                    scheme = random.choice(team_schemes)
-                    # print(f"DEBUG: Auto-selected Team Scheme: {scheme.get('team')}")
-            
-            # Apply signature color substitution if applicable
-            sig_color = data.get("signature_color")
-            use_sig = char.get("use_signature_color", False)
-            
-            if isinstance(outfit, str):
-                # Replace {modifier} placeholder before color substitution
-                outfit = re.sub(r"\{modifier\}", modifier_text, outfit)
-                # Apply signature color logic
-                outfit = substitute_signature_color(outfit, sig_color, use_sig)
-                outfit = substitute_colors(outfit, scheme)
-            elif isinstance(outfit, dict):
-                # Work on a copy to avoid mutating the source data
-                outfit = outfit.copy()
-                for k, v in outfit.items():
-                    if isinstance(v, str):
-                        # Skip metadata keys during substitution to be safe
-                        if k in ("tags", "modifiers"): continue
-                        
-                        v = re.sub(r"\{modifier\}", modifier_text, v)
-                        v = substitute_signature_color(v, sig_color, use_sig)
-                        outfit[k] = substitute_colors(v, scheme)
-            # Apply character-level traits if selected
-            char_traits = char.get("character_traits", [])
-            char_traits_def = data.get("traits", {})
-            appearance = data.get("appearance", "")
-            
-            trait_texts = []
-            for ct in char_traits:
-                if ct in char_traits_def:
-                    trait_texts.append(char_traits_def[ct])
-            
-            if trait_texts:
-                # Append traits to appearance, ensuring proper punctuation
-                if appearance and not appearance.endswith((".", ";")):
-                    appearance += ";"
-                appearance += " " + "; ".join(trait_texts)
+            if requires_team:
+                # Only pick if one isn't explicitly set in config (first one wins for now)
+                if not char_config.color_scheme or char_config.color_scheme == "The Standard":
+                    team_schemes = [s for s in self.color_schemes.values() if isinstance(s, dict) and "team" in s]
+                    if team_schemes:
+                        self._active_team_scheme = random.choice(team_schemes)
+                break
 
-            # Append Tier-based descriptors if available
-            tier_info = []
-            if data.get("age_presentation"): tier_info.append(f"Age: {data['age_presentation']}")
-            if data.get("vibe"): tier_info.append(f"Vibe: {data['vibe']}")
-            if data.get("bearing"): tier_info.append(f"Bearing: {data['bearing']}")
-            
-            if tier_info:
-                if appearance and not appearance.endswith((".", ";")):
-                    appearance += "."
-                appearance += " " + "; ".join(tier_info) + "."
+    def generate_summary(self, config: Union[Dict[str, Any], PromptConfig]) -> str:
+        """Generate a condensed summary of the prompt."""
+        if isinstance(config, dict):
+            config = PromptConfig(**config)
 
-            parts.append(
-                CharacterRenderer.render(
-                    idx,
-                    char["name"],
-                    appearance,
-                    OutfitRenderer.render(outfit),
-                    PoseRenderer.render(pose),
-                )
-            )
-
-        notes = config.get("notes", "")
-        if notes:
-            # Dynamic character placeholder replacement
-            if "{char" in notes:
-                for i, char in enumerate(config.get("selected_characters", [])):
-                    notes = notes.replace(f"{{char{i+1}}}", char["name"])
-            
-            parts.append(NotesRenderer.render(notes))
-        out = "\n\n".join([p for p in parts if p])
-        return normalize_blank_lines(out)
-
-    def generate_summary(self, config: PromptConfig) -> str:
-        """Generate a condensed summary of the prompt.
-
-        Args:
-            config: Configuration dictionary.
-
-        Returns:
-            Condensed summary string.
-        """
         summary_parts = []
         
         # 1. Art Style
-        base_prompt = config.get("base_prompt")
-        if base_prompt and base_prompt != "Default":
-            summary_parts.append(f"🎨 **{base_prompt}**")
+        if config.base_prompt and config.base_prompt != "Default":
+            summary_parts.append(f"🎨 **{config.base_prompt}**")
         
         # 2. Scene
-        scene = config.get("scene", "").strip()
+        scene = config.scene.strip()
         if scene:
-            # First line of scene or first 50 chars
             short_scene = scene.split("\n")[0]
             if len(short_scene) > 60:
                 short_scene = short_scene[:57] + "..."
             summary_parts.append(f"🎬 {short_scene}")
             
-        # 3. Moods (from metadata if provided by randomizer)
-        metadata = config.get("metadata", {})
-        if metadata and "moods" in metadata and metadata["moods"]:
-            moods = sorted(list(metadata["moods"]))
-            summary_parts.append(f"✨ **Moods**: {', '.join(moods)}")
+        # 3. Moods
+        moods = config.metadata.get("moods")
+        if moods:
+            moods_list = sorted(list(moods))
+            summary_parts.append(f"✨ **Moods**: {', '.join(moods_list)}")
 
         # 4. Characters
-        chars = config.get("selected_characters", [])
-        if chars:
+        if config.selected_characters:
             char_summaries = []
-            for char in chars:
-                name = char["name"]
-                outfit = char.get("outfit", "Base")
-
-                pose = char.get("pose_preset") or "Default"
-                if char.get("action_note"):
+            for char_config in config.selected_characters:
+                name = char_config.name
+                outfit = char_config.outfit or "Base"
+                pose = char_config.pose_preset or "Default"
+                if char_config.action_note:
                     pose = "Custom Action"
                 
                 parts = [outfit]
-                scheme_name = char.get("color_scheme")
+                scheme_name = char_config.color_scheme
                 
-                # Check if outfit actually uses color schemes or signature colors
-                char_def = self.characters.get(name, {})
-                outfit_data = char_def.get("outfits", {}).get(outfit, "")
-                
-                # Convert outfit data to a checkable string
-                outfit_str = ""
-                if isinstance(outfit_data, dict):
-                    outfit_str = " ".join(str(v) for k, v in outfit_data.items() if isinstance(v, str))
-                else:
-                    outfit_str = str(outfit_data)
-                
-                supports_schemes = any(f"{{{k}}}" in outfit_str for k in ("primary_color", "secondary_color", "accent"))
-                supports_sig = "{signature_color}" in outfit_str or "(signature)" in outfit_str
-                
-                if scheme_name and scheme_name not in ("Default (No Scheme)", "The Standard") and supports_schemes:
-                    scheme = self.color_schemes.get(scheme_name)
-                    if scheme:
-                        team_name = scheme.get("team", scheme_name)
-                        parts.append(team_name)
-                
-                # Add signature color info if active AND supported
-                if char.get("use_signature_color") and supports_sig:
-                    sig_color = char_def.get("signature_color")
-                    if sig_color:
-                        parts.append(f"Sig: {sig_color}")
+                char_def = self.characters.get(name)
+                if char_def:
+                    outfit_data = char_def.outfits.get(outfit, "")
+                    outfit_str = str(outfit_data) if not isinstance(outfit_data, dict) else " ".join(str(v) for v in outfit_data.values() if isinstance(v, str))
+                    
+                    supports_schemes = any(f"{{{k}}}" in outfit_str for k in ("primary_color", "secondary_color", "accent"))
+                    supports_sig = "{signature_color}" in outfit_str or "(signature)" in outfit_str
+                    
+                    if scheme_name and scheme_name not in ("Default (No Scheme)", "The Standard") and supports_schemes:
+                        scheme = self.color_schemes.get(scheme_name)
+                        if scheme:
+                            team_name = scheme.get("team", scheme_name)
+                            parts.append(team_name)
+                    
+                    if char_config.use_signature_color and supports_sig:
+                        if char_def.signature_color:
+                            parts.append(f"Sig: {char_def.signature_color}")
 
                 parts.append(pose)
-                
                 char_summaries.append(f"   **{name}** ({' • '.join(parts)})")
             
             summary_parts.append("👥 **Characters**:")
             summary_parts.extend(char_summaries)
             
         # 5. Interaction/Notes
-        notes = config.get("notes", "").strip()
+        notes = config.notes.strip()
         if notes:
-            # Check if this looks like a tagged interaction
             is_interaction = "(" in notes and ")" in notes and ":" in notes
             icon = "🤝" if is_interaction else "📝"
             label = "Interaction" if is_interaction else "Action"

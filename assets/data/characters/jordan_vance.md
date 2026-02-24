@@ -1,7 +1,7 @@
 ### Jordan Vance
 **Photo:** jordan_vance_photo.png
 
-**Tags:** Black, Athletic, Chic, Commanding, Female, Playful, Tall, Casual, Sci-Fi, Sport, Action, Noir
+**Tags:** Black, Athletic, Chic, Commanding, Female, Playful, Tall, Casual, sci-fi, Sport, action, noir
 **Summary:** Jordan is the ultimate expression of "Athletic Glam"—possessing the elite verticality of a pro basketballer mixed with high-fashion confidence. At 6'4", she commands the space around her with a "Bayou Barbie" energy: unapologetically feminine, fiercely competitive, and always "on." She blends the explosive power of an elite athlete with a polished, glamorous aesthetic that makes her presence feel both dynamic and captivating.
 
 **Gender:** F

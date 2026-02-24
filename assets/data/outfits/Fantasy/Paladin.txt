@@ -1,4 +1,4 @@
-Tags: Fantasy, Everyday
+Tags: fantasy, Everyday
 modifiers:
   Gold: in **gilded brass armor**
   Silver: in **polished fluted steel**

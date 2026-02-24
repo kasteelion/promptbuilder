@@ -126,11 +126,11 @@ class DashboardSection(ft.Container):
 
     def _update_overview(self):
         # Calculate stats
-        chars = self.app.state.get("characters", {}) or {}
+        # Use metadata for counts to support lazy loading
+        total_chars = len(self.app.state.ctx.characters_metadata)
         scenes_data = self.app.data_loader.load_presets("scenes.md")
         interactions_data = self.app.data_loader.load_interactions()
         
-        total_chars = len(chars)
         total_scenes = sum(len(cat) for cat in scenes_data.values())
         total_interactions = sum(len(cat) for cat in interactions_data.values())
         
@@ -161,11 +161,12 @@ class DashboardSection(ft.Container):
         issues_found = 0
         
         # 1. Missing Photos
-        chars = self.app.state.get("characters", {})
+        # Use metadata to avoid loading all full characters
+        chars_meta = self.app.state.ctx.characters_metadata
         chars_dir = self.app.data_loader._find_characters_dir()
         
         missing_photos = []
-        for name, data in chars.items():
+        for name, meta in chars_meta.items():
             # Assume 1:1 filename match for simplicity or check standard
             # Logic: data_loader.resolve_photo_for_character logic simplified
             from utils.validation import sanitize_filename
@@ -177,8 +178,8 @@ class DashboardSection(ft.Container):
                     break
             
             if not photo_found:
-                 # Check specific field
-                 if not data.get("photo"): # If no photo field and no auto-photo
+                 # Check specific field from metadata
+                 if not meta.photo: # If no photo field and no auto-photo
                       missing_photos.append(name)
 
         if missing_photos:
@@ -219,10 +220,11 @@ class DashboardSection(ft.Container):
         """Aggregate all tags."""
         tag_counts = {} # {tag: {chars: 0, presets: 0}}
         
-        # Count Characters
-        chars = self.app.state.get("characters", {})
-        for c in chars.values():
-            tags = c.get("tags", [])
+        # Count Characters (Using metadata for efficiency and lazy-loading support)
+        chars_meta = self.app.state.ctx.characters_metadata
+        for meta in chars_meta.values():
+            tags = meta.tags or []
+            # Metadata tags are already a list, but handle just in case
             if isinstance(tags, str): tags = tags.split(",")
             for t in tags:
                 t = t.strip().lower()

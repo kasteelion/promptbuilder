@@ -1,4 +1,4 @@
-tags: [Fantasy, Formal, Royal]
+tags: [fantasy, formal, Royal]
 
 [F]
 - **Top:** Luxurious flowing robes with gold embroidery.

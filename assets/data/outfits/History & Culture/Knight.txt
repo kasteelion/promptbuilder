@@ -1,4 +1,4 @@
-tags: [Armor, weapon_combat, Fantasy]
+tags: [armor, weapon_combat, fantasy]
 
 [F]
 - **Top:** Polished plate armor bodice.

@@ -3,7 +3,7 @@ modifiers:
   Afternoon: in **pale cream irish linen**
   Evening: in **soft embroidered batiste**
 
-tags: [Vintage, 1900s, Coastal, Elegant]
+tags: [vintage, 1900s, Coastal, elegant]
 
 [F]
 - **Top:** Pigeon-breast (blouson) bodice.

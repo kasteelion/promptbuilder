@@ -1,4 +1,4 @@
-tags: [Lingerie, Glamour, Wings, Costume, High Fashion, Runway]
+tags: [Lingerie, Glamour, Wings, costume, High Fashion, Runway]
 
 modifiers:
   Golden: featuring **gold-plated feathers** and champagne silk

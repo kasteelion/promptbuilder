@@ -1,0 +1,56 @@
+tags: [combat, tactical, cyberpunk]
+modifiers: {}
+
+[F]
+- **Top:** {Color} Augmented Tech-wear Tunic
+  - **Type:** Tech-wear Tunic
+  - **Material:** Matte Synthetic with neon fiber-optic tracing
+  - **Fit:** Relaxed-urban
+  - **Color:** ((default:Neon Cyan) or (signature))
+- **Bottom:** {Color} Hardshell Tactical Skirt
+  - **Type:** Tactical Skirt
+  - **Material:** Layered Polycarbonate
+  - **Color:** ((default:Matte Black) or (signature))
+- **Outerwear:** {Color} Modular Gear Vest
+  - **Type:** Gear Vest
+  - **Material:** Ballistic Mesh
+  - **Color:** ((default:Charcoal) or (signature))
+- **Accessories:** {Style} Augmented Reality Visor and Cyber-deck
+  - **Type:** AR Visor and Cyber-deck
+  - **Style:** Glitch-aesthetic
+
+[M]
+- **Top:** {Color} Augmented Tech-wear Tunic
+  - **Type:** Tech-wear Tunic
+  - **Material:** Matte Synthetic with neon fiber-optic tracing
+  - **Fit:** Relaxed-urban
+  - **Color:** ((default:Neon Cyan) or (signature))
+- **Bottom:** {Color} Hardshell Tactical Trousers
+  - **Type:** Tactical Trousers
+  - **Material:** Layered Polycarbonate
+  - **Color:** ((default:Matte Black) or (signature))
+- **Outerwear:** {Color} Modular Gear Vest
+  - **Type:** Gear Vest
+  - **Material:** Ballistic Mesh
+  - **Color:** ((default:Charcoal) or (signature))
+- **Accessories:** {Style} Augmented Reality Visor and Cyber-deck
+  - **Type:** AR Visor and Cyber-deck
+  - **Style:** Glitch-aesthetic
+
+[H]
+- **Top:** {Color} Augmented Tech-wear Tunic
+  - **Type:** Tech-wear Tunic
+  - **Material:** Matte Synthetic with neon fiber-optic tracing
+  - **Fit:** Modest Relaxed-urban
+  - **Color:** ((default:Neon Cyan) or (signature))
+- **Bottom:** {Color} Hardshell Tactical Trousers
+  - **Type:** Tactical Trousers
+  - **Material:** Layered Polycarbonate
+  - **Color:** ((default:Matte Black) or (signature))
+- **Outerwear:** {Color} Modular Gear Vest
+  - **Type:** Gear Vest
+  - **Material:** Ballistic Mesh
+  - **Color:** ((default:Charcoal) or (signature))
+- **Accessories:** {Style} Augmented Reality Visor and Cyber-deck
+  - **Type:** AR Visor and Cyber-deck
+  - **Style:** Glitch-aesthetic

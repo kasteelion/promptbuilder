@@ -1,7 +1,7 @@
 ### Natsumi Maki
 **Photo:** natsumi_maki_photo.png
 
-**Tags:** Female, Athletic, Chic, Creative, Japanese, Petite, Playful, Casual, Sport, Action, Noir, Social
+**Tags:** Female, Athletic, Chic, creative, Japanese, Petite, Playful, Casual, Sport, action, noir, social
 **Summary:** Dynamic idol-wrestler with infectious enthusiasm and athletic grace. Natsumi radiates bubbly charisma and kawaii energy, blending fierce performance prowess with approachable sweetness. Her presence is magnetic—equal parts sparkle and strength.
 
 **Gender:** F

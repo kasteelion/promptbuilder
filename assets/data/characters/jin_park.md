@@ -1,6 +1,6 @@
 ### Jin Park
 **Photo:** jin_park_photo.png
-**Tags:** Male, Chic, K-Fashion, Minimalist, Soft, Urban, Noir, Casual
+**Tags:** Male, Chic, K-Fashion, Minimalist, soft, urban, noir, Casual
 
 **Summary:** Jin’s presence is understated and thoughtful, defined by quiet confidence and emotional sensitivity. He feels observant rather than performative, with a modern elegance rooted in restraint.
 

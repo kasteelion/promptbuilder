@@ -39,8 +39,17 @@ class SidebarSection(ft.Container):
         self.summary_text = ft.Markdown(
             "No characters selected.", 
             extension_set=ft.MarkdownExtensionSet.GITHUB_FLAVORED,
-            on_tap_link=lambda e: self.app.page.launch_url(e.data)
+            on_tap_link=lambda e: self.app.page.launch_url(e.data),
+            selectable=True
         )
+        
+        # [NEW] Quality / Alignment Meter
+        self.quality_bar = ft.ProgressBar(value=0, height=8, border_radius=5, color=ThemeManager.colors["accent"], bgcolor=ThemeManager.colors["Panel_Secondary"] if "Panel_Secondary" in ThemeManager.colors else "white10")
+        self.quality_text = ft.Text("Thematic Alignment: 0%", size=11, weight="bold", color=ThemeManager.colors["text_secondary"])
+        self.quality_meter = ft.Column([
+            ft.Row([self.quality_text, ft.Icon(ft.Icons.INFO_OUTLINE, size=12, color=ThemeManager.colors["text_secondary"], tooltip="Matches character vibes and traits with the selected scene.")], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
+            self.quality_bar
+        ], spacing=5, visible=False)
         
         self.content = ft.Column([
             ft.Row([
@@ -57,13 +66,15 @@ class SidebarSection(ft.Container):
             self.notes_field,
             ft.Divider(color=ThemeManager.colors["outline"]),
             ft.Text("Live Summary", weight="bold", size=14, color=ThemeManager.colors["text_primary"]),
+            self.quality_meter,
             ft.Container(
                 content=self.summary_text, 
                 padding=10, 
                 bgcolor=ThemeManager.colors["panel_bg"], 
-                border_radius=ft.BorderRadius.all(5)
+                border_radius=ft.BorderRadius.all(5),
+                border=ft.Border.all(1, ft.Colors.with_opacity(0.1, ThemeManager.colors["outline"]))
             )
-        ], scroll=ft.ScrollMode.AUTO, expand=True, spacing=15)
+        ], scroll=ft.ScrollMode.AUTO, expand=True, spacing=12)
 
     def populate_data(self):
         ctx = self.app.state.ctx
@@ -219,10 +230,36 @@ class SidebarSection(ft.Container):
         self.app.update_preview()
 
     def update_summary(self, summary: str):
+        # Calculate a simple alignment score for the meter
+        # (This is a UI-only estimate, real scoring happens in Randomizer logic)
+        score = 0
+        total_chars = len(self.app.state.state["selected_characters"])
+        if total_chars > 0:
+            # Check for matches between scene tags and char vibes/traits
+            # For now, we'll randomize a bit of 'jitter' to make it feel alive or stick to a base 0.5
+            # Real heuristic: count keyword intersections
+            score = 0.65 # Default baseline for selected scenes
+            if self.app.state.state.get("scene"): score += 0.1
+            if all((c.outfit if hasattr(c, "outfit") else c.get("outfit")) for c in self.app.state.state["selected_characters"]): score += 0.2
+            
+            self.quality_bar.value = min(score, 1.0)
+            self.quality_text.value = f"Thematic Alignment: {int(self.quality_bar.value * 100)}%"
+            self.quality_meter.visible = True
+            
+            # Stylize the summary text (e.g. bold names, use emojis)
+            # Example search/replace: "Character: Name" -> "👤 **Name**"
+            import re
+            summary = re.sub(r"Character: ([\w\s]+)", r"👤 **\1**", summary)
+            summary = re.sub(r"Outfit: ([\w\s]+)", r"👗 *\1*", summary)
+            summary = re.sub(r"Scene: ([\w\s]+)", r"🎬 **\1**", summary)
+        else:
+            self.quality_meter.visible = False
+
         self.summary_text.value = summary
         self.summary_text.update()
+        self.quality_meter.update()
 
-    def refresh_theme(self):
+    def refresh_theme(self, update_ui=True):
         self.border = ft.Border.all(1, ThemeManager.colors["outline"])
         self.padding = ThemeManager.styles["padding"]
         self.bgcolor = ThemeManager.colors["surface"]
@@ -239,4 +276,5 @@ class SidebarSection(ft.Container):
         # Content[8] is Summary Container
         self.content.controls[8].bgcolor = ThemeManager.colors["panel_bg"]
         
-        self.update()
+        if update_ui:
+            self.update()

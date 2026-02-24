@@ -2,7 +2,7 @@
 
 **Photo:** esme_dubois_photo.png
 
-**Tags:** Female, Chic, Creative, Minimalist, Elegant, Vintage, Retro, Casual, Sport, Action, Noir, Work
+**Tags:** Female, Chic, creative, Minimalist, elegant, vintage, Retro, Casual, Sport, action, noir, work
 
 **Summary:** Esme moves with quiet precision and ballet-trained grace. Her presence is refined and fluid, marked by discipline, elegance, and a serene confidence that feels effortless rather than performative. A curator of a private gallery, her eye for detail is unmatched, extending from her work to her carefully curated personal life. She speaks softly but with absolute clarity, and her stillness is just as powerful as her movement. She embodies the "quiet luxury" aesthetic—unassuming quality and timeless sophistication.
 

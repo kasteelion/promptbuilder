@@ -1,0 +1,52 @@
+tags: [Specialty, tech, sci-fi]
+modifiers: {}
+
+[F]
+- **Top:** Reinforced haptic compression vest over a moisture-wicking charcoal mesh shirt.
+  - **Fit:** Tight-fitting, anatomical contours.
+  - **Details:** Integrated sensor nodes on shoulders and chest, glowing blue status lights.
+- **Bottom:** Tech-athletic compression leggings with integrated tracking markers.
+  - **Fit:** Skin-tight for precise motion capture.
+  - **Details:** Carbon-fiber knee protection, reinforced seams.
+- **Footwear:** Specialized haptic grip socks with rubberized soles.
+  - **Details:** Low profile, maximizing ground feel.
+- **Accessories:** 
+  - Lightweight VR headset (worn around neck or on forehead)
+  - Haptic gloves with articulated knuckle sensors
+  - Adjustable nylon harness straps across chest and back
+- **Hair/Makeup:** 
+  - Practical tight ponytail or braids
+  - Sweat-resistant matte finish, minimal focused look
+
+[M]
+- **Top:** Reinforced haptic compression vest over a moisture-wicking charcoal mesh shirt.
+  - **Fit:** Tight-fitting, anatomical contours.
+  - **Details:** Integrated sensor nodes on shoulders and chest, glowing blue status lights.
+- **Bottom:** Tech-athletic compression leggings with integrated tracking markers.
+  - **Fit:** Skin-tight for precise motion capture.
+  - **Details:** Carbon-fiber knee protection, reinforced seams.
+- **Footwear:** Specialized haptic grip socks with rubberized soles.
+  - **Details:** Low profile, maximizing ground feel.
+- **Accessories:** 
+  - Lightweight VR headset (worn around neck or on forehead)
+  - Haptic gloves with articulated knuckle sensors
+  - Adjustable nylon harness straps across chest and back
+- **Hair/Makeup:** 
+  - Short practical cut
+  - Sweat-resistant matte finish
+
+[H]
+- **Top:** Reinforced haptic compression vest over a moisture-wicking long-sleeve charcoal mesh shirt.
+  - **Fit:** Tight-fitting modest cut, anatomical contours.
+  - **Details:** Integrated sensor nodes on shoulders and chest, glowing blue status lights.
+- **Bottom:** Tech-athletic compression leggings with integrated tracking markers.
+  - **Fit:** Skin-tight for precise motion capture.
+  - **Details:** Carbon-fiber knee protection, reinforced seams.
+- **Footwear:** Specialized haptic grip socks with rubberized soles.
+  - **Details:** Low profile, maximizing ground feel.
+- **Accessories:** 
+  - Lightweight VR headset (worn around neck or on forehead)
+  - Haptic gloves with articulated knuckle sensors
+  - Adjustable nylon harness straps across chest and back
+- **Hair/Makeup:** 
+  - Sweat-resistant matte finish, minimal focused look

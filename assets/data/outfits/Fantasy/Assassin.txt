@@ -1,4 +1,4 @@
-tags: [weapon_combat, Fantasy, Stealth]
+tags: [weapon_combat, fantasy, Stealth]
 
 [F]
 - **Top:** Form-fitting bodysuit with reinforced leather armor.

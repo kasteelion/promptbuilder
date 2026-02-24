@@ -204,8 +204,8 @@ class GalleryExplorer(ft.Container):
             # If it handles standard text blocks, we might need a specific metadata parser if the format is strict.
             # archive/ui/gallery.py had a custom _parse_metadata because it looked for "# METADATA"
             
-            # Let's try TextParser first, if it fails, fallback or implement custom.
-            available_chars = list(self.app.ctx.characters.keys())
+            # Use metadata to see ALL available characters
+            available_chars = list(self.app.ctx.characters_metadata.keys())
             config = TextParser.parse_import_text(content, available_chars)
             
             # If TextParser didn't pick up specific metadata fields (like hidden interaction metadata), 

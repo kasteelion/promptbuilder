@@ -1,0 +1,45 @@
+tags: [Specialty, combat, fantasy, Fighter, Rugged]
+
+[F]
+- **Top:** Reinforced dark leather gambeson with intricate cord lacing and a high protective collar.
+  - **Fit:** Fitted; Protective.
+  - **Material:** Boiled leather and quilted linen.
+  - **Pattern:** Weathered brown leather with blackened steel rivets.
+  - **Neckline:** High-collar.
+  - **Sleeve:** Full-length with integrated leather forearm bracers.
+- **Bottom:** Rugged dark-gray charcoal trousers with reinforced inner thighs and knee pads.
+  - **Fit:** Slim-athletic.
+  - **Material:** Heavy canvas and leather panels.
+  - **Waist:** Broad leather utility belt with multiple pouches and a heavy buckle.
+  - **Length:** Full.
+- **Footwear:** Heavy-duty leather stride boots with silent rubber soles and speed-lacing.
+- **Accessories:** Leather quiver strapped to the back; a compact tactical crossbow held in the right hand; tactical fingerless gloves.
+
+[M]
+- **Top:** Heavy leather tactical vest over a dark gray long-sleeve knit shirt.
+  - **Fit:** Rugged; Combat-ready.
+  - **Material:** Distressed leather and thermal knit.
+  - **Neckline:** Round.
+  - **Sleeve:** Long.
+- **Bottom:** Dark brown tactical cargo pants with modular pockets.
+  - **Fit:** Durable.
+  - **Material:** Ripstop cotton.
+  - **Waist:** Webbing belt.
+  - **Length:** Full.
+- **Footwear:** Black combat boots.
+- **Accessories:** Bolt pouch on the leg; tactical headset.
+
+[H]
+- **Hijab:** Dark charcoal tactical jersey hijab.
+- **Top:** Long-line leather-reinforced tactical tunic with side slits for movement.
+  - **Fit:** Modest athletic.
+  - **Material:** Reinforced technical fabric.
+  - **Neckline:** High-neck.
+  - **Sleeve:** Long sleeves with built-in wrist guards.
+- **Bottom:** Matching charcoal tactical trousers.
+  - **Fit:** Modest straight fit.
+  - **Material:** matching.
+  - **Waist:** Utility belt.
+  - **Length:** Floor-length.
+- **Footwear:** Tactical boots.
+- **Accessories:** Crossbow slung across the back; tactical goggles on the forehead.

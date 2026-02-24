@@ -1,4 +1,4 @@
-tags: [weapon_combat, Historical, Japanese]
+tags: [weapon_combat, historical, Japanese]
 
 [F]
 - **Top:** Ornate dō (chest armor).

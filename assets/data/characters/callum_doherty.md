@@ -1,7 +1,7 @@
 ### Callum Doherty
 **Photo:** callum_doherty_photo.png
 
-**Tags:** Male, Celtic, Confident, Craftsman, Freckled, Playful, Red-Haired, Rugged, Vintage, Retro, Casual, Sport, Noir, Urban, Social
+**Tags:** Male, Celtic, Confident, Craftsman, Freckled, Playful, Red-Haired, Rugged, vintage, Retro, Casual, Sport, noir, urban, social
 
 **Summary:** Callum is a burst of fiery charisma and infectious laughter. He embodies the energy of a modern craftsman—someone who works with his hands but cleans up nicely for a night out at the pub. He carries himself with a "cheeky rogue" confidence, the kind of guy who can charm his way out of trouble as easily as he got into it. He’s vibrant, tactile, and unapologetically alive.
 

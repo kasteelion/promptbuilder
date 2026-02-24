@@ -1,4 +1,4 @@
-tags: [Event, Semi-Formal, Spring]
+tags: [event, Semi-Formal, Spring]
 
 [F]
 - **Top:** Floral midi dress (Bodice).

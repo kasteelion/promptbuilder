@@ -1,0 +1,348 @@
+﻿Starting Post-Refactor Smoke Test...
+Loading data...
+Loaded 82 characters.
+Loaded 14 base prompts.
+Testing generation for Aaliyah Chen...
+
+Generated Prompt Sample:
+--------------------
+**Medium/Format:**
+High-End Digital Photography (85mm Portrait Lens simulation).
+
+**Technical Specifications:**
+f/1.8 aperture for shallow depth of field. Sharp focus on eyes with smooth fall-off. Global illumination, accurate ray-traced reflections, and true-to-life skin texture (pores, vellus hair, subsurface scattering). 8K resolution.
+
+**Stylistic Rules:**
+Neutral, balanced color grading. No stylization filters. Lighting is soft, diffused studio quality (soft-box or window light). Compositio...
+--------------------
+\n--- GENERATING AUDIT PROMPTS ---\n
+\n--- ROLL 1 ---
+Scenario: None | Score: 400
+PROMPT:\n**Medium/Format:**
+High-End Digital Photography (85mm Portrait Lens simulation).
+
+**Technical Specifications:**
+f/1.8 aperture for shallow depth of field. Sharp focus on eyes with smooth fall-off. Global illumination, accurate ray-traced reflections, and true-to-life skin texture (pores, vellus hair, subsurface scattering). 8K resolution.
+
+**Stylistic Rules:**
+Neutral, balanced color grading. No stylization filters. Lighting is soft, diffused studio quality (soft-box or window light). Composition is clean and centered.
+
+**Negative Prompt:**
+Illustration, painting, drawing, cartoon, anime, heavy grain, low contrast, distorted, makeup smudge.
+
+---
+
+**CHARACTER: Callum Doherty**
+**Appearance:**
+* **Body:** Natural frame; lean but defined muscularity (mesomorph leaning); moderate vertical (5'10"-5'11"); "wiry strength" developed from physical labor; forearms are notably toned and vascular; broad chest tapering to a narrow waist; moves with a loose, athletic agility.
+* **Face:** Angular and expressive; defined jawline that is often softened by a scruffy 5 o'clock shadow; bright, mischievous eyes in a piercing electric blue (striking contrast to hair); nose has a slight bump (maybe broken once in a rugby match); features are animated and quick to smile.
+* **Hair:** Type 2B waves; high density; vibrant, true copper-red (fox colored); cut in a "textured crop" or "modern mullet" styleùshorter on sides, longer and messy on top/back; matte finish; often tousled by running hands through it.
+* **Skin:** Fair/Pale with pink undertones; heavily freckledùa constellation of rust-colored freckles covers his nose, cheeks, shoulders, and arms; prone to sunburn but currently has a "farmer's tan" on the arms. Age Presentation: mid-to-late 20s; Vibe: Energetic, Cheeky, Hardworking, Rugged, Social, Magnetic.; Bearing: relaxed and open posture; leads with his chest; frequent tactile gestures (clapping backs, handshakes); sits with legs wide or straddling a chair; high-energy presence..
+**Outfit:**
+- **Top:** Tank top or fitted t-shirt under oversized zip-up hoodie.
+  - **Fit:** Fitted top; Oversized hoodie.
+  - **Material:** Cotton.
+  - **Neckline:** Crew/Hooded.
+  - **Sleeve:** Sleeveless/Short under Long.
+- **Bottom:** Athletic joggers or shorts.
+  - **Fit:** Relaxed.
+  - **Material:** Stretchy technical fabric.
+  - **Waist:** Elastic drawstring.
+  - **Length:** Full or Knee.
+- **Footwear:** Slip-on sneakers.
+- **Accessories:** Yoga mat bag, water bottle.
+**Pose/Action:**
+Looking at an off-camera figure with soft and dreamy eyes, a gentle and warm smile playing on the lips, body relaxed and leaning forward slightly.
+---
+
+**CHARACTER 2: Elena Rosales**
+**Appearance:**
+* **Body:** Theatrical Romantic frame; lush, petite, and curvy (5'3"-5'4"); hourglass proportions with a full bust and rounded hips; soft flesh quality but held with confident posture; projects a "don't touch the art" aura.
+* **Face:** lush and rounded; heart-shaped face with full, apple cheeks; large, dark expressive eyes with perfectly winged liner; small, delicate nose; full, pouty lips always painted in a bold shade; dimples appear when she offers her calculated, charming smile.
+* **Hair:** Type 2A waves; high density; "Bombshell" blowout style; shoulder-length with voluminous layers; deep espresso brown with subtle mahogany lowlights; high-gloss glass finish.
+* **Skin:** Light-medium olive; warm undertones; flawless, airbrushed matte finish; usually scented with expensive floral perfume. Age Presentation: late 20s; Vibe: Magnetic, Glamorous, Intentional, Intellectually Sharp, Unapologetically Feminine.; Bearing: walks with a rhythmic, hip-swaying precision (the "catwalk strut"); posture is impeccably upright; gestures are graceful, using manicured hands to emphasize points..
+**Outfit:**
+- **Top:** Silk blouse or nice knit top in #2774AE.
+  - **Fit:** Fitted or slightly relaxed.
+  - **Material:** Silk, satin, or fine knit.
+  - **Pattern:** Solid or subtle print.
+  - **Neckline:** V-neck or scoop.
+  - **Sleeve:** Long or 3/4 sleeves.
+- **Bottom:** Dark skinny jeans or tailored pants.
+  - **Fit:** Skinny or slim.
+  - **Material:** Premium denim or ponte.
+  - **Waist:** High-rise.
+  - **Length:** Full length.
+- **Footwear:** Heeled ankle boots or pumps.
+- **Accessories:** Statement earrings; clutch or small purse.
+**Pose/Action:**
+A moody and cinematographic close-up with a tight center-crop to isolate the emotion, downcast eyes with a slight tremor in the lower lip, head tilted down and hair partially obscuring the face.
+---
+\n--- ROLL 2 ---
+Scenario: None | Score: 280
+PROMPT:\n**Medium/Format:**
+Inked Illustration with Digital Coloring.
+
+**Technical Specifications:**
+Heavy black spot-blacks and varying line weights. Halftone patterns (Ben-Day dots) used for shading gradients. High-key lighting for dramatic shadow placement.
+
+**Stylistic Rules:**
+Bold, graphic composition. Anatomy is defined by heavy contour lines and shadow blocks. Colors are flat and distinct within the ink boundaries.
+
+**Negative Prompt:**
+Soft shading, painterly, blurry, photography, 3D, watercolor, pastel.
+
+---
+
+**CHARACTER: Aaliyah Chen**
+**Appearance:**
+- **Body:** Natural frame; natural flesh with slight wave softness; balanced athletic build with subtle curve; moderate height and vertical line; grounded and capable presence.
+- **Face:** Balanced-soft facial structure; oval face with gentle angles; warm expressive dark eyes with direct inviting gaze; soft jawline; serene neutral expression that easily breaks into a warm genuine smile.
+- **Hair:** Type 3Bû3C curls; high density; natural dark brown curls with healthy volume and sheen; versatile styling options including loose curls and protective styles.
+- **Skin:** Warm golden-brown skin with a natural sun-touched glow and soft satin finish. urban creative aesthetic. Age Presentation: mid-20s presentation; vibrant, grounded, mature.; Vibe: Grounded, Warm, Creative, Earthy.; Bearing: relaxed, fluid movement; poised and centered bearing; natural athletic grace..
+**Outfit:**
+- **Top:** Oversized boxy hoodie .
+  - **Fit:** Oversized boxy; Drop-shoulder.
+  - **Material:** Heavyweight 450gsm French Terry.
+  - **Pattern:** Variable .
+  - **Neckline:** Hooded.
+  - **Sleeve:** Long sleeves with ribbed cuffs.
+- **Bottom:** Wide-leg tactical cargo trousers.
+  - **Fit:** Billowing tactical.
+  - **Material:** Ripstop nylon.
+  - **Pattern:** Solid.
+  - **Waist:** Adjustable velcro clinch.
+  - **Length:** Ankle-length.
+- **Footwear:** Bulky deconstructed platform sneakers.
+- **Accessories:** Crossbody sling bag; silver curb chain.
+**Pose/Action:**
+Lying on the side propped up on one elbow, other hand resting on the hip, legs stretched out with the knee slightly bent, projecting a relaxed and graceful silhouette.
+---
+
+**CHARACTER 2: Linh Nguyen**
+**Appearance:**
+* **Body:** Gamely Natural frame; petite and energetic density; moderate vertical (5'2"-5'3"); youthful, balanced proportions with a soft athletic ease; moves with a quick, light-footed grace.
+* **Face:** Friendly-refined facial structure; heart-shaped face with soft youthful roundness and high "apple" cheeks; warm dark brown eyes with a subtle upward tilt and a constant sparkle; petite straight nose; bright dimpled smile that reaches her eyes; neutral resting expression is attentive and inviting.
+* **Hair:** Type 1A-1B straight; high density; long length falling to mid-back; styled with a distinctive high half-up bun at the crown; deep obsidian base with sun-kissed honey-blonde money pieces framing her face and highlights through the lower layers; silky and disciplined finish.
+* **Skin:** Warm golden-tan with sun-kissed peach undertones; smooth, luminous texture; flawless "morning-fresh" glow. a red-and-white beaded "friendship" bracelet on her right wrist; stack of red and white bracelets. Age Presentation: mid-20s (24-26); youthful, high-spirited, genuinely warm.; Vibe: Buoyant, Charismatic, Sweetly Assertive, "main stage" Energy.; Bearing: open and animated; frequent expressive hand gestures; stands with a slight tilt of the head; moves with a bouncy, optimistic rhythm..
+**Outfit:**
+- **Top:** Nice blouse or fitted sweater in #C5050C.
+  - **Fit:** Fitted or slightly relaxed.
+  - **Material:** Silk, satin, or fine knit.
+  - **Pattern:** Solid or subtle texture.
+  - **Neckline:** V-neck or boat neck.
+  - **Sleeve:** Long or 3/4 sleeves.
+- **Bottom:** Midi skirt or tailored pants in #FFFFFF.
+  - **Fit:** A-line skirt or straight pants.
+  - **Material:** Ponte, wool blend, or structured cotton.
+  - **Waist:** High-rise.
+  - **Length:** Midi or full length.
+- **Footwear:** Heeled boots or dressy flats.
+- **Accessories:** Simple necklace; clutch or small purse.
+**Pose/Action:**
+Walking gracefully while carrying a woven wicker basket filled with wildflowers in the crook of the right arm, head tilted with a serene and Peaceful smile.
+---
+\n--- ROLL 3 ---
+Scenario: None | Score: 310
+PROMPT:\n**Medium/Format:**
+High-End Digital Photography (85mm Portrait Lens simulation).
+
+**Technical Specifications:**
+f/1.8 aperture for shallow depth of field. Sharp focus on eyes with smooth fall-off. Global illumination, accurate ray-traced reflections, and true-to-life skin texture (pores, vellus hair, subsurface scattering). 8K resolution.
+
+**Stylistic Rules:**
+Neutral, balanced color grading. No stylization filters. Lighting is soft, diffused studio quality (soft-box or window light). Composition is clean and centered.
+
+**Negative Prompt:**
+Illustration, painting, drawing, cartoon, anime, heavy grain, low contrast, distorted, makeup smudge.
+
+---
+
+**CHARACTER: Kaia Vaitupu**
+**Appearance:**
+- **Body:** Statuesque Athletic frame; warm golden-bronze skin with a luminous, hydrated finish; soft-rectangular proportions with strong, graceful posture; tall stature (5'10"-5'11"); refined athletic build with long limbs and elegant muscle definition; "quiet authority" presenceùcomposed and commanding.
+
+- **Face:** Strong heart-shaped structure; defined cheekbones that catch the light; firm, graceful jawline; large, deep-set dark brown eyes with a steady, intelligent gaze; thick, natural dark eyebrows with a soft arch; straight, elegant nose; full, well-defined mouth with a composed neutral expression; presence conveys deep concentration and intellectual clarity.
+
+- **Hair:** Type 1A-1B straight; high density; and lustrous sheen; waist-length dark ebony hair, often worn in a sharp, high-shine ponytail or loose with a precise center part; matte-satin finish with silver-blue holographic highlights woven through the strands.
+
+- **Skin:** Deep golden-bronze with warm radiant undertones; flawless, smooth texture; subtle traditional geometric "tatau" patterns on her forearms that pulse with a faint cyan glow; healthy, hydrated "digital office" glow. Age Presentation: early 30s presentation; sophisticated, grounded, authoritative.; Vibe: Intellectual, Precise, Graceful, Quiet Power, Technological-Naturalist.; Bearing: steady, composed posture; fluid, rhythmic movementùmoves with the efficiency of a well-coded algorithm; calm and unshakeable in any environment; expressive, precise hand gestures when interacting with data..
+**Outfit:**
+- **Top:** {Color} Body-mapping Combat Shirt
+  - **Type:** Body-mapping Combat Shirt
+  - **Material:** Ripstop Nylon and Jersey mix
+  - **Fit:** Compression-fit
+  - **Color:** Tactical Black
+- **Bottom:** {Color} Tactical Cargo Pants
+  - **Type:** Tactical Cargo Pants
+  - **Material:** Cordura Reinforced Ripstop
+  - **Color:** Tactical Black
+- **Outerwear:** {Color} Lightweight Plate Carrier
+  - **Type:** Lightweight Plate Carrier
+  - **Material:** Laser-cut Laminate
+  - **Color:** Stealth Gray
+- **Accessories:** {Style} Tactical Gloves and Comms Headset
+  - **Type:** Tactical Gloves and Comms Headset
+  - **Style:** Rugged Professional
+---
+
+**CHARACTER 2: Mei Chen**
+**Appearance:**
+* **Body:** Romantic; petite vertical (5'0"-5'2") with high-impact voluptuous proportions; striking hourglass silhouette featuring exceptionally large featuresùspecifically an extremely full, heavy bust (F-G cup) that is her most prominent physical traitùbalanced by flared, rounded hips and a sharply defined narrow waist; the build is body-forward and provocative but maintains a lean, petite structure without overall bulk; shapely, well-defined legs and neat, rounded shoulders; maximizes the "extreme curves on a small frame" aesthetic.
+* **Face:** Soft-balanced structure; heart-to-oval shape; youthful midface fullness; high soft cheekbones with subtle prominence; large expressive almond-shaped eyes; moderate spacing; deep brown to black irises; defined lid with natural crease; bright engaging gaze; small refined nose with soft bridge; softly rounded jawline; neutral resting expression is sweetly confident with a playful smile and direct flirtatious eye contact.
+* **Hair:** Type 1B-2A; high density; sleek silky silhouette with subtle body; medium-to-long length (mid-back); center part or off-center; high-gloss lustrous finish; commonly worn in half-up styles with ribbons, high ponytail with face-framing pieces, loose with clips, or twin-tail styles. Rich black or dark brown.
+* **Skin:** Light porcelain; cool-neutral undertones; dewy luminous finish; smooth flawless texture with natural radiance; clear even complexion with healthy glow. Age Presentation: early-to-mid 20s; youthful femininity with sensual awareness.; Vibe: Playful, Confidently Sweet, Cute-Provocative, Knowingly Feminine, Inviting.; Bearing: animated movement with deliberate feminine emphasis; upright posture that accentuates curves; frequent use of cute gestures mixed with body-aware positioning; stands with slight hip tilt or weight on one leg; movements blend youthful energy with purposeful sensuality..
+**Outfit:**
+- **Top:** {Color} Body-mapping Combat Shirt
+  - **Type:** Body-mapping Combat Shirt
+  - **Material:** Ripstop Nylon and Jersey mix
+  - **Fit:** Compression-fit
+  - **Color:** Tactical Black
+- **Bottom:** {Color} Tactical Cargo Pants
+  - **Type:** Tactical Cargo Pants
+  - **Material:** Cordura Reinforced Ripstop
+  - **Color:** Tactical Black
+- **Outerwear:** {Color} Lightweight Plate Carrier
+  - **Type:** Lightweight Plate Carrier
+  - **Material:** Laser-cut Laminate
+  - **Color:** Stealth Gray
+- **Accessories:** {Style} Tactical Gloves and Comms Headset
+  - **Type:** Tactical Gloves and Comms Headset
+  - **Style:** Rugged Professional
+---
+
+**Additional Notes:**
+Kaia Vaitupu manifesting a red beam of energy while Mei Chen counters with a blue beam, the two magics colliding in the center with a powerful and atmospheric energy explosion.
+\n--- ROLL 4 ---
+Scenario: None | Score: 250
+PROMPT:\n**Medium/Format:**
+High-End Digital Photography (85mm Portrait Lens simulation).
+
+**Technical Specifications:**
+f/1.8 aperture for shallow depth of field. Sharp focus on eyes with smooth fall-off. Global illumination, accurate ray-traced reflections, and true-to-life skin texture (pores, vellus hair, subsurface scattering). 8K resolution.
+
+**Stylistic Rules:**
+Neutral, balanced color grading. No stylization filters. Lighting is soft, diffused studio quality (soft-box or window light). Composition is clean and centered.
+
+**Negative Prompt:**
+Illustration, painting, drawing, cartoon, anime, heavy grain, low contrast, distorted, makeup smudge.
+
+---
+
+**CHARACTER: Harper Mae Sullivan**
+**Appearance:**
+* **Body:** Soft Natural frame; natural-wave flesh blend; balanced proportions with gentle curves and natural waist definition; moderate vertical; soft athletic build with graceful ease.
+* **Face:** Soft oval-to-heart facial structure; gentle rounded features; warm expressive blue-green eyes with slight upward tilt, moderately spaced; constellation of freckles across nose and cheeks; soft defined jawline; neutral resting expression is warm and inviting with easy dimpled smile and sparkling eyes.
+* **Hair:** Type 2B-2C waves; high density; long sun-lightened layers past shoulders; natural loose part; healthy bounce; warm honey-blonde with natural golden highlights from sun exposure; commonly worn half-up with loose tendrils or in relaxed low ponytail.
+* **Skin:** Fair-to-light warm peachy undertones with natural healthy glow; prominent freckles across nose, cheeks, and shoulders that intensify with sun; soft luminous finish. Age Presentation: mid-20s presentation; youthful, warm, naturally confident.; Vibe: Welcoming, Genuine, Sweetly Charismatic, Down-To-Earth.; Bearing: relaxed fluid movement; open friendly posture; natural grace with slight Southern sway; frequent warm gestures and animated storytelling hands..
+**Outfit:**
+- **Top:** Flowy blouse or wrap top in #FF00FF.
+  - **Fit:** Relaxed flowy.
+  - **Material:** Chiffon or soft cotton.
+  - **Pattern:** Solid or floral.
+  - **Neckline:** V-neck or wrap.
+  - **Sleeve:** Short or 3/4 sleeves.
+- **Bottom:** High-waisted midi skirt or culottes in #00FFFF.
+  - **Fit:** A-line or wide-leg.
+  - **Material:** Cotton or linen blend.
+  - **Waist:** High-waisted.
+  - **Length:** Midi or knee-length.
+- **Footwear:** Strappy sandals or mules.
+- **Accessories:** Sunglasses; tote bag; delicate jewelry.
+**Pose/Action:**
+Cinematic close-up with dramatic side-lighting and a tight focal point on the eyes, a clinched jaw and Narrowed, focused eyes reflecting unwavering resolve, chin lifted slightly.
+---
+
+**CHARACTER 2: Oliver St. James**
+**Appearance:**
+* **Body:** Soft Natural frame; average height (5'9"-5'10"); "Otter" buildùslim but not skinny, with a soft, natural muscularity and a bit of fuzz; rounded shoulders; comfortable and lived-in physicality.
+* **Face:** Oval face with soft features; warm, crinkling blue eyes; nose is slightly button-like; jawline is softened by a scruffy, well-maintained short beard (strawberry blonde/ginger tone).
+* **Hair:** Type 2C curls; medium density; messy "mop top" style that looks better when tousled; light brown/dark blonde; often falling into his eyes.
+* **Skin:** Fair to light; pinkish warm undertones; prone to blushing; smooth complexion. round gold wire-frame glasses. Age Presentation: mid-20s; Vibe: Cozy, Intellectual, Sweet, Sincere, Approachable, Neurotic-Charming.; Bearing: relaxed, slightly slouchy posture (the "academic slouch"); leans in when listening; hands often tucked into pockets or holding a warm mug; gentle, non-threatening presence..
+**Outfit:**
+- **Top:** Faded band tee or distressed mesh shirt.
+  - **Fit:** Relaxed grunge.
+  - **Material:** Cotton jersey.
+  - **Pattern:** Faded graphic.
+  - **Neckline:** Crew neck.
+  - **Sleeve:** Short sleeves.
+- **Bottom:** Ripped skinny jeans with hardware.
+  - **Fit:** Skinny distressed.
+  - **Material:** Denim.
+  - **Waist:** Low-slung.
+  - **Length:** Full length pooling.
+- **Footwear:** Combat boots.
+- **Accessories:** Spiked leather collar, silver rings, wrist cuffs.
+**Pose/Action:**
+Standing against a strong breeze with hair and clothing billowing dramatically, right hand reaching up to brush a stray lock from the face, eyes gazing into the distance with a contemplative look.
+---
+\n--- ROLL 5 ---
+Scenario: None | Score: 270
+PROMPT:\n**Medium/Format:**
+Black and White Film Photography.
+
+**Technical Specifications:**
+High-contrast "Low Key" lighting. Deep blacks and stark white highlights. Film grain and scratch textures. "Dutch Angle" compositions allowed.
+
+**Stylistic Rules:**
+Faces often partially obscured by shadow (Venetian blind effects, rim lighting). No color. Atmosphere implies smoke, rain, or fog.
+
+**Negative Prompt:**
+Color, bright, sunny, flat lighting, happy, cartoon, anime, painting.
+
+---
+
+**CHARACTER: Jena Marlowe**
+**Appearance:**
+* **Body:** Soft DramaticûRomantic blend; elongated but light vertical; gentle hourglass with soft waist emphasis; overall delicacy rather than dramatic weight.
+* **Face:** Soft oval face with balanced proportions; medium-large bright eyes; refined nose; gentle jawline; warm, approachable expression with an easy smile.
+* **Hair:** Light honey-blonde; Type 2Aû2B loose waves; fine-to-medium density; long hair with soft volume; luminous natural-looking highlights; healthy glossy finish.
+* **Skin:** Fair to light neutral-warm tone with a natural satin glow; fresh and luminous in daylight. Age Presentation: mid-to-late 20s presentation; youthful, polished, and open.; Vibe: Warm, Romantic, Quietly confident; Inviting Rather Than Dramatic.; Bearing: relaxed, graceful posture; light, fluid movement with a soft feminine presence..
+**Outfit:**
+- **Top:** {Color} Body-mapping Combat Shirt
+  - **Type:** Body-mapping Combat Shirt
+  - **Material:** Ripstop Nylon and Jersey mix
+  - **Fit:** Compression-fit
+  - **Color:** Tactical Black
+- **Bottom:** {Color} Tactical Cargo Pants
+  - **Type:** Tactical Cargo Pants
+  - **Material:** Cordura Reinforced Ripstop
+  - **Color:** Tactical Black
+- **Outerwear:** {Color} Lightweight Plate Carrier
+  - **Type:** Lightweight Plate Carrier
+  - **Material:** Laser-cut Laminate
+  - **Color:** Stealth Gray
+- **Accessories:** {Style} Tactical Gloves and Comms Headset
+  - **Type:** Tactical Gloves and Comms Headset
+  - **Style:** Rugged Professional
+---
+
+**CHARACTER 2: Aiyana Blackfeather**
+**Appearance:**
+- **Body:** Natural frame; balanced athletic build with natural softness; moderate proportions; moderate vertical (5'5"-5'6"); powerful legs and core strength from dance; dignified powerful presence.
+- **Face:** Balanced-strong facial structure; oval-to-round face; pronounced cheekbones; medium almond-shaped dark eyes with proud gaze; defined epicanthic fold; neutral resting expression shows calm dignity with a slight knowing smile.
+- **Hair:** Type 1B-1C; very high density; very long hair to lower back; high-gloss sheen; pure black with blue-black sheen; versatile styling options including traditional braids and loose styles.
+- **Skin:** Medium tan with warm red-brown undertones and natural healthy finish. heavy silver cuff bracelet with traditional stamping. Age Presentation: mid-20s presentation; culturally grounded, athletically confident.; Vibe: Proud, Powerful, Graceful, Culturally Rooted.; Bearing: grounded centered posture; powerful deliberate movement with rhythmic precision; dance-trained weight distribution..
+**Outfit:**
+- **Top:** {Color} Reinforced Urban Combat Tee
+  - **Type:** Reinforced Combat Tee
+  - **Material:** Breathable Mesh with Kevlar-reinforced shoulders
+  - **Fit:** Athletic-fit
+  - **Color:** Wolf Gray
+- **Bottom:** {Color} Urban Tactical Slacks
+  - **Type:** Tactical Slacks
+  - **Material:** Flexible Stretch-cordura
+  - **Color:** Wolf Gray
+- **Outerwear:** {Color} Concealable Balistic Vest
+  - **Type:** Ballistic Vest
+  - **Material:** Ultra-light Dyneema
+  - **Color:** Dark Slate
+- **Accessories:** {Style} Tactical Watch and Low-profile Earbuds
+  - **Type:** Tactical Watch and Earbuds
+  - **Style:** Low-vis Professional
+---
+
+**Additional Notes:**
+Jena Marlowe holding a tactical shield while Aiyana Blackfeather prepares to toss a flashbang, both moving with professional grit and lethal precision.
+
+Smoke Test PASSED!

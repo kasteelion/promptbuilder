@@ -1,4 +1,4 @@
-tags: [weapon_combat, Fantasy, Magic]
+tags: [weapon_combat, fantasy, Magic]
 
 [F]
 - **Top:** Enchanted plate armor with glowing runes.

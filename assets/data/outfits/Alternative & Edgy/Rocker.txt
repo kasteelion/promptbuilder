@@ -1,4 +1,4 @@
-tags: [Edgy, Music, Cyberpunk]
+tags: [Edgy, Music, cyberpunk]
 
 [F]
 - **Top:** Fitted ((default:bold colored) or (signature)) top.

@@ -108,6 +108,15 @@ class AutomationController:
             if not builder or not randomizer:
                 raise RuntimeError("Builder or Randomizer not initialized. Load data first.")
             
+            # Ensure all available characters are loaded for randomization variety (Lazy Loading support)
+            all_names = list(self.ctx.characters_metadata.keys())
+            if len(self.ctx.characters) < len(all_names):
+                on_progress(0, count, f"Preparing character pool ({len(all_names)} characters)...")
+                for name in all_names:
+                    if self.stop_requested: break
+                    if self.app_state:
+                        self.app_state.ensure_character_loaded(name)
+            
             for i in range(count):
                 if self.stop_requested:
                     break
@@ -129,7 +138,10 @@ class AutomationController:
                     "score": config.get("metadata", {}).get("score", 0)
                 })
 
-        if self.stop_requested or prompts_only:
+        if self.stop_requested or not prompts_with_meta:
+            return prompts_with_meta
+
+        if prompts_only:
             return prompts_with_meta
 
         # 2. Browser Automation (Slow)

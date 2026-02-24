@@ -2,7 +2,7 @@
 
 **Photo:** hailey_bennett_photo.png
 
-**Tags:** Female, Caucasian, Cheerful, Gen-Z, Casual, Bubbly, Approachable, Trendy, Vintage, Retro, Sport, Urban, Social
+**Tags:** Female, Caucasian, Cheerful, Gen-Z, Casual, Bubbly, Approachable, Trendy, vintage, Retro, Sport, urban, social
 
 **Summary:** Hailey is an effervescent, trendy Gen Z coffee shop enthusiast with a contagious smile. Bubbly, approachable, and effortlessly styled in casual athleisure, she represents the "Clean Girl" aesthetic—balancing high-energy social interaction with a relaxed, minimalist fashion sense. She's the type of person who knows the best local roasteries and radiates a natural, "lit-from-within" warmth that makes everyone feel like an old friend.
 

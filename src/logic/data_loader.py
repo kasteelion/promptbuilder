@@ -1,8 +1,9 @@
-"""Data loading utilities for markdown files."""
-
+import json
 from pathlib import Path
+from typing import Dict, List, Optional, Any, Set
 
 from .parsers import MarkdownParser
+from core.models import CharacterMetadata, CharacterDetails
 
 
 class DataLoader:
@@ -32,6 +33,11 @@ class DataLoader:
         # Cache for parsed data
         self._cache = {}
         self._file_mtimes = {}
+        
+        # [NEW] Lazy Loading state
+        self.characters_metadata: Dict[str, CharacterMetadata] = {}
+        self._character_file_map: Dict[str, Path] = {}
+        self._characters_full: Dict[str, CharacterDetails] = {}
 
     def load_json_config(self, filename: str, default: dict = None) -> dict:
         """Load a JSON configuration file from assets/config/."""
@@ -202,6 +208,17 @@ A simple and comfortable casual outfit.
             dict: { category_name: [tags] }
         """
         f = self._find_data_file("tags.md")
+        cache_key = "categorized_tags"
+        
+        if f.exists():
+            try:
+                mtime = f.stat().st_mtime
+                if cache_key in self._cache and self._file_mtimes.get(cache_key) == mtime:
+                    return self._cache[cache_key]
+                self._file_mtimes[cache_key] = mtime
+            except OSError:
+                pass
+
         if not f.exists():
             return {"Demographics": ["male", "female"], "Other": []}
 
@@ -217,11 +234,12 @@ A simple and comfortable casual outfit.
                 current_cat = line[3:].strip()
                 categorized[current_cat] = []
             elif line.startswith("- "):
-                tag = line[2:].strip().lower()
+                tag = line[2:].strip()
                 if current_cat not in categorized:
                     categorized[current_cat] = []
                 categorized[current_cat].append(tag)
         
+        self._cache[cache_key] = categorized
         return categorized
 
     def load_tags(self):
@@ -254,7 +272,7 @@ A simple and comfortable casual outfit.
                 for _, data in chars.items():
                     tlist = data.get("tags") or []
                     if isinstance(tlist, str):
-                        tlist = [t.strip().lower() for t in tlist.split(",") if t.strip()]
+                        tlist = [t.strip() for t in tlist.split(",") if t.strip()]
                     for tt in tlist:
                         if tt and tt not in known_tags:
                             extra_tags.add(tt)
@@ -295,9 +313,9 @@ A simple and comfortable casual outfit.
         for char_data in chars.values():
             tlist = char_data.get("tags") or []
             if isinstance(tlist, str):
-                tlist = [t.strip().lower() for t in tlist.split(",") if t.strip()]
+                tlist = [t.strip() for t in tlist.split(",") if t.strip()]
             elif isinstance(tlist, (list, tuple)):
-                tlist = [str(t).strip().lower() for t in tlist if t]
+                tlist = [str(t).strip() for t in tlist if t]
             
             for t in tlist:
                 if t and t not in known_tags:
@@ -336,106 +354,175 @@ A simple and comfortable casual outfit.
             logger.error(f"Failed to sync tags: {e}")
             return 0
 
-    def load_characters(self):
-        """Load and parse character files from characters/ folder, merging with shared outfits.
+    def load_scoring_config(self):
+        """Load scoring heuristics from `data/config/scoring.json`."""
+        f = self._find_data_file("config/scoring.json")
+        if not f.exists():
+            return None
+        
+        try:
+            return json.loads(f.read_text(encoding="utf-8"))
+        except Exception:
+            return None
 
-        Looks for individual character markdown files in the characters/ folder.
-        Uses granular per-file caching to only re-parse changed files.
+    def load_characters_metadata(self) -> Dict[str, CharacterMetadata]:
+        """Load character metadata only, using index cache if possible.
+        
+        This is the preferred way to load characters for the gallery.
         """
         chars_dir = self._find_characters_dir()
+        cache_dir = self.base_dir / "assets" / "data" / "cache"
+        index_file = cache_dir / "character_index.json"
         
-        # Initialize caches if not present
-        if "characters_map" not in self._cache:
-            self._cache["characters_map"] = {}
-        if "file_mtimes_map" not in self._cache:
-            self._cache["file_mtimes_map"] = {}
-
-        cached_chars = self._cache["characters_map"]
-        mtimes_map = self._cache["file_mtimes_map"]
-
+        # 1. Gather current file stats for validation
+        current_files = {}
         if chars_dir.exists() and chars_dir.is_dir():
-            all_files = list(chars_dir.glob("*.md"))
-            found_any = False
-            
-            # Identify which files need parsing
-            for char_file in all_files:
-                found_any = True
-                try:
-                    mtime = char_file.stat().st_mtime
-                    # If not in cache or mtime changed, parse it
-                    if char_file.name not in cached_chars or mtimes_map.get(char_file.name) != mtime:
-                        text = char_file.read_text(encoding="utf-8")
-                        file_chars = MarkdownParser.parse_characters(text)
-                        if file_chars:
-                            # We expect one character per file usually, but parse_characters returns a dict
-                            # We'll associate these characters with this file for cache invalidation
-                            cached_chars[char_file.name] = file_chars
-                            mtimes_map[char_file.name] = mtime
-                except Exception as e:
-                    from utils import logger
-                    logger.error(f"Error loading {char_file.name}: {e}")
+            for f in chars_dir.glob("*.md"):
+                stat = f.stat()
+                current_files[f.name] = (stat.st_mtime, stat.st_size)
 
-            # Remove characters from cache if their file is gone
-            current_filenames = {f.name for f in all_files}
-            for cached_filename in list(cached_chars.keys()):
-                if cached_filename not in current_filenames:
-                    del cached_chars[cached_filename]
-                    if cached_filename in mtimes_map:
-                        del mtimes_map[cached_filename]
-
-        # Flatten the per-file character dicts into one master dict
-        chars = {}
-        for file_dict in cached_chars.values():
-            chars.update(file_dict)
-
-        # If no character files were found, attempt to create a sample character
-        if not chars:
+        # 2. Check if index is valid
+        use_cache = False
+        if index_file.exists():
             try:
-                # ... (rest of fallback logic remains similar but uses chars_dir)
-                chars_dir.mkdir(parents=True, exist_ok=True)
-                sample_file = chars_dir / "sample_character.md"
-                if not sample_file.exists():
-                    default_content = """### Sample Character
-**Appearance:** A sample character for you to get started.
-
-**Outfits:**
-
-#### Base
-- **Top:** Simple tee
-- **Bottom:** Basic jeans
-"""
-                    sample_file.write_text(default_content, encoding="utf-8")
-                
-                # Re-run logic for the newly created sample
-                text = sample_file.read_text(encoding="utf-8")
-                chars = MarkdownParser.parse_characters(text)
-            except Exception as e:
-                from utils import logger
-                logger.error(f"Error creating sample character: {e}")
-
-        if not chars:
-            from core.exceptions import DataLoadError
-            raise DataLoadError(
-                "No characters parsed from characters/ folder. Please check the file format."
-            )
-
-        # Load shared outfits and merge with each character
-        shared_outfits = self.load_outfits()
-        for char_name, char_data in chars.items():
-            merged_outfits, categorized_outfits = MarkdownParser.merge_character_outfits(
-                char_data, shared_outfits, char_name
-            )
-            char_data["outfits"] = merged_outfits
-            char_data["outfits_categorized"] = categorized_outfits
-
-        # Resolve photo filenames
-        for char_name, char_data in chars.items():
-            try:
-                resolved = self.resolve_photo_for_character(char_name, char_data.get("photo"))
-                char_data["photo"] = resolved
+                index_data = json.loads(index_file.read_text(encoding="utf-8"))
+                if "characters" in index_data:
+                    cached_meta = {
+                        name: CharacterMetadata(**data) for name, data in index_data["characters"].items()
+                    }
+                    cached_file_map = {
+                        name: Path(path) for name, path in index_data["file_map"].items()
+                    }
+                    
+                    # Validate: all files in cache must match current disk state
+                    # We check if any file in current_files has changed since cache
+                    # Or if a file is in cache but missing from disk
+                    valid = True
+                    for name, meta in cached_meta.items():
+                        f_path = cached_file_map.get(name)
+                        if not f_path or not f_path.exists():
+                            valid = False; break
+                        
+                        f_name = f_path.name
+                        if f_name not in current_files:
+                            valid = False; break
+                        
+                        mtime, size = current_files[f_name]
+                        if meta.mtime != mtime or meta.file_size != size:
+                            valid = False; break
+                    
+                    # Also check if there are NEW files not in cache
+                    cached_filenames = {p.name for p in cached_file_map.values()}
+                    if any(f_name not in cached_filenames for f_name in current_files):
+                        valid = False
+                        
+                    if valid:
+                        self.characters_metadata = cached_meta
+                        self._character_file_map = cached_file_map
+                        use_cache = True
             except Exception:
                 pass
 
+        # 3. Perform full scan if cache invalid or missing
+        if not use_cache:
+            self._perform_metadata_scan(chars_dir)
+            
+            # 4. Save index
+            try:
+                cache_dir.mkdir(parents=True, exist_ok=True)
+                index_data = {
+                    "characters": {name: meta.dict() for name, meta in self.characters_metadata.items()},
+                    "file_map": {name: str(path) for name, path in self._character_file_map.items()}
+                }
+                index_file.write_text(json.dumps(index_data, indent=2), encoding="utf-8")
+            except Exception:
+                pass
+            
+        return self.characters_metadata
+
+    def _perform_metadata_scan(self, chars_dir: Path):
+        """Scan all markdown files for metadata only."""
+        self.characters_metadata = {}
+        self._character_file_map = {}
+        
+        if not chars_dir.exists() or not chars_dir.is_dir():
+            return
+
+        for char_file in chars_dir.glob("*.md"):
+            try:
+                stat = char_file.stat()
+                text = char_file.read_text(encoding="utf-8")
+                file_metadata = MarkdownParser.scan_metadata(
+                    text, 
+                    mtime=stat.st_mtime, 
+                    file_size=stat.st_size
+                )
+                for name, meta in file_metadata.items():
+                    self.characters_metadata[name] = meta
+                    self._character_file_map[name] = char_file
+            except Exception as e:
+                from utils import logger
+                logger.error(f"Error scanning metadata from {char_file}: {e}")
+
+    def get_character_details(self, name: str) -> CharacterDetails:
+        """Load full character details on demand."""
+        if name in self._characters_full:
+            return self._characters_full[name]
+            
+        char_file = self._character_file_map.get(name)
+        if not char_file or not char_file.exists():
+            # Attempt to find it if file map is missing
+            self.load_characters_metadata()
+            char_file = self._character_file_map.get(name)
+            
+        if not char_file:
+            raise ValueError(f"Character '{name}' not found.")
+            
+        try:
+            text = char_file.read_text(encoding="utf-8")
+            file_chars = MarkdownParser.parse_characters(text)
+            if name in file_chars:
+                details = file_chars[name]
+                
+                # Load shared outfits and merge
+                shared_outfits = self.load_outfits()
+                merged_outfits, categorized_outfits = MarkdownParser.merge_character_outfits(
+                    details.dict() if hasattr(details, 'dict') else details, 
+                    shared_outfits, 
+                    name
+                )
+                
+                # Update details with merged outfits
+                details.outfits = merged_outfits
+                details.outfits_categorized = categorized_outfits
+                
+                # Resolve photo
+                resolved = self.resolve_photo_for_character(name, details.photo)
+                details.photo = resolved
+                
+                self._characters_full[name] = details
+                return details
+        except Exception as e:
+            from utils import logger
+            logger.exception(f"Error loading full details for {name}")
+            raise
+            
+        raise ValueError(f"Failed to load details for character '{name}'.")
+
+    def load_characters(self):
+        """Compatibility method for existing code. Loads all characters metadata first."""
+        # For now, we still return a full dict if legacy code expects it, 
+        # but we'll transition to lazy loading in the UI.
+        # If we really want lazy loading, we'd return a proxy or handle it in AppState.
+        
+        # Transition: We'll load metadata first.
+        self.load_characters_metadata()
+        
+        # Legacy behavior: Actually load all of them if needed by other components (e.g. Randomizer)
+        # But for performance, we should ideally refactor consumers.
+        chars = {}
+        for name in self.characters_metadata.keys():
+            chars[name] = self.get_character_details(name)
         return chars
 
     def clear_cache(self):

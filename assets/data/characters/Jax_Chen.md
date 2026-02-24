@@ -2,7 +2,7 @@
 
 **Photo:** jax_chen_photo.png
 
-**Tags:** Male, Mixed-Heritage, Dynamic, Athletic, Intense, Energetic, High-Performance, Neon-Orange-Signature, Sport, Action, Noir
+**Tags:** Male, Mixed-Heritage, Dynamic, Athletic, Intense, Energetic, High-Performance, Neon-Orange-Signature, Sport, action, noir
 
 **Summary:** Jax is a Kinetic Athlete, a personification of explosive power and fluid motion. His presence is electric, his movements sharp and precise, vibrating with a compressed energy that’s always ready to ignite. He specializes in high-speed, high-stakes physical performance, his body a finely tuned instrument of kinetic force. His style is a fusion of high-performance techwear and biological textures, emphasizing the raw power and efficient design of his physique. He thrives on competition and the thrill of the limit, his focus singular and unwavering.
 

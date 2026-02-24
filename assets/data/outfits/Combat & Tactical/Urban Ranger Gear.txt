@@ -1,0 +1,56 @@
+tags: [combat, tactical, urban]
+modifiers: {}
+
+[F]
+- **Top:** {Color} Reinforced Urban Combat Tee
+  - **Type:** Reinforced Combat Tee
+  - **Material:** Breathable Mesh with Kevlar-reinforced shoulders
+  - **Fit:** Athletic-fit
+  - **Color:** ((default:Wolf Gray) or (signature))
+- **Bottom:** {Color} Urban Tactical Slacks
+  - **Type:** Tactical Slacks
+  - **Material:** Flexible Stretch-cordura
+  - **Color:** ((default:Wolf Gray) or (signature))
+- **Outerwear:** {Color} Concealable Balistic Vest
+  - **Type:** Ballistic Vest
+  - **Material:** Ultra-light Dyneema
+  - **Color:** ((default:Dark Slate) or (signature))
+- **Accessories:** {Style} Tactical Watch and Low-profile Earbuds
+  - **Type:** Tactical Watch and Earbuds
+  - **Style:** Low-vis Professional
+
+[M]
+- **Top:** {Color} Reinforced Urban Combat Tee
+  - **Type:** Reinforced Combat Tee
+  - **Material:** Breathable Mesh with Kevlar-reinforced shoulders
+  - **Fit:** Athletic-fit
+  - **Color:** ((default:Wolf Gray) or (signature))
+- **Bottom:** {Color} Urban Tactical Slacks
+  - **Type:** Tactical Slacks
+  - **Material:** Flexible Stretch-cordura
+  - **Color:** ((default:Wolf Gray) or (signature))
+- **Outerwear:** {Color} Concealable Balistic Vest
+  - **Type:** Ballistic Vest
+  - **Material:** Ultra-light Dyneema
+  - **Color:** ((default:Dark Slate) or (signature))
+- **Accessories:** {Style} Tactical Watch and Low-profile Earbuds
+  - **Type:** Tactical Watch and Earbuds
+  - **Style:** Low-vis Professional
+
+[H]
+- **Top:** {Color} Reinforced Urban Combat Tee
+  - **Type:** Reinforced Combat Tee
+  - **Material:** Breathable Mesh with Kevlar-reinforced shoulders
+  - **Fit:** Modest Athletic-fit
+  - **Color:** ((default:Wolf Gray) or (signature))
+- **Bottom:** {Color} Urban Tactical Slacks
+  - **Type:** Tactical Slacks
+  - **Material:** Flexible Stretch-cordura
+  - **Color:** ((default:Wolf Gray) or (signature))
+- **Outerwear:** {Color} Concealable Balistic Vest
+  - **Type:** Ballistic Vest
+  - **Material:** Ultra-light Dyneema
+  - **Color:** ((default:Dark Slate) or (signature))
+- **Accessories:** {Style} Tactical Watch and Low-profile Earbuds
+  - **Type:** Tactical Watch and Earbuds
+  - **Style:** Low-vis Professional

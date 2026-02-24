@@ -1,4 +1,4 @@
-tags: [Classic, Lounge, Sleep]
+tags: [Classic, lounge, sleep]
 
 [F]
 - **Top:** Button-front pajama top.

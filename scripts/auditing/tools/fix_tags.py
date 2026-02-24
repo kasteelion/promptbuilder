@@ -1,6 +1,20 @@
 import os
+import sys
 import re
-from tag_inventory import TagInventory
+from pathlib import Path
+
+# Add project root and analysis directory to path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+sys.path.append(str(PROJECT_ROOT))
+sys.path.append(str(PROJECT_ROOT / "scripts" / "auditing" / "analysis"))
+
+try:
+    from tag_inventory import TagInventory
+except ImportError:
+    # Fallback if specific dependency is missing in dev environment
+    class TagInventory:
+        @staticmethod
+        def load(): return {}
 
 # Define explicit replacements (Old -> New)
 # Case sensitive matching, but we will apply it carefully.
@@ -65,6 +79,27 @@ REPLACEMENTS = {
     "China": "chinese",
     "Japan": "japanese",
     "India": "indian",
+}
+
+# Keyword mappings for smart suggestions (Regex -> Suggested Tag)
+KEYWORD_MAP = {
+    r"\bdragon\b": "fantasy",
+    r"\bmagic\b": "fantasy",
+    r"\bmedieval\b": "historical",
+    r"\bstarship\b": "sci-fi",
+    r"\bhologram\b": "tech",
+    r"\bneon\b": "cyberpunk",
+    r"\bcybernetic\b": "cyberpunk",
+    r"\bfemme fatale\b": "noir",
+    r"\btrench coat\b": "noir",
+    r"\bformal\b": "formal",
+    r"\boffice\b": "professional",
+    r"\bsnow\b": "winter",
+    r"\bsunny\b": "summer",
+    r"\bbeach\b": "summer",
+    r"\bforest\b": "nature",
+    r"\bmilitary\b": "tactical",
+    r"\btactical\b": "tactical",
 }
 
 def apply_replacements(content, source_type):
@@ -166,11 +201,21 @@ def process_tags(tags_str):
         
     return ', '.join(new_tags)
 
+def suggest_missing_tags(content, current_tags):
+    """Scan content for keywords and suggest missing tags."""
+    suggestions = []
+    content_lower = content.lower()
+    for pattern, tag in KEYWORD_MAP.items():
+        if re.search(pattern, content_lower):
+            # If tag not already present (case-insensitive check)
+            if tag.lower() not in [t.lower() for t in current_tags]:
+                suggestions.append(tag)
+    return list(set(suggestions))
+
 def run_fix():
-    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    data_dir = os.path.join(root_dir, "data")
+    data_dir = PROJECT_ROOT / "assets" / "data"
     
-    print("Fixing tags...")
+    print(f"Fixing tags in {data_dir}...")
     
     # 1. Characters
     char_dir = os.path.join(data_dir, "characters")
@@ -207,6 +252,17 @@ def run_fix():
                 with open(path, 'r', encoding='utf-8') as f:
                     content = f.read()
                 new_content, changed = apply_replacements(content, "text")
+                
+                # Smart Suggestion logic
+                current_tags = []
+                tags_match = re.search(r'tags:\s*\[?(.*?)\]?$', content, re.MULTILINE | re.IGNORECASE)
+                if tags_match:
+                    current_tags = [t.strip() for t in tags_match.group(1).split(',')]
+                
+                suggestions = suggest_missing_tags(content, current_tags)
+                if suggestions:
+                    print(f"[SUGGEST] {file} might need: {', '.join(suggestions)}")
+                
                 if changed:
                     print(f"Fixed {file}")
                     with open(path, 'w', encoding='utf-8') as f:

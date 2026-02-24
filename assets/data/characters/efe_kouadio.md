@@ -4,7 +4,7 @@
 
 **Summary:** Efe embodies the warmth and approachable charm of the girl next door with distinctly Nigerian flair. Her natural textured hair and luminous smile create an aura of genuine sweetness and self-assurance. She carries herself with an easy confidence that makes people feel immediately comfortable, radiating the kind of friendly energy that turns strangers into friends. Her style is playful yet put-together, mixing vibrant colors with casual comfort in a way that feels effortlessly cute and authentically her.
 
-**Tags:** Black, Approachable, Commanding, Female, Minimalist, Playful, Textured-Hair, Noir, Casual, Sci-Fi
+**Tags:** Black, Approachable, Commanding, Female, Minimalist, Playful, Textured-Hair, noir, Casual, sci-fi
 
 **Gender:** F
 **Signature Color:** #FF7F50

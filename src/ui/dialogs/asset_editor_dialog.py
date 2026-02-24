@@ -48,7 +48,7 @@ class AssetEditorDialog(ft.AlertDialog):
         
         # Link Tabs
         self.tabs.tabs[0].content = tag_manager_content
-        self.tabs.tabs[1].content = ft.Container(content=ft.Text("Metadata Editor Coming Soon"), alignment=ft.alignment.center)
+        self.tabs.tabs[1].content = ft.Container(content=ft.Text("Metadata Editor Coming Soon"), alignment=ft.Alignment(0, 0))
 
         self.content = ft.Container(
             width=800,

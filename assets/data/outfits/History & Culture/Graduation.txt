@@ -1,4 +1,4 @@
-tags: [Event, Formal]
+tags: [event, formal]
 
 [F]
 - **Top:** Black academic gown.

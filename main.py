@@ -2,19 +2,23 @@ import flet as ft
 import os
 import sys
 import threading
-from typing import Dict, Any, List
-
-# Add the current directory to sys.path
+import json
+import random
+import subprocess
+import traceback
+import argparse
+from typing import Dict, Any, List, Optional
 # Add the current directory and src to sys.path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
-
 from core.builder import PromptBuilder
+from core.app_state import AppState
 from utils import logger
 from core.flet_theme_manager import ThemeManager
 from logic.interaction_logic import InteractionLogic
 from logic.character_logic import CharacterLogic
+from logic.controllers import CharacterController
 
 # Modular UI Sections
 from ui.sections.toolbar import ToolbarSection
@@ -23,21 +27,69 @@ from ui.sections.roster import RosterSection
 from ui.sections.sidebar import SidebarSection
 from ui.sections.console import ConsoleSection
 from ui.sections.dashboard import DashboardSection
-from core.app_state import AppState
+
+class PlatformUtils:
+    """Standardized platform-specific operations (web-safe)."""
+    
+    @staticmethod
+    def open_path(path: str, is_web: bool = False):
+        """Open a file or directory in the system's default handler."""
+        if is_web:
+            return  # No-op on web
+        try:
+            if sys.platform == "win32":
+                os.startfile(path)
+            elif sys.platform == "darwin":
+                subprocess.run(["open", path])
+            else:
+                subprocess.run(["xdg-open", path])
+        except Exception as e:
+            from utils import logger
+            logger.error(f"Failed to open path {path}: {e}")
+
+    @staticmethod
+    def copy_to_clipboard(page: ft.Page, text: str, is_web: bool = False) -> bool:
+        """Copy text to clipboard. Uses Flet API (works on both web and desktop)."""
+        # Method 1: Flet API (works on web and desktop)
+        if hasattr(page, "set_clipboard"):
+            try:
+                page.set_clipboard(text)
+                return True
+            except Exception:
+                pass
+
+        # Method 2: OS-specific commands (desktop only)
+        if not is_web:
+            try:
+                if sys.platform == "win32":
+                    subprocess.run("clip", input=text, text=True, shell=True, check=True)
+                    return True
+                elif sys.platform == "darwin":
+                    subprocess.run("pbcopy", input=text, text=True, check=True)
+                    return True
+            except Exception:
+                pass
+            
+        return False
 
 class FletPromptBuilder:
     def __init__(self, page: ft.Page):
         self.page = page
+        self.is_web = getattr(page, 'web', False)
         
         self.page.title = "Gemini Prompt Builder"
         self.page.padding = 0
-        self.page.window_width = 1600
-        self.page.window_height = 900
+        if not self.is_web:
+            self.page.window_width = 1600
+            self.page.window_height = 900
         
-        # Initialize Logic
+        # Initialize Logic & Controllers
         self.state = AppState(page)
         self.interaction_logic = InteractionLogic(self.state)
-        self.character_logic = CharacterLogic(self.state.ctx, self.state.state)
+        # Controller layer (New)
+        self.char_controller = CharacterController(self.state)
+        # Legacy backup/internal logic
+        self.character_logic = self.char_controller.logic 
         
         # Initialize Theme
         ThemeManager.apply_theme(self.page, "Dark")
@@ -104,11 +156,21 @@ class FletPromptBuilder:
     # --- Proxy Methods for Modular Sections ---
     
     def add_character(self, name):
-        """Toggle character in roster."""
-        self.character_logic.toggle_character(name)
-        self.refresh_roster()
-        self.gallery.refresh() # Update selection status in gallery
-        self.update_preview()
+        """Toggle character in roster via controller."""
+        if self.char_controller.add_character(name):
+            self.refresh_roster()
+            self.gallery.refresh() # Update selection status in gallery
+            self.update_preview()
+        else:
+            # Check if it was a removal or a failure
+            if any((c.name if hasattr(c, "name") else c["name"]) == name for c in self.state.state["selected_characters"]):
+                 # Should not happen on success, but for safety:
+                 self.show_toast(f"Failed to add: {name}", color="red")
+            else:
+                 # It was removed
+                 self.refresh_roster()
+                 self.gallery.refresh()
+                 self.update_preview()
 
     def remove_character(self, name):
         """Defensive alias for add_character."""
@@ -122,40 +184,21 @@ class FletPromptBuilder:
         self.sidebar.update_summary(self.state.get_summary())
         self.page.update()
 
-    def randomize_outfit(self, index):
-        """Randomize outfit for character at index."""
-        import random
-        # TODO: Move this to a dedicated RandomizerLogic class if it grows
-        if index >= len(self.state.state["selected_characters"]): return
-
-        char = self.state.state["selected_characters"][index]
-        char_info = self.state.ctx.characters.get(char["name"], {})
-        
-        # Determine valid outfits
-        all_outfits = sorted(list(char_info.get("outfits", {}).keys()))
-        if all_outfits:
-            new_outfit = random.choice(all_outfits)
-            
-            # Find category
-            categorized = char_info.get("outfits_categorized", {})
-            for cat, outfits in categorized.items():
-                if new_outfit in outfits:
-                    char["outfit_category"] = cat
-                    break
-            char["outfit"] = new_outfit
-            # Surgical update not possible cleanly from here since we want logic separation
-            # Full refresh for now or utilize roster public method
-            self.roster.update_character_ui(index)
-            self.update_preview()
-
     def handle_solo_randomize(self, index):
+        if not self.state.ctx.randomizer: 
+            self.show_toast("Randomizer not available.", color="orange")
+            return
         if not (0 <= index < len(self.state.state["selected_characters"])): return
+        
         char_entry = self.state.state["selected_characters"][index]
-        new_config = self.state.ctx.randomizer._randomize_character(char_entry["name"])
+        name = char_entry.name if hasattr(char_entry, "name") else char_entry["name"]
+        
+        new_config = self.state.ctx.randomizer._randomize_character(name)
         if new_config:
-            char_entry.update(new_config)
-            char_entry["action_note"] = ""
-        self.roster.update_character_ui(index)
+            new_config["action_note"] = ""
+            self.char_controller.update_character(index, new_config)
+        
+        self.refresh_roster()
         self.update_preview()
 
     def handle_randomize(self, e):
@@ -206,12 +249,12 @@ class FletPromptBuilder:
     def set_theme(self, theme_name):
         ThemeManager.apply_theme(self.page, theme_name)
         
-        # Propagate theme changes to UI sections
-        if hasattr(self, 'toolbar'): self.toolbar.refresh_theme()
-        if hasattr(self, 'gallery'): self.gallery.refresh_theme()
-        if hasattr(self, 'roster'): self.roster.refresh_theme()
-        if hasattr(self, 'sidebar'): self.sidebar.refresh_theme()
-        if hasattr(self, 'console'): self.console.refresh_theme()
+        # Propagate theme changes to UI sections (without redundant page.update calls)
+        if hasattr(self, 'toolbar'): self.toolbar.refresh_theme(update_ui=False)
+        if hasattr(self, 'gallery'): self.gallery.refresh_theme(update_ui=False)
+        if hasattr(self, 'roster'): self.roster.refresh_theme(update_ui=False)
+        if hasattr(self, 'sidebar'): self.sidebar.refresh_theme(update_ui=False)
+        if hasattr(self, 'console'): self.console.refresh_theme(update_ui=False)
         
         self.show_toast(f"Theme set to: {theme_name}") 
         self.page.update()
@@ -259,8 +302,7 @@ class FletPromptBuilder:
             dlg = AssetEditorDialog(self)
             self._open_dialog(dlg)
         except Exception as err:
-            import traceback
-            traceback.print_exc()
+            logger.error(f"Error opening Asset Editor: {traceback.format_exc()}")
             self.show_toast(f"Error opening Asset Editor: {err}", color="red")
 
     def open_outfit_builder(self, e=None, character_index=None):
@@ -271,8 +313,7 @@ class FletPromptBuilder:
             dlg = OutfitBuilderDialog(self, character_index=character_index)
             self._open_dialog(dlg)
         except Exception as err:
-            import traceback
-            traceback.print_exc()
+            logger.error(f"Error opening Outfit Builder: {traceback.format_exc()}")
             self.show_toast(f"Error opening Outfit Builder: {err}", color="red")
 
     def _open_dialog(self, dlg):
@@ -288,7 +329,6 @@ class FletPromptBuilder:
     def open_settings(self, e=None): self.show_toast("Settings: Use Sidebar for configuration.")
     
     def open_output_gallery(self, e=None):
-
         try:
             from ui.dialogs.output_gallery import OutputGalleryDialog
             dlg = OutputGalleryDialog(self)
@@ -303,49 +343,76 @@ class FletPromptBuilder:
             logger.error(f"Failed to open gallery: {err}")
             # Fallback to file explorer if something breaks
             self.show_toast(f"Gallery Error, opening folder instead...", color="orange")
-            output_dir = os.path.join(os.getcwd(), "output", "images", "generated_images")
-            if os.path.exists(output_dir):
-                os.startfile(output_dir)
+            if not self.is_web:
+                output_dir = os.path.join(os.getcwd(), "output", "images", "generated_images")
+                if os.path.exists(output_dir):
+                    PlatformUtils.open_path(output_dir)
 
     def save_preset(self, e=None): 
-        # Fallback to simple file save due to FilePicker issues
-        import json
-        path = os.path.join(os.getcwd(), "preset.json")
-        try:
-            with open(path, "w", encoding="utf-8") as f:
-                json.dump(self.state.state, f, indent=2)
-            self.show_toast(f"Saved to {path}")
-        except Exception as err:
-            self.show_toast(f"Failed to save: {err}", color="red400")
+        if self.is_web:
+            # Web: Use browser localStorage via Flet's client_storage
+            try:
+                self.page.client_storage.set("promptbuilder_preset", json.dumps(self.state.state))
+                self.show_toast("Preset saved to browser storage!")
+            except Exception as err:
+                self.show_toast(f"Failed to save: {err}", color="red400")
+        else:
+            # Desktop: File system
+            path = os.path.join(os.getcwd(), "preset.json")
+            try:
+                with open(path, "w", encoding="utf-8") as f:
+                    json.dump(self.state.state, f, indent=2)
+                self.show_toast(f"Saved to {path}")
+            except Exception as err:
+                self.show_toast(f"Failed to save: {err}", color="red400")
             
     def load_preset(self, e=None): 
-        # Fallback to simple file load
-        import json
-        path = os.path.join(os.getcwd(), "preset.json")
-        if not os.path.exists(path):
-             self.show_toast("No preset.json found in app directory", color="orange400")
-             return
-             
-        try:
-            with open(path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            # Basic validation
-            if "selected_characters" in data:
-                self.state.state.update(data)
-                self.sidebar.populate_data()
-                self.refresh_roster()
-                self.update_preview()
-                self.gallery.refresh() # In case characters changed
-                self.show_toast(f"Loaded from {path}")
-            else:
-                self.show_toast("Invalid preset structure", color="red400")
-        except Exception as err:
-            self.show_toast(f"Failed to load: {err}", color="red400")
+        if self.is_web:
+            # Web: Load from browser localStorage
+            try:
+                raw = self.page.client_storage.get("promptbuilder_preset")
+                if not raw:
+                    self.show_toast("No saved preset found in browser", color="orange400")
+                    return
+                data = json.loads(raw)
+            except Exception as err:
+                self.show_toast(f"Failed to load: {err}", color="red400")
+                return
+        else:
+            # Desktop: File system
+            path = os.path.join(os.getcwd(), "preset.json")
+            if not os.path.exists(path):
+                self.show_toast("No preset.json found in app directory", color="orange400")
+                return
+            try:
+                with open(path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+            except Exception as err:
+                self.show_toast(f"Failed to load: {err}", color="red400")
+                return
+
+        # Common validation and apply
+        if "selected_characters" in data:
+            self.state.state.update(data)
+            self.sidebar.populate_data()
+            self.refresh_roster()
+            self.update_preview()
+            self.gallery.refresh()
+            self.show_toast("Preset loaded!")
+        else:
+            self.show_toast("Invalid preset structure", color="red400")
 
     def reset_all_outfits(self):
         for char in self.state.state["selected_characters"]:
-            char["outfit"] = "Base"
-            char["outfit_traits"] = []
+            if hasattr(char, "outfit"):
+                char.outfit = "Base"
+            else:
+                char["outfit"] = "Base"
+                
+            if hasattr(char, "outfit_traits"):
+                char.outfit_traits = []
+            else:
+                char["outfit_traits"] = []
         self.refresh_roster()
         self.update_preview()
         self.show_toast("Reset all outfits to Base")
@@ -353,70 +420,71 @@ class FletPromptBuilder:
     def handle_copy(self, e=None):
         prompt = self.state.get_prompt()
         if prompt:
-            # Method 1: Try Flet set_clipboard (if exists)
-            if hasattr(self.page, "set_clipboard"):
-                try:
-                    self.page.set_clipboard(prompt)
-                    self.show_toast("Prompt copied to clipboard!", color="green")
-                    return
-                except Exception:
-                    pass
-
-            # Method 2: Windows native 'clip' command
-            import subprocess
-            try:
-                subprocess.run("clip", input=prompt, text=True, shell=True, check=True)
-                self.show_toast("Prompt copied (Windows Native)!", color="green")
-                return
-            except Exception as err:
-                pass
-
-            self.show_toast("Clipboard copy failed. Check console.", color="red")
+            if PlatformUtils.copy_to_clipboard(self.page, prompt, is_web=self.is_web):
+                self.show_toast("Prompt copied to clipboard!", color="green")
+            else:
+                self.show_toast("Clipboard copy failed. Check console.", color="red")
         else:
             self.show_toast("No prompt to copy!", color="orange")
 
     def handle_generate(self, e=None):
+        if self.is_web:
+            self.show_toast("Image generation requires the desktop app (AI Studio automation).", color="orange")
+            return
+        
         prompt = self.state.get_prompt()
         if not prompt:
-            self.show_toast("No prompt to generate!")
+            self.show_toast("No prompt to generate!", color="orange")
             return
             
         if not self.state.ctx.automation_controller:
-            self.show_toast("Automation module not available.")
+            self.show_toast("Automation module is still initializing or failed to load. Please wait or check logs.", color="orange")
             return
 
+        # Show visual progress
         self.page.splash = ft.ProgressBar()
         self.page.update()
+        self.show_toast("Launching browser for image generation...", color=ThemeManager.colors["accent"])
         
         def on_complete(results):
             self.page.splash = None
-            path = results[0].get('image_path', 'Unknown')
+            if not results:
+                self.show_toast("Generation finished but no images were returned.", color="orange")
+                self.page.update()
+                return
+
+            path = results[0].get('image_path')
+            if not path:
+                self.show_toast("Generation finished but image path is missing.", color="orange")
+                self.page.update()
+                return
             
             def open_file(e):
-                try:
-                    os.startfile(path)
-                except Exception:
-                    pass
+                PlatformUtils.open_path(path, is_web=self.is_web)
 
-            self.show_toast(f"Generation Complete! Saved to: {path}", action="OPEN", on_action=open_file)
+            self.show_toast(f"Generation Complete! Saved to: {os.path.basename(path)}", action="OPEN", on_action=open_file)
             self.page.update()
 
         def on_error(err):
             self.page.splash = None
-            self.show_toast(f"Error: {str(err)}", color="red400")
+            logger.error(f"Generation error: {err}")
+            self.show_toast(f"Generation Failed: {str(err)}", color="red")
             self.page.update()
 
-        self.state.ctx.automation_controller.start_generation(
-            count=1,
-            match_outfits_prob=0,
-            prompts_only=False,
-            on_progress=lambda *args: None,
-            on_complete=on_complete,
-            on_error=on_error,
-            fixed_prompt=prompt
-        )
-        
-        self.show_toast("Starting generation...")
+        try:
+            self.state.ctx.automation_controller.start_generation(
+                count=1,
+                match_outfits_prob=0,
+                prompts_only=False,
+                on_progress=lambda *args: None,
+                on_complete=on_complete,
+                on_error=on_error,
+                fixed_prompt=prompt
+            )
+        except Exception as err:
+            self.page.splash = None
+            self.show_toast(f"Could not start generation: {err}", color="red")
+            self.page.update()
 
     def close_dialog(self, dlg):
         dlg.open = False
@@ -430,9 +498,44 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Gemini Prompt Builder")
+    parser.add_argument("--web", action="store_true", help="Run in web browser mode")
+    parser.add_argument("--port", type=int, default=8550, help="Port for web mode (default: 8550)")
+    parser.add_argument("--audit", action="store_true", help="Generate 5 random prompts to the console for auditing")
+    args = parser.parse_args()
+    
     try:
-        ft.app(target=main)
+        if args.audit:
+            from logic.app_state import AppState
+            import random
+            print("Running randomizer audit...")
+            state = AppState()
+            state.theme_manager = None
+            state.load_data()
+            print(f"Loaded {len(state.data['characters'])} characters.")
+            scenarios = list(state.data['scenarios'].values())
+            for i in range(5):
+                scen = random.choice(scenarios)
+                b, s, c = state.ctx.randomizer._generate_single_candidate(scen, random.randint(1, min(3, scen.max_chars)))
+                config_raw = {
+                    "base_prompt": "Photography",
+                    "scene": b.get("scene", ""),
+                    "selected_characters": c,
+                    "notes": b.get("notes", ""),
+                    "metadata": b
+                }
+                prompt = state.ctx.builder.generate(config_raw)
+                print(f"\n--- ROLL {i+1} (Score: {s}) ---")
+                print(f"Scenario: {scen.name}")
+                print(f"{prompt}\n")
+            sys.exit(0)
+            
+        if args.web:
+            ft.run(main=main, view=ft.AppView.WEB_BROWSER, assets_dir="assets", port=args.port)
+        else:
+            ft.run(main=main)
     except Exception:
         import traceback
         traceback.print_exc()
-        input("Press enter to exit...")
+        if not args.web:
+            input("Press enter to exit...")

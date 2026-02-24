@@ -1,7 +1,7 @@
 ### Isla MacLeod
 **Photo:** isla_macleod_photo.png
 
-**Tags:** Female, Bohemian, Creative, Ethereal, Minimalist, Soft, Vintage, Retro
+**Tags:** Female, Bohemian, creative, Ethereal, Minimalist, soft, vintage, Retro
 
 **Summary:** Isla has a dreamy, otherworldly quality softened by genuine warmth. Her indie-folk aesthetic and artistic sensibility define her more than any regional identity—she's the girl with a vintage film camera and a Spotify playlist full of obscure folk artists. She moves with quiet intention, her creative nature expressed through thoughtful pauses and an observant gaze that takes everything in.
 

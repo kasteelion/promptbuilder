@@ -2,7 +2,7 @@
 
 **Photo:** zemen_ayele_photo.png
 
-**Tags:** Black, Ethiopian, Cultural, Intellectual, Creative, Academic, Commanding, Burgundy-Signature, Vintage, Retro, Fantasy, Noir, Urban, Work
+**Tags:** Black, Ethiopian, Cultural, Intellectual, creative, Academic, Commanding, Burgundy-Signature, vintage, Retro, fantasy, noir, urban, work
 
 **Summary:** Zemen is a dedicated cultural archivist and architectural researcher specializing in Aksumite heritage. She possesses a quiet, formidable intellect and a presence that feels deeply rooted in history. Her work involves bridging the gap between ancient Ethiopian design and modern urban planning. She moves with a steady, unhurried grace, and her style is a sophisticated fusion of traditional Ethiopian habesha textiles and sharp, contemporary academic tailoring.
 

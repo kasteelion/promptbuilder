@@ -1,4 +1,4 @@
-tags: [Casual, Urban, Textured]
+tags: [Casual, urban, Textured]
 modifiers:
   Vintage: featuring a **faded vintage wash** and distressed hems
   Tech: with **water-resistant coating** and reflective taping

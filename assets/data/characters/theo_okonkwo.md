@@ -1,7 +1,7 @@
 ### Theo Okonkwo
 **Photo:** theo_okonkwo_photo.png
 
-**Tags:** Black, Approachable, Chic, Creative, Cultural, Male, Playful, Rhythmic, Sport, Casual
+**Tags:** Black, Approachable, Chic, creative, Cultural, Male, Playful, Rhythmic, Sport, Casual
 
 **Summary:** Theo radiates infectious creative energy and cultural confidence. His style blends British streetwear with African textile traditions, creating something entirely his own. He moves with easy rhythm, his warmth and humor making him a natural connector who brings people together effortlessly.
 

@@ -9,7 +9,7 @@ class InteractionLogic:
         self.app_state = app_state
         self.color_schemes = parse_color_schemes("assets/data/lists/color_schemes.md")
         
-    def resolve_interaction(self, text: str, characters: List[Dict[str, Any]]) -> str:
+    def resolve_interaction(self, text: str, characters: List[Any]) -> str:
         """Replace placeholders in interaction text with character names."""
         if not text:
             return ""
@@ -18,14 +18,15 @@ class InteractionLogic:
         for i, char in enumerate(characters):
             # Replace {char1}, {char2}, etc.
             placeholder = f"{{char{i+1}}}"
-            resolved_text = resolved_text.replace(placeholder, char["name"])
+            name = char.name if hasattr(char, "name") else char.get("name", "Unknown")
+            resolved_text = resolved_text.replace(placeholder, name)
             
         return resolved_text
         
-    def sync_poses_from_interaction(self, interaction_data: Dict[str, Any], characters: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def sync_poses_from_interaction(self, interaction_data: Dict[str, Any], characters: List[Any]) -> List[Any]:
         """
         Updates character action notes based on required poses defined in the interaction.
-        Returns a list of updated character dictionaries (or just modifies in place if ref allowed).
+        Returns a list of updated character objects.
         """
         required_poses = interaction_data.get("required_poses", [])
         
@@ -36,14 +37,15 @@ class InteractionLogic:
                 # Use the pose for this index, or the last one if fewer poses than chars
                 pose_val = required_poses[i] if i < len(required_poses) else required_poses[-1]
                 
-                # Check if we should actually update (e.g., if different)
-                if char.get("action_note") != pose_val:
-                    char["action_note"] = pose_val
+                # Check if we should actually update
+                current_note = char.action_note if hasattr(char, "action_note") else char.get("action_note")
+                if current_note != pose_val:
+                    if hasattr(char, "action_note"):
+                        char.action_note = pose_val
+                    else:
+                        char["action_note"] = pose_val
                     updated_chars.append(char)
             else:
-                # No required pose forced by interaction? 
-                # We leave it alone or clear it? 
-                # Current logic: Leave it alone.
                 pass
                 
         return updated_chars
@@ -70,8 +72,11 @@ class InteractionLogic:
     def resolve_outfit(self, outfit_name: str, char_name: str) -> str:
         """Resolve outfit string, populating placeholders like {team} or {primary_color}."""
         characters = self.app_state.ctx.characters
-        char_def = characters.get(char_name, {})
-        outfit_data = char_def.get("outfits", {}).get(outfit_name, "")
+        char_def = characters.get(char_name)
+        if not char_def: return outfit_name
+        
+        outfits = char_def.outfits if hasattr(char_def, "outfits") else char_def.get("outfits", {})
+        outfit_data = outfits.get(outfit_name, "")
         
         # Convert dict to string (simplified for now, ideally handle dict structure)
         if isinstance(outfit_data, dict):

@@ -1,4 +1,4 @@
-tags: [Costume, Villain]
+tags: [costume, villain]
 modifiers:
   Armored: , wearing spiked dark plate armor
   Sorcerer: , wearing flowing dark robes with arcane sigils

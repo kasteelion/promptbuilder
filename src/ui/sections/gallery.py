@@ -38,53 +38,123 @@ class GallerySection(ft.Container):
                 ], spacing=10, vertical_alignment=ft.CrossAxisAlignment.CENTER),
                 self.search_field
             ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
-            ft.Container(content=self.gallery_row, height=180, bgcolor=ft.Colors.TRANSPARENT)
+            ft.Container(content=self.gallery_row, height=220, bgcolor=ft.Colors.TRANSPARENT)
         ])
 
-    def refresh(self, search_term="", update_ui=True):
+    def refresh(self, search_term="", update_ui=True, append=False):
         from ui.components.character_card import create_character_card
         
-        selected_names = {char["name"] for char in self.app.state.state["selected_characters"]}
-        chars = sorted(self.app.state.ctx.characters.keys())
-        search_lower = (search_term or "").lower()
+        MAX_GALLERY_ITEMS = 40
         
-        new_controls = []
-        visible_count = 0
-        
-        for name in chars:
-            char_data = self.app.state.ctx.characters[name]
-            tags_str = str(char_data.get("tags", "")).lower()
+        if not append:
+            self.gallery_row.controls.clear()
+            self._current_matches = []
+            self._loaded_count = 0
             
-            if search_lower in name.lower() or search_lower in tags_str:
-                is_sel = (name in selected_names)
+            selected_names = {(char.name if hasattr(char, "name") else char["name"]) for char in self.app.state.state["selected_characters"]}
+            search_lower = (search_term or "").lower()
+            
+            # 1. Filter and build list of matches
+            for name, meta in self.app.state.ctx.characters_metadata.items():
+                tags_str = " ".join(meta.tags).lower()
+                vibe_str = (meta.vibe or "").lower()
+                bearing_str = (meta.bearing or "").lower()
+
+                if search_lower and not (search_lower in name.lower() or
+                                         search_lower in tags_str or
+                                         search_lower in vibe_str or
+                                         search_lower in bearing_str):
+                    continue
                 
-                card = create_character_card(
-                    char_name=name,
-                    char_data=char_data,
-                    on_click_callback=self.handle_character_click,
-                    is_selected=is_sel
-                )
-                new_controls.append(card)
-                visible_count += 1
+                self._current_matches.append((name, meta, name in selected_names))
                 
-        self.gallery_row.controls = new_controls
-        self.count_label.value = f"({visible_count})"
+            self.count_label.value = f"({len(self._current_matches)})"
+
+        # 2. Slice the next batch
+        start_idx = self._loaded_count
+        end_idx = start_idx + MAX_GALLERY_ITEMS
+        batch = self._current_matches[start_idx:end_idx]
+        
+        if not batch and append:
+            return
+
+        # Check if button already exists, remove it
+        if self.gallery_row.controls and getattr(self.gallery_row.controls[-1], "data", None) == "load_more":
+            self.gallery_row.controls.pop()
+
+        for name, meta, is_sel in batch:
+            card = create_character_card(
+                char_name=name,
+                char_data=meta.dict(),
+                on_click_callback=self.handle_character_click,
+                is_selected=is_sel,
+                is_web=getattr(self.app, 'is_web', False)
+            )
+            self.gallery_row.controls.append(card)
+            self._loaded_count += 1
+            
+        # Add "Load More" if there are more
+        if self._loaded_count < len(self._current_matches):
+            load_more_btn = ft.Container(
+                content=ft.Column([
+                    ft.Icon(ft.Icons.ADD_CIRCLE_OUTLINE, size=30, color=ThemeManager.colors.get("accent", "blue")),
+                    ft.Text("Load More", size=12, weight="bold")
+                ], alignment=ft.MainAxisAlignment.CENTER, horizontal_alignment=ft.CrossAxisAlignment.CENTER),
+                bgcolor=ThemeManager.colors["surface"],
+                border_radius=12,
+                border=ft.Border.all(1, ThemeManager.colors["outline"]),
+                on_click=lambda _: self.refresh(search_term=self.search_field.value, update_ui=True, append=True),
+                alignment=ft.Alignment(0, 0),
+                data="load_more",
+                ink=True,
+                height=200, width=160
+            )
+            self.gallery_row.controls.append(load_more_btn)
+
         if update_ui:
             self.update()
 
     def handle_search(self, e):
-        self.refresh(e.control.value)
+        self.refresh(e.control.value, update_ui=True, append=False)
 
     def handle_character_click(self, name):
         self.app.add_character(name)
-        self.refresh(self.search_field.value)
+        # Surgical update for the clicked card to avoid re-rendering the whole gallery
+        for control in self.gallery_row.controls:
+            if getattr(control, "data", None) != "load_more":
+                # The name is inside the Info Panel -> Row -> Text
+                try:
+                    card_name = control.content.controls[0].controls[1].content.controls[0].controls[0].value
+                    if card_name == name:
+                        # Need to recreate the entire card because of the Flet Stack structure and selection badge overlay
+                        meta = self.app.state.ctx.characters_metadata[name]
+                        selected_names = {(char.name if hasattr(char, "name") else char["name"]) for char in self.app.state.state["selected_characters"]}
+                        is_sel = name in selected_names
+                        
+                        from ui.components.character_card import create_character_card
+                        new_card = create_character_card(
+                            char_name=name,
+                            char_data=meta.dict(),
+                            on_click_callback=self.handle_character_click,
+                            is_selected=is_sel,
+                            is_web=getattr(self.app, 'is_web', False)
+                        )
+                        # Replace control in place
+                        idx = self.gallery_row.controls.index(control)
+                        self.gallery_row.controls[idx] = new_card
+                        break
+                except Exception:
+                    pass
+
+        self.update()
         self.app.refresh_roster()
         self.app.update_preview()
 
-    def refresh_theme(self):
+    def refresh_theme(self, update_ui=True):
         self.bgcolor = ThemeManager.colors["surface"]
         # Update header text
         header_row = self.content.controls[0]
         header_row.controls[0].controls[0].color = ThemeManager.colors["text_secondary"]  # "CHARACTER GALLERY"
         self.count_label.color = ThemeManager.colors["text_secondary"]
-        self.update()
+        if update_ui:
+            self.update()

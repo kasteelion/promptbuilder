@@ -1,7 +1,7 @@
 ### Aryan Kapoor
 **Photo:** aryan_kapoor_photo.png
 
-**Tags:** Male, Bearded, Chic, Commanding, Corporate, Indian, Luxury, Vintage, Retro, Casual, Sci-Fi, Noir, Urban, Social, Work
+**Tags:** Male, Bearded, Chic, Commanding, Corporate, Indian, luxury, vintage, Retro, Casual, sci-fi, noir, urban, social, work
 
 **Summary:** Aryan is the embodiment of modern "old money" aesthetics blended with Bollywood charisma. He carries the air of a man who closes seven-figure deals before breakfast, yet retains a disarming, roguish warmth. His presence is polished to a mirror shine, exuding power through impeccable grooming and tailored precision rather than brute force.
 

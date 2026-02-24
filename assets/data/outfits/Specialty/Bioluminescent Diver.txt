@@ -1,4 +1,4 @@
-tags: [Diver, Tech, Bioluminescent, Specialty, Scuba]
+tags: [Diver, tech, Bioluminescent, Specialty, Scuba]
 
 [F]
 - **Top:** Form-fitting neoprene diving suit.

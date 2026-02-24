@@ -1,4 +1,4 @@
-tags: [Casual, Winter, Cozy, Knitwear, Soft]
+tags: [Casual, Winter, cozy, Knitwear, soft]
 
 modifiers:
   Cable: featuring a **chunky cable-knit pattern**

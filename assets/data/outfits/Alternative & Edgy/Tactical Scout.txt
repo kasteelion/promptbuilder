@@ -1,4 +1,4 @@
-tags: [combat_tactical, action, Edgy, Outdoor]
+tags: [combat_tactical, action, Edgy, outdoor]
 
 [F]
 - **Top:** Ribbed moisture-wicking henley.

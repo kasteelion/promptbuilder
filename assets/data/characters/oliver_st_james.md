@@ -1,7 +1,7 @@
 ### Oliver St. James
 **Photo:** oliver_st._james_photo.png
 
-**Tags:** Male, Approachable, British, Casual, Gay, Hipster, Indie, Soft, Vintage, Retro, Home, Noir, Urban, Social
+**Tags:** Male, Approachable, British, Casual, Gay, Hipster, Indie, soft, vintage, Retro, Home, noir, urban, social
 
 **Summary:** Oliver feels like a warm cup of tea on a rainy afternoon—comforting, intelligent, and unpretentious. He embodies the "soft masculinity" of a modern indie intellectual, equally at home in a dusty library or a vinyl record shop. He radiates a golden-retriever-like warmth, drawing people in with an open heart and a slightly nervous, endearing charm.
 

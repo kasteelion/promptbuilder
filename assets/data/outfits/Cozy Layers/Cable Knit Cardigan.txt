@@ -1,4 +1,4 @@
-tags: [Casual, Academic, Cozy, Soft, Vintage]
+tags: [Casual, Academic, cozy, soft, vintage]
 
 modifiers:
   Chunky: a **heavy chunky-knit cardigan** with wooden buttons

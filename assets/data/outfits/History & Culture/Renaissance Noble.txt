@@ -1,4 +1,4 @@
-tags: [Formal, Historical]
+tags: [formal, historical]
 
 [F]
 - **Top:** Fitted bodice (burgundy or {modifier}).

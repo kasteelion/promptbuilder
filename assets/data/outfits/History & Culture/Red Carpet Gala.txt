@@ -1,4 +1,4 @@
-tags: [Celebrity, Event, Formal]
+tags: [Celebrity, event, formal]
 
 [F]
 - **Top:** Haute couture gown (Bodice).

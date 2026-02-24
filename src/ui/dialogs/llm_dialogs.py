@@ -78,7 +78,8 @@ class ImportFromTextDialog(ft.AlertDialog):
             return
 
         try:
-            available_chars = list(self.app.ctx.characters.keys())
+            # Use metadata to see ALL available characters
+            available_chars = list(self.app.state.ctx.characters_metadata.keys())
             config = TextParser.parse_import_text(text, available_chars)
             
             if config["selected_characters"] or config["base_prompt"] != "Default":

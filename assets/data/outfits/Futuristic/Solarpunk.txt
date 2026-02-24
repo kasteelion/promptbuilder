@@ -3,7 +3,7 @@ modifiers:
   Cloud: in **white aerogel-linen blend**
   Sun: in **iridescent amber solar-silk**
 
-tags: [Futuristic, Eco, Nature]
+tags: [Futuristic, Eco, nature]
 
 [F]
 - **Top:** Asymmetric wrap tunic {modifier}.

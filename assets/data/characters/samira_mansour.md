@@ -1,7 +1,7 @@
 ### Samira Mansour
 **Photo:** samira_mansour_photo.png
 
-**Tags:** North-African, Approachable, Chic, Cultural, Female, Hijabi, Sport, Noir, Urban
+**Tags:** North-African, Approachable, Chic, Cultural, Female, Hijabi, Sport, noir, urban
 
 **Summary:** Samira radiates a polished, sophisticated warmth that reflects her Moroccan heritage and modern creative life. She moves with a gentle poise, blending traditional values with a high-fashion sensibility. Her presence is inviting and culturally rooted, defined by a sharp intellect and a penchant for intricate, colorful textiles.
 

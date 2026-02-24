@@ -1,7 +1,7 @@
 ### Malik Farrah
 **Photo:** malik_farrah_photo.png
 
-**Tags:** Male, North-African, Rugged, Adventurous, Steady, Resourceful, Earthy, Gold-Signature, Sport, Action, Noir
+**Tags:** Male, North-African, Rugged, Adventurous, Steady, Resourceful, Earthy, Gold-Signature, Sport, action, noir
 
 **Summary:** Malik is a Desert Voyager, a man whose character has been etched by the sand and wind of the Sahara. He possesses a rugged, durable presence, his movements economical and efficient. He is a master of navigation and survival, his knowledge of the desert deep and intuitive. His attire is a blend of traditional textiles and functional gear, designed to protect him from the elements while allowing for maximum mobility. He speaks little, but his steady gaze conveys a wealth of experience and a calm, unshakeable resolve.
 

@@ -1,0 +1,16 @@
+{
+    "weights": {
+        "mood_match": 30,
+        "style_alignment": 25,
+        "diversity_bonus": 10
+    },
+    "penalties": {
+        "mismatch": -100,
+        "genre_clash": -1000
+    },
+    "thresholds": {
+        "min_score_floor": 250,
+        "mood_diminishing_returns_cutoff": 3,
+        "mood_excess_value": 10
+    }
+}

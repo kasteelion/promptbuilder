@@ -1,17 +1,24 @@
 ### Aaliyah Chen
+
 **Photo:** aaliyah_chen_photo.png
 
-**Tags:** Female, Approachable, Athletic, Bohemian, Minimalist, Mixed-Heritage, Sport, Noir, Casual
+**Tags:** Female, Approachable, Athletic, Bohemian, Minimalist, Mixed-Heritage, Sport, noir, Casual
 **Summary:** A grounded, vibrant performer whose energy feels rooted and alive. Aaliyah carries herself with relaxed athletic confidence, blending warmth, cultural depth, and effortless movement. Her presence feels sunlit and calm, with a quiet strength that reads as both capable and deeply human.
 
 **Gender:** F
 **Signature Color:** #8DA399
 
+**Traits:**
+
+- Signature Accents: green and teal artistic flair
+- Modern Style: urban creative aesthetic
+
 **Appearance:**
-* **Body:** Natural frame; natural flesh with slight wave softness; balanced athletic build with subtle curve; moderate height and vertical line; grounded and capable presence.
-* **Face:** Balanced-soft facial structure; oval face with gentle angles; warm expressive dark eyes with direct inviting gaze; soft jawline; serene neutral expression that easily breaks into a warm genuine smile.
-* **Hair:** Type 3B–3C curls; high density; natural dark brown curls with healthy volume and sheen; versatile styling options including loose curls and protective styles.
-* **Skin:** Warm golden-brown skin with a natural sun-touched glow and soft satin finish.
+
+- **Body:** Natural frame; natural flesh with slight wave softness; balanced athletic build with subtle curve; moderate height and vertical line; grounded and capable presence.
+- **Face:** Balanced-soft facial structure; oval face with gentle angles; warm expressive dark eyes with direct inviting gaze; soft jawline; serene neutral expression that easily breaks into a warm genuine smile.
+- **Hair:** Type 3B–3C curls; high density; natural dark brown curls with healthy volume and sheen; versatile styling options including loose curls and protective styles.
+- **Skin:** Warm golden-brown skin with a natural sun-touched glow and soft satin finish.
 
 **Age Presentation:** mid-20s presentation; vibrant, grounded, mature.
 **Vibe / Energy:** Grounded, Warm, Creative, Earthy.
@@ -28,6 +35,7 @@
 **Outfits:**
 
 #### Base
+
 - **Top:** Loose sage green linen tank top with relaxed fit
 - **Bottom:** High-waist rust-colored wide-leg linen pants
 - **Footwear:** Tan leather sandals with simple straps

@@ -1,7 +1,7 @@
 ### Zahara El-Amin
 **Photo:** zahara_el-amin_photo.png
 
-**Tags:** North-African, Chic, Creative, Cultural, Female, Hijabi, Intellectual, Vintage, Noir, Work, Urban
+**Tags:** North-African, Chic, creative, Cultural, Female, Hijabi, Intellectual, vintage, noir, work, urban
 
 **Summary:** Zahara is a visionary architect who views the world through the lens of Moorish geometry and modern minimalism. Her presence is a deliberate blend of historical depth and contemporary sharp-intelligence. She is often found with a sketchbook in hand, translating the intricate patterns of the Alhambra into modern structural designs. Her style is impeccable, defined by high-contrast silks and an observant, analytical gaze.
 

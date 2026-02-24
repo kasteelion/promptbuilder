@@ -4,7 +4,7 @@ Different base style prompts for your character images. Select one from the drop
 
 ---
 
-## Studio Photorealism (Photography, Realistic, High-Definition, Work, Social, mood:Professional)
+## Studio Photorealism (Photography, Realistic, High-Definition, work, social, professional, formal, Office, mood:professional, whitelist:Casual, pose_whitelist:Fashion, pose_whitelist:Casual)
 
 **Medium/Format:**
 High-End Digital Photography (85mm Portrait Lens simulation).
@@ -20,7 +20,7 @@ Illustration, painting, drawing, cartoon, anime, heavy grain, low contrast, dist
 
 ---
 
-## Analog Film (Photography, Vintage, Retro, Casual, mood:Nostalgic)
+## Analog Film (Photography, vintage, Retro, Casual, mood:Nostalgic, whitelist:Casual, pose_whitelist:Casual)
 
 **Medium/Format:**
 35mm Film Photography (90s emulation).
@@ -36,7 +36,7 @@ HDR, 3D render, glossy, digital perfection, polished, neon, high contrast studio
 
 ---
 
-## Luminous Digital Illustration (Digital Art, Fantasy, Glamour, mood:Elegant)
+## Luminous Digital Illustration (Digital Art, fantasy, Glamour, luxury, Fashion, mood:elegant, whitelist:International, whitelist:Specialty, pose_whitelist:Fashion, pose_whitelist:Fantasy)
 
 **Medium/Format:**
 High-polish Digital Airbrushing / Concept Art.
@@ -52,7 +52,7 @@ Sketch, messy lines, flat color, matte, dull, noisy, grain, rough texture.
 
 ---
 
-## Classical Painterly (Artistic, Traditional, mood:Dramatic)
+## Classical Painterly (Artistic, traditional, mood:Dramatic, whitelist:Specialty, pose_whitelist:History, pose_whitelist:Fantasy)
 
 **Medium/Format:**
 Traditional Oil on Canvas or Heavy Acrylic Impasto.
@@ -68,7 +68,7 @@ Vector, digital sheen, sharp outlines, bright neon colors, anime, cel-shading, p
 
 ---
 
-## Artistic Anime: "Kyoto Atmosphere" (Anime, Soft, mood:Peaceful)
+## Artistic Anime: "Kyoto Atmosphere" (Anime, soft, Cultural, traditional, mood:Peaceful, whitelist:International, pose_whitelist:Casual, pose_whitelist:Thematic)
 
 Medium/Format: High-Quality Anime Illustration (Kyoto Animation / Frieren Style).
 Technical Specifications: Line Art: Delicate, variable-width brown/charcoal lines. NOT thick black outlines. Shading: Cel-Shading for character features (distinct shadow shapes), but using a soft, harmonious color palette. Skin: Flat, matte anime coloring. NO gradient airbrushing or "luminous" texture.
@@ -77,7 +77,7 @@ Negative Prompt: Western cartoon, disney, webtoon, thick outlines, realistic ski
 
 ---
 
-## Retro Anime (Anime, Retro, 90s, mood:Nostalgic)
+## Retro Anime (Anime, Retro, 90s, mood:Nostalgic, whitelist:International, pose_whitelist:Casual, pose_whitelist:Action)
 
 **Medium/Format:**
 1990s Analog Cel Animation.
@@ -93,7 +93,7 @@ HD, 4K, vector, sharp, vibrant, 3D, realistic shading, digital painting.
 
 ---
 
-## Western Graphic Novel (Comic, Illustration, Ink, mood:Gritty)
+## Western Graphic Novel (Comic, Illustration, Ink, mood:gritty, whitelist:Combat, pose_whitelist:Action, pose_whitelist:Combat)
 
 **Medium/Format:**
 Inked Illustration with Digital Coloring.
@@ -109,7 +109,7 @@ Soft shading, painterly, blurry, photography, 3D, watercolor, pastel.
 
 ---
 
-## Cinematic 3D (3D, Animation, Cute, mood:Polished)
+## Cinematic 3D (3D, Animation, Cute, mood:Polished, whitelist:Casual, pose_whitelist:Action)
 
 **Medium/Format:**
 Pre-rendered 3D Computer Animation (Feature Film style).
@@ -125,7 +125,7 @@ Shapes are rounded and appealing (slightly stylized proportions). Hair is render
 
 ---
 
-## Neon Futurism (Sci-Fi, Cyberpunk, Urban, mood:Dark)
+## Neon Futurism (sci-fi, cyberpunk, urban, tech, mood:Dark, whitelist:Combat, whitelist:Specialty, pose_whitelist:Fantasy, pose_whitelist:Combat)
 
 **Medium/Format:**
 Digital Rendering with Ray-Tracing.
@@ -141,7 +141,7 @@ Natural light, sunlight, pastoral, soft, vintage, watercolor, beige, earth tones
 
 ---
 
-## Monochrome Noir (Cinema, Vintage, Dramatic, Noir, mood:Mysterious)
+## Monochrome Noir (Cinema, vintage, Dramatic, noir, historical, Winter, mood:Mysterious, whitelist:Casual, pose_whitelist:Alternative, pose_whitelist:Thematic)
 
 **Medium/Format:**
 Black and White Film Photography.
@@ -157,7 +157,7 @@ Color, bright, sunny, flat lighting, happy, cartoon, anime, painting.
 
 ---
 
-## Soft Vector (Illustration, Flat, Cute, mood:Soft)
+## Soft Vector (Illustration, Flat, Cute, mood:soft, whitelist:Casual, pose_whitelist:Action)
 
 **Medium/Format:**
 2D Vector Illustration.
@@ -173,7 +173,7 @@ Sharp angles, grit, realism, photography, complex shading, dark, scary.
 
 ---
 
-## Graphite Sketch (Artistic, Monochrome, Sketch, mood:Raw)
+## Graphite Sketch (Artistic, Monochrome, Sketch, mood:Raw, whitelist:Casual, pose_whitelist:Casual)
 
 **Medium/Format:**
 Pencil/Graphite on Paper.
@@ -189,7 +189,7 @@ Color, paint, 3D, smooth, digital, plastic, photo.
 
 ---
 
-## Candid Lifestyle (Casual, Everyday, Unposed, Outdoor, Nature, mood:Relaxed)
+## Candid Lifestyle (Casual, Everyday, Unposed, outdoor, nature, Summer, mood:relaxed, whitelist:Casual, pose_whitelist:Casual)
 
 **Medium/Format:**
 High-Quality Lifestyle Photography.
@@ -205,7 +205,7 @@ Studio lighting, stiff pose, heavy makeup, airbrushed, drawing, illustration.
 
 ---
 
-## High-Speed Action (Photography, Sport, Action, Dynamic, mood:Intense)
+## High-Speed Action (Photography, Sport, action, Dynamic, mood:Intense, whitelist:Combat, pose_whitelist:Athletics, pose_whitelist:Combat)
 
 **Medium/Format:**
 Sports Action Photography (Telephoto Lens).

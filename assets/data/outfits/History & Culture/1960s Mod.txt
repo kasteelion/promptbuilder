@@ -1,4 +1,4 @@
-tags: [Fashion, Retro, Vintage]
+tags: [Fashion, Retro, vintage]
 
 [F]
 - **Top:** A-line Shift dress.
