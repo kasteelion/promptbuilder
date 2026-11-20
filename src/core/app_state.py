@@ -137,6 +137,11 @@ class AppState:
         if getattr(self, '_portraits_scanned', False):
             return
         self._portraits_scanned = True
+
+        from utils.preferences import PreferencesManager
+        prefs = PreferencesManager()
+        if not prefs.get("auto_generate_missing_portraits", False):
+            return
         
         import pathlib
         import re

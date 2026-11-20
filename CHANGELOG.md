@@ -14,6 +14,12 @@
 - **Color Palette & Contrast System:** Added live wardrobe color swatches with character signature colors and curated Quick Color Harmonies (Maroon & Khaki, Olive & Rust, Navy & Amber, etc.) applicable across the active roster.
 - **Automation Studio Target Profiles:** Added engine profile selection dropdown (`Markdown`, `Prose`, `Midjourney`, `SDXL`) to `AutomationDialog`, `AutomationOrchestrator`, and `GemmaPipelineRunner`.
 - **CLI Batch Automation Formats:** Added `--format [markdown|prose|midjourney|sdxl]` CLI parameter to `scripts/automation/automate_generation.py` and `scripts/automation/bulk_generator.py`.
+- **Automation Suite Standardization & Hardening:**
+  - Consolidated browser automation: Replaced duplicate 338-line `scripts/automation/ai_studio_client.py` with a clean backward-compatible facade re-exporting canonical `src/utils/ai_client.py`.
+  - Added concurrency guard in `AutomationOrchestrator.start_generation()` preventing duplicate thread launches or race conditions (`is_running()` check).
+  - Gated background portrait scanning behind `auto_generate_missing_portraits` preference (default `False`), preventing unsolicited browser launches on app start.
+  - Sanitized target engine prompt prefixing in `gemma_pipeline.py` to preserve raw Midjourney (`/imagine`) and SDXL syntax.
+  - Relocated 11 legacy one-off tag migration scripts from `scripts/automation/` to `scripts/maintenance/legacy_tag_migrations/`.
 - **New Pose Presets:** Added *Playful Hair Twirl* (Casual & Domestic), *Playful Prone Bed Lounge* (Intimate & Sensual), and *Overhead Dreamy Surrender* (Intimate & Sensual) to `assets/data/poses.md`.
 
 ### Fixed
@@ -28,7 +34,7 @@
 - Added `tests/test_suggestion_engine.py` (Recommendation engine tests).
 - Added `tests/test_thematic_alignment.py` (Progression and cohesion model tests).
 - Added `tests/test_automation_pipeline.py` (Batch generator and multi-engine format tests).
-- Test suite expanded to 59 passing tests.
+- Test suite expanded to 62 passing tests.
 
 ## [1.0.0] – 2026-04-11
 

@@ -2,7 +2,6 @@
 
 import asyncio
 import threading
-import queue
 from typing import List, Callable, Dict, Any, Optional
 
 from logic.automation.gemma_pipeline import GemmaPipelineRunner
@@ -21,7 +20,10 @@ class AutomationOrchestrator:
         self.stop_requested = False
         self._thread = None
         self._loop = None
-        self._queue = queue.Queue()
+
+    def is_running(self) -> bool:
+        """Check if a generation thread is currently running."""
+        return self._thread is not None and self._thread.is_alive()
 
     def start_generation(
         self,
@@ -45,6 +47,10 @@ class AutomationOrchestrator:
         format_type: str = "markdown"
     ):
         """Start the generation process in a background thread."""
+        if self.is_running():
+            on_error(RuntimeError("Generation pipeline is already running."))
+            return
+
         self.stop_requested = False
         self.gemma_runner.stop_requested = False
         
@@ -94,6 +100,7 @@ class AutomationOrchestrator:
                     self._loop.close()
                 except RuntimeError:
                     pass # Already closed or running
+            self._thread = None
 
     def generate_character_portrait(self, character_name: str, on_complete: Callable = None):
         """Delegates portrait generation to the Asset Manager."""

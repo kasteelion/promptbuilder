@@ -641,7 +641,13 @@ class GemmaPipelineRunner:
             headless=False
         )
         
-        batch_prompts = [f"Generate an image of: {p['prompt']}" for p in prompts_with_meta]
+        batch_prompts = []
+        for p in prompts_with_meta:
+            ptxt = p["prompt"]
+            if ptxt.startswith(("/imagine", "POSITIVE:", "Generate an image of:")):
+                batch_prompts.append(ptxt)
+            else:
+                batch_prompts.append(f"Generate an image of: {ptxt}")
         
         results = await client.generate_images(batch_prompts, progress_callback=client_progress_shim)
         

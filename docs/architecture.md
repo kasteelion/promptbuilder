@@ -1,4 +1,4 @@
-﻿# Architecture Overview
+# Architecture Overview
 
 Prompt Builder is designed with a modular, layered architecture to ensure maintainability, extensibility, and ease of testing. This document describes the key components and patterns used in the Flet-based codebase.
 

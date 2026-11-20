@@ -46,6 +46,7 @@ class PreferencesManager:
             "ollama_base_url": "http://localhost:11434",
             "ai_temperature": 0.7,
             "enhance_style": "cinematic",
+            "auto_generate_missing_portraits": False,
         }
 
         if not self.prefs_file.exists():

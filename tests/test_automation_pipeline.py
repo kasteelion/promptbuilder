@@ -88,6 +88,46 @@ Notes: Waiting quietly in the mist
         out_mj = self.builder.generate(resolved, format_type="midjourney")
         self.assertIn("--ar 16:9", out_mj)
 
+    def test_automation_reexport_client(self):
+        """Verify ai_studio_client facade re-exports AIStudioClient cleanly."""
+        from ai_studio_client import AIStudioClient, generate_images_simple
+        from utils.ai_client import AIStudioClient as CanonicalClient
+        self.assertIs(AIStudioClient, CanonicalClient)
+        self.assertTrue(callable(generate_images_simple))
+
+    def test_orchestrator_concurrency_guard(self):
+        """Verify AutomationOrchestrator prevents overlapping generations."""
+        from logic.automation.orchestrator import AutomationOrchestrator
+        ctx = MagicMock()
+        orchestrator = AutomationOrchestrator(ctx)
+        self.assertFalse(orchestrator.is_running())
+
+        errors = []
+        # Simulate active running thread
+        mock_thread = MagicMock()
+        mock_thread.is_alive.return_value = True
+        orchestrator._thread = mock_thread
+
+        self.assertTrue(orchestrator.is_running())
+
+        orchestrator.start_generation(
+            count=1,
+            match_outfits_prob=0.5,
+            prompts_only=True,
+            on_progress=lambda c, t, m: None,
+            on_complete=lambda res: None,
+            on_error=lambda err: errors.append(err)
+        )
+
+        self.assertEqual(len(errors), 1)
+        self.assertIn("already running", str(errors[0]))
+
+    def test_missing_portraits_preference_default(self):
+        """Verify auto_generate_missing_portraits is disabled by default."""
+        from utils.preferences import PreferencesManager
+        prefs = PreferencesManager()
+        self.assertFalse(prefs.get("auto_generate_missing_portraits", False))
+
 
 if __name__ == "__main__":
     unittest.main()

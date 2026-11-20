@@ -299,3 +299,15 @@ class AIStudioClient:
             await context.close()
         
         return results
+
+
+# Convenience function for simple usage
+async def generate_images_simple(
+    prompts: List[str],
+    output_dir: str = "generated_images",
+    headless: bool = False
+) -> List[Tuple[str, Optional[str]]]:
+    """Simple wrapper for generating images from prompts."""
+    client = AIStudioClient(output_dir=output_dir, headless=headless)
+    return await client.generate_images(prompts)
+
