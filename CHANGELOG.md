@@ -25,6 +25,7 @@
 ### Fixed
 - **Character Load Latency:** Cached `DataLoader.load_outfits()` via `self._cache["shared_outfits"]`, slashing individual character load times from 135ms to 2ms (eliminating redundant disk scans of 280+ files on every roster click).
 - **Startup Frame Latency:** Added fast metadata preloading (`load_metadata_fast()`) in `AppState` before `build_ui()`, ensuring characters render on the very first frame.
+- **Ollama & Cloud AI Fallback Resilience:** Fixed Ollama auto-detection selecting corrupted/unsupported models (e.g. `gemma4:latest`) by prioritizing verified models (`gemma2:latest`, `gemma3:latest`) and respecting user-configured preferences; added multi-model local retry on error and detailed error message extraction; intercepted `API_KEY_INVALID` to fail fast with Settings guidance; added graceful fallback to PromptRandomizer in `GemmaPipelineRunner` if AI inference fails.
 - **Gallery Double-Render:** Removed duplicate 30-line post-click loop in `gallery.py` that caused redundant roster, preview, and gallery rebuilds.
 - **Async & Threading Safety:** Migrated background UI calls in `main.py` and `app_state.py` to `page.run_task()`, wrapped blocking AI calls in `asyncio.to_thread()`, and eliminated unattached Flet control update crashes.
 - **Automation Pydantic Model Crashes:** Fixed `AttributeError` crashes in `automate_generation.py` (`char.get('name')`), `bulk_generator.py` (`char_outfits = chars[real_name].get('outfits')`), and `gemma_pipeline.py` (`config.scene`, `config.selected_characters`).

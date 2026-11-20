@@ -65,15 +65,26 @@ class GemmaClient:
             if r.status_code == 200:
                 self.local_provider = "ollama"
                 models = [m["name"] for m in r.json().get("models", [])]
-                for target in ["gemma4:latest", "gemma4", "gemma4:31b", "gemma4:26b", "gemma3:latest", "gemma3", "gemma2:latest", "gemma2", "gemma:latest"]:
-                    if target in models:
-                        self.ollama_model = target
-                        break
+                self.available_ollama_models = models
+                
+                # Check user-configured model first
+                user_model = self.ollama_model
+                user_model_latest = f"{user_model}:latest" if ":" not in user_model else user_model
+                
+                if user_model in models:
+                    self.ollama_model = user_model
+                elif user_model_latest in models:
+                    self.ollama_model = user_model_latest
                 else:
-                    logger.warning(
-                        f"Ollama is running but none of the preferred "
-                        f"Gemma models were found. Falling back to '{self.ollama_model}'."
-                    )
+                    for target in ["gemma3:latest", "gemma3", "gemma2:latest", "gemma2", "gemma:latest", "llama3.2:3b", "gemma4:latest"]:
+                        if target in models:
+                            self.ollama_model = target
+                            break
+                    else:
+                        logger.warning(
+                            f"Ollama is running but none of the preferred "
+                            f"Gemma models were found. Falling back to '{self.ollama_model}'."
+                        )
                 logger.info(f"Found local Ollama with model: {self.ollama_model}")
                 return
         except requests.exceptions.RequestException:
@@ -165,23 +176,50 @@ class GemmaClient:
 
     def _call_local(self, prompt: str, system: str, json_mode: bool = False,
                     json_schema: dict = None, temperature: float = None, timeout: int = 120, num_predict: int = 4096) -> str:
-        """Call the local provider. Raises requests.exceptions.RequestException on failure."""
-        payload, endpoint = self._build_local_payload(
-            prompt, system, json_mode=json_mode, json_schema=json_schema,
-            temperature=temperature, timeout=timeout
-        )
-        
-        # Inject options
-        if self.local_provider == "ollama":
-            if "options" not in payload:
-                payload["options"] = {}
-            payload["options"]["num_predict"] = num_predict
-            if temperature is not None:
-                payload["options"]["temperature"] = temperature
+        """Call the local provider. Raises requests.exceptions.RequestException or RuntimeError on failure."""
+        candidate_models = [self.ollama_model]
+        if self.local_provider == "ollama" and hasattr(self, "available_ollama_models"):
+            for alt in ["gemma3:latest", "gemma2:latest", "gemma:latest", "llama3.2:3b"]:
+                if alt in self.available_ollama_models and alt not in candidate_models:
+                    candidate_models.append(alt)
 
-        response = requests.post(endpoint, json=payload, timeout=timeout)
-        response.raise_for_status()
-        return self._extract_local_text(response.json())
+        last_error = None
+        for cur_model in candidate_models:
+            if self.local_provider == "ollama":
+                self.ollama_model = cur_model
+
+            payload, endpoint = self._build_local_payload(
+                prompt, system, json_mode=json_mode, json_schema=json_schema,
+                temperature=temperature, timeout=timeout
+            )
+            
+            # Inject options
+            if self.local_provider == "ollama":
+                if "options" not in payload:
+                    payload["options"] = {}
+                payload["options"]["num_predict"] = num_predict
+                if temperature is not None:
+                    payload["options"]["temperature"] = temperature
+
+            try:
+                response = requests.post(endpoint, json=payload, timeout=timeout)
+                response.raise_for_status()
+                return self._extract_local_text(response.json())
+            except requests.exceptions.HTTPError as http_err:
+                error_detail = ""
+                try:
+                    err_json = response.json()
+                    error_detail = err_json.get("error", "")
+                except Exception:
+                    error_detail = response.text[:200]
+                
+                last_error = RuntimeError(f"Local inference server error ({response.status_code}): {error_detail}")
+                logger.warning(f"Local model '{cur_model}' failed ({response.status_code}: {error_detail}). Trying next local model if available...")
+            except Exception as e:
+                last_error = e
+                logger.warning(f"Local model '{cur_model}' request failed: {e}")
+
+        raise last_error or RuntimeError("Local inference failed on all available models.")
 
     def _call_cloud(
         self,
@@ -235,6 +273,10 @@ class GemmaClient:
                 return ""
             except Exception as e:
                 last_error = e
+                err_str = str(e)
+                if "API_KEY_INVALID" in err_str or "API key not valid" in err_str:
+                    logger.error(f"Gemini API key is invalid: {e}")
+                    raise RuntimeError("Gemini API key is invalid or expired. Please update your API key in Settings (Gear icon) or set a valid GEMINI_API_KEY environment variable.") from e
                 logger.warning(f"Cloud model ({model_name}) failed: {e}. Trying next fallback...")
 
         raise RuntimeError(f"Gemini cloud inference failed on all models ({', '.join(candidate_models)}). Last error: {last_error}")

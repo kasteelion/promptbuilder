@@ -294,43 +294,63 @@ class GemmaPipelineRunner:
                         
                         if not roster_data:
                             print("[GemmaPipeline] Step 1 failed after 3 retries.")
-                            continue
                             
                         # Step 2: Gear
-                        for r2 in range(3):
-                            if r2 == 0:
-                                on_progress(i, count, "Gemma Step 2: Choosing Outfits")
-                            else:
-                                on_progress(i, count, f"Gemma Step 2: Retrying Outfits (Attempt {r2+1})")
-                            selected_names = roster_data["characters"]
-                            gear_ctx = generate_character_gear_context(self.ctx, selected_names)
-                            gear_data = gemma_client.step_2_select_gear(gear_ctx, selected_names)
-                            if gear_data:
-                                gear_str = ", ".join([f"{k.split()[0]}: {v}" for k, v in gear_data.items() if k != 'pose'])
-                                on_progress(i, count, f"  -> Gear: {gear_str}")
-                                break
+                        if roster_data:
+                            for r2 in range(3):
+                                if r2 == 0:
+                                    on_progress(i, count, "Gemma Step 2: Choosing Outfits")
+                                else:
+                                    on_progress(i, count, f"Gemma Step 2: Retrying Outfits (Attempt {r2+1})")
+                                selected_names = roster_data["characters"]
+                                gear_ctx = generate_character_gear_context(self.ctx, selected_names)
+                                gear_data = gemma_client.step_2_select_gear(gear_ctx, selected_names)
+                                if gear_data:
+                                    gear_str = ", ".join([f"{k.split()[0]}: {v}" for k, v in gear_data.items() if k != 'pose'])
+                                    on_progress(i, count, f"  -> Gear: {gear_str}")
+                                    break
+                                    
+                            if not gear_data:
+                                print("[GemmaPipeline] Step 2 failed after 3 retries.")
                                 
-                        if not gear_data:
-                            print("[GemmaPipeline] Step 2 failed after 3 retries.")
-                            continue
-                            
                         # Step 3: Finalize
-                        appearance_ctx = generate_character_appearance_context(self.ctx, roster_data.get("characters", []))
-                        for r3 in range(3):
-                            if r3 == 0:
-                                on_progress(i, count, "Gemma Step 3: Finalizing Composition")
-                            else:
-                                on_progress(i, count, f"Gemma Step 3: Retrying Composition (Attempt {r3+1})")
-                            final_comp = gemma_client.step_3_finalize_composition(roster_data, gear_data, character_context=appearance_ctx)
-                            if final_comp:
-                                break
-                                
-                        if not final_comp:
-                            print("[GemmaPipeline] Step 3 failed after 3 retries.")
-                            continue
-                            
-                        config = self._parse_gemma_composition(final_comp)
-                        valid_prompt = True
+                        if roster_data and gear_data:
+                            appearance_ctx = generate_character_appearance_context(self.ctx, roster_data.get("characters", []))
+                            for r3 in range(3):
+                                if r3 == 0:
+                                    on_progress(i, count, "Gemma Step 3: Finalizing Composition")
+                                else:
+                                    on_progress(i, count, f"Gemma Step 3: Retrying Composition (Attempt {r3+1})")
+                                final_comp = gemma_client.step_3_finalize_composition(roster_data, gear_data, character_context=appearance_ctx)
+                                if final_comp:
+                                    break
+                                    
+                            if not final_comp:
+                                print("[GemmaPipeline] Step 3 failed after 3 retries.")
+
+                        if not roster_data or not gear_data or not final_comp:
+                            on_progress(i, count, "Gemma pipeline failed. Falling back to Prompt Randomizer...")
+                            print("[GemmaPipeline] Pure Gemma pipeline failed. Falling back to Prompt Randomizer...")
+                            config = randomizer.randomize(
+                                num_characters=num_characters,
+                                include_scene=include_scene,
+                                include_notes=include_notes,
+                                match_outfits_prob=match_outfits_prob,
+                                candidates=max(10, candidates),
+                                forced_characters=forced_characters,
+                                forced_scenario=forced_scenario,
+                                character_pool=character_pool
+                            )
+                            if isinstance(config, dict):
+                                try:
+                                    from core.models import PromptConfig
+                                    config = PromptConfig(**config)
+                                except Exception:
+                                    pass
+                            valid_prompt = True
+                        else:
+                            config = self._parse_gemma_composition(final_comp)
+                            valid_prompt = True
                     else:
                         on_progress(i, count, f"Randomizing candidate {i+1} (Attempt {attempts})...")
                         
@@ -588,8 +608,11 @@ class GemmaPipelineRunner:
                     print(f"[Critic] Failed to find a valid prompt after 3 attempts for index {i}")
                 
                 if use_gemma and gemma_client:
-                    on_progress(i, count, f"Enhancing prompt {i+1}/{count} with Gemma...")
-                    prompt_text = gemma_client.enhance_prompt(prompt_text)
+                    try:
+                        on_progress(i, count, f"Enhancing prompt {i+1}/{count} with Gemma...")
+                        prompt_text = gemma_client.enhance_prompt(prompt_text)
+                    except Exception as e:
+                        print(f"[GemmaPipeline] Prompt enhancement failed: {e}. Keeping unenhanced prompt.")
                     
                 logged_config = config
                 if hasattr(config, "dict"):
