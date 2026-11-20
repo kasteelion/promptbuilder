@@ -10,7 +10,7 @@ import os
 import time
 import base64
 from typing import List, Tuple, Optional, Callable
-from playwright.async_api import async_playwright, Page, BrowserContext
+from playwright.async_api import async_playwright, Page
 
 
 class AIStudioClient:

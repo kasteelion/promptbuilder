@@ -41,3 +41,9 @@
 - **Footwear:** Black and white athletic shoes
 - **Accessories:** Black digital watch on left wrist, delicate silver necklace with small pendant, dark red/brown sunglasses resting on top of head
 - **Hair/Makeup:** Hair styled with soft waves, loose; minimal makeup visible
+
+
+**Affinities:**
+- Styles: [Analog Film, Luminous Digital Illustration, Monochrome Noir]
+- Scenes: [Arts & Performance, Casual & Domestic, Outdoor]
+- Outfit_Tags: [Sport, Soft, Everyday, Minimalist]

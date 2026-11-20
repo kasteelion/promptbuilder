@@ -33,3 +33,9 @@
 - **Footwear:** Slightly heeled sandals
 - **Accessories:** Thin choker, simple bracelets including one with turquoise thread
 - **Hair/Makeup:** Hair in loose playful braids with soft bounce; minimal luminous makeup
+
+
+**Affinities:**
+- Styles: [Analog Film, Graphite Sketch, Cinematic 3D]
+- Scenes: [Casual & Domestic, Arts & Performance, Athletics & Sports]
+- Outfit_Tags: [Black, Sport, Casual, Comfortable]

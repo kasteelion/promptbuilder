@@ -31,3 +31,9 @@
 - **Footwear:** Casual slip-on shoes or barefoot
 - **Accessories:** Simple gold hoop earrings (medium size), thin ring
 - **Hair/Makeup:** Hair down in soft waves; minimal warm makeup
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Soft Vector, Classical Painterly]
+- Scenes: [Casual & Domestic, Arts & Performance, Fashion & Glamour]
+- Outfit_Tags: [Summer, Floral, Chic, White]

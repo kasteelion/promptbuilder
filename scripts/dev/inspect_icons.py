@@ -1,5 +1,4 @@
 import flet as ft
-import sys
 
 def inspect_icons():
     print("Inspecting flet.icons...")

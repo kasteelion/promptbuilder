@@ -37,3 +37,9 @@
 - **Accessories:** Small gold hoops, delicate gold pendant
 - **Hair/Makeup:** Hair in soft waves; luminous natural makeup
 - **Signature:** Thin gold headband (delicate circlet)
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Soft Vector]
+- Scenes: [Casual & Domestic, Arts & Performance, Home]
+- Outfit_Tags: [Soft, Vintage, Elegant, Retro]

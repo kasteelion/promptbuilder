@@ -45,3 +45,9 @@
 - **Footwear:** Brown leather tactical boots with ankle support
 - **Accessories:** Leather forearm bracer (worn on dominant arm even casually), small field journal, leather belt with practical attachments, silver arrow pendant necklace
 - **Hair/Makeup:** Hair in signature crown braid into high ponytail (keeps hair secure and controlled); minimal precise makeup
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Monochrome Noir, Graphite Sketch]
+- Scenes: [History & Culture, Combat & Tactical, Arts & Performance]
+- Outfit_Tags: [Rugged, Dark, Ginger, Velvet]

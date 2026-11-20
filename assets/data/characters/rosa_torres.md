@@ -31,3 +31,9 @@
 - **Footwear:** White canvas sneakers
 - **Accessories:** Simple gold hoop earrings, thin leather wrap bracelet on left wrist
 - **Hair/Makeup:** Long dark hair worn down in loose waves, brushed away from face; natural makeup with bold warm lip color
+
+
+**Affinities:**
+- Styles: [Analog Film, Luminous Digital Illustration, Cinematic 3D]
+- Scenes: [Arts & Performance, Fashion & Glamour, Combat & Tactical]
+- Outfit_Tags: [Floral, Red, Track, Fashion]

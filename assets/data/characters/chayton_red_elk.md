@@ -31,3 +31,9 @@
 - **Footwear:** Worn-in brown leather service boots (Red Wing style).
 - **Accessories:** Thick silver cuff bracelet with turquoise inlay; minimalist wire-frame glasses for reading.
 - **Hair/Makeup:** Hair braided tightly and neat; clean-shaven face.
+
+
+**Affinities:**
+- Styles: [Monochrome Noir, Classical Painterly, Analog Film]
+- Scenes: [History & Culture, Arts & Performance, Urban]
+- Outfit_Tags: [Rugged, Layered, Sport, Casual]

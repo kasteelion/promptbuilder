@@ -33,3 +33,9 @@
 - **Footwear:** Red-brown leather moc-toe work boots with white wedge soles
 - **Accessories:** Thick brown leather suspenders, knit watch cap (beanie) in navy or olive green
 - **Hair/Makeup:** Signature mutton chops; clean chin; wind-flushed cheeks
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Analog Film, Vintage]
+- Scenes: [History & Culture, Arts & Performance, Casual & Domestic, Work & Industrial]
+- Outfit_Tags: [Rugged, Vintage, Dark, Basic, Warm-weather]

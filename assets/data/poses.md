@@ -25,6 +25,7 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Savory Stir** (Cooking, Domestic, Standing): Standing over a steaming pot on the stove, right hand slowly stirring with a wooden spoon while the left hand holds the pot's handle, a gentle cloud of steam framing the face.
 - **Leisurely Reading** (Reading, Relaxed, Sitting): Reclining on a plush sofa with an open book resting on the lap, right hand poised to turn a page, legs stretched out comfortably, exuding a quiet and Peaceful aura.
 - **Keynote Delivery** (Professional, Work, Standing): Standing confidently before a large display, right arm extended to gesture toward a specific data point, left hand holding a clicker, commanding the room with professional authority.
+- **Playful Hair Twirl** (Standing, Flirty, Casual): Standing facing the camera with a bright, warm smile, the left arm folded loosely across the torso to support the right elbow while the right hand playfully twirls a lock of hair, radiating approachable and lighthearted charm.
 
 ---
 
@@ -80,6 +81,8 @@ Quick pose and action descriptions for your prompts. Edit or add your own!
 - **Contemplative Window Seat** (Relaxed, Cozy, Sitting): Sitting in a deep window bay with legs drawn up and arms wrapped around the knees, head resting against the glass, gazing out at a distant horizon with a thoughtful mood.
 - **Kneeling Bed Lean** (Relaxed, Intimate, Bedroom): Kneeling on a plush white bed with knees together and torso leaning forward comfortably, hands resting in the lap with fingers loosely interlaced, reflecting a bright and approachable bedroom energy.
 - **Off-Shoulder Jacket Embrace** (Relaxed, Intimate, Moody): Sitting with arms crossed tightly across the chest, hands gripping the sleeves of a loose denim jacket that has slipped off the shoulders. The head is turned sharply to the left, chin lifted, gazing off-camera with a contemplative expression.
+- **Playful Prone Bed Lounge** (Intimate, Relaxed, Lying): Lying prone on a bed propped up on the forearms with hands clasped loosely together in front, legs bent upward behind the back with feet lifted playfully in the air, gazing directly into the lens with a soft and inviting expression.
+- **Overhead Dreamy Surrender** (Intimate, Relaxed, Lying): Captured from a top-down perspective lying flat on the back, both arms raised overhead with elbows bent and palms relaxed open, head tilted slightly to the side with eyes closed in a peaceful and dreamy expression.
 
 ---
 

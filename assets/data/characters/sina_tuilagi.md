@@ -50,3 +50,9 @@
 - **Footwear:** Brown leather sandals with woven straps
 - **Accessories:** Layered shell and black cord necklaces, bone and silver bangle bracelets, small shell hoop earrings, woven crossbody bag with traditional pattern
 - **Hair/Makeup:** Hair loose and full with natural curl pattern; warm bronze makeup with glowing skin and coral lip
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Luminous Digital Illustration, Artistic Anime: "Kyoto Atmosphere"]
+- Scenes: [History & Culture, Arts & Performance, Fashion & Glamour, Casual & Domestic]
+- Outfit_Tags: [Velvet, Traditional-Modern-Fusion, Rich, Floral]

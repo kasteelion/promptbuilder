@@ -38,3 +38,9 @@
 - **Footwear:** Nude low-heeled sandals in soft suede with a thin ankle strap
 - **Accessories:** Delicate rose gold necklace with a tiny pearl pendant, small rose gold stud earrings, thin velvet decorative headband in a muted rose tone
 - **Hair/Makeup:** Hair styled in soft loose curls with natural volume; romantic pink-toned makeup with a focus on a dewy skin finish and soft-tinted lips
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Analog Film, Classical Painterly]
+- Scenes: [Arts & Performance, Intimate & Sensual, Fashion & Glamour]
+- Outfit_Tags: [Floral, White, Lingerie, Velvet]

@@ -14,9 +14,8 @@ Each renderer follows a consistent interface with a static render() method.
 
 import re
 import copy
-import random
 from typing import Any, Dict, List, Optional, Union
-from .models import SelectedCharacterConfig, CharacterDetails, OutfitItem
+from .models import SelectedCharacterConfig, CharacterDetails
 
 # Pre-compiled regex for performance
 RE_MODIFIER = re.compile(r"\{modifier\}")
@@ -200,12 +199,51 @@ class CharacterRenderer:
         shared_poses: Dict[str, Dict[str, str]],
         shared_framing: Dict[str, str],
         shared_schemes: Dict[str, Dict[str, str]],
-        active_team_scheme: Optional[Dict[str, str]] = None
+        active_team_scheme: Optional[Dict[str, str]] = None,
+        global_outfits: Optional[Dict[str, Any]] = None
     ) -> str:
         """Render a single character block by coordinating sub-renderers."""
         
         # 1. Resolve Outfits & Modifiers
-        outfit_raw = data.outfits.get(config.outfit, "")
+        outfit_name = config.outfit
+        variant_name = "base"
+        if outfit_name and " - " in outfit_name:
+            outfit_name, variant_name = outfit_name.split(" - ", 1)
+            
+        outfit_raw = data.outfits.get(outfit_name)
+        
+        # Fallback 1: Fuzzy match in character's own outfits
+        if not outfit_raw and outfit_name:
+            fuzzy_name = CharacterRenderer._fuzzy_match_outfit(outfit_name, data.outfits.keys())
+            if fuzzy_name:
+                outfit_raw = data.outfits.get(fuzzy_name)
+        
+        # Fallback 2: Global catalog fallback (gender-specific)
+        if not outfit_raw and global_outfits and outfit_name:
+            gender = data.gender or "F"
+            gender_outfits = global_outfits.get(gender, {})
+            
+            # Search all categories in this gender
+            for cat_outfits in gender_outfits.values():
+                # Direct match
+                if outfit_name in cat_outfits:
+                    outfit_raw = cat_outfits[outfit_name]
+                    break
+                # Fuzzy match
+                fuzzy_name = CharacterRenderer._fuzzy_match_outfit(outfit_name, cat_outfits.keys())
+                if fuzzy_name:
+                    outfit_raw = cat_outfits[fuzzy_name]
+                    break
+        
+        
+        if not outfit_raw:
+            outfit_raw = ""
+            
+        # Resolve Variant
+        if isinstance(outfit_raw, dict) and "variants" in outfit_raw:
+            variants = outfit_raw.get("variants", {})
+            outfit_raw = variants.get(variant_name, variants.get("base", outfit_raw))
+
         modifier_text = ModifierRenderer.render(config, outfit_raw, shared_modifiers)
         
         # 2. Resolve Poses & Framing
@@ -279,6 +317,30 @@ class CharacterRenderer:
             appearance += " " + "; ".join(tier_info) + "."
             
         return appearance
+
+    @staticmethod
+    def _fuzzy_match_outfit(target: str, candidates: List[str]) -> Optional[str]:
+        """Helper to find the best match for an outfit name."""
+        if not target: return None
+        target_low = target.lower().strip()
+        
+        # 1. Exact case-insensitive
+        for c in candidates:
+            if c.lower() == target_low: return c
+            
+        # 2. Starts with / Contains
+        for c in candidates:
+            c_low = c.lower()
+            if c_low.startswith(target_low) or target_low in c_low: return c
+            
+        # 3. Handle common suffixes/prefixes (like 'Outfit', 'Suit', etc.)
+        target_clean = re.sub(r"\s*(?:outfit|suit|gear|set|style)\s*$", "", target_low).strip()
+        if target_clean != target_low:
+            for c in candidates:
+                c_low = c.lower()
+                if target_clean in c_low: return c
+                
+        return None
 
 
 class ModifierRenderer:

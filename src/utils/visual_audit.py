@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """Visual auditing utility to capture app screenshots."""
 
-import os
 from PIL import ImageGrab
 from utils.debug_log import log
 

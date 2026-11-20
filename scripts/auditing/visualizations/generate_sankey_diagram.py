@@ -196,7 +196,6 @@ def create_sankey_diagram(style_to_scene, scene_to_outfit, outfit_to_mode, mode_
 def create_mermaid_diagram(style_to_scene, scene_to_outfit, outfit_to_mode, mode_to_interaction, output_path):
     """Generate Mermaid diagram: Style → Scene → Outfit → Mode → Interaction."""
     
-    import json
     with open(output_path, 'w', encoding='utf-8', newline='\n') as f:
         f.write("# Prompt Distribution Flow\n\n")
         f.write("```mermaid\n")

@@ -5,7 +5,7 @@ from utils.text_parser import TextParser
 class LLMExportDialog(ft.AlertDialog):
     def __init__(self, app):
         self.app = app
-        text_content = generate_llm_export_text(self.app.ctx)
+        text_content = generate_llm_export_text(self.app.state.ctx)
         
         self.output_field = ft.TextField(
             value=text_content,
@@ -84,7 +84,7 @@ class ImportFromTextDialog(ft.AlertDialog):
             
             if config["selected_characters"] or config["base_prompt"] != "Default":
                 self.app.restore_state(config)
-                self.app.show_toast(f"Imported successfully!")
+                self.app.show_toast("Imported successfully!")
                 self.close(None)
             else:
                 self.app.show_toast("No valid valid data found in text.", color="orange")
@@ -124,7 +124,7 @@ class LLMContentCreationDialog(ft.AlertDialog):
             
             tab_content = ft.Container(
                 content=ft.Column([
-                    ft.ElevatedButton("Copy Prompt", icon=ft.Icons.COPY, on_click=lambda e, t=text: self.copy_text(t)),
+                    ft.FilledTonalButton("Copy Prompt", icon=ft.Icons.COPY, on_click=lambda e, t=text: self.copy_text(t)),
                     ft.Divider(),
                     content_field
                 ], expand=True),

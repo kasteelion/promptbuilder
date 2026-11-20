@@ -36,3 +36,9 @@
 - **Footwear:** White platform sneakers with pink accents
 - **Accessories:** Layered delicate silver necklaces (one with star charm), small silver hoop earrings, pastel hair clips, mini white crossbody bag with cute keychain
 - **Hair/Makeup:** Hair in half-up style with ribbons and loose waves; dewy K-beauty inspired makeup with glossy pink lip
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Monochrome Noir, Artistic Anime: "Kyoto Atmosphere"]
+- Scenes: [Intimate & Sensual, Arts & Performance, Casual & Domestic]
+- Outfit_Tags: [Floral, Red, Lingerie, Velvet]

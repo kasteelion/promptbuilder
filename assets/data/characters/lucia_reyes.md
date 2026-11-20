@@ -36,3 +36,9 @@
 - **Footwear:** Heeled ankle boots (cognac brown leather)
 - **Accessories:** Medium gold hoop earrings, delicate gold layered necklaces, leather crossbody bag
 - **Hair/Makeup:** Loose waves over one shoulder; warm polished makeup
+
+
+**Affinities:**
+- Styles: [Noir, Classical Painterly, Luminous Digital Illustration]
+- Scenes: [Arts & Performance, Fashion & Glamour, Casual & Domestic]
+- Outfit_Tags: [Floral, Red, Velvet, Lingerie]

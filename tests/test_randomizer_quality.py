@@ -1,7 +1,6 @@
 
 import sys
 import os
-import random
 
 # Add project root to path
 sys.path.append(os.getcwd())
@@ -36,9 +35,14 @@ def test_randomizer_quality():
         interactions=interactions,
         color_schemes=color_schemes,
         scenes=scenes,
-        framing=framing
+        framing=framing,
+        tag_rules={"hub_tags": ["TestHub", "Indoor"]}
     )
     
+    if not characters or not base_prompts or not poses:
+        print("Skipping quality test — insufficient assets loaded.")
+        return
+
     print("\nRunning Randomization Quality Tests (20 iterations)...")
     print("-" * 60)
     
@@ -151,7 +155,7 @@ def test_randomizer_quality():
         print(f"  Base-Pose Match: {'YES' if is_coherent else 'NO'} (Overlap: {list(coherence_overlap)})")
         print("-" * 30)
 
-    print(f"\nFinal Results:")
+    print("\nFinal Results:")
     print(f"Base-Char Coherence: {base_char_matches}/{total} ({base_char_matches/total*100:.1f}%)")
     print(f"Base-Pose Coherence: {coherence_matches}/{total} ({coherence_matches/total*100:.1f}%)") # This is what we care about now
 

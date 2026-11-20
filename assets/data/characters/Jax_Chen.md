@@ -42,3 +42,9 @@
 - **Footwear:** Lightweight neon orange athletic shoes with carbon-fiber reinforced soles and high-grip tread.
 - **Accessories:** A sleek, neon orange performance tracker band on his right forearm; minimalist carbon-fiber stud earrings.
 - **Hair/Makeup:** Sharp high-fade with neon orange tips; determined, focused expression; high-oxygenated skin flush.
+
+
+**Affinities:**
+- Styles: [Neon Futurism, High-Speed Action, Monochrome Noir, Cinematic 3D]
+- Scenes: [Combat & Tactical, Athletics & Sports, Cyberpunk & Sci-Fi, Work & Industrial]
+- Outfit_Tags: [Sport, Tactical, Urban, Bold]

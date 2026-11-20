@@ -13,8 +13,9 @@ import os
 import re
 import argparse
 
-# Add project root to path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# Add project root and src to path
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.join(project_root, "src"))
 
 from logic.data_loader import DataLoader
 from core.builder import PromptBuilder
@@ -176,7 +177,8 @@ def resolve_config(config, loader, poses_data):
             # Resolve Outfit
             # The outfit string "Intimate" needs to match a key in char["outfits"]
             target_outfit = char["outfit"]
-            char_outfits = chars[real_name].get("outfits", {})
+            char_obj = chars[real_name]
+            char_outfits = getattr(char_obj, "outfits", {}) if hasattr(char_obj, "outfits") else char_obj.get("outfits", {})
             
             # Try exact match first
             if target_outfit in char_outfits:
@@ -317,6 +319,7 @@ def main():
     parser.add_argument("input_file", nargs="?", help="Path to input text file")
     parser.add_argument("--demo", action="store_true", help="Run with demo text")
     parser.add_argument("--output", "-o", help="Path to output text file")
+    parser.add_argument("--format", choices=["markdown", "prose", "midjourney", "sdxl"], default="markdown", help="Output prompt format profile")
     
     args = parser.parse_args()
     
@@ -359,10 +362,10 @@ def main():
     for idx, raw_conf in enumerate(raw_configs):
         resolved_conf = resolve_config(raw_conf, loader, poses)
         
-        prompt = builder.generate(resolved_conf)
-        all_prompts.append(f"--- PROMPT {idx+1} ---\n{prompt}")
+        prompt = builder.generate(resolved_conf, format_type=args.format)
+        all_prompts.append(f"--- PROMPT {idx+1} ({args.format.upper()}) ---\n{prompt}")
         
-        print(f"--- PROMPT {idx+1} ---")
+        print(f"--- PROMPT {idx+1} ({args.format.upper()}) ---")
         print(prompt)
         print("\n\n")
 

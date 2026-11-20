@@ -146,8 +146,51 @@
 - **secondary:** #000000
 - **accent:** #FFFFFF
 - **team:** The Tidal Sharks
+
 ## The Standard
 - **primary:** white
 - **secondary:** black
 - **accent:** blue
 - **team:** Standard Team
+
+## Maroon & Khaki
+- **primary:** #800020
+- **secondary:** #C3B091
+- **accent:** #F5F5DC
+- **team:** Autumn Casual Contrast
+
+## Olive & Rust
+- **primary:** #556B2F
+- **secondary:** #B7410E
+- **accent:** #EEDC82
+- **team:** Earthy Warm Contrast
+
+## Navy & Amber
+- **primary:** #001F3F
+- **secondary:** #FFBF00
+- **accent:** #FFFFFF
+- **team:** Complementary Pop
+
+## Charcoal & Mustard
+- **primary:** #36454F
+- **secondary:** #E1AD01
+- **accent:** #E5E4E2
+- **team:** Urban High Contrast
+
+## Emerald & Bronze
+- **primary:** #50C878
+- **secondary:** #CD7F32
+- **accent:** #FAF0E6
+- **team:** Elegant Jewel Tone
+
+## Sage & Terracotta
+- **primary:** #9DC183
+- **secondary:** #E2725B
+- **accent:** #FDF6E2
+- **team:** Warm Muted Contrast
+
+## Midnight & Crimson
+- **primary:** #0A0F24
+- **secondary:** #990000
+- **accent:** #D4AF37
+- **team:** Dramatic Cinematic Noir

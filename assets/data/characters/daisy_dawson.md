@@ -38,3 +38,9 @@
 - **Accessories:** Large black velvet hair bow clipped in a half-up hairstyle; minimalist gold hoop earrings and a delicate gold chain necklace.
 - **Hair/Makeup:** Long strawberry blonde waves styled with a black velvet bow; heavy mascara with false lashes, rosy blush-heavy cheeks, and high-shine pink lip gloss.
 * **Body:** Visible vine and leaf tattoo wrapping around her left forearm.
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Luminous Digital Illustration]
+- Scenes: [Casual & Domestic, Arts & Performance, Retro]
+- Outfit_Tags: [Coquette, Soft, Everyday, Retro]

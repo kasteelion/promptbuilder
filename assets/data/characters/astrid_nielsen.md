@@ -35,3 +35,9 @@
 - **Bottom:** High-waist tailored black straight-leg trousers
 - **Footwear:** Black leather minimalist loafers
 - **Accessories:** Thin silver stud earrings, slim black leather watch
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Monochrome Noir]
+- Scenes: [History & Culture, Arts & Performance, Casual & Domestic]
+- Outfit_Tags: [Elegant, Retro, Minimalist, Soft]

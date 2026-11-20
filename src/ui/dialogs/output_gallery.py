@@ -157,7 +157,7 @@ class OutputGalleryDialog(ft.AlertDialog):
                 encoded_string = base64.b64encode(image_file.read()).decode("utf-8")
                 img_data["base64"] = encoded_string
                 return encoded_string
-        except Exception as e:
+        except Exception:
             return None
 
     def create_thumbnail(self, img_data):

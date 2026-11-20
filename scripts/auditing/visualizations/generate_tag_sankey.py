@@ -318,7 +318,6 @@ def generate_sankey():
     print(f"Saved Mermaid Markdown to {mermaid_path}")
 
 def generate_mermaid(s2st, st2o, output_path):
-    import json
     with open(output_path, 'w', encoding='utf-8', newline='\n') as f:
         f.write("# Tag Distribution Flow\n\n")
         f.write("```mermaid\n")

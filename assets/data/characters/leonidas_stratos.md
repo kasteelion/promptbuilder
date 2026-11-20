@@ -33,3 +33,9 @@
 - **Footwear:** Modern black performance cross-trainers
 - **Accessories:** Black smartwatch, simple gold band
 - **Hair/Makeup:** Short disciplined crop; neatly groomed beard
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Monochrome Noir, Cinematic 3D]
+- Scenes: [History & Culture, Combat & Tactical, Arts & Performance]
+- Outfit_Tags: [Rugged, Dark, Greek, White]

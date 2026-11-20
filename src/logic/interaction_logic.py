@@ -1,13 +1,14 @@
 import random
 from typing import Dict, Any, List
-from utils.color_scheme import parse_color_schemes, substitute_colors
+from utils.color_scheme import substitute_colors
 
 class InteractionLogic:
     """Encapsulates business logic for scene and interaction generation."""
     
     def __init__(self, app_state):
         self.app_state = app_state
-        self.color_schemes = parse_color_schemes("assets/data/lists/color_schemes.md")
+        # Lazily access color schemes from context when needed to avoid issues if data isn't loaded yet
+        # self.color_schemes = parse_color_schemes("assets/data/lists/color_schemes.md")
         
     def resolve_interaction(self, text: str, characters: List[Any]) -> str:
         """Replace placeholders in interaction text with character names."""
@@ -101,12 +102,13 @@ class InteractionLogic:
         # Check for placeholders
         if "{team}" in raw_text or "{primary_color}" in raw_text:
             # Pick a random team
-            if self.color_schemes:
-                team_name = random.choice(list(self.color_schemes.keys()))
-                scheme = self.color_schemes[team_name]
+            schemes = self.app_state.ctx.color_schemes
+            if schemes:
+                team_name = random.choice(list(schemes.keys()))
+                scheme = schemes[team_name]
                 # Substitute
                 resolved = substitute_colors(raw_text, scheme)
-                # print(f"DEBUG_COLOR: Resolved {outfit_name} -> {team_name}")
+                # Color resolution logged at debug level if needed
                 return resolved
                 
         return raw_text

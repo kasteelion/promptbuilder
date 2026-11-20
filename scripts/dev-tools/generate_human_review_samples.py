@@ -9,7 +9,6 @@ Generates a targeted set of prompts from specific score buckets:
 - CLASH (<150)
 """
 
-import os
 import sys
 from pathlib import Path
 

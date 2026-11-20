@@ -27,3 +27,9 @@
 - **Footwear:** High-top chunky sneakers in neon green and black.
 - **Accessories:** Silver chain necklace with padlock, black fingerless gloves, crossbody sling bag.
 - **Hair/Makeup:** Hair textured with matte wax to look windblown; optional black eyeliner smudged on lower lash line.
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Neon Futurism, High-Speed Action]
+- Scenes: [Cyberpunk & Sci-Fi, Athletics & Sports, Urban]
+- Outfit_Tags: [Techwear, Sharp, Red, Summer, Casual]

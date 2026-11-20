@@ -44,3 +44,9 @@
 - **Accessories:** Large gold hoop earrings, layered gold necklaces, beaded wrap bracelet; optional patterned headscarf for funk styling
 - **Hair/Makeup:** Full picked-out afro with side part; warm bold makeup emphasizing brows and lip
 - **Signature:** Funky beaded bracelet and bold patterned headscarf option
+
+
+**Affinities:**
+- Styles: [Monochrome Noir, Classical Painterly, Luminous Digital Illustration]
+- Scenes: [Arts & Performance, Fashion & Glamour, Thematic & Cinematic]
+- Outfit_Tags: [Dark, Fashion, Floral, Red]

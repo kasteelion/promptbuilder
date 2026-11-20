@@ -42,3 +42,9 @@
 - **Footwear:** High-top skate sneakers in black and neon green with visible scuff marks on the suede.
 - **Accessories:** A few neon green beads in her locs; a thick silver chain necklace; a black utility crossbody bag slung tight across her chest.
 - **Hair/Makeup:** Long locs tied back into a high voluminous bun; sharp neon green winged eyeliner and glossy lips.
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Neon Futurism, Monochrome Noir]
+- Scenes: [Arts & Performance, Cyberpunk & Sci-Fi, Casual & Domestic]
+- Outfit_Tags: [Black, Techwear, Summer, Floral]

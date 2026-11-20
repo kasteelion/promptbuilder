@@ -96,7 +96,7 @@ def analyze_prompt_distribution(directory):
             if metadata['interaction']:
                 interaction_counts[metadata['interaction']] += 1
     
-    print(f"\n# Prompt Distribution Analysis")
+    print("\n# Prompt Distribution Analysis")
     print(f"\nTotal Prompts Analyzed: {total_prompts}\n")
     
     def print_dist(title, data, total, limit=10):

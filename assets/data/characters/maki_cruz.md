@@ -34,3 +34,9 @@
 - **Footwear:** Black and white Vans Old Skool skate shoes (worn and scuffed)
 - **Accessories:** Simple silver chain necklace, small silver hoop earrings, black digital watch, woven friendship bracelet
 - **Hair/Makeup:** Hair loose and natural, tucked behind ears; no makeup
+
+
+**Affinities:**
+- Styles: [Monochrome Noir, Luminous Digital Illustration, Artistic Anime: "Kyoto Atmosphere"]
+- Scenes: [Urban, Arts & Performance, Cyberpunk & Sci-Fi]
+- Outfit_Tags: [Rugged, Dark, Techwear, Minimalist]

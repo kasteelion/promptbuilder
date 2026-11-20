@@ -31,3 +31,9 @@
 - **Footwear:** Black leather Chelsea boots with a Cuban heel.
 - **Accessories:** Multiple silver rings on every finger (skulls, gems); layered silver chain necklaces; chipped black nail polish.
 - **Hair/Makeup:** Hair tousled with sea salt spray; smudged guyliner; subtle lip stain.
+
+
+**Affinities:**
+- Styles: [Monochrome Noir, Classical Painterly, Analog Film]
+- Scenes: [Arts & Performance, Intimate & Sensual, Urban]
+- Outfit_Tags: [Dark, Velvet, Lingerie, Floral]

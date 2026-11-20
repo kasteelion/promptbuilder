@@ -51,3 +51,9 @@
 - **Footwear:** Black steel-toe work boots (worn and scuffed)
 - **Accessories:** Black leather belt, carabiner with keys clipped to belt loop, shop rag hanging from back pocket, simple steel ring
 - **Hair/Makeup:** Short tousled hair pushed back; no makeup
+
+
+**Affinities:**
+- Styles: [Analog Film, Monochrome Noir, Classical Painterly]
+- Scenes: [History & Culture, Arts & Performance, Intimate & Sensual]
+- Outfit_Tags: [Vintage, Rugged, Sport, Layered]

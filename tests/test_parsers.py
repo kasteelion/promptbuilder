@@ -13,10 +13,10 @@ class TestCharacterParser(unittest.TestCase):
 """
         chars = CharacterParser.parse_characters(markdown)
         self.assertIn("Test Char", chars)
-        self.assertEqual(chars["Test Char"]["appearance"], "A test character.")
-        self.assertEqual(chars["Test Char"]["gender"], "F")
-        self.assertIn("Outfit 1", chars["Test Char"]["outfits"])
-        self.assertEqual(chars["Test Char"]["outfits"]["Outfit 1"], "Description 1")
+        self.assertEqual(chars["Test Char"].appearance, "A test character.")
+        self.assertEqual(chars["Test Char"].gender, "F")
+        self.assertIn("Outfit 1", chars["Test Char"].outfits)
+        self.assertEqual(chars["Test Char"].outfits["Outfit 1"], "Description 1")
 
     def test_parse_multiple_characters(self):
         markdown = """
@@ -46,7 +46,7 @@ class TestCharacterParser(unittest.TestCase):
 - Shoes: Loafers
 """
         chars = CharacterParser.parse_characters(markdown)
-        outfits = chars["Structured Char"]["outfits"]
+        outfits = chars["Structured Char"].outfits
         self.assertIn("School Uniform", outfits)
         self.assertIsInstance(outfits["School Uniform"], dict)
         self.assertEqual(outfits["School Uniform"]["Top"], "White shirt")
@@ -60,7 +60,7 @@ class TestCharacterParser(unittest.TestCase):
 """
         chars = CharacterParser.parse_characters(markdown)
         # Parser adds empty appearance if missing
-        self.assertEqual(chars["Ghost Char"]["appearance"], "")
+        self.assertEqual(chars["Ghost Char"].appearance, "")
 
     def test_invalid_character_block(self):
         # A block without a name header shouldn't crash it, but might be skipped or handled specific way

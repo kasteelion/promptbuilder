@@ -1,75 +1,67 @@
-# API Reference (Internal)
+﻿# API Reference (Internal)
 
-This document provides a high-level overview of the core classes and modules in the Prompt Builder codebase. This is intended for developers who wish to extend or modify the application.
+This document provides a high-level overview of the core classes and modules in the Prompt Builder codebase.
 
-## Logic Layer (`logic/`)
+## Logic Layer (logic/)
 
-### `DataLoader`
+### DataLoader
 The primary interface for the file system.
-- **Responsibility**: Loads characters, outfits, scenes, and interactions from the `data/` directory.
+- **Responsibility**: Loads characters, outfits, scenes, and interactions from ssets/data/.
 - **Key Methods**:
-    - `load_all_characters()`: Returns a list of character objects.
-    - `get_outfits(gender)`: Returns shared outfits for the specified gender.
-    - `get_scenes()`: Returns all scene presets.
+    - load_characters_metadata(): Lightweight load for gallery display.
+    - get_character_details(name): Full lazy-load of character data.
+    - load_presets(filename): Loads generic assets like scenes and poses.
 
-### `MarkdownParser`
-A regex-based parser for human-readable content.
-- **Responsibility**: Converts Markdown files into structured Python dictionaries.
-- **Key Methods**:
-    - `parse_character(content)`: Parses a character's Markdown content.
-    - `parse_outfits(content)`: Parses the shared outfit files.
-
-### `PromptRandomizer`
+### PromptRandomizer
 Handles the intelligent randomization of prompt elements.
-- **Responsibility**: Randomly selects characters, outfits, and scenes while respecting user-defined constraints and character counts.
-
-## Core Engine (`core/`)
-
-### `PromptBuilder`
-The central engine for prompt assembly.
-- **Responsibility**: Takes the current application state and produces a formatted prompt string.
+- **Responsibility**: Selects coherent combinations of character, scene, and style using a weighted scoring engine.
 - **Key Methods**:
-    - `build_prompt(state)`: The main entry point for prompt generation.
+    - andomize(): Generates and scores candidates, returning the best configuration.
 
-### Renderers (`core/renderers.py`)
-Small, focused functions for formatting specific parts of the prompt.
-- `render_character()`: Formats a character's traits and outfit.
-- `render_scene()`: Formats the environment and lighting.
+### AppState
+Centralized state management.
+- **Responsibility**: Coordinates between UI sections and logic controllers.
+- **Key Methods**:
+    - get_prompt(): Triggers the builder to generate the final prompt string.
 
-## UI Layer (`ui/`)
+## Core Engine (core/)
 
-### `ThemeManager` (`themes/theme_manager.py`)
-Manages application styling and dynamic theming.
-- **Responsibility**: Handles theme loading, switching, and color palette management.
-- **Key Features**:
-    - Derives `hover_bg` and `placeholder_fg` automatically if not provided by the theme.
-    - `theme_toplevel(window)`: Applies theme background and attaches the manager to Toplevel dialogs.
-    - `apply_theme(theme_name)`: Updates all standard `ttk` styles and triggers manual updates for custom widgets.
+### PromptBuilder
+The central engine for prompt assembly.
+- **Responsibility**: Assembles formatted prompts from a PromptConfig model.
+- **Key Methods**:
+    - generate(config): Produces the final prompt string.
+    - generate_summary(config): Produces the human-readable UI summary.
 
-### `SearchableCombobox` (`ui/searchable_combobox.py`)
-A custom themed combobox with filtering and favorites.
-- **Responsibility**: Provides a better user experience for long lists (characters, outfits).
-- **Key Features**:
-    - Real-time filtering with smart prioritization (Starts With > Contains).
-    - Favorites system with visual indicators.
-    - Fully themed dropdown and entry components.
+### PromptConfig (core/models.py)
+The primary data model for prompt generation.
+- **Fields**: ase_prompt, scene, selected_characters, 
+otes, metadata.
 
-### `StateManager`
-Orchestrates application state and undo/redo.
-- **Responsibility**: Maintains the current selection, handles presets, and coordinates with `UndoManager`.
+### Renderers (core/renderers/)
+Modules responsible for formatting specific segments of the prompt.
+- CharacterRenderer, OutfitRenderer, PoseRenderer, SceneRenderer, NotesRenderer.
 
-### `FontManager`
-Handles UI scaling and responsive typography.
-- **Responsibility**: Calculates font sizes based on window dimensions and updates registered widgets.
+## UI Layer (ui/)
 
-## Utilities (`utils/`)
+### FletPromptBuilder
+The main application entry point.
+- **Responsibility**: Initializes the Flet page and manages modular sections.
 
-### `Logger` (`utils/logger.py`)
-- **Responsibility**: Provides consistent logging across the application. Logs are written to `promptbuilder_debug.log`.
+### Modular Sections (ui/sections/)
+- ToolbarSection, GallerySection, RosterSection, SidebarSection, ConsoleSection.
 
-### `Notification` (`utils/notification.py`)
-- **Responsibility**: Provides a unified way to show feedback to the user via toasts, status bars, or modal dialogs.
+### CharacterController (logic/controllers/)
+- **Responsibility**: Handles additions, removals, and updates to the character roster.
+
+## Utilities (utils/)
+
+### PlatformUtils
+- **Responsibility**: Provides web-safe wrappers for OS-specific operations like clipboard and file opening.
+
+### ThemeManager (core/flet_theme_manager.py)
+- **Responsibility**: Applies the "Nebula" design system styling to the Flet application.
 
 ---
 
-*Last updated: December 2025*
+*Last updated: May 2026*

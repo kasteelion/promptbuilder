@@ -1,6 +1,6 @@
 import flet as ft
-from pathlib import Path
 from ui.components.icon_button import SafeIconButton
+from core.flet_theme_manager import ThemeManager
 
 class DashboardSection(ft.Container):
     def __init__(self, app):
@@ -9,7 +9,19 @@ class DashboardSection(ft.Container):
         self.visible = False
         self.expand = True
         self.padding = 20
-        self.bgcolor = "background"
+        self.bgcolor = ft.Colors.with_opacity(0.85, ThemeManager.colors["surface"])
+        self.border_radius = 16
+        self.border = ft.Border.all(1, ft.Colors.with_opacity(0.15, ThemeManager.colors["outline"]))
+        self.shadow = ft.BoxShadow(
+            blur_radius=30,
+            color=ft.Colors.with_opacity(0.3, ThemeManager.colors["accent"]),
+        )
+        self.left = 60
+        self.top = 60
+        self.right = 60
+        self.bottom = 60
+        self.scale = 0.95
+        self.animate_scale = ft.Animation(400, ft.AnimationCurve.EASE_OUT_EXPO)
         
         # --- UI Components ---
         self.stats_row = ft.Row(spacing=20, alignment=ft.MainAxisAlignment.CENTER)
@@ -60,11 +72,36 @@ class DashboardSection(ft.Container):
     def show(self, e=None):
         self.visible = True
         self.refresh_data()
+        self.scale = 0.95
         self.page.update()
         
+        # Animate scale intro
+        import threading
+        import time
+        def _trigger():
+            time.sleep(0.05)
+            try:
+                self.scale = 1.0
+                self.update()
+            except Exception:
+                pass
+        threading.Thread(target=_trigger, daemon=True).start()
+        
     def hide(self, e=None):
-        self.visible = False
-        self.page.update()
+        self.scale = 0.95
+        self.update()
+        
+        # Wait for scale transition before hiding container
+        import threading
+        import time
+        def _trigger():
+            time.sleep(0.15)
+            try:
+                self.visible = False
+                self.page.update()
+            except Exception:
+                pass
+        threading.Thread(target=_trigger, daemon=True).start()
         
     def refresh_data(self):
         """Refresh all dashboard data."""
@@ -88,12 +125,12 @@ class DashboardSection(ft.Container):
                 ft.Divider(height=40, color=ft.Colors.TRANSPARENT),
                 ft.Text("Quick Actions", size=16, weight="bold"),
                 ft.Row([
-                    ft.ElevatedButton(
+                    ft.FilledTonalButton(
                         "Run Health Check",
                         icon="health_and_safety",
                         on_click=lambda e: setattr(self.tabs, 'selected_index', 1) or self._set_view(1) or self.update() or self._run_health_checks()
                     ),
-                    ft.ElevatedButton(
+                    ft.FilledTonalButton(
                         "Refresh Data",
                         icon="refresh",
                         on_click=lambda e: self.refresh_data()
@@ -105,7 +142,7 @@ class DashboardSection(ft.Container):
                 ft.Text("System Health", size=24, weight="bold"),
                 ft.Text("Automated checks for missing files and integrity issues.", color="outline"),
                 ft.Divider(),
-                ft.ElevatedButton("Run Auto-Diagnosis", icon="play_arrow", on_click=lambda e: self._run_health_checks()),
+                ft.FilledTonalButton("Run Auto-Diagnosis", icon="play_arrow", on_click=lambda e: self._run_health_checks()),
                 ft.Divider(height=20, color=ft.Colors.TRANSPARENT),
                 self.health_list
             ])
@@ -117,7 +154,7 @@ class DashboardSection(ft.Container):
                 ft.Container(
                     content=self.tag_matrix,
                     expand=True,
-                    border=ft.border.all(1, "outlineVariant"),
+                    border=ft.Border.all(1, "outlineVariant"),
                     border_radius=10,
                     padding=10
                 )
@@ -128,8 +165,8 @@ class DashboardSection(ft.Container):
         # Calculate stats
         # Use metadata for counts to support lazy loading
         total_chars = len(self.app.state.ctx.characters_metadata)
-        scenes_data = self.app.data_loader.load_presets("scenes.md")
-        interactions_data = self.app.data_loader.load_interactions()
+        scenes_data = self.app.state.data_loader.load_presets("scenes.md")
+        interactions_data = self.app.state.data_loader.load_interactions()
         
         total_scenes = sum(len(cat) for cat in scenes_data.values())
         total_interactions = sum(len(cat) for cat in interactions_data.values())
@@ -163,7 +200,7 @@ class DashboardSection(ft.Container):
         # 1. Missing Photos
         # Use metadata to avoid loading all full characters
         chars_meta = self.app.state.ctx.characters_metadata
-        chars_dir = self.app.data_loader._find_characters_dir()
+        chars_dir = self.app.state.data_loader._find_characters_dir()
         
         missing_photos = []
         for name, meta in chars_meta.items():
@@ -172,7 +209,7 @@ class DashboardSection(ft.Container):
             from utils.validation import sanitize_filename
             base = sanitize_filename(name).lower().replace(" ", "_")
             photo_found = False
-            for ext in [".png", ".jpg", ".jpeg"]:
+            for ext in [".webp", ".png", ".jpg", ".jpeg"]:
                 if (chars_dir / f"{base}_photo{ext}").exists():
                     photo_found = True
                     break
@@ -213,8 +250,8 @@ class DashboardSection(ft.Container):
                     padding=40
                 )
             )
-            
-        self.health_list.update()
+        if self.health_list.page:
+            self.health_list.update()
 
     def _build_tag_matrix(self):
         """Aggregate all tags."""
@@ -228,19 +265,23 @@ class DashboardSection(ft.Container):
             if isinstance(tags, str): tags = tags.split(",")
             for t in tags:
                 t = t.strip().lower()
-                if not t: continue
-                if t not in tag_counts: tag_counts[t] = {"chars": 0, "presets": 0}
+                if not t:
+                    continue
+                if t not in tag_counts:
+                    tag_counts[t] = {"chars": 0, "presets": 0}
                 tag_counts[t]["chars"] += 1
 
         # Count Scenes
-        scenes = self.app.data_loader.load_presets("scenes.md")
+        scenes = self.app.state.data_loader.load_presets("scenes.md")
         for cat in scenes.values():
             for s in cat.values():
                 tags = s.get("tags", [])
                 for t in tags:
                     t = t.strip().lower()
-                    if not t: continue
-                    if t not in tag_counts: tag_counts[t] = {"chars": 0, "presets": 0}
+                    if not t:
+                        continue
+                    if t not in tag_counts:
+                        tag_counts[t] = {"chars": 0, "presets": 0}
                     tag_counts[t]["presets"] += 1
                     
         # Sort by total

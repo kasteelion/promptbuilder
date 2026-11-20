@@ -1,5 +1,47 @@
 {
   "characters": {
+    "Amina Benali": {
+      "name": "Amina Benali",
+      "tags": [
+        "Female",
+        "Approachable",
+        "Chic",
+        "Commanding",
+        "Content-Creator",
+        "North-African",
+        "Home",
+        "Casual",
+        "sci-fi",
+        "noir",
+        "work"
+      ],
+      "photo": "amina_benali_photo.png",
+      "vibe": "Engaging, Strategic, Warm-P...",
+      "bearing": "excellent upright posture (...",
+      "age_presentation": "mid-20s presentation",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777852853.189993,
+      "file_size": 5129,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Monochrome Noir",
+          "Artistic Anime: \"Kyoto Atmosphere\""
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Work & Industrial",
+          "Fashion & Glamour"
+        ],
+        "Outfit_Tags": [
+          "Clean",
+          "Corporate",
+          "Urban",
+          "Retro"
+        ]
+      }
+    },
     "Aaliyah Chen": {
       "name": "Aaliyah Chen",
       "tags": [
@@ -18,8 +60,106 @@
       "bearing": "relaxed, fluid movement",
       "age_presentation": "mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.8977592,
-      "file_size": 2472
+      "outfits": {},
+      "mtime": 1777852846.937652,
+      "file_size": 2671,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Soft Vector"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Arts & Performance",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Boho",
+          "Sport",
+          "Everyday",
+          "Layered"
+        ]
+      }
+    },
+    "Astrid Nielsen": {
+      "name": "Astrid Nielsen",
+      "tags": [
+        "Female",
+        "Chic",
+        "Cool-Toned",
+        "Minimalist",
+        "Nordic",
+        "Statuesque",
+        "vintage",
+        "Retro",
+        "Casual"
+      ],
+      "photo": "astrid_nielsen_photo.png",
+      "vibe": "Composed, Restrained, elegant",
+      "bearing": "controlled, minimal movement",
+      "age_presentation": "early 30s presentation",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777852862.2363353,
+      "file_size": 2646,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Casual & Domestic"
+        ],
+        "Outfit_Tags": [
+          "Elegant",
+          "Retro",
+          "Minimalist",
+          "Soft"
+        ]
+      }
+    },
+    "Amira Khalil": {
+      "name": "Amira Khalil",
+      "tags": [
+        "Female",
+        "Chic",
+        "Hijabi",
+        "Middle Eastern",
+        "Minimalist",
+        "traditional",
+        "vintage",
+        "Retro"
+      ],
+      "photo": "amira_khalil_photo.png",
+      "vibe": "Calm, Dignified, Inwardly S...",
+      "bearing": "upright, deliberate movement",
+      "age_presentation": "late 20s to early 30s prese...",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777852856.2839727,
+      "file_size": 2506,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Analog Film",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Intimate & Sensual"
+        ],
+        "Outfit_Tags": [
+          "Elegant",
+          "Traditional",
+          "Layered",
+          "Boho"
+        ]
+      }
     },
     "Aiyana Blackfeather": {
       "name": "Aiyana Blackfeather",
@@ -44,51 +184,68 @@
       "bearing": "grounded centered posture",
       "age_presentation": "mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.8983278,
-      "file_size": 4559
+      "outfits": {},
+      "mtime": 1777852849.9373739,
+      "file_size": 4770,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Monochrome Noir",
+          "Luminous Digital Illustration"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Urban",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Sport",
+          "Bold",
+          "layered",
+          "Minimalist"
+        ]
+      }
     },
-    "Amina Benali": {
-      "name": "Amina Benali",
+    "Avery Blake": {
+      "name": "Avery Blake",
       "tags": [
         "Female",
-        "Approachable",
-        "Chic",
+        "Athletic",
         "Commanding",
-        "Content-Creator",
-        "North-African",
-        "Home",
-        "Casual",
-        "sci-fi",
+        "creative",
+        "Dramatic",
+        "Edgy",
+        "Sport",
+        "fantasy",
         "noir",
-        "work"
+        "intimate"
       ],
-      "photo": "amina_benali_photo.png",
-      "vibe": "Engaging, Strategic, Warm-P...",
-      "bearing": "excellent upright posture (...",
-      "age_presentation": "mid-20s presentation",
+      "photo": "avery_blake_photo.png",
+      "vibe": "Edgy, Provocative, Rebellio...",
+      "bearing": "sensual movement, Edgy",
+      "age_presentation": "mid-to-late 20s presentation",
       "gender": "F",
-      "mtime": 1771798450.8994727,
-      "file_size": 4893
-    },
-    "Amira Khalil": {
-      "name": "Amira Khalil",
-      "tags": [
-        "Female",
-        "Chic",
-        "Hijabi",
-        "Middle Eastern",
-        "Minimalist",
-        "traditional",
-        "vintage",
-        "Retro"
-      ],
-      "photo": "amira_khalil_photo.png",
-      "vibe": "Calm, Dignified, Inwardly S...",
-      "bearing": "upright, deliberate movement",
-      "age_presentation": "late 20s to early 30s prese...",
-      "gender": "F",
-      "mtime": 1771798450.8999805,
-      "file_size": 2297
+      "outfits": {},
+      "mtime": 1777852868.6611593,
+      "file_size": 3522,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Monochrome Noir",
+          "Artistic Anime: \"Kyoto Atmosphere\""
+        ],
+        "Scenes": [
+          "Intimate & Sensual",
+          "Combat & Tactical",
+          "Arts & Performance"
+        ],
+        "Outfit_Tags": [
+          "Sport",
+          "Villain",
+          "Layered",
+          "Cyberpunk"
+        ]
+      }
     },
     "Aryan Kapoor": {
       "name": "Aryan Kapoor",
@@ -114,29 +271,27 @@
       "bearing": "walks with a measured, expa...",
       "age_presentation": "early 30s",
       "gender": "M",
-      "mtime": 1771798450.9004948,
-      "file_size": 2202
-    },
-    "Astrid Nielsen": {
-      "name": "Astrid Nielsen",
-      "tags": [
-        "Female",
-        "Chic",
-        "Cool-Toned",
-        "Minimalist",
-        "Nordic",
-        "Statuesque",
-        "vintage",
-        "Retro",
-        "Casual"
-      ],
-      "photo": "astrid_nielsen_photo.png",
-      "vibe": "Composed, Restrained, elegant",
-      "bearing": "controlled, minimal movement",
-      "age_presentation": "early 30s presentation",
-      "gender": "F",
-      "mtime": 1771895328.5291922,
-      "file_size": 2441
+      "outfits": {},
+      "mtime": 1777852859.279825,
+      "file_size": 2417,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Monochrome Noir",
+          "Luminous Digital Illustration"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Urban"
+        ],
+        "Outfit_Tags": [
+          "Elegant",
+          "Corporate",
+          "Vintage",
+          "Layered"
+        ]
+      }
     },
     "Audrey Thorne": {
       "name": "Audrey Thorne",
@@ -159,57 +314,27 @@
       "bearing": "Deliberate and grounded mov...",
       "age_presentation": "Mid-20s",
       "gender": "F",
-      "mtime": 1771798450.9013946,
-      "file_size": 3799
-    },
-    "Avery Blake": {
-      "name": "Avery Blake",
-      "tags": [
-        "Female",
-        "Athletic",
-        "Commanding",
-        "creative",
-        "Dramatic",
-        "Edgy",
-        "Sport",
-        "fantasy",
-        "noir",
-        "intimate"
-      ],
-      "photo": "avery_blake_photo.png",
-      "vibe": "Edgy, Provocative, Rebellio...",
-      "bearing": "sensual movement, Edgy",
-      "age_presentation": "mid-to-late 20s presentation",
-      "gender": "F",
-      "mtime": 1771798450.9029057,
-      "file_size": 3281
-    },
-    "Callum Doherty": {
-      "name": "Callum Doherty",
-      "tags": [
-        "Male",
-        "Celtic",
-        "Confident",
-        "Craftsman",
-        "Freckled",
-        "Playful",
-        "Red-Haired",
-        "Rugged",
-        "vintage",
-        "Retro",
-        "Casual",
-        "Sport",
-        "noir",
-        "urban",
-        "social"
-      ],
-      "photo": "callum_doherty_photo.png",
-      "vibe": "Energetic, Cheeky, Hardwork...",
-      "bearing": "relaxed and open posture",
-      "age_presentation": "mid-to-late 20s",
-      "gender": "M",
-      "mtime": 1771798450.9029057,
-      "file_size": 2497
+      "outfits": {},
+      "mtime": 1777852865.2786586,
+      "file_size": 4002,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Luminous Digital Illustration",
+          "Soft Vector"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Urban",
+          "Fashion & Glamour"
+        ],
+        "Outfit_Tags": [
+          "Elegant",
+          "Layered",
+          "Chic",
+          "Boho"
+        ]
+      }
     },
     "Camila Vargas": {
       "name": "Camila Vargas",
@@ -235,8 +360,27 @@
       "bearing": "quick, sharp, and precise d...",
       "age_presentation": "late 30s presentation",
       "gender": "F",
-      "mtime": 1771798450.9044473,
-      "file_size": 2917
+      "outfits": {},
+      "mtime": 1777852874.4149384,
+      "file_size": 3120,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Monochrome Noir",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Combat & Tactical",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Sport",
+          "Retro",
+          "Villain",
+          "Elegant"
+        ]
+      }
     },
     "Celine Voss": {
       "name": "Celine Voss",
@@ -256,31 +400,73 @@
       "bearing": "stillness",
       "age_presentation": "mid-30s presentation",
       "gender": "F",
-      "mtime": 1771798450.9054496,
-      "file_size": 1776
+      "outfits": {},
+      "mtime": 1777852877.7092903,
+      "file_size": 1994,
+      "affinities": {
+        "Styles": [
+          "Monochrome Noir",
+          "Classical Painterly",
+          "Studio Photorealism"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Intimate & Sensual",
+          "Cyberpunk & Sci-Fi"
+        ],
+        "Outfit_Tags": [
+          "Elegant",
+          "Severe",
+          "Functional",
+          "Villain"
+        ]
+      }
     },
-    "Chayton Red-Elk": {
-      "name": "Chayton Red-Elk",
+    "Callum Doherty": {
+      "name": "Callum Doherty",
       "tags": [
         "Male",
-        "creative",
-        "Indigenous",
-        "Intellectual",
-        "Long-Hair",
-        "modern",
+        "Celtic",
+        "Confident",
+        "Craftsman",
+        "Freckled",
+        "Playful",
+        "Red-Haired",
         "Rugged",
-        "urban",
-        "noir",
+        "vintage",
+        "Retro",
         "Casual",
-        "Sport"
+        "Sport",
+        "noir",
+        "urban",
+        "social"
       ],
-      "photo": "chayton_red-elk_photo.png",
-      "vibe": "Grounded, Stoic, Observant,...",
-      "bearing": "stands completely still wit...",
-      "age_presentation": "late 20s",
+      "photo": "callum_doherty_photo.png",
+      "vibe": "Energetic, Cheeky, Hardwork...",
+      "bearing": "relaxed and open posture",
+      "age_presentation": "mid-to-late 20s",
       "gender": "M",
-      "mtime": 1771798450.9064612,
-      "file_size": 2113
+      "outfits": {},
+      "mtime": 1777852871.482,
+      "file_size": 2673,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Retro Anime"
+        ],
+        "Scenes": [
+          "Urban",
+          "Sports",
+          "Arts & Performance"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Casual",
+          "Rugged",
+          "Sport"
+        ]
+      }
     },
     "Chiara Lombardi": {
       "name": "Chiara Lombardi",
@@ -302,35 +488,112 @@
       "bearing": "relaxed confidence",
       "age_presentation": "early 30s presentation",
       "gender": "F",
-      "mtime": 1771798450.9064612,
-      "file_size": 2086
+      "outfits": {},
+      "mtime": 1777852883.649031,
+      "file_size": 2283,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Retro Anime"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Casual & Domestic",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Soft",
+          "Layered",
+          "Chic"
+        ]
+      }
     },
-    "Clara Thorne": {
-      "name": "Clara Thorne",
+    "Chayton Red-Elk": {
+      "name": "Chayton Red-Elk",
+      "tags": [
+        "Male",
+        "creative",
+        "Indigenous",
+        "Intellectual",
+        "Long-Hair",
+        "modern",
+        "Rugged",
+        "urban",
+        "noir",
+        "Casual",
+        "Sport"
+      ],
+      "photo": "chayton_red-elk_photo.png",
+      "vibe": "Grounded, Stoic, Observant,...",
+      "bearing": "stands completely still wit...",
+      "age_presentation": "late 20s",
+      "gender": "M",
+      "outfits": {},
+      "mtime": 1777852880.6834693,
+      "file_size": 2304,
+      "affinities": {
+        "Styles": [
+          "Monochrome Noir",
+          "Classical Painterly",
+          "Analog Film"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Urban"
+        ],
+        "Outfit_Tags": [
+          "Rugged",
+          "Layered",
+          "Sport",
+          "Casual"
+        ]
+      }
+    },
+    "Diesel Murphy": {
+      "name": "Diesel Murphy",
       "tags": [
         "Female",
-        "Caucasian",
-        "Studious",
-        "Feminine",
-        "Classic",
-        "Observant",
-        "Composed",
-        "Intelligent",
-        "Petite",
-        "Casual",
-        "work",
+        "Commanding",
+        "Lesbian",
+        "Rugged",
         "vintage",
         "Retro",
-        "social",
-        "urban"
+        "intimate",
+        "Casual",
+        "sci-fi",
+        "Sport",
+        "noir",
+        "work"
       ],
-      "photo": "clara_thorne_photo.png",
-      "vibe": "Observant, Composed, Intell...",
-      "bearing": "Upright and attentive posture",
-      "age_presentation": "20-23",
+      "photo": "diesel_murphy_photo.png",
+      "vibe": "Confident, Capable, Straigh...",
+      "bearing": "wide stable stance with wei...",
+      "age_presentation": "late 20s to early 30s prese...",
       "gender": "F",
-      "mtime": 1771798450.9074633,
-      "file_size": 2891
+      "outfits": {},
+      "mtime": 1777852895.6663759,
+      "file_size": 5314,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Monochrome Noir",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Intimate & Sensual"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Rugged",
+          "Sport",
+          "Layered"
+        ]
+      }
     },
     "Daisy Dawson": {
       "name": "Daisy Dawson",
@@ -356,8 +619,73 @@
       "bearing": "Relaxed and leaning posture",
       "age_presentation": "20-24",
       "gender": "F",
-      "mtime": 1771798450.908913,
-      "file_size": 2978
+      "outfits": {},
+      "mtime": 1777852889.5475035,
+      "file_size": 3184,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Luminous Digital Illustration"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Arts & Performance",
+          "Retro"
+        ],
+        "Outfit_Tags": [
+          "Coquette",
+          "Soft",
+          "Everyday",
+          "Retro"
+        ]
+      }
+    },
+    "Clara Thorne": {
+      "name": "Clara Thorne",
+      "tags": [
+        "Female",
+        "Caucasian",
+        "Studious",
+        "Feminine",
+        "Classic",
+        "Observant",
+        "Composed",
+        "Intelligent",
+        "Petite",
+        "Casual",
+        "work",
+        "vintage",
+        "Retro",
+        "social",
+        "urban"
+      ],
+      "photo": "clara_thorne_photo.png",
+      "vibe": "Observant, Composed, Intell...",
+      "bearing": "Upright and attentive posture",
+      "age_presentation": "20-23",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777852886.522576,
+      "file_size": 3080,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Analog Film",
+          "Retro Anime"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Urban",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Elegant",
+          "Vintage",
+          "Soft",
+          "Academic"
+        ]
+      }
     },
     "Diego Morales": {
       "name": "Diego Morales",
@@ -382,32 +710,27 @@
       "bearing": "easy relaxed posture",
       "age_presentation": "late 20s presentation",
       "gender": "M",
-      "mtime": 1771798450.908913,
-      "file_size": 3743
-    },
-    "Diesel Murphy": {
-      "name": "Diesel Murphy",
-      "tags": [
-        "Female",
-        "Commanding",
-        "Lesbian",
-        "Rugged",
-        "vintage",
-        "Retro",
-        "intimate",
-        "Casual",
-        "sci-fi",
-        "Sport",
-        "noir",
-        "work"
-      ],
-      "photo": "diesel_murphy_photo.png",
-      "vibe": "Confident, Capable, Straigh...",
-      "bearing": "wide stable stance with wei...",
-      "age_presentation": "late 20s to early 30s prese...",
-      "gender": "F",
-      "mtime": 1771798450.908913,
-      "file_size": 5109
+      "outfits": {},
+      "mtime": 1777852892.520133,
+      "file_size": 3947,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Casual & Domestic"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Retro",
+          "Sport",
+          "everyday"
+        ]
+      }
     },
     "Efe Kouadio": {
       "name": "Efe Kouadio",
@@ -428,8 +751,27 @@
       "bearing": "relaxed casual posture",
       "age_presentation": "early-to-mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.910954,
-      "file_size": 4349
+      "outfits": {},
+      "mtime": 1777852898.9760163,
+      "file_size": 4574,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Monochrome Noir",
+          "Luminous Digital Illustration"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Arts & Performance",
+          "Cyberpunk & Sci-Fi"
+        ],
+        "Outfit_Tags": [
+          "Minimalist",
+          "Playful",
+          "Textured-Hair",
+          "Urban"
+        ]
+      }
     },
     "Elara Soledad": {
       "name": "Elara Soledad",
@@ -455,8 +797,27 @@
       "bearing": "fluid and powerful movement",
       "age_presentation": "late 20s to early 30s prese...",
       "gender": "F",
-      "mtime": 1771798450.9119804,
-      "file_size": 2391
+      "outfits": {},
+      "mtime": 1777852902.0779243,
+      "file_size": 2608,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Luminous Digital Illustration",
+          "Retro Anime"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Fantasy & RPG",
+          "Combat & Tactical"
+        ],
+        "Outfit_Tags": [
+          "Rugged",
+          "Sport",
+          "Functional",
+          "Vintage"
+        ]
+      }
     },
     "Elena Moretti": {
       "name": "Elena Moretti",
@@ -478,8 +839,27 @@
       "bearing": "Relaxed confidence",
       "age_presentation": "21-25",
       "gender": "F",
-      "mtime": 1771798450.9124925,
-      "file_size": 2886
+      "outfits": {},
+      "mtime": 1777852905.335494,
+      "file_size": 3099,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Retro Anime",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Downtown-Chic",
+          "Arts & Performance",
+          "Intimate & Sensual"
+        ],
+        "Outfit_Tags": [
+          "Bold",
+          "Urban",
+          "Romantic-Boho",
+          "Sport"
+        ]
+      }
     },
     "Elena Rosales": {
       "name": "Elena Rosales",
@@ -502,8 +882,27 @@
       "bearing": "walks with a rhythmic, hip-...",
       "age_presentation": "late 20s",
       "gender": "F",
-      "mtime": 1771798450.9131448,
-      "file_size": 2272
+      "outfits": {},
+      "mtime": 1777852908.521536,
+      "file_size": 2475,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Monochrome Noir",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "Fashion & Glamour",
+          "Arts & Performance",
+          "Intimate & Sensual"
+        ],
+        "Outfit_Tags": [
+          "Elegant",
+          "Bold",
+          "Layered",
+          "Retro"
+        ]
+      }
     },
     "Elias Thorne": {
       "name": "Elias Thorne",
@@ -525,8 +924,71 @@
       "bearing": "perfectly vertical posture",
       "age_presentation": "early 50s",
       "gender": "M",
-      "mtime": 1771798450.9142075,
-      "file_size": 2287
+      "outfits": {},
+      "mtime": 1777852911.5546334,
+      "file_size": 2511,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Monochrome Noir",
+          "Luminous Digital Illustration"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Work & Industrial",
+          "Urban"
+        ],
+        "Outfit_Tags": [
+          "Elegant",
+          "Sophisticated",
+          "Professional",
+          "Layered"
+        ]
+      }
+    },
+    "Fiona O'Sullivan": {
+      "name": "Fiona O'Sullivan",
+      "tags": [
+        "Celtic",
+        "Approachable",
+        "Commanding",
+        "creative",
+        "Female",
+        "Freckled",
+        "Generous",
+        "Plus-Size",
+        "Red-Haired",
+        "soft",
+        "noir",
+        "Casual",
+        "sci-fi"
+      ],
+      "photo": "fiona_osullivan_photo.png",
+      "vibe": "Open, Generous, Comforting.",
+      "bearing": "relaxed presence",
+      "age_presentation": "mid-30s presentation",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777852920.61237,
+      "file_size": 2870,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Casual & Domestic",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Soft",
+          "Layered",
+          "Red-Haired",
+          "Boho"
+        ]
+      }
     },
     "Enzo Rossi": {
       "name": "Enzo Rossi",
@@ -551,151 +1013,27 @@
       "bearing": "grounded wide-base stance",
       "age_presentation": "early to mid-30s presentation",
       "gender": "M",
-      "mtime": 1771798450.9147174,
-      "file_size": 3520
-    },
-    "Esme Dubois": {
-      "name": "Esme Dubois",
-      "tags": [
-        "Female",
-        "Chic",
-        "creative",
-        "Minimalist",
-        "elegant",
-        "vintage",
-        "Retro",
-        "Casual",
-        "Sport",
-        "action",
-        "noir",
-        "work"
-      ],
-      "photo": "esme_dubois_photo.png",
-      "vibe": "Elegant, Reserved, Intentio...",
-      "bearing": "minimal and precise movemen...",
-      "age_presentation": "early 30s presentation",
-      "gender": "F",
-      "mtime": 1771798450.9155743,
-      "file_size": 3531
-    },
-    "Fiona O'Sullivan": {
-      "name": "Fiona O'Sullivan",
-      "tags": [
-        "Celtic",
-        "Approachable",
-        "Commanding",
-        "creative",
-        "Female",
-        "Freckled",
-        "Generous",
-        "Plus-Size",
-        "Red-Haired",
-        "soft",
-        "noir",
-        "Casual",
-        "sci-fi"
-      ],
-      "photo": "fiona_osullivan_photo.png",
-      "vibe": "Open, Generous, Comforting.",
-      "bearing": "relaxed presence",
-      "age_presentation": "mid-30s presentation",
-      "gender": "F",
-      "mtime": 1771798450.916089,
-      "file_size": 2666
-    },
-    "Freydis Holm": {
-      "name": "Freydis Holm",
-      "tags": [
-        "Female",
-        "Athletic",
-        "Commanding",
-        "Intense",
-        "Nordic",
-        "Rugged",
-        "Strong",
-        "fantasy",
-        "Casual",
-        "sci-fi",
-        "Sport",
-        "action",
-        "urban"
-      ],
-      "photo": "freydis_holm_photo.png",
-      "vibe": "Intense, Primal, Unyielding...",
-      "bearing": "upright, dominant posture w...",
-      "age_presentation": "late 20s to early 30s",
-      "gender": "F",
-      "mtime": 1771798450.916089,
-      "file_size": 3220
-    },
-    "Hailey Bennett": {
-      "name": "Hailey Bennett",
-      "tags": [
-        "Female",
-        "Caucasian",
-        "Cheerful",
-        "Gen-Z",
-        "Casual",
-        "Bubbly",
-        "Approachable",
-        "Trendy",
-        "vintage",
-        "Retro",
-        "Sport",
-        "urban",
-        "social"
-      ],
-      "photo": "hailey_bennett_photo.png",
-      "vibe": "Bubbly, Animated, Chatty, A...",
-      "bearing": "Expressive head tilting",
-      "age_presentation": "19-23",
-      "gender": "F",
-      "mtime": 1771798450.9176047,
-      "file_size": 2740
-    },
-    "Hallie Bennett": {
-      "name": "Hallie Bennett",
-      "tags": [
-        "Female",
-        "Approachable",
-        "Athletic",
-        "Casual",
-        "Minimalist",
-        "Outdoorsy",
-        "soft",
-        "Sport",
-        "noir",
-        "social",
-        "sci-fi"
-      ],
-      "photo": "hallie_bennett_photo.png",
-      "vibe": "Gentle, Approachable, Natur...",
-      "bearing": "relaxed movement with open ...",
-      "age_presentation": "early to mid-20s presentation",
-      "gender": "F",
-      "mtime": 1771798450.918123,
-      "file_size": 3324
-    },
-    "Hana Park": {
-      "name": "Hana Park",
-      "tags": [
-        "Female",
-        "Chic",
-        "K-Fashion",
-        "Petite",
-        "Playful",
-        "urban",
-        "noir",
-        "social",
-        "Casual"
-      ],
-      "photo": "hana_park_photo.png",
-      "vibe": "Playful, Curious, Bright.",
-      "bearing": "light movement",
-      "age_presentation": "early 20s presentation",
-      "gender": "F",
-      "mtime": 1771798450.918123,
-      "file_size": 1915
+      "outfits": {},
+      "mtime": 1777852914.4030287,
+      "file_size": 3708,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Urban",
+          "Arts & Performance",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Retro",
+          "Sport",
+          "Bold",
+          "Layered"
+        ]
+      }
     },
     "Harald Bjornson": {
       "name": "Harald Bjornson",
@@ -719,30 +1057,200 @@
       "bearing": "slow, deliberate movements",
       "age_presentation": "early-to-mid 30s",
       "gender": "M",
-      "mtime": 1771798450.9198916,
-      "file_size": 2687
+      "outfits": {},
+      "mtime": 1777852935.5527065,
+      "file_size": 2873,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Monochrome Noir",
+          "Retro Anime"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Urban",
+          "Combat & Tactical"
+        ],
+        "Outfit_Tags": [
+          "Rugged",
+          "Bold",
+          "1900s",
+          "Sport"
+        ]
+      }
     },
-    "Harper Mae Sullivan": {
-      "name": "Harper Mae Sullivan",
+    "Hailey Bennett": {
+      "name": "Hailey Bennett",
+      "tags": [
+        "Female",
+        "Caucasian",
+        "Cheerful",
+        "Gen-Z",
+        "Casual",
+        "Bubbly",
+        "Approachable",
+        "Trendy",
+        "vintage",
+        "Retro",
+        "Sport",
+        "urban",
+        "social"
+      ],
+      "photo": "hailey_bennett_photo.png",
+      "vibe": "Bubbly, Animated, Chatty, A...",
+      "bearing": "Expressive head tilting",
+      "age_presentation": "19-23",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777852926.650879,
+      "file_size": 2939,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Luminous Digital Illustration",
+          "Retro Anime"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Arts & Performance",
+          "Urban"
+        ],
+        "Outfit_Tags": [
+          "Trendy",
+          "Everyday",
+          "Sport",
+          "Vintage"
+        ]
+      }
+    },
+    "Esme Dubois": {
+      "name": "Esme Dubois",
+      "tags": [
+        "Female",
+        "Chic",
+        "creative",
+        "Minimalist",
+        "elegant",
+        "vintage",
+        "Retro",
+        "Casual",
+        "Sport",
+        "action",
+        "noir",
+        "work"
+      ],
+      "photo": "esme_dubois_photo.png",
+      "vibe": "Elegant, Reserved, Intentio...",
+      "bearing": "minimal and precise movemen...",
+      "age_presentation": "early 30s presentation",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777852917.4880488,
+      "file_size": 3739,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "History & Culture",
+          "Fashion & Glamour"
+        ],
+        "Outfit_Tags": [
+          "Elegant",
+          "Retro",
+          "Minimalist",
+          "Layered"
+        ]
+      }
+    },
+    "Freydis Holm": {
+      "name": "Freydis Holm",
+      "tags": [
+        "Female",
+        "Athletic",
+        "Commanding",
+        "Intense",
+        "Nordic",
+        "Rugged",
+        "Strong",
+        "fantasy",
+        "Casual",
+        "sci-fi",
+        "Sport",
+        "action",
+        "urban"
+      ],
+      "photo": "freydis_holm_photo.png",
+      "vibe": "Intense, Primal, Unyielding...",
+      "bearing": "upright, dominant posture w...",
+      "age_presentation": "late 20s to early 30s",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777852923.7767458,
+      "file_size": 3443,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Luminous Digital Illustration",
+          "Cinematic 3D"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Combat & Tactical",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Rugged",
+          "Sport",
+          "Tactical",
+          "Functional"
+        ]
+      }
+    },
+    "Hallie Bennett": {
+      "name": "Hallie Bennett",
       "tags": [
         "Female",
         "Approachable",
-        "Freckled",
+        "Athletic",
+        "Casual",
         "Minimalist",
-        "Southern",
-        "Sun-Kissed",
+        "Outdoorsy",
+        "soft",
         "Sport",
+        "noir",
         "social",
-        "Home",
-        "Casual"
+        "sci-fi"
       ],
-      "photo": "harper_mae_sullivan_photo.png",
-      "vibe": "Welcoming, Genuine, Sweetly...",
-      "bearing": "relaxed fluid movement",
-      "age_presentation": "mid-20s presentation",
+      "photo": "hallie_bennett_photo.png",
+      "vibe": "Gentle, Approachable, Natur...",
+      "bearing": "relaxed movement with open ...",
+      "age_presentation": "early to mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.9203994,
-      "file_size": 3014
+      "outfits": {},
+      "mtime": 1777852929.5306,
+      "file_size": 3530,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Luminous Digital Illustration",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Casual & Domestic",
+          "Outdoor"
+        ],
+        "Outfit_Tags": [
+          "Sport",
+          "Soft",
+          "Everyday",
+          "Minimalist"
+        ]
+      }
     },
     "Inara Velez": {
       "name": "Inara Velez",
@@ -768,8 +1276,68 @@
       "bearing": "Poised and Kinetic",
       "age_presentation": "21-25",
       "gender": "F",
-      "mtime": 1771798450.9203994,
-      "file_size": 3582
+      "outfits": {},
+      "mtime": 1777852941.3713682,
+      "file_size": 3791,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Luminous Digital Illustration",
+          "Retro Anime"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Fashion & Glamour",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Sport",
+          "Vintage",
+          "Retro",
+          "Layered"
+        ]
+      }
+    },
+    "Harper Mae Sullivan": {
+      "name": "Harper Mae Sullivan",
+      "tags": [
+        "Female",
+        "Approachable",
+        "Freckled",
+        "Minimalist",
+        "Southern",
+        "Sun-Kissed",
+        "Sport",
+        "social",
+        "Home",
+        "Casual"
+      ],
+      "photo": "harper_mae_sullivan_photo.png",
+      "vibe": "Welcoming, Genuine, Sweetly...",
+      "bearing": "relaxed fluid movement",
+      "age_presentation": "mid-20s presentation",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777852938.3621523,
+      "file_size": 3201,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Soft Vector"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Arts & Performance",
+          "Home"
+        ],
+        "Outfit_Tags": [
+          "Soft",
+          "Everyday",
+          "Sport",
+          "Southern"
+        ]
+      }
     },
     "Ines Santos": {
       "name": "Ines Santos",
@@ -792,8 +1360,67 @@
       "bearing": "casual yet attentive posture",
       "age_presentation": "mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.921932,
-      "file_size": 2812
+      "outfits": {},
+      "mtime": 1777852944.1312165,
+      "file_size": 2991,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Monochrome Noir",
+          "Retro"
+        ],
+        "Scenes": [
+          "Urban",
+          "Arts & Performance",
+          "Casual & Domestic"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Chic",
+          "Filipino",
+          "Layered"
+        ]
+      }
+    },
+    "Hana Park": {
+      "name": "Hana Park",
+      "tags": [
+        "Female",
+        "Chic",
+        "K-Fashion",
+        "Petite",
+        "Playful",
+        "urban",
+        "noir",
+        "social",
+        "Casual"
+      ],
+      "photo": "hana_park_photo.png",
+      "vibe": "Playful, Curious, Bright.",
+      "bearing": "light movement",
+      "age_presentation": "early 20s presentation",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777852932.4699414,
+      "file_size": 2117,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Monochrome Noir",
+          "Soft Vector"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Urban",
+          "Arts & Performance"
+        ],
+        "Outfit_Tags": [
+          "K-Fashion",
+          "Chic",
+          "Soft",
+          "Everyday"
+        ]
+      }
     },
     "Isla MacLeod": {
       "name": "Isla MacLeod",
@@ -812,29 +1439,27 @@
       "bearing": "soft fluid movement",
       "age_presentation": "mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.921932,
-      "file_size": 2879
-    },
-    "Jamal Rivers": {
-      "name": "Jamal Rivers",
-      "tags": [
-        "Black",
-        "Approachable",
-        "Chic",
-        "Intellectual",
-        "Male",
-        "Minimalist",
-        "vintage",
-        "Retro",
-        "Casual"
-      ],
-      "photo": "jamal_rivers_photo.png",
-      "vibe": "Thoughtful, Composed, Intel...",
-      "bearing": "upright posture",
-      "age_presentation": "early 30s presentation",
-      "gender": "M",
-      "mtime": 1771798450.9229355,
-      "file_size": 2199
+      "outfits": {},
+      "mtime": 1777852947.1359713,
+      "file_size": 3083,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Luminous Digital Illustration"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Intimate & Sensual",
+          "Retro"
+        ],
+        "Outfit_Tags": [
+          "Soft",
+          "Vintage",
+          "Boho",
+          "Layered"
+        ]
+      }
     },
     "Jax Chen": {
       "name": "Jax Chen",
@@ -856,8 +1481,108 @@
       "bearing": "aggressive, ready-to-launch...",
       "age_presentation": "mid-20s presentation",
       "gender": "M",
-      "mtime": 1771798450.9239857,
-      "file_size": 3582
+      "outfits": {},
+      "mtime": 1777852953.6569722,
+      "file_size": 3817,
+      "affinities": {
+        "Styles": [
+          "Neon Futurism",
+          "High-Speed Action",
+          "Monochrome Noir",
+          "Cinematic 3D"
+        ],
+        "Scenes": [
+          "Combat & Tactical",
+          "Athletics & Sports",
+          "Cyberpunk & Sci-Fi",
+          "Work & Industrial"
+        ],
+        "Outfit_Tags": [
+          "Sport",
+          "Tactical",
+          "Urban",
+          "Bold"
+        ]
+      }
+    },
+    "Jin Park": {
+      "name": "Jin Park",
+      "tags": [
+        "Male",
+        "Chic",
+        "K-Fashion",
+        "Minimalist",
+        "soft",
+        "urban",
+        "noir",
+        "Casual"
+      ],
+      "photo": "jin_park_photo.png",
+      "vibe": "Quiet, Observant, restrained",
+      "bearing": "contained posture",
+      "age_presentation": "late 20s presentation",
+      "gender": "M",
+      "outfits": {},
+      "mtime": 1777852966.0665777,
+      "file_size": 2971,
+      "affinities": {
+        "Styles": [
+          "Monochrome Noir",
+          "Minimalist",
+          "Studio Photorealism"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Arts & Performance",
+          "Urban"
+        ],
+        "Outfit_Tags": [
+          "Dark",
+          "Chic",
+          "White",
+          "Minimalist"
+        ]
+      }
+    },
+    "Jamal Rivers": {
+      "name": "Jamal Rivers",
+      "tags": [
+        "Black",
+        "Approachable",
+        "Chic",
+        "Intellectual",
+        "Male",
+        "Minimalist",
+        "vintage",
+        "Retro",
+        "Casual"
+      ],
+      "photo": "jamal_rivers_photo.png",
+      "vibe": "Thoughtful, Composed, Intel...",
+      "bearing": "upright posture",
+      "age_presentation": "early 30s presentation",
+      "gender": "M",
+      "outfits": {},
+      "mtime": 1777852950.0906672,
+      "file_size": 2405,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Casual & Domestic"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Retro",
+          "Minimalist",
+          "Clean"
+        ]
+      }
     },
     "Jena Marlowe": {
       "name": "Jena Marlowe",
@@ -877,74 +1602,27 @@
       "bearing": "relaxed, graceful posture",
       "age_presentation": "mid-to-late 20s presentation",
       "gender": "F",
-      "mtime": 1771798450.9244955,
-      "file_size": 2983
-    },
-    "Jin Park": {
-      "name": "Jin Park",
-      "tags": [
-        "Male",
-        "Chic",
-        "K-Fashion",
-        "Minimalist",
-        "soft",
-        "urban",
-        "noir",
-        "Casual"
-      ],
-      "photo": "jin_park_photo.png",
-      "vibe": "Quiet, Observant, restrained",
-      "bearing": "contained posture",
-      "age_presentation": "late 20s presentation",
-      "gender": "M",
-      "mtime": 1771798450.9244955,
-      "file_size": 2782
-    },
-    "Jordan Vance": {
-      "name": "Jordan Vance",
-      "tags": [
-        "Black",
-        "Athletic",
-        "Chic",
-        "Commanding",
-        "Female",
-        "Playful",
-        "Tall",
-        "Casual",
-        "sci-fi",
-        "Sport",
-        "action",
-        "noir"
-      ],
-      "photo": "jordan_vance_photo.png",
-      "vibe": "Energetic, Commanding, Glam...",
-      "bearing": "excellent upright posture w...",
-      "age_presentation": "mid-20s",
-      "gender": "F",
-      "mtime": 1771798450.926037,
-      "file_size": 2925
-    },
-    "Julian Blackwood": {
-      "name": "Julian Blackwood",
-      "tags": [
-        "Male",
-        "Alternative",
-        "Caucasian",
-        "creative",
-        "Goth",
-        "romantic",
-        "soft",
-        "urban",
-        "Casual",
-        "noir"
-      ],
-      "photo": "julian_blackwood_photo.png",
-      "vibe": "Moody, Sensitive, Artistic,...",
-      "bearing": "slouches artistically",
-      "age_presentation": "mid-20s",
-      "gender": "M",
-      "mtime": 1771798450.9270403,
-      "file_size": 1965
+      "outfits": {},
+      "mtime": 1777852956.4580445,
+      "file_size": 3168,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Soft Vector"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Arts & Performance",
+          "Home"
+        ],
+        "Outfit_Tags": [
+          "Soft",
+          "Vintage",
+          "Elegant",
+          "Retro"
+        ]
+      }
     },
     "Kaia Vaitupu": {
       "name": "Kaia Vaitupu",
@@ -968,8 +1646,27 @@
       "bearing": "steady, composed posture",
       "age_presentation": "early 30s presentation",
       "gender": "F",
-      "mtime": 1771798450.9275446,
-      "file_size": 3559
+      "outfits": {},
+      "mtime": 1777852975.73302,
+      "file_size": 3780,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Monochrome Noir",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Intimate & Sensual"
+        ],
+        "Outfit_Tags": [
+          "Rich",
+          "White",
+          "Techwear",
+          "Floral"
+        ]
+      }
     },
     "Kaito Sato": {
       "name": "Kaito Sato",
@@ -991,56 +1688,113 @@
       "bearing": "never stands still",
       "age_presentation": "early 20s",
       "gender": "M",
-      "mtime": 1771798450.928059,
-      "file_size": 2088
+      "outfits": {},
+      "mtime": 1777852978.9970212,
+      "file_size": 2300,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Neon Futurism",
+          "High-Speed Action"
+        ],
+        "Scenes": [
+          "Cyberpunk & Sci-Fi",
+          "Athletics & Sports",
+          "Urban"
+        ],
+        "Outfit_Tags": [
+          "Techwear",
+          "Sharp",
+          "Red",
+          "Summer",
+          "Casual"
+        ]
+      }
     },
-    "Kassandra Lykaios": {
-      "name": "Kassandra Lykaios",
+    "Julian Blackwood": {
+      "name": "Julian Blackwood",
       "tags": [
-        "Female",
-        "Athletic",
-        "Commanding",
-        "greek",
-        "Playful",
-        "Strong",
-        "fantasy",
-        "Sport",
-        "action",
-        "noir",
-        "urban"
-      ],
-      "photo": "kassandra_lykaios_photo.png",
-      "vibe": "Electric, Agile, Fiery, Dis...",
-      "bearing": "dynamic and alert",
-      "age_presentation": "late 20s to early 30s",
-      "gender": "F",
-      "mtime": 1771798450.9291227,
-      "file_size": 2819
-    },
-    "Keiko Yamamoto": {
-      "name": "Keiko Yamamoto",
-      "tags": [
-        "Female",
-        "Athletic",
+        "Male",
+        "Alternative",
+        "Caucasian",
         "creative",
-        "Edgy",
-        "Intense",
-        "Japanese",
-        "Sharp",
+        "Goth",
+        "romantic",
+        "soft",
+        "urban",
         "Casual",
+        "noir"
+      ],
+      "photo": "julian_blackwood_photo.png",
+      "vibe": "Moody, Sensitive, Artistic,...",
+      "bearing": "slouches artistically",
+      "age_presentation": "mid-20s",
+      "gender": "M",
+      "outfits": {},
+      "mtime": 1777852972.547976,
+      "file_size": 2157,
+      "affinities": {
+        "Styles": [
+          "Monochrome Noir",
+          "Classical Painterly",
+          "Analog Film"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Intimate & Sensual",
+          "Urban"
+        ],
+        "Outfit_Tags": [
+          "Dark",
+          "Velvet",
+          "Lingerie",
+          "Floral"
+        ]
+      }
+    },
+    "Jordan Vance": {
+      "name": "Jordan Vance",
+      "tags": [
+        "Black",
+        "Athletic",
+        "Chic",
+        "Commanding",
+        "Female",
+        "Playful",
+        "Tall",
+        "Casual",
+        "sci-fi",
         "Sport",
         "action",
-        "noir",
-        "urban",
-        "work"
+        "noir"
       ],
-      "photo": "keiko_yamamoto_photo.png",
-      "vibe": "Alert, Driven, Competitive,...",
-      "bearing": "quick, precise movement",
-      "age_presentation": "late 20s presentation",
+      "photo": "jordan_vance_photo.png",
+      "vibe": "Energetic, Commanding, Glam...",
+      "bearing": "excellent upright posture w...",
+      "age_presentation": "mid-20s",
       "gender": "F",
-      "mtime": 1771798450.9296646,
-      "file_size": 2576
+      "outfits": {},
+      "mtime": 1777852969.515883,
+      "file_size": 3148,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Cinematic 3D",
+          "Neon Futurism"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Fashion & Glamour",
+          "Cyberpunk & Sci-Fi"
+        ],
+        "Outfit_Tags": [
+          "High Fashion",
+          "Black",
+          "Red",
+          "Techwear",
+          "Chic"
+        ]
+      }
     },
     "Kendra Mitchell": {
       "name": "Kendra Mitchell",
@@ -1062,29 +1816,70 @@
       "bearing": "long confident strides",
       "age_presentation": "early 30s presentation",
       "gender": "F",
-      "mtime": 1771798450.930668,
-      "file_size": 2858
+      "outfits": {},
+      "mtime": 1777852988.4802518,
+      "file_size": 3079,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Cinematic 3D",
+          "Graphite Sketch"
+        ],
+        "Scenes": [
+          "Athletics & Sports",
+          "Outdoorsy",
+          "Fantasy & RPG",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Track",
+          "Rugged",
+          "Athletic",
+          "White"
+        ]
+      }
     },
-    "Leilani Te'o": {
-      "name": "Leilani Te'o",
+    "Kassandra Lykaios": {
+      "name": "Kassandra Lykaios",
       "tags": [
-        "Pacific-Islander",
+        "Female",
         "Athletic",
         "Commanding",
-        "Curvy",
-        "Female",
+        "greek",
+        "Playful",
         "Strong",
+        "fantasy",
         "Sport",
+        "action",
         "noir",
-        "sci-fi"
+        "urban"
       ],
-      "photo": "leilani_teo_photo.png",
-      "vibe": "Commanding, Steady, Discipl...",
-      "bearing": "deliberate and purposeful m...",
-      "age_presentation": "early 30s",
+      "photo": "kassandra_lykaios_photo.png",
+      "vibe": "Electric, Agile, Fiery, Dis...",
+      "bearing": "dynamic and alert",
+      "age_presentation": "late 20s to early 30s",
       "gender": "F",
-      "mtime": 1771798450.930668,
-      "file_size": 2611
+      "outfits": {},
+      "mtime": 1777852982.0313063,
+      "file_size": 3029,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Cinematic 3D",
+          "Graphite Sketch"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Combat & Tactical",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Greek",
+          "Red",
+          "Sport",
+          "Fashion"
+        ]
+      }
     },
     "Leonidas Stratos": {
       "name": "Leonidas Stratos",
@@ -1104,8 +1899,67 @@
       "bearing": "perfect military posture",
       "age_presentation": "mid-to-late 30s",
       "gender": "M",
-      "mtime": 1771798450.9317088,
-      "file_size": 2533
+      "outfits": {},
+      "mtime": 1777852994.623938,
+      "file_size": 2733,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Monochrome Noir",
+          "Cinematic 3D"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Combat & Tactical",
+          "Arts & Performance"
+        ],
+        "Outfit_Tags": [
+          "Rugged",
+          "Dark",
+          "Greek",
+          "White"
+        ]
+      }
+    },
+    "Leilani Te'o": {
+      "name": "Leilani Te'o",
+      "tags": [
+        "Pacific-Islander",
+        "Athletic",
+        "Commanding",
+        "Curvy",
+        "Female",
+        "Strong",
+        "Sport",
+        "noir",
+        "sci-fi"
+      ],
+      "photo": "leilani_teo_photo.png",
+      "vibe": "Commanding, Steady, Discipl...",
+      "bearing": "deliberate and purposeful m...",
+      "age_presentation": "early 30s",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777852991.5635223,
+      "file_size": 2815,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Neon Futurism",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Combat & Tactical",
+          "Arts & Performance"
+        ],
+        "Outfit_Tags": [
+          "Velvet",
+          "Rugged",
+          "Dark",
+          "Fashion"
+        ]
+      }
     },
     "Lila Reyes": {
       "name": "Lila Reyes",
@@ -1130,8 +1984,67 @@
       "bearing": "upright posture with natura...",
       "age_presentation": "mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.9327612,
-      "file_size": 3655
+      "outfits": {},
+      "mtime": 1777852997.8405516,
+      "file_size": 3878,
+      "affinities": {
+        "Styles": [
+          "Monochrome Noir",
+          "Luminous Digital Illustration",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Work & Industrial",
+          "Cyberpunk & Sci-Fi"
+        ],
+        "Outfit_Tags": [
+          "Dark",
+          "Fashion",
+          "Techwear",
+          "Floral"
+        ]
+      }
+    },
+    "Luna Vex": {
+      "name": "Luna Vex",
+      "tags": [
+        "Female",
+        "Curvy",
+        "Edgy",
+        "Petite",
+        "Playful",
+        "Sport",
+        "action",
+        "noir",
+        "urban",
+        "social"
+      ],
+      "photo": "luna_vex_photo.png",
+      "vibe": "Infectious, Warm, Welcoming...",
+      "bearing": "Dynamic and candid",
+      "age_presentation": "20\u201325",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777853006.7964482,
+      "file_size": 2805,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Artistic Anime: \"Kyoto Atmosphere\"",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Urban"
+        ],
+        "Outfit_Tags": [
+          "Fashion",
+          "Red",
+          "Floral",
+          "Comfortable"
+        ]
+      }
     },
     "Linh Nguyen": {
       "name": "Linh Nguyen",
@@ -1158,8 +2071,27 @@
       "bearing": "open and animated",
       "age_presentation": "mid-20s (24-26)",
       "gender": "F",
-      "mtime": 1771798450.9327612,
-      "file_size": 3354
+      "outfits": {},
+      "mtime": 1777853000.8180697,
+      "file_size": 3554,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Retro Anime",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Urban",
+          "Fashion & Glamour"
+        ],
+        "Outfit_Tags": [
+          "Floral",
+          "Red",
+          "Summer",
+          "Techwear"
+        ]
+      }
     },
     "Luc\u00eda Reyes": {
       "name": "Luc\u00eda Reyes",
@@ -1179,30 +2111,113 @@
       "bearing": "open posture",
       "age_presentation": "late 20s presentation",
       "gender": "F",
-      "mtime": 1771798450.9327612,
-      "file_size": 1788
+      "outfits": {},
+      "mtime": 1777853003.881968,
+      "file_size": 1997,
+      "affinities": {
+        "Styles": [
+          "Noir",
+          "Classical Painterly",
+          "Luminous Digital Illustration"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Fashion & Glamour",
+          "Casual & Domestic"
+        ],
+        "Outfit_Tags": [
+          "Floral",
+          "Red",
+          "Velvet",
+          "Lingerie"
+        ]
+      }
     },
-    "Luna Vex": {
-      "name": "Luna Vex",
+    "Keiko Yamamoto": {
+      "name": "Keiko Yamamoto",
       "tags": [
         "Female",
-        "Curvy",
+        "Athletic",
+        "creative",
         "Edgy",
-        "Petite",
-        "Playful",
+        "Intense",
+        "Japanese",
+        "Sharp",
+        "Casual",
         "Sport",
         "action",
         "noir",
         "urban",
-        "social"
+        "work"
       ],
-      "photo": "luna_vex_photo.png",
-      "vibe": "Infectious, Warm, Welcoming...",
-      "bearing": "Dynamic and candid",
-      "age_presentation": "20\u201325",
+      "photo": "keiko_yamamoto_photo.png",
+      "vibe": "Alert, Driven, Competitive,...",
+      "bearing": "quick, precise movement",
+      "age_presentation": "late 20s presentation",
       "gender": "F",
-      "mtime": 1771798450.934827,
-      "file_size": 2597
+      "outfits": {},
+      "mtime": 1777852985.152776,
+      "file_size": 2796,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Monochrome Noir",
+          "Artistic Anime: \"Kyoto Atmosphere\""
+        ],
+        "Scenes": [
+          "Urban",
+          "Arts & Performance",
+          "Combat & Tactical"
+        ],
+        "Outfit_Tags": [
+          "Dark",
+          "Sharp",
+          "Red",
+          "Techwear"
+        ]
+      }
+    },
+    "Malik Farrah": {
+      "name": "Malik Farrah",
+      "tags": [
+        "Male",
+        "North-African",
+        "Rugged",
+        "Adventurous",
+        "Steady",
+        "Resourceful",
+        "Earthy",
+        "Gold-Signature",
+        "Sport",
+        "action",
+        "noir"
+      ],
+      "photo": "malik_farrah_photo.png",
+      "vibe": "Adventurous, Steady, Resour...",
+      "bearing": "alert, grounded posture",
+      "age_presentation": "mid-30s presentation",
+      "gender": "M",
+      "outfits": {},
+      "mtime": 1777853013.223588,
+      "file_size": 3726,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Monochrome Noir",
+          "Graphite Sketch"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Athletics & Sports",
+          "Combat & Tactical"
+        ],
+        "Outfit_Tags": [
+          "Rugged",
+          "Dark",
+          "Vintage",
+          "Gold-Signature"
+        ]
+      }
     },
     "Maki Cruz": {
       "name": "Maki Cruz",
@@ -1226,31 +2241,27 @@
       "bearing": "relaxed athletic posture",
       "age_presentation": "early to mid-20s",
       "gender": "F",
-      "mtime": 1771798450.935501,
-      "file_size": 3019
-    },
-    "Malik Farrah": {
-      "name": "Malik Farrah",
-      "tags": [
-        "Male",
-        "North-African",
-        "Rugged",
-        "Adventurous",
-        "Steady",
-        "Resourceful",
-        "Earthy",
-        "Gold-Signature",
-        "Sport",
-        "action",
-        "noir"
-      ],
-      "photo": "malik_farrah_photo.png",
-      "vibe": "Adventurous, Steady, Resour...",
-      "bearing": "alert, grounded posture",
-      "age_presentation": "mid-30s presentation",
-      "gender": "M",
-      "mtime": 1771798450.935501,
-      "file_size": 3512
+      "outfits": {},
+      "mtime": 1777853010.206884,
+      "file_size": 3248,
+      "affinities": {
+        "Styles": [
+          "Monochrome Noir",
+          "Luminous Digital Illustration",
+          "Artistic Anime: \"Kyoto Atmosphere\""
+        ],
+        "Scenes": [
+          "Urban",
+          "Arts & Performance",
+          "Cyberpunk & Sci-Fi"
+        ],
+        "Outfit_Tags": [
+          "Rugged",
+          "Dark",
+          "Techwear",
+          "Minimalist"
+        ]
+      }
     },
     "Marcus Thompson": {
       "name": "Marcus Thompson",
@@ -1272,8 +2283,154 @@
       "bearing": "stable posture",
       "age_presentation": "early 30s presentation",
       "gender": "M",
-      "mtime": 1771798450.937037,
-      "file_size": 1860
+      "outfits": {},
+      "mtime": 1777853015.9753864,
+      "file_size": 2030,
+      "affinities": {
+        "Styles": [
+          "Noir",
+          "Minimalist",
+          "Graphic Novel"
+        ],
+        "Scenes": [
+          "Urban",
+          "Athletics & Sports",
+          "Work & Industrial"
+        ],
+        "Outfit_Tags": [
+          "Black",
+          "Casual",
+          "Chic",
+          "Rugged"
+        ]
+      }
+    },
+    "Maya Rose": {
+      "name": "Maya Rose",
+      "tags": [
+        "Female",
+        "Approachable",
+        "Chic",
+        "Commanding",
+        "Minimalist",
+        "Playful",
+        "Sport",
+        "Home",
+        "Casual"
+      ],
+      "photo": "maya_rose_photo.png",
+      "vibe": "Open, Genuinely Warm, Casua...",
+      "bearing": "relaxed confident posture",
+      "age_presentation": "mid-20s presentation",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777853025.1447172,
+      "file_size": 2303,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Soft Vector",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Arts & Performance",
+          "Fashion & Glamour"
+        ],
+        "Outfit_Tags": [
+          "Summer",
+          "Floral",
+          "Chic",
+          "White"
+        ]
+      }
+    },
+    "Mei Chen": {
+      "name": "Mei Chen",
+      "tags": [
+        "Chinese-American",
+        "Approachable",
+        "Commanding",
+        "Curvy",
+        "Edgy",
+        "Female",
+        "Playful",
+        "Plus-Size",
+        "urban",
+        "noir",
+        "intimate",
+        "Casual"
+      ],
+      "photo": "mei_chen_photo.png",
+      "vibe": "Playful, Confidently Sweet,...",
+      "bearing": "animated movement with deli...",
+      "age_presentation": "early-to-mid 20s",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777853028.5067725,
+      "file_size": 4505,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Monochrome Noir",
+          "Artistic Anime: \"Kyoto Atmosphere\""
+        ],
+        "Scenes": [
+          "Intimate & Sensual",
+          "Arts & Performance",
+          "Casual & Domestic"
+        ],
+        "Outfit_Tags": [
+          "Floral",
+          "Red",
+          "Lingerie",
+          "Velvet"
+        ]
+      }
+    },
+    "Marley Thompson": {
+      "name": "Marley Thompson",
+      "tags": [
+        "Female",
+        "Approachable",
+        "Controversial",
+        "Cultural-Fusion",
+        "Curvy",
+        "Jamaican",
+        "traditional",
+        "vintage",
+        "Retro",
+        "Home",
+        "intimate",
+        "sci-fi",
+        "noir"
+      ],
+      "photo": "marley_thompson_photo.png",
+      "vibe": "Nurturing, Warm, Traditiona...",
+      "bearing": "graceful unhurried movement",
+      "age_presentation": "late 20s to early 30s prese...",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777853022.1156077,
+      "file_size": 4115,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Luminous Digital Illustration"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Intimate & Sensual",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Velvet",
+          "Floral",
+          "Vintage",
+          "Red"
+        ]
+      }
     },
     "Marisol Rivera": {
       "name": "Marisol Rivera",
@@ -1299,78 +2456,27 @@
       "bearing": "aligned and grounded bearing",
       "age_presentation": "mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.937037,
-      "file_size": 4511
-    },
-    "Marley Thompson": {
-      "name": "Marley Thompson",
-      "tags": [
-        "Female",
-        "Approachable",
-        "Controversial",
-        "Cultural-Fusion",
-        "Curvy",
-        "Jamaican",
-        "traditional",
-        "vintage",
-        "Retro",
-        "Home",
-        "intimate",
-        "sci-fi",
-        "noir"
-      ],
-      "photo": "marley_thompson_photo.png",
-      "vibe": "Nurturing, Warm, Traditiona...",
-      "bearing": "graceful unhurried movement",
-      "age_presentation": "late 20s to early 30s prese...",
-      "gender": "F",
-      "mtime": 1771798450.9385798,
-      "file_size": 3899
-    },
-    "Maya Rose": {
-      "name": "Maya Rose",
-      "tags": [
-        "Female",
-        "Approachable",
-        "Chic",
-        "Commanding",
-        "Minimalist",
-        "Playful",
-        "Sport",
-        "Home",
-        "Casual"
-      ],
-      "photo": "maya_rose_photo.png",
-      "vibe": "Open, Genuinely Warm, Casua...",
-      "bearing": "relaxed confident posture",
-      "age_presentation": "mid-20s presentation",
-      "gender": "F",
-      "mtime": 1770447719.793387,
-      "file_size": 2089
-    },
-    "Mei Chen": {
-      "name": "Mei Chen",
-      "tags": [
-        "Chinese-American",
-        "Approachable",
-        "Commanding",
-        "Curvy",
-        "Edgy",
-        "Female",
-        "Playful",
-        "Plus-Size",
-        "urban",
-        "noir",
-        "intimate",
-        "Casual"
-      ],
-      "photo": "mei_chen_photo.png",
-      "vibe": "Playful, Confidently Sweet,...",
-      "bearing": "animated movement with deli...",
-      "age_presentation": "early-to-mid 20s",
-      "gender": "F",
-      "mtime": 1771798450.9390898,
-      "file_size": 4269
+      "outfits": {},
+      "mtime": 1777853018.9686377,
+      "file_size": 4712,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Monochrome Noir",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Work & Industrial",
+          "Fashion & Glamour"
+        ],
+        "Outfit_Tags": [
+          "Floral",
+          "Red",
+          "Bandana",
+          "Velvet"
+        ]
+      }
     },
     "Mela Hart": {
       "name": "Mela Hart",
@@ -1389,8 +2495,27 @@
       "bearing": "springy movement",
       "age_presentation": "mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.940441,
-      "file_size": 1928
+      "outfits": {},
+      "mtime": 1777853031.4423769,
+      "file_size": 2128,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Graphite Sketch",
+          "Cinematic 3D"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Arts & Performance",
+          "Athletics & Sports"
+        ],
+        "Outfit_Tags": [
+          "Black",
+          "Sport",
+          "Casual",
+          "Comfortable"
+        ]
+      }
     },
     "Natsumi Maki": {
       "name": "Natsumi Maki",
@@ -1413,8 +2538,27 @@
       "bearing": "expressive body language",
       "age_presentation": "late teens to early twentie...",
       "gender": "F",
-      "mtime": 1771798450.941072,
-      "file_size": 2740
+      "outfits": {},
+      "mtime": 1777853034.6472661,
+      "file_size": 2970,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Artistic Anime: \"Kyoto Atmosphere\"",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Casual & Domestic",
+          "Fashion & Glamour"
+        ],
+        "Outfit_Tags": [
+          "Floral",
+          "Track",
+          "Chic",
+          "Red"
+        ]
+      }
     },
     "Nora Alvarez": {
       "name": "Nora Alvarez",
@@ -1439,8 +2583,69 @@
       "bearing": "generally calm and delibera...",
       "age_presentation": "mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.9415836,
-      "file_size": 3087
+      "outfits": {},
+      "mtime": 1777853037.8763142,
+      "file_size": 3304,
+      "affinities": {
+        "Styles": [
+          "Monochrome Noir",
+          "Graphite Sketch",
+          "Luminous Digital Illustration"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Intimate & Sensual"
+        ],
+        "Outfit_Tags": [
+          "Dark",
+          "Rugged",
+          "Glasses",
+          "Floral"
+        ]
+      }
+    },
+    "Priya Sharma": {
+      "name": "Priya Sharma",
+      "tags": [
+        "Female",
+        "Approachable",
+        "Athletic",
+        "Chic",
+        "Indian",
+        "Playful",
+        "Sport",
+        "noir",
+        "social",
+        "urban",
+        "formal"
+      ],
+      "photo": "priya_sharma_photo.png",
+      "vibe": "Focused, Disciplined, Intense.",
+      "bearing": "efficient, energetic, forwa...",
+      "age_presentation": "late 20s presentation",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777853043.7161486,
+      "file_size": 2931,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Monochrome Noir",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Fashion & Glamour",
+          "Urban"
+        ],
+        "Outfit_Tags": [
+          "Rich",
+          "Fashion",
+          "Floral",
+          "Red"
+        ]
+      }
     },
     "Oliver St. James": {
       "name": "Oliver St. James",
@@ -1465,75 +2670,28 @@
       "bearing": "relaxed, slightly slouchy p...",
       "age_presentation": "mid-20s",
       "gender": "M",
-      "mtime": 1771798450.9432502,
-      "file_size": 2065
-    },
-    "Priya Sharma": {
-      "name": "Priya Sharma",
-      "tags": [
-        "Female",
-        "Approachable",
-        "Athletic",
-        "Chic",
-        "Indian",
-        "Playful",
-        "Sport",
-        "noir",
-        "social",
-        "urban",
-        "formal"
-      ],
-      "photo": "priya_sharma_photo.png",
-      "vibe": "Focused, Disciplined, Intense.",
-      "bearing": "efficient, energetic, forwa...",
-      "age_presentation": "late 20s presentation",
-      "gender": "F",
-      "mtime": 1771798450.9432502,
-      "file_size": 2726
-    },
-    "Rafael Costa": {
-      "name": "Rafael Costa",
-      "tags": [
-        "Latina",
-        "Approachable",
-        "creative",
-        "Male",
-        "Playful",
-        "vintage",
-        "Retro",
-        "Casual",
-        "sci-fi",
-        "Sport"
-      ],
-      "photo": "rafael_costa_photo.png",
-      "vibe": "Warm, Expressive, Creativel...",
-      "bearing": "fluid movement",
-      "age_presentation": "late 20s presentation",
-      "gender": "M",
-      "mtime": 1771798450.9448364,
-      "file_size": 2351
-    },
-    "Rosa Torres": {
-      "name": "Rosa Torres",
-      "tags": [
-        "Female",
-        "Approachable",
-        "Commanding",
-        "Latina",
-        "Playful",
-        "Strong",
-        "Sport",
-        "action",
-        "noir",
-        "Casual"
-      ],
-      "photo": "rosa_torres_photo.png",
-      "vibe": "Confident, Playful, Strong,...",
-      "bearing": "dynamic and engaged",
-      "age_presentation": "mid-20s to early 30s",
-      "gender": "F",
-      "mtime": 1771798450.945347,
-      "file_size": 2392
+      "outfits": {},
+      "mtime": 1777853040.791159,
+      "file_size": 2266,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Classical Painterly",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Arts & Performance",
+          "Urban"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Retro",
+          "Dark",
+          "Comfortable",
+          "White"
+        ]
+      }
     },
     "Roxanna Perez": {
       "name": "Roxanna Perez",
@@ -1557,8 +2715,109 @@
       "bearing": "upright, strong posture",
       "age_presentation": "early to mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.94586,
-      "file_size": 3092
+      "outfits": {},
+      "mtime": 1777853052.7065747,
+      "file_size": 3300,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Monochrome Noir",
+          "Retro Anime"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Work & Industrial",
+          "Fashion & Glamour"
+        ],
+        "Outfit_Tags": [
+          "Dark",
+          "Fashion",
+          "Red",
+          "Sharp"
+        ]
+      }
+    },
+    "Rafael Costa": {
+      "name": "Rafael Costa",
+      "tags": [
+        "Latina",
+        "Approachable",
+        "creative",
+        "Male",
+        "Playful",
+        "vintage",
+        "Retro",
+        "Casual",
+        "sci-fi",
+        "Sport"
+      ],
+      "photo": "rafael_costa_photo.png",
+      "vibe": "Warm, Expressive, Creativel...",
+      "bearing": "fluid movement",
+      "age_presentation": "late 20s presentation",
+      "gender": "M",
+      "outfits": {},
+      "mtime": 1777853046.658201,
+      "file_size": 2547,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Retro Anime",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Fashion & Glamour",
+          "Casual & Domestic"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Retro",
+          "Floral",
+          "Red"
+        ]
+      }
+    },
+    "Rosa Torres": {
+      "name": "Rosa Torres",
+      "tags": [
+        "Female",
+        "Approachable",
+        "Commanding",
+        "Latina",
+        "Playful",
+        "Strong",
+        "Sport",
+        "action",
+        "noir",
+        "Casual"
+      ],
+      "photo": "rosa_torres_photo.png",
+      "vibe": "Confident, Playful, Strong,...",
+      "bearing": "dynamic and engaged",
+      "age_presentation": "mid-20s to early 30s",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777853049.7282586,
+      "file_size": 2599,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Luminous Digital Illustration",
+          "Cinematic 3D"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Fashion & Glamour",
+          "Combat & Tactical"
+        ],
+        "Outfit_Tags": [
+          "Floral",
+          "Red",
+          "Track",
+          "Fashion"
+        ]
+      }
     },
     "Samira Mansour": {
       "name": "Samira Mansour",
@@ -1578,56 +2837,27 @@
       "bearing": "graceful and deliberate mov...",
       "age_presentation": "late 20s",
       "gender": "F",
-      "mtime": 1771798450.94586,
-      "file_size": 2280
-    },
-    "Sasha King": {
-      "name": "Sasha King",
-      "tags": [
-        "Black",
-        "American",
-        "urban",
-        "Athletic",
-        "Energetic",
-        "creative",
-        "Youthful",
-        "Street-Artist",
-        "Sport",
-        "noir",
-        "Casual",
-        "sci-fi"
-      ],
-      "photo": "sasha_king_photo.png",
-      "vibe": "Electric, High-Performance,...",
-      "bearing": "aggressive and ready-to-move",
-      "age_presentation": "early 20s (21-23)",
-      "gender": "F",
-      "mtime": 1771798450.9474015,
-      "file_size": 3514
-    },
-    "Silas Burnside": {
-      "name": "Silas Burnside",
-      "tags": [
-        "Male",
-        "Approachable",
-        "Midwestern",
-        "Outdoorsy",
-        "Rugged",
-        "Strong",
-        "vintage",
-        "Retro",
-        "Casual",
-        "Sport",
-        "noir",
-        "work"
-      ],
-      "photo": "silas_burnside_photo.png",
-      "vibe": "Hearty, Reliable, Rugged, J...",
-      "bearing": "relaxed and open",
-      "age_presentation": "late 40s to early 50s",
-      "gender": "M",
-      "mtime": 1771798450.9486744,
-      "file_size": 2670
+      "outfits": {},
+      "mtime": 1777853055.6376953,
+      "file_size": 2487,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Monochrome Noir",
+          "Luminous Digital Illustration"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Urban",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Hijabi",
+          "Floral",
+          "Rich",
+          "Velvet"
+        ]
+      }
     },
     "Simone Brooks": {
       "name": "Simone Brooks",
@@ -1655,32 +2885,115 @@
       "bearing": "animated and high-energy",
       "age_presentation": "late 20s to early 30s (29-32)",
       "gender": "F",
-      "mtime": 1771798450.9486744,
-      "file_size": 3879
+      "outfits": {},
+      "mtime": 1777853065.2197385,
+      "file_size": 4103,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Monochrome Noir",
+          "Retro Anime"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Work & Industrial",
+          "Fashion & Glamour"
+        ],
+        "Outfit_Tags": [
+          "Fuchsia-Signature",
+          "Velvet",
+          "Vintage",
+          "Track"
+        ]
+      }
     },
-    "Sina Tuilagi": {
-      "name": "Sina Tuilagi",
+    "Silas Burnside": {
+      "name": "Silas Burnside",
       "tags": [
-        "Female",
-        "Athletic",
-        "Chic",
-        "Commanding",
-        "Cultural",
-        "Pacific-Islander",
+        "Male",
+        "Approachable",
+        "Midwestern",
+        "Outdoorsy",
+        "Rugged",
         "Strong",
-        "Tatau",
-        "Traditional-Modern-Fusion",
-        "urban",
+        "vintage",
+        "Retro",
         "Casual",
-        "Sport"
+        "Sport",
+        "noir",
+        "work"
       ],
-      "photo": "sina_tuilagi_photo.png",
-      "vibe": "Warm, Strong, Proud, Cultur...",
-      "bearing": "grounded powerful posture w...",
-      "age_presentation": "mid-to-late 20s presentation",
+      "photo": "silas_burnside_photo.png",
+      "vibe": "Hearty, Reliable, Rugged, J...",
+      "bearing": "relaxed and open",
+      "age_presentation": "late 40s to early 50s",
+      "gender": "M",
+      "outfits": {},
+      "mtime": 1777853062.0812314,
+      "file_size": 2896,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Analog Film",
+          "Vintage"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Casual & Domestic",
+          "Work & Industrial"
+        ],
+        "Outfit_Tags": [
+          "Rugged",
+          "Vintage",
+          "Dark",
+          "Basic",
+          "Warm-weather"
+        ]
+      }
+    },
+    "Sasha King": {
+      "name": "Sasha King",
+      "tags": [
+        "Black",
+        "American",
+        "urban",
+        "Athletic",
+        "Energetic",
+        "creative",
+        "Youthful",
+        "Street-Artist",
+        "Sport",
+        "noir",
+        "Casual",
+        "sci-fi"
+      ],
+      "photo": "sasha_king_photo.png",
+      "vibe": "Electric, High-Performance,...",
+      "bearing": "aggressive and ready-to-move",
+      "age_presentation": "early 20s (21-23)",
       "gender": "F",
-      "mtime": 1771798450.9502099,
-      "file_size": 4847
+      "outfits": {},
+      "mtime": 1777853058.8235252,
+      "file_size": 3731,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Neon Futurism",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Cyberpunk & Sci-Fi",
+          "Casual & Domestic"
+        ],
+        "Outfit_Tags": [
+          "Black",
+          "Techwear",
+          "Summer",
+          "Floral"
+        ]
+      }
     },
     "Siofra Quinn": {
       "name": "Siofra Quinn",
@@ -1704,8 +3017,27 @@
       "bearing": "poised, ready stance",
       "age_presentation": "late 20s presentation",
       "gender": "F",
-      "mtime": 1771798450.9507241,
-      "file_size": 3688
+      "outfits": {},
+      "mtime": 1777853071.8606362,
+      "file_size": 3893,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Monochrome Noir",
+          "Graphite Sketch"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Combat & Tactical",
+          "Arts & Performance"
+        ],
+        "Outfit_Tags": [
+          "Rugged",
+          "Dark",
+          "Ginger",
+          "Velvet"
+        ]
+      }
     },
     "Sitara Saanvi": {
       "name": "Sitara Saanvi",
@@ -1729,101 +3061,71 @@
       "bearing": "graceful and deliberately s...",
       "age_presentation": "early to mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.9514363,
-      "file_size": 2910
+      "outfits": {},
+      "mtime": 1777853074.9974606,
+      "file_size": 3114,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Monochrome Noir",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Intimate & Sensual",
+          "Fashion & Glamour"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Floral",
+          "Red",
+          "Lingerie"
+        ]
+      }
     },
-    "Sophie Summers": {
-      "name": "Sophie Summers",
+    "Sina Tuilagi": {
+      "name": "Sina Tuilagi",
       "tags": [
         "Female",
-        "Caucasian",
-        "Cheerful",
-        "Resort-Chic",
-        "Bubbly",
-        "Optimistic",
-        "social",
-        "Vacation-Ready",
-        "Casual",
-        "urban",
-        "Sport",
-        "action",
-        "sci-fi"
-      ],
-      "photo": "sophie_summers_photo.png",
-      "vibe": "Bubbly, Breezy, Optimistic,...",
-      "bearing": "Open and inviting",
-      "age_presentation": "22-26",
-      "gender": "F",
-      "mtime": 1771798450.9514363,
-      "file_size": 3072
-    },
-    "Suki Nakamura": {
-      "name": "Suki Nakamura",
-      "tags": [
-        "Female",
+        "Athletic",
         "Chic",
         "Commanding",
-        "creative",
-        "Ethereal",
-        "Geometric",
-        "Japanese",
-        "Minimalist",
-        "vintage",
-        "Retro",
-        "sci-fi",
-        "noir",
-        "urban"
-      ],
-      "photo": "suki_nakamura_photo.png",
-      "vibe": "Ethereal, Intentional, Quie...",
-      "bearing": "precise movement",
-      "age_presentation": "late 20s presentation",
-      "gender": "F",
-      "mtime": 1771798450.9529507,
-      "file_size": 2319
-    },
-    "Talia Levi": {
-      "name": "Talia Levi",
-      "tags": [
-        "Female",
-        "Commanding",
-        "Edgy",
-        "Israeli",
-        "Mediterranean",
-        "noir",
-        "intimate",
-        "Casual",
-        "sci-fi"
-      ],
-      "photo": "talia_levi_photo.png",
-      "vibe": "Alluring, Provocative, Self...",
-      "bearing": "deliberate sensual movement...",
-      "age_presentation": "late 20s to early 30s prese...",
-      "gender": "F",
-      "mtime": 1771798450.9529507,
-      "file_size": 3802
-    },
-    "Theo Okonkwo": {
-      "name": "Theo Okonkwo",
-      "tags": [
-        "Black",
-        "Approachable",
-        "Chic",
-        "creative",
         "Cultural",
-        "Male",
-        "Playful",
-        "Rhythmic",
-        "Sport",
-        "Casual"
+        "Pacific-Islander",
+        "Strong",
+        "Tatau",
+        "Traditional-Modern-Fusion",
+        "urban",
+        "Casual",
+        "Sport"
       ],
-      "photo": "theo_okonkwo_photo.png",
-      "vibe": "Warm, Expressive, Creative,...",
-      "bearing": "rhythmic movement",
-      "age_presentation": "late 20s presentation",
-      "gender": "M",
-      "mtime": 1771798450.9544945,
-      "file_size": 2271
+      "photo": "sina_tuilagi_photo.png",
+      "vibe": "Warm, Strong, Proud, Cultur...",
+      "bearing": "grounded powerful posture w...",
+      "age_presentation": "mid-to-late 20s presentation",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777853068.9226627,
+      "file_size": 5123,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Luminous Digital Illustration",
+          "Artistic Anime: \"Kyoto Atmosphere\""
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Fashion & Glamour",
+          "Casual & Domestic"
+        ],
+        "Outfit_Tags": [
+          "Velvet",
+          "Traditional-Modern-Fusion",
+          "Rich",
+          "Floral"
+        ]
+      }
     },
     "Valentina \"Tina\" Kova\u010d": {
       "name": "Valentina \"Tina\" Kova\u010d",
@@ -1852,31 +3154,197 @@
       "bearing": "restless movement\u2014never ful...",
       "age_presentation": "mid-20s presentation",
       "gender": "F",
-      "mtime": 1771798450.9550042,
-      "file_size": 4301
+      "outfits": {},
+      "mtime": 1777853091.2774005,
+      "file_size": 4531,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Luminous Digital Illustration",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Intimate & Sensual",
+          "Cyberpunk & Sci-Fi",
+          "History & Culture"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Dark",
+          "Floral",
+          "Red"
+        ]
+      }
     },
-    "Yuki Tanaka": {
-      "name": "Yuki Tanaka",
+    "Theo Okonkwo": {
+      "name": "Theo Okonkwo",
       "tags": [
-        "Female",
+        "Black",
         "Approachable",
         "Chic",
+        "creative",
+        "Cultural",
+        "Male",
+        "Playful",
+        "Rhythmic",
+        "Sport",
+        "Casual"
+      ],
+      "photo": "theo_okonkwo_photo.png",
+      "vibe": "Warm, Expressive, Creative,...",
+      "bearing": "rhythmic movement",
+      "age_presentation": "late 20s presentation",
+      "gender": "M",
+      "outfits": {},
+      "mtime": 1777853087.8935478,
+      "file_size": 2519,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Artistic Anime: \u201cKyoto Atmosphere\u201d",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Fashion & Glamour",
+          "Casual & Domestic"
+        ],
+        "Outfit_Tags": [
+          "Floral",
+          "Rhythm",
+          "Chic",
+          "Warm-weather"
+        ]
+      }
+    },
+    "Suki Nakamura": {
+      "name": "Suki Nakamura",
+      "tags": [
+        "Female",
+        "Chic",
+        "Commanding",
+        "creative",
+        "Ethereal",
+        "Geometric",
         "Japanese",
-        "soft",
-        "romantic",
-        "Home",
-        "intimate",
+        "Minimalist",
+        "vintage",
+        "Retro",
         "sci-fi",
         "noir",
         "urban"
       ],
-      "photo": "yuki_tanaka_photo.png",
-      "vibe": "Tender, Warm, romantic",
-      "bearing": "soft posture with natural e...",
-      "age_presentation": "early 20s presentation",
+      "photo": "suki_nakamura_photo.png",
+      "vibe": "Ethereal, Intentional, Quie...",
+      "bearing": "precise movement",
+      "age_presentation": "late 20s presentation",
       "gender": "F",
-      "mtime": 1771798450.9565134,
-      "file_size": 3742
+      "outfits": {},
+      "mtime": 1777853081.1572473,
+      "file_size": 2535,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Luminous Digital Illustration",
+          "Monochrome Noir"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Intimate & Sensual",
+          "Cyberpunk & Sci-Fi"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Dark",
+          "Geometric",
+          "White"
+        ]
+      }
+    },
+    "Sophie Summers": {
+      "name": "Sophie Summers",
+      "tags": [
+        "Female",
+        "Caucasian",
+        "Cheerful",
+        "Resort-Chic",
+        "Bubbly",
+        "Optimistic",
+        "social",
+        "Vacation-Ready",
+        "Casual",
+        "urban",
+        "Sport",
+        "action",
+        "sci-fi"
+      ],
+      "photo": "sophie_summers_photo.png",
+      "vibe": "Bubbly, Breezy, Optimistic,...",
+      "bearing": "Open and inviting",
+      "age_presentation": "22-26",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777853078.0019834,
+      "file_size": 3281,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Retro Anime",
+          "Soft Vector"
+        ],
+        "Scenes": [
+          "Casual & Domestic",
+          "Fashion & Glamour",
+          "Arts & Performance"
+        ],
+        "Outfit_Tags": [
+          "Summer",
+          "Floral",
+          "Fashion",
+          "Track"
+        ]
+      }
+    },
+    "Talia Levi": {
+      "name": "Talia Levi",
+      "tags": [
+        "Female",
+        "Commanding",
+        "Edgy",
+        "Israeli",
+        "Mediterranean",
+        "noir",
+        "intimate",
+        "Casual",
+        "sci-fi"
+      ],
+      "photo": "talia_levi_photo.png",
+      "vibe": "Alluring, Provocative, Self...",
+      "bearing": "deliberate sensual movement...",
+      "age_presentation": "late 20s to early 30s prese...",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777853084.526038,
+      "file_size": 4023,
+      "affinities": {
+        "Styles": [
+          "Monochrome Noir",
+          "Luminous Digital Illustration",
+          "Retro Anime"
+        ],
+        "Scenes": [
+          "Intimate & Sensual",
+          "Cyberpunk & Sci-Fi",
+          "Arts & Performance"
+        ],
+        "Outfit_Tags": [
+          "Dark",
+          "Floral",
+          "High Fashion",
+          "Lingerie"
+        ]
+      }
     },
     "Zahara El-Amin": {
       "name": "Zahara El-Amin",
@@ -1898,8 +3366,69 @@
       "bearing": "composed and still",
       "age_presentation": "early 30s",
       "gender": "F",
-      "mtime": 1771798450.9575396,
-      "file_size": 2535
+      "outfits": {},
+      "mtime": 1777853097.5237732,
+      "file_size": 2741,
+      "affinities": {
+        "Styles": [
+          "Classical Painterly",
+          "Monochrome Noir",
+          "Analog Film"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Work & Industrial"
+        ],
+        "Outfit_Tags": [
+          "Velvet",
+          "Lingerie",
+          "Floral",
+          "Vintage"
+        ]
+      }
+    },
+    "Yuki Tanaka": {
+      "name": "Yuki Tanaka",
+      "tags": [
+        "Female",
+        "Approachable",
+        "Chic",
+        "Japanese",
+        "soft",
+        "romantic",
+        "Home",
+        "intimate",
+        "sci-fi",
+        "noir",
+        "urban"
+      ],
+      "photo": "yuki_tanaka_photo.png",
+      "vibe": "Tender, Warm, romantic",
+      "bearing": "soft posture with natural e...",
+      "age_presentation": "early 20s presentation",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1777853094.5114987,
+      "file_size": 3961,
+      "affinities": {
+        "Styles": [
+          "Luminous Digital Illustration",
+          "Analog Film",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Intimate & Sensual",
+          "Fashion & Glamour"
+        ],
+        "Outfit_Tags": [
+          "Floral",
+          "White",
+          "Lingerie",
+          "Velvet"
+        ]
+      }
     },
     "Zara Washington": {
       "name": "Zara Washington",
@@ -1921,8 +3450,27 @@
       "bearing": "confident bearing with natu...",
       "age_presentation": "mid-30s presentation",
       "gender": "F",
-      "mtime": 1771798450.9585986,
-      "file_size": 2473
+      "outfits": {},
+      "mtime": 1777853100.6661355,
+      "file_size": 2693,
+      "affinities": {
+        "Styles": [
+          "Monochrome Noir",
+          "Classical Painterly",
+          "Luminous Digital Illustration"
+        ],
+        "Scenes": [
+          "Arts & Performance",
+          "Fashion & Glamour",
+          "Thematic & Cinematic"
+        ],
+        "Outfit_Tags": [
+          "Dark",
+          "Fashion",
+          "Floral",
+          "Red"
+        ]
+      }
     },
     "Zemen Ayele": {
       "name": "Zemen Ayele",
@@ -1947,92 +3495,148 @@
       "bearing": "perfectly vertical posture",
       "age_presentation": "late 20s (27-29)",
       "gender": "F",
-      "mtime": 1771798450.9591126,
-      "file_size": 3518
+      "outfits": {},
+      "mtime": 1777853103.878745,
+      "file_size": 3735,
+      "affinities": {
+        "Styles": [
+          "Analog Film",
+          "Monochrome Noir",
+          "Classical Painterly"
+        ],
+        "Scenes": [
+          "History & Culture",
+          "Arts & Performance",
+          "Intimate & Sensual"
+        ],
+        "Outfit_Tags": [
+          "Vintage",
+          "Burgundy-Signature",
+          "Lingerie",
+          "Dark"
+        ]
+      }
+    },
+    "Niko Vance": {
+      "name": "Niko Vance",
+      "tags": [
+        "Tomboy",
+        "Athletic",
+        "Rebellious",
+        "Confident",
+        "Determined"
+      ],
+      "photo": "niko_vance_photo.png",
+      "vibe": "Defiant, Intense, Understat...",
+      "bearing": "Confident, relaxed but asse...",
+      "age_presentation": "Late teens to early 20s pre...",
+      "gender": "F",
+      "outfits": {},
+      "mtime": 1779048504.992887,
+      "file_size": 2360,
+      "affinities": {
+        "Styles": [
+          "Manga style",
+          "Action-comedy anime",
+          "Modern realistic art"
+        ],
+        "Scenes": [
+          "Rooftops at sunset",
+          "High-energy school hallways",
+          "Urban athletic settings"
+        ],
+        "Outfit_Tags": [
+          "Academy uniform",
+          "Sporty",
+          "Rebellious",
+          "Blazer"
+        ]
+      }
     }
   },
   "file_map": {
-    "Aaliyah Chen": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\aaliyah_chen.md",
-    "Aiyana Blackfeather": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\aiyana_blackfeather.md",
     "Amina Benali": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\amina_benali.md",
-    "Amira Khalil": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\amira_khalil.md",
-    "Aryan Kapoor": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\aryan_kapoor.md",
+    "Aaliyah Chen": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\aaliyah_chen.md",
     "Astrid Nielsen": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\astrid_nielsen.md",
-    "Audrey Thorne": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\audrey_thorne.md",
+    "Amira Khalil": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\amira_khalil.md",
+    "Aiyana Blackfeather": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\aiyana_blackfeather.md",
     "Avery Blake": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\avery_glam.md",
-    "Callum Doherty": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\callum_doherty.md",
+    "Aryan Kapoor": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\aryan_kapoor.md",
+    "Audrey Thorne": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\audrey_thorne.md",
     "Camila Vargas": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\camila_vargas.md",
     "Celine Voss": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\celine_voss.md",
-    "Chayton Red-Elk": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\chayton_red_elk.md",
+    "Callum Doherty": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\callum_doherty.md",
     "Chiara Lombardi": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\chiara_lombardi.md",
-    "Clara Thorne": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\clara_thorne.md",
-    "Daisy Dawson": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\daisy_dawson.md",
-    "Diego Morales": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Diego_Morales.md",
+    "Chayton Red-Elk": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\chayton_red_elk.md",
     "Diesel Murphy": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\diesel_murphy.md",
+    "Daisy Dawson": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\daisy_dawson.md",
+    "Clara Thorne": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\clara_thorne.md",
+    "Diego Morales": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Diego_Morales.md",
     "Efe Kouadio": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\efe_kouadio.md",
     "Elara Soledad": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\elara_soledad.md",
     "Elena Moretti": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\elena_moretti.md",
     "Elena Rosales": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\elena_rosales.md",
     "Elias Thorne": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\elias_thorne.md",
-    "Enzo Rossi": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Enzo_Rossi.md",
-    "Esme Dubois": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Esme_Dubois.md",
     "Fiona O'Sullivan": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Fiona_OSullivan.md",
-    "Freydis Holm": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\freydis_holm.md",
-    "Hailey Bennett": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\hailey_bennett.md",
-    "Hallie Bennett": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\hallie_bennett.md",
-    "Hana Park": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\hana_park.md",
+    "Enzo Rossi": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Enzo_Rossi.md",
     "Harald Bjornson": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\harald_bjornson.md",
-    "Harper Mae Sullivan": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\harper_mae.md",
+    "Hailey Bennett": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\hailey_bennett.md",
+    "Esme Dubois": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Esme_Dubois.md",
+    "Freydis Holm": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\freydis_holm.md",
+    "Hallie Bennett": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\hallie_bennett.md",
     "Inara Velez": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\inara_velez.md",
+    "Harper Mae Sullivan": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\harper_mae.md",
     "Ines Santos": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\ines_santos.md",
+    "Hana Park": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\hana_park.md",
     "Isla MacLeod": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\isla_macleod.md",
-    "Jamal Rivers": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\jamal_rivers.md",
     "Jax Chen": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Jax_Chen.md",
-    "Jena Marlowe": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\jena_marlowe.md",
     "Jin Park": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\jin_park.md",
-    "Jordan Vance": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\jordan_vance.md",
-    "Julian Blackwood": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\julian_blackwood.md",
+    "Jamal Rivers": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\jamal_rivers.md",
+    "Jena Marlowe": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\jena_marlowe.md",
     "Kaia Vaitupu": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Kaia_Vaitupu.md",
     "Kaito Sato": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\kaito_sato.md",
-    "Kassandra Lykaios": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\kassandra_lykaios.md",
-    "Keiko Yamamoto": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\keiko_yamamoto.md",
+    "Julian Blackwood": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\julian_blackwood.md",
+    "Jordan Vance": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\jordan_vance.md",
     "Kendra Mitchell": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\kendra_mitchell.md",
-    "Leilani Te'o": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\leilani_teo.md",
+    "Kassandra Lykaios": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\kassandra_lykaios.md",
     "Leonidas Stratos": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\leonidas_stratos.md",
+    "Leilani Te'o": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\leilani_teo.md",
     "Lila Reyes": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\lila_reyes.md",
+    "Luna Vex": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\luna_vex.md",
     "Linh Nguyen": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\linh_nguyen.md",
     "Luc\u00eda Reyes": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\lucia_reyes.md",
-    "Luna Vex": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\luna_vex.md",
-    "Maki Cruz": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\maki_cruz.md",
+    "Keiko Yamamoto": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\keiko_yamamoto.md",
     "Malik Farrah": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Malik_Farrah.md",
+    "Maki Cruz": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\maki_cruz.md",
     "Marcus Thompson": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\marcus_thompson.md",
-    "Marisol Rivera": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\marisol_rivera.md",
-    "Marley Thompson": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\marley_thompson.md",
     "Maya Rose": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\maya_rose.md",
     "Mei Chen": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\mei_chen.md",
+    "Marley Thompson": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\marley_thompson.md",
+    "Marisol Rivera": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\marisol_rivera.md",
     "Mela Hart": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\mela_hart.md",
     "Natsumi Maki": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\natsumi_maki.md",
     "Nora Alvarez": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\nora_alvarez.md",
-    "Oliver St. James": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\oliver_st_james.md",
     "Priya Sharma": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\priya_sharma.md",
+    "Oliver St. James": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\oliver_st_james.md",
+    "Roxanna Perez": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\roxanna_perez.md",
     "Rafael Costa": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\rafael_costa.md",
     "Rosa Torres": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\rosa_torres.md",
-    "Roxanna Perez": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\roxanna_perez.md",
     "Samira Mansour": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\samira_mansour.md",
-    "Sasha King": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\sasha_king.md",
-    "Silas Burnside": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\silas_burnside.md",
     "Simone Brooks": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\simone_brooks.md",
-    "Sina Tuilagi": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\sina_tuilagi.md",
+    "Silas Burnside": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\silas_burnside.md",
+    "Sasha King": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\sasha_king.md",
     "Siofra Quinn": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\siofra_quinn.md",
     "Sitara Saanvi": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\sitara_saanvi.md",
-    "Sophie Summers": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\sophie_summers.md",
-    "Suki Nakamura": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\suki_nakamura.md",
-    "Talia Levi": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\talia_levi.md",
-    "Theo Okonkwo": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\theo_okonkwo.md",
+    "Sina Tuilagi": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\sina_tuilagi.md",
     "Valentina \"Tina\" Kova\u010d": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\valentina_kovac.md",
-    "Yuki Tanaka": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Yuki_Tanaka.md",
+    "Theo Okonkwo": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\theo_okonkwo.md",
+    "Suki Nakamura": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\suki_nakamura.md",
+    "Sophie Summers": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\sophie_summers.md",
+    "Talia Levi": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\talia_levi.md",
     "Zahara El-Amin": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\zahara_el_amin.md",
+    "Yuki Tanaka": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\Yuki_Tanaka.md",
     "Zara Washington": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\zara_washington.md",
-    "Zemen Ayele": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\zemen_ayele.md"
+    "Zemen Ayele": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\zemen_ayele.md",
+    "Niko Vance": "C:\\Users\\parking\\Desktop\\promptbuilder\\assets\\data\\characters\\niko_vance.md"
   }
 }

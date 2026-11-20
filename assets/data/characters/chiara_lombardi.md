@@ -35,3 +35,9 @@
 - **Footwear:** Pointed-toe leather loafers in cognac brown
 - **Accessories:** Vintage gold watch, small gold hoop earrings, structured leather tote in tan
 - **Hair/Makeup:** Hair in loose low bun with face-framing pieces; refined warm-toned makeup
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Retro Anime]
+- Scenes: [Arts & Performance, Casual & Domestic, History & Culture]
+- Outfit_Tags: [Vintage, Soft, Layered, Chic]

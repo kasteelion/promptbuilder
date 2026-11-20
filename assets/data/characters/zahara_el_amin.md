@@ -36,3 +36,9 @@
 - **Footwear:** Navy blue suede pointed-toe flats with a minimalist gold hardware detail
 - **Accessories:** Silk hijab in a rich amber color with a clean, professional wrap; a thin gold ring with a geometric lapis stone
 - **Hair/Makeup:** Hijab covers hair; makeup is minimalist and sharp with a focus on defined brows and a matte terracotta lip
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Monochrome Noir, Analog Film]
+- Scenes: [History & Culture, Arts & Performance, Work & Industrial]
+- Outfit_Tags: [Velvet, Lingerie, Floral, Vintage]

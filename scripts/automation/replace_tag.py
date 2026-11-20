@@ -51,7 +51,7 @@ def replace_in_outfits(old_tag, new_tag, dry_run=True):
             if not dry_run:
                 with open(fp, 'w', encoding='utf-8') as f:
                     f.write("\n".join(new_lines))
-                print(f"  > Updated.")
+                print("  > Updated.")
 
 def replace_in_scenes(old_tag, new_tag, dry_run=True):
     print(f"\n--- Scanning Scenes for '{old_tag}' -> '{new_tag}' ---")
@@ -93,7 +93,7 @@ def replace_in_scenes(old_tag, new_tag, dry_run=True):
             new_lines.append(line)
             
     if modified:
-        print(f"[MATCH] scenes.md")
+        print("[MATCH] scenes.md")
         if not dry_run:
             with open(fp, 'w', encoding='utf-8') as f:
                 f.write("".join(new_lines))
@@ -139,7 +139,7 @@ def replace_in_interactions(old_tag, new_tag, dry_run=True):
             new_lines.append(line)
 
     if modified:
-        print(f"[MATCH] interactions.md")
+        print("[MATCH] interactions.md")
         if not dry_run:
             with open(fp, 'w', encoding='utf-8') as f:
                 f.write("".join(new_lines))
@@ -185,7 +185,7 @@ def replace_in_poses(old_tag, new_tag, dry_run=True):
             new_lines.append(line)
 
     if modified:
-        print(f"[MATCH] poses.md")
+        print("[MATCH] poses.md")
         if not dry_run:
             with open(fp, 'w', encoding='utf-8') as f:
                 f.write("".join(new_lines))

@@ -33,3 +33,9 @@
 - **Footwear:** Black leather square-toe ankle boots (matte finish)
 - **Accessories:** Single gunmetal geometric ring
 - **Hair/Makeup:** Blunt bob iron-smooth; matte oxblood lip, no highlight
+
+
+**Affinities:**
+- Styles: [Monochrome Noir, Classical Painterly, Studio Photorealism]
+- Scenes: [History & Culture, Intimate & Sensual, Cyberpunk & Sci-Fi]
+- Outfit_Tags: [Elegant, Severe, Functional, Villain]

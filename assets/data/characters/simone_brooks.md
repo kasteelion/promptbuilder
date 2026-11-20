@@ -42,3 +42,9 @@
 - **Footwear:** Elegant black leather wide-strap slide sandals.
 - **Accessories:** Black plastic rectangular-cat-eye hybrid frames; layered yellow gold chains with a delicate star pendant; large thick gold hoop earrings; stack of gold bangles (left wrist) and a thin gold bracelet (right wrist); silver link watch; milky-white nails.
 - **Hair/Makeup:** Ultra-long sleek black micro-braids with visible zigzag parting, pulled back away from the face; soft glam makeup with neutral glossy lips and a glowing highlight.
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Monochrome Noir, Retro Anime]
+- Scenes: [Arts & Performance, Work & Industrial, Fashion & Glamour]
+- Outfit_Tags: [Fuchsia-Signature, Velvet, Vintage, Track]

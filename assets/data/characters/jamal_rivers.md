@@ -39,3 +39,9 @@
 - **Accessories:** Silver watch with brown leather strap, canvas and leather messenger bag
 - **Hair/Makeup:** Short natural hair with clean lineup; clean-shaven
 - **Grooming:** Well-maintained short natural hair; clear skin
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Monochrome Noir]
+- Scenes: [History & Culture, Arts & Performance, Casual & Domestic]
+- Outfit_Tags: [Vintage, Retro, Minimalist, Clean]

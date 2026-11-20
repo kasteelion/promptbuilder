@@ -37,3 +37,9 @@
 - **Footwear:** Classic black suede Mary Jane block heels with a minimalist gold buckle.
 - **Accessories:** Rose-gold thin wireframe glasses (rectangular/cat-eye hybrid); dainty gold choker necklace; small gold and pearl teardrop earrings; bright coral manicured nails.
 - **Hair/Makeup:** Long silky honey blonde hair with a deep side part; soft pink lipstick and groomed brows.
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Analog Film, Retro Anime]
+- Scenes: [Arts & Performance, Urban, History & Culture]
+- Outfit_Tags: [Elegant, Vintage, Soft, Academic]

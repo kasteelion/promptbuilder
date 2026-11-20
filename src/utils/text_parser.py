@@ -1,4 +1,4 @@
-﻿import re
+import re
 from typing import Any, Dict, List, Optional
 
 class TextParser:
@@ -113,7 +113,8 @@ class TextParser:
         
         for line in text.splitlines():
             line = line.strip()
-            if not line: continue
+            if not line:
+                continue
             
             # Handle icons/labels
             if line.startswith("🎨"):
@@ -141,34 +142,70 @@ class TextParser:
                 config["notes"] = line.split("ote:", 1)[1].strip()
                 continue
                 
-            # Support multiple characters per line using finditer
+            # Support for the 👤 **Name**: Outfit • Pose format
+            char_colon_match = re.search(r"(?:👤\s*)?\*\*?([^*:]+)\*\*?:\s*(.+)", line)
+            if char_colon_match:
+                raw_name = char_colon_match.group(1).strip()
+                params_text = char_colon_match.group(2).strip()
+                
+                name = TextParser._fuzzy_match(raw_name, available_characters)
+                if name:
+                    # Logic: Outfit [Tags] • Pose
+                    # Split by bullet first! This is the most reliable way to separate Outfit from Pose.
+                    if " • " in params_text:
+                        outfit_part, pose_part = params_text.split(" • ", 1)
+                        params = [outfit_part.strip()]
+                        pose_preset = pose_part.strip()
+                    else:
+                        # Fallback for comma-only lists
+                        params = [p.strip() for p in params_text.split(",")]
+                        pose_preset = params[-1] if len(params) > 1 else ""
+                    
+                    # Clean up Outfit name (remove [Tags])
+                    outfit_name = params[0]
+                    outfit_name = re.sub(r"\s*\[[^\]]*\]\s*", "", outfit_name).strip()
+                    
+                    char_entry = {
+                        "name": name,
+                        "outfit": outfit_name,
+                        "pose_preset": pose_preset,
+                        "use_signature_color": "✨" in params_text or "Sig:" in params_text
+                    }
+                    
+                    # If we have a middle part (like a color scheme), it would be in params[1] if comma split
+                    # For now, let's just make sure outfit and pose are safe.
+                    
+                    config["selected_characters"].append(char_entry)
+                    continue
+
+            # Support for the legacy Name(Params) format
             char_matches = list(re.finditer(r"(?:[👥\[]\d*\]?\s*)?(\**[^(*]+\**)\(([^)]+)\)", line))
             if char_matches:
                 for char_match in char_matches:
                     raw_name = char_match.group(1).strip().strip("*")
-                    # Clean up (F) etc
                     raw_name = re.sub(r"\s*\([FmMHh]\)\s*", "", raw_name)
-                    # Strip icons like 👥
                     raw_name = re.sub(r"^[^\w\s]+", "", raw_name).strip()
                     
                     name = TextParser._fuzzy_match(raw_name, available_characters)
                     
                     if name:
-                        # Support both ',' and ' • ' as separators
                         params_text = char_match.group(2).replace(" • ", ",")
                         params = [p.strip() for p in params_text.split(",")]
+                        
+                        outfit_name = params[0] if len(params) > 0 else "Base"
+                        outfit_name = re.sub(r"\s*\[[^\]]*\]\s*", "", outfit_name).strip()
+
                         char_entry = {
                             "name": name,
-                            "outfit": params[0] if len(params) > 0 else "Base",
+                            "outfit": outfit_name,
                             "pose_preset": params[-1] if len(params) > 1 else "",
-                            "use_signature_color": any("Sig:" in p for p in params)
+                            "use_signature_color": any("Sig:" in p or "✨" in p for p in params)
                         }
                         if len(params) >= 3:
-                            # Try to find something that looks like a color scheme (usually the middle one)
                             char_entry["color_scheme"] = params[1]
                         config["selected_characters"].append(char_entry)
             else:
-                # Direct name match (only if no characters with parens were found)
+                # Direct name match (only if no characters with parens or colons were found)
                 clean_line = re.sub(r"^[^\w\s]+", "", line).strip().strip("*")
                 name = TextParser._fuzzy_match(clean_line, available_characters)
                 if name:
@@ -179,11 +216,33 @@ class TextParser:
     @staticmethod
     def _fuzzy_match(raw_name: str, available: List[str]) -> Optional[str]:
         raw_low = raw_name.lower().strip()
-        if not raw_low: return None
+        if not raw_low:
+            return None
+        
+        # Clean up common prefixes/formatting
+        raw_clean = re.sub(r"^[^\w\s]+", "", raw_low).strip() # Remove leading emojis/punctuation
+        raw_clean = re.sub(r"\s*\(.*?\)\s*", "", raw_clean).strip() # Remove gender tags like (F)
+        
+        if not raw_clean:
+            return None
+
+        # 1. Exact match
         for name in available:
-            if name.lower() == raw_low: return name
+            if name.lower() == raw_clean:
+                return name
+            
+        # 2. Starts with / Contains
         for name in available:
-            if name.lower().startswith(raw_low): return name
-        for name in available:
-            if raw_low in name.lower(): return name
+            name_low = name.lower()
+            if name_low.startswith(raw_clean) or raw_clean in name_low:
+                return name
+            
+        # 3. Handle Reversed Names (e.g., "Hart Mela" vs "Mela Hart")
+        parts = raw_clean.split()
+        if len(parts) > 1:
+            reversed_name = " ".join(reversed(parts))
+            for name in available:
+                if name.lower() == reversed_name:
+                    return name
+                
         return None

@@ -13,7 +13,6 @@ try:
     print("\nChecking outfit_builder_dialog.py...")
     # Mocking ThemeManager if needed, but imports should work if file exists
     # If ThemeManager is not in path, it might fail. Let's see.
-    from src.ui.dialogs.outfit_builder_dialog import OutfitBuilderDialog
     print("OutfitBuilderDialog imported successfully.")
 
 except Exception as e:

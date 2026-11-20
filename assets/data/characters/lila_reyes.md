@@ -33,3 +33,9 @@
 - **Footwear:** Minimalist black and white training shoes (flat sole for lifting)
 - **Accessories:** Simple black digital watch (tracks workouts), small gold stud earrings, gym bag always present (meal prep containers visible), lifting straps hanging from bag, resistance bands, foam roller
 - **Hair/Makeup:** High tight ponytail secured with thick hair tie; minimal makeup—tinted sunscreen, filled brows, lip balm
+
+
+**Affinities:**
+- Styles: [Monochrome Noir, Luminous Digital Illustration, Classical Painterly]
+- Scenes: [Arts & Performance, Work & Industrial, Cyberpunk & Sci-Fi]
+- Outfit_Tags: [Dark, Fashion, Techwear, Floral]

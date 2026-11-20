@@ -45,3 +45,9 @@
 - **Accessories:** Wrist tape (casual wrist wrap), simple stud earrings, small pendant necklace
 - **Makeup/Hair:** Minimal makeup for casual looks; hair tied back in a low ponytail or loose braid
 - **Signature:** Wrist tape / casual ring gear nod
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Monochrome Noir, Retro Anime]
+- Scenes: [Arts & Performance, Work & Industrial, Fashion & Glamour]
+- Outfit_Tags: [Dark, Fashion, Red, Sharp]

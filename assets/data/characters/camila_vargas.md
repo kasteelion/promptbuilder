@@ -42,3 +42,9 @@
 - **Footwear:** Black leather ankle boots with low heel
 - **Accessories:** Small silver stud earrings, simple black leather belt
 - **Hair/Makeup:** Hair in sleek low ponytail; minimal natural makeup with defined brows
+
+
+**Affinities:**
+- Styles: [Analog Film, Monochrome Noir, Classical Painterly]
+- Scenes: [Arts & Performance, Combat & Tactical, History & Culture]
+- Outfit_Tags: [Sport, Retro, Villain, Elegant]

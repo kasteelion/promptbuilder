@@ -1,7 +1,7 @@
 import flet as ft
 import os
-import base64
 import re
+from core.flet_theme_manager import ThemeManager
 
 def create_character_card(char_name: str, char_data: dict, on_click_callback, is_selected: bool = False, is_web: bool = False):
     """
@@ -16,6 +16,12 @@ def create_character_card(char_name: str, char_data: dict, on_click_callback, is
     # Uses a Vertical Column layout (Image Top, Text Bottom) to avoid Stack rendering issues.
     # Data extraction
     photo_filename = char_data.get("photo", "")
+    if photo_filename and photo_filename.endswith(".png"):
+        webp_name = photo_filename[:-4] + ".webp"
+        webp_disk = os.path.join("assets", "data", "characters", webp_name)
+        if os.path.exists(webp_disk):
+            photo_filename = webp_name
+
     # Web mode: /path resolves via Flet's asset server. Desktop: filesystem-relative path.
     if photo_filename:
         photo_path = f"/data/characters/{photo_filename}" if is_web else f"assets/data/characters/{photo_filename}"
@@ -36,8 +42,12 @@ def create_character_card(char_name: str, char_data: dict, on_click_callback, is
     # [NEW] Meta extraction
     vibe = char_data.get("vibe", "")
     age_raw = char_data.get("age_presentation", "")
-    # Truncate age to just the core descriptor (e.g. "mid-20s" from "mid-20s presentation; vibrant, grounded")
-    age = age_raw.split(";")[0].split("presentation")[0].strip().rstrip(",") if age_raw else ""
+    # Robust age parsing to extract just the core age (e.g., "mid-20s")
+    age = ""
+    if age_raw:
+        # Split on common delimiters or the words presentation/presenting (case insensitive)
+        age_clean = re.split(r"(?i)\s*(?:presentation|presenting|;|,)", age_raw)[0].strip()
+        age = age_clean[:12] + "..." if len(age_clean) > 15 else age_clean
     
     # Visual Elements
     
@@ -67,8 +77,11 @@ def create_character_card(char_name: str, char_data: dict, on_click_callback, is
         content=ft.Column([
             ft.Row([
                 ft.Text(char_name, weight="bold", size=13, max_lines=1, overflow=ft.TextOverflow.ELLIPSIS, color=ft.Colors.WHITE, expand=True),
-                ft.Text(age, size=10, color=ft.Colors.WHITE60) if age else ft.Container()
-            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, spacing=0),
+                ft.Container(
+                    content=ft.Text(age, size=10, color=ft.Colors.WHITE60, max_lines=1, overflow=ft.TextOverflow.ELLIPSIS, text_align=ft.TextAlign.RIGHT),
+                    width=65, alignment=ft.Alignment(1, 0)
+                ) if age else ft.Container(width=0)
+            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, spacing=2),
             ft.Text(display_tags, size=10, color=ft.Colors.WHITE70, max_lines=1, overflow=ft.TextOverflow.ELLIPSIS)
         ], spacing=2),
         padding=ft.Padding(8, 6, 8, 6),
@@ -83,23 +96,22 @@ def create_character_card(char_name: str, char_data: dict, on_click_callback, is
         vibe_badge = ft.Container(
             content=ft.Text(short_vibe.upper(), size=9, weight="bold", color=ft.Colors.WHITE),
             top=8, left=8,
-            padding=ft.padding.symmetric(horizontal=6, vertical=2),
+            padding=ft.Padding.symmetric(horizontal=6, vertical=2),
             bgcolor=ft.Colors.with_opacity(0.7, ft.Colors.BLUE_GREY_900),
             border_radius=4,
             border=ft.Border.all(1, ft.Colors.with_opacity(0.3, ft.Colors.WHITE))
         )
     
-    # 3. Selection Badge - Enhanced Pro
     selection_badge = None
     if is_selected:
         selection_badge = ft.Container(
-            content=ft.Icon(ft.Icons.CHECK_CIRCLE, color=ft.Colors.BLUE_ACCENT, size=18),
+            content=ft.Icon(ft.Icons.CHECK_CIRCLE, color=ThemeManager.colors["accent"], size=18),
             top=8,
             right=8,
             padding=4,
             bgcolor=ft.Colors.with_opacity(0.9, ft.Colors.BLACK),
             border_radius=ft.BorderRadius.all(20),
-            shadow=ft.BoxShadow(blur_radius=15, color=ft.Colors.with_opacity(0.3, ft.Colors.BLUE_ACCENT))
+            shadow=ft.BoxShadow(blur_radius=15, color=ft.Colors.with_opacity(0.3, ThemeManager.colors["accent"]))
         )
     
     # Combine all elements
@@ -114,21 +126,22 @@ def create_character_card(char_name: str, char_data: dict, on_click_callback, is
     # Hover Logic (Refined Micro-animations)
     def handle_hover(e):
         c = e.control
+        accent_color = ThemeManager.colors["accent"]
         if e.data == "true": # Enter
             c.scale = 1.05
             c.shadow = ft.BoxShadow(
                 blur_radius=30, 
-                color=ft.Colors.with_opacity(0.5, ft.Colors.BLUE_ACCENT),
+                color=ft.Colors.with_opacity(0.5, accent_color),
                 blur_style=ft.ShadowBlurStyle.OUTER
             )
-            c.border = ft.Border.all(2, ft.Colors.BLUE_ACCENT)
+            c.border = ft.Border.all(2, accent_color)
         else: # Leave
             c.scale = 1.0
             c.shadow = ft.BoxShadow(
                 blur_radius=15, 
-                color=ft.Colors.with_opacity(0.4, ft.Colors.BLUE_ACCENT)
-            ) if is_selected else None
-            c.border = ft.Border.all(2, ft.Colors.with_opacity(0.8, ft.Colors.BLUE_ACCENT)) if is_selected else None
+                color=ft.Colors.with_opacity(0.4, accent_color)
+            ) if is_selected else ThemeManager.styles.get("shadow_sm")
+            c.border = ft.Border.all(2, ft.Colors.with_opacity(0.8, accent_color)) if is_selected else None
             
         c.update()
 
@@ -148,8 +161,10 @@ def create_character_card(char_name: str, char_data: dict, on_click_callback, is
         height=200,
         bgcolor=ft.Colors.BLACK,
         border_radius=12,
-        # ...
+        shadow=ft.BoxShadow(blur_radius=15, color=ft.Colors.with_opacity(0.4, ThemeManager.colors["accent"])) if is_selected else ThemeManager.styles.get("shadow_sm"),
+        border=ft.Border.all(2, ft.Colors.with_opacity(0.8, ThemeManager.colors["accent"])) if is_selected else None,
         animate_scale=ft.Animation(400, ft.AnimationCurve.EASE_OUT_EXPO),
+        animate=ft.Animation(300, ft.AnimationCurve.EASE_OUT),
         on_click=on_click_wrapper,
         on_hover=handle_hover
     )

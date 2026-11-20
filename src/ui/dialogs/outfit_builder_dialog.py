@@ -1,9 +1,23 @@
 import flet as ft
-import json
-import os
 import random
-from pathlib import Path
 from core.flet_theme_manager import ThemeManager
+
+
+def _cfg_get(obj, key, default=None):
+    """Universal accessor for SelectedCharacterConfig (Pydantic model) or dict."""
+    if hasattr(obj, key):
+        return getattr(obj, key)
+    if isinstance(obj, dict):
+        return obj.get(key, default)
+    return default
+
+
+def _cfg_set(obj, key, value):
+    """Universal setter for SelectedCharacterConfig (Pydantic model) or dict."""
+    if hasattr(obj, key):
+        setattr(obj, key, value)
+    elif isinstance(obj, dict):
+        obj[key] = value
 
 
 class OutfitBuilderDialog(ft.AlertDialog):
@@ -28,7 +42,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
         self.is_global_mode = (character_index is None)
         if character_index is not None and 0 <= character_index < len(app.state.state["selected_characters"]):
             self.char_data = app.state.state["selected_characters"][character_index]
-            self.char_name = self.char_data["name"]
+            self.char_name = _cfg_get(self.char_data, "name")
             self.char_info = app.state.ctx.characters.get(self.char_name, {})
 
         # Build the outfit catalogue
@@ -37,6 +51,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
         # State
         self.selected_category = None
         self.selected_outfit = None
+        self.selected_variant = "base"
         self._init_defaults()
 
         # UI Components
@@ -63,7 +78,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
                     padding=15,
                     border_radius=8,
                     bgcolor=ThemeManager.colors["active_item"],
-                    border=ft.border.all(1, ThemeManager.colors["outline"]),
+                    border=ft.Border.all(1, ThemeManager.colors["outline"]),
                     expand=True,
                 ),
             ]),
@@ -83,14 +98,23 @@ class OutfitBuilderDialog(ft.AlertDialog):
                 ft.Icon(header_icon, color=ThemeManager.colors["accent"], size=20),
                 ft.Text(header_text, weight="bold", size=14),
             ], spacing=8),
-            padding=ft.padding.only(bottom=5),
+            padding=ft.Padding.only(bottom=5),
         )
 
+        # Main Layout — flat Container with explicit height, matching working dialog patterns
         # Main Layout — flat Container with explicit height, matching working dialog patterns
         self.content = ft.Container(
             width=1200,
             height=750,
-            bgcolor=ThemeManager.colors["surface"],
+            bgcolor=ft.Colors.with_opacity(0.85, ThemeManager.colors["surface"]),
+            border_radius=16,
+            border=ft.Border.all(1, ft.Colors.with_opacity(0.15, ThemeManager.colors["outline"])),
+            shadow=ft.BoxShadow(
+                blur_radius=30,
+                color=ft.Colors.with_opacity(0.3, ThemeManager.colors["accent"]),
+            ),
+            scale=0.95,
+            animate_scale=ft.Animation(400, ft.AnimationCurve.EASE_OUT_EXPO),
             content=ft.Row([
                 # Left Pane: Tree View (Categories -> Outfits)
                 ft.Container(
@@ -103,7 +127,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
                     ]),
                     width=260,
                     padding=10,
-                    border=ft.border.only(right=ft.BorderSide(1, ThemeManager.colors["outline"])),
+                    border=ft.Border.only(right=ft.BorderSide(1, ft.Colors.with_opacity(0.15, ThemeManager.colors["outline"]))),
                 ),
 
                 # Middle Pane: Detail View for Selected Outfit
@@ -125,7 +149,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
                 ft.Container(
                     width=350,
                     content=self.preview_container,
-                    border=ft.border.only(left=ft.BorderSide(1, ThemeManager.colors["outline"])),
+                    border=ft.Border.only(left=ft.BorderSide(1, ft.Colors.with_opacity(0.15, ThemeManager.colors["outline"]))),
                     padding=10,
                 ),
             ], spacing=0),
@@ -133,8 +157,23 @@ class OutfitBuilderDialog(ft.AlertDialog):
 
         self.actions = [
             ft.TextButton("Close", on_click=self.handle_close),
-            ft.FilledButton("Apply to Character", icon=ft.Icons.CHECK, on_click=self.handle_apply,
-                            disabled=(self.char_data is None)),
+            ft.FilledButton(
+                "Apply to Character",
+                icon=ft.Icons.CHECK,
+                on_click=self.handle_apply,
+                disabled=(self.char_data is None),
+                style=ft.ButtonStyle(
+                    bgcolor={
+                        ft.ControlState.DEFAULT: ThemeManager.colors["accent"],
+                        ft.ControlState.DISABLED: ThemeManager.colors["active_item"],
+                    },
+                    color={
+                        ft.ControlState.DEFAULT: "white",
+                        ft.ControlState.DISABLED: ThemeManager.colors["text_secondary"],
+                    },
+                    shape=ft.RoundedRectangleBorder(radius=8),
+                )
+            ),
         ]
         self.actions_alignment = ft.MainAxisAlignment.END
 
@@ -148,12 +187,18 @@ class OutfitBuilderDialog(ft.AlertDialog):
         Global mode: aggregates all outfits across all characters.
         """
         if not self.is_global_mode and self.char_info:
-            return self.char_info.get("outfits_categorized", {})
+            oc = getattr(self.char_info, "outfits_categorized", None)
+            if oc is None and isinstance(self.char_info, dict):
+                oc = self.char_info.get("outfits_categorized", {})
+            return oc or {}
 
         # Global mode: merge all characters' outfits_categorized
         merged = {}
         for char_name, char_data in self.app.state.ctx.characters.items():
-            for cat, outfits in char_data.get("outfits_categorized", {}).items():
+            oc = getattr(char_data, "outfits_categorized", None)
+            if oc is None and isinstance(char_data, dict):
+                oc = char_data.get("outfits_categorized", {})
+            for cat, outfits in (oc or {}).items():
                 if cat not in merged:
                     merged[cat] = {}
                 merged[cat].update(outfits)
@@ -162,8 +207,15 @@ class OutfitBuilderDialog(ft.AlertDialog):
     def _init_defaults(self):
         """Set initial selection to the character's current outfit."""
         if self.char_data:
-            self.selected_category = self.char_data.get("outfit_category")
-            self.selected_outfit = self.char_data.get("outfit")
+            self.selected_category = _cfg_get(self.char_data, "outfit_category")
+            raw_outfit = _cfg_get(self.char_data, "outfit")
+            if raw_outfit and " - " in raw_outfit:
+                parts = raw_outfit.split(" - ", 1)
+                self.selected_outfit = parts[0]
+                self.selected_variant = parts[1]
+            else:
+                self.selected_outfit = raw_outfit
+                self.selected_variant = "base"
 
     # ──────────────────────────────────────────────
     # TREE VIEW
@@ -198,10 +250,10 @@ class OutfitBuilderDialog(ft.AlertDialog):
                         content=ft.Text(str(outfit_count), size=10, color=ThemeManager.colors["outline"]),
                         bgcolor=ThemeManager.colors["active_item"],
                         border_radius=10,
-                        padding=ft.padding.symmetric(horizontal=6, vertical=2),
+                        padding=ft.Padding.symmetric(horizontal=6, vertical=2),
                     ),
                 ]),
-                padding=ft.padding.symmetric(horizontal=5, vertical=8),
+                padding=ft.Padding.symmetric(horizontal=5, vertical=8),
                 border_radius=5,
                 bgcolor=ThemeManager.colors["active_item"] if is_expanded else "transparent",
                 on_click=self._create_category_click_handler(category),
@@ -212,9 +264,9 @@ class OutfitBuilderDialog(ft.AlertDialog):
             if is_expanded:
                 for outfit_name in sorted(outfits.keys()):
                     is_selected = (outfit_name == self.selected_outfit)
-                    is_current = (self.char_data and
-                                  self.char_data.get("outfit") == outfit_name and
-                                  self.char_data.get("outfit_category") == category)
+                    is_current = (self.char_data is not None and
+                                  _cfg_get(self.char_data, "outfit") == outfit_name and
+                                  _cfg_get(self.char_data, "outfit_category") == category)
 
                     slot_tile = ft.Container(
                         content=ft.Row([
@@ -229,7 +281,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
                                 color="green" if is_current else ThemeManager.colors["text_primary"],
                             ),
                         ]),
-                        padding=ft.padding.only(left=28, top=5, bottom=5, right=5),
+                        padding=ft.Padding.only(left=28, top=5, bottom=5, right=5),
                         border_radius=5,
                         bgcolor=ThemeManager.colors["active_item"] if is_selected else "transparent",
                         on_click=self._create_outfit_click_handler(category, outfit_name),
@@ -243,6 +295,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
             else:
                 self.selected_category = category
             self.selected_outfit = None
+            self.selected_variant = "base"
             self.build_tree_view()
             self.build_detail_view()
             self._page_update()
@@ -252,6 +305,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
         def handler(e):
             self.selected_category = category
             self.selected_outfit = outfit_name
+            self.selected_variant = "base"
             self.build_tree_view()
             self.build_detail_view()
             self._safe_update_preview()
@@ -280,10 +334,24 @@ class OutfitBuilderDialog(ft.AlertDialog):
 
         outfit_data = self.catalogue.get(self.selected_category, {}).get(self.selected_outfit, "")
 
+        # Extract variant data
+        variants = {}
+        if isinstance(outfit_data, dict) and "variants" in outfit_data:
+            variants = outfit_data["variants"]
+            # Fallback if selected variant doesn't exist
+            if self.selected_variant not in variants:
+                self.selected_variant = outfit_data.get("default_variant", "base")
+            active_data = variants.get(self.selected_variant, outfit_data)
+        else:
+            active_data = outfit_data
+            variants = {"base": outfit_data} if isinstance(outfit_data, dict) else {}
+
         # Header breadcrumb
-        is_current = (self.char_data and
-                      self.char_data.get("outfit") == self.selected_outfit and
-                      self.char_data.get("outfit_category") == self.selected_category)
+        
+        saved_name = f"{self.selected_outfit} - {self.selected_variant}" if self.selected_variant != "base" else self.selected_outfit
+        is_current = (self.char_data is not None and
+                      _cfg_get(self.char_data, "outfit") == saved_name and
+                      _cfg_get(self.char_data, "outfit_category") == self.selected_category)
 
         header = ft.Container(
             content=ft.Row([
@@ -294,25 +362,57 @@ class OutfitBuilderDialog(ft.AlertDialog):
                     content=ft.Text("ACTIVE", size=10, color="white", weight="bold"),
                     bgcolor="green",
                     border_radius=4,
-                    padding=ft.padding.symmetric(horizontal=8, vertical=3),
+                    padding=ft.Padding.symmetric(horizontal=8, vertical=3),
                     visible=is_current,
                 ),
             ]),
-            padding=ft.padding.only(bottom=10),
+            padding=ft.Padding.only(bottom=10),
         )
         self.detail_container.controls.append(header)
 
+        # Add variant chips
+        if len(variants) > 1:
+            def _create_variant_handler(v_name):
+                def handler(e):
+                    self.selected_variant = v_name
+                    self.build_detail_view()
+                    self._safe_update_preview()
+                    self._page_update()
+                return handler
+
+            chips = []
+            for v_name in sorted(variants.keys()):
+                is_sel = (v_name == self.selected_variant)
+                chips.append(
+                    ft.ElevatedButton(
+                        text=v_name.capitalize(),
+                        bgcolor=ThemeManager.colors["accent"] if is_sel else ThemeManager.colors["surface_light"],
+                        color="white" if is_sel else ThemeManager.colors["text_primary"],
+                        on_click=_create_variant_handler(v_name),
+                        style=ft.ButtonStyle(
+                            shape=ft.RoundedRectangleBorder(radius=4),
+                            padding=ft.Padding.symmetric(horizontal=12, vertical=4)
+                        )
+                    )
+                )
+            
+            variant_row = ft.Container(
+                content=ft.Row([ft.Text("Variant:", size=12, color=ThemeManager.colors["outline"])] + chips, wrap=True),
+                padding=ft.Padding.only(bottom=10)
+            )
+            self.detail_container.controls.append(variant_row)
+
         # Description Preview
-        if isinstance(outfit_data, dict):
-            desc = outfit_data.get("description", str(outfit_data))
-            tags = outfit_data.get("tags", [])
-            modifiers = outfit_data.get("modifiers", {})
-        elif isinstance(outfit_data, str):
-            desc = outfit_data
+        if isinstance(active_data, dict):
+            desc = active_data.get("description", str(active_data))
+            tags = active_data.get("tags", [])
+            modifiers = active_data.get("modifiers", {})
+        elif isinstance(active_data, str):
+            desc = active_data
             tags = []
             modifiers = {}
         else:
-            desc = str(outfit_data)
+            desc = str(active_data)
             tags = []
             modifiers = {}
 
@@ -324,7 +424,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
                         content=ft.Text(t, size=10, color=ThemeManager.colors["text_secondary"]),
                         bgcolor=ThemeManager.colors["active_item"],
                         border_radius=4,
-                        padding=ft.padding.symmetric(horizontal=8, vertical=3),
+                        padding=ft.Padding.symmetric(horizontal=8, vertical=3),
                     )
                     for t in tags
                 ],
@@ -347,7 +447,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
             padding=15,
             border_radius=8,
             bgcolor=ThemeManager.colors["panel_bg"],
-            border=ft.border.all(1, ThemeManager.colors["outline"]),
+            border=ft.Border.all(1, ThemeManager.colors["outline"]),
         )
         self.detail_container.controls.append(desc_label)
         self.detail_container.controls.append(desc_display)
@@ -359,9 +459,9 @@ class OutfitBuilderDialog(ft.AlertDialog):
             self.detail_container.controls.append(mod_label)
 
             mod_chips = ft.Row(wrap=True, spacing=5)
-            current_traits = self.char_data.get("outfit_traits", []) if self.char_data else []
+            current_traits = _cfg_get(self.char_data, "outfit_traits", []) if self.char_data else []
             for mod_name, mod_desc in sorted(modifiers.items()):
-                is_active = mod_name in current_traits
+                is_active = mod_name in (current_traits or [])
                 chip = ft.Chip(
                     label=ft.Text(mod_name, size=11),
                     bgcolor=ThemeManager.colors["accent"] if is_active else ThemeManager.colors["active_item"],
@@ -375,7 +475,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
 
             # Show modifier descriptions
             for mod_name, mod_desc in sorted(modifiers.items()):
-                is_active = mod_name in current_traits
+                is_active = mod_name in (current_traits or [])
                 if is_active:
                     self.detail_container.controls.append(
                         ft.Container(
@@ -384,7 +484,7 @@ class OutfitBuilderDialog(ft.AlertDialog):
                                 ft.Text(f"{mod_name}: ", weight="bold", size=12),
                                 ft.Text(mod_desc, size=12, color=ThemeManager.colors["text_secondary"]),
                             ]),
-                            padding=ft.padding.only(left=10),
+                            padding=ft.Padding.only(left=10),
                         )
                     )
 
@@ -402,7 +502,14 @@ class OutfitBuilderDialog(ft.AlertDialog):
             on_click=self.handle_apply,
             disabled=(not has_roster or is_current) if not self.is_global_mode else (not has_roster),
             style=ft.ButtonStyle(
-                bgcolor="green" if not is_current else ThemeManager.colors["active_item"],
+                bgcolor={
+                    ft.ControlState.DEFAULT: ThemeManager.colors["accent"],
+                    ft.ControlState.DISABLED: ThemeManager.colors["active_item"],
+                },
+                color={
+                    ft.ControlState.DEFAULT: "white",
+                    ft.ControlState.DISABLED: ThemeManager.colors["text_secondary"],
+                },
                 shape=ft.RoundedRectangleBorder(radius=8),
             ),
         )
@@ -412,14 +519,14 @@ class OutfitBuilderDialog(ft.AlertDialog):
         def handler(e):
             if not self.char_data:
                 return
-            traits = self.char_data.get("outfit_traits", [])
+            traits = list(_cfg_get(self.char_data, "outfit_traits", []) or [])
             if new_state:
                 if mod_name not in traits:
                     traits.append(mod_name)
             else:
                 if mod_name in traits:
                     traits.remove(mod_name)
-            self.char_data["outfit_traits"] = traits
+            _cfg_set(self.char_data, "outfit_traits", traits)
             self.build_detail_view()
             self._safe_update_preview()
             self._page_update()
@@ -434,14 +541,13 @@ class OutfitBuilderDialog(ft.AlertDialog):
         if not self.char_data or not self.selected_outfit:
             text = "Select an outfit to preview."
         else:
-            # Build a temporary config to get what the prompt would look like
-            temp_char = dict(self.char_data)
-            temp_char["outfit"] = self.selected_outfit
-            temp_char["outfit_category"] = self.selected_category
-
             try:
-                data = self.app.state.ctx.characters.get(temp_char["name"], {})
-                outfit_raw = data.get("outfits", {}).get(self.selected_outfit, "")
+                char_name = _cfg_get(self.char_data, "name")
+                data = self.app.state.ctx.characters.get(char_name, {})
+                outfits = getattr(data, "outfits", None)
+                if outfits is None and isinstance(data, dict):
+                    outfits = data.get("outfits", {})
+                outfit_raw = (outfits or {}).get(self.selected_outfit, "")
 
                 if isinstance(outfit_raw, dict):
                     desc = outfit_raw.get("description", "")
@@ -449,9 +555,10 @@ class OutfitBuilderDialog(ft.AlertDialog):
                     desc = str(outfit_raw) if outfit_raw else ""
 
                 lines = [
-                    f"Character: {temp_char['name']}",
+                    f"Character: {char_name}",
                     f"Category: {self.selected_category}",
                     f"Outfit: {self.selected_outfit}",
+                    f"Variant: {self.selected_variant}",
                     "",
                     "--- Rendered Outfit ---",
                     desc if desc else "(No outfit description found)",
@@ -498,25 +605,29 @@ class OutfitBuilderDialog(ft.AlertDialog):
         if not chars:
             return
 
+        saved_name = f"{self.selected_outfit} - {self.selected_variant}" if self.selected_variant != "base" else self.selected_outfit
+
         if self.is_global_mode:
             # Apply to ALL rostered characters
             count = 0
             for char in chars:
-                char["outfit"] = self.selected_outfit
-                char["outfit_category"] = self.selected_category
-                char["outfit_traits"] = []
+                _cfg_set(char, "outfit", saved_name)
+                _cfg_set(char, "outfit_category", self.selected_category)
+                _cfg_set(char, "outfit_traits", [])
                 count += 1
-            self.app.show_toast(f"Applied '{self.selected_outfit}' to {count} characters!")
+            self.app.show_toast(f"Applied '{saved_name}' to {count} characters!")
             self.app.roster.refresh()
         else:
             # Apply to specific character
             if not self.char_data:
                 return
-            self.char_data["outfit"] = self.selected_outfit
-            self.char_data["outfit_category"] = self.selected_category
-            self.char_data["outfit_traits"] = self.char_data.get("outfit_traits", [])
+            _cfg_set(self.char_data, "outfit", saved_name)
+            _cfg_set(self.char_data, "outfit_category", self.selected_category)
+            # Preserve existing traits list
+            existing_traits = _cfg_get(self.char_data, "outfit_traits", [])
+            _cfg_set(self.char_data, "outfit_traits", existing_traits or [])
             self.app.roster.update_character_ui(self.character_index)
-            self.app.show_toast(f"Applied '{self.selected_outfit}' to {self.char_name}!")
+            self.app.show_toast(f"Applied '{saved_name}' to {self.char_name}!")
 
         self.app.update_preview()
 
@@ -534,6 +645,11 @@ class OutfitBuilderDialog(ft.AlertDialog):
 
     def handle_close(self, e):
         self.app.close_dialog(self)
+
+    def animate_intro(self):
+        if hasattr(self, "content") and self.content:
+            self.content.scale = 1.0
+            self._page_update()
 
     def _page_update(self):
         try:

@@ -32,3 +32,9 @@
 - **Footwear:** Impeccably clean limited-edition designer sneakers in white and electric blue
 - **Accessories:** Large gold hoop earrings; a stack of gold bangles on her right wrist; a high-end designer crossbody bag slung across her chest
 - **Hair/Makeup:** Long knotless braids with gold accents; soft glam makeup featuring defined brows, winged liner, long lashes, and a high-shine rose-pink lip gloss; athletic sun-kissed finish
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Cinematic 3D, Neon Futurism]
+- Scenes: [Arts & Performance, Fashion & Glamour, Cyberpunk & Sci-Fi]
+- Outfit_Tags: [High Fashion, Black, Red, Techwear, Chic]

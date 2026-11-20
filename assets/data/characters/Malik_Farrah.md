@@ -41,3 +41,9 @@
 - **Footwear:** Sturdy, mid-cut desert boots in distressed dark brown leather with a rugged lug sole.
 - **Accessories:** A multi-functional leather utility belt with multiple pouches; a lightweight charcoal wool scarf wrapped loosely around his neck; protective copper-framed eyewear tucked into a pocket.
 - **Hair/Makeup:** Textured buzz cut; short, well-maintained beard; sun-weathered skin texture.
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Monochrome Noir, Graphite Sketch]
+- Scenes: [History & Culture, Athletics & Sports, Combat & Tactical]
+- Outfit_Tags: [Rugged, Dark, Vintage, Gold-Signature]

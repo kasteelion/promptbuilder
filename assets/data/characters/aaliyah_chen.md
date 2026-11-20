@@ -41,3 +41,9 @@
 - **Footwear:** Tan leather sandals with simple straps
 - **Accessories:** Wood and turquoise beaded necklace, mixed metal small hoop earrings, canvas crossbody bag
 - **Hair/Makeup:** Natural curls in high puff with patterned headscarf; minimal dewy makeup
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Soft Vector]
+- Scenes: [Casual & Domestic, Arts & Performance, History & Culture]
+- Outfit_Tags: [Boho, Sport, Everyday, Layered]

@@ -36,3 +36,9 @@
 - **Accessories:** Medium gold chain necklace, gold watch, small gold hoop earring, black crossbody bag with wax print strap
 - **Hair/Makeup:** Mini twists styled with slight height; clean fade; clean-shaven
 - **Grooming:** Sharp lineup; well-maintained twists; clear skin
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Artistic Anime: “Kyoto Atmosphere”, Classical Painterly]
+- Scenes: [Arts & Performance, Fashion & Glamour, Casual & Domestic]
+- Outfit_Tags: [Floral, Rhythm, Chic, Warm-weather]

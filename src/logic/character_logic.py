@@ -1,5 +1,5 @@
-from typing import Dict, Any, List, Union
-from core.models import SelectedCharacterConfig, CharacterDetails, CharacterMetadata
+from typing import Dict, Any
+from core.models import SelectedCharacterConfig
 
 class CharacterLogic:
     def __init__(self, ctx, state: Dict[str, Any]):
@@ -72,7 +72,7 @@ class CharacterLogic:
             elif hasattr(char, "dict"):
                  # Pydantic 1.x fallback
                  old_expanded = getattr(char, "_expanded", True)
-                 data = char.dict()
+                 data = char.model_dump()
                  data.update(updates)
                  new_char = SelectedCharacterConfig(**data)
                  new_char._expanded = old_expanded

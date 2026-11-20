@@ -16,8 +16,7 @@ Usage:
 import os
 import sys
 import time
-import json
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 
 # Add project root to path
@@ -151,7 +150,7 @@ class RandomizerAnalyzer:
         scores = self.stats["scores"]
         
         # Basic stats
-        print(f"\n📊 Generation Statistics:")
+        print("\n📊 Generation Statistics:")
         print(f"  Total Prompts: {self.stats['total_prompts']}")
         print(f"  Total Candidates: {self.stats['total_candidates']}")
         print(f"  Avg Candidates/Prompt: {self.stats['total_candidates'] / self.stats['total_prompts']:.1f}")
@@ -160,13 +159,13 @@ class RandomizerAnalyzer:
         
         # Performance
         avg_time = self.stats["total_time"] / self.stats["total_prompts"]
-        print(f"\n⚡ Performance:")
+        print("\n⚡ Performance:")
         print(f"  Total Time: {self.stats['total_time'] / 1000:.2f}s")
         print(f"  Average Time: {avg_time:.1f}ms per prompt")
         print(f"  Throughput: {1000 / avg_time:.1f} prompts/second")
         
         # Score distribution
-        print(f"\n🎯 Score Distribution:")
+        print("\n🎯 Score Distribution:")
         print(f"  Mean: {sum(scores) / len(scores):.2f}")
         print(f"  Median: {sorted(scores)[len(scores) // 2]:.2f}")
         print(f"  Min: {min(scores)}")
@@ -200,14 +199,14 @@ class RandomizerAnalyzer:
             else:
                 ranges["600+"] += 1
         
-        print(f"\n📈 Score Ranges:")
+        print("\n📈 Score Ranges:")
         for range_name, count in ranges.items():
             pct = count / len(scores) * 100
             bar = "█" * int(pct / 2)
             print(f"  {range_name:10} | {count:5} ({pct:5.1f}%) {bar}")
         
         # Retry distribution
-        print(f"\n🔄 Retry Distribution:")
+        print("\n🔄 Retry Distribution:")
         for attempts in sorted(self.stats["attempts_distribution"].keys()):
             count = self.stats["attempts_distribution"][attempts]
             pct = count / self.stats["total_prompts"] * 100
@@ -222,7 +221,7 @@ class RandomizerAnalyzer:
         print(f"  Would need retry with this threshold: {below_threshold}")
         
         # Recommendations
-        print(f"\n💡 Recommendations:")
+        print("\n💡 Recommendations:")
         if below_threshold / len(scores) < 0.05:
             print(f"  ✅ Current threshold ({threshold}) is appropriate")
             print(f"     Only {below_threshold / len(scores) * 100:.1f}% of prompts need retry")

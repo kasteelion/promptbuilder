@@ -37,3 +37,9 @@
 - **Footwear:** White New Balance style lifestyle trainers with teal and grey accents.
 - **Accessories:** Minimalist silver chain necklace; simple silver studs.
 - **Hair/Makeup:** Loose wind-swept espresso waves; natural "sun-kissed" skin.
+
+
+**Affinities:**
+- Styles: [Analog Film, Luminous Digital Illustration, Retro Anime]
+- Scenes: [Arts & Performance, Fashion & Glamour, History & Culture]
+- Outfit_Tags: [Sport, Vintage, Retro, Layered]

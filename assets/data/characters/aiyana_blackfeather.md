@@ -71,3 +71,9 @@
   - Defined bold brows
   - Minimal makeup: nude-brown lip, soft definition on eyes
   - Healthy natural finish emphasizing her features
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Monochrome Noir, Luminous Digital Illustration]
+- Scenes: [Arts & Performance, Urban, History & Culture]
+- Outfit_Tags: [Sport, Bold, layered, Minimalist]

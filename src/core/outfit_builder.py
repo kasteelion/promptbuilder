@@ -6,7 +6,7 @@ and a set of user selections.
 """
 
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict
 import re
 
 class OutfitBuilder:

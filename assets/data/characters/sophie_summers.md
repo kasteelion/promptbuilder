@@ -37,3 +37,9 @@
 - **Footwear:** Elegant white/neutral wedge sandals with a faux-leather strap and a comfortable cork sole.
 - **Accessories:** White silicone strap smart watch on her wrist; oversized aviator sunglasses pushed up onto her head used as a headband; dainty gold necklace.
 - **Hair/Makeup:** Shoulder-blade length waves with sun-kissed balayage; "beach glow" makeup with bronzed cheeks and a sheer glossy lip.
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Retro Anime, Soft Vector]
+- Scenes: [Casual & Domestic, Fashion & Glamour, Arts & Performance]
+- Outfit_Tags: [Summer, Floral, Fashion, Track]

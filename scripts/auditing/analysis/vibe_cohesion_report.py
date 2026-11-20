@@ -86,12 +86,12 @@ def analyze_vibe_cohesion(directory):
 
     # Generate Report
     print("# Vibe Cohesion & Diversity Report")
-    print(f"\n## Top Vibe Mixes (Multi-faceted Prompts)")
+    print("\n## Top Vibe Mixes (Multi-faceted Prompts)")
     sorted_mixes = sorted(stats['mixes'].items(), key=lambda x: x[1], reverse=True)
     for mix, count in sorted_mixes:
         print(f"- **{mix}**: {count} prompts")
         
-    print(f"\n## Potential Thematic Mismatches")
+    print("\n## Potential Thematic Mismatches")
     if not mismatches:
         print("- No major thematic mismatches detected! (High Vibe Cohesion)")
     else:

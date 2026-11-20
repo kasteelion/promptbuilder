@@ -32,3 +32,9 @@
 - **Footwear:** Flat-sole black lifting shoes with red laces
 - **Accessories:** Simple black digital watch; leather lifting belt (often slung over one shoulder); simple silver stud earrings
 - **Hair/Makeup:** Half-up with a thick elastic; no makeup, skin showing a light sheen of sweat and natural sun-kissed glow
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Neon Futurism, Monochrome Noir]
+- Scenes: [History & Culture, Combat & Tactical, Arts & Performance]
+- Outfit_Tags: [Velvet, Rugged, Dark, Fashion]

@@ -37,3 +37,9 @@
 - **Footwear:** Classic white chunky dad-style sneakers with beige accents.
 - **Accessories:** Small polished silver tube hoops; dainty silver chain with a small floating heart pendant.
 - **Hair/Makeup:** Voluminous butterfly cut with prominent platinum highlights; fresh face makeup with dewy foundation, lengthening mascara, and a sheer pink lip gloss.
+
+
+**Affinities:**
+- Styles: [Analog Film, Luminous Digital Illustration, Retro Anime]
+- Scenes: [Casual & Domestic, Arts & Performance, Urban]
+- Outfit_Tags: [Trendy, Everyday, Sport, Vintage]

@@ -138,13 +138,46 @@ class OutfitParser:
         return merged_outfits, final_categorized
 
     @staticmethod
+    def _parse_outfit_file(content: str):
+        import re
+        result = {"tags": [], "modifiers": {}, "blocks": {}}
+        # Parse Tags
+        tags_match = re.search(r"^tags:\s*\[(.*?)\]", content, re.MULTILINE)
+        if tags_match:
+            tags_str = tags_match.group(1)
+            result["tags"] = [t.strip() for t in tags_str.split(",") if t.strip()]
+
+        # Parse Modifiers
+        modifiers_match = re.search(r"^modifiers:\s*(.*?)(?=\n\[|\Z)", content, re.DOTALL | re.MULTILINE)
+        if modifiers_match:
+            mod_block = modifiers_match.group(1)
+            for line in mod_block.splitlines():
+                line = line.strip()
+                if not line: continue
+                if ":" in line:
+                    key, val = line.split(":", 1)
+                    result["modifiers"][key.strip()] = val.strip()
+
+        # Parse Sections: [F], [M], [H]
+        parts = re.split(r"^\[([FMH])\]", content, flags=re.MULTILINE)
+        for i in range(1, len(parts), 2):
+            modifier = parts[i]
+            body = parts[i+1].strip()
+            if not body or body.startswith("- Content missing"):
+                continue
+            result["blocks"][modifier] = body
+            
+        return result
+
+    @staticmethod
     def parse_outfits_directory(directory_path):
         """Parse outfits from the new unified directory structure.
         
-        Structure: data/outfits/<Category>/<OutfitName>.txt
+        Structure: data/outfits/<Category>/<OutfitGroup>/<VariantName>.txt
+        Fallback: data/outfits/<Category>/<OutfitName>.txt (treated as base variant)
         
         Returns:
-            dict: { "F": { Cat: { Name: Data } }, "M": ..., "H": ... }
+            dict: { "F": { Cat: { GroupName: { "variants": {...}, ... } } }, ... }
         """
         import re
         from pathlib import Path
@@ -162,59 +195,70 @@ class OutfitParser:
                 
             category = cat_dir.name
             
-            # Iterate through outfit files
-            for outfit_file in cat_dir.glob("*.txt"):
-                try:
-                    content = outfit_file.read_text(encoding="utf-8")
-                    name = outfit_file.stem
-                    
-                    # Parse Tags
-                    tags = []
-                    tags_match = re.search(r"^tags:\s*\[(.*?)\]", content, re.MULTILINE)
-                    if tags_match:
-                        tags_str = tags_match.group(1)
-                        tags = [t.strip() for t in tags_str.split(",") if t.strip()]
+            # Find groups and variants
+            outfit_groups = {} # group_name -> {variant_name: file_path}
+            
+            for child in cat_dir.iterdir():
+                if child.is_file() and child.suffix == ".txt":
+                    outfit_groups.setdefault(child.stem, {})["base"] = child
+                elif child.is_dir():
+                    for variant_file in child.glob("*.txt"):
+                        outfit_groups.setdefault(child.name, {})[variant_file.stem] = variant_file
 
-                    # Parse Modifiers (YAML-style block)
-                    # modifiers:
-                    #   Name: Description
-                    modifiers = {}
-                    modifiers_match = re.search(r"^modifiers:\s*(.*?)(?=\n\[|\Z)", content, re.DOTALL | re.MULTILINE)
-                    if modifiers_match:
-                        mod_block = modifiers_match.group(1)
-                        # Find lines looking like "  Key: Value"
-                        for line in mod_block.splitlines():
-                            line = line.strip()
-                            if not line: continue
-                            if ":" in line:
-                                key, val = line.split(":", 1)
-                                modifiers[key.strip()] = val.strip()
+            for group_name, variants in outfit_groups.items():
+                if not variants:
+                    continue
                     
-                    # Parse Sections: [F], [M], [H]
-                    parts = re.split(r"^\[([FMH])\]", content, flags=re.MULTILINE)
-                    # parts[0] is header/tags, then alternating Key, Content
-                    
-                    # Iterate parts starting from index 1
-                    for i in range(1, len(parts), 2):
-                        modifier = parts[i]
-                        body = parts[i+1].strip()
+                # Determine base
+                base_name = "base" if "base" in variants else list(variants.keys())[0]
+                
+                parsed_variants = {}
+                for v_name, v_path in variants.items():
+                    try:
+                        content = v_path.read_text(encoding="utf-8")
+                        parsed_variants[v_name] = OutfitParser._parse_outfit_file(content)
+                    except Exception as e:
+                        from utils import logger
+                        logger.error(f"Error parsing outfit variant {v_path}: {e}")
                         
-                        # Skip if body is empty or explicitly missing content marker
-                        if not body or body.startswith("- Content missing"):
-                            continue
+                base_data = parsed_variants.get(base_name, {"tags": [], "modifiers": {}, "blocks": {}})
+                
+                # We need to construct the result by modifier (F, M, H)
+                for modifier in ["F", "M", "H"]:
+                    has_any_content = False
+                    item_data = {
+                        "description": "", 
+                        "tags": base_data["tags"],
+                        "modifiers": base_data["modifiers"],
+                        "variants": {},
+                        "default_variant": base_name
+                    }
+                    
+                    for v_name, v_data in parsed_variants.items():
+                        # Inheritance: if this variant is missing the block, fall back to base
+                        body = v_data["blocks"].get(modifier)
+                        if not body:
+                            body = base_data["blocks"].get(modifier)
+                        
+                        if body:
+                            has_any_content = True
+                            v_item = {
+                                "description": body,
+                                "tags": v_data["tags"] if v_data["tags"] else base_data["tags"],
+                                "modifiers": v_data["modifiers"] if v_data["modifiers"] else base_data["modifiers"]
+                            }
+                            item_data["variants"][v_name] = v_item
                             
-                        item_data = {
-                            "description": body,
-                            "tags": tags,
-                            "modifiers": modifiers
-                        }
+                            # Ensure the top-level description matches the base variant (or default)
+                            if v_name == base_name:
+                                item_data["description"] = body
+                                item_data["tags"] = v_item["tags"]
+                                item_data["modifiers"] = v_item["modifiers"]
+                                
+                    # Only add if at least one variant has content for this gender
+                    if has_any_content:
+                        result.setdefault(modifier, {}).setdefault(category, {})[group_name] = item_data
                         
-                        result.setdefault(modifier, {}).setdefault(category, {})[name] = item_data
-                        
-                except Exception as e:
-                    from utils import logger
-                    logger.error(f"Error parsing outfit file {outfit_file}: {e}")
-                    
-        # Normalize Common category if needed (not strictly required if folders are correct)
+        # Normalize Common category if needed
         return result
 

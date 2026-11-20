@@ -36,3 +36,9 @@
 - **Footwear:** Dark coffee brown leather Chelsea boots with a polished finish and stacked wood heel
 - **Accessories:** Silver watch with a leather strap, thin silver curb-link chain necklace
 - **Hair/Makeup:** Tousled medium-length jet black hair with natural volume; well-maintained heavy stubble; matte-finish skin
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Monochrome Noir]
+- Scenes: [Urban, Arts & Performance, History & Culture]
+- Outfit_Tags: [Retro, Sport, Bold, Layered]

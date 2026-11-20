@@ -5,7 +5,6 @@ import os
 # Add project root to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from core.builder import PromptBuilder
 from logic.randomizer import PromptRandomizer
 
 from logic.data_loader import DataLoader

@@ -1,116 +1,93 @@
-# Themes (Editable)
-## Packers Dark
+# Premium Themes (Curated)
+
+## Cyberpunk
 
 ```yaml
-bg: "#203731"
-fg: "#FFFFFF"
-panel_bg: "#1a2b26"
-preview_bg: "#1a2b26"
-preview_fg: "#f0f0f0"
-text_bg: "#2d4d45"
-text_fg: "#FFFFFF"
-accent: "#FFB612"
-accent_hover: "#e6a410"
-border: "#3d5e56"
-selected_bg: "#3d5e56"
+bg: "#050505"
+fg: "#f0f0f0"
+panel_bg: "#0d0d0f"
+text_bg: "#1a1a1d"
+text_fg: "#f0f0f0"
+accent: "#ff0055"
+accent_hover: "#ff3377"
+border: "#ff005522"
+selected_bg: "#22000a"
+header_bg: "#120005"
+header_fg: "#ff0055"
 ```
 
-## Packers Light
+## Nordic Night
 
 ```yaml
-bg: "#f5f5f5"
-fg: "#203731"
-panel_bg: "#FFFFFF"
-preview_bg: "#FFFFFF"
-preview_fg: "#203731"
-text_bg: "#FFFFFF"
-text_fg: "#203731"
-accent: "#203731"
-accent_hover: "#2d4d45"
-border: "#FFB612"
-selected_bg: "#fff8e1"
+bg: "#1b222d"
+fg: "#e5e9f0"
+panel_bg: "#242e3d"
+text_bg: "#2e3b4e"
+text_fg: "#eceff4"
+accent: "#88c0d0"
+accent_hover: "#a3be8c"
+border: "#434c5e"
+selected_bg: "#3b4252"
+header_bg: "#151b24"
+header_fg: "#81a1c1"
 ```
 
-## FC Cincinnati Dark
+## Emerald Forest
 
 ```yaml
-bg: "#1a1a1a"
-fg: "#FFFFFF"
-panel_bg: "#263B94"
-preview_bg: "#263B94"
-preview_fg: "#FFFFFF"
-text_bg: "#2d2d2d"
-text_fg: "#FFFFFF"
-accent: "#FE5000"
-accent_hover: "#e54800"
-border: "#263B94"
-selected_bg: "#3d3d3d"
+bg: "#0d1b15"
+fg: "#e8edea"
+panel_bg: "#14261d"
+text_bg: "#1c3328"
+text_fg: "#e8edea"
+accent: "#4caf50"
+accent_hover: "#66bb6a"
+border: "#244032"
+selected_bg: "#1c3328"
 ```
 
-## FC Cincinnati Light
+## Astro Grey
 
 ```yaml
-bg: "#f0f4f8"
-fg: "#263B94"
-panel_bg: "#FFFFFF"
-preview_bg: "#FFFFFF"
-preview_fg: "#263B94"
-text_bg: "#FFFFFF"
-text_fg: "#263B94"
-accent: "#FE5000"
-accent_hover: "#e54800"
-border: "#263B94"
-selected_bg: "#e1e8f0"
+bg: "#1c1c1e"
+fg: "#f2f2f7"
+panel_bg: "#2c2c2e"
+text_bg: "#3a3a3c"
+text_fg: "#f2f2f7"
+accent: "#ff9500"
+accent_hover: "#ffcc00"
+border: "#48484a"
+selected_bg: "#3a3a3c"
 ```
 
-## ONU Dark
+## Lavender Mist
 
 ```yaml
-bg: "#000000"
-fg: "#FFFFFF"
-panel_bg: "#1a1a1a"
-preview_bg: "#1a1a1a"
-preview_fg: "#FFFFFF"
-text_bg: "#222222"
-text_fg: "#FFFFFF"
-accent: "#FF6600"
-accent_hover: "#e55c00"
-border: "#333333"
-selected_bg: "#333333"
-```
-
-## ONU Light
-
-```yaml
-bg: "#FFFFFF"
-fg: "#000000"
-panel_bg: "#f5f5f5"
-preview_bg: "#f5f5f5"
-preview_fg: "#000000"
-text_bg: "#FFFFFF"
-text_fg: "#000000"
-accent: "#FF6600"
-accent_hover: "#e55c00"
-border: "#CCCCCC"
-selected_bg: "#fff0e6"
+bg: "#1e1b26"
+fg: "#e6e1f0"
+panel_bg: "#262233"
+text_bg: "#312c40"
+text_fg: "#e6e1f0"
+accent: "#bb9af7"
+accent_hover: "#ccacff"
+border: "#413b58"
+selected_bg: "#312c40"
 ```
 
 # Themes (Auto-Generated)
-# You can edit or add themes below. Each theme is a header and a YAML block.
 
 ## Dark
 
 ```yaml
-bg: "#1e1e1e"
-fg: "#d4d4d4"
-preview_bg: "#252526"
-preview_fg: "#e0e0e0"
-text_bg: "#2d2d2d"
-text_fg: "#d4d4d4"
-accent: "#0e639c"
-accent_hover: "#1177bb"
-border: "#3c3c3c"
-selected_bg: "#2d3e50"
+bg: "#121212"
+fg: "#f8f8f2"
+panel_bg: "#1e1e1e"
+text_bg: "#2a2a2d"
+text_fg: "#f8f8f2"
+accent: "#3ea6ff"
+accent_hover: "#65b8ff"
+border: "#2c2c2e"
+selected_bg: "#2a2a2d"
 ```
 
 ## Dracula
@@ -118,8 +95,7 @@ selected_bg: "#2d3e50"
 ```yaml
 bg: "#282a36"
 fg: "#f8f8f2"
-preview_bg: "#21222c"
-preview_fg: "#f8f8f2"
+panel_bg: "#21222c"
 text_bg: "#44475a"
 text_fg: "#f8f8f2"
 accent: "#bd93f9"
@@ -131,16 +107,15 @@ selected_bg: "#44475a"
 ## Gruvbox Dark
 
 ```yaml
-bg: "#282828"
+bg: "#1d2021"
 fg: "#ebdbb2"
-preview_bg: "#1d2021"
-preview_fg: "#ebdbb2"
+panel_bg: "#282828"
 text_bg: "#3c3836"
 text_fg: "#ebdbb2"
-accent: "#83a598"
-accent_hover: "#a89984"
+accent: "#fe8019"
+accent_hover: "#fabd2f"
 border: "#504945"
-selected_bg: "#504945"
+selected_bg: "#3c3836"
 ```
 
 ## High Contrast
@@ -148,23 +123,7 @@ selected_bg: "#504945"
 ```yaml
 bg: "#000000"
 fg: "#ffffff"
-preview_bg: "#000000"
-preview_fg: "#ffffff"
-text_bg: "#000000"
-text_fg: "#ffffff"
-accent: "#ffff00"
-accent_hover: "#ffea00"
-border: "#ffffff"
-selected_bg: "#333333"
-```
-
-## High Contrast Copy
-
-```yaml
-bg: "#000000"
-fg: "#ffffff"
-preview_bg: "#000000"
-preview_fg: "#ffffff"
+panel_bg: "#000000"
 text_bg: "#000000"
 text_fg: "#ffffff"
 accent: "#ffff00"
@@ -176,46 +135,15 @@ selected_bg: "#333333"
 ## Light
 
 ```yaml
-bg: "#f0f0f0"
-fg: "#1a1a1a"
-preview_bg: "#ffffff"
-preview_fg: "#2c2c2c"
-text_bg: "#ffffff"
-text_fg: "#2c2c2c"
-accent: "#0066cc"
-accent_hover: "#004c99"
-border: "#cccccc"
-selected_bg: "#e3f2fd"
-```
-
-## Midnight Blue
-
-```yaml
-bg: "#0b1b2b"
-fg: "#cfe8ff"
-preview_bg: "#071426"
-preview_fg: "#bcdff6"
-text_bg: "#0f2a44"
-text_fg: "#cfe8ff"
-accent: "#4aa3ff"
-accent_hover: "#66b8ff"
-border: "#12324a"
-selected_bg: "#0f3a55"
-```
-
-## Monokai
-
-```yaml
-bg: "#272822"
-fg: "#f8f8f2"
-preview_bg: "#1e1f1c"
-preview_fg: "#f8f8f2"
-text_bg: "#3e3d32"
-text_fg: "#f8f8f2"
-accent: "#66d9ef"
-accent_hover: "#89e4f7"
-border: "#75715e"
-selected_bg: "#49483e"
+bg: "#f8f9fa"
+fg: "#212529"
+panel_bg: "#ffffff"
+text_bg: "#f1f3f5"
+text_fg: "#212529"
+accent: "#007bff"
+accent_hover: "#0056b3"
+border: "#dee2e6"
+selected_bg: "#e7f1ff"
 ```
 
 ## Nord
@@ -223,104 +151,13 @@ selected_bg: "#49483e"
 ```yaml
 bg: "#2e3440"
 fg: "#d8dee9"
-preview_bg: "#3b4252"
-preview_fg: "#eceff4"
+panel_bg: "#3b4252"
 text_bg: "#434c5e"
 text_fg: "#eceff4"
-accent: "#88c0d0"
-accent_hover: "#8fbcbb"
-border: "#5e81ac"
+accent: "#81a1c1"
+accent_hover: "#88c0d0"
+border: "#4c566a"
 selected_bg: "#434c5e"
-```
-
-## One Dark
-
-```yaml
-bg: "#282c34"
-fg: "#abb2bf"
-preview_bg: "#21252b"
-preview_fg: "#abb2bf"
-text_bg: "#323842"
-text_fg: "#abb2bf"
-accent: "#61afef"
-accent_hover: "#84c0f4"
-border: "#5c6370"
-selected_bg: "#3e4451"
-```
-
-## Packers
-
-```yaml
-bg: "#000000"
-fg: "#ffffff"
-preview_bg: "#183000"
-preview_fg: "#ffffff"
-text_bg: "#183000"
-text_fg: "#ffffff"
-accent: "#ffb808"
-accent_hover: "#ffb81c"
-border: "#ffffff"
-selected_bg: "#333333"
-```
-
-## Pastel
-
-```yaml
-bg: "#fffaf0"
-fg: "#3b3a3a"
-preview_bg: "#fff8f2"
-preview_fg: "#3b3a3a"
-text_bg: "#fffaf0"
-text_fg: "#3b3a3a"
-accent: "#ff9a9e"
-accent_hover: "#ffb3b8"
-border: "#e6d7d7"
-selected_bg: "#fff1f2"
-```
-
-## Sepia
-
-```yaml
-bg: "#f4ecd8"
-fg: "#5b4636"
-preview_bg: "#f6eee1"
-preview_fg: "#5b4636"
-text_bg: "#fbf6ee"
-text_fg: "#5b4636"
-accent: "#b57f50"
-accent_hover: "#9c5f2f"
-border: "#d7c9b1"
-selected_bg: "#efe6d1"
-```
-
-## Solarized Dark
-
-```yaml
-bg: "#002b36"
-fg: "#839496"
-preview_bg: "#073642"
-preview_fg: "#93a1a1"
-text_bg: "#002b36"
-text_fg: "#93a1a1"
-accent: "#b58900"
-accent_hover: "#d29922"
-border: "#073642"
-selected_bg: "#073642"
-```
-
-## Solarized Light
-
-```yaml
-bg: "#fdf6e3"
-fg: "#657b83"
-preview_bg: "#eee8d5"
-preview_fg: "#586e75"
-text_bg: "#ffffff"
-text_fg: "#586e75"
-accent: "#268bd2"
-accent_hover: "#0b6fa4"
-border: "#93a1a1"
-selected_bg: "#eee8d5"
 ```
 
 ## Tokyo Night
@@ -328,12 +165,25 @@ selected_bg: "#eee8d5"
 ```yaml
 bg: "#1a1b26"
 fg: "#a9b1d6"
-preview_bg: "#16161e"
-preview_fg: "#c0caf5"
+panel_bg: "#16161e"
 text_bg: "#24283b"
-text_fg: "#a9b1d6"
+text_fg: "#c0caf5"
 accent: "#7aa2f7"
-accent_hover: "#9db3f5"
+accent_hover: "#89ddff"
 border: "#414868"
 selected_bg: "#292e42"
+```
+
+## Solarized Dark
+
+```yaml
+bg: "#002b36"
+fg: "#839496"
+panel_bg: "#073642"
+text_bg: "#002b36"
+text_fg: "#93a1a1"
+accent: "#268bd2"
+accent_hover: "#2aa198"
+border: "#073642"
+selected_bg: "#073642"
 ```

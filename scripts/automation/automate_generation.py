@@ -13,9 +13,9 @@ from logic.randomizer import PromptRandomizer
 from core.builder import PromptBuilder
 from utils.ai_client import AIStudioClient
 
-def generate_prompts(count=10, match_outfits_prob=0.3):
+def generate_prompts(count=10, match_outfits_prob=0.3, format_type="markdown"):
     """Generate a list of random prompts using the app's logic."""
-    print(f"Generating {count} prompts (Match Outfit Prob: {match_outfits_prob})...")
+    print(f"Generating {count} prompts (Match Outfit Prob: {match_outfits_prob}, Format: {format_type})...")
     loader = DataLoader()
     chars = loader.load_characters()
     base_prompts = loader.load_base_prompts()
@@ -43,15 +43,15 @@ def generate_prompts(count=10, match_outfits_prob=0.3):
             match_outfits_prob=match_outfits_prob,
             candidates=1
         )
-        prompt_text = builder.generate(config)
-        score = config.get("metadata", {}).get("score", 0)
+        prompt_text = builder.generate(config, format_type=format_type)
+        score = config.get("metadata", {}).get("score", 0) if isinstance(config, dict) else getattr(config, "metadata", {}).get("score", 0)
         prompts_with_scores.append((prompt_text, score, config))
         
     return prompts_with_scores
 
-async def run_automation(count=10, match_outfits_prob=0.3):
+async def run_automation(count=10, match_outfits_prob=0.3, format_type="markdown"):
     """Generate prompts and images using browser automation."""
-    prompts_with_scores = generate_prompts(count, match_outfits_prob)
+    prompts_with_scores = generate_prompts(count, match_outfits_prob, format_type=format_type)
     
     # Extract just the prompts (add "Generate an image of: " prefix)
     prompts = [f"Generate an image of: {prompt}" for prompt, score, _ in prompts_with_scores]
@@ -145,9 +145,9 @@ async def run_automation(count=10, match_outfits_prob=0.3):
     print(f"Successful: {successful}")
     print(f"Failed: {len(results) - successful}")
 
-def run_local_generation(count=10, match_outfits_prob=0.3):
+def run_local_generation(count=10, match_outfits_prob=0.3, format_type="markdown"):
     """Generate prompts and save to text files without browser automation."""
-    prompts_with_scores = generate_prompts(count, match_outfits_prob)
+    prompts_with_scores = generate_prompts(count, match_outfits_prob, format_type=format_type)
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(os.path.dirname(script_dir))
@@ -157,7 +157,6 @@ def run_local_generation(count=10, match_outfits_prob=0.3):
     print(f"Prompts will be saved to: {output_dir}")
     
     import time
-    import time
     timestamp = int(time.time())
     for i, (prompt, score, config) in enumerate(prompts_with_scores):
         print(f"  Saving prompt {i+1}/{len(prompts_with_scores)}... [Score: {score}]")
@@ -165,62 +164,60 @@ def run_local_generation(count=10, match_outfits_prob=0.3):
         
         # Save Prompt as Text File
         text_path = os.path.join(output_dir, f"{base_filename}.txt")
-        full_text = "Generate an image of: " + prompt
+        full_text = prompt if format_type in ("midjourney", "sdxl") else "Generate an image of: " + prompt
         
         # Append Metadata
-        # Note: 'metadata' key usually contains scoring info, while scene/prompt choices are at root
         meta_block = "\n\n# METADATA\n"
+        meta_block += f"Format_Profile: {format_type}\n"
         
-        # Schene
-        if "scene" in config:
+        # Scene
+        if isinstance(config, dict) and "scene" in config:
             s_val = config["scene"]
-            # Handle if it's a dict or string
             s_name = s_val.get("name", str(s_val)) if isinstance(s_val, dict) else str(s_val)
             meta_block += f"Scene: {s_name}\n"
-            
-            # Add Scene Category if available for better auditing
             if "scene_category" in config:
                 meta_block += f"Scene_Category: {config['scene_category']}\n"
+        elif hasattr(config, "scene"):
+            meta_block += f"Scene: {config.scene}\n"
+            if hasattr(config, "scene_category"):
+                meta_block += f"Scene_Category: {config.scene_category}\n"
             
-        # Base Prompt
-        if "base_prompt" in config:
+        # Base Prompt / Art Style
+        if isinstance(config, dict) and "base_prompt" in config:
             bp_val = config["base_prompt"]
             bp_name = bp_val.get("name", str(bp_val)) if isinstance(bp_val, dict) else str(bp_val)
             meta_block += f"Base_Prompt: {bp_name}\n"
+        elif hasattr(config, "base_prompt"):
+            meta_block += f"Base_Prompt: {config.base_prompt}\n"
             
         # Interaction (Notes)
-        if "notes" in config and config["notes"]:
-            # Notes usually string, but sometimes we track Interaction name in metadata
-            # Let's check if the specific interaction name is available in specific metadata
-            # or just use the notes text snippet as ID if needed, 
-            # BUT the analyzer expects 'Interaction: Name'.
-            # The randomizer logic calculates interaction tags.
-            # If we don't have the clean name, we might skip or use a hint.
-            # Usually randomizer puts 'interaction' in metadata if it chose from a file.
-            
-            # Check internal metadata for specific keys
-            score_meta = config.get("metadata", {})
+        notes = config.get("notes") if isinstance(config, dict) else getattr(config, "notes", None)
+        if notes:
+            score_meta = config.get("metadata", {}) if isinstance(config, dict) else getattr(config, "metadata", {})
             if "interaction" in score_meta:
                  i_name = score_meta["interaction"]
                  meta_block += f"Interaction: {i_name}\n"
             
-        # Composition Mode (Always write if available)
-        score_meta = config.get("metadata", {})
+        # Composition Mode
+        score_meta = config.get("metadata", {}) if isinstance(config, dict) else getattr(config, "metadata", {})
         if "composition_mode" in score_meta:
              c_mode = score_meta["composition_mode"]
              meta_block += f"Composition_Mode: {c_mode}\n"
 
-
         # Characters
-        for char in config.get("selected_characters", []): # Key is 'selected_characters'
-            name = char.get('name', 'Unknown')
-            outfit = char.get('outfit', {})
-            outfit_name = outfit.get('name', str(outfit)) if isinstance(outfit, dict) else str(outfit)
+        chars_list = config.get("selected_characters", []) if isinstance(config, dict) else getattr(config, "selected_characters", [])
+        for char in chars_list:
+            name = getattr(char, "name", None) or (char.get("name", "Unknown") if isinstance(char, dict) else "Unknown")
+            outfit = getattr(char, "outfit", None) or (char.get("outfit", "") if isinstance(char, dict) else "")
+            outfit_name = outfit.get("name", str(outfit)) if isinstance(outfit, dict) else str(outfit)
             
-            pose = char.get('pose', {})
-            pose_name = pose.get('name', str(pose)) if isinstance(pose, dict) else str(pose)
+            pose = getattr(char, "pose_preset", None) or getattr(char, "pose", None) or (char.get("pose", "") if isinstance(char, dict) else "")
+            pose_name = pose.get("name", str(pose)) if isinstance(pose, dict) else str(pose)
             
-            meta_block += f"Character: {name} | Outfit: {outfit_name} | Pose: {pose_name}\n"
+            scheme = getattr(char, "color_scheme", None) or (char.get("color_scheme") if isinstance(char, dict) else None)
+            scheme_str = f" | Color_Scheme: {scheme}" if scheme and scheme != "The Standard" else ""
+            
+            meta_block += f"Character: {name} | Outfit: {outfit_name} | Pose: {pose_name}{scheme_str}\n"
             
         meta_block += f"Score: {score}\n"
         
@@ -235,13 +232,14 @@ if __name__ == "__main__":
     parser.add_argument("--prompts-only", action="store_true", help="Generate prompts to text files only (no browser)")
     parser.add_argument("--count", type=int, default=10, help="Number of prompts to generate")
     parser.add_argument("--match-outfits-prob", type=float, default=0.3, help="Probability of matching outfits (0.0-1.0)")
+    parser.add_argument("--format", choices=["markdown", "prose", "midjourney", "sdxl"], default="markdown", help="Output prompt format profile")
     args = parser.parse_args()
 
     try:
         if args.prompts_only:
-            run_local_generation(args.count, args.match_outfits_prob)
+            run_local_generation(args.count, args.match_outfits_prob, format_type=args.format)
         else:
-            asyncio.run(run_automation(args.count, args.match_outfits_prob))
+            asyncio.run(run_automation(args.count, args.match_outfits_prob, format_type=args.format))
             
     except KeyboardInterrupt:
         print("Stopped by user.")

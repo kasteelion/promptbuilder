@@ -1,145 +1,78 @@
-# Data File Syntax & Conventions
+﻿# Data File Syntax & Conventions
 
-This document outlines the standard file formats, syntax, and norms used within the `data/` directory. Adhering to these conventions ensures that characters, outfits, and prompt assets are correctly parsed and utilized by the PromptBuilder application.
+This document outlines the standard file formats, syntax, and norms used within the ssets/data/ directory.
 
 ---
 
 ## 1. Character Files
-**Path:** `data/characters/*.md`
+**Path:** ssets/data/characters/*.md
 
-Character files are Markdown documents that define the visual identity, metadata, and default style of a specific persona. The filename should generally match the character's name (e.g., `diego_morales.md`).
+Character files are Markdown documents that define the visual identity and metadata of a persona.
 
-### Basic Structure
-
-```markdown
+### Structure
+`markdown
 ### Character Name
 **Photo:** filename.png
-**Summary:** A brief narrative description of the character's vibe and personality.
-**Tags:** comma, separated, tags, for, filtering
-**Modifier:** F (or M, or H)
-**Signature Color:** #HEXCODE (Optional)
+**Tags:** comma, separated, tags
+**Gender:** F (or M)
+**Signature Color:** #HEXCODE
 
 **Appearance:**
-* **Body:** Detailed description of body type, flesh quality, and proportions.
-* **Face:** Description of facial structure, eyes, nose, and expression.
-* **Hair:** Texture, length, style, and color.
-* **Skin:** Complexion, undertones, and texture.
-
-**Age Presentation:** text description (e.g., "mid-20s")
-**Vibe / Energy:** list of adjectives
-**Bearing:** description of posture and movement
-
----
+- **Body:** ...
+- **Face:** ...
+- **Hair:** ...
+- **Skin:** ...
 
 **Outfits:**
-
 #### Base
-- **Top:** Description
-- **Bottom:** Description
-- **Footwear:** Description
-- **Accessories:** Description
-- **Hair/Makeup:** Specific styling for this base look
-```
-
-### Key Fields
-- **Header (`### Name`):** Must match the character's display name.
-- **Photo:** The filename of the corresponding image in `data/characters/`.
-- **Modifier:** Replaces the legacy **Gender** field. Critical for mapping to the correct outfit library (`outfits_f.md`, `outfits_m.md`, or `outfits_h.md`).
-- **Signature Color:** A Hex code (e.g., `#FF7F50`) used to personalize generic outfits.
-- **Appearance:** Bullet points are parsed to build the core visual prompt.
-- **Base Outfit:** Defines the "Default" look if no specific outfit is selected in the UI.
-
-### Advanced Features
-- **Identity Locks:** You can replace the standard `**Appearance:**` header with `**Appearance (Identity Locks):**`. This signals the parser that specific physical traits (like a signature hairstyle) should *never* be overridden by outfit definitions.
+- **Top:** ...
+- **Bottom:** ...
+`
 
 ---
 
 ## 2. Outfit Libraries
-**Paths:**
-- `data/outfits_f.md` (Female)
-- `data/outfits_m.md` (Male)
-- `data/outfits_h.md` (Hijabi adaptations)
+**Path:** ssets/data/outfits/[Category]/[filename].txt
 
-These files contain a categorized library of clothing options.
+Outfits are stored in plain text files, organized by category folders.
 
 ### Structure
+`	ext
+tags: [Thematic, Tags]
 
-```markdown
-# File Title
+[F]
+- **Top:** Description
+- **Bottom:** Description
 
-## Category Name (e.g., Athletic & Sports)
+[M]
+- **Top:** Description
+...
+`
 
-### Outfit Name
-Description text goes here. Bold **key items** to ensure they are emphasized in the final prompt.
-```
-
-### Syntax & Logic
-
-#### 1. Bold Emphasis
-Enclosing text in double asterisks (e.g., `**red leather jacket**`) is a convention to signal key visual elements.
-
-#### 2. Library Indicators
-When using the Outfit Library Explorer, you may see these symbols:
-- `(🎨)`: Supports Team Color Scheme placeholders.
-- `(✨)`: Supports the character's Signature Color.
-
-#### 3. Dynamic Placeholders
-Outfits can adapt to specific color schemes defined in `data/color_schemes.md`.
-- `{primary_color}`: The team/scheme's main color.
-- `{secondary_color}`: The supporting color.
-- `{accent}`: A highlight color.
-- `{team}`: The text name of the team/organization.
-- `{modifier}`: A special slot for appending text from `data/modifiers.md`.
+### Dynamic Placeholders
+- (signature): Injects the character's Signature Color.
+- {primary_color}, {secondary_color}, {accent}: Injects colors from the selected team scheme.
+- {modifier}: Slot for snippets from modifiers.md.
 
 ---
 
-## 3. Color Schemes
-**Path:** `data/color_schemes.md`
+## 3. Global Assets
+**Paths:** ssets/data/scenes.md, ssets/data/poses.md, ssets/data/interactions.md
 
-Defines reusable palettes for team jerseys, uniforms, and themed outfits.
+These files use a header-based categorization with bulleted presets.
 
-### Structure
-
-```markdown
-## Scheme Name
-- **primary:** #HexCode
-- **secondary:** #HexCode
-- **accent:** #HexCode
-- **team:** Display Name of Team
-```
+### Interaction Templates (interactions.md)
+Use placeholders for character mapping:
+- {char1}, {char2}, etc.
 
 ---
 
-## 4. Global Asset Lists
-**Paths:** `data/poses.md`, `data/scenes.md`, `data/interactions.md`
+## 4. Logical Constraints
+**Path:** ssets/config/tag_rules.json, ssets/config/scene_constraints.json
 
-These files provide reusable snippets for prompt construction.
-
-### Structure
-All three files follow a simple list format grouped by headers.
-
-```markdown
-## Category Header
-
-- **Asset Name:** The actual text description that will be injected into the prompt.
-- **Another Asset:** Description...
-```
-
-### Interaction Placeholders (`interactions.md`)
-Interactions often involve multiple subjects. Use specific placeholders to map characters:
-- `{char1}`: The first selected character.
-- `{char2}`: The second selected character.
-- `{char3}`, `{char4}`, etc.: Additional characters.
+- **tag_rules.json**: Defines tag aliases, groups, and Hub Tags for the randomizer.
+- **scene_constraints.json**: Defines allowed/blocked tags for specific scene categories.
 
 ---
 
-## 5. Tags & Modifiers
-**Paths:** `data/tags.md`, `data/modifiers.md`
-
-- **Tags:** Simple categorization lists used for UI filtering.
-- **Modifiers:** Small text snippets appended to outfits when the `{modifier}` placeholder is present (e.g., adding specific equipment to a generic sports uniform).
-
-```markdown
-## Category (e.g., Volleyball - Libero)
-- **text:** , wearing a contrasting {secondary_color} jersey...
-```
+*Last updated: May 2026*

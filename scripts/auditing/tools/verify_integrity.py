@@ -1,7 +1,6 @@
 
 import os
 import glob
-import sys
 
 def verify_integrity():
     prompt_dir = "output/prompts"

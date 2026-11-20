@@ -34,3 +34,9 @@
 - **Footwear:** Black leather combat boots with silver hardware
 - **Accessories:** Silver arm cuff, layered leather bracelets
 - **Hair/Makeup:** Messy high braid with loose tendrils; natural skin
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Luminous Digital Illustration, Cinematic 3D]
+- Scenes: [Arts & Performance, Combat & Tactical, History & Culture]
+- Outfit_Tags: [Rugged, Sport, Tactical, Functional]

@@ -36,3 +36,9 @@
 - **Footwear:** Canvas slip-on sneakers in cream with a vulcanized rubber sole
 - **Accessories:** Leather cord necklace with a small stone pendant, single woven hemp bracelet on the left wrist
 - **Hair/Makeup:** Textured sun-bleached waves with natural volume; light stubble (well-maintained); natural healthy skin glow
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Monochrome Noir]
+- Scenes: [History & Culture, Arts & Performance, Casual & Domestic]
+- Outfit_Tags: [Vintage, Retro, Sport, everyday]

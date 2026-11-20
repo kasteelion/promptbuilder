@@ -42,3 +42,9 @@
 - **Footwear:** Crisp white leather low-top sneakers worn with slightly ruffled white crew socks that reach just above the ankle.
 - **Accessories:** Dainty gold heart necklace; stack of red and white beaded friendship bracelets; small gold hoop earrings.
 - **Hair/Makeup:** High half-up bun with long straight hair cascading down; peachy-natural makeup with a soft red lip tint.
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Retro Anime, Monochrome Noir]
+- Scenes: [Arts & Performance, Urban, Fashion & Glamour]
+- Outfit_Tags: [Floral, Red, Summer, Techwear]

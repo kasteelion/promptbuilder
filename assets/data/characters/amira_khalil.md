@@ -41,3 +41,9 @@
 - **Footwear:** Pointed-toe flats in soft leather
 - **Accessories:** Small gold stud earrings, delicate gold bracelet, structured crossbody bag
 - **Makeup:** Modest and polished
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Analog Film, Monochrome Noir]
+- Scenes: [History & Culture, Arts & Performance, Intimate & Sensual]
+- Outfit_Tags: [Elegant, Traditional, Layered, Boho]

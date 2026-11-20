@@ -45,3 +45,9 @@
 - **Footwear:** White leather minimal sneakers
 - **Accessories:** Thin silver chain necklace, simple silver ring
 - **Grooming:** Soft side-swept hair; clear skin, clean-shaven
+
+
+**Affinities:**
+- Styles: [Monochrome Noir, Minimalist, Studio Photorealism]
+- Scenes: [Casual & Domestic, Arts & Performance, Urban]
+- Outfit_Tags: [Dark, Chic, White, Minimalist]

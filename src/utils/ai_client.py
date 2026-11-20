@@ -9,7 +9,7 @@ import os
 import time
 import base64
 from typing import List, Tuple, Optional, Callable
-from playwright.async_api import async_playwright, Page, BrowserContext
+from playwright.async_api import async_playwright, Page
 
 class AIStudioClient:
     """
@@ -59,7 +59,7 @@ class AIStudioClient:
             # Short timeout to check if already logged in
             await page.wait_for_selector(self.prompt_selector, timeout=5000)
             print("Login verified!")
-        except:
+        except Exception:
             print(">> ACTION REQUIRED: Please log in manually in the browser window.")
             print("Waiting up to 5 minutes for you to reach the chat interface...")
             await page.wait_for_selector(self.prompt_selector, timeout=300000)
@@ -90,7 +90,7 @@ class AIStudioClient:
                                 src = await img.get_attribute("src")
                                 if src and (src.startswith("data:") or src.startswith("blob:") or "googleusercontent" in src):
                                     potential_targets.append(img)
-                    except:
+                    except Exception:
                         continue
                 
                 if not potential_targets:
@@ -226,7 +226,7 @@ class AIStudioClient:
                 const container = document.querySelector('ms-autoscroll-container') || document.querySelector('.conversation-container') || document.body;
                 container.scrollTop = container.scrollHeight;
             }""")
-        except:
+        except Exception:
             pass
         await page.wait_for_timeout(2000)
     

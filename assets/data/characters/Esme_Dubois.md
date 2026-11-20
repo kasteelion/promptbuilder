@@ -37,3 +37,9 @@
 - **Footwear:** Black pointed-toe leather ballet flats with a thin matte silk ribbon
 - **Accessories:** Thin gold chain necklace, small gold stud earrings, structured black leather tote with minimal branding
 - **Hair/Makeup:** Sleek low bun with a precise center part; refined natural makeup with a soft rose-nude lip and satin skin finish
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Monochrome Noir]
+- Scenes: [Arts & Performance, History & Culture, Fashion & Glamour]
+- Outfit_Tags: [Elegant, Retro, Minimalist, Layered]

@@ -59,3 +59,9 @@
   - **Details:** Clean minimal design; chunky silhouette; slight platform for leg elongation.
 - **Accessories:** Small gold hoop earrings
 - **Hair/Makeup:** Half-up hair with topknot, faceframing tendrils, defined brows, soft smokey eye in warm browns, glossy nude-pink lip, winged eyeliner
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Monochrome Noir, Artistic Anime: "Kyoto Atmosphere"]
+- Scenes: [Arts & Performance, Work & Industrial, Fashion & Glamour]
+- Outfit_Tags: [Clean, Corporate, Urban, Retro]

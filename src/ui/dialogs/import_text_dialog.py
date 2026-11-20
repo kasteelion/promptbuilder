@@ -28,12 +28,12 @@ class ImportTextDialog(ft.AlertDialog):
             content=ft.Column([
                 ft.Text("Paste your prompt configuration text below:", size=12, color="grey"),
                 self.input_field,
-                ft.ElevatedButton("Parse Text", on_click=self.handle_parse, icon=ft.Icons.ANALYTICS),
+                ft.FilledTonalButton("Parse Text", on_click=self.handle_parse, icon=ft.Icons.ANALYTICS),
                 ft.Divider(),
                 ft.Text("Detected Configurations:", weight="bold"),
                 ft.Container(
                     content=self.config_list,
-                    border=ft.border.all(1, ThemeManager.colors["outline"]),
+                    border=ft.Border.all(1, ThemeManager.colors["outline"]),
                     border_radius=5,
                     padding=5,
                     expand=True
@@ -114,35 +114,41 @@ class ImportTextDialog(ft.AlertDialog):
             self.app.state.state["selected_characters"] = []
             
             for char_conf in config.get("selected_characters", []):
-                # We need to structure this as AppState expects
-                # AppState.add_character logic is useful but we have specific overrides.
-                
                 name = char_conf["name"]
                 
                 # Check if char exists in library
-                if name not in self.app.state.ctx.characters:
-                    # Fuzzy match or failed?
-                    pass 
+                if hasattr(self.app.state, "ensure_character_loaded"):
+                    self.app.state.ensure_character_loaded(name)
                 
-                # We can use add_character to get defaults, then override.
-                self.app.state.add_character(name)
+                # Use controller to safely add character
+                if hasattr(self.app, "char_controller"):
+                    self.app.char_controller.add_character(name)
+                elif hasattr(self.app, "add_character"):
+                    self.app.add_character(name)
                 
-                # Now override with config values
-                # add_character appends to end, so we take the last one
+                if not self.app.state.state["selected_characters"]:
+                    continue
+
                 new_char = self.app.state.state["selected_characters"][-1]
                 
-                if "outfit" in char_conf: new_char["outfit"] = char_conf["outfit"]
-                # category? resolve again or trust resolver?
-                
-                if "color_scheme" in char_conf: new_char["color_scheme"] = char_conf["color_scheme"]
-                if "use_signature_color" in char_conf: new_char["use_signature_color"] = char_conf["use_signature_color"]
-                
-                # Pose
-                if "pose_preset" in char_conf: 
-                     new_char["pose_preset"] = char_conf["pose_preset"]
-                     if "pose_category" in char_conf: new_char["pose_category"] = char_conf["pose_category"]
-                
-                if "action_note" in char_conf: new_char["action_note"] = char_conf["action_note"]
+                def _set_attr(obj, key, val):
+                    if hasattr(obj, key):
+                        setattr(obj, key, val)
+                    elif isinstance(obj, dict):
+                        obj[key] = val
+
+                if "outfit" in char_conf:
+                    _set_attr(new_char, "outfit", char_conf["outfit"])
+                if "color_scheme" in char_conf:
+                    _set_attr(new_char, "color_scheme", char_conf["color_scheme"])
+                if "use_signature_color" in char_conf:
+                    _set_attr(new_char, "use_signature_color", char_conf["use_signature_color"])
+                if "pose_preset" in char_conf:
+                    _set_attr(new_char, "pose_preset", char_conf["pose_preset"])
+                    if "pose_category" in char_conf:
+                        _set_attr(new_char, "pose_category", char_conf["pose_category"])
+                if "action_note" in char_conf:
+                    _set_attr(new_char, "action_note", char_conf["action_note"])
 
             # Refresh UI
             self.app.sidebar.populate_data()

@@ -13,7 +13,7 @@ def debug_report(report_path):
         print(f"File not found: {report_path}")
         return
 
-    print(f"\n" + "="*80)
+    print("\n" + "="*80)
     print(f"REPORT: {report_path}")
     print("="*80)
     

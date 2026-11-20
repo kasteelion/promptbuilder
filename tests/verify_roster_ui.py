@@ -64,7 +64,7 @@ def main(page: ft.Page):
         print("TEST COMPLETE: No Crash")
         # page.window_close() # Unavailable in some versions
         sys.exit(0)
-    except Exception as e:
+    except Exception:
         import traceback
         with open("test_error.log", "w") as f:
             f.write(traceback.format_exc())

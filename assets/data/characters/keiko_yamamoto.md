@@ -39,3 +39,9 @@
 - **Accessories:** Multiple silver ear piercings, black leather cuff bracelet, silver chain necklaces (layered)
 - **Hair/Makeup:** Asymmetrical choppy cut with side-swept fringe; bold black eyeliner
 - **Note:** Visible arm tattoos (traditional Japanese wave and crane motifs)
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Monochrome Noir, Artistic Anime: "Kyoto Atmosphere"]
+- Scenes: [Urban, Arts & Performance, Combat & Tactical]
+- Outfit_Tags: [Dark, Sharp, Red, Techwear]

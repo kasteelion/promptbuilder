@@ -4,7 +4,7 @@
 import shutil
 import datetime
 from pathlib import Path
-from typing import Tuple, Optional
+from typing import Tuple
 
 def create_snapshot(base_dir: Path) -> Tuple[bool, str]:
     """Create a timestamped backup of the data/ directory.

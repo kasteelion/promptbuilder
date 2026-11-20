@@ -37,3 +37,9 @@
 - **Footwear:** Black suede Mary Jane block heels featuring a prominent rhinestone crystal buckle on the strap.
 - **Accessories:** Delicate pearl choker around the neck; dark burgundy manicured nails; minimalist silver rings.
 - **Hair/Makeup:** Long espresso waves with heavy fringe bangs; "clean girl" makeup with soft rosy blush and a clear, high-shine lip gloss.
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Retro Anime, Monochrome Noir]
+- Scenes: [Downtown-Chic, Arts & Performance, Intimate & Sensual]
+- Outfit_Tags: [Bold, Urban, Romantic-Boho, Sport]

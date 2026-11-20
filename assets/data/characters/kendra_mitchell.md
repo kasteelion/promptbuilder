@@ -34,3 +34,9 @@
 - Style preferences: oversized natural fabrics with structure—linen, heavyweight cotton, denim, leather in earth tones and warm neutrals—rust, olive, camel, burnt sienna, warm white, deep teal
 - Jewelry preference: mixed metals, chunky statement pieces, natural materials
 - General vibe: effortlessly bold, outdoorsy-chic, naturally commanding with adventure-ready energy
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Cinematic 3D, Graphite Sketch]
+- Scenes: [Athletics & Sports, Outdoorsy, Fantasy & RPG, History & Culture]
+- Outfit_Tags: [Track, Rugged, Athletic, White]

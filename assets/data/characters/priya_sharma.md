@@ -39,3 +39,9 @@
 - **Footwear:** Simple tan leather flat sandals or low wedge sandals
 - **Accessories:** Small gold hoop earrings, single delicate gold chain with small Om pendant, 2-3 thin gold bangles on one wrist, fitness tracker on opposite wrist
 - **Hair/Makeup:** Natural loose waves with slight center part, voluminous beachy texture, warm highlights catching light; minimal fresh makeup with light mascara, naturally full groomed brows, nude-mauve lip color, hint of warm blush, natural dewy finish
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Monochrome Noir, Classical Painterly]
+- Scenes: [Arts & Performance, Fashion & Glamour, Urban]
+- Outfit_Tags: [Rich, Fashion, Floral, Red]

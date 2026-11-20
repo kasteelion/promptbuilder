@@ -1,6 +1,6 @@
-﻿"""Scenario-First Architecture components for PromptRandomizer."""
+"""Scenario-First Architecture components for PromptRandomizer."""
 from dataclasses import dataclass, field
-from typing import List, Dict, Set, Optional
+from typing import List
 
 @dataclass
 class Role:
@@ -21,8 +21,6 @@ class Scenario:
     vibe_tags: List[str]
     allowed_scene_categories: List[str]
     roles: List[Role]
-    blocked_global_tags: List[str] = field(default_factory=list)
-    default_style_tags: List[str] = field(default_factory=list)
     blocked_global_tags: List[str] = field(default_factory=list)
     default_style_tags: List[str] = field(default_factory=list)
     exclusive_notes: bool = True # If True, ONLY items matching vibe_tags are allowed

@@ -1,5 +1,62 @@
 # Changelog
 
+## [1.1.0] – 2026-11-19
+
+### Added
+- **Target Engine Output Profiles:** Added dedicated generator engines in `core/builder.py` and a 4-way format toggle in `console.py`:
+  - `[MJ]` **Midjourney Profile:** Formats prompts into clean, comma-separated tokens without Markdown syntax, automatically appending `--ar 16:9 --v 6.1 --stylize 250`.
+  - `[SDXL]` **Stable Diffusion XL Profile:** Emits weighted tokens `(token:1.2)`, `BREAK` segment chunks, and derives automatic photographic or anime negative prompts.
+  - `[🍌 Prose]` **Banana / Natural Language Prose:** Generates fluid natural-language narrative paragraphs tailored for Google Imagen 3 and Gemini.
+  - `[Markdown]` **Structured Markdown:** Classic categorized output with bold headers and bullet points.
+- **FIFO Prompt History Buffer:** Added a 20-item `collections.deque` buffer in `console.py` with auto-scrolling preview chips, click-to-restore with undo capability, and a clear action.
+- **Smart 1-Click Suggestion Engine:** Introduced `SuggestionEngine` (`logic/suggestion_engine.py`) offering context-aware recommendations for missing Scenes, Multi-Character Interactions (names auto-resolved), Wardrobe upgrades, and Coordinated Palettes.
+- **Thematic Alignment & Prompt Completeness Model:** Replaced vocabulary-ratio formula with a multi-dimensional prompt cohesion model scoring character baseline (20%), scene setting (+25-35%), wardrobe customization (+15%), interactions (+15%), color harmonies (+10%), and art styles (+5%) with dynamic color feedback.
+- **Color Palette & Contrast System:** Added live wardrobe color swatches with character signature colors and curated Quick Color Harmonies (Maroon & Khaki, Olive & Rust, Navy & Amber, etc.) applicable across the active roster.
+- **Automation Studio Target Profiles:** Added engine profile selection dropdown (`Markdown`, `Prose`, `Midjourney`, `SDXL`) to `AutomationDialog`, `AutomationOrchestrator`, and `GemmaPipelineRunner`.
+- **CLI Batch Automation Formats:** Added `--format [markdown|prose|midjourney|sdxl]` CLI parameter to `scripts/automation/automate_generation.py` and `scripts/automation/bulk_generator.py`.
+- **New Pose Presets:** Added *Playful Hair Twirl* (Casual & Domestic), *Playful Prone Bed Lounge* (Intimate & Sensual), and *Overhead Dreamy Surrender* (Intimate & Sensual) to `assets/data/poses.md`.
+
+### Fixed
+- **Character Load Latency:** Cached `DataLoader.load_outfits()` via `self._cache["shared_outfits"]`, slashing individual character load times from 135ms to 2ms (eliminating redundant disk scans of 280+ files on every roster click).
+- **Startup Frame Latency:** Added fast metadata preloading (`load_metadata_fast()`) in `AppState` before `build_ui()`, ensuring characters render on the very first frame.
+- **Gallery Double-Render:** Removed duplicate 30-line post-click loop in `gallery.py` that caused redundant roster, preview, and gallery rebuilds.
+- **Async & Threading Safety:** Migrated background UI calls in `main.py` and `app_state.py` to `page.run_task()`, wrapped blocking AI calls in `asyncio.to_thread()`, and eliminated unattached Flet control update crashes.
+- **Automation Pydantic Model Crashes:** Fixed `AttributeError` crashes in `automate_generation.py` (`char.get('name')`), `bulk_generator.py` (`char_outfits = chars[real_name].get('outfits')`), and `gemma_pipeline.py` (`config.scene`, `config.selected_characters`).
+
+### Tests
+- Added `tests/test_builder_profiles.py` (Midjourney, SDXL, and Negative Prompt tests).
+- Added `tests/test_suggestion_engine.py` (Recommendation engine tests).
+- Added `tests/test_thematic_alignment.py` (Progression and cohesion model tests).
+- Added `tests/test_automation_pipeline.py` (Batch generator and multi-engine format tests).
+- Test suite expanded to 59 passing tests.
+
+## [1.0.0] – 2026-04-11
+
+### Fixed
+
+- **Debug Prints:** Replaced 3 leftover `print(f"DEBUG:...")` statements in `app_state.py`, `flet_theme_manager.py`, and `interaction_logic.py` with proper `logger` calls.
+- **Deprecated Widgets:** Replaced all 7 remaining `ft.ElevatedButton` instances with `ft.FilledTonalButton` across dashboard, dialogs, and gallery explorer.
+- **Duplicate Dataclass Fields:** Removed duplicate `blocked_global_tags` and `default_style_tags` field declarations in `Scenario` dataclass (`scenarios.py`).
+- **LLM Export Dialog:** Wired up the "LLM Export" menu item to the existing `LLMExportDialog` (was showing "Coming Soon" toast despite dialog being implemented).
+- **Content Guide Dialog:** Wired up the "Content Guide" menu item to the existing `LLMContentCreationDialog`.
+- **Prompt Quality – _expanded_tags Leak:** Internal `_expanded_tags` metadata no longer appears in generated prompt output. Added regex post-processing in `builder.py`.
+- **Prompt Quality – {Color} Placeholders:** Unresolved `{Color}` and `{Style}` placeholders are now stripped from final output if color scheme substitution didn't resolve them.
+- **Duplicate Imports:** Removed duplicate import block in `builder.py`.
+- **Gallery Explorer:** Removed duplicate `_build_ui()` call that was initializing UI twice.
+
+### Improved
+
+- **Thematic Alignment Meter:** Replaced the hardcoded 65-95% fake quality meter with real tag intersection scoring between character tags/vibes and scene keywords.
+- **Asset Editor Metadata Tab:** Replaced "Coming Soon" placeholder with helpful guidance pointing users to character `.md` files.
+- **PromptConfig Model:** Added missing `scene_category`, `scene_preset`, `interaction_category`, and `interaction_preset` fields.
+
+### Cleaned
+
+- **Root Directory:** Moved 12+ orphaned debug/audit files (`debug_output.txt`, `audit_log.txt`, `final.txt`, etc.) out of project root into `auditing/artifacts/` or deleted them.
+- **Legacy Test Scripts:** Moved `test_gen.py` and `test_live.py` (stale API references) to `auditing/` as legacy artifacts.
+- **`.gitignore`:** Updated patterns to prevent debug/temp file clutter. Removed overly broad `test_*.py` glob that was gitignoring real test files.
+- **`requirements.txt`:** Rewritten to accurately list Flet + Pydantic as runtime dependencies (was still referencing tkinter/Python 3.8).
+
 ## [0.9.0] – 2026-02-21
 
 ### Added

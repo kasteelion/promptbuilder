@@ -28,3 +28,9 @@
 - **Footwear:** Nude pointed-toe stiletto pumps.
 - **Accessories:** Gold statement earrings (vintage), dainty gold chain necklace, designer clutch.
 - **Hair/Makeup:** Voluminous blowout; signature sharp winged liner and matte raspberry lipstick; long acrylic nails in a soft ombre.
+
+
+**Affinities:**
+- Styles: [Analog Film, Monochrome Noir, Classical Painterly]
+- Scenes: [Fashion & Glamour, Arts & Performance, Intimate & Sensual]
+- Outfit_Tags: [Elegant, Bold, Layered, Retro]

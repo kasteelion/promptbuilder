@@ -48,3 +48,9 @@
 - **Footwear:** Beaded leather sandals or colorful woven flat sandals
 - **Accessories:** Layered gold chain necklaces, medium gold hoop earrings, colorful beaded bracelets stacked on wrist, gold anklet, ankara print headwrap or matching fabric hair tie
 - **Hair/Makeup:** Natural 4A coils in voluminous defined twist-out or high puff secured with ankara fabric scrunchie; natural glowing makeup with warm golden highlight, glossy lips in coral-orange tone
+
+
+**Affinities:**
+- Styles: [Analog Film, Monochrome Noir, Luminous Digital Illustration]
+- Scenes: [Casual & Domestic, Arts & Performance, Cyberpunk & Sci-Fi]
+- Outfit_Tags: [Minimalist, Playful, Textured-Hair, Urban]

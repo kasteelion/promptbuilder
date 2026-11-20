@@ -37,3 +37,9 @@
 - **Footwear:** Scuffed black combat boots with loose laces and worn soles
 - **Accessories:** Layered mixed-metal necklaces (coins, talismans, found objects), multiple silver rings on both hands (some handmade), leather cord bracelets with beads, worn leather messenger bag covered in pins/patches, bandana tied around wrist or neck
 - **Hair/Makeup:** Wild tousled waves with natural texture; smudged black eyeliner (intentionally messy), no other makeup, paint under fingernails
+
+
+**Affinities:**
+- Styles: [Analog Film, Luminous Digital Illustration, Monochrome Noir]
+- Scenes: [Arts & Performance, Intimate & Sensual, Cyberpunk & Sci-Fi, History & Culture]
+- Outfit_Tags: [Vintage, Dark, Floral, Red]

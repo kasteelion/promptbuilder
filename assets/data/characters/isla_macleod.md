@@ -40,3 +40,9 @@
 - **Footwear:** Worn brown leather ankle boots with low heel
 - **Accessories:** Thin silver chain with small pendant, vintage brass ring, small leather crossbody bag with embroidered detail
 - **Hair/Makeup:** Hair in loose natural waves with wispy strands framing face; minimal dewy makeup with soft rose lip
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Luminous Digital Illustration]
+- Scenes: [Arts & Performance, Intimate & Sensual, Retro]
+- Outfit_Tags: [Soft, Vintage, Boho, Layered]

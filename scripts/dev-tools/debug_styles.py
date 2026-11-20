@@ -4,7 +4,6 @@ import os
 sys.path.append(os.getcwd())
 
 from logic.data_loader import DataLoader
-from logic.parsers import MarkdownParser
 
 loader = DataLoader()
 prompts = loader.load_base_prompts()

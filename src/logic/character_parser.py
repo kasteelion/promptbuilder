@@ -1,6 +1,6 @@
 import re
-from typing import Any, Dict, List, Optional, Union
-from core.models import CharacterDetails, CharacterMetadata, OutfitItem
+from typing import Any, Dict, Union
+from core.models import CharacterDetails, CharacterMetadata
 from pydantic import ValidationError
 from utils import logger
 
@@ -8,7 +8,7 @@ from utils import logger
 _SUBSECTION_RE = re.compile(r"^###\s+(.+)$", re.MULTILINE)
 _OUTFIT_RE = re.compile(r"^####\s+(.+)$", re.MULTILINE)
 _PHOTO_RE = re.compile(r"\*\*Photo:\*\*\s*([^\n\r]+)", re.IGNORECASE)
-_APPEARANCE_RE = re.compile(r"\*\*Appearance:\*\*\s*(.*?)(?=\n\s*\*\*Outfits:|\n\s*\*\*(?:Tags|Gender|Signature Color|Traits|Age Presentation|Vibe|Bearing|Summary):|$)", re.DOTALL | re.IGNORECASE)
+_APPEARANCE_RE = re.compile(r"\*\*Appearance:\*\*\s*(.*?)(?=\n\s*\*\*Outfits:|\n\s*\*\*(?:Tags|Gender|Signature Color|Traits|Age Presentation|Vibe|Bearing|Summary|Affinities):|$)", re.DOTALL | re.IGNORECASE)
 _GENDER_RE = re.compile(r"\*\*Gender:\*\*\s*([mfMF])\b", re.IGNORECASE)
 _MODIFIER_RE = re.compile(r"\*\*Modifier:\*\*\s*([^\n\r]+)", re.IGNORECASE)
 _SUMMARY_RE = re.compile(r"\*\*Summary:\*\*\s*(.+?)(?=\n\s*\*\*|$)", re.DOTALL | re.IGNORECASE)
@@ -17,7 +17,8 @@ _SIGNATURE_COLOR_RE = re.compile(r"\*\*Signature Color:\*\*\s*([^\n\r]+)", re.IG
 _AGE_PRESENTATION_RE = re.compile(r"\*\*Age Presentation:\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*//|\n\s*---|\n\s*\n|$)", re.IGNORECASE)
 _VIBE_RE = re.compile(r"\*\*Vibe\s*/\s*Energy:\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*//|\n\s*---|\n\s*\n|$)", re.IGNORECASE)
 _BEARING_RE = re.compile(r"\*\*Bearing:\*\*\s*(.+?)(?=\n\s*\*\*|\n\s*//|\n\s*---|\n\s*\n|$)", re.IGNORECASE)
-_TRAITS_RE = re.compile(r"\*\*Traits:\*\*\s*(.*?)(?=\n\s*\*\*Outfits:|\n\s*\*\*(?:Tags|Gender|Signature Color|Age Presentation|Vibe|Bearing|Summary|Appearance):|\n\s*-{3,}|$)", re.DOTALL | re.IGNORECASE)
+_TRAITS_RE = re.compile(r"\*\*Traits:\*\*\s*(.*?)(?=\n\s*\*\*Outfits:|\n\s*\*\*(?:Tags|Gender|Signature Color|Age Presentation|Vibe|Bearing|Summary|Appearance|Affinities):|\n\s*-{3,}|$)", re.DOTALL | re.IGNORECASE)
+_AFFINITIES_RE = re.compile(r"\*\*Affinities:\*\*\s*(.*?)(?=\n\s*\*\*Outfits:|\n\s*\*\*(?:Tags|Gender|Signature Color|Age Presentation|Vibe|Bearing|Summary|Appearance|Traits):|\n\s*-{3,}|$)", re.DOTALL | re.IGNORECASE)
 _IDENTITY_LOCKS_HEADER_RE = re.compile(
     r"^Appearance\s*\(Identity Locks\):\s*$", re.IGNORECASE | re.MULTILINE
 )
@@ -76,6 +77,18 @@ class CharacterParser:
                     clean = clean[:27] + "..."
                 return clean
 
+            aff_match = _AFFINITIES_RE.search(body)
+            affinities = {}
+            if aff_match:
+                for line in aff_match.group(1).strip().splitlines():
+                    line = line.strip()
+                    if line.startswith("- "):
+                        content = line[2:].strip()
+                        if ":" in content:
+                            k, v = content.split(":", 1)
+                            v_clean = v.strip().strip("[]")
+                            affinities[k.strip().strip("*")] = [x.strip() for x in v_clean.split(",") if x.strip()]
+
             metadata[name] = CharacterMetadata(
                 name=name,
                 photo=photo_match.group(1).strip() if photo_match else None,
@@ -85,7 +98,8 @@ class CharacterParser:
                 age_presentation=truncate(a_match.group(1)) if a_match else None,
                 gender=g_match.group(1).upper() if g_match else "F",
                 mtime=mtime,
-                file_size=file_size
+                file_size=file_size,
+                affinities=affinities
             )
         return metadata
 
@@ -128,6 +142,15 @@ class CharacterParser:
     @staticmethod
     def _parse_outfits(body: str) -> dict:
         """Extract and parse outfits from the character body."""
+        # Top-level field markers that should NOT be part of any outfit body.
+        # These appear at the ** level (e.g. **Affinities:**) and mark the end
+        # of the outfits section.
+        _FIELD_FENCE = re.compile(
+            r"^\s*\*\*(?:Affinities|Tags|Traits|Gender|Signature Color|"
+            r"Age Presentation|Vibe|Bearing|Summary|Appearance):\*\*",
+            re.MULTILINE | re.IGNORECASE,
+        )
+
         outfits = {}
         outfit_parts = _OUTFIT_RE.split(body)
         
@@ -135,6 +158,10 @@ class CharacterParser:
             for i in range(1, len(outfit_parts), 2):
                 o_name = outfit_parts[i].strip()
                 o_body = outfit_parts[i + 1] if i + 1 < len(outfit_parts) else ""
+                # Trim at any top-level field marker that leaked into the outfit body
+                fence = _FIELD_FENCE.search(o_body)
+                if fence:
+                    o_body = o_body[:fence.start()]
                 outfits[o_name] = CharacterParser._parse_outfit_details(o_body)
         else:
             # Legacy single-line format: - **Name:** description
@@ -291,7 +318,20 @@ class CharacterParser:
                         traits[k.strip().strip("*")] = v.strip()
                     else:
                         traits[content.strip().strip("*")] = content
-        meta["traits"] = traits
+        # Affinities
+        affinities = {}
+        aff_match = _AFFINITIES_RE.search(body)
+        if aff_match:
+            for line in aff_match.group(1).strip().splitlines():
+                line = line.strip()
+                if line.startswith("- "):
+                    content = line[2:].strip()
+                    if ":" in content:
+                        k, v = content.split(":", 1)
+                        # Extract list elements inside brackets if present
+                        v_clean = v.strip().strip("[]")
+                        affinities[k.strip().strip("*")] = [x.strip() for x in v_clean.split(",") if x.strip()]
+        meta["affinities"] = affinities
         
         return meta
 

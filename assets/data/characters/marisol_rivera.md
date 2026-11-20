@@ -52,3 +52,9 @@
 - **Footwear:** Tan leather slide sandals with minimal sole
 - **Accessories:** Coral bandana tied as headband, small gold hoop earrings, delicate gold ankle bracelet, woven beach tote
 - **Hair/Makeup:** Sleek low ponytail secured with coral bandana; minimal natural makeup with warm bronze and coral-toned lip
+
+
+**Affinities:**
+- Styles: [Analog Film, Monochrome Noir, Classical Painterly]
+- Scenes: [Arts & Performance, Work & Industrial, Fashion & Glamour]
+- Outfit_Tags: [Floral, Red, Bandana, Velvet]

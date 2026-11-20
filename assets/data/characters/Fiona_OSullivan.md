@@ -40,3 +40,9 @@
 - **Footwear:** Brown leather ankle boots with low stacked heel
 - **Accessories:** Copper hoop earrings, layered rose gold necklaces, crossbody leather bag
 - **Hair/Makeup:** Loose natural waves with side part; warm fresh makeup
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Monochrome Noir]
+- Scenes: [Arts & Performance, Casual & Domestic, History & Culture]
+- Outfit_Tags: [Soft, Layered, Red-Haired, Boho]

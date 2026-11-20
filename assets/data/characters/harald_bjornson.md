@@ -33,3 +33,9 @@
 - **Footwear:** Brown leather work boots with scuffs
 - **Accessories:** Leather cord necklace, simple leather wrist band
 - **Hair/Makeup:** Swept-back hair; full groomed beard
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Monochrome Noir, Retro Anime]
+- Scenes: [History & Culture, Urban, Combat & Tactical]
+- Outfit_Tags: [Rugged, Bold, 1900s, Sport]

@@ -1,16 +1,18 @@
 import unittest
 from core.builder import PromptBuilder
-from core.definitions import PromptConfig
+from core.models import PromptConfig, SelectedCharacterConfig, CharacterDetails
 
 class TestPromptBuilder(unittest.TestCase):
     
     def setUp(self):
         self.characters = {
-            "Alice": {
-                "name": "Alice",
-                "appearance": "Blonde hair",
-                "signature_color": "red"
-            }
+            "Alice": CharacterDetails(
+                name="Alice",
+                appearance="Blonde hair",
+                signature_color="red",
+                outfits={"TestOutfit": "Default"},
+                outfits_categorized={"Personal": {"TestOutfit": "Default"}},
+            )
         }
         self.base_prompts = {"Default": "Art style"}
         self.poses = {}
@@ -27,18 +29,18 @@ class TestPromptBuilder(unittest.TestCase):
         # Outfit with {modifier} placeholder
         outfit_template = "Wearing a {modifier} dress"
         
-        self.characters["Alice"]["outfits"] = {"TestOutfit": outfit_template}
+        self.characters["Alice"].outfits["TestOutfit"] = outfit_template
         
-        config: PromptConfig = {
-            "base_prompt": "Default",
-            "selected_characters": [
-                {
-                    "name": "Alice",
-                    "outfit": "TestOutfit",
-                    "outfit_traits": ["TestMod"] # Should resolve to "shiny"
-                }
+        config = PromptConfig(
+            base_prompt="Default",
+            selected_characters=[
+                SelectedCharacterConfig(
+                    name="Alice",
+                    outfit="TestOutfit",
+                    outfit_traits=["TestMod"],  # Should resolve to "shiny"
+                )
             ]
-        }
+        )
         
         prompt = self.builder.generate(config)
         self.assertIn("Wearing a shiny dress", prompt)
@@ -47,18 +49,18 @@ class TestPromptBuilder(unittest.TestCase):
         # Outfit with {signature_color} placeholder
         outfit_template = "Wearing a {signature_color} scarf"
         
-        self.characters["Alice"]["outfits"] = {"TestOutfit": outfit_template}
+        self.characters["Alice"].outfits["TestOutfit"] = outfit_template
         
-        config: PromptConfig = {
-            "base_prompt": "Default",
-            "selected_characters": [
-                {
-                    "name": "Alice",
-                    "outfit": "TestOutfit",
-                    "use_signature_color": True
-                }
+        config = PromptConfig(
+            base_prompt="Default",
+            selected_characters=[
+                SelectedCharacterConfig(
+                    name="Alice",
+                    outfit="TestOutfit",
+                    use_signature_color=True,
+                )
             ]
-        }
+        )
         
         prompt = self.builder.generate(config)
         self.assertIn("Wearing a red scarf", prompt)

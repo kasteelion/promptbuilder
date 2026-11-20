@@ -9,6 +9,8 @@ venv/
 *.egg-info/
 dist/
 build/
+.pytest_cache/
+.ruff_cache/
 
 # IDE
 .vscode/
@@ -23,21 +25,32 @@ Thumbs.db
 # User Data
 presets/
 data/presets/
+preferences.json
 
 # Generated Content & Output
 output/
+logs/
+*.log
+
+# Reports & Visualizations
+reports/
+**/reports/
+*.html
 
 # Config & Temp
-.config/preferences.json
-.config/chrome_profile/
-.config/temp/
+.config/
+src/.config/
 
-# Automation / Temp
-test_*.py
-check_*.py
-gen_*.py
-
+# Chrome Profile (Playwright automation)
+**/chrome_profile/
 
 # Experiments
 auditing/experiments/
 data/experiments/
+
+# Auditing Reports (generated artifacts)
+auditing/reports/
+scripts/auditing/reports/
+
+# Scratch & Temp
+scratch/

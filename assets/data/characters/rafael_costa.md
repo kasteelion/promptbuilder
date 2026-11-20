@@ -36,3 +36,9 @@
 - **Accessories:** Leather cord bracelet with wooden beads, simple silver ring, canvas messenger bag with colorful woven strap
 - **Hair/Makeup:** Natural curls pushed back with slight volume; light stubble
 - **Grooming:** Well-maintained light stubble; natural brows
+
+
+**Affinities:**
+- Styles: [Analog Film, Retro Anime, Classical Painterly]
+- Scenes: [Arts & Performance, Fashion & Glamour, Casual & Domestic]
+- Outfit_Tags: [Vintage, Retro, Floral, Red]

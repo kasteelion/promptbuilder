@@ -40,3 +40,9 @@
 * **Accessories:** mauve elastic hair ties for twin braids.
 
 * **Styling:** Split-dye hair (magenta/blue) in two braids; light "winged" eyeliner; natural "dewy" skin finish with visible pores and slight freckling.
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Artistic Anime: "Kyoto Atmosphere", Monochrome Noir]
+- Scenes: [Arts & Performance, Urban]
+- Outfit_Tags: [Fashion, Red, Floral, Comfortable]

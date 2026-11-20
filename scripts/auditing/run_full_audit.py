@@ -1,7 +1,6 @@
 import subprocess
 import argparse
 import sys
-import os
 from pathlib import Path
 
 def run_command(command, description):
@@ -92,12 +91,12 @@ def main():
     print("\n" + "="*50)
     print("CONSOLIDATED AUDIT COMPLETE")
     print("="*50)
-    print(f"📄 MASTER REPORT: auditing/reports/comprehensive_audit.md")
+    print("📄 MASTER REPORT: auditing/reports/comprehensive_audit.md")
     print("-" * 50)
-    print(f"1. Static Integrity:    auditing/reports/static_integrity.md")
-    print(f"2. Hub Connectivity:   auditing/reports/hub_connectivity.md")
-    print(f"3. Scoring Analysis:   auditing/reports/best_worst_prompts.md")
-    print(f"4. Distribution Flow:   auditing/reports/prompt_distribution_flow.md")
+    print("1. Static Integrity:    auditing/reports/static_integrity.md")
+    print("2. Hub Connectivity:   auditing/reports/hub_connectivity.md")
+    print("3. Scoring Analysis:   auditing/reports/best_worst_prompts.md")
+    print("4. Distribution Flow:   auditing/reports/prompt_distribution_flow.md")
     print("="*50)
 
 if __name__ == "__main__":

@@ -28,3 +28,9 @@
 - **Footwear:** Dark brown leather loafers (no socks).
 - **Accessories:** Vintage gold Rolex, gold signet ring, tortoiseshell wayfarer sunglasses tucked into the shirt placket.
 - **Hair/Makeup:** Hair perfectly coiffed with pomade; beard oiled and lined up.
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Monochrome Noir, Luminous Digital Illustration]
+- Scenes: [History & Culture, Arts & Performance, Urban]
+- Outfit_Tags: [Elegant, Corporate, Vintage, Layered]

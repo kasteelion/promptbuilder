@@ -1,8 +1,6 @@
-import os
 import sys
 import difflib
 from pathlib import Path
-from collections import defaultdict
 
 # Add project root and src to path
 # scripts/auditing/analysis/detect_redundancy.py -> auditing/analysis -> auditing -> scripts -> root

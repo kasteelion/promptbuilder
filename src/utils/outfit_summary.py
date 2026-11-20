@@ -20,9 +20,17 @@ def generate_outfit_data(data_dir=None):
         }
     """
     if data_dir is None:
-        # Assuming run from root or installed package structure
-        # Use relative path logic similar to other utilities
-        data_dir = Path(__file__).resolve().parents[1] / "data"
+        # Get the directory of the current script (src/utils)
+        current_dir = Path(__file__).resolve().parent
+        # Project root is two levels up (src/utils -> src -> root)
+        root = current_dir.parent.parent
+        
+        data_dir = root / "assets" / "data"
+        if not data_dir.exists():
+             # Fallback for different execution environments
+             data_dir = Path.cwd() / "assets" / "data"
+             if not data_dir.exists():
+                 data_dir = root / "data"
     else:
         data_dir = Path(data_dir)
 
@@ -78,10 +86,11 @@ def generate_consolidated_outfit_data(data_dir=None):
             for name, data in outfits.items():
                 if name not in consolidated[cat]:
                     consolidated[cat][name] = {
-                        "variations": {},
+                        "variations": {}, # F/M/H variations
                         "has_color_scheme": False,
                         "has_signature": False,
-                        "tags": []
+                        "tags": [],
+                        "variants": [] # Outfit styling variants
                     }
                 
                 # 'data' is a dict: {'description': str, 'tags': list}
@@ -90,6 +99,12 @@ def generate_consolidated_outfit_data(data_dir=None):
                 
                 # Add variation
                 consolidated[cat][name]["variations"][mod] = desc_str
+                
+                # Extract outfit styling variants
+                if not consolidated[cat][name]["variants"]:
+                    v_dict = data.get("variants", {})
+                    if len(v_dict) > 1:
+                        consolidated[cat][name]["variants"] = list(v_dict.keys())
                 
                 # Check modifiers in the description text
                 if "{primary_color}" in desc_str or "{secondary_color}" in desc_str or "{accent}" in desc_str:
@@ -100,20 +115,15 @@ def generate_consolidated_outfit_data(data_dir=None):
                     if "(signature)" in desc_str:
                         consolidated[cat][name]["has_signature"] = True
 
-            # Extract tags (if available in any variation)
-            # Assuming tags are consistent across gender variations for the same outfit name
-            # We check the raw data structure: parsed = {mod: {cat: {name: {description, tags}}}}
-            if "tags" not in consolidated[cat][name]:
-                # Try to find tags in the current item
-                raw_item = raw_data.get(mod, {}).get(cat, {}).get(name)
-                if raw_item and isinstance(raw_item, dict):
-                    t = raw_item.get("tags")
+                # Extract tags (if available in any variation)
+                # Assuming tags are consistent across gender variations for the same outfit name
+                if "tags" not in consolidated[cat][name] or not consolidated[cat][name]["tags"]:
+                    # Try to find tags in the current item
+                    t = data.get("tags")
                     if t:
                         consolidated[cat][name]["tags"] = t
                     else:
                         consolidated[cat][name]["tags"] = []
-                else:
-                    consolidated[cat][name]["tags"] = []
 
     return consolidated
 

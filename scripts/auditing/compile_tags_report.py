@@ -1,5 +1,4 @@
 import os
-import glob
 
 # Configuration
 DATA_DIR = r"c:\Users\parking\Desktop\promptbuilder\data"

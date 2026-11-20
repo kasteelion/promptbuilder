@@ -33,3 +33,9 @@
 - **Footwear:** Gold leather pointed-toe flat mules
 - **Accessories:** Chiffon hijab in saffron yellow with an elegant side-drape; layered gold coins necklace; simple gold bands on her fingers
 - **Hair/Makeup:** Hijab covers hair; makeup is polished with a focus on kohl-lined eyes and a matte nude lip
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Monochrome Noir, Luminous Digital Illustration]
+- Scenes: [Arts & Performance, Urban, History & Culture]
+- Outfit_Tags: [Hijabi, Floral, Rich, Velvet]

@@ -36,3 +36,9 @@
 - **Accessories:** Single geometric silver ear cuff, minimalist black leather crossbody bag with silver hardware
 - **Hair/Makeup:** Precise geometric bob with micro-fringe; subtle graphic eyeliner
 - **Signature:** Geometric architectural silhouette with one asymmetrical element
+
+
+**Affinities:**
+- Styles: [Analog Film, Luminous Digital Illustration, Monochrome Noir]
+- Scenes: [Arts & Performance, Intimate & Sensual, Cyberpunk & Sci-Fi]
+- Outfit_Tags: [Vintage, Dark, Geometric, White]

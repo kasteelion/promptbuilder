@@ -42,3 +42,9 @@
 - **Footwear:** Minimalist cyan-light sandals with holographic support straps.
 - **Accessories:** A digital interface ring on her right index finger; a sleek silver data-cuff on her left wrist.
 - **Hair/Makeup:** Sharp, high-shine ponytail; precise liquid eyeliner in deep charcoal; luminous skin finish.
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Monochrome Noir, Classical Painterly]
+- Scenes: [History & Culture, Arts & Performance, Intimate & Sensual]
+- Outfit_Tags: [Rich, White, Techwear, Floral]

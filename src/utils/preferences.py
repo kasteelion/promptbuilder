@@ -39,6 +39,13 @@ class PreferencesManager:
             "show_welcome": True,
             "sash_position": None,
             "auto_theme": False,
+            "ai_provider": "auto",
+            "gemini_model": "gemini-2.5-flash",
+            "gemini_api_key": "",
+            "ollama_model": "gemma2",
+            "ollama_base_url": "http://localhost:11434",
+            "ai_temperature": 0.7,
+            "enhance_style": "cinematic",
         }
 
         if not self.prefs_file.exists():

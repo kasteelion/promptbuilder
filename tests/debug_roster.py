@@ -6,7 +6,6 @@ from unittest.mock import MagicMock
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 try:
-    import flet as ft
     from ui.sections.roster import RosterSection
     
     class MockApp:

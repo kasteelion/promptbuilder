@@ -1,5 +1,6 @@
 """Normalize tags.md to Title Case (matching character files) and add missing tags."""
-import sys, os, re
+import sys
+import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', 'src'))
 
@@ -26,7 +27,7 @@ if not tags_path.exists():
     tags_path = Path(__file__).parent.parent.parent / "assets" / "data" / "tags.md"
     
 if not tags_path.exists():
-    print(f"Error: tags.md not found in expected locations.")
+    print("Error: tags.md not found in expected locations.")
     sys.exit(1)
 content = tags_path.read_text(encoding='utf-8')
 lines = content.split('\n')

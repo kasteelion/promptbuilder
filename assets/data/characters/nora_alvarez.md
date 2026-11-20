@@ -44,3 +44,9 @@
 - **Footwear:** Practical low-profile canvas slip-on shoes
 - **Accessories:** Simple silver stud earrings, thin silver chain necklace
 - **Hair/Makeup:** Hair loosely tied back
+
+
+**Affinities:**
+- Styles: [Monochrome Noir, Graphite Sketch, Luminous Digital Illustration]
+- Scenes: [History & Culture, Arts & Performance, Intimate & Sensual]
+- Outfit_Tags: [Dark, Rugged, Glasses, Floral]

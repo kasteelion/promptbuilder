@@ -34,3 +34,9 @@
 - **Footwear:** Nude kitten heel pumps or elegant flat sandals
 - **Accessories:** Pearl stud earrings, delicate gold cross necklace, gold wedding band (prominently worn), vintage-inspired apron when cooking (floral or gingham pattern), hair clip with decorative detail
 - **Hair/Makeup:** Elegant twist-out styled away from face with decorative clip; polished natural makeup—glowing skin, defined brows, soft pink lip, subtle highlight
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Luminous Digital Illustration]
+- Scenes: [Arts & Performance, Intimate & Sensual, History & Culture]
+- Outfit_Tags: [Velvet, Floral, Vintage, Red]

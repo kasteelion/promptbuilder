@@ -36,3 +36,9 @@
 - **Footwear:** Cognac brown leather gladiator sandals with braided straps
 - **Accessories:** Delicate gold layered necklaces (one with small magnolia pendant), small gold hoop earrings, woven straw crossbody bag with leather trim, thin leather wrap bracelet
 - **Hair/Makeup:** Hair in loose beachy waves with half-up style secured by small claw clip; natural dewy makeup emphasizing freckles with peachy blush and glossy nude-pink lip
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Soft Vector]
+- Scenes: [Casual & Domestic, Arts & Performance, Home]
+- Outfit_Tags: [Soft, Everyday, Sport, Southern]

@@ -40,3 +40,9 @@
 - **Footwear:** Minimalist black leather loafers or pointed-toe flats.
 - **Accessories:** Small gold stud earrings; delicate gold ring on the right hand.
 - **Hair/Makeup:** Sleek center-parted low bun; sharp winged black eyeliner; rose-pink lips; radiant, even skin tone.
+
+
+**Affinities:**
+- Styles: [Analog Film, Monochrome Noir, Retro]
+- Scenes: [Urban, Arts & Performance, Casual & Domestic]
+- Outfit_Tags: [Vintage, Chic, Filipino, Layered]

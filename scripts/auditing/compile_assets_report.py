@@ -10,7 +10,6 @@ from pathlib import Path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from logic.data_loader import DataLoader
-from utils.validation import sanitize_filename
 
 def main():
     loader = DataLoader()

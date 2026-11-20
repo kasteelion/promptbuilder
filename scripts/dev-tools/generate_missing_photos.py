@@ -19,13 +19,11 @@ import re
 import argparse
 import asyncio
 import shutil
-from pathlib import Path
 
 # Add project root to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from logic.data_loader import DataLoader
-from logic.character_parser import CharacterParser
 from automation.ai_studio_client import AIStudioClient
 from utils.validation import sanitize_filename
 

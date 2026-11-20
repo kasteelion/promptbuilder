@@ -28,3 +28,9 @@
 - **Footwear:** Worn-in brown leather Blundstone boots.
 - **Accessories:** Leather wrist cuff, simple silver chain, maybe a pencil tucked behind the ear.
 - **Hair/Makeup:** Messy textured hair; natural grooming; faint smell of sawdust and cedar.
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Retro Anime]
+- Scenes: [Urban, Sports, Arts & Performance]
+- Outfit_Tags: [Vintage, Casual, Rugged, Sport]

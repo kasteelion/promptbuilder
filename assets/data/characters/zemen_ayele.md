@@ -42,3 +42,9 @@
 - **Footwear:** Pointed-toe dark brown leather flats with a minimalist gold hardware detail.
 - **Accessories:** Thin gold chain with a small Coptic cross; leather-bound notebook tucked under her arm; small gold stud earrings.
 - **Hair/Makeup:** Natural 3C ringlets worn loose with volume; minimalist matte makeup with terracotta tones and defined brows.
+
+
+**Affinities:**
+- Styles: [Analog Film, Monochrome Noir, Classical Painterly]
+- Scenes: [History & Culture, Arts & Performance, Intimate & Sensual]
+- Outfit_Tags: [Vintage, Burgundy-Signature, Lingerie, Dark]

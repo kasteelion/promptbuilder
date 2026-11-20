@@ -50,14 +50,13 @@ class GalleryExplorer(ft.Container):
         self.btn_prev = ft.IconButton(ft.Icons.ARROW_BACK, on_click=lambda e: self.change_page(-1))
         self.btn_next = ft.IconButton(ft.Icons.ARROW_FORWARD, on_click=lambda e: self.change_page(1))
         
-        self.load_btn = ft.ElevatedButton(
+        self.load_btn = ft.FilledTonalButton(
             "Load Settings", 
             icon=ft.Icons.UPLOAD_FILE, 
             on_click=self.load_current_settings,
             disabled=True
         )
 
-        self._build_ui()
         self._build_ui()
         self.refresh()
 
@@ -151,7 +150,7 @@ class GalleryExplorer(ft.Container):
             card = ft.Container(
                 content=ft.Image(src=src, fit="cover", border_radius=5),
                 on_click=lambda e, idx=start+i: self.select_item(idx),
-                border=ft.border.all(2, ft.Colors.TRANSPARENT),
+                border=ft.Border.all(2, ft.Colors.TRANSPARENT),
                 border_radius=5,
                 tooltip=img.name
             )

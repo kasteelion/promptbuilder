@@ -21,7 +21,7 @@ def _load_module_from_path(path, name):
     # resolve to modules in the same `utils` directory without executing
     # `utils/__init__.py` and triggering package-level side-effects.
     project_root = Path(__file__).resolve().parent.parent
-    utils_dir = project_root / "utils"
+    utils_dir = project_root / "src" / "utils"
 
     original_utils = sys.modules.get("utils")
     try:
@@ -71,7 +71,7 @@ def _load_module_from_path(path, name):
 def test_imports():
     """Ensure core utility modules are importable without triggering package-level side-effects."""
     project_root = Path(__file__).resolve().parent.parent
-    utils_dir = project_root / "utils"
+    utils_dir = project_root / "src" / "utils"
     # Importing submodules directly can trigger package-level initializers
     # (and circular imports). Use the helper loader to verify the modules
     # are importable from file without executing package-level side-effects.
@@ -88,7 +88,7 @@ def test_imports():
 def test_undo_manager():
     """UndoManager supports save/undo/redo semantics."""
     project_root = Path(__file__).resolve().parent.parent
-    utils_dir = project_root / "utils"
+    utils_dir = project_root / "src" / "utils"
 
     mod = _load_module_from_path(utils_dir / "undo_manager.py", "utils.undo_manager")
     UndoManager = mod.UndoManager
@@ -112,7 +112,7 @@ def test_undo_manager():
 def test_preferences_manager(tmp_path):
     """PreferencesManager persists values and recent/favorite lists."""
     project_root = Path(__file__).resolve().parent.parent
-    utils_dir = project_root / "utils"
+    utils_dir = project_root / "src" / "utils"
 
     mod = _load_module_from_path(utils_dir / "preferences.py", "utils.preferences")
     PreferencesManager = mod.PreferencesManager
@@ -136,7 +136,7 @@ def test_preferences_manager(tmp_path):
 def test_preset_manager(tmp_path):
     """PresetManager can save, load, and list presets."""
     project_root = Path(__file__).resolve().parent.parent
-    utils_dir = project_root / "utils"
+    utils_dir = project_root / "src" / "utils"
 
     mod = _load_module_from_path(utils_dir / "preset_manager.py", "utils.preset_manager")
     PresetManager = mod.PresetManager

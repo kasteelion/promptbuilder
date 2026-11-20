@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from typing import Dict, List, Optional, Any, Set
+from typing import Dict
 
 from .parsers import MarkdownParser
 from core.models import CharacterMetadata, CharacterDetails
@@ -154,6 +154,10 @@ class DataLoader:
 
         Returns a dict: {"F": {...}, "M": {...}, "H": {...}, ...}
         """
+        cache_key = "shared_outfits"
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+
         data_dir = self.base_dir / "assets" / "data"
         if not data_dir.exists():
             data_dir = self.base_dir
@@ -161,7 +165,9 @@ class DataLoader:
         # [NEW] Check for unified outfits directory first
         outfits_dir = data_dir / "outfits"
         if outfits_dir.exists() and outfits_dir.is_dir():
-            return MarkdownParser.parse_outfits_directory(outfits_dir)
+            parsed = MarkdownParser.parse_outfits_directory(outfits_dir)
+            self._cache[cache_key] = parsed
+            return parsed
 
 
         # Migration logic for legacy outfits.md
@@ -441,28 +447,43 @@ A simple and comfortable casual outfit.
         return self.characters_metadata
 
     def _perform_metadata_scan(self, chars_dir: Path):
-        """Scan all markdown files for metadata only."""
+        """Scan all markdown files for metadata only using parallel I/O."""
+        from concurrent.futures import ThreadPoolExecutor, as_completed
+        
         self.characters_metadata = {}
         self._character_file_map = {}
         
         if not chars_dir.exists() or not chars_dir.is_dir():
             return
 
-        for char_file in chars_dir.glob("*.md"):
-            try:
-                stat = char_file.stat()
-                text = char_file.read_text(encoding="utf-8")
-                file_metadata = MarkdownParser.scan_metadata(
-                    text, 
-                    mtime=stat.st_mtime, 
-                    file_size=stat.st_size
-                )
-                for name, meta in file_metadata.items():
-                    self.characters_metadata[name] = meta
-                    self._character_file_map[name] = char_file
-            except Exception as e:
-                from utils import logger
-                logger.error(f"Error scanning metadata from {char_file}: {e}")
+        char_files = list(chars_dir.glob("*.md"))
+        if not char_files:
+            return
+
+        def _scan_single_file(char_file: Path):
+            """Read and parse a single character file. Thread-safe (no shared state)."""
+            stat = char_file.stat()
+            text = char_file.read_text(encoding="utf-8")
+            file_metadata = MarkdownParser.scan_metadata(
+                text,
+                mtime=stat.st_mtime,
+                file_size=stat.st_size
+            )
+            return char_file, file_metadata
+
+        # Use thread pool for parallel file I/O (capped to avoid fd exhaustion)
+        max_workers = min(8, len(char_files))
+        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+            futures = {pool.submit(_scan_single_file, f): f for f in char_files}
+            for future in as_completed(futures):
+                try:
+                    char_file, file_metadata = future.result()
+                    for name, meta in file_metadata.items():
+                        self.characters_metadata[name] = meta
+                        self._character_file_map[name] = char_file
+                except Exception as e:
+                    from utils import logger
+                    logger.error(f"Error scanning metadata from {futures[future]}: {e}")
 
     def get_character_details(self, name: str) -> CharacterDetails:
         """Load full character details on demand."""
@@ -487,6 +508,7 @@ A simple and comfortable casual outfit.
                 # Load shared outfits and merge
                 shared_outfits = self.load_outfits()
                 merged_outfits, categorized_outfits = MarkdownParser.merge_character_outfits(
+                    details.model_dump() if hasattr(details, 'model_dump') else
                     details.dict() if hasattr(details, 'dict') else details, 
                     shared_outfits, 
                     name
@@ -502,7 +524,7 @@ A simple and comfortable casual outfit.
                 
                 self._characters_full[name] = details
                 return details
-        except Exception as e:
+        except Exception:
             from utils import logger
             logger.exception(f"Error loading full details for {name}")
             raise
@@ -529,6 +551,7 @@ A simple and comfortable casual outfit.
         """Clear all cached data to force reload."""
         self._cache.clear()
         self._file_mtimes.clear()
+        self._characters_full.clear()
 
     def resolve_photo_for_character(
         self, character_name: str, photo_field: str | None
@@ -566,10 +589,17 @@ A simple and comfortable casual outfit.
                     local = chars_dir / cand.name
                     if local.exists():
                         return cand.name
-                    # otherwise, do not return absolute paths (keep relative)
+                    # try webp version if original not found
+                    webp_local = chars_dir / cand.with_suffix(".webp").name
+                    if webp_local.exists():
+                        return webp_local.name
                 else:
                     # relative to characters dir
                     res = check_candidate(photo_field)
+                    if res:
+                        return res
+                    webp_cand = cand.with_suffix(".webp").name
+                    res = check_candidate(webp_cand)
                     if res:
                         return res
             except Exception:
@@ -577,8 +607,8 @@ A simple and comfortable casual outfit.
 
         # 2) standardized sanitized name
         base = sanitize_filename(character_name).lower().replace(" ", "_")
-        # Try common extensions
-        for ext in (".png", ".jpg", ".jpeg"):
+        # Try common extensions (.webp first for efficiency)
+        for ext in (".webp", ".png", ".jpg", ".jpeg"):
             cand = f"{base}_photo{ext}"
             found = check_candidate(cand)
             if found:
@@ -588,7 +618,7 @@ A simple and comfortable casual outfit.
         simple = "".join(c for c in character_name.lower() if c.isalnum() or c == "_").replace(
             " ", "_"
         )
-        for ext in (".png", ".jpg", ".jpeg"):
+        for ext in (".webp", ".png", ".jpg", ".jpeg"):
             cand = f"{simple}_photo{ext}"
             found = check_candidate(cand)
             if found:

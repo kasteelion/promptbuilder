@@ -43,3 +43,9 @@
 - **Footwear:** knee-high boots
 - **Accessories:** Studded leather belt (worn through loops or slung low on hips), studded leather cuff bracelet, layered silver chain necklaces (mix of lengths), silver hoop or stud earrings,
 - **Hair/Makeup:** Pin-straight jet-black hair worn long and loose or half-up; signature heavy smokey eye makeup with black eyeshadow, thick black eyeliner, false lashes, nude-to-mauve lips, dramatic contour
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Monochrome Noir, Artistic Anime: "Kyoto Atmosphere"]
+- Scenes: [Intimate & Sensual, Combat & Tactical, Arts & Performance]
+- Outfit_Tags: [Sport, Villain, Layered, Cyberpunk]

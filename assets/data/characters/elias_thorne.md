@@ -31,3 +31,9 @@
 - **Footwear:** Black leather Chelsea boots or high-end minimalist leather sneakers (Common Projects style).
 - **Accessories:** Thick-rimmed black architectural glasses (distinctive frame), simple silver band ring, long wool coat draped over shoulders.
 - **Hair/Makeup:** Immaculately groomed silver hair; light moisturizer sheen.
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Monochrome Noir, Luminous Digital Illustration]
+- Scenes: [Arts & Performance, Work & Industrial, Urban]
+- Outfit_Tags: [Elegant, Sophisticated, Professional, Layered]

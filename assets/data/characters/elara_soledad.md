@@ -28,3 +28,9 @@
 - **Footwear:** Brown leather ankle boots with sturdy sole
 - **Accessories:** Leather wrap bracelet, simple wooden bead necklace, small gold stud earrings
 - **Hair/Makeup:** Hair in thick functional braid down back; minimal natural makeup with subtle bronze highlight
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Luminous Digital Illustration, Retro Anime]
+- Scenes: [Arts & Performance, Fantasy & RPG, Combat & Tactical]
+- Outfit_Tags: [Rugged, Sport, Functional, Vintage]

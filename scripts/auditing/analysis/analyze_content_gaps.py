@@ -1,5 +1,4 @@
 import os
-import sys
 from collections import defaultdict
 from tag_inventory import TagInventory
 
@@ -129,7 +128,7 @@ class ContentGapAnalyzer:
             f.write("Identifies themes where we have 'Demand' (Scenes/Prompts) but no 'Supply' (Characters/Outfits).\n\n")
             
             f.write("## 📊 Visualization\n")
-            f.write(f"See [Content Balance Chart](content_balance_chart.html) for an interactive view.\n\n")
+            f.write("See [Content Balance Chart](content_balance_chart.html) for an interactive view.\n\n")
 
             f.write("## 🚨 Critical Gaps (Missing Content)\n")
             if analysis["critical_gaps"]:

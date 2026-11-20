@@ -31,7 +31,8 @@ def load_themes_from_markdown(file_path):
         sections = content.split("## ")
         
         for section in sections:
-            if not section.strip(): continue
+            if not section.strip():
+                continue
             
             # First line is title
             lines = section.split('\n')

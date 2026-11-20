@@ -31,3 +31,9 @@
 - **Footwear:** White chunky sneakers or pastel platform trainers
 - **Accessories:** Small hoop earrings, delicate silver chain necklace
 - **Hair/Makeup:** Messy high bun with face-framing tendrils; bright kawaii makeup
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Artistic Anime: "Kyoto Atmosphere", Monochrome Noir]
+- Scenes: [Arts & Performance, Casual & Domestic, Fashion & Glamour]
+- Outfit_Tags: [Floral, Track, Chic, Red]

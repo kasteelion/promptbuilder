@@ -1,5 +1,4 @@
 import flet as ft
-from core.flet_theme_manager import ThemeManager
 from scripts.automation.replace_tag import replace_in_outfits, replace_in_scenes, replace_in_interactions, replace_in_poses
 
 class AssetEditorDialog(ft.AlertDialog):
@@ -13,8 +12,8 @@ class AssetEditorDialog(ft.AlertDialog):
             selected_index=0,
             animation_duration=300,
             tabs=[
-                ft.Tab(text="Tag Manager", icon=ft.Icons.LABEL),
-                ft.Tab(text="Metadata", icon=ft.Icons.INFO_OUTLINE), # Placeholder
+                ft.Tab(label="Tag Manager", icon=ft.Icons.LABEL),
+                ft.Tab(label="Metadata", icon=ft.Icons.INFO_OUTLINE), # Placeholder
             ],
             expand=True
         )
@@ -30,7 +29,7 @@ class AssetEditorDialog(ft.AlertDialog):
                 ft.Text("Batch replace or delete tags across all assets.", size=12, color="grey"),
                 ft.Row([self.old_tag_field, self.new_tag_field]),
                 ft.Row([
-                    ft.ElevatedButton("Dry Run (Scan Only)", icon=ft.Icons.SEARCH, on_click=lambda e: self.run_tag_op(dry_run=True)),
+                    ft.FilledTonalButton("Dry Run (Scan Only)", icon=ft.Icons.SEARCH, on_click=lambda e: self.run_tag_op(dry_run=True)),
                     ft.FilledButton("Execute Changes", icon=ft.Icons.SAVE_ALT, on_click=lambda e: self.run_tag_op(dry_run=False), style=ft.ButtonStyle(bgcolor="red400")),
                 ]),
                 ft.Divider(),
@@ -48,7 +47,15 @@ class AssetEditorDialog(ft.AlertDialog):
         
         # Link Tabs
         self.tabs.tabs[0].content = tag_manager_content
-        self.tabs.tabs[1].content = ft.Container(content=ft.Text("Metadata Editor Coming Soon"), alignment=ft.Alignment(0, 0))
+        self.tabs.tabs[1].content = ft.Container(
+            content=ft.Column([
+                ft.Icon(ft.Icons.CONSTRUCTION, size=40, color="outline"),
+                ft.Text("Metadata editing is handled via the character .md files.", color="outline"),
+                ft.Text("Use 'Refresh Assets' after editing files to reload.", size=12, color="outline")
+            ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=10),
+            alignment=ft.Alignment(0, 0),
+            expand=True
+        )
 
         self.content = ft.Container(
             width=800,

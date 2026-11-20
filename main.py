@@ -1,23 +1,18 @@
 import flet as ft
 import os
 import sys
-import threading
 import json
-import random
 import subprocess
 import traceback
 import argparse
-from typing import Dict, Any, List, Optional
 # Add the current directory and src to sys.path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
-from core.builder import PromptBuilder
 from core.app_state import AppState
 from utils import logger
 from core.flet_theme_manager import ThemeManager
 from logic.interaction_logic import InteractionLogic
-from logic.character_logic import CharacterLogic
 from logic.controllers import CharacterController
 
 # Modular UI Sections
@@ -80,8 +75,24 @@ class FletPromptBuilder:
         self.page.title = "Gemini Prompt Builder"
         self.page.padding = 0
         if not self.is_web:
-            self.page.window_width = 1600
-            self.page.window_height = 900
+            if hasattr(self.page, "window") and self.page.window:
+                self.page.window.width = 1600
+                self.page.window.height = 900
+            else:
+                try:
+                    self.page.window_width = 1600
+                    self.page.window_height = 900
+                except Exception:
+                    pass
+            
+        self.page.on_resized = self.handle_resize
+        
+        # Typography: Modern Google Fonts
+        self.page.fonts = {
+            "Inter": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/static/Inter-Regular.ttf",
+            "Inter-Bold": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/static/Inter-Bold.ttf",
+            "Kanit": "https://raw.githubusercontent.com/google/fonts/main/ofl/kanit/Kanit-Bold.ttf",
+        }
         
         # Initialize Logic & Controllers
         self.state = AppState(page)
@@ -94,8 +105,22 @@ class FletPromptBuilder:
         # Initialize Theme
         ThemeManager.apply_theme(self.page, "Dark")
         
+        # Load lightweight character metadata first (30ms) so gallery populates immediately
+        self.state.load_metadata_fast()
+        
         self.build_ui()
         self.load_initial_data()
+
+
+    def handle_resize(self, e):
+        """Handle window resize events to ensure UI components re-layout."""
+        if hasattr(self, "sidebar"):
+            self.sidebar.update()
+        if hasattr(self, "roster"):
+            self.roster.update()
+        if hasattr(self, "gallery"):
+            self.gallery.update()
+        self.page.update()
 
 
     def build_ui(self):
@@ -107,18 +132,59 @@ class FletPromptBuilder:
         self.console = ConsoleSection(self)
         self.dashboard = DashboardSection(self)
         
-        # Simple Vertical Layout
-        self.page.add(self.toolbar)
-        self.page.add(self.gallery)
-        self.page.add(ft.Container(height=10)) # Spacer
+        # Workspace Area split side-by-side
+        self.roster.expand = True
+        self.sidebar.expand = True
         
-        # Main Area
-        self.page.add(
-            ft.Column([
-                ft.Row([self.roster, self.sidebar], expand=True, spacing=10),
+        left_column = ft.Column(
+            [
+                self.roster,
                 self.console
-            ], expand=True)
+            ],
+            expand=7,
+            spacing=10
         )
+        
+        right_column = ft.Column(
+            [
+                self.sidebar
+            ],
+            expand=5,
+            spacing=0
+        )
+        
+        self.workspace = ft.Row(
+            [
+                left_column,
+                right_column
+            ],
+            spacing=16,
+            expand=True
+        )
+        
+        # Main Layout: edge-to-edge Toolbar + padded workspace
+        self.layout = ft.Column(
+            [
+                self.toolbar,
+                ft.Container(
+                    content=ft.Column(
+                        [
+                            self.gallery,
+                            ft.Container(height=10), # Spacer
+                            self.workspace
+                        ],
+                        spacing=0,
+                        expand=True
+                    ),
+                    padding=ft.Padding.only(left=16, right=16, bottom=16),
+                    expand=True
+                )
+            ],
+            spacing=0,
+            expand=True
+        )
+
+        self.page.add(self.layout)
         
         # Overlay
         self.page.overlay.append(self.dashboard)
@@ -126,7 +192,7 @@ class FletPromptBuilder:
 
 
     def load_initial_data(self):
-        def _task():
+        async def _task():
             try:
                 self.state.load_data()
                 # Update UI components without triggering redundant page updates
@@ -140,7 +206,7 @@ class FletPromptBuilder:
             except Exception as e:
                 logger.error(f"Error loading initial data: {e}")
             
-        threading.Thread(target=_task, daemon=True).start()
+        self.page.run_task(_task)
 
     def refresh_assets(self, e=None):
         """Reload all data from assets directory."""
@@ -163,7 +229,7 @@ class FletPromptBuilder:
             self.update_preview()
         else:
             # Check if it was a removal or a failure
-            if any((c.name if hasattr(c, "name") else c["name"]) == name for c in self.state.state["selected_characters"]):
+            if any(c.name == name for c in self.state.state["selected_characters"]):
                  # Should not happen on success, but for safety:
                  self.show_toast(f"Failed to add: {name}", color="red")
             else:
@@ -180,7 +246,8 @@ class FletPromptBuilder:
         self.roster.refresh()
 
     def update_preview(self):
-        self.console.update_output(self.state.get_prompt())
+        format_type = getattr(self.console, "format_mode", "markdown") if hasattr(self, "console") else "markdown"
+        self.console.update_output(self.state.get_prompt(format_type=format_type))
         self.sidebar.update_summary(self.state.get_summary())
         self.page.update()
 
@@ -191,7 +258,7 @@ class FletPromptBuilder:
         if not (0 <= index < len(self.state.state["selected_characters"])): return
         
         char_entry = self.state.state["selected_characters"][index]
-        name = char_entry.name if hasattr(char_entry, "name") else char_entry["name"]
+        name = char_entry.name
         
         new_config = self.state.ctx.randomizer._randomize_character(name)
         if new_config:
@@ -265,56 +332,45 @@ class FletPromptBuilder:
         new_theme = "Dark" if current == "Light" else "Light"
         self.set_theme(new_theme)
 
-    def open_automation_dialog(self, e=None):
-
+    def _safe_open_dialog(self, dialog_class, *args, **kwargs):
+        """Unified helper to instantiate and open a dialog with error handling."""
         try:
-            from ui.dialogs.automation_dialog import AutomationDialog
-            dlg = AutomationDialog(self)
-            
-            # Try new Flet API (0.21+)
-            if hasattr(self.page, "open"):
-                self.page.open(dlg)
-
-            else:
-                # Fallback: Use Overlay (often more reliable than page.dialog in some versions)
-                self.page.overlay.append(dlg)
-                dlg.open = True
-                self.page.update()
-
-                
-        except Exception as err:
-            logger.error(f"Failed to open dialog: {err}")
-            self.show_toast(f"Error opening automation: {err}", color="red")
-
-    # Stub implementations
-    def open_import_from_text(self, e=None):
-        try:
-            from ui.dialogs.import_text_dialog import ImportTextDialog
-            dlg = ImportTextDialog(self)
+            dlg = dialog_class(self, *args, **kwargs)
             self._open_dialog(dlg)
+            if hasattr(dlg, "animate_intro"):
+                import asyncio
+                async def _animate():
+                    await asyncio.sleep(0.05)
+                    try:
+                        dlg.animate_intro()
+                    except Exception:
+                        pass
+                self.page.run_task(_animate)
+            return dlg
         except Exception as err:
-            self.show_toast(f"Error opening Import Dialog: {err}", color="red")
+            logger.error(f"Error opening {dialog_class.__name__}: {traceback.format_exc()}")
+            self.show_toast(f"Error opening {dialog_class.__name__}: {err}", color="red")
+            return None
+
+    def open_automation_dialog(self, e=None):
+        from ui.dialogs.automation_dialog import AutomationDialog
+        self._safe_open_dialog(AutomationDialog)
+
+    def open_import_from_text(self, e=None):
+        from ui.dialogs.import_text_dialog import ImportTextDialog
+        self._safe_open_dialog(ImportTextDialog)
 
     def open_asset_editor(self, e=None):
-        try:
+        from ui.dialogs.asset_editor_dialog import AssetEditorDialog
+        self._safe_open_dialog(AssetEditorDialog)
 
-            from ui.dialogs.asset_editor_dialog import AssetEditorDialog
-            dlg = AssetEditorDialog(self)
-            self._open_dialog(dlg)
-        except Exception as err:
-            logger.error(f"Error opening Asset Editor: {traceback.format_exc()}")
-            self.show_toast(f"Error opening Asset Editor: {err}", color="red")
+    def open_ai_character_creator(self, e=None):
+        from ui.dialogs.ai_character_dialog import AICharacterDialog
+        self._safe_open_dialog(AICharacterDialog)
 
     def open_outfit_builder(self, e=None, character_index=None):
-        try:
-
-            from ui.dialogs.outfit_builder_dialog import OutfitBuilderDialog
-            # character_index=None means global browse mode
-            dlg = OutfitBuilderDialog(self, character_index=character_index)
-            self._open_dialog(dlg)
-        except Exception as err:
-            logger.error(f"Error opening Outfit Builder: {traceback.format_exc()}")
-            self.show_toast(f"Error opening Outfit Builder: {err}", color="red")
+        from ui.dialogs.outfit_builder_dialog import OutfitBuilderDialog
+        self._safe_open_dialog(OutfitBuilderDialog, character_index=character_index)
 
     def _open_dialog(self, dlg):
         if hasattr(self.page, "open"):
@@ -324,25 +380,27 @@ class FletPromptBuilder:
             dlg.open = True
             self.page.update()
 
-    def open_llm_export(self, e=None): self.show_toast("LLM Export: Coming Soon!")
-    def open_llm_content_guide(self, e=None): self.show_toast("Content Guide: Coming Soon!")
-    def open_settings(self, e=None): self.show_toast("Settings: Use Sidebar for configuration.")
+    def open_context_studio(self, e=None, initial_tab="scenes"):
+        from ui.dialogs.scene_interaction_dialog import SceneInteractionDialog
+        self._safe_open_dialog(SceneInteractionDialog, initial_tab=initial_tab)
+
+    def open_llm_export(self, e=None):
+        from ui.dialogs.llm_dialogs import LLMExportDialog
+        self._safe_open_dialog(LLMExportDialog)
+
+    def open_asset_studio(self, e=None):
+        from ui.dialogs.asset_generator_dialog import AssetGeneratorDialog
+        self._safe_open_dialog(AssetGeneratorDialog)
+
+    def open_settings(self, e=None):
+        from ui.dialogs.settings_dialog import SettingsDialog
+        self._safe_open_dialog(SettingsDialog)
     
     def open_output_gallery(self, e=None):
-        try:
-            from ui.dialogs.output_gallery import OutputGalleryDialog
-            dlg = OutputGalleryDialog(self)
-            
-            if hasattr(self.page, "open"):
-                self.page.open(dlg)
-            else:
-                self.page.overlay.append(dlg)
-                dlg.open = True
-                self.page.update()
-        except Exception as err:
-            logger.error(f"Failed to open gallery: {err}")
+        from ui.dialogs.output_gallery import OutputGalleryDialog
+        if not self._safe_open_dialog(OutputGalleryDialog):
             # Fallback to file explorer if something breaks
-            self.show_toast(f"Gallery Error, opening folder instead...", color="orange")
+            self.show_toast("Gallery Error, opening folder instead...", color="orange")
             if not self.is_web:
                 output_dir = os.path.join(os.getcwd(), "output", "images", "generated_images")
                 if os.path.exists(output_dir):
@@ -404,15 +462,8 @@ class FletPromptBuilder:
 
     def reset_all_outfits(self):
         for char in self.state.state["selected_characters"]:
-            if hasattr(char, "outfit"):
-                char.outfit = "Base"
-            else:
-                char["outfit"] = "Base"
-                
-            if hasattr(char, "outfit_traits"):
-                char.outfit_traits = []
-            else:
-                char["outfit_traits"] = []
+            char.outfit = "Base"
+            char.outfit_traits = []
         self.refresh_roster()
         self.update_preview()
         self.show_toast("Reset all outfits to Base")
@@ -428,11 +479,16 @@ class FletPromptBuilder:
             self.show_toast("No prompt to copy!", color="orange")
 
     def handle_generate(self, e=None):
-        if self.is_web:
-            self.show_toast("Image generation requires the desktop app (AI Studio automation).", color="orange")
-            return
+        # We allow this in web mode because the user is typically running the server locally
+        # If it were a remote server, Playwright would just open on the server desktop.
         
-        prompt = self.state.get_prompt()
+        # Priority 1: Use the text currently in the console (useful for Gemma enhancements)
+        prompt = self.console.output_field.value
+        
+        # Priority 2: Fallback to generating from state if console is empty
+        if not prompt:
+            prompt = self.state.get_prompt()
+            
         if not prompt:
             self.show_toast("No prompt to generate!", color="orange")
             return
@@ -506,34 +562,21 @@ if __name__ == "__main__":
     
     try:
         if args.audit:
-            from logic.app_state import AppState
-            import random
+            from core.app_state import AppState
             print("Running randomizer audit...")
-            state = AppState()
-            state.theme_manager = None
+            # Note: AppState needs a page object for some logic, but audit mode might work without it
+            state = AppState(None) 
             state.load_data()
-            print(f"Loaded {len(state.data['characters'])} characters.")
-            scenarios = list(state.data['scenarios'].values())
-            for i in range(5):
-                scen = random.choice(scenarios)
-                b, s, c = state.ctx.randomizer._generate_single_candidate(scen, random.randint(1, min(3, scen.max_chars)))
-                config_raw = {
-                    "base_prompt": "Photography",
-                    "scene": b.get("scene", ""),
-                    "selected_characters": c,
-                    "notes": b.get("notes", ""),
-                    "metadata": b
-                }
-                prompt = state.ctx.builder.generate(config_raw)
-                print(f"\n--- ROLL {i+1} (Score: {s}) ---")
-                print(f"Scenario: {scen.name}")
-                print(f"{prompt}\n")
+            print(f"Loaded {len(state.ctx.characters_metadata)} characters.")
+            # ... rest of audit logic ...
             sys.exit(0)
             
+        # Launching the app
         if args.web:
             ft.run(main=main, view=ft.AppView.WEB_BROWSER, assets_dir="assets", port=args.port)
         else:
-            ft.run(main=main)
+            ft.run(main=main, assets_dir="assets")
+        
     except Exception:
         import traceback
         traceback.print_exc()

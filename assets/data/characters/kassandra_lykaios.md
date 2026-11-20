@@ -33,3 +33,9 @@
 - **Footwear:** Black lightweight running shoes with gold accents
 - **Accessories:** Simple gold hoop earrings, gold hair cuff
 - **Hair/Makeup:** Intricate high braid; natural glowy skin
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Cinematic 3D, Graphite Sketch]
+- Scenes: [Arts & Performance, Combat & Tactical, History & Culture]
+- Outfit_Tags: [Greek, Red, Sport, Fashion]

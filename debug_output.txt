@@ -1,4 +1,0 @@
-C:\Users\parking\Desktop\promptbuilder\scripts\auditing\assess_content_quality.py:26: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
-  data = char_obj.dict() if hasattr(char_obj, "dict") else char_obj
-C:\Users\parking\Desktop\promptbuilder\scripts\auditing\assess_content_quality.py:89: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
-  char_data = char_obj.dict() if hasattr(char_obj, "dict") else char_obj

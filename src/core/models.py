@@ -24,8 +24,10 @@ class CharacterMetadata(BaseModel):
     bearing: Optional[str] = None
     age_presentation: Optional[str] = None
     gender: str = "F"
+    outfits: Dict[str, Any] = Field(default_factory=dict) # Global registry: {gender: {category: {name: data}}}
     mtime: float = 0.0
     file_size: int = 0
+    affinities: Dict[str, List[str]] = Field(default_factory=dict)
 
 class CharacterDetails(BaseModel):
     """Full character details for prompt generation."""
@@ -44,6 +46,7 @@ class CharacterDetails(BaseModel):
     traits: Dict[str, str] = Field(default_factory=dict)
     outfits: Dict[str, Union[str, Dict[str, Any]]] = Field(default_factory=dict)
     outfits_categorized: Dict[str, Dict[str, Union[str, Dict[str, Any]]]] = Field(default_factory=dict)
+    affinities: Dict[str, List[str]] = Field(default_factory=dict)
 
 class SelectedCharacterConfig(BaseModel):
     """Configuration for a character selected in the roster."""
@@ -66,6 +69,10 @@ class PromptConfig(BaseModel):
     """Configuration for global prompt generation."""
     base_prompt: str = "Detailed"
     scene: str = ""
+    scene_category: Optional[str] = None
+    scene_preset: Optional[str] = None
+    interaction_category: Optional[str] = None
+    interaction_preset: Optional[str] = None
     notes: str = ""
     selected_characters: List[SelectedCharacterConfig] = Field(default_factory=list)
     metadata: Dict[str, Any] = Field(default_factory=dict)

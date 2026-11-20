@@ -43,3 +43,9 @@
 - **Footwear:** Tan leather ballet flats
 - **Accessories:** Small gold hoop earrings, delicate gold chain necklace, cream canvas tote bag
 - **Hair/Makeup:** Hair in soft loose waves with side part; natural makeup with glossy lip
+
+
+**Affinities:**
+- Styles: [Analog Film, Monochrome Noir, Classical Painterly]
+- Scenes: [Arts & Performance, Intimate & Sensual, Fashion & Glamour]
+- Outfit_Tags: [Vintage, Floral, Red, Lingerie]

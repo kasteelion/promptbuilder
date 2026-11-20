@@ -36,3 +36,9 @@
 - **Footwear:** White platform sneakers or Mary Jane flats
 - **Accessories:** Small silver heart stud earrings, delicate silver necklace, mini crossbody bag
 - **Hair/Makeup:** Half-up with claw clip, loose face-framing pieces; soft K-beauty makeup
+
+
+**Affinities:**
+- Styles: [Luminous Digital Illustration, Monochrome Noir, Soft Vector]
+- Scenes: [Casual & Domestic, Urban, Arts & Performance]
+- Outfit_Tags: [K-Fashion, Chic, Soft, Everyday]

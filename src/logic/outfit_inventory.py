@@ -7,7 +7,7 @@ legacy outfit files to build a catalog of available components (parts, materials
 
 import re
 from pathlib import Path
-from typing import Dict, List, Set, Any
+from typing import Dict, List
 from logic.data_loader import DataLoader
 
 class OutfitInventory:

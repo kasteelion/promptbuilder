@@ -32,3 +32,9 @@
 - **Footwear:** Worn-in Converse Chuck 70s or desert boots.
 - **Accessories:** brown leather satchel, maybe a scarf.
 - **Hair/Makeup:** Messy natural curls; natural grooming.
+
+
+**Affinities:**
+- Styles: [Analog Film, Classical Painterly, Monochrome Noir]
+- Scenes: [Casual & Domestic, Arts & Performance, Urban]
+- Outfit_Tags: [Vintage, Retro, Dark, Comfortable, White]

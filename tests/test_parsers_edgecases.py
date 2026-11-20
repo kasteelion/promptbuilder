@@ -68,7 +68,7 @@ def test_parse_characters_malformed_outfit_entries():
 
     chars = MarkdownParser.parse_characters(md)
     assert "Alex" in chars
-    outfits = chars["Alex"]["outfits"]
+    outfits = chars["Alex"].outfits
     assert "Weird" in outfits
     # Should parse items robustly even when bold markers or colons are malformed
     val = outfits["Weird"]

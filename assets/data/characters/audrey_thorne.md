@@ -56,3 +56,9 @@
   - Subtle mascara emphasizing hooded eyes
   - Satin rose-pink lip (#E5B8C4)
   - Natural flushing on apple cheeks
+
+
+**Affinities:**
+- Styles: [Classical Painterly, Luminous Digital Illustration, Soft Vector]
+- Scenes: [Arts & Performance, Urban, Fashion & Glamour]
+- Outfit_Tags: [Elegant, Layered, Chic, Boho]

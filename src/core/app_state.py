@@ -1,10 +1,11 @@
 import flet as ft
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, Optional
+from utils import logger
 from dataclasses import dataclass, field
 from core.builder import PromptBuilder
 from logic.data_loader import DataLoader
 from logic.randomizer import PromptRandomizer
-from core.models import CharacterDetails, CharacterMetadata, PromptConfig, SelectedCharacterConfig
+from core.models import CharacterDetails, CharacterMetadata, PromptConfig
 
 @dataclass
 class AppContext:
@@ -22,6 +23,7 @@ class AppContext:
     scoring_config: Dict[str, Any] = field(default_factory=dict)
     randomizer: Optional[PromptRandomizer] = None
     automation_controller: Optional[Any] = None
+    gemma_client: Optional[Any] = None
 
 class AppState:
     def __init__(self, page: ft.Page):
@@ -44,11 +46,17 @@ class AppState:
         self.builder: Optional[PromptBuilder] = None
         self.current_theme = "Dark"
 
+    def load_metadata_fast(self):
+        """Pre-load character metadata immediately (30ms) for instant gallery rendering."""
+        if not self.ctx.characters_metadata:
+            self.ctx.characters_metadata = self.data_loader.load_characters_metadata()
+
     def load_data(self):
         loader = self.data_loader
         
         # 1. Load Metadata (Fast, for Gallery)
-        self.ctx.characters_metadata = loader.load_characters_metadata()
+        if not self.ctx.characters_metadata:
+            self.ctx.characters_metadata = loader.load_characters_metadata()
         
         # 2. Load other presets
         self.ctx.base_prompts = loader.load_base_prompts()
@@ -61,18 +69,39 @@ class AppState:
         self.ctx.scene_constraints = loader.load_scene_constraints()
         self.ctx.tag_rules = loader.load_tag_rules()
         self.ctx.scoring_config = loader.load_scoring_config()
+        self.ctx.outfits = loader.load_outfits()
         
         # 3. [LAZY] Pre-load characters that are already in state (if any from session)
         for char_conf in self.state.get("selected_characters", []):
             name = char_conf.get("name") if isinstance(char_conf, dict) else char_conf.name
             self.ensure_character_loaded(name)
 
-        # 4. Initialize Automation/Randomizer/Builder
+        # 4. Initialize Automation/Randomizer/Builder/Gemma
         try:
-            from logic.automation_controller import AutomationController
-            self.ctx.automation_controller = AutomationController(self.ctx, app_state=self)
+            from logic.automation import AutomationOrchestrator
+            self.ctx.automation_controller = AutomationOrchestrator(self.ctx, app_state=self)
         except Exception as e:
-            print(f"DEBUG: AutomationController load fail: {e}")
+            logger.warning(f"AutomationOrchestrator failed to load: {e}")
+            
+        try:
+            from utils.gemma_client import GemmaClient
+            from utils.preferences import PreferencesManager
+            prefs = PreferencesManager()
+            ai_provider = prefs.get("ai_provider", "auto")
+            gemini_model = prefs.get("gemini_model", "gemini-2.5-flash")
+            gemini_api_key = prefs.get("gemini_api_key") or None
+            ollama_model = prefs.get("ollama_model", "gemma2")
+            ollama_base = prefs.get("ollama_base_url", "http://localhost:11434")
+
+            self.ctx.gemma_client = GemmaClient(
+                mode=ai_provider,
+                api_key=gemini_api_key,
+                cloud_model=gemini_model,
+                ollama_model=ollama_model,
+                ollama_base=ollama_base,
+            )
+        except Exception as e:
+            logger.warning(f"GemmaClient failed to load: {e}")
 
         # Initialize Randomizer (Will need full characters for tag matching, so we might still need to load some)
         # For now, we'll let Randomizer load what it needs or handle error gracefully
@@ -96,8 +125,42 @@ class AppState:
             self.ctx.poses,
             self.ctx.color_schemes,
             self.ctx.modifiers,
-            self.ctx.framing
+            self.ctx.framing,
+            self.ctx.outfits # Pass global outfits for fallbacks
         )
+        
+        # Check for missing character portraits in background
+        if self.ctx.automation_controller:
+            self._check_missing_portraits()
+
+    def _check_missing_portraits(self):
+        if getattr(self, '_portraits_scanned', False):
+            return
+        self._portraits_scanned = True
+        
+        import pathlib
+        import re
+
+        async def _scan():
+            data_dir = pathlib.Path("assets/data/characters")
+            for char_name, meta in self.ctx.characters_metadata.items():
+                if hasattr(meta, "photo") and meta.photo:
+                    photo_path = data_dir / meta.photo
+                    has_photo = photo_path.exists() or photo_path.with_suffix(".webp").exists()
+                    if not has_photo:
+                        logger.info(f"Missing photo for {char_name}, queueing generation...")
+                        self.ctx.automation_controller.generate_character_portrait(char_name)
+                else:
+                    filename = char_name.lower().replace(" ", "_")
+                    filename = re.sub(r'[^a-z0-9_]', '', filename) + "_photo.png"
+                    photo_path = data_dir / filename
+                    has_photo = photo_path.exists() or photo_path.with_suffix(".webp").exists()
+                    if not has_photo:
+                        logger.info(f"Missing photo for {char_name}, queueing generation...")
+                        self.ctx.automation_controller.generate_character_portrait(char_name)
+
+        if self.page:
+            self.page.run_task(_scan)
 
     def ensure_character_loaded(self, name: str) -> bool:
         """Loads full character details if not already in memory."""
@@ -122,11 +185,11 @@ class AppState:
         self.ctx.characters.clear() # Clear full data cache
         self.load_data()
 
-    def get_prompt(self) -> str:
+    def get_prompt(self, format_type: str = "markdown") -> str:
         if not self.builder: return ""
         # Convert state to PromptConfig model for builder
         config = PromptConfig(**self.state)
-        return self.builder.generate(config)
+        return self.builder.generate(config, format_type=format_type)
 
     def get_summary(self) -> str:
         if not self.builder: return ""

@@ -7,15 +7,14 @@ Analyzes all assets (characters, outfits, scenes, poses, interactions) for:
 - Tag coverage and orphan detection
 """
 
-import sys, os, json
+import sys
 from pathlib import Path
-from collections import Counter, defaultdict
+from collections import Counter
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "src"))
 
 from logic.data_loader import DataLoader
-from logic.character_parser import CharacterParser
 
 def run_audit():
     d = DataLoader()
@@ -220,7 +219,7 @@ def run_audit():
     # Check: outfit categories with very few options
     thin_cats = [(c, len(o)) for c, o in shared_outfit_cats.items() if len(o) <= 2]
     if thin_cats:
-        print(f"\n  ⚠ Categories with <=2 outfits:")
+        print("\n  ⚠ Categories with <=2 outfits:")
         for c, n in thin_cats:
             print(f"    - {c}: {n}")
 

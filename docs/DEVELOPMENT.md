@@ -4,74 +4,79 @@ This guide provides instructions for developers looking to contribute to Prompt 
 
 ## Environment Setup
 
-1.  **Requirement**: Python 3.8+
+1.  **Requirement**: Python 3.10+
 2.  **Recommended**: Create a virtual environment.
-3.  **Install Development Dependencies**:
-    ```powershell
-    python -m pip install -r requirements-dev.txt
-    ```
+3.  **Install Core Dependencies**:
+    `ash
+    pip install -r requirements.txt
+    `
+4.  **Install Development Dependencies**:
+    `ash
+    pip install -r requirements-dev.txt
+    `
 
 ## Code Quality Tools
 
 We use several tools to maintain code quality:
 
 *   **pytest**: For running the test suite.
-*   **black**: For code formatting.
-*   **isort**: For sorting imports.
 *   **ruff**: For fast linting and code analysis.
+*   **black**: For code formatting (optional, but recommended).
 
 ### Running Quality Checks
 
-```powershell
+`powershell
 # Run all tests
 python -m pytest
 
-# Format code
-python -m black .
-python -m isort .
-
 # Run linter
 python -m ruff check .
-```
+`
 
 ## Testing Strategy
 
-### Unit Tests
-Located in the `tests/` directory. We aim for high coverage of logic and parsers.
+### Unit & Integration Tests
+Located in the 	ests/ directory. 
+- 	est_builder.py: Validates prompt assembly and rendering.
+- 	est_randomizer.py: Tests randomization logic and scoring.
+- 	est_parsers.py: Ensures assets are correctly parsed into models.
+- 	est_roster_logic.py: Validates roster management.
 
-### Import-Time Smoke Tests
-Since UI modules (Tkinter) are difficult to unit test, we use a smoke test to ensure all modules can at least be imported without errors.
+### UI Testing
+Flet components are tested primarily through integration tests and manual verification. Use the --audit flag to run console-based randomization audits.
 
-```powershell
-# Run the smoke test
-python -m pytest tests/test_cli.py # (or specific smoke test script if available)
-```
+`powershell
+python main.py --audit
+`
 
 ## Architecture Principles
 
-*   **Modular Design**: Use the manager pattern for UI components (e.g., `MenuManager`, `ThemeManager`).
-*   **Data-Driven**: Logic should be separated from data. Data is stored in the `data/` folder as Markdown or JSON.
-*   **Fail Gracefully**: Use the `logger` for error reporting and provide user-friendly notifications via `utils.notification`.
-*   **Type Hinting**: Use Python type hints for better IDE support and maintainability.
+*   **Modular UI**: Sections should be self-contained and inherit from `ft.UserControl` or `ft.Container`.
+*   **Logic Isolation**: Business logic belongs in `logic/` and should be independent of Flet components.
+*   **Model-Driven**: Use the Pydantic models in `core/models.py` for data passing and validation.
+*   **Local-First / Offline Fallbacks**: Ensure all features remain functional without internet connectivity. Features relying on cloud AI models (like the Gemma Client or AI Studio automation) must fail gracefully or attempt to use local offline inference (e.g. Ollama via `localhost:11434`) before resorting to Cloud APIs.
+
+### Configuring Gemma Client (Development)
+If testing the `GemmaClient` in `cloud` mode, ensure you have exported your API key:
+```powershell
+# Windows
+$env:GEMINI_API_KEY="your-api-key"
+```
+Or ensure you have an active local Ollama instance running `gemma2` on port 11434 if using `local` mode.
 
 ## Debugging
 
-*   **Verbose Logging**: Run the app with the `--debug` flag to see more detailed output in `promptbuilder_debug.log`.
-    ```powershell
-    python main.py --debug
-    ```
-*   **Debug Scripts**: Use `debug_log.py` for persistent logging during development.
+*   **Logging**: Check logs/ directory for detailed application logs.
+*   **Flet Inspection**: Use Flet's built-in developer tools if needed.
 
 ## Commit Checklist
 
 Before submitting a pull request, ensure:
-1.  Tests pass: `pytest`
-2.  Code is formatted: `black .`
-3.  Imports are sorted: `isort .`
-4.  Linter passes: `ruff check .`
-5.  No `print()` statements remain (use `utils.logger`).
-6.  Documentation is updated.
+1.  Tests pass: pytest
+2.  Linter passes: uff check .
+3.  No print() statements remain (use utils.logger).
+4.  Documentation is updated (especially docs/api.md if changing core logic).
 
 ---
 
-*Last updated: December 2025*
+*Last updated: May 2026*

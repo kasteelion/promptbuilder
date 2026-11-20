@@ -8,7 +8,7 @@ def audit_outfit_quality():
     total_outfits = 0
     flagged_files = [] 
     
-    print(f"\n=== OUTFIT QUALITY AUDIT (Component-Scientific Standard) ===\n")
+    print("\n=== OUTFIT QUALITY AUDIT (Component-Scientific Standard) ===\n")
 
     for filepath in glob.glob(os.path.join(outfit_dir, "**/*.txt"), recursive=True):
         filename = os.path.basename(filepath)
@@ -103,7 +103,7 @@ def audit_outfit_quality():
     
     with open(REPORT_FILE, 'w', encoding='utf-8') as report:
         report.write("# Outfit Precision Audit Report\n\n")
-        report.write(f"**Standard:** Component-Scientific\n")
+        report.write("**Standard:** Component-Scientific\n")
         report.write(f"**Scanned:** {total_outfits} Outfits\n\n")
         
         print(f"Scanned {total_outfits} Outfits.")

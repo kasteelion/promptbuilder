@@ -33,3 +33,9 @@
 - **Footwear:** White leather minimalist sneakers
 - **Accessories:** Silver watch with black leather strap, small silver stud earrings
 - **Grooming:** Short fade with neat lineup; well-maintained short beard
+
+
+**Affinities:**
+- Styles: [Noir, Minimalist, Graphic Novel]
+- Scenes: [Urban, Athletics & Sports, Work & Industrial]
+- Outfit_Tags: [Black, Casual, Chic, Rugged]
