@@ -72,17 +72,19 @@ def create_character_card(char_name: str, char_data: dict, on_click_callback, is
         )
 
     
-    # 2. Info Panel (Name + Tags + Age) - Polish
+    # Format subtitle: age + tags
+    subtitle_parts = []
+    if age:
+        subtitle_parts.append(age)
+    if tags:
+        subtitle_parts.extend(tags[:2])
+    card_subtitle = " • ".join(subtitle_parts) if subtitle_parts else display_tags
+
+    # 2. Info Panel (Full Name + Age/Tags)
     info_panel = ft.Container(
         content=ft.Column([
-            ft.Row([
-                ft.Text(char_name, weight="bold", size=13, max_lines=1, overflow=ft.TextOverflow.ELLIPSIS, color=ft.Colors.WHITE, expand=True),
-                ft.Container(
-                    content=ft.Text(age, size=10, color=ft.Colors.WHITE60, max_lines=1, overflow=ft.TextOverflow.ELLIPSIS, text_align=ft.TextAlign.RIGHT),
-                    width=65, alignment=ft.Alignment(1, 0)
-                ) if age else ft.Container(width=0)
-            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, spacing=2),
-            ft.Text(display_tags, size=10, color=ft.Colors.WHITE70, max_lines=1, overflow=ft.TextOverflow.ELLIPSIS)
+            ft.Text(char_name, weight="bold", size=12, max_lines=1, overflow=ft.TextOverflow.ELLIPSIS, color=ft.Colors.WHITE),
+            ft.Text(card_subtitle, size=10, color=ft.Colors.WHITE70, max_lines=1, overflow=ft.TextOverflow.ELLIPSIS)
         ], spacing=2),
         padding=ft.Padding(8, 6, 8, 6),
         bgcolor=ft.Colors.with_opacity(0.85, ft.Colors.BLACK), # Semi-transparent

@@ -266,32 +266,49 @@ class SidebarSection(ft.Container):
                     SafeIconButton("settings", tooltip="Dashboard", on_click=lambda _: self.app.show_dashboard(), scale=0.9)
                 ], spacing=0)
             ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
+            # Thematic Alignment Meter & Live Recommendations elevated to top of Sidebar
+            ft.Container(self.quality_meter, padding=ft.Padding.only(top=2, bottom=4)),
+            self.summary_container,
+            ft.Divider(color=ft.Colors.with_opacity(0.1, ThemeManager.colors["outline"]), height=6),
             self.base_prompt_panel,
-            self.director_tile,
             self.palette_tile,
             self.scene_tile,
             self.interaction_tile,
-            ft.Divider(color=ft.Colors.with_opacity(0.1, ThemeManager.colors["outline"]), height=10),
-            self.summary_header,
-            ft.Container(self.quality_meter, padding=ft.Padding.symmetric(vertical=5, horizontal=0)),
-            self.summary_container
-        ], scroll=ft.ScrollMode.AUTO, expand=True, spacing=12)
+            self.director_tile,
+        ], scroll=ft.ScrollMode.AUTO, expand=True, spacing=10)
 
     def populate_data(self):
         ctx = self.app.state.ctx
         
         # Art Style Chips
+        base_prompts = ctx.base_prompts if isinstance(getattr(ctx, "base_prompts", None), dict) else {}
         current_style = self.app.state.state.get("base_prompt", "Detailed")
+        if base_prompts:
+            if current_style not in base_prompts:
+                for k in base_prompts.keys():
+                    if k.lower() in current_style.lower() or current_style.lower() in k.lower():
+                        current_style = k
+                        self.app.state.state["base_prompt"] = k
+                        break
+                else:
+                    if "Studio Photorealism" in base_prompts:
+                        current_style = "Studio Photorealism"
+                    else:
+                        current_style = list(base_prompts.keys())[0]
+                    self.app.state.state["base_prompt"] = current_style
+        else:
+            current_style = "Detailed"
+
         self.base_prompt_chips.controls = []
-        for style_name in sorted(ctx.base_prompts.keys()):
+        for style_name in sorted(base_prompts.keys()):
             is_selected = (style_name == current_style)
             self.base_prompt_chips.controls.append(
                 ft.Chip(
-                    label=ft.Text(style_name, size=11),
+                    label=ft.Text(style_name, size=11, weight=ft.FontWeight.W_600 if is_selected else ft.FontWeight.NORMAL),
                     selected=is_selected,
                     on_select=lambda e, n=style_name: self.handle_art_style_select(n),
                     selected_color=ThemeManager.colors["accent"],
-                    show_checkmark=False,
+                    show_checkmark=True,
                 )
             )
         
@@ -330,7 +347,9 @@ class SidebarSection(ft.Container):
         self.app.state.state["base_prompt"] = name
         for ctrl in self.base_prompt_chips.controls:
             if isinstance(ctrl, ft.Chip):
-                ctrl.selected = (ctrl.label.value == name)
+                is_sel = (ctrl.label.value == name)
+                ctrl.selected = is_sel
+                ctrl.label.weight = ft.FontWeight.W_600 if is_sel else ft.FontWeight.NORMAL
         self.base_prompt_chips.update()
         self.app.update_preview()
 

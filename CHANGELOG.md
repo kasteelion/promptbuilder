@@ -23,6 +23,13 @@
 - **New Pose Presets:** Added *Playful Hair Twirl* (Casual & Domestic), *Playful Prone Bed Lounge* (Intimate & Sensual), and *Overhead Dreamy Surrender* (Intimate & Sensual) to `assets/data/poses.md`.
 
 ### Fixed
+- **Flet 0.80 Web Dialog Lifecycle:** Modernized dialog invocation in `main.py` (`_open_dialog` / `close_dialog`) to prioritize `page.show_dialog()` and `page.pop_dialog()`, restoring modal dialogs (Settings, Automation Studio, Context Studio, Outfit Builder) in Flet 0.80 web sessions.
+- **Roster & Console Flex Constraints:** Assigned explicit integer flex weights (`roster.expand = 6`, `console.expand = 5`) to prevent lengthy generated prompts in the Console from collapsing the Active Roster into an unreadable sliver.
+- **Streamlined Single-Character Roster:** Conditionally hidden the bulk operations toolbar when only one character is staged (`len(items) >= 2`), maximizing card interaction space.
+- **Character Card Typography & Ellipsis Truncation:** Re-architected gallery cards to give names full horizontal container width and merged age into subtitle traits (`mid-20s • Female • Approachable`), eliminating ellipsis truncation on character names.
+- **First-Frame Gallery Initialization:** Invoked `self.gallery.refresh(update_ui=False)` during `build_ui()` so all 83 characters render instantly on the initial frame using fast metadata cache.
+- **Sidebar Ergonomics & Suggestion Prominence:** Relocated the Thematic Alignment meter and context-aware 1-Click Suggestions to the top of the sidebar above the fold, ensuring immediate feedback on character additions.
+- **Art Style Chip Indicators:** Added visual checkmark and semi-bold typography to the active art style pill, with guarded dictionary resolution.
 - **Character Load Latency:** Cached `DataLoader.load_outfits()` via `self._cache["shared_outfits"]`, slashing individual character load times from 135ms to 2ms (eliminating redundant disk scans of 280+ files on every roster click).
 - **Startup Frame Latency:** Added fast metadata preloading (`load_metadata_fast()`) in `AppState` before `build_ui()`, ensuring characters render on the very first frame.
 - **Ollama & Cloud AI Fallback Resilience:** Fixed Ollama auto-detection selecting corrupted/unsupported models (e.g. `gemma4:latest`) by prioritizing verified models (`gemma2:latest`, `gemma3:latest`) and respecting user-configured preferences; added multi-model local retry on error and detailed error message extraction; intercepted `API_KEY_INVALID` to fail fast with Settings guidance; added graceful fallback to PromptRandomizer in `GemmaPipelineRunner` if AI inference fails.

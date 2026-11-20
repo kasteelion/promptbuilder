@@ -127,13 +127,16 @@ class FletPromptBuilder:
         # Instantiate Modular Sections
         self.toolbar = ToolbarSection(self)
         self.gallery = GallerySection(self)
+        # Pre-populate gallery immediately from fast metadata on first frame
+        self.gallery.refresh(update_ui=False)
         self.roster = RosterSection(self)
         self.sidebar = SidebarSection(self)
         self.console = ConsoleSection(self)
         self.dashboard = DashboardSection(self)
         
-        # Workspace Area split side-by-side
-        self.roster.expand = True
+        # Workspace Area split side-by-side: balanced flex prevents console from crushing roster
+        self.roster.expand = 6
+        self.console.expand = 5
         self.sidebar.expand = True
         
         left_column = ft.Column(
@@ -373,7 +376,9 @@ class FletPromptBuilder:
         self._safe_open_dialog(OutfitBuilderDialog, character_index=character_index)
 
     def _open_dialog(self, dlg):
-        if hasattr(self.page, "open"):
+        if hasattr(self.page, "show_dialog"):
+            self.page.show_dialog(dlg)
+        elif hasattr(self.page, "open"):
             self.page.open(dlg)
         else:
             self.page.overlay.append(dlg)
@@ -543,6 +548,18 @@ class FletPromptBuilder:
             self.page.update()
 
     def close_dialog(self, dlg):
+        if hasattr(self.page, "pop_dialog"):
+            try:
+                self.page.pop_dialog()
+                return
+            except Exception:
+                pass
+        if hasattr(self.page, "close"):
+            try:
+                self.page.close(dlg)
+                return
+            except Exception:
+                pass
         dlg.open = False
         self.page.update()
 

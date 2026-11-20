@@ -203,7 +203,7 @@ class RosterSection(ft.Container):
             self.empty_state.content = self.build_dashboard_content()
             
         self.roster_list.visible = has_chars
-        self.bulk_panel.visible = has_chars
+        self.bulk_panel.visible = len(items) >= 2
         self.clear_btn.visible = has_chars
         self._count_badge.visible = has_chars
         self._count_badge.content.value = str(len(items))
