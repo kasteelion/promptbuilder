@@ -820,7 +820,8 @@ class GemmaClient:
                 json_mode=True,
                 json_schema=self.AUDIT_JSON_SCHEMA,
                 temperature=0.3,
-                local_timeout=180,
+                local_timeout=35,
+                num_predict=256,
                 label="audit_prompt",
             )
         except RuntimeError as e:

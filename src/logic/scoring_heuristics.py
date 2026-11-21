@@ -248,10 +248,26 @@ class ScoringEngine:
                 all_outfit_genres = set().union(*genres_present)
                 if len(all_outfit_genres) > 1:
                     extra_genres = len(all_outfit_genres) - 1
-                    penalty = abs(self.ctx.scoring["penalties"]["mismatch"]) * extra_genres
+                    # Strong penalty (-300) for mixed genre axes across characters
+                    penalty = 300 * extra_genres
                     score -= penalty
                     breakdown["mismatch_penalty"] -= penalty
                     breakdown["warnings"].append(f"OUTFIT INCOHERENCE: {len(all_outfit_genres)} genre axes in group ({all_outfit_genres})")
+
+        # 7b. Action-Scene Energy Mismatch Check
+        if scene_tags:
+            is_quiet_domestic = any(t in ["domestic", "casual", "cozy", "quiet", "library", "coffee", "bedroom", "office", "study"] for t in [st.lower() for st in scene_tags])
+            if is_quiet_domestic:
+                for char in chars:
+                    pose = getattr(char, "pose_preset", "") or (char.get("pose_preset", "") if isinstance(char, dict) else "")
+                    cat = getattr(char, "pose_category", "") or (char.get("pose_category", "") if isinstance(char, dict) else "")
+                    action_note = getattr(char, "action_note", "") or (char.get("action_note", "") if isinstance(char, dict) else "")
+                    combo_text = f"{pose} {cat} {action_note}".lower()
+                    if any(t in combo_text for t in ["combat", "fight", "diving", "weapon", "shoot", "tackle", "sprint"]):
+                        penalty = 150
+                        score -= penalty
+                        breakdown["mismatch_penalty"] -= penalty
+                        breakdown["warnings"].append(f"ACTION-SCENE CLASH: High-energy action '{pose or cat}' in quiet/domestic scene")
 
         # 8. Color Harmony & Contrast Scoring
         contrast_schemes = {

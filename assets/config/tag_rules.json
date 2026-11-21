@@ -12,6 +12,9 @@
         "FOOTWEAR": ["shoes", "boots", "heels", "sandals"],
         "GENRE_FANTASY": ["fantasy", "medieval", "magic", "mystical", "castle", "knight", "sword", "shield", "robe", "dnd", "spell", "arcane", "mythology", "dragon", "lair", "dungeon", "temple", "quest"],
         "GENRE_MODERN": ["modern", "tech", "computer", "phone", "laptop", "car", "city", "office", "urban", "neon", "cyberpunk"],
+        "GENRE_SCIFI": ["sci-fi", "scifi", "cyberpunk", "futuristic", "space", "cyber", "android", "techwear", "cyber-deck", "spacesuit", "spaceship", "coliseum", "starship", "augmented"],
+        "GENRE_CASUAL": ["casual", "cottagecore", "brunch", "loungewear", "pajamas", "cozy", "everyday", "streetwear", "coffee", "bookstore", "fall cozy", "hoodie", "knit dress"],
+        "GENRE_HISTORICAL": ["historical", "victorian", "1890s", "1900s", "1920s", "1940s", "1950s", "edwardian", "vintage", "western", "retro", "cowboy"],
         "GENRE_SPORT": ["sport", "athletic", "gym", "stadium", "court", "field", "track", "basketball", "bowling", "baseball", "volleyball", "football", "soccer", "tennis", "mma", "boxing", "wrestling", "relay", "baton", "jersey", "activewear", "sneakers"]
     },
     "tag_aliases": {

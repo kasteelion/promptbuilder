@@ -505,6 +505,7 @@ class PromptRandomizer:
         context_tags.update(scene_tags)
 
         existing_schemes = []
+        anchor_genre = None
 
         for i, char_name in enumerate(char_names):
             # 1. Role Assignment
@@ -526,10 +527,24 @@ class PromptRandomizer:
                 scene_category=scene_category,
                 context_tags=context_tags,
                 hub_tag=hub_tag, # Pass Hub Tag for outfit filtering
-                existing_schemes=existing_schemes
+                existing_schemes=existing_schemes,
+                anchor_genre=anchor_genre
             )
             if char_data.color_scheme and char_data.color_scheme != "Default (No Scheme)":
                 existing_schemes.append(char_data.color_scheme)
+            
+            # Set anchor genre from first character to align subsequent characters
+            if not anchor_genre:
+                char_def = self.characters.get(char_name, {})
+                char_outfits = char_def.outfits if hasattr(char_def, "outfits") else (char_def.get("outfits", {}) if isinstance(char_def, dict) else {})
+                outfit_data = char_outfits.get(char_data.outfit, {})
+                if isinstance(outfit_data, dict):
+                    outfit_tags = outfit_data.get("_expanded_tags") or self._expand_tags(self._get_tags(outfit_data))
+                    for g_name, g_tags in self.tag_groups.items():
+                        if g_name.startswith("GENRE_"):
+                            if outfit_tags.intersection({t.lower() for t in g_tags}):
+                                anchor_genre = g_name[6:].lower()
+                                break
             
             # --- APPLY MODE SPECIFIC POSE LOGIC ---
 
@@ -599,7 +614,7 @@ class PromptRandomizer:
             }
         }
 
-    def _randomize_character_with_role(self, char_name, role, scene_category="", context_tags=None, hub_tag=None, existing_schemes=None):
+    def _randomize_character_with_role(self, char_name, role, scene_category="", context_tags=None, hub_tag=None, existing_schemes=None, anchor_genre=None):
         """Generate character features strictly matching a role."""
         char_def = self.characters.get(char_name, {})
         # Handle CharacterDetails vs dict
@@ -631,6 +646,20 @@ class PromptRandomizer:
                 constraints = self.scene_constraints[scene_cat_lower]
                 if "blocked" in constraints:
                     local_blocked.update(constraints["blocked"])
+
+            # Everyday/Peaceful scenes block overt tactical/combat/spacesuits unless role demands it
+            if scene_cat_lower in ("domestic", "casual", "home", "bedroom", "office", "library", "coffee"):
+                if not any(t in role.required_tags for t in ["combat", "armor", "weapon", "tactical"]):
+                    local_blocked.update(["armor", "weapon", "combat", "spacesuit", "cyber-deck"])
+
+        # 1b. Multi-Character Aesthetic Anchor Alignment
+        if anchor_genre:
+            if anchor_genre in ("casual", "historical"):
+                local_blocked.update(["cyberpunk", "spacesuit", "sci-fi", "scifi", "techwear", "armor"])
+            elif anchor_genre == "scifi":
+                local_blocked.update(["medieval", "cottagecore", "victorian", "robe", "sword", "shield"])
+            elif anchor_genre == "fantasy":
+                local_blocked.update(["computer", "laptop", "cyberpunk", "spacesuit", "techwear"])
 
         # 2. Context Tag Specifics (Precise)
         # Check if any active scene tags trigger a specific whitelist/blocklist

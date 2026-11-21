@@ -121,6 +121,31 @@
                 "travel"
             ],
             "timestamp": null
+        },
+        {
+            "reasoning": "Assassin outfit clashes with a classical painterly scene.",
+            "tags": [],
+            "timestamp": null
+        },
+        {
+            "reasoning": "Intimate outfit clashes with a 'Candid Lifestyle' scene which implies casual public interaction.",
+            "tags": [],
+            "timestamp": null
+        },
+        {
+            "reasoning": "Muay Thai is a modern combat sport clashing with the fantasy/historical Ren Faire setting.",
+            "tags": [],
+            "timestamp": null
+        },
+        {
+            "reasoning": "The 'High-Speed Action' scene description clashes violently with the 'Smart Casual' outfit and 'Flirty Upward Gaze' pose. This creates a severe tonal and genre mismatch \u2013 a business meeting does not typically involve a flirty gaze.",
+            "tags": [],
+            "timestamp": null
+        },
+        {
+            "reasoning": "Extreme clash. The 'Valentine's Set' (lingerie, glamour) and 'OOTD Mirror Selfie' pose are completely inappropriate for a 'Visual Description' scene. There is no context or scene to support this outfit or pose. It's a bizarre and illogical combination.",
+            "tags": [],
+            "timestamp": null
         }
     ],
     "hall_of_fame": [

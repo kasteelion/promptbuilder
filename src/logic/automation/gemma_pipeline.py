@@ -25,6 +25,7 @@ class GemmaPipelineRunner:
         self.ctx = ctx
         self.app_state = app_state
         self.stop_requested = False
+        self._audit_cache = {}
 
     def stop(self):
         self.stop_requested = True
@@ -398,19 +399,27 @@ class GemmaPipelineRunner:
                     if use_critic and gemma_client:
                         if pure_gemma:
                             internal_score = 0
+                            score_warnings = []
                         else:
                             if hasattr(config, "metadata"):
                                 internal_score = config.metadata.get("score", 0)
+                                score_breakdown = config.metadata.get("score_breakdown", {})
                             else:
                                 internal_score = config.get("metadata", {}).get("score", 0)
+                                score_breakdown = config.get("metadata", {}).get("score_breakdown", {})
+                            score_warnings = score_breakdown.get("warnings", []) if isinstance(score_breakdown, dict) else []
                                 
-                        if pure_gemma or internal_score >= 500:
+                        is_clean_auto_pass = (internal_score >= 400 and len(score_warnings) == 0)
+                        if pure_gemma or internal_score >= 500 or is_clean_auto_pass:
                             if pure_gemma:
                                 reason = "Gemma Creative Architect (Direct)"
                                 score = 10
-                            else:
+                            elif internal_score >= 500:
                                 reason = f"Auto-passed: randomizer confidence score {internal_score} >= 500"
                                 score = 9
+                            else:
+                                reason = f"Auto-passed: high confidence {internal_score} >= 400 with 0 warnings"
+                                score = 8.5
                                 
                             audit = {
                                 "score": score, "recommendation": "keep",
@@ -418,7 +427,7 @@ class GemmaPipelineRunner:
                                 "fixed_prompt": ""
                             }
                             if not pure_gemma:
-                                print(f"[Critic] Auto-passed candidate {i+1} (randomizer score: {internal_score})")
+                                print(f"[Critic] Auto-passed candidate {i+1} (score: {internal_score})")
                             
                             critic_logs.append({
                                 "candidate_idx": i, "attempt": attempts,
@@ -494,10 +503,23 @@ class GemmaPipelineRunner:
 
                         on_progress(i, count, f"Auditing candidate {i+1} (Attempt {attempts})...")
                         
-                        # Build targeted audit catalog
-                        targeted_audit_catalog = self._generate_targeted_audit_catalog(config)
+                        # Check in-memory audit cache
+                        chars_list = getattr(config, "selected_characters", None) or (config.get("selected_characters", []) if isinstance(config, dict) else [])
+                        char_keys = [f"{getattr(c, 'name', '')}:{getattr(c, 'outfit', '')}" for c in chars_list]
+                        scene_key = getattr(config, "scene", "")
+                        style_key = getattr(config, "base_prompt", "")
+                        cache_key = f"{scene_key}|{'&'.join(char_keys)}|{style_key}"
                         
-                        audit = gemma_client.audit_prompt(audit_input, catalog_context=targeted_audit_catalog)
+                        if cache_key in self._audit_cache:
+                            audit = self._audit_cache[cache_key]
+                            print(f"[Critic] Cache hit for candidate {i+1} -> {audit.get('recommendation')}")
+                        else:
+                            # Build targeted audit catalog
+                            targeted_audit_catalog = self._generate_targeted_audit_catalog(config)
+                            audit = gemma_client.audit_prompt(audit_input, catalog_context=targeted_audit_catalog)
+                            if audit.get("recommendation") != "error":
+                                self._audit_cache[cache_key] = audit
+                        
                         rec = audit.get("recommendation", "keep")
                         
                         critic_logs.append({
