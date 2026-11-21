@@ -292,10 +292,29 @@ class FletPromptBuilder:
             self.update_preview()
 
     def clear_all_characters(self):
+        prev_chars = list(self.state.state["selected_characters"])
+        if not prev_chars:
+            return
+        self._last_cleared_roster = prev_chars
         self.state.state["selected_characters"] = []
         self.refresh_roster()
         self.gallery.refresh()
         self.update_preview()
+
+        def undo_clear(e):
+            if hasattr(self, "_last_cleared_roster") and self._last_cleared_roster:
+                self.state.state["selected_characters"] = list(self._last_cleared_roster)
+                self._last_cleared_roster = []
+                self.refresh_roster()
+                self.gallery.refresh()
+                self.update_preview()
+                self.show_toast("Roster restored")
+
+        self.show_toast(
+            f"Cleared {len(prev_chars)} character(s)", 
+            action="UNDO", 
+            on_action=undo_clear
+        )
 
     def show_toast(self, message, color=None, action=None, on_action=None):
         try:

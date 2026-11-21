@@ -119,30 +119,39 @@ class RosterItem(ft.Container):
         self._refs["identity_row"] = ft.Row(wrap=True, spacing=5)
         self._rebuild_identity_chips()
 
-        # 2. Outfit Explorer Banner (Clickable)
+        # 2. Outfit Selector Row (Inline Dropdown + Advanced Builder Button)
+        outfit_options = self._get_outfit_options()
+        curr_cat = self._get_val('outfit_category', 'Personal')
+        curr_out = self._get_val('outfit', 'Base')
+        curr_key = f"{curr_cat}::{curr_out}"
+        if curr_key not in [o.key for o in outfit_options]:
+            outfit_options.insert(0, ft.dropdown.Option(key=curr_key, text=f"{curr_out} ({curr_cat})"))
+
+        self._refs["outfit_dd"] = ft.Dropdown(
+            label="Outfit Preset",
+            options=outfit_options,
+            value=curr_key,
+            on_select=self.handle_outfit_select,
+            text_size=11, height=40, content_padding=8,
+            expand=True,
+            border_color=ThemeManager.colors["outline"],
+            focused_border_color=ThemeManager.colors["accent"],
+        )
         self._refs["outfit_display_text"] = ft.Text(
-            f"{self._get_val('outfit_category', 'Category')} > {self._get_val('outfit', 'Base')}",
+            f"{curr_cat} > {curr_out}",
             size=12, weight="bold", color=ThemeManager.colors["text_primary"]
         )
-        self._refs["outfit_display"] = ft.Container(
-            content=ft.Row([
-                ft.Row([
-                    ft.Icon(ft.Icons.CHECKROOM, size=16, color=ThemeManager.colors["accent"]),
-                    self._refs["outfit_display_text"]
-                ], spacing=8),
-                ft.Row([
-                    ft.Text("EDIT OUTFIT", size=10, weight="bold", color=ThemeManager.colors["accent"]),
-                    ft.Icon(ft.Icons.EDIT, size=12, color=ThemeManager.colors["accent"]),
-                ], spacing=4)
-            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
-            padding=ft.Padding.symmetric(horizontal=12, vertical=10),
-            bgcolor=ThemeManager.colors["active_item"],
-            border_radius=8,
-            border=ft.Border.all(1, ThemeManager.colors["outline"]),
-            on_click=lambda _: self.app.open_outfit_builder(character_index=self.idx),
-            ink=True,
-            tooltip="Open Outfit Builder Studio"
-        )
+        self._refs["outfit_display"] = ft.Row([
+            ft.Icon(ft.Icons.CHECKROOM, size=18, color=ThemeManager.colors["accent"]),
+            self._refs["outfit_dd"],
+            ft.IconButton(
+                icon=ft.Icons.TUNE,
+                icon_color=ThemeManager.colors["accent"],
+                tooltip="Advanced Layer Editor (Outfit Builder Studio)",
+                on_click=lambda _: self.app.open_outfit_builder(character_index=self.idx),
+                scale=0.9
+            )
+        ], spacing=6, vertical_alignment=ft.CrossAxisAlignment.CENTER)
 
         
         # 2b. Color Scheme (Conditional)
@@ -321,6 +330,38 @@ class RosterItem(ft.Container):
 
     # --- Handlers ---
 
+    def _get_outfit_options(self):
+        char_name = self._get_val("name")
+        char_info = self.app.state.ctx.characters.get(char_name) if hasattr(self.app, "state") and hasattr(self.app.state, "ctx") else None
+        if not char_info:
+            return [ft.dropdown.Option(key="Personal::Base", text="Base (Personal)")]
+        oc = getattr(char_info, "outfits_categorized", None)
+        if not isinstance(oc, dict):
+            oc = char_info.get("outfits_categorized", {}) if isinstance(char_info, dict) else {}
+        options = []
+        for cat in sorted(oc.keys()):
+            for out_name in sorted(oc[cat].keys()):
+                key = f"{cat}::{out_name}"
+                options.append(ft.dropdown.Option(key=key, text=f"{out_name} ({cat})"))
+        if not options:
+            options.append(ft.dropdown.Option(key="Personal::Base", text="Base (Personal)"))
+        return options
+
+    def handle_outfit_select(self, e):
+        val = e.control.value
+        if not val or "::" not in val:
+            return
+        cat, out_name = val.split("::", 1)
+        self._set_val("outfit_category", cat)
+        self._set_val("outfit", out_name)
+        self._set_val("outfit_pieces", {})
+        self._set_val("outfit_traits", [])
+        self.surgical_update()
+        if self.on_update_callback:
+            self.on_update_callback()
+        if hasattr(self.app, "update_preview"):
+            self.app.update_preview()
+
     def toggle_expanded(self, e=None):
         current = self._get_val("_expanded", False)
         self._set_val("_expanded", not current)
@@ -410,8 +451,18 @@ class RosterItem(ft.Container):
         self._refs["avatar"].bgcolor = self._get_avatar_color()
         
         # 3. Inputs
-        self._refs["outfit_display_text"].value = f"{self._get_val('outfit_category', 'Category')} > {self._get_val('outfit', 'Base')}"
+        curr_cat = self._get_val('outfit_category', 'Category')
+        curr_out = self._get_val('outfit', 'Base')
+        curr_key = f"{curr_cat}::{curr_out}"
+        self._refs["outfit_display_text"].value = f"{curr_cat} > {curr_out}"
         self._refs["outfit_display_text"].update()
+        
+        if "outfit_dd" in self._refs and self._refs["outfit_dd"]:
+            opts = [o.key for o in self._refs["outfit_dd"].options]
+            if curr_key not in opts:
+                self._refs["outfit_dd"].options.insert(0, ft.dropdown.Option(key=curr_key, text=f"{curr_out} ({curr_cat})"))
+            self._refs["outfit_dd"].value = curr_key
+            self._refs["outfit_dd"].update()
         
         # Update Color Scheme Visibility
         supports_scheme = self._supports_color_scheme()

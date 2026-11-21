@@ -36,6 +36,11 @@ class GallerySection(ft.Container):
             icon_color=ThemeManager.colors["text_secondary"],
         )
 
+        # Quick Archetype Filter Chips
+        self.active_filter = "All"
+        self.filter_chips_row = ft.Row(spacing=4, scroll=ft.ScrollMode.AUTO)
+        self._build_filter_chips()
+
         self.is_collapsed = False
         self.collapse_btn = ft.IconButton(
             ft.Icons.KEYBOARD_ARROW_UP,
@@ -64,12 +69,35 @@ class GallerySection(ft.Container):
                         self.count_label,
                         self.refresh_btn,
                     ], spacing=6, vertical_alignment=ft.CrossAxisAlignment.CENTER),
+                    self.filter_chips_row,
                     self.search_field,
-                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, wrap=True),
+                ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, wrap=True, vertical_alignment=ft.CrossAxisAlignment.CENTER),
                 padding=ft.Padding.symmetric(horizontal=4, vertical=2),
             ),
             self.gallery_container,
         ], spacing=2)
+
+    def _build_filter_chips(self):
+        filters = ["All", "Female", "Male", "Chic", "Athletic", "Casual", "Approachable"]
+        self.filter_chips_row.controls = []
+        for f in filters:
+            is_sel = (f == self.active_filter)
+            self.filter_chips_row.controls.append(
+                ft.Chip(
+                    label=ft.Text(f, size=10, weight=ft.FontWeight.W_600 if is_sel else ft.FontWeight.NORMAL),
+                    selected=is_sel,
+                    selected_color=ThemeManager.colors.get("accent", "blue"),
+                    on_select=lambda e, name=f: self.handle_filter_select(name),
+                    padding=2,
+                    show_checkmark=False,
+                )
+            )
+
+    def handle_filter_select(self, filter_name):
+        self.active_filter = filter_name
+        self._build_filter_chips()
+        self.filter_chips_row.update()
+        self.refresh(search_term=self.search_field.value, update_ui=True, append=False)
 
     def toggle_collapse(self, e=None):
         self.is_collapsed = not self.is_collapsed
@@ -94,11 +122,26 @@ class GallerySection(ft.Container):
             }
             search_lower = (search_term or "").lower()
 
+            filter_lower = getattr(self, "active_filter", "All").lower()
+
             # 1. Filter and build list of matches
             for name, meta in self.app.state.ctx.characters_metadata.items():
                 tags_str = " ".join(meta.tags).lower()
                 vibe_str = (meta.vibe or "").lower()
                 bearing_str = (meta.bearing or "").lower()
+                gender_str = (getattr(meta, "gender", "") or "").lower()
+
+                # Archetype / gender filter
+                if filter_lower != "all":
+                    if filter_lower == "female":
+                        if gender_str != "f" and "female" not in tags_str:
+                            continue
+                    elif filter_lower == "male":
+                        if gender_str != "m" and ("male" not in tags_str or "female" in tags_str):
+                            continue
+                    else:
+                        if not (filter_lower in tags_str or filter_lower in vibe_str or filter_lower in bearing_str):
+                            continue
 
                 if search_lower and not (
                     search_lower in name.lower()
@@ -110,7 +153,9 @@ class GallerySection(ft.Container):
 
                 self._current_matches.append((name, meta, name in selected_names))
 
-            self.count_label.value = f"{len(self._current_matches)} available"
+            roster_count = len(selected_names)
+            roster_suffix = f" • {roster_count} in roster" if roster_count > 0 else ""
+            self.count_label.value = f"{len(self._current_matches)} available{roster_suffix}"
 
         # 2. Slice the next batch
         start_idx = self._loaded_count

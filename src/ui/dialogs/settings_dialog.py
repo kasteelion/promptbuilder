@@ -28,24 +28,32 @@ class SettingsDialog(ft.AlertDialog):
         # --- Dialog Header ---
         self.title = ft.Container(
             content=ft.Row([
-                ft.Container(
-                    content=ft.Icon(ft.Icons.SETTINGS_SUGGEST, color="#ffffff", size=22),
-                    width=38,
-                    height=38,
-                    border_radius=19,
-                    gradient=ft.LinearGradient(
-                        begin=ft.Alignment(-1, -1),
-                        end=ft.Alignment(1, 1),
-                        colors=["#2563eb", ThemeManager.colors["accent"]],
+                ft.Row([
+                    ft.Container(
+                        content=ft.Icon(ft.Icons.SETTINGS_SUGGEST, color="#ffffff", size=22),
+                        width=38,
+                        height=38,
+                        border_radius=19,
+                        gradient=ft.LinearGradient(
+                            begin=ft.Alignment(-1, -1),
+                            end=ft.Alignment(1, 1),
+                            colors=["#2563eb", ThemeManager.colors["accent"]],
+                        ),
+                        alignment=ft.Alignment(0, 0),
                     ),
-                    alignment=ft.Alignment(0, 0),
+                    ft.Column([
+                        ft.Text("Application Settings", size=17, weight=ft.FontWeight.W_700),
+                        ft.Text("Configure Gemini Flash AI models, API keys, and workflow defaults",
+                                size=11, color=ThemeManager.colors["text_secondary"]),
+                    ], spacing=2, tight=True),
+                ], spacing=12, vertical_alignment=ft.CrossAxisAlignment.CENTER),
+                ft.IconButton(
+                    icon=ft.Icons.CLOSE,
+                    tooltip="Close",
+                    icon_color=ThemeManager.colors["text_secondary"],
+                    on_click=lambda _: self.app.close_dialog(self)
                 ),
-                ft.Column([
-                    ft.Text("Application Settings", size=17, weight=ft.FontWeight.W_700),
-                    ft.Text("Configure Gemini Flash AI models, API keys, and workflow defaults",
-                            size=11, color=ThemeManager.colors["text_secondary"]),
-                ], spacing=2, tight=True),
-            ], spacing=12, vertical_alignment=ft.CrossAxisAlignment.CENTER),
+            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, vertical_alignment=ft.CrossAxisAlignment.CENTER),
             padding=ft.Padding.only(bottom=5),
         )
 

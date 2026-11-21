@@ -11,22 +11,30 @@ class AutomationDialog(ft.AlertDialog):
         # --- Header with gradient accent bar ---
         self.title = ft.Container(
             content=ft.Row([
-                ft.Container(
-                    content=ft.Icon(ft.Icons.AUTO_AWESOME, color="#ffffff", size=20),
-                    width=36, height=36,
-                    border_radius=18,
-                    gradient=ft.LinearGradient(
-                        begin=ft.Alignment(-1, -1), end=ft.Alignment(1, 1),
-                        colors=["#7c3aed", ThemeManager.colors["accent"]]
+                ft.Row([
+                    ft.Container(
+                        content=ft.Icon(ft.Icons.AUTO_AWESOME, color="#ffffff", size=20),
+                        width=36, height=36,
+                        border_radius=18,
+                        gradient=ft.LinearGradient(
+                            begin=ft.Alignment(-1, -1), end=ft.Alignment(1, 1),
+                            colors=["#7c3aed", ThemeManager.colors["accent"]]
+                        ),
+                        alignment=ft.Alignment(0, 0),
                     ),
-                    alignment=ft.Alignment(0, 0),
+                    ft.Column([
+                        ft.Text("Automation Studio", size=16, weight=ft.FontWeight.W_700),
+                        ft.Text("Configure and launch batch generation", size=11,
+                                color=ThemeManager.colors["text_secondary"]),
+                    ], spacing=2, tight=True),
+                ], spacing=12, vertical_alignment=ft.CrossAxisAlignment.CENTER),
+                ft.IconButton(
+                    icon=ft.Icons.CLOSE,
+                    tooltip="Close",
+                    icon_color=ThemeManager.colors["text_secondary"],
+                    on_click=lambda _: self.app.close_dialog(self)
                 ),
-                ft.Column([
-                    ft.Text("Automation Studio", size=16, weight=ft.FontWeight.W_700),
-                    ft.Text("Configure and launch batch generation", size=11,
-                            color=ThemeManager.colors["text_secondary"]),
-                ], spacing=2, tight=True),
-            ], spacing=12, vertical_alignment=ft.CrossAxisAlignment.CENTER),
+            ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN, vertical_alignment=ft.CrossAxisAlignment.CENTER),
             padding=ft.Padding.only(bottom=5),
         )
 

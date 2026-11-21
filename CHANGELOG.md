@@ -21,6 +21,12 @@
   - Sanitized target engine prompt prefixing in `gemma_pipeline.py` to preserve raw Midjourney (`/imagine`) and SDXL syntax.
   - Relocated 11 legacy one-off tag migration scripts from `scripts/automation/` to `scripts/maintenance/legacy_tag_migrations/`.
 - **New Pose Presets:** Added *Playful Hair Twirl* (Casual & Domestic), *Playful Prone Bed Lounge* (Intimate & Sensual), and *Overhead Dreamy Surrender* (Intimate & Sensual) to `assets/data/poses.md`.
+- **Inline Outfit Preset Dropdown:** Added direct preset outfit selection (`Outfit Preset` dropdown) on each active character card in `RosterItem`, enabling instant 1-click wardrobe swaps without requiring the modal `OutfitBuilderDialog`.
+- **Gallery Quick Archetype Filter Chips:** Added interactive filter pills (`All`, `Female`, `Male`, `Chic`, `Athletic`, `Casual`, `Approachable`) above the gallery row to quickly narrow down the 83 characters.
+- **Gallery Active Roster Counter:** Enhanced gallery counter badge to display both available matches and staged count (`83 available • 1 in roster`).
+- **Prompt Completeness & Cohesion Rebranding:** Renamed "Thematic Alignment" to "Prompt Completeness" with an explanatory tooltip to clearly convey structural prompt readiness across all 6 layers.
+- **Roster "Clear All" Undo Protection:** Added non-destructive undo capability to `clear_all_characters` via a snackbar toast with an `UNDO` action.
+- **Modal Dialog Header Close Buttons:** Added explicit "✕" close icon buttons to the headers of `SettingsDialog` and `AutomationDialog` for desktop ergonomics.
 
 ### Fixed
 - **Flet 0.80 Web Dialog Lifecycle:** Modernized dialog invocation in `main.py` (`_open_dialog` / `close_dialog`) to prioritize `page.show_dialog()` and `page.pop_dialog()`, restoring modal dialogs (Settings, Automation Studio, Context Studio, Outfit Builder) in Flet 0.80 web sessions.

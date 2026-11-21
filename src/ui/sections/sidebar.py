@@ -94,9 +94,15 @@ class SidebarSection(ft.Container):
             shadow=ThemeManager.styles.get("shadow_md")
         )
         
-        # [NEW] Quality / Alignment Meter
+        # Quality / Alignment / Completeness Meter
         self.quality_bar = ft.ProgressBar(value=0, height=10, border_radius=10, color=ThemeManager.colors["accent"], bgcolor=ft.Colors.with_opacity(0.1, ThemeManager.colors["text_primary"]))
-        self.quality_text = ft.Text("Thematic Alignment: 0%", size=12, weight=ft.FontWeight.BOLD, color=ThemeManager.colors["text_secondary"])
+        self.quality_text = ft.Text(
+            "Prompt Completeness: 0%", 
+            size=12, 
+            weight=ft.FontWeight.BOLD, 
+            color=ThemeManager.colors["text_secondary"],
+            tooltip="Measures prompt readiness across characters, wardrobe, scene, interactions, and color harmony."
+        )
         
         # [NEW] Interactive Suggestions Panel (1-Click Recommendations)
         self.suggestions_column = ft.Column(spacing=6)
@@ -540,7 +546,7 @@ class SidebarSection(ft.Container):
             else:
                 self.quality_bar.color = ft.Colors.GREEN_400
                 
-            self.quality_text.value = f"Thematic Alignment: {pct}%"
+            self.quality_text.value = f"Prompt Completeness: {pct}%"
             self.quality_meter.visible = True
             self._update_suggestions()
             
