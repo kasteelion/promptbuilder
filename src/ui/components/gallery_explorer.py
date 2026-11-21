@@ -14,7 +14,7 @@ class GalleryExplorer(ft.Container):
         # Path configuration
         # Resolve absolute path relative to project root
         # ui/components/gallery_explorer.py -> ../../../ -> root
-        project_root = Path(__file__).resolve().parent.parent.parent
+        project_root = Path(__file__).resolve().parents[3]
         self.output_dir = project_root / "output" / "images" / "generated_images"
 
         if hasattr(self.app, "ctx") and self.app.ctx.data_loader:

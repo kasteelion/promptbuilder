@@ -676,7 +676,7 @@ class GemmaPipelineRunner:
             if not self.stop_requested:
                 on_progress(current, total, message)
 
-        base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        base_dir = str(Path(__file__).resolve().parents[3])
         output_dir = os.path.join(base_dir, "output", "images", "generated_images")
         user_data_dir = os.path.join(base_dir, ".config", "chrome_profile")
         

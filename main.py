@@ -436,9 +436,10 @@ class FletPromptBuilder:
             # Fallback to file explorer if something breaks
             self.show_toast("Gallery Error, opening folder instead...", color="orange")
             if not self.is_web:
-                output_dir = os.path.join(os.getcwd(), "output", "images", "generated_images")
-                if os.path.exists(output_dir):
-                    PlatformUtils.open_path(output_dir)
+                from pathlib import Path
+                output_dir = Path(__file__).resolve().parent / "output" / "images" / "generated_images"
+                if output_dir.exists():
+                    PlatformUtils.open_path(str(output_dir))
 
     def save_preset(self, e=None): 
         if self.is_web:

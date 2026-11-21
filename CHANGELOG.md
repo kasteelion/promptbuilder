@@ -3,6 +3,10 @@
 ## [1.1.0] – 2026-11-19
 
 ### Added
+- **Output Gallery Dual Mode & Prompt Runs:** Added a mode toggle in `OutputGalleryDialog` (`src/ui/dialogs/output_gallery.py`) between **Generated Images** (`output/images/generated_images`, 617 images) and **Prompt Runs** (`output/prompts`, 61 files) with live file count badges, enabling inspection of both rendered image assets and prompt-only generation batches.
+- **Output Gallery "Load Settings" Workspace Restoration:** Added a 1-click **"Load Settings"** action (`ft.Icons.RESTORE`) to the gallery detail inspector, parsing `# METADATA` blocks or prompt text to seamlessly restore base styles, scenes, character rosters, outfits, color palettes, and poses directly into the active studio workspace.
+- **High-Performance Compressed Web Thumbnails:** Implemented an in-memory cached PIL thumbnail pipeline (`_get_thumbnail_base64`) reducing web mode payload sizes from ~2.5MB per image down to ~15KB compressed thumbnails, eliminating WebSocket frame bottlenecks and client disconnects.
+- **Output Gallery Test Coverage:** Added dedicated unit tests (`tests/test_output_gallery.py`) verifying directory resolution, dual mode switching, `# METADATA` extraction, web mode thumbnail generation, and workspace state restoration (67 total tests passing).
 - **Target Engine Output Profiles:** Added dedicated generator engines in `core/builder.py` and a 4-way format toggle in `console.py`:
   - `[MJ]` **Midjourney Profile:** Formats prompts into clean, comma-separated tokens without Markdown syntax, automatically appending `--ar 16:9 --v 6.1 --stylize 250`.
   - `[SDXL]` **Stable Diffusion XL Profile:** Emits weighted tokens `(token:1.2)`, `BREAK` segment chunks, and derives automatic photographic or anime negative prompts.
@@ -41,6 +45,8 @@
 - **Critic Inference Acceleration:** Reduced `audit_prompt` local Ollama timeout from 180s to 35s and capped `num_predict=256` in `GemmaClient`, accelerating critic inference cycles by ~50% and preventing token runaway.
 
 ### Fixed
+- **Output Gallery Path Mapping & Output Consolidation:** Corrected `base_dir` resolution in `src/logic/automation/gemma_pipeline.py` from 3 `dirname` calls to 4 (`Path(__file__).resolve().parents[3]`), eliminating stray writes to `src/output/images/generated_images`. Migrated 88 generated assets into canonical `output/images/generated_images/` and cleaned up stray directories.
+- **Output Gallery Theme Crash (`KeyError: 'input_bg'`):** Replaced non-existent theme dictionary key `'input_bg'` with safe `ThemeManager.colors.get("surface_variant", ...)` fallbacks across button containers and prompt text cards in `src/ui/dialogs/output_gallery.py`.
 - **Prose Profile Paragraph Separation:** Fixed an issue in `core/builder.py:generate_prose` where the environmental scene setting paragraph was joined into the style negative prompt block when a base prompt contained an explicit `Negative Prompt:` section.
 - **Flet 0.80 Web Dialog Lifecycle:** Modernized dialog invocation in `main.py` (`_open_dialog` / `close_dialog`) to prioritize `page.show_dialog()` and `page.pop_dialog()`, restoring modal dialogs (Settings, Automation Studio, Context Studio, Outfit Builder) in Flet 0.80 web sessions.
 - **Roster & Console Flex Constraints:** Assigned explicit integer flex weights (`roster.expand = 6`, `console.expand = 5`) to prevent lengthy generated prompts in the Console from collapsing the Active Roster into an unreadable sliver.
