@@ -41,6 +41,7 @@
 - **Critic Inference Acceleration:** Reduced `audit_prompt` local Ollama timeout from 180s to 35s and capped `num_predict=256` in `GemmaClient`, accelerating critic inference cycles by ~50% and preventing token runaway.
 
 ### Fixed
+- **Prose Profile Paragraph Separation:** Fixed an issue in `core/builder.py:generate_prose` where the environmental scene setting paragraph was joined into the style negative prompt block when a base prompt contained an explicit `Negative Prompt:` section.
 - **Flet 0.80 Web Dialog Lifecycle:** Modernized dialog invocation in `main.py` (`_open_dialog` / `close_dialog`) to prioritize `page.show_dialog()` and `page.pop_dialog()`, restoring modal dialogs (Settings, Automation Studio, Context Studio, Outfit Builder) in Flet 0.80 web sessions.
 - **Roster & Console Flex Constraints:** Assigned explicit integer flex weights (`roster.expand = 6`, `console.expand = 5`) to prevent lengthy generated prompts in the Console from collapsing the Active Roster into an unreadable sliver.
 - **Streamlined Single-Character Roster:** Conditionally hidden the bulk operations toolbar when only one character is staged (`len(items) >= 2`), maximizing card interaction space.
