@@ -57,7 +57,7 @@ class AutomationDialog(ft.AlertDialog):
         self.notes_switch = ft.Switch(label="Interaction", value=True, label_text_style=ft.TextStyle(size=12))
 
         self.gemma_switch = ft.Switch(
-            label="Enhance", value=False,
+            label="Enhance", value=True,
             active_color=ThemeManager.colors["accent"],
             label_text_style=ft.TextStyle(size=12),
         )
@@ -82,7 +82,7 @@ class AutomationDialog(ft.AlertDialog):
                 ft.dropdown.Option("Midjourney"),
                 ft.dropdown.Option("SDXL"),
             ],
-            value="Markdown", width=130, text_size=12, height=42, content_padding=8,
+            value="Prose", width=130, text_size=12, height=42, content_padding=8,
             border_color=ThemeManager.colors["outline"],
             focused_border_color=ThemeManager.colors["accent"],
         )

@@ -215,9 +215,19 @@ class PromptBuilder:
             framing_text = self.framing.get(char_config.framing_mode, "")
             pose = PoseRenderer.render(pose_raw, framing_text).strip()
 
-            # Construct prose description for character
+            # Construct prose description for character with dynamic depth staging
             sentences = []
-            prefix = f"{char_data.name}" if idx == 0 else f"Alongside, {char_data.name}"
+            num_chars = len(config.selected_characters)
+            if num_chars > 1:
+                if idx == 0:
+                    prefix = f"{char_data.name}, framed in sharp focus in the immediate foreground"
+                elif idx == 1:
+                    primary_name = config.selected_characters[0].name
+                    prefix = f"Alongside, {char_data.name}, positioned naturally in the mid-ground angled towards {primary_name}"
+                else:
+                    prefix = f"Alongside, {char_data.name}, anchoring the spatial composition in the background"
+            else:
+                prefix = f"{char_data.name}"
 
             if appearance:
                 clean_app = appearance.lower() if not appearance.startswith(("A ", "An ")) else appearance

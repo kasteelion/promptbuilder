@@ -10,13 +10,13 @@ Different base style prompts for your character images. Select one from the drop
 High-End Digital Photography (85mm Portrait Lens simulation).
 
 **Technical Specifications:**
-f/1.8 aperture for shallow depth of field. Sharp focus on eyes with smooth fall-off. Global illumination, accurate ray-traced reflections, and true-to-life skin texture (pores, vellus hair, subsurface scattering). 8K resolution.
+f/1.8 aperture for shallow depth of field with realistic optical bokeh. Sharp focus on eyes with natural focal fall-off. Raw 85mm optical photography, tactile skin micro-texture, visible dermal pores, subtle vellus hair, authentic skin specular sheen, true subsurface scattering. 8K resolution.
 
 **Stylistic Rules:**
 Neutral, balanced color grading. No stylization filters. Lighting is soft, diffused studio quality (soft-box or window light). Composition is clean and centered.
 
 **Negative Prompt:**
-Illustration, painting, drawing, cartoon, anime, heavy grain, low contrast, distorted, makeup smudge.
+plastic skin, CGI render, 3D model, airbrushed, smooth porcelain, cartoon, anime, illustration, oversaturated, mannequin, doll, wax figure, makeup smudge, distorted anatomy.
 
 ---
 
@@ -48,7 +48,7 @@ Smooth, porcelain-like skin rendering with high subsurface scattering. Volumetri
 Idealized beauty standards. Flowing, liquid-like hair rendering. Colors are vibrant and deep. The background is usually atmospheric or abstract to focus on the subject.
 
 **Negative Prompt:**
-Sketch, messy lines, flat color, matte, dull, noisy, grain, rough texture.
+Sketch, messy lines, flat color, matte, dull, noisy, distorted.
 
 ---
 

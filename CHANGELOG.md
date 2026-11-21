@@ -27,6 +27,9 @@
 - **Prompt Completeness & Cohesion Rebranding:** Renamed "Thematic Alignment" to "Prompt Completeness" with an explanatory tooltip to clearly convey structural prompt readiness across all 6 layers.
 - **Roster "Clear All" Undo Protection:** Added non-destructive undo capability to `clear_all_characters` via a snackbar toast with an `UNDO` action.
 - **Modal Dialog Header Close Buttons:** Added explicit "✕" close icon buttons to the headers of `SettingsDialog` and `AutomationDialog` for desktop ergonomics.
+- **Photorealism & Tactical Skin Directives:** Modernized `Studio Photorealism` base prompt in `assets/data/base_prompts.md` with tactile optical specifications (raw 85mm optics, dermal micro-pores, fine vellus hair, authentic specular sheen) and aggressive negative prompting against plastic, porcelain, and 3D CGI airbrushing; removed `grain` suppression.
+- **Multi-Character Spatial Depth Staging:** Upgraded `generate_prose` in `src/core/builder.py` with multi-plane depth cues (foreground focus, mid-ground placement, background spatial anchoring) to prevent flat horizontal lineup compositions in multi-subject scenes.
+- **Automation Pipeline Defaults:** Configured `AutomationDialog` to default batch generation to the narrative **Prose Engine (`[🍌 Prose]`)** and enabled **Gemma AI Enhancement** by default for maximum diffusion compositional coherence.
 
 ### Fixed
 - **Flet 0.80 Web Dialog Lifecycle:** Modernized dialog invocation in `main.py` (`_open_dialog` / `close_dialog`) to prioritize `page.show_dialog()` and `page.pop_dialog()`, restoring modal dialogs (Settings, Automation Studio, Context Studio, Outfit Builder) in Flet 0.80 web sessions.
