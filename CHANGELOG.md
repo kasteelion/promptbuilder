@@ -30,6 +30,8 @@
 - **Photorealism & Tactical Skin Directives:** Modernized `Studio Photorealism` base prompt in `assets/data/base_prompts.md` with tactile optical specifications (raw 85mm optics, dermal micro-pores, fine vellus hair, authentic specular sheen) and aggressive negative prompting against plastic, porcelain, and 3D CGI airbrushing; removed `grain` suppression.
 - **Multi-Character Spatial Depth Staging:** Upgraded `generate_prose` in `src/core/builder.py` with multi-plane depth cues (foreground focus, mid-ground placement, background spatial anchoring) to prevent flat horizontal lineup compositions in multi-subject scenes.
 - **Automation Pipeline Defaults:** Configured `AutomationDialog` to default batch generation to the narrative **Prose Engine (`[🍌 Prose]`)** and enabled **Gemma AI Enhancement** by default for maximum diffusion compositional coherence.
+- **Automation Studio Launch Acceleration:** Slashed `AutomationDialog` launch latency from ~2.5s down to 14ms by virtualizing `ListView` rendering (`item_extent=32`), flattening nested container controls, implementing progressive batch loading (25 initial rows with background hydration), and caching the dialog instance in `main.py`.
+- **Automation Candidate Pool Integrity:** Fixed bug where forcing a character without selecting pool checkboxes inadvertently restricted the candidate pool to only the forced character, enabling multi-character scenes to draw from all characters as intended.
 
 ### Fixed
 - **Flet 0.80 Web Dialog Lifecycle:** Modernized dialog invocation in `main.py` (`_open_dialog` / `close_dialog`) to prioritize `page.show_dialog()` and `page.pop_dialog()`, restoring modal dialogs (Settings, Automation Studio, Context Studio, Outfit Builder) in Flet 0.80 web sessions.

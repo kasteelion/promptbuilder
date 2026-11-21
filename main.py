@@ -376,7 +376,17 @@ class FletPromptBuilder:
 
     def open_automation_dialog(self, e=None):
         from ui.dialogs.automation_dialog import AutomationDialog
-        self._safe_open_dialog(AutomationDialog)
+        try:
+            if not hasattr(self, "_automation_dialog") or self._automation_dialog is None:
+                self._automation_dialog = AutomationDialog(self)
+            else:
+                self._automation_dialog.reset_view()
+            self._open_dialog(self._automation_dialog)
+            if hasattr(self._automation_dialog, "schedule_lazy_load"):
+                self._automation_dialog.schedule_lazy_load()
+        except Exception as err:
+            logger.error(f"Error opening AutomationDialog: {traceback.format_exc()}")
+            self.show_toast(f"Error opening AutomationDialog: {err}", color="red")
 
     def open_import_from_text(self, e=None):
         from ui.dialogs.import_text_dialog import ImportTextDialog

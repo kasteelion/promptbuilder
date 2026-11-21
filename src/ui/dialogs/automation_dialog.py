@@ -141,11 +141,11 @@ class AutomationDialog(ft.AlertDialog):
         )
 
         # =====================================================================
-        #  CHARACTER SELECTION with Search
+        #  CHARACTER SELECTION with Fast Progressive Rendering
         # =====================================================================
         self.char_selections = {}
         self._char_rows = []  # Keep references for filtering
-        self._char_list_view = ft.ListView(spacing=1, height=155)
+        self._char_list_view = ft.ListView(spacing=1, height=155, item_extent=32)
 
         # Search bar
         self.char_search = ft.TextField(
@@ -158,24 +158,14 @@ class AutomationDialog(ft.AlertDialog):
             border_radius=8,
         )
 
-        # Build character rows
+        # Fast Progressive Rendering: Render initial 25 characters immediately, defer remainder
         sorted_chars = sorted(self.app.state.ctx.characters_metadata.keys())
-        for idx, name in enumerate(sorted_chars):
-            force_chk = ft.Checkbox(value=False, fill_color="#f59e0b", scale=0.8)
-            allow_chk = ft.Checkbox(value=False, fill_color=ThemeManager.colors["accent"], scale=0.8)
-            self.char_selections[name] = {"force": force_chk, "allow": allow_chk}
+        initial_batch = sorted_chars[:25]
+        self._pending_chars = sorted_chars[25:]
+        self._all_chars_loaded = len(self._pending_chars) == 0
 
-            row = ft.Container(
-                content=ft.Row([
-                    ft.Container(force_chk, width=44, alignment=ft.Alignment(0, 0)),
-                    ft.Container(allow_chk, width=44, alignment=ft.Alignment(0, 0)),
-                    ft.Text(name, size=12, expand=True, weight=ft.FontWeight.W_500),
-                ]),
-                padding=ft.Padding.symmetric(horizontal=6, vertical=2),
-                bgcolor=ft.Colors.with_opacity(0.04, "#ffffff") if idx % 2 == 0 else ft.Colors.TRANSPARENT,
-                border_radius=4,
-                data=name.lower(),  # Store lowercase name for search matching
-            )
+        for idx, name in enumerate(initial_batch):
+            row = self._create_char_row(idx, name)
             self._char_rows.append(row)
             self._char_list_view.controls.append(row)
 
@@ -372,9 +362,67 @@ class AutomationDialog(ft.AlertDialog):
         self.actions_alignment = ft.MainAxisAlignment.END
 
     # =================================================================
+    #  Character Row Creation & Progressive Loading
+    # =================================================================
+    def _create_char_row(self, idx: int, name: str):
+        force_chk = ft.Checkbox(value=False, fill_color="#f59e0b", scale=0.8, width=44)
+        allow_chk = ft.Checkbox(value=False, fill_color=ThemeManager.colors["accent"], scale=0.8, width=44)
+        self.char_selections[name] = {"force": force_chk, "allow": allow_chk}
+
+        return ft.Container(
+            content=ft.Row([
+                force_chk,
+                allow_chk,
+                ft.Text(name, size=12, expand=True, weight=ft.FontWeight.W_500),
+            ], spacing=2, vertical_alignment=ft.CrossAxisAlignment.CENTER),
+            padding=ft.Padding.symmetric(horizontal=6, vertical=1),
+            bgcolor=ft.Colors.with_opacity(0.04, "#ffffff") if idx % 2 == 0 else ft.Colors.TRANSPARENT,
+            border_radius=4,
+            height=30,
+            data=name.lower(),
+        )
+
+    def _ensure_all_chars_loaded(self):
+        if getattr(self, "_all_chars_loaded", False):
+            return
+        start_idx = len(self._char_rows)
+        for i, name in enumerate(self._pending_chars):
+            row = self._create_char_row(start_idx + i, name)
+            self._char_rows.append(row)
+            self._char_list_view.controls.append(row)
+        self._pending_chars = []
+        self._all_chars_loaded = True
+
+    def schedule_lazy_load(self):
+        """Asynchronously load remaining characters after the dialog is visible."""
+        if getattr(self, "_all_chars_loaded", False):
+            return
+        import asyncio
+        async def _load():
+            await asyncio.sleep(0.06)
+            if not getattr(self, "_all_chars_loaded", False):
+                self._ensure_all_chars_loaded()
+                try:
+                    self._char_list_view.update()
+                except Exception:
+                    pass
+        if hasattr(self.app, "page") and self.app.page:
+            self.app.page.run_task(_load)
+
+    def reset_view(self):
+        """Reset progress / status indicators when re-opening dialog."""
+        self.progress_bar.visible = False
+        self.progress_bar.value = 0
+        self.log_container.visible = False
+        self.status_chip.visible = False
+        self.start_btn.disabled = False
+        self.stop_btn.visible = False
+
+    # =================================================================
     #  Character Search Filter
     # =================================================================
     def _on_char_search(self, e):
+        self._ensure_all_chars_loaded()
         query = (e.control.value or "").lower().strip()
         for row in self._char_rows:
             row.visible = query in row.data if query else True
@@ -431,16 +479,22 @@ class AutomationDialog(ft.AlertDialog):
             self.app.show_toast("Automation Controller not initialized.", color="red")
             return
 
+        self._ensure_all_chars_loaded()
+
         # Gather params
         count = int(self.count_slider.value)
         num_chars = int(self.num_chars_dd.value) if self.num_chars_dd.value != "Auto" else None
 
         forced = [name for name, chks in self.char_selections.items() if chks["force"].value]
-        allowed = [name for name, chks in self.char_selections.items() if chks["allow"].value]
+        explicit_pool = [name for name, chks in self.char_selections.items() if chks["allow"].value]
 
-        for f in forced:
-            if f not in allowed:
-                allowed.append(f)
+        if explicit_pool:
+            for f in forced:
+                if f not in explicit_pool:
+                    explicit_pool.append(f)
+            pool_to_pass = explicit_pool
+        else:
+            pool_to_pass = None
 
         scenario_val = self.scenario_dd.value
         forced_scenario = scenario_val if scenario_val != "Auto / Random" else None
@@ -582,6 +636,6 @@ class AutomationDialog(ft.AlertDialog):
             use_gemma=self.gemma_switch.value,
             use_critic=self.critic_switch.value,
             pure_gemma=self.pure_gemma_switch.value,
-            character_pool=allowed if allowed else None,
+            character_pool=pool_to_pass,
             format_type=self.format_mode_dd.value.lower(),
         )
