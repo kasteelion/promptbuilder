@@ -128,6 +128,59 @@ Notes: Waiting quietly in the mist
         prefs = PreferencesManager()
         self.assertFalse(prefs.get("auto_generate_missing_portraits", False))
 
+    def test_build_prompt_file_text_formatting(self):
+        """Verify _build_prompt_file_text produces valid companion text with # METADATA."""
+        from logic.automation.gemma_pipeline import GemmaPipelineRunner
+        runner = GemmaPipelineRunner(None, None)
+        cfg = PromptConfig(
+            base_prompt="Detailed",
+            scene="Cozy Cafe",
+            notes="Laughing over coffee",
+            selected_characters=[
+                SelectedCharacterConfig(name="Amina Benali", outfit="Casual", pose_preset="Sitting", color_scheme="Earth Tones")
+            ]
+        )
+        res = runner._build_prompt_file_text("Amina sitting in a cafe", cfg, score=380, format_type="prose")
+        self.assertIn("# METADATA", res)
+        self.assertIn("Scene: Cozy Cafe", res)
+        self.assertIn("Base_Prompt: Detailed", res)
+        self.assertIn("Interaction: Laughing over coffee", res)
+        self.assertIn("Character: Amina Benali | Outfit: Casual", res)
+        self.assertIn("Score: 380", res)
+
+    def test_ai_client_generate_images_stream_queue(self):
+        """Verify generate_images_stream correctly streams prompts from an asyncio.Queue."""
+        import asyncio
+        from unittest.mock import AsyncMock, patch
+        from utils.ai_client import AIStudioClient
+
+        async def _run():
+            client = AIStudioClient(output_dir="output/images/generated_images", headless=True)
+            mock_page = AsyncMock()
+            mock_context = AsyncMock()
+            mock_context.pages = [mock_page]
+
+            mock_pw = AsyncMock()
+            mock_pw.chromium.launch_persistent_context.return_value = mock_context
+
+            q = asyncio.Queue()
+            await q.put({"prompt": "Prompt 1", "file_text": "P1\n# METADATA"})
+            await q.put(None)
+
+            with patch("utils.ai_client.async_playwright") as mock_pw_ctx:
+                mock_pw_ctx.return_value.__aenter__.return_value = mock_pw
+                with patch.object(client, "_wait_for_login", new_callable=AsyncMock), \
+                     patch.object(client, "_submit_prompt", new_callable=AsyncMock), \
+                     patch.object(client, "_wait_for_generation", new_callable=AsyncMock), \
+                     patch.object(client, "_scroll_to_load", new_callable=AsyncMock), \
+                     patch.object(client, "_extract_image_from_dom", new_callable=AsyncMock) as mock_extract:
+                    mock_extract.return_value = "img_1.png"
+                    res = await client.generate_images_stream(q, 1)
+                    self.assertEqual(len(res), 1)
+                    self.assertEqual(res[0], ("Prompt 1", "img_1.png"))
+
+        asyncio.run(_run())
+
 
 if __name__ == "__main__":
     unittest.main()

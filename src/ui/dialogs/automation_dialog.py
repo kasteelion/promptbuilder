@@ -541,6 +541,12 @@ class AutomationDialog(ft.AlertDialog):
                     status = "Rebuilding..."
                 elif "Attempt" in msg:
                     color = "#f59e0b"
+                elif "Rendering image" in msg or "saved" in msg:
+                    color = "#06b6d4"
+                    status = "Rendering..."
+                elif "Chrome" in msg or "Connecting" in msg or "AI Studio ready" in msg:
+                    color = "#38bdf8"
+                    status = "Browser Warmup"
                 elif "->" in msg:
                     color = ft.Colors.with_opacity(0.7, ThemeManager.colors["text_primary"])
 
@@ -575,8 +581,9 @@ class AutomationDialog(ft.AlertDialog):
             if self.prompts_only_switch.value and results:
                 import os
                 import time
-                base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-                out_dir = os.path.join(base_dir, "output", "prompts")
+                from pathlib import Path
+                base_dir = Path(__file__).resolve().parents[3]
+                out_dir = str(base_dir / "output" / "prompts")
                 os.makedirs(out_dir, exist_ok=True)
 
                 filename = f"automated_prompts_{int(time.time())}.txt"

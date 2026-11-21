@@ -4,6 +4,7 @@ import asyncio
 import os
 import re
 import random
+from pathlib import Path
 from typing import List, Callable, Dict, Any, Optional
 
 from utils.ai_client import AIStudioClient
@@ -29,6 +30,63 @@ class GemmaPipelineRunner:
 
     def stop(self):
         self.stop_requested = True
+
+    def _build_prompt_file_text(self, prompt: str, config: Any, score: int = 0, format_type: str = "markdown") -> str:
+        """Construct the prompt text along with an attached # METADATA block for companion .txt storage."""
+        full_text = prompt if format_type in ("midjourney", "sdxl") else ("Generate an image of: " + prompt if not prompt.startswith("Generate an image of:") else prompt)
+        
+        meta_block = "\n\n# METADATA\n"
+        meta_block += f"Format_Profile: {format_type}\n"
+        
+        # Scene
+        if isinstance(config, dict) and "scene" in config:
+            s_val = config["scene"]
+            s_name = s_val.get("name", str(s_val)) if isinstance(s_val, dict) else str(s_val)
+            meta_block += f"Scene: {s_name}\n"
+            if "scene_category" in config:
+                meta_block += f"Scene_Category: {config['scene_category']}\n"
+        elif hasattr(config, "scene"):
+            s_val = getattr(config, "scene")
+            s_name = s_val.get("name", str(s_val)) if isinstance(s_val, dict) else str(s_val)
+            meta_block += f"Scene: {s_name}\n"
+
+        # Base Prompt / Style
+        if isinstance(config, dict) and "base_prompt" in config:
+            bp_val = config["base_prompt"]
+            bp_name = bp_val.get("name", str(bp_val)) if isinstance(bp_val, dict) else str(bp_val)
+            meta_block += f"Base_Prompt: {bp_name}\n"
+        elif hasattr(config, "base_prompt"):
+            bp_val = getattr(config, "base_prompt")
+            bp_name = bp_val.get("name", str(bp_val)) if isinstance(bp_val, dict) else str(bp_val)
+            meta_block += f"Base_Prompt: {bp_name}\n"
+
+        # Notes / Interaction
+        notes = ""
+        if isinstance(config, dict):
+            notes = config.get("notes", "") or config.get("metadata", {}).get("interaction", "")
+        elif hasattr(config, "notes"):
+            notes = getattr(config, "notes", "")
+        if notes:
+            meta_block += f"Interaction: {notes}\n"
+
+        # Characters
+        chars = []
+        if isinstance(config, dict):
+            chars = config.get("selected_characters", [])
+        elif hasattr(config, "selected_characters"):
+            chars = getattr(config, "selected_characters", [])
+            
+        for char in chars:
+            name = char.get("name") if isinstance(char, dict) else getattr(char, "name", "")
+            outfit = char.get("outfit", "Base") if isinstance(char, dict) else getattr(char, "outfit", "Base")
+            pose = char.get("pose_preset", "") if isinstance(char, dict) else getattr(char, "pose_preset", "")
+            color_scheme = char.get("color_scheme", "") if isinstance(char, dict) else getattr(char, "color_scheme", "")
+            meta_block += f"Character: {name} | Outfit: {outfit} | Pose: {pose} | Color_Scheme: {color_scheme}\n"
+
+        if score:
+            meta_block += f"Score: {score}\n"
+
+        return full_text + meta_block
 
     def _generate_targeted_audit_catalog(self, config) -> str:
         """Generate a highly trimmed catalog containing only context for the active prompt."""
@@ -180,6 +238,54 @@ class GemmaPipelineRunner:
              catalog_context = generate_llm_export_text(self.ctx, is_audit=False)
              audit_logger.log_json("catalog_context", {"length": len(catalog_context)})
         
+        # Pipelined Streaming Setup: Run prompt generation and image rendering concurrently
+        prompt_queue: asyncio.Queue = asyncio.Queue()
+        image_results = []
+        consumer_task = None
+
+        def _queue_prompt_for_imaging(prompt_text: str, config_data: Any, score_val: int):
+            if prompts_only:
+                return
+            ptxt = prompt_text
+            if not ptxt.startswith(("/imagine", "POSITIVE:", "Generate an image of:")):
+                submit_prompt = f"Generate an image of: {ptxt}"
+            else:
+                submit_prompt = ptxt
+            file_text = self._build_prompt_file_text(prompt_text, config_data, score_val, format_type=format_type)
+            prompt_queue.put_nowait({
+                "prompt": submit_prompt,
+                "file_text": file_text
+            })
+
+        if not prompts_only:
+            base_dir = str(Path(__file__).resolve().parents[3])
+            output_dir = os.path.join(base_dir, "output", "images", "generated_images")
+            user_data_dir = os.path.join(base_dir, ".config", "chrome_profile")
+            
+            client = AIStudioClient(
+                output_dir=output_dir,
+                user_data_dir=user_data_dir,
+                headless=False
+            )
+            
+            def client_progress_shim(current, total, message):
+                if not self.stop_requested:
+                    on_progress(current, total, message)
+
+            async def image_consumer():
+                nonlocal image_results
+                try:
+                    image_results = await client.generate_images_stream(
+                        prompt_queue=prompt_queue,
+                        total_count=count,
+                        progress_callback=client_progress_shim,
+                        stop_check=lambda: self.stop_requested
+                    )
+                except Exception as err:
+                    print(f"[GemmaPipeline] Image consumer encountered error: {err}")
+
+            consumer_task = asyncio.create_task(image_consumer())
+
         if fixed_prompt:
             final_prompt = fixed_prompt
             if use_critic and gemma_client:
@@ -237,6 +343,7 @@ class GemmaPipelineRunner:
                 "config": {},
                 "score": 100
             })
+            _queue_prompt_for_imaging(final_prompt, {}, 100)
         else:
             on_progress(0, count, "Preparing generation...")
 
@@ -649,6 +756,7 @@ class GemmaPipelineRunner:
                     "score": audit.get("score", 0) if audit else internal_score,
                     "audit": audit
                 })
+                _queue_prompt_for_imaging(prompt_text, logged_config, audit.get("score", 0) if audit else internal_score)
 
                 if audit and audit.get("score", 0) >= 9:
                     tags = []
@@ -657,7 +765,14 @@ class GemmaPipelineRunner:
                     feedback.record_success(prompt_text, audit.get("score"), tags)
 
                 i += 1
+
+        if not prompts_only:
+            # Guarantee that the sentinel is sent so image_consumer exits cleanly
+            prompt_queue.put_nowait(None)
         
+        if not prompts_only and consumer_task:
+            await consumer_task
+
         if ruled_out:
             audit_logger.log_json("ruled_out_compositions", ruled_out)
             audit_logger.log_event(f"Logged {len(ruled_out)} rejected compositions to session folder")
@@ -672,35 +787,14 @@ class GemmaPipelineRunner:
         if prompts_only:
             return prompts_with_meta
 
-        def client_progress_shim(current, total, message):
-            if not self.stop_requested:
-                on_progress(current, total, message)
-
-        base_dir = str(Path(__file__).resolve().parents[3])
-        output_dir = os.path.join(base_dir, "output", "images", "generated_images")
-        user_data_dir = os.path.join(base_dir, ".config", "chrome_profile")
-        
-        client = AIStudioClient(
-            output_dir=output_dir,
-            user_data_dir=user_data_dir,
-            headless=False
-        )
-        
-        batch_prompts = []
-        for p in prompts_with_meta:
-            ptxt = p["prompt"]
-            if ptxt.startswith(("/imagine", "POSITIVE:", "Generate an image of:")):
-                batch_prompts.append(ptxt)
-            else:
-                batch_prompts.append(f"Generate an image of: {ptxt}")
-        
-        results = await client.generate_images(batch_prompts, progress_callback=client_progress_shim)
-        
         final_results = []
-        for j, (prompt, img_path) in enumerate(results):
-            res = prompts_with_meta[j].copy()
-            res["image_path"] = img_path
-            final_results.append(res)
+        for j, res in enumerate(prompts_with_meta):
+            item = res.copy()
+            if j < len(image_results):
+                item["image_path"] = image_results[j][1]
+            else:
+                item["image_path"] = None
+            final_results.append(item)
             
         return final_results
 

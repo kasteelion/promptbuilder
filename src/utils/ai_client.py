@@ -8,6 +8,7 @@ Image Generation (Gemini Image models) and Text Generation (future use).
 import os
 import time
 import base64
+import asyncio
 from typing import List, Tuple, Optional, Callable
 from playwright.async_api import async_playwright, Page
 
@@ -230,16 +231,20 @@ class AIStudioClient:
             pass
         await page.wait_for_timeout(2000)
     
-    async def generate_images(
+    async def generate_images_stream(
         self,
-        prompts: List[str],
-        progress_callback: Optional[Callable[[int, int, str], None]] = None
+        prompt_queue: asyncio.Queue,
+        total_count: int,
+        progress_callback: Optional[Callable[[int, int, str], None]] = None,
+        stop_check: Optional[Callable[[], bool]] = None
     ) -> List[Tuple[str, Optional[str]]]:
-        """Generate images from a list of prompts."""
+        """Generate images by streaming prompts from an asyncio.Queue as they are produced."""
         results = []
         
         async with async_playwright() as p:
-            print("\nLaunching Google Chrome (Persistent)...")
+            if progress_callback:
+                progress_callback(0, total_count, "Launching Google Chrome...")
+            print("\nLaunching Google Chrome (Persistent, Stream)...")
             context = await p.chromium.launch_persistent_context(
                 user_data_dir=self.user_data_dir,
                 headless=self.headless,
@@ -250,19 +255,42 @@ class AIStudioClient:
             )
             
             page = context.pages[0]
+            if progress_callback:
+                progress_callback(0, total_count, "Connecting to AI Studio...")
             await page.goto(self.url)
             await self._wait_for_login(page)
+            if progress_callback:
+                progress_callback(0, total_count, "AI Studio ready, waiting for prompts...")
             
-            for i, prompt in enumerate(prompts):
+            processed_count = 0
+            while processed_count < total_count:
+                if stop_check and stop_check():
+                    break
+                    
+                # Poll for next prompt from producer queue
+                try:
+                    item = await asyncio.wait_for(prompt_queue.get(), timeout=1.0)
+                except asyncio.TimeoutError:
+                    continue
+                    
+                if item is None:
+                    # Producer finished
+                    prompt_queue.task_done()
+                    break
+                    
+                prompt = item["prompt"] if isinstance(item, dict) else item
+                file_text = item.get("file_text", prompt) if isinstance(item, dict) else prompt
+                i = processed_count
+                
                 if progress_callback:
-                    progress_callback(i + 1, len(prompts), f"Processing prompt {i+1}/{len(prompts)}")
+                    progress_callback(i, total_count, f"Rendering image {i+1}/{total_count} in AI Studio...")
                 
                 # Start new chat for subsequent prompts to keep context clean
                 if i > 0:
                     await page.goto(self.url)
                     await page.wait_for_selector(self.prompt_selector)
                 
-                await page.wait_for_timeout(3000)
+                await page.wait_for_timeout(2000)
                 
                 # Submit
                 await self._submit_prompt(page, prompt)
@@ -285,20 +313,38 @@ class AIStudioClient:
                     except Exception:
                         image_path = None
                 
-                # Cache the prompt to a .txt file
+                # Cache the prompt and metadata to a .txt file
                 if image_path:
                     try:
                         prompt_path = os.path.join(self.output_dir, f"{base_filename}.txt")
                         with open(prompt_path, "w", encoding="utf-8") as f:
-                            f.write(prompt)
+                            f.write(file_text)
                     except Exception as e:
                         print(f"Failed to cache prompt: {e}")
                 
                 results.append((prompt, image_path))
+                prompt_queue.task_done()
+                processed_count += 1
+                
+                if progress_callback:
+                    fn = os.path.basename(image_path) if image_path else "fallback"
+                    progress_callback(processed_count, total_count, f"✓ Image {processed_count}/{total_count} saved ({fn})")
             
             await context.close()
         
         return results
+
+    async def generate_images(
+        self,
+        prompts: List[str],
+        progress_callback: Optional[Callable[[int, int, str], None]] = None
+    ) -> List[Tuple[str, Optional[str]]]:
+        """Generate images from a list of prompts (backward-compatible wrapper)."""
+        q: asyncio.Queue = asyncio.Queue()
+        for p in prompts:
+            q.put_nowait(p)
+        q.put_nowait(None)
+        return await self.generate_images_stream(q, len(prompts), progress_callback)
 
 
 # Convenience function for simple usage
