@@ -137,10 +137,6 @@ class RosterItem(ft.Container):
             border_color=ThemeManager.colors["outline"],
             focused_border_color=ThemeManager.colors["accent"],
         )
-        self._refs["outfit_display_text"] = ft.Text(
-            f"{curr_cat} > {curr_out}",
-            size=12, weight="bold", color=ThemeManager.colors["text_primary"]
-        )
         self._refs["outfit_display"] = ft.Row([
             ft.Icon(ft.Icons.CHECKROOM, size=18, color=ThemeManager.colors["accent"]),
             self._refs["outfit_dd"],
@@ -454,8 +450,6 @@ class RosterItem(ft.Container):
         curr_cat = self._get_val('outfit_category', 'Category')
         curr_out = self._get_val('outfit', 'Base')
         curr_key = f"{curr_cat}::{curr_out}"
-        self._refs["outfit_display_text"].value = f"{curr_cat} > {curr_out}"
-        self._refs["outfit_display_text"].update()
         
         if "outfit_dd" in self._refs and self._refs["outfit_dd"]:
             opts = [o.key for o in self._refs["outfit_dd"].options]
