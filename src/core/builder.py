@@ -148,8 +148,8 @@ class PromptBuilder:
 
         opening_sentences = []
         if base_desc:
-            clean_base = base_desc.strip().rstrip(".")
-            opening_sentences.append(f"{clean_base}.")
+            clean_base = base_desc.strip()
+            prose_paragraphs.append(clean_base)
 
         if scene_raw:
             clean_scene = scene_raw.replace("\n", " ").strip()
@@ -157,10 +157,8 @@ class PromptBuilder:
             clean_scene = re.sub(r"^\*\*.*?\*\*\s*", "", clean_scene)
             if not clean_scene.endswith("."):
                 clean_scene += "."
-            opening_sentences.append(f"Set in {clean_scene[0].lower() + clean_scene[1:] if clean_scene else clean_scene}")
-
-        if opening_sentences:
-            prose_paragraphs.append(" ".join(opening_sentences))
+            scene_text = f"Set in {clean_scene[0].lower() + clean_scene[1:] if clean_scene else clean_scene}"
+            prose_paragraphs.append(scene_text)
 
         # 3. Characters & Attire & Contrast
         self._active_team_scheme = None
